@@ -1,4 +1,4 @@
-name: CI
+name: Template validation
 
 on:
   pull_request:
@@ -20,10 +20,11 @@ jobs:
           - 80:80
     steps:
       - uses: actions/checkout@v2
-
-      - name: Import templates
+      - name: Wait for Zabbix API
         run: |
           python -m pip install py-zabbix
-          sleep 30
+          while ! ./.github/workflows/check.py; do sleep 5; done
+      - name: Import templates
+        run: |
           find . -type f -name "*.yaml" | sort | xargs -n 1 ./.github/workflows/import.py
           
