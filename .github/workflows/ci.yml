@@ -16,16 +16,12 @@ jobs:
         image: zabbix/zabbix-appliance
         env:
           PHP_TZ: "Europe/Riga"
-        options: >-
-          --health-cmd "systemctl is-active nginx"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
         ports:
           - 80:80
     steps:
       - uses: actions/checkout@v2
 
-      - name: Check localhost
+      - name: Check zabbix API
         run: |
-          curl localhost
+          sleep 30
+          curl zabbix
