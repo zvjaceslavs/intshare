@@ -11,6 +11,8 @@ parser.add_argument(dest='arg1', nargs=1)
 args = parser.parse_args()
 
 def import_template(zapi, filename):
+    print('Importing template "{}"...'.format(filename))
+    
     with open(filename, 'r') as file:
         contents = file.read()
 
