@@ -26,15 +26,21 @@ jobs:
       zabbix:
         image: zabbix/zabbix-web-nginx-pgsql
         env:
-          DB_SERVER_HOST: localhost
+          DB_SERVER_HOST: postgres
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           ZBX_SERVER_HOST: ci
           PHP_TZ: "Europe/Riga"
+        options: >-
+          --health-cmd systemctl is-active nginx
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
         ports:
           - 80:80
     steps:
       - uses: actions/checkout@v2
 
       - name: Check localhost
-        run: curl localhost
+        run: |
+          curl localhost
