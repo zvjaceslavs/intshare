@@ -32,7 +32,7 @@ jobs:
           ZBX_SERVER_HOST: ci
           PHP_TZ: "Europe/Riga"
         options: >-
-          --health-cmd "systemctl is-active nginx"
+          --health-cmd "/usr/bin/docker logs && systemctl is-active nginx"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
