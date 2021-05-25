@@ -1,0 +1,15 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-05-25T13:07:34Z'
+  groups:
+    -
+      uuid: 52c08d80091f4a6a8ba457dcaaef9735
+      name: demo
+  templates:
+    -
+      uuid: 4f6a1737c3234ef3a32bad18f4d338fd
+      template: empty
+      name: empty
+      groups:
+        -
+          name: demo
