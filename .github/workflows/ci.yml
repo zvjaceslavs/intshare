@@ -12,27 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      postgres:
-        image: postgres
-        env:
-          POSTGRES_PASSWORD: postgres
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-        ports:
-          - 5432:5432
       zabbix:
-        image: zabbix/zabbix-web-nginx-pgsql
+        image: zabbix/zabbix-appliance
         env:
-          DB_SERVER_HOST: postgres
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          ZBX_SERVER_HOST: ci
           PHP_TZ: "Europe/Riga"
         options: >-
-          --health-cmd "/usr/bin/docker logs && systemctl is-active nginx"
+          --health-cmd "systemctl is-active nginx"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
