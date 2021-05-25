@@ -1,0 +1,30 @@
+name: Template validation
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.yaml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      zabbix:
+        image: zabbix/zabbix-appliance
+        env:
+          PHP_TZ: "Europe/Riga"
+        ports:
+          - 80:80
+    steps:
+      - uses: actions/checkout@v2
+      - name: Wait for Zabbix API
+        run: |
+          python -m pip install py-zabbix
+          while ! ./.github/workflows/check.py; do sleep 5; done
+      - name: Import templates
+        run: |
+          find . -type f -name "*.yaml" | sort | xargs -n 1 ./.github/workflows/import.py
+          
