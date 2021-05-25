@@ -25,5 +25,5 @@ jobs:
         run: |
           python -m pip install py-zabbix
           sleep 30
-          find . -type f -name "*.yaml" | sort | xargs -n 1 ./.github/workflows/import.py
+          find . -type f -name "*.yaml" | sort | xargs -n 1 echo
           
