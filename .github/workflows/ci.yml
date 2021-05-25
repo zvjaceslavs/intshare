@@ -24,4 +24,4 @@ jobs:
       - name: Check zabbix API
         run: |
           sleep 30
-          curl zabbix
+          curl localhost
