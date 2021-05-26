@@ -35,7 +35,7 @@ jobs:
       zabbix-web:
         image: zabbix/zabbix-web-nginx-pgsql
         ports:
-          - "80:80"
+          - "80:8080"
         env:
           DB_SERVER_HOST: postgres-server
           POSTGRES_DB: zabbix
