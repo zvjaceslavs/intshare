@@ -1,0 +1,6 @@
+zabbix_export:
+  version: '3.4'
+  date: 'yes'
+  templates:
+    -
+      template: invalid
