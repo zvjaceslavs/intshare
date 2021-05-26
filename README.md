@@ -1,7 +1,7 @@
 # Zabbix public templates
 ## A place for community driven integrations
 
-[![Template Repository](https://github.com/zvjaceslavs/intshare/actions/workflows/ci.yml/badge.svg)
+![Template Repository](https://github.com/zvjaceslavs/intshare/actions/workflows/ci.yml/badge.svg)
 
 Here you can find Zabbix templates that are being supported by the vast and large Zabbix community.
 
