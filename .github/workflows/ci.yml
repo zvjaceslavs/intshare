@@ -12,31 +12,35 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      mysql-server:
-        image: mysql/mysql-server
+      postgres-server:
+        image: postgres
         env:
-          MYSQL_DATABASE: zabbix
-          MYSQL_USER: zabbix
-          MYSQL_PASSWORD: zabbix
-          MYSQL_ROOT_PASSWORD: root_pwd
+          POSTGRES_DB: zabbix
+          POSTGRES_USER: zabbix
+          POSTGRES_PASSWORD: zabbix
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
       zabbix-server:
-        image: zabbix/zabbix-server-mysql
+        image: zabbix/zabbix-server-pgsql
         env:
-          DB_SERVER_HOST: mysql-server
-          MYSQL_DATABASE: zabbix
-          MYSQL_USER: zabbix
-          MYSQL_PASSWORD: zabbix
+          DB_SERVER_HOST: postgres-server
+          POSTGRES_DB: zabbix
+          POSTGRES_USER: zabbix
+          POSTGRES_PASSWORD: zabbix
 
       zabbix-web:
-        image: zabbix/zabbix-web-apache-mysql
+        image: zabbix/zabbix-web-nginx-pgsql
         ports:
           - "80:80"
         env:
-          DB_SERVER_HOST: mysql-server
-          MYSQL_DATABASE: zabbix
-          MYSQL_USER: zabbix
-          MYSQL_PASSWORD: zabbix
+          DB_SERVER_HOST: postgres-server
+          POSTGRES_DB: zabbix
+          POSTGRES_USER: zabbix
+          POSTGRES_PASSWORD: zabbix
           PHP_TZ: Europe/Riga
 
     steps:
