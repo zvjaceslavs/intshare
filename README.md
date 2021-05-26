@@ -1,7 +1,7 @@
 # Zabbix public templates
 ## A place for community driven integrations
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Template Repository](https://github.com/zvjaceslavs/intshare/actions/workflows/ci.yml/badge.svg)
 
 Here you can find Zabbix templates that are being supported by the vast and large Zabbix community.
 
