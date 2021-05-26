@@ -1,12 +1,18 @@
 #!/usr/bin/env python
 import sys
+import time
 from zabbix.api import ZabbixAPI
 
-try:
-    zapi = ZabbixAPI(url="http://localhost/api_jsonrpc.php",
-                     user="Admin",
-                     password="zabbix")
-except:
-    sys.exit('Zabbix API is not ready...')
+for x in range(20):
+    try:
+        zapi = ZabbixAPI(url="http://localhost/api_jsonrpc.php",
+                         user="Admin",
+                         password="zabbix")
+    except:
+        print('Zabbix API is not ready...')
+        time.sleep(5)
+    else:
+        zapi.do_request('user.logout')
+        break;
 else:
-    zapi.do_request('user.logout')
+  sys.exit('Failed to wait for Zabbix API to be ready')
