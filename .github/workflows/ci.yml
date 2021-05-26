@@ -13,7 +13,7 @@ jobs:
 
     services:
       mysql-server:
-        image: mysql-server
+        image: mysql/mysql-server
         env:
           MYSQL_DATABASE: zabbix
           MYSQL_USER: zabbix
