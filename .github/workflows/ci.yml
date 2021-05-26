@@ -12,19 +12,41 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      zabbix:
-        image: zabbix/zabbix-appliance
+      mysql-server:
+        image: mysql:5.7
         env:
-          PHP_TZ: "Europe/Riga"
+          MYSQL_DATABASE: zabbix
+          MYSQL_USER: zabbix
+          MYSQL_PASSWORD: zabbix
+          MYSQL_ROOT_PASSWORD: root_pwd
+
+      zabbix-server:
+        image: zabbix/zabbix-server-mysql
+        env:
+          DB_SERVER_HOST: mysql-server
+          MYSQL_DATABASE: zabbix
+          MYSQL_USER: zabbix
+          MYSQL_PASSWORD: zabbix
+
+      zabbix-web:
+        image: zabbix/zabbix-web-apache-mysql
         ports:
-          - 80:80
+          - "80:80"
+        env:
+          DB_SERVER_HOST: mysql-server
+          MYSQL_DATABASE: zabbix
+          MYSQL_USER: zabbix
+          MYSQL_PASSWORD: zabbix
+          PHP_TZ: Europe/Riga
+
     steps:
       - uses: actions/checkout@v2
       - name: Wait for Zabbix API
         run: |
           python -m pip install py-zabbix
-          while ! ./.github/workflows/check.py; do sleep 5; done
-      - name: Import templates
-        run: |
-          find . -type f -name "*.yaml" | sort | xargs -n 1 ./.github/workflows/import.py
-          
+          i = 0
+          while [[ ! ./.github/workflows/check.py && $i -lt 20 ]]; do
+            ((i = $i + 1));
+            sleep 5;
+          done
+          ./.github/workflows/check.py
