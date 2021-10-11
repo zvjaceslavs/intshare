@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-05-24T08:17:23Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template SNMP Omron UPS</template>
+            <name>Template SNMP Omron UPS</name>
+            <templates>
+                <template>
+                    <name>Template SNMP Disks</name>
+                </template>
+                <template>
+                    <name>Template SNMP Generic</name>
+                </template>
+                <template>
+                    <name>Template SNMP Interfaces</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <name>Battery Remaining %</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.2.4.0</snmp_oid>
+                    <key>batteryRemaining</key>
+                    <units>%</units>
+                </item>
+                <item>
+                    <name>Battery Status</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.2.1.0</snmp_oid>
+                    <key>batteryStatus</key>
+                    <valuemap>
+                        <name>Omron Battery Status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Battery Temperature</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.2.7.0</snmp_oid>
+                    <key>batteryTemperature</key>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Battery Voltage</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.2.5.0</snmp_oid>
+                    <key>batteryVoltage</key>
+                    <units>V</units>
+                </item>
+                <item>
+                    <name>Estimated Minutes Remaining on Battery</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.2.3.0</snmp_oid>
+                    <key>estimatedMinutesRemaining</key>
+                    <units>m</units>
+                </item>
+                <item>
+                    <name>Input Frequency</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.3.3.1.2.1</snmp_oid>
+                    <key>inputFrequency</key>
+                    <value_type>FLOAT</value_type>
+                    <units>Hz</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Input Voltage</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.3.3.1.3.1</snmp_oid>
+                    <key>inputVoltage</key>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Input Voltage Max</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.3.3.1.4.1</snmp_oid>
+                    <key>inputVoltageMax</key>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Input Voltage Min</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.3.3.1.5.1</snmp_oid>
+                    <key>inputVoltageMin</key>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Output Frequency</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.4.2.0</snmp_oid>
+                    <key>outputFrequency</key>
+                    <value_type>FLOAT</value_type>
+                    <units>Hz</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Output Load %</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.4.4.1.3.1</snmp_oid>
+                    <key>outputLoad</key>
+                    <units>%</units>
+                </item>
+                <item>
+                    <name>Output Voltage</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.4.4.1.2.1</snmp_oid>
+                    <key>outputVoltage</key>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Seconds on Battery</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.2.2.0</snmp_oid>
+                    <key>secondsOnButtery</key>
+                    <units>s</units>
+                </item>
+                <item>
+                    <name>UPS Agent Software Version</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.1.3.0</snmp_oid>
+                    <key>upsIdentAgentSoftwareVersion</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                </item>
+                <item>
+                    <name>UPS Manufacturer</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.1.1.0</snmp_oid>
+                    <key>upsIdentManufacturer</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                </item>
+                <item>
+                    <name>UPS Model</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.1.2.0</snmp_oid>
+                    <key>upsIdentModel</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                </item>
+                <item>
+                    <name>UPS Name</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.1.4.0</snmp_oid>
+                    <key>upsIdentName</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                </item>
+                <item>
+                    <name>UPS Temperature</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.1.13.0</snmp_oid>
+                    <key>upsIdentTemperature</key>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>UPS Status</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.1.6.0</snmp_oid>
+                    <key>upsIdentUPSStatus</key>
+                    <valuemap>
+                        <name>Omron UPS Status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>UPS Type</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.16838.1.2.2.1.1.7.0</snmp_oid>
+                    <key>upsIdentUPSType</key>
+                    <delay>1h</delay>
+                    <valuemap>
+                        <name>Omron UPS Type</name>
+                    </valuemap>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Ups Status</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>FFCCBC</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template SNMP Omron UPS</host>
+                        <key>inputFrequency</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>F63100</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template SNMP Omron UPS</host>
+                        <key>inputVoltage</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <color>2774A4</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template SNMP Omron UPS</host>
+                        <key>outputFrequency</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>4</sortorder>
+                    <color>3F51B5</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template SNMP Omron UPS</host>
+                        <key>outputVoltage</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>5</sortorder>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>26A69A</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template SNMP Omron UPS</host>
+                        <key>outputLoad</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+    <value_maps>
+        <value_map>
+            <name>Omron Battery Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Low</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Weak</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Discharging</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Disconnected</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Omron UPS Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>onLine</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>upsPowerOff</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>standby</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>bypass</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>onBattery</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>testing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>upsAbnormal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>batteryWeak</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Omron UPS Type</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>on-Line</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>off-Line</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>line-Interactive</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-05-13T07:09:32Z</date>
+    <groups>
+        <group>
+            <name>3CX Services</name>
+        </group>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template 3CX Services Linux</template>
+            <name>Template 3CX Services Linux</name>
+            <groups>
+                <group>
+                    <name>3CX Services</name>
+                </group>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>3CX Services</name>
+                </application>
+                <application>
+                    <name>Nginx Service</name>
+                </application>
+                <application>
+                    <name>PostgreSQL Services</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>3CX Phone System Service</name>
+                    <key>proc.num[,,,/usr/sbin/3CXPhoneSystem]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Phone System Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX Audio Provider Service</name>
+                    <key>proc.num[,,,3CXAudioProvider]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Audio Provider Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX Call Flow Service</name>
+                    <key>proc.num[,,,3CXCallFlow]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Call Flow Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX IVR Service</name>
+                    <key>proc.num[,,,3CXIVR]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX IVR Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX Management Console Service</name>
+                    <key>proc.num[,,,3CXManagementConsole]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Management Console Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX Media Server Service</name>
+                    <key>proc.num[,,,3CXMediaServer]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Media Server Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX Configuration Service</name>
+                    <key>proc.num[,,,3CXSLDBServ]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Configuration Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX System Service</name>
+                    <key>proc.num[,,,3cxSystemService]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX System Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX Tunnel Service</name>
+                    <key>proc.num[,,,3CXTunnel]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Tunnel Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX Event Notification Manager</name>
+                    <key>proc.num[,,,CloudServicesWatcher]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Event Notification Manager is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Nginx Service</name>
+                    <key>proc.num[,,,nginx]</key>
+                    <applications>
+                        <application>
+                            <name>Nginx Service</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Nginx Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PostgreSQL Service</name>
+                    <key>proc.num[,,,postgres]</key>
+                    <applications>
+                        <application>
+                            <name>PostgreSQL Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>PostgreSQL is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>3CX Queue Manager Service</name>
+                    <key>proc.num[,,,TcxQMsrv]</key>
+                    <applications>
+                        <application>
+                            <name>3CX Services</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>3CX Queue Manager Service is not running</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

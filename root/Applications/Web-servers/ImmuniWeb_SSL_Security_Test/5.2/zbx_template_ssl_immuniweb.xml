@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.2</version>
+    <date>2021-03-29T20:14:58Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template App SSL ImmuniWeb Scan</template>
+            <name>Template App SSL ImmuniWeb Scan</name>
+            <description>https://www.immuniweb.com/ssl/</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>HTTPS service</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>{$SSL_HOST} ImmuniWeb Scan Date</name>
+                    <type>DEPENDENT</type>
+                    <key>immuniweb.scan.date</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>HTTPS service</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.internals.ts</parameter>
+                            </parameters>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <parameters>
+                                <parameter>var date = new Date(value * 1000);
+return date.toString();</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>immuniweb.scan.result</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>{$SSL_HOST} ImmuniWeb SSL Scan</name>
+                    <type>SCRIPT</type>
+                    <key>immuniweb.scan.result</key>
+                    <delay>0;h/5m0,5,15</delay>
+                    <history>14d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <params>try {
+    Zabbix.Log(3, 'SSL ImmuniWeb scan script value='+value);
+ 
+    var result = {},
+    params = JSON.parse(value),
+    req = new CurlHttpRequest(),
+    resp;
+
+    var domain = params.sslHost + ':' + params.sslPort;
+    var paramString = 'domain='+domain+'&amp;show_test_results=false&amp;recheck=false&amp;choosen_ip=any';
+    var ts = Date.now();
+ 
+    Zabbix.Log(3, 'Attempting SSL ImmuniWeb scan with POST fields: '+paramString);
+    resp = req.Post('https://www.immuniweb.com/ssl/api/v1/check/'+ts+'.html', paramString);
+    Zabbix.Log(3, 'SSL ImmuniWeb received response: '+resp); 
+    if (req.Status() != 200) {
+        throw 'Response code: '+req.Status();
+    }
+ 
+    resp = JSON.parse(resp);
+    var status_id = resp.status_id;
+    var status = resp.message;
+    var job_id = resp.job_id;
+    var test_id = resp.test_id;
+    
+    if (status_id == 3) {
+      Zabbix.Log(3, 'SSL ImmuniWeb scan result is ready/cached');
+      paramString = 'id='+test_id;
+      Zabbix.Log(3, 'Attempting to fetch SSL ImmuniWeb result with POST fields: '+paramString);
+      resp = req.Post('https://www.immuniweb.com/ssl/api/v1/get_result/'+ts+'.html', paramString);
+      if (req.Status() != 200) {
+        throw 'Response code: '+req.Status();
+      }
+      resp = JSON.parse(resp);
+
+      if (resp.internals) {
+        if (resp.internals.ts) {
+          var testDate = new Date(resp.internals.ts * 1000);
+          testDate.setDate( testDate.getDate() + 3 );
+          if (testDate &lt; Date.now()) {
+            Zabbix.Log(3, 'SSL ImmuniWeb cached result is over 3 days old, reqeusting recheck');
+            paramString = 'domain='+domain+'&amp;show_test_results=false&amp;recheck=true&amp;choosen_ip=any';
+            var recheckResp = req.Post('https://www.immuniweb.com/ssl/api/v1/check/'+ts+'.html', paramString);
+            Zabbix.Log(3, 'SSL ImmuniWeb recheck received response: '+recheckResp); 
+          }
+        }
+      }
+
+    } else {
+      Zabbix.Log(3, 'Scan result not ready, status: '+status);
+    }
+    result = resp;
+} catch (error) {
+    Zabbix.Log(3, 'SSL ImmuniWeb API call failed, POST fields: '+paramString);
+    Zabbix.Log(3, 'SSL ImmuniWeb API call failed: '+error);
+    result = {};
+}
+ 
+return JSON.stringify(result);</params>
+                    <applications>
+                        <application>
+                            <name>HTTPS service</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <parameters>
+                                <parameter>43200</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <timeout>5s</timeout>
+                    <parameters>
+                        <parameter>
+                            <name>sslHost</name>
+                            <value>{$SSL_HOST}</value>
+                        </parameter>
+                        <parameter>
+                            <name>sslPort</name>
+                            <value>{$SSL_PORT}</value>
+                        </parameter>
+                    </parameters>
+                </item>
+                <item>
+                    <name>{$SSL_HOST} ImmuniWeb Server Signature</name>
+                    <type>DEPENDENT</type>
+                    <key>immuniweb.server.signature</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>HTTPS service</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.server_info.server_signature.value</parameter>
+                            </parameters>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>immuniweb.scan.result</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>{$SSL_HOST} ImmuniWeb SSL Grade</name>
+                    <type>DEPENDENT</type>
+                    <key>immuniweb.ssl.grade</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>https://www.immuniweb.com/ssl/#scoring</description>
+                    <applications>
+                        <application>
+                            <name>HTTPS service</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.results.grade</parameter>
+                            </parameters>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>immuniweb.scan.result</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>{$SSL_HOST} ImmuniWeb SSL HIPAA Compliant</name>
+                    <type>DEPENDENT</type>
+                    <key>immuniweb.ssl.hipaa.compliant</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>90d</trends>
+                    <applications>
+                        <application>
+                            <name>HTTPS service</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.hipaa.compliant.value</parameter>
+                            </parameters>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                        <step>
+                            <type>BOOL_TO_DECIMAL</type>
+                            <parameters>
+                                <parameter/>
+                            </parameters>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>immuniweb.scan.result</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>{$SSL_HOST} ImmuniWeb SSL PCI Compliant</name>
+                    <type>DEPENDENT</type>
+                    <key>immuniweb.ssl.pci.compliant</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>90d</trends>
+                    <applications>
+                        <application>
+                            <name>HTTPS service</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.pci_dss.compliant.value</parameter>
+                            </parameters>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                        <step>
+                            <type>BOOL_TO_DECIMAL</type>
+                            <parameters>
+                                <parameter/>
+                            </parameters>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>immuniweb.scan.result</key>
+                    </master_item>
+                </item>
+                <item>
+                    <name>{$SSL_HOST} ImmuniWeb SSL Score</name>
+                    <type>DEPENDENT</type>
+                    <key>immuniweb.ssl.score</key>
+                    <delay>0</delay>
+                    <history>30d</history>
+                    <trends>90d</trends>
+                    <value_type>FLOAT</value_type>
+                    <description>https://www.immuniweb.com/ssl/#scoring</description>
+                    <applications>
+                        <application>
+                            <name>HTTPS service</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <parameters>
+                                <parameter>$.results.score</parameter>
+                            </parameters>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                    </preprocessing>
+                    <master_item>
+                        <key>immuniweb.scan.result</key>
+                    </master_item>
+                    <triggers>
+                        <trigger>
+                            <expression>{max(#2)}&lt;{$IMMUNIWEB_MIN_SCORE}</expression>
+                            <name>{HOST.NAME} SSL ImmuniWeb Score Low</name>
+                            <priority>WARNING</priority>
+                            <description>Last 2 scores below minimum score threshold</description>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$IMMUNIWEB_MIN_SCORE}</macro>
+                    <value>50</value>
+                    <description>https://www.immuniweb.com/ssl/#scoring</description>
+                </macro>
+                <macro>
+                    <macro>{$SSL_HOST}</macro>
+                    <value>{HOST.NAME}</value>
+                </macro>
+                <macro>
+                    <macro>{$SSL_PORT}</macro>
+                    <value>443</value>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template App SSL ImmuniWeb Scan:immuniweb.ssl.score.nodata(36h)}=1 and ({Template App SSL ImmuniWeb Scan:immuniweb.scan.result.nodata(36h)}=0 or {Template App SSL ImmuniWeb Scan:immuniweb.ssl.score.nodata(72h)}=0)</expression>
+            <name>{HOST.NAME} SSL ImmuniWeb Scan Not Working</name>
+            <priority>WARNING</priority>
+            <description>No score received in last 36 hours, but there is result data or there were scores within the past 72 hours.</description>
+        </trigger>
+    </triggers>
+</zabbix_export>

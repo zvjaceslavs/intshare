@@ -1,0 +1,2272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2013-10-03T12:27:17Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Supermicro 2042G</template>
+            <name>Template Supermicro 2042G</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Fans</name>
+                </application>
+                <application>
+                    <name>Temperature</name>
+                </application>
+                <application>
+                    <name>Voltage</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>+3.3 Volts</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.3_3v</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>+3.3V</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>+3.3 Volts Standby</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.3_3vsb</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>+3.3VSB</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>+5 Volts</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.5v</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>+5V</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>+12 Volts</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.12v</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>+12V</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Battery</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.vbat</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>VBAT</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPU 1 Core Voltage</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>cpu.vcore[1]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>CPU1 Vcore</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPU 1 DIMM Voltage</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>cpu.dimm[1]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>CPU1 DIMM</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPU 2 Core Voltage</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>cpu.vcore[2]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>CPU2 Vcore</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPU 2 DIMM Voltage</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>cpu.dimm[2]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>CPU2 DIMM</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPU 3 Core Voltage</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>cpu.vcore[3]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>CPU3 Vcore</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPU 3 DIMM Voltage</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>cpu.dimm[3]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>CPU3 DIMM</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPU 4 Core Voltage</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>cpu.vcore[4]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>CPU4 Vcore</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPU 4 DIMM Voltage</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>cpu.dimm[4]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>Volts</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>CPU4 DIMM</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Voltage</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Fan 1</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.fan[1]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>RPM</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>Fan1</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Fans</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Fan 2</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.fan[2]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>RPM</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>Fan2</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Fans</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Fan 3</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.fan[3]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>RPM</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>Fan3</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Fans</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Fan 4</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.fan[4]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>RPM</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>Fan4</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Fans</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Fan 5</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.fan[5]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>RPM</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>Fan5</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Fans</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Fan 6</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.fan[6]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>RPM</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>Fan6</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Fans</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Fan 10</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.fan[10]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>RPM</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>Fan10</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Fans</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Fan 11</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.fan[11]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>RPM</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>Fan11</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Fans</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>System Temperature</name>
+                    <type>12</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>chassis.temperature</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>degrees C</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor>System Temp</ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Temperature</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <macros/>
+            <templates/>
+            <screens>
+                <screen>
+                    <name>IPMI</name>
+                    <hsize>1</hsize>
+                    <vsize>3</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <name>Fan Speed and Temperature</name>
+                                <host>Template Supermicro 2042G</host>
+                            </resource>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <name>System Voltages</name>
+                                <host>Template Supermicro 2042G</host>
+                            </resource>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>2</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <name>Fan Speed and Temperature</name>
+                                <host>Template Supermicro 2042G</host>
+                            </resource>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <name>System Voltages</name>
+                                <host>Template Supermicro 2042G</host>
+                            </resource>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>2</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <name>CPU Voltages</name>
+                                <host>Template Supermicro 2042G</host>
+                            </resource>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+            </screens>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.3_3v.last(0)}&lt;2.905 | {Template Supermicro 2042G:chassis.3_3v.last(0)}&gt;3.671</expression>
+            <name>+3.3 Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>+3.3 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.3_3v.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.3_3v.last(0)}&gt;3.695</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.3_3v.last(0)}&lt;2.929 | {Template Supermicro 2042G:chassis.3_3v.last(0)}&gt;3.647</expression>
+            <name>+3.3 Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>+3.3 Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.3_3v.last(0)}&lt;2.905 | {Template Supermicro 2042G:chassis.3_3v.last(0)}&gt;3.671</expression>
+                </dependency>
+                <dependency>
+                    <name>+3.3 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.3_3v.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.3_3v.last(0)}&gt;3.695</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.3_3v.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.3_3v.last(0)}&gt;3.695</expression>
+            <name>+3.3 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.3_3vsb.last(0)}&lt;2.905 | {Template Supermicro 2042G:chassis.3_3vsb.last(0)}&gt;3.671</expression>
+            <name>+3.3 Voltage Standby Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>+3.3 Voltage Standby Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.3_3vsb.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.3_3vsb.last(0)}&gt;3.695</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.3_3vsb.last(0)}&lt;2.929 | {Template Supermicro 2042G:chassis.3_3vsb.last(0)}&gt;3.647</expression>
+            <name>+3.3 Voltage Standby Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>+3.3 Voltage Standby Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.3_3vsb.last(0)}&lt;2.905 | {Template Supermicro 2042G:chassis.3_3vsb.last(0)}&gt;3.671</expression>
+                </dependency>
+                <dependency>
+                    <name>+3.3 Voltage Standby Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.3_3vsb.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.3_3vsb.last(0)}&gt;3.695</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.3_3vsb.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.3_3vsb.last(0)}&gt;3.695</expression>
+            <name>+3.3 Voltage Standby Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.5v.last(0)}&lt;4.449 | {Template Supermicro 2042G:chassis.5v.last(0)}&gt;5.567</expression>
+            <name>+5 Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>+5 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.5v.last(0)}&lt;4.417 | {Template Supermicro 2042G:chassis.5v.last(0)}&gt;5.599</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.5v.last(0)}&lt;4.481 | {Template Supermicro 2042G:chassis.5v.last(0)}&gt;5.535</expression>
+            <name>+5 Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>+5 Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.5v.last(0)}&lt;4.449 | {Template Supermicro 2042G:chassis.5v.last(0)}&gt;5.567</expression>
+                </dependency>
+                <dependency>
+                    <name>+5 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.5v.last(0)}&lt;4.417 | {Template Supermicro 2042G:chassis.5v.last(0)}&gt;5.599</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.5v.last(0)}&lt;4.417 | {Template Supermicro 2042G:chassis.5v.last(0)}&gt;5.599</expression>
+            <name>+5 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.12v.last(0)}&lt;10.654 | {Template Supermicro 2042G:chassis.12v.last(0)}&gt;13.302</expression>
+            <name>+12 Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>+12 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.12v.last(0)}&lt;10.601 | {Template Supermicro 2042G:chassis.12v.last(0)}&gt;13.355</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.12v.last(0)}&lt;10.705 | {Template Supermicro 2042G:chassis.12v.last(0)}&gt;13.249</expression>
+            <name>+12 Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>+12 Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.12v.last(0)}&lt;10.654 | {Template Supermicro 2042G:chassis.12v.last(0)}&gt;13.302</expression>
+                </dependency>
+                <dependency>
+                    <name>+12 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.12v.last(0)}&lt;10.601 | {Template Supermicro 2042G:chassis.12v.last(0)}&gt;13.355</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.12v.last(0)}&lt;10.601 | {Template Supermicro 2042G:chassis.12v.last(0)}&gt;13.355</expression>
+            <name>+12 Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.vbat.last(0)}&lt;2.905 | {Template Supermicro 2042G:chassis.vbat.last(0)}&gt;3.671</expression>
+            <name>Battery Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Battery Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.vbat.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.vbat.last(0)}&gt;3.695</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.vbat.last(0)}&lt;2.929 | {Template Supermicro 2042G:chassis.vbat.last(0)}&gt;3.647</expression>
+            <name>Battery Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Battery Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.vbat.last(0)}&lt;2.905 | {Template Supermicro 2042G:chassis.vbat.last(0)}&gt;3.671</expression>
+                </dependency>
+                <dependency>
+                    <name>Battery Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.vbat.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.vbat.last(0)}&gt;3.695</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.vbat.last(0)}&lt;2.879 | {Template Supermicro 2042G:chassis.vbat.last(0)}&gt;3.695</expression>
+            <name>Battery Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[1].last(0)}&lt;0.817 | {Template Supermicro 2042G:cpu.vcore[1].last(0)}&gt;1.431</expression>
+            <name>CPU 1 Core Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 1 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[1].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[1].last(0)}&gt;1.439</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[1].last(0)}&lt;0.825 | {Template Supermicro 2042G:cpu.vcore[1].last(0)}&gt;1.423</expression>
+            <name>CPU 1 Core Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 1 Core Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[1].last(0)}&lt;0.817 | {Template Supermicro 2042G:cpu.vcore[1].last(0)}&gt;1.431</expression>
+                </dependency>
+                <dependency>
+                    <name>CPU 1 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[1].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[1].last(0)}&gt;1.439</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[1].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[1].last(0)}&gt;1.439</expression>
+            <name>CPU 1 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[1].last(0)}&lt;1.201 | {Template Supermicro 2042G:cpu.dimm[1].last(0)}&gt;1.663</expression>
+            <name>CPU 1 DIMM Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 1 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[1].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[1].last(0)}&gt;1.679</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[1].last(0)}&lt;1.217 | {Template Supermicro 2042G:cpu.dimm[1].last(0)}&gt;1.647</expression>
+            <name>CPU 1 DIMM Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 1 DIMM Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[1].last(0)}&lt;1.201 | {Template Supermicro 2042G:cpu.dimm[1].last(0)}&gt;1.663</expression>
+                </dependency>
+                <dependency>
+                    <name>CPU 1 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[1].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[1].last(0)}&gt;1.679</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[1].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[1].last(0)}&gt;1.679</expression>
+            <name>CPU 1 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[2].last(0)}&lt;0.817 | {Template Supermicro 2042G:cpu.vcore[2].last(0)}&gt;1.431</expression>
+            <name>CPU 2 Core Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 2 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[2].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[2].last(0)}&gt;1.439</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[2].last(0)}&lt;0.825 | {Template Supermicro 2042G:cpu.vcore[2].last(0)}&gt;1.423</expression>
+            <name>CPU 2 Core Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 2 Core Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[2].last(0)}&lt;0.817 | {Template Supermicro 2042G:cpu.vcore[2].last(0)}&gt;1.431</expression>
+                </dependency>
+                <dependency>
+                    <name>CPU 2 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[2].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[2].last(0)}&gt;1.439</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[2].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[2].last(0)}&gt;1.439</expression>
+            <name>CPU 2 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[2].last(0)}&lt;1.201 | {Template Supermicro 2042G:cpu.dimm[2].last(0)}&gt;1.663</expression>
+            <name>CPU 2 DIMM Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 2 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[2].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[2].last(0)}&gt;1.679</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[2].last(0)}&lt;1.217 | {Template Supermicro 2042G:cpu.dimm[2].last(0)}&gt;1.647</expression>
+            <name>CPU 2 DIMM Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 2 DIMM Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[2].last(0)}&lt;1.201 | {Template Supermicro 2042G:cpu.dimm[2].last(0)}&gt;1.663</expression>
+                </dependency>
+                <dependency>
+                    <name>CPU 2 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[2].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[2].last(0)}&gt;1.679</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[2].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[2].last(0)}&gt;1.679</expression>
+            <name>CPU 2 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[3].last(0)}&lt;0.817 | {Template Supermicro 2042G:cpu.vcore[3].last(0)}&gt;1.431</expression>
+            <name>CPU 3 Core Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 3 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[3].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[3].last(0)}&gt;1.439</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[3].last(0)}&lt;0.825 | {Template Supermicro 2042G:cpu.vcore[3].last(0)}&gt;1.423</expression>
+            <name>CPU 3 Core Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 3 Core Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[3].last(0)}&lt;0.817 | {Template Supermicro 2042G:cpu.vcore[3].last(0)}&gt;1.431</expression>
+                </dependency>
+                <dependency>
+                    <name>CPU 3 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[3].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[3].last(0)}&gt;1.439</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[3].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[3].last(0)}&gt;1.439</expression>
+            <name>CPU 3 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[3].last(0)}&lt;1.201 | {Template Supermicro 2042G:cpu.dimm[3].last(0)}&gt;1.663</expression>
+            <name>CPU 3 DIMM Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 3 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[3].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[3].last(0)}&gt;1.679</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[3].last(0)}&lt;1.217 | {Template Supermicro 2042G:cpu.dimm[3].last(0)}&gt;1.647</expression>
+            <name>CPU 3 DIMM Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 3 DIMM Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[3].last(0)}&lt;1.201 | {Template Supermicro 2042G:cpu.dimm[3].last(0)}&gt;1.663</expression>
+                </dependency>
+                <dependency>
+                    <name>CPU 3 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[3].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[3].last(0)}&gt;1.679</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[3].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[3].last(0)}&gt;1.679</expression>
+            <name>CPU 3 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[4].last(0)}&lt;0.817 | {Template Supermicro 2042G:cpu.vcore[4].last(0)}&gt;1.431</expression>
+            <name>CPU 4 Core Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 4 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[4].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[4].last(0)}&gt;1.439</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[4].last(0)}&lt;0.825 | {Template Supermicro 2042G:cpu.vcore[4].last(0)}&gt;1.423</expression>
+            <name>CPU 4 Core Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 4 Core Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[4].last(0)}&lt;0.817 | {Template Supermicro 2042G:cpu.vcore[4].last(0)}&gt;1.431</expression>
+                </dependency>
+                <dependency>
+                    <name>CPU 4 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.vcore[4].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[4].last(0)}&gt;1.439</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.vcore[4].last(0)}&lt;0.809 | {Template Supermicro 2042G:cpu.vcore[4].last(0)}&gt;1.439</expression>
+            <name>CPU 4 Core Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[4].last(0)}&lt;1.201 | {Template Supermicro 2042G:cpu.dimm[4].last(0)}&gt;1.663</expression>
+            <name>CPU 4 DIMM Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 4 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[4].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[4].last(0)}&gt;1.679</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[4].last(0)}&lt;1.217 | {Template Supermicro 2042G:cpu.dimm[4].last(0)}&gt;1.647</expression>
+            <name>CPU 4 DIMM Voltage Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>CPU 4 DIMM Voltage Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[4].last(0)}&lt;1.201 | {Template Supermicro 2042G:cpu.dimm[4].last(0)}&gt;1.663</expression>
+                </dependency>
+                <dependency>
+                    <name>CPU 4 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:cpu.dimm[4].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[4].last(0)}&gt;1.679</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:cpu.dimm[4].last(0)}&lt;1.185 | {Template Supermicro 2042G:cpu.dimm[4].last(0)}&gt;1.679</expression>
+            <name>CPU 4 DIMM Voltage Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[1].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[1].last(0)}&gt;34289</expression>
+            <name>Fan 1 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 1 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[1].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[1].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[1].last(0)}&lt;676 | {Template Supermicro 2042G:chassis.fan[1].last(0)}&gt;34154</expression>
+            <name>Fan 1 Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 1 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[1].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[1].last(0)}&gt;34289</expression>
+                </dependency>
+                <dependency>
+                    <name>Fan 1 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[1].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[1].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[1].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[1].last(0)}&gt;34425</expression>
+            <name>Fan 1 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[2].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[2].last(0)}&gt;34289</expression>
+            <name>Fan 2 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 2 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[2].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[2].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[2].last(0)}&lt;676 | {Template Supermicro 2042G:chassis.fan[2].last(0)}&gt;34154</expression>
+            <name>Fan 2 Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 3 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[3].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[3].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[2].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[2].last(0)}&gt;34425</expression>
+            <name>Fan 2 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[3].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[3].last(0)}&gt;34289</expression>
+            <name>Fan 3 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 3 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[3].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[3].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[3].last(0)}&lt;676 | {Template Supermicro 2042G:chassis.fan[3].last(0)}&gt;34154</expression>
+            <name>Fan 3 Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 3 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[3].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[3].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[3].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[3].last(0)}&gt;34425</expression>
+            <name>Fan 3 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[4].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[4].last(0)}&gt;34289</expression>
+            <name>Fan 4 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 4 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[4].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[4].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[4].last(0)}&lt;676 | {Template Supermicro 2042G:chassis.fan[4].last(0)}&gt;34154</expression>
+            <name>Fan 4 Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 4 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[4].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[4].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[4].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[4].last(0)}&gt;34425</expression>
+            <name>Fan 4 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[5].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[5].last(0)}&gt;34289</expression>
+            <name>Fan 5 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 5 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[5].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[5].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[5].last(0)}&lt;676 | {Template Supermicro 2042G:chassis.fan[5].last(0)}&gt;34154</expression>
+            <name>Fan 5 Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 5 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[5].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[5].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[5].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[5].last(0)}&gt;34425</expression>
+            <name>Fan 5 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[6].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[6].last(0)}&gt;34289</expression>
+            <name>Fan 6 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 6 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[6].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[6].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[6].last(0)}&lt;676 | {Template Supermicro 2042G:chassis.fan[6].last(0)}&gt;34154</expression>
+            <name>Fan 6 Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 6 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[6].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[6].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[6].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[6].last(0)}&gt;34425</expression>
+            <name>Fan 6 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[10].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[10].last(0)}&gt;34289</expression>
+            <name>Fan 10 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 10 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[10].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[10].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[10].last(0)}&lt;676 | {Template Supermicro 2042G:chassis.fan[10].last(0)}&gt;34154</expression>
+            <name>Fan 10 Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 10 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[10].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[10].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[10].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[10].last(0)}&gt;34425</expression>
+            <name>Fan 10 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[11].last(0)}&lt;541 | {Template Supermicro 2042G:chassis.fan[11].last(0)}&gt;34289</expression>
+            <name>Fan 11 Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 11 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[11].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[11].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[11].last(0)}&lt;676 | {Template Supermicro 2042G:chassis.fan[11].last(0)}&gt;34154</expression>
+            <name>Fan 11 Non-Critical on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>Fan 11 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.fan[11].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[11].last(0)}&gt;34425</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.fan[11].last(0)}&lt;406 | {Template Supermicro 2042G:chassis.fan[11].last(0)}&gt;34425</expression>
+            <name>Fan 11 Non-Recoverable on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.temperature.last(0)}&lt;-6 | {Template Supermicro 2042G:chassis.temperature.last(0)}&gt;76</expression>
+            <name>System Temperature Critical on on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>System Temperature Non-Recoverable on on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.temperature.last(0)}&lt;-8 | {Template Supermicro 2042G:chassis.temperature.last(0)}&gt;78</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.temperature.last(0)}&lt;-4 | {Template Supermicro 2042G:chassis.temperature.last(0)}&gt;74</expression>
+            <name>System Temperature Non-Critical on on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>System Temperature Critical on on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.temperature.last(0)}&lt;-6 | {Template Supermicro 2042G:chassis.temperature.last(0)}&gt;76</expression>
+                </dependency>
+                <dependency>
+                    <name>System Temperature Non-Recoverable on on {HOST.NAME} [{ITEM.VALUE}]</name>
+                    <expression>{Template Supermicro 2042G:chassis.temperature.last(0)}&lt;-8 | {Template Supermicro 2042G:chassis.temperature.last(0)}&gt;78</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{Template Supermicro 2042G:chassis.temperature.last(0)}&lt;-8 | {Template Supermicro 2042G:chassis.temperature.last(0)}&gt;78</expression>
+            <name>System Temperature Non-Recoverable on on {HOST.NAME} [{ITEM.VALUE}]</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>CPU Voltages</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>9999FF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>cpu.vcore[1]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>0000EE</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>cpu.dimm[1]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>99FF99</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>cpu.vcore[2]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00EE00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>cpu.dimm[2]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>4</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>FF99FF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>cpu.vcore[3]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>5</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>EE00EE</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>cpu.dimm[3]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>6</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>FFFF99</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>cpu.vcore[4]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>7</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>EEEE00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>cpu.dimm[4]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Fan Speed and Temperature</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>99FFFF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.fan[1]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>66FFFF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.fan[2]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>33FFFF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.fan[3]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00EEEE</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.fan[4]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>4</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00DDDD</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.fan[5]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>5</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00CCCC</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.fan[6]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>6</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>FF99FF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.fan[10]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>7</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>FF66FF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.fan[11]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>8</sortorder>
+                    <drawtype>2</drawtype>
+                    <color>EE0000</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.temperature</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>System Voltages</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C80000</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.3_3v</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00C800</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.3_3vsb</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>0000C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.5v</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C800C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.12v</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>4</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00C8C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Supermicro 2042G</host>
+                        <key>chassis.vbat</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>

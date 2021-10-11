@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-10-24T05:22:22Z</date>
+    <media_types>
+        <media_type>
+            <name>Telegram [Zabbix Notify]</name>
+            <type>WEBHOOK</type>
+            <parameters>
+                <parameter>
+                    <name>BOT_TOKEN</name>
+                    <value>267788435192:ABEQ4qgWc15OXyTnDmxE29NdW8IFpGC_xqM</value>
+                </parameter>
+                <parameter>
+                    <name>chat_id</name>
+                    <value>{ALERT.SENDTO}</value>
+                </parameter>
+                <parameter>
+                    <name>message</name>
+                    <value>{ALERT.MESSAGE}</value>
+                </parameter>
+                <parameter>
+                    <name>parse_mode</name>
+                    <value>html</value>
+                </parameter>
+            </parameters>
+            <max_sessions>0</max_sessions>
+            <attempts>5</attempts>
+            <attempt_interval>2s</attempt_interval>
+            <script>try {&#13;
+	var itm_Request = new CurlHttpRequest(); // Определение объекта для работы с запросами&#13;
+	itm_Request.AddHeader('Content-Type: application/x-www-form-urlencoded'); // Установка заголовка&#13;
+	&#13;
+	zbx_Params = JSON.parse(value); // Парсинг входящих от Zabbix данных&#13;
+	var result = {'chat_id': zbx_Params.chat_id}; // Определение объекта возвращаемых данных (возвращается идентификатор пользователя)&#13;
+	&#13;
+	zbx_Params.message = zbx_Params.message.replace(/\\U\+([\d\w]{4,5})/gi, function(match, grp) { // Работа с Эмодзи&#13;
+        return String.fromCharCode(parseInt(grp, 16)); // Преобразование из кода вида \u2601 в символ multibyte&#13;
+    });&#13;
+	&#13;
+	itm_Response = itm_Request.Post('https://api.telegram.org/bot' + zbx_Params.BOT_TOKEN + '/sendMessage', &quot;chat_id=&quot; + zbx_Params.chat_id + '&amp;parse_mode=' + zbx_Params.parse_mode + '&amp;text=' + zbx_Params.message); // Отправка запроса&#13;
+	&#13;
+	if (itm_Request.Status() &gt; 0) {&#13;
+		json_Response = JSON.parse(itm_Response); // Парсинг данных от телеграм&#13;
+		if (!json_Response.ok) throw 'Response code: ' + json_Response.error_code + '. Reason: ' + json_Response.description; // Обработка ошибки, если телеграм сообщил о ней&#13;
+		result.message_id = json_Response.result.message_id; // Добавление в объект идентификатора message_id&#13;
+	} else {&#13;
+		throw 'Response code: ' + itm_Request.Status(); // Обработка ошибки, если запрос имеет ошибочный HTTP код&#13;
+	}&#13;
+} catch (error) {&#13;
+	Zabbix.Log(2, 'Telegram send failed: ' + error); // Отправка сообщения в лог Zabbix&#13;
+    result = {}; // Сообщаем, что произошла ошибка&#13;
+}&#13;
+return JSON.stringify(result); // Возвращаем объект с данными</script>
+            <timeout>8s</timeout>
+            <process_tags>YES</process_tags>
+            <show_event_menu>NO</show_event_menu>
+            <description>Контакты: grayhoax[at]grayhoax.ru&#13;
+Телеграм: @grayhoax&#13;
+Сбербанк: 55767899&#13;
+&#13;
+Инструкция по установке - https://github.com/GrayHoax/zabbix-webhook-telegram/</description>
+        </media_type>
+    </media_types>
+</zabbix_export>

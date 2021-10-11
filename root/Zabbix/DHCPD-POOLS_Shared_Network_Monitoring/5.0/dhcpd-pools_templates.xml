@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2020-10-05T12:22:41Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>DHCPD Pools data</template>
+            <name>DHCPD Pools data</name>
+            <description>Template that use dhcpd-pools ( package avail on EPEL or http://dhcpd-pools.sourceforge.net ) to monitor DHCPD Pools Status</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>DHCPD</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>DHCPD-POOLS-JSON-DATA</name>
+                    <key>system.run[dhcpd-pools -fj -L 12]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>RAW JSON DATA from dhcpd-pools</description>
+                    <applications>
+                        <application>
+                            <name>DHCPD</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <params>shared-networks
+data</params>
+                        </step>
+                    </preprocessing>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>DHCPD-Pools Discovery</name>
+                    <type>DEPENDENT</type>
+                    <key>dhcpd-pools.discovery</key>
+                    <delay>0</delay>
+                    <lifetime>90d</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#LOCATION} : Defined IP</name>
+                            <type>CALCULATED</type>
+                            <key>DHCPD-POOLS[{#LOCATION},DEFINED]</key>
+                            <delay>5m</delay>
+                            <params>{#DEFINED}</params>
+                            <description>Total number of IP’s in the POOL</description>
+                            <applications>
+                                <application>
+                                    <name>DHCPD</name>
+                                </application>
+                            </applications>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>DHCPD-POOLS : {#LOCATION}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LOCATION} : Free IP</name>
+                            <type>CALCULATED</type>
+                            <key>DHCPD-POOLS[{#LOCATION},FREE]</key>
+                            <delay>5m</delay>
+                            <params>{#FREE}</params>
+                            <description>Number of IP’s currently available in the pool</description>
+                            <applications>
+                                <application>
+                                    <name>DHCPD</name>
+                                </application>
+                            </applications>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>DHCPD-POOLS : {#LOCATION}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;{$MIN_FREE_IP}</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{last()}&gt;{$MIN_FREE_IP}+10</recovery_expression>
+                                    <name>Less than {$MIN_FREE_IP} leases available in {#LOCATION}</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LOCATION} : Percent IP used</name>
+                            <type>CALCULATED</type>
+                            <key>DHCPD-POOLS[{#LOCATION},PERCENT]</key>
+                            <delay>5m</delay>
+                            <units>%</units>
+                            <params>{#PERCENT}</params>
+                            <description>Percentage of IP’s used in the pool</description>
+                            <applications>
+                                <application>
+                                    <name>DHCPD</name>
+                                </application>
+                            </applications>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>DHCPD-POOLS : {#LOCATION}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;{$PERCENT_IP_USED}</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{last()}&lt;{$PERCENT_IP_USED}-5</recovery_expression>
+                                    <name>More than {$PERCENT_IP_USED}% IP used in {#LOCATION}</name>
+                                    <priority>AVERAGE</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LOCATION} : Status</name>
+                            <type>CALCULATED</type>
+                            <key>DHCPD-POOLS[{#LOCATION},STATUS]</key>
+                            <delay>5m</delay>
+                            <params>{#STATUS}</params>
+                            <description>Status of the Pool ( by default / see http://dhcpd-pools.sourceforge.net/man.html for −−critical and −−warning )&#13;
+0 = Good&#13;
+1 = percent used over 80%&#13;
+2 = percent used over 90%</description>
+                            <applications>
+                                <application>
+                                    <name>DHCPD</name>
+                                </application>
+                            </applications>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>DHCPD-POOLS : {#LOCATION}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LOCATION} : Touched IP</name>
+                            <type>CALCULATED</type>
+                            <key>DHCPD-POOLS[{#LOCATION},TOUCHED]</key>
+                            <delay>5m</delay>
+                            <params>{#TOUCHED}</params>
+                            <description>Number of IP’s which appear in the lease file, but who’s leases have expired. A touched IP is either expired or abandoned.</description>
+                            <applications>
+                                <application>
+                                    <name>DHCPD</name>
+                                </application>
+                            </applications>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>DHCPD-POOLS : {#LOCATION}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LOCATION} : Already Used IP</name>
+                            <type>CALCULATED</type>
+                            <key>DHCPD-POOLS[{#LOCATION},TOUCH_COUNT]</key>
+                            <delay>5m</delay>
+                            <params>{#TOUCH_COUNT}</params>
+                            <description>Number of IP’s that was already used at least once in the pool</description>
+                            <applications>
+                                <application>
+                                    <name>DHCPD</name>
+                                </application>
+                            </applications>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>DHCPD-POOLS : {#LOCATION}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LOCATION} : Percent IP already use at least for 1 lease</name>
+                            <type>CALCULATED</type>
+                            <key>DHCPD-POOLS[{#LOCATION},TOUCH_PERCENT]</key>
+                            <delay>5m</delay>
+                            <units>%</units>
+                            <params>{#TOUCH_PERCENT}</params>
+                            <description>Percentage of IP’s that was already in used at least one time in the pool</description>
+                            <applications>
+                                <application>
+                                    <name>DHCPD</name>
+                                </application>
+                            </applications>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>DHCPD-POOLS : {#LOCATION}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LOCATION} : Used IP</name>
+                            <type>CALCULATED</type>
+                            <key>DHCPD-POOLS[{#LOCATION},USED]</key>
+                            <delay>5m</delay>
+                            <params>{#USED}</params>
+                            <description>Number of IP’s currently used in the pool</description>
+                            <applications>
+                                <application>
+                                    <name>DHCPD</name>
+                                </application>
+                            </applications>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>DHCPD-POOLS : {#LOCATION}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>{#LOCATION}</name>
+                            <graph_items>
+                                <graph_item>
+                                    <drawtype>FILLED_REGION</drawtype>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>DHCPD Pools data</host>
+                                        <key>DHCPD-POOLS[{#LOCATION},DEFINED]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>FILLED_REGION</drawtype>
+                                    <color>0040FF</color>
+                                    <item>
+                                        <host>DHCPD Pools data</host>
+                                        <key>DHCPD-POOLS[{#LOCATION},USED]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <drawtype>BOLD_LINE</drawtype>
+                                    <color>00FFFF</color>
+                                    <item>
+                                        <host>DHCPD Pools data</host>
+                                        <key>DHCPD-POOLS[{#LOCATION},TOUCH_COUNT]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                    <master_item>
+                        <key>system.run[dhcpd-pools -fj -L 12]</key>
+                    </master_item>
+                    <lld_macro_paths>
+                        <lld_macro_path>
+                            <lld_macro>{#DEFINED}</lld_macro>
+                            <path>$.defined</path>
+                        </lld_macro_path>
+                        <lld_macro_path>
+                            <lld_macro>{#FREE}</lld_macro>
+                            <path>$.free</path>
+                        </lld_macro_path>
+                        <lld_macro_path>
+                            <lld_macro>{#LOCATION}</lld_macro>
+                            <path>$.location</path>
+                        </lld_macro_path>
+                        <lld_macro_path>
+                            <lld_macro>{#PERCENT}</lld_macro>
+                            <path>$.percent</path>
+                        </lld_macro_path>
+                        <lld_macro_path>
+                            <lld_macro>{#STATUS}</lld_macro>
+                            <path>$.status</path>
+                        </lld_macro_path>
+                        <lld_macro_path>
+                            <lld_macro>{#TOUCHED}</lld_macro>
+                            <path>$.touched</path>
+                        </lld_macro_path>
+                        <lld_macro_path>
+                            <lld_macro>{#USED}</lld_macro>
+                            <path>$.used</path>
+                        </lld_macro_path>
+                        <lld_macro_path>
+                            <lld_macro>{#TOUCH_COUNT}</lld_macro>
+                            <path>$.touch_count</path>
+                        </lld_macro_path>
+                        <lld_macro_path>
+                            <lld_macro>{#TOUCH_PERCENT}</lld_macro>
+                            <path>$.touch_percent</path>
+                        </lld_macro_path>
+                    </lld_macro_paths>
+                </discovery_rule>
+            </discovery_rules>
+            <macros>
+                <macro>
+                    <macro>{$MIN_FREE_IP}</macro>
+                    <value>10</value>
+                    <description>Minimum Free IP</description>
+                </macro>
+                <macro>
+                    <macro>{$PERCENT_IP_USED}</macro>
+                    <value>90</value>
+                    <description>Max pourcentage of IP used  for trigger</description>
+                </macro>
+            </macros>
+            <screens>
+                <screen>
+                    <name>DHCPD-POOLS</name>
+                    <hsize>2</hsize>
+                    <vsize>100</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>20</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>{#LOCATION}</name>
+                                <host>DHCPD Pools data</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>2</max_columns>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+            </screens>
+        </template>
+    </templates>
+</zabbix_export>

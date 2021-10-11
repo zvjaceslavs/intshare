@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2021-03-12T04:37:18Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+        <group>
+            <name>ZBS-CISCO-TEMPLATES</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template SNMP Cisco WS3850-24T</template>
+            <name>Template SNMP Cisco WS3850-24T</name>
+            <description>Created 18 Mar 2020 by Charles for by full clone of Template SNMP Cisco WS3750 (thanks Sergei Averichev) then:&#13;
+* Change &quot;Device description&quot; to &quot;Device model name&quot; and fix using ZBX-CISCO-ENVMON OID&#13;
+* Fix &quot;Device serial number&quot; using ZBX-CISCO-ENVMON OID&#13;
+* Removed broken item CPU (removed CPU triggers and graph)&#13;
+* Removed broken item Device firmware version&#13;
+* Removed broken item Device hardware version&#13;
+* Link &quot;Template Module Cisco CISCO-PROCESS-MIB SNMPv2&quot;&#13;
+&#13;
+28 Jun 2020&#13;
+* Added description to interface names&#13;
+* Fixed interface graph prototype. Added error and discarded packets&#13;
+&#13;
+8 Jan 2021&#13;
+* Fixed spurious &quot;Incoming traffic on interface ... exceed 80% for the last 5 minutes&quot; notifications by re-modelling the trigger prototype based on &quot;Template Module Interfaces SNMPv2&quot;&#13;
+* Fixed IFNAME OID&#13;
+* Changed IF.UTIL.MAX from 80% to 90% (for consistency with &quot;Template Module Interfaces SNMPv2&quot;)</description>
+            <templates>
+                <template>
+                    <name>Template Module Cisco CISCO-PROCESS-MIB SNMPv2</name>
+                </template>
+                <template>
+                    <name>Template Module ICMP Ping</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>ZBS-CISCO-TEMPLATES</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Environment</name>
+                </application>
+                <application>
+                    <name>Information(s)</name>
+                </application>
+                <application>
+                    <name>Interface(s)</name>
+                </application>
+                <application>
+                    <name>System</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Device manufacter mame</name>
+                    <type>EXTERNAL</type>
+                    <key>echo.something[&quot;Cisco Systems&quot;]</key>
+                    <delay>3600</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>VENDOR</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Information(s)</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.47.1.1.1.1.2.1</snmp_oid>
+                    <key>entPhysicalDescr</key>
+                    <delay>3600</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>HARDWARE_FULL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device model name</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.47.1.1.1.1.13[&quot;index&quot;,&quot;.1.3.6.1.2.1.47.1.1.1.1.4&quot;,&quot;0&quot;]</snmp_oid>
+                    <key>entPhysicalModelName</key>
+                    <delay>3600</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>MODEL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Information(s)</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device serial number</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.47.1.1.1.1.11[&quot;index&quot;,&quot;.1.3.6.1.2.1.47.1.1.1.1.4&quot;,&quot;0&quot;]</snmp_oid>
+                    <key>entPhysicalSerialNum</key>
+                    <delay>3600</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>SERIALNO_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Information(s)</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device contact details</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-MIB::sysContact.0</snmp_oid>
+                    <key>sysContact</key>
+                    <delay>3600</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>CONTACT</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Information(s)</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device full description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.1.1.0</snmp_oid>
+                    <key>sysDescr</key>
+                    <delay>3600</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>Full text IOS description</description>
+                    <inventory_link>SOFTWARE_FULL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Information(s)</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device location</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.1.6.0</snmp_oid>
+                    <key>sysLocation</key>
+                    <delay>3600</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>The physical location of this node (e.g., `telephone closet, 3rd floor').  If the location is unknown, the value is the zero-length string.</description>
+                    <inventory_link>LOCATION</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Information(s)</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device name</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.9.2.1.3.0</snmp_oid>
+                    <key>sysName</key>
+                    <delay>3600</delay>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name.  If the name is unknown, the value is the zero-length string.</description>
+                    <inventory_link>ALIAS</inventory_link>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device uptime</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.1.3.0</snmp_oid>
+                    <key>sysUpTime</key>
+                    <delay>300</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <units>uptime</units>
+                    <description>The time since the network management portion of the system was last re-initialized.</description>
+                    <applications>
+                        <application>
+                            <name>Information(s)</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Environment Fans</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.13.1.4.1.2]</snmp_oid>
+                    <key>ciscoEnvMonFanStatusDescr</key>
+                    <delay>3600</delay>
+                    <lifetime>1d</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Environment $1 status</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.9.9.13.1.4.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>ciscoEnvMonFanState[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <applications>
+                                <application>
+                                    <name>Environment</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>ciscoEnvMonState</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{avg(#3)}=3</expression>
+                                    <name>{HOST.NAME} {#SNMPVALUE} fan critical</name>
+                                    <priority>AVERAGE</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{avg(#3)}=6</expression>
+                                    <name>{HOST.NAME} {#SNMPVALUE} fan failed</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{avg(#3)}=2</expression>
+                                    <name>{HOST.NAME} {#SNMPVALUE} fan warning</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Environment Temperature</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.13.1.3.1.2]</snmp_oid>
+                    <key>ciscoEnvMonTemperatureStatusDescr</key>
+                    <delay>3600</delay>
+                    <lifetime>1d</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Environment $1 temp. status</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.9.9.13.1.3.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>ciscoEnvMonTemperatureState[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>1d</history>
+                            <trends>0</trends>
+                            <description>CiscoEnvMonState (INTEGER) {normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6)}&#13;
+&#13;
+The current state of the testpoint being instrumented.</description>
+                            <applications>
+                                <application>
+                                    <name>Environment</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>ciscoEnvMonState</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}=6</expression>
+                                    <name>{HOST.NAME} {#SNMPVALUE} temperature critical</name>
+                                    <priority>DISASTER</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{avg(#3)}=3</expression>
+                                    <name>{HOST.NAME} {#SNMPVALUE} temperature emergency</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{avg(#3)}=2</expression>
+                                    <name>{HOST.NAME} {#SNMPVALUE} temperature warning</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Processes Memory</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.48.1.1.1.2]</snmp_oid>
+                    <key>ciscoMemoryPoolName</key>
+                    <delay>3600</delay>
+                    <lifetime>1d</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Device memory $1 free</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.9.9.48.1.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>ciscoMemoryPoolFree[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>30d</history>
+                            <trends>60d</trends>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>Environment</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Device memory $1 largest free</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.9.9.48.1.1.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>ciscoMemoryPoolLargestFree[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>30d</history>
+                            <trends>60d</trends>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>Environment</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Device memory $1 used</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.9.9.48.1.1.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>ciscoMemoryPoolUsed[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>30d</history>
+                            <trends>60d</trends>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>Environment</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Memory free, {#SNMPVALUE}</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>EACC00</color>
+                                    <item>
+                                        <host>Template SNMP Cisco WS3850-24T</host>
+                                        <key>ciscoMemoryPoolFree[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Memory usage, {#SNMPVALUE}</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>EACC00</color>
+                                    <item>
+                                        <host>Template SNMP Cisco WS3850-24T</host>
+                                        <key>ciscoMemoryPoolUsed[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Network Interfaces</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#IFNAME},.1.3.6.1.2.1.2.2.1.2,{#IFDESCR},.1.3.6.1.2.1.31.1.1.1.18]</snmp_oid>
+                    <key>ifName</key>
+                    <delay>3600</delay>
+                    <lifetime>1d</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Admin status of interface {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.2.2.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>ifAdminStatus[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <description>INTEGER {up(1), down(2), testing(3)}&#13;
+&#13;
+The desired state of the interface.  The testing(3) state indicates that no operational packets can be passed.&#13;
+&#13;
+When a managed system initializes, all interfaces start with ifAdminStatus in the down(2) state.  As a result of either explicit management action or per configuration information retained by the managed system, ifAdminStatus is then changed to either the up(1) or testing(3) states (or remains in the down(2) state).</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>SNMP interface status (ifAdminStatus)</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Alias of interface {#IFNAME}</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.18.{#SNMPINDEX}</snmp_oid>
+                            <key>ifAlias[{#IFNAME}]</key>
+                            <delay>3600</delay>
+                            <history>1d</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <description>This object is an 'alias' name for the interface as specified by a network manager, and provides a non-volatile 'handle' for the interface.&#13;
+&#13;
+On the first instantiation of an interface, the value ofifAlias associated with that interface is the zero-length string.  As and when a value is written into an instance of ifAlias through a network management set operation, then the agent must retain the supplied value in the ifAlias instance associated with the same interface for as long as that interface remains instantiated, including across all re-initializations/reboots of the network management system, including those which result in a change of the interface's ifIndex value.&#13;
+&#13;
+An example of the value which a network manager might store in this object for a WAN interface is the (Telco's) circuit number/identifier of the interface. Some agents may support write-access only for interfaces having particular values of ifType.&#13;
+&#13;
+An agent which supports write access to this object is required to keep the value  in non-volatile storage, but it may limit the length of new values depending on how much storage is already occupied by the current values for other interfaces.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Description of interface {#IFNAME}</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.2.2.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>ifDescr[{#IFNAME}]</key>
+                            <delay>3600</delay>
+                            <history>1d</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <description>A textual string containing information about the interface.  This string should include the name of the manufacturer, the product name and the version of the interface hardware/software.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Incoming broadcast packets on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>ifHCInBroadcastPkts[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>pps</units>
+                            <description>The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were addressed to a broadcast address at this sub-layer.&#13;
+&#13;
+This object is a 64-bit version of ifInBroadcastPkts.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Incoming multicast packets on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>ifHCInMulticastPkts[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>pps</units>
+                            <description>The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were addressed to a multicast address at this sub-layer.  For a MAC layer protocol, this includes both Group and Functional addresses.&#13;
+&#13;
+This object is a 64-bit version of ifInMulticastPkts.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Incoming traffic on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>ifHCInOctets[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>180d</history>
+                            <trends>30d</trends>
+                            <units>bps</units>
+                            <description>The total number of octets received on the interface, including framing characters.&#13;
+&#13;
+This object is a 64-bit version of ifInOctets.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>8</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Incoming unicast packets on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>ifHCInUcastPkts[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>pps</units>
+                            <description>The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were not addressed to a multicast or broadcast address at this sub-layer.&#13;
+&#13;
+This object is a 64-bit version of ifInUcastPkts.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Outgoing broadcast packets on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.13.{#SNMPINDEX}</snmp_oid>
+                            <key>ifHCOutBroadcastPkts[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>pps</units>
+                            <description>The total number of packets that higher-level protocols requested be transmitted, and which were addressed to a&#13;
+broadcast address at this sub-layer, including those that were discarded or not sent.&#13;
+&#13;
+This object is a 64-bit version of ifOutBroadcastPkts.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other&#13;
+times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Outgoing multicast packets on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>ifHCOutMulticastPkts[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>pps</units>
+                            <description>The total number of packets that higher-level protocols requested be transmitted, and which were addressed to a multicast address at this sub-layer, including those that were discarded or not sent.  For a MAC layer protocol, this includes both Group and Functional addresses.&#13;
+&#13;
+This object is a 64-bit version of ifOutMulticastPkts.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Outgoing traffic on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>IfHCOutOctets[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>180d</history>
+                            <trends>30d</trends>
+                            <units>bps</units>
+                            <description>The total number of octets transmitted out of the interface, including framing characters.  This object is a 64-bit version of ifOutOctets.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>8</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Outgoing unicast packets on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>ifHCOutUcastPkts[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>pps</units>
+                            <description>The total number of packets that higher-level protocols requested be transmitted, and which were not addressed to a multicast or broadcast address at this sub-layer, including those that were discarded or not sent.&#13;
+&#13;
+This object is a 64-bit version of ifOutUcastPkts.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Speed of interface {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.31.1.1.1.15.{#SNMPINDEX}</snmp_oid>
+                            <key>ifHighSpeed[{#IFNAME}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>bps</units>
+                            <description>An estimate of the interface's current bandwidth in bits per second.&#13;
+&#13;
+For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.  For a sub-layer which has no concept of bandwidth, this object should be zero.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>1000000</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Incoming discarded packets on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.2.2.1.13.{#SNMPINDEX}</snmp_oid>
+                            <key>ifInDiscards[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>pps</units>
+                            <description>The number of inbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+&#13;
+One possible reason for discarding such a packet could be to free up buffer space.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Inbound errors on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.2.2.1.14.{#SNMPINDEX}</snmp_oid>
+                            <key>ifInErrors[{#IFNAME}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <description>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>SIMPLE_CHANGE</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Uptime of interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.2.2.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>ifLastChange[{#IFNAME}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>uptime</units>
+                            <description>The value of sysUpTime at the time the interface entered its current operational state.  If the current state was entered prior to the last re-initialization of the local network management subsystem, then this object contains a zero value.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.01</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Operational status of interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>ifOperStatus[{#IFNAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <description>INTEGER {up(1), down(2), testing(3), unknown(4), dormant(5), notPresent(6), lowerLayerDown(7)}&#13;
+&#13;
+he current operational state of the interface.&#13;
+&#13;
+The testing(3) state indicates that no operational packets can be passed.&#13;
+&#13;
+If ifAdminStatus is down(2) then ifOperStatus should be down(2).&#13;
+&#13;
+If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic;it should change to dormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection);it should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state;it should remain in the notPresent(6) state if the interface has missing (typically, hardware) components.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>SNMP interface status (ifOperStatus)</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{max(#1)}=0 and {max(#2)}=0</expression>
+                                    <name>{HOST.NAME} link changed on {#IFNAME} ({#IFDESCR}): {ITEM.VALUE1}</name>
+                                    <priority>DISASTER</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Outgoing discarded packets on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.2.2.1.19.{#SNMPINDEX}</snmp_oid>
+                            <key>ifOutDiscards[{#IFNAME}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <units>pps</units>
+                            <description>The number of outbound packets which were chosen to be discarded even though no errors had been detected to prevent their being transmitted.  One possible reason for discarding such a packet could be to free up buffer space. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Outbound errors on interface  {#IFNAME} ({#IFDESCR})</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.2.2.1.20.{#SNMPINDEX}</snmp_oid>
+                            <key>ifOutErrors[{#IFNAME}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <description>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.&#13;
+&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                            <applications>
+                                <application>
+                                    <name>Interface(s)</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>SIMPLE_CHANGE</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>({Template SNMP Cisco WS3850-24T:ifHCInOctets[{#IFNAME}].avg(15m)}&gt;({$IF.UTIL.MAX:&quot;{#IFNAME}&quot;}/100)*{Template SNMP Cisco WS3850-24T:ifHighSpeed[{#IFNAME}].last()} or&#13;
+{Template SNMP Cisco WS3850-24T:IfHCOutOctets[{#IFNAME}].avg(15m)}&gt;({$IF.UTIL.MAX:&quot;{#IFNAME}&quot;}/100)*{Template SNMP Cisco WS3850-24T:ifHighSpeed[{#IFNAME}].last()}) and&#13;
+{Template SNMP Cisco WS3850-24T:ifHighSpeed[{#IFNAME}].last()}&gt;0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{Template SNMP Cisco WS3850-24T:ifHCInOctets[{#IFNAME}].avg(15m)}&lt;(({$IF.UTIL.MAX:&quot;{#IFNAME}&quot;}-3)/100)*{Template SNMP Cisco WS3850-24T:ifHighSpeed[{#IFNAME}].last()} and&#13;
+{Template SNMP Cisco WS3850-24T:IfHCOutOctets[{#IFNAME}].avg(15m)}&lt;(({$IF.UTIL.MAX:&quot;{#IFNAME}&quot;}-3)/100)*{Template SNMP Cisco WS3850-24T:ifHighSpeed[{#IFNAME}].last()}</recovery_expression>
+                            <name>Interface {#IFNAME}({#IFDESCR}): High bandwidth usage ( &gt; {$IF.UTIL.MAX:&quot;{#IFNAME}&quot;}% )</name>
+                            <opdata>In: {ITEM.LASTVALUE1}, out: {ITEM.LASTVALUE3}, speed: {ITEM.LASTVALUE2}</opdata>
+                            <priority>WARNING</priority>
+                            <description>The network interface utilization is close to its estimated maximum bandwidth.</description>
+                            <manual_close>YES</manual_close>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Interface {#IFNAME}({#IFDESCR}): Network traffic</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>00C800</color>
+                                    <item>
+                                        <host>Template SNMP Cisco WS3850-24T</host>
+                                        <key>ifHCInOctets[{#IFNAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>3333FF</color>
+                                    <item>
+                                        <host>Template SNMP Cisco WS3850-24T</host>
+                                        <key>IfHCOutOctets[{#IFNAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>Template SNMP Cisco WS3850-24T</host>
+                                        <key>ifOutErrors[{#IFNAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <color>A54F10</color>
+                                    <item>
+                                        <host>Template SNMP Cisco WS3850-24T</host>
+                                        <key>ifInErrors[{#IFNAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>4</sortorder>
+                                    <color>FC6EA3</color>
+                                    <item>
+                                        <host>Template SNMP Cisco WS3850-24T</host>
+                                        <key>ifOutDiscards[{#IFNAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>5</sortorder>
+                                    <color>6C59DC</color>
+                                    <item>
+                                        <host>Template SNMP Cisco WS3850-24T</host>
+                                        <key>ifInDiscards[{#IFNAME}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <macros>
+                <macro>
+                    <macro>{$IF.UTIL.MAX}</macro>
+                    <value>90</value>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>ciscoEnvMonState</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>warning</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>critical</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>shutdown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>notPresent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>notFunctioning</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>SNMP interface status (ifAdminStatus)</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>up</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>down</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>testing</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>SNMP interface status (ifOperStatus)</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>up</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>down</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>testing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>dormant</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>notPresent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>lowerLayerDown</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

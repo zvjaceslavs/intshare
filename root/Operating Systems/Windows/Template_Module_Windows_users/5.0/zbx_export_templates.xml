@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-06-10T01:22:01Z</date>
+    <groups>
+        <group>
+            <name>Templates/Modules</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Module Windows users by Zabbix agent</template>
+            <name>Template Module Windows users by Zabbix agent</name>
+            <description>Get a total of logged-in users in the system.</description>
+            <groups>
+                <group>
+                    <name>Templates/Modules</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>General</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Number of logged in users</name>
+                    <key>wmi.getall[root\cimv2,select SessionId from Win32_Process where Name like '%explorer.exe%']</key>
+                    <description>The number of users who are currently logged in.</description>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.length()</params>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                    </preprocessing>
+                </item>
+            </items>
+        </template>
+        <template>
+            <template>Template Module Windows users by Zabbix agent active</template>
+            <name>Template Module Windows users by Zabbix agent active</name>
+            <description>Get a total of logged-in users in the system.</description>
+            <groups>
+                <group>
+                    <name>Templates/Modules</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>General</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Number of logged in users</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>wmi.getall[root\cimv2,select SessionId from Win32_Process where Name like '%explorer.exe%']</key>
+                    <description>The number of users who are currently logged in.</description>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JSONPATH</type>
+                            <params>$.length()</params>
+                            <error_handler>DISCARD_VALUE</error_handler>
+                        </step>
+                    </preprocessing>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

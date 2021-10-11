@@ -1,0 +1,2774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2021-02-03T12:23:50Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+        <group>
+            <name>Templates/Printers</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template SNMP Printer</template>
+            <name>Template SNMP Universal Printer </name>
+            <templates>
+                <template>
+                    <name>Template SNMP Device</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates/Printers</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Printer Cover</name>
+                </application>
+                <application>
+                    <name>Printer diag.</name>
+                </application>
+                <application>
+                    <name>Printer Information</name>
+                </application>
+                <application>
+                    <name>Printer Input</name>
+                </application>
+                <application>
+                    <name>Printer Media Path</name>
+                </application>
+                <application>
+                    <name>Printer Output</name>
+                </application>
+                <application>
+                    <name>Printer Supplies</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Device Type</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.25.3.2.1.3.1</snmp_oid>
+                    <key>hrDeviceDescr</key>
+                    <delay>20m</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>TYPE</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Printer error state</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.25.3.5.1.2.1</snmp_oid>
+                    <key>hrPrinterDetectedErrorState</key>
+                    <delay>300</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Printer error state</name>
+                    </valuemap>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>//Valid by  30.09.2020 Kotov
+
+
+if ((value == '') || (value == ' '))  {
+    value = 999; 
+}
+
+var regex = /([0-9A-F]* )/;
+m = regex.exec(value)  
+if ( m )  {
+      var hex  = value.toString(); 
+      hex = hex.replace(/00/g,&quot;&quot;);  //1
+      hex = hex.replace(/ /g,&quot;&quot;);   //2
+      var str = parseInt(hex, 16);      
+      value =  Number(str);
+}else{
+      value =  Number(value);
+}
+
+if ( ! Number.isInteger(value) ) {
+    value = 999;
+}
+if ( ! value ) {
+    value = 999;
+}
+return value</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;999&#13;
+and &#13;
+{last()}&lt;&gt;0&#13;
+and &#13;
+{last()}&lt;&gt;1&#13;
+and &#13;
+{last()}&lt;&gt;11&#13;
+and &#13;
+{last()}&lt;&gt;12&#13;
+and &#13;
+{last()}&lt;&gt;128&#13;
+and &#13;
+{last()}&lt;&gt;129&#13;
+and &#13;
+{last()}&lt;&gt;195&#13;
+and&#13;
+{last()}&lt;&gt;32772&#13;
+&#13;
+and&#13;
+&#13;
+{delta(#6)}=0</expression>
+                            <name>Ошибка на МФУ: {HOST.NAME}</name>
+                            <opdata>{ITEM.VALUE}</opdata>
+                            <url>http://{HOST.IP}</url>
+                            <priority>WARNING</priority>
+                            <description>Last value: {ITEM.LASTVALUE1}.</description>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>event</tag>
+                                    <value>other</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                        <trigger>
+                            <expression>{last(,1800)}&lt;&gt;999&#13;
+and &#13;
+{last(,1800)}&lt;&gt;0&#13;
+and &#13;
+{last(,1800)}&lt;&gt;1&#13;
+and &#13;
+{last(,1800)}&lt;&gt;11&#13;
+and &#13;
+{last(,1800)}&lt;&gt;12&#13;
+and &#13;
+{last(,1800)}&lt;&gt;129&#13;
+and &#13;
+{last(,1800)}&lt;&gt;195&#13;
+and &#13;
+{last(,1800)}&lt;&gt;32772&#13;
+and&#13;
+(&#13;
+{last()}&lt;&gt;999&#13;
+and &#13;
+{last()}&lt;&gt;0&#13;
+and &#13;
+{last()}&lt;&gt;1&#13;
+and &#13;
+{last()}&lt;&gt;11&#13;
+and &#13;
+{last()}&lt;&gt;12&#13;
+and &#13;
+{last()}&lt;&gt;129&#13;
+and &#13;
+{last()}&lt;&gt;195&#13;
+and &#13;
+{last()}&lt;&gt;132772&#13;
+)</expression>
+                            <name>Ошибка на МФУ: {HOST.NAME}</name>
+                            <opdata>{ITEM.VALUE}</opdata>
+                            <url>http://{HOST.IP}</url>
+                            <status>DISABLED</status>
+                            <priority>WARNING</priority>
+                            <description>Last value: {ITEM.LASTVALUE1}.</description>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>event</tag>
+                                    <value>other</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Printer status</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.25.3.5.1.1.1</snmp_oid>
+                    <key>hrPrinterStatus</key>
+                    <delay>180</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Printer status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Device MAC address</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.2.2.1.6.1</snmp_oid>
+                    <key>ifPhysAddress</key>
+                    <delay>3600</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>MACADDRESS_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device console display</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.43.16.5.1.2.1.1</snmp_oid>
+                    <key>prtConsoleDisplayBufferText</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/\r|\n| /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Device serial number</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.43.5.1.1.17.1</snmp_oid>
+                    <key>prtGeneralSerialNumber</key>
+                    <delay>10m</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>SERIALNO_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Printer lifetime counter</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.43.10.2.1.4.1.1</snmp_oid>
+                    <key>prtMarkerLifeCount</key>
+                    <delay>180</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Printer status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Printer power on counter</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.43.10.2.1.5.1.1</snmp_oid>
+                    <key>prtMarkerPowerOnCount</key>
+                    <delay>180</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Printer status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>SNMP traps (fallback)</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap.fallback</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <description>Item is used to collect all SNMP traps unmatched by other snmptrap items</description>
+                    <applications>
+                        <application>
+                            <name>Printer diag.</name>
+                        </application>
+                    </applications>
+                    <logtimefmt>hh:mm:sszyyyy/MM/dd</logtimefmt>
+                </item>
+                <item>
+                    <name>Device location HP</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.11.2.3.9.4.2.1.1.3.11.0</snmp_oid>
+                    <key>sysLocationHP</key>
+                    <delay>600</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>CHAR</value_type>
+                    <description>for specific HP device</description>
+                    <inventory_link>SITE_ADDRESS_B</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/00/g,&quot;&quot;);
+      hex = hex.replace(/FD/g,&quot;&quot;);
+      hex = hex.replace(/E8/g,&quot;&quot;);
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Device location site</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.1.6.0</snmp_oid>
+                    <key>sysLocationSite</key>
+                    <delay>180</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>The physical location of this node (e.g., `telephone closet, 3rd floor').  If the location is unknown, the value is the zero-length string.</description>
+                    <inventory_link>SITE_ADDRESS_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>return value.replace(/-[0-9A-Z_]+$/g,'-');</params>
+                        </step>
+                    </preprocessing>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Cover</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.6.1.1.2]</snmp_oid>
+                    <key>prtCoverDescription</key>
+                    <delay>3600</delay>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Cover $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.6.1.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>prtCoverDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Cover</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>//var str1 = &quot;{#SNMPVALUE}&quot;;
+var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }
+</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Cover Status of $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.6.1.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>prtCoverStatus[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <applications>
+                                <application>
+                                    <name>Printer Cover</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>Printer cover state</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(,1800)}&lt;&gt;4 and {last(,1800)}&lt;&gt;6</expression>
+                                    <name>Крышка &quot;{#SNMPVALUE}&quot;  не закрыта на МФУ {HOST.NAME}</name>
+                                    <opdata>{ITEM.VALUE}</opdata>
+                                    <priority>INFO</priority>
+                                    <tags>
+                                        <tag>
+                                            <tag>event</tag>
+                                            <value>other</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Input</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.8.2.1.18]</snmp_oid>
+                    <key>prtInputDescription</key>
+                    <delay>3600</delay>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Input Capacity $1</name>
+                            <type>CALCULATED</type>
+                            <key>prtInputCapacity[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <params>100*last(&quot;prtInputCurrentLevel[{#SNMPVALUE}]&quot;)/last(&quot;prtInputMaxCapacity[{#SNMPVALUE}]&quot;)</params>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input current level $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputCurrentLevel[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.18.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input max capacity $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputMaxCapacity[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input Media Name $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputMediaName[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input Model $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.15.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputModel[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input SerialNumber $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.17.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputSerialNumber[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input status $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputStatus[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(,600)}&lt;&gt;0</expression>
+                                    <name>{HOST.NAME} . Input {#SNMPVALUE} on printer has changed.</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input Type $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputType[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Supplies</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.12.1.1.4]</snmp_oid>
+                    <key>prtMarkerSuppliesDescription</key>
+                    <delay>3600</delay>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Color Value of supplies $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.12.1.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMarkerColorantValue[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Capacity of supplies $1</name>
+                            <type>CALCULATED</type>
+                            <key>prtMarkerSuppliesCapacity[{#SNMPVALUE}]</key>
+                            <delay>5m</delay>
+                            <history>30d</history>
+                            <trends>120d</trends>
+                            <units>%</units>
+                            <params>100*last(&quot;prtMarkerSuppliesLevel[{#SNMPVALUE}]&quot;)/last(&quot;prtMarkerSuppliesMaxCapacity[{#SNMPVALUE}]&quot;)</params>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;=5</expression>
+                                    <name>Мало тонера  {#SNMPVALUE} в МФУ {HOST.NAME}</name>
+                                    <opdata>{ITEM.VALUE}</opdata>
+                                    <priority>WARNING</priority>
+                                    <description>Value: {ITEM.VALUE} %</description>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>event</tag>
+                                            <value>supplie</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Description of supplies $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.11.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMarkerSuppliesDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/\r|\n| /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Level of supplies $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.11.1.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMarkerSuppliesLevel[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <history>10d</history>
+                            <trends>60d</trends>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{max(#2)}&lt;0</expression>
+                                    <name>Ошибка картриджа {#SNMPVALUE} в МФУ {HOST.NAME}</name>
+                                    <opdata>{ITEM.VALUE}</opdata>
+                                    <priority>WARNING</priority>
+                                    <description>Value: {ITEM.VALUE}</description>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>event</tag>
+                                            <value>supplie</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>max Capacity of supplies $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.11.1.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMarkerSuppliesMaxCapacity[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Level of supplies {#SNMPVALUE} in %</name>
+                            <show_work_period>NO</show_work_period>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <ymax_type_1>FIXED</ymax_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <color>80FF00</color>
+                                    <item>
+                                        <host>Template SNMP Printer</host>
+                                        <key>prtMarkerSuppliesCapacity[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Media Path</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.13.4.1.10]</snmp_oid>
+                    <key>prtMediaPathDescription</key>
+                    <delay>3600</delay>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Media Path Description of supplies $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.13.4.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMediaPathDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Media Path</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }
+</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Media Path Status of supplies $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.13.4.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMediaPathStatus[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <applications>
+                                <application>
+                                    <name>Printer Media Path</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Media Path Type of supplies $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.13.4.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMediaPathType[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Media Path</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Output</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.9.2.1.12]</snmp_oid>
+                    <key>prtOutputDescription</key>
+                    <delay>3600</delay>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Output $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.9.2.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>prtOutputDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Output</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>//var str1 = &quot;{#SNMPVALUE}&quot;;
+var str1 = value 
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }
+
+
+</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Output max Capacity $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.9.2.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>prtOutputMaxCapacity[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Output</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Output remaining Capacity $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.9.2.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>prtOutputRemainingCapacity[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Printer Output</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Output Status $1</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.9.2.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>prtOutputStatus[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <applications>
+                                <application>
+                                    <name>Printer Output</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(,600)}&lt;&gt;0</expression>
+                                    <name>{HOST.NAME}. Output {#SNMPVALUE} on printer has changed.</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+            </discovery_rules>
+            <screens>
+                <screen>
+                    <name>Printer</name>
+                    <hsize>1</hsize>
+                    <vsize>1</vsize>
+                </screen>
+            </screens>
+        </template>
+        <template>
+            <template>Template SNMP Printer v3</template>
+            <name>Template SNMP Universal Printer ( ) v3</name>
+            <templates>
+                <template>
+                    <name>Template SNMP Device v3</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates/Printers</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Printer Cover</name>
+                </application>
+                <application>
+                    <name>Printer diag.</name>
+                </application>
+                <application>
+                    <name>Printer Information</name>
+                </application>
+                <application>
+                    <name>Printer Input</name>
+                </application>
+                <application>
+                    <name>Printer Media Path</name>
+                </application>
+                <application>
+                    <name>Printer Output</name>
+                </application>
+                <application>
+                    <name>Printer Supplies</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Device Type</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.25.3.2.1.3.1</snmp_oid>
+                    <key>hrDeviceDescr</key>
+                    <delay>43200</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <inventory_link>TYPE</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Printer error state</name>
+                    <type>SNMPV3</type>
+                    <snmp_oid>.1.3.6.1.2.1.25.3.5.1.2.1</snmp_oid>
+                    <key>hrPrinterDetectedErrorState</key>
+                    <delay>300</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Printer error state</name>
+                    </valuemap>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>//Valid by  30.09.2020 Kotov
+
+
+if ((value == '') || (value == ' '))  {
+    value = 999; 
+}
+
+var regex = /([0-9A-F]* )/;
+m = regex.exec(value)  
+if ( m )  {
+      var hex  = value.toString(); 
+      hex = hex.replace(/00/g,&quot;&quot;);  //1
+      hex = hex.replace(/ /g,&quot;&quot;);   //2
+      var str = parseInt(hex, 16);      
+      value =  Number(str);
+}else{
+      value =  Number(value);
+}
+
+if ( ! Number.isInteger(value) ) {
+    value = 999;
+}
+if ( ! value ) {
+    value = 999;
+}
+return value</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;999&#13;
+and &#13;
+{last()}&lt;&gt;0&#13;
+and &#13;
+{last()}&lt;&gt;1&#13;
+and &#13;
+{last()}&lt;&gt;11&#13;
+and &#13;
+{last()}&lt;&gt;12&#13;
+and &#13;
+{last()}&lt;&gt;129&#13;
+and &#13;
+{last()}&lt;&gt;128&#13;
+and &#13;
+{last()}&lt;&gt;195&#13;
+and&#13;
+{last()}&lt;&gt;32772&#13;
+&#13;
+and&#13;
+{delta(#6)}=0</expression>
+                            <name>Ошибка на МФУ: {HOST.NAME}</name>
+                            <opdata>{ITEM.VALUE}</opdata>
+                            <url>http://{HOST.IP}</url>
+                            <priority>WARNING</priority>
+                            <description>Last value: {ITEM.LASTVALUE1}.</description>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>event</tag>
+                                    <value>other</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                        <trigger>
+                            <expression>{last(,1800)}&lt;&gt;999&#13;
+and &#13;
+{last(,1800)}&lt;&gt;0&#13;
+and &#13;
+{last(,1800)}&lt;&gt;1&#13;
+and &#13;
+{last(,1800)}&lt;&gt;11&#13;
+and &#13;
+{last(,1800)}&lt;&gt;12&#13;
+and &#13;
+{last(,1800)}&lt;&gt;129&#13;
+and &#13;
+{last(,1800)}&lt;&gt;195&#13;
+and&#13;
+{last(,1800)}&lt;&gt;32772&#13;
+and&#13;
+(&#13;
+{last()}&lt;&gt;999&#13;
+and &#13;
+{last()}&lt;&gt;0&#13;
+and &#13;
+{last()}&lt;&gt;1&#13;
+and &#13;
+{last()}&lt;&gt;11&#13;
+and &#13;
+{last()}&lt;&gt;12&#13;
+and &#13;
+{last()}&lt;&gt;129&#13;
+and &#13;
+{last()}&lt;&gt;195&#13;
+and &#13;
+{last()}&lt;&gt;32772&#13;
+)</expression>
+                            <name>Ошибка на МФУ: {HOST.NAME}</name>
+                            <opdata>{ITEM.VALUE}</opdata>
+                            <url>http://{HOST.IP}</url>
+                            <status>DISABLED</status>
+                            <priority>WARNING</priority>
+                            <description>Last value: {ITEM.LASTVALUE1}.</description>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>event</tag>
+                                    <value>other</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Printer status</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.25.3.5.1.1.1</snmp_oid>
+                    <key>hrPrinterStatus</key>
+                    <delay>180</delay>
+                    <history>7d</history>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Printer status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Device MAC address</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.2.2.1.6.1</snmp_oid>
+                    <key>ifPhysAddress</key>
+                    <delay>3600</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <inventory_link>MACADDRESS_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device console display</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.43.16.5.1.2.1.1</snmp_oid>
+                    <key>prtConsoleDisplayBufferText</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/\r|\n| /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Device serial number</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.43.5.1.1.17.1</snmp_oid>
+                    <key>prtGeneralSerialNumber</key>
+                    <delay>43200</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <inventory_link>SERIALNO_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Printer lifetime counter</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.43.10.2.1.4.1.1</snmp_oid>
+                    <key>prtMarkerLifeCount</key>
+                    <delay>180</delay>
+                    <history>7d</history>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Printer status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Printer power on counter</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.43.10.2.1.5.1.1</snmp_oid>
+                    <key>prtMarkerPowerOnCount</key>
+                    <delay>180</delay>
+                    <history>7d</history>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <applications>
+                        <application>
+                            <name>Printer Information</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Printer status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>SNMP traps (fallback)</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap.fallback</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <description>Item is used to collect all SNMP traps unmatched by other snmptrap items</description>
+                    <applications>
+                        <application>
+                            <name>Printer diag.</name>
+                        </application>
+                    </applications>
+                    <logtimefmt>hh:mm:sszyyyy/MM/dd</logtimefmt>
+                </item>
+                <item>
+                    <name>Device location HP</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.11.2.3.9.4.2.1.1.3.11.0</snmp_oid>
+                    <key>sysLocationHP</key>
+                    <delay>600</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>CHAR</value_type>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <description>for specific HP device</description>
+                    <inventory_link>SITE_ADDRESS_B</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/00/g,&quot;&quot;);
+      hex = hex.replace(/FD/g,&quot;&quot;);
+      hex = hex.replace(/E8/g,&quot;&quot;);
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Device location site</name>
+                    <type>SNMPV3</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.1.6.0</snmp_oid>
+                    <key>sysLocationSite</key>
+                    <delay>180</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <description>The physical location of this node (e.g., `telephone closet, 3rd floor').  If the location is unknown, the value is the zero-length string.</description>
+                    <inventory_link>SITE_ADDRESS_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>return value.replace(/-[0-9A-Z_]+$/g,'-');</params>
+                        </step>
+                    </preprocessing>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Cover</name>
+                    <type>SNMPV3</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.6.1.1.2]</snmp_oid>
+                    <key>prtCoverDescription</key>
+                    <delay>3600</delay>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Cover $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.6.1.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>prtCoverDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Cover</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>//var str1 = &quot;{#SNMPVALUE}&quot;;
+var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }
+</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Cover Status of $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.6.1.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>prtCoverStatus[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Cover</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>Printer cover state</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(,1800)}&lt;&gt;4 and {last(,1800)}&lt;&gt;6</expression>
+                                    <name>Крышка &quot;{#SNMPVALUE}&quot;  не закрыта на МФУ {HOST.NAME}.</name>
+                                    <opdata>{ITEM.VALUE}</opdata>
+                                    <priority>INFO</priority>
+                                    <tags>
+                                        <tag>
+                                            <tag>event</tag>
+                                            <value>other</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Input</name>
+                    <type>SNMPV3</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.8.2.1.18]</snmp_oid>
+                    <key>prtInputDescription</key>
+                    <delay>3600</delay>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Input Capacity $1</name>
+                            <type>CALCULATED</type>
+                            <key>prtInputCapacity[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <params>100*last(&quot;prtInputCurrentLevel[{#SNMPVALUE}]&quot;)/last(&quot;prtInputMaxCapacity[{#SNMPVALUE}]&quot;)</params>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input current level $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputCurrentLevel[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <value_type>FLOAT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.18.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input max capacity $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputMaxCapacity[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input Media Name $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputMediaName[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input Model $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.15.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputModel[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input SerialNumber $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.17.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputSerialNumber[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input status $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputStatus[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(,600)}&lt;&gt;0</expression>
+                                    <name>{HOST.NAME} . Input {#SNMPVALUE} on printer has changed.</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input Type $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.8.2.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>prtInputType[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Supplies</name>
+                    <type>SNMPV3</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.12.1.1.4]</snmp_oid>
+                    <key>prtMarkerSuppliesDescription</key>
+                    <delay>3600</delay>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Color Value of supplies $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.12.1.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMarkerColorantValue[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Capacity of supplies $1</name>
+                            <type>CALCULATED</type>
+                            <key>prtMarkerSuppliesCapacity[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <units>%</units>
+                            <params>100*last(&quot;prtMarkerSuppliesLevel[{#SNMPVALUE}]&quot;)/last(&quot;prtMarkerSuppliesMaxCapacity[{#SNMPVALUE}]&quot;)</params>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;=5</expression>
+                                    <name>Мало тонера  {#SNMPVALUE} в МФУ {HOST.NAME}.</name>
+                                    <opdata>{ITEM.VALUE}</opdata>
+                                    <priority>WARNING</priority>
+                                    <description>Value: {ITEM.VALUE} %</description>
+                                    <tags>
+                                        <tag>
+                                            <tag>event</tag>
+                                            <value>supplie</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Description of supplies $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.11.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMarkerSuppliesDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/\r|\n| /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Level of supplies $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.11.1.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMarkerSuppliesLevel[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <value_type>FLOAT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>max Capacity of supplies $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.11.1.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMarkerSuppliesMaxCapacity[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Supplies</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Level of supplies {#SNMPVALUE} in %</name>
+                            <show_work_period>NO</show_work_period>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <ymax_type_1>FIXED</ymax_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <color>80FF00</color>
+                                    <item>
+                                        <host>Template SNMP Printer v3</host>
+                                        <key>prtMarkerSuppliesCapacity[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Media Path</name>
+                    <type>SNMPV3</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.13.4.1.10]</snmp_oid>
+                    <key>prtMediaPathDescription</key>
+                    <delay>3600</delay>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Media Path Description of supplies $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.13.4.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMediaPathDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Media Path</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>var str1 = value ;
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }
+</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Media Path Status of supplies $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.13.4.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMediaPathStatus[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Media Path</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Media Path Type of supplies $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.13.4.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>prtMediaPathType[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Media Path</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Output</name>
+                    <type>SNMPV3</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.43.9.2.1.12]</snmp_oid>
+                    <key>prtOutputDescription</key>
+                    <delay>3600</delay>
+                    <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                    <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                    <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                    <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                    <lifetime>12h</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Output $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.9.2.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>prtOutputDescription[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Output</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JAVASCRIPT</type>
+                                    <params>//var str1 = &quot;{#SNMPVALUE}&quot;;
+var str1 = value 
+var hex  = str1.toString();  
+  if (! hex.match(/\b[0-9A-F ]{6}\b/gi))
+  {
+    return str1;
+  }  else  {
+      
+      hex = hex.replace(/ /g,&quot;&quot;);
+      var str = '';
+      for (var n = 0; n &lt; hex.length; n += 2) {
+        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+      return str;
+  }
+
+
+</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Output max Capacity $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.9.2.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>prtOutputMaxCapacity[{#SNMPVALUE}]</key>
+                            <delay>3600</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Output</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Output remaining Capacity $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.9.2.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>prtOutputRemainingCapacity[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <value_type>FLOAT</value_type>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Output</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Output Status $1</name>
+                            <type>SNMPV3</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.2.1.43.9.2.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>prtOutputStatus[{#SNMPVALUE}]</key>
+                            <delay>600</delay>
+                            <snmpv3_contextname>{$SNMP_V3_CONTEXT}</snmpv3_contextname>
+                            <snmpv3_securityname>{$SNMP_V3_USER}</snmpv3_securityname>
+                            <snmpv3_securitylevel>AUTHPRIV</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>SHA</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase>{$SNMP_V3_AUTHPASSPHRASE}</snmpv3_authpassphrase>
+                            <snmpv3_privprotocol>AES</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase>{$SNMP_V3_PRIVPASSPHRASE}</snmpv3_privpassphrase>
+                            <applications>
+                                <application>
+                                    <name>Printer Output</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(,600)}&lt;&gt;0</expression>
+                                    <name>{HOST.NAME}. Output {#SNMPVALUE} on printer has changed.</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>var elms = [];
+
+var regex = /{#SNMPVALUE}&quot;:&quot;([0-9 A-F ]*) &quot;}/;
+var m;
+
+do{
+m = regex.exec(value);
+  if (m) {
+    var str = '';
+    hex = m[1];
+    hex = hex.replace(/00/g,'');
+    hex = hex.replace(/ /g,'');
+
+    for (var n = 0; n &lt; hex.length; n += 2) {
+       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+      }
+
+  // check for dublicates
+  var strv = str;
+  var n = 0;
+  do{
+      n = 0;
+      for (var i = 0; i &lt; elms.length; i++)
+        if ( elms[i] == strv ){
+           n++;  
+           strv = str + n;     
+         }
+   } while(n &gt; 0);
+  elms.push(strv); 
+  value = value.replace(m[1], strv);
+  }
+}while (m);
+return (value);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+            </discovery_rules>
+            <macros>
+                <macro>
+                    <macro>{$SNMP_V3_AUTHPASSPHRASE}</macro>
+                    <value>usermon1</value>
+                    <description>for printers</description>
+                </macro>
+                <macro>
+                    <macro>{$SNMP_V3_PRIVPASSPHRASE}</macro>
+                    <value>usermon1</value>
+                    <description>for printers</description>
+                </macro>
+                <macro>
+                    <macro>{$SNMP_V3_USER}</macro>
+                    <value>usermon</value>
+                    <description>for printers</description>
+                </macro>
+            </macros>
+            <screens>
+                <screen>
+                    <name>Printer</name>
+                    <hsize>1</hsize>
+                    <vsize>1</vsize>
+                </screen>
+            </screens>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template SNMP Printer:sysUpTime.nodata(600)}=1</expression>
+            <name>СТИ. Нет данных по SNMP</name>
+            <priority>WARNING</priority>
+            <description>Last value: {ITEM.LASTVALUE1}</description>
+        </trigger>
+    </triggers>
+    <value_maps>
+        <value_map>
+            <name>Printer cover state</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>doorOpen</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>doorClosed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>interlockOpen</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>interlockClosed</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Printer error state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>lowPaper</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>noPaper</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>lowToner</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>noToner</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>doorOpen</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>jammed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>offline</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>serviceRequested</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>inputTrayMissing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>outputTrayMissing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>markerSupplyMissing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>outputNearFull</newvalue>
+                </mapping>
+                <mapping>
+                    <value>12</value>
+                    <newvalue>outputFull</newvalue>
+                </mapping>
+                <mapping>
+                    <value>13</value>
+                    <newvalue>inputTrayEmpty</newvalue>
+                </mapping>
+                <mapping>
+                    <value>14</value>
+                    <newvalue>overduePreventMaint</newvalue>
+                </mapping>
+                <mapping>
+                    <value>999</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Printer status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>idle</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>printing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>warmup</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

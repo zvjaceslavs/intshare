@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2020-06-22T11:41:49Z</date>
+    <groups>
+        <group>
+            <name>Infrastructure</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Huawei NetCol5000</template>
+            <name>Huawei NetCol5000</name>
+            <description>Template Huawei NetCol5000&#13;
+MIBs used:&#13;
+HUAWEI-MIB&#13;
+HUAWEI_ACC_MIB</description>
+            <templates>
+                <template>
+                    <name>Template Module Generic SNMPv2</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Infrastructure</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Cooler</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Cooling mode</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.2.0</snmp_oid>
+                    <key>hwCoolingMode</key>
+                    <description>The cooling mode flag</description>
+                    <valuemap>
+                        <name>hwUnitOnOffStatus</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1</expression>
+                            <name>{HOST.NAME} - cooling mode standby</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Cooling Output</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.6.0</snmp_oid>
+                    <key>hwCoolingOutputPercent</key>
+                    <delay>5m</delay>
+                    <units>%</units>
+                    <description>The cooling output percentage</description>
+                </item>
+                <item>
+                    <name>Humidity</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.11.0</snmp_oid>
+                    <key>hwCurrentHum</key>
+                    <delay>5m</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Temperature</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.10.0</snmp_oid>
+                    <key>hwCurrentTemp</key>
+                    <delay>5m</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>°C</units>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(10m)}&gt;=22</expression>
+                            <name>Temperature is higher than {ITEM.LASTVALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{last(10m)}&gt;=25</expression>
+                            <name>Temperature is higher than {ITEM.LASTVALUE}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{last(10m)}&gt;=28</expression>
+                            <name>Temperature is higher than {ITEM.LASTVALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{last(10m)}&gt;=30</expression>
+                            <name>Temperature is higher than {ITEM.LASTVALUE}</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Dehumidification mode</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.5.0</snmp_oid>
+                    <key>hwDehumidificationMode</key>
+                    <description>The dehumidification mode flag</description>
+                    <valuemap>
+                        <name>hwUnitOnOffStatus</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan Output</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.9.0</snmp_oid>
+                    <key>hwFanOutputPercent</key>
+                    <delay>5m</delay>
+                    <units>%</units>
+                </item>
+                <item>
+                    <name>Heating mode</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.3.0</snmp_oid>
+                    <key>hwHeatingMode</key>
+                    <delay>5m</delay>
+                    <description>The heating mode flag</description>
+                    <valuemap>
+                        <name>hwUnitOnOffStatus</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>heating output</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.7.0</snmp_oid>
+                    <key>hwHeatingOutputPercent</key>
+                    <delay>5m</delay>
+                    <units>%</units>
+                    <description>The heating output percentage</description>
+                </item>
+                <item>
+                    <name>Humidification mode</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.4.0</snmp_oid>
+                    <key>hwHumidificationMode</key>
+                    <description>The humidification mode flag</description>
+                    <valuemap>
+                        <name>hwUnitOnOffStatus</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>humidification</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.8.0</snmp_oid>
+                    <key>hwHumidificationOutputPercent</key>
+                    <delay>5m</delay>
+                    <units>%</units>
+                </item>
+                <item>
+                    <name>Status</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2011.6.189.2.2.1.2.1.0</snmp_oid>
+                    <key>hwUnitOnOffStatus</key>
+                    <valuemap>
+                        <name>hwUnitOnOffStatus</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1</expression>
+                            <name>{HOST.NAME} shutdown</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Temperature&amp;Humidity</name>
+            <graph_items>
+                <graph_item>
+                    <color>FF4000</color>
+                    <item>
+                        <host>Huawei NetCol5000</host>
+                        <key>hwCurrentTemp</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>0040FF</color>
+                    <item>
+                        <host>Huawei NetCol5000</host>
+                        <key>hwCurrentHum</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+    <value_maps>
+        <value_map>
+            <name>hwUnitOnOffStatus</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>off</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>on</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

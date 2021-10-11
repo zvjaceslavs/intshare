@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.0</version>
+    <date>2020-02-09T20:45:28Z</date>
+    <groups>
+        <group>
+            <name>Templates/Modules</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Auto register an active Zabbix proxy</template>
+            <name>Auto register an active Zabbix proxy</name>
+            <description>prxid=$(/usr/bin/curl -sk {$Z_API_PHP} -X POST -H &quot;Content-Type: application/json&quot; -d '&#13;
+{&#13;
+	&quot;jsonrpc&quot;: &quot;2.0&quot;,&#13;
+	&quot;method&quot;: &quot;proxy.create&quot;,&#13;
+	&quot;params&quot;: {&#13;
+		&quot;host&quot;: &quot;{EVENT.TAGS}&quot;,&#13;
+		&quot;status&quot;: &quot;5&quot;&#13;
+	},&#13;
+	&quot;auth&quot;: &quot;{$Z_API_SESSIONID}&quot;,&#13;
+	&quot;id&quot;: 1&#13;
+}&#13;
+' | grep -o -E &quot;[0-9]+{3,}&quot;) &amp;&amp; \&#13;
+&#13;
+/usr/bin/curl -sk {$Z_API_PHP} -X POST -H &quot;Content-Type: application/json&quot; -d &quot;&#13;
+{&#13;
+    \&quot;jsonrpc\&quot;: \&quot;2.0\&quot;,&#13;
+    \&quot;method\&quot;: \&quot;host.create\&quot;,&#13;
+    \&quot;params\&quot;: {&#13;
+        \&quot;host\&quot;: \&quot;{EVENT.TAGS}\&quot;,&#13;
+        \&quot;interfaces\&quot;: [&#13;
+            {&#13;
+                \&quot;type\&quot;: 1,&#13;
+                \&quot;main\&quot;: 1,&#13;
+                \&quot;useip\&quot;: 1,&#13;
+                \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,&#13;
+                \&quot;dns\&quot;: \&quot;\&quot;,&#13;
+                \&quot;port\&quot;: \&quot;10050\&quot;&#13;
+            }&#13;
+        ],&#13;
+        \&quot;groups\&quot;: [&#13;
+            {&#13;
+                \&quot;groupid\&quot;: \&quot;4\&quot;&#13;
+            }&#13;
+        ],&#13;
+        \&quot;templates\&quot;: [&#13;
+            {&#13;
+                \&quot;templateid\&quot;: \&quot;10048\&quot;&#13;
+            }&#13;
+        ],&#13;
+        \&quot;proxy_hostid\&quot;:\&quot;$prxid\&quot;&#13;
+    },&#13;
+    \&quot;auth\&quot;: \&quot;{$Z_API_SESSIONID}\&quot;,&#13;
+    \&quot;id\&quot;: 1&#13;
+}&#13;
+&quot; &amp;&amp; \&#13;
+&#13;
+/usr/sbin/zabbix_server -R config_cache_reload &amp;&amp; \&#13;
+&#13;
+/usr/bin/sleep 20 &amp;&amp; \&#13;
+&#13;
+/usr/bin/curl -sk {$Z_API_PHP} -X POST -H &quot;Content-Type: application/json&quot; -d '&#13;
+{&#13;
+	&quot;jsonrpc&quot;: &quot;2.0&quot;,&#13;
+	&quot;method&quot;: &quot;event.acknowledge&quot;,&#13;
+	&quot;params&quot;: {&#13;
+		&quot;eventids&quot;: &quot;{EVENT.ID}&quot;,&#13;
+		&quot;action&quot;: 1,&#13;
+		&quot;message&quot;: &quot;Problem resolved.&quot;&#13;
+	},&#13;
+	&quot;auth&quot;: &quot;{$Z_API_SESSIONID}&quot;,&#13;
+	&quot;id&quot;: 1&#13;
+}&#13;
+'</description>
+            <groups>
+                <group>
+                    <name>Templates/Modules</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Log</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>zabbix_server.log proxy not found</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>log[/var/log/zabbix/zabbix_server.log,&quot;cannot parse proxy data from active proxy at.*proxy.*not found&quot;,,,skip,,]</key>
+                    <delay>1s</delay>
+                    <history>90d</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Log</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>0</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Auto register an active Zabbix proxy:log[/var/log/zabbix/zabbix_server.log,&quot;cannot parse proxy data from active proxy at.*proxy.*not found&quot;,,,skip,,].regexp(proxy.*not found)}=1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>{{ITEM.VALUE}.regsub(&quot;(proxy \&quot;.*\&quot; not found)&quot;,\1)}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags>
+                <tag>
+                    <tag>{{ITEM.VALUE}.regsub(&quot;proxy \&quot;(.*)\&quot; not found&quot;,\1)}</tag>
+                    <value/>
+                </tag>
+            </tags>
+        </trigger>
+    </triggers>
+</zabbix_export>

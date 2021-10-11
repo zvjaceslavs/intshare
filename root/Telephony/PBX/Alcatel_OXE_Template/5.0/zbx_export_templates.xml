@@ -1,0 +1,1912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-07-28T17:14:17Z</date>
+    <groups>
+        <group>
+            <name>PABX</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>PABX-TEMPLATE</template>
+            <name>PABX</name>
+            <description>Model for PBX OXE R9.1 or greater, discovery: &quot;trunk&quot; only works on OXE R12.2&#13;
+Modelo para PBX OXE R9.1 ou superior, descoberta: tronco só funciona em OXE R12.2</description>
+            <templates>
+                <template>
+                    <name>Template Net Network Generic Device SNMP</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>PABX</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>PABX</name>
+                </application>
+                <application>
+                    <name>PABX-General-Status</name>
+                </application>
+                <application>
+                    <name>PABX CAC</name>
+                </application>
+                <application>
+                    <name>PABX DSP</name>
+                </application>
+                <application>
+                    <name>PABX IpDomain</name>
+                </application>
+                <application>
+                    <name>PABX Trunk</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>pbxRole</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.637.64.4400.1.4.0</snmp_oid>
+                    <key>pbxRole</key>
+                    <description>&quot;Indicates the PCX role.&#13;
+Available values are: INDETERMINATE, MAIN, STAND-BY, ACTIVE_PCS or INACTIVE_PCS where:&#13;
+- MAIN and STAND-BY values are used to indicate the Com Server role &#13;
+- ACTIVE_PCS and INACTIVE_PCS values are used to indicate the Passive Communication Server (PCS) status &#13;
+- The INDETERMINATE value is not sent in response to an SNMP request when the corresponding SNMP agent is not started&#13;
+&#13;
+Indica a função PCX.&#13;
+Os valores disponíveis são: INDETERMINATE, MAIN, STAND-BY, ACTIVE_PCS ou INACTIVE_PCS onde:&#13;
+- Os valores MAIN e STAND-BY são usados para indicar a função do Com Server&#13;
+- Os valores ACTIVE_PCS e INACTIVE_PCS são usados para indicar o status do Passive Communication Server (PCS)&#13;
+- O valor INDETERMINATE não é enviado em resposta a uma solicitação SNMP quando o agente SNMP correspondente não é iniciado&quot;</description>
+                    <applications>
+                        <application>
+                            <name>PABX-General-Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>pbxRole</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}=1 or {last()}=2 or {last()}=3 or {last()}=4</recovery_expression>
+                            <name>{HOST.NAME} Failure - Role is {ITEM.VALUE}</name>
+                            <priority>DISASTER</priority>
+                            <description>Role is {ITEM.VALUE}</description>
+                            <dependencies>
+                                <dependency>
+                                    <name>No SNMP data collection</name>
+                                    <expression>{PABX-TEMPLATE:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <expression>{last(#1)}&lt;&gt;{last(#2)}=1&#13;
+and&#13;
+{last()}&gt;0</expression>
+                            <name>{HOST.NAME} role has changed (new role: {ITEM.VALUE})</name>
+                            <priority>INFO</priority>
+                            <description>System role has changed. Ack to close.&#13;
+A função do sistema mudou. Ack para fechar.</description>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>pbxState</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.637.64.4400.1.2</snmp_oid>
+                    <key>pbxState</key>
+                    <value_type>FLOAT</value_type>
+                    <description>Available values are: &#13;
+INDETERMINATE, CRITICAL, MAJOR, MINOR, WARNING or NORMAL&#13;
+&#13;
+Os valores disponíveis são:&#13;
+INDETERMINADO, CRÍTICO, MAIOR, MENOR, AVISO ou NORMAL</description>
+                    <applications>
+                        <application>
+                            <name>PABX-General-Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>pbxState</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1 or {last()}=2</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}=4 or {last()}=5</recovery_expression>
+                            <name>{HOST.NAME} - Failure - State is {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                            <description>{HOST.NAME} Failure - State is {ITEM.VALUE}&#13;
+&#13;
+Falha de {HOST.NAME} - o status é {ITEM.VALUE}</description>
+                            <dependencies>
+                                <dependency>
+                                    <name>No SNMP data collection</name>
+                                    <expression>{PABX-TEMPLATE:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}=4 or {last()}=5</recovery_expression>
+                            <name>{HOST.NAME} Failure - State is {ITEM.VALUE}</name>
+                            <priority>DISASTER</priority>
+                            <description>{HOST.NAME} Failure - State is {ITEM.VALUE}&#13;
+Falha de {HOST.NAME} - o status é {ITEM.VALUE}</description>
+                            <dependencies>
+                                <dependency>
+                                    <name>No SNMP data collection</name>
+                                    <expression>{PABX-TEMPLATE:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <expression>{last(#1)}&lt;&gt;{last(#2)}=1&#13;
+and&#13;
+{last()}&gt;0</expression>
+                            <name>{HOST.NAME} state has changed (state: {ITEM.VALUE})</name>
+                            <priority>INFO</priority>
+                            <description>System state has changed. Ack to close.&#13;
+O estado do sistema mudou. Ack para fechar.</description>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Sets in service</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.637.64.4400.1.7.0</snmp_oid>
+                    <key>setsInService</key>
+                    <description>Indicates the number of sets in service.This counter includes all types of set but not SIP sets&#13;
+&#13;
+Indica o número de SETS em serviço. Este contador inclui todos os tipos de SETS, mas não os conjuntos SIP</description>
+                    <applications>
+                        <application>
+                            <name>PABX-General-Status</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Sets out service</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.637.64.4400.1.8.0</snmp_oid>
+                    <key>setsOutOfServices</key>
+                    <description>Indicates the number of sets out of service. This counter includes all types of set but not SIP sets.  &#13;
+&#13;
+Indica o número de SETS fora de serviço. Este contador inclui todos os tipos de conjunto, mas não os SETS SIP.</description>
+                    <applications>
+                        <application>
+                            <name>PABX-General-Status</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>SIP sets register</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.637.64.4400.1.5.0</snmp_oid>
+                    <key>sipRegSets</key>
+                    <description>Indicates the number of SIP terminals registered in the PCX, as well as SIP terminals not defined in PCX configuration (provided that authentication is not required for SIP terminal registration)&#13;
+&#13;
+Indica o número de terminais SIP registrados no PCX, bem como terminais SIP não definidos na configuração do PCX (desde que a autenticação não seja necessária para o registro do terminal SIP)</description>
+                    <applications>
+                        <application>
+                            <name>PABX-General-Status</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>SIP sets unregister</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.637.64.4400.1.6.0</snmp_oid>
+                    <key>sipUnregSets</key>
+                    <description>Indicates the number of SIP terminals not registered in the PCX. This counter is equal to the number of SIP terminals configured in the PCX minus the number of SIP terminals registered in the PCX. If authentication is not required for SIP terminal registration, this counter may be negative (when there are more self registered SIP terminals than SIP terminals configured in the PCX). &#13;
+  &#13;
+Indica o número de terminais SIP não registrados no PCX. Este contador é igual ao número de terminais SIP configurados no PCX menos o número de terminais SIP registrados no PCX. Se a autenticação não for necessária para o registro do terminal SIP, este contador pode ser negativo (quando houver mais terminais SIP autorregistrados do que terminais SIP configurados no PCX).</description>
+                    <applications>
+                        <application>
+                            <name>PABX-General-Status</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>CAC Discovery</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#IPDOMAIN},.1.3.6.1.4.1.637.64.4400.1.3.1.1,{#CAC_ALLOWED},.1.3.6.1.4.1.637.64.4400.1.3.1.9,{#CAC_USED},.1.3.6.1.4.1.637.64.4400.1.3.1.10]</snmp_oid>
+                    <key>cac.discovery</key>
+                    <description>Indicates the number of external communications &#13;
+Indica o número de comunicações externas</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Allowed Ext. Communications - IpDomain.[{#IPDOMAIN}]</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.637.64.4400.1.3.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>cac.allowed.[{#IPDOMAIN}]</key>
+                            <value_type>FLOAT</value_type>
+                            <description>Indicates the number of allowed external communications &#13;
+Indica o número de comunicações externas permitidas</description>
+                            <applications>
+                                <application>
+                                    <name>PABX CAC</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;=0</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{last()}&gt;0</recovery_expression>
+                                    <name>{HOST.NAME} - Domain {#IPDOMAIN} - Failure - No allowed external communications</name>
+                                    <priority>HIGH</priority>
+                                    <description>No allowed external communications in {HOST.NAME}  - Domain {#IPDOMAIN}</description>
+                                    <manual_close>YES</manual_close>
+                                    <dependencies>
+                                        <dependency>
+                                            <name>No SNMP data collection</name>
+                                            <expression>{PABX-TEMPLATE:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
+                                        </dependency>
+                                    </dependencies>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Used Ext. Communications - IpDomain.[{#IPDOMAIN}]</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.637.64.4400.1.3.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>cac.used.[{#IPDOMAIN}]</key>
+                            <value_type>FLOAT</value_type>
+                            <description>Indicates the current number of external communications This counter is only used if the number of allowed external communications is limited, if not its value is 0 &#13;
+&#13;
+Indica o número atual de comunicações externas. Este contador só é usado se o número de comunicações externas permitidas for limitado, caso contrário seu valor é 0&#13;
+&#13;
+Command: cnx dom &#13;
+1.3.6.1.4.1.637.64.4400.1.3.1.10.X&#13;
+  X=IPDOMAIN</description>
+                            <applications>
+                                <application>
+                                    <name>PABX CAC</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{PABX-TEMPLATE:cac.used.[{#IPDOMAIN}].last()} / {PABX-TEMPLATE:cac.allowed.[{#IPDOMAIN}].last()} &gt;= 0.8</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{PABX-TEMPLATE:cac.used.[{#IPDOMAIN}].last()} / {PABX-TEMPLATE:cac.allowed.[{#IPDOMAIN}].last()} &lt; 0.8</recovery_expression>
+                            <name>{HOST.NAME} - Domain {#IPDOMAIN} - Used external communications is greater or equal than 80%</name>
+                            <priority>WARNING</priority>
+                            <description>Used external communications is greater than 80% in {HOST.NAME}  - Domain {#IPDOMAIN}</description>
+                            <manual_close>YES</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>No SNMP data collection</name>
+                                    <expression>{PABX-TEMPLATE:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Ext. Communications [{#IPDOMAIN}]</name>
+                            <yaxismin>-1</yaxismin>
+                            <show_triggers>NO</show_triggers>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>PABX-TEMPLATE</host>
+                                        <key>cac.allowed.[{#IPDOMAIN}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>PABX-TEMPLATE</host>
+                                        <key>cac.used.[{#IPDOMAIN}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>DSP Discovery</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#IPDOMAIN},.1.3.6.1.4.1.637.64.4400.1.3.1.1,{#DSP_RESS_AVAILABLE},.1.3.6.1.4.1.637.64.4400.1.3.1.5,{#DSP_RESS_BUSY},.1.3.6.1.4.1.637.64.4400.1.3.1.6,{#DSP_RESS_OUT_OF_ORDER},.1.3.6.1.4.1.637.64.4400.1.3.1.7]</snmp_oid>
+                    <key>dsp.discovery</key>
+                    <description>Indicates the number of DSP resources (i.e. compressors)&#13;
+Indica o número de recursos DSP (ou seja, compressores)</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Available DSP - IpDomain.[{#IPDOMAIN}]</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.637.64.4400.1.3.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>dsp.available.[{#IPDOMAIN}]</key>
+                            <value_type>FLOAT</value_type>
+                            <description>Indicates the number of available DSP resources (i.e. compressors)&#13;
+Indica o número de recursos DSP disponíveis (ou seja, compressores)&#13;
+&#13;
+Command: cnx dom &#13;
+OID-BASE: 1.3.6.1.4.1.637.64.4400.1.3.1.5.X&#13;
+  X=IPDOMAIN</description>
+                            <applications>
+                                <application>
+                                    <name>PABX DSP</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Busy DSP - IpDomain.[{#IPDOMAIN}]</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.637.64.4400.1.3.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>dsp.busy.[{#IPDOMAIN}]</key>
+                            <value_type>FLOAT</value_type>
+                            <description>Indicates the number of busy compressors &#13;
+Indica o número de compressores ocupados &#13;
+&#13;
+Command: cnx dom &#13;
+1.3.6.1.4.1.637.64.4400.1.3.1.6.X&#13;
+  X=IPDOMAIN</description>
+                            <applications>
+                                <application>
+                                    <name>PABX DSP</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Out Service DSP - IpDomain.[{#IPDOMAIN}]</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.637.64.4400.1.3.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>dsp.out.[{#IPDOMAIN}]</key>
+                            <value_type>FLOAT</value_type>
+                            <description>Indicates the number of out service compressors &#13;
+Indica o número de compressores fora de serviço&#13;
+&#13;
+Command: cnx dom &#13;
+1.3.6.1.4.1.637.64.4400.1.3.1.6.X&#13;
+  X=IPDOMAIN</description>
+                            <applications>
+                                <application>
+                                    <name>PABX DSP</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{PABX-TEMPLATE:dsp.busy.[{#IPDOMAIN}].last()} / {PABX-TEMPLATE:dsp.available.[{#IPDOMAIN}].last()} &gt;= 0.8</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{PABX-TEMPLATE:dsp.busy.[{#IPDOMAIN}].last()} / {PABX-TEMPLATE:dsp.available.[{#IPDOMAIN}].last()} &lt; 0.8</recovery_expression>
+                            <name>{HOST.NAME}  - Domain {#IPDOMAIN} - Busy compressors is greater or equal than 80%</name>
+                            <priority>WARNING</priority>
+                            <description>Busy compressors is greater or equal than 80% in {HOST.NAME}  - Domain {#IPDOMAIN}</description>
+                            <manual_close>YES</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>No SNMP data collection</name>
+                                    <expression>{PABX-TEMPLATE:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{PABX-TEMPLATE:dsp.available.[{#IPDOMAIN}].last()}=0 and {PABX-TEMPLATE:dsp.out.[{#IPDOMAIN}].last()}&gt;=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{PABX-TEMPLATE:dsp.available.[{#IPDOMAIN}].last()}&gt; 0 and {PABX-TEMPLATE:dsp.out.[{#IPDOMAIN}].last()}=0</recovery_expression>
+                            <name>{HOST.NAME}  -  Out Service all compressors  {HOST.NAME}  - Domain {#IPDOMAIN}</name>
+                            <priority>HIGH</priority>
+                            <description>Out Service all compressors  {HOST.NAME}  - Domain {#IPDOMAIN}</description>
+                            <manual_close>YES</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>No SNMP data collection</name>
+                                    <expression>{PABX-TEMPLATE:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Compressors (DSP) - [{#IPDOMAIN}]</name>
+                            <yaxismax>0</yaxismax>
+                            <show_work_period>NO</show_work_period>
+                            <show_triggers>NO</show_triggers>
+                            <type>PIE</type>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>PABX-TEMPLATE</host>
+                                        <key>dsp.available.[{#IPDOMAIN}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>FFFF00</color>
+                                    <item>
+                                        <host>PABX-TEMPLATE</host>
+                                        <key>dsp.busy.[{#IPDOMAIN}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>PABX-TEMPLATE</host>
+                                        <key>dsp.out.[{#IPDOMAIN}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>IpDomain Discovery</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#IPDOMAIN},.1.3.6.1.4.1.637.64.4400.1.3.1.1]</snmp_oid>
+                    <key>ipdomain.discovery</key>
+                    <delay>30m</delay>
+                    <description>IP domain number</description>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Trunk Discovey</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#TRUNK_ID},.1.3.6.1.4.1.637.64.4400.1.9.1.1,{#TRUNK_NAME},.1.3.6.1.4.1.637.64.4400.1.9.1.2,{#TRUNK_TYPE},.1.3.6.1.4.1.637.64.4400.1.9.1.5,{#TRUNK_STATUS},.1.3.6.1.4.1.637.64.4400.1.9.1.10,{#FREE_CHAN},.1.3.6.1.4.1.637.64.4400.1.9.1.7,{#BUSY_CHAN},.1.3.6.1.4.1.637.64.4400.1.9.1.8,{#OOS_CHAN},.1.3.6.1.4.1.637.64.4400.1.9.1.9]</snmp_oid>
+                    <key>trunk.discovery</key>
+                    <delay>30s</delay>
+                    <description>Info the trunks and channels&#13;
+Informações sobre os troncos e canais</description>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+        <template>
+            <template>PABX-TRAPS</template>
+            <name>PABX-TRAPS</name>
+            <groups>
+                <group>
+                    <name>PABX</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>TRAPS</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>SNMP TRAP - Inter ACT link HS</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*379]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} Inter ACT link HS - Incident: 379&#13;
+&#13;
+Inter-crystal signaling link problems on &#13;
+Link establishment or shutdown of existing link  &#13;
+Several possible causes; &#13;
+No system reaction. &#13;
+Check IP resources boards within INTIPB. &#13;
+To see timer used tabtemptool.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(379)}=1</expression>
+                            <name>{HOST.NAME} - Inter ACT link HS</name>
+                            <priority>WARNING</priority>
+                            <description>{ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - PCS Establishment or Loss Link</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*427]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} PCS Establishment or Loss Link - Incident: 427&#13;
+&#13;
+PCS-&gt;CS: @IP P1 error P2  &#13;
+ P1 : IP Adress of the CS &#13;
+ P2 : Error Type &#13;
+ - 1   Establishment of the link &#13;
+ - 0   Lost link &#13;
+ Establishment or lost of the link with the CS &#13;
+ No system reaction &#13;
+ Verify the state off the IP link between the PCS and the CS</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>(({iregexp(error.(0)})&lt;&gt;0)</expression>
+                            <name>PCS ({ITEM.VALUE}.regsub(&quot;\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:\/\d{2})?&quot;),&quot;\1&quot;) Loss Link</name>
+                            <priority>WARNING</priority>
+                            <description>PCS ({ITEM.VALUE}.regsub(&quot;\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:\/\d{2})?&quot;),&quot;\1&quot;) Loss Link</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - PCS with domain - Establishment or Loss Link</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*428]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} PCS with domain - Establishment or Loss Link - Incident: 428&#13;
+&#13;
+CS-&gt;PCS: @IP P1 error P2 PCS domain P3  &#13;
+ P1 : IP Adress of the PCS &#13;
+ P2 : Error Type &#13;
+ - 1   Establishment of the link &#13;
+ - 0   Lost link &#13;
+ P3 : domain off the PCS &#13;
+ Establishment or lost of the link with the PCS &#13;
+ No system reaction &#13;
+ Verify the state off the IP link between the PCS and the CS</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>(({iregexp(error.(0)})&lt;&gt;0)</expression>
+                            <name>PCS ({ITEM.VALUE}.regsub(&quot;(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:\/\d{2})?).*(domain.\d{1,4})&quot;),&quot;\1 - \2&quot;) Loss Link</name>
+                            <priority>WARNING</priority>
+                            <description>PCS ({ITEM.VALUE}.regsub(&quot;(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:\/\d{2})?).*(domain.\d{1,4})&quot;),&quot;\1 - \2&quot;) Loss Link</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - PCS Database update error</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*433]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} PCS Database update: error - Incident: 433&#13;
+&#13;
+  PCS P1: Database update: error P2 info P3. &#13;
+  P1 : PCS IP address &#13;
+  P2 : Reason of the update failure. &#13;
+ - 1       Error mapping on remanents. &#13;
+ - 2       PCS unreachable. &#13;
+ - 3       PCS bad soft. release. &#13;
+ - 4       The database bacup failed. &#13;
+ - 5       The database copy on PCS failed. &#13;
+ - 6       The database restoration on PCS failed. &#13;
+ - 7       The PCS reboot failed. &#13;
+ - 8       PCS in active mode. &#13;
+ - 9       A process Bck is already running on the PCS. &#13;
+  P3 : Further information, swinst errors (if P2 = 3, 5 or 6). &#13;
+ - 0       No info. &#13;
+ - 1       Invalid command syntax. &#13;
+ - 2       The telephonic application is started. &#13;
+ - 3       The telephonic application is stopped. &#13;
+ - 4       An other backup is already running. &#13;
+ - 5       Not enough space on root file system. &#13;
+ - 6       No telephonic application has been installed. &#13;
+ - 7       The emulation layer is stopped. &#13;
+ - 8       Invalid archive format. &#13;
+ - 9       Remote CPU unreachable. &#13;
+ - 10      Warnings during the command. &#13;
+ - 11      Failure. &#13;
+ The PCS database update failed. &#13;
+ No system reaction &#13;
+ No action.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(433)}=1</expression>
+                            <name>{HOSTNAME} - PCS Database update error</name>
+                            <priority>WARNING</priority>
+                            <description>PCS Database update error: {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - FlexLM no checkout can be realized</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*640]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  FLEXLM_ERROR_SERVER : no checkout can be realized  - Incident: 640&#13;
+&#13;
+ FLEXLM_ERROR_SERVER : no checkout can be realized P1 P2 &#13;
+ P1: Number of sub-incident flex error server &#13;
+ P2: Parameter sent by the application &#13;
+ Value of P1   Meaning of P1 Field P2 &#13;
+  1    FlexLM server not found           FlexLM error number &#13;
+  2    Impossible to check in licenses   FlexLM error number &#13;
+  3    Server busy                       FlexLM error number &#13;
+  4    Impossible to check out licenses  FlexLM error number &#13;
+  5    Problem on the license file       FlexLM error number &#13;
+  6    Invalid feature name              FlexLM error number &#13;
+  7    Invalid license file              FlexLM error number &#13;
+  8    General FlexLM error              FlexLM error number &#13;
+ An error occur during the licensing process on the FlexLM server.  &#13;
+ No system reaction &#13;
+ Verify the FlexLM server configuration (Number of unused  &#13;
+ licenses, ...).</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\2</params>
+                        </step>
+                        <step>
+                            <type>REGEX</type>
+                            <params>.*(\d{1,8})
+No checkout can be realized in FlexLM Server: \1</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>(({iregexp((1|2|3|4|5|6|7|8)})&lt;&gt;0)</expression>
+                            <name>{HOSTNAME} - FLEXLM - No checkout can be realized</name>
+                            <priority>AVERAGE</priority>
+                            <description>No checkout can be realized {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP -  FlexLM -Network breakdown with the licensing FlexLM server</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*642]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <description>{HOSTNAME} Network breakdown with the licensing FlexLM server - Incident: 642&#13;
+&#13;
+ FLEXLM_SERVER_LINK: Network breakdown with the licensing FlexLM server P1 P2 &#13;
+ P1: Number of sub-incident. &#13;
+ P2 : Parameter sent by the application &#13;
+ Value of P1   Meaning of P1 Field P2 &#13;
+ 1    FlexLM network problem  FlexLM error code &#13;
+ 2    PANIC MODE is running  FlexLM error code &#13;
+ Network link error with the licensing FlexLM server. Verify that &#13;
+ the FlexLM server is always running and connected o the network. &#13;
+ No system reaction. &#13;
+ Note the incident, with all pertinent information on an observation sheet &#13;
+ (or problem report), specifying the error context as much as possible.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                        <step>
+                            <type>REGEX</type>
+                            <params>.*(\d{1,2})
+\1</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1</expression>
+                            <name>{HOSTNAME} - FlexLM - Network problem  FlexLM error code</name>
+                            <priority>AVERAGE</priority>
+                            <description>FlexLM network problem  FlexLM error code {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                        <trigger>
+                            <expression>{last()}=2</expression>
+                            <name>{HOSTNAME} - FlexLM - PANIC MODE is running  FlexLM error code</name>
+                            <priority>AVERAGE</priority>
+                            <description>PANIC MODE is running  FlexLM error code: {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP -  FlexLM - Link breakdown with the FLEX agent</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*644]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <description>{HOSTNAME} The flex agent is not running or does not respond - Incident: 644&#13;
+&#13;
+ FLEX_AG_CRASH: Link breakdown with the FLEX agent P1 P2 &#13;
+ P1: Number of sub-incident FLEX ag crash &#13;
+ P2: Parameter sent by the application &#13;
+ Value of P1   Meaning of P1 Field P2 &#13;
+  1    No link with the FLEX agent        IPC status &#13;
+ The flex agent is not running or does not respond. &#13;
+ No system reaction. &#13;
+ Note the incident, with all pertinent information on an observation sheet &#13;
+ (or problem report), specifying the error context as much as possible.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                        <step>
+                            <type>REGEX</type>
+                            <params>.*(\d{1})
+\1</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1</expression>
+                            <name>{HOSTNAME} - FlexLM - Link breakdown</name>
+                            <priority>AVERAGE</priority>
+                            <description>FlexLM - Link breakdown {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Login Alert</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*1125]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(1125)}=1</expression>
+                            <name>{HOSTNAME} - LOGIN MTCL ALERT</name>
+                            <status>DISABLED</status>
+                            <priority>INFO</priority>
+                            <description>{ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Powerfail, shutdown</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*1521]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} Powerfail, shutdown - Incident: 1521&#13;
+&#13;
+ Powerfail, shutdown &#13;
+ Power failure &#13;
+ Power failure detection. &#13;
+ The system tries an absolute shut down. &#13;
+ Check the power supply.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>(({regexp({PABX-TRAPS:snmptrap[637\.64\.0\.10\.1\.1\.8.*:*1521].str(1521)})&lt;&gt;0)</expression>
+                            <name>Powerfail, shutdown</name>
+                            <priority>WARNING</priority>
+                            <description>Powerfail, shutdown&#13;
+{ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Shutdown Command</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2073]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} Shutdown command has been called</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2073)}=1</expression>
+                            <name>{HOSTNAME} -  Shutdown Command</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - CPU was halted due to a shutdown</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2077]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  Bascul command called  - Incident: 2077&#13;
+&#13;
+CPU was halted due to a shutdown &#13;
+ CPU was halted due to a shutdown. &#13;
+ CPU is shutting down. &#13;
+ No action.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2077)}=1</expression>
+                            <name>{HOSTNAME} -  CPU was halted due to a shutdown</name>
+                            <priority>WARNING</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - SQL error</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2255]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} SQL error - Incident: 2255&#13;
+&#13;
+SQL error: appli P1 table P2 error P3 (P4) &#13;
+ P1: Application instance which has transmitted the incident &#13;
+ P2: SQL table with which the instance was working when the incident occurred &#13;
+ P3: Number of the SQL error (Refer to the CQL manual) &#13;
+ P4: TTY Input/output used by the P1 application during the current execution &#13;
+      (ttyxx, sccxx, spbxx, io2ttyxx, etc., ? if unknown) &#13;
+ SQL error: SQL unknown operation &#13;
+ Similar to SQL_ERROR. &#13;
+ Similar to SQL_ERROR. &#13;
+ Similar to SQL_ERROR.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Presence of two main Call Server on the network</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2345]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  Presence of two main Call Server on the network  - Incident: 2345&#13;
+&#13;
+ Presence of two main Call Server on the network &#13;
+ After a network break down both duplicate Call Server is Main &#13;
+ The system goes down &#13;
+ Check the IP network</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2345)}=1</expression>
+                            <name>{HOSTNAME} - Presence of two main Call Server on the network</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Bascul command called</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2346]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  Bascul command called  - Incident: 2346&#13;
+&#13;
+Bascul command called &#13;
+Bascul command called &#13;
+The system goes down &#13;
+Check the switchover of the standby CPU</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Reset of standby CPU</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2347]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  Reset of standby CPU  - Incident: 2347&#13;
+&#13;
+Reset of standby CPU &#13;
+ if CPU CS: reset main CPU reset the standby &#13;
+ if CPU5,6,7: reset after loosing IP connection with main CPU &#13;
+ The system goes down &#13;
+ if CPU CS: Check the main CPU &#13;
+ if CPU 5,6,7: Check IP network between CPU</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2347)}=1</expression>
+                            <name>{HOSTNAME} - Reset of standby CPU</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Local CPU Shutdown</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2348]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  Local CPU Shutdown   - Incident: 2348&#13;
+&#13;
+Local CPU Shutdown &#13;
+ System has detected an incoherent state &#13;
+ A reset/switchover is necessary. &#13;
+ No operator action required</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2348)}=1</expression>
+                            <name>{HOSTNAME} -  Local CPU Shutdown</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Bascul command called</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2349]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  Bascul command called  - Incident: 2349&#13;
+&#13;
+Bascul command called &#13;
+Bascul command called &#13;
+The system goes down &#13;
+Check the switchover of the standby CPU</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Failure of the backup inter-ACT link establishment</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2479]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}   Failure of the backup inter-ACT link establishment  - Incident: 2479&#13;
+&#13;
+ Failure of the backup inter-ACT link establishment &#13;
+ The CPU did not receive any message from the LIO &#13;
+ telling that the ISDN backup link is active &#13;
+ The backup call is released &#13;
+ Check the configuration (in particular the &#13;
+ backup number)</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2479)}=1</expression>
+                            <name>{HOSTNAME} - Failure of the backup inter-ACT link establishment</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Virtual board not initialized.</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2489]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} Virtual board not initialized- Incident: 2489&#13;
+&#13;
+ P1 virtual board (P2,P3) of the associated board P4 (P5,P6) not initialized. &#13;
+ P1 = logical name of the unstarted virtual board &#13;
+ P2 = Crystal number &#13;
+ P3 = uninitialized virtual board number &#13;
+ P4 = logical name of the associated board &#13;
+ P5 = Crystal number &#13;
+ P6 = board number of the associated board &#13;
+ This anomaly message informs the operator than one board did not &#13;
+ start two minutes past the starting of the associated board. &#13;
+ No reaction for the system &#13;
+ Reset associated board and check again; if the same incident occurs &#13;
+ consult with expert of connected exchange.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2489)}=1</expression>
+                            <name>{HOSTNAME} -  Virtual board not initialized.</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Loss of a virtual board</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2490]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} Loss of a virtual board - Incident: 2490&#13;
+&#13;
+Loss of a virtual board P1 (P2,P3) of the associated board P4 (P5,P6) &#13;
+ P1: Logical name of lost virtual board &#13;
+ P2: Crystal number &#13;
+ P3: Virtual coupler number &#13;
+ P4: Logical name of the associated coupler &#13;
+ P5: Crystal number &#13;
+ P6: Coupler number of the associated board &#13;
+ Loss of a virtual  coupler &#13;
+ Any transmission with the virtual coupler has become impossible. &#13;
+ All the resources previously occupied by the terminals of the lost virtual &#13;
+ coupler are released. &#13;
+ Reinitialize the virtual coupler for executing rstcpl. &#13;
+ If the problem persists, note the incident with all its information on an &#13;
+ observation sheet (problem report), specifying the error context if possible.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2490)}=1</expression>
+                            <name>{HOSTNAME} - Loss of a virtual board</name>
+                            <priority>WARNING</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Virtual board commissioning</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2491]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} Virtual board commissioning - Incident: 2491&#13;
+&#13;
+P1(P2,P3) virtual board commissioning of the associated board P4(P5,P6) &#13;
+ P1: Type of the commissioned virtual board &#13;
+ P2: Crystal number &#13;
+ P3: Virtual coupler number &#13;
+ P4: Logical name of the associated coupler &#13;
+ P5: Crystal number &#13;
+ P6: Coupler number of the associated board &#13;
+ Virtual coupler commissioning &#13;
+ The virtual coupler is commissioned. This does not mean that the equipment &#13;
+ which comes with it is commissioned too. &#13;
+ No system reaction &#13;
+ No operator action required</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(2491)}=1</expression>
+                            <name>{HOSTNAME} - Virtual board commissioning</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - SQL error</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2650]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} SQL error - Incident: 2650&#13;
+&#13;
+SQL error: appli P1 table P2 error P3 &#13;
+ P1: Number of the application transmitting the incident &#13;
+ P2: Table or object number &#13;
+ P3: Error  number &#13;
+ Unknown operation to get to a data base &#13;
+ The database has become incoherent as a result of a software error (for &#13;
+ instance, attempt to get to a non-existent field).The database does not &#13;
+ correspond to the software version. &#13;
+ If it appears during the system initialization, the problem is serious since &#13;
+ certain data won't get a new stock of memory or will get an incomplete stock. &#13;
+ The problem is less critical if it occurs during a configuration because the &#13;
+ system ignores the modification or the edition in progress. &#13;
+ Reload the database if it is saved. &#13;
+ Note the incident with all its information on an observation sheet (problem &#13;
+ report), specifying the error context if possible.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>SNMP TRAP - SIP trunk group put into service</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5800]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  SIP external gateway P1 is out of service - Incident: 5800&#13;
+&#13;
+P1 SIP trunk group put into service &#13;
+ P1: SIP trunk group id put into service &#13;
+ SIP Gateway put into service &#13;
+ No system reaction &#13;
+ No action</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5800)}=1</expression>
+                            <name>{HOSTNAME} - SIP trunk group put into service</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - SIP trunk group put out of service</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5801]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  SIP trunk group put out of service - Incident: 5801&#13;
+&#13;
+P1 SIP trunk group put out of service &#13;
+ P1: SIP trunk group id put into service &#13;
+ SIP Gateway out of service &#13;
+ No system reaction &#13;
+ No action</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5801)}=1</expression>
+                            <name>{HOSTNAME} - SIP trunk group put out of service</name>
+                            <priority>WARNING</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - SIP external gateway P1 is in service</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5812]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  SIP external gateway P1 is in service - Incident: 5812&#13;
+&#13;
+ SIP external gateway P1 is in service &#13;
+ P1: SIP external gateway number &#13;
+ SIP Gateway put into service &#13;
+ No system reaction &#13;
+ No action</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5812)}=1</expression>
+                            <name>{HOSTNAME} - SIP external gateway in service</name>
+                            <priority>INFO</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - SIP external gateway P1 is out of service</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5813]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  SIP external gateway P1 is out of service - Incident: 5813&#13;
+&#13;
+SIP external gateway P1 is out of service &#13;
+ P1: SIP external gateway number &#13;
+ SIP Gateway put out of service &#13;
+ No system reaction &#13;
+ No action</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5813)}=1</expression>
+                            <name>{HOSTNAME} -  SIP external gateway is out of service</name>
+                            <priority>WARNING</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Critical failure in SIP component</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5814]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} Critical failure in SIP component - Incident: 5814&#13;
+&#13;
+ Critical failure in SIP component &#13;
+ Look at the SIP Alarm log file: /tmpd/sipalarm.log &#13;
+ or at the traces for more informations &#13;
+ No system reaction &#13;
+ No action</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5814)}=1</expression>
+                            <name>{HOSTNAME} - Critical failure in SIP component</name>
+                            <priority>WARNING</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Media Gateway has received a power supply alarm</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5856]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} Media Gateway has received a power supply alarm - Incident: 5856&#13;
+&#13;
+Media Gateway has received a power supply alarm &#13;
+ CPU has received a power supply alarm, so there is probably &#13;
+ a power supply problem. &#13;
+ No reaction &#13;
+ Check power supply.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5856)}=1</expression>
+                            <name>{HOSTNAME} - Media Gateway has received a power supply alarm</name>
+                            <priority>WARNING</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - GD/GA/INTIP/RGD: reason of reboot</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5857]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} GD/GA/INTIP/RGD: reason of reboot P1- Incident: 5857&#13;
+&#13;
+P1 Error state &#13;
+ P1: &#13;
+ GD/GA code: &#13;
+ - 0: Reset by &quot;reboot&quot; or &quot;shutdown -r&quot; command &#13;
+ - 1: Reset on exception of the real time task &#13;
+ - 2: Hardware reset on loss of DL IP &#13;
+ - 3: Soft reset on loss of DL IP &#13;
+ - 4: Soft reset on loss of DL backup &#13;
+ - 5: Bad initialization with Call Server &#13;
+ - 6: Time out in phase of initialization &#13;
+ - 7: Reset by &quot;rstcpl&quot; command &#13;
+ - 8: Update of binaries &#13;
+ - 9: Update of parameters with mgconfig &#13;
+ - 10: Update of parameters with UAconfig &#13;
+ - 11: NMI Watchdog &#13;
+ - 12: Update of bios &#13;
+ - 13: Power off on GD/GA or Reset by &quot;rstcpl&quot; command on GA &#13;
+ - 14: Not enough memory for the real time task &#13;
+ - 15: Reset on exception in the Linux core &#13;
+ - 16: Not enough buffer descriptor &#13;
+ - 17: Reset on not obtaining IP parameters from the DHCP server &#13;
+ - 18: Change of IP parameters by the DHCP server &#13;
+ - 19: No renewal of IP parameters on expiration of the lease time &#13;
+ - 20: Backup configured but not validated (DHCP mode is configured) &#13;
+ - 21: Reset on startemg file not received and no backup mode &#13;
+ - 22: Reset on lanpbx.cfg file not received when CS address &#13;
+    : is dynamic and no backup mode &#13;
+ - 23: Time out in phase of waiting of backup or IP establishment &#13;
+ - 24: Software anomaly &#13;
+ - 25: Reset with the re-establishment of the power supply &#13;
+    : if DL IP is KO &#13;
+ - 26: Reset with the re-establishment of the power supply &#13;
+    : during the stop of the CPU  applications &#13;
+ - 27: Reset with the re-establishment of the power supply &#13;
+    : when the CPU  applications are stopped &#13;
+ - 28: Reset on Ethernet link test failed at system startup &#13;
+ - 29: Reset on back panel - communication lost between GD and GA &#13;
+ - 30: Reset on connect not received &#13;
+ - 255: Unknown reason: &#13;
+     : - impossible to store reason in flash &#13;
+     : - defective ramdisk &#13;
+     : - impossible to treat NMI watchdog &#13;
+     : - stop of the system on empty battery &#13;
+     : - hot unplug &#13;
+ INTIP code: &#13;
+ - 0: Normal state &#13;
+ - 1: Reset order from CPU &#13;
+ - 2: Reset order from monitor &#13;
+ - 3: Reset order from V24 &#13;
+ - 4: Backtrace &#13;
+ - 5: Signalization link lost &#13;
+ - 6: DHCP loss &#13;
+ - 7: Backplane clock loss &#13;
+ - 8: Fatal error on C1 &#13;
+ - 9: No more memory (C1 pool) &#13;
+ - 10: No more memory (BD Pool) &#13;
+ - 11: No more memory (Heap) &#13;
+ - 12: C1 download timeout &#13;
+ - 13: Too many CTX event &#13;
+ - 14: Cold init asked by CPU &#13;
+ - 15: Bad state in Mngt state machine &#13;
+ - 16: Signalization link establishment failed &#13;
+ - 17: No coupler detected in shelf &#13;
+ - 18: IP Redundancy: loss of Ethernet &#13;
+ - 19 : Fatal CPU error (checkstop) &#13;
+ - 20 : Blocking Bus Monitor (Machine Check) &#13;
+ - 255: other reason &#13;
+ Note (INTIP): &#13;
+        For reason 5 and 6, a diagnosis has been processed &#13;
+        automatically by INTIP board. &#13;
+        You just have to download NetDiag.txt file using TFTP &#13;
+        from CPU (Main or Standby) which contains results. &#13;
+        See document 3BA_29000_0628_PAZZA for more information &#13;
+        Example: &#13;
+        Tftp 192.168.42.15 &#13;
+        bin &#13;
+        get NetDiag.txt &#13;
+        quit &#13;
+ RGD code: &#13;
+ - 0: Reset by &quot;reboot&quot; or &quot;shutdown -r&quot; command &#13;
+ - 1: Reset on exception of the real time task &#13;
+ - 2: Hardware reset on loss of DL HSL &#13;
+ - 5: Bad initialization with Call Server &#13;
+ - 6: Time out in phase of initialization &#13;
+ - 7: Reset by &quot;rstcpl&quot; command &#13;
+ - 8: Update of binaries &#13;
+ - 11: NMI Watchdog &#13;
+ - 12: Update of bios &#13;
+ - 13: Power off on RGD &#13;
+ - 14: Not enough memory for the real time task &#13;
+ - 15: Reset on exception in the Linux core &#13;
+ - 16: Not enough buffer descriptors &#13;
+ - 24: Software anomaly &#13;
+ - 255: Unknown reason: &#13;
+     : - impossible to store reason in flash &#13;
+     : - defective ramdisk &#13;
+     : - impossible to treat NMI watchdog &#13;
+     : - stop of the system on empty battery &#13;
+     : - hot unplug &#13;
+ No system reaction &#13;
+ Note the incident on a problem report. &#13;
+ For INTIP reason 20: Change GIP6 board and if the problem persist &#13;
+ change INTIP board and return board to R&amp;D for analyse.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5857)}=1</expression>
+                            <name>{HOSTNAME} - GD/GA/INTIP/RGD: reason of reboot</name>
+                            <priority>AVERAGE</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}&#13;
+&#13;
+GD/GA/INTIP/RGD: reason of reboot</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - Media Gateway power supply has come back</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5858]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME}  Media Gateway power supply has come back  - Incident: 5858</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5858)}=1</expression>
+                            <name>{HOSTNAME} - Media Gateway power supply has come back</name>
+                            <priority>WARNING</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}&#13;
+&#13;
+Media Gateway power supply has come back</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>SNMP TRAP - MG/RGD: download status error</name>
+                    <type>SNMP_TRAP</type>
+                    <key>snmptrap[637\.64\.0\.10\.1\.1\.8.*:*5859]</key>
+                    <delay>0</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>{HOSTNAME} MG/RGD: download status P1 - Incident: 5859&#13;
+&#13;
+MG/RGD: download status P1 &#13;
+ P1 Error state &#13;
+ P1: &#13;
+ RGD code: &#13;
+ - 0: No Ethernet &#13;
+ - 1: binrgd download failure &#13;
+ - 2: TFTP failure on binaries download &#13;
+ - 3: Binary files corrupted &#13;
+ - 4: Not enough memory &#13;
+ - 5: Failure on copy in flash &#13;
+ - 6: Bad network configuration &#13;
+ - 255: Unknown status &#13;
+ MG code: &#13;
+ - 1: binmg download failure &#13;
+ - 2: TFTP failure on binaries download &#13;
+ No system reaction &#13;
+ MG : MG has started using its old binaries, please check binaries versions &#13;
+ MG : and if necessary, do a MG reset &#13;
+ RGD : Note the incident on a problem report.</description>
+                    <applications>
+                        <application>
+                            <name>TRAPS</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>REGEX</type>
+                            <params>637\.64\.0\.10\.1\.1\.8.*:.(\d{1,4})\n.*637\.64\.0\.10\.1\.1\.9.*STRING:.&quot;(.*)&quot;
+\1 - \2</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(5859)}=1</expression>
+                            <name>{HOSTNAME} - MG/RGD: download status error</name>
+                            <priority>AVERAGE</priority>
+                            <description>{HOSTNAME} - {ITEM.VALUE}&#13;
+&#13;
+MG/RGD: download status error</description>
+                            <type>MULTIPLE</type>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{PABX-TRAPS:snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2346].str(2346)}=1 or {PABX-TRAPS:snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2349].str(2349)}=1</expression>
+            <name>{HOSTNAME} - Bascul command called</name>
+            <priority>INFO</priority>
+            <description>{HOSTNAME} - {ITEM.VALUE}</description>
+            <type>MULTIPLE</type>
+            <manual_close>YES</manual_close>
+        </trigger>
+        <trigger>
+            <expression>{PABX-TRAPS:snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2255].str(2255)}=1 or&#13;
+{PABX-TRAPS:snmptrap[637\.64\.0\.10\.1\.1\.8.*:*2650].str(2650)}=1</expression>
+            <name>{HOSTNAME} - SQL error</name>
+            <priority>WARNING</priority>
+            <description>SQL error: {ITEM.VALUE}</description>
+            <type>MULTIPLE</type>
+            <manual_close>YES</manual_close>
+        </trigger>
+    </triggers>
+    <value_maps>
+        <value_map>
+            <name>pbxRole</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>INDETERMINATE</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>MAIN</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>STAND-BY</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>ACTIVE_PCS</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>INACTIVE_PCS</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>pbxState</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>INDETERMINATE</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>CRITICAL</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>MAJOR</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>MINOR</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>WARNING</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>NORMAL</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

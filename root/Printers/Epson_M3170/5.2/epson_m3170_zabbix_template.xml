@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.2</version>
+    <date>2021-05-06T05:51:41Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Epson m3170</template>
+            <name>Epson m3170</name>
+            <description>use SNMP v1</description>
+            <templates>
+                <template>
+                    <name>Template Module Generic SNMPv1</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Network Interfaces</name>
+                </application>
+                <application>
+                    <name>work</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>copy</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.1248.1.2.2.27.6.1.4.1.1.2</snmp_oid>
+                    <key>m3170.copy</key>
+                    <delay>15m</delay>
+                    <history>1w</history>
+                    <trends>3650d</trends>
+                    <applications>
+                        <application>
+                            <name>work</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>firmware</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.1248.1.1.3.1.21.1.1.2.5</snmp_oid>
+                    <key>m3170.fm</key>
+                    <delay>1d</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>mac address</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>ifPhysAddress.1</snmp_oid>
+                    <key>m3170.mac</key>
+                    <delay>1d</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Network Interfaces</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>model</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.1248.1.2.2.1.1.1.2.1</snmp_oid>
+                    <key>m3170.model</key>
+                    <delay>1d</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>MODEL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>other print</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.1248.1.2.2.27.6.1.4.1.1.4</snmp_oid>
+                    <key>m3170.otherprint</key>
+                    <delay>15m</delay>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>work</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>print from pc/mobile</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.1248.1.2.2.27.6.1.4.1.1.1</snmp_oid>
+                    <key>m3170.printfrompc</key>
+                    <delay>15m</delay>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>work</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>serial number</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.1248.1.2.2.2.1.1.2.1.2</snmp_oid>
+                    <key>m3170.sn</key>
+                    <delay>1d</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>SERIALNO_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total print</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.1248.1.2.2.27.1.1.3.1.1</snmp_oid>
+                    <key>m3170.totalprint</key>
+                    <delay>15m</delay>
+                    <history>1w</history>
+                    <trends>3650d</trends>
+                    <applications>
+                        <application>
+                            <name>work</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{delta(1w)}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{delta(1w)}&gt;0</recovery_expression>
+                            <name>Опасность высыхания</name>
+                            <priority>WARNING</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>No SNMP data collection</name>
+                                    <expression>{Epson m3170:zabbix[host,snmp,available].max({$SNMP_TIMEOUT})}=0</expression>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>Telegram</tag>
+                                    <value>1</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

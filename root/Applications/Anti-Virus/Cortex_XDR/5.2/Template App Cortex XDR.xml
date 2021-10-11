@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.4</version>
+    <date>2021-08-17T20:57:52Z</date>
+    <groups>
+        <group>
+            <uuid>7df96b18c230490a9a0a9e2307226338</uuid>
+            <name>Templates</name>
+        </group>
+        <group>
+            <uuid>a571c0d144b14fd4a87a9d9b2aa9fcd6</uuid>
+            <name>Templates/Applications</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <uuid>882bf6447ac744afa52d925d4c468385</uuid>
+            <template>Template App Cortex XDR</template>
+            <name>Template App Cortex XDR</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates/Applications</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>7a95f5c7aa9e4ff3bb1642214d126349</uuid>
+                    <name>Cortex XDR Service</name>
+                    <key>service.info[cyserver,state]</key>
+                    <delay>5m</delay>
+                    <description>Service state of Cortex XDR</description>
+                    <triggers>
+                        <trigger>
+                            <uuid>d36f440e65c343d18e049d77c936785a</uuid>
+                            <expression>last(/Template App Cortex XDR/service.info[cyserver,state])&gt;0</expression>
+                            <name>Cortex XDR Service is not running on {HOSTNAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>e842ddbca578468eb932b5a02a4e8be9</uuid>
+                    <name>Cortex Service Path</name>
+                    <key>service.info[{$CORTEX.SERVICE},path]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Path of Cortex XDR service. Depends on service name in macro</description>
+                    <preprocessing>
+                        <step>
+                            <type>TRIM</type>
+                            <parameters>
+                                <parameter>&quot;</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <uuid>2ea4839f3d4448f2b5ee90bc9efa4238</uuid>
+                            <expression>change(/Template App Cortex XDR/service.info[{$CORTEX.SERVICE},path])=1</expression>
+                            <name>Cortex XDR service path changed on {HOSTNAME}</name>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>f3635ccdb37e473f85d78b4b3cb1c985</uuid>
+                    <name>Cortex Version</name>
+                    <key>system.run[powershell.exe Get-ItemPropertyValue -Path 'HKLM:\Software\Cyvera\Client\' -Name 'Product Version']</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <triggers>
+                        <trigger>
+                            <uuid>fdf523996d1848468987dc80f070c5bb</uuid>
+                            <expression>change(/Template App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path 'HKLM:\Software\Cyvera\Client\' -Name 'Product Version'])=1</expression>
+                            <name>Cortex XDR version changed on {HOSTNAME}</name>
+                            <status>DISABLED</status>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>04f8be4e13c14308974374e729bff988</uuid>
+                    <name>Cortex Protection Status</name>
+                    <key>system.run[powershell.exe Get-ItemPropertyValue -Path 'HKLM:\Software\Palo Alto Networks\Traps\' -Name 'ProtectionStatus']</key>
+                    <delay>5m</delay>
+                    <value_type>FLOAT</value_type>
+                    <description>Protection Status of Cortex XDR
+
+Value
+Anti-Exploit Protection	Anti-Malware Protection
+3	Enabled	Enabled
+2	Disabled	Enabled
+1	Enabled	Disabled
+0	Disabled	Disabled</description>
+                    <valuemap>
+                        <name>Cortex XDR Protection Status</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <uuid>9caf092216554fe4ae424615f1e9ea59</uuid>
+                            <expression>change(/Template App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path 'HKLM:\Software\Palo Alto Networks\Traps\' -Name 'ProtectionStatus'])=1</expression>
+                            <name>Cortex XDR Protection Status changed on {HOSTNAME}</name>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                        <trigger>
+                            <uuid>bca66f70357542d3bf530193fb04ef09</uuid>
+                            <expression>last(/Template App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path 'HKLM:\Software\Palo Alto Networks\Traps\' -Name 'ProtectionStatus'])=0</expression>
+                            <name>Cortex XDR Protection Status on {HOSTNAME} is disabled</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$CORTEX.SERVICE}</macro>
+                    <value>&quot;cyserver&quot;</value>
+                    <description>Service name of Cortex XDR</description>
+                </macro>
+            </macros>
+            <valuemaps>
+                <valuemap>
+                    <uuid>16a6e7d6e447483da3cc30434fb7dc72</uuid>
+                    <name>Cortex XDR Protection Status</name>
+                    <mappings>
+                        <mapping>
+                            <value>3</value>
+                            <newvalue>Anti-Exploit Protection and Anti-Malware Protection Enabled</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Anti-Exploit Protection Enabled</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>2</value>
+                            <newvalue>Anti-Malware Protection Enabled</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Disabled</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+            </valuemaps>
+        </template>
+    </templates>
+</zabbix_export>

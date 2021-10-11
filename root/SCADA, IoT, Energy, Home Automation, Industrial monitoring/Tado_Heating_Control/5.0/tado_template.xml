@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.2</version>
+    <date>2020-10-31T20:50:11Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Tado Template</template>
+            <name>Tado Template</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <name>Outside Temperature</name>
+                    <type>EXTERNAL</type>
+                    <key>tado_client_for_zabbix[&quot;-u&quot;,&quot;{$TADO_USER}&quot;,&quot;-p&quot;,&quot;{$TADO_PASSWD}&quot;,&quot;outside_temp&quot;]</key>
+                    <delay>15m</delay>
+                    <value_type>FLOAT</value_type>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Discovery Zones</name>
+                    <type>EXTERNAL</type>
+                    <key>tado_client_for_zabbix[&quot;-u&quot;,&quot;{$TADO_USER}&quot;,&quot;-p&quot;,&quot;{$TADO_PASSWD}&quot;,&quot;list_zones&quot;]</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Zone {#TADO_ZONE_NAME} Heating Power</name>
+                            <type>DEPENDENT</type>
+                            <key>tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <parameters>
+                                        <parameter>$.heating_power_percentage</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>tado_client_for_zabbix[&quot;-u&quot;,&quot;{$TADO_USER}&quot;,&quot;-p&quot;,&quot;{$TADO_PASSWD}&quot;,&quot;zone_status&quot;,&quot;{#TADO_ZONE_ID}&quot;]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Zone {#TADO_ZONE_NAME} Humidity</name>
+                            <type>DEPENDENT</type>
+                            <key>tado.zone.humidity[{#TADO_ZONE_NAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <parameters>
+                                        <parameter>$.humidity</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>tado_client_for_zabbix[&quot;-u&quot;,&quot;{$TADO_USER}&quot;,&quot;-p&quot;,&quot;{$TADO_PASSWD}&quot;,&quot;zone_status&quot;,&quot;{#TADO_ZONE_ID}&quot;]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Zone {#TADO_ZONE_NAME} Target Temperature</name>
+                            <type>DEPENDENT</type>
+                            <key>tado.zone.target_temp[{#TADO_ZONE_NAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <parameters>
+                                        <parameter>$.target_temp</parameter>
+                                    </parameters>
+                                </step>
+                                <step>
+                                    <type>IN_RANGE</type>
+                                    <parameters>
+                                        <parameter>1</parameter>
+                                        <parameter>99</parameter>
+                                    </parameters>
+                                    <error_handler>DISCARD_VALUE</error_handler>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>tado_client_for_zabbix[&quot;-u&quot;,&quot;{$TADO_USER}&quot;,&quot;-p&quot;,&quot;{$TADO_PASSWD}&quot;,&quot;zone_status&quot;,&quot;{#TADO_ZONE_ID}&quot;]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Zone {#TADO_ZONE_NAME} Temperature</name>
+                            <type>DEPENDENT</type>
+                            <key>tado.zone.temp[{#TADO_ZONE_NAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <parameters>
+                                        <parameter>$.temp</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>tado_client_for_zabbix[&quot;-u&quot;,&quot;{$TADO_USER}&quot;,&quot;-p&quot;,&quot;{$TADO_PASSWD}&quot;,&quot;zone_status&quot;,&quot;{#TADO_ZONE_ID}&quot;]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Zone {#TADO_ZONE_NAME} Status</name>
+                            <type>EXTERNAL</type>
+                            <key>tado_client_for_zabbix[&quot;-u&quot;,&quot;{$TADO_USER}&quot;,&quot;-p&quot;,&quot;{$TADO_PASSWD}&quot;,&quot;zone_status&quot;,&quot;{#TADO_ZONE_ID}&quot;]</key>
+                            <delay>5m</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Zone {#TADO_ZONE_NAME} All-in-One</name>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>FILLED_REGION</drawtype>
+                                    <color>FFECB3</color>
+                                    <yaxisside>RIGHT</yaxisside>
+                                    <item>
+                                        <host>Tado Template</host>
+                                        <key>tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>Tado Template</host>
+                                        <key>tado.zone.temp[{#TADO_ZONE_NAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <color>00FF00</color>
+                                    <item>
+                                        <host>Tado Template</host>
+                                        <key>tado.zone.target_temp[{#TADO_ZONE_NAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>4</sortorder>
+                                    <color>0040FF</color>
+                                    <yaxisside>RIGHT</yaxisside>
+                                    <item>
+                                        <host>Tado Template</host>
+                                        <key>tado.zone.humidity[{#TADO_ZONE_NAME}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Zone {#TADO_ZONE_NAME} Heating Power</name>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>FILLED_REGION</drawtype>
+                                    <color>FFECB3</color>
+                                    <item>
+                                        <host>Tado Template</host>
+                                        <key>tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Zone {#TADO_ZONE_NAME} Temp and Humidity</name>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>Tado Template</host>
+                                        <key>tado.zone.temp[{#TADO_ZONE_NAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>00FF00</color>
+                                    <item>
+                                        <host>Tado Template</host>
+                                        <key>tado.zone.target_temp[{#TADO_ZONE_NAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <color>0040FF</color>
+                                    <yaxisside>RIGHT</yaxisside>
+                                    <item>
+                                        <host>Tado Template</host>
+                                        <key>tado.zone.humidity[{#TADO_ZONE_NAME}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <macros>
+                <macro>
+                    <macro>{$TADO_PASSWD}</macro>
+                    <type>SECRET_TEXT</type>
+                    <description>Password for Tado</description>
+                </macro>
+                <macro>
+                    <macro>{$TADO_USER}</macro>
+                    <value>this_is_dummy_password</value>
+                    <description>Username for Tado</description>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Outside Temperature</name>
+            <graph_items>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>FF0000</color>
+                    <item>
+                        <host>Tado Template</host>
+                        <key>tado_client_for_zabbix[&quot;-u&quot;,&quot;{$TADO_USER}&quot;,&quot;-p&quot;,&quot;{$TADO_PASSWD}&quot;,&quot;outside_temp&quot;]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>

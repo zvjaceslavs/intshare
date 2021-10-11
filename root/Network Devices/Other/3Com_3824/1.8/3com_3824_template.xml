@@ -1,0 +1,2466 @@
+<?xml version="1.0"?>
+<zabbix_export version="1.0" date="02.04.08" time="10.34">
+	<hosts>
+		<host name="Template_3COM_3824">
+			<ip>0.0.0.0</ip>
+			<port>10050</port>
+			<status>3</status>
+			<groups>
+			</groups>
+			<items>
+				<item type="1" key="ifInErrors.1" value_type="3">
+					<description>Port 1 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.1</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.10" value_type="3">
+					<description>Port 10 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.10</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.11" value_type="3">
+					<description>Port 11 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.11</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.12" value_type="3">
+					<description>Port 12 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.12</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.13" value_type="3">
+					<description>Port 13 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.13</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.14" value_type="3">
+					<description>Port 14 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.14</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.15" value_type="3">
+					<description>Port 15 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.15</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.16" value_type="3">
+					<description>Port 16 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.16</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.17" value_type="3">
+					<description>Port 17 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.17</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.18" value_type="3">
+					<description>Port 18 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.18</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.19" value_type="3">
+					<description>Port 19 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.19</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.2" value_type="3">
+					<description>Port 2 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.2</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.20" value_type="3">
+					<description>Port 20 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.20</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.21" value_type="3">
+					<description>Port 21 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.21</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.22" value_type="3">
+					<description>Port 22 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.22</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.23" value_type="3">
+					<description>Port 23 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.23</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.24" value_type="3">
+					<description>Port 24 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.24</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.3" value_type="3">
+					<description>Port 3 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.3</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.4" value_type="3">
+					<description>Port 4 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.4</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.5" value_type="3">
+					<description>Port 5 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.5</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.6" value_type="3">
+					<description>Port 6 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.6</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.7" value_type="3">
+					<description>Port 7 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.7</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.8" value_type="3">
+					<description>Port 8 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.8</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInErrors.9" value_type="3">
+					<description>Port 9 Traffic IN Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInErrors.9</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.1" value_type="3">
+					<description>Port 1 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.1</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.10" value_type="3">
+					<description>Port 10 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.10</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.11" value_type="3">
+					<description>Port 11 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.11</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.12" value_type="3">
+					<description>Port 12 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.12</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.13" value_type="3">
+					<description>Port 13 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.13</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.14" value_type="3">
+					<description>Port 14 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.14</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.15" value_type="3">
+					<description>Port 15 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.15</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.16" value_type="3">
+					<description>Port 16 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.16</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.17" value_type="3">
+					<description>Port 17 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.17</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.18" value_type="3">
+					<description>Port 18 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.18</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.19" value_type="3">
+					<description>Port 19 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.19</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.2" value_type="3">
+					<description>Port 2 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.2</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.20" value_type="3">
+					<description>Port 20 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.20</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.21" value_type="3">
+					<description>Port 21 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.21</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.22" value_type="3">
+					<description>Port 22 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.22</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.23" value_type="3">
+					<description>Port 23 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.23</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.24" value_type="3">
+					<description>Port 24 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.24</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.3" value_type="3">
+					<description>Port 3 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.3</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.4" value_type="3">
+					<description>Port 4 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.4</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.5" value_type="3">
+					<description>Port 5 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.5</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.6" value_type="3">
+					<description>Port 6 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.6</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.7" value_type="3">
+					<description>Port 7 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.7</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.8" value_type="3">
+					<description>Port 8 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.8</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifInOctects.9" value_type="3">
+					<description>Port 9 Traffic IN </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifInOctets.9</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.1" value_type="3">
+					<description>Port 1 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.1</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.10" value_type="3">
+					<description>Port 10 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.10</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.11" value_type="3">
+					<description>Port 11 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.11</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.12" value_type="3">
+					<description>Port 12 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.12</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.13" value_type="3">
+					<description>Port 13 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.13</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.14" value_type="3">
+					<description>Port 14 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.14</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.15" value_type="3">
+					<description>Port 15 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.15</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.16" value_type="3">
+					<description>Port 16 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.16</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.17" value_type="3">
+					<description>Port 17 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.17</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.18" value_type="3">
+					<description>Port 18 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.18</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.19" value_type="3">
+					<description>Port 19 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.19</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.2" value_type="3">
+					<description>Port 2 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.2</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.20" value_type="3">
+					<description>Port 20 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.20</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.21" value_type="3">
+					<description>Port 21 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.21</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.22" value_type="3">
+					<description>Port 22 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.22</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.23" value_type="3">
+					<description>Port 23 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.23</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.24" value_type="3">
+					<description>Port 24 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.24</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.3" value_type="3">
+					<description>Port 3 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.3</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.4" value_type="3">
+					<description>Port 4 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.4</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.5" value_type="3">
+					<description>Port 5 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.5</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.6" value_type="3">
+					<description>Port 6 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.6</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.7" value_type="3">
+					<description>Port 7 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.7</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.8" value_type="3">
+					<description>Port 8 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.8</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifLastChange.9" value_type="3">
+					<description>Port 9 Last Changed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>uptime</units>
+					<multiplier>1</multiplier>
+					<formula>0.01</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifLastChange.9</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.1" value_type="1">
+					<description>Port 1 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.1</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.10" value_type="1">
+					<description>Port 10 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.10</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.11" value_type="1">
+					<description>Port 11 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.11</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.12" value_type="1">
+					<description>Port 12 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.12</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.13" value_type="1">
+					<description>Port 13 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.13</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.14" value_type="1">
+					<description>Port 14 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.14</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.15" value_type="1">
+					<description>Port 15 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.15</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.16" value_type="1">
+					<description>Port 16 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.16</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.17" value_type="1">
+					<description>Port 17 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.17</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.18" value_type="1">
+					<description>Port 18 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.18</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.19" value_type="1">
+					<description>Port 19 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.19</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.2" value_type="1">
+					<description>Port 2 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.2</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.20" value_type="1">
+					<description>Port 20 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.20</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.21" value_type="1">
+					<description>Port 21 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.21</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.22" value_type="1">
+					<description>Port 22 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.22</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.23" value_type="1">
+					<description>Port 23 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.23</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.24" value_type="1">
+					<description>Port 24 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.24</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.3" value_type="1">
+					<description>Port 3 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.3</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.4" value_type="1">
+					<description>Port 4 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.4</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.5" value_type="1">
+					<description>Port 5 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.5</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.6" value_type="1">
+					<description>Port 6 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.6</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.7" value_type="1">
+					<description>Port 7 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.7</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.8" value_type="1">
+					<description>Port 8 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.8</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOperStatus.9" value_type="1">
+					<description>Port 9 Status</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOperStatus.9</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.1" value_type="3">
+					<description>Port 1 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.1</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.10" value_type="3">
+					<description>Port 10 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.10</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.11" value_type="3">
+					<description>Port 11 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.11</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.12" value_type="3">
+					<description>Port 12 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.12</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.13" value_type="3">
+					<description>Port 13 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.13</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.14" value_type="3">
+					<description>Port 14 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.14</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.15" value_type="3">
+					<description>Port 15 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.15</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.16" value_type="3">
+					<description>Port 16 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.16</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.17" value_type="3">
+					<description>Port 17 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.17</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.18" value_type="3">
+					<description>Port 18 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.18</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.19" value_type="3">
+					<description>Port 19 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.19</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.2" value_type="3">
+					<description>Port 2 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.2</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.20" value_type="3">
+					<description>Port 20 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.20</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.21" value_type="3">
+					<description>Port 21 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.21</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.22" value_type="3">
+					<description>Port 22 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.22</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.23" value_type="3">
+					<description>Port 23 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.23</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.24" value_type="3">
+					<description>Port 24 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.24</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.3" value_type="3">
+					<description>Port 3 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.3</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.4" value_type="3">
+					<description>Port 4 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.4</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.5" value_type="3">
+					<description>Port 5 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.5</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.6" value_type="3">
+					<description>Port 6 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.6</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.7" value_type="3">
+					<description>Port 7 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.7</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.8" value_type="3">
+					<description>Port 8 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.8</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutErrors.9" value_type="3">
+					<description>Port 9 Traffic OUT Errors</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutErrors.9</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.1" value_type="3">
+					<description>Port 1 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.1</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.10" value_type="3">
+					<description>Port 10 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.10</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.11" value_type="3">
+					<description>Port 11 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.11</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.12" value_type="3">
+					<description>Port 12 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.12</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.13" value_type="3">
+					<description>Port 13 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.13</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.14" value_type="3">
+					<description>Port 14 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.14</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.15" value_type="3">
+					<description>Port 15 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.15</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.16" value_type="3">
+					<description>Port 16 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.16</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.17" value_type="3">
+					<description>Port 17 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.17</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.18" value_type="3">
+					<description>Port 18 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.18</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.19" value_type="3">
+					<description>Port 19 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.19</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.2" value_type="3">
+					<description>Port 2 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.2</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.20" value_type="3">
+					<description>Port 20 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.20</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.21" value_type="3">
+					<description>Port 21 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.21</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.22" value_type="3">
+					<description>Port 22 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.22</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.23" value_type="3">
+					<description>Port 23 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.23</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.24" value_type="3">
+					<description>Port 24 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.24</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.3" value_type="3">
+					<description>Port 3 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.3</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.4" value_type="3">
+					<description>Port 4 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.4</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.5" value_type="3">
+					<description>Port 5 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.5</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.6" value_type="3">
+					<description>Port 6 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.6</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.7" value_type="3">
+					<description>Port 7 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.7</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.8" value_type="3">
+					<description>Port 8 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.8</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifOutOctets.9" value_type="3">
+					<description>Port 9 Traffic OUT </description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>b</units>
+					<delta>2</delta>
+					<formula>1</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifOutOctets.9</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.1" value_type="0">
+					<description>Port 1 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.1</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.10" value_type="0">
+					<description>Port 10 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.10</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.11" value_type="0">
+					<description>Port 11 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.11</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.12" value_type="0">
+					<description>Port 12 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.12</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.13" value_type="0">
+					<description>Port 13 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.13</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.14" value_type="0">
+					<description>Port 14 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.14</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.15" value_type="0">
+					<description>Port 15 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.15</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.16" value_type="0">
+					<description>Port 16 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.16</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.17" value_type="0">
+					<description>Port 17 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.17</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.18" value_type="0">
+					<description>Port 18 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.18</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.19" value_type="0">
+					<description>Port 19 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.19</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.2" value_type="0">
+					<description>Port 2 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.2</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.20" value_type="0">
+					<description>Port 20 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.20</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.21" value_type="0">
+					<description>Port 21 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.21</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.22" value_type="0">
+					<description>Port 22 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.22</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.23" value_type="0">
+					<description>Port 23 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.23</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.24" value_type="0">
+					<description>Port 24 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.24</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.3" value_type="0">
+					<description>Port 3 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.3</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.4" value_type="0">
+					<description>Port 4 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.4</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.5" value_type="0">
+					<description>Port 5 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.5</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.6" value_type="0">
+					<description>Port 6 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.6</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.7" value_type="0">
+					<description>Port 7 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.7</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.8" value_type="0">
+					<description>Port 8 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.8</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+				<item type="1" key="ifspeed.9" value_type="0">
+					<description>Port 9 Speed</description>
+					<delay>30</delay>
+					<history>90</history>
+					<trends>365</trends>
+					<units>bps</units>
+					<formula>0.00001</formula>
+					<snmp_community>public</snmp_community>
+					<snmp_oid>ifSpeed.9</snmp_oid>
+					<snmp_port>161</snmp_port>
+				</item>
+			</items>
+			<triggers>
+				<trigger>
+					<description>Port 5 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.5.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 1 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.1.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 2 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.2.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 3 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.3.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 4 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.4.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 6 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.6.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 7 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.7.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 8 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.8.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 9 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.9.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 10 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.10.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 11 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.11.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 12 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.12.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 13 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.13.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 14 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.14.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 15 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.15.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 16 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.16.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 17 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.17.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 18 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.18.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 19 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.19.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 20 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.20.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 21 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.21.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 22 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.22.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 23 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.23.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+				<trigger>
+					<description>Port 24 on {HOSTNAME} Status Change</description>
+					<expression>{{HOSTNAME}:ifOperStatus.24.diff(0)}=1</expression>
+					<priority>3</priority>
+				</trigger>
+			</triggers>
+			<graphs>
+				<graph name="Port 1 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.1">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.1">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 2 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.2">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.2">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 3 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.3">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.3">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 4 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.4">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.4">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 5 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.5">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.5">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 6 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.6">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.6">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 7 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.7">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.7">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 8 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.8">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.8">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 9 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.9">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.9">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 10 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.10">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.10">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 11 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.11">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.11">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 12 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.12">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.12">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 13 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.13">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.13">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 14 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.14">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.14">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 15 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.15">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.15">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 16 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.16">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.16">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 17 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.17">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.17">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 18 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.18">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.18">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 19 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.19">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.19">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 20 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.20">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.20">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 21 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.21">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.21">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 22 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.22">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.22">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 23 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.23">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.23">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+				<graph name="Port 24 Traffic" width="900" height="200">
+					<show_work_period>1</show_work_period>
+					<show_triggers>1</show_triggers>
+					<yaxismin>0.0000</yaxismin>
+					<yaxismax>100.0000</yaxismax>
+					<graph_elements>
+						<graph_element item="{HOSTNAME}:ifInOctects.24">
+							<color>009900</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+						<graph_element item="{HOSTNAME}:ifOutOctets.24">
+							<color>FF0000</color>
+							<yaxisside>1</yaxisside>
+							<calc_fnc>2</calc_fnc>
+							<periods_cnt>5</periods_cnt>
+						</graph_element>
+					</graph_elements>
+				</graph>
+			</graphs>
+		</host>
+	</hosts>
+</zabbix_export>

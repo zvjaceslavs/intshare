@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-03-05T13:06:38Z</date>
+    <groups>
+        <group>
+            <name>Templates/Linux</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Monitor one Linux Services</template>
+            <name>Monitor one Linux Services</name>
+            <groups>
+                <group>
+                    <name>Templates/Linux</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Services is up</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Check ufw</name>
+                    <key>system.run[&quot;systemctl status ufw | grep -q running;echo $?&quot;]</key>
+                    <delay>10s</delay>
+                    <description>1= not found&#13;
+0 = found</description>
+                    <applications>
+                        <application>
+                            <name>Services is up</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1</expression>
+                            <name>Firewall is not up</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

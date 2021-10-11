@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-01T14:56:04Z</date>
+    <groups>
+        <group>
+            <name>DEMO</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>rpcm_1502_template</template>
+            <name>rpcm_1502_template</name>
+            <groups>
+                <group>
+                    <name>DEMO</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Automatic Transfer Switch</name>
+                </application>
+                <application>
+                    <name>Inputs</name>
+                </application>
+                <application>
+                    <name>Outputs</name>
+                </application>
+                <application>
+                    <name>System</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Active Input</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.2.1.0</snmp_oid>
+                    <key>activeInput.0</key>
+                    <delay>30s</delay>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Automatic Transfer Switch Currently Active Input</description>
+                    <applications>
+                        <application>
+                            <name>Automatic Transfer Switch</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Contact Information</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.4.0</snmp_oid>
+                    <key>contact.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Contact Information</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>System Name</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.1.0</snmp_oid>
+                    <key>description.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>System Name</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Firmware Release Date and Time</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.11.0</snmp_oid>
+                    <key>firmwareReleaseDate.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Firmware Release Date and Time</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Firmware Version</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.10.0</snmp_oid>
+                    <key>firmwareVersion.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Firmware Version</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Force Failback</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.2.3.0</snmp_oid>
+                    <key>forceFailback.0</key>
+                    <delay>30s</delay>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Automatic Transfer Switch Force Failback Setting (1 =enabled, 0 =disabled)</description>
+                    <applications>
+                        <application>
+                            <name>Automatic Transfer Switch</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>rpcm - force fallback</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Seconds Before Forcing Failback</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.2.4.0</snmp_oid>
+                    <key>forceFailbackDelaySeconds.0</key>
+                    <delay>30s</delay>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Automatic Transfer Switch Delay in Seconds Before Forcing Failback</description>
+                    <applications>
+                        <application>
+                            <name>Automatic Transfer Switch</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Ground Connected State</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.2.5.0</snmp_oid>
+                    <key>groundGood.0</key>
+                    <delay>30s</delay>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Good Ground Connected State (1 =Ground is Good, 0 =Ground is Bad)</description>
+                    <applications>
+                        <application>
+                            <name>Automatic Transfer Switch</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>rpcm - ground good</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Ground connected state is bad</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Location</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.6.0</snmp_oid>
+                    <key>location.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Location</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Name</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.5.0</snmp_oid>
+                    <key>name.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Name (usually FQDN)</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Vendor Identifier</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.2.0</snmp_oid>
+                    <key>objectID.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Vendor Identifier (RCNTEC)</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Priority Input</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.2.2.0</snmp_oid>
+                    <key>priorityInput.0</key>
+                    <delay>30s</delay>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Automatic Transfer Switch Priority Input</description>
+                    <applications>
+                        <application>
+                            <name>Automatic Transfer Switch</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Serial Number</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.9.0</snmp_oid>
+                    <key>serialNumber.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Serial Number</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Services Field</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.7.0</snmp_oid>
+                    <key>services.0</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Services Field</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Temperature</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.12.0</snmp_oid>
+                    <key>temperature.0</key>
+                    <delay>30s</delay>
+                    <value_type>FLOAT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Temperature</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Uptime in Seconds</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.46235.2.1.3.0</snmp_oid>
+                    <key>uptime.0</key>
+                    <delay>30s</delay>
+                    <value_type>FLOAT</value_type>
+                    <port>{$SNMP_PORT}</port>
+                    <description>Uptime in Seconds</description>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Discover Inputs</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE}, .1.3.6.1.4.1.46235.2.3.2.1.2]</snmp_oid>
+                    <key>inputEntry</key>
+                    <delay>1h</delay>
+                    <port>{$SNMP_PORT}</port>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KVA/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.14.{#SNMPINDEX}</snmp_oid>
+                            <key>inputAccumulatedKVAhFloat.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Accumulated KVA/h</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KVA/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>inputAccumulatedKVAhString.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Accumulated KVA/h</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KVar/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.15.{#SNMPINDEX}</snmp_oid>
+                            <key>inputAccumulatedKVarhFloat.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Accumulated KVar/h</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KVar/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>inputAccumulatedKVarhString.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Accumulated KVar/h</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KWatt/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.13.{#SNMPINDEX}</snmp_oid>
+                            <key>inputAccumulatedKWhFloat.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Accumulated KWatt/h</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KWatt/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>inputAccumulatedKWhString.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Accumulated KWatt/h</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Maximum Alloed Ampers</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.20.{#SNMPINDEX}</snmp_oid>
+                            <key>inputAmpsAllowedMax.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Maximum Alloed Ampers</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Description</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>inputDescription.[{#SNMPINDEX}]</key>
+                            <delay>1h</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Description</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Instant Frequency Value</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>inputFrequency.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Instant Frequency Value</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Maximum Allowed Frequency</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.16.{#SNMPINDEX}</snmp_oid>
+                            <key>inputFrequencyAllowedMax.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Maximum Allowed Frequency Multiplied by 100</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Minimum Allowed Frequency</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.17.{#SNMPINDEX}</snmp_oid>
+                            <key>inputFrequencyAllowedMin.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Minimum Allowed Frequency Multiplied by 100</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Presence of Frequency</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>inputFrequencyAvailable.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Presence of Frequency on Input (1 =present, 0 =absent)</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - frequency</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}=0</expression>
+                                    <name>Frequency on {#SNMPVALUE} is absent</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Instant Milliamps Value</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>inputInstantMilliamps.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Instant Milliamps Value</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Instant Watts Value</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>inputInstantWatts.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Instant Watts Value</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Recognition State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>inputRecognitionState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Indicator Flashing for Physical Recognition/Indication (1 =enabled, 0 =disabled)</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - indicator flashing</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Instant Voltage Value</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>inputVoltage.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Instant Voltage Value</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Maximum Allowed Voltage</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.18.{#SNMPINDEX}</snmp_oid>
+                            <key>inputVoltageAllowedMax.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Maximum Allowed Voltage</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Minimum Allowed Voltage</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.3.2.1.19.{#SNMPINDEX}</snmp_oid>
+                            <key>inputVoltageAllowedMin.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Input Minimum Allowed Voltage</description>
+                            <applications>
+                                <application>
+                                    <name>Inputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Discover Outputs</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE}, .1.3.6.1.4.1.46235.2.4.2.1.2]</snmp_oid>
+                    <key>outputEntry</key>
+                    <delay>1h</delay>
+                    <port>{$SNMP_PORT}</port>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KVA/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.19.{#SNMPINDEX}</snmp_oid>
+                            <key>outputAccumulatedKVAhFloat.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Accumulated KVA/h</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KVA/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.16.{#SNMPINDEX}</snmp_oid>
+                            <key>outputAccumulatedKVAhString.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <value_type>FLOAT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Accumulated KVA/h</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KVar/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.20.{#SNMPINDEX}</snmp_oid>
+                            <key>outputAccumulatedKVarhFloat.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Accumulated KVar/h</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KVar/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.17.{#SNMPINDEX}</snmp_oid>
+                            <key>outputAccumulatedKVarhString.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Accumulated KVar/h</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KWatt/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.18.{#SNMPINDEX}</snmp_oid>
+                            <key>outputAccumulatedKWhFloat.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Accumulated KWatt/h</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Accumulated KWatt/h</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.15.{#SNMPINDEX}</snmp_oid>
+                            <key>outputAccumulatedKWhString.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Accumulated KWatt/h</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Actual State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>outputActualState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Actual State (1 =on, 0 =off)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - admin state</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Administrative State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>outputAdminState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Administrative State (1 =on, 0 =off)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - admin state</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Circuit Breaker State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>outputCircuitBreakerFiredState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Circuit Breaker State (1 =SHORT CIRCUIT DETECTED, 0 =NO SHORT CIRCUIT DETECTED)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - breaker state</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Circuit Breaker Short Circuit Firing Facts</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.21.{#SNMPINDEX}</snmp_oid>
+                            <key>outputCircuitBreakerFiringFacts.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <value_type>FLOAT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Circuit Breaker Short Circuit Firing Facts</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Description</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>outputDescription.[{#SNMPINDEX}]</key>
+                            <delay>1h</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Description</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Turn Off Due to Input Overcurrent State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>outputInputOvercurrentTurnOffFiredState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Turn Off Due to Input Overcurrent State (1 =OVERCURRENT TURN OFF FIRED, 0 =NO OVERCURRENT TURN OFF DETECTED)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - overcurent turn off state</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Instant Milliamps Value</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>outputInstantMilliamps.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <value_type>FLOAT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Instant Milliamps Value</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Instant Vars Value</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.14.{#SNMPINDEX}</snmp_oid>
+                            <key>outputInstantVars.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <value_type>FLOAT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Instant Vars Value</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Instant VAs Value</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.13.{#SNMPINDEX}</snmp_oid>
+                            <key>outputInstantVAs.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <value_type>FLOAT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Instant VAs Value</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Instant Watts Value</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>outputInstantWatts.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <value_type>FLOAT</value_type>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Instant Watts Value</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Alarm Fired Facts</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.25.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentAlarmFiredFacts.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Alarm Fired Facts</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Alarm State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentAlarmFiredState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Alarm State (1 =OVERCURRENT ALARM FIRED, 0 =NO ALARM)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - overcurrent alarm state</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Alarm Limit Milliamps</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.22.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentAlarmLimitMilliamps.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Alarm Limit Milliamps</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Alarm Limit Reached Facts</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.24.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentAlarmLimitReachedFacts.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Alarm Limit Reached Facts</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Alarm Limit Seconds</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.23.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentAlarmLimitSeconds.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Alarm Limit Seconds</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Turn Off Fired Facts</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.29.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentTurnOffFiredFacts.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Turn Off Fired Facts</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Turn Off State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentTurnOffFiredState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Turn Off State (1 =OVERCURRENT TURN OFF FIRED, 0 =NO OVERCURRENT TURN OFF DETECTED)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - overcurent turn off state</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Turn Off Limit Milliamps</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.26.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentTurnOffLimitMilliamps.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Turn Off Limit Milliamps</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Turn Off Limit Reached Facts</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.28.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentTurnOffLimitReachedFacts.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Turn Off Limit Reached Facts</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overcurrent Turn Off Limit Seconds</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.27.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvercurrentTurnOffLimitSeconds.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overcurrent Turn Off Limit Seconds</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overvoltage Turn Off Facts</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.34.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvervoltageTurnOffFacts.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overvoltage Turn Off Facts</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overvoltage Turn Off Fired State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.32.{#SNMPINDEX}</snmp_oid>
+                            <key>outputOvervoltageTurnOffFiredState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overvoltage Turn Off Fired State (1 =OVERVOLTAGE TURN OFF FIRED, 0 =NO OVERVOLTAGE TURN OFF DETECTED)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rcpm - over voltage state</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Indicator Flashing</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>outputRecognitionState.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Indicator Flashing for Physical Recognition/Indication (1 =enabled, 0 =disabled)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>rpcm - indicator flashing</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Overvoltage Recovery interval, Seconds</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.23.{#SNMPINDEX}</snmp_oid>
+                            <key>outputRecoverAfterOvervoltageSeconds.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Overvoltage Recovery interval, Seconds</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Turn Off Priority On Input Overload</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.31.{#SNMPINDEX}</snmp_oid>
+                            <key>outputTurnOffPriorityOnInputOverload.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Turn Off Priority On Input Overload (Outputs with higher priority values will turn off first)</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Turn On Delay After RPCM Device Startup</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.46235.2.4.2.1.30.{#SNMPINDEX}</snmp_oid>
+                            <key>outputTurnOnDelayOnStartup.[{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Output Turn On Delay After RPCM Device Startup</description>
+                            <applications>
+                                <application>
+                                    <name>Outputs</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>rcpm - over voltage state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>NO OVERVOLTAGE TURN OFF DETECTED</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>OVERVOLTAGE TURN OFF FIRED</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>rpcm - admin state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>off</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>on</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>rpcm - breaker state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>NO SHORT CIRCUIT DETECTED</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>SHORT CIRCUIT DETECTED</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>rpcm - force fallback</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>enabled</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>disabled</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>rpcm - frequency</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>absent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>present</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>rpcm - ground good</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Ground is Bad</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Ground is Good</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>rpcm - indicator flashing</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>disabled</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>enabled</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>rpcm - overcurent turn off state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>NO OVERCURRENT TURN OFF DETECTED</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>OVERCURRENT TURN OFF FIRED</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>rpcm - overcurrent alarm state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>NO ALARM</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>OVERCURRENT ALARM FIRED</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

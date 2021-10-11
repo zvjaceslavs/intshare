@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-02-26T22:25:24Z</date>
+    <groups>
+        <group>
+            <name>Security Cameras - HikVision</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Security Cameras - HikVision</template>
+            <name>Security Cameras - HikVision</name>
+            <description>Based of SNMP v2 Generic</description>
+            <templates>
+                <template>
+                    <name>Template App HTTP Service</name>
+                </template>
+                <template>
+                    <name>Template Module ICMP Ping</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Security Cameras - HikVision</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>General</name>
+                </application>
+                <application>
+                    <name>Video Stream</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>System Firmware</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.4.1.39165.1.3.0</snmp_oid>
+                    <key>system.firmware</key>
+                    <delay>1h</delay>
+                    <history>0</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>MIB: SNMPv2-MIB&#13;
+A textual description of the entity. This value should&#13;
+include the full name and version identification of the system's hardware type, software operating-system, and&#13;
+networking software.</description>
+                    <inventory_link>OS</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{diff()}=1</expression>
+                            <recovery_mode>NONE</recovery_mode>
+                            <name>Firmware Updated</name>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>System MAC Address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.4.1.39165.1.4.0</snmp_oid>
+                    <key>system.macaddress</key>
+                    <delay>12h</delay>
+                    <history>0</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>MIB: SNMPv2-MIB&#13;
+A textual description of the entity. This value should&#13;
+include the full name and version identification of the system's hardware type, software operating-system, and&#13;
+networking software.</description>
+                    <inventory_link>MACADDRESS_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>System Manafacturer</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.4.1.39165.1.6.0</snmp_oid>
+                    <key>system.manafacturer</key>
+                    <delay>12h</delay>
+                    <history>0</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>MIB: SNMPv2-MIB&#13;
+A textual description of the entity. This value should&#13;
+include the full name and version identification of the system's hardware type, software operating-system, and&#13;
+networking software.</description>
+                    <inventory_link>VENDOR</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>System Model</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.4.1.39165.1.1.0</snmp_oid>
+                    <key>system.model</key>
+                    <delay>12h</delay>
+                    <history>0</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>MIB: SNMPv2-MIB&#13;
+A textual description of the entity. This value should&#13;
+include the full name and version identification of the system's hardware type, software operating-system, and&#13;
+networking software.</description>
+                    <inventory_link>MODEL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>SNMP agent availability</name>
+                    <type>INTERNAL</type>
+                    <key>zabbix[host,snmp,available]</key>
+                    <delay>5m</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>zabbix.host.available</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{max({$SNMP.TIMEOUT})}=0</expression>
+                            <name>No SNMP data collection</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>WARNING</priority>
+                            <description>SNMP is not available for polling. Please check device connectivity and SNMP settings.</description>
+                            <dependencies>
+                                <dependency>
+                                    <name>Unavailable by ICMP ping</name>
+                                    <expression>{Security Cameras - HikVision:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <httptests>
+                <httptest>
+                    <name>RTSP Check</name>
+                    <application>
+                        <name>Video Stream</name>
+                    </application>
+                    <agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36</agent>
+                    <authentication>BASIC</authentication>
+                    <http_user>{$RTSP_USER}</http_user>
+                    <http_password>{$RTSP_PASS}</http_password>
+                    <steps>
+                        <step>
+                            <name>Check if RTSP is Active</name>
+                            <url>rtsp://{HOST.IP}:554/Streaming/Channels/101/</url>
+                            <follow_redirects>NO</follow_redirects>
+                        </step>
+                    </steps>
+                </httptest>
+            </httptests>
+            <macros>
+                <macro>
+                    <macro>{$RTSP_PASS}</macro>
+                    <value>RTSP_PASS</value>
+                </macro>
+                <macro>
+                    <macro>{$RTSP_USER}</macro>
+                    <value>RTSP_User</value>
+                </macro>
+                <macro>
+                    <macro>{$SNMP.TIMEOUT}</macro>
+                    <value>5m</value>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>zabbix.host.available</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>not available</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>available</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

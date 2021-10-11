@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2020-11-05T17:41:27Z</date>
+    <media_types>
+        <media_type>
+            <name>Line Notify Template 2</name>
+            <type>WEBHOOK</type>
+            <parameters>
+                <parameter>
+                    <name>Message</name>
+                    <value>{ALERT.MESSAGE}</value>
+                </parameter>
+                <parameter>
+                    <name>Subject</name>
+                    <value>{ALERT.SUBJECT}</value>
+                </parameter>
+                <parameter>
+                    <name>To</name>
+                    <value>{ALERT.SENDTO}</value>
+                </parameter>
+            </parameters>
+            <script>var LineNotify = {&#13;
+    to: null,&#13;
+    message: null,&#13;
+&#13;
+    sendMessage: function() {&#13;
+        var data,&#13;
+        response,&#13;
+        request = new CurlHttpRequest(),&#13;
+        url = 'https://notify-api.line.me/api/notify';&#13;
+&#13;
+        request.AddHeader('Content-Type: application/x-www-form-urlencoded');&#13;
+        request.AddHeader('Authorization: Bearer ' + LineNotify.to);&#13;
+        data = encodeURI('message=' + '\n' + LineNotify.message);&#13;
+&#13;
+        // Remove replace() function if you want to see the exposed token in the log file.&#13;
+        Zabbix.Log(4, '[LineNotify Webhook] URL: ' + url);&#13;
+        Zabbix.Log(4, '[LineNotify Webhook] Bearer: ' + LineNotify.to);&#13;
+        Zabbix.Log(4, '[LineNotify Webhook] params: ' + data);&#13;
+        response = request.Post(url, data);&#13;
+        Zabbix.Log(4, '[LineNotify Webhook] HTTP code: ' + request.Status());&#13;
+&#13;
+        try {&#13;
+            response = JSON.parse(response);&#13;
+        }&#13;
+        catch (error) {&#13;
+            response = null;&#13;
+            Zabbix.Log(4, '[LineNotify Webhook] HTTP code: ' + request.Status());&#13;
+        }&#13;
+&#13;
+        if (request.Status() !== 200 || response.status !== 200) {&#13;
+            Zabbix.Log(1, '[LineNotify Webhook] HTTP code: ' + request.Status());&#13;
+            if (typeof response.description === 'string') {&#13;
+                throw response.description;&#13;
+            }&#13;
+            else {&#13;
+                throw 'Unknown error. Check debug log for more information.'&#13;
+            }&#13;
+        }&#13;
+    }&#13;
+}&#13;
+&#13;
+try {&#13;
+    var params = JSON.parse(value);&#13;
+&#13;
+    LineNotify.to = params.To;&#13;
+    LineNotify.message = params.Subject + '\n' + params.Message;&#13;
+    LineNotify.sendMessage();&#13;
+&#13;
+    return 'OK';&#13;
+}&#13;
+catch (error) {&#13;
+    Zabbix.Log(4, '[LineNotify Webhook] notification failed: ' + error);&#13;
+    throw 'Sending failed: ' + error + '.';&#13;
+}</script>
+            <timeout>10s</timeout>
+            <description>1. Generate access token on https://notify-bot.line.me/&#13;
+2. On Zabbix, put the token on the &quot;Send to&quot; field of users media setting.</description>
+            <message_templates>
+                <message_template>
+                    <event_source>TRIGGERS</event_source>
+                    <operation_mode>PROBLEM</operation_mode>
+                    <subject>Problem: {EVENT.NAME}</subject>
+                    <message>Problem started at {EVENT.TIME} on {EVENT.DATE}&#13;
+Problem name: {EVENT.NAME}&#13;
+Host: {HOST.NAME}&#13;
+Severity: {EVENT.SEVERITY}&#13;
+Operational data: {EVENT.OPDATA}&#13;
+Original problem ID: {EVENT.ID}&#13;
+{TRIGGER.URL}</message>
+                </message_template>
+                <message_template>
+                    <event_source>TRIGGERS</event_source>
+                    <operation_mode>RECOVERY</operation_mode>
+                    <subject>Resolved in {EVENT.DURATION}: {EVENT.NAME}</subject>
+                    <message>Problem has been resolved in {EVENT.DURATION} at {EVENT.RECOVERY.TIME} on {EVENT.RECOVERY.DATE}&#13;
+Problem name: {EVENT.NAME}&#13;
+Host: {HOST.NAME}&#13;
+Severity: {EVENT.SEVERITY}&#13;
+Original problem ID: {EVENT.ID}&#13;
+{TRIGGER.URL}</message>
+                </message_template>
+                <message_template>
+                    <event_source>TRIGGERS</event_source>
+                    <operation_mode>UPDATE</operation_mode>
+                    <subject>Updated problem: {EVENT.NAME}</subject>
+                    <message>{USER.FULLNAME} {EVENT.UPDATE.ACTION} problem at {EVENT.UPDATE.DATE} {EVENT.UPDATE.TIME}.&#13;
+{EVENT.UPDATE.MESSAGE}&#13;
+&#13;
+Current problem status is {EVENT.STATUS}, acknowledged: {EVENT.ACK.STATUS}.</message>
+                </message_template>
+                <message_template>
+                    <event_source>DISCOVERY</event_source>
+                    <operation_mode>PROBLEM</operation_mode>
+                    <subject>Discovery: {DISCOVERY.DEVICE.STATUS} {DISCOVERY.DEVICE.IPADDRESS}</subject>
+                    <message>Discovery rule: {DISCOVERY.RULE.NAME}&#13;
+&#13;
+Device IP: {DISCOVERY.DEVICE.IPADDRESS}&#13;
+Device DNS: {DISCOVERY.DEVICE.DNS}&#13;
+Device status: {DISCOVERY.DEVICE.STATUS}&#13;
+Device uptime: {DISCOVERY.DEVICE.UPTIME}&#13;
+&#13;
+Device service name: {DISCOVERY.SERVICE.NAME}&#13;
+Device service port: {DISCOVERY.SERVICE.PORT}&#13;
+Device service status: {DISCOVERY.SERVICE.STATUS}&#13;
+Device service uptime: {DISCOVERY.SERVICE.UPTIME}</message>
+                </message_template>
+                <message_template>
+                    <event_source>AUTOREGISTRATION</event_source>
+                    <operation_mode>PROBLEM</operation_mode>
+                    <subject>Autoregistration: {HOST.HOST}</subject>
+                    <message>Host name: {HOST.HOST}&#13;
+Host IP: {HOST.IP}&#13;
+Agent port: {HOST.PORT}</message>
+                </message_template>
+            </message_templates>
+        </media_type>
+    </media_types>
+</zabbix_export>

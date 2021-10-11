@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.4</version>
+    <date>2021-03-11T20:43:56Z</date>
+    <groups>
+        <group>
+            <name>Templates/Network devices</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>HW UPS HP</template>
+            <name>HW UPS HP</name>
+            <groups>
+                <group>
+                    <name>Templates/Network devices</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Battery</name>
+                </application>
+                <application>
+                    <name>Bypass</name>
+                </application>
+                <application>
+                    <name>General</name>
+                </application>
+                <application>
+                    <name>Health</name>
+                </application>
+                <application>
+                    <name>Input</name>
+                </application>
+                <application>
+                    <name>Output</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Ambient Temperature</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.232.165.3.6.1.0</snmp_oid>
+                    <key>upsAmbientTemp</key>
+                    <units>°C</units>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;40</expression>
+                            <name>Ambinet Temperature {ITEM.VALUE} °C</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Battery current</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.2.3.0</snmp_oid>
+                    <key>upsBatteryCurrent</key>
+                    <delay>60</delay>
+                    <units>A</units>
+                    <description>Battery Current as reported by the UPS metering. Current is positive when discharging, negative when recharging the battery.</description>
+                    <applications>
+                        <application>
+                            <name>Battery</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <parameters>
+                                <parameter>0.1</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Battery Status</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.2.5.0</snmp_oid>
+                    <key>upsBatteryStatus</key>
+                    <delay>30</delay>
+                    <description>Gives the status of the Advanced Battery Management; batteryFloating(3) status means that the charger is temporarily charging the battery to its float voltage; batteryResting(4) is the state when the battery is fully charged and none of the other actions (charging/discharging/floating) is being done</description>
+                    <applications>
+                        <application>
+                            <name>Battery</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>UPS Battery status</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=3</expression>
+                            <name>Battery Status: Charging</name>
+                            <priority>INFO</priority>
+                            <description>Battery Status on {HOST.NAME} is {ITEM.VALUE}</description>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>Loc</tag>
+                                    <value>{INVENTORY.LOCATION1}</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Battery Test Status</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.232.165.3.7.2.0</snmp_oid>
+                    <key>upsBatteryStatusTest</key>
+                    <applications>
+                        <application>
+                            <name>Battery</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;1</expression>
+                            <name>Battery Test Status</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Battery voltage</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.2.2.0</snmp_oid>
+                    <key>upsBatteryVoltage</key>
+                    <delay>60</delay>
+                    <units>V</units>
+                    <description>The magnitude of the present battery voltage.</description>
+                    <applications>
+                        <application>
+                            <name>Battery</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>ByPass Frequency</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.5.1.0</snmp_oid>
+                    <key>upsByPassFrequency1</key>
+                    <delay>30</delay>
+                    <units>Hz</units>
+                    <applications>
+                        <application>
+                            <name>Bypass</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <parameters>
+                                <parameter>0.1</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Estimated charge remaining</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.2.4.0</snmp_oid>
+                    <key>upsEstimatedChargeRemaining</key>
+                    <delay>60</delay>
+                    <units>%</units>
+                    <description>Battery percent charge</description>
+                    <applications>
+                        <application>
+                            <name>Battery</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;20</expression>
+                            <name>Battery Charge Depleated</name>
+                            <priority>HIGH</priority>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>Loc</tag>
+                                    <value>{INVENTORY.LOCATION1}</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                        <trigger>
+                            <expression>{last()}&lt;80</expression>
+                            <name>Battery Charge Less Than 80%</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>Loc</tag>
+                                    <value>{INVENTORY.LOCATION1}</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Estimated minutes remaining if no power</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.2.1.0</snmp_oid>
+                    <key>upsEstimatedMinutesRemaining</key>
+                    <delay>30</delay>
+                    <units>uptime</units>
+                    <description>Battery run time in seconds before UPS turns off due to low battery.</description>
+                    <applications>
+                        <application>
+                            <name>Battery</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;10</expression>
+                            <name>Battery Time Remaining Below 10 Minutes</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>Loc</tag>
+                                    <value>{INVENTORY.LOCATION1}</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Device MAC Address</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.1.2.8.0</snmp_oid>
+                    <key>upsIdentAgentMAC</key>
+                    <delay>600</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>MAC Address</description>
+                    <inventory_link>MACADDRESS_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device Serial number</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.2.2.2.1.0</snmp_oid>
+                    <key>upsIdentAgentSN</key>
+                    <delay>600</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>Communication Board Firmware Revision ; UPS Firmware Revision</description>
+                    <inventory_link>SERIALNO_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device Software Versions</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.1.3.0</snmp_oid>
+                    <key>upsIdentAgentSoftwareVersion</key>
+                    <delay>600</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>Communication Board Firmware Revision ; UPS Firmware Revision</description>
+                    <inventory_link>SOFTWARE</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device Location</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.1.6.0</snmp_oid>
+                    <key>upsIdentLocation</key>
+                    <delay>600</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <inventory_link>LOCATION</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device Manufacturer</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.1.1.0</snmp_oid>
+                    <key>upsIdentManufacturer</key>
+                    <delay>600</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>The name of the UPS manufacturer.</description>
+                    <inventory_link>VENDOR</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device Model</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.1.2.0</snmp_oid>
+                    <key>upsIdentModel</key>
+                    <delay>86400</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>The UPS Model designation.</description>
+                    <inventory_link>MODEL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device Name</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.1.5.0</snmp_oid>
+                    <key>upsIdentName</key>
+                    <delay>600</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Device Uptime</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.1.3.0</snmp_oid>
+                    <key>upsIdentUptime</key>
+                    <units>uptime</units>
+                    <description>UPS uptime.</description>
+                    <inventory_link>DEPLOYMENT_STATUS</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <parameters>
+                                <parameter>0.01</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;300</expression>
+                            <name>Device rebooted</name>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>Loc</tag>
+                                    <value>{INVENTORY.LOCATION1}</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Input Frequency</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.3.1.0</snmp_oid>
+                    <key>upsInputFrequency1</key>
+                    <delay>30</delay>
+                    <units>Hz</units>
+                    <applications>
+                        <application>
+                            <name>Input</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <parameters>
+                                <parameter>0.1</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;53 or {last()}&lt;47</expression>
+                            <name>UPS Input frequency outside nominal</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Input line bads counter</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.3.2.0</snmp_oid>
+                    <key>upsInputLineBads</key>
+                    <delay>30</delay>
+                    <description>A count of the number of times the input entered an out-of-tolerance condition as defined by the manufacturer.  This count is incremented by one each time the input transitions from zero out-of-tolerance lines to one or more input lines out-of-tolerance. A big number show problems with the electricity power where your UPS is connected</description>
+                    <applications>
+                        <application>
+                            <name>Input</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{change()}&gt;0</expression>
+                            <name>UPS Input Power Line Bad counter</name>
+                            <priority>HIGH</priority>
+                            <description>The number of times the Input was out of tolerance in voltage or frequency.</description>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>Loc</tag>
+                                    <value>{INVENTORY.LOCATION1}</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Output Frequency</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.4.2.0</snmp_oid>
+                    <key>upsOutputFrequency1</key>
+                    <delay>30</delay>
+                    <units>Hz</units>
+                    <applications>
+                        <application>
+                            <name>Output</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <parameters>
+                                <parameter>0.1</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Output Load</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.232.165.3.4.1.0</snmp_oid>
+                    <key>upsOutputLoad</key>
+                    <delay>30</delay>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Output</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Segment #1</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.232.165.3.10.2.1.2.1</snmp_oid>
+                    <key>upsOutputSegment1</key>
+                    <delay>30s</delay>
+                    <applications>
+                        <application>
+                            <name>Output</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>UPS Output pluged</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;1</expression>
+                            <name>Output Segment #1 unpluged</name>
+                            <status>DISABLED</status>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Segment #2</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.232.165.3.10.2.1.2.2</snmp_oid>
+                    <key>upsOutputSegment2</key>
+                    <delay>30s</delay>
+                    <applications>
+                        <application>
+                            <name>Output</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>UPS Output pluged</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;1</expression>
+                            <name>Output Segment #2 unpluged</name>
+                            <status>DISABLED</status>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>UPS Bypass Phases</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.232.165.3.5.3.1.1]</snmp_oid>
+                    <key>upsBypassCurrent</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Bypass Voltage Phase {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.232.165.3.5.3.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>upsBypassVoltage.[{#SNMPINDEX}]</key>
+                            <units>V</units>
+                            <applications>
+                                <application>
+                                    <name>Bypass</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Bypass Phase {#SNMPINDEX}</name>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>F7941D</color>
+                                    <item>
+                                        <host>HW UPS HP</host>
+                                        <key>upsBypassVoltage.[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>UPS Input Phases</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.232.165.3.3.4.1.1]</snmp_oid>
+                    <key>upsInputFrequency</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Input current Phase {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.232.165.3.3.4.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>upsInputCurrent.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>A</units>
+                            <applications>
+                                <application>
+                                    <name>Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input power Phase {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.232.165.3.3.4.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>upsInputPower.[{#SNMPINDEX}]</key>
+                            <units>W</units>
+                            <applications>
+                                <application>
+                                    <name>Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Input voltage Phase {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.232.165.3.3.4.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>upsInputVoltage.[{#SNMPINDEX}]</key>
+                            <units>V</units>
+                            <applications>
+                                <application>
+                                    <name>Input</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Input Phase {#SNMPINDEX}</name>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>HW UPS HP</host>
+                                        <key>upsInputCurrent.[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>F7941D</color>
+                                    <item>
+                                        <host>HW UPS HP</host>
+                                        <key>upsInputPower.[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <color>FC6EA3</color>
+                                    <item>
+                                        <host>HW UPS HP</host>
+                                        <key>upsInputVoltage.[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>UPS Output Phses</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.232.165.3.4.4.1.1]</snmp_oid>
+                    <key>upsOutputPower</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Output current Phase {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.232.165.3.4.4.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>upsOutputcurrent.[{#SNMPINDEX}]</key>
+                            <units>A</units>
+                            <applications>
+                                <application>
+                                    <name>Output</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Output Power Phase {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.232.165.3.4.4.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>upsOutputPower.[{#SNMPINDEX}]</key>
+                            <units>W</units>
+                            <applications>
+                                <application>
+                                    <name>Output</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{change()}&gt;300</expression>
+                                    <name>UPS Load Changed phase {#SNMPINDEX} (+/-300W)</name>
+                                    <priority>INFO</priority>
+                                    <description>On {HOST.NAME} we detect a big load change - the power output differential is over 300W</description>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;10</expression>
+                                    <name>UPS Low output power phase {#SNMPINDEX} (&lt;10 W)</name>
+                                    <priority>WARNING</priority>
+                                    <description>The output power for {HOST.NAME} is under {ITEM.VALUE}. Take actions to prevent this in future</description>
+                                    <tags>
+                                        <tag>
+                                            <tag>Value</tag>
+                                            <value>{ITEM.VALUE}</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Output Voltage Phase {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.232.165.3.4.4.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>upsOutputVoltage.[{#SNMPINDEX}]</key>
+                            <units>V</units>
+                            <applications>
+                                <application>
+                                    <name>Output</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(#3)}&lt;200 or {last(#3)}&gt;250</expression>
+                                    <name>UPS Power Voltage outside nominal phase {#SNMPINDEX}</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Output Phase {#SNMPINDEX}</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>HW UPS HP</host>
+                                        <key>upsOutputcurrent.[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>2774A4</color>
+                                    <item>
+                                        <host>HW UPS HP</host>
+                                        <key>upsOutputPower.[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>F7941D</color>
+                                    <item>
+                                        <host>HW UPS HP</host>
+                                        <key>upsOutputVoltage.[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <valuemaps>
+                <valuemap>
+                    <name>UPS Battery status</name>
+                    <mappings>
+                        <mapping>
+                            <value>3</value>
+                            <newvalue>batteryCharging</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>4</value>
+                            <newvalue>batteryCharged</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <name>UPS Battery test status</name>
+                    <mappings>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Aborted</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>2</value>
+                            <newvalue>OK</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <name>UPS Output pluged</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>UnPluged</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Pluged</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+            </valuemaps>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Battery</name>
+            <show_work_period>NO</show_work_period>
+            <show_triggers>NO</show_triggers>
+            <type>STACKED</type>
+            <graph_items>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>008800</color>
+                    <item>
+                        <host>HW UPS HP</host>
+                        <key>upsEstimatedChargeRemaining</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <color>2774A4</color>
+                    <item>
+                        <host>HW UPS HP</host>
+                        <key>upsEstimatedMinutesRemaining</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>

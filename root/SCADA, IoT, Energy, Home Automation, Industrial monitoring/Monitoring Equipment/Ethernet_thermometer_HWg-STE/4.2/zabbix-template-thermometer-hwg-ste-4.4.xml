@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-08T09:04:30Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Thermometer HWg-STE</template>
+            <name>Template Thermometer HWg-STE</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>General</name>
+                </application>
+                <application>
+                    <name>Thermometer</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Device HW MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21796.4.1.70.1.0</snmp_oid>
+                    <key>sysHwMacAddress</key>
+                    <delay>1h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>Device HW MAC address</description>
+                    <inventory_link>MACADDRESS_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Sensors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE}, SNMPv2-SMI::enterprises.21796.4.1.3.1.2, {#SENSOR_UNIT}, SNMPv2-SMI::enterprises.21796.4.1.3.1.7,{#SENSOR_NAME}, SNMPv2-SMI::enterprises.21796.4.1.3.1.2]</snmp_oid>
+                    <key>sensorName</key>
+                    <delay>1h</delay>
+                    <filter>
+                        <conditions>
+                            <condition>
+                                <macro>{#SNMPVALUE}</macro>
+                                <value>^$</value>
+                                <operator>NOT_MATCHES_REGEX</operator>
+                                <formulaid>A</formulaid>
+                            </condition>
+                        </conditions>
+                    </filter>
+                    <description>{$SNMP_COMMUNITY} is a global macro.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>ID of sensor $1</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21796.4.1.3.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>sensorId[{#SNMPVALUE}]</key>
+                            <delay>1d</delay>
+                            <history>1w</history>
+                            <trends>0</trends>
+                            <applications>
+                                <application>
+                                    <name>Thermometer</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Index of sensor $1</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21796.4.1.3.1.1.{#SNMPINDEX}</snmp_oid>
+                            <key>sensorIndex[{#SNMPVALUE}]</key>
+                            <delay>1d</delay>
+                            <history>1w</history>
+                            <trends>0</trends>
+                            <applications>
+                                <application>
+                                    <name>Thermometer</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Name of sensor $1</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21796.4.1.3.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>sensorName[{#SNMPVALUE}]</key>
+                            <delay>1d</delay>
+                            <history>1w</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <applications>
+                                <application>
+                                    <name>Thermometer</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Serial number of sensor $1</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21796.4.1.3.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>sensorSerialNumber[{#SNMPVALUE}]</key>
+                            <delay>1d</delay>
+                            <history>1w</history>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <applications>
+                                <application>
+                                    <name>Thermometer</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>State of sensor $1</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21796.4.1.3.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>sensorState[{#SNMPVALUE}]</key>
+                            <delay>{$THERMOMETER_UPDATE_INTERVAL}</delay>
+                            <history>{$THERMOMETER_STORAGE_PERIOD}</history>
+                            <trends>0</trends>
+                            <description>0=Invalid, 1=Normal, 2=OutOfRangeLo, 3=OutOfRangeHi, 4=AlarmLo, 5=AlarmHi</description>
+                            <applications>
+                                <application>
+                                    <name>Thermometer</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>Thermometer HWg-STE states</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{min(#2)}&lt;&gt;1</expression>
+                                    <name>HWg-STE thermometer {HOST.NAME} sensor {#SENSOR_NAME} is in alarm state</name>
+                                    <opdata>Current state: {ITEM.LASTVALUE}</opdata>
+                                    <url>http://{HOST.IP}</url>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Unit of sensor $1 values</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21796.4.1.3.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>sensorUnit[{#SNMPVALUE}]</key>
+                            <delay>1h</delay>
+                            <history>{$THERMOMETER_STORAGE_PERIOD}</history>
+                            <trends>0</trends>
+                            <description>0=unknown, 1=°C, 2=°F, 3=°K, 4=%RH</description>
+                            <applications>
+                                <application>
+                                    <name>Thermometer</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>Thermometer HWg-STE units</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Value of sensor $1</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21796.4.1.3.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>sensorValue[{#SNMPVALUE}]</key>
+                            <delay>{$THERMOMETER_UPDATE_INTERVAL}</delay>
+                            <trends>{$THERMOMETER_STORAGE_PERIOD}</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>{#SENSOR_UNIT}</units>
+                            <applications>
+                                <application>
+                                    <name>Thermometer</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Values of sensor {#SNMPVALUE}</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template Thermometer HWg-STE</host>
+                                        <key>sensorValue[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>const units = ['unknown', '°C', '°F', '°K', '%'];
+
+const result = JSON.parse(value).map(function (row) {
+  row[&quot;{#SENSOR_UNIT}&quot;] = units[row[&quot;{#SENSOR_UNIT}&quot;]];
+  return row;
+});
+
+return JSON.stringify(result);</params>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+            </discovery_rules>
+            <httptests>
+                <httptest>
+                    <name>Available values.xml</name>
+                    <application>
+                        <name>Thermometer</name>
+                    </application>
+                    <delay>30m</delay>
+                    <attempts>3</attempts>
+                    <steps>
+                        <step>
+                            <name>Get values.xml</name>
+                            <url>http://{HOST.IP}/values.xml</url>
+                            <timeout>20s</timeout>
+                            <required>&lt;/val:Root&gt;</required>
+                            <status_codes>200</status_codes>
+                        </step>
+                    </steps>
+                </httptest>
+            </httptests>
+            <macros>
+                <macro>
+                    <macro>{$THERMOMETER_STORAGE_PERIOD}</macro>
+                    <value>9125d</value>
+                </macro>
+                <macro>
+                    <macro>{$THERMOMETER_UPDATE_INTERVAL}</macro>
+                    <value>1m</value>
+                    <description>How frequently read values from thermometer sensors</description>
+                </macro>
+            </macros>
+            <screens>
+                <screen>
+                    <name>Thermometer values</name>
+                    <hsize>1</hsize>
+                    <vsize>1</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>20</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Values of sensor {#SNMPVALUE}</name>
+                                <host>Template Thermometer HWg-STE</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+            </screens>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template Thermometer HWg-STE:web.test.fail[Available values.xml].min(#5)}&lt;&gt;0</expression>
+            <name>Thermometer {HOST.NAME} values not accessible at http://{HOST.IP}/values.xml</name>
+            <priority>AVERAGE</priority>
+            <description>Thermometer /values.xml could not be read.</description>
+            <manual_close>YES</manual_close>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>Thermometer response time</name>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>00DD00</color>
+                    <yaxisside>RIGHT</yaxisside>
+                    <calc_fnc>MAX</calc_fnc>
+                    <item>
+                        <host>Template Thermometer HWg-STE</host>
+                        <key>web.test.time[Available values.xml,Get values.xml,resp]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+    <value_maps>
+        <value_map>
+            <name>Thermometer HWg-STE states</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Invalid</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>OutOfRangeLo</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>OutOfRangeHi</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>AlarmLo</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>AlarmHi</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Thermometer HWg-STE units</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>°C</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>°F</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>°K</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>%</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

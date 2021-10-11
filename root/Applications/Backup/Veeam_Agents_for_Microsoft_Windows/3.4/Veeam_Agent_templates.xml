@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.4</version>
+    <date>2018-07-09T13:25:15Z</date>
+    <groups>
+        <group>
+            <name>A-OVR_TPLGPR</name>
+        </group>
+        <group>
+            <name>EXT_TPLGRP/Software</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template VEEAM-Agents</template>
+            <name>Template VEEAM-Agents</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>A-OVR_TPLGPR</name>
+                </group>
+                <group>
+                    <name>EXT_TPLGRP/Software</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>VeeamAgent_EventLog</name>
+                </application>
+                <application>
+                    <name>VeeamAgent_Service</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>VeeamAgent_EventLog_JobResult</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>eventlog[Veeam Agent,,,Veeam Agent,190,,skip]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>VeeamAgent_EventLog</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>VeeamAgent_EventLog_JobRetry</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>eventlog[Veeam Agent,,,Veeam Agent,191,,skip]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>VeeamAgent_EventLog</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>VeeamAgent_EventLog_Synchronisation</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>eventlog[Veeam Agent,,,Veeam Agent,195,,skip]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>VeeamAgent_EventLog</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>VeeamAgent_Service</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>service.info[VeeamEndpointBackupSvc]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>30d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>VeeamAgent_Service</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].nodata(604800)}=1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>VeeamAgent - No job result since 1 Week</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:service.info[VeeamEndpointBackupSvc].nodata(86400)}=1</expression>
+            <recovery_mode>1</recovery_mode>
+            <recovery_expression>{Template VEEAM-Agents:service.info[VeeamEndpointBackupSvc].last()}=0 or {Template VEEAM-Agents:service.info[VeeamEndpointBackupSvc].last()}&lt;&gt;0</recovery_expression>
+            <name>VeeamAgent - No result from service since 24h</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies>
+                <dependency>
+                    <name>VeeamAgent - No job result since 1 Week</name>
+                    <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].nodata(604800)}=1</expression>
+                    <recovery_expression/>
+                </dependency>
+            </dependencies>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>VeeamAgent Job completed successfull</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=2 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].iregexp(low on free disk space)}=1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>VeeamAgent Job completed successfull  (warning about free space)</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>1</priority>
+            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=4</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>VeeamAgent Job completed with error</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=2 and not  {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(low on free disk space)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>VeeamAgent Job completed with warning</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,191,,skip].logeventid(191)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,191,,skip].logseverity()}=2</expression>
+            <recovery_mode>1</recovery_mode>
+            <recovery_expression>({Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=1) or ({Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=2 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].iregexp(low on free disk space)}=1)</recovery_expression>
+            <name>VeeamAgent Job Retry</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:service.info[VeeamEndpointBackupSvc].last()}&lt;&gt;0</expression>
+            <recovery_mode>1</recovery_mode>
+            <recovery_expression>{Template VEEAM-Agents:service.info[VeeamEndpointBackupSvc].last()}=0</recovery_expression>
+            <name>VeeamAgent Service Down</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,195,,skip].logeventid(195)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,195,,skip].logseverity()}=4</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>VeeamAgent Synchronization completed with error</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,195,,skip].logeventid(195)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,195,,skip].logseverity()}=2</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>VeeamAgent Synchronization completed with warning</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+            <type>0</type>
+            <manual_close>1</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+</zabbix_export>

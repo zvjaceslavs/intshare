@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-10-29T14:35:19Z</date>
+    <groups>
+        <group>
+            <name>Powercom</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template_PowerCom</template>
+            <name>Template_PowerCom</name>
+            <templates>
+                <template>
+                    <name>Template Module ICMP Ping</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Powercom</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Batary Data</name>
+                </application>
+                <application>
+                    <name>Inventory Data</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>PowerCom: Battery Capacity (%)</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.2.4.0</snmp_oid>
+                    <key>BatteryCapacity</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Battery Status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.2.1.0</snmp_oid>
+                    <key>BatteryStatus</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;2</expression>
+                            <name>PowerCom: Battary Status</name>
+                            <priority>DISASTER</priority>
+                            <description>unknown 	(1),	 &#13;
+ 	batteryNormal (2),	 &#13;
+ 	batteryLow (3),	 &#13;
+ 	batteryDepleted (4)</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PowerCom: Battery Voltage</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.2.5.0</snmp_oid>
+                    <key>BatteryVoltage</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Firmware Version UPS</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.1.3.0</snmp_oid>
+                    <key>FirmwareUPS</key>
+                    <delay>40320s</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Inventory Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Firmware Version Card</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.1.4.0</snmp_oid>
+                    <key>FirmwareVersionCard</key>
+                    <delay>40320s</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Inventory Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Input Frequency</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.3.3.1.2.1</snmp_oid>
+                    <key>InputFrequency</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>dHz</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Input Voltage</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.3.3.1.3.1</snmp_oid>
+                    <key>InputVoltage</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;180</expression>
+                            <name>PowerCom: No Input Voltage</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PowerCom: Model</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.1.2.0</snmp_oid>
+                    <key>ModelUPS</key>
+                    <delay>40320s</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Inventory Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Output Frequency</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.4.2.0</snmp_oid>
+                    <key>OutputFrequency</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>dHz</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Output Load (%)</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.4.4.1.5.1</snmp_oid>
+                    <key>OutputLoad</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;80</expression>
+                            <name>PowerCom: Output Load Too High - {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PowerCom: Output Power</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.4.4.1.4.1</snmp_oid>
+                    <key>OutputPower</key>
+                    <delay>5s</delay>
+                    <history>7d</history>
+                    <status>DISABLED</status>
+                    <value_type>FLOAT</value_type>
+                    <units>W</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Output Voltage</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.4.4.1.2.1</snmp_oid>
+                    <key>OutputVoltage</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Run Time Remaining</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.2.3.0</snmp_oid>
+                    <key>RunTimeRemaining</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>Min</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{max(60)}&lt;5</expression>
+                            <name>PowerCom: Battary ieft: &lt; 5 minutes - {HOST.NAME}</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{max(120)}&lt;10</expression>
+                            <name>PowerCom: Battary ieft: &lt; 10 minutes - {HOST.NAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PowerCom: SysUpTime</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.1.3.0</snmp_oid>
+                    <key>SysUpTime</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <status>DISABLED</status>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PowerCom: Temperature</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.2.7.0</snmp_oid>
+                    <key>Temperature</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;=70</expression>
+                            <name>PowerCom: MAX Temperature Overhead - {HOST.NAME}</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PowerCom: TimeOnBattery</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>public</snmp_community>
+                    <snmp_oid>.1.3.6.1.2.1.33.1.2.2.0</snmp_oid>
+                    <key>TimeOnBattery</key>
+                    <delay>30s</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>Min</units>
+                    <applications>
+                        <application>
+                            <name>Batary Data</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.4</version>
+    <date>2018-05-31T19:04:53Z</date>
+    <groups>
+        <group>
+            <name>Zabbix servers</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Zabbix DB Partitions</template>
+            <name>Template Zabbix DB Partitions</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Zabbix servers</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>DB Partitions</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Current Daily Partition count</name>
+                    <type>13</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>ssh.run[dpc,{HOST.HOST},22,]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>ls /var/lib/mysql/zabbixdb | grep -c $(date +%F | sed s/-//g)</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username>root</username>
+                    <password>{$PASSWORD}</password>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Gets the current count of the number of daily partitions in the /var/lib/mysql/zabbixdb, this will need to be adjusted to fit your environment.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>DB Partitions</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Tomorrow Daily Partition Count</name>
+                    <type>13</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>ssh.run[dpc1,{HOST.HOST},22,]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>ls /var/lib/mysql/zabbixdb | grep -c $(date -d &quot;$(date +%F)&quot;+1days &quot;+%Y%m%d&quot;)</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username>root</username>
+                    <password>{$PASSWORD}</password>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>ls /var/lib/mysql/zabbixdb | grep -c $(date -d &quot;$(date +%F)&quot;+Xdays &quot;+%Y%m%d&quot;)&#13;
+&#13;
+Workflow&#13;
+1. List the content of the /var/lib/mysql/zabbixdb folder&#13;
+2. Print the grep count of current date, + X days ahead, printing the format like the partition file name.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>DB Partitions</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Third Daily Partition Count</name>
+                    <type>13</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>ssh.run[dpc3,{HOST.HOST},22,]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>ls /var/lib/mysql/zabbixdb | grep -c $(date -d &quot;$(date +%F)&quot;+2days &quot;+%Y%m%d&quot;)</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username>root</username>
+                    <password>{$PASSWORD}</password>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>ls /var/lib/mysql/zabbixdb | grep -c $(date -d &quot;$(date +%F)&quot;+Xdays &quot;+%Y%m%d&quot;)&#13;
+&#13;
+Workflow&#13;
+1. List the content of the /var/lib/mysql/zabbixdb folder&#13;
+2. Print the grep count of current date, + X days ahead, printing the format like the partition file name.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>DB Partitions</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Fourth Daily Partition Count</name>
+                    <type>13</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>ssh.run[dpc4,{HOST.HOST},22,]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>ls /var/lib/mysql/zabbixdb | grep -c $(date -d &quot;$(date +%F)&quot;+3days &quot;+%Y%m%d&quot;)</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username>root</username>
+                    <password>{$PASSWORD}</password>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>ls /var/lib/mysql/zabbixdb | grep -c $(date -d &quot;$(date +%F)&quot;+Xdays &quot;+%Y%m%d&quot;)&#13;
+&#13;
+Workflow&#13;
+1. List the content of the /var/lib/mysql/zabbixdb folder&#13;
+2. Print the grep count of current date, + X days ahead, printing the format like the partition file name.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>DB Partitions</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Fifth Daily Partition Count</name>
+                    <type>13</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>ssh.run[dpc5,{HOST.HOST},22,]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>ls /var/lib/mysql/zabbixdb | grep -c $(date -d &quot;$(date +%F)&quot;+4days &quot;+%Y%m%d&quot;)</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username>root</username>
+                    <password>{$PASSWORD}</password>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>ls /var/lib/mysql/zabbixdb | grep -c $(date -d &quot;$(date +%F)&quot;+Xdays &quot;+%Y%m%d&quot;)&#13;
+&#13;
+Workflow&#13;
+1. List the content of the /var/lib/mysql/zabbixdb folder&#13;
+2. Print the grep count of current date, + X days ahead, printing the format like the partition file name.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>DB Partitions</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <httptests/>
+            <macros>
+                <macro>
+                    <macro>{$PASSWORD}</macro>
+                    <value/>
+                </macro>
+            </macros>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template Zabbix DB Partitions:ssh.run[dpc1,{HOST.HOST},22,].prev()}&lt;&gt;7 or {Template Zabbix DB Partitions:ssh.run[dpc3,{HOST.HOST},22,].prev()}&lt;&gt;7 or &#13;
+{Template Zabbix DB Partitions:ssh.run[dpc4,{HOST.HOST},22,].prev()}&lt;&gt;7 or &#13;
+{Template Zabbix DB Partitions:ssh.run[dpc5,{HOST.HOST},22,].prev()}&lt;&gt;7</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Future Partition missing</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+</zabbix_export>

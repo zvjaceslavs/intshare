@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.2</version>
+    <date>2021-05-11T19:33:38Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>CISCO EIGRP</template>
+            <name>CISCO EIGRP</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>EIGRP protocol</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>total number packet acknowledgements received</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.12.0.410</snmp_oid>
+                    <key>cEigrpAcksRcvd.0</key>
+                    <units>bps</units>
+                    <description>The total number packet acknowledgements that have been received from all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number packet acknowledgements sent</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.11.0.410</snmp_oid>
+                    <key>cEigrpAcksSent.0</key>
+                    <units>bps</units>
+                    <description>The total number packet acknowledgements that have been sent to all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>EIGRP unique router-id</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.18.0.410</snmp_oid>
+                    <key>cEigrpAsRouterId.0</key>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <description>The format of the router-id configured or automatically selected for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>The format of the router-id</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>format of the router-id type</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.17.0.410</snmp_oid>
+                    <key>cEigrpAsRouterIdType.0</key>
+                    <description>The format of the router-id configured or automatically selected for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>The format of the router-id</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Routes in topology table EIGRP AS</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.20.0.410</snmp_oid>
+                    <key>cEigrpHeadSerial.0</key>
+                    <units>bps</units>
+                    <description>Routes in a topology table for an AS are assigned serial numbers and are sequenced internally as they are inserted and deleted. The serial number of the first route in that internal sequence is called the head serial number. Each AS has its own topology table, and its own serial number space, each of which begins with the value 1. A serial number of zero implies that there are no routes in the topology.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>The format of the router-id</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>total number Hello packets received</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.4.0.410</snmp_oid>
+                    <key>cEigrpHellosRcvd.0</key>
+                    <units>bps</units>
+                    <description>The total number Hello packets that have been received from all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number Hello packets sent</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.3.0.410</snmp_oid>
+                    <key>cEigrpHellosSent.0</key>
+                    <units>bps</units>
+                    <description>The total number Hello packets that have been sent to all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>number of EIGRP packets dropped from the input queue</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.14.0.410</snmp_oid>
+                    <key>cEigrpInputQDrops.0</key>
+                    <units>bps</units>
+                    <description>The number of EIGRP packets dropped from the input queue due to it being full within the AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>highest number of EIGRP packets in the input queue</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.13.0.410</snmp_oid>
+                    <key>cEigrpInputQHighMark.0</key>
+                    <units>bps</units>
+                    <description>The highest number of EIGRP packets in the input queue waiting to be processed internally addressed to this AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number of live EIGRP neighbors</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.2.0.410</snmp_oid>
+                    <key>cEigrpNbrCount.0</key>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The serial number that would be assigned to the next route</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.21.0.410</snmp_oid>
+                    <key>cEigrpNextSerial.0</key>
+                    <description>The serial number that would be assigned to the next new or changed route in the topology table for the AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>The format of the router-id</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>total number alternate route query received</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.7.0.410</snmp_oid>
+                    <key>cEigrpQueriesRcvd.0</key>
+                    <units>bps</units>
+                    <description>The total number alternate route query packets that have been received from all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number alternate route query sent</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.7.0.410</snmp_oid>
+                    <key>cEigrpQueriesSent.0</key>
+                    <units>bps</units>
+                    <description>The total number alternate route query packets that have been sent to all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number query reply packets received</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.10.0.410</snmp_oid>
+                    <key>cEigrpRepliesRcvd.0</key>
+                    <units>bps</units>
+                    <description>The total number query reply packets that have been sent to all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number query reply packets sent</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.9.0.410</snmp_oid>
+                    <key>cEigrpRepliesSent.0</key>
+                    <units>bps</units>
+                    <description>The total number query reply packets that have been sent to all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number of Stuck-In-Active (SIA) query packets received</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.16.0.410</snmp_oid>
+                    <key>cEigrpSiaQueriesRcvd.0</key>
+                    <units>bps</units>
+                    <description>The total number of Stuck-In-Active (SIA) query packets received from all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number of Stuck-In-Active (SIA) query packets sent</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.15.0.410</snmp_oid>
+                    <key>cEigrpSiaQueriesSent.0</key>
+                    <units>bps</units>
+                    <description>The total number of Stuck-In-Active (SIA) query packets sent to all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number of existing EIGRP derived routes</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.19.0.410</snmp_oid>
+                    <key>cEigrpTopoRoutes.0</key>
+                    <description>The total number of EIGRP derived routes currently existing in the topology table for the AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>The format of the router-id</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>total number routing update packets received</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.6.0.410</snmp_oid>
+                    <key>cEigrpUpdatesRcvd.0</key>
+                    <units>bps</units>
+                    <description>The total number Hello packets that have been received from all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number routing update packets sent</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.5.0.410</snmp_oid>
+                    <key>cEigrpUpdatesSent.0</key>
+                    <units>bps</units>
+                    <description>The total number routing update packets that have been sent to all EIGRP neighbors formed on all interfaces whose IP addresses fall under networks configured for the EIGRP AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>total number of dummy currently</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.23.0.410</snmp_oid>
+                    <key>cEigrpXmitDummies.0</key>
+                    <description>A dummy is a temporary internal entity used as a place holder in the topology table for an AS. They are not transmitted in routing updates. This is the total number currently in existence associated with the AS.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>alternative route query packets are sent to adjacent EIGRP pairs</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>SNMPv2-SMI::enterprises.9.9.449.1.2.1.1.22.0.410</snmp_oid>
+                    <key>cEigrpXmitPendReplies.0</key>
+                    <description>When alternate route query packets are sent to adjacent EIGRP peers in an AS, replies are expected. This object is the total number of outstanding replies expected to queries that have been sent to peers in the current AS. It remains at zero most of the time until an EIGRP route becomes active.</description>
+                    <applications>
+                        <application>
+                            <name>EIGRP protocol</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Cisco Enhanced Interior Gateway Protocol Active (EIGRP)</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.9.9.449.1.2.1.1]</snmp_oid>
+                    <key>cEigrpTraffStatsEntry</key>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>The format of the router-id</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>ipv4</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>ipv6</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>ipv4z</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>ipv6z</newvalue>
+                </mapping>
+                <mapping>
+                    <value>16</value>
+                    <newvalue>dns</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

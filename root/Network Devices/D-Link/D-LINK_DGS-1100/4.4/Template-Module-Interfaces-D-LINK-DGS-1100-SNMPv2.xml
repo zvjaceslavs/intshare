@@ -1,0 +1,2980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-05-28T09:02:18Z</date>
+    <groups>
+        <group>
+            <name>vi Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Module Interfaces D-LINK DGS-1100 SNMPv2</template>
+            <name>Template Module Interfaces D-LINK DGS-1100 SNMPv2</name>
+            <description>Template Module Interfaces&#13;
+&#13;
+MIBs used:&#13;
+IF-MIB&#13;
+&#13;
+Template tooling version used: 0.34</description>
+            <groups>
+                <group>
+                    <name>vi Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Interface eth1</name>
+                </application>
+                <application>
+                    <name>Interface eth2</name>
+                </application>
+                <application>
+                    <name>Interface eth3</name>
+                </application>
+                <application>
+                    <name>Interface eth4</name>
+                </application>
+                <application>
+                    <name>Interface eth5</name>
+                </application>
+                <application>
+                    <name>Interface eth6</name>
+                </application>
+                <application>
+                    <name>Interface eth7</name>
+                </application>
+                <application>
+                    <name>Interface eth8</name>
+                </application>
+                <application>
+                    <name>Network interfaces</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Interface eth1: Inbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.13.1</snmp_oid>
+                    <key>net.if.in.discards[ifInDiscards.1]</key>
+                    <delay>3m</delay>
+                    <description>MIB: IF-MIB&#13;
+The number of inbound packets which were chosen to be discarded&#13;
+even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+One possible reason for discarding such a packet could be to free up buffer space.&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Inbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.13.2</snmp_oid>
+                    <key>net.if.in.discards[ifInDiscards.2]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of inbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Inbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.13.3</snmp_oid>
+                    <key>net.if.in.discards[ifInDiscards.3]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of inbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Inbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.13.4</snmp_oid>
+                    <key>net.if.in.discards[ifInDiscards.4]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of inbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Inbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.13.5</snmp_oid>
+                    <key>net.if.in.discards[ifInDiscards.5]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of inbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Inbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.13.6</snmp_oid>
+                    <key>net.if.in.discards[ifInDiscards.6]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of inbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Inbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.13.7</snmp_oid>
+                    <key>net.if.in.discards[ifInDiscards.7]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of inbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Inbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.13.8</snmp_oid>
+                    <key>net.if.in.discards[ifInDiscards.8]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of inbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Inbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.14.1</snmp_oid>
+                    <key>net.if.in.errors[ifInErrors.1]</key>
+                    <delay>3m</delay>
+                    <description>MIB: IF-MIB&#13;
+For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Inbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.14.2</snmp_oid>
+                    <key>net.if.in.errors[ifInErrors.2]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Inbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.14.3</snmp_oid>
+                    <key>net.if.in.errors[ifInErrors.3]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Inbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.14.4</snmp_oid>
+                    <key>net.if.in.errors[ifInErrors.4]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Inbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.14.5</snmp_oid>
+                    <key>net.if.in.errors[ifInErrors.5]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Inbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.14.6</snmp_oid>
+                    <key>net.if.in.errors[ifInErrors.6]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Inbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.14.7</snmp_oid>
+                    <key>net.if.in.errors[ifInErrors.7]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Inbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.14.8</snmp_oid>
+                    <key>net.if.in.errors[ifInErrors.8]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Bits received</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.6.1</snmp_oid>
+                    <key>net.if.in[ifHCInOctets.1]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>MIB: IF-MIB&#13;
+The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Bits received</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.6.2</snmp_oid>
+                    <key>net.if.in[ifHCInOctets.2]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Bits received</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.6.3</snmp_oid>
+                    <key>net.if.in[ifHCInOctets.3]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Bits received</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.6.4</snmp_oid>
+                    <key>net.if.in[ifHCInOctets.4]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Bits received</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.6.5</snmp_oid>
+                    <key>net.if.in[ifHCInOctets.5]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Bits received</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.6.6</snmp_oid>
+                    <key>net.if.in[ifHCInOctets.6]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Bits received</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.6.7</snmp_oid>
+                    <key>net.if.in[ifHCInOctets.7]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Bits received</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.6.8</snmp_oid>
+                    <key>net.if.in[ifHCInOctets.8]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Outbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.19.1</snmp_oid>
+                    <key>net.if.out.discards[ifOutDiscards.1]</key>
+                    <delay>3m</delay>
+                    <description>MIB: IF-MIB&#13;
+The number of outbound packets which were chosen to be discarded&#13;
+even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+One possible reason for discarding such a packet could be to free up buffer space.&#13;
+Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Outbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.19.2</snmp_oid>
+                    <key>net.if.out.discards[ifOutDiscards.2]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of outbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Outbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.19.3</snmp_oid>
+                    <key>net.if.out.discards[ifOutDiscards.3]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of outbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Outbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.19.4</snmp_oid>
+                    <key>net.if.out.discards[ifOutDiscards.4]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of outbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Outbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.19.5</snmp_oid>
+                    <key>net.if.out.discards[ifOutDiscards.5]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of outbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Outbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.19.6</snmp_oid>
+                    <key>net.if.out.discards[ifOutDiscards.6]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of outbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Outbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.19.7</snmp_oid>
+                    <key>net.if.out.discards[ifOutDiscards.7]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of outbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Outbound packets discarded</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.19.8</snmp_oid>
+                    <key>net.if.out.discards[ifOutDiscards.8]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The number of outbound packets which were chosen to be discarded&#13;
+                  even though no errors had been detected to prevent their being deliverable to a higher-layer protocol.&#13;
+                  One possible reason for discarding such a packet could be to free up buffer space.&#13;
+                  Discontinuities in the value of this counter can occur at re-initialization of the management system,&#13;
+                  and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Outbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.20.1</snmp_oid>
+                    <key>net.if.out.errors[ifOutErrors.1]</key>
+                    <delay>3m</delay>
+                    <description>MIB: IF-MIB&#13;
+For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Outbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.20.2</snmp_oid>
+                    <key>net.if.out.errors[ifOutErrors.2]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Outbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.20.3</snmp_oid>
+                    <key>net.if.out.errors[ifOutErrors.3]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Outbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.20.4</snmp_oid>
+                    <key>net.if.out.errors[ifOutErrors.4]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Outbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.20.5</snmp_oid>
+                    <key>net.if.out.errors[ifOutErrors.5]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Outbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.20.6</snmp_oid>
+                    <key>net.if.out.errors[ifOutErrors.6]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Outbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.20.7</snmp_oid>
+                    <key>net.if.out.errors[ifOutErrors.7]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Outbound packets with errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.20.8</snmp_oid>
+                    <key>net.if.out.errors[ifOutErrors.8]</key>
+                    <delay>3m</delay>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.  For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Bits sent</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.10.1</snmp_oid>
+                    <key>net.if.out[ifHCOutOctets.1]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>MIB: IF-MIB&#13;
+The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Bits sent</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.10.2</snmp_oid>
+                    <key>net.if.out[ifHCOutOctets.2]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Bits sent</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.10.3</snmp_oid>
+                    <key>net.if.out[ifHCOutOctets.3]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Bits sent</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.10.4</snmp_oid>
+                    <key>net.if.out[ifHCOutOctets.4]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Bits sent</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.10.5</snmp_oid>
+                    <key>net.if.out[ifHCOutOctets.5]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Bits sent</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.10.6</snmp_oid>
+                    <key>net.if.out[ifHCOutOctets.6]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Bits sent</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.10.7</snmp_oid>
+                    <key>net.if.out[ifHCOutOctets.7]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Bits sent</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.31.1.1.1.10.8</snmp_oid>
+                    <key>net.if.out[ifHCOutOctets.8]</key>
+                    <delay>3m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>CHANGE_PER_SECOND</type>
+                            <params/>
+                        </step>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Speed</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.5.1</snmp_oid>
+                    <key>net.if.speed[ifSpeed.1]</key>
+                    <delay>5m</delay>
+                    <units>bps</units>
+                    <description>MIB: IF-MIB&#13;
+An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1h</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Speed</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.5.2</snmp_oid>
+                    <key>net.if.speed[ifSpeed.2]</key>
+                    <delay>5m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1h</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Speed</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.5.3</snmp_oid>
+                    <key>net.if.speed[ifSpeed.3]</key>
+                    <delay>5m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1h</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Speed</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.5.4</snmp_oid>
+                    <key>net.if.speed[ifSpeed.4]</key>
+                    <delay>5m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1h</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Speed</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.5.5</snmp_oid>
+                    <key>net.if.speed[ifSpeed.5]</key>
+                    <delay>5m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1h</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Speed</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.5.6</snmp_oid>
+                    <key>net.if.speed[ifSpeed.6]</key>
+                    <delay>5m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1h</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Speed</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.5.7</snmp_oid>
+                    <key>net.if.speed[ifSpeed.7]</key>
+                    <delay>5m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1h</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Speed</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.5.8</snmp_oid>
+                    <key>net.if.speed[ifSpeed.8]</key>
+                    <delay>5m</delay>
+                    <units>bps</units>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1h</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Operational status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.8.1</snmp_oid>
+                    <key>net.if.status[ifOperStatus.1]</key>
+                    <trends>0</trends>
+                    <description>MIB: IF-MIB&#13;
+The current operational state of the interface.&#13;
+- The testing(3) state indicates that no operational packet scan be passed&#13;
+- If ifAdminStatus is down(2) then ifOperStatus should be down(2)&#13;
+- If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic&#13;
+- It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)&#13;
+- It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state&#13;
+- It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{$IFCONTROL:&quot;eth1&quot;}=1 and ({last()}=2 and {diff()}=1)</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}&lt;&gt;2</recovery_expression>
+                            <name>Interface eth1: Link down</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <description>This trigger expression works as follows:&#13;
+1. Can be triggered if operations status is down.&#13;
+2. {$IFCONTROL:&quot;eth1=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.&#13;
+3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)&#13;
+&#13;
+WARNING: if closed manually - won't fire again on next poll, because of .diff.</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Interface eth2: Operational status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.8.2</snmp_oid>
+                    <key>net.if.status[ifOperStatus.2]</key>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The current operational state of the interface.&#13;
+                  - The testing(3) state indicates that no operational packet scan be passed&#13;
+                  - If ifAdminStatus is down(2) then ifOperStatus should be down(2)&#13;
+                  - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic&#13;
+                  - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)&#13;
+                  - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state&#13;
+                  - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{$IFCONTROL:&quot;eth2&quot;}=1 and ({last()}=2 and {diff()}=1)</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}&lt;&gt;2</recovery_expression>
+                            <name>Interface eth2: Link down</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <description>
+                      This trigger expression works as follows:&#13;
+                      1. Can be triggered if operations status is down.&#13;
+                      2. {$IFCONTROL:&quot;eth2=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.&#13;
+                      3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)&#13;
+                      &#13;
+                      WARNING: if closed manually - won't fire again on next poll, because of .diff.
+                    </description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Interface eth3: Operational status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.8.3</snmp_oid>
+                    <key>net.if.status[ifOperStatus.3]</key>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The current operational state of the interface.&#13;
+                  - The testing(3) state indicates that no operational packet scan be passed&#13;
+                  - If ifAdminStatus is down(2) then ifOperStatus should be down(2)&#13;
+                  - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic&#13;
+                  - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)&#13;
+                  - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state&#13;
+                  - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{$IFCONTROL:&quot;eth3&quot;}=1 and ({last()}=2 and {diff()}=1)</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}&lt;&gt;2</recovery_expression>
+                            <name>Interface eth3: Link down</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <description>
+                      This trigger expression works as follows:&#13;
+                      1. Can be triggered if operations status is down.&#13;
+                      2. {$IFCONTROL:&quot;eth3=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.&#13;
+                      3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)&#13;
+                      &#13;
+                      WARNING: if closed manually - won't fire again on next poll, because of .diff.
+                    </description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Interface eth4: Operational status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.8.4</snmp_oid>
+                    <key>net.if.status[ifOperStatus.4]</key>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The current operational state of the interface.&#13;
+                  - The testing(3) state indicates that no operational packet scan be passed&#13;
+                  - If ifAdminStatus is down(2) then ifOperStatus should be down(2)&#13;
+                  - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic&#13;
+                  - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)&#13;
+                  - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state&#13;
+                  - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{$IFCONTROL:&quot;eth4&quot;}=1 and ({last()}=2 and {diff()}=1)</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}&lt;&gt;2</recovery_expression>
+                            <name>Interface eth4: Link down</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <description>
+                      This trigger expression works as follows:&#13;
+                      1. Can be triggered if operations status is down.&#13;
+                      2. {$IFCONTROL:&quot;eth4=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.&#13;
+                      3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)&#13;
+                      &#13;
+                      WARNING: if closed manually - won't fire again on next poll, because of .diff.
+                    </description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Interface eth5: Operational status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.8.5</snmp_oid>
+                    <key>net.if.status[ifOperStatus.5]</key>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The current operational state of the interface.&#13;
+                  - The testing(3) state indicates that no operational packet scan be passed&#13;
+                  - If ifAdminStatus is down(2) then ifOperStatus should be down(2)&#13;
+                  - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic&#13;
+                  - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)&#13;
+                  - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state&#13;
+                  - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{$IFCONTROL:&quot;eth5&quot;}=1 and ({last()}=2 and {diff()}=1)</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}&lt;&gt;2</recovery_expression>
+                            <name>Interface eth5: Link down</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <description>
+                      This trigger expression works as follows:&#13;
+                      1. Can be triggered if operations status is down.&#13;
+                      2. {$IFCONTROL:&quot;eth5=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.&#13;
+                      3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)&#13;
+                      &#13;
+                      WARNING: if closed manually - won't fire again on next poll, because of .diff.
+                    </description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Interface eth6: Operational status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.8.6</snmp_oid>
+                    <key>net.if.status[ifOperStatus.6]</key>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The current operational state of the interface.&#13;
+                  - The testing(3) state indicates that no operational packet scan be passed&#13;
+                  - If ifAdminStatus is down(2) then ifOperStatus should be down(2)&#13;
+                  - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic&#13;
+                  - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)&#13;
+                  - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state&#13;
+                  - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{$IFCONTROL:&quot;eth6&quot;}=1 and ({last()}=2 and {diff()}=1)</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}&lt;&gt;2</recovery_expression>
+                            <name>Interface eth6: Link down</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <description>
+                      This trigger expression works as follows:&#13;
+                      1. Can be triggered if operations status is down.&#13;
+                      2. {$IFCONTROL:&quot;eth6=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.&#13;
+                      3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)&#13;
+                      &#13;
+                      WARNING: if closed manually - won't fire again on next poll, because of .diff.
+                    </description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Interface eth7: Operational status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.8.7</snmp_oid>
+                    <key>net.if.status[ifOperStatus.7]</key>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The current operational state of the interface.&#13;
+                  - The testing(3) state indicates that no operational packet scan be passed&#13;
+                  - If ifAdminStatus is down(2) then ifOperStatus should be down(2)&#13;
+                  - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic&#13;
+                  - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)&#13;
+                  - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state&#13;
+                  - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{$IFCONTROL:&quot;eth7&quot;}=1 and ({last()}=2 and {diff()}=1)</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}&lt;&gt;2</recovery_expression>
+                            <name>Interface eth7: Link down</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <description>
+                      This trigger expression works as follows:&#13;
+                      1. Can be triggered if operations status is down.&#13;
+                      2. {$IFCONTROL:&quot;eth7=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.&#13;
+                      3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)&#13;
+                      &#13;
+                      WARNING: if closed manually - won't fire again on next poll, because of .diff.
+                    </description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Interface eth8: Operational status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.8.8</snmp_oid>
+                    <key>net.if.status[ifOperStatus.8]</key>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The current operational state of the interface.&#13;
+                  - The testing(3) state indicates that no operational packet scan be passed&#13;
+                  - If ifAdminStatus is down(2) then ifOperStatus should be down(2)&#13;
+                  - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic&#13;
+                  - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)&#13;
+                  - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state&#13;
+                  - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{$IFCONTROL:&quot;eth8&quot;}=1 and ({last()}=2 and {diff()}=1)</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}&lt;&gt;2</recovery_expression>
+                            <name>Interface eth8: Link down</name>
+                            <opdata>Current state: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <description>
+                      This trigger expression works as follows:&#13;
+                      1. Can be triggered if operations status is down.&#13;
+                      2. {$IFCONTROL:&quot;eth8=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.&#13;
+                      3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)&#13;
+                      &#13;
+                      WARNING: if closed manually - won't fire again on next poll, because of .diff.
+                    </description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Interface eth1: Interface description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.2.1</snmp_oid>
+                    <key>net.if.type[ifDescr.1]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>MIB: IF-MIB&#13;
+The description of interface.&#13;
+Additional values for ifDescr are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+through updating the syntax of the IANAifDescr textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Interface description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.2.2</snmp_oid>
+                    <key>net.if.type[ifDescr.2]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The description of interface.&#13;
+                  Additional values for ifDescr are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifDescr textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Interface description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.2.3</snmp_oid>
+                    <key>net.if.type[ifDescr.3]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The description of interface.&#13;
+                  Additional values for ifDescr are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifDescr textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Interface description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.2.4</snmp_oid>
+                    <key>net.if.type[ifDescr.4]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The description of interface.&#13;
+                  Additional values for ifDescr are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifDescr textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Interface description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.2.5</snmp_oid>
+                    <key>net.if.type[ifDescr.5]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The description of interface.&#13;
+                  Additional values for ifDescr are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifDescr textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Interface description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.2.6</snmp_oid>
+                    <key>net.if.type[ifDescr.6]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The description of interface.&#13;
+                  Additional values for ifDescr are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifDescr textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Interface description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.2.7</snmp_oid>
+                    <key>net.if.type[ifDescr.7]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The description of interface.&#13;
+                  Additional values for ifDescr are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifDescr textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Interface description</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.2.8</snmp_oid>
+                    <key>net.if.type[ifDescr.8]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The description of interface.&#13;
+                  Additional values for ifDescr are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifDescr textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Interface last change</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.9.1</snmp_oid>
+                    <key>net.if.type[ifLastChange.1]</key>
+                    <delay>10m</delay>
+                    <units>uptime</units>
+                    <description>MIB: IF-MIB&#13;
+The last change state of interface.&#13;
+Additional values for ifLastChange are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+through updating the syntax of the IANAifLastChange textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Interface last change</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.9.2</snmp_oid>
+                    <key>net.if.type[ifLastChange.2]</key>
+                    <delay>10m</delay>
+                    <units>uptime</units>
+                    <description>MIB: IF-MIB&#13;
+                  The last change state of interface.&#13;
+                  Additional values for ifLastChange are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifLastChange textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Interface last change</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.9.3</snmp_oid>
+                    <key>net.if.type[ifLastChange.3]</key>
+                    <delay>10m</delay>
+                    <units>uptime</units>
+                    <description>MIB: IF-MIB&#13;
+                  The last change state of interface.&#13;
+                  Additional values for ifLastChange are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifLastChange textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Interface last change</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.9.4</snmp_oid>
+                    <key>net.if.type[ifLastChange.4]</key>
+                    <delay>10m</delay>
+                    <units>uptime</units>
+                    <description>MIB: IF-MIB&#13;
+The last change state of interface.&#13;
+Additional values for ifLastChange are assigned by the Internet Assigned NumbersAuthority (IANA), through updating the syntax of the IANAifLastChange textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Interface last change</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.9.5</snmp_oid>
+                    <key>net.if.type[ifLastChange.5]</key>
+                    <delay>10m</delay>
+                    <units>uptime</units>
+                    <description>MIB: IF-MIB&#13;
+                  The last change state of interface.&#13;
+                  Additional values for ifLastChange are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifLastChange textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Interface last change</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.9.6</snmp_oid>
+                    <key>net.if.type[ifLastChange.6]</key>
+                    <delay>10m</delay>
+                    <units>uptime</units>
+                    <description>MIB: IF-MIB&#13;
+                  The last change state of interface.&#13;
+                  Additional values for ifLastChange are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifLastChange textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Interface last change</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.9.7</snmp_oid>
+                    <key>net.if.type[ifLastChange.7]</key>
+                    <delay>10m</delay>
+                    <units>uptime</units>
+                    <description>MIB: IF-MIB&#13;
+                  The last change state of interface.&#13;
+                  Additional values for ifLastChange are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifLastChange textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Interface last change</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.9.8</snmp_oid>
+                    <key>net.if.type[ifLastChange.8]</key>
+                    <delay>10m</delay>
+                    <units>uptime</units>
+                    <description>MIB: IF-MIB&#13;
+                  The last change state of interface.&#13;
+                  Additional values for ifLastChange are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifLastChange textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Interface MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.6.1</snmp_oid>
+                    <key>net.if.type[ifPhysAddress.1]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>MIB: IF-MIB&#13;
+The physical address of interface.&#13;
+Additional values for ifPhysAddress are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+through updating the syntax of the IANAifPhysAddress textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Interface MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.6.2</snmp_oid>
+                    <key>net.if.type[ifPhysAddress.2]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The physical address of interface.&#13;
+                  Additional values for ifPhysAddress are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifPhysAddress textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Interface MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.6.3</snmp_oid>
+                    <key>net.if.type[ifPhysAddress.3]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The physical address of interface.&#13;
+                  Additional values for ifPhysAddress are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifPhysAddress textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Interface MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.6.4</snmp_oid>
+                    <key>net.if.type[ifPhysAddress.4]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The physical address of interface.&#13;
+                  Additional values for ifPhysAddress are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifPhysAddress textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Interface MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.6.5</snmp_oid>
+                    <key>net.if.type[ifPhysAddress.5]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The physical address of interface.&#13;
+                  Additional values for ifPhysAddress are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifPhysAddress textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Interface MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.6.6</snmp_oid>
+                    <key>net.if.type[ifPhysAddress.6]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The physical address of interface.&#13;
+                  Additional values for ifPhysAddress are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifPhysAddress textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Interface MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.6.7</snmp_oid>
+                    <key>net.if.type[ifPhysAddress.7]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The physical address of interface.&#13;
+                  Additional values for ifPhysAddress are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifPhysAddress textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Interface MAC address</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.6.8</snmp_oid>
+                    <key>net.if.type[ifPhysAddress.8]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The physical address of interface.&#13;
+                  Additional values for ifPhysAddress are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifPhysAddress textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth1: Interface type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.3.1</snmp_oid>
+                    <key>net.if.type[ifType.1]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>MIB: IF-MIB&#13;
+The type of interface.&#13;
+Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+through updating the syntax of the IANAifType textual convention.</description>
+                    <applications>
+                        <application>
+                            <name>Interface eth1</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth2: Interface type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.3.2</snmp_oid>
+                    <key>net.if.type[ifType.2]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The type of interface.&#13;
+                  Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifType textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth2</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth3: Interface type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.3.3</snmp_oid>
+                    <key>net.if.type[ifType.3]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The type of interface.&#13;
+                  Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifType textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth3</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth4: Interface type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.3.4</snmp_oid>
+                    <key>net.if.type[ifType.4]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The type of interface.&#13;
+                  Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifType textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth4</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth5: Interface type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.3.5</snmp_oid>
+                    <key>net.if.type[ifType.5]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The type of interface.&#13;
+                  Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifType textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth5</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth6: Interface type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.3.6</snmp_oid>
+                    <key>net.if.type[ifType.6]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The type of interface.&#13;
+                  Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifType textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth6</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth7: Interface type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.3.7</snmp_oid>
+                    <key>net.if.type[ifType.7]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The type of interface.&#13;
+                  Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifType textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth7</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Interface eth8: Interface type</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.2.2.1.3.8</snmp_oid>
+                    <key>net.if.type[ifType.8]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>
+                  MIB: IF-MIB&#13;
+                  The type of interface.&#13;
+                  Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA),&#13;
+                  through updating the syntax of the IANAifType textual convention.
+                </description>
+                    <applications>
+                        <application>
+                            <name>Interface eth8</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <params>1d</params>
+                        </step>
+                    </preprocessing>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN:&quot;eth1&quot;}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN:&quot;eth2&quot;}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN:&quot;eth3&quot;}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN:&quot;eth4&quot;}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN:&quot;eth5&quot;}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN:&quot;eth6&quot;}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN:&quot;eth7&quot;}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.ERRORS.WARN:&quot;eth8&quot;}</macro>
+                    <value>2</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX:&quot;eth1&quot;}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX:&quot;eth2&quot;}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX:&quot;eth3&quot;}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX:&quot;eth4&quot;}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX:&quot;eth5&quot;}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX:&quot;eth6&quot;}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX:&quot;eth7&quot;}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IF.UTIL.MAX:&quot;eth8&quot;}</macro>
+                    <value>90</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL:&quot;eth1&quot;}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL:&quot;eth2&quot;}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL:&quot;eth3&quot;}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL:&quot;eth4&quot;}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL:&quot;eth5&quot;}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL:&quot;eth6&quot;}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL:&quot;eth7&quot;}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$IFCONTROL:&quot;eth8&quot;}</macro>
+                    <value>1</value>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFADMINSTATUS.MATCHES}</macro>
+                    <value>^.*</value>
+                    <description>Ignore notPresent(6)</description>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFADMINSTATUS.NOT_MATCHES}</macro>
+                    <value>^2$</value>
+                    <description>Ignore down(2) administrative status</description>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFALIAS.MATCHES}</macro>
+                    <value>.*</value>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFALIAS.NOT_MATCHES}</macro>
+                    <value>CHANGE_IF_NEEDED</value>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFDESCR.MATCHES}</macro>
+                    <value>.*</value>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFDESCR.NOT_MATCHES}</macro>
+                    <value>CHANGE_IF_NEEDED</value>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFNAME.MATCHES}</macro>
+                    <value>^.*$</value>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFNAME.NOT_MATCHES}</macro>
+                    <value>(^Software Loopback Interface|^NULL[0-9.]*$|^[Ll]o[0-9.]*$|^[Ss]ystem$|^Nu[0-9.]*$|^veth[0-9a-z]+$|docker[0-9]+|br-[a-z0-9]{12})</value>
+                    <description>Filter out loopbacks, nulls, docker veth links and docker0 bridge by default</description>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFOPERSTATUS.MATCHES}</macro>
+                    <value>^.*$</value>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFOPERSTATUS.NOT_MATCHES}</macro>
+                    <value>^6$</value>
+                    <description>Ignore notPresent(6)</description>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFTYPE.MATCHES}</macro>
+                    <value>.*</value>
+                </macro>
+                <macro>
+                    <macro>{$NET.IF.IFTYPE.NOT_MATCHES}</macro>
+                    <value>CHANGE_IF_NEEDED</value>
+                </macro>
+            </macros>
+            <screens>
+                <screen>
+                    <name>Network interfaces</name>
+                    <hsize>2</hsize>
+                    <vsize>4</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Interface eth1: Network traffic</name>
+                                <host>vi Template Module Interfaces D-LINK DGS-1100 SNMPv2</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Interface eth2: Network traffic</name>
+                                <host>vi Template Module Interfaces D-LINK DGS-1100 SNMPv2</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Interface eth3: Network traffic</name>
+                                <host>vi Template Module Interfaces D-LINK DGS-1100 SNMPv2</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Interface eth4: Network traffic</name>
+                                <host>vi Template Module Interfaces D-LINK DGS-1100 SNMPv2</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Interface eth5: Network traffic</name>
+                                <host>vi Template Module Interfaces D-LINK DGS-1100 SNMPv2</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>2</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Interface eth6: Network traffic</name>
+                                <host>vi Template Module Interfaces D-LINK DGS-1100 SNMPv2</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>2</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Interface eth7: Network traffic</name>
+                                <host>vi Template Module Interfaces D-LINK DGS-1100 SNMPv2</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>3</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Interface eth8: Network traffic</name>
+                                <host>vi Template Module Interfaces D-LINK DGS-1100 SNMPv2</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>3</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+            </screens>
+        </template>
+    </templates>
+</zabbix_export>

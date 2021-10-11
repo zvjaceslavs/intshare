@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.0</version>
+    <date>2019-12-16T17:12:43Z</date>
+    <groups>
+        <group>
+            <name>Templates/Modules</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>check if session key is valid api</template>
+            <name>check if session key is valid api</name>
+            <description>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'&#13;
+&#13;
+curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;&#13;
+&#13;
+curl -s -X POST http://127.0.0.1/zabbix/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;</description>
+            <groups>
+                <group>
+                    <name>Templates/Modules</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Session</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>check session key</name>
+                    <type>19</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>check.session.key</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Session</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing>
+                        <step>
+                            <type>5</type>
+                            <params>(html|error|result)
+\1;result=0;error=1;html=2</params>
+                        </step>
+                        <step>
+                            <type>5</type>
+                            <params>(html|error|result)(?=.*;\1=(\d))
+\2</params>
+                        </step>
+                    </preprocessing>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url>{$JSONRPC.PHP}</url>
+                    <query_fields/>
+                    <posts>{&#13;
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,&#13;
+    &quot;method&quot;: &quot;proxy.get&quot;,&#13;
+    &quot;params&quot;: {&#13;
+        &quot;output&quot;: [&quot;name&quot;]&#13;
+    },&#13;
+    &quot;auth&quot;: &quot;{$APIKEY}&quot;,&#13;
+    &quot;id&quot;: 1&#13;
+}</posts>
+                    <status_codes/>
+                    <follow_redirects>0</follow_redirects>
+                    <post_type>2</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <output_format>1</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{check if session key is valid api:check.session.key.last()}=2</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>invalid url configureded for zabbix api</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'&#13;
+&#13;
+curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{check if session key is valid api:check.session.key.last()}=1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>session key now valid. http works fine</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'&#13;
+&#13;
+curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+</zabbix_export>

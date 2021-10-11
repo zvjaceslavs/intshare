@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.2</version>
+    <date>2021-03-17T22:26:31Z</date>
+    <groups>
+        <group>
+            <name>ASR-9006</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template for ASR9006 IPv4 Pool discovery</template>
+            <name>Template for ASR9006 IPv4 Pool discovery</name>
+            <description>Discovering pool name and vrf name from ASR9006
+and represents Used &amp; Free IP addresses
+Mokhtari Tce
+mohamadreza.mokhtari@gmail.com</description>
+            <groups>
+                <group>
+                    <name>ASR-9006</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>IPv4</name>
+                </application>
+            </applications>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>ASR9006 Pool Discovery</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#POOLNAME},1.3.6.1.4.1.9.9.748.1.2.2.1.4,{#VRF},1.3.6.1.4.1.9.9.748.1.2.2.1.6]</snmp_oid>
+                    <key>pool.ip.discovery</key>
+                    <delay>1h</delay>
+                    <description>Discovering pool name and vrf name from ASR9006
+Mokhtari Tce
+mohamadreza.mokhtari@gmail.com</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Pool {#POOLNAME} Free IP Address</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.9.9.748.1.2.2.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>pool.ip.free.[ipfree.{#SNMPINDEX}]</key>
+                            <applications>
+                                <application>
+                                    <name>IPv4</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Pool {#POOLNAME} Used IP Address</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>1.3.6.1.4.1.9.9.748.1.2.2.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>pool.ip.used.[used.{#SNMPINDEX}]</key>
+                            <applications>
+                                <application>
+                                    <name>IPv4</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template for ASR9006 IPv4 Pool discovery:pool.ip.free.[ipfree.{#SNMPINDEX}].last()} &lt; (1/100) * {Template for ASR9006 IPv4 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{Template for ASR9006 IPv4 Pool discovery:pool.ip.free.[ipfree.{#SNMPINDEX}].last()}&gt; (2/100) * {Template for ASR9006 IPv4 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</recovery_expression>
+                            <name>Pool {#POOLNAME} Free IP Address less than (1/100) * {Template for ASR9006 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</name>
+                            <priority>DISASTER</priority>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template for ASR9006 IPv4 Pool discovery:pool.ip.free.[ipfree.{#SNMPINDEX}].last()} &lt; (2/100) * {Template for ASR9006 IPv4 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{Template for ASR9006 IPv4 Pool discovery:pool.ip.free.[ipfree.{#SNMPINDEX}].last()}&gt; (3/100) * {Template for ASR9006 IPv4 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</recovery_expression>
+                            <name>Pool {#POOLNAME} Free IP Address less than (2/100) * {Template for ASR9006 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</name>
+                            <priority>HIGH</priority>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template for ASR9006 IPv4 Pool discovery:pool.ip.free.[ipfree.{#SNMPINDEX}].last()} &lt; (3/100) * {Template for ASR9006 IPv4 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{Template for ASR9006 IPv4 Pool discovery:pool.ip.free.[ipfree.{#SNMPINDEX}].last()}&gt; (4/100) * {Template for ASR9006 IPv4 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</recovery_expression>
+                            <name>Pool {#POOLNAME} Free IP Address less than (3/100) * {Template for ASR9006 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template for ASR9006 IPv4 Pool discovery:pool.ip.free.[ipfree.{#SNMPINDEX}].last()} &lt; (4/100) * {Template for ASR9006 IPv4 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{Template for ASR9006 IPv4 Pool discovery:pool.ip.free.[ipfree.{#SNMPINDEX}].last()}&gt; (5/100) * {Template for ASR9006 IPv4 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</recovery_expression>
+                            <name>Pool {#POOLNAME} Free IP Address less than (4/100) * {Template for ASR9006 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}</name>
+                            <priority>WARNING</priority>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Pool {#POOLNAME} Free IP Address</name>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>GRADIENT_LINE</drawtype>
+                                    <color>9C27B0</color>
+                                    <item>
+                                        <host>Template for ASR9006 IPv4 Pool discovery</host>
+                                        <key>pool.ip.free.[ipfree.{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Pool {#POOLNAME} Used IP Address</name>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>GRADIENT_LINE</drawtype>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template for ASR9006 IPv4 Pool discovery</host>
+                                        <key>pool.ip.used.[used.{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>

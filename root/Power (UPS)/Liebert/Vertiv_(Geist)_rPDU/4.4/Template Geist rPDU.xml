@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-09-08T21:14:58Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Geist Vertiv rPDU</template>
+            <name>Template Geist Vertiv rPDU</name>
+            <description>Zabbix monitoring template for Geist/Vertiv rPDU</description>
+            <templates>
+                <template>
+                    <name>Template ICMP Ping</name>
+                </template>
+                <template>
+                    <name>Template SNMP Device</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Humidity</name>
+                </application>
+                <application>
+                    <name>Power</name>
+                </application>
+                <application>
+                    <name>Power Outlets</name>
+                </application>
+                <application>
+                    <name>System</name>
+                </application>
+                <application>
+                    <name>Temperature</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Alarm Count</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.13.0</snmp_oid>
+                    <key>alarmCount</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>90d</trends>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;0</expression>
+                            <name>{HOST.NAME} Alarms Present</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Product Name</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.3.0</snmp_oid>
+                    <key>productFriendlyName</key>
+                    <delay>12h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Product Hostname</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.12.0</snmp_oid>
+                    <key>productHostname</key>
+                    <delay>1h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Product Manufacturer</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.15.0</snmp_oid>
+                    <key>productManufacturer</key>
+                    <delay>12h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Product Model Number</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.8.0</snmp_oid>
+                    <key>productModelNumber</key>
+                    <delay>12h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Product Part Number</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.9.0</snmp_oid>
+                    <key>productPartNumber</key>
+                    <delay>12h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Product Serial Number</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.10.0</snmp_oid>
+                    <key>productSerialNumber</key>
+                    <delay>12h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Product Version</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.2.0</snmp_oid>
+                    <key>productVersion</key>
+                    <delay>12h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>General</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Warning Count</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.1.14.0</snmp_oid>
+                    <key>warningCount</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>90d</trends>
+                    <applications>
+                        <application>
+                            <name>System</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;0</expression>
+                            <name>{HOST.NAME} Warnings Present</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>PDU Discovery</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.21239.5.2.3.1.1.2]</snmp_oid>
+                    <key>pdu</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>PDU {#SNMPINDEX} Name</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.21239.5.2.3.1.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>pduMainName[{#SNMPINDEX}]</key>
+                            <delay>6h</delay>
+                            <history>1w</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>System</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PDU {#SNMPINDEX} Serial Number</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.21239.5.2.3.1.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>pduMainSerial[{#SNMPINDEX}]</key>
+                            <delay>6h</delay>
+                            <history>1w</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>System</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PDU {#SNMPINDEX} Total Apparent Power</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.21239.5.2.3.1.1.10.{#SNMPINDEX}</snmp_oid>
+                            <key>pduTotalApparentPower[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>VA</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PDU {#SNMPINDEX} Total Energy</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.21239.5.2.3.1.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>pduTotalEnergy[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>Wh</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PDU {#SNMPINDEX} Total Power Factor</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.21239.5.2.3.1.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>pduTotalPowerFactor[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <units>%</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PDU {#SNMPINDEX} Total Real Power</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.21239.5.2.3.1.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>pduTotalRealPower[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>W</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{min(#3)}&gt;={$TOTAL_POWER_LIMIT:&quot;{#SNMPINDEX}&quot;}</expression>
+                                    <name>{HOST.NAME} PDU {#SNMPINDEX} Total Real Power Too High</name>
+                                    <priority>AVERAGE</priority>
+                                    <description>Set the TOTAL_POWER_LIMIT macro on each host, and for each PDU if there are more than one per host.  Trigger alarm if the power usage is at or above TOTAL_POWER_LIMIT.</description>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Total Real Power On PDU {#SNMPINDEX}</name>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <drawtype>GRADIENT_LINE</drawtype>
+                                    <color>FF5722</color>
+                                    <item>
+                                        <host>Template Geist Vertiv rPDU</host>
+                                        <key>pduTotalRealPower[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PDU Breaker Discovery</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.21239.5.2.3.3.1.3]</snmp_oid>
+                    <key>pduBreaker</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Breaker Current</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.3.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>pduBreakerCurrent[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>A (RMS)</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.01</params>
+                                </step>
+                            </preprocessing>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{min(#3)}&gt;={$BREAKER_LIMIT:&quot;{#SNMPINDEX}&quot;}</expression>
+                                    <name>{HOST.NAME} {#SNMPVALUE} Breaker Current High</name>
+                                    <priority>AVERAGE</priority>
+                                    <description>Common built-in circuit breakers seem to be 20A.  Trigger alarm if the breaker current is at or above BREAKER_LIMIT.  Override this by setting the BREAKER_LIMIT macro on the host.</description>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PDU Line Discovery</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.21239.5.2.3.4.1.2]</snmp_oid>
+                    <key>pduLine</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Current</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.4.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>pduLineCurrent[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>A (RMS)</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.01</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PDU Outlet Meter Discovery</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.21239.5.2.3.6.1.2]</snmp_oid>
+                    <key>pduOutletMeter</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Metered Outlet {#SNMPINDEX} Current</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.6.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>pduOutletMeterCurrent[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>A (RMS)</units>
+                            <applications>
+                                <application>
+                                    <name>Power Outlets</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.01</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Metered Outlet {#SNMPINDEX} Name</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.6.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>pduOutletMeterName[{#SNMPINDEX}]</key>
+                            <delay>1h</delay>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <applications>
+                                <application>
+                                    <name>Power Outlets</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Metered Outlet {#SNMPINDEX} Real Power</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.6.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>pduOutletMeterRealPower[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>W</units>
+                            <applications>
+                                <application>
+                                    <name>Power Outlets</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Metered Outlet {#SNMPINDEX} Voltage</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.6.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>pduOutletMeterVoltage[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>V (RMS)</units>
+                            <applications>
+                                <application>
+                                    <name>Power Outlets</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.1</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PDU Outlet Switch Discovery</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.21239.5.2.3.5.1.2]</snmp_oid>
+                    <key>pduOutletSwitch</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Switched Outlet {#SNMPINDEX} State</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.5.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>pduOutletSwitchState[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <applications>
+                                <application>
+                                    <name>Power Outlets</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>Geist PDU Outlet State</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{diff(0)}=1</expression>
+                                    <name>{HOST.NAME} Outlet {#SNMPINDEX} ({#SNMPVALUE}) State Changed</name>
+                                    <priority>INFO</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PDU Phase Discovery</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.21239.5.2.3.2.1.2]</snmp_oid>
+                    <key>pduPhase</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Apparent Power</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.2.1.13.{#SNMPINDEX}</snmp_oid>
+                            <key>pduPhaseApparentPower[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>VA</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Current</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.2.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>pduPhaseCurrent[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>A (RMS)</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.01</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Real Power</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.2.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>pduPhaseRealPower[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>W</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#SNMPVALUE} Voltage</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>SNMPv2-SMI::enterprises.21239.5.2.3.2.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>pduPhaseVoltage[{#SNMPINDEX}]</key>
+                            <history>15d</history>
+                            <trends>90d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>V (RMS)</units>
+                            <applications>
+                                <application>
+                                    <name>Power</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.1</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <macros>
+                <macro>
+                    <macro>{$BREAKER_LIMIT}</macro>
+                    <value>15</value>
+                    <description>Circuit breaker limit (Amps) to trigger alarm.</description>
+                </macro>
+                <macro>
+                    <macro>{$TOTAL_POWER_LIMIT}</macro>
+                    <value>4900</value>
+                    <description>Total power limit (in Watts) to trigger alarm.  Default (4900) is for 208V 30A PDU.  This should be set for each specific PDU.  If using redundant PDUs, it should be set to total power / 2 to avoid overload if one PDU loses power.</description>
+                </macro>
+            </macros>
+            <screens>
+                <screen>
+                    <name>External Sensors</name>
+                    <hsize>2</hsize>
+                    <vsize>1</vsize>
+                </screen>
+                <screen>
+                    <name>Inlets</name>
+                    <hsize>5</hsize>
+                    <vsize>1</vsize>
+                </screen>
+                <screen>
+                    <name>Outlets</name>
+                    <hsize>5</hsize>
+                    <vsize>1</vsize>
+                </screen>
+                <screen>
+                    <name>Protectors</name>
+                    <hsize>1</hsize>
+                    <vsize>1</vsize>
+                </screen>
+            </screens>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>Geist PDU Outlet State</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>On</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Off</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>On -&gt; Off</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Off -&gt; On</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Reboot (Currently On)</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Reboot (Currently Off)</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Unavailable</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
