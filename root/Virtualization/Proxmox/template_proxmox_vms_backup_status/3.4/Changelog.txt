@@ -1,0 +1,26 @@
+09.10.2018
+Found bug: in case of big installation, mounted storages can have similar names. Example:
+
+cat /etc/pve/storage.cfg
+
+nfs: fs
+        ...
+        path /mnt/pve/fs
+	...
+
+nfs: fsmain
+        ...
+        path /mnt/pve/fsmain
+	...
+
+nfs: fssecondary
+        ...
+        path /mnt/pve/fssecondary
+	...
+
+In this case script “proxmox-vms-backup-status” define all storages that fits by criterion, and get error, because path to backup files must be only one.
+Solution. String 
+backupdirectory=`cat $storageconfig|grep -A 1 $backupstorage|grep path|rev|cut -d " " -f 1|rev`
+changed to:
+backupdirectory=`cat $storageconfig|grep -w -A 1 $backupstorage|grep path|rev|cut -d " " -f 1|rev`
+argument “-w” provides us exact search, without similar names. On my Proxmox machine now works correct.

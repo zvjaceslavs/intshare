@@ -1,0 +1,14 @@
+1:other
+2:unknown
+3:voltsAC
+4:voltsDC
+5:amperes
+6:watts
+7:hertz
+8:celsius
+9:percentRH
+10:rpm
+11:cmm
+12:truthvalue
+13:specialEnum
+14:dBm 

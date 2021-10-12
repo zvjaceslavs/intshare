@@ -1,0 +1,6 @@
+# Maxscale discovery and items
+UserParameter=maxscale.discovery,maxadmin show servers | grep "(" | awk '{$3=substr($3,2,length($3)-2); printf "{\"{#SERVER_NODE}\": \""$3"\"},"}' | sed 's/,$/]}/' | sed 's/^/{"data":[/'
+UserParameter=maxscale.currconns[*],maxadmin show server $1 | grep "Current no. of conns:" | sed 's/Current no. of conns://g' | tr -d '[:space:]'
+UserParameter=maxscale.syncstate[*],maxadmin show server $1 | grep "Status:" | sed 's/Status://g' | tr -d '[:space:]' | sed 's/,.*//'
+UserParameter=maxscale.qmaster,maxadmin show service "Read-Write Service" | grep "Number of queries forwarded to master" | awk '{print $7}'
+UserParameter=maxscale.qslave,maxadmin show service "Read-Write Service" | grep "Number of queries forwarded to slave" | awk '{print $7}'

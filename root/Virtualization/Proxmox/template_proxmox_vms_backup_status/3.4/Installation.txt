@@ -1,0 +1,21 @@
+﻿0. Setup backup procedure on needed Proxmox server in web interface.
+1. On needed server copy files from "scripts" folder to /etc/zabbix/scripts/
+2. Make them executable, chmod a+rx script_name
+3. Add to /etc/zabbix/zabbix_agentd.conf:
+UserParameter=proxmox-vms-discovery, sudo /etc/zabbix/scripts/proxmox-vms-discovery
+UserParameter=proxmox-vms-backup-status[*], sudo /etc/zabbix/scripts/proxmox-vms-backup-status $1 $2
+4. Restart Zabbix agent.
+5. Add to /etc/sudoers:
+zabbix ALL=(ALL) NOPASSWD: /etc/zabbix/scripts/proxmox-vms-discovery
+zabbix ALL=(ALL) NOPASSWD: /etc/zabbix/scripts/proxmox-vms-backup-status
+6. Import template to Zabbix Server and apply to needed host
+7. Change macros {$BACKUP_PERIOD} value in template as you wish. Default - 7 days
+
+Value mapping that used in template. On Zabbix Server: Administration -> General -> Value mapping
+Name: 		Proxmox VMs backup return codes
+Value map: 	0 ⇒ Invalid VM number, or backup for VM is not configured.
+		1 ⇒ Backup directory for VM does not exists.
+		2 ⇒ VM has no backup file.
+		3 ⇒ VM backup is older than N day(s).
+		4 ⇒ VM backup finished with errors. Please, check logs.
+		7 ⇒ VM backup is OK, no errors found.

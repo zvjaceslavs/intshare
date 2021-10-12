@@ -1,0 +1,5 @@
+ 
+1 : other
+2 : supported
+3 : unsupported
+4 : incompatible

@@ -1,0 +1,6 @@
+
+pn400 ALL=NOPASSWD:/export/home/pn400/java/bin/java
+Defaults:pn400 !requiretty
+zabbix ALL=NOPASSWD:/bin/su *
+zabbix ALL=NOPASSWD:/etc/zabbix/scripts/*
+Defaults:zabbix !requiretty

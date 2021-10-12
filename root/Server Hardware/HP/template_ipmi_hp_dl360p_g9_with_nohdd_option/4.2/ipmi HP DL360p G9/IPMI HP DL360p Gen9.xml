@@ -1,0 +1,1843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-11T14:17:37Z</date>
+    <groups>
+        <group>
+            <name>Templates Archive</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>IPMI HP DL360p Gen9</template>
+            <name>IPMI HP DL360p Gen9</name>
+            <groups>
+                <group>
+                    <name>Templates Archive</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Drives</name>
+                </application>
+                <application>
+                    <name>Fan</name>
+                </application>
+                <application>
+                    <name>Fan_MSK</name>
+                </application>
+                <application>
+                    <name>Hardware</name>
+                </application>
+                <application>
+                    <name>Health</name>
+                </application>
+                <application>
+                    <name>Memory</name>
+                </application>
+                <application>
+                    <name>Power</name>
+                </application>
+                <application>
+                    <name>Temp</name>
+                </application>
+                <application>
+                    <name>Temp memory</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>01-Inlet Ambient</name>
+                    <type>IPMI</type>
+                    <key>01-InletAmbient</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>01-Inlet Ambient</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>02-CPU 1</name>
+                    <type>IPMI</type>
+                    <key>02-CPU1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>?</units>
+                    <ipmi_sensor>02-CPU 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>03-CPU 2</name>
+                    <type>IPMI</type>
+                    <key>03-CPU2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>?</units>
+                    <ipmi_sensor>03-CPU 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>04-P1 DIMM 1-6</name>
+                    <type>IPMI</type>
+                    <key>04-P1DIMM1-6</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>04-P1 DIMM 1-6</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>05-P1 DIMM 7-12</name>
+                    <type>IPMI</type>
+                    <key>05-P1DIMM7-12</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>05-P1 DIMM 7-12</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>06-P2 DIMM 1-6</name>
+                    <type>IPMI</type>
+                    <key>06-P2DIMM1-6</key>
+                    <delay>3600;50/1-7,00:00-24:00</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>06-P2 DIMM 1-6</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>07-P2 DIMM 7-12</name>
+                    <type>IPMI</type>
+                    <key>07-P2DIMM7-12</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>07-P2 DIMM 7-12</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>08-HD Max</name>
+                    <type>IPMI</type>
+                    <key>08-HDMax</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>08-HD Max</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>10-Chipset</name>
+                    <type>IPMI</type>
+                    <key>10-Chipset</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>10-Chipset</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>11-PS 1 Inlet</name>
+                    <type>IPMI</type>
+                    <key>11-PS1Inlet</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>11-PS 1 Inlet</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>12-PS 2 Inlet</name>
+                    <type>IPMI</type>
+                    <key>12-PS2Inlet</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>12-PS 2 Inlet</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>13-VR P1</name>
+                    <type>IPMI</type>
+                    <key>13-VRP1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>13-VR P1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>14-VR P2</name>
+                    <type>IPMI</type>
+                    <key>14-VRP2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>14-VR P2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>15-VR P1 Mem</name>
+                    <type>IPMI</type>
+                    <key>15-VRP1Mem</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>15-VR P1 Mem</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>16-VR P1 Mem</name>
+                    <type>IPMI</type>
+                    <key>16-VRP1Mem</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>16-VR P1 Mem</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>17-VR P2 Mem</name>
+                    <type>IPMI</type>
+                    <key>17-VRP2Mem</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>17-VR P2 Mem</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>18-VR P2 Mem</name>
+                    <type>IPMI</type>
+                    <key>18-VRP2Mem</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>18-VR P2 Mem</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>19-PS 1 Internal</name>
+                    <type>IPMI</type>
+                    <key>19-PS1Internal</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>19-PS 1 Internal</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>20-PS 2 Internal</name>
+                    <type>IPMI</type>
+                    <key>20-PS2Internal</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>20-PS 2 Internal</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>21-PCI 1</name>
+                    <type>IPMI</type>
+                    <key>21-PCI1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>21-PCI 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>22-PCI 2</name>
+                    <type>IPMI</type>
+                    <key>22-PCI2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>22-PCI 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>23-PCI 3</name>
+                    <type>IPMI</type>
+                    <key>23-PCI3</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>23-PCI 3</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>24-HD Controller</name>
+                    <type>IPMI</type>
+                    <key>24-HDController</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>24-HD Controller</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>25-LOM Card</name>
+                    <type>IPMI</type>
+                    <key>25-LOMCard</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>25-LOM Card</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>26-LOM</name>
+                    <type>IPMI</type>
+                    <key>26-LOM</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>26-LOM</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>27-Front Ambient</name>
+                    <type>IPMI</type>
+                    <key>27-FrontAmbient</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>27-Front Ambient</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>28-P/S 2 Zone</name>
+                    <type>IPMI</type>
+                    <key>28-PS2Zone</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>28-P/S 2 Zone</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>29-Battery Zone</name>
+                    <type>IPMI</type>
+                    <key>29-BatteryZone</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>29-Battery Zone</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>30-iLO Zone</name>
+                    <type>IPMI</type>
+                    <key>30-iLOZone</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>30-iLO Zone</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>31-PCI 1 Zone</name>
+                    <type>IPMI</type>
+                    <key>31-PCI1Zone</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>31-PCI 1 Zone</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>32-PCI 2 Zone</name>
+                    <type>IPMI</type>
+                    <key>32-PCI2Zone</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>32-PCI 2 Zone</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>33-PCI 3 Zone</name>
+                    <type>IPMI</type>
+                    <key>33-PCI3Zone</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>33-PCI 3 Zone</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>34-HD Cntlr Zone</name>
+                    <type>IPMI</type>
+                    <key>34-HDCntlrZone</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>34-HD Cntlr Zone</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>35-I/O Zone</name>
+                    <type>IPMI</type>
+                    <key>35-IOZone</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>35-I/O Zone</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>36-Storage Batt</name>
+                    <type>IPMI</type>
+                    <key>36-StorageBatt</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>36-Storage Batt</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>37-Fuse</name>
+                    <type>IPMI</type>
+                    <key>37-Fuse</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>C</units>
+                    <ipmi_sensor>37-Fuse</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>C1 P1I Bay 3</name>
+                    <type>IPMI</type>
+                    <key>C1P1IBay3</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <status>DISABLED</status>
+                    <ipmi_sensor>C1 P1I Bay 3</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>C1 P1I Bay 4</name>
+                    <type>IPMI</type>
+                    <key>C1P1IBay4</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <status>DISABLED</status>
+                    <ipmi_sensor>C1 P1I Bay 4</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>C1 P2I Bay 5</name>
+                    <type>IPMI</type>
+                    <key>C1P2IBay5</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <status>DISABLED</status>
+                    <ipmi_sensor>C1 P2I Bay 5</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>C1 P2I Bay 6</name>
+                    <type>IPMI</type>
+                    <key>C1P2IBay6</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <status>DISABLED</status>
+                    <ipmi_sensor>C1 P2I Bay 6</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>C1 P2I Bay 7</name>
+                    <type>IPMI</type>
+                    <key>C1P2IBay7</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <status>DISABLED</status>
+                    <ipmi_sensor>C1 P2I Bay 7</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>C1 P2I Bay 8</name>
+                    <type>IPMI</type>
+                    <key>C1P2IBay8</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <status>DISABLED</status>
+                    <ipmi_sensor>C1 P2I Bay 8</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>C2 P1I Bay 1</name>
+                    <type>IPMI</type>
+                    <key>C2P1IBay1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P1I Bay 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P1IBay1.avg</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P1I Bay 2</name>
+                    <type>IPMI</type>
+                    <key>C2P1IBay2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P1I Bay 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P1IBay2</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P1I Bay 3</name>
+                    <type>IPMI</type>
+                    <key>C2P1IBay3</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P1I Bay 3</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P1IBay3</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P1I Bay 4</name>
+                    <type>IPMI</type>
+                    <key>C2P1IBay4</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P1I Bay 4</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P1IBay4</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P1I Bay 5</name>
+                    <type>IPMI</type>
+                    <key>C2P1IBay5</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P1I Bay 5</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P1IBay5</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P1I Bay 6</name>
+                    <type>IPMI</type>
+                    <key>C2P1IBay6</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P1I Bay 6</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P1IBay6</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P1I Bay 7</name>
+                    <type>IPMI</type>
+                    <key>C2P1IBay7</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P1I Bay 7</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P1IBay7</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P1I Bay 8</name>
+                    <type>IPMI</type>
+                    <key>C2P1IBay8</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P1I Bay 8</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P1IBay8</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P2I Bay 1</name>
+                    <type>IPMI</type>
+                    <key>C2P2IBay1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P2I Bay 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P2IBay1</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>C2 P2I Bay 2</name>
+                    <type>IPMI</type>
+                    <key>C2P2IBay2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>C2 P2I Bay 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Drives</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Error on drive C2P2IBay2</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <expression>{avg(#3)}&gt;1</expression>
+                            <name>Predictive failure on drive {$ITEM.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Fan 1</name>
+                    <type>IPMI</type>
+                    <key>Fan1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 1 DutyCycle</name>
+                    <type>IPMI</type>
+                    <key>Fan1DutyCycle</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan 1 DutyCycle</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 1 Presence</name>
+                    <type>IPMI</type>
+                    <key>Fan1Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 1 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 2</name>
+                    <type>IPMI</type>
+                    <key>Fan2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 2 DutyCycle</name>
+                    <type>IPMI</type>
+                    <key>Fan2DutyCycle</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan 2 DutyCycle</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 2 Presence</name>
+                    <type>IPMI</type>
+                    <key>Fan2Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 2 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 3</name>
+                    <type>IPMI</type>
+                    <key>Fan3</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 3</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 3 DutyCycle</name>
+                    <type>IPMI</type>
+                    <key>Fan3DutyCycle</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan 3 DutyCycle</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 3 Presence</name>
+                    <type>IPMI</type>
+                    <key>Fan3Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 3 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 4</name>
+                    <type>IPMI</type>
+                    <key>Fan4</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 4</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 4 DutyCycle</name>
+                    <type>IPMI</type>
+                    <key>Fan4DutyCycle</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan 4 DutyCycle</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 4 Presence</name>
+                    <type>IPMI</type>
+                    <key>Fan4Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 4 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 5</name>
+                    <type>IPMI</type>
+                    <key>Fan5</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 5</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 5 DutyCycle</name>
+                    <type>IPMI</type>
+                    <key>Fan5DutyCycle</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan 5 DutyCycle</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 5 Presence</name>
+                    <type>IPMI</type>
+                    <key>Fan5Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 5 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 6</name>
+                    <type>IPMI</type>
+                    <key>Fan6</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 6</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 6 DutyCycle</name>
+                    <type>IPMI</type>
+                    <key>Fan6DutyCycle</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan 6 DutyCycle</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 6 Presence</name>
+                    <type>IPMI</type>
+                    <key>Fan6Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 6 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 7</name>
+                    <type>IPMI</type>
+                    <key>Fan7</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 7</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 7 DutyCycle</name>
+                    <type>IPMI</type>
+                    <key>Fan7DutyCycle</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan 7 DutyCycle</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fan 7 Presence</name>
+                    <type>IPMI</type>
+                    <key>Fan7Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Fan 7 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Fans</name>
+                    <type>IPMI</type>
+                    <key>Fans</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>Fans</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Megacell Status</name>
+                    <type>IPMI</type>
+                    <key>MegacellStatus</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>Megacell Status</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Health</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Memory Status</name>
+                    <type>IPMI</type>
+                    <key>MemoryStatus</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>Memory Status</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Health</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Power Meter</name>
+                    <type>IPMI</type>
+                    <key>PowerMeter</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Power Meter</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Power Supplies</name>
+                    <type>IPMI</type>
+                    <key>PowerSupplies</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Power Supplies</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Power Supply 1</name>
+                    <type>IPMI</type>
+                    <key>PowerSupply1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Power Supply 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Power Supply 2</name>
+                    <type>IPMI</type>
+                    <key>PowerSupply2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Power Supply 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PS 1 Output</name>
+                    <type>IPMI</type>
+                    <key>PS1Output</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>Watts</units>
+                    <ipmi_sensor>PS 1 Output</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PS 1 Presence</name>
+                    <type>IPMI</type>
+                    <key>PS1Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>PS 1 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PS 2 Output</name>
+                    <type>IPMI</type>
+                    <key>PS2Output</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>Watts</units>
+                    <ipmi_sensor>PS 2 Output</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PS 2 Presence</name>
+                    <type>IPMI</type>
+                    <key>PS2Presence</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>PS 2 Presence</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>PwrMeter Output</name>
+                    <type>IPMI</type>
+                    <key>PwrMeterOutput</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>Watts</units>
+                    <ipmi_sensor>PwrMeter Output</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Sys Health LED</name>
+                    <type>IPMI</type>
+                    <key>SysHealthLED</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>Sys Health LED</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Error Sys. Health LED</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>UID</name>
+                    <type>IPMI</type>
+                    <key>UID</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>UID</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Health</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{nodata(10800)}=1</expression>
+                            <name>3h with No data from IPMI interface</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{IPMI HP DL360p Gen9:Fan1.last()}=0 or {IPMI HP DL360p Gen9:Fan2.last()}=0 or {IPMI HP DL360p Gen9:Fan3.last()}=0 or {IPMI HP DL360p Gen9:Fan4.last()}=0 or {IPMI HP DL360p Gen9:Fan5.last()}=0 or {IPMI HP DL360p Gen9:Fan6.last()}=0 or&#13;
+{IPMI HP DL360p Gen9:Fan7.last()}=0</expression>
+            <name>Error FANS</name>
+            <priority>AVERAGE</priority>
+        </trigger>
+        <trigger>
+            <expression>{IPMI HP DL360p Gen9:PowerSupply1.last()}=0 or {IPMI HP DL360p Gen9:PowerSupply2.last()}=0</expression>
+            <name>Error Power</name>
+            <priority>HIGH</priority>
+        </trigger>
+        <trigger>
+            <expression>{IPMI HP DL360p Gen9:02-CPU1.last()}&gt;70 or {IPMI HP DL360p Gen9:03-CPU2.last()}&gt;70</expression>
+            <name>Error Temp CPU</name>
+            <priority>HIGH</priority>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>CPU</name>
+            <ymax_type_1>FIXED</ymax_type_1>
+            <graph_items>
+                <graph_item>
+                    <color>0000EE</color>
+                    <item>
+                        <host>IPMI HP DL360p Gen9</host>
+                        <key>02-CPU1</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>00C800</color>
+                    <item>
+                        <host>IPMI HP DL360p Gen9</host>
+                        <key>03-CPU2</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+    <value_maps>
+        <value_map>
+            <name>Server HP Fan</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Failure</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Server HP Health</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Error</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

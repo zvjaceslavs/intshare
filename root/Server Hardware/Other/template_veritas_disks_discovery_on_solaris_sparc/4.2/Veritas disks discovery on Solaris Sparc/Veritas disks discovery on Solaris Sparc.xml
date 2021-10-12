@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-12T06:40:45Z</date>
+    <groups>
+        <group>
+            <name>Templates Hardware</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Veritas disks discovery on Solaris Sparc</template>
+            <name>Veritas disks discovery on Solaris Sparc</name>
+            <groups>
+                <group>
+                    <name>Templates Hardware</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Hardware</name>
+                </application>
+            </applications>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Veritas Disks discovery</name>
+                    <key>veritas.discovery_disks</key>
+                    <delay>60</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Disk {#DISK_NAME} status</name>
+                            <key>veritas.diskstatus[{#DISK_NAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <applications>
+                                <application>
+                                    <name>Hardware</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;1</expression>
+                                    <name>Disk {#DISK_NAME} Faulted</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>

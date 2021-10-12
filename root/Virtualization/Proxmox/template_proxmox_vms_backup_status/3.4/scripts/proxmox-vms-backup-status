@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Script for checking ProxMox virtual machines backup. For use in Zabbix. Skygge@2016
+# Modified: MR_Andrew, 2018.
+# Special thanks: Max Dark, Marinero from cyberforum.ru
+
+#Variables
+
+backupconfig='/etc/pve/vzdump.cron'
+storageconfig='/etc/pve/storage.cfg'
+configdir='/etc/pve/local/qemu-server'
+
+# Check every VM for existing backup files and check if they're newer than 7 days
+parameters=`cat $backupconfig |egrep "($1|\-\-all)"|head -1|sed 's/  */ /g'`
+
+if [ "$parameters" = "" ];then
+   #echo "Invalid VM number, or backup for VM $1 is not configured."
+   echo 0
+else
+    #read backup configuration file into an array and find the backup storage parameter
+    IFS=' ' read -r -a array <<< "$parameters"
+    for index in "${!array[@]}"
+    do
+       	if [ "${array[index]}" = "--storage" ]; then
+       	   z=$((index+1))
+           backupstorage=${array[$z]}
+        fi
+    done
+
+# read physical backup path from storage configuration file for VM $1
+backupdirectory=`cat $storageconfig|grep -w -A 1 $backupstorage|grep path|rev|cut -d " " -f 1|rev`
+
+if [ -d $backupdirectory/dump ]; then
+        # check if backup file(s) exists on backup path for VM $1
+        backup=`ls $backupdirectory/dump/|grep "$1" |grep -v -E "log|tmp|dat"|wc -l`
+        if [ "$backup" = "0" ]; then
+              #echo "VM $1 has no backup file."
+              echo 2
+        else
+            # check if backup file is newer than $2 day(s) for VM $1
+            newbackup=`find $backupdirectory/dump/ -type f -name "*$1*" -not -name "*.log" -not -name "*.tmp" -not -name "*.dat" -mtime -$2 | sort -nr | head -1|wc -l`
+                if [ "$newbackup" = "0" ]; then
+                      #echo "VM $1 backup is older than $2 day(s)."
+                      echo 3
+                else
+                        #check last log file for errors
+                        backuplastlog=`ls $backupdirectory/dump/ | grep "$1" | grep log | tail -1`
+                        backupresult=`cat $backupdirectory/dump/$backuplastlog | grep -i -E "ERROR|FAILED"`
+                                if [ "$backupresult" = "" ];then
+                                        #echo "VM $1 backup is OK, no errors found."
+                                        echo 7
+                                else
+                                        #echo "VM $1 backup finished with errors. Please, check logs."
+                                        echo 4
+                                fi
+                fi
+        fi
+else
+    #echo "Backup directory for VM $1 does not exists."
+    echo 1
+fi
+fi

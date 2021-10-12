@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-12T06:08:09Z</date>
+    <groups>
+        <group>
+            <name>Templates Hardware</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Sun Ultra80</template>
+            <name>Sun Ultra80</name>
+            <description>only overal hw, not performed</description>
+            <groups>
+                <group>
+                    <name>Templates Hardware</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Hardware</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>overal hw status</name>
+                    <key>ultra80.hw.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;1</expression>
+                            <name>Overal HW status problem</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

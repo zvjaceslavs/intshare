@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-12T06:05:15Z</date>
+    <groups>
+        <group>
+            <name>Templates Hardware</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>SunFire v890 hardware</template>
+            <name>SunFire v890 hardware</name>
+            <description>get state from prtdiag</description>
+            <groups>
+                <group>
+                    <name>Templates Hardware</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Hardware</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>DISKS status</name>
+                    <key>sunv890.disk.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>DISK faulted</name>
+                            <priority>HIGH</priority>
+                            <description>check on system with prtdiag -v</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FAN status</name>
+                    <key>sunv890.fan.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;10</expression>
+                            <name>FAN faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>LED disks status</name>
+                    <key>sunv890.led.disks</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>LED Disks faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>LED general status</name>
+                    <key>sunv890.led.general</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>LED General faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>LED left door status</name>
+                    <key>sunv890.led.ldoor</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>LED LEFT DOOR faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>LED left thermal status</name>
+                    <key>sunv890.led.ltherm</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>LED LEFT THERMAL faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>LED right door status</name>
+                    <key>sunv890.led.rdoor</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>LED RIGHT DOOR faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>LED right thermal status</name>
+                    <key>sunv890.led.rtherm</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>LED RIGHT THERMAL faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PCI cards status</name>
+                    <key>sunv890.pcicards.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;{$PCI_CARD_COUNT}</expression>
+                            <name>PCI card faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PSU status</name>
+                    <key>sunv890.psu.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;3</expression>
+                            <name>PSU faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Temperature status</name>
+                    <key>sunv890.temp.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;7</expression>
+                            <name>Temperature sensor alarm</name>
+                            <priority>HIGH</priority>
+                            <description>che</description>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$PCI_CARD_COUNT}</macro>
+                    <value>8</value>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+</zabbix_export>

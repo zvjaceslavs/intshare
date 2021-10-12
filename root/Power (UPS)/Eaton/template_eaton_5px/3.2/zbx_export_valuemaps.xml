@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.2</version>
+    <date>2017-03-21T16:49:54Z</date>
+    <value_maps>
+        <value_map>
+            <name>Eaton 5PX xUPS Battery Status (ABM)</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Battery Charging</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Battery Discharging</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Battery Floating</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Battery Resting</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Unknown Status</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Battery Disconnected</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Battery Under Test</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>Check Battery</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Eaton 5PX xUPS Battery Test Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Unknown Status</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Passed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>In Progress</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Not Supported</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Inhibited</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Scheduled</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Eaton 5PX xUPS Input Source</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>None</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Primary Utility</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Bypass Feed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Secondary Utility</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Generator</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Flywheel</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>Fuel Cell</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Eaton 5PX xUPS Output Source</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>None</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Bypass</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Battery</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Booster</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Reducer</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>Parallel Capacity</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>Parallel Redundant</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>High Efficiency Mode</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>Maintenance Bypass</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

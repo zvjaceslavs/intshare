@@ -1,0 +1,8 @@
+Desenvolvido por Diego Cavalcante - 29/08/2017
+E-Mail: diego@suportecavalcante.com.br
+Skype: suportecavalcante
+S.O: Windows
+Linguagem: Powershell
+
+OBS: Para detalhes sobre o uso, consulte o arquivo LEIA-ME.pdf em:
+https://github.com/suportecavalcante/zabbix.agent

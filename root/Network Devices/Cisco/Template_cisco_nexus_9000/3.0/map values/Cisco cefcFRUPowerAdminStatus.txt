@@ -1,0 +1,6 @@
+ 
+1:on
+2:off
+3:inlineAuto
+4:inlineOn
+5:powerCycle

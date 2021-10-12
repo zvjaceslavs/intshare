@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-07-30T14:40:46Z</date>
+    <groups>
+        <group>
+            <name>Templates/Applications</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template App Nomad</template>
+            <name>Template App Nomad</name>
+            <description>Check If Nomad daemon is running</description>
+            <groups>
+                <group>
+                    <name>Templates/Applications</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Nomad</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Nomad memory used</name>
+                    <key>proc.mem[nomad]</key>
+                    <value_type>FLOAT</value_type>
+                    <units>b</units>
+                    <applications>
+                        <application>
+                            <name>Nomad</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Nomad daemon status</name>
+                    <key>proc.num[nomad]</key>
+                    <applications>
+                        <application>
+                            <name>Nomad</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;1</expression>
+                            <name>Nomad is not running on {HOST.NAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Nomad memory</name>
+            <graph_items>
+                <graph_item>
+                    <color>199C0D</color>
+                    <item>
+                        <host>Template App Nomad</host>
+                        <key>proc.mem[nomad]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>

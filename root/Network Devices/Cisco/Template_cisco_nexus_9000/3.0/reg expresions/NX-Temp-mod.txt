@@ -1,0 +1,3 @@
+Case sensitive!!	
+1	» 	^module-[0-9] [A-Z]|Module-1 Outlet-[0-9]|Module-1 Inlet-[0-9]|Module-1 Die-[0-9]	[RESULTADO is VERDADERO]
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.2</version>
+    <date>2019-04-21T13:48:41Z</date>
+    <value_maps>
+        <value_map>
+            <name>Daikin modes</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Auto (cool?)</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Auto (fan?)</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Dehumidify</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Cool</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Heat</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Fan</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Auto (heat)</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

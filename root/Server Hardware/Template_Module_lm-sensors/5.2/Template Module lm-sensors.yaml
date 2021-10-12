@@ -1,0 +1,122 @@
+zabbix_export:
+  version: '5.2'
+  date: '2021-04-13T20:45:01Z'
+  groups:
+    -
+      name: Templates
+  templates:
+    -
+      template: 'Template Module lm-sensors'
+      name: 'Template Module lm-sensors'
+      description: |
+        This template will automatically detect and supervise the temperature sensors of the machines.
+        
+        It's optimized to make only one request on the agent, and to proceed the data on the Zabbix server
+        
+        Important: this template is only compatible with lm-sensors >= 3.5.0 because it uses JSON.
+      groups:
+        -
+          name: Templates
+      applications:
+        -
+          name: Sensors
+        -
+          name: Temperatures
+        -
+          name: 'Zabbix raw items'
+      items:
+        -
+          name: 'Information about the lm-sensors'
+          key: sensors
+          history: 1h
+          trends: '0'
+          value_type: TEXT
+          applications:
+            -
+              name: 'Zabbix raw items'
+      discovery_rules:
+        -
+          name: 'Discovery of temperature sensors'
+          type: DEPENDENT
+          key: sensors.discovery
+          delay: '0'
+          lifetime: 7d
+          item_prototypes:
+            -
+              name: 'Temperature of "{#DEVICE}" - "{#SENSOR}"'
+              type: DEPENDENT
+              key: 'sensor-value["{#DEVICE}","{#SENSOR}"]'
+              delay: '0'
+              value_type: FLOAT
+              units: °C
+              applications:
+                -
+                  name: Sensors
+                -
+                  name: Temperatures
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.[''{#DEVICE}''].[''{#SENSOR}''].[''{#INPUT}'']'
+              master_item:
+                key: sensors
+              trigger_prototypes:
+                -
+                  expression: '{last()}>={#THRESHOLD}'
+                  name: 'The temperature of the {#DEVICE} - {#SENSOR} sensor is too high'
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              name: 'Evolution of the Temperature of "{#DEVICE}" - "{#SENSOR}"'
+              ymin_type_1: FIXED
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 1A7C11
+                  item:
+                    host: 'Template Module lm-sensors'
+                    key: 'sensor-value["{#DEVICE}","{#SENSOR}"]'
+          master_item:
+            key: sensors
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - |
+                  var parsedvalue = JSON.parse(value);
+                  var output = '[';
+                  for(var device in parsedvalue) {
+                      for(var sensor in parsedvalue[device]) {
+                          input = '';
+                          max = '';
+                          crit = '';
+                          threshold = '';
+                          for (var index in parsedvalue[device][sensor]) {
+                              if (index.substr(0,4) == "temp" && index.substr(index.length-6,index.length) == "_input") {
+                                  input = index;
+                              } else if (index.substr(index.length-4,index.length) == "_max") {
+                                  max = parseFloat(parsedvalue[device][sensor][index]);
+                              } else if (index.substr(index.length-5,index.length) == "_crit") {
+                                  crit = parseFloat(parsedvalue[device][sensor][index]);
+                              }
+                          }
+                          if (input) {
+                              if (max && crit) {
+                                  if (max < crit) {
+                                      threshold = max;
+                                  } else {
+                                      threshold = crit;
+                                  }
+                              } else if (max) {
+                                  threshold = max;
+                              } else if (crit) {
+                                  threshold = crit;
+                              } else {
+                                  threshold = "2147483647";
+                              }
+                              output += '{"{#DEVICE}":"' + device + '","{#SENSOR}":"' + sensor + '","{#INPUT}":"' + input + '","{#THRESHOLD}":"' + threshold + '"},';
+                          }
+                      }
+                  } 
+                  return output.slice(0,-1) + ']';

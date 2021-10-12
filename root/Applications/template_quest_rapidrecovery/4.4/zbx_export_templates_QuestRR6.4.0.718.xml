@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-02-21T14:09:04Z</date>
+    <groups>
+        <group>
+            <name>Templates/Disaster Recovery</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Rapid Recovery Core Template</template>
+            <name>Rapid Recovery Core Template</name>
+            <groups>
+                <group>
+                    <name>Templates/Disaster Recovery</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>RapidRecovery</name>
+                </application>
+                <application>
+                    <name>RapidRecovery Protected Agents</name>
+                </application>
+                <application>
+                    <name>RapidRecovery Repository</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Rapid Recovery Core Service</name>
+                    <key>service_state[RapidRecoveryCore]</key>
+                    <delay>3m</delay>
+                    <applications>
+                        <application>
+                            <name>RapidRecovery</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Windows service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#2)}&lt;&gt;0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last()}=0</recovery_expression>
+                            <name>Rapid Recovery Core is not running</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Rapid Recovery MongoDB Service</name>
+                    <key>service_state[RapidRecoveryMongod]</key>
+                    <delay>10m</delay>
+                    <applications>
+                        <application>
+                            <name>RapidRecovery</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Windows service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#2)}&lt;&gt;0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last(#2)}=0</recovery_expression>
+                            <name>Rapid Recovery MongoDB is not running</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Rapid Recovery VMware Proxy Service</name>
+                    <key>service_state[RapidRecoveryVMwareProxy]</key>
+                    <delay>10m</delay>
+                    <applications>
+                        <application>
+                            <name>RapidRecovery</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Windows service state</name>
+                    </valuemap>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Protected Agent Discovery</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#AGENTNAME},1.3.6.1.4.1.7572.200.100.300.1.3,{#AGENTSTATUS},1.3.6.1.4.1.7572.200.100.300.1.5,{#AGENTRECOVERYPOINTSCOUNT},1.3.6.1.4.1.7572.200.100.300.1.7,{#AGENTREPLICATIONSTATUS},1.3.6.1.4.1.7572.200.100.300.1.8,{#AGENTREPLICATIONLAST},1.3.6.1.4.1.7572.200.100.300.1.9]</snmp_oid>
+                    <key>rragent.discovery</key>
+                    <delay>4h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>RapidRecovery Agent {#AGENTNAME}</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.674.11000.1000.200.100.300.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>rragent.discovery[agentName.{#SNMPINDEX}]</key>
+                            <delay>0;md1h9</delay>
+                            <trends>0</trends>
+                            <status>DISABLED</status>
+                            <value_type>TEXT</value_type>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>RapidRecovery Agent {#AGENTNAME} Num of Recovery Points</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.7572.200.100.300.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>rragent.discovery[agentRecoveryPointsCount.{#SNMPINDEX}]</key>
+                            <delay>1800</delay>
+                            <history>7d</history>
+                            <trends>190d</trends>
+                            <applications>
+                                <application>
+                                    <name>RapidRecovery Protected Agents</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(#5)}=0</expression>
+                                    <name>Rapid Recovery Protected Agent Recovery Point Count</name>
+                                    <priority>WARNING</priority>
+                                    <description>The last 5 checks for the number of recovery points for this agent has reported '0'. Something may be wrong with the RR Core/RR Repository/RR Agent.</description>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>RapidRecovery Agent {#AGENTNAME} Last Replication</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.7572.200.100.300.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>rragent.discovery[agentReplicationLast.{#SNMPINDEX}]</key>
+                            <delay>1800</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>RapidRecovery Protected Agents</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>RapidRecovery Agent {#AGENTNAME} Replication State</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.7572.200.100.300.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>rragent.discovery[agentReplicationStatus.{#SNMPINDEX}]</key>
+                            <delay>900</delay>
+                            <history>7d</history>
+                            <trends>190d</trends>
+                            <applications>
+                                <application>
+                                    <name>RapidRecovery Protected Agents</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>RapidRecovery Replication Status</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>RapidRecovery Agent {#AGENTNAME} Status</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.7572.200.100.300.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>rragent.discovery[agentStatus.{#SNMPINDEX}]</key>
+                            <delay>900</delay>
+                            <history>7d</history>
+                            <trends>190d</trends>
+                            <applications>
+                                <application>
+                                    <name>RapidRecovery Protected Agents</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>RapidRecovery Agent Status</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(#5)}=2 or {last(#5)}=3</expression>
+                                    <name>Rapid Recovery Protected Agent State</name>
+                                    <priority>WARNING</priority>
+                                    <description>The last 5 checks for Agent Status have reported either an 'unreachable' (2) status or 'authenticationError' (3) status.</description>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last(#5)}=4</expression>
+                                    <name>Rapid Recovery Protected Agent State</name>
+                                    <priority>HIGH</priority>
+                                    <description>The last 5 checks for Agent Status have reported a 'failed' (4) state.</description>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Repository Discovery</name>
+                    <type>SNMPV1</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#REPOSITORYNAME},1.3.6.1.4.1.7572.200.100.200.1.3,{#REPOSITORYSTATUS},1.3.6.1.4.1.7572.200.100.200.1.5,{#REPOSITORYSIZEMB},1.3.1.3.6.1.4.1.7572.200.100.200.1.6,{#REPOSITORYFREEMB},1.3.6.1.4.1.7572.200.100.200.1.7]</snmp_oid>
+                    <key>rrcore.repo</key>
+                    <delay>8h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>RapidRecovery Repo FreeSpace - {#REPOSITORYNAME}</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.7572.200.100.200.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>rrcore.repo[repositoryFreeMB.{#SNMPINDEX}]</key>
+                            <delay>5m</delay>
+                            <history>7d</history>
+                            <trends>190d</trends>
+                            <units>MB</units>
+                            <applications>
+                                <application>
+                                    <name>RapidRecovery Repository</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>RapidRecovery Repo % Free - {#REPOSITORYNAME}</name>
+                            <type>CALCULATED</type>
+                            <key>rrcore.repo[repositoryFreeSpacePCT.{#SNMPINDEX}]</key>
+                            <history>7d</history>
+                            <trends>190d</trends>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <params>(last(rrcore.repo[repositoryFreeMB.{#SNMPINDEX}])/last(rrcore.repo[repositorySizeMB.{#SNMPINDEX}]))*100</params>
+                            <applications>
+                                <application>
+                                    <name>RapidRecovery Repository</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(,3h)}&lt;{$RR_REPO_FREEPCT_HIGH}</expression>
+                                    <name>Rapid Recovery Repository Free Space Remaining</name>
+                                    <priority>HIGH</priority>
+                                    <description>RapidRecovery Core Repository has been less than {$RR_REPO_FREEPCT_HIGH} for 3 hours.</description>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last(,3h)}&lt;{$RR_REPO_FREEPCT_WARN}</expression>
+                                    <name>Rapid Recovery Repository Free Space Remaining</name>
+                                    <priority>WARNING</priority>
+                                    <description>RapidRecovery Core Repository has been less than {$RR_REPO_FREEPCT_WARN} for 3 hours.</description>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>RapidRecovery Repo Size - {#REPOSITORYNAME}</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.7572.200.100.200.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>rrcore.repo[repositorySizeMB.{#SNMPINDEX}]</key>
+                            <delay>5m</delay>
+                            <history>7d</history>
+                            <trends>190d</trends>
+                            <units>MB</units>
+                            <applications>
+                                <application>
+                                    <name>RapidRecovery Repository</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>RapidRecovery Repo Status - {#REPOSITORYNAME}</name>
+                            <type>SNMPV1</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.7572.200.100.200.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>rrcore.repo[repositoryStatus.{#SNMPINDEX}]</key>
+                            <delay>30s</delay>
+                            <applications>
+                                <application>
+                                    <name>RapidRecovery Repository</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>RapidRecovery Repository Status</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}=6</expression>
+                                    <name>Rapid Recovery Repository Failure</name>
+                                    <priority>HIGH</priority>
+                                    <description>Rapid Recovery Repository has entered an error state.</description>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}=0</expression>
+                                    <name>Rapid Recovery Repository Status</name>
+                                    <priority>INFO</priority>
+                                    <description>Rapid Recovery Repository has entered an unknown status.</description>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}=1 or {last()}=2</expression>
+                                    <name>Rapid Recovery Repository Status</name>
+                                    <priority>WARNING</priority>
+                                    <description>Rapid Recovery Repository has entered or is entering an unmounted status.</description>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}=5</expression>
+                                    <name>Rapid Recovery Repository Status</name>
+                                    <priority>INFO</priority>
+                                    <description>Rapid Recovery Repository has entered a maintenance status</description>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Repository Freespace (%) - {#REPOSITORYNAME}</name>
+                            <width>300</width>
+                            <height>300</height>
+                            <type>STACKED</type>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Rapid Recovery Core Template</host>
+                                        <key>rrcore.repo[repositoryFreeSpacePCT.{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <httptests>
+                <httptest>
+                    <name>RapidRecovery Web Console Availability</name>
+                    <application>
+                        <name>RapidRecovery</name>
+                    </application>
+                    <delay>10m</delay>
+                    <attempts>5</attempts>
+                    <steps>
+                        <step>
+                            <name>Rapid Recovery Console Login</name>
+                            <url>https://{HOST.IP}:8006/apprecovery/admin/Core/Replication</url>
+                            <status_codes>401</status_codes>
+                        </step>
+                    </steps>
+                </httptest>
+            </httptests>
+            <macros>
+                <macro>
+                    <macro>{$RR_REPO_FREEPCT_HIGH}</macro>
+                    <value>15</value>
+                </macro>
+                <macro>
+                    <macro>{$RR_REPO_FREEPCT_WARN}</macro>
+                    <value>22.5</value>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>RapidRecovery Agent Status</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>online</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>pendingFailover</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>unreachable</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>authenticationError</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>loading</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>RapidRecovery Replication Status</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>no</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>yes</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>RapidRecovery Repository Status</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>unmounting</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>unmounted</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>mounting</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>mounted</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>maintenance</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>error</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Windows service state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Running</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Paused</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Start pending</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Pause pending</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Continue pending</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Stop pending</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Stopped</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>255</value>
+                    <newvalue>No such service</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

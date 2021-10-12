@@ -1,0 +1,2055 @@
+CPKM2-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+  TEXTUAL-CONVENTION,
+  MacAddress,
+  DisplayString       FROM SNMPv2-TC
+  enterprises,
+  Integer32,
+  NOTIFICATION-TYPE,
+  MODULE-IDENTITY     FROM SNMPv2-SMI
+  OBJECT-GROUP,
+  NOTIFICATION-GROUP,
+  MODULE-COMPLIANCE   FROM SNMPv2-CONF
+  OBJECT-TYPE         FROM RFC-1212;
+
+
+vsat-s MODULE-IDENTITY
+  LAST-UPDATED "201711272020Z"
+  ORGANIZATION "VSAT-SERVICE"
+  CONTACT-INFO "VSAT-SERVICE  LTD,
+                Moscow, Russia,
+                www.vsat-s.ru"
+  DESCRIPTION  "SRK-M2 version v29 and later"
+  REVISION    "201711272020Z"
+    DESCRIPTION " "
+   ::= { enterprises 43573 }
+
+cpkm2  OBJECT IDENTIFIER ::= { vsat-s 1 }
+
+trapData OBJECT IDENTIFIER ::= { cpkm2 1 }
+
+deviceNamet OBJECT-TYPE
+  SYNTAX DisplayString
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Device name"
+   ::= { trapData 1 }
+
+errCode OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "System state Error code"
+   ::= { trapData 2 }
+
+warnCode OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "System state warning code"
+   ::= { trapData 3 }
+
+workState OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "System work state  bit0 (1=ventilation 0=condition) Bit2(=1 Jast ON)"
+   ::= {  trapData 4 }
+
+
+cpkm2State OBJECT IDENTIFIER ::= { cpkm2 2 }
+
+
+uptimeSeconds OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Uptime in seconds"
+   ::= { cpkm2State 1 }
+
+startsNumber OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Starts number"
+   ::= { cpkm2State 2 }
+
+workTime OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in seconds"
+   ::= { cpkm2State 3 }
+
+u3V OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "3V bateery voltages  in .01v"
+   ::= { cpkm2State 4 }
+
+uLine1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Voltage in input power line 1"
+   ::= { cpkm2State 5 }
+
+uLine2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Voltage in input power line 2"
+   ::= { cpkm2State 6 }
+
+uLine3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Voltage in input power line 3"
+   ::= { cpkm2State 7 }
+
+inputsBit OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Bit 0 is state  INPUT1, bit1-INPUT2 ,..."
+   ::= { cpkm2State 8 }
+
+rele OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Relay coil state. Bit0-relay1, bit1-relay2...."
+   ::= { cpkm2State 9 }
+
+roomTemperature OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Indoor temperature"
+   ::= { cpkm2State 10 }
+
+outDoorTemp OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Outdoor temperature"
+   ::= { cpkm2State 11 }
+
+
+hardVers OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Hardware Version"
+  ::= { cpkm2State 12 }
+
+softVers OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "SoftWare Version"
+  ::= { cpkm2State 13 }
+
+humidityInd OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Humidity indoor"
+  ::= { cpkm2State 14 }
+
+humidityOut OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Humidity outdoor"
+  ::= { cpkm2State 15 }
+
+
+
+
+cpkm2Net OBJECT IDENTIFIER ::= { cpkm2  3 }
+
+
+myIP OBJECT-TYPE
+  SYNTAX DisplayString
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "IP address of the CPK-M2 device"
+   ::= { cpkm2Net 1 }
+
+
+myMask OBJECT-TYPE
+  SYNTAX DisplayString
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "IP mask of the CPK-M2 device"
+   ::= { cpkm2Net 2}
+
+
+myGateway OBJECT-TYPE
+  SYNTAX DisplayString
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Default gateway of the CPK-M2 device"
+   ::= { cpkm2Net 3 }
+
+
+myMAC OBJECT-TYPE
+  SYNTAX DisplayString
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Ethernet MAC address of the CPK-M2 device"
+   ::= { cpkm2Net 4 }
+
+   
+deviceName OBJECT-TYPE
+  SYNTAX DisplayString
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Device name"
+   ::= { cpkm2Net 5 }
+
+moduleBits OBJECT IDENTIFIER ::= { cpkm2 4}
+
+modConnect OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with address N exist and connected"
+   ::= { moduleBits 1 }
+
+
+modStart  OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N send START signal"
+   ::= { moduleBits 2 }
+
+modBlock  OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N send BLOCK signal"
+   ::= { moduleBits 3 }
+
+modAlarm  OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N resive ALARM signal"
+   ::= { moduleBits 4 }
+
+modNoWork OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N  not resive WORK signal"
+   ::= { moduleBits 5 }
+  
+modNoAcc OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N  not Accessable on bus"
+   ::= { moduleBits 6 }
+
+modInfo OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N  get Info Bit"
+   ::= { moduleBits 7 }
+
+modEmergency OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N has Emergensy State (alarm or Nowork or NoAcc)"
+   ::= { moduleBits 8 }
+
+modTS OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an Temperature Sensor module"
+   ::= { moduleBits 9 }
+
+modDC OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an Dry Contacts module"
+   ::= { moduleBits 10 }
+
+modIR OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an IR module"
+   ::= { moduleBits 11 }
+
+modREL OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an Reley module"
+   ::= { moduleBits 12 }
+
+modCooler OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an Cooler module"
+   ::= { moduleBits 13 }
+
+modHeater OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an Heater module"
+   ::= { moduleBits 14 }
+
+modVent OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an Air Cooler (ventilator)"
+   ::= { moduleBits 15 }
+
+modA413 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an A413 type module"
+   ::= { moduleBits 16 }
+
+modAF OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an AF type module"
+   ::= { moduleBits 17 }
+ 
+modAFD OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an AFD type module"
+   ::= { moduleBits 18 } 
+
+mod4A OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an 4A type module"
+   ::= { moduleBits 19 }
+   
+modTH OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an Temperature&Humidity type module"
+   ::= { moduleBits 20 }   
+ 
+modGSM OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Bit N =1 means that module with ADR=N is an GSM type module"
+   ::= { moduleBits 21 }    
+   
+cpkm2Temperat OBJECT IDENTIFIER ::= { cpkm2  5 }
+
+t1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Temperature limit T1: if less, is alarm state"
+   ::= { cpkm2Temperat 1 }
+
+t2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Temperature limit T2: if  less, reserv heater ON"
+   ::= { cpkm2Temperat 2 }
+
+t3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Temperature limit  T3: if more, reserv cooler ON"
+   ::= { cpkm2Temperat 3 }
+
+t4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Temperature limitT4: if more, is alarm state"
+   ::= { cpkm2Temperat 4}
+
+t5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Temperature limin T5: more is fire"
+   ::= { cpkm2Temperat 5 }
+
+tVent OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Normal Temperature in room for vent system"
+   ::= { cpkm2Temperat 6 }
+
+tVentAllowMin OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Outdoor Min Temperature  for vent system work"
+   ::= { cpkm2Temperat 7 }
+
+tVentAllowMax OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Outdoor Max Temperature  for vent system work"
+   ::= { cpkm2Temperat 8 }
+
+tGistIndor OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Indoor  Temperature  Gisteresis"
+   ::= { cpkm2Temperat 9 }
+
+tGistOutdor OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Outdoor Temperature  Gisteresis"
+   ::= { cpkm2Temperat 10 }
+
+workMode OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "0=Auto 1= Cond Only  2=Vent only"
+   ::= { cpkm2Temperat 11 }
+
+nReserv OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Q-ty reserv conditioners in rotate groop"
+   ::= { cpkm2Temperat 12 }
+
+
+cpkm2TimeDate OBJECT IDENTIFIER ::= { cpkm2  6 }
+
+rotatePeriod OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Rotate period of reserv equipment in minutes"
+   ::= { cpkm2TimeDate 1 }
+
+journalTime OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Time between  records to journal in minutes"
+   ::= { cpkm2TimeDate 2 }
+
+rotateStart OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Time  in hour for start allow  rotate reserv equipments"
+   ::= { cpkm2TimeDate 3 }
+
+rotateEnd OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Time  in hour for end allow  rotate reserv equipments"
+   ::= { cpkm2TimeDate 4 }
+
+year OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Current date: years and  tens year 14...99  example: 14"
+   ::= { cpkm2TimeDate 5 }
+
+month OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Current date: month   1...12"
+   ::= { cpkm2TimeDate 6 }
+
+monthDay OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Current date: day of month  1..31"
+   ::= { cpkm2TimeDate 7 }
+
+hour OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Current time: hour 0...23"
+   ::= { cpkm2TimeDate 8 }
+
+minutes OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Current time:  minutes, 0...59. If write minutes, it will write NULL automaticaly to seconds."
+   ::= { cpkm2TimeDate 9 }
+
+
+cpkm2Voltage OBJECT IDENTIFIER ::= { cpkm2  7 }
+
+uMin OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Minimum voltage for  allow work conditioner equipment"
+   ::= { cpkm2Voltage 1 }
+
+uMax OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Maximum voltage for  allow work conditioner equipmens"
+   ::= { cpkm2Voltage 2 }
+
+uMinAlarm OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Minimum voltage for alarm & OFF  ALL  Devices"
+   ::= { cpkm2Voltage 3 }
+
+uMaxAlarm OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Maximum voltage for alarm & OFF  ALL  Devices"
+   ::= { cpkm2Voltage 4 }
+
+uKalibr OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Voltage calibration factor;  1000 equal 1.000"
+   ::= { cpkm2Voltage 5 }
+
+
+
+
+srkm2modulesData OBJECT IDENTIFIER ::= { cpkm2  9 }
+
+module0 OBJECT IDENTIFIER ::= { srkm2modulesData  1 }
+modFunction0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module0 1 }
+
+modType0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=Temperature module; 1=dry contacts; 2= IR; 4=reley ; 6=A413; 12=invers reley "
+   ::= { module0 2 }
+
+modWorkTime0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module0 3 }
+
+modSetTemp0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF  or AFD  ONLY"
+   ::= {module0 4 }
+
+modSetMode0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+      "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or  AF or AFD  ONLY "
+   ::= { module0 5 }  
+
+modSetVent0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+         "Set vent speed for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5); A413 or AF or AFD  ONLY "
+   ::= { module0 6 }
+
+modTemp0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Target Temperature on conditioner;  A413  or AF   ONLY "
+   ::= { module0 7 }
+
+modMode0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module0 8 }
+
+modVent0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Real vent speed on conditioner 1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module0 9 }
+
+modErrCode0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Error code from conditioner; A413 or AF ONLY"
+   ::= { module0 10 }
+
+modTempFrom0 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module  "
+   ::= { module0 11 }
+
+
+module1 OBJECT IDENTIFIER ::= { srkm2modulesData  2 }
+modFunction1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module1 1 }
+
+modType1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module1 2 }
+
+modWorkTime1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module1 3 }
+
+modSetTemp1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+       "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD  ONLY"
+   ::= {module1 4 }
+
+modSetMode1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+        "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413  or AF or AFD F ONLY "
+   ::= { module1 5 }
+
+modSetVent1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+       "Set vent speed for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5); A413 or AF or AFD  ONLY "
+   ::= { module1 6 }
+
+modTemp1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module1 7 }
+
+modMode1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+         "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module1 8 }
+modVent1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Real vent speed on conditioner 1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module1 9 }
+
+modErrCode1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner for A413 or AF ONLY   OR Humidity for  DTH) "
+   ::= { module1 10 }
+
+modTempFrom1 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module  "
+   ::= { module1 11 }
+
+module2 OBJECT IDENTIFIER ::= { srkm2modulesData  3 }
+modFunction2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module2 1 }
+
+modType2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module2 2 }
+
+modWorkTime2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module2 3 }
+
+modSetTemp2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+         "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current)  A413  or AF or AFD  ONLY"
+   ::= {module2 4 }
+
+modSetMode2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+       "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413  or AF or AFD  ONLY "
+   ::= { module2 5 }
+
+modSetVent2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Set vent speed for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5) ; A413 or AF or AFD ONLY "
+   ::= { module2 6 }
+
+modTemp2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module2 7 }
+
+modMode2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+           "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module2 8 }
+modVent2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+         "Real vent speed on conditioner  1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module2 9 }
+
+modErrCode2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner for A413 or AF ONLY   OR Humidity for  DTH "
+   ::= { module2 10 }
+
+modTempFrom2 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module  "
+   ::= { module2 11 }
+
+module3 OBJECT IDENTIFIER ::= { srkm2modulesData  4 }
+modFunction3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module3 1 }
+
+modType3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module3 2 }
+
+modWorkTime3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module3 3 }
+
+modSetTemp3  OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+          "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current); A413  or AF or AFD  ONLY"
+   ::= {module3 4 }
+
+modSetMode3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+          "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ; A413  or AF or AFD  ONLY "
+   ::= { module3 5 }
+
+modSetVent3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+     "Set vent speed for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5 ) ; A413  or AF or AFD  ONLY "
+   ::= { module3 6 }
+
+modTemp3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module3 7 }
+
+modMode3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+         "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module3 8 }
+modVent3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+       "Real vent speed on conditioner 1=auto; 2=speed1;..... 6=speed5;;  A413 or AF  ONLY  "
+   ::= { module3 9 }
+
+modErrCode3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner  for A413 or AF ONLY   OR Humidity for  DTH "
+   ::= { module3 10 }
+
+modTempFrom3 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module  "
+   ::= { module3 11 }
+
+module4 OBJECT IDENTIFIER ::= { srkm2modulesData  5 }
+modFunction4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module4 1 }
+
+modType4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module4 2 }
+
+modWorkTime4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module4 3 }
+
+modSetTemp4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+           "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current;  A413 or AF or AFD  ONLY"
+   ::= {module4 4 }
+
+modSetMode4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+       "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD  ONLY "
+   ::= { module4 5 }
+
+modSetVent4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+     "Set vent speed for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5) ;  A413 or AF or AFD  ONLY "
+   ::= { module4 6 }
+
+modTemp4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module4 7 }
+
+modMode4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+         "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module4 8 }
+
+modVent4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Real vent speed on conditioner  1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module4 9 }
+
+modErrCode4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner for A413 or AF ONLY  OR Humidity for DTH "
+   ::= { module4 10 }
+
+modTempFrom4 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module4 11 }
+
+module5 OBJECT IDENTIFIER ::= { srkm2modulesData  6 }
+modFunction5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module5 1 }
+
+modType5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module5 2 }
+
+modWorkTime5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module5 3 }
+
+modSetTemp5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+           "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current); A413 or AF or AFD  ONLY"
+   ::= {module5 4 }
+
+modSetMode5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+           "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD  ONLY "
+   ::= { module5 5 }
+
+modSetVent5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+     "Set vent speed for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5) ;  A413 or AF or AFD  ONLY "
+   ::= { module5 6 }
+
+modTemp5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module5 7 }
+
+modMode5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF  ONLY "
+   ::= { module5 8 }
+
+modVent5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+         "Real vent speed on conditioner  1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module5 9 }
+
+modErrCode5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner for A413 or AF ONLY OR Humidity for DTH "
+   ::= { module5 10 }
+
+modTempFrom5 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module5 11 }
+
+module6 OBJECT IDENTIFIER ::= { srkm2modulesData  7 }
+modFunction6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module6 1 }
+
+modType6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module6 2 }
+
+modWorkTime6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module6 3 }
+
+modSetTemp6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+          "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD  ONLY"
+   ::= {module6 4 }
+
+modSetMode6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+       "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD  ONLY "
+   ::= { module6 5 }
+
+modSetVent6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+       "Set vent speed for conditioner (0=not_set; 1=auto; 2=speed1;.. 6=speed5) ;  A413 or AF or AFD  ONLY "
+   ::= { module6 6 }
+
+modTemp6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413 or AF  ONLY "
+   ::= { module6 7 }
+
+modMode6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module6 8 }
+
+modVent6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+       "Real vent speed on conditioner 1=auto; 2=speed1;..... 6=speed5;;  A413 or AF  ONLY  "
+   ::= { module6 9 }
+
+modErrCode6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner  for A413 or AF ONLY   OR Humidity for  DTH "
+   ::= { module6 10 }
+
+modTempFrom6 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module6 11 }
+
+module7 OBJECT IDENTIFIER ::= { srkm2modulesData  8 }
+modFunction7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module7 1 }
+
+modType7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module7 2 }
+
+modWorkTime7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module7 3 }
+
+modSetTemp7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+        "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD ONLY"
+   ::= {module7 4 }
+
+modSetMode7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+       "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD ONLY "
+   ::= { module7 5 }
+
+modSetVent7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Set vent speed for conditioner (0=not_set; 1=auto; 2=speed1;.. 6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module7 6 }
+
+modTemp7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+         "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module7 7 }
+
+modMode7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+          "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF  ONLY "
+   ::= { module7 8 }
+
+modVent7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+    "Real vent speed on conditioner 1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module7 9 }
+
+modErrCode7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner for A413 or AF ONLY OR Humidity for  DTH "
+   ::= { module7 10 }
+
+modTempFrom7 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module7 11 }
+
+module8 OBJECT IDENTIFIER ::= { srkm2modulesData  9 }
+modFunction8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module8 1 }
+
+modType8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module8 2 }
+
+modWorkTime8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module8 3 }
+
+modSetTemp8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+           "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD ONLY"
+   ::= {module8 4 }
+
+modSetMode8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+       "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD ONLY "
+   ::= { module8 5 }
+
+modSetVent8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+     "Set vent speed  for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module8 6 }
+
+modTemp8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413 or AF  ONLY "
+   ::= { module8 7 }
+
+modMode8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+          "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module8 8 }
+
+modVent8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+    "Real vent speed on conditioner  1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module8 9 }
+
+modErrCode8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner for A413 or AF ONLY OR Humidity for DTH "
+   ::= { module8 10 }
+
+modTempFrom8 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module  "
+   ::= { module8 11 }
+
+module9 OBJECT IDENTIFIER ::= { srkm2modulesData  10 }
+modFunction9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module9 1 }
+
+modType9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module9 2 }
+
+modWorkTime9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module9 3 }
+
+modSetTemp9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+          "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD ONLY"
+   ::= {module9 4 }
+
+modSetMode9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+       "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD ONLY "
+   ::= { module9 5 }
+
+modSetVent9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+    "Set vent speed  for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module9 6 }
+
+modTemp9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module9 7 }
+
+modMode9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+          "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module9 8 }
+
+modVent9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Real vent speed on conditioner  1=auto; 2=speed1;..... 6=speed5;;  A413 or AF  ONLY  "
+   ::= { module9 9 }
+
+modErrCode9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner  for A413 or AF ONLY OR Humidity for DTH"
+   ::= { module9 10 }
+
+modTempFrom9 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module  "
+   ::= { module9 11 }
+
+module10 OBJECT IDENTIFIER ::= { srkm2modulesData  11 }
+modFunction10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module10 1 }
+
+modType10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module10 2 }
+
+modWorkTime10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module10 3 }
+
+modSetTemp10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+          "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current;  A413 or AF or AFD ONLY"
+   ::= {module10 4 }
+
+modSetMode10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+        "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD ONLY "
+   ::= { module10 5 }
+
+modSetVent10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+    "Set vent speed  for conditioner (0=not_set; 1=auto; 2=speed1;... 6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module10 6 }
+
+modTemp10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+     "Target Temperature on conditioner;  A413 or AF  ONLY "
+   ::= { module10 7 }
+
+modMode10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+          "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF  ONLY "
+   ::= { module10 8 }
+
+modVent10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+    "Real vent speed on conditioner 1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module10 9 }
+
+modErrCode10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner for A413 or AF ONLY OR Humidity for DTH "
+   ::= { module10 10 }
+
+modTempFrom10 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module  "
+   ::= { module10 11 }
+
+module11 OBJECT IDENTIFIER ::= { srkm2modulesData  12 }
+modFunction11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module11 1 }
+
+modType11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module11 2 }
+
+modWorkTime11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module11 3 }
+
+modSetTemp11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+          "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD ONLY"
+   ::= {module11 4 }
+
+modSetMode11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+         "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD ONLY "
+   ::= { module11 5 }
+
+modSetVent11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+       "Set vent speed  for conditioner (0=not_set; 1=auto; 2=speed1;..... 6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module11 6 }
+
+modTemp11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module11 7 }
+
+modMode11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+        "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module11 8 }
+
+modVent11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "Real vent speed on conditioner 1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module11 9 }
+
+modErrCode11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Error code from conditioner  for A413 or AF ONLY   OR Humidity for  DTH "
+   ::= { module11 10 }
+
+modTempFrom11 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module11 11 }
+
+module12 OBJECT IDENTIFIER ::= { srkm2modulesData  13 }
+modFunction12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module12 1 }
+
+modType12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module12 2 }
+
+modWorkTime12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module12 3 }
+
+modSetTemp12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+        "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD ONLY"
+   ::= {module12 4 }
+
+modSetMode12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+         "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD ONLY "
+   ::= { module12 5 }
+
+modSetVent12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Set vent speed  for conditioner (0=not_set; 1=auto; 2=speed1;.. 6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module12 6 }
+
+modTemp12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+       "Target Temperature on conditioner;  A413 or AF  ONLY "
+   ::= { module12 7 }
+
+modMode12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+          "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module12 8 }
+
+modVent12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+         "Real vent speed on conditioner  1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module12 9 }
+
+modErrCode12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+  "Error code from conditioner  for A413 or AF ONLY OR Humidity for DTH "
+   ::= { module12 10 }
+
+modTempFrom12 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module12 11 }
+
+module13 OBJECT IDENTIFIER ::= { srkm2modulesData  14 }
+modFunction13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module13 1 }
+
+modType13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module13 2 }
+
+modWorkTime13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module13 3 }
+
+modSetTemp13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+       "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD ONLY"
+   ::= {module13 4 }
+
+modSetMode13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+         "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD ONLY "
+   ::= { module13 5 }
+
+modSetVent13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+    "Set vent speed  for conditioner (0=not_set; 1=auto; 2=speed1;..... 6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module13 6 }
+
+modTemp13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+       "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module13 7 }
+
+modMode13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+       "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module13 8 }
+
+modVent13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Real vent speed on conditioner  1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module13 9 }
+
+modErrCode13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "Error code from conditioner  for A413 or AF ONLY   OR Humidity for  DTH "
+   ::= { module13 10 }
+
+modTempFrom13 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module13 11 }
+
+module14 OBJECT IDENTIFIER ::= { srkm2modulesData  15 }
+modFunction14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module14 1 }
+
+modType14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module14 2 }
+
+modWorkTime14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module14 3 }
+
+modSetTemp14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+         "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD ONLY"
+   ::= {module14 4 }
+
+modSetMode14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+        "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413 or AF or AFD ONLY "
+   ::= { module14 5 }
+
+modSetVent14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Set vent speed  for conditioner (0=not_set; 1=auto; 2=speed1;..... 6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module14 6 }
+
+modTemp14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+       "Target Temperature on conditioner;  A413 or AF ONLY "
+   ::= { module14 7 }
+
+modMode14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+          "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module14 8 }
+
+modVent14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+       "Real vent speed on conditioner 1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module14 9 }
+
+modErrCode14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "Error code from conditioner for A413 or AF ONLY   OR Humidity for  DTH "
+   ::= { module14 10 }
+
+modTempFrom14 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module14 11 }
+
+module15 OBJECT IDENTIFIER ::= { srkm2modulesData  16 }
+modFunction15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "module function: 0=not use  1=every time OFF  2=reserv  3=rotate(work or reserv) 5=every time ON"
+   ::= {module15 1 }
+
+modType15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+      "module type: 0=dry contacts 1 IR 2=reley 4=temperature sensor "
+   ::= { module15 2 }
+
+modWorkTime15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+      "Summary work time in sekonds of equipment, connected througt module with adr 0"
+   ::= { module15 3 }
+
+modSetTemp15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+      "Set target Temperature for conditioner ( 17-30, 0=not_set=stay_current);  A413 or AF or AFD ONLY"
+   ::= {module15 4 }
+
+modSetMode15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-write
+  STATUS current
+  DESCRIPTION
+       "Set MODE  for conditioner (0=not_set; 1=auto; 2=dry; 3=cool; 4=heat) ;  A413  or AF or AFD ONLY "
+   ::= { module15 5 }
+
+modSetVent15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-write
+  STATUS current
+  DESCRIPTION
+     "Set vent speed  for conditioner (0=not_set; 1=auto; 2=speed1;.6=speed5; ) ;  A413 or AF or AFD ONLY "
+   ::= { module15 6 }
+
+modTemp15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Target Temperature on conditioner;  A413  or AF ONLY "
+   ::= { module15 7 }
+
+modMode15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+           "Real Mode on conditioner (1=auto; 2=dry; 3=cool; 4=heat);  A413 or AF ONLY "
+   ::= { module15 8 }
+
+modVent15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS  read-only
+  STATUS current
+  DESCRIPTION
+        "Real vent speed on conditioner  1=auto; 2=speed1;..... 6=speed5;;  A413 or AF ONLY  "
+   ::= { module15 9 }
+
+modErrCode15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Error code from conditioner for A413 or AF ONLY   OR Humidity for  DTH "
+   ::= { module15 10 }
+
+modTempFrom15 OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+   "Temp from module   "
+   ::= { module15 11 }
+
+
+
+END

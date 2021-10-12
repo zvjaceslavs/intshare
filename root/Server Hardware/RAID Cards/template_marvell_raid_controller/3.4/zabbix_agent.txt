@@ -1,0 +1,1 @@
+UserParameter=marvell.raid[*],powershell -NoProfile -NoLogo -File "C:\Program Files (x86)\Zabbix Agent\Scripts\marvell-raid.ps1" $1 $2 $3

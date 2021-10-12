@@ -1,0 +1,74 @@
+Optional script to create combined graphs for LLD SNMP OVM CPUs.
+
+Tested with Zabbix 2.4.8 and CentOS 7.3.
+
+I found the original script on Zabbix Forums at the following URL:
+https://www.zabbix.com/forum/showthread.php?t=26678
+
+It can be used for any template or multiple LLD itens. Just edit the LLD item names on the script.
+The script supports a number of 42 items per graph if using only $regexes[0], or 21 items if using both $regexes[0] and $regexes[1].
+
+It needs the following package:
+# yum install perl-JSON.noarch curl.x86_64
+
+
+# How To use #
+
+Place the provided scripts on your ZABBIX WEB, on a scripts dir. It can be triggered by a CRON job once a day. Example:
+# crontab -e
+1 0 * * * /sbin/scripts/lld_all_ovm_snmp_cpu_graph.pl TEMPLATE_ORACLEVM_CLI_SNMP > /var/log/lld_all_ovm_snmp_cpu_graph.log 2>&1
+
+
+Assign the execute attribute to it:
+# chmod a+x /sbin/scripts/lld_all_ovm_snmp_cpu_graph.pl
+
+You will have to configure the following lines:
+344: Username (an Zabbix admin account)
+346: Password
+352: Zabbix Web IP/FQDN
+354: Graph Name as shown on LLD template
+364: Regular Expression for your item
+
+I recommend you to create an Zabbix account for this one. Example:
+Administration -> Users -> Create user
+Username: lld_combined_graphs
+Password: LLD_Combined_Graphs_My_Secret_Password
+User type: Zabbix admin
+
+Run it manually to test. You shoud see something similar to this:
+
+HOSTGROUP: MYGROUP.MYSUBGROUP (1975)
+    HOST: CLIENT.HOSTNAME (02017)
+        ITEM: OVM Utilization of Processor #$1 (1372874)
+        ITEM: OVM Utilization of Processor #$1 (1372875)
+        ITEM: OVM Utilization of Processor #$1 (1372876)
+        ITEM: OVM Utilization of Processor #$1 (1372877)
+        ITEM: OVM Utilization of Processor #$1 (1372878)
+        ITEM: OVM Utilization of Processor #$1 (1372879)
+        ITEM: OVM Utilization of Processor #$1 (1372880)
+        ITEM: OVM Utilization of Processor #$1 (1372881)
+        ITEM: OVM Utilization of Processor #$1 (1372882)
+        ITEM: OVM Utilization of Processor #$1 (1372883)
+        ITEM: OVM Utilization of Processor #$1 (1372884)
+        ITEM: OVM Utilization of Processor #$1 (1372885)
+        ITEM: OVM Utilization of Processor #$1 (1372886)
+        ITEM: OVM Utilization of Processor #$1 (1372887)
+        ITEM: OVM Utilization of Processor #$1 (1372888)
+        ITEM: OVM Utilization of Processor #$1 (1372889)
+        ITEM: OVM Utilization of Processor #$1 (1372890)
+        ITEM: OVM Utilization of Processor #$1 (1372891)
+        ITEM: OVM Utilization of Processor #$1 (1372892)
+        ITEM: OVM Utilization of Processor #$1 (1372893)
+            Graph created: OVM SNMP ALL CPUs Use
+
+
+To debug, uncomment the following string on line 68:
+print $res;
+
+
+You also could use this script as a discovery rule. Just add the following strings at the end of the script, and create a discovery rule for it.
+
+print '{ "data": [{}] }';
+print "\n";
+
+I do preffer the CRON method, though. But it is your decision.

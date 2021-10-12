@@ -1,0 +1,33 @@
+#!/usr/bin/expect
+
+## Access CLI
+set loginUser [lindex $argv 0]
+set loginPass [lindex $argv 1]
+set mgmServer [lindex $argv 2]
+set itemLists [lindex $argv 3]
+
+## Expect Parameters
+set timeout 20
+set successMsg "Status: Success"
+set failureMsg "Status: Failure"
+
+spawn ssh -l $loginUser $mgmServer -p 10000 -o StrictHostKeyChecking=no -o ServerAliveInterval=40
+expect_after eof {exit 0}
+
+set timeout 10
+
+##interact with SSH
+##expect "yes/no" {send "yes\r"}
+expect "password:" {send "$loginPass\r"}
+# puts "\n## Starting Generated OVMCLI Script... ##\n"
+set timeout 300
+
+expect "OVM> "
+  send "set OutputMode=Verbose\r"
+  expect $successMsg {} \
+   timeout { puts "\n\nTest Failure: \n\r"; exit} 
+
+expect "OVM> "
+  send  "$itemLists\r"
+  expect $successMsg {} \
+   timeout { puts "\n\nScript Failure: \n\r"; exit}

@@ -1,0 +1,7 @@
+1:notsupported
+2:redundant
+3:combined
+4:nonRedundant
+5:psRedundant
+6:inPwrSrcRedundant
+7:psRedundantSingleInput 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-02-05T11:38:39Z</date>
+    <groups>
+        <group>
+            <name>All Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Web Check</template>
+            <name>Web Check</name>
+            <groups>
+                <group>
+                    <name>All Templates</name>
+                </group>
+            </groups>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Web Sites Discovery</name>
+                    <key>web.discovery</key>
+                    <lifetime>1d</lifetime>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Website ({#SITENAME}) - Status</name>
+                            <key>web.status[{#SITEURL},{#SITEKEYWORD},{#SITEHEADER}]</key>
+                            <delay>30s</delay>
+                            <history>14d</history>
+                            <trends>14d</trends>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{count(#4,0,&quot;eq&quot;)}=4</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{count(#4,0,&quot;gt&quot;)}=4</recovery_expression>
+                                    <name>Website ({#SITENAME}) - Fail</name>
+                                    <priority>AVERAGE</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Website ({#SITENAME}) - Log</name>
+                            <key>web.tail[{#SITEURL},{#SITEKEYWORD},{#SITEHEADER}]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <tags>
+                <tag>
+                    <tag>web</tag>
+                </tag>
+            </tags>
+        </template>
+    </templates>
+</zabbix_export>
+

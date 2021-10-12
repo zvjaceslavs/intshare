@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.2</version>
+    <date>2019-12-04T07:49:50Z</date>
+    <groups>
+        <group>
+            <name>Железо HDD-CPU-RAM</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Hardware-OpenHardwareMonitor</template>
+            <name>Аппаратное обеспечение LLD V1.0 Windows OpenHardwareMonitor</name>
+            <description>Работа через внешнюю проверку , скрипт на заббикс сервере OHM.sh &#13;
+C помощью утилиты OpenHardwareMonitor по команде WMIC.exe /NAMESPACE:\\root\OpenHardwareMonitor PATH Sensor&#13;
+&#13;
+На удаленный Хост (узел) который будет мониториться должно быть установлено OpenHardwareMonitor виде службы  и Заббикс Агент&#13;
+&#13;
+При работе скрипта вся нагрузка выполнения ложится на ресурсы железа Заббикс Сервера!&#13;
+&#13;
+Скрипт ложим (у вас может быть другой путь)&#13;
+/usr/local/share/zabbix/externalscripts OHM.sh&#13;
+&#13;
+Шаблон для версии скрипта V1.0 (Без данных о железе)</description>
+            <groups>
+                <group>
+                    <name>Железо HDD-CPU-RAM</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>OpenHardwareMonitor</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>OHM {HOST.NAME}</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>OHM.sh[{HOST.CONN},info]</key>
+                    <delay>24h</delay>
+                    <history>90d</history>
+                    <trends>0</trends>
+                    <status>1</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>обычный Листинг команды OHM</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>OpenHardwareMonitor</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>0</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>MaxTemp {HOST.NAME}</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>OHM.sh[{HOST.CONN},maxtemp]</key>
+                    <delay>1m</delay>
+                    <history>90d</history>
+                    <trends>90d</trends>
+                    <status>1</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Максимальная температура из всех доступных</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>OpenHardwareMonitor</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>0</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Обнаружение датчиков</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>OHM.sh[{HOST.CONN},discovery]</key>
+                    <delay>3600s</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>1d</lifetime>
+                    <description>Обнаружение подключенных датчиков</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Датчик {#SENSORTYPE} Имя {#NAME} ИД {#ID}</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>wmi.get[root\OpenHardwareMonitor,SELECT Value FROM Sensor WHERE InstanceId={#ID}]</key>
+                            <delay>300</delay>
+                            <history>90d</history>
+                            <trends>90d</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>{#SENSORTYPE}</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Запрос через агента&#13;
+Запрос раз в 5 минут&#13;
+Температура&#13;
+Скорость вращения Кулеров &#13;
+Напряжение V&#13;
+Загрузка&#13;
+Время</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>OpenHardwareMonitor</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>0</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Hardware-OpenHardwareMonitor:wmi.get[root\OpenHardwareMonitor,SELECT Value FROM Sensor WHERE InstanceId={#ID}].avg(#3)}&gt;70</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>ExtremHighTempДатчик {#SensorType} Имя {#Name} {HOST.NAME}=({ITEM.VALUE})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>1</status>
+                            <priority>5</priority>
+                            <description>Слишком высокая температура&#13;
+Последнее значение: {ITEM.VALUE} {ITEM.LASTVALUE} ({TIME})</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Hardware-OpenHardwareMonitor:wmi.get[root\OpenHardwareMonitor,SELECT Value FROM Sensor WHERE InstanceId={#ID}].avg(#3)}&gt;60</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>HighTemp Датчик {#SensorType} Имя {#Name} {HOST.NAME}=({ITEM.VALUE})</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>1</status>
+                            <priority>4</priority>
+                            <description>Высокая температура&#13;
+Последнее значение: {ITEM.VALUE} {ITEM.LASTVALUE} ({TIME})</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>0</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
+                </discovery_rule>
+            </discovery_rules>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+            <tags/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Hardware-OpenHardwareMonitor:OHM.sh[{HOST.CONN},maxtemp].avg(#3)}&gt;70</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>ExtremHighTemp {HOST.NAME}=({ITEM.VALUE})</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>1</status>
+            <priority>5</priority>
+            <description>Максимальная температура из всех доступных в LM-SENSORS&#13;
+Слишком высокая температура&#13;
+Последнее значение: {ITEM.VALUE} {ITEM.LASTVALUE} ({TIME})</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Hardware-OpenHardwareMonitor:OHM.sh[{HOST.CONN},maxtemp].avg(#3)}&gt;60</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>HighTemp {HOST.NAME}=({ITEM.VALUE})</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>1</status>
+            <priority>4</priority>
+            <description>Максимальная температура из всех доступных в LM-SENSORS&#13;
+высокая температура&#13;
+Последнее значение: {ITEM.VALUE} {ITEM.LASTVALUE} ({TIME})</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+</zabbix_export>

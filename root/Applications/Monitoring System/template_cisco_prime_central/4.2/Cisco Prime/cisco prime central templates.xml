@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-06T14:17:51Z</date>
+    <groups>
+        <group>
+            <name>Templates NMS</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Cisco Prime FM</template>
+            <name>Cisco Prime FM</name>
+            <description>fault management component</description>
+            <groups>
+                <group>
+                    <name>Templates NMS</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>NMS</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>FM Service Status</name>
+                    <key>prime.fm.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{str(SUCCESS: Prime Central Fault Management is fully started)}=0</expression>
+                            <name>Process FM has problems in status</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+        <template>
+            <template>Cisco Prime Gateway</template>
+            <name>Cisco Prime Gateway</name>
+            <groups>
+                <group>
+                    <name>Templates NMS</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>NMS</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>AVM99(main supervisor avm) status</name>
+                    <key>gw.avm99.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <description>main avm status</description>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Prime Network service on Gateway is down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Compliance Engine status</name>
+                    <key>gw.compilance.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Compliance Engine is down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>license server status</name>
+                    <key>gw.licenseserver.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Prime Network Web Server status</name>
+                    <key>gw.primewebserver.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Prime Network Web Server is down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>secured connectivity daemon status</name>
+                    <key>gw.seccon.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>secured connectivity daemon is down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>time server status</name>
+                    <key>gw.timeserver.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>host's time server is down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>webserver daemon status</name>
+                    <key>gw.webserver.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>webserver daemon is down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>AVM discovery</name>
+                    <key>avm.discovery</key>
+                    <delay>3600</delay>
+                    <description>Discovery registered AVM on Unit host.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>AVM {#AVM_NAME} status</name>
+                            <key>avm.status[{#AVM_NAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>NMS</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{str(DOWN)}=1</expression>
+                                    <name>AVM {#AVM_NAME} is down</name>
+                                    <priority>HIGH</priority>
+                                    <description>AVM is down</description>
+                                    <tags>
+                                        <tag>
+                                            <tag>avmdown</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+        <template>
+            <template>Cisco Prime Portal</template>
+            <name>Cisco Prime Portal</name>
+            <groups>
+                <group>
+                    <name>Templates NMS</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>NMS</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>HTTPS service status</name>
+                    <type>SIMPLE</type>
+                    <key>net.tcp.service[https,,8443]</key>
+                    <delay>30</delay>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Online users count</name>
+                    <key>online.users[{$DB_PASSWORD}]</key>
+                    <delay>60</delay>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Portal status</name>
+                    <key>portal.status</key>
+                    <delay>60</delay>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Portal is down</name>
+                            <priority>HIGH</priority>
+                            <description>please check portal status with command &quot;portalctl status&quot; at user primeusr</description>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>ITG discovery</name>
+                    <key>portal.itg.discovery</key>
+                    <delay>3600</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Intergation layer {#ITG_NAME} status</name>
+                            <key>portal.itg.status[{#ITG_NAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <applications>
+                                <application>
+                                    <name>NMS</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}=0</expression>
+                                    <name>Integration layer {#ITG_NAME} is down</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <macros>
+                <macro>
+                    <macro>{$DB_PASSWORD}</macro>
+                    <value>password</value>
+                    <description>database password</description>
+                </macro>
+            </macros>
+        </template>
+        <template>
+            <template>Cisco Prime Provisioning</template>
+            <name>Cisco Prime Provisioning</name>
+            <groups>
+                <group>
+                    <name>Templates NMS</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>NMS</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>service dbpoller status</name>
+                    <key>pp.dbpoller.status</key>
+                    <delay>60</delay>
+                    <description>count of started services</description>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>service dbpoller down</name>
+                            <priority>HIGH</priority>
+                            <description>please check it with command /opt/PrimeProvisioning*/prime.sh status</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>service discovery status</name>
+                    <key>pp.discovery.status</key>
+                    <delay>60</delay>
+                    <description>count of started services</description>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>service discovery down</name>
+                            <priority>HIGH</priority>
+                            <description>please check it with command /opt/PrimeProvisioning*/prime.sh status</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>service httpd status</name>
+                    <key>pp.httpd.status</key>
+                    <delay>60</delay>
+                    <description>count of started services</description>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>service httpd down</name>
+                            <priority>HIGH</priority>
+                            <description>please check it with command /opt/PrimeProvisioning*/prime.sh status</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>service nspoller status</name>
+                    <key>pp.nspoller.status</key>
+                    <delay>60</delay>
+                    <description>count of started services</description>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>service nspoller down</name>
+                            <priority>HIGH</priority>
+                            <description>please check it with command /opt/PrimeProvisioning*/prime.sh status</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>service rgserver status</name>
+                    <key>pp.rgserver.status</key>
+                    <delay>60</delay>
+                    <description>count of started services</description>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>service rgserver down</name>
+                            <priority>HIGH</priority>
+                            <description>please check it with command /opt/PrimeProvisioning*/prime.sh status</description>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+        <template>
+            <template>Cisco Prime Unit</template>
+            <name>Cisco Prime Unit</name>
+            <groups>
+                <group>
+                    <name>Templates NMS</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>NMS</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>AVM99(main supervisor avm) status</name>
+                    <key>avm99.status</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <description>main avm status</description>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>AVM99(main supervisor avm) status summary</name>
+                    <type>AGGREGATE</type>
+                    <key>grpsum[{$NMS_NAME},&quot;avm99.status&quot;,last]</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{avg(#3)}=0</expression>
+                            <name>Prime Network service is down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>AVM discovery</name>
+                    <key>avm.discovery</key>
+                    <delay>3600</delay>
+                    <description>Discovery registered AVM on Unit host.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>AVM {#AVM_NAME} status</name>
+                            <key>avm.status[{#AVM_NAME}]</key>
+                            <delay>60</delay>
+                            <history>7d</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>NMS</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{str(DOWN)}=1</expression>
+                                    <name>AVM {#AVM_NAME} is down</name>
+                                    <description>AVM is down</description>
+                                    <tags>
+                                        <tag>
+                                            <tag>avmdown</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Cisco Prime Online Users</name>
+            <show_work_period>NO</show_work_period>
+            <show_triggers>NO</show_triggers>
+            <graph_items>
+                <graph_item>
+                    <color>1A7C11</color>
+                    <item>
+                        <host>Cisco Prime Portal</host>
+                        <key>online.users[{$DB_PASSWORD}]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>

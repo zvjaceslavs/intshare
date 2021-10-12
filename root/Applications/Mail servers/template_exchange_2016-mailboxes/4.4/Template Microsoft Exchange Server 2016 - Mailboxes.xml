@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-02-10T13:58:59Z</date>
+    <groups>
+        <group>
+            <name>Exchange Servers</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Microsoft Exchange Server 2016 - Mailboxes</template>
+            <name>Template Microsoft Exchange Server 2016 - Mailboxes</name>
+            <description>Template pulls all user mailboxes based on the ALIAS.</description>
+            <groups>
+                <group>
+                    <name>Exchange Servers</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Exchange 2016 - Archives</name>
+                </application>
+                <application>
+                    <name>Exchange 2016 - Calculations</name>
+                </application>
+                <application>
+                    <name>Exchange 2016 - Mailboxes</name>
+                </application>
+                <application>
+                    <name>Exchange 2016 - Mailbox Folders</name>
+                </application>
+                <application>
+                    <name>Exchange 2016 - Quotas</name>
+                </application>
+            </applications>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Mailbox Discover</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>exchange.host[discover,mailbox]</key>
+                    <delay>1h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | On-Line Archive % Used</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[archivepercentage,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <value_type>FLOAT</value_type>
+                            <description>Percentage, Is used *LOOSELY* HERE</description>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Calculations</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=25.00</expression>
+                                    <name>{#MAILALIAS} On-Line Archive at 25%</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=50.00</expression>
+                                    <name>{#MAILALIAS} On-Line Archive at 50%</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=75.00</expression>
+                                    <name>{#MAILALIAS} On-Line Archive at 75%</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=80.00</expression>
+                                    <name>{#MAILALIAS} On-Line Archive at 80%</name>
+                                    <priority>WARNING</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=95.00</expression>
+                                    <name>{#MAILALIAS} On-Line Archive at 95% | Needs ~IMMEDIATE ATTENTION~</name>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=99.00</expression>
+                                    <name>{#MAILALIAS} On-Line Archive at 99% | ~NEVER SHOULD HAVE GOTTEN HERE~</name>
+                                    <opdata>Ok, Who's at fault - Admin's will be checking the ~TICKETS!~</opdata>
+                                    <priority>DISASTER</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | On-Line Archive Quota Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[archivequota,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Quotas</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Archive Mailbox Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[archives,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Archives</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Deleted Items Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[deleted,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Mailbox Folders</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Drafts Folder Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[drafts,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Mailbox Folders</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Inbox Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[inbox,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Mailbox Folders</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Junk Mail Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[junkmail,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Mailbox Folders</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Mailbox Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[mailbox,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Mailboxes</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Mailbox % Used</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[mailboxpercentage,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <value_type>FLOAT</value_type>
+                            <description>Percentage, Is used *LOOSELY* HERE</description>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Calculations</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=25.00</expression>
+                                    <name>{#MAILALIAS} Mailbox at 25%</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=50.00</expression>
+                                    <name>{#MAILALIAS} Mailbox at 50%</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=75.00</expression>
+                                    <name>{#MAILALIAS} Mailbox at 75%</name>
+                                    <status>DISABLED</status>
+                                    <priority>INFO</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=80.00</expression>
+                                    <name>{#MAILALIAS} Mailbox at 80%</name>
+                                    <priority>WARNING</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=95.00</expression>
+                                    <name>{#MAILALIAS} Mailbox at 95% | Needs ~IMMEDIATE ATTENTION~</name>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;=99.00</expression>
+                                    <name>{#MAILALIAS} Mailbox at 99% | ~NEVER SHOULD HAVE GOTTEN HERE~</name>
+                                    <opdata>Ok, Who's at fault - Admin's will be checking the ~TICKETS!~</opdata>
+                                    <priority>DISASTER</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{change()}&gt;2</expression>
+                                    <name>{#MAILALIAS} | 2% Abnormal Mailbox Growth Since Last Check</name>
+                                    <status>DISABLED</status>
+                                    <priority>WARNING</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{change()}&gt;2</expression>
+                                    <name>{#MAILALIAS} | 2% Abnormal On-Line Archive Growth Since Last Check</name>
+                                    <status>DISABLED</status>
+                                    <priority>WARNING</priority>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>{#MAILALIAS}</tag>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Mailbox Quota Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[mailboxquota,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Quotas</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#MAILALIAS} | Sent Items Size</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>exchange.host[sent,{#MAILALIAS}]</key>
+                            <delay>15m</delay>
+                            <units>bytes</units>
+                            <applications>
+                                <application>
+                                    <name>Exchange 2016 - Mailbox Folders</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>{#MAILALIAS} - Mailbox Info</name>
+                            <show_work_period>NO</show_work_period>
+                            <show_triggers>NO</show_triggers>
+                            <graph_items>
+                                <graph_item>
+                                    <color>7E57C2</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[archives,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>EF5350</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[deleted,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>FFB74D</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[drafts,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <color>42A5F5</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[inbox,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>4</sortorder>
+                                    <color>66BB6A</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[junkmail,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>5</sortorder>
+                                    <color>FFFFFF</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[mailbox,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>6</sortorder>
+                                    <color>607D8B</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[sent,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>7</sortorder>
+                                    <drawtype>DASHED_LINE</drawtype>
+                                    <color>FFFFFF</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[mailboxquota,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>8</sortorder>
+                                    <drawtype>DASHED_LINE</drawtype>
+                                    <color>7E57C2</color>
+                                    <calc_fnc>ALL</calc_fnc>
+                                    <item>
+                                        <host>Template Microsoft Exchange Server 2016 - Mailboxes</host>
+                                        <key>exchange.host[archivequota,{#MAILALIAS}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <macros>
+                <macro>
+                    <macro>{$MAIL_ALIAS}</macro>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+</zabbix_export>

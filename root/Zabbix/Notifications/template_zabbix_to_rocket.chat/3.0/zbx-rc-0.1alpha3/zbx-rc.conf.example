@@ -1,0 +1,7 @@
+[RCHAT]
+protocol = http
+server = 10.0.0.1
+port = 3000
+
+uid = 
+token = 

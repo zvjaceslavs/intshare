@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-03-05T12:32:55Z</date>
+    <groups>
+        <group>
+            <name>Power</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template NAC1006-01</template>
+            <name>Template NAC1006-01</name>
+            <templates>
+                <template>
+                    <name>Template Module ICMP Ping</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Power</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>acInput</name>
+                </application>
+                <application>
+                    <name>dcOutput</name>
+                </application>
+                <application>
+                    <name>infoController</name>
+                </application>
+                <application>
+                    <name>infoShelf</name>
+                </application>
+                <application>
+                    <name>psuData</name>
+                </application>
+                <application>
+                    <name>Shelf Info</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Average shelf AC input voltage</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.3.1.0</snmp_oid>
+                    <key>acInputAvgVoltage</key>
+                    <units>Vrms</units>
+                    <applications>
+                        <application>
+                            <name>acInput</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Number of AC inputs.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.3.5.0</snmp_oid>
+                    <key>acInputCount</key>
+                    <applications>
+                        <application>
+                            <name>acInput</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;2</expression>
+                            <name>Lost input</name>
+                            <priority>AVERAGE</priority>
+                            <description>Пропало питание по одному из лучей</description>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Total shelf AC input current</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.3.2.0</snmp_oid>
+                    <key>acInputTotCurrent</key>
+                    <units>Arms</units>
+                    <applications>
+                        <application>
+                            <name>acInput</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>AC input energy [Wh] since last clear</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.3.4.0</snmp_oid>
+                    <key>acInputTotEnergy</key>
+                    <units>Wh</units>
+                    <applications>
+                        <application>
+                            <name>acInput</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Total shelf AC input power</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.3.3.0</snmp_oid>
+                    <key>acInputTotPower</key>
+                    <units>W</units>
+                    <applications>
+                        <application>
+                            <name>acInput</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The controller description.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.1.2.0</snmp_oid>
+                    <key>infoControllerDescription</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>infoController</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The controller hardware version.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.1.5.0</snmp_oid>
+                    <key>infoControllerHwVersion</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>infoController</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The controller MAC address</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.1.9.0</snmp_oid>
+                    <key>infoControllerMac</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>infoController</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The controller manufacturer.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.1.3.0</snmp_oid>
+                    <key>infoControllerMfr</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>infoController</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The controller manufacturing date.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.1.7.0</snmp_oid>
+                    <key>infoControllerMfrDate</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <applications>
+                        <application>
+                            <name>infoController</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The controller model number.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.1.1.0</snmp_oid>
+                    <key>infoControllerModel</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>infoController</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The controller serial number.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.1.4.0</snmp_oid>
+                    <key>infoControllerSerialNo</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>infoController</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The controller software version.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.1.6.0</snmp_oid>
+                    <key>infoControllerSwVersion</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>infoController</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf model name.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>enterprises.27259.1.2.1.2.1.0</snmp_oid>
+                    <key>infoShelfModel</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>MODEL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>infoShelf</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>The currently maximum available power</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.5.6.0</snmp_oid>
+                    <key>statusShelfMaxAvailablePower</key>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf controller temperature</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.5.7.0</snmp_oid>
+                    <key>statusShelfTemperature</key>
+                    <value_type>FLOAT</value_type>
+                    <description>Shelf controller temperature reading [degC]. This&#13;
+sensor located on the backpane of the shelf.</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>The shelf inlet temperature</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.5.8.0</snmp_oid>
+                    <key>statusShelfTempInlet</key>
+                    <value_type>FLOAT</value_type>
+                    <description>The shelf inlet temperature in degree centigrade measured&#13;
+as the average of the inlet temperature as measured by each of&#13;
+the power supply units.</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>The shelf outlet temperature</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.5.9.0</snmp_oid>
+                    <key>statusShelfTempOutlet</key>
+                    <value_type>FLOAT</value_type>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>0.1</params>
+                        </step>
+                    </preprocessing>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>The (conceptual) AC input table.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>dicovery[{#LININX},.1.3.6.1.4.1.27259.1.2.1.3.6.1.1,{#LINNAME},.1.3.6.1.4.1.27259.1.2.1.3.6.1.2]</snmp_oid>
+                    <key>acInputIndex</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#LINNAME} The AC feed sum of phase currents</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.3.6.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>acInputCurrent.[{#SNMPINDEX}]</key>
+                            <units>Arms</units>
+                            <applications>
+                                <application>
+                                    <name>acInput</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LINNAME}  The AC feed power</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.3.6.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>acInputPower.[{#SNMPINDEX}]</key>
+                            <units>W</units>
+                            <applications>
+                                <application>
+                                    <name>acInput</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#LINNAME} The AC feed phase average voltage</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.3.6.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>acInputVoltage.[{#SNMPINDEX}]</key>
+                            <units>Vrms</units>
+                            <applications>
+                                <application>
+                                    <name>acInput</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PSU Info</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#MDL},.1.3.6.1.4.1.27259.1.2.1.6.2.1.4, {#MNFCT},.1.3.6.1.4.1.27259.1.2.1.6.2.1.6, {#SERNUM},.1.3.6.1.4.1.27259.1.2.1.6.2.1.7, {#FIRMW},.1.3.6.1.4.1.27259.1.2.1.6.2.1.8, {#MODV},.1.3.6.1.4.1.27259.1.2.1.6.2.1.9]</snmp_oid>
+                    <key>psuData</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} FW Version</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.8.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataInfoFwVersion.[{#SNMPINDEX}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Manufacturer</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataInfoManufacturer.[{#SNMPINDEX}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Model</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataInfoModel.[{#SNMPINDEX}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Module Vesion</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.9.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataInfoModuleVersion.[{#SNMPINDEX}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Serial Number</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataInfoSerialNo.[{#SNMPINDEX}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PSU table.</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>dicovery[{#PSUNDX},.1.3.6.1.4.1.27259.1.2.1.6.2.1.1,{#PSUSTATUS},.1.3.6.1.4.1.27259.1.2.1.6.2.1.11]</snmp_oid>
+                    <key>psuDataInfoIndex</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Status</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.11.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataOperation.[{#SNMPINDEX}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}=2</expression>
+                                    <name>PSU status OFF</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PSU FAN RPM</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#PSUFAN1},.1.3.6.1.4.1.27259.1.2.1.6.2.1.26,{#PSUFAN2},.1.3.6.1.4.1.27259.1.2.1.6.2.1.27]</snmp_oid>
+                    <key>psuDataRpmFan</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} FAN 1 RPM</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.26.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataRpmFan1.[{#SNMPINDEX}]</key>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} FAN 2 RPM</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.27.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataRpmFan2.[{#SNMPINDEX}]</key>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PSU Temp</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#INTEMP},.1.3.6.1.4.1.27259.1.2.1.6.2.1.23,{#OUTTEMP},.1.3.6.1.4.1.27259.1.2.1.6.2.1.24,{#HTSNK},.1.3.6.1.4.1.27259.1.2.1.6.2.1.25]</snmp_oid>
+                    <key>psuDataTemperature</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Heatsink Temp</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.25.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataTemperatureHeatsink.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.1</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Inlet Temp</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.23.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataTemperatureInlet.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.1</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Outlet Temp</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.24.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataTemperatureOutlet.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.1</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PSU Measures</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#INPV},.1.3.6.1.4.1.27259.1.2.1.6.2.1.12, {#INCUR},.1.3.6.1.4.1.27259.1.2.1.6.2.1.13, {#INPOW},.1.3.6.1.4.1.27259.1.2.1.6.2.1.14, {#OUTVOL}, .1.3.6.1.4.1.27259.1.2.1.6.2.1.16, {#OUTCUR},.1.3.6.1.4.1.27259.1.2.1.6.2.1.17, {#OUTPOW}, .1.3.6.1.4.1.27259.1.2.1.6.2.1.18]</snmp_oid>
+                    <key>psuMeasures</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Input Current</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.13.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataInCurrent.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.001</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Input Power</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.14.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataInPower.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Input Voltage</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.12.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataInVoltage.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.001</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Output Current</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.17.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataV1Current.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.001</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMP} Output Power</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.18.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataV1Power.[{#SNMPINDEX}]</key>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PSU {#SNMPINDEX} Output Voltage</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.27259.1.2.1.6.2.1.16.{#SNMPINDEX}</snmp_oid>
+                            <key>psuDataV1Voltage.[{#SNMPINDEX}]</key>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>psuData</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>MULTIPLIER</type>
+                                    <params>0.001</params>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>
+

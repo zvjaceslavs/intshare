@@ -1,0 +1,17 @@
+1:yocto
+2:zepto
+3:atto
+4:femto
+5:pico
+6:nano
+7:micro
+8:milli
+9:units
+10:kilo
+11:mega
+12:giga
+13:tera
+14:exa
+15:peta
+16:zetta
+17:yotta 

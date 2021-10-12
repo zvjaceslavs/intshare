@@ -1,0 +1,35 @@
+on zabbix UI:
+export HP_array.2014.01.14.xml template
+
+on all servers with HP array (copy hparray dir to servers):
+1.
+for CentOS (if you have another Linux OS use aptitude and etc)
+find in Internet hpacucli-9.40-12.0.i386.rpm or latest version 
+install it (rpm -ivh /root/hpacucli-9.40-12.0.i386.rpm) (if you have 64bit: yum install glibc.i686 libgcc.i686 libstdc++.i686 )
+
+2. file hparray/userparams_hparry.conf
+by default I use /usr/local/zabbix for zabbix (maybe need change it to /etc/zabbix)
+
+3.
+hparray/zabbixhparraycrontab
+by default I use /usr/local/zabbix for zabbix (maybe need change it to /etc/zabbix)
+
+4.
+copy hparray dir to your zabbix etc dir
+
+cp hparray /usr/local/zabbix/etc
+or
+cp hparray /etc/zabbix
+
+5.
+cd /usr/local/zabbix/etc/mapr 
+(or /etc/zabbix/mapr) 
+
+ln -s zabbixhparraycrontab /etc/cron.d/
+ln -s userparams_hparry.conf /usr/local/zabbix/etc/zabbix_agentd.conf.d/
+or
+ln -s userparams_hparry.conf /etc/zabbix/zabbix_agentd.conf.d/
+
+7. 
+reload cron (/etc/init.d/crond reload)
+reload zabbix_agentd (/etc/init.d/zabbix_agentd reload or /etc/init.d/zabbix-agentd reload or etc)

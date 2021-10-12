@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-12-04T13:18:18Z</date>
+    <groups>
+        <group>
+            <name>Hardware Server</name>
+        </group>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template - Fujitsu RX2540 SNMP V2</template>
+            <name>Template - Fujitsu RX2540 SNMP V2</name>
+            <description>.</description>
+            <groups>
+                <group>
+                    <name>Hardware Server</name>
+                </group>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Components errors</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#NAME},1.3.6.1.4.1.231.2.10.2.11.4.1.1.5, {#STATUS}, 1.3.6.1.4.1.231.2.10.2.11.4.1.1.6]</snmp_oid>
+                    <key>components.errors.discovery</key>
+                    <delay>15m</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Components {#NAME} - Errors</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.231.2.10.2.11.4.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>component.errors.[{#SNMPINDEX}]</key>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>System</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{min(15m)}&gt;1</expression>
+                                    <name>{HOST.NAME} -&gt; Component {#NAME} Errors: {ITEM.LASTVALUE}</name>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Components status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#NAME},1.3.6.1.4.1.231.2.10.2.11.4.1.1.2, {#STATUS}, 1.3.6.1.4.1.231.2.10.2.11.4.1.1.3]</snmp_oid>
+                    <key>components.status.discovery</key>
+                    <delay>15m</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Component {#NAME} - Status</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.231.2.10.2.11.4.1.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>component.status.[{#SNMPINDEX}]</key>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>System</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <valuemap>
+                                <name>RX2540</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;1 and {last()}&lt;&gt;6</expression>
+                                    <name>{HOST.NAME} -&gt; {#NAME} status is fail</name>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Fans Status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#FAN}, .1.3.6.1.4.1.231.2.10.2.2.10.5.2.1.3.1, {#FAN_SPEED}, .1.3.6.1.4.1.231.2.10.2.2.10.5.2.1.6.1, {#STATUS}, .1.3.6.1.4.1.231.2.10.2.2.10.5.2.1.5.1]</snmp_oid>
+                    <key>snmp.discovery.fans</key>
+                    <delay>15m</delay>
+                    <port>161</port>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#FAN} - Speed</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.231.2.10.2.2.10.5.2.1.6.1.{#SNMPINDEX}</snmp_oid>
+                            <key>fan.speed.[{#SNMPINDEX}]</key>
+                            <port>161</port>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Fans</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{max(5m)}&lt;{$FAN_SPEED_LIMIT}</expression>
+                                    <name>{HOST.NAME} -&gt; {#FAN} Speed: {ITEM.LASTVALUE}, threshold: {$FAN_SPEED_LIMIT}</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#FAN} - Status</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.231.2.10.2.2.10.5.2.1.5.1.{#SNMPINDEX}</snmp_oid>
+                            <key>fan.status.[{#SNMPINDEX}]</key>
+                            <port>161</port>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Fans</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <valuemap>
+                                <name>Fujitsu RX FAN Status</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;3</expression>
+                                    <name>{HOST.NAME} -&gt; {#FAN} Status not ok</name>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>PSU Status</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#PSU},1.3.6.1.4.1.231.2.10.2.2.10.6.2.1.4.1, {#PSU_STATUS}, 1.3.6.1.4.1.231.2.10.2.2.10.6.2.1.5.1]</snmp_oid>
+                    <key>snmp.discovery.psu</key>
+                    <delay>15m</delay>
+                    <port>161</port>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#PSU} - Status</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.231.2.10.2.2.10.6.2.1.5.1.{#SNMPINDEX}</snmp_oid>
+                            <key>psu.status.[{#PSU}]</key>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>PSU</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <valuemap>
+                                <name>Fujitsu RX PSU Status</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;3</expression>
+                                    <name>{HOST.NAME} -&gt; {#PSU} not ok</name>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Temperature</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#SENSOR},1.3.6.1.4.1.231.2.10.2.2.10.5.1.1.4.1, {#SENSOR_TEMP}, 1.3.6.1.4.1.231.2.10.2.2.10.5.1.1.6.1, {#WARN_TEMP}, 1.3.6.1.4.1.231.2.10.2.2.10.5.1.1.7.1]</snmp_oid>
+                    <key>snmp.discovery.temp</key>
+                    <delay>15m</delay>
+                    <port>161</port>
+                    <filter>
+                        <conditions>
+                            <condition>
+                                <macro>{#SENSOR_TEMP}</macro>
+                                <value>^\d\d</value>
+                                <formulaid>A</formulaid>
+                            </condition>
+                        </conditions>
+                    </filter>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#SENSOR} - Temperature</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.231.2.10.2.2.10.5.1.1.6.1.{#SNMPINDEX}</snmp_oid>
+                            <key>sensor.temp.[{#SNMPINDEX}]</key>
+                            <units>C</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Temperature</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;{#WARN_TEMP}</expression>
+                                    <name>{HOST.NAME} -&gt; Temperature {#SENSOR}: {ITEM.LASTVALUE}, threshold: {#WARN_TEMP}</name>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Voltage</name>
+                    <type>SNMPV2</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#VSENSOR},1.3.6.1.4.1.231.2.10.2.2.10.6.3.1.3.1, {#VOLTAGE}, 1.3.6.1.4.1.231.2.10.2.2.10.6.3.1.4.1]</snmp_oid>
+                    <key>snmp.discovery.vsensors</key>
+                    <delay>15m</delay>
+                    <port>161</port>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#VSENSOR} - Status</name>
+                            <type>SNMPV2</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>1.3.6.1.4.1.231.2.10.2.2.10.6.3.1.4.1.{#SNMPINDEX}</snmp_oid>
+                            <key>voltage.sensor.[{#SNMPINDEX}]</key>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Voltage</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <valuemap>
+                                <name>Fujitsu RX Voltage Status</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;3 and {last()}&lt;&gt;2</expression>
+                                    <name>{HOST.NAME} -&gt; {#VSENSOR} status not ok</name>
+                                    <priority>HIGH</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <macros>
+                <macro>
+                    <macro>{$FAN_SPEED_LIMIT}</macro>
+                    <value>1K</value>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>Fujitsu RX FAN Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>disabled</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>prefailure-predicted</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>redundant-fan-failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>not-manageable</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>not-present</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Fujitsu RX PSU Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>not-present</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>ac-fail</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>dc-fail</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>critical-temperature</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>not-manageable</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>fan-failure-predicted</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>fan-failure</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>power-safe-mode</newvalue>
+                </mapping>
+                <mapping>
+                    <value>12</value>
+                    <newvalue>non-redundant-dc-fail</newvalue>
+                </mapping>
+                <mapping>
+                    <value>13</value>
+                    <newvalue>non-redundant-ac-fail</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Fujitsu RX Voltage Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>not-available</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>too-low</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>too-high</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>out-of-range</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>warning</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>RX2540</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>notPresent</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

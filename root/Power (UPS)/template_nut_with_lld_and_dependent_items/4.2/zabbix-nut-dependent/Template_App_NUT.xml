@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-12-11T10:38:34Z</date>
+    <groups>
+        <group>
+            <name>Templates/Server hardware</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template App NUT</template>
+            <name>Template App NUT</name>
+            <groups>
+                <group>
+                    <name>Templates/Server hardware</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Nut</name>
+                </application>
+            </applications>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>NUT UPSes discover</name>
+                    <key>nut.ups</key>
+                    <delay>12h</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#UPSNAME}: Battery Charge</name>
+                            <type>DEPENDENT</type>
+                            <key>nut.ups.battery.charge[{#UPSNAME}]</key>
+                            <delay>0</delay>
+                            <units>%</units>
+                            <applications>
+                                <application>
+                                    <name>Nut</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>REGEX</type>
+                                    <params>battery.charge: (.*)
+\1</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>nut.ups[{#UPSNAME}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;{$UPS_BATTERY_CRITICAL}</expression>
+                                    <name>UPS {#UPSNAME} is under {$UPS_BATTERY_CRITICAL}% charge</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;{$UPS_BATTERY_LOW}</expression>
+                                    <name>UPS {#UPSNAME} is under {$UPS_BATTERY_LOW}% charge</name>
+                                    <priority>AVERAGE</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#UPSNAME}: Battery Temperature</name>
+                            <type>DEPENDENT</type>
+                            <key>nut.ups.battery.temperature[{#UPSNAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <units>°C</units>
+                            <applications>
+                                <application>
+                                    <name>Nut</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>REGEX</type>
+                                    <params>battery.temperature: (.*)
+\1</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>nut.ups[{#UPSNAME}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#UPSNAME}: Input voltage</name>
+                            <type>DEPENDENT</type>
+                            <key>nut.ups.input.voltage[{#UPSNAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <units>V</units>
+                            <applications>
+                                <application>
+                                    <name>Nut</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>REGEX</type>
+                                    <params>input.voltage: (.*)
+\1</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>nut.ups[{#UPSNAME}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#UPSNAME}: Output voltage</name>
+                            <type>DEPENDENT</type>
+                            <key>nut.ups.output.voltage[{#UPSNAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <units>V</units>
+                            <applications>
+                                <application>
+                                    <name>Nut</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>REGEX</type>
+                                    <params>output.voltage: (.*)
+\1</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>nut.ups[{#UPSNAME}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#UPSNAME}: UPS load</name>
+                            <type>DEPENDENT</type>
+                            <key>nut.ups.ups.load[{#UPSNAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <applications>
+                                <application>
+                                    <name>Nut</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>REGEX</type>
+                                    <params>ups.load: (.*)
+\1</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>nut.ups[{#UPSNAME}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#UPSNAME}: UPS status</name>
+                            <type>DEPENDENT</type>
+                            <key>nut.ups.ups.status[{#UPSNAME}]</key>
+                            <delay>0</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Nut</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>REGEX</type>
+                                    <params>ups.status: (.*)
+\1</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>nut.ups[{#UPSNAME}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{str(RB)}=1</expression>
+                                    <name>UPS {#UPSNAME}'s battery needs to be replaced</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{str(CAL)}=1</expression>
+                                    <name>UPS {#UPSNAME} is calibrating</name>
+                                    <priority>INFO</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{regexp(&quot;\bCHRG\b&quot;)}=1</expression>
+                                    <name>UPS {#UPSNAME} is charging</name>
+                                    <priority>INFO</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{str(OB)}=1</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{str(OL)}=1</recovery_expression>
+                                    <name>UPS {#UPSNAME} is on battery</name>
+                                    <priority>AVERAGE</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{str(LB)}=1</expression>
+                                    <name>UPS {#UPSNAME} raised low battery alert</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#UPSNAME}: Data</name>
+                            <key>nut.ups[{#UPSNAME}]</key>
+                            <history>0</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Nut</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS {#UPSNAME}: Battery charge</name>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <ymax_type_1>FIXED</ymax_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template App NUT</host>
+                                        <key>nut.ups.battery.charge[{#UPSNAME}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>UPS {#UPSNAME}: Load</name>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <ymax_type_1>FIXED</ymax_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template App NUT</host>
+                                        <key>nut.ups.ups.load[{#UPSNAME}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>UPS {#UPSNAME}: Temperature</name>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template App NUT</host>
+                                        <key>nut.ups.battery.temperature[{#UPSNAME}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>UPS {#UPSNAME}: Voltages</name>
+                            <ymin_type_1>FIXED</ymin_type_1>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template App NUT</host>
+                                        <key>nut.ups.input.voltage[{#UPSNAME}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>Template App NUT</host>
+                                        <key>nut.ups.output.voltage[{#UPSNAME}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <tags>
+                <tag>
+                    <tag>component</tag>
+                    <value>ups</value>
+                </tag>
+            </tags>
+            <macros>
+                <macro>
+                    <macro>{$UPS_BATTERY_CRITICAL}</macro>
+                    <value>5</value>
+                    <description>Percentage to raise low battery alert</description>
+                </macro>
+                <macro>
+                    <macro>{$UPS_BATTERY_LOW}</macro>
+                    <value>20</value>
+                    <description>Percentage to raise low battery alert</description>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+</zabbix_export>

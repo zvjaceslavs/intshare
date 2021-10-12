@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-09-30T22:11:08Z</date>
+    <groups>
+        <group>
+            <name>Templates/Virtualization</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>XenServer</template>
+            <name>XenServer</name>
+            <groups>
+                <group>
+                    <name>Templates/Virtualization</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>XenServer Disk</name>
+                </application>
+                <application>
+                    <name>XenServer Memory</name>
+                </application>
+                <application>
+                    <name>XenServer Network</name>
+                </application>
+            </applications>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>XenServer Discovery Hosts</name>
+                    <key>xenhost.discovery</key>
+                    <delay>3600</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>XenServer  [{#XENHOSTNAME}]</name>
+                            <key>XenServer.XenHost.json[{#XENHOST}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>XenServer Memory</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer [{#XENHOSTNAME}] Free Memory %</name>
+                            <type>CALCULATED</type>
+                            <key>XenServer.XenHost.pfreememory[{#XENHOST}]</key>
+                            <units>%</units>
+                            <params>(last(XenServer.XenJson.freememory[{#XENHOST}])*100)/last(XenServer.XenJson.totalmemory[{#XENHOST}])</params>
+                            <applications>
+                                <application>
+                                    <name>XenServer Memory</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;=15</expression>
+                                    <name>XenServer [{#XENHOSTNAME}] Free Memory % is Less Than 15%</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer [{#XENHOSTNAME}] Free Memory</name>
+                            <type>DEPENDENT</type>
+                            <key>XenServer.XenJson.freememory[{#XENHOST}]</key>
+                            <delay>0</delay>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>XenServer Memory</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.data.XENMEMORYFREE</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>XenServer.XenHost.json[{#XENHOST}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer [{#XENHOSTNAME}] Total Memory</name>
+                            <type>DEPENDENT</type>
+                            <key>XenServer.XenJson.totalmemory[{#XENHOST}]</key>
+                            <delay>0</delay>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>XenServer Memory</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.data.XENMEMORYTOTAL</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>XenServer.XenHost.json[{#XENHOST}]</key>
+                            </master_item>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>XenServer Discovery Network</name>
+                    <key>xennetwork.discovery</key>
+                    <delay>3600</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>XenServer  [{#XENHOSTNAME} - {#XENHOSTNICNAME} ]</name>
+                            <key>XenServer.XenNetwork.json[{#XENHOSTNIC}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>XenServer Network</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer [{#XENHOSTNAME} - {#XENHOSTNICNAME} ] Link Status</name>
+                            <type>DEPENDENT</type>
+                            <key>XenServer.XenNetwork.linkstatus[{#XENHOSTNIC}]</key>
+                            <delay>0</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>XenServer Network</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.data.XENNETWORKSTATE</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>XenServer.XenNetwork.json[{#XENHOSTNIC}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{iregexp(true)}=0</expression>
+                                    <name>XenServer [{#XENHOSTNAME} - {#XENHOSTNICNAME} ] Link Status is Down</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer [{#XENHOSTNAME} - {#XENHOSTNICNAME} ] Network Duplex</name>
+                            <type>DEPENDENT</type>
+                            <key>XenServer.XenNetwork.networkduplex[{#XENHOSTNIC}]</key>
+                            <delay>0</delay>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>XenServer Network</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.data.XENNETWORKDUPLEX</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>XenServer.XenNetwork.json[{#XENHOSTNIC}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer [{#XENHOSTNAME} - {#XENHOSTNICNAME} ] Network Speed (Mbps)</name>
+                            <type>DEPENDENT</type>
+                            <key>XenServer.XenNetwork.networkspeed[{#XENHOSTNIC}]</key>
+                            <delay>0</delay>
+                            <applications>
+                                <application>
+                                    <name>XenServer Network</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.data.XENNETWORKSPEED</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>XenServer.XenNetwork.json[{#XENHOSTNIC}]</key>
+                            </master_item>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>XenServer Discovery Disks Hba</name>
+                    <key>xensr.discovery</key>
+                    <delay>3600</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>XenServer Disk [{#XENSRNAME}] Free Space</name>
+                            <type>CALCULATED</type>
+                            <key>XenServer.XenSR.freespace[{#XENSR}]</key>
+                            <units>B</units>
+                            <params>last(XenServer.XenSRJson.physicalsize[{#XENSR}])-last(XenServer.XenSRJson.physicaluse[{#XENSR}])</params>
+                            <applications>
+                                <application>
+                                    <name>XenServer Disk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer SR [{#XENSRNAME}]</name>
+                            <key>XenServer.XenSR.json[{#XENSR}]</key>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <applications>
+                                <application>
+                                    <name>XenServer Disk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer Disk [{#XENSRNAME}] Free Space %</name>
+                            <type>CALCULATED</type>
+                            <key>XenServer.XenSR.pfreespace[{#XENSR}]</key>
+                            <units>%</units>
+                            <params>(last(XenServer.XenSR.freespace[{#XENSR}])*100)/last(XenServer.XenSRJson.physicalsize[{#XENSR}])</params>
+                            <applications>
+                                <application>
+                                    <name>XenServer Disk</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;=10</expression>
+                                    <name>XenServer Disk [{#XENSRNAME}] Free Space % is Less Than 10%</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer Disk [{#XENSRNAME}] Physical Size</name>
+                            <type>DEPENDENT</type>
+                            <key>XenServer.XenSRJson.physicalsize[{#XENSR}]</key>
+                            <delay>0</delay>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>XenServer Disk</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.data.XENSRPHYSICALSIZE</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>XenServer.XenSR.json[{#XENSR}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XenServer Disk [{#XENSRNAME}] Physical Use</name>
+                            <type>DEPENDENT</type>
+                            <key>XenServer.XenSRJson.physicaluse[{#XENSR}]</key>
+                            <delay>0</delay>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>XenServer Disk</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.data.XENSRPHYSICALUSE</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>XenServer.XenSR.json[{#XENSR}]</key>
+                            </master_item>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>

@@ -1,0 +1,354 @@
+#!/bin/bash
+#
+# Ugly and Dirty Zabbix Wrapper for ESXi Check_MK Agent
+# Made with P.O.G.
+# 
+# Andre Rocha <arocha@equinix.com>
+# v0.96 Tested on CentOS 7.3
+#
+# Needs Packages: 
+# yum install sblim-wbemcli.x86_64 pywbem.noarch python2-pyvmomi.noarch jq dmidecode
+#
+# Needs Python Extensions:
+# easy_install -U pysphere
+# easy_install -U docopt
+#
+# We need setproctitle, but it asks for GCC:
+  # yum install gcc python-devel.x86_64
+  # easy_install -U setproctitle
+# Remove GCC and installed dependencies, as they are not needed anymore:
+  # yum remove gcc cpp glibc-devel glibc-headers kernel-headers libmpc mpfr python-devel
+#
+# Needs ESXi Read Only Accound (esxcli):
+# /usr/lib/vmware/auth/bin/adduser -s /sbin/nologin -D -H zabbix -G root
+# echo "MY_PASSWORD" | /usr/lib/vmware/auth/bin/passwd --stdin zabbix
+# vim-cmd vimsvc/auth/role_add CIM_ReadOnly Host.Cim.CimInteraction System.Anonymous
+# vim-cmd vimsvc/auth/entity_permission_add vim.Folder:ha-folder-root 'zabbix' false CIM_ReadOnly true
+#
+# Needs Host Macros: {$USERNAME} {$PASSWORD}
+#
+# Check_MK vSphere Agent can be found here:
+# https://raw.githubusercontent.com/opinkerfi/check_mk/master/agents/special/agent_vsphere
+#
+# Todo: check if all pre-reqs do exist, cleanup the code.
+# Rewrite this whole thing in Python, as an non-wrapper format.
+#
+# Thanks for reporting some issues:
+# defkev
+# Stéphane HOFMAN
+
+# Check if we should use zabbix_proxy or zabbix_server config file here:
+ExternalScriptsDir=$([ -f /etc/zabbix/zabbix_server.conf ] && grep "^ExternalScripts=" /etc/zabbix/zabbix_server.conf || grep "^ExternalScripts=" /etc/zabbix/zabbix_proxy.conf | cut -d "=" -f2)
+ZabbixServer=$([ -f /etc/zabbix/zabbix_server.conf ] && grep "^Server=" /etc/zabbix/zabbix_server.conf || grep "^Server=" /etc/zabbix/zabbix_proxy.conf | cut -d "=" -f2)
+ZabbixSender=$(which zabbix_sender)
+
+if [ -z $ExternalScriptsDir ]; then echo "Exernal Scripts Dir not found!"; exit 1; fi
+
+if [ -f $ExternalScriptsDir/agent_vsphere ]; then sleep 0; else echo "Agent not Found. Exiting..." ; exit 1 ; fi
+
+TMP=/var/tmp/zabbix ; [ -d $TMP ] || mkdir -p $TMP
+
+case $1 in
+	fullesxinfo)
+	# Collect and prepare all necessary files
+	# LLD: agent_vsphere_wrapper[fullesxinfo,{$USERNAME},{$PASSWORD},{HOST.CONN},{HOST.NAME}]
+	$ExternalScriptsDir/agent_vsphere --no-cert-check -t 90 -u $2 -s $3 -D $4 > $TMP/$5.FULL_ESX_INFO.TMP 2> $TMP/$5.FULL_ESX_INFO.TMP.ERR
+	if [ $? -ne 0 ]; then rm -f $TMP/$5.FULL_ESX_INFO.TMP $TMP/$5.FULL_ESX_INFO; echo "Cannot Access ESXi Data"; exit 1; else cat $TMP/$5.FULL_ESX_INFO.TMP > $TMP/$5.FULL_ESX_INFO ; fi
+	# Datastore MACROS:
+        printf "{\n\t\"data\":[" > $TMP/$5.DATASTORE.MACRO
+        #
+        P=
+	SAVEIFS=$IFS
+	IFS=$(echo -en "\n\b")
+        for I in $(egrep "^\[" $TMP/$5.FULL_ESX_INFO | egrep "\]$" | tr -d "\[;\]" | sed "s,(,\\\(,g;s,),\\\),g" | grep -v ^hardware.systemInfo)
+          do
+	    # Some Datastores has strange names, and we have to deal with it. #
+	    [ ! -z "$P" ] && printf ",\n" >> $TMP/$5.DATASTORE.MACRO
+            printf "\n\t\t{\n\t\t\t\"{#DSTORE}\":\""$I"\",\n\t\t\t\"{#ACCESSIBLE}\":\"$(egrep -A6 "\[$I\]" $TMP/$5.FULL_ESX_INFO | egrep ^accessible | awk '{print $2}')\",\n\t\t\t\"{#CAPACITY}\":\"$(egrep -A6 "\[$I\]" $TMP/$5.FULL_ESX_INFO | egrep ^capacity | awk '{print $2}')\",\n\t\t\t\"{#FREESPACE}\":\"$(egrep -A6 "\[$I\]" $TMP/$5.FULL_ESX_INFO | egrep ^freeSpace | awk '{print $2}')\",\n\t\t\t\"{#TYPE}\":\"$(egrep -A6 "\[$I\]" $TMP/$5.FULL_ESX_INFO | egrep ^type | awk '{print $2}')\",\n\t\t\t\"{#UNCOMMITED}\":\"$(egrep -A6 "\[$I\]" $TMP/$5.FULL_ESX_INFO | egrep ^uncommitted | awk '{print $2}')\",\n\t\t\t\"{#URL}\":\"$(egrep -A6 "\[$I\]" $TMP/$5.FULL_ESX_INFO | egrep ^url | awk '{print $2}')\",\n\t" >> $TMP/$5.DATASTORE.MACRO
+	    DstoreURL=$(grep ^datastore.name $TMP/$5.FULL_ESX_INFO | egrep "$I\|" | cut -d "|" -f2)
+	    grep $DstoreURL $TMP/$5.FULL_ESX_INFO | grep ^datastore.datastoreReadIops > /dev/null; if [ $? -ne 0 ]; then ReadIOPS=0; else
+	    ReadIOPS=$(((`grep $DstoreURL $TMP/$5.FULL_ESX_INFO | grep ^datastore.datastoreReadIops | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); fi
+	    grep $DstoreURL $TMP/$5.FULL_ESX_INFO | grep ^datastore.datastoreReadIops > /dev/null; if [ $? -ne 0 ]; then ReadIOPS=0; else
+	    ReadIOPS=$(((`grep $DstoreURL $TMP/$5.FULL_ESX_INFO | grep ^datastore.datastoreReadIops | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); fi
+	    grep $DstoreURL $TMP/$5.FULL_ESX_INFO | grep ^datastore.datastoreWriteIops > /dev/null; if [ $? -ne 0 ]; then WriteIOPS=0; else
+	    WriteIOPS=$(((`grep $DstoreURL $TMP/$5.FULL_ESX_INFO | grep ^datastore.datastoreWriteIops | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); fi
+	    TotalIOPS=$((($ReadIOPS)+($WriteIOPS)));
+	    printf "\t\t\"{#MREADIOPS}\":\"$ReadIOPS\",\n\t\t\t\"{#MWRITEIOPS}\":\"$WriteIOPS\",\n\t\t\t\"{#MTOTALIOPS}\":\"$TotalIOPS\"\n\t\t}" >> $TMP/$5.DATASTORE.MACRO
+            P=$I >> $TMP/$5.DATASTORE.MACRO
+          done
+	IFS=$SAVEIFS
+        printf "\n\t]\n}\n" >> $TMP/$5.DATASTORE.MACRO
+        #
+        # Format a JSON Datastore list for LLD #
+        cat $TMP/$5.DATASTORE.MACRO | egrep -v "{#ACCESSIBLE}|{#CAPACITY}|{#FREESPACE}|{#TYPE}|{#UNCOMMITED}|{#URL}|{#MREADIOPS}|{#MWRITEIOPS}|{#MTOTALIOPS}" | sed s/\",/\"/g | sed "s,\\\(,\(,g;s,\\\),\),g"
+        #
+        # Parse all JSON data for select operations #
+        cat $TMP/$5.DATASTORE.MACRO | sed "s,\\\(,\(,g;s,\\\),\),g" | sed \
+	-e 's/{#DSTORE}/datastore/g' \
+	-e 's/{#ACCESSIBLE}/accessible/g' \
+	-e 's/{#CAPACITY}/capacity/g' \
+	-e 's/{#FREESPACE}/freespace/g' \
+	-e 's/{#TYPE}/type/g' \
+	-e 's/{#UNCOMMITED}/uncommited/g' \
+	-e 's/{#URL}/url/g' \
+	-e 's/{#MREADIOPS}/mreadiops/g' \
+	-e 's/{#MWRITEIOPS}/mwriteiops/g' \
+	-e 's/{#MTOTALIOPS}/mtotaliops/g' \
+	-e 's/true/True/g' \
+	-e 's/false/False/g' \
+	 > $TMP/$5.DATASTORE.JSON
+	;;
+        
+	esxnetwork)
+	# Network MACROS:
+        VMNICS=$(egrep -o "vmnic[0-99]" $TMP/$5.FULL_ESX_INFO|sort|uniq)
+
+        printf "{\n\t\"data\":[\n" > $TMP/$5.NETWORK.MACRO
+        P=
+        for X in $VMNICS
+        do
+	  # ESX 5 does not provide some values. So to avoid a "Non Supported Item" on your queue, we assume ZERO. #
+          [ ! -z "$P" ] && printf ",\n" >> $TMP/$5.NETWORK.MACRO
+          Bandwidth=$(grep ^net.bandwidth $TMP/$5.FULL_ESX_INFO | grep $X | cut -d \| -f3); [ ! -z $Bandwidth ] || Bandwidth=0
+	  printf "\n\t{\n\t\t\"{#VMNICX}\":\"$X\",\n\t\t\"{#BANDWI}\":\"$Bandwidth\",\n\t\t\"{#VMNSTA}\":\"$(egrep $X $TMP/$5.FULL_ESX_INFO | grep ^net.state|cut -d \| -f3)\",\n\t\t\"{#VMNMAC}\":\"$(egrep $X $TMP/$5.FULL_ESX_INFO | grep ^net.macaddress|cut -d \| -f3)\"," >> $TMP/$5.NETWORK.MACRO
+	  grep "^net.broadcastRx" $TMP/$5.FULL_ESX_INFO | grep $X > /dev/null; if [ $? -ne 0 ]; then BcastRx=0; else \
+          BcastRx=$(((`grep ^net.broadcastRx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); [ ! -z $BcastRx ] || BcastRx=0; fi
+	  grep "^net.broadcastTx" $TMP/$5.FULL_ESX_INFO | grep $X > /dev/null; if [ $? -ne 0 ]; then BcastTx=0; else \
+          BcastTx=$(((`grep ^net.broadcastTx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); [ ! -z $BcastTx ] || BcastTx=0; fi
+          BytesRx=$(((`grep ^net.bytesRx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); [ ! -z $BytesRx ] || BytesRx=0
+          BytesTx=$(((`grep ^net.bytesTx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); [ ! -z $BytesTx ] || BytesTx=0
+          DropsRx=$(((`grep ^net.droppedRx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); [ ! -z $DropsRx ] || DropsRx=0
+          DropsTx=$(((`grep ^net.droppedTx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); [ ! -z $DropsTx ] || DropsTx=0
+          ErrorRx=$(((`grep ^net.errorsRx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3));
+          ErrorTx=$(((`grep ^net.errorsTx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3));
+	  grep "^net.multicastRx" $TMP/$5.FULL_ESX_INFO | grep $X > /dev/null; if [ $? -ne 0 ]; then McastRx=0; else \
+          McastRx=$(((`grep ^net.multicastRx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); [ ! -z $McastRx ] || McastRx=0; fi
+	  grep "^net.multicastTx" $TMP/$5.FULL_ESX_INFO | grep $X > /dev/null; if [ $? -ne 0 ]; then McastTx=0; else \
+          McastTx=$(((`grep ^net.multicastTx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3)); [ ! -z $McastTx ] || McastTx=0; fi
+          PktRx=$(((`grep ^net.packetsRx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3));
+          PktTx=$(((`grep ^net.packetsTx $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3));
+          NReceived=$(((`grep ^net.received $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3));
+          NTransmit=$(((`grep ^net.transmitted $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3));
+          UnknProtos=$(((`grep ^net.unknownProtos $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3));
+          NetUsage=$(((`grep ^net.usage $TMP/$5.FULL_ESX_INFO | grep $X | cut -d "|" -f3 | sed "s,\#,\+,g"`)/3));
+	  printf "\n\t\t\"{#BCASRX}\":\"$BcastRx\",\n\t\t\"{#BCASTX}\":\"$BcastTx\",\n\t\t\"{#BYTERX}\":\"$BytesRx\",\n\t\t\"{#BYTETX}\":\"$BytesTx\",\n\t\t\"{#DROPRX}\":\"$DropsRx\",\n\t\t\"{#DROPTX}\":\"$DropsTx\",\n\t\t\"{#ERRRRX}\":\"$ErrorRx\",\n\t\t\"{#ERRRTX}\":\"$ErrorTx\",\n\t\t\"{#MCASRX}\":\"$McastRx\",\n\t\t\"{#MCASTX}\":\"$McastTx\",\n\t\t\"{#PCKTRX}\":\"$PktRx\",\n\t\t\"{#PCKTTX}\":\"$PktTx\",\n\t\t\"{#RCEIVD}\":\"$NReceived\",\n\t\t\"{#TRNSMT}\":\"$NTransmit\",\n\t\t\"{#UNKNOW}\":\"$UnknProtos\",\n\t\t\"{#USAGE}\":\"$NetUsage\"\n\t}" >> $TMP/$5.NETWORK.MACRO
+          P=$X >> $TMP/$5.NETWORK.MACRO
+        done
+        printf "\n\t]\n}\n" >> $TMP/$5.NETWORK.MACRO
+
+        # Format a JSON VMNICs list for LLD #
+	cat $TMP/$5.NETWORK.MACRO | egrep -v "{#BANDWI}|{#VMNSTA}|{#VMNMAC}|{#BCASRX}|{#BCASTX}|{#BYTERX}|{#BYTETX}|{#DROPRX}|{#DROPTX}|{#ERRRRX}|{#ERRRTX}|{#MCASTX}|{#MCASRX}|{#PCKTRX}|{#PCKTTX}|{#RCEIVD}|{#TRNSMT}|{#UNKNOW}|{#USAGE}" | sed s/\",/\"/g
+
+        # Parse all JSON data for select operations #
+        cat $TMP/$5.NETWORK.MACRO | sed \
+        -e 's/{#VMNICX}/hvinterface/g' \
+        -e 's/{#BANDWI}/netbandwidth/g' \
+        -e 's/{#VMNSTA}/netstate/g' \
+        -e 's/{#VMNMAC}/netmacaddress/g' \
+        -e 's/{#BCASRX}/netbroadcastRx/g' \
+        -e 's/{#BCASTX}/netbroadcastTx/g' \
+        -e 's/{#BYTERX}/netbytesRx/g' \
+        -e 's/{#BYTETX}/netbytesTx/g' \
+        -e 's/{#DROPRX}/netdroppedRx/g' \
+        -e 's/{#DROPTX}/netdroppedTx/g' \
+        -e 's/{#ERRRRX}/neterrorsRx/g' \
+        -e 's/{#ERRRTX}/neterrorsTx/g' \
+        -e 's/{#MCASRX}/netmulticastRx/g' \
+        -e 's/{#MCASTX}/netmulticastTx/g' \
+        -e 's/{#PCKTRX}/netpacketsRx/g' \
+        -e 's/{#PCKTTX}/netpacketsTx/g' \
+        -e 's/{#RCEIVD}/netreceived/g' \
+        -e 's/{#TRNSMT}/nettransmitted/g' \
+        -e 's/{#UNKNOW}/netunknownProtos/g' \
+        -e 's/{#USAGE}/netusage/g' > $TMP/$5.NETWORK.JSON
+	;;
+
+	esxvirtualmachines)
+	# Virtual Machines MACROS:
+	ESXVMS=$(cat -T $TMP/$2.FULL_ESX_INFO | egrep ^"<<<<|>>>>$" | egrep -v "<<<<>>>>" | tr -d "\<<<<;\>>>>")
+        printf "{\n\t\"data\":[\n" > $TMP/$2.VIRTUALMACHINE.MACRO
+        Q=
+	SAVEIFS=$IFS
+	IFS=$(echo -en "\n\b")
+        for Y in $ESXVMS
+        do
+	  # ESX 5 does not provide some values. So to avoid a "Non Supported Item" on your queue, we assume ZERO. #
+          [ ! -z "$Q" ] && printf ",\n" >> $TMP/$2.VIRTUALMACHINE.MACRO
+          printf "\n\t{\n\t\t\"{#VMNAME}\":\"$Y\",\n" >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#BALLMEM}\":\"0\",\n" ; else \
+          printf "\t\t\"{#BALLMEM}\":\"$(grep -A15 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.balloonedMemory | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#COMPMEM}\":\"0\",\n" ; else \
+          printf "\t\t\"{#COMPMEM}\":\"$(grep -A16 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.compressedMemory | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#OVERMEM}\":\"0\",\n" ; else \
+          printf "\t\t\"{#OVERMEM}\":\"$(grep -A17 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.consumedOverheadMemory | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#USEGMEM}\":\"0\",\n" ; else \
+          printf "\t\t\"{#USEGMEM}\":\"$(grep -A18 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.guestMemoryUsage | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#USEHMEM}\":\"0\",\n" ; else \
+          printf "\t\t\"{#USEHMEM}\":\"$(grep -A19 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.hostMemoryUsage | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#USEDCPU}\":\"0\",\n" ; else \
+          printf "\t\t\"{#USEDCPU}\":\"$(grep -A20 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.overallCpuUsage | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#PRIVMEM}\":\"0\",\n" ; else \
+	  PrivateMem=$(grep -A21 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.privateMemory | awk '{print $2}')
+	  [ ! -z $PrivateMem ] || PrivateMem=0
+          printf "\t\t\"{#PRIVMEM}\":\"$PrivateMem" >> $TMP/$2.VIRTUALMACHINE.MACRO
+          printf "\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#SHARMEM}\":\"0\",\n" ; else \
+          printf "\t\t\"{#SHARMEM}\":\"$(grep -A22 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.sharedMemory | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#SWAPMEM}\":\"0\",\n" ; else \
+          printf "\t\t\"{#SWAPMEM}\":\"$(grep -A23 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.swappedMemory | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#VUPTIME}\":\"0\",\n" ; else \
+          printf "\t\t\"{#VUPTIME}\":\"$(grep -A24 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.quickStats.uptimeSeconds | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#POWERST}\":\"poweredOff\",\n" ; else \
+          printf "\t\t\"{#POWERST}\":\"$(grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^runtime.powerState | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#INSTRAM}\":\"0\",\n" ; else \
+          printf "\t\t\"{#INSTRAM}\":\"$(grep -A3 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^config.hardware.memoryMB | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#INSTCPU}\":\"0\",\n" ; else \
+          printf "\t\t\"{#INSTCPU}\":\"$(grep -A4 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^config.hardware.numCPU | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#SKTCORE}\":\"0\",\n" ; else \
+          printf "\t\t\"{#SKTCORE}\":\"$(grep -A5 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^config.hardware.numCoresPerSocket | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+          printf "\t\t\"{#TOOLSV}\":\"$(grep -A7 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^guest.toolsVersion | awk '{print $2}')\",\n\t\t\"{#TOOLSS}\":\"$(grep -A8 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^guest.toolsVersionStatus | awk '{print $2}')\",\n" >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#HEARTBT}\":\"unknown\",\n" ; else \
+          printf "\t\t\"{#HEARTBT}\":\"$(grep -A9 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^guestHeartbeatStatus | awk '{print $2}')\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A13 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.guest.hostName > /dev/null ; if [ $? -ne 0 ]; then GuestHostname="unknown" ; else \
+	  GuestHostname=$(grep -A13 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^summary.guest.hostName | awk '{print $2}') ; fi
+	  grep -A12 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep poweredOff > /dev/null ; if [ $? -eq 0 ]; then printf "\t\t\"{#VMHOSTN}\":\"unknown\",\n" ; else \
+          printf "\t\t\"{#VMHOSTN}\":\"$GuestHostname\",\n" ; fi >> $TMP/$2.VIRTUALMACHINE.MACRO
+	  grep -A13 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | egrep ^snapshot.rootSnapshotList > /dev/null ; if [ $? -ne 0 ]; then VMSnapshot="None Found" ; else \
+	  VMSnapshot=$(grep -A13 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | egrep ^snapshot.rootSnapshotList | cut -d " " -f2-)
+
+	  VMSnapList=$(echo $(echo "$VMSnapshot" | grep -v "None Found") | tr '|' '\n') ; > $TMP/$2.VIRTUALMACHINE.SNAPSHOTS
+	  SAVEIFS=$IFS
+	  IFS=$(echo -en "\n\b")
+	  counter=0
+	  for S in $VMSnapList
+	     do
+	       counter=$((counter+1))
+	       TimeStamp=$(date -d@`echo $S | cut -d " " -f2`)
+	       SnapshotDesc=$(echo $S | cut -d " " -f3-)
+               printf "\t\t\"{#SNAAGE"$counter"}\":\"$TimeStamp\",\n" >> $TMP/$2.VIRTUALMACHINE.MACRO
+               printf "Snapshot "$counter" created on "$TimeStamp". Info: "$SnapshotDesc". " >> $TMP/$2.VIRTUALMACHINE.SNAPSHOTS
+             done
+          IFS=$SAVEIFS
+	  VMSnapshot=$(cat $TMP/$2.VIRTUALMACHINE.SNAPSHOTS) ; fi
+          printf "\t\t\"{#VMDSTOR}\":\"$(grep -A3 "^<<<<"$Y">>>>" $TMP/$2.FULL_ESX_INFO | grep ^config.datastoreUrl | cut -d "|" -f3 | cut -d " " -f2-)\",\n" >> $TMP/$2.VIRTUALMACHINE.MACRO
+          printf "\t\t\"{#VMSNAPS}\":\"$VMSnapshot\"\n" >> $TMP/$2.VIRTUALMACHINE.MACRO
+          printf "\t}" >> $TMP/$2.VIRTUALMACHINE.MACRO
+          Q=$Y >> $TMP/$2.VIRTUALMACHINE.MACRO
+        done
+	IFS=$SAVEIFS
+
+        printf "\n\t]\n}\n" >> $TMP/$2.VIRTUALMACHINE.MACRO
+
+        # Format a JSON Virtual Machines list for LLD #
+        cat $TMP/$2.VIRTUALMACHINE.MACRO | egrep -v "{#BALLMEM}|{#COMPMEM}|{#OVERMEM}|{#USEGMEM}|{#USEHMEM}|{#USEDCPU}|{#PRIVMEM}|{#SHARMEM}|{#SWAPMEM}|{#VUPTIME}|{#POWERST}|{#INSTRAM}|{#INSTCPU}|{#SKTCORE}|{#HEARTBT}|{#TOOLSV}|{#TOOLSS}|{#VMHOSTN}|{#VMDSTOR}|{#VMSNAPS}|{#SNAAGE" | sed s/\",/\"/g 
+
+        # Parse all JSON data for select operations #
+        cat $TMP/$2.VIRTUALMACHINE.MACRO | sed \
+        -e 's/{#VMNAME}/virtualmachine/g' \
+        -e 's/{#BALLMEM}/balloonedMemory/g' \
+        -e 's/{#COMPMEM}/compressedMemory/g' \
+        -e 's/{#OVERMEM}/consumedOverheadMemory/g' \
+        -e 's/{#USEGMEM}/guestMemoryUsage/g' \
+        -e 's/{#USEHMEM}/hostMemoryUsage/g' \
+        -e 's/{#USEDCPU}/overallCpuUsage/g' \
+        -e 's/{#PRIVMEM}/privateMemory/g' \
+        -e 's/{#SHARMEM}/sharedMemory/g' \
+        -e 's/{#SWAPMEM}/swappedMemory/g' \
+        -e 's/{#VUPTIME}/uptimeSeconds/g' \
+        -e 's/{#POWERST}/powerState/g' \
+        -e 's/{#INSTRAM}/memoryMB/g' \
+        -e 's/{#INSTCPU}/numCPU/g' \
+        -e 's/{#SKTCORE}/numCoresPerSocket/g' \
+        -e 's/{#HEARTBT}/guestHeartbeatStatus/g' \
+        -e 's/{#TOOLSV}/guestoolsversion/g' \
+        -e 's/{#TOOLSS}/guestoolsstatus/g' \
+        -e 's/{#VMHOSTN}/vmhostname/g' \
+        -e 's/{#VMDSTOR}/vmdatastore/g' \
+        -e 's/{#VMSNAPS}/vmsnapshot/g' \
+	-e 's/{#SNAAGE/vmsnapage/g;/vmsnapage/s/}//g' \
+	-e 's/poweredOn/ON/g' \
+	-e 's/poweredOff/OFF/g' \
+	-e 's/guestToolsUnmanaged/Guest Managed/g' \
+	-e 's/guestToolsNeedUpgrade/Need Upgrade/g' \
+        -e 's/guestToolsNotInstalled/Not Installed/g' \
+	-e 's/guestToolsCurrent/Current/g' \
+        > $TMP/$2.VIRTUALMACHINE.JSON
+	;;
+
+	balloonedMemory|compressedMemory|consumedOverheadMemory|guestMemoryUsage|hostMemoryUsage|overallCpuUsage|privateMemory|sharedMemory|swappedMemory|uptimeSeconds|powerState|memoryMB|numCPU|numCoresPerSocket|guestHeartbeatStatus|guestoolsversion|guestoolsstatus|vmhostname|vmdatastore|vmsnapshot)
+        # JSON Selects #
+	# Item Prototype: agent_vsphere_wrapper[ItemType,{#ESXVM},{HOST.NAME}]
+        cat $TMP/$3.VIRTUALMACHINE.JSON | jq ".data[] | select(.virtualmachine == \"$2\") | .$1"
+	;;
+
+	vmsnapage)
+        # JSON Selects #
+	VMSnapCount=$(cat $TMP/$3.VIRTUALMACHINE.JSON | jq ".data[] | select(.virtualmachine == \"$2\")" | grep vmsnapage | wc -l)
+	Count=0
+	while [ $Count -lt $VMSnapCount ]
+	do
+	   Count=$((Count+1))
+	   cat $TMP/$3.VIRTUALMACHINE.JSON | jq ".data[] | select(.virtualmachine == \"$2\") | .vmsnapage"$Count""
+	done
+	;;
+
+	accessible|capacity|freespace|type|uncommited|url|mreadiops|mwriteiops|mtotaliops)
+        # JSON Selects #
+	# Item Prototype: agent_vsphere_wrapper[ItemType,{#DSTORE},{HOST.NAME}]
+        cat $TMP/$3.DATASTORE.JSON | jq ".data[] | select(.datastore == \"$2\") | .$1"
+        ;;
+
+	netbroadcastRx|netbroadcastTx|netbytesRx|netbytesTx|netdroppedRx|netdroppedTx|neterrorsRx|neterrorsTx|netmulticastRx|netmulticastTx|netpacketsRx|netpacketsTx|netreceived|nettransmitted|netunknownProtos|netusage|netbandwidth|netstate|netmacaddress)
+        # JSON Selects #
+        cat $TMP/$3.NETWORK.JSON | jq ".data[] | select(.hvinterface == \"$2\") | .$1"
+        ;;
+
+	esxhostname)
+	grep ^hostsystem $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	servicetag)
+	grep ^hardware.systemInfo.otherIdentifyingInfo.ServiceTag $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	cpupacks)
+	grep ^hardware.cpuInfo.numCpuPackages $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	biosversion)
+	grep ^hardware.biosInfo.biosVersion $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	biosuuid)
+	grep ^hardware.systemInfo.uuid $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	cpucores)
+	grep ^hardware.cpuInfo.numCpuCores $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	cputhreads)
+	grep ^hardware.cpuInfo.numCpuThreads $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	cpufrequency)
+	grep ^hardware.cpuInfo.hz $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	hardwarememory)
+	grep ^hardware.memorySize $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	hardwarememoryusage)
+	grep ^summary.quickStats.overallMemoryUsage $TMP/$2.FULL_ESX_INFO | awk '{print $2}'
+	;;
+
+	webapiconnect)
+        if [ -f $TMP/$2.FULL_ESX_INFO.TMP.ERR ]; then FileSizeStat=$(stat -c %s -t $TMP/$2.FULL_ESX_INFO.TMP.ERR); if [ $FileSizeStat -ne 0 ]; then cat $TMP/$2.FULL_ESX_INFO.TMP.ERR; else echo OK; fi; fi
+	;;
+
+*)
+	# Zabbix knows how to use this script :P #
+	echo "Usage: $0 ?"
+	;;
+esac

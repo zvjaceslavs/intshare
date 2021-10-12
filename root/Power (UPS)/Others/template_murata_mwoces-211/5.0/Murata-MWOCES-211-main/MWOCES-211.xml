@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-06-30T09:24:18Z</date>
+    <groups>
+        <group>
+            <name>Power</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>MWOCES-211</template>
+            <name>MWOCES-211</name>
+            <description>MWOCES-211 Monitoring through MWOC-RMU-2</description>
+            <templates>
+                <template>
+                    <name>Template Module ICMP Ping</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Power</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>PSU Sensors</name>
+                </application>
+                <application>
+                    <name>PSU State</name>
+                </application>
+                <application>
+                    <name>RMU Info</name>
+                </application>
+                <application>
+                    <name>Shelf Info</name>
+                </application>
+                <application>
+                    <name>Shelf Sensors</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>All PSUs Average Output Voltage</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.4.1.0</snmp_oid>
+                    <key>allPSUsAverageOutputVoltage</key>
+                    <applications>
+                        <application>
+                            <name>PSU Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>All PSUs Current Sensor Failure</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.12.0</snmp_oid>
+                    <key>allPSUsCurrentSensorFailure</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of CurrentSensorFailure.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has CurrentSensorFailure.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Efficiency</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.4.5.0</snmp_oid>
+                    <key>allPSUsEfficiency</key>
+                    <applications>
+                        <application>
+                            <name>PSU Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>All PSUs Fan 1 Failure</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.16.0</snmp_oid>
+                    <key>allPSUsFan1Failure</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of Fan1Failure.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has Fan1Failure.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Fan 2 Failure</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.17.0</snmp_oid>
+                    <key>allPSUsFan2Failure</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of Fan2Failure.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has Fan1Failure.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs High Line Mode Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.18.0</snmp_oid>
+                    <key>allPSUsHighLineModeFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of HighLineModeFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has HighLineModeFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Input OverVoltage Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.9.0</snmp_oid>
+                    <key>allPSUsInputOverVoltageFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of InputOverVoltageFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has InputOverVoltageFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Input UnderVoltage Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.3.0</snmp_oid>
+                    <key>allPSUsInputUnderVoltageFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of InputUnderVoltageFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has InputUnderVoltageFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Input UnderVoltage Warning</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.1.0</snmp_oid>
+                    <key>allPSUsInputUnderVoltageWarning</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of InputUnderVoltageWarning.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has InputUnderVoltageWarning.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>Critical PSU</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.2.3.0</snmp_oid>
+                    <key>allPSUsNumberOfCriticalPSU</key>
+                    <units>Pcs</units>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Mounted PSU</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.2.1.0</snmp_oid>
+                    <key>allPSUsNumberOfMountedPSU</key>
+                    <units>Pcs</units>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Outputing PSU</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.2.2.0</snmp_oid>
+                    <key>allPSUsNumberOfOutputingPSU</key>
+                    <units>Pcs</units>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Warning PSU</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.2.4.0</snmp_oid>
+                    <key>allPSUsNumberOfWarningPSU</key>
+                    <units>Pcs</units>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>All PSUs Oring Failure</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.15.0</snmp_oid>
+                    <key>allPSUsOringFailure</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of OringFailure.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has OringFailure.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Output OverCurrent Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.4.0</snmp_oid>
+                    <key>allPSUsOutputOverCurrentFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of OutputOverCurrentFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has OutputOverCurrentFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Output OverCurrent Warning</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.2.0</snmp_oid>
+                    <key>allPSUsOutputOverCurrentWarning</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of OutputOverCurrentWarning.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has OutputOverCurrentWarning.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Output OverPower Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.8.0</snmp_oid>
+                    <key>allPSUsOutputOverPowerFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of OutputOverPowerFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has OutputOverPowerFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>all PSUs Output OverVoltage Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.5.0</snmp_oid>
+                    <key>allPSUsOutputOverVoltageFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of OutputOverVoltageFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has OutputOverVoltageFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Output UnderVoltage Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.7.0</snmp_oid>
+                    <key>allPSUsOutputUnderVoltageFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of OutputUnderVoltageFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has OutputUnderVoltageFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs OverTemperature Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.10.0</snmp_oid>
+                    <key>allPSUsOverTemperatureFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of OverTemperatureFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has OverTemperatureFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs PMBus Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.6.0</snmp_oid>
+                    <key>allPSUsPMBusFault</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of PMBusFault.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has PMBusFault.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Processor Failure</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.11.0</snmp_oid>
+                    <key>allPSUsProcessorFailure</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of ProcessorFailure.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has ProcessorFailure.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Product ID Failure</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.14.0</snmp_oid>
+                    <key>allPSUsProductIDFailuree</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of ProductIDFailure.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has ProductIDFailure.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Temperature Sensor Failure</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.3.13.0</snmp_oid>
+                    <key>allPSUsTemperatureSensorFailure</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Indicates which units have the alarm of TemperatureSensorFailure.&#13;
+Each bit in the binary converted from this integer shows whether the corresponding PSU&#13;
+has TemperatureSensorFailure.&#13;
+Bit0(LSB):PSU1&#13;
+Bit1     :PSU2&#13;
+...&#13;
+Bit5(MSB):PSU6</description>
+                    <applications>
+                        <application>
+                            <name>PSU State</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <params>mass = ['No PSUs', 'PSU 1', 'PSU 2', 'PSU 1, 2', 'PSU 3', 'PSU 1, 3', 'PSU 2, 3', 'PSU 1, 2, 3', 'PSU 4', 'PSU 1, 4',
+'PSU 2, 4','PSU 1, 2, 4', 'PSU 3, 4','PSU 1, 3, 4', 'PSU 2, 3, 4', 'PSU 1, 2, 3, 4', 'PSU 5', 'PSU 1, 5', 'PSU 2, 5',
+'PSU 1, 2, 5', 'PSU 3, 5','PSU 1, 3, 5', 'PSU 2, 3, 5', 'PSU 1, 2, 3, 5','PSU 4, 5', 'PSU 1, 4, 5', 'PSU 2, 4, 5',
+'PSU 1, 2, 4, 5', 'PSU 3, 4, 5','PSU 1, 3, 4, 5','PSU 2, 3, 4, 5', 'PSU 1, 2, 3, 4, 5', 'PSU 6', 'PSU 1, 6','PSU 2, 6',
+'PSU 1, 2, 6', 'PSU 3, 6', 'PSU 1, 3, 6', 'PSU 2, 3, 6','PSU 1, 2, 3, 6','PSU 4, 6', 'PSU 1, 4, 6', 'PSU 2, 4, 6',
+'PSU 1, 2, 4, 6','PSU 3, 4, 6', 'PSU 1, 3, 4, 6', 'PSU 2, 3, 4, 6', 'PSU 1, 2, 3, 4, 6', 'PSU 5, 6','PSU 1, 5, 6',
+'PSU 2, 5, 6', 'PSU 1, 2, 5, 6', 'PSU 3, 5, 6', 'PSU 1, 3, 5, 6','PSU 2, 3, 5, 6', 'PSU 1, 2, 3, 5, 6', 'PSU 4, 5, 6',
+'PSU 1, 4, 5, 6','PSU 2, 4, 5, 6', 'PSU 1, 2, 4, 5, 6', 'PSU 3, 4, 5, 6', 'PSU 1, 3, 4, 5, 6','PSU 2, 3, 4, 5, 6',
+'PSU 1, 2, 3, 4, 5, 6'];
+return mass[value];</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>All PSUs Total Input Power</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.4.4.0</snmp_oid>
+                    <key>allPSUsTotalInputPower</key>
+                    <applications>
+                        <application>
+                            <name>PSU Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>All PSUs Total Output Current</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.4.2.0</snmp_oid>
+                    <key>allPSUsTotalOutputCurrent</key>
+                    <applications>
+                        <application>
+                            <name>PSU Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>All PSUs Total Output Power</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.1.4.3.0</snmp_oid>
+                    <key>allPSUsTotalOutputPower</key>
+                    <applications>
+                        <application>
+                            <name>PSU Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>RMU Location</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.1.1.1.0</snmp_oid>
+                    <key>rmuLocation</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RMU Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>RMU Main Firmware Version</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.1.1.4.0</snmp_oid>
+                    <key>rmuMainFirmwareVersion</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RMU Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>RMU Model Name</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.1.1.2.0</snmp_oid>
+                    <key>rmuModelName</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RMU Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>RMU Serial Number</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.1.1.3.0</snmp_oid>
+                    <key>rmuSerialNumber</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RMU Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>RMU SubFirmware Version</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.1.1.5.0</snmp_oid>
+                    <key>rmuSubFirmwareVersion</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>RMU Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Alarm Duration</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.4.1.1.0</snmp_oid>
+                    <key>shelfAlarmDuration</key>
+                    <units>s</units>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Input OverPower Fault</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.3.2.0</snmp_oid>
+                    <key>shelfInputOverPowerFault</key>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1</expression>
+                            <name>Input OverPower Fault</name>
+                            <priority>DISASTER</priority>
+                            <description>Indicates whether the alarm of InputOverPowerFault exists in the power shelf.&#13;
+This alarm will occur when the input power of the power shelf exceeds the threshold&#13;
+continuously for the duration. And it will be cleared when the input power falls below&#13;
+the recovery threshold continuously for the duration. The thresholds and duration are&#13;
+user-configurable respectively.</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Shelf Input OverPower Fault Clear Threshold</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.4.1.3.0</snmp_oid>
+                    <key>shelfInputOverPowerFaultClearThreshold</key>
+                    <units>W</units>
+                    <description>The recovery threshold of InputOverPowerFault (Watts).</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Input OverPower Fault Occur Threshold</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.4.1.2.0</snmp_oid>
+                    <key>shelfInputOverPowerFaultOccurThreshold</key>
+                    <units>W</units>
+                    <description>The occurrence threshold of InputOverPowerFault (Watts).&#13;
+When this value is zero, InputOverPowerFault will not occur.</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Input OverPower Warnig Clear Threshold</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.4.1.5.0</snmp_oid>
+                    <key>shelfInputOverPowerWarnigClearThreshold</key>
+                    <units>W</units>
+                    <description>The recovery threshold of InputOverPowerWarning (Watts).</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Input OverPower Warnig Occur Threshold</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.4.1.4.0</snmp_oid>
+                    <key>shelfInputOverPowerWarnigOccurThreshold</key>
+                    <units>W</units>
+                    <description>The occurrence threshold of InputOverPowerWarning (Watts).&#13;
+When this value is zero, InputOverPowerWarning will not occur.</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Input OverPower Warning</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.3.1.0</snmp_oid>
+                    <key>shelfInputOverPowerWarning</key>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1</expression>
+                            <name>Shelf Input OverPower</name>
+                            <priority>HIGH</priority>
+                            <description>Indicates whether the alarm of InputOverPowerWarning exists in the power shelf.&#13;
+This alarm will occur when the input power of the power shelf exceeds the threshold&#13;
+continuously for the duration. And it will be cleared when the input power falls below&#13;
+the recovery threshold continuously for the duration. The thresholds and duration are&#13;
+user-configurable respectively</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Shelf Model</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.1.1.0</snmp_oid>
+                    <key>shelfModel</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>Shelf Info</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Phase Power L1 to L2 or N</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.5.2.1.0</snmp_oid>
+                    <key>shelfPhasePowerL1toL2orN</key>
+                    <units>W</units>
+                    <description>The three-phase input power between Line 1 and X (Watts).&#13;
+The measurement lines depend on the connection type as below.&#13;
+Delta :Line 1 to Line 2&#13;
+Wye   :Line 1 to Neutral</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Phase Power L2 to L3 or N</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.44474.2.3.2.5.2.2.0</snmp_oid>
+                    <key>shelfPhasePowerL2toL3orN</key>
+                    <units>W</units>
+                    <applications>
+                        <application>
+                            <name>Shelf Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Phase Power L3 to L1 or N</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.5.2.3.0</snmp_oid>
+                    <key>shelfPhasePowerL3toL1orN</key>
+                    <units>W</units>
+                    <description>The three-phase input power between Line 3 and X (Watts).&#13;
+The measurement lines depend on the connection type as below.&#13;
+Delta :Line 3 to Line 1&#13;
+Wye   :Line 3 to Neutral</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Phase Voltage L1 to L2 or N</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.5.2.4.0</snmp_oid>
+                    <key>shelfPhaseVoltageL1toL2orN</key>
+                    <units>mV</units>
+                    <description>The three-phase input voltage between Line 1 and X (milli Volts).&#13;
+The measurement lines depend on the connection type as below.&#13;
+Delta :Line 1 to Line 2&#13;
+Wye   :Line 1 to Neutral</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Phase Voltage L2 to L3 or N</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.5.2.5.0</snmp_oid>
+                    <key>shelfPhaseVoltageL2toL3orN</key>
+                    <units>mV</units>
+                    <description>The three-phase input voltage between Line 2 and X (milli Volts).&#13;
+The measurement lines depend on the connection type as below.&#13;
+Delta :Line 2 to Line 3&#13;
+Wye   :Line 2 to Neutral</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Phase Voltage L3 to L1 or N</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.5.2.6.0</snmp_oid>
+                    <key>shelfPhaseVoltageL3toL1orN</key>
+                    <units>mV</units>
+                    <description>The three-phase input voltage between Line 3 and X (milli Volts).&#13;
+The measurement lines depend on the connection type as below.&#13;
+Delta :Line 3 to Line 1&#13;
+Wye   :Line 3 to Neutral</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Shelf Total Input Power</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.44474.2.3.2.5.1.1.0</snmp_oid>
+                    <key>shelfTotalInputPower</key>
+                    <units>W</units>
+                    <description>The total input power of the power shelf (Watts).&#13;
+The measuring method of this value depends on the presence or absence of ATS.&#13;
+Any ATSes are NOT mounted :The sum of all PSUs' input power.&#13;
+One or two ATSes are mounted :The input power of the active ATS.</description>
+                    <applications>
+                        <application>
+                            <name>Shelf Sensors</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>PSU Value</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#PIV},.1.3.6.1.4.1.44474.2.3.3.2.4.1, {#PIC}, .1.3.6.1.4.1.44474.2.3.3.2.4.2, {#PIP}, .1.3.6.1.4.1.44474.2.3.3.2.4.3, {#POV}, .1.3.6.1.4.1.44474.2.3.3.2.4.4, {#POC}, .1.3.6.1.4.1.44474.2.3.3.2.4.5, {#POP}, .1.3.6.1.4.1.44474.2.3.3.2.4.6, {#PT1}, .1.3.6.1.4.1.44474.2.3.3.2.4.7, {#PT2}, .1.3.6.1.4.1.44474.2.3.3.2.4.8, {#PT3}, .1.3.6.1.4.1.44474.2.3.3.2.4.9, {#PFS1}, .1.3.6.1.4.1.44474.2.3.3.2.4.10, {#PFS2}, .1.3.6.1.4.1.44474.2.3.3.2.4.11]</snmp_oid>
+                    <key>psuValue</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Psu Fan Speed 1  {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.10.{#SNMPINDEX}</snmp_oid>
+                            <key>psuFanSpeed1.[{#SNMPINDEX}]</key>
+                            <units>RPM</units>
+                            <description>The rotational speed of FAN 1 installed in PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Fan Speed 2  {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.11.{#SNMPINDEX}</snmp_oid>
+                            <key>psuFanSpeed2.[{#SNMPINDEX}]</key>
+                            <units>RPM</units>
+                            <description>The rotational speed of FAN 2 installed in PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Input Current {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.2.{#SNMPINDEX}</snmp_oid>
+                            <key>psuInputCurrent.[{#SNMPINDEX}]</key>
+                            <units>mA</units>
+                            <description>The input current of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Input Power {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.3.{#SNMPINDEX}</snmp_oid>
+                            <key>psuInputPower.[{#SNMPINDEX}]</key>
+                            <units>W</units>
+                            <description>The input power of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Input Voltage {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.1.{#SNMPINDEX}</snmp_oid>
+                            <key>psuInputVoltage[{#SNMPINDEX}]</key>
+                            <units>mV</units>
+                            <description>The input voltage of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Output Current {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.5.{#SNMPINDEX}</snmp_oid>
+                            <key>psuOutputCurrent.[{#SNMPINDEX}]</key>
+                            <units>mA</units>
+                            <description>The output current of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Output Power {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.6.{#SNMPINDEX}</snmp_oid>
+                            <key>psuOutputPower.[{#SNMPINDEX}]</key>
+                            <units>W</units>
+                            <description>The output power of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Output State {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.3.2.{#SNMPINDEX}</snmp_oid>
+                            <key>psuOutputState.[{#SNMPINDEX}]</key>
+                            <description>The output state of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}=0</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{last()}=3</recovery_expression>
+                                    <name>PSU {#SNMPINDEX} status &quot;HALT&quot;</name>
+                                    <priority>WARNING</priority>
+                                    <description>PSU output is turned off manually</description>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}=2</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{last()}=3</recovery_expression>
+                                    <name>PSU {#SNMPINDEX} status &quot;NOT-GOOD&quot;</name>
+                                    <priority>WARNING</priority>
+                                    <description>PSU output is out of regulated voltage</description>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{last()}=0</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{last()}=3</recovery_expression>
+                                    <name>PSU {#SNMPINDEX} status &quot;UNMOUNTED&quot;</name>
+                                    <priority>WARNING</priority>
+                                    <description>PSU is not inserted to the power shelf</description>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Output Voltage  {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.4.{#SNMPINDEX}</snmp_oid>
+                            <key>psuOutputVoltage.[{#SNMPINDEX}]</key>
+                            <units>mV</units>
+                            <description>The output voltage of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Temperature 1  {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.7.{#SNMPINDEX}</snmp_oid>
+                            <key>psuTemperature1.[{#SNMPINDEX}]</key>
+                            <units>C</units>
+                            <description>The circuit temperature near the air outlet of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Temperature 2  {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.8.{#SNMPINDEX}</snmp_oid>
+                            <key>psuTemperature2.[{#SNMPINDEX}]</key>
+                            <units>C</units>
+                            <description>The circuit temperature at the hottest point of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Psu Temperature 3  {#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.44474.2.3.3.2.4.9.{#SNMPINDEX}</snmp_oid>
+                            <key>psuTemperature3.[{#SNMPINDEX}]</key>
+                            <units>C</units>
+                            <description>The circuit temperature of PSU [{#SNMPINDEX}]</description>
+                            <applications>
+                                <application>
+                                    <name>PSU Sensors</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>

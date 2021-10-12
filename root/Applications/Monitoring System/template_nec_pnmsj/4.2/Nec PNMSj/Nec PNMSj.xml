@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-12T06:47:12Z</date>
+    <groups>
+        <group>
+            <name>Templates NMS</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>PNMSj</template>
+            <name>PNMSj</name>
+            <description>pnms app template</description>
+            <groups>
+                <group>
+                    <name>Templates NMS</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>NMS</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>application log count</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>logrt.count[&quot;c:\PNMSj\log\log\^.*.log&quot;]</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{max(600)}=0</expression>
+                            <name>messages in application log DELAY</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FTP Service Status</name>
+                    <key>net.tcp.service[ftp]</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(,600)}=0</expression>
+                            <name>FTP service port not respond</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>HTTP service status</name>
+                    <key>net.tcp.service[http]</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(,600)}=0</expression>
+                            <name>HTTP Service port not respond</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Online Users count</name>
+                    <key>online.users</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;20</expression>
+                            <name>Too many users is connected</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>process javaw.exe count</name>
+                    <key>proc.num[javaw.exe,PNMS_start]</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#2)}&lt;2</expression>
+                            <name>Process javaw.exe is not running</name>
+                            <priority>DISASTER</priority>
+                            <description>main pnmsj process</description>
+                            <dependencies>
+                                <dependency>
+                                    <name>Process Pnms.exe is not running</name>
+                                    <expression>{PNMSj:proc.num[Pnms.exe,PNMS_start].last(#2)}&lt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>process Pnms.exe count</name>
+                    <key>proc.num[Pnms.exe,PNMS_start]</key>
+                    <delay>60</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>NMS</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#2)}&lt;1</expression>
+                            <name>Process Pnms.exe is not running</name>
+                            <priority>DISASTER</priority>
+                            <description>main pnmsj process</description>
+                            <dependencies>
+                                <dependency>
+                                    <name>messages in application log DELAY</name>
+                                    <expression>{PNMSj:logrt.count[&quot;c:\PNMSj\log\log\^.*.log&quot;].max(600)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>application log count</name>
+            <graph_items>
+                <graph_item>
+                    <color>F63100</color>
+                    <item>
+                        <host>PNMSj</host>
+                        <key>logrt.count[&quot;c:\PNMSj\log\log\^.*.log&quot;]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>PNMSj Online Users</name>
+            <graph_items>
+                <graph_item>
+                    <color>1A7C11</color>
+                    <item>
+                        <host>PNMSj</host>
+                        <key>online.users</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>

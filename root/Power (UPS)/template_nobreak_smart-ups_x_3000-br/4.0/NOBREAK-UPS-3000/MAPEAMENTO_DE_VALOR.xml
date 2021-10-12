@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.0</version>
+    <date>2020-02-05T19:14:13Z</date>
+    <value_maps>
+        <value_map>
+            <name>UPS Status Bateria</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Desconhecido</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Bateria Normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Bateria Fraca</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Bateria com Falha</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>UPS Status de Substituição da Bateria</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Bateria OK</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Substituir Bateria</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>UPS upsBasicOutputStatus</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Desconhecido</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>onLine</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Pela Bateria</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>onSmartBoost</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>timedSleeping</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>softwareBypass</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>off</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>Reiniciando</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>switchedBypass</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>hardwareFailureBypass</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>sleepingUntilPowerReturn</newvalue>
+                </mapping>
+                <mapping>
+                    <value>12</value>
+                    <newvalue>onSmartTrim</newvalue>
+                </mapping>
+                <mapping>
+                    <value>13</value>
+                    <newvalue>ecoMode</newvalue>
+                </mapping>
+                <mapping>
+                    <value>14</value>
+                    <newvalue>hotStandby</newvalue>
+                </mapping>
+                <mapping>
+                    <value>15</value>
+                    <newvalue>onBatteryTest</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

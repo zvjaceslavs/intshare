@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-15T07:57:14Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Module Linux LXC CPU by Zabbix agent</template>
+            <name>Template Module Linux LXC CPU by Zabbix agent</name>
+            <description>Template for proxmox CTs CPU</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>CPU</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Load average (1m avg)</name>
+                    <key>ct.cpu.load[percpu,avg1]</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>CPU</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Load average (5m avg)</name>
+                    <key>ct.cpu.load[percpu,avg5]</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>CPU</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Load average (15m avg)</name>
+                    <key>ct.cpu.load[percpu,avg15]</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>CPU</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Number of CPUs</name>
+                    <key>ct.cpu.num</key>
+                    <history>7d</history>
+                    <description>Number of CPU on CT</description>
+                    <applications>
+                        <application>
+                            <name>CPU</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+        </template>
+        <template>
+            <template>Template Module Linux LXC  memory by Zabbix agent</template>
+            <name>Template Module Linux LXC  memory by Zabbix agent</name>
+            <description>Template for proxmox CTs memory</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Memory</name>
+                </application>
+                <application>
+                    <name>Swap</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Aviable memory</name>
+                    <key>ct.memory.size[available]</key>
+                    <history>7d</history>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Memory</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Buffered memory</name>
+                    <key>ct.memory.size[buffers]</key>
+                    <history>7d</history>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Memory</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Cached memory</name>
+                    <key>ct.memory.size[cached]</key>
+                    <history>7d</history>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Memory</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Memory utilization</name>
+                    <key>ct.memory.size[pavailable]</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <description>Memory used percentage is calculated as (100-pavailable)</description>
+                    <applications>
+                        <application>
+                            <name>Memory</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Total memory</name>
+                    <key>ct.memory.size[total]</key>
+                    <history>7d</history>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Memory</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Used memory</name>
+                    <key>ct.memory.size[used]</key>
+                    <history>7d</history>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Memory</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Free swap space</name>
+                    <key>ct.swap.size[free]</key>
+                    <history>7d</history>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Swap</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Total swap space</name>
+                    <key>ct.swap.size[total]</key>
+                    <history>7d</history>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Swap</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Swap used</name>
+                    <key>ct.swap.size[used]</key>
+                    <history>7d</history>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Swap</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template Module Linux LXC  memory by Zabbix agent:ct.swap.size[free].min(5m)}&lt;{$SWAP.PFREE.MIN.WARN} and {Template Module Linux LXC  memory by Zabbix agent:ct.swap.size[total].last()}&gt;0</expression>
+            <name>High swap space usage ( less than {$SWAP.PFREE.MIN.WARN}% free)</name>
+            <opdata>Free: {ITEM.LASTVALUE1}, total: {ITEM.LASTVALUE2}</opdata>
+            <priority>WARNING</priority>
+        </trigger>
+        <trigger>
+            <expression>{Template Module Linux LXC  memory by Zabbix agent:ct.memory.size[available].min(5m)}&lt;{$MEMORY.AVAILABLE.MIN} and {Template Module Linux LXC  memory by Zabbix agent:ct.memory.size[total].last()}&gt;0</expression>
+            <name>Lack of available memory ( &lt; {$MEMORY.AVAILABLE.MIN} of {ITEM.VALUE2})</name>
+            <opdata>Available: {ITEM.LASTVALUE1}, total: {ITEM.LASTVALUE2}</opdata>
+            <priority>AVERAGE</priority>
+        </trigger>
+        <trigger>
+            <expression>{Template Module Linux LXC CPU by Zabbix agent:ct.cpu.load[percpu,avg1].min(5m)}/{Template Module Linux LXC CPU by Zabbix agent:ct.cpu.num.last()}&gt;{$LOAD_AVG_PER_CPU.MAX.WARN}&#13;
+and {Template Module Linux LXC CPU by Zabbix agent:ct.cpu.load[percpu,avg5].last()}&gt;0&#13;
+and {Template Module Linux LXC CPU by Zabbix agent:ct.cpu.load[percpu,avg15].last()}&gt;0</expression>
+            <name>Load average is too high (per CPU load over {$LOAD_AVG_PER_CPU.MAX.WARN} for 5m)</name>
+            <opdata>Load averages(1m 5m 15m): ({ITEM.LASTVALUE1} {ITEM.LASTVALUE3} {ITEM.LASTVALUE4}), # of CPUs: {ITEM.LASTVALUE2}</opdata>
+            <priority>AVERAGE</priority>
+            <description>Per CPU load average is too high. Your system may be slow to respond.</description>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>CPU load</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <color>199C0D</color>
+                    <item>
+                        <host>Template Module Linux LXC CPU by Zabbix agent</host>
+                        <key>ct.cpu.load[percpu,avg1]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>FF8000</color>
+                    <item>
+                        <host>Template Module Linux LXC CPU by Zabbix agent</host>
+                        <key>ct.cpu.load[percpu,avg5]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <color>FF0000</color>
+                    <item>
+                        <host>Template Module Linux LXC CPU by Zabbix agent</host>
+                        <key>ct.cpu.load[percpu,avg15]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <color>4000FF</color>
+                    <yaxisside>RIGHT</yaxisside>
+                    <item>
+                        <host>Template Module Linux LXC CPU by Zabbix agent</host>
+                        <key>ct.cpu.num</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Memory usage</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>199C0D</color>
+                    <item>
+                        <host>Template Module Linux LXC  memory by Zabbix agent</host>
+                        <key>ct.memory.size[used]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>F63100</color>
+                    <item>
+                        <host>Template Module Linux LXC  memory by Zabbix agent</host>
+                        <key>ct.memory.size[total]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>2774A4</color>
+                    <item>
+                        <host>Template Module Linux LXC  memory by Zabbix agent</host>
+                        <key>ct.memory.size[cached]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Swap usage</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>FF8000</color>
+                    <item>
+                        <host>Template Module Linux LXC  memory by Zabbix agent</host>
+                        <key>ct.swap.size[used]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>F63100</color>
+                    <item>
+                        <host>Template Module Linux LXC  memory by Zabbix agent</host>
+                        <key>ct.swap.size[total]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>

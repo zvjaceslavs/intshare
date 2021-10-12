@@ -1,0 +1,58 @@
+Last update: Dec 14 2016.
+
+Do not use SNMP "bulk requests".
+
+How to Install:
+
+Install echo.something in the ExternalScripts directory of your Zabbix server and/or proxy. Check your zabbix_server.conf and/or zabbix_proxy.conf if in doubt.
+Then chmod a+x echo.something
+
+Go to  Administration -> General -> Value Mapping  and create the following maps:
+
+scItemStatus
+1 => Up
+2 => Down
+3 => Degraded
+
+scProductIDGlobalStatus
+1 => Other
+2 => Unknown
+3 => Ok
+4 => Noncritical
+5 => Critical
+6 => Nonrecoverable
+
+scServerCnctvy
+1 => Up
+2 => Down
+3 => Partial
+
+scScStatus
+1 => Online
+2 => Offline
+3 => Unknown
+
+scDiskHealthy
+1 => Healthy
+2 => Not Healthy
+3 => Unknown
+
+scDiskType
+1 => FibreChannel
+2 => iSCSI
+3 => FibreChannelOverEthernet
+4 => SAS
+5 => Unknown
+
+scHostStatus
+0 => Up
+2 => Unreachable
+
+SNMP_interface_status
+1 => Up
+2 => Down
+3 => Testing
+4 => Unknown
+5 => Dormant
+6 => NotPresent
+7 => LowerLayerDown

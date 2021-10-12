@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>4.0</version>
+  <date>2019-05-28T22:28:33Z</date>
+  <groups>
+    <group>
+      <name>Templates/Operating systems</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template OS Windows SNMPv2</template>
+      <name>Template OS Windows SNMPv2</name>
+      <description>Template OS Windows version: 0.15&#13;\nKnown Issues:&#13;\ndescription : Doesn't support In/Out 64 bit counters even thoug1h IfxTable is present:&#13;\nCurrently, Windows gets it\u2019s interface status from MIB-2. Since these 64bit SNMP counters (ifHCInOctets, ifHCOutOctets, etc.) are defined as an extension to IF-MIB, Microsoft has not implemented it.&#13;\nhttps://social.technet.microsoft.com/Forums/windowsserver/en-US/07b62ff0-94f6-40ca-a99d-d129c1b33d70/windows-2008-r2-snmp-64bit-counters-support?forum=winservergen&#13;\n&#13;\nversion : Win2008, Win2012R2&#13;\ndevice : &#13;\ndescription : Doesn't support ifXTable at all&#13;\nversion : WindowsXP&#13;\ndevice : &#13;\ndescription : EtherLike MIB is not supported&#13;\nversion : *&#13;\ndevice : *</description>
+      <groups>
+        <group>
+          <name>Templates/Operating systems</name>
+        </group>
+      </groups>
+      <applications/>
+      <items/>
+      <discovery_rules/>
+      <httptests/>
+      <macros/>
+      <templates>
+        <template>
+          <name>Template Module Generic SNMPv2</name>
+        </template>
+        <template>
+          <name>Template Module HOST-RESOURCES-MIB SNMPv2</name>
+        </template>
+        <template>
+          <name>Template Module Interfaces Windows SNMPv2</name>
+        </template>
+      </templates>
+      <screens/>
+    </template>
+  </templates>
+</zabbix_export>

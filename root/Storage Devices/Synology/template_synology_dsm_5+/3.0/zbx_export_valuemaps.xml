@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-03-02T10:33:24Z</date>
+    <value_maps>
+        <value_map>
+            <name>Synology Disk Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Initialized</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Not Initialized</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>System Partition Failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Crashed</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Synology RAID Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Repairing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Migrating</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Expanding</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Deleting</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Creating</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Syncing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>Parity Checking</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>Assembling</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>Canceling</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>Degraded</newvalue>
+                </mapping>
+                <mapping>
+                    <value>12</value>
+                    <newvalue>Crashed</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Synology System Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Failed</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

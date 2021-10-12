@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-07-30T14:50:22Z</date>
+    <groups>
+        <group>
+            <name>Templates/Applications</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template App Traefik</template>
+            <name>Template App Traefik</name>
+            <description>Check If Traefik daemon is running</description>
+            <groups>
+                <group>
+                    <name>Templates/Applications</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Traefik</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Treafik memory used</name>
+                    <key>proc.mem[traefik]</key>
+                    <value_type>FLOAT</value_type>
+                    <units>b</units>
+                    <applications>
+                        <application>
+                            <name>Traefik</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Traefik daemon status</name>
+                    <key>proc.num[traefik]</key>
+                    <applications>
+                        <application>
+                            <name>Traefik</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;1</expression>
+                            <name>Traefik is not running on {HOST.NAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Traefik memory</name>
+            <graph_items>
+                <graph_item>
+                    <color>199C0D</color>
+                    <item>
+                        <host>Template App Traefik</host>
+                        <key>proc.mem[traefik]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>

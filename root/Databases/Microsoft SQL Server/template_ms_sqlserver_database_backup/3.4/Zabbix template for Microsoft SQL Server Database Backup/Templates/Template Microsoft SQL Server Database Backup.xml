@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.4</version>
+    <date>2019-05-14T09:48:22Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Microsoft SQL Server Database Backup</template>
+            <name>Template Microsoft SQL Server Database Backup</name>
+            <description>Zabbix template for Microsoft SQL Server backup monitoring.&#13;
+&#13;
+Tested on Microsoft SQL Server 2012, 2014 and 2016. It may work with earlier versions, but some items may be unsupported.&#13;
+Tested on Zabbix 3.4.0. It may work with earlier versions, but some items may be unsupported.&#13;
+&#13;
+For Low Level Discovery to work additional scripts must be configured.&#13;
+&#13;
+Mantas Tumenas.&#13;
+mantas.tumenas@gmail.com</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications/>
+            <items/>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>SQL Server System Databases Discovery</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>backup.sysdatabase.mssql.discovery</key>
+                    <delay>4h</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>14d</lifetime>
+                    <description>Microsoft SQL Server system database discovery with additional scripts lets discover Microsoft SQL Server system databases.&#13;
+System databases here are: master, model, msdb, distribution, ReportServer, ReportServerTempDB, tempdb. Resource database is excluded from discovery and monitoring.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>SQL Instance {#SQLINSTANCENAME} System Database {#DBNAME}: Full Backup Status</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>backup.sysdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$SYSDBFTIME1},{$SYSDBFTIME2},{$SYSDBFTIME3}]</key>
+                            <delay>30s</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>System database full backup status from msdb.dbo.backupset.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>SQL Database Backup status</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>SQL {#SQLINSTANCENAME} System Database {#DBNAME}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.sysdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$SYSDBFTIME1},{$SYSDBFTIME2},{$SYSDBFTIME3}].last(,0)}=2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} System Database {#DBNAME}: Full Backup is older then {$SYSDBFTIME1} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>System database full backup is older then {$SYSDBFTIME1} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.sysdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$SYSDBFTIME1},{$SYSDBFTIME2},{$SYSDBFTIME3}].last(,0)}=3</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} System Database {#DBNAME}: Full Backup is older then {$SYSDBFTIME2} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description>System database full backup is older then {$SYSDBFTIME2} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>SQL Instance {#SQLINSTANCENAME} System Database {#DBNAME}: Full Backup is older then {$SYSDBFTIME1} hours</name>
+                                    <expression>{Template Microsoft SQL Server Database Backup:backup.sysdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$SYSDBFTIME1},{$SYSDBFTIME2},{$SYSDBFTIME3}].last(,0)}=2</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.sysdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$SYSDBFTIME1},{$SYSDBFTIME2},{$SYSDBFTIME3}].last(,0)}=4</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} System Database {#DBNAME}: Full Backup is older then {$SYSDBFTIME3} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>System database full backup is older then {$SYSDBFTIME3} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>SQL Instance {#SQLINSTANCENAME} System Database {#DBNAME}: Full Backup is older then {$SYSDBFTIME2} hours</name>
+                                    <expression>{Template Microsoft SQL Server Database Backup:backup.sysdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$SYSDBFTIME1},{$SYSDBFTIME2},{$SYSDBFTIME3}].last(,0)}=3</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.sysdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$SYSDBFTIME1},{$SYSDBFTIME2},{$SYSDBFTIME3}].last(,0)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} System Database {#DBNAME}: Full Backup status unavailable</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>System database backup status from msdb.dbo.backupset is unavailable.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                    <jmx_endpoint/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>SQL Server User Databases Discovery</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>backup.userdatabase.mssql.discovery</key>
+                    <delay>4h</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>14d</lifetime>
+                    <description>Microsoft SQL Server user database discovery with additional scripts lets discover Microsoft SQL Server user databases.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Diff Backup Status</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>backup.userdatabasediff.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBDTIME1},{$UDBDTIME2},{$UDBDTIME3}]</key>
+                            <delay>30s</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>User database differential backup status from msdb.dbo.backupset.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>SQL Database Backup status</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>SQL {#SQLINSTANCENAME} Database {#DBNAME}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Full Backup Status</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>backup.userdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBFTIME1},{$UDBFTIME2},{$UDBFTIME3}]</key>
+                            <delay>30s</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>User database full backup status from msdb.dbo.backupset.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>SQL Database Backup status</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>SQL {#SQLINSTANCENAME} Database {#DBNAME}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Log Backup Status</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>backup.userdatabaselog.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBLTIME1},{$UDBLTIME2},{$UDBLTIME3}]</key>
+                            <delay>30s</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>User database log backup status from msdb.dbo.backupset.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap>
+                                <name>SQL Database Backup status</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>SQL {#SQLINSTANCENAME} Database {#DBNAME}</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasediff.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBDTIME1},{$UDBDTIME2},{$UDBDTIME3}].last(,0)}=12</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Diff Backup is older then {$UDBDTIME1} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-differential-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Database differential backup status is older then {$UDBDTIME1} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasediff.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBDTIME1},{$UDBDTIME2},{$UDBDTIME3}].last(,0)}=13</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Diff Backup is older then {$UDBDTIME2} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-differential-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description>Database differential backup status is older then {$UDBDTIME2} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Diff Backup is older then {$UDBDTIME1} hours</name>
+                                    <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasediff.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBDTIME1},{$UDBDTIME2},{$UDBDTIME3}].last(,0)}=12</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasediff.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBDTIME1},{$UDBDTIME2},{$UDBDTIME3}].last(,0)}=14</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Diff Backup is older then {$UDBDTIME3} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-differential-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Database differential backup status is older then {$UDBDTIME3} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Diff Backup is older then {$UDBDTIME2} hours</name>
+                                    <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasediff.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBDTIME1},{$UDBDTIME2},{$UDBDTIME3}].last(,0)}=13</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasediff.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBDTIME1},{$UDBDTIME2},{$UDBDTIME3}].last(,0)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Diff Backup status unavailable</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-differential-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Database differential backup status from msdb.dbo.backupset is unavailable</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBFTIME1},{$UDBFTIME2},{$UDBFTIME3}].last(,0)}=7</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Full Backup is older then {$UDBFTIME1} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Database full backup status is older then {$UDBFTIME1} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBFTIME1},{$UDBFTIME2},{$UDBFTIME3}].last(,0)}=8</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Full Backup is older then {$UDBFTIME2} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description>Database full backup status is older then {$UDBFTIME2} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Full Backup is older then {$UDBFTIME1} hours</name>
+                                    <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBFTIME1},{$UDBFTIME2},{$UDBFTIME3}].last(,0)}=7</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBFTIME1},{$UDBFTIME2},{$UDBFTIME3}].last(,0)}=9</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Full Backup is older then {$UDBFTIME3} hours</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Database full backup status is older then {$UDBFTIME3} hours. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Full Backup is older then {$UDBFTIME2} hours</name>
+                                    <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBFTIME1},{$UDBFTIME2},{$UDBFTIME3}].last(,0)}=8</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabasefull.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBFTIME1},{$UDBFTIME2},{$UDBFTIME3}].last(,0)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Full Backup status unavailable</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Database full backup status from msdb.dbo.backupset is unavailable</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabaselog.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBLTIME1},{$UDBLTIME2},{$UDBLTIME3}].last(,0)}=17</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Log Backup is older then {$UDBLTIME1} minutes</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Database log backup status is older then {$UDBLTIME1} minutes. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabaselog.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBLTIME1},{$UDBLTIME2},{$UDBLTIME3}].last(,0)}=18</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Log Backup is older then {$UDBLTIME2} minutes</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description>Database log backup status is older then {$UDBLTIME2} minutes. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Log Backup is older then {$UDBLTIME1} minutes</name>
+                                    <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabaselog.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBLTIME1},{$UDBLTIME2},{$UDBLTIME3}].last(,0)}=17</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabaselog.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBLTIME1},{$UDBLTIME2},{$UDBLTIME3}].last(,0)}=19</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Log Backup is older then {$UDBLTIME3} minutes</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Database log backup status is older then {$UDBLTIME3} minutes. Status from msdb.dbo.backupset.</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies>
+                                <dependency>
+                                    <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Log Backup is older then {$UDBLTIME2} minutes</name>
+                                    <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabaselog.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBLTIME1},{$UDBLTIME2},{$UDBLTIME3}].last(,0)}=18</expression>
+                                    <recovery_expression/>
+                                </dependency>
+                            </dependencies>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Microsoft SQL Server Database Backup:backup.userdatabaselog.mssql.status[{#SQLINSTANCENAME},{#DBNAME},{$UDBLTIME1},{$UDBLTIME2},{$UDBLTIME3}].last(,0)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>SQL Instance {#SQLINSTANCENAME} Database {#DBNAME}: Log Backup status unavailable</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url>https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-a-transaction-log-sql-server?view=sql-server-2017</url>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Database log backup status from msdb.dbo.backupset is unavailable</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags>
+                                <tag>
+                                    <tag>SQL</tag>
+                                    <value/>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                    <jmx_endpoint/>
+                </discovery_rule>
+            </discovery_rules>
+            <httptests/>
+            <macros>
+                <macro>
+                    <macro>{$SYSDBFTIME1}</macro>
+                    <value>25</value>
+                </macro>
+                <macro>
+                    <macro>{$SYSDBFTIME2}</macro>
+                    <value>26</value>
+                </macro>
+                <macro>
+                    <macro>{$SYSDBFTIME3}</macro>
+                    <value>27</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBDTIME1}</macro>
+                    <value>25</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBDTIME2}</macro>
+                    <value>26</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBDTIME3}</macro>
+                    <value>27</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBFTIME1}</macro>
+                    <value>172</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBFTIME2}</macro>
+                    <value>174</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBFTIME3}</macro>
+                    <value>176</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBLTIME1}</macro>
+                    <value>30</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBLTIME2}</macro>
+                    <value>60</value>
+                </macro>
+                <macro>
+                    <macro>{$UDBLTIME3}</macro>
+                    <value>90</value>
+                </macro>
+            </macros>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>SQL Database Backup status</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Backup status unavailable</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Backup is not older then 25 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Backup is older then 25 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Backup is older then 26 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Backup is older then 27 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Backup is not older then 7 days and 4 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Backup is older then 7 days and 4 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>Backup is older then 7 days and 6 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>Backup is older then 7 days and 8 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>Backup is not older then 25 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>12</value>
+                    <newvalue>Backup is older then 25 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>13</value>
+                    <newvalue>Backup is older then 26 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>14</value>
+                    <newvalue>Backup is older then 27 hours</newvalue>
+                </mapping>
+                <mapping>
+                    <value>16</value>
+                    <newvalue>Backup is not older then 30 minutes</newvalue>
+                </mapping>
+                <mapping>
+                    <value>17</value>
+                    <newvalue>Backup is older then 30 minutes</newvalue>
+                </mapping>
+                <mapping>
+                    <value>18</value>
+                    <newvalue>Backup is older then 60 minutes</newvalue>
+                </mapping>
+                <mapping>
+                    <value>19</value>
+                    <newvalue>Backup is older then 90 minutes</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.0</version>
+    <date>2019-06-21T11:17:10Z</date>
+    <groups>
+        <group>
+            <name>Template check ports</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template_check_any_port_from_any_Linux_host - NC command</template>
+            <name>Template_check_any_port_from_any_Linux_host - NC command</name>
+            <description>INPUT COMMAND ON MONITORED SERVER&#13;
+echo '&#13;
+UserParameter=failed_check_host_port[*], nc -zvw3 $1 $2 2&gt;/dev/null | echo $?' &gt; /etc/zabbix/zabbix_agentd.d/failed_check_host_port.conf</description>
+            <groups>
+                <group>
+                    <name>Template check ports</name>
+                </group>
+            </groups>
+            <applications/>
+            <items>
+                <item>
+                    <name>Failed connection from {HOST.NAME} to IP $1 TCP port $2</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>failed_check_host_port[172.16.1.1,22]</key>
+                    <delay>3m</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Just change the key</description>
+                    <inventory_link>0</inventory_link>
+                    <applications/>
+                    <valuemap>
+                        <name>Boolean Status</name>
+                    </valuemap>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>0</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <httptests/>
+            <macros>
+                <macro>
+                    <macro>{$HOST}</macro>
+                    <value>172.16.160.136</value>
+                </macro>
+                <macro>
+                    <macro>{$PORT}</macro>
+                    <value>21</value>
+                </macro>
+            </macros>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template_check_any_port_from_any_Linux_host - NC command:failed_check_host_port[172.16.1.1,22].last(10m)}=1 or {Template_check_any_port_from_any_Linux_host - NC command:failed_check_host_port[172.16.1.1,22].nodata(180)}=1</expression>
+            <recovery_mode>1</recovery_mode>
+            <recovery_expression>{Template_check_any_port_from_any_Linux_host - NC command:failed_check_host_port[172.16.1.1,22].last()}=0</recovery_expression>
+            <name>{HOST.NAME} has connection problem to other important host (see e-mail)</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>It can't be use name or key of item in name of trigger</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+    <value_maps>
+        <value_map>
+            <name>Boolean Status</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>False</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>True</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-12T06:13:30Z</date>
+    <groups>
+        <group>
+            <name>Templates Hardware</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Sun M4000 prtdiag</template>
+            <name>Sun M4000 prtdiag</name>
+            <groups>
+                <group>
+                    <name>Templates Hardware</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Hardware</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>IO devices ok count</name>
+                    <key>sunm4000.io.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;9</expression>
+                            <name>io device faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>memory ok count</name>
+                    <key>sunm4000.mem.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;2</expression>
+                            <name>RAM faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

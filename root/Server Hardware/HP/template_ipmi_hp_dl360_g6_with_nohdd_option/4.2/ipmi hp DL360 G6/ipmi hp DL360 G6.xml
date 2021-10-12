@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-11T14:05:27Z</date>
+    <groups>
+        <group>
+            <name>Templates Archive</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>IPMI HP DL360p Gen6</template>
+            <name>IPMI HP DL360p Gen6</name>
+            <groups>
+                <group>
+                    <name>Templates Archive</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Fan</name>
+                </application>
+                <application>
+                    <name>Hardware</name>
+                </application>
+                <application>
+                    <name>Health</name>
+                </application>
+                <application>
+                    <name>Memory</name>
+                </application>
+                <application>
+                    <name>Power</name>
+                </application>
+                <application>
+                    <name>Temp</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Ext. Health LED</name>
+                    <type>IPMI</type>
+                    <key>Ext.HealthLED</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>Ext. Health LED</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>Ext. Health LED error on {HOSTNAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Fan Block 1</name>
+                    <type>IPMI</type>
+                    <key>FanBlock1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan Block 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Fan Block 2</name>
+                    <type>IPMI</type>
+                    <key>FanBlock2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan Block 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Fan Block 3</name>
+                    <type>IPMI</type>
+                    <key>FanBlock3</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan Block 3</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Fan Block 4</name>
+                    <type>IPMI</type>
+                    <key>FanBlock4</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <units>% Speed</units>
+                    <ipmi_sensor>Fan Block 4</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Fans</name>
+                    <type>IPMI</type>
+                    <key>Fans</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>Fans</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Fan</name>
+                        </application>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Fan error on {HOSTNAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Int. Health LED</name>
+                    <type>IPMI</type>
+                    <key>Int.HealthLED</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>Int. Health LED</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;0</expression>
+                            <name>Int. Health LED error on {HOSTNAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Memory</name>
+                    <type>IPMI</type>
+                    <key>Memory</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>Memory</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Health</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=1</expression>
+                            <name>Memory error on {HOSTNAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Power Meter</name>
+                    <type>IPMI</type>
+                    <key>PowerMeter</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Power Meter</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Power Supplies</name>
+                    <type>IPMI</type>
+                    <key>PowerSupplies</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Power Supplies</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Power Supply 1</name>
+                    <type>IPMI</type>
+                    <key>PowerSupply1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Power Supply 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Power Supply 2</name>
+                    <type>IPMI</type>
+                    <key>PowerSupply2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <ipmi_sensor>Power Supply 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Temp 2</name>
+                    <type>IPMI</type>
+                    <key>Temp2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <units>C</units>
+                    <ipmi_sensor>Temp 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Temp</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Fan</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;60</expression>
+                            <name>Temp 2 is very High!</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>UIDLight</name>
+                    <type>IPMI</type>
+                    <key>UIDLight</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>UID Light</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Health</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Server HP Health</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{nodata(10800)}=1</expression>
+                            <name>3h with No data from IPMI interface</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>VRM 1</name>
+                    <type>IPMI</type>
+                    <key>VRM1</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>VRM 1</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>VRM 2</name>
+                    <type>IPMI</type>
+                    <key>VRM2</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <ipmi_sensor>VRM 2</ipmi_sensor>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                        <application>
+                            <name>Power</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{IPMI HP DL360p Gen6:PowerSupply1.last()}=0 or {IPMI HP DL360p Gen6:PowerSupply2.last()}=0</expression>
+            <name>Power supply failure on {HOSTNAME}</name>
+            <priority>HIGH</priority>
+        </trigger>
+    </triggers>
+    <value_maps>
+        <value_map>
+            <name>Server HP Fan</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Failure</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>Server HP Health</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Error</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

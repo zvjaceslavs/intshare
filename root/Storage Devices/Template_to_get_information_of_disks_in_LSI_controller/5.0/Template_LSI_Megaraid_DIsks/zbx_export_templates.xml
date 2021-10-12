@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2020-12-29T15:26:23Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template LSI Megaraid Disks</template>
+            <name>Template LSI Megaraid Disks</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>LSI disk status</name>
+                </application>
+            </applications>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Disk discovery</name>
+                    <key>disk</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>SlotNumber: {#SLOTN}  - Device Id: {#DEVID}</name>
+                            <key>diskinfo[diskinfo {#SLOTN},{#DEVID}]</key>
+                            <delay>5m</delay>
+                            <trends>0</trends>
+                            <value_type>CHAR</value_type>
+                            <applications>
+                                <application>
+                                    <name>LSI disk status</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{str(&quot;Online, Spun Up&quot;)}=0</expression>
+                                    <name>Disk Error &quot;SlotNumber: {#SLOTN} - Device Id: {#DEVID}&quot;</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>

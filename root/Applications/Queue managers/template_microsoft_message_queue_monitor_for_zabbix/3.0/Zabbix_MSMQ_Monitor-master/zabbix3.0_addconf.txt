@@ -1,0 +1,9 @@
+### Option: UserParameter
+#	User-defined parameter to monitor. There can be several user-defined parameters.
+#	Format: UserParameter=<key>,<shell command>
+#
+# Mandatory: no
+# Default:
+# UserParameter=
+UserParameter=orgmsmq.discovery,powershell -NoProfile -ExecutionPolicy Bypass -File "C:\path\to\get_queues.ps1"
+UserParameter=orgmsmq.messagecount[*],powershell -NoProfile -ExecutionPolicy Bypass -File C:\path\to\get_queuemessagecount.ps1 "$1"

@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-10-28T05:16:20Z</date>
+    <groups>
+        <group>
+            <name>.Templates - Cisco</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Cisco StackWise</template>
+            <name>Cisco StackWise</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>.Templates - Cisco</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Stack Info</name>
+                </application>
+                <application>
+                    <name>Stack Port Info</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Ring Redundant</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>CISCO-STACKWISE-MIB::cswRingRedundant</snmp_oid>
+                    <key>cswRingRedundant</key>
+                    <delay>30</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>1</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>A value of 'true' is returned when the stackports are connected in such a way that it forms a redundant ring.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Stack Info</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>cswRingRedundant</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Stack Port Info</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#CSWSTACKPORTOPERSTATUS}, CISCO-STACKWISE-MIB::cswStackPortOperStatus]</snmp_oid>
+                    <key>cswStackPortOperStatus</key>
+                    <delay>30</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Stack port {#SNMPINDEX} status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CISCO-STACKWISE-MIB::cswStackPortOperStatus.{#SNMPINDEX}</snmp_oid>
+                            <key>cswStackPortOperStatus[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>The state of the stackport.&#13;
+up - Connected and operational.&#13;
+down - Not connected to a neighboring switch or administrative down.&#13;
+forcedDown - Shut down by stack manager due to mismatch or stackport errors.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Stack Port Info</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>cswStackPortOperStatus</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Cisco StackWise:cswStackPortOperStatus[{#SNMPINDEX}].last()}&lt;&gt;1</expression>
+                            <name>Stack port status changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>5</priority>
+                            <description/>
+                            <type>1</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Stack Info</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>discovery[{#CSWSWITCHNUMCURRENT}, CISCO-STACKWISE-MIB::cswSwitchNumCurrent]</snmp_oid>
+                    <key>cswSwitchNumCurrent</key>
+                    <delay>30</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Hardware priority {#SNMPINDEX}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CISCO-STACKWISE-MIB::cswSwitchHwPriority.{#SNMPINDEX}</snmp_oid>
+                            <key>cswSwitchHwPriority[{#CSWSWITCHNUMCURRENT}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>This object contains the hardware priority of a switch.  If two or more entries in this table have the same cswSwitchSwPriority value during the master election time,&#13;
+the switch with the highest cswSwitchHwPriority will become&#13;
+the master.&#13;
+Note:This object will contain the value of 0 if the cswSwitchState value is other than 'ready'.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Stack Info</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>MAC address {#SNMPINDEX}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CISCO-STACKWISE-MIB::cswSwitchMacAddress.{#SNMPINDEX}</snmp_oid>
+                            <key>cswSwitchMacAddress[{#CSWSWITCHNUMCURRENT}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>The MAC address of the switch.&#13;
+Note:This object will contain the value of 0000:0000:0000 if the cswSwitchState value is other than 'ready'.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Stack Info</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Switch number current {#SNMPINDEX}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CISCO-STACKWISE-MIB::cswSwitchNumCurrent.{#SNMPINDEX}</snmp_oid>
+                            <key>cswSwitchNumCurrent[{#CSWSWITCHNUMCURRENT}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>This object contains the current switch identification number. This number should match any logical labeling on the switch.&#13;
+For example, a switch whose interfaces are labeled 'interface #3' this value should be 3.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Stack Info</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Role {#SNMPINDEX}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CISCO-STACKWISE-MIB::cswSwitchRole.{#SNMPINDEX}</snmp_oid>
+                            <key>cswSwitchRole[{#CSWSWITCHNUMCURRENT}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>This object describes the function of the switch:&#13;
+master - stack master.&#13;
+member - active member of the stack.&#13;
+notMember - none-active stack member, see cswSwitchState for status.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Stack Info</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>cswSwitchRole</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Software image {#SNMPINDEX}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CISCO-STACKWISE-MIB::cswSwitchSoftwareImage.{#SNMPINDEX}</snmp_oid>
+                            <key>cswSwitchSoftwareImage[{#CSWSWITCHNUMCURRENT}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>The software image type running on the switch.&#13;
+Note:This object will contain an empty string if the cswSwitchState value is other than 'ready'.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Stack Info</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>State {#SNMPINDEX}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CISCO-STACKWISE-MIB::cswSwitchState.{#SNMPINDEX}</snmp_oid>
+                            <key>cswSwitchState[{#CSWSWITCHNUMCURRENT}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>The current state of a switch:&#13;
+waiting - Waiting for a limited time on other switches in the stack to come online.&#13;
+progressing - Master election or mismatch checks in progress.&#13;
+added - The switch is added to the stack.&#13;
+ready - The switch is operational.&#13;
+sdmMismatch - The SDM template configured on the master is not supported by the new member.&#13;
+verMismatch - The operating system version running on the master is different from the operating system version running on this member.&#13;
+featureMismatch - Some of the features configured on the master are not supported on this member.&#13;
+newMasterInit - Waiting for the new master to finish initialization after master switchover (Master Re-Init).&#13;
+provisioned - The switch is not an active member of the stack.&#13;
+invalid - The switch's state machine is in an invalid state.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Stack Info</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>cswSwitchState</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Cisco StackWise:cswSwitchState[{#CSWSWITCHNUMCURRENT}].last()}&lt;&gt;4</expression>
+                            <name>Switch state changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>5</priority>
+                            <description/>
+                            <type>1</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>cswRingRedundant</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>true</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>cswStackPortOperStatus</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>up</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>down</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>forcedDown</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>cswSwitchRole</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>master</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>member</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>notMember</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>cswSwitchState</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>waiting</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>progressing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>added</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>ready</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>5sdmMismatch</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>verMismatch</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>featureMismatch</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>newMasterInit</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>provisioned</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>invalid</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

@@ -1,0 +1,72 @@
+#!/bin/bash
+#
+# chkconfig: - 54 74
+# description: Diskstat. \
+
+### BEGIN INIT INFO
+# Provides: diskstat
+# Required-Start: $network $local_fs $remote_fs
+# Required-Stop: $network $local_fs $remote_fs
+# Should-Start: $syslog 
+# Should-Stop: $syslog 
+# Short-Description: start and stop diskstat
+# Description: Diskstat send iostat data to zabbix servers
+#              It's a script that invokes iostat and zabbix_sender
+### END INIT INFO
+
+# Source function library.
+. /etc/init.d/functions
+
+RETVAL=0
+prog="diskstat"
+LOCKFILE=/var/lock/subsys/$prog
+
+start() {
+        [ -f $LOCKFILE ] && exit 5
+        echo -n "Starting $prog: "
+        /etc/zabbix/scripts/diskstat.sh && success || failure
+        RETVAL=$?
+        [ $RETVAL -eq 0 ] && touch $LOCKFILE
+        echo
+        return $RETVAL
+}
+
+stop() {
+        [ "$UID" != "0" ] && exit 4
+        echo -n "Shutting down $prog: "
+        pkill iostat
+        pkill diskstat && success || failure
+        RETVAL=$?
+        [ $RETVAL -eq 0 ] && rm -f $LOCKFILE
+	echo
+        return $RETVAL
+}
+                                                
+status() {
+        echo -n "Checking $prog status: "
+        ps aux|grep diskstat.py 1>/dev/null && success || failure
+        echo
+        RETVAL=$?
+        return $RETVAL
+}
+                                                                                
+case "$1" in
+        start)
+        start
+        ;;
+        stop)
+        stop
+        ;;
+        status)
+        status
+        ;;
+        restart)
+        stop
+        start
+        ;;
+        *)
+        echo "Usage: $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
+exit $RETVAL

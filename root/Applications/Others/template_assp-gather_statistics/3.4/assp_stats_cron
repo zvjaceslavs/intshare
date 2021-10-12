@@ -1,0 +1,16 @@
+# Send assp statistics to Zabbix
+# This is a sample entry.
+# Adjust the path to your perl library
+# Adjust the path to the send_stats_to_zabbix.pl script
+# Adjust the path to the zabbix_sender app
+# Specify the correct zabbix server ip address
+# Specify the assp server hostname as identified in zabbix
+# Other supported options are: 
+# --statsurl http://127.0.0.1:55553
+# --port 10051 #zabbix server port
+# --tmpFile /tmp/zabbix_assp_stats.txt
+# --verbose
+# --sinceReset
+# --senderLimit = 25 #chunk the stats files into smaller pieces rather than sending all as one "large" file
+
+* * * * * nobody /usr/bin/perl /usr/local/assp/send_stats_to_zabbix.pl --server="zabbix.ip_address.here" --host="hostname_as_stored_in_zabbix" --sender="/usr/bin/zabbix_sender"

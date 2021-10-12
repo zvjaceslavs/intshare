@@ -1,0 +1,146 @@
+#!/bin/bash
+
+# Ugly and Dirty Oracle VM Monitor Script
+# Made with P.O.G.
+# Equinix BR
+# Andre Rocha <arocha@equinix.com>
+# v0.1 Tested on CentOS 7.3 and Zabbix 2.4.8
+#
+# Needs Packages: 
+# yum install jq expect.x86_64 gawk sed
+#
+# Needs Host Macros:
+# {$USERNAME} = Oracle VM Admin Account
+# {$PASSWORD} = Oracle VM Admin Password
+# {$ADMINCLI} = Admin CLI IP address
+# {$OVMHNAME} = Oracle VM configured hostname
+# {$SNMP_COMMUNITY} = OVM SNMP Community
+# => Don't use white spaces or special characters on your hostnames and disks!
+#
+# Note:
+# Monitor a Hypervisor is a complicated task, because it can generate
+# a huge ammount of data, and this can kill your Zabbix environment
+# and your infrastructure. That's why we collect all the necessary
+# data once five minutes for local processing.
+#
+# Warning:
+# Oracle VM does not provide a way to monitor CPU, Network and Disk consumption via Admin CLI.
+# The itens CPU and Network can be monitored by SNMP, but I don't know if the data is accurate.
+# Disk use can be monitored from the Virtual Machine.
+# Maybe on future upgrades there will be some more options to Admin CLI, to fill in the gaps.
+#
+# Todo:
+# check if all pre-reqs do exist, cleanup the code, monitor Guests/Disk/FS/CPU/Net Details
+#
+# Be sure to use your zabbix_proxy or zabbix_server config file here:
+ExternalScriptsDir=$(grep ExternalScripts /etc/zabbix/zabbix_proxy.conf|cut -d "=" -f2)
+
+# Set temp dir
+TMP=/var/tmp/zabbix/ovm ; [ -d $TMP ] || mkdir -p $TMP
+
+# Checks whether the agent script exists
+if [ -f $ExternalScriptsDir/agent_ovm_info.exp ]; then sleep 0; else echo "Agent not Found. Exiting..." ; exit 1 ; fi
+
+case $1 in
+        disks)
+	HOSTNAME="$5"
+        SAVEIFS=$IFS
+        IFS=$(echo -en "\n\b")
+        # Collect and prepare all necessary files
+	PARAM="show server name=$6"
+	$ExternalScriptsDir/agent_ovm_info.exp $2 $3 $4 $PARAM > $TMP/$5.FULL_OVM_INFO.TMP 2> $TMP/$5.FULL_OVM_INFO.TMP.ERR
+	# Clear temporary file if necessary
+	if [ $? -ne 0 ]; then rm -f $TMP/$5.FULL_OVM_INFO.TMP $TMP/$5.FULL_OVM_INFO ; else cat $TMP/$5.FULL_OVM_INFO.TMP > $TMP/$5.FULL_OVM_INFO ; fi
+	# 
+	if [ $1 = disks ]; then DPARAM="list PhysicalDisk"; fi
+	DiskList=$($ExternalScriptsDir/agent_ovm_info.exp $2 $3 $4 $DPARAM | grep name | awk '{print $2}' | cut -d ":" -f2-)
+	> $TMP/$5.FULL_DISK_INFO.TMP
+        # MACROS
+        printf "{\n\t\"data\":[" > $TMP/$5.DISKS.MACRO
+        P=
+        for I in $DiskList
+          do
+	    PPARAM="show PhysicalDisk id=$I"
+            # Some Datastores has strange names, and we have to deal with it. #
+	    # PLACE NAME NORMALIZE CODE HERE #
+	    # Soon ... #
+	    $ExternalScriptsDir/agent_ovm_info.exp $2 $3 $4 $PPARAM >> $TMP/$5.FULL_DISK_INFO.TMP
+	    cat -v $TMP/$5.FULL_DISK_INFO.TMP | egrep -v "spawn|directory|Failed|admin|OVM>|Command:|Status:|Time:" | tr -d '^M' > $TMP/$5.FULL_DISK_INFO 2> $TMP/$5.FULL_DISK_INFO.ERR
+            [ ! -z "$P" ] && printf ",\n" >> $TMP/$5.DISKS.MACRO
+            printf "\n\t\t{\n\t\t\t\"{#DISK}\":\""$(echo $I)"\",\n\t\t\t\"{#DSKUSERFRNAME}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "User-Friendly Name" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DISKSIZE}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "Size (GiB)" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DISKVENDOR}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "Vendor" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DISKTYPE}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "Type" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DSKSHARE}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "Shareable" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DSKTHIN}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "Thin Provision" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DSKVG}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "Volume Group" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DSKSTGARRAY}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "Storage Array" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DSKSTATE}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -B12 "Id = $I" | grep "State" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#LOCKED}\":\"$(cat $TMP/$5.FULL_DISK_INFO | egrep -A3 "Id = $I" | grep "Locked" | cut -d "=" -f2 | sed 's/^ \+//')\",\n\t\t\t\"{#DISKNAME}\":\"$(grep $I $TMP/$5.FULL_DISK_INFO | grep "Id = " | cut -d '[' -f2| tr -d "\[;\]")\"\n\t\t}" >> $TMP/$5.DISKS.MACRO
+            P=$I >> $TMP/$5.DISKS.MACRO
+          done
+        IFS=$SAVEIFS
+        printf "\n\t]\n}\n" >> $TMP/$5.DISKS.MACRO
+        #
+        # Format a JSON Datastore list for LLD #
+        cat $TMP/$5.DISKS.MACRO | egrep -v "{#DISKSIZE}|{#DISKVENDOR}|{#DSKSHARE}|{#DSKTHIN}|{#DSKVG}|{#DSKSTGARRAY}|{#DSKSTATE}|{#DSKUSERFRNAME}|{#DISKTYPE}|{#LOCKED}"
+        #
+        # Parse all JSON data for select operations #
+        cat $TMP/$5.DISKS.MACRO | sed "s,\\\(,\(,g;s,\\\),\),g" | sed \
+        -e 's/{#DISK}/PhysicalDisk/g' \
+        -e 's/{#DISKNAME}/DiskName/g' \
+        -e 's/{#DISKSIZE}/DiskSize/g' \
+        -e 's/{#DISKVENDOR}/DiskVendor/g' \
+        -e 's/{#DISKTYPE}/DiskType/g' \
+        -e 's/{#DSKSHARE}/Shareable/g' \
+        -e 's/{#DSKTHIN}/ThinProvision/g' \
+        -e 's/{#DSKVG}/VolumeGroup/g' \
+        -e 's/{#DSKSTGARRAY}/StorageArray/g' \
+        -e 's/{#DSKSTATE}/DiskState/g' \
+        -e 's/{#DSKUSERFRNAME}/UserFriendlyName/g' \
+        -e 's/{#LOCKED}/Locked/g' \
+        > $TMP/$5.DISKS.JSON
+	;;
+
+	server)
+        # SERVER MACROS
+        printf "{\n\t\"data\":[" > $TMP/$2.OVMSERVER.MACRO
+        P=
+        [ ! -z "$P" ] && printf ",\n" >> $TMP/$2.OVMSERVER.MACRO
+        printf "\n\t\t{\n\t\t\t\"{#HOSTNAME}\":\""$(cat $TMP/$2.FULL_OVM_INFO|grep "Host Name"|cut -d"=" -f2|sed -e 's/^ *//')"\",\n\t\t\t\"{#STATUS}\":\""$(cat $TMP/$2.FULL_OVM_INFO | grep Status | grep -v "Status:" | cut -d "=" -f2 | sed -e 's/^ *//')"\",\n\t\t\t\"{#MAINT}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Maintenance Mode" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#BIOSVEN}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "BIOS Vendor" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#BIOSVER}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "BIOS Version" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#BIOSREA}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "BIOS Release Date" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#CPUTYPE}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Processor Type" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#CPUSPEED}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Processor Speed" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#CPUSOCKT}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Processor Sockets Populated" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#CPUTHREA}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Threads per Core" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#COREPERSOCKT}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Cores per Processor Socket" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#PROCESSORS}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Processors" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#ENABLEDPROCORES}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Enabled Processor Cores" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#MEMORY}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Memory (MB) =" | grep -v "Usable" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#USABLEMEMORY}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Usable Memory (MB) =" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#MANUFACT}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Manufacturer" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#PRODNAME}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Product Name" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#SERIAL}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Serial Number" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#UP2DATE}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "Up To Date" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#NOEXECUTEFLAG}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "No Execute Flag" | cut -d "=" -f2 | sed -e 's/^ *//')\",\n\t\t\t\"{#OVMVER}\":\"$(cat $TMP/$2.FULL_OVM_INFO | grep "OVM Version" | cut -d "=" -f2 | sed -e 's/^ *//')\"\n\t\t}" >> $TMP/$2.OVMSERVER.MACRO
+        P=$I >> $TMP/$2.OVMSERVER.MACRO
+        printf "\n\t]\n}\n" >> $TMP/$2.OVMSERVER.MACRO
+        #
+        cat $TMP/$2.OVMSERVER.MACRO | egrep -v "{#STATUS}|{#MAINT}|{#BIOSVEN}|{#BIOSVER}|{#BIOSREA}|{#CPUTYPE}|{#CPUSPEED}|{#CPUSOCKT}|{#CPUTHREA}|{#COREPERSOCKT}|{#PROCESSORS}|{#ENABLEDPROCORES}|{#MEMORY}|{#USABLEMEMORY}|{#NOEXECUTEFLAG}|{#OVMVER}|{#MANUFACT}|{#PRODNAME}|{#SERIAL}|{#UP2DATE}" | sed s/\",/\"/g | sed "s,\\\(,\(,g;s,\\\),\),g"
+	#
+        cat $TMP/$2.OVMSERVER.MACRO | sed "s,\\\(,\(,g;s,\\\),\),g" | sed \
+	-e 's/{#HOSTNAME}/Hostname/g' \
+	-e 's/{#STATUS}/Status/g' \
+	-e 's/{#MAINT}/Maintenance/g' \
+	-e 's/{#BIOSVEN}/BIOSVendor/g' \
+	-e 's/{#BIOSVER}/BIOSVersion/g' \
+	-e 's/{#BIOSREA}/BIOSRelease/g' \
+	-e 's/{#CPUTYPE}/CPUType/g' \
+	-e 's/{#CPUSPEED}/CPUSpeed/g' \
+	-e 's/{#CPUSOCKT}/CPUSocket/g' \
+	-e 's/{#CPUTHREA}/ThreadsPerCore/g' \
+	-e 's/{#COREPERSOCKT}/CoresPerProcessorSocket/g' \
+	-e 's/{#PROCESSORS}/Processors/g' \
+	-e 's/{#ENABLEDPROCORES}/EnabledProcessorCores/g' \
+	-e 's/{#MEMORY}/Memory/g' \
+	-e 's/{#USABLEMEMORY}/UsableMemory/g' \
+	-e 's/{#NOEXECUTEFLAG}/NoExecuteFlag/g' \
+	-e 's/{#OVMVER}/OVMVersion/g' \
+	-e 's/{#MANUFACT}/Manufacturer/g' \
+	-e 's/{#PRODNAME}/ProductName/g' \
+	-e 's/{#SERIAL}/SerialNumber/g' \
+	-e 's/{#UP2DATE}/UpToDate/g' \
+	> $TMP/$2.OVMSERVER.JSON
+	;;
+
+        PhysicalDisk|DiskName|DiskSize|DiskVendor|DiskType|Shareable|ThinProvision|VolumeGroup|StorageArray|DiskState|UserFriendlyName|Locked)
+        # JSON Selects #
+        cat $TMP/$3.DISKS.JSON | jq ".data[] | select(.PhysicalDisk == \"$2\") | .$1"
+        ;;
+
+        Hostname|Status|Maintenance|BIOSVendor|BIOSVersion|BIOSRelease|CPUType|CPUSpeed|CPUSocket|ThreadsPerCore|CoresPerProcessorSocket|Processors|EnabledProcessorCores|Memory|UsableMemory|NoExecuteFlag|OVMVersion|Manufacturer|ProductName|SerialNumber|UpToDate)
+        # JSON Selects #
+        cat $TMP/$3.OVMSERVER.JSON | jq ".data[] | select(.Hostname == \"$2\") | .$1"
+        ;;
+
+*)
+        # Zabbix knows how to use this script :P #
+        echo "Usage: $0 ?"
+        ;;
+esac

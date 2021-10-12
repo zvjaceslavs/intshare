@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-01-23T09:41:04Z</date>
+    <groups>
+        <group>
+            <name>Templates/Network devices</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Net AVM FritzBox</template>
+            <name>Template Net AVM FritzBox</name>
+            <description>Monitoring of FritzBox via UPNP and a shell script using Curl.</description>
+            <templates>
+                <template>
+                    <name>Template Module ICMP Ping</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates/Network devices</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Device Information</name>
+                </application>
+                <application>
+                    <name>LAN Data Volume</name>
+                </application>
+                <application>
+                    <name>WAN Bandwidth</name>
+                </application>
+                <application>
+                    <name>WAN Data Volume</name>
+                </application>
+                <application>
+                    <name>WAN Status</name>
+                </application>
+                <application>
+                    <name>Web Frontend</name>
+                </application>
+                <application>
+                    <name>WLAN</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>FritzBox Download Bitrate</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;down&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>15s</delay>
+                    <trends>90d</trends>
+                    <units>bit/s</units>
+                    <applications>
+                        <application>
+                            <name>WAN Bandwidth</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>FritzBox Device Name</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;friendlyname&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>NAME</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox External IPv4 Address</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;ipv4&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>HOST_ROUTER</inventory_link>
+                    <applications>
+                        <application>
+                            <name>WAN Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{diff()}=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{diff()}=0</recovery_expression>
+                            <name>Change of public IPv4 address</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzBox External IPv6 Address</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;ipv6&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>WAN Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{diff()}=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{diff()}=0</recovery_expression>
+                            <name>Change of public IPv6 address</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzBox LAN Bytes Received</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;lanbytesrec&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <units>bytes</units>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>LAN Data Volume</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox LAN Bytes Sent</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;lanbytessent&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <units>bytes</units>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>LAN Data Volume</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox LAN Packets Received</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;lanpacketsrec&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>LAN Data Volume</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox LAN Packets Sent</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;lanpacketssent&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>LAN Data Volume</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Physical WAN Link Status</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;linkstatus&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>WAN Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{regexp(^Up$)}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{regexp(^Up$)}=1</recovery_expression>
+                            <name>WAN interface down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzBox Manufacturer</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;manufacturer&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>VENDOR</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox MaxDownload Bitrate</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;maxdown&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <units>bit/s</units>
+                    <applications>
+                        <application>
+                            <name>WAN Bandwidth</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox MaxUpload Bitrate</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;maxup&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <units>bit/s</units>
+                    <applications>
+                        <application>
+                            <name>WAN Bandwidth</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Model</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;modelname&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>MODEL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Serial Number</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;serial&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>SERIALNO_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Connection Status</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;status&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>WAN Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{regexp(^Connected$)}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{regexp(^Connected$)}=1</recovery_expression>
+                            <name>WAN not connected</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzBox Total Bytes Received</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;totalbytesrec&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <units>bytes</units>
+                    <applications>
+                        <application>
+                            <name>WAN Data Volume</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Total Bytes Sent</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;totalbytessent&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <units>bytes</units>
+                    <applications>
+                        <application>
+                            <name>WAN Data Volume</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Total Packets Received</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;totalpacketsrec&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <applications>
+                        <application>
+                            <name>WAN Data Volume</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Total Packets Sent</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;totalpacketssent&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <applications>
+                        <application>
+                            <name>WAN Data Volume</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Upload Bitrate</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;up&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>15s</delay>
+                    <trends>90d</trends>
+                    <units>bit/s</units>
+                    <applications>
+                        <application>
+                            <name>WAN Bandwidth</name>
+                        </application>
+                    </applications>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <params>8</params>
+                        </step>
+                    </preprocessing>
+                </item>
+                <item>
+                    <name>FritzBox Uptime</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;uptime&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <history>1w</history>
+                    <trends>0</trends>
+                    <units>s</units>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzBox Software Version</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;version&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>SOFTWARE</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{change()}=1</expression>
+                            <recovery_mode>NONE</recovery_mode>
+                            <name>Change of software version</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzBox WLAN 2.4 Ghz Channel</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;wlan2gchannel&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>WLAN</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{diff()}=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{diff()}=0</recovery_expression>
+                            <name>Change of 2.4 Ghz WLAN Channel</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzBox WLAN 2.4 Ghz Enable</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;wlan2genable&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>WLAN</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#1)}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last(#1)}=1</recovery_expression>
+                            <name>2.4 Ghz WLAN disabled</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzBox WLAN 5 Ghz Channel</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;wlan5gchannel&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>WLAN</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{diff()}=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{diff()}=0</recovery_expression>
+                            <name>Change of 5 Ghz WLAN Channel</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzBox WLAN 5 Ghz Enable</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;wlan5genable&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>WLAN</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#1)}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last(#1)}=1</recovery_expression>
+                            <name>5 Ghz WLAN disabled</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <httptests>
+                <httptest>
+                    <name>FritzBox LoginPage</name>
+                    <application>
+                        <name>Web Frontend</name>
+                    </application>
+                    <delay>1h</delay>
+                    <steps>
+                        <step>
+                            <name>Open Web Page</name>
+                            <url>http://{HOST.CONN}</url>
+                            <follow_redirects>NO</follow_redirects>
+                            <retrieve_mode>BOTH</retrieve_mode>
+                        </step>
+                    </steps>
+                </httptest>
+            </httptests>
+            <macros>
+                <macro>
+                    <macro>{$FBPASSWORD}</macro>
+                    <value>NONE</value>
+                    <description>Optional password for protected status queries</description>
+                </macro>
+                <macro>
+                    <macro>{$FBUSERNAME}</macro>
+                    <value>NONE</value>
+                    <description>Optional username for protected status queries</description>
+                </macro>
+            </macros>
+            <screens>
+                <screen>
+                    <name>Screen FritzBox</name>
+                    <hsize>2</hsize>
+                    <vsize>2</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>FritzBox WAN Bandwidth</name>
+                                <host>Template Net AVM FritzBox</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>FritzBox WAN Data Received and Sent</name>
+                                <host>Template Net AVM FritzBox</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+            </screens>
+        </template>
+        <template>
+            <template>Template Net AVM FritzRepeater</template>
+            <name>Template Net AVM FritzRepeater</name>
+            <templates>
+                <template>
+                    <name>Template Module ICMP Ping</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates/Network devices</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Device Information</name>
+                </application>
+                <application>
+                    <name>WLAN</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>FritzRepeater Device Name</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;friendlyname&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>NAME</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzRepeater Manufacturer</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;manufacturer&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>VENDOR</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzRepeater Model</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;modelname&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>MODEL</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzRepeater Serial Number</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;serial&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>SERIALNO_A</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzRepeater Software Version</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;swversion&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1d</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <inventory_link>SOFTWARE</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Device Information</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>FritzRepeater WLAN 2.4 Ghz Channel</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;wlan2gchannel&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>WLAN</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{diff()}=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{diff()}=0</recovery_expression>
+                            <name>Change of 2.4 Ghz WLAN Channel</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzRepeater WLAN 2.4 Ghz Enable</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;wlan2genable&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>WLAN</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#1)}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last(#1)}=1</recovery_expression>
+                            <name>2.4 Ghz WLAN disabled</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzRepeater WLAN 5 Ghz Channel</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;wlan5gchannel&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>90d</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>WLAN</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{diff()}=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{diff()}=0</recovery_expression>
+                            <name>Change of 5 Ghz WLAN Channel</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FritzRepeater WLAN 5 Ghz Enable</name>
+                    <type>EXTERNAL</type>
+                    <key>fritzbox.sh[&quot;wlan5genable&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    <delay>1h</delay>
+                    <trends>0</trends>
+                    <description>This check requires a username and password set up in as a user macro</description>
+                    <applications>
+                        <application>
+                            <name>WLAN</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{last(#1)}=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>{last(#1)}=1</recovery_expression>
+                            <name>5 Ghz WLAN disabled</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$FBPASSWORD}</macro>
+                    <value>NONE</value>
+                    <description>Optional password for protected status queries</description>
+                </macro>
+                <macro>
+                    <macro>{$FBUSERNAME}</macro>
+                    <value>NONE</value>
+                    <description>Optional username for protected status queries</description>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>FritzBox WAN Bandwidth</name>
+            <height>400</height>
+            <show_work_period>NO</show_work_period>
+            <show_triggers>NO</show_triggers>
+            <graph_items>
+                <graph_item>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>FF0000</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template Net AVM FritzBox</host>
+                        <key>fritzbox.sh[&quot;maxdown&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>0040FF</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template Net AVM FritzBox</host>
+                        <key>fritzbox.sh[&quot;down&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>BFFF00</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template Net AVM FritzBox</host>
+                        <key>fritzbox.sh[&quot;maxup&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <color>00BFFF</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template Net AVM FritzBox</host>
+                        <key>fritzbox.sh[&quot;up&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>FritzBox WAN Data Received and Sent</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <color>0040FF</color>
+                    <item>
+                        <host>Template Net AVM FritzBox</host>
+                        <key>fritzbox.sh[&quot;totalbytesrec&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>FF4000</color>
+                    <item>
+                        <host>Template Net AVM FritzBox</host>
+                        <key>fritzbox.sh[&quot;totalbytessent&quot;,&quot;{HOST.CONN}&quot;]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>FritzBox WLAN Channels</name>
+            <show_work_period>NO</show_work_period>
+            <show_triggers>NO</show_triggers>
+            <graph_items>
+                <graph_item>
+                    <color>D32F2F</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template Net AVM FritzBox</host>
+                        <key>fritzbox.sh[&quot;wlan2gchannel&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>0D47A1</color>
+                    <yaxisside>RIGHT</yaxisside>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template Net AVM FritzBox</host>
+                        <key>fritzbox.sh[&quot;wlan5gchannel&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>FritzRepeater WLAN Channels</name>
+            <show_work_period>NO</show_work_period>
+            <show_triggers>NO</show_triggers>
+            <graph_items>
+                <graph_item>
+                    <color>D32F2F</color>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template Net AVM FritzRepeater</host>
+                        <key>fritzbox.sh[&quot;wlan2gchannel&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>0D47A1</color>
+                    <yaxisside>RIGHT</yaxisside>
+                    <calc_fnc>ALL</calc_fnc>
+                    <item>
+                        <host>Template Net AVM FritzRepeater</host>
+                        <key>fritzbox.sh[&quot;wlan5gchannel&quot;,&quot;{HOST.CONN}&quot;,&quot;{$FBUSERNAME}&quot;,&quot;{$FBPASSWORD}&quot;]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+    <value_maps>
+        <value_map>
+            <name>Service state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Down</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Up</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

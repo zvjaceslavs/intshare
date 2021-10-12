@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-03-13T17:35:50Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+        <group>
+            <name>Templates/Modules</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Module Ping average</template>
+            <name>Template Module Ping average</name>
+            <description>Ping Ip and Hostname and trigger average if error occur</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates/Modules</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Status</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>ICMP ping</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping</key>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{max(#3)}=0</expression>
+                            <name>{HOST.NAME} unavailable</name>
+                            <priority>AVERAGE</priority>
+                            <description>Last three attempts returned timeout.  Please check device connectivity.</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP loss</name>
+                    <type>SIMPLE</type>
+                    <key>icmppingloss</key>
+                    <history>1w</history>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{min(5m)}&gt;{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
+                            <name>High ICMP ping loss on {HOST.NAME}</name>
+                            <opdata>Loss: {ITEM.LASTVALUE1}</opdata>
+                            <priority>WARNING</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} unavailable</name>
+                                    <expression>{Template Module Ping average:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP response time</name>
+                    <type>SIMPLE</type>
+                    <key>icmppingsec</key>
+                    <history>1w</history>
+                    <value_type>FLOAT</value_type>
+                    <units>s</units>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>({avg(5m)}&gt;{$ICMP_RESPONSE_TIME_WARN})-({$ICMP_DISABLED_RESPONSETIME_CHECK})=1</expression>
+                            <name>High ICMP ping response time on {HOST.NAME}</name>
+                            <opdata>Value: {ITEM.LASTVALUE1}</opdata>
+                            <priority>WARNING</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>High ICMP ping loss on {HOST.NAME}</name>
+                                    <expression>{Template Module Ping average:icmppingloss.min(5m)}&gt;{$ICMP_LOSS_WARN} and {Template Module Ping average:icmppingloss.min(5m)}&lt;100</expression>
+                                </dependency>
+                                <dependency>
+                                    <name>{HOST.NAME} unavailable</name>
+                                    <expression>{Template Module Ping average:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP Ping hostname</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping[{HOST.HOST}]</key>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$ICMP_DISABLED_HOSTNAME_CHECK}</macro>
+                    <value>0</value>
+                    <description>if set to 1 disable the display of problems on hostname</description>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_DISABLED_RESPONSETIME_CHECK}</macro>
+                    <value>0</value>
+                    <description>if set to 1 disable the display of problems on response time</description>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_LOSS_WARN}</macro>
+                    <value>20</value>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
+                    <value>0.15</value>
+                </macro>
+            </macros>
+        </template>
+        <template>
+            <template>Template Module Ping high</template>
+            <name>Template Module Ping high</name>
+            <description>Ping Ip and Hostname and trigger average if error occur</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates/Modules</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Status</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>ICMP ping</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping</key>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{max(#3)}=0</expression>
+                            <name>{HOST.NAME} unavailable</name>
+                            <priority>HIGH</priority>
+                            <description>Last three attempts returned timeout.  Please check device connectivity.</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP loss</name>
+                    <type>SIMPLE</type>
+                    <key>icmppingloss</key>
+                    <history>1w</history>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{min(5m)}&gt;{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
+                            <name>High ICMP ping loss on {HOST.NAME}</name>
+                            <opdata>Loss: {ITEM.LASTVALUE1}</opdata>
+                            <priority>AVERAGE</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} unavailable</name>
+                                    <expression>{Template Module Ping high:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP response time</name>
+                    <type>SIMPLE</type>
+                    <key>icmppingsec</key>
+                    <history>1w</history>
+                    <value_type>FLOAT</value_type>
+                    <units>s</units>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>({avg(5m)}&gt;{$ICMP_RESPONSE_TIME_WARN})-({$ICMP_DISABLED_RESPONSETIME_CHECK})=1</expression>
+                            <name>High ICMP ping response time on {HOST.NAME}</name>
+                            <opdata>Value: {ITEM.LASTVALUE1}</opdata>
+                            <priority>WARNING</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>High ICMP ping loss on {HOST.NAME}</name>
+                                    <expression>{Template Module Ping high:icmppingloss.min(5m)}&gt;{$ICMP_LOSS_WARN} and {Template Module Ping high:icmppingloss.min(5m)}&lt;100</expression>
+                                </dependency>
+                                <dependency>
+                                    <name>{HOST.NAME} unavailable</name>
+                                    <expression>{Template Module Ping high:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP Ping hostname</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping[{HOST.HOST}]</key>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$ICMP_DISABLED_HOSTNAME_CHECK}</macro>
+                    <value>0</value>
+                    <description>if set to 1 disable the display of problems on hostname</description>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_DISABLED_RESPONSETIME_CHECK}</macro>
+                    <value>0</value>
+                    <description>if set to 1 disable the display of problems on response time</description>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_LOSS_WARN}</macro>
+                    <value>20</value>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
+                    <value>0.15</value>
+                </macro>
+            </macros>
+        </template>
+        <template>
+            <template>Template Module Ping information</template>
+            <name>Template Module Ping information</name>
+            <description>Ping Ip and Hostname and trigger information if error occur</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates/Modules</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Status</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>ICMP ping</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping</key>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{max(#3)}=0</expression>
+                            <name>{HOST.NAME} unavailable</name>
+                            <priority>INFO</priority>
+                            <description>Last three attempts returned timeout.  Please check device connectivity.</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP loss</name>
+                    <type>SIMPLE</type>
+                    <key>icmppingloss</key>
+                    <history>1w</history>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{min(5m)}&gt;{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
+                            <name>High ICMP ping loss on {HOST.NAME}</name>
+                            <opdata>Loss: {ITEM.LASTVALUE1}</opdata>
+                            <priority>INFO</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} unavailable</name>
+                                    <expression>{Template Module Ping information:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP response time</name>
+                    <type>SIMPLE</type>
+                    <key>icmppingsec</key>
+                    <history>1w</history>
+                    <value_type>FLOAT</value_type>
+                    <units>s</units>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>({avg(5m)}&gt;{$ICMP_RESPONSE_TIME_WARN})-({$ICMP_DISABLED_RESPONSETIME_CHECK})=1</expression>
+                            <name>High ICMP ping response time on {HOST.NAME}</name>
+                            <opdata>Value: {ITEM.LASTVALUE1}</opdata>
+                            <priority>INFO</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>High ICMP ping loss on {HOST.NAME}</name>
+                                    <expression>{Template Module Ping information:icmppingloss.min(5m)}&gt;{$ICMP_LOSS_WARN} and {Template Module Ping information:icmppingloss.min(5m)}&lt;100</expression>
+                                </dependency>
+                                <dependency>
+                                    <name>{HOST.NAME} unavailable</name>
+                                    <expression>{Template Module Ping information:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP Ping hostname</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping[{HOST.HOST}]</key>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$ICMP_DISABLED_HOSTNAME_CHECK}</macro>
+                    <value>0</value>
+                    <description>if set to 1 disable the display of problems on hostname</description>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_DISABLED_RESPONSETIME_CHECK}</macro>
+                    <value>0</value>
+                    <description>if set to 1 disable the display of problems on response time</description>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_LOSS_WARN}</macro>
+                    <value>20</value>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
+                    <value>0.15</value>
+                </macro>
+            </macros>
+        </template>
+        <template>
+            <template>Template Module Ping warning</template>
+            <name>Template Module Ping warning</name>
+            <description>Ping Ip and Hostname and trigger warning if error occur</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates/Modules</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Status</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>ICMP ping</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping</key>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <triggers>
+                        <trigger>
+                            <expression>{max(#3)}=0</expression>
+                            <name>{HOST.NAME} unavailable</name>
+                            <priority>WARNING</priority>
+                            <description>Last three attempts returned timeout.  Please check device connectivity.</description>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP loss</name>
+                    <type>SIMPLE</type>
+                    <key>icmppingloss</key>
+                    <history>1w</history>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{min(5m)}&gt;{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
+                            <name>High ICMP ping loss on {HOST.NAME}</name>
+                            <opdata>Loss: {ITEM.LASTVALUE1}</opdata>
+                            <priority>INFO</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>{HOST.NAME} unavailable</name>
+                                    <expression>{Template Module Ping warning:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP response time</name>
+                    <type>SIMPLE</type>
+                    <key>icmppingsec</key>
+                    <history>1w</history>
+                    <value_type>FLOAT</value_type>
+                    <units>s</units>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>({avg(5m)}&gt;{$ICMP_RESPONSE_TIME_WARN})-({$ICMP_DISABLED_RESPONSETIME_CHECK})=1</expression>
+                            <name>High ICMP ping response time on {HOST.NAME}</name>
+                            <opdata>Value: {ITEM.LASTVALUE1}</opdata>
+                            <priority>INFO</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>High ICMP ping loss on {HOST.NAME}</name>
+                                    <expression>{Template Module Ping warning:icmppingloss.min(5m)}&gt;{$ICMP_LOSS_WARN} and {Template Module Ping warning:icmppingloss.min(5m)}&lt;100</expression>
+                                </dependency>
+                                <dependency>
+                                    <name>{HOST.NAME} unavailable</name>
+                                    <expression>{Template Module Ping warning:icmpping.max(#3)}=0</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>ICMP Ping hostname</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping[{HOST.HOST}]</key>
+                    <history>1w</history>
+                    <applications>
+                        <application>
+                            <name>Status</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$ICMP_DISABLED_HOSTNAME_CHECK}</macro>
+                    <value>0</value>
+                    <description>if set to 1 disable the display of problems on hostname</description>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_DISABLED_RESPONSETIME_CHECK}</macro>
+                    <value>0</value>
+                    <description>if set to 1 disable the display of problems on response time</description>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_LOSS_WARN}</macro>
+                    <value>20</value>
+                </macro>
+                <macro>
+                    <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
+                    <value>0.15</value>
+                </macro>
+            </macros>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{$ICMP_DISABLED_HOSTNAME_CHECK}=0 and {Template Module Ping average:icmpping.max(3)}=1 and {Template Module Ping average:icmpping[{HOST.HOST}].max(3)}=0</expression>
+            <name>{HOST.NAME} unavailable by Hostname</name>
+            <priority>AVERAGE</priority>
+            <description>Last three attempts returned timeout.  Please check device connectivity.</description>
+        </trigger>
+        <trigger>
+            <expression>{$ICMP_DISABLED_HOSTNAME_CHECK}=0 and {Template Module Ping high:icmpping.max(3)}=1 and {Template Module Ping high:icmpping[{HOST.HOST}].max(3)}=0</expression>
+            <name>{HOST.NAME} unavailable by Hostname</name>
+            <priority>HIGH</priority>
+            <description>Last three attempts returned timeout.  Please check device connectivity.</description>
+        </trigger>
+        <trigger>
+            <expression>{$ICMP_DISABLED_HOSTNAME_CHECK}=0 and {Template Module Ping information:icmpping.max(3)}=1 and {Template Module Ping information:icmpping[{HOST.HOST}].max(3)}=0</expression>
+            <name>{HOST.NAME} unavailable by Hostname</name>
+            <priority>INFO</priority>
+            <description>Last three attempts returned timeout.  Please check device connectivity.</description>
+        </trigger>
+        <trigger>
+            <expression>{$ICMP_DISABLED_HOSTNAME_CHECK}=0 and {Template Module Ping warning:icmpping.max(3)}=1 and {Template Module Ping warning:icmpping[{HOST.HOST}].max(3)}=0</expression>
+            <name>{HOST.NAME} unavailable by Hostname</name>
+            <priority>WARNING</priority>
+            <description>Last three attempts returned timeout.  Please check device connectivity.</description>
+        </trigger>
+    </triggers>
+    <value_maps>
+        <value_map>
+            <name>Service state</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Down</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Up</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

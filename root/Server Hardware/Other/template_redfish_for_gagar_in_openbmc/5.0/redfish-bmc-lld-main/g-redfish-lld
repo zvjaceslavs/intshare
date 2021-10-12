@@ -1,0 +1,199 @@
+#!/usr/bin/ruby
+
+############################
+#
+# Redshift LLD for Zabbix
+#
+# This script will be able to discovery and put out most of the important items
+# exposed by redshift feature on Phoenix vXXX and AMI MegaRAC SP-X BMC v4.06.200522
+#
+# Originally written by julio.hegedus@sentia.com ## 07-08-2018 for iDRAC v7 or greater.
+# Modified by a.tutolmin@gagar-in.com ## 24-03-2021
+#
+
+require 'net/https'
+require 'uri'
+require 'json'
+
+BMC     =ARGV[0]
+USER    =ARGV[1]
+PASS    =ARGV[2]
+HOST    =ARGV[3]
+DISCITEM=ARGV[4]
+
+LOCALPATH="/etc/zabbix/externalscripts/redfish/"
+
+if !BMC || !USER || !PASS || !HOST || !DISCITEM
+  puts "Please specify all the neccessary parameters!"
+  puts "Try: $./g-redfish-lld user pass host type item"
+#  puts "valid items are: CooledBy, ManagedBy, PoweredBy, Processors, Memory, Storage, Temperatures, Fans, Power"
+  puts "valid items are: Processors, Memory, Sensors, Temperatures, Fans, Power"
+  puts "valid types are: GAGARIN, AMI"
+  puts "Example: ./g-redfish-lld GAGARIN root pass 192.168.188.12 Power"
+  exit 1
+end
+
+if DISCITEM == "CooledBy" or DISCITEM == "ManagedBy" or DISCITEM == "PoweredBy"
+  APIURL="/redfish/v1/Systems/system"
+  TYPE="A"
+elsif DISCITEM == "Processors" or DISCITEM == "Memory" or DISCITEM == "Storage" or DISCITEM == "Temperatures" or DISCITEM == "Fans" or DISCITEM == "Sensors" or DISCITEM == "Power"
+  case DISCITEM
+  when "Processors"
+    if BMC == "AMI" 
+      APIURL="/redfish/v1/Systems/Self/Processors"
+    else
+      APIURL="/redfish/v1/Systems/system/Processors"
+    end
+    TYPE="B"
+  when "Memory"
+    if BMC == "AMI" 
+      APIURL="/redfish/v1/Systems/Self/Memory"
+    else
+      APIURL="/redfish/v1/Systems/system/Memory"
+    end
+    TYPE="B"
+  when "Storage"
+    APIURL="/redfish/v1/Systems/system/Storage/Controllers"
+    TYPE="C"
+  when "Temperatures"
+    if BMC == "AMI" 
+      APIURL="/redfish/v1/Chassis/Self/Thermal" 
+    else
+      APIURL="/redfish/v1/Chassis/TiogaPass_Baseboard/Thermal"
+    end
+    TYPE="D"
+  when "Fans"
+    if BMC == "AMI" 
+      APIURL="/redfish/v1/Chassis/Self/Thermal" 
+    else
+      APIURL="/redfish/v1/Chassis/TiogaPass_Baseboard/Thermal"
+    end
+    TYPE="G"
+  when "Power"
+    if BMC == "AMI" 
+      APIURL="/redfish/v1/Chassis/Self/Power" 
+    else
+      APIURL="/redfish/v1/Chassis/TiogaPass_Baseboard/Power"
+    end
+    TYPE="E"
+  else
+    APIURL="/redfish/v1/Chassis/TiogaPass_Baseboard/Sensors"
+    TYPE="F"
+  end
+else
+  puts "Could not find a recognized Item option, go read a manual!"
+  puts "valid items are: CooledBy, ManagedBy, PoweredBy, Processors, Memory, Storage, Temperatures, Fans, Sensors, Power"
+  exit 1
+end
+
+base = URI.parse(["https://",HOST,APIURL].join(''))
+request = Net::HTTP::Get.new(base)
+request.basic_auth(USER, PASS)
+
+response = Net::HTTP.start(base.hostname, base.port, :timeout => 60, :use_ssl => base.scheme == "https", :verify_mode => OpenSSL::SSL::VERIFY_NONE) do |https|
+  https.request(request)
+end
+
+list = JSON.parse(response.body)
+
+discovery_list = { }
+
+MACRONAME = DISCITEM.upcase
+
+def file_name(url)
+  filetmp = url.gsub("||","__")
+  filefin = filetmp.gsub("%23","-")
+  filename=filefin.split("/")[-1]
+  filename=[HOST,"-",filename,".json"].join('')
+  return filename
+end
+
+if TYPE == "A"
+  list['Links'][DISCITEM].each do |system|
+    filemacro = file_name(system['@odata.id'])
+    if discovery_list["data"]
+      discovery_list["data"].push({ "{##{MACRONAME}}" => system['@odata.id'] , "{#FILENAME}" => filemacro })
+    else
+      discovery_list = { "data" => [ "{##{MACRONAME}}" => system['@odata.id']  , "{#FILENAME}" => filemacro ] }
+    end
+  end
+elsif TYPE == "B"
+  list['Members'].each do |system|
+    filemacro = file_name(system['@odata.id'])
+    if discovery_list["data"]
+      discovery_list["data"].push({ "{##{MACRONAME}}" => system['@odata.id'] , "{#FILENAME}" => filemacro })
+    else
+      discovery_list = { "data" => [ "{##{MACRONAME}}" => system['@odata.id'] , "{#FILENAME}" => filemacro ] }
+    end
+  end
+elsif TYPE == "C"
+  list['Members'].each do |storage|
+    filemacro = file_name(storage['@odata.id'])
+
+    filefinal=[LOCALPATH,filemacro].join('')
+
+    disks = URI.parse(["https://",HOST,storage['@odata.id']].join(''))
+    request = Net::HTTP::Get.new(disks)
+    request.basic_auth(USER, PASS)
+
+    response = Net::HTTP.start(disks.hostname, disks.port, :timeout => 60, :use_ssl => disks.scheme == "https", :verify_mode => OpenSSL::SSL::VERIFY_NONE) do |https|
+      https.request(request)
+    end
+
+    disklist = JSON.parse(response.body)
+
+    if File.file?("#{filefinal}")
+      file = File.delete("#{filefinal}")
+    end
+
+    open("#{filefinal}","w") do |f|
+      f.write(JSON.pretty_generate(disklist))
+    end
+
+    disklist['Devices'].each do |disk|
+      if discovery_list["data"]
+        discovery_list["data"].push({ "{##{MACRONAME}}" => disk['Name'] , "{#FILENAME}" => filemacro })
+      else
+        discovery_list = { "data" => [ "{##{MACRONAME}}" => disk['Name'] , "{#FILENAME}" => filemacro ] }
+      end
+    end
+  end
+elsif TYPE == "D"
+  list['Temperatures'].each do |thermal|
+    filemacro = file_name(thermal['@odata.id'])
+    if discovery_list["data"]
+      discovery_list["data"].push({ "{##{MACRONAME}}" => thermal['@odata.id'] , "{#FILENAME}" => filemacro, "{#NAME}" => thermal['Name'] })
+    else
+      discovery_list = { "data" => [ "{##{MACRONAME}}" => thermal['@odata.id'] , "{#FILENAME}" => filemacro, "{#NAME}" => thermal['Name']] }
+    end
+  end
+elsif TYPE == "G"
+  list['Fans'].each do |thermal|
+    filemacro = file_name(thermal['@odata.id'])
+    if discovery_list["data"]
+      discovery_list["data"].push({ "{##{MACRONAME}}" => thermal['@odata.id'] , "{#FILENAME}" => filemacro, "{#NAME}" => thermal['Name'] })
+    else
+      discovery_list = { "data" => [ "{##{MACRONAME}}" => thermal['@odata.id'] , "{#FILENAME}" => filemacro, "{#NAME}" => thermal['Name']] }
+    end
+  end
+elsif TYPE == "E"
+  list['Voltages'].each do |thermal|
+    filemacro = file_name(thermal['@odata.id'])
+    if discovery_list["data"]
+      discovery_list["data"].push({ "{##{MACRONAME}}" => thermal['@odata.id'] , "{#FILENAME}" => filemacro, "{#NAME}" => thermal['Name'] })
+    else
+      discovery_list = { "data" => [ "{##{MACRONAME}}" => thermal['@odata.id'] , "{#FILENAME}" => filemacro, "{#NAME}" => thermal['Name']] }
+    end
+  end
+elsif TYPE == "F"
+  list['Members'].each do |system|
+    filemacro = file_name(system['@odata.id'])
+    if discovery_list["data"]
+      discovery_list["data"].push({ "{##{MACRONAME}}" => system['@odata.id'] , "{#FILENAME}" => filemacro })
+    else
+      discovery_list = { "data" => [ "{##{MACRONAME}}" => system['@odata.id'] , "{#FILENAME}" => filemacro ] }
+    end
+  end
+end
+
+puts JSON.pretty_generate(discovery_list)

@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Script for checking ProxMox virtual machines backup. For use in Zabbix. Skygge@2016
+# Modified: MR_Andrew, 2018.
+# Special thanks: Max Dark, Marinero from cyberforum.ru
+
+#Variables
+
+backupconfig='/etc/pve/vzdump.cron'
+storageconfig='/etc/pve/storage.cfg'
+configdir='/etc/pve/local/qemu-server'
+
+ARR=()
+
+# Virtual machines
+virtualmachines=`find $configdir -type f -name "*.conf" |cut -d "/" -f 6|cut -d "." -f 1`
+
+# Backup Configuration for VM's
+backupallmachines=`grep '\-\-all' $backupconfig|wc -l`
+
+# Check every VM for configured backup
+if [ "$backupallmachines" = "0" ]; then
+for i in $virtualmachines
+do
+    backupenabled=1
+
+    checkbackup=`grep $i $backupconfig |sed 's/  */ /g'|cut -d "-" -f 1|cut -d " " -f 8-|tr -d "\n"`
+    if [ "$checkbackup" = "" ];then
+        # echo "VM $i is not configured for backups."
+        backupenabled=0
+    fi
+
+    checkbackupenabled=`grep $i $backupconfig | grep "#vzdump" | sed 's/  */ /g'|cut -d "-" -f 1|cut -d " " -f 8-|tr -d "\n"`
+    if ! [ "$checkbackupenabled" = "" ];then
+        # echo "Backup for VM $i is configured, but disabled."
+        backupenabled=0
+    fi
+
+ARR+=("{\"{#VM_NUMBER}\":\""$i"\", \"{#BACKUP_STATUS}\":\""$backupenabled"\"}")
+
+done
+SAVE_IFS="$IFS"
+### separator
+IFS=","
+### bash join array
+JOINED_LIST="${ARR[*]}"
+IFS="$SAVE_IFS"
+
+echo '{ "data": [' $JOINED_LIST ']}'
+fi

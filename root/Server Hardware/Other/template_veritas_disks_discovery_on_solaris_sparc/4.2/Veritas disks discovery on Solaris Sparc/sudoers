@@ -1,0 +1,4 @@
+zabbix ALL = NOPASSWD: /usr/bin/zabbix_scripts/*
+zabbix ALL = NOPASSWD: /opt/VRTS/bin/hastatus*
+zabbix ALL = NOPASSWD: /etc/zabbix/scripts/*
+zabbix ALL = NOPASSWD: /usr/sbin/vxdisk *

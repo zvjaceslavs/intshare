@@ -1,0 +1,25 @@
+required: time, perl, perl-JSON, mapr utils
+
+1.
+copy "mapr" directory to /usr/local/zabbix/etc/ on your main mapr server
+
+2.
+file check.mapr.sh:
+
+JAVA_HOME=set your way to java (JAVA_HOME=/usr/java/default by default)
+check path to maprcli (/usr/bin/maprcli in file)
+you can set permissions for temporary files in this file 
+
+3.
+copy or link file userparams_mapr.conf to your "zabbix_agentd.conf.d" directory (/etc/zabbix/zabbix_agentd.conf.d by default)
+
+4.
+copy or link file "zabbixmaprcrontab" to /etc/cron.d/
+
+5. 
+reload cron (/etc/init.d/crond reload)
+reload/restart zabbix_agentd (/etc/init.d/zabbix_agentd reload or /etc/init.d/zabbix-agentd reload or etc)
+
+6.
+on zabbix UI 
+export mapr_2014.01.28.xml template

@@ -1,0 +1,332 @@
+zabbix_export:
+  version: '5.2'
+  date: '2021-04-13T20:12:16Z'
+  groups:
+    -
+      name: Templates
+    -
+      name: Templates/Applications
+  templates:
+    -
+      template: 'Template App Nginx by Zabbix agent Enhanced'
+      name: 'Template App Nginx by Zabbix agent Enhanced'
+      description: |
+        This template extends the "Template App Nginx by Zabbix agent" template by adding :
+        * Certificate detection and verification
+        * Verification of the existence of a DNS entry for each "server_name"
+        * Analysis of virtual host logs (5XX responses)
+        * Verification of the status code of the roots of each virtual host
+      templates:
+        -
+          name: 'Template App Nginx by Zabbix agent'
+      groups:
+        -
+          name: Templates
+        -
+          name: Templates/Applications
+      applications:
+        -
+          name: DNS
+        -
+          name: Logs
+        -
+          name: TLS
+      discovery_rules:
+        -
+          name: 'Nginx Certificates discovery'
+          key: 'nginx_discovery[certificates]'
+          delay: 12h
+          lifetime: 48h
+          item_prototypes:
+            -
+              name: 'Information about {#DOMAIN} certificate'
+              type: EXTERNAL
+              key: 'cert-check["{HOST.CONN}",443,"{#DOMAIN}"]'
+              delay: 24h
+              history: 1d
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: 'Zabbix raw items'
+            -
+              name: 'Existence of {#DOMAIN} certificate'
+              type: DEPENDENT
+              key: 'cert-existence[{#DOMAIN}]'
+              delay: '0'
+              history: 7d
+              trends: '0'
+              value_type: CHAR
+              applications:
+                -
+                  name: TLS
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - $.cert
+                -
+                  type: DISCARD_UNCHANGED_HEARTBEAT
+                  parameters:
+                    - 3d
+              master_item:
+                key: 'cert-check["{HOST.CONN}",443,"{#DOMAIN}"]'
+              trigger_prototypes:
+                -
+                  expression: '{str(true)}=0'
+                  name: 'No valid {#DOMAIN} certificate'
+                  priority: HIGH
+                  manual_close: 'YES'
+            -
+              name: 'Remaining days of {#DOMAIN} certificate'
+              type: DEPENDENT
+              key: 'cert-remaining-days[{#DOMAIN}]'
+              delay: '0'
+              value_type: FLOAT
+              units: days
+              applications:
+                -
+                  name: TLS
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - $.remaining_days
+                -
+                  type: DISCARD_UNCHANGED_HEARTBEAT
+                  parameters:
+                    - 3d
+              master_item:
+                key: 'cert-check["{HOST.CONN}",443,"{#DOMAIN}"]'
+              trigger_prototypes:
+                -
+                  expression: '{last()}<15'
+                  name: 'TLS Certificate of {#DOMAIN} expires in less than 15 days'
+                  priority: AVERAGE
+                  manual_close: 'YES'
+                  dependencies:
+                    -
+                      name: 'No valid {#DOMAIN} certificate'
+                      expression: '{Template App Nginx by Zabbix agent Enhanced:cert-existence[{#DOMAIN}].str(true)}=0'
+                    -
+                      name: 'TLS Certificate of {#DOMAIN} have expired'
+                      expression: '{Template App Nginx by Zabbix agent Enhanced:cert-remaining-days[{#DOMAIN}].last()}<1'
+                -
+                  expression: '{last()}<1'
+                  name: 'TLS Certificate of {#DOMAIN} have expired'
+                  priority: HIGH
+                  manual_close: 'YES'
+            -
+              name: 'Issuer of {#DOMAIN} certificate'
+              type: DEPENDENT
+              key: 'cert-remaining-issuer[{#DOMAIN}]'
+              delay: '0'
+              history: 7d
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: TLS
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - $.issuer
+                -
+                  type: DISCARD_UNCHANGED_HEARTBEAT
+                  parameters:
+                    - 3d
+              master_item:
+                key: 'cert-check["{HOST.CONN}",443,"{#DOMAIN}"]'
+              trigger_prototypes:
+                -
+                  expression: '{diff()}=1 and {strlen(#1)}>0'
+                  name: 'The issuer of {#DOMAIN} certificate has changed'
+                  priority: INFO
+                  manual_close: 'YES'
+            -
+              name: 'Valid Hostname of {#DOMAIN} certificate'
+              type: DEPENDENT
+              key: 'cert-valid_hostname[{#DOMAIN}]'
+              delay: '0'
+              history: 7d
+              trends: '0'
+              value_type: CHAR
+              applications:
+                -
+                  name: TLS
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - $.valid_hostname
+                -
+                  type: DISCARD_UNCHANGED_HEARTBEAT
+                  parameters:
+                    - 3d
+              master_item:
+                key: 'cert-check["{HOST.CONN}",443,"{#DOMAIN}"]'
+              trigger_prototypes:
+                -
+                  expression: '{str(true)}=0'
+                  name: 'The hostname of the {#DOMAIN} certificate does not match'
+                  priority: AVERAGE
+                  dependencies:
+                    -
+                      name: 'No valid {#DOMAIN} certificate'
+                      expression: '{Template App Nginx by Zabbix agent Enhanced:cert-existence[{#DOMAIN}].str(true)}=0'
+            -
+              name: 'HTTPS Status code for {#DOMAIN}'
+              type: DEPENDENT
+              key: 'https.request.code[{#DOMAIN}]'
+              delay: '0'
+              applications:
+                -
+                  name: Nginx
+              preprocessing:
+                -
+                  type: REGEX
+                  parameters:
+                    - '^HTTP\/.* (\d\d\d)'
+                    - \1
+                -
+                  type: DISCARD_UNCHANGED_HEARTBEAT
+                  parameters:
+                    - 1d
+              master_item:
+                key: 'https.request[{#DOMAIN}]'
+              trigger_prototypes:
+                -
+                  expression: |
+                    {last()}<200 or 
+                    {last()}>403
+                  name: '{#DOMAIN} HTTPS Status code is not normal'
+                  priority: AVERAGE
+                  manual_close: 'YES'
+            -
+              name: 'HTTPS Request to {#DOMAIN}'
+              type: HTTP_AGENT
+              key: 'https.request[{#DOMAIN}]'
+              delay: 1h
+              history: 7d
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: 'Zabbix raw items'
+              url: 'https://{#DOMAIN}/'
+              status_codes: ''
+              follow_redirects: 'NO'
+              retrieve_mode: HEADERS
+              verify_peer: 'YES'
+              verify_host: 'YES'
+        -
+          name: 'Nginx Domains discovery'
+          key: 'nginx_discovery[domains]'
+          delay: 12h
+          lifetime: 48h
+          item_prototypes:
+            -
+              name: 'DNS entry for {#DOMAIN}'
+              type: EXTERNAL
+              key: 'dns-check[{#DOMAIN}]'
+              delay: 1h
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: DNS
+              trigger_prototypes:
+                -
+                  expression: '{strlen()}<1'
+                  name: 'No DNS Entry for {#DOMAIN}'
+                  priority: AVERAGE
+            -
+              name: 'HTTP Status code for {#DOMAIN}'
+              type: DEPENDENT
+              key: 'http.request.code[{#DOMAIN}]'
+              delay: '0'
+              applications:
+                -
+                  name: Nginx
+              preprocessing:
+                -
+                  type: REGEX
+                  parameters:
+                    - '^HTTP\/.* (\d\d\d)'
+                    - \1
+                -
+                  type: DISCARD_UNCHANGED_HEARTBEAT
+                  parameters:
+                    - 1d
+              master_item:
+                key: 'http.request[{#DOMAIN}]'
+              trigger_prototypes:
+                -
+                  expression: |
+                    {last()}<200 or 
+                    {last()}>403
+                  name: '{#DOMAIN} HTTP Status code is not normal'
+                  priority: AVERAGE
+                  manual_close: 'YES'
+                  dependencies:
+                    -
+                      name: 'No DNS Entry for {#DOMAIN}'
+                      expression: '{Template App Nginx by Zabbix agent Enhanced:dns-check[{#DOMAIN}].strlen()}<1'
+            -
+              name: 'HTTP Request to {#DOMAIN}'
+              type: HTTP_AGENT
+              key: 'http.request[{#DOMAIN}]'
+              delay: 1h
+              trends: '0'
+              value_type: TEXT
+              applications:
+                -
+                  name: 'Zabbix raw items'
+              url: 'http://{#DOMAIN}/'
+              status_codes: ''
+              follow_redirects: 'NO'
+              retrieve_mode: HEADERS
+        -
+          name: 'Nginx Access Logs discovery'
+          key: 'nginx_discovery[logs]'
+          delay: 12h
+          lifetime: 48h
+          item_prototypes:
+            -
+              name: 'Number of 500 errors for {#DOMAIN}'
+              type: CALCULATED
+              key: '500errors.count[{#DOMAIN},{#PATH}]'
+              params: 'count("log[{#PATH},.*\\" 5\d\d ,,100,skip]",1m)'
+              applications:
+                -
+                  name: Logs
+              preprocessing:
+                -
+                  type: DISCARD_UNCHANGED_HEARTBEAT
+                  parameters:
+                    - 3d
+            -
+              name: '500 errors for {#DOMAIN}'
+              type: ZABBIX_ACTIVE
+              key: 'log[{#PATH},.*\" 5\d\d ,,100,skip]'
+              trends: '0'
+              value_type: LOG
+              description: 'PATH: {#PATH}'
+              applications:
+                -
+                  name: Logs
+          trigger_prototypes:
+            -
+              expression: '{Template App Nginx by Zabbix agent Enhanced:log[{#PATH},.*\" 5\d\d ,,100,skip].nodata(1m)}=0 and {Template App Nginx by Zabbix agent Enhanced:500errors.count[{#DOMAIN},{#PATH}].last()}>={$500.ERROR.RATES}'
+              name: '{#DOMAIN}: Some 500 errors'
+              priority: HIGH
+              manual_close: 'YES'
+              tags:
+                -
+                  tag: Web
+      macros:
+        -
+          macro: '{$500.ERROR.RATES}'
+          value: '10'
+          description: 'This macro is used as a threshold in 500 errors trigger.'

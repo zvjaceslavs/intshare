@@ -1,0 +1,1 @@
+1	» 	PowerSupply-[0-9]$|Power Supply [0-9]	[RESULTADO is VERDADERO]

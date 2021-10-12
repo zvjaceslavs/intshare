@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-11T14:42:05Z</date>
+    <groups>
+        <group>
+            <name>Templates Hardware</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Sun enterprise T2000 hardware</template>
+            <name>Sun enterprise T2000 hardware</name>
+            <groups>
+                <group>
+                    <name>Templates Hardware</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Hardware</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>CPU status</name>
+                    <key>sunt2000.cpu.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;32</expression>
+                            <name>CPU faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Disk 0 status</name>
+                    <key>sunt2000.disk.status[0.0.0]</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;1</expression>
+                            <name>Disk 0 faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Disk 1 status</name>
+                    <key>sunt2000.disk.status[0.1.0]</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;1</expression>
+                            <name>Disk 1 faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Disk 2 status</name>
+                    <key>sunt2000.disk.status[0.2.0]</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;1</expression>
+                            <name>Disk 2 faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Disk 3 status</name>
+                    <key>sunt2000.disk.status[0.3.0]</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;&gt;1</expression>
+                            <name>Disk 3 faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>FAN status</name>
+                    <key>sunt2000.fan.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;4</expression>
+                            <name>FAN faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>PSU status</name>
+                    <key>sunt2000.psu.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;2</expression>
+                            <name>PSU faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>MB sensors status</name>
+                    <key>sunt2000.sensors.mb_sensors</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;3</expression>
+                            <name>MB sensors faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Temperature status</name>
+                    <key>sunt2000.temp.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;6</expression>
+                            <name>Temperature faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Voltage status</name>
+                    <key>sunt2000.voltage.status</key>
+                    <delay>3600</delay>
+                    <history>7d</history>
+                    <applications>
+                        <application>
+                            <name>Hardware</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&lt;16</expression>
+                            <name>Voltage faulted</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

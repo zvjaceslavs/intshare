@@ -1,0 +1,7 @@
+1 : up
+2 : down
+3 : testing
+4 : unknown
+5 : dormant
+6 : notPresent
+7 : lowerLayerDown 

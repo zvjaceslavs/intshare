@@ -1,0 +1,69 @@
+Tested with:
+
+- Oracle VM Version 3.4.2-1384
+- Zabbix 2.4.8
+- CentOS 7.3
+
+
+This Oracle VM template can monitor the following aspects:
+
+- OVM Disk Locked
+- OVM Disks
+  Disk Name
+  Disk ID
+- OVM Disk Shareable
+- OVM Disk Size
+- OVM Disk State
+- OVM Disk Storage Array
+- OVM Disk Thin Privision
+- OVM Disk Type 
+- OVM Disk User Friendly Name
+- OVM Disk Vendor
+- OVM Disk Volume Group
+- OVM Server
+  BIOS Release
+  BIOS Vendor
+  BIOS Version
+  Cores Per Processor Socket
+  CPU Speed
+  CPU Type
+  Enabled Processor Cores
+  Free Memory
+  Free Memory %
+  Hypervisor Status
+  Maintenance Mode
+  Manufacturer
+  No Execute Flag
+  OVM Version
+  Processors
+  Product Name
+  Serial Number
+  Threads Per Core
+  Total Memory
+  Up To Date
+  Used Memory
+  CPU Iddle
+  CPU Used
+  Device Uptime
+- OVM SNMP Interface Operational Status
+- OVM SNMP Interface Traffic
+- OVM SNMP Individual Processor Core Utilization
+
+
+Graphics Included:
+- Network
+- SNMP CPU Use
+- SNMP All CPUs Cores Aggregated
+- Memory
+
+
+Triggers included:
+
+OVM SERVER -> OVM SNMP CPU Iddle: is less than 10% for 5 mins - WARNING
+OVM SERVER -> OVM SNMP CPU Iddle: is less than 5%  for 5 mins - CRITICAL
+OVM SERVER -> Free Memory %: is less than 5%  for 5 mins - WARNING
+OVM SERVER -> Free Memory %: is less than 2%  for 5 mins - CRITICAL
+OVM SERVER -> Hypervisor Status: is not "Running" - CRITICAL
+OVM SERVER -> Up To Date: is not "Yes" - WARNING
+OVM DISK STATE -> Disk State: is not ONLINE - WARNING
+OVM DISK LOCKED -> Locked State: is not "false" - WARNING

@@ -1,0 +1,12 @@
+1:offEnvOther
+2:on
+3:offAdmin
+4:offDenied
+5:offEnvPower
+6:offEnvTemp
+7:offEnvFan
+8:failed
+9:onButFanFail
+10:offCooling
+11:offConnectorRating
+12:onButInlinePowerFail 

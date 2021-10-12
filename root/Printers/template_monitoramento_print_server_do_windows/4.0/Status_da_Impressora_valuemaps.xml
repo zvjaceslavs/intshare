@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.0</version>
+    <date>2020-02-12T16:50:22Z</date>
+    <value_maps>
+        <value_map>
+            <name>Status da Impressora</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Pouco Papel</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Sem Papel</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Gaveta Aberta</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>Offline</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

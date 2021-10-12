@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2016-09-20T12:38:20Z</date>
+    <value_maps>
+        <value_map>
+            <name>Battery Status</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>unknown</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Normal</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Low</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Depleted</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>upsOutputSource</name>
+            <mappings>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>on-line</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>bypass</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>battery</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

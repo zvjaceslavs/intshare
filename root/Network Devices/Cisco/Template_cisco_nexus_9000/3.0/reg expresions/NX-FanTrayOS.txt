@@ -1,0 +1,2 @@
+	
+1	»	Fan Module-[0-9]$|Fan-[0-9]$	[RESULTADO is VERDADERO]

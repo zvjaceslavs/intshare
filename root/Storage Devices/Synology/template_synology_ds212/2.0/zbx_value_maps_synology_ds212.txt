@@ -1,0 +1,24 @@
+Synology disk status:
+1 ⇒ Normal
+2 ⇒ Initialized
+3 ⇒ NotInitialized
+4 ⇒ SystemPartitionFailed
+5 ⇒ Crashed
+
+Synology status:
+1 ⇒ Normal
+2 ⇒ Failed
+
+Synology Volume status:
+1 ⇒ Normal
+2 ⇒ Repairing
+3 ⇒ Migrating
+4 ⇒ Expanding
+5 ⇒ Deleting
+6 ⇒ Creating
+7 ⇒ RaidSyncing
+8 ⇒ RaidParityChecking
+9 ⇒ RaidAssembling
+10 ⇒ Canceling
+11 ⇒ Degrade
+12 ⇒ Crashed

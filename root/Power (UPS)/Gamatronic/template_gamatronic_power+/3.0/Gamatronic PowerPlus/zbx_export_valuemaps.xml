@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2017-03-22T07:31:37Z</date>
+    <value_maps>
+        <value_map>
+            <name>UPSBatteryFuseStatus</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>OK</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>BAD</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>UPS Battery Status</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>unknown state</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>On line (mains is present)</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>On battery (mains is not present)</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Low battery</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>The battery needs to be replaced</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>The battery is charging</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>The battery is discharging (inverter is providing load power)</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>UPS bypass circuit is active echo no battery protection is avail</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>UPS is currently performing runtime calibration (on battery)</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>UPS is offline and is not supplying power to the load</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>UPS is overloaded</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>UPS is trimming incoming voltage (called &quot;buck&quot; in some hardware</newvalue>
+                </mapping>
+                <mapping>
+                    <value>12</value>
+                    <newvalue>UPS is boosting incoming voltage</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>UPSBatteryStatus</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Passed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Low</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>UPSBatteryTemperature</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Positive</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Negativ</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>UPSCurrentDirection</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>charge</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
