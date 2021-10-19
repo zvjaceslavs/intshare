@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-<Employee name="Иван Иванов">
-<Age>25</Age>
-<Programmer>True</Programmer>
-</Employee>
-</root>

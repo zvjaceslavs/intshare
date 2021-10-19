@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export><version>5.0</version><date>2021-10-19T06:15:57Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>check if session key is valid api</template><name>check if session key is valid api</name><description>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'&#13;
+&#13;
+curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;&#13;
+&#13;
+curl -s -X POST http://127.0.0.1/zabbix/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;</description><groups><group><name>Templates/Modules</name></group></groups><applications><application><name>Session</name></application></applications><items><item><name>check session key</name><type>HTTP_AGENT</type><key>check.session.key</key><delay>30s</delay><trends>0</trends><value_type>TEXT</value_type><applications><application><name>Session</name></application></applications><preprocessing><step><type>REGEX</type><params>(html|error|result)
+\1;result=0;error=1;html=2</params></step><step><type>REGEX</type><params>(html|error|result)(?=.*;\1=(\d))
+\2</params></step></preprocessing><url>{$JSONRPC.PHP}</url><posts>{&#13;
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,&#13;
+    &quot;method&quot;: &quot;proxy.get&quot;,&#13;
+    &quot;params&quot;: {&#13;
+        &quot;output&quot;: [&quot;name&quot;]&#13;
+    },&#13;
+    &quot;auth&quot;: &quot;{$APIKEY}&quot;,&#13;
+    &quot;id&quot;: 1&#13;
+}</posts><follow_redirects>NO</follow_redirects><post_type>JSON</post_type><request_method>POST</request_method><output_format>JSON</output_format><triggers><trigger><expression>{last()}=2</expression><name>invalid url configureded for zabbix api</name><priority>DISASTER</priority><description>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'&#13;
+&#13;
+curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;</description></trigger><trigger><expression>{last()}=1</expression><name>session key now valid. http works fine</name><priority>DISASTER</priority><description>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'&#13;
+&#13;
+curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;</description></trigger></triggers></item></items></template></templates></zabbix_export>
