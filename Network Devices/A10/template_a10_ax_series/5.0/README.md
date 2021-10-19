@@ -10,6 +10,8 @@ Power Supply Discovery
 
 Power Supply Voltage Discovery
 
+
+
 ## Macros used
 
 There are no macros links in this template.

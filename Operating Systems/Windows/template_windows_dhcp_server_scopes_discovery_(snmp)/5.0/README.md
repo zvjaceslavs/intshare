@@ -13,6 +13,8 @@ Please make sure you activated SNMP monitoring in your server and that you chang
 
 Remember to add your Zabbix server IP as a permitted host in your SNMP configuration.
 
+
+
 ## Author
 
 Zilmar de Souza Junior

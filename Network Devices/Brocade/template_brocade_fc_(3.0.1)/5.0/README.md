@@ -10,6 +10,8 @@ you also need Fibre Channel Switch MIB = SW.mib ([v7.4.1b\_all\_mibs.tar.gz](htt
 
 This template is distributed under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. ### Copyright Copyright (c) Jean-Jacques Martrès ### Authors Jean-Jacques Martrès (jjmartres |at| gmail |dot| com)
 
+
+
 ## Author
 
 Jean-Jacques Martrès (original)

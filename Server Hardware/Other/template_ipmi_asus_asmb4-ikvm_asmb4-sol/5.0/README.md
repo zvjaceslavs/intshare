@@ -11,6 +11,8 @@ IPMI HW status [Fan, Temperature, Voltage], Triggers [Temperature].
 
 (The ASUS ASMB4-iKVM/ASMB4-SOL PLUS is an Intelligent Platform Management Interface (IPMI) 2.0-compliant board that allows you to monitor, control, and manage a remote server from the local or central server in your local area network (LAN).)
 
+
+
 ## Author
 
 belmih

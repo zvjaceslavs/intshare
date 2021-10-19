@@ -16,6 +16,8 @@ Current 1, Current 2, Inlet Temp, Power, Pwr Consumption, Sys Fan1 RPM, Temp, Vo
 
 Some changes and fixes.
 
+
+
 ## Author
 
 Daniel Carvalho

@@ -9,6 +9,8 @@ IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage]
 Items 30, Triggers 12, Graphs 3
 
 
+
+
 ## Author
 
 dataCore

@@ -26,6 +26,8 @@ In order to use this template, it's required to run and maintain an active sessi
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.

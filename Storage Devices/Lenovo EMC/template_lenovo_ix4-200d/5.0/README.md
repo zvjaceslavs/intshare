@@ -19,6 +19,8 @@ Template Lenovo ix4-200d
 
 [Rede](http://10.255.255.6/zabbix/applications.php?form=update&applicationid=4182&hostid=10399)
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

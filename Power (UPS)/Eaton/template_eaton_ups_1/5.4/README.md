@@ -52,6 +52,8 @@ This template was tested on zabbix 5.4.1 with Eaton 9SX3000iR and Eaton 5PX1500
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.

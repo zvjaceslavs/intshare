@@ -13,6 +13,8 @@ Graphs for IN and OUT throughput per port
 
 Adapted from the layout https://www.zabbix.com/forum/attachment.php?attachmentid=4762&d=1337691484
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|
@@ -100,7 +102,6 @@ There are no discovery rules in this template.
 |Port 01 Traffic OUT Errors|<p>Port 01 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.518<p>Update: 120</p>|
 |Port 02 Traffic OUT Errors|<p>Port 02 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.646<p>Update: 120</p>|
 |Port 03 Traffic OUT Errors|<p>Port 03 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.774<p>Update: 120</p>|
-|Port 04 Traffic OUT Errors|<p>Port 04 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.902<p>Update: 120</p>|
 |Port SFP 25 Traffic OUT|<p>Port 01 Traffic OUT</p>|`SNMP agent`|ifOutOctets.3846<p>Update: 120</p>|
 |Port 01 Speed|<p>Port 01 Speed</p>|`SNMP agent`|ifspeed.518<p>Update: 120</p>|
 |Port 02 Speed|<p>Port 02 Speed</p>|`SNMP agent`|ifspeed.646<p>Update: 120</p>|
@@ -143,7 +144,6 @@ There are no discovery rules in this template.
 |Port 18 Traffic IN|<p>Port 18 Traffic IN</p>|`SNMP agent`|ifInOctects.2694<p>Update: 120</p>|
 |Port 05 Traffic IN Errors|<p>Port 05 Traffic IN Errors</p>|`SNMP agent`|ifInErrors.1030<p>Update: 120</p>|
 |Port 23 Last Changed|<p>Port 23 Last Changed</p>|`SNMP agent`|ifLastChange.3334<p>Update: 120</p>|
-|Port 24 Last Changed|<p>Port 24 Last Changed</p>|`SNMP agent`|ifLastChange.3462<p>Update: 120</p>|
 |Port SFP 26 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.3974<p>Update: 120</p>|
 |Port 01 Status|<p>Port 01 Status</p>|`SNMP agent`|ifOperStatus.518<p>Update: 120</p>|
 |Port 03 Status|<p>Port 03 Status</p>|`SNMP agent`|ifOperStatus.774<p>Update: 120</p>|
@@ -151,6 +151,11 @@ There are no discovery rules in this template.
 |Port 07 Last Changed|<p>Port 07 Last Changed</p>|`SNMP agent`|ifLastChange.1286<p>Update: 120</p>|
 |Port 08 Last Changed|<p>Port 08 Last Changed</p>|`SNMP agent`|ifLastChange.1414<p>Update: 120</p>|
 |Port 13 Last Changed|<p>Port 13 Last Changed</p>|`SNMP agent`|ifLastChange.2054<p>Update: 120</p>|
+|Port 04 Traffic OUT Errors|<p>Port 04 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.902<p>Update: 120</p>|
+|Port 24 Last Changed|<p>Port 24 Last Changed</p>|`SNMP agent`|ifLastChange.3462<p>Update: 120</p>|
+|Port 10 Last Changed|<p>Port 10 Last Changed</p>|`SNMP agent`|ifLastChange.1670<p>Update: 120</p>|
+|Port 11 Last Changed|<p>Port 11 Last Changed</p>|`SNMP agent`|ifLastChange.1798<p>Update: 120</p>|
+|Port 12 Last Changed|<p>Port 12 Last Changed</p>|`SNMP agent`|ifLastChange.1926<p>Update: 120</p>|
 |Port 25 Traffic OUT Errors|<p>Port 25 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.3590<p>Update: 120</p>|
 |Port 13 Traffic OUT Errors|<p>Port 13 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.2054<p>Update: 120</p>|
 |Port 26 Traffic OUT Errors|<p>Port 26 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.3718<p>Update: 120</p>|
@@ -222,9 +227,6 @@ There are no discovery rules in this template.
 |Port 26 Traffic IN|<p>Port 26 Traffic IN</p>|`SNMP agent`|ifInOctects.3718<p>Update: 120</p>|
 |Port SFP 25 Traffic IN|<p>Port 01 Traffic IN</p>|`SNMP agent`|ifInOctects.3846<p>Update: 120</p>|
 |Port 06 Last Changed|<p>Port 06 Last Changed</p>|`SNMP agent`|ifLastChange.1158<p>Update: 120</p>|
-|Port 10 Last Changed|<p>Port 10 Last Changed</p>|`SNMP agent`|ifLastChange.1670<p>Update: 120</p>|
-|Port 11 Last Changed|<p>Port 11 Last Changed</p>|`SNMP agent`|ifLastChange.1798<p>Update: 120</p>|
-|Port 12 Last Changed|<p>Port 12 Last Changed</p>|`SNMP agent`|ifLastChange.1926<p>Update: 120</p>|
 |Port 14 Last Changed|<p>Port 14 Last Changed</p>|`SNMP agent`|ifLastChange.2182<p>Update: 120</p>|
 |Port 16 Last Changed|<p>Port 16 Last Changed</p>|`SNMP agent`|ifLastChange.2438<p>Update: 120</p>|
 ## Triggers

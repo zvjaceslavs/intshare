@@ -59,6 +59,8 @@ For those using Grafana, I have uploaded the dashboard to <https://grafana.com/d
 
 Edit **zabbix\_server.conf** and update value of **StartVMwareCollectors** to more than 0 and restart zabbix-server.
 
+
+
 ## Author
 
 Zabbix

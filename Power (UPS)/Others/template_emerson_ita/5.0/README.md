@@ -7,6 +7,8 @@ Includes 47 items, 1 Trigger, 8 Graphs
 
 Please set {$SNMP\_COMMUNITY} macro for host.
 
+
+
 ## Author
 
 Augusto Ribeiro

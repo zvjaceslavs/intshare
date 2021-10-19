@@ -46,6 +46,8 @@ Also monitors DSL errors and resyncs.
 
 Tested against a Cisco 887VA, should work for any other devices that has the standard ADSL OID of .1.3.6.1.2.1.10.94.1
 
+
+
 ## Author
 
 SirLagz

@@ -10,6 +10,8 @@ All connected sensors (humidity and temperature) are automaticly discovered in t
 
 This template is tested whith SensorProbe2 and SensorProbe4.
 
+
+
 ## Author
 
 Nico Wieczorek

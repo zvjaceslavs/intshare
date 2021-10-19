@@ -21,6 +21,8 @@ Itens coletados:
 * Quantidade de eventos críticos
 * Status da atualização da base
 * Último update.
+
+
 ## Author
 
 Carlos Eduardo

@@ -25,6 +25,8 @@ Template for Hikvision company NVR's (Network Video Recorder) using SNMPv2. Test
 	+ Device description
 * Mappings
 	+ HDD disk state mappings
+
+
 ## Author
 
 Omar Bayramov, David Sitnikov

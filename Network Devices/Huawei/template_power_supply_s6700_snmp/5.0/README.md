@@ -4,6 +4,8 @@
 
 Regra de Descoberta com Filtros para monitoramento de PSU na linha S6700.. Testado com S6720, S5720, S6730, S5732
 
+
+
 ## Author
 
 carlosviatroski

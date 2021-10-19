@@ -7,6 +7,8 @@ The unofficial template for Alvarion BreezeNET (testing B10, B14, B28) is a comp
 
 The template is for us and is still used. All parameters are requirements for the operation of our network and may not suit you
 
+
+
 ## Author
 
 Asert

@@ -12,8 +12,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Virtual Machines|<p>Name by which this vm is displayed. It is not guaranteed to be unique. MOB: https://esx.example.com/mob/?moid=vmwVmIdx&doPath=summary%2eguest</p>|`SNMP agent`|vmwVmDisplayName<p>Update: 3600</p>|
 |Environment discovery|<p>A unique identifier that does not persist across management restarts</p>|`SNMP agent`|vmwEnvIndex<p>Update: 3600</p>|
+|Virtual Machines|<p>Name by which this vm is displayed. It is not guaranteed to be unique. MOB: https://esx.example.com/mob/?moid=vmwVmIdx&doPath=summary%2eguest</p>|`SNMP agent`|vmwVmDisplayName<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
@@ -25,19 +25,19 @@ There are no template links in this template.
 |ESXi Build|<p>This identifier represents the most specific identifier. VIM Property: AboutInfo.build https://esx.example.com/mob/?moid=ServiceInstance&doPath=content%2eabout</p>|`SNMP agent`|vmwProdBuild.0<p>Update: 3600</p>|
 |ESXi name|<p>This product's name. VIM Property: AboutInfo.name https://esx.example.com/mob/?moid=ServiceInstance&doPath=content%2eabout</p>|`SNMP agent`|vmwProdName.0<p>Update: 3600</p>|
 |ESXi Version|<p>The product's version release identifier. Format is Major.Minor.Update VIM Property: AboutInfo.version https://esx.example.com/mob/?moid=ServiceInstance&doPath=content%2eabout</p>|`SNMP agent`|vmwProdVersion.0<p>Update: 3600</p>|
+|ESXi subsystem {#SNMPINDEX} description (LLD)|<p>Human readable description of this event</p>|`SNMP agent`|vmwEventDescription[{#SNMPINDEX}]<p>Update: 60s</p>|
+|ESXi subsystem {#SNMPINDEX} status (LLD)|<p>Last reported state of this component</p>|`SNMP agent`|vmwSubsystemStatus[{#SNMPINDEX}]<p>Update: 60s</p>|
+|ESXi subsystem {#SNMPINDEX} type (LLD)|<p>Hardware component reporting environmental state</p>|`SNMP agent`|vmwSubsystemType[{#SNMPINDEX}]<p>Update: 60s</p>|
 |VM {#SNMPVALUE} Guest OS (LLD)|<p>Operating system running on this vm. This value corresponds to the value specified when creating the VM and unless set correctly may differ from the actual OS running. Will return one of the values if set in order: Vim.Vm.GuestInfo.guestFullName Vim.Vm.GuestInfo.guestId Vim.Vm.GuestInfo.guestFamily MOB: https://esx.example.com/mob/?moid=vmwVmIdx&doPath=guest where moid = vmwVmIdx. If VMware Tools is not running, value will be of form 'E: error message'</p>|`SNMP agent`|vmwVMGuestOS.[{#SNMPINDEX}]<p>Update: 3600</p>|
 |VM {#SNMPVALUE} Guest State (LLD)|<p>Operation mode of guest operating system. Values include: running - Guest is running normally. shuttingdown - Guest has a pending shutdown command. resetting - Guest has a pending reset command. standby - Guest has a pending standby command. notrunning - Guest is not running. unknown - Guest information is not available. VIM Property: guestState MOB: https://esx.example.com/mob/?moid=vmwVmIdx&doPath=guest</p>|`SNMP agent`|vmwVMGuestState.[{#SNMPINDEX}]<p>Update: 60s</p>|
 |VM {#SNMPVALUE} Power State (LLD)|<p>Power state of the virtual machine. VIM Property: powerState MOB: https://esx.example.com/mob/?moid=vmwVmIdx&doPath=summary%2eruntime</p>|`SNMP agent`|vmwVMState.[{#SNMPINDEX}]<p>Update: 60s</p>|
 |VM {#SNMPVALUE} CPUs Number (LLD)|<p>Number of virtual CPUs assigned to this virtual machine. VIM Property: numCPU MOB: https://esx.example.com/mob/?moid=vmwVmIdx&doPath=config%2ehardware</p>|`SNMP agent`|vmwVMCPUs.[{#SNMPINDEX}]<p>Update: 60s</p>|
 |VM {#SNMPVALUE} Memory Size (LLD)|<p>Memory configured for this virtual machine. Memory > MAX Integer32 is reported as max integer32. VIM Property: memoryMB MOB: https://esx.example.com/mob/?moid=vmwVmIdx&doPath=config%2ehardware</p>|`SNMP agent`|vmwVMMemSize.[{#SNMPINDEX}]<p>Update: 60s</p>|
-|ESXi subsystem {#SNMPINDEX} description (LLD)|<p>Human readable description of this event</p>|`SNMP agent`|vmwEventDescription[{#SNMPINDEX}]<p>Update: 60s</p>|
-|ESXi subsystem {#SNMPINDEX} status (LLD)|<p>Last reported state of this component</p>|`SNMP agent`|vmwSubsystemStatus[{#SNMPINDEX}]<p>Update: 60s</p>|
-|ESXi subsystem {#SNMPINDEX} type (LLD)|<p>Hardware component reporting environmental state</p>|`SNMP agent`|vmwSubsystemType[{#SNMPINDEX}]<p>Update: 60s</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
 |Guest Tools not running on {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP OS ESXi:vmwVMGuestState.[{#SNMPINDEX}].regexp("not running")}=1</p><p>**Recovery expression**: </p>|information|
 |ESXi subsystem {#SNMPINDEX} on {HOST.NAME} status is not OK|<p>-</p>|<p>**Expression**: {Template SNMP OS ESXi:vmwSubsystemStatus[{#SNMPINDEX}].last()}<>2</p><p>**Recovery expression**: </p>|high|
-|Guest Tools not running on {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP OS ESXi:vmwVMGuestState.[{#SNMPINDEX}].regexp("not running")}=1</p><p>**Recovery expression**: </p>|information|
 |ESXi subsystem {#SNMPINDEX} on {HOST.NAME} status is not OK (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP OS ESXi:vmwSubsystemStatus[{#SNMPINDEX}].last()}<>2</p><p>**Recovery expression**: </p>|high|
+|Guest Tools not running on {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP OS ESXi:vmwVMGuestState.[{#SNMPINDEX}].regexp("not running")}=1</p><p>**Recovery expression**: </p>|information|

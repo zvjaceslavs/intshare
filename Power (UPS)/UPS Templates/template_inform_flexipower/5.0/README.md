@@ -10,6 +10,8 @@ This template was tested on Zabbix 3.4 and work for Inform Flexipower 10KVA equi
 
  
 
+
+
 ## Author
 
 Hamdi Ben Abdallah

@@ -8,6 +8,8 @@ Autor: m.beloglazov@gmail.com Template: Template D-link DES-1210-28 SNMP Version
 
 Uses SNMP LLD to discover interfaces. Items (In/Out interface traffic and other statistics, uptime, sysDescr, sysName), Screen and Graph. Trigger up/down interface.
 
+
+
 ## Author
 
 belmih

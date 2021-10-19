@@ -4,6 +4,8 @@
 
 Official VMware Guest Template from Zabbix distribution
 
+
+
 ## Author
 
 Zabbix SIA

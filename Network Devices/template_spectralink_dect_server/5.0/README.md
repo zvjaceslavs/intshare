@@ -10,6 +10,8 @@ Need to install [Spectralink MIBs](http://support.spectralink.com/resources/spec
 
 trigger *Base station is DOWN*
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -22,6 +22,8 @@ No special configuration or mibs needed. Just import the template, assign the te
 
 I have only tested this in 3.0 and above. Changes might need to be made to be compatible with earlier versions of Zabbix.
 
+
+
 ## Author
 
 Justin Pulling

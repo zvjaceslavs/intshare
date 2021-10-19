@@ -12,6 +12,8 @@ DN2800MT: Need zabbix-agent installed, using coretemp & winbond 83627ehf driver
 	  Load coretemp and w83627ehf modules in /etc/modules
 	  Based on BIOS values
 ```
+
+
 ## Author
 
 pfoo

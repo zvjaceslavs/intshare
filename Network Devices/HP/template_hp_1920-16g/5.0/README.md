@@ -7,6 +7,8 @@ Modified and updated(CPU and Memory monitor) version of
 
 https://share.zabbix.com/network\_devices/cat-hp/zabbix-2-2-hp-v1910-snmp-template
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -29,6 +31,9 @@ There are no discovery rules in this template.
 |Status port 16|<p>-</p>|`SNMP agent`|ifOperStatus.16<p>Update: 120</p>|
 |Memory total|<p>-</p>|`SNMP agent`|MemTotal<p>Update: 60</p>|
 |Uptime|<p>-</p>|`SNMP agent`|Uptime<p>Update: 60</p>|
+|Bytes Tx port 18|<p>-</p>|`SNMP agent`|ifOutOctets.18<p>Update: 120</p>|
+|Bytes Rx port 3|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 120</p>|
+|Bytes Rx port 6|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 120</p>|
 |Cpu usage|<p>Cpu usage in last 1 minute</p>|`SNMP agent`|CpuUsagePerc<p>Update: 60</p>|
 |Bytes Tx port 9|<p>-</p>|`SNMP agent`|ifOutOctets.9<p>Update: 120</p>|
 |Bytes Tx port 8|<p>-</p>|`SNMP agent`|ifOutOctets.8<p>Update: 120</p>|
@@ -78,7 +83,6 @@ There are no discovery rules in this template.
 |Memory usage|<p>-</p>|`Calculated`|MemUsageByte<p>Update: 60</p>|
 |Bytes Tx port 20|<p>-</p>|`SNMP agent`|ifOutOctets.20<p>Update: 120</p>|
 |Bytes Tx port 19|<p>-</p>|`SNMP agent`|ifOutOctets.19<p>Update: 120</p>|
-|Bytes Tx port 18|<p>-</p>|`SNMP agent`|ifOutOctets.18<p>Update: 120</p>|
 |Bytes Tx port 1|<p>-</p>|`SNMP agent`|ifOutOctets.1<p>Update: 120</p>|
 |Bytes Tx port 12|<p>-</p>|`SNMP agent`|ifOutOctets.12<p>Update: 120</p>|
 |Bytes Tx port 11|<p>-</p>|`SNMP agent`|ifOutOctets.11<p>Update: 120</p>|
@@ -92,12 +96,10 @@ There are no discovery rules in this template.
 |InErrorsFa0/1|<p>-</p>|`SNMP agent`|ifInErrors.1<p>Update: 120</p>|
 |InErrorsFa0/14|<p>-</p>|`SNMP agent`|ifInErrors.14<p>Update: 120</p>|
 |Bytes Rx port 4|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 120</p>|
-|Bytes Rx port 3|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 120</p>|
 |Bytes Rx port 2|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 120</p>|
 |Bytes Rx port 1|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 120</p>|
 |InErrorsFa0/15|<p>-</p>|`SNMP agent`|ifInErrors.15<p>Update: 120</p>|
 |InErrorsFa0/13|<p>-</p>|`SNMP agent`|ifInErrors.13<p>Update: 120</p>|
-|Bytes Rx port 6|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 120</p>|
 |InErrorsFa0/12|<p>-</p>|`SNMP agent`|ifInErrors.12<p>Update: 120</p>|
 |InErrorsFa0/11|<p>-</p>|`SNMP agent`|ifInErrors.11<p>Update: 120</p>|
 |InErrorsFa0/10|<p>-</p>|`SNMP agent`|ifInErrors.10<p>Update: 120</p>|

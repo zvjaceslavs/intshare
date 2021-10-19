@@ -37,6 +37,8 @@ This template uses http agent to get informations from [Harbor](https://goharbor
 - [View and Test the Harbor REST API via Swagger](https://goharbor.io/docs/1.10/build-customize-contribute/configure-swagger/)
 - [Zabbix - HTTP AGENT](https://www.zabbix.com/documentation/current/manual/config/items/itemtypes/http)
 ```
+
+
 ## Author
 
 Yioda

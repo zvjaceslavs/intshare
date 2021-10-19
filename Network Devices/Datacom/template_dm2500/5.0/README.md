@@ -13,6 +13,8 @@ For platforms: DM2500-4GT, DM2500-6GT
 
 Linked templates: Template SNMP Interfaces
 
+
+
 ## Author
 
 Guilherme Zamora Rodrigues

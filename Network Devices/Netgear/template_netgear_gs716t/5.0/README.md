@@ -28,6 +28,8 @@ LAGS IN/OUT traffic
 
 Informations such as uptime, sysname, sw version, serial number, model, mac address, location, IP
 
+
+
 ## Author
 
 Nicolas C.
@@ -48,11 +50,7 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Port 02 Status|<p>-</p>|`SNMP agent`|ifOperStatus.2<p>Update: 60</p>|
 |LAG26 Name|<p>-</p>|`SNMP agent`|lag.name.26<p>Update: 30</p>|
-|LAG22 Name|<p>-</p>|`SNMP agent`|lag.name.22<p>Update: 30</p>|
-|LAG 22 Status|<p>-</p>|`SNMP agent`|lag22.status<p>Update: 30</p>|
-|LAG 22 Traffic IN|<p>-</p>|`SNMP agent`|lag22.traffic.in<p>Update: 30</p>|
 |LAG 23 Traffic IN|<p>-</p>|`SNMP agent`|lag23.traffic.in<p>Update: 30</p>|
 |LAG 25 Traffic IN|<p>-</p>|`SNMP agent`|lag25.traffic.in<p>Update: 30</p>|
 |Port 14 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.14<p>Update: 60</p>|
@@ -61,6 +59,16 @@ There are no discovery rules in this template.
 |LAG14 Name|<p>-</p>|`SNMP agent`|lag.name.14<p>Update: 30</p>|
 |LAG 14 Status|<p>-</p>|`SNMP agent`|lag14.status<p>Update: 30</p>|
 |LAG 14 Traffic IN|<p>-</p>|`SNMP agent`|lag14.traffic.in<p>Update: 30</p>|
+|Port 02 Status|<p>-</p>|`SNMP agent`|ifOperStatus.2<p>Update: 60</p>|
+|LAG22 Name|<p>-</p>|`SNMP agent`|lag.name.22<p>Update: 30</p>|
+|LAG 22 Status|<p>-</p>|`SNMP agent`|lag22.status<p>Update: 30</p>|
+|LAG 22 Traffic IN|<p>-</p>|`SNMP agent`|lag22.traffic.in<p>Update: 30</p>|
+|Port 14 Status|<p>-</p>|`SNMP agent`|ifOperStatus.14<p>Update: 60</p>|
+|Port 16 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.16<p>Update: 60</p>|
+|Port 16 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.16<p>Update: 60</p>|
+|LAG3 Name|<p>-</p>|`SNMP agent`|lag.name.3<p>Update: 30</p>|
+|LAG 07 Traffic IN|<p>-</p>|`SNMP agent`|lag07.traffic.in<p>Update: 30</p>|
+|LAG 07 Traffic OUT|<p>-</p>|`SNMP agent`|lag07.traffic.out<p>Update: 30</p>|
 |LAG 14 Traffic OUT|<p>-</p>|`SNMP agent`|lag14.traffic.out<p>Update: 30</p>|
 |LAG 21 Traffic IN|<p>-</p>|`SNMP agent`|lag21.traffic.in<p>Update: 30</p>|
 |LAG 21 Traffic OUT|<p>-</p>|`SNMP agent`|lag21.traffic.out<p>Update: 30</p>|
@@ -108,7 +116,6 @@ There are no discovery rules in this template.
 |LAG 09 Traffic IN|<p>-</p>|`SNMP agent`|lag09.traffic.in<p>Update: 30</p>|
 |LAG 09 Traffic OUT|<p>-</p>|`SNMP agent`|lag09.traffic.out<p>Update: 30</p>|
 |LAG1 Name|<p>-</p>|`SNMP agent`|lag.name.1<p>Update: 30</p>|
-|LAG3 Name|<p>-</p>|`SNMP agent`|lag.name.3<p>Update: 30</p>|
 |LAG4 Name|<p>-</p>|`SNMP agent`|lag.name.4<p>Update: 30</p>|
 |LAG5 Name|<p>-</p>|`SNMP agent`|lag.name.5<p>Update: 30</p>|
 |LAG6 Name|<p>-</p>|`SNMP agent`|lag.name.6<p>Update: 30</p>|
@@ -116,7 +123,6 @@ There are no discovery rules in this template.
 |LAG8 Name|<p>-</p>|`SNMP agent`|lag.name.8<p>Update: 30</p>|
 |LAG9 Name|<p>-</p>|`SNMP agent`|lag.name.9<p>Update: 30</p>|
 |LAG10 Name|<p>-</p>|`SNMP agent`|lag.name.10<p>Update: 30</p>|
-|LAG 07 Traffic OUT|<p>-</p>|`SNMP agent`|lag07.traffic.out<p>Update: 30</p>|
 |LAG 07 Status|<p>-</p>|`SNMP agent`|lag07.status<p>Update: 30</p>|
 |LAG 10 Traffic IN|<p>-</p>|`SNMP agent`|lag10.traffic.in<p>Update: 30</p>|
 |LAG 03 Traffic OUT|<p>-</p>|`SNMP agent`|lag03.traffic.out<p>Update: 30</p>|
@@ -155,7 +161,6 @@ There are no discovery rules in this template.
 |Port 10 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.10<p>Update: 60</p>|
 |Port 10 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.10<p>Update: 60</p>|
 |Port 11 Status|<p>-</p>|`SNMP agent`|ifOperStatus.11<p>Update: 60</p>|
-|LAG 07 Traffic IN|<p>-</p>|`SNMP agent`|lag07.traffic.in<p>Update: 30</p>|
 |IP|<p>-</p>|`SNMP agent`|IP.switch<p>Update: 3600</p>|
 |LAG 25 Status|<p>-</p>|`SNMP agent`|lag25.status<p>Update: 30</p>|
 |Port 05 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.5<p>Update: 60</p>|
@@ -195,9 +200,6 @@ There are no discovery rules in this template.
 |Port 13 Status|<p>-</p>|`SNMP agent`|ifOperStatus.13<p>Update: 60</p>|
 |Port 13 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.13<p>Update: 60</p>|
 |Port 13 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.13<p>Update: 60</p>|
-|Port 14 Status|<p>-</p>|`SNMP agent`|ifOperStatus.14<p>Update: 60</p>|
-|Port 16 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.16<p>Update: 60</p>|
-|Port 16 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.16<p>Update: 60</p>|
 |LAG2 Name|<p>-</p>|`SNMP agent`|lag.name.2<p>Update: 30</p>|
 |LAG 08 Status|<p>-</p>|`SNMP agent`|lag08.status<p>Update: 30</p>|
 |LAG 08 Traffic OUT|<p>-</p>|`SNMP agent`|lag08.traffic.out<p>Update: 30</p>|

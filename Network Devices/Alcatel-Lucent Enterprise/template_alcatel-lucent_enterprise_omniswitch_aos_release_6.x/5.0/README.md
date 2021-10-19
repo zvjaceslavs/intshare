@@ -68,6 +68,8 @@ Changelog
 * 09.04.2018 - Initial release
 * 14.04.2018 - Modified the template to discover most elements dynamically (now compatible to stacked and standalone OmniSwitch units)
 * 28.04.2019 - Due to popular request, the individual PoE power consumption per port was added **(due to the use of regsub function, Zab**
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

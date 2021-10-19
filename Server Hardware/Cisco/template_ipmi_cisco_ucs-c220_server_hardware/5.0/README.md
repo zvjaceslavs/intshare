@@ -26,6 +26,8 @@ sensors and triggers:
 * Power modules status
 * other temperature sensors
 * storage status
+
+
 ## Author
 
 Dmitry Lavrukhin

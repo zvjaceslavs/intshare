@@ -40,6 +40,8 @@ OBS: Esta licença esta sobre regra do GNU.
 
  
 
+
+
 ## Author
 
 Magno Monte Cerqueira "magnopeem"
@@ -60,6 +62,48 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Tráfego de saída GigabitEthernet1/0/04|<p>-</p>|`SNMP agent`|ifOutOctets.4<p>Update: 60</p>|
+|Pacotes de saída com erro GigabitEthernet1/0/47|<p>-</p>|`SNMP agent`|ifOutErrors.47<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/03|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/02|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 60</p>|
+|Pacotes de saída com erro GigabitEthernet1/0/13|<p>-</p>|`SNMP agent`|ifOutErrors.13<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/16|<p>-</p>|`SNMP agent`|ifOutOctets.16<p>Update: 60</p>|
+|Velocidade GigaEthernet 0/23|<p>-</p>|`SNMP agent`|ifSpeed.23<p>Update: 60</p>|
+|Velocidade GigaEthernet 0/18|<p>-</p>|`SNMP agent`|ifSpeed.18<p>Update: 60</p>|
+|Velocidade GigaEthernet 0/17|<p>-</p>|`SNMP agent`|ifSpeed.17<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/21|<p>-</p>|`SNMP agent`|ifOutOctets.21<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/20|<p>-</p>|`SNMP agent`|ifOutOctets.20<p>Update: 60</p>|
+|Velocidade GigaEthernet 0/6|<p>-</p>|`SNMP agent`|ifSpeed.6<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/44|<p>-</p>|`SNMP agent`|ifOutOctets.44<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/42|<p>-</p>|`SNMP agent`|ifOutOctets.42<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/41|<p>-</p>|`SNMP agent`|ifOutOctets.41<p>Update: 60</p>|
+|Pacotes de entrada com erro GigabitEthernet1/0/07|<p>-</p>|`SNMP agent`|ifInErrors.7<p>Update: 60</p>|
+|Pacotes de entrada com erro GigabitEthernet1/0/04|<p>-</p>|`SNMP agent`|ifInErrors.4<p>Update: 60</p>|
+|Pacotes de entrada com erro GigabitEthernet1/0/01|<p>-</p>|`SNMP agent`|ifInErrors.1<p>Update: 60</p>|
+|Pacotes de entrada com erro GigabitEthernet1/0/40|<p>-</p>|`SNMP agent`|ifInErrors.40<p>Update: 60</p>|
+|Pacotes de entrada com erro GigabitEthernet1/0/28|<p>-</p>|`SNMP agent`|ifInErrors.28<p>Update: 60</p>|
+|Pacotes de entrada com erro GigabitEthernet1/0/27|<p>-</p>|`SNMP agent`|ifInErrors.27<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/41 MTU|<p>-</p>|`SNMP agent`|ifMtu.41<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/40 MTU|<p>-</p>|`SNMP agent`|ifMtu.40<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/39 MTU|<p>-</p>|`SNMP agent`|ifMtu.39<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/38 MTU|<p>-</p>|`SNMP agent`|ifMtu.38<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/37 MTU|<p>-</p>|`SNMP agent`|ifMtu.37<p>Update: 60</p>|
+|Estado operacional GigabitEthernet1/0/22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 60</p>|
+|Estado operacional GigabitEthernet1/0/20|<p>-</p>|`SNMP agent`|ifOperStatus.20<p>Update: 60</p>|
+|Estado operacional GigabitEthernet1/0/19|<p>-</p>|`SNMP agent`|ifOperStatus.19<p>Update: 60</p>|
+|Estado operacional GigabitEthernet1/0/18|<p>-</p>|`SNMP agent`|ifOperStatus.18<p>Update: 60</p>|
+|Estado operacional GigabitEthernet1/0/14|<p>-</p>|`SNMP agent`|ifOperStatus.14<p>Update: 60</p>|
+|Estado operacional GigabitEthernet1/0/13|<p>-</p>|`SNMP agent`|ifOperStatus.13<p>Update: 60</p>|
+|Tráfego de entrada GigabitEthernet1/0/46|<p>-</p>|`SNMP agent`|ifInOctets.46<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/26 MTU|<p>-</p>|`SNMP agent`|ifMtu.26<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/25 MTU|<p>-</p>|`SNMP agent`|ifMtu.25<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/24 MTU|<p>-</p>|`SNMP agent`|ifMtu.24<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/23 MTU|<p>-</p>|`SNMP agent`|ifMtu.23<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/22 MTU|<p>-</p>|`SNMP agent`|ifMtu.22<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/20 MTU|<p>-</p>|`SNMP agent`|ifMtu.20<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/19 MTU|<p>-</p>|`SNMP agent`|ifMtu.19<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/12 MTU|<p>-</p>|`SNMP agent`|ifMtu.12<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/11 MTU|<p>-</p>|`SNMP agent`|ifMtu.11<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/19|<p>-</p>|`SNMP agent`|ifOutOctets.19<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/18|<p>-</p>|`SNMP agent`|ifOutOctets.18<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/36|<p>-</p>|`SNMP agent`|ifOutOctets.36<p>Update: 60</p>|
@@ -108,17 +152,6 @@ There are no discovery rules in this template.
 |Velocidade GigaEthernet 0/8|<p>-</p>|`SNMP agent`|ifSpeed.8<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/39|<p>-</p>|`SNMP agent`|ifInErrors.39<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/05|<p>-</p>|`SNMP agent`|ifOperStatus.5<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/41 MTU|<p>-</p>|`SNMP agent`|ifMtu.41<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/40 MTU|<p>-</p>|`SNMP agent`|ifMtu.40<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/39 MTU|<p>-</p>|`SNMP agent`|ifMtu.39<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/38 MTU|<p>-</p>|`SNMP agent`|ifMtu.38<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/37 MTU|<p>-</p>|`SNMP agent`|ifMtu.37<p>Update: 60</p>|
-|Estado operacional GigabitEthernet1/0/19|<p>-</p>|`SNMP agent`|ifOperStatus.19<p>Update: 60</p>|
-|Estado operacional GigabitEthernet1/0/18|<p>-</p>|`SNMP agent`|ifOperStatus.18<p>Update: 60</p>|
-|Estado operacional GigabitEthernet1/0/14|<p>-</p>|`SNMP agent`|ifOperStatus.14<p>Update: 60</p>|
-|Estado operacional GigabitEthernet1/0/13|<p>-</p>|`SNMP agent`|ifOperStatus.13<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/12 MTU|<p>-</p>|`SNMP agent`|ifMtu.12<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/11 MTU|<p>-</p>|`SNMP agent`|ifMtu.11<p>Update: 60</p>|
 |Tempo Ligado|<p>-</p>|`SNMP agent`|system.uptime<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/1/3|<p>-</p>|`SNMP agent`|ifOutErrors.51<p>Update: 60</p>|
 |Velocidade Porta GigaEthernet 0/8 MTU|<p>-</p>|`SNMP agent`|ifMtu.8<p>Update: 60</p>|
@@ -171,7 +204,6 @@ There are no discovery rules in this template.
 |Pacotes de entrada com erro GigabitEthernet1/0/05|<p>-</p>|`SNMP agent`|ifInErrors.5<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/41|<p>-</p>|`SNMP agent`|ifInErrors.41<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/32|<p>-</p>|`SNMP agent`|ifInErrors.32<p>Update: 60</p>|
-|Pacotes de entrada com erro GigabitEthernet1/0/40|<p>-</p>|`SNMP agent`|ifInErrors.40<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/36|<p>-</p>|`SNMP agent`|ifInErrors.36<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/35|<p>-</p>|`SNMP agent`|ifInErrors.35<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/34|<p>-</p>|`SNMP agent`|ifInErrors.34<p>Update: 60</p>|
@@ -207,12 +239,6 @@ There are no discovery rules in this template.
 |Tráfego de saída GigabitEthernet1/0/26|<p>-</p>|`SNMP agent`|ifOutOctets.26<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/37|<p>-</p>|`SNMP agent`|ifOutOctets.37<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/22|<p>-</p>|`SNMP agent`|ifOutOctets.22<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/21|<p>-</p>|`SNMP agent`|ifOutOctets.21<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/20|<p>-</p>|`SNMP agent`|ifOutOctets.20<p>Update: 60</p>|
-|Velocidade GigaEthernet 0/6|<p>-</p>|`SNMP agent`|ifSpeed.6<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/44|<p>-</p>|`SNMP agent`|ifOutOctets.44<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/42|<p>-</p>|`SNMP agent`|ifOutOctets.42<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/41|<p>-</p>|`SNMP agent`|ifOutOctets.41<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/40|<p>-</p>|`SNMP agent`|ifOutOctets.40<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/29|<p>-</p>|`SNMP agent`|ifOperStatus.29<p>Update: 60</p>|
 |Tráfego de entrada GigabitEthernet1/0/07|<p>-</p>|`SNMP agent`|ifInOctets.7<p>Update: 60</p>|
@@ -226,16 +252,11 @@ There are no discovery rules in this template.
 |Pacotes de entrada com erro GigabitEthernet1/0/09|<p>-</p>|`SNMP agent`|ifInErrors.9<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/17|<p>-</p>|`SNMP agent`|ifInErrors.17<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/16|<p>-</p>|`SNMP agent`|ifInErrors.16<p>Update: 60</p>|
-|Pacotes de entrada com erro GigabitEthernet1/0/07|<p>-</p>|`SNMP agent`|ifInErrors.7<p>Update: 60</p>|
-|Pacotes de entrada com erro GigabitEthernet1/0/04|<p>-</p>|`SNMP agent`|ifInErrors.4<p>Update: 60</p>|
-|Pacotes de entrada com erro GigabitEthernet1/0/01|<p>-</p>|`SNMP agent`|ifInErrors.1<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/38|<p>-</p>|`SNMP agent`|ifInErrors.38<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/37|<p>-</p>|`SNMP agent`|ifInErrors.37<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/33|<p>-</p>|`SNMP agent`|ifInErrors.33<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/21|<p>-</p>|`SNMP agent`|ifInErrors.21<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/29|<p>-</p>|`SNMP agent`|ifInErrors.29<p>Update: 60</p>|
-|Pacotes de entrada com erro GigabitEthernet1/0/28|<p>-</p>|`SNMP agent`|ifInErrors.28<p>Update: 60</p>|
-|Pacotes de entrada com erro GigabitEthernet1/0/27|<p>-</p>|`SNMP agent`|ifInErrors.27<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/26|<p>-</p>|`SNMP agent`|ifInErrors.26<p>Update: 60</p>|
 |Velocidade Porta GigaEthernet 0/46 MTU|<p>-</p>|`SNMP agent`|ifMtu.46<p>Update: 60</p>|
 |Velocidade Porta GigaEthernet 0/44 MTU|<p>-</p>|`SNMP agent`|ifMtu.44<p>Update: 60</p>|
@@ -244,19 +265,9 @@ There are no discovery rules in this template.
 |Estado operacional GigabitEthernet1/0/04|<p>-</p>|`SNMP agent`|ifOperStatus.4<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/06|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 60</p>|
 |Velocidade Porta GigaEthernet 0/32 MTU|<p>-</p>|`SNMP agent`|ifMtu.32<p>Update: 60</p>|
-|Estado operacional GigabitEthernet1/0/22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 60</p>|
-|Estado operacional GigabitEthernet1/0/20|<p>-</p>|`SNMP agent`|ifOperStatus.20<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/16|<p>-</p>|`SNMP agent`|ifOperStatus.16<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/10|<p>-</p>|`SNMP agent`|ifOperStatus.10<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/09|<p>-</p>|`SNMP agent`|ifOperStatus.9<p>Update: 60</p>|
-|Tráfego de entrada GigabitEthernet1/0/46|<p>-</p>|`SNMP agent`|ifInOctets.46<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/26 MTU|<p>-</p>|`SNMP agent`|ifMtu.26<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/25 MTU|<p>-</p>|`SNMP agent`|ifMtu.25<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/24 MTU|<p>-</p>|`SNMP agent`|ifMtu.24<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/23 MTU|<p>-</p>|`SNMP agent`|ifMtu.23<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/22 MTU|<p>-</p>|`SNMP agent`|ifMtu.22<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/20 MTU|<p>-</p>|`SNMP agent`|ifMtu.20<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/19 MTU|<p>-</p>|`SNMP agent`|ifMtu.19<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/16|<p>-</p>|`SNMP agent`|ifOutErrors.16<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/15|<p>-</p>|`SNMP agent`|ifOutErrors.15<p>Update: 60</p>|
 |Velocidade GigaEthernet 0/30|<p>-</p>|`SNMP agent`|ifSpeed.30<p>Update: 60</p>|
@@ -305,7 +316,6 @@ There are no discovery rules in this template.
 |Pacotes de saída com erro GigabitEthernet1/0/27|<p>-</p>|`SNMP agent`|ifOutErrors.27<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/24|<p>-</p>|`SNMP agent`|ifOutErrors.24<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/05|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 60</p>|
-|Pacotes de saída com erro GigabitEthernet1/0/13|<p>-</p>|`SNMP agent`|ifOutErrors.13<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/18|<p>-</p>|`SNMP agent`|ifOutErrors.18<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/14|<p>-</p>|`SNMP agent`|ifOutErrors.14<p>Update: 60</p>|
 |Tráfego de entrada GigabitEthernet1/0/04|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 60</p>|
@@ -327,21 +337,13 @@ There are no discovery rules in this template.
 |Tráfego de saída GigabitEthernet1/0/08|<p>-</p>|`SNMP agent`|ifOutOctets.8<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/07|<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/06|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/04|<p>-</p>|`SNMP agent`|ifOutOctets.4<p>Update: 60</p>|
-|Pacotes de saída com erro GigabitEthernet1/0/47|<p>-</p>|`SNMP agent`|ifOutErrors.47<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/03|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/02|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/25|<p>-</p>|`SNMP agent`|ifOutErrors.25<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/09|<p>-</p>|`SNMP agent`|ifOutErrors.9<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/08|<p>-</p>|`SNMP agent`|ifOutErrors.8<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/14|<p>-</p>|`SNMP agent`|ifOutOctets.14<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/16|<p>-</p>|`SNMP agent`|ifOutOctets.16<p>Update: 60</p>|
-|Velocidade GigaEthernet 0/23|<p>-</p>|`SNMP agent`|ifSpeed.23<p>Update: 60</p>|
 |Velocidade GigaEthernet 0/22|<p>-</p>|`SNMP agent`|ifSpeed.22<p>Update: 60</p>|
 |Velocidade GigaEthernet 0/20|<p>-</p>|`SNMP agent`|ifSpeed.20<p>Update: 60</p>|
 |Velocidade GigaEthernet 0/19|<p>-</p>|`SNMP agent`|ifSpeed.19<p>Update: 60</p>|
-|Velocidade GigaEthernet 0/18|<p>-</p>|`SNMP agent`|ifSpeed.18<p>Update: 60</p>|
-|Velocidade GigaEthernet 0/17|<p>-</p>|`SNMP agent`|ifSpeed.17<p>Update: 60</p>|
 |Velocidade GigaEthernet 0/16|<p>-</p>|`SNMP agent`|ifSpeed.16<p>Update: 60</p>|
 |Velocidade GigaEthernet 0/14|<p>-</p>|`SNMP agent`|ifSpeed.14<p>Update: 60</p>|
 |Fan 01|<p>-</p>|`SNMP agent`|rlEnvMonFanState.67109250<p>Update: 600</p>|

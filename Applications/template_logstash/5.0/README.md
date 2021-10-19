@@ -7,6 +7,8 @@ This method uses python protobix library, and check metrics from logstash JSON f
 
 More informations and download script on: https://github.com/fredprod/logstash-zabbix
 
+
+
 ## Author
 
 fredprod

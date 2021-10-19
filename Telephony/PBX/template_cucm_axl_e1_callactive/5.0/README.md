@@ -16,6 +16,8 @@ macro for username: {$ZABBIX\_APIUSER\_UC}
 
 macro for password: {$ZABBIX\_APIPASS\_UC}
 
+
+
 ## Author
 
 Andrey

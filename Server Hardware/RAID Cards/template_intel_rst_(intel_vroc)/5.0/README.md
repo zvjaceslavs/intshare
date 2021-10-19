@@ -13,6 +13,8 @@ Instuctions is on github page
 
 <https://github.com/mykolq/zabbix_intel_rst_template>
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

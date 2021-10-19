@@ -4,7 +4,9 @@
 
 LLD for Cards, Onus and Interfaces
 Traps
-PWR## Author
+PWR
+
+## Author
 
 Pedro Pilla de Azevedo e Souza
 
@@ -90,7 +92,9 @@ There are no macros links in this template.
 
 LLD for Cards, Onus and Interfaces
 Traps
-PWR## Author
+PWR
+
+## Author
 
 Pedro Pilla de Azevedo e Souza
 
@@ -123,7 +127,9 @@ There are no triggers in this template.
 
 LLD for Cards, Onus and Interfaces
 Traps
-PWR## Author
+PWR
+
+## Author
 
 Pedro Pilla de Azevedo e Souza
 

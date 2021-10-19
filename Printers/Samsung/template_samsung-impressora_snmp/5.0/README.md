@@ -67,6 +67,8 @@ Entre outros...
 
 Como sou novo com Zabbix, esse é meu primeiro template, resolvi compartilhar e contribuir com a comunidade.
 
+
+
 ## Author
 
 Thomas Henrique Lage

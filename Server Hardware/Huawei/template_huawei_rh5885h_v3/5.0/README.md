@@ -103,6 +103,8 @@ Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administra
 
 MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/huawei/RH5885H%20V3/snmp) repository
 
+
+
 ## Author
 
 P.V. Galonza
@@ -145,19 +147,19 @@ There are no template links in this template.
 |Safe poweroff time|<p>The system safe poweroff time, the value 0 indicates non-timeout.</p>|`SNMP agent`|huawei-server.safepowerofftime<p>Update: 1h</p>|
 |System boot sequence|<p>Decide the system's first boot device. 1 - No override 2 - Force PXE 3 - Force boot from default Hard-drive 4 - Force boot from default CD/DVD 5 - Force boot from Floppy/primary removable media 6 - boot flags valid. The bit should be set to indicate that valid flag data is present. This bit may be automatically cleared based on the boot flag valid bit clearing parameter, above.(This option is read-only.) 7 - Force boot into BIOS SETUP The default value is 6 (unspecified)</p>|`SNMP agent`|huawei-server.systemBootsequence<p>Update: 1h</p>|
 |System disk partition usage threshold|<p>Percent of hard disk partition usage threshold. This value is in [0,100].</p>|`SNMP agent`|huawei-server.systemDiskPartitionUsageThre<p>Update: 10m</p>|
-|System memory usage threshold|<p>Percent of memory usage threshold. This value is in [0,100].</p>|`SNMP agent`|huawei-server.systemMemUsageThre<p>Update: 15m</p>|
 |Configuration error info|<p>Query the error information of exporting/importing all configuration of BMC , BIOS and RAID Controller. Query the error information of uploading configuration file to remote host or download configuration file from remote host. If error happened, configerrorinfo value shows the error information. If error don't happened, configerrorinfo value is null.</p>|`SNMP agent`|huawei-server.configerrorinfo<p>Update: 10m</p>|
 |CPU entire status|<p>Information about all cpu health status.</p>|`SNMP agent`|huawei-server.cpuEntireStatus<p>Update: 5m</p>|
 |System CPU usage threshold|<p>Percent of CPU usage threshold. This value is in [0,100].</p>|`SNMP agent`|huawei-server.systemCpuUsageThre<p>Update: 10m</p>|
 |System GUID|<p>The GUID is hex string such as ********-****-****-****-************.</p>|`SNMP agent`|huawei-server.systemGuid<p>Update: 6h</p>|
 |Device location info|<p>The deviceLocationInfo between 0 and 64 characters. Default value is server room.</p>|`SNMP agent`|huawei-server.deviceLocationInfo<p>Update: 6h</p>|
 |Device owner ID|<p>The device owner ID, maxlength is 64 characters</p>|`SNMP agent`|huawei-server.deviceOwnerID<p>Update: 6h</p>|
-|Device serial number|<p>The device serial number value between 1 to 63 characters.</p>|`SNMP agent`|huawei-server.deviceSerialNo<p>Update: 6h</p>|
 |Host name|<p>The host name between 1 to 64 characters. Supported characters: 0-9 a-z A-Z - ('-' is not allowed to be the first/last character). Default value is huawei.</p>|`SNMP agent`|huawei-server.hostName<p>Update: 6h</p>|
 |System disk portition usage  threshold|<p>Percent of hard disk partition usage threshold. This value is in [0,100].</p>|`SNMP agent`|huawei-server.hudiskPartitionUsage<p>Update: 10m</p>|
 |Local LVM state|<p>Local KVM display state. disable 1, enable 2. Default value is enable(2).</p>|`SNMP agent`|huawei-server.localKVMState<p>Update: 5m</p>|
 |Temperature entire status|<p>Information about all temperature sensor health status.</p>|`SNMP agent`|huawei-server.temperatureEntireStatus<p>Update: 5m</p>|
 |Two factor authentication|<p>The enable state of two-factor authentication. disable 1, enable 2. Default value is disable(1).</p>|`SNMP agent`|huawei-server.twoFactorAuthenticationEnable<p>Update: 15m</p>|
+|System memory usage threshold|<p>Percent of memory usage threshold. This value is in [0,100].</p>|`SNMP agent`|huawei-server.systemMemUsageThre<p>Update: 15m</p>|
+|Device serial number|<p>The device serial number value between 1 to 63 characters.</p>|`SNMP agent`|huawei-server.deviceSerialNo<p>Update: 6h</p>|
 |Actual power supply entire mode|<p>Actual power supply entire mode.</p>|`SNMP agent`|huawei-server.actualPowerSupplyEntireMode<p>Update: 5m</p>|
 |Setted power supply entire mode|<p>Setted power supply entire mode. Power supply entire mode get: 1:loadBalance(1) 2:activeBackup(2) 3:unsupport(3) Power supply entire mode set: 1:loadBalance(1) 2:activeBackup(2)</p>|`SNMP agent`|huawei-server.settedPowerSupplyEntireMode<p>Update: 5m</p>|
 |Syslog enable|<p>The enable state of syslog. Default value is disable(1).</p>|`SNMP agent`|huawei-server.syslogEnable<p>Update: 10m</p>|

@@ -7,6 +7,8 @@ Monitoring the LAN speedtest by iperf on different server
 
 It need the script here https://git.cdp.li/polcape/zabbix/tree/master/zabbix-speedtest-lan
 
+
+
 ## Macros used
 
 There are no macros links in this template.

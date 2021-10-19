@@ -4,6 +4,8 @@
 
 Official OS Linux Template from Zabbix distribution
 
+
+
 ## Author
 
 Zabbix SIA

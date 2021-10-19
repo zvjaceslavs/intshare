@@ -29,6 +29,8 @@ Template criado para fornecer:
 
 Alerta de problema com a sonda do sensor.
 
+
+
 ## Author
 
 Guilherme Campos

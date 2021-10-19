@@ -28,6 +28,8 @@ The advsnmp.discovery external script (<https://github.com/simonkowallik/Zabbix-
 
 Last, the SNMP items reference the CHECKPOINT-MIB (chkpnt.mib, see https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit\_doGoviewsolutiondetails=&solutionid=sk90470#Check Point SNMP MIB files for all products) so it must be properly installed on your Zabbix server.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

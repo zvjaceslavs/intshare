@@ -34,7 +34,9 @@ With the script and template, you will be able to:
 Since this is designed for a small environment, the trigger for new device has no recovery expression, and should be manually disabled.
 
 
-<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Ar## Author
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Ar
+
+## Author
 
 Rafael Gustavo Gassner
 

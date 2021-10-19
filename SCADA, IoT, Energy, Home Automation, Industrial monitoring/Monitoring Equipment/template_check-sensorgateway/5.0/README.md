@@ -51,6 +51,8 @@ Critical Facilities Monitoring with **[ServersCheck.com](https://serverscheck.co
 
 
 * All SNMP values are TEXT so graphs are possibly not working
+
+
 ## Author
 
 Jean-Paul van Hamond

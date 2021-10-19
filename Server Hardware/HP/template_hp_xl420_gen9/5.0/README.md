@@ -4,6 +4,8 @@
 
 IPMI Template for the HP XL420 Gen 9 
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -35,6 +35,8 @@ zabbix             ALL = NOPASSWD: /usr/sbin/needrestart -b -r l *
   
 
 ```
+
+
 ## Author
 
 kaneo GmbH

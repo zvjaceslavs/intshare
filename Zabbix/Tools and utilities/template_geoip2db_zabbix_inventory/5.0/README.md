@@ -8,6 +8,8 @@ Template for executing https://github.com/mjtrangoni/geoip2_zabbix This populate
 
 Monitor your host locations with [GeoIP2](https://www.maxmind.com/en/home)
 
+
+
 ## Author
 
 Mario Trangoni

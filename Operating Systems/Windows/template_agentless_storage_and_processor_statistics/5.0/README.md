@@ -10,6 +10,8 @@ You can get script from: <https://github.com/13hakta/zbxwmi> - with tips and ins
 
 Requires python 3 script (check link above).
 
+
+
 ## Author
 
 Vitaly Chekryzhev

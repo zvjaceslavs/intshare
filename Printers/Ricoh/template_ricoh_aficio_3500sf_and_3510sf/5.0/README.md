@@ -9,6 +9,8 @@ Template is tested with Ricoh Aficio 3500SF and 3510SF.
 Displays toner levels, Total Pages and Triggers on low toner level.
 
 
+
+
 ## Author
 
 Renan R. Santos

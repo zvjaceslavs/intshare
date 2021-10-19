@@ -89,6 +89,8 @@ So, in discovered item names there will be a little bit strange names.
 
 <https://support.zabbix.com/browse/ZBXNEXT-3753> - renaming discovered items still unavailable
 
+
+
 ## Author
 
 Aleksey Omelyanovich

@@ -18,6 +18,8 @@ Example:
 Key: kamailio.rpc[stats,usrloc:registered\_users]  
 Pre-Processing (JSONPath): $.['result'].['usrloc.registered\_users'] 
 
+
+
 ## Author
 
 Neimar L. Avila
@@ -90,12 +92,9 @@ There are no discovery rules in this template.
 |Rcv Replies 2XX Message|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_2xx_message]<p>Update: 1m</p>|
 |Rcv Replies 2XX Update|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_2xx_update]<p>Update: 1m</p>|
 |Rcv Replies 3XX Cancel|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_3xx_cancel]<p>Update: 1m</p>|
-|Rcv Replies 3XX Invite|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_3xx_invite]<p>Update: 1m</p>|
 |Rcv Replies 2XX Cancel|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_2xx_cancel]<p>Update: 1m</p>|
 |Rcv Replies 2XX|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_2xx]<p>Update: 1m</p>|
 |Drop Requests|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:drop_requests]<p>Update: 1m</p>|
-|Rcv Replies 1XX Update|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_1xx_update]<p>Update: 1m</p>|
-|Rcv Replies 1XX Message|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_1xx_message]<p>Update: 1m</p>|
 |Rcv Replies 1XX Prack|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_1xx_prack]<p>Update: 1m</p>|
 |Rcv Replies 1XX Refer|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_1xx_refer]<p>Update: 1m</p>|
 |Rcv Replies 3XX Update|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_3xx_update]<p>Update: 1m</p>|
@@ -112,6 +111,9 @@ There are no discovery rules in this template.
 |Rcv Replies 5XX Refer|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_5xx_refer]<p>Update: 1m</p>|
 |Rcv Replies 5XX Reg|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_5xx_reg]<p>Update: 1m</p>|
 |Rcv Replies 5XX Update|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_5xx_update]<p>Update: 1m</p>|
+|Rcv Replies 3XX Invite|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_3xx_invite]<p>Update: 1m</p>|
+|Rcv Replies 1XX Update|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_1xx_update]<p>Update: 1m</p>|
+|Rcv Replies 1XX Message|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_1xx_message]<p>Update: 1m</p>|
 |500 Replies|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,sl:500_replies]<p>Update: 1m</p>|
 |Received ACKs|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,sl:received_ACKs]<p>Update: 1m</p>|
 |Sent Err Replies|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,sl:sent_err_replies]<p>Update: 1m</p>|

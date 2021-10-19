@@ -53,6 +53,8 @@ In addition to trigger triggers for all items
 
 Update: Template updated to configuration version, search and discovery items changed
 
+
+
 ## Author
 
 Cleyton Ferreira da Silva

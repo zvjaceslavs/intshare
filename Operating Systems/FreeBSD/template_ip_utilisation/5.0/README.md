@@ -32,6 +32,8 @@ UserParameter=net.ip6[*],netstat -s -p ip6 | awk '/$1/{ print $$1}'
 
 Template might work on earlier Zabbix versions, only tested for 3.0.x
 
+
+
 ## Author
 
 RedShift

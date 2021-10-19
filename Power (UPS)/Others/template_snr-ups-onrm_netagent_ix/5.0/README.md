@@ -20,6 +20,8 @@ UPS status
 UPS time on battery  
 Uptime
 
+
+
 ## Author
 
 Ilya Ostanin

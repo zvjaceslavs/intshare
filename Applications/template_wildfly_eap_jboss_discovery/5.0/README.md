@@ -36,6 +36,8 @@ Garbage Collector
 Memory Pool
 Server
 ```
+
+
 ## Author
 
 Tomas Hermanek
@@ -71,15 +73,15 @@ There are no template links in this template.
 |jvm Vendor|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmVendor]<p>Update: 1h</p>|
 |jvm Name|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmName]<p>Update: 1h</p>|
 |Process CPU Load|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",ProcessCpuLoad]<p>Update: 1m</p>|
-|Total Loaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",TotalLoadedClassCount]<p>Update: 1m</p>|
 |Non-Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.used]<p>Update: 1m</p>|
 |Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.used]<p>Update: 1m</p>|
 |Heap Memory max|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.max]<p>Update: 1h</p>|
+|Total Loaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",TotalLoadedClassCount]<p>Update: 1m</p>|
+|Wildfly monitoring interface|<p>-</p>|`Simple check`|net.tcp.service[tcp,,4447]<p>Update: 30s</p>|
 |Loaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",LoadedClassCount]<p>Update: 1m</p>|
 |Object Pending Finalization Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",ObjectPendingFinalizationCount]<p>Update: 1m</p>|
 |Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.committed]<p>Update: 1m</p>|
 |Unloaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",UnloadedClassCount]<p>Update: 1m</p>|
-|Wildfly monitoring interface|<p>-</p>|`Simple check`|net.tcp.service[tcp,,4447]<p>Update: 30s</p>|
 |Java Version|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",SpecVersion]<p>Update: 1h</p>|
 |Wildfly Web application interface|<p>-</p>|`Simple check`|net.tcp.service[http,,8080]<p>Update: 30s</p>|
 |jvm Uptime|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",Uptime]<p>Update: 1m</p>|

@@ -19,6 +19,8 @@ Be default in ES max shards per node is 1000 ({$ELASTICSEARCH.MAX\_SHARDS\_PER\_
 
 Tested on Zabbix 4.2 and Elasticsearch 7.4.2
 
+
+
 ## Author
 
 R N

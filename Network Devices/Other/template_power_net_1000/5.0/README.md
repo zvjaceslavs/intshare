@@ -32,6 +32,8 @@ Segue abaixo lista de Itens a serem Monitorados.
 * Voltagem do Ramal 2
 * Voltagem do Ramal 3
 * Voltagem do Ramal 4
+
+
 ## Author
 
 Aquinof

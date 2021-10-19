@@ -20,6 +20,8 @@ Adicione as MIBs no servidor de monitoramento antes de executar o template nos a
 <https://www.cisco.com/web/ironport/tools/email/ASYNCOS-MAIL-MIB.txt>  
 <https://www.cisco.com/web/ironport/tools/email/IRONPORT-SMI.txt>
 
+
+
 ## Author
 
 Lauro de Paula

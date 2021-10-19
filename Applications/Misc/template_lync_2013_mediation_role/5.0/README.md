@@ -8,6 +8,8 @@ This template assesses the status and overall health of services as well as the 
 
 Lync 2013 Mediation role template
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -4,6 +4,8 @@
 
 Official template from Zabbix distribution to check FTP service availability
 
+
+
 ## Author
 
 Zabbix SIA

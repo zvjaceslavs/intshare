@@ -12,6 +12,8 @@ I adjusted to have the information of the four toners (cyan / yellow / magenta /
 
 With trigers same as on the original template
 ```
+
+
 ## Author
 
 Alex Clerbois

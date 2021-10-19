@@ -22,6 +22,8 @@ There was something wrong with the uptime measurement for me with the old templa
 
 I increased the HDD temperature warning to 45 becuase my disks are always 42 degrees.
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

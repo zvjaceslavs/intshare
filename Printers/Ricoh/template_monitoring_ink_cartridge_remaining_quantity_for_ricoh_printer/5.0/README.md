@@ -21,6 +21,8 @@ Attention
 Regarding to the waste ink box, we set the item but we do not register the trigger.  
 
 
+
+
 ## Author
 
 Toshihiro_SKK

@@ -4,6 +4,8 @@
 
 Eltex LTE-8x Template with ONT discovery (Mac & Laser Level), PON I/O traffic, CPU load, Temperature, ONT Count
 
+
+
 ## Author
 
 nvrskARTIst

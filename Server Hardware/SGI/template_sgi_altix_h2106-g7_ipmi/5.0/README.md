@@ -16,6 +16,8 @@ IPMI sensors for SGI Altix H2106-G7:
 
 Some changes and fixes.
 
+
+
 ## Author
 
 Daniel Carvalho

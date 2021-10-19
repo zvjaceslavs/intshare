@@ -10,6 +10,8 @@ Created from MIB table for ALxxMP/ME and ALxxD/E links <http://www.al-wireless.c
 
 SNMP v1
 
+
+
 ## Macros used
 
 There are no macros links in this template.

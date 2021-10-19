@@ -10,6 +10,8 @@ No MIBs required. Used OIDs.
 
 No Dependencies - just enable SNMP with v2 community on the shelf and set SNMP\_COMMUNITY macro in template.
 
+
+
 ## Author
 
 Dustin Howard

@@ -8,6 +8,8 @@ Template for Trintri devices.
 
 Template 5.X for Tintri SNMP devices.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

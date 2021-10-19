@@ -43,6 +43,8 @@ Template uses vars set on host-level:
 
 * {$SNMP\_PORT}
 * {$SNMP\_COMMUNITY}
+
+
 ## Macros used
 
 There are no macros links in this template.

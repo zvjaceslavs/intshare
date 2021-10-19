@@ -16,6 +16,8 @@ Ambient Temp, FAN 1 RPM, FAN 2 RPM, Planar Temp, Power
 
 Some changes and fixes.
 
+
+
 ## Author
 
 Daniel Carvalho

@@ -38,6 +38,8 @@ Russian language. Tested on:
 * Тонер: максимальное кол-во
 * Тонер: текущее кол-во
 * Время работы с момента последнего включения
+
+
 ## Macros used
 
 There are no macros links in this template.

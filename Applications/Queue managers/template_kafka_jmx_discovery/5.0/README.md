@@ -4,6 +4,8 @@
 
 This template will use JMX discovery to get metrics about resource usage, topics stats and much more from a Kafka node.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

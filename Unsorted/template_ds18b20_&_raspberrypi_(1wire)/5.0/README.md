@@ -34,6 +34,8 @@ You also have the option to assign sensors to three different groups: 0, 1 and 2
 
 The space limit unfortunatly doesn't allow me to tell you the thresholds here, however you can quickly see them in the trigger sections.
 
+
+
 ## Author
 
 Leonard Winck

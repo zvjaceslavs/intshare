@@ -7,6 +7,8 @@ Monitoring gammu daemon statistics.
 
 ODBC connected queries into gammu database.
 
+
+
 ## Author
 
 Pavel Mlčoch

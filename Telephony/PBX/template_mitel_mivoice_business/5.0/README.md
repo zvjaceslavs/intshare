@@ -32,6 +32,8 @@ Triggers:
 
 
 * Alarm state
+
+
 ## Macros used
 
 There are no macros links in this template.

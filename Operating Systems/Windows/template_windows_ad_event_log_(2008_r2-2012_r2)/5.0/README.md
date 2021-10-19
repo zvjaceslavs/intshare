@@ -15,6 +15,8 @@ Check windows event log:
 
 + changed domain policy and cleaned security log
 
+
+
 ## Author
 
 Andrew Herasym

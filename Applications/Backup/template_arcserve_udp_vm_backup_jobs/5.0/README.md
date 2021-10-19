@@ -23,6 +23,8 @@ UserParameter=custom.arcserveudpvm[*],powershell.exe -NoProfile -ExecutionPolicy
 8. Assign the template to the Zabbix host for ARcserve UDP.
 9. Modify the macro "{$ARCSERVE\_DOMAIN}", "{$ARCSERVE\_USER}" and "{$ARCSERVE\_PASS} with the read only user login for Arcserve UDP.
 10. Check the latest value of application "ArcserveUDP Jobs".
+
+
 ## Author
 
 R.P.Wimmer

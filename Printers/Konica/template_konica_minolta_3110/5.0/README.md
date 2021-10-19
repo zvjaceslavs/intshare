@@ -4,6 +4,8 @@
 
 Template for Konica Minolta C3110
 
+
+
 ## Author
 
 cruppy

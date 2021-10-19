@@ -13,6 +13,8 @@ Reading Power usage and temperature.
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.

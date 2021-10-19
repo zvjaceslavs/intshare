@@ -42,6 +42,8 @@ I have created a very detailed template for a Rack Mounted APC PDU. I spent a co
 
 I hope you enjoy using this template as much as I have. You can tweak the Interval and History settings within each item per your needs. I have also included HOSTNAME calls in each Trigger to Identify the host that is causing the Trigger.
 
+
+
 ## Author
 
 Chad Hoye

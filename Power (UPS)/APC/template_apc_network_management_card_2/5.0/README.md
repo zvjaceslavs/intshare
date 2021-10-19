@@ -19,6 +19,8 @@ Monitors power parameters like voltage and frequency, battery charge and status,
 
 Please set {$SNMP\_COMMUNITY} macro for host.
 
+
+
 ## Author
 
 Eugene Varnavsky

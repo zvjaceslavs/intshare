@@ -4,6 +4,8 @@
 
 The template does not require additional scripts and installation of any packages on a Linux system. Low-level discovery (LLD) extracts keys from the /etc/os-release file and generates items. The template requires version 5 (or higher) of Zabbix server.
 
+
+
 ## Author
 
 vasilisc

@@ -32,6 +32,8 @@ UserParameter=gpu.used,nvidia-smi --query-gpu=memory.used --format=csv,noheader,
 UserParameter=gpu.utilisation,nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits -i 0   
  UserParameter=gpu.power,nvidia-smi --query-gpu=power.draw --format=csv,noheader,nounits -i 0
 
+
+
 ## Author
 
 Richard Kavanagh

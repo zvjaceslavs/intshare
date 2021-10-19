@@ -12,6 +12,8 @@ Required extra configuration:
 Macro for {$SNMP\_COMMUNITY}  
 UPS-MIB
 
+
+
 ## Author
 
 sim

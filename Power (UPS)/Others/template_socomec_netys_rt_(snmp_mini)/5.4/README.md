@@ -41,6 +41,8 @@ Based in [https://share.zabbix.com/power-ups/others/socomec-netys-rt-snmp-v1](po
 
 (this MIBs not worked correctly)
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

@@ -4,6 +4,8 @@
 
 Template for color printers Samsung CLP and other color Samsung models
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

@@ -10,6 +10,8 @@ Tested with Unif Switch 16 POE-150W.
 
 Information at 70°C and Warning at 90°C just like Unifi specifies in console output. The temperatures are the ones you can see in the screenshot.
 
+
+
 ## Author
 
 frauhottelmann

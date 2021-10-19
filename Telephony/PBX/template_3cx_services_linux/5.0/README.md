@@ -10,6 +10,8 @@ Template for monitoring 3cx services running on linux, this template contains tr
 
 Note: As of version 18, the tunnel has been incorporated into the media server and this item/trigger must be disabled or excluded.
 
+
+
 ## Author
 
 Antony T. N. Peronio

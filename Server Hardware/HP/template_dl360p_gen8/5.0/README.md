@@ -22,6 +22,8 @@ Graph: CPU temperature
 
 Instructions for use: Set IPMI authentication algorithm to RMCP+ and I believe you need a user with Administrator privileges. Make sure to disable all items that do not exist or you will get errors. Tested only with Zabbix 3.0.x.
 
+
+
 ## Author
 
 Tiemen Ruiten

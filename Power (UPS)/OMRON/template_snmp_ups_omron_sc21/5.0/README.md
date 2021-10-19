@@ -23,6 +23,8 @@ Items:
 * Battery Remaining %
 * Battery Temperature
 * Case Temperature
+
+
 ## Author
 
 330k

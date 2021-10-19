@@ -4,6 +4,8 @@
 
 Template for IPMI SuperMicro X9SRI Motherboard (items, triggers, graphs).
 
+
+
 ## Macros used
 
 There are no macros links in this template.

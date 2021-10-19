@@ -55,7 +55,9 @@ Requires the following macros:
 *EXAMPLE:*
 
 
-<p style="box-sizing: border-box; margin-top: 0px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 16px; margin-bottom: 0px ## Author
+<p style="box-sizing: border-box; margin-top: 0px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 16px; margin-bottom: 0px 
+
+## Author
 
 Ceillian
 

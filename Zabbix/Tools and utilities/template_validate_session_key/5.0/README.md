@@ -44,6 +44,8 @@ Install session key as macro like:
 
 {$APIKEY} = 0b0bacc6ebc339e3a89247f20a65c13c
 
+
+
 ## Macros used
 
 There are no macros links in this template.

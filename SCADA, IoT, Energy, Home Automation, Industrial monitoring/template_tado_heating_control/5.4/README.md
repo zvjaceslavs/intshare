@@ -19,6 +19,8 @@ It discovery zone. And record temperature, target temperature, humidity and heat
 
 You need to set marco {$TADO\_USER} and {$TADO\_PASSWD} to your Tado account login and password.
 
+
+
 ## Author
 
 Alan Tang

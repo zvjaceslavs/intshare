@@ -48,6 +48,8 @@ Template for monitoring Solr using json statistics. http://{USERNAME}@{PASSWORD}
 * Create host on Zabbix and apply the template (I have configured to connect to DNS name, because it will be used in {HOST.CONN})
 * On host configuration, modify macros {$SOLR\_USERNAME} and {$SOLR\_PASSWORD} with the information you created.
 * You can change macros {$PROTOCOL}, {$URI} from host and/or template to your environment
+
+
 ## Author
 
 Felipe de Moura Vieira

@@ -59,6 +59,8 @@ Install a vpn service such as OpenVPN or Zerotier on the router and your Zabbix 
 If using Zerotier add a route in my.zerotier.com for 192.168.x.1/32 or (or .0/24 if you also want to monitor devices inside the network)  
 Test on the zabbix server: *snmpwalk -c public -v 2c 192.168.x.1:161 .1.3.6.1.4.1.48690.1*
 
+
+
 ## Author
 
 Pierre Fagrell
@@ -127,7 +129,13 @@ There are no template links in this template.
 |SNMP Trap: TELTONIKA-MIB::digitalOutputNotification|<p>Digital output trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.2\s"]<p>Update: 0</p>|
 |SNMP Trap: TELTONIKA-MIB::relay0Notification|<p>Relay trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.8\s"]<p>Update: 0</p>|
 |SNMP Trap: TELTONIKA-MIB::digitalInput2Notification|<p>Digital input2 trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.12\s"]<p>Update: 0</p>|
-|SNMP Trap: TELTONIKA-MIB::connectionTypeNotification|<p>Connection type trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.1\.2\s"]<p>Update: 0</p>|
+|serial|<p>Serial number</p>|`SNMP agent`|TELTONIKA-MIB.serial<p>Update: 24h</p>|
+|signalStrength|<p>Modem signal strength</p>|`SNMP agent`|TELTONIKA-MIB.signalStrength<p>Update: 30m</p>|
+|hardwareRevision|<p>Router hardware revision</p>|`SNMP agent`|TELTONIKA-MIB.hardwareRevision<p>Update: 24h</p>|
+|doutState|<p>Digital output state</p>|`SNMP agent`|TELTONIKA-MIB.doutState<p>Update: 60m</p>|
+|SNMP Trap: TELTONIKA-MIB::digitalIioNotification|<p>Isolated Input trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.13\s"]<p>Update: 0</p>|
+|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1m</p>|
+|SNMP Trap: TELTONIKA-MIB::signalChangeNotification|<p>Signal strength trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.1\.1\s"]<p>Update: 0</p>|
 |SNMP Trap: TELTONIKA-MIB::digitalOutput2Notification|<p>Isolated Output trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.14\s"]<p>Update: 0</p>|
 |dout2State|<p>Digital output2 state</p>|`SNMP agent`|TELTONIKA-MIB.dout2State<p>Update: 30m</p>|
 |CPU utilization|<p>MIB: HOST-RESOURCES-MIB The average, over the last minute, of the percentage of time that processors was not idle. Implementations may approximate this one minute smoothing period if necessary.</p>|`SNMP agent`|system.cpu.util<p>Update: 3m</p>|
@@ -138,17 +146,11 @@ There are no template links in this template.
 |din2State|<p>Digital input2 state</p>|`SNMP agent`|TELTONIKA-MIB.din2State<p>Update: 30m</p>|
 |dinState|<p>Digital input state</p>|`SNMP agent`|TELTONIKA-MIB.dinState<p>Update: 30m</p>|
 |SNMP Bad Community Names|<p>The total number of community-based SNMP messages (for example, SNMPv1) delivered to the SNMP entity which used an SNMP community name not known to said entity.</p>|`SNMP agent`|TELTONIKA-MIB.snmpBadCommunity<p>Update: 60m</p>|
+|SNMP Trap: TELTONIKA-MIB::connectionTypeNotification|<p>Connection type trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.1\.2\s"]<p>Update: 0</p>|
+|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1m</p>|
 |GPS:numSatellites|<p>Number of satellites</p>|`SNMP agent`|TELTONIKA-MIB.numSatellites<p>Update: 60m</p>|
 |productCode|<p>Router product code</p>|`SNMP agent`|TELTONIKA-MIB.productCode<p>Update: 24h</p>|
 |routerName|<p>Router name</p>|`SNMP agent`|TELTONIKA-MIB.routerName<p>Update: 24h</p>|
-|serial|<p>Serial number</p>|`SNMP agent`|TELTONIKA-MIB.serial<p>Update: 24h</p>|
-|signalStrength|<p>Modem signal strength</p>|`SNMP agent`|TELTONIKA-MIB.signalStrength<p>Update: 30m</p>|
-|hardwareRevision|<p>Router hardware revision</p>|`SNMP agent`|TELTONIKA-MIB.hardwareRevision<p>Update: 24h</p>|
-|doutState|<p>Digital output state</p>|`SNMP agent`|TELTONIKA-MIB.doutState<p>Update: 60m</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1m</p>|
-|SNMP Trap: TELTONIKA-MIB::digitalIioNotification|<p>Isolated Input trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.13\s"]<p>Update: 0</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1m</p>|
-|SNMP Trap: TELTONIKA-MIB::signalChangeNotification|<p>Signal strength trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.1\.1\s"]<p>Update: 0</p>|
 |ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1m</p>|
 |GPS:latitude|<p>Latitutde coordinates</p>|`SNMP agent`|TELTONIKA-MIB.latitude<p>Update: 60m</p>|
 |hsAuth|<p>Authentication mode</p>|`SNMP agent`|TELTONIKA-MIB.hsAuth<p>Update: 24h</p>|

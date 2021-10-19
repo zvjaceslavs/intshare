@@ -31,6 +31,8 @@ The Template Needs as well a MACRO: {$SNMP\_MERAKI\_COMMUNITY} for the SNMP Comu
 
  
 
+
+
 ## Author
 
 amendez

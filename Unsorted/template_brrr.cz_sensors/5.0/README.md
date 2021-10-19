@@ -10,6 +10,8 @@ Temperature and himidity is supported now.
 
  
 
+
+
 ## Author
 
 Lukas Macura
@@ -48,6 +50,8 @@ Temperature and himidity is supported now.
 
 
  
+
+
 
 ## Author
 

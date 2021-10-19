@@ -13,6 +13,8 @@ A custom firmware is needed to get Zabbix agent, please follow the link.
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -82,6 +82,8 @@ UserParameter=gpu.metrics[*],sudo /opt/intel/mediasdk/tools/metrics\_monitor/\_b
 
  
 
+
+
 ## Author
 
 Kirill Savin

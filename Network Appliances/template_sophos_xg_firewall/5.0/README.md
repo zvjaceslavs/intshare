@@ -19,6 +19,8 @@ Need to set a Macro for {$SNMP\_COMMUNITY} with the community name on the Firewa
 
 It does not contain Interface Discovery, but native SNMP Interface template does the job.
 
+
+
 ## Author
 
 Paulo S. D. Vasques

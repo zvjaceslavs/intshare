@@ -39,6 +39,8 @@ cat /tmp/rndcstatus | grep recursive | awk '{ print $3 }' | cut -d '/' -f 1 > /t
 -----------------------------  
 add key for rndc in config of named
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -4,6 +4,8 @@
 
 Template for Zabbix 3.0 version. Adapted from Pahedu Pahedu's Zabbix 3.2 template.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

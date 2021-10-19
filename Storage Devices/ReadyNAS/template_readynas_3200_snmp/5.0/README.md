@@ -20,7 +20,9 @@ Disks and volumes are searching by lld.Appropriate triggers for each item are al
 I have created and tested this template vs Zabbix 3.2.4. 
 
 
-<p style="margin: 0px 0px 1.5em; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background## Author
+<p style="margin: 0px 0px 1.5em; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background
+
+## Author
 
 Nikolay Kulikov
 

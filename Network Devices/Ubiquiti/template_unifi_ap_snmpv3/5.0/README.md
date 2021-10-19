@@ -19,6 +19,8 @@ Zabbix > Macro >
 2020 April
 fixed zabbix version
 fixed virtual interface items
+
+
 ## Author
 
 Helmut Leonhardt

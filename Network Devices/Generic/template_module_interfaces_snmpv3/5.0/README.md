@@ -32,6 +32,8 @@ SNMPv3 support added, new macros:
 
 Template is just like V2 templates, but changed to support SNMPv3, please use SHA and AES128.
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

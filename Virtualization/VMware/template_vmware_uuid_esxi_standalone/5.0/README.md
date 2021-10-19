@@ -69,6 +69,8 @@ If template does not work, try using the official Zabbix VMware monitoring (e.g.
 
  
 
+
+
 ## Author
 
 Zabbix

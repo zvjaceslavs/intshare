@@ -39,6 +39,8 @@ Optional macroses that can be overloaded per device:
   
 Tested on XG106 (FW 18.0.2 MR-2) with zabbix 5.0.x (Probably can be ported to 4.0 and lower)
 
+
+
 ## Author
 
 R.P.Wimmer

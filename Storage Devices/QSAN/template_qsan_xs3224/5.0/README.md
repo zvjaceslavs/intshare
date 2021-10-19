@@ -10,6 +10,8 @@ Collects temperature data and status as text, discovers disks, pools and volumes
 
 Based on [https://share.zabbix.com/storage-devices/monitor-qsan-storage-devices-via-snmp](storage-devices/monitor-qsan-storage-devices-via-snmp) template with changes to support XS3224 (but no external scripts and OIDs are hardcoded, so no MIB is required).
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -46,6 +48,8 @@ Collects temperature data and status as text, discovers disks, pools and volumes
 
 
 Based on [https://share.zabbix.com/storage-devices/monitor-qsan-storage-devices-via-snmp](storage-devices/monitor-qsan-storage-devices-via-snmp) template with changes to support XS3224 (but no external scripts and OIDs are hardcoded, so no MIB is required).
+
+
 
 ## Macros used
 
@@ -136,6 +140,8 @@ Collects temperature data and status as text, discovers disks, pools and volumes
 
 
 Based on [https://share.zabbix.com/storage-devices/monitor-qsan-storage-devices-via-snmp](storage-devices/monitor-qsan-storage-devices-via-snmp) template with changes to support XS3224 (but no external scripts and OIDs are hardcoded, so no MIB is required).
+
+
 
 ## Macros used
 

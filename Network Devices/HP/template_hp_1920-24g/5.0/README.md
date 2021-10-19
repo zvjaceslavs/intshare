@@ -4,6 +4,8 @@
 
 Modified (added additional ports) following template https://share.zabbix.com/network\_devices/cat-hp/hp-1920-16g
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -47,8 +49,6 @@ There are no discovery rules in this template.
 |Bytes Rx port 4|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 120</p>|
 |InErrorsFa0/18|<p>-</p>|`SNMP agent`|ifInErrors.18<p>Update: 120</p>|
 |InErrorsFa0/9|<p>-</p>|`SNMP agent`|ifInErrors.9<p>Update: 120</p>|
-|InErrorsFa0/17|<p>-</p>|`SNMP agent`|ifInErrors.17<p>Update: 120</p>|
-|InErrorsFa0/10|<p>-</p>|`SNMP agent`|ifInErrors.10<p>Update: 120</p>|
 |Status port 7|<p>-</p>|`SNMP agent`|ifOperStatus.7<p>Update: 120</p>|
 |Status port 9|<p>-</p>|`SNMP agent`|ifOperStatus.9<p>Update: 120</p>|
 |Bytes Rx port 28|<p>-</p>|`SNMP agent`|ifInOctets.28<p>Update: 120</p>|
@@ -64,6 +64,9 @@ There are no discovery rules in this template.
 |Memory total|<p>-</p>|`SNMP agent`|MemTotal<p>Update: 60</p>|
 |Model|<p>-</p>|`SNMP agent`|Model<p>Update: 86400</p>|
 |Bytes Tx port 18|<p>-</p>|`SNMP agent`|ifOutOctets.18<p>Update: 120</p>|
+|Bytes Tx port 6|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 120</p>|
+|InErrorsFa0/17|<p>-</p>|`SNMP agent`|ifInErrors.17<p>Update: 120</p>|
+|InErrorsFa0/10|<p>-</p>|`SNMP agent`|ifInErrors.10<p>Update: 120</p>|
 |Bytes Tx port 10|<p>-</p>|`SNMP agent`|ifOutOctets.10<p>Update: 120</p>|
 |Bytes Tx port 11|<p>-</p>|`SNMP agent`|ifOutOctets.11<p>Update: 120</p>|
 |Bytes Tx port 12|<p>-</p>|`SNMP agent`|ifOutOctets.12<p>Update: 120</p>|
@@ -94,7 +97,6 @@ There are no discovery rules in this template.
 |Bytes Tx port 23|<p>-</p>|`SNMP agent`|ifOutOctets.23<p>Update: 120</p>|
 |Bytes Tx port 16|<p>-</p>|`SNMP agent`|ifOutOctets.16<p>Update: 120</p>|
 |OutErrorsFa0/27|<p>-</p>|`SNMP agent`|ifOutErrors.27<p>Update: 120</p>|
-|Bytes Tx port 6|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 120</p>|
 |InErrorsFa0/15|<p>-</p>|`SNMP agent`|ifInErrors.15<p>Update: 120</p>|
 |Bytes Tx port 1|<p>-</p>|`SNMP agent`|ifOutOctets.1<p>Update: 120</p>|
 |Bytes Tx port 2|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 120</p>|

@@ -28,6 +28,8 @@ UnsafeUserParameters=1
 In ZabbixAgent is installed environment  
 It will use the chrony template.  
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

@@ -47,6 +47,8 @@ Triggers for:
 * Waste Toner Near Full
 * Yellow 1%
 * Yellow < 5%
+
+
 ## Author
 
 Chr1sB89

@@ -18,6 +18,8 @@ Also creates a graph for each Shared Network that is shown on a screen
 
 You will need to put EnableRemoteCommands=1 on zabbix\_agentd.conf of the host that runs DHCPD
 ```
+
+
 ## Author
 
 Mathieu Morier

@@ -28,6 +28,8 @@ Just apply template to your box and set macro {$SNMP\_COMMUNITY} to fit your nee
 
  
 
+
+
 ## Author
 
 Lukas Macura

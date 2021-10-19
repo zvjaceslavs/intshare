@@ -25,6 +25,8 @@ Outlet Status (Dynamic Discovery)
 
 Please enjoy and vote!
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -94,6 +96,8 @@ Outlet Status (Dynamic Discovery)
 
 
 Please enjoy and vote!
+
+
 
 ## Macros used
 

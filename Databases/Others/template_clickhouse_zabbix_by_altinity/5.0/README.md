@@ -21,6 +21,8 @@ Require **clickhouse-client** and **zbx\_clickhouse\_monitor.sh** installed on z
 
 ![Clickhouse Zabbix Template](https://github.com/Altinity/clickhouse-zabbix-template/raw/master/img/dashboard.png)
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

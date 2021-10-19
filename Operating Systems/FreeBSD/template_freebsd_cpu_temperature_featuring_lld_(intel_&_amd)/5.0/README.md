@@ -50,6 +50,8 @@ zabbix\_agentd\_paths="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/
   
 
 ```
+
+
 ## Author
 
 Felicián Hoppál

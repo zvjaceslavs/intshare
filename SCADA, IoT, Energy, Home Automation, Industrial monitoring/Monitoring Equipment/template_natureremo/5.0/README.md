@@ -34,6 +34,8 @@ userparameterで/usr/local/bin/remo-json.shを参照してるので、そのパ�
 remo-json.shはZabbix-agent実行ユーザーに実行権限を付けること。
 -------------------------------------------
 
+
+
 ## Author
 
 nakaring

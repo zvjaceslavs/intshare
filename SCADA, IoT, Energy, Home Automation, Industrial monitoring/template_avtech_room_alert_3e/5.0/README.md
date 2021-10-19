@@ -10,6 +10,8 @@ To use, create a new host with an SNMP Interface pointing at the IP address of t
 
 Includes a 'high' alert trigger for temperatures in excess of 25°C and a 'critical' alert trigger for temperatures in excess of 30°C.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

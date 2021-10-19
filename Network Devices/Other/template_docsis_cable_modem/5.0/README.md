@@ -8,6 +8,8 @@ Tested on Motorola Surfboard SB5101,SB5100 SVG1202 e Cisco DPC3010
 Fix Traffic in Cisco DPC 3010 *30/12/16  
 Added 5 frequencies for docsis 3.0 * 30/12/16
 
+
+
 ## Author
 
 Édipo R. Avanzo

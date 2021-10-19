@@ -10,6 +10,8 @@ MACROS to be defined for the hosts: {$SNMP\_COMMUNITY}
 
 Possilble, it will work on earlier versions of Zabbix, but i was testing it on 4.0
 
+
+
 ## Author
 
 Fedor Katilov
@@ -42,7 +44,6 @@ There are no template links in this template.
 |Bytes Tx FE07|<p>-</p>|`SNMP agent`|ifOutOctets.4227674<p>Update: 30s</p>|
 |Admin Status port FE24|<p>-</p>|`SNMP agent`|ifAdminStatus.4227810<p>Update: 30s</p>|
 |Admin Status port GE3|<p>-</p>|`SNMP agent`|ifAdminStatus.4228057<p>Update: 30s</p>|
-|Admin Status port GE4|<p>-</p>|`SNMP agent`|ifAdminStatus.4228065<p>Update: 30s</p>|
 |Errors RX port FE01|<p>-</p>|`SNMP agent`|ifInErrors.4227626<p>Update: 30s</p>|
 |Errors RX port FE03|<p>-</p>|`SNMP agent`|ifInErrors.4227642<p>Update: 30s</p>|
 |Errors RX port FE04|<p>-</p>|`SNMP agent`|ifInErrors.4227650<p>Update: 30s</p>|
@@ -55,13 +56,10 @@ There are no template links in this template.
 |Oper status port FE15|<p>-</p>|`SNMP agent`|ifOperStatus.4227738<p>Update: 30s</p>|
 |Oper status port FE16|<p>-</p>|`SNMP agent`|ifOperStatus.4227746<p>Update: 30s</p>|
 |Bytes Tx FE12|<p>-</p>|`SNMP agent`|ifOutOctets.4227714<p>Update: 30s</p>|
-|Bytes Tx FE13|<p>-</p>|`SNMP agent`|ifOutOctets.4227722<p>Update: 30s</p>|
-|Bytes Tx FE14|<p>-</p>|`SNMP agent`|ifOutOctets.4227730<p>Update: 30s</p>|
 |Bytes Tx FE11|<p>-</p>|`SNMP agent`|ifOutOctets.4227706<p>Update: 30s</p>|
 |Bytes Tx FE09|<p>-</p>|`SNMP agent`|ifOutOctets.4227690<p>Update: 30s</p>|
 |Errors TX port FE17|<p>-</p>|`SNMP agent`|ifOutErrors.4227754<p>Update: 30s</p>|
 |Errors TX port GE2|<p>-</p>|`SNMP agent`|ifOutErrors.4228049<p>Update: 30s</p>|
-|Errors TX port FE18|<p>-</p>|`SNMP agent`|ifOutErrors.4227762<p>Update: 30s</p>|
 |Errors TX port FE23|<p>-</p>|`SNMP agent`|ifOutErrors.4227802<p>Update: 30s</p>|
 |Errors TX port FE24|<p>-</p>|`SNMP agent`|ifOutErrors.4227810<p>Update: 30s</p>|
 |Errors TX port GE1|<p>-</p>|`SNMP agent`|ifOutErrors.4228041<p>Update: 30s</p>|
@@ -100,16 +98,8 @@ There are no template links in this template.
 |Admin Status port FE03|<p>-</p>|`SNMP agent`|ifAdminStatus.4227642<p>Update: 30s</p>|
 |Admin Status port FE04|<p>-</p>|`SNMP agent`|ifAdminStatus.4227650<p>Update: 30s</p>|
 |Admin Status port FE15|<p>-</p>|`SNMP agent`|ifAdminStatus.4227738<p>Update: 30s</p>|
-|Admin Status port FE16|<p>-</p>|`SNMP agent`|ifAdminStatus.4227746<p>Update: 30s</p>|
 |Admin Status port FE17|<p>-</p>|`SNMP agent`|ifAdminStatus.4227754<p>Update: 30s</p>|
 |Errors RX port FE12|<p>-</p>|`SNMP agent`|ifInErrors.4227714<p>Update: 30s</p>|
-|Bytes Rx FE10|<p>-</p>|`SNMP agent`|ifInOctets.4227698<p>Update: 30s</p>|
-|Bytes Rx FE11|<p>-</p>|`SNMP agent`|ifInOctets.4227706<p>Update: 30s</p>|
-|Bytes Rx FE12|<p>-</p>|`SNMP agent`|ifInOctets.4227714<p>Update: 30s</p>|
-|Bytes Rx FE14|<p>-</p>|`SNMP agent`|ifInOctets.4227730<p>Update: 30s</p>|
-|Bytes Rx FE15|<p>-</p>|`SNMP agent`|ifInOctets.4227738<p>Update: 30s</p>|
-|Bytes Rx FE17|<p>-</p>|`SNMP agent`|ifInOctets.4227754<p>Update: 30s</p>|
-|Bytes Rx FE19|<p>-</p>|`SNMP agent`|ifInOctets.4227770<p>Update: 30s</p>|
 |Bytes Rx FE24|<p>-</p>|`SNMP agent`|ifInOctets.4227810<p>Update: 30s</p>|
 |Bytes Rx GE1|<p>-</p>|`SNMP agent`|ifInOctets.4228041<p>Update: 30s</p>|
 |Bytes Rx GE2|<p>-</p>|`SNMP agent`|ifInOctets.4228049<p>Update: 30s</p>|
@@ -124,7 +114,6 @@ There are no template links in this template.
 |Errors TX port FE06|<p>-</p>|`SNMP agent`|ifOutErrors.4227666<p>Update: 30s</p>|
 |Errors TX port FE07|<p>-</p>|`SNMP agent`|ifOutErrors.4227674<p>Update: 30s</p>|
 |Oper status port FE03|<p>-</p>|`SNMP agent`|ifOperStatus.4227642<p>Update: 30s</p>|
-|Oper status port FE21|<p>-</p>|`SNMP agent`|ifOperStatus.4227786<p>Update: 30s</p>|
 |Oper status port FE13|<p>-</p>|`SNMP agent`|ifOperStatus.4227722<p>Update: 30s</p>|
 |Oper status port FE18|<p>-</p>|`SNMP agent`|ifOperStatus.4227762<p>Update: 30s</p>|
 |Bytes Tx FE15|<p>-</p>|`SNMP agent`|ifOutOctets.4227738<p>Update: 30s</p>|
@@ -164,7 +153,6 @@ There are no template links in this template.
 |Bytes Tx FE22|<p>-</p>|`SNMP agent`|ifOutOctets.4227794<p>Update: 30s</p>|
 |Bytes Tx FE23|<p>-</p>|`SNMP agent`|ifOutOctets.4227802<p>Update: 30s</p>|
 |Bytes Tx FE24|<p>-</p>|`SNMP agent`|ifOutOctets.4227810<p>Update: 30s</p>|
-|Bytes Tx GE1|<p>-</p>|`SNMP agent`|ifOutOctets.4228041<p>Update: 30s</p>|
 |Errors RX port FE05|<p>-</p>|`SNMP agent`|ifInErrors.4227658<p>Update: 30s</p>|
 |Errors RX port FE06|<p>-</p>|`SNMP agent`|ifInErrors.4227666<p>Update: 30s</p>|
 |Bytes Rx GE4|<p>-</p>|`SNMP agent`|ifInOctets.4228065<p>Update: 30s</p>|
@@ -174,6 +162,20 @@ There are no template links in this template.
 |Errors RX port FE15|<p>-</p>|`SNMP agent`|ifInErrors.4227738<p>Update: 30s</p>|
 |Errors RX port FE24|<p>-</p>|`SNMP agent`|ifInErrors.4227810<p>Update: 30s</p>|
 |Errors RX port FE16|<p>-</p>|`SNMP agent`|ifInErrors.4227746<p>Update: 30s</p>|
+|Oper status port FE21|<p>-</p>|`SNMP agent`|ifOperStatus.4227786<p>Update: 30s</p>|
+|Bytes Tx FE13|<p>-</p>|`SNMP agent`|ifOutOctets.4227722<p>Update: 30s</p>|
+|Bytes Tx FE14|<p>-</p>|`SNMP agent`|ifOutOctets.4227730<p>Update: 30s</p>|
+|Bytes Tx GE1|<p>-</p>|`SNMP agent`|ifOutOctets.4228041<p>Update: 30s</p>|
+|Errors TX port FE18|<p>-</p>|`SNMP agent`|ifOutErrors.4227762<p>Update: 30s</p>|
+|Admin Status port GE4|<p>-</p>|`SNMP agent`|ifAdminStatus.4228065<p>Update: 30s</p>|
+|Admin Status port FE16|<p>-</p>|`SNMP agent`|ifAdminStatus.4227746<p>Update: 30s</p>|
+|Bytes Rx FE10|<p>-</p>|`SNMP agent`|ifInOctets.4227698<p>Update: 30s</p>|
+|Bytes Rx FE11|<p>-</p>|`SNMP agent`|ifInOctets.4227706<p>Update: 30s</p>|
+|Bytes Rx FE12|<p>-</p>|`SNMP agent`|ifInOctets.4227714<p>Update: 30s</p>|
+|Bytes Rx FE14|<p>-</p>|`SNMP agent`|ifInOctets.4227730<p>Update: 30s</p>|
+|Bytes Rx FE15|<p>-</p>|`SNMP agent`|ifInOctets.4227738<p>Update: 30s</p>|
+|Bytes Rx FE17|<p>-</p>|`SNMP agent`|ifInOctets.4227754<p>Update: 30s</p>|
+|Bytes Rx FE19|<p>-</p>|`SNMP agent`|ifInOctets.4227770<p>Update: 30s</p>|
 |CPU medium load|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.25.3.3.1.2<p>Update: 60s</p>|
 |Errors TX port FE04|<p>-</p>|`SNMP agent`|ifOutErrors.4227650<p>Update: 30s</p>|
 |Oper status port GE1|<p>-</p>|`SNMP agent`|ifOperStatus.4228041<p>Update: 30s</p>|

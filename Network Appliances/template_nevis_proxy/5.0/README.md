@@ -10,6 +10,8 @@ Not all of the items are in there but the most for admin, proxy and auth have be
 
 The template is built with discovery Rules only.
 
+
+
 ## Author
 
 Stefan Müller

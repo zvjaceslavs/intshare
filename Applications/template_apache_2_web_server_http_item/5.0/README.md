@@ -10,6 +10,8 @@ Requirements:
 
 1. Zabbix 4+
 2. Enabled mod\_status <https://www.tecmint.com/monitor-apache-web-server-load-and-page-statistics/>
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

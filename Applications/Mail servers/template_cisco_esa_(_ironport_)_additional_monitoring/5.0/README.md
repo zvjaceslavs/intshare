@@ -47,6 +47,8 @@ Tempalate contains 28 items. "HTTP agent" item (Get\_Ironport\_xml\_status) read
 * rejected\_recips
 * soft\_bounced\_evts
 * soft\_bounced\_evts\_last\_1\_min
+
+
 ## Author
 
 DK

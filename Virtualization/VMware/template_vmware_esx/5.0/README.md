@@ -11,6 +11,8 @@ Olá, template default do sistema Zabbix com algumas atualizações abaixo.
 * Criado item para gerar a porcentagem do CPU & Memória;
 * Criado Trigger de utilização de CPU & Memória conforme a porcentagem;
 * Criado Trigger de utilização de Datastores dos Hosts.
+
+
 ## Author
 
 Felipe Aquino
@@ -83,6 +85,8 @@ Olá, template default do sistema Zabbix com algumas atualizações abaixo.
 * Criado item para gerar a porcentagem do CPU & Memória;
 * Criado Trigger de utilização de CPU & Memória conforme a porcentagem;
 * Criado Trigger de utilização de Datastores dos Hosts.
+
+
 ## Author
 
 Felipe Aquino
@@ -128,6 +132,8 @@ Olá, template default do sistema Zabbix com algumas atualizações abaixo.
 * Criado item para gerar a porcentagem do CPU & Memória;
 * Criado Trigger de utilização de CPU & Memória conforme a porcentagem;
 * Criado Trigger de utilização de Datastores dos Hosts.
+
+
 ## Author
 
 Felipe Aquino

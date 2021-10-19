@@ -7,6 +7,8 @@ simple template to monitor IPMI sensors for HP blade server BL460G8
 
  
 
+
+
 ## Author
 
 Dmitry Lavrukhin

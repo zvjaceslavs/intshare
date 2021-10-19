@@ -22,6 +22,8 @@ also, MONO templates seem to work on many models (e.g MS622de/MS826de have the s
 
  **note : template edited on April 6th 2019 to fix issues with triggers, now triggering everything at 15% levels (with high capacity toners)**
 
+
+
 ## Author
 
 Olivier GRIFFIN

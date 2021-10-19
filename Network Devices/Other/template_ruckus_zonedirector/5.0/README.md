@@ -40,6 +40,8 @@ Inventory template
  1 ⇒ Up  
  2 ⇒ Down
 
+
+
 ## Author
 
 Pieter-Jan Lamont
@@ -56,8 +58,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ZoneDirector Eth|<p>-</p>|`SNMP agent`|ZDEthName[{#SNMPVALUE}]<p>Update: 3600</p>|
 |Ruckus APs|<p>-</p>|`SNMP agent`|AP-[{#SNMPVALUE}]<p>Update: 3600</p>|
+|ZoneDirector Eth|<p>-</p>|`SNMP agent`|ZDEthName[{#SNMPVALUE}]<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
@@ -73,14 +75,14 @@ There are no template links in this template.
 |ZoneDirector Total Users|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsAllNumSta<p>Update: 30</p>|
 |ZoneDirector Total Auth Clients|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsNumSta.0<p>Update: 30</p>|
 |ZoneDirector System Version|<p>-</p>|`SNMP agent`|ruckusZDSystemVersion.0<p>Update: 3600</p>|
-|Status $1 (LLD)|<p>-</p>|`SNMP agent`|ruckusZDEthStatus[{#SNMPVALUE}]<p>Update: 30</p>|
 |AP $1 : Auth Clients (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPNumSta[{#SNMPVALUE}]<p>Update: 60</p>|
 |AP Status $1 (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPStatus[{#SNMPVALUE}]<p>Update: 60</p>|
+|Status $1 (LLD)|<p>-</p>|`SNMP agent`|ruckusZDEthStatus[{#SNMPVALUE}]<p>Update: 30</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
 |Acces Point {#SNMPVALUE} is Offline|<p>-</p>|<p>**Expression**: {Template SNMP Ruckus Zonedirector:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}=0</p><p>**Recovery expression**: </p>|average|
 |Port {#SNMPVALUE} is Down|<p>-</p>|<p>**Expression**: {Template SNMP Ruckus Zonedirector:ruckusZDEthStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
-|Port {#SNMPVALUE} is Down (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Ruckus Zonedirector:ruckusZDEthStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
 |Acces Point {#SNMPVALUE} is Offline (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Ruckus Zonedirector:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}=0</p><p>**Recovery expression**: </p>|average|
+|Port {#SNMPVALUE} is Down (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Ruckus Zonedirector:ruckusZDEthStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|

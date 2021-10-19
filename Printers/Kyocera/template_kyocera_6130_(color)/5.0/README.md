@@ -52,6 +52,8 @@ Printer location
 
 Serial number
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -23,6 +23,8 @@ This template create graphs about this checks.
 
 I have created and tested it using Zabbix 4.0.5
 
+
+
 ## Author
 
 Federico Coppola

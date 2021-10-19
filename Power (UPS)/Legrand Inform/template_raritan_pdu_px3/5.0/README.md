@@ -24,6 +24,8 @@ Suggestions and corrections are welcome, see <https://github.com/BrandwatchLtd/z
 
 Inspired in [https://share.zabbix.com/power-ups/legrand-inform/raritan-px-pdu](power-ups/legrand-inform/raritan-px-pdu)
 
+
+
 ## Author
 
 Tiago TT

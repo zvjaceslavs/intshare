@@ -20,6 +20,8 @@ Triggers are created with thresholds given by gbic.
 
 Temperature, voltage, bias, serial, hardware type, fiber diameter, status, dbm, db, transmit power, receive power.
 
+
+
 ## Author
 
 Rafael Gustavo Gassner

@@ -22,6 +22,8 @@ This File gets basic components of Samsung M Series Printer.
 
 I used to do Printer Accounting and monitor Tonner Level for runners into company replace empty Tonners.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -17,6 +17,8 @@ It is tested with the Zabbix version 4 alpha and works properly.
 
  
 
+
+
 ## Author
 
 Federico Coppola

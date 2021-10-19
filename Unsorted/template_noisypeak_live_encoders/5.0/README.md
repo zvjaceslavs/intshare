@@ -7,6 +7,8 @@ Template for monitoring status NoisyPeak Live encoders over REST API.
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -13,6 +13,8 @@ It only discovered "UP"-ports.
 
 Discoveryrules for: temperatur, fan and power supply. every Port is an "Application"
 
+
+
 ## Author
 
 Stefan Krüger
@@ -81,6 +83,8 @@ It only discovered "UP"-ports.
 
 Discoveryrules for: temperatur, fan and power supply. every Port is an "Application"
 
+
+
 ## Author
 
 Stefan Krüger
@@ -127,6 +131,8 @@ It only discovered "UP"-ports.
 
 
 Discoveryrules for: temperatur, fan and power supply. every Port is an "Application"
+
+
 
 ## Author
 

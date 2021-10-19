@@ -4,6 +4,8 @@
 
 Official JMX Template from Zabbix distribution. Could be useful for many Java Applications (JMX).
 
+
+
 ## Author
 
 Zabbix SIA

@@ -78,6 +78,8 @@ about unstable connection with the UPS with the closing of the event
 
 "Батарея разряжена"
 
+
+
 ## Author
 
 Whyborn

@@ -4,6 +4,8 @@
 
 Template for Audemat FM Monitor Silver, snmp no MIBS needed
 
+
+
 ## Author
 
 I. Aliaga U.

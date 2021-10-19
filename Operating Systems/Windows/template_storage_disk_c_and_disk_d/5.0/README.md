@@ -7,6 +7,8 @@
 
 Важно не подключать диск А, меняются OID
 
+
+
 ## Macros used
 
 There are no macros links in this template.

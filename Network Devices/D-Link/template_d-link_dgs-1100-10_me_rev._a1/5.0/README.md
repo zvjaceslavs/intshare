@@ -10,6 +10,8 @@ Auto-discovery for Network Interfaces.
 
 Fills possible host inventory fields.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

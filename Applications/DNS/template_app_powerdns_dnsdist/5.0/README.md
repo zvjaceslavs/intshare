@@ -11,6 +11,8 @@ Self-contained Zabbix template to get information about PowerDNS dnsdist.
 
 For installation instructions see: [https://github.com/frei-style/zabbix-powerdns-dnsdist-template](cat-app/dns/app-powerdns-dnsdist/visit)
 
+
+
 ## Author
 
 Manuel Frei

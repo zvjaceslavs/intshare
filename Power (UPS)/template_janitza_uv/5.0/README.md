@@ -16,6 +16,8 @@ Just OIDs to Zabbix Template
 
 Maybe helpful to some.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -14,6 +14,8 @@ Corrected the error when the importing template to new zabbix versions. It teste
 
 Regards..
 
+
+
 ## Macros used
 
 There are no macros links in this template.

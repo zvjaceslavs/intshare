@@ -53,6 +53,8 @@ sed -i '/root/s/.*/&\n\+:zabbixUsername:ALL/' /etc/security/access.conf
 4. Import template "esxi\_hp\_smart\_array.xml" into Zabbix.
 5. Edit template macros {$ZABBIX\_SSH\_USER} and {$ZABBIX\_SSH\_PASS}.
 6. Assign the template to your ESXi server(s).
+
+
 ## Author
 
 Zabbix.tips

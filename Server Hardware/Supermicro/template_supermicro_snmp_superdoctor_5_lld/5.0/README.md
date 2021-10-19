@@ -62,6 +62,8 @@ For using this template you have to configure snmp and install super doctor 5.
 
 You can use template as is and make commens with your wishes or other. i will glad to see interesting ideas for upgrading this template.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

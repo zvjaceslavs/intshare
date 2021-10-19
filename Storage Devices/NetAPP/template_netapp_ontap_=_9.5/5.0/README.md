@@ -31,6 +31,8 @@ Improvements:
 
 Exported from Zabbix 5.0
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

@@ -13,6 +13,8 @@ Following properties will be monitored (to be extended):
 
 * List of installed licenses
 * License expiration
+
+
 ## Author
 
 WorkSimple GmbH

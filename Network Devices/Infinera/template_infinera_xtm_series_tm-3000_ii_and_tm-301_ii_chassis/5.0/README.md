@@ -10,6 +10,8 @@ README: <https://github.com/hacktivism-github/zbx-templates-repository/blob/mast
 
  ![Infinera XTM Series Template in Production](media/com_mtree/images/listings/m/481.png)
 
+
+
 ## Author
 
 Bruno Teixeira

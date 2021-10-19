@@ -26,6 +26,8 @@ System Manufacturer > Vendor
 
 You will need to ensure that your SNMP Macro is set correctly for the cameras (or override it at the Template or Host level) and set the RTSP\_USER and RTSP\_PASS macro's in the template to allow the RTSP check to work
 
+
+
 ## Author
 
 Justin Simmonds

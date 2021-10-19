@@ -10,6 +10,8 @@ Hi,
 
 New here, I updated the english version to french since mdaemon perf indicator are localized.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

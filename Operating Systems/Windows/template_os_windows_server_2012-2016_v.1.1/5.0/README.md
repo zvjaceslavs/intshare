@@ -14,6 +14,8 @@ All thanks to the [author](https://vk.com/simplezabbix)
 
 Видео про шаблон:<https://youtu.be/FWqFyRu8hmQ>
 
+
+
 ## Author
 
 https://vk.com/simplezabbix

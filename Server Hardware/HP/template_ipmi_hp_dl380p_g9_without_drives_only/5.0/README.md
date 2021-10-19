@@ -13,6 +13,8 @@ Please first corretly configure ipmi interface on node in zabbix web interface.
 
 This pack contains template: IPMI HP DL380p Gen9 without Drives.xml - contains all sensors except hard drives I prefer use template with noHDD option and my ipmi HDD discovery template.
 
+
+
 ## Author
 
 Dmitry Lavrukhin

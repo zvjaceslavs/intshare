@@ -25,6 +25,8 @@ Testado no Zabbix 3.0, mas deverá funcionar em todas as versões. Dúvidas ou a
 
 Site fabricante: https://dcmtech.com.br/
 
+
+
 ## Author
 
 Daniel Berton, Daniel Pechmann

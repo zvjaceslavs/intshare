@@ -56,6 +56,8 @@ HA Auto Sync- {HOST.NAME} - Disable
 
 6.2/ 6.1
 
+
+
 ## Macros used
 
 There are no macros links in this template.

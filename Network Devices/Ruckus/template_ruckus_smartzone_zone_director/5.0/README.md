@@ -25,7 +25,9 @@ Items:
 Low Level Discovery LLD for Access Points and SSIDS. Non normalized user count indexed by Group, Description and Access point name, to be used with Grafana.
 
 
-<h2 style="box-sizing: border-box; margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid #eaecef; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Sego## Author
+<h2 style="box-sizing: border-box; margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid #eaecef; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Sego
+
+## Author
 
 Rafael Gustavo Gassner
 
@@ -41,9 +43,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ssids|<p>-</p>|`SNMP agent`|ssid-[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Ruckus APs|<p>-</p>|`SNMP agent`|AP-[{#SNMPVALUE}]<p>Update: 3600</p>|
 |Ruckus APs NN|<p>Not normalized discovery, to use with Grafana.</p>|`SNMP agent`|APNN-[{#SNMPVALUE}]<p>Update: 3600</p>|
+|Ruckus APs|<p>-</p>|`SNMP agent`|AP-[{#SNMPVALUE}]<p>Update: 3600</p>|
+|ssids|<p>-</p>|`SNMP agent`|ssid-[{#SNMPVALUE}]<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
@@ -52,10 +54,7 @@ There are no template links in this template.
 |Total Users|<p>-</p>|`SNMP agent`|ruckusSZSystemStatsNumSta<p>Update: 300</p>|
 |Total Rx Bytes|<p>-</p>|`SNMP agent`|ruckusSZSystemStatsWLANTotalRxBytes<p>Update: 1200</p>|
 |Total Tx Bytes|<p>-</p>|`SNMP agent`|ruckusSZSystemStatsWLANTotalTxBytes<p>Update: 1200</p>|
-|SSID $1 : Clients (LLD)|<p>-</p>|`SNMP agent`|ruckusSZWLANNumSta[{#SNMPVALUE}]<p>Update: 300</p>|
-|SSID $1 : Name (LLD)|<p>-</p>|`SNMP agent`|ruckusSZWLANSSID[{#SNMPVALUE}]<p>Update: 21600</p>|
-|SSID $1 : Rx Bytes (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANRxBytes[{#SNMPVALUE}]<p>Update: 1200</p>|
-|SSID $1 : Tx Bytes (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANTxBytes[{#SNMPVALUE}]<p>Update: 1200</p>|
+|AP $1#{#GROUP}#{#DESCRIPTION}#{#NAME} : Auth Clients (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPNumStaNN[{#SNMPVALUE}]<p>Update: 300</p>|
 |AP $1 : Auth Clients (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPNumSta[{#SNMPVALUE}]<p>Update: 300</p>|
 |AP $1 : Status (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPStatus[{#SNMPVALUE}]<p>Update: 360</p>|
 |AP $1 : Count (LLD)|<p>-</p>|`Calculated`|ruckusZDWLANAPCount[{#SNMPVALUE}]<p>Update: 300</p>|
@@ -71,7 +70,10 @@ There are no template links in this template.
 |AP $1 : Name (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPName[{#SNMPVALUE}]<p>Update: 300</p>|
 |AP $1 : Serial (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPSerial[{#SNMPVALUE}]<p>Update: 36000</p>|
 |AP $1 : Uptime (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPUpTime[{#SNMPVALUE}]<p>Update: 3600</p>|
-|AP $1#{#GROUP}#{#DESCRIPTION}#{#NAME} : Auth Clients (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPNumStaNN[{#SNMPVALUE}]<p>Update: 300</p>|
+|SSID $1 : Clients (LLD)|<p>-</p>|`SNMP agent`|ruckusSZWLANNumSta[{#SNMPVALUE}]<p>Update: 300</p>|
+|SSID $1 : Name (LLD)|<p>-</p>|`SNMP agent`|ruckusSZWLANSSID[{#SNMPVALUE}]<p>Update: 21600</p>|
+|SSID $1 : Rx Bytes (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANRxBytes[{#SNMPVALUE}]<p>Update: 1200</p>|
+|SSID $1 : Tx Bytes (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANTxBytes[{#SNMPVALUE}]<p>Update: 1200</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

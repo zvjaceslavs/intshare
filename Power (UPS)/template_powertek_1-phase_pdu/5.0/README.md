@@ -11,6 +11,8 @@ This template is for Powertek 1-phase PDU's.
 
 It consists of 25 Items, nine triggers, and four graphs. It also has four discovery rules, with one of them having nine trigger prototypes. The discovery rules are disabled by default since they only created noise for me, but might be useful for other people.
 
+
+
 ## Author
 
 Joakim Kingström

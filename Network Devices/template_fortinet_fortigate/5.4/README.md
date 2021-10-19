@@ -20,6 +20,8 @@ For details of all collected metrics please check github.
 
 Legacy Zabbix 4.4 compatible template also available on github (v1.5)
 
+
+
 ## Author
 
 Michel Barbosa
@@ -112,10 +114,10 @@ There are no template links in this template.
 |Hard Disk Capacity|<p>FORTINET-FORTIGATE-MIB::fgSysDiskCapacity Total hard disk capacity (MB), if disk is present</p>|`SNMP agent`|fgSysDiskCapacity<p>Update: 1h</p>|
 |Hard Disk Usage|<p>FORTINET-FORTIGATE-MIB::fgSysDiskUsage Current hard disk usage (MB), if disk is present</p>|`SNMP agent`|fgSysDiskUsage<p>Update: 1m</p>|
 |Hard Disk Usage Rate|<p>FORTINET-FORTIGATE-MIB::fgSysDiskUsage Current hard disk usage (MB), if disk is present</p>|`SNMP agent`|fgSysDiskUsage.Rate<p>Update: 1m</p>|
-|Memory usage|<p>FORTINET-FORTIGATE-MIB::fgSysMemUsage Current memory utilization (percentage)</p>|`SNMP agent`|fgSysMemUsage<p>Update: 1m</p>|
 |IPv4 Active sessions|<p>FORTINET-FORTIGATE-MIB::fgSysSesCount Number of active sessions on the device</p>|`SNMP agent`|fgSysSesCount<p>Update: 1m</p>|
 |FortiGate Uptime|<p>FORTINET-FORTIGATE-MIB::fgSysUpTime The 64bit time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|fgSysUpTime<p>Update: 1m</p>|
 |SNMP agent availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 1m</p>|
+|Memory usage|<p>FORTINET-FORTIGATE-MIB::fgSysMemUsage Current memory utilization (percentage)</p>|`SNMP agent`|fgSysMemUsage<p>Update: 1m</p>|
 |Wireless Controller - Name|<p>FORTINET-FORTIGATE-MIB::fgWcInfoName Represents the name of an AC</p>|`SNMP agent`|fgWcInfoName<p>Update: 1m</p>|
 |Wireless Controller - Station Capacity|<p>FORTINET-FORTIGATE-MIB::fgWcInfoStationCapacity Represents the maximum number of stations that can be supported on the AC.</p>|`SNMP agent`|fgWcInfoStationCapacity<p>Update: 1h</p>|
 |Wireless Controller - Station Count|<p>FORTINET-FORTIGATE-MIB::fgWcInfoStationCount Represents the number of stations that are accessing the wireless service provided by the AC.</p>|`SNMP agent`|fgWcInfoStationCount<p>Update: 1m</p>|

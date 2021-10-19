@@ -158,6 +158,8 @@ EVENT general .* "General event" Normal
 ```
 FORMAT ZBXTRAP $ar $Fn $+*
 ```
+
+
 ## Author
 
 Pavol Rehak

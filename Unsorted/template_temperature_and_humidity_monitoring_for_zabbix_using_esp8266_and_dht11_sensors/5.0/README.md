@@ -20,6 +20,8 @@ What is needed:
 
 Installation process is described here: [https://github.com/michalsternadel/zbx-esp-env/blob/master/README.md](https://github.com/michalsternadel/zbx-esp-env/blob/master/README.md "Installation")
 
+
+
 ## Author
 
 Michał Sternadel

@@ -13,6 +13,8 @@ The 4.0 template has been tested on Zabbix up to 5.2 .
 
 (Removed the old template and lost the download count which was at ~5K).
 
+
+
 ## Author
 
 AceSlash

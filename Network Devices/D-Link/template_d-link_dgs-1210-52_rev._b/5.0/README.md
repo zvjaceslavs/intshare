@@ -13,6 +13,8 @@ In general will work for rev C1 devices also. But better use specific template.
 
 Not shure if it will work with PoE version of devices rev B.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -42,6 +42,8 @@ Link to additional script: https://github.com/nen-dev/zabbix-net-template/blob/m
 
  
 
+
+
 ## Author
 
 Nen

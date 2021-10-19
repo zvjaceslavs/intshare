@@ -7,6 +7,8 @@ Sometimes we are faced with an infrastructure distributed over the Internet. In 
 
 This template uses a macros with "!"-separated pairs for hosts and IP-addresses for LLD and makes a very simple ICMP checks for each host.
 
+
+
 ## Author
 
 Maxim M. Demichev

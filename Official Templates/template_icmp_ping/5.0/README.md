@@ -8,6 +8,8 @@ Template Module ICMP Ping version: 0.12
 
 Official ICMP Ping Template from Zabbix distribution. It is used to check hardware availability by ICMP.
 
+
+
 ## Author
 
 Zabbix SIA

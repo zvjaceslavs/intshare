@@ -16,6 +16,8 @@ I may add line discovery in later. But for now this template should cover everyt
 
 Enjoy and please rate!
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -17,6 +17,8 @@ ServerCheck SensorGateway.
 
 Tested in Zabbix 5.0 TLS
 
+
+
 ## Author
 
 Issayev Nursultan

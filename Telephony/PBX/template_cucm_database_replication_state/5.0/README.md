@@ -16,6 +16,8 @@ Application user name: {$ZABBIX\_APIUSER\_UC}
 
 Applicatuin user passwd: {$ZABBIX\_APIUSER\_UC}
 
+
+
 ## Macros used
 
 There are no macros links in this template.

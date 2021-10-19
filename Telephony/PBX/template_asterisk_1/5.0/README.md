@@ -32,6 +32,8 @@ astctlpermissions = 775
 
 - Import Asterisk.xml template in Zabbix. Adjust values if necessary.
 ```
+
+
 ## Author
 
 Oleg

@@ -10,6 +10,8 @@ Template provide server information, connection status, users and queue sizes, t
 
 Tested on zabbix 3.4
 
+
+
 ## Macros used
 
 There are no macros links in this template.

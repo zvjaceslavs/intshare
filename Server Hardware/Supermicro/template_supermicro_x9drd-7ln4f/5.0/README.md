@@ -10,6 +10,8 @@ It's my fist template.
 
 Warning! FAN3, FAN4, FAN6, FAN7, FAN8 disabled for me.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

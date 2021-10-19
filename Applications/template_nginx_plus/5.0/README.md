@@ -30,7 +30,9 @@ TODO: triggers
  
 
 
-<p style="font-size: 16px; box-sizing: border-box; margin-t## Macros used
+<p style="font-size: 16px; box-sizing: border-box; margin-t
+
+## Macros used
 
 |Name|Description|Default|Type|
 |----|-----------|-------|----|

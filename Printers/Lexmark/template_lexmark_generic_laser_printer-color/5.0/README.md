@@ -7,6 +7,8 @@ SNMP Template
 
 Lexmark Generic Laser Printer - Color
 
+
+
 ## Author
 
 Romulo Ribeiro Moreira

@@ -22,6 +22,8 @@ DELL MIBs required
 
 Link: https://www.dell.com/support/home/br/en/brbsdt1/drivers/driversdetails?driverId=M0KV7
 
+
+
 ## Author
 
 Geraldo Jr

@@ -46,6 +46,8 @@ Triggers
 * Device has just been restarted
 * LAN is down
 * WAN1 down
+
+
 ## Author
 
 Sean Gordon

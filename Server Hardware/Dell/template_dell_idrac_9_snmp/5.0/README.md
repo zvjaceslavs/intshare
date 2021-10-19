@@ -21,7 +21,9 @@ Lucas Afonso Kremer https://www.linkedin.com/in/lucasafonsokremer
 * #### Make sure your iDRAC is reachable from the zabbix server/proxy, test with:
 
 
-snmpstatus -v 2c -c public 192.168.0.1 Based on @endersonmaia iDRAC 7 template## Author
+snmpstatus -v 2c -c public 192.168.0.1 Based on @endersonmaia iDRAC 7 template
+
+## Author
 
 Lucas Afonso Kremer
 

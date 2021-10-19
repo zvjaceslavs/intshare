@@ -27,7 +27,9 @@ Memory board discovery
 Memory Unit discovery
 
 
-<p style="margin: 0px 0px 1.5em## Author
+<p style="margin: 0px 0px 1.5em
+
+## Author
 
 Dmitry Lavrukhin
 

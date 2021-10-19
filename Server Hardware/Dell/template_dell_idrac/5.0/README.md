@@ -7,7 +7,9 @@ Based on <https://github.com/endersonmaia/zabbix-templates/tree/master/dell/idra
 
  
  
- ## Macros used
+ 
+
+## Macros used
 
 |Name|Description|Default|Type|
 |----|-----------|-------|----|

@@ -20,6 +20,8 @@ This template parses the JSON output of AssetCacheManagerUtil for monitoring in 
 
 Requires Zabbix 3.4 and RemoteCommands=1 in the Zabbix Agent.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

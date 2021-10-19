@@ -16,6 +16,8 @@ IPMI sensors for SGI Altix C2108-G9 :
 
 Some changes and fixes.
 
+
+
 ## Author
 
 Daniel Carvalho

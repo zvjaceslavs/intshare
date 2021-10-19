@@ -29,6 +29,8 @@ device : H620-G30, I620-G30, I840-G30
 
 Repalce macro {$CLOUD\_SNMP\_COMMUNITY} with your snmp community
 
+
+
 ## Author
 
 zhangzhefeng

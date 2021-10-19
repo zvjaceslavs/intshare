@@ -4,6 +4,8 @@
 
 IPMI HW status [Fan, Temperature, Voltage, PS], Triggers [Fan, Temperature, Voltage, PS] 
 
+
+
 ## Author
 
 Daniel Pogac

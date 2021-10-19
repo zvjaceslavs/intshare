@@ -16,6 +16,8 @@ Please set macro for host.
 
 {$SNMP\_COMMUNITY} ⇒ nobreak01
 
+
+
 ## Author
 
 Wellington Martins

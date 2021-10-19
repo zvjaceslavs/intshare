@@ -12,6 +12,8 @@ SHA authpass and AES privpass are hardcoded
 DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values
 Zabbix > Template > Macros > set Username, Passwort and PrivacyPasswort
 2020 April: fixed https://github.com/kko/unifi-zabbix-snmpv3/issues/4
+
+
 ## Author
 
 Helmut Leonhardt

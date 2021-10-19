@@ -4,6 +4,8 @@
 
 The template is used to monitor health of Zabbix Proxy parts (processes, caches, connectivity with Zabbix server and etc).
 
+
+
 ## Author
 
 Zabbix SIA

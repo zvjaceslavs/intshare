@@ -10,6 +10,8 @@ I add 2 triggers and make 2 fixes to make it compare with 9150.
 
 You may need some old items to add this template to older versions of zabbix. You can download it from oficial zabbix site.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

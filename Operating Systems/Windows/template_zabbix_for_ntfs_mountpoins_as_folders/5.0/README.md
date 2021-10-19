@@ -24,7 +24,9 @@ Installation
 ### Host Installation
 
 
-<ul style="box-sizing: border-box; margin-bottom: 16px; margin-top: 0px; padding-left: 2em; color: #24292e; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple C## Author
+<ul style="box-sizing: border-box; margin-bottom: 16px; margin-top: 0px; padding-left: 2em; color: #24292e; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple C
+
+## Author
 
 Douglas Lopez
 

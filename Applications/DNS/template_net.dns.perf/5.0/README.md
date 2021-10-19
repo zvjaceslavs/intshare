@@ -23,6 +23,8 @@ UnsafeUserParameters=1
 {$DOMAIN\_NAME}＝対象ドメイン名を指定します。  
 
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

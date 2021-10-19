@@ -4,6 +4,8 @@
 
 Official VMware General Template from Zabbix distribution. It is used to discover all entities (Hypervisors, Guests and Clusters)
 
+
+
 ## Author
 
 Zabbix SIA

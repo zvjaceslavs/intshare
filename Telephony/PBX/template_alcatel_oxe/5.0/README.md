@@ -35,6 +35,8 @@ Applications > Incident manager > Descend(Go down) > Incident Filter
  - SNMP Incident: Yes
 
 ```
+
+
 ## Author
 
 Pedro Rodrigues
@@ -153,6 +155,8 @@ Applications > Incident manager > Descend(Go down) > Incident Filter
  - SNMP Incident: Yes
 
 ```
+
+
 ## Author
 
 Pedro Rodrigues

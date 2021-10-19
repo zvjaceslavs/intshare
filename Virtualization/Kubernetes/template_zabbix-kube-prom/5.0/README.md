@@ -58,6 +58,8 @@ The global export (zabbix-kube-prom.xml) contains following templates:
 
  
 
+
+
 ## Author
 
 Laurent Marchelli
@@ -253,6 +255,8 @@ The global export (zabbix-kube-prom.xml) contains following templates:
 
  
 
+
+
 ## Author
 
 Laurent Marchelli
@@ -380,6 +384,8 @@ The global export (zabbix-kube-prom.xml) contains following templates:
 
 
  
+
+
 
 ## Author
 

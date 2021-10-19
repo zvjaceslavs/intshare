@@ -31,6 +31,8 @@ Printed pages
 
 Tested with ECOSYS M6526cdn
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -152,6 +154,8 @@ Printed pages
 
 Tested with ECOSYS M6526cdn
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -188,6 +192,13 @@ There are no discovery rules in this template.
 |Pages printed Color Legal|<p>-</p>|`SNMP agent`|pages-printed-color-legal<p>Update: 15m</p>|
 |Pages Copied Monochrom|<p>-</p>|`SNMP agent`|pages-copied-monochrom<p>Update: 15m</p>|
 |Pages printed BW Legal|<p>-</p>|`SNMP agent`|pages-printed-bw-legal<p>Update: 15m</p>|
+|Pages printed BW Other1|<p>-</p>|`SNMP agent`|pages-printed-bw-other1<p>Update: 15m</p>|
+|Pages printed BW Other2|<p>-</p>|`SNMP agent`|pages-printed-bw-other2<p>Update: 15m</p>|
+|Pages printed BW Statement|<p>-</p>|`SNMP agent`|pages-printed-bw-statement<p>Update: 15m</p>|
+|Pages printed Color A4|<p>-</p>|`SNMP agent`|pages-printed-color-a4<p>Update: 15m</p>|
+|Pages printed Color A5|<p>-</p>|`SNMP agent`|pages-printed-color-a5<p>Update: 15m</p>|
+|Pages printed Color B5|<p>-</p>|`SNMP agent`|pages-printed-color-b5<p>Update: 15m</p>|
+|Pages TTL|<p>-</p>|`Calculated`|pages-ttl<p>Update: 15m</p>|
 |Pages copied TTL|<p>-</p>|`SNMP agent`|pages-copied-ttl<p>Update: 15m</p>|
 |Pages Faxed Monochrom|<p>-</p>|`SNMP agent`|pages-faxed-monochrom<p>Update: 15m</p>|
 |Pages Faxed TTL|<p>-</p>|`SNMP agent`|pages-faxed-ttl<p>Update: 15m</p>|
@@ -196,13 +207,6 @@ There are no discovery rules in this template.
 |Pages printed BW Folio|<p>-</p>|`SNMP agent`|pages-printed-bw-folio<p>Update: 15m</p>|
 |Pages printed BW Letter|<p>-</p>|`SNMP agent`|pages-printed-bw-letter<p>Update: 15m</p>|
 |Pages printed Color Folio|<p>-</p>|`SNMP agent`|pages-printed-color-folio<p>Update: 15m</p>|
-|Pages printed BW Other1|<p>-</p>|`SNMP agent`|pages-printed-bw-other1<p>Update: 15m</p>|
-|Pages printed BW Other2|<p>-</p>|`SNMP agent`|pages-printed-bw-other2<p>Update: 15m</p>|
-|Pages printed BW Statement|<p>-</p>|`SNMP agent`|pages-printed-bw-statement<p>Update: 15m</p>|
-|Pages printed Color A4|<p>-</p>|`SNMP agent`|pages-printed-color-a4<p>Update: 15m</p>|
-|Pages printed Color A5|<p>-</p>|`SNMP agent`|pages-printed-color-a5<p>Update: 15m</p>|
-|Pages printed Color B5|<p>-</p>|`SNMP agent`|pages-printed-color-b5<p>Update: 15m</p>|
-|Pages TTL|<p>-</p>|`Calculated`|pages-ttl<p>Update: 15m</p>|
 ## Triggers
 
 There are no triggers in this template.
@@ -239,6 +243,8 @@ Printed pages
 
 
 Tested with ECOSYS M6526cdn
+
+
 
 ## Macros used
 

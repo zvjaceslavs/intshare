@@ -4,6 +4,8 @@
 
 Template for IPMI Gigabyte 6PXSV4 Motherboard (items, triggers, graphs).
 
+
+
 ## Macros used
 
 There are no macros links in this template.

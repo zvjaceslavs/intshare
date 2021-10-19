@@ -81,6 +81,8 @@ chown zabbix:zabbix nginx\_stat\_getter
 
 Затем нужно импортировать шаблон *zbx\_nginx\_template.xml* в Zabbix фронтенде и прикрепить его к нужному серверу. Ждать данных.
 
+
+
 ## Author
 
 Antony Ryabov

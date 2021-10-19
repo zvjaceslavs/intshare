@@ -5,6 +5,8 @@
 * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity)
 * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds
 * Graph Prototypes for Temperature and Humidity
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -70,6 +72,8 @@ There are no template links in this template.
 * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity)
 * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds
 * Graph Prototypes for Temperature and Humidity
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

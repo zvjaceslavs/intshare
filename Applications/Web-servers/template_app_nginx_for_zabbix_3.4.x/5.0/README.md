@@ -88,6 +88,8 @@ location /nginx\_status {
 
 1. Import XML template file (`zbx\_template\_nginx.xml`) into Zabbix via Web GUI (Configuration -> Templates -> Import).
 2. Assign the imported template to a host and enjoy!
+
+
 ## Author
 
 Alex Gluck

@@ -4,6 +4,8 @@
 
 Template simples para monitoramento de: tensão de entrada, Tensão da Bateria e Temperatura. Acompanha triggers.
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

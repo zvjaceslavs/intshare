@@ -31,6 +31,8 @@ Requirements
 
  
 
+
+
 ## Author
 
 mutsumi Iwata
@@ -56,7 +58,6 @@ There are no discovery rules in this template.
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[10051,,ESTABLISHED]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[10051,,FIN_WAIT1]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,20772,FIN_WAIT1]<p>Update: 0</p>|
-|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,80,LAST_ACK]<p>Update: 0</p>|
 |TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,FIN_WAIT1]<p>Update: 0</p>|
 |TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,FIN_WAIT2]<p>Update: 0</p>|
 |TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,LAST_ACK]<p>Update: 0</p>|
@@ -64,24 +65,13 @@ There are no discovery rules in this template.
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,CLOSING]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,CountAll]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[20772,,FIN_WAIT2]<p>Update: 0</p>|
-|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,20772,CLOSE]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[445,,SYN_SENT]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,20772,LAST_ACK]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,10051,SYN_SENT]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,80,FIN_WAIT1]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,80,FIN_WAIT2]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,80,LISTEN]<p>Update: 0</p>|
-|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,SYN_RECV]<p>Update: 0</p>|
-|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,80,SYN_RECV]<p>Update: 0</p>|
-|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,LISTEN]<p>Update: 0</p>|
-|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,CLOSE]<p>Update: 0</p>|
-|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,CLOSE_WAIT]<p>Update: 0</p>|
-|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,CLOSING]<p>Update: 0</p>|
-|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,CountAll]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,LAST_ACK]<p>Update: 0</p>|
-|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,SYN_SENT]<p>Update: 0</p>|
-|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,TIME_WAIT]<p>Update: 0</p>|
-|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,CLOSE]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,10051,SYN_RECV]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,443,TIME_WAIT]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,445,CLOSE]<p>Update: 0</p>|
@@ -98,6 +88,19 @@ There are no discovery rules in this template.
 |TCP count all master|<p>-</p>|`Zabbix agent`|net.tcp.count.bulk[]<p>Update: 30s</p>|
 |TCP count local port $1 master|<p>-</p>|`Zabbix agent`|net.tcp.count.bulk[10051,]<p>Update: 30s</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,10050,CountAll]<p>Update: 0</p>|
+|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,80,LAST_ACK]<p>Update: 0</p>|
+|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,SYN_RECV]<p>Update: 0</p>|
+|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,80,SYN_RECV]<p>Update: 0</p>|
+|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,LISTEN]<p>Update: 0</p>|
+|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,CLOSE]<p>Update: 0</p>|
+|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,CLOSE_WAIT]<p>Update: 0</p>|
+|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,CLOSING]<p>Update: 0</p>|
+|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,CountAll]<p>Update: 0</p>|
+|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,SYN_SENT]<p>Update: 0</p>|
+|TCP count $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,,TIME_WAIT]<p>Update: 0</p>|
+|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,CLOSE]<p>Update: 0</p>|
+|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,443,LAST_ACK]<p>Update: 0</p>|
+|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,20772,CLOSE]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[443,,SYN_RECV]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,20772,SYN_RECV]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[445,,FIN_WAIT1]<p>Update: 0</p>|
@@ -189,7 +192,6 @@ There are no discovery rules in this template.
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,443,FIN_WAIT2]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,FIN_WAIT2]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,443,FIN_WAIT1]<p>Update: 0</p>|
-|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,443,LAST_ACK]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,20772,ESTABLISHED]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,10051,ESTABLISHED]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,10050,SYN_RECV]<p>Update: 0</p>|

@@ -10,6 +10,8 @@ This template allows you to quickly get up and running with monitoring of Ubiqui
 
  Please see @ [Github (albinbatman/zabbix-edgemax-template)](https://github.com/albinbatman/zabbix-edgemax-template)
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

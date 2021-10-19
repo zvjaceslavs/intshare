@@ -7,6 +7,8 @@ Template for the Repotec RP-PG1625W in Stacked Mode(Two Switches)
 
 Monitors Port- and Switch status
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -59,17 +61,18 @@ There are no discovery rules in this template.
 |SW 1 Interface 13 Status|<p>SW 1 Interface 13 Status</p>|`SNMP agent`|sw1.interface.13.status<p>Update: 30</p>|
 |SW 1 Interface 12 Speed|<p>SW 1 Interface 12 Speed</p>|`SNMP agent`|sw1.interface.12.speed<p>Update: 30</p>|
 |SW 1 Interface 12 Last change|<p>SW 1 Interface 12 Last change Timeticks</p>|`SNMP agent`|sw1.interface.12.lastChange<p>Update: 30</p>|
-|SW 1 Interface 11 Status|<p>SW 1 Interface 11 Status</p>|`SNMP agent`|sw1.interface.11.status<p>Update: 30</p>|
-|System Uptime|<p>System Uptime</p>|`SNMP agent`|system.uptime<p>Update: 30</p>|
 |SW 1 Interface 28 Status|<p>SW 1 Interface 28 Status</p>|`SNMP agent`|sw1.interface.28.status<p>Update: 30</p>|
 |SW 2 Interface 2 Status|<p>SW 2 Interface 2 Status</p>|`SNMP agent`|sw2.interface.2.status<p>Update: 30</p>|
 |SW 1 Interface 6 Last change|<p>SW 1 Interface 6 Last change Timeticks</p>|`SNMP agent`|sw1.interface.6.lastChange<p>Update: 30</p>|
 |SW 1 Interface 5 Speed|<p>SW 1 Interface 5 Speed</p>|`SNMP agent`|sw1.interface.5.speed<p>Update: 30</p>|
 |SW 1 Interface 10 Last change|<p>SW 1 Interface 10 Last change Timeticks</p>|`SNMP agent`|sw1.interface.10.lastChange<p>Update: 30</p>|
 |SW 1 Interface 5 Last change|<p>SW 1 Interface 5 Last change Timeticks</p>|`SNMP agent`|sw1.interface.5.lastChange<p>Update: 30</p>|
-|SW 1 Interface 4 Speed|<p>SW 1 Interface 4 Speed</p>|`SNMP agent`|sw1.interface.4.speed<p>Update: 30</p>|
 |SW 1  Interface 3 Last change|<p>SW 1 Interface 3 Last change Timeticks</p>|`SNMP agent`|sw1.interface.3.lastChange<p>Update: 30</p>|
 |SW 1 Interface 19 Last change|<p>SW 1 Interface 19 Last change Timeticks</p>|`SNMP agent`|sw1.interface.19.lastChange<p>Update: 30</p>|
+|SW 2 Interface 10 Status|<p>SW 2 Interface 10 Status</p>|`SNMP agent`|sw2.interface.10.status<p>Update: 30</p>|
+|SW 1 Interface 4 Speed|<p>SW 1 Interface 4 Speed</p>|`SNMP agent`|sw1.interface.4.speed<p>Update: 30</p>|
+|SW 1 Interface 11 Status|<p>SW 1 Interface 11 Status</p>|`SNMP agent`|sw1.interface.11.status<p>Update: 30</p>|
+|System Uptime|<p>System Uptime</p>|`SNMP agent`|system.uptime<p>Update: 30</p>|
 |Ping Check|<p>-</p>|`Simple check`|icmpping<p>Update: 30</p>|
 |SW 1 Interface 24 Status|<p>SW 1 Interface 24 Status</p>|`SNMP agent`|sw1.interface.24.status<p>Update: 30</p>|
 |SW 1 Interface 26 Last change|<p>SW 1 Interface 26 Last change Timeticks</p>|`SNMP agent`|sw1.interface.26.lastChange<p>Update: 30</p>|
@@ -92,7 +95,6 @@ There are no discovery rules in this template.
 |SW 2 Interface 25 Status|<p>SW 2 Interface 25 Status</p>|`SNMP agent`|sw2.interface.25.status<p>Update: 30</p>|
 |SW 2 Interface 24 Status|<p>SW 2 Interface 24 Status</p>|`SNMP agent`|sw2.interface.24.status<p>Update: 30</p>|
 |SW 2 Interface 12 Status|<p>SW 2 Interface 12 Status</p>|`SNMP agent`|sw2.interface.12.status<p>Update: 30</p>|
-|SW 2 Interface 10 Status|<p>SW 2 Interface 10 Status</p>|`SNMP agent`|sw2.interface.10.status<p>Update: 30</p>|
 |SW 1 Interface 9 Speed|<p>SW 1 Interface 9 Speed</p>|`SNMP agent`|sw1.interface.9.speed<p>Update: 30</p>|
 |SW 1 Interface 9 Last change|<p>SW 1 Interface 9 Last change Timeticks</p>|`SNMP agent`|sw1.interface.9.lastChange<p>Update: 30</p>|
 |SW 1 Interface 8 Status|<p>SW 1 Interface 8 Status</p>|`SNMP agent`|sw1.interface.8.status<p>Update: 30</p>|

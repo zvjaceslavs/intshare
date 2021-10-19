@@ -29,6 +29,8 @@ Discovery for frontends, backends, servers.
 * Check if <50% of backend are down (not up, like DRAIN, NOLB, etc )on a frontend.
 * Check if connections are >90/95% of the limit on frontend
 * Check status of frontend and backend.
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -10,6 +10,8 @@ This script get next metrics:
 
 Disk, Enclosure, Battery, Enclosure Canister, PSU, Mdisk, Pool, PortFibreChannel, PortSas, Volume
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

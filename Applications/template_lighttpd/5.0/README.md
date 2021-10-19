@@ -4,6 +4,8 @@
 
 A very simple Zabbix Agent template for monitoring Lighttpd using the ModStatus module.
 
+
+
 ## Author
 
 Dave Humphrey (dave@uesp.net)

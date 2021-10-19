@@ -10,6 +10,8 @@ This requires you to enable SNMPv2 polling in your Meraki Dashboard and set the 
 
 I am working on getting more data into this, including (hopefully) interface statistics for MR and MX, I would also LOVE to get the number of clients connected to each radio (2.4 and 5) like I do from other venders but I will need to see if Meraki gives up that data.
 
+
+
 ## Author
 
 John T. Young

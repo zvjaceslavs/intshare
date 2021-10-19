@@ -8,6 +8,8 @@ Template Net Mikrotik MIBs used: HOST-RESOURCES-MIB MIKROTIK-MIB
 
 to use this template must also be loaded "Template Module Generic SNMPv3", "Template Module Interfaces Simple SNMPv3". For correct use, you need to define the macro "{$SNMP\_SECNAME\_CONTEXT}", this macro is also used in the rest of my templates using SNMPv3
 
+
+
 ## Author
 
 Alexey Glotkin

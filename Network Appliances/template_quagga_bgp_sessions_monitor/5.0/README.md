@@ -8,6 +8,8 @@ Template for auto-discovery bgp peers and monitor they.
 
 This is a template to monitor peerings BGP Quagga with Zabbix.
 
+
+
 ## Author
 
 Renan Rodrigues

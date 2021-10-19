@@ -10,6 +10,8 @@ Template com discovery que ignora interfaces ADM Down e PPP.
 
 Alterar macro do template {$SNMP\_COMMUNITY} conforme sua necessidade.
 
+
+
 ## Author
 
 Cesar Buffulin

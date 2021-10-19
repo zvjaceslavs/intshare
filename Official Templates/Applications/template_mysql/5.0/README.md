@@ -4,6 +4,8 @@
 
 Official MySQL Template from Zabbix distribution
 
+
+
 ## Author
 
 Zabbix SIA

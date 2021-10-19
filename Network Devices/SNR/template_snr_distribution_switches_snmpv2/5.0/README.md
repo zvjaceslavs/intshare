@@ -5,7 +5,9 @@
  Official Zabbix templates for SNR switches.
 Recommended for distribution switches.
  
-If you have any questions, please contact support@nag.ru.## Author
+If you have any questions, please contact support@nag.ru.
+
+## Author
 
 SNR-TEAM
 
@@ -43,7 +45,9 @@ There are no triggers in this template.
  Official Zabbix templates for SNR switches.
 Recommended for distribution switches.
  
-If you have any questions, please contact support@nag.ru.## Author
+If you have any questions, please contact support@nag.ru.
+
+## Author
 
 SNR-TEAM
 
@@ -75,7 +79,9 @@ There are no triggers in this template.
  Official Zabbix templates for SNR switches.
 Recommended for distribution switches.
  
-If you have any questions, please contact support@nag.ru.## Author
+If you have any questions, please contact support@nag.ru.
+
+## Author
 
 SNR-TEAM
 
@@ -109,7 +115,9 @@ There are no triggers in this template.
  Official Zabbix templates for SNR switches.
 Recommended for distribution switches.
  
-If you have any questions, please contact support@nag.ru.## Author
+If you have any questions, please contact support@nag.ru.
+
+## Author
 
 SNR-TEAM
 
@@ -148,7 +156,9 @@ There are no template links in this template.
  Official Zabbix templates for SNR switches.
 Recommended for distribution switches.
  
-If you have any questions, please contact support@nag.ru.## Author
+If you have any questions, please contact support@nag.ru.
+
+## Author
 
 SNR-TEAM
 
@@ -193,7 +203,9 @@ There are no template links in this template.
  Official Zabbix templates for SNR switches.
 Recommended for distribution switches.
  
-If you have any questions, please contact support@nag.ru.## Author
+If you have any questions, please contact support@nag.ru.
+
+## Author
 
 SNR-TEAM
 
@@ -226,7 +238,9 @@ There are no triggers in this template.
  Official Zabbix templates for SNR switches.
 Recommended for distribution switches.
  
-If you have any questions, please contact support@nag.ru.## Author
+If you have any questions, please contact support@nag.ru.
+
+## Author
 
 SNR-TEAM
 
@@ -261,7 +275,9 @@ There are no triggers in this template.
  Official Zabbix templates for SNR switches.
 Recommended for distribution switches.
  
-If you have any questions, please contact support@nag.ru.## Author
+If you have any questions, please contact support@nag.ru.
+
+## Author
 
 SNR-TEAM
 

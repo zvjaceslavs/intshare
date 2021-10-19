@@ -10,6 +10,8 @@ Model: WAP4410N-E, Firmware: Versão 2.0.7.8
 
 Monitoramento: Disponibilidade; Uptime; Nome; Modelo; Localização; CPU; SSID,s; Trafego Wifi; Mac adress.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

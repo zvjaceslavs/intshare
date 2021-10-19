@@ -24,6 +24,8 @@ Triggers:
 
 1. Signal Quality is low,
 2. Link Margin is low
+
+
 ## Author
 
 Roman Ermakov

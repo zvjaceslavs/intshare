@@ -49,6 +49,8 @@ Version / Zabbix version:
 
 1.0 / 4.2+
 
+
+
 ## Author
 
 SuNova

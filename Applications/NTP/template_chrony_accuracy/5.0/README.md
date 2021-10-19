@@ -5,6 +5,8 @@
 This template will parse the various types of data from the acquisition result of chronyc tracking command.  
 This allows you to detect the change of the time of displacement and Stratum by chrony.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

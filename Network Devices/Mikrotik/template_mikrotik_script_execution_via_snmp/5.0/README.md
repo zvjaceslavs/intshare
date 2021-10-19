@@ -4,6 +4,8 @@
 
 This template will discover any scripts created in the router which names starts with "Get" (can be customized in the template discovery filter) and will make them available as an item to be plotted in graphics or create triggers and alarms. 
 
+
+
 ## Author
 
 Antonio Forster

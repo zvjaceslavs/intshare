@@ -15,6 +15,8 @@ SAN3700-G08E
 SAN3700-G08E provides 8 GPON ports, and 2 10GE or 8 GE ports for uplink. One GPON port can manage up to 128 ONUs, one SAN3700-G08E can manage up to 1024 ONUs. The installation and commissioning is easy so that the operators' investments are minimized. It is an excellent choice for service providers to quickly deploy a GPON FTTH network.
 
 
+
+
 ## Author
 
 Anderson Serra
@@ -46,26 +48,12 @@ There are no template links in this template.
 |ONU Serial - gpon-olt-3-74|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-74<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-73|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-73<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-22|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-22<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-21|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-21<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-20|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-20<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-19|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-19<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-18|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-18<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-17|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-17<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-16|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-16<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-14|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-14<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-30|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-30<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-13|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-13<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-12|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-12<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-11|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-11<p>Update: 1d</p>|
 |GPON interface 1 - OperStatus|<p>-</p>|`SNMP agent`|cianet.g8ps.gpon.pon.operstatus.1<p>Update: 1m</p>|
 |ONU Serial - gpon-olt-3-79|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-79<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-92|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-92<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-91|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-91<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-90|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-90<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-89|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-89<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-86|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-86<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-85|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-85<p>Update: 1d</p>|
-|ONU Serial - gpon-olt-3-84|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-84<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-88|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-88<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-87|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-87<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-83|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-83<p>Update: 1d</p>|
@@ -122,6 +110,17 @@ There are no template links in this template.
 |ONU Serial - gpon-olt-3-25|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-25<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-24|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-24<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-23|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-23<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-21|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-21<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-20|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-20<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-19|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-19<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-18|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-18<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-17|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-17<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-16|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-16<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-14|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-14<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-30|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-30<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-13|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-13<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-12|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-12<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-11|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-11<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-10|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-10<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-9|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-9<p>Update: 1d</p>|
 |ONU Serial - gpon-olt-3-8|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-8<p>Update: 1d</p>|
@@ -1776,6 +1775,9 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-8-61|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.8-61<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-7-126|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.7-126<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-8-13|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.8-13<p>Update: 30m</p>|
+|ONU Serial - gpon-olt-3-86|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-86<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-85|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-85<p>Update: 1d</p>|
+|ONU Serial - gpon-olt-3-84|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.serial.gpon.olt.3-84<p>Update: 1d</p>|
 |ONU OperStatus - gpon-olt-8-26|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.8-26<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-8-25|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.8-25<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-8-24|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.8-24<p>Update: 30m</p>|
@@ -1847,6 +1849,42 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-5-86|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-86<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-85|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-85<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-84|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-84<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-10|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-10<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-26|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-26<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-5|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-5<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-4|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-4<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-3|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-3<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-2|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-2<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-1|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-1<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-4-128|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.4-128<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-53|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-53<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-52|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-52<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-51|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-51<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-50|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-50<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-80|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-80<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-79|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-79<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-78|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-78<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-76|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-76<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-91|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-91<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-93|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-93<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-61|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-61<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-96|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-96<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-95|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-95<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-62|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-62<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-60|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-60<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-125|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-125<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-12|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-12<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-25|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-25<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-16|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-16<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-15|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-15<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-5-126|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-126<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-26|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-26<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-28|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-28<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-59|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-59<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-45|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-45<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-58|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-58<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-57|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-57<p>Update: 30m</p>|
+|ONU OperStatus - gpon-olt-6-56|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-56<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-83|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-83<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-82|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-82<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-81|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-81<p>Update: 30m</p>|
@@ -1918,18 +1956,10 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-5-14|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-14<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-13|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-13<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-12|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-12<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-10|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-10<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-26|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-26<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-9|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-9<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-8|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-8<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-7|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-7<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-6|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-6<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-5|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-5<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-4|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-4<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-3|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-3<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-2|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-2<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-1|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-1<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-4-128|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.4-128<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-4-127|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.4-127<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-4-126|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.4-126<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-4-125|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.4-125<p>Update: 30m</p>|
@@ -1941,10 +1971,6 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-5-56|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-56<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-55|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-55<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-54|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-54<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-53|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-53<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-52|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-52<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-51|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-51<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-50|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-50<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-49|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-49<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-48|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-48<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-47|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-47<p>Update: 30m</p>|
@@ -1980,10 +2006,6 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-6-83|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-83<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-82|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-82<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-81|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-81<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-80|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-80<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-79|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-79<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-78|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-78<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-76|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-76<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-92|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-92<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-75|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-75<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-74|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-74<p>Update: 30m</p>|
@@ -1998,9 +2020,6 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-6-65|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-65<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-64|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-64<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-63|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-63<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-91|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-91<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-93|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-93<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-61|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-61<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-109|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-109<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-122|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-122<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-121|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-121<p>Update: 30m</p>|
@@ -2028,13 +2047,6 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-6-99|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-99<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-98|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-98<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-97|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-97<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-96|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-96<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-95|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-95<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-62|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-62<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-60|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-60<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-125|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-125<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-12|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-12<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-25|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-25<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-24|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-24<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-23|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-23<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-22|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-22<p>Update: 30m</p>|
@@ -2043,8 +2055,6 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-6-19|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-19<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-18|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-18<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-17|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-17<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-16|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-16<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-15|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-15<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-14|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-14<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-13|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-13<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-11|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-11<p>Update: 30m</p>|
@@ -2061,14 +2071,6 @@ There are no template links in this template.
 |ONU OperStatus - gpon-olt-6-1|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-1<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-128|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-128<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-5-127|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-127<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-5-126|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.5-126<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-26|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-26<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-28|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-28<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-59|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-59<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-45|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-45<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-58|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-58<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-57|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-57<p>Update: 30m</p>|
-|ONU OperStatus - gpon-olt-6-56|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-56<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-55|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-55<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-54|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-54<p>Update: 30m</p>|
 |ONU OperStatus - gpon-olt-6-53|<p>-</p>|`SNMP agent`|cianet.g8ps.onu.operstatus.gpon.olt.6-53<p>Update: 30m</p>|

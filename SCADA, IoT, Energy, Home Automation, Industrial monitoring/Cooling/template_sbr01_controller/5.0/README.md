@@ -46,6 +46,8 @@ Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administra
 
 MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/sbr01) repository
 
+
+
 ## Author
 
 P.V. Galonza

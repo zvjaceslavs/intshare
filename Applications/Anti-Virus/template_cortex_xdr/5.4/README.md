@@ -7,6 +7,8 @@ Cortex XDR template for Windows.
 
 Checks service state, service path, Cortex XDR version and protection status.
 
+
+
 ## Author
 
 Olai Wanvik

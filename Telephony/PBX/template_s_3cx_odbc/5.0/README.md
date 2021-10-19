@@ -70,6 +70,8 @@ Trunks:
 
 - Number of associated routes
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

@@ -43,6 +43,8 @@ Zabbix version > 4.4 because template is using HTTP agent and JSON Path.
 * Create host on Zabbix and apply the template  
 
 	+ On host configuration, modify macros{$USERAPI\_ID} and {$USERAPI\_TOKEN} with the information you saved.
+
+
 ## Author
 
 Felipe Vieira

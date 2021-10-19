@@ -38,6 +38,8 @@ Gráficos para visualizar o consumo de recursos (CPU e Memória)
 
 Para utilizar, informe o valor para macro {$SNMP\_COMMUNITY}
 
+
+
 ## Author
 
 Fernando F. Costa

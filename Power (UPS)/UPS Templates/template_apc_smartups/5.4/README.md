@@ -52,6 +52,8 @@ This template was tested on zabbix 5.4.1 with a Schneider Electric ( APC SmartUP
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.

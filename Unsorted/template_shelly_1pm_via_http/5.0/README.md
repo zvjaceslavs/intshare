@@ -7,6 +7,8 @@ Monitoring of almost all values the Shelly 1PM reports, except external sensors 
 
 It has a fixed update time of 60s for all values, which might not be enough for some usecases - feel free to adjust it.
 
+
+
 ## Author
 
 Leonard Winck

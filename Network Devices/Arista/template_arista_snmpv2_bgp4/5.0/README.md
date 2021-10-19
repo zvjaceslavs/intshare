@@ -13,6 +13,8 @@ Collects AdminStatus, OperStatus, Recieved/Accepted/Announced Prefixes.
 
 SNMPv2 Community via {$SNMP\_COMMUNITY} Macro
 
+
+
 ## Macros used
 
 There are no macros links in this template.

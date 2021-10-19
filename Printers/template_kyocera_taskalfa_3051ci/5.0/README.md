@@ -22,6 +22,8 @@ Contains :
 
 - Informations : location, MAC Address, Name, S/N
 
+
+
 ## Author
 
 Nicolas C.

@@ -18,6 +18,8 @@ So, it should be possible to import this template on Zabbix v2.x also. Required 
 * it is necessary to modify version from "3.0" onto "2.0" at the beginning of template;
 * remove entire "value\_maps" section at the end of this file: the appropriate value maps for disk status and ASP status should be created manually;
 * replace macro with context **{$MAX\_DISK\_PUSED:"{#FSNAME}"}** by the regular macro **{$MAX\_DISK\_PUSED}** in the trigger prototype of ASP discovery rule (twice: in the trigger's name and in the formula).
+
+
 ## Author
 
 Constantin Oshmyan

@@ -16,6 +16,8 @@ IPMI sensors for SGI Altix C2112-4G10:
 
 Some changes and fixes.
 
+
+
 ## Author
 
 Daniel Carvalho

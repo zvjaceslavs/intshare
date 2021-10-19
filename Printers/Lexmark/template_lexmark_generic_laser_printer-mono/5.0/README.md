@@ -6,6 +6,8 @@ SNMP Template
   
 Lexmark Generic Laser Printer - Mono
 
+
+
 ## Author
 
 Romulo Ribeiro Moreira

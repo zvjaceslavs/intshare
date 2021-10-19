@@ -12,6 +12,8 @@ D2500CC: Need zabbix-agent installed, using coretemp & winbond 83627uhg driver
 	 Load coretemp and w83627ehf modules in /etc/modules
 	 Based on BIOS values
 ```
+
+
 ## Author
 
 pfoo

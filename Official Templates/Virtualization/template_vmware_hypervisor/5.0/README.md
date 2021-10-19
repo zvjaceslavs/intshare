@@ -4,6 +4,8 @@
 
 Official VMware Hypervisor Template from Zabbix distribution
 
+
+
 ## Author
 
 Zabbix SIA

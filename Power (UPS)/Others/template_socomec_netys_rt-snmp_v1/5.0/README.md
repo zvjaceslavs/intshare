@@ -22,6 +22,8 @@ This templase include some info and trigger such as:
 
 You just edit the SNMP\_COMMUNITY value into the template
 
+
+
 ## Author
 
 diablofight89

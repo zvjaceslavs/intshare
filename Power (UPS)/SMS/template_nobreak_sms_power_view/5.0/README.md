@@ -23,6 +23,8 @@ Meu Nobreak é Entrada/Saída 220V, portanto para 110V seriam necessários ajust
 
 Este template funciona realizando o parse do código da página http://localhost:8080/sms/s2/atualizaBlock.action que possui comentários com os dados do Nobreak.
 
+
+
 ## Author
 
 Marlon J dos Anjos

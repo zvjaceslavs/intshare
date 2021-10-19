@@ -34,6 +34,8 @@ Seeks Bitcoin, Ethereum and Litecoin trading using [MercadoBitcoin API](https://
 * [LTC] - Current
 * [LTC] - High
 * [LTC] - Low
+
+
 ## Author
 
 Rickk Barbosa

@@ -27,6 +27,8 @@ For the metrics. We included the measurements 2 and 3:
 
 For triggers in my case 38 has disabled. we added this SNMP Check connect what check if the UPS have snmp connectivity. If past ten minute without data
 
+
+
 ## Author
 
 Marcos Sousa

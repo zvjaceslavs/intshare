@@ -16,7 +16,9 @@ Before using, define Macros (Administration -> General -> Macros):
 * {$SNMP\_PORT} : 161
 
 
- ## Author
+ 
+
+## Author
 
 TommXP
 

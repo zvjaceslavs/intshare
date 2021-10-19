@@ -22,6 +22,8 @@ SNMP Discovery - Temperature Sensor
 
  
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

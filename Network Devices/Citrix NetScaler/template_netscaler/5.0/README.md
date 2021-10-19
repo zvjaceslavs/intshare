@@ -15,6 +15,8 @@ It requires the following value mappings :
 | [Netscaler haPeerState](https://zabbix/adm.valuemapping.php?form=update&valuemapid=73&sid=f8a763efbdf5da9c) | 1 ⇒ Secondary2 ⇒ Primary |
 | [Netscaler vServer State](https://zabbix/adm.valuemapping.php?form=update&valuemapid=74&sid=f8a763efbdf5da9c) | 0 ⇒ unknown1 ⇒ down2 ⇒ unknown3 ⇒ busy4 ⇒ out of service5 ⇒ transition to out of service7 ⇒ up |
 
+
+
 ## Macros used
 
 There are no macros links in this template.

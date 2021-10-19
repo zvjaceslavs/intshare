@@ -90,6 +90,8 @@ Related template
 
 It's recommended to use "Template OS Linux - Plus" together to have further information in your zabbix server. > <a href="operating-systems/linux/template-os-lin
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|
@@ -123,13 +125,16 @@ There are no discovery rules in this template.
 |Zabbix $4 $2 processes, in %|<p>-</p>|`Zabbix internal`|zabbix[process,timer,avg,busy]<p>Update: 1m</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": unreachable poller"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": trapper"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": timer"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": task manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": preprocessing manager",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": poller",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Zabbix preprocessing queue|<p>Count of values enqueued in the preprocessing queue.</p>|`Zabbix internal`|zabbix[preprocessing_queue]<p>Update: 10m</p>|
 |Zabbix $4 $2 processes, in %|<p>-</p>|`Zabbix internal`|zabbix[process,alerter,avg,busy]<p>Update: 1m</p>|
 |Zabbix $4 $2 processes, in %|<p>-</p>|`Zabbix internal`|zabbix[process,ipmi manager,avg,busy]<p>Update: 1m</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"zabbix_server -c"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": timer"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": task manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": alerter"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": discoverer",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Value processed $3, per second|<p>-</p>|`Zabbix internal`|zabbix[wcache,values,not supported]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Value processed $3, per second|<p>-</p>|`Zabbix internal`|zabbix[wcache,values,log]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Value processed $3, per second|<p>-</p>|`Zabbix internal`|zabbix[wcache,values,float]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
@@ -175,7 +180,6 @@ There are no discovery rules in this template.
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": java poller",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": ipmi poller",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": history syncer",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": discoverer",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Zabbix agentd log count ($1)|<p>-</p>|`Zabbix agent (active)`|log.count[{$ZABBIX_AGENT_LOG_PATH},,,,skip]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,alert manager,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,preprocessing manager,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
@@ -248,9 +252,9 @@ There are no discovery rules in this template.
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,"{$ZABBIX_PROCESSNAME_HTTP}",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,"{$ZABBIX_PROCESSNAME_DB}",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": trapper",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Zabbix $4 $2 processes, in %|<p>-</p>|`Zabbix internal`|zabbix[process,poller,avg,busy]<p>Update: 1m</p>|
 |Zabbix $4 $2 processes, in %|<p>-</p>|`Zabbix internal`|zabbix[process,history syncer,avg,busy]<p>Update: 1m</p>|
 |Zabbix $4 $2 processes, in %|<p>-</p>|`Zabbix internal`|zabbix[process,housekeeper,avg,busy]<p>Update: 1m</p>|
-|Zabbix $4 $2 processes, in %|<p>-</p>|`Zabbix internal`|zabbix[process,poller,avg,busy]<p>Update: 1m</p>|
 |Zabbix queue over $2|<p>-</p>|`Zabbix internal`|zabbix[queue,10m]<p>Update: 10m</p>|
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,poller,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,ipmi poller,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
@@ -265,13 +269,11 @@ There are no discovery rules in this template.
 |File - DB Table [ib_logfile0]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}ib_logfile0]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Zabbix server log count ($1)|<p>-</p>|`Zabbix agent (active)`|log.count[{$ZABBIX_SERVER_LOG_PATH},,,,skip]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": preprocessing manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"zabbix_server -c"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"zabbix_server"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"zabbix_agentd"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": vmware collector"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": snmp trapper"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": self-monitoring"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": alerter"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"{$ZABBIX_PROCESSNAME_DB}"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": alerter",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |File - DB Table [ibdata1]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}ibdata1]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|

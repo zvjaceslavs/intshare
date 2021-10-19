@@ -17,6 +17,8 @@ Best regards,
   
 Samuel Martins
 
+
+
 ## Author
 
 Samuel Martins
@@ -51,14 +53,12 @@ There are no template links in this template.
 |[Temp] Discovery of Temperature Threshold for Shutdown|<p>Temp threshold for automated library activity shutdown</p>|`SNMP agent`|slTempSensorFailThreshold<p>Update: 1h</p>|
 |[Temp] Discovery of High Temperature Sensor|<p>Storage area peak temp since last machine boot</p>|`SNMP agent`|slTempSensorHighTemp<p>Update: 1h</p>|
 |[Cap] Discovery of Cap Access State|<p>The access state of the cap presented as an enumeration unknown(1), open(2), close(3)</p>|`SNMP agent`|slCapAccessStateEnum<p>Update: 1h</p>|
-|[Cap] Discovery of Cap is Enabled|<p>The Enabled state of the Cap</p>|`SNMP agent`|slCapEnabled<p>Update: 1h</p>|
 |[Cap] Discovery of Cap Accessibility|<p>The accessibility of a CAP (open allow/prevent)</p>|`SNMP agent`|slCapAccessibility<p>Update: 1m</p>|
 |[Cap] Discovery of Cap Rotations|<p>The Caps rotation count</p>|`SNMP agent`|slCapRotations<p>Update: 1h</p>|
 |[Cap] Discovery of Cap Status|<p>The operational status of the CAP presented as an enumeration</p>|`SNMP agent`|slCapStatusEnum<p>Update: 1h</p>|
 |[Drive] Discovery of Drive Cell Content Label|<p>The label of the cart in the drive (zero len string if empty, '??????' if unreadable)</p>|`SNMP agent`|slDriveCellContentLabel<p>Update: 1h</p>|
 |[Drive] Discovery of Drive Cell Status|<p>The status of the drive's cell presented as an enumeration</p>|`SNMP agent`|slDriveCellStatusEnum<p>Update: 1h</p>|
 |[Drive] Discovery of Drive Command Clean|<p>Signal to clean/cancel cleaning of the drive enable(1), cancel(2)</p>|`SNMP agent`|slDriveCommandClean<p>Update: 1h</p>|
-|[Drive] Discovery of Drive Fibre Node Name|<p>Drive's fibre node name (node WWN)</p>|`SNMP agent`|slDriveFibreNodeName<p>Update: 1h</p>|
 |[Drive] Discovery of Drive Fibre Port B is Enabled|<p>Port B - is port enabled</p>|`SNMP agent`|slDriveFibrePortBPortEnabled<p>Update: 1h</p>|
 |[Drive] Discovery of Drive Fibre Port Count|<p>The number of active ports in the drive</p>|`SNMP agent`|slDriveFibrePortCount<p>Update: 1h</p>|
 |[Drive] Discovery of Drive Get Retries|<p>The number of mount retries performed to the drive</p>|`SNMP agent`|slDriveGetRetries<p>Update: 1h</p>|
@@ -74,6 +74,12 @@ There are no template links in this template.
 |[Cleaning] Discovery of The ID of Cleaning Cartridge Location|<p>The cleaning cartridge location - SCSI Element ID or translated HLI Address</p>|`SNMP agent`|slLibCleanCartLocationElementID<p>Update: 1h</p>|
 |[Cleaning] Discovery of Number of times that the cartridge has been used to clean|<p>Number of times that the cartridge has been used to clean</p>|`SNMP agent`|slLibCleanCartUsageCount<p>Update: 1h</p>|
 |[PowerSupply] Discovery if the Power Supply is Installed|<p>Indicates if the supply is installed(2) or not(1)</p>|`SNMP agent`|slPowerSupplyInstalled<p>Update: 1h</p>|
+|[Cap] Discovery of Cap is Enabled|<p>The Enabled state of the Cap</p>|`SNMP agent`|slCapEnabled<p>Update: 1h</p>|
+|[Controller] Discovery of Hardware Version|<p>The controller's hardware version</p>|`SNMP agent`|slControllerVersion<p>Update: 1h</p>|
+|[Drive] Discovery of Drive Fibre Node Name|<p>Drive's fibre node name (node WWN)</p>|`SNMP agent`|slDriveFibreNodeName<p>Update: 1h</p>|
+|[Drive] Discovery of Drive Fibre Port A is Enabled|<p>Port A - is port enabled</p>|`SNMP agent`|slDriveFibrePortAPortEnabled<p>Update: 1h</p>|
+|[Cleaning] Discovery of Configured warn count threshold|<p>Configured warn count threshold</p>|`SNMP agent`|slLibCleanWarnCount<p>Update: 1h</p>|
+|[Robot] Discovery of Robot Firmware Version|<p>The robot's firmware version</p>|`SNMP agent`|slRobotFirmwareVer<p>Update: 1h</p>|
 |[Robot] Discovery of Robot Put Retries|<p>The number of dismount retries performed by the robot</p>|`SNMP agent`|slRobotPutRetries<p>Update: 1h</p>|
 |[Robot] Discovery of Robot Serial Number|<p>The Robot's card serial number</p>|`SNMP agent`|slRobotSerialNum<p>Update: 1h</p>|
 |[Robot] Discovery of Robot State|<p>The robot's state (empty, loaded, moving, etc)</p>|`SNMP agent`|slRobotState<p>Update: 1h</p>|
@@ -93,11 +99,7 @@ There are no template links in this template.
 |[Robot] Discovery of Robot Operational Status|<p>The robot's operational status in enumerated form</p>|`SNMP agent`|slRobotStatusEnum<p>Update: 1h</p>|
 |[Controller] Discovery of Controller Status|<p>he controller's operational status in enumerated form</p>|`SNMP agent`|discovery[{#SNMPVALUE},slControllerStatusEnum]<p>Update: 1h</p>|
 |[Controller] Discovery of Code Version|<p>The controller's code version</p>|`SNMP agent`|slControllerCodeVer<p>Update: 1h</p>|
-|[Controller] Discovery of Hardware Version|<p>The controller's hardware version</p>|`SNMP agent`|slControllerVersion<p>Update: 1h</p>|
-|[Drive] Discovery of Drive Fibre Port A is Enabled|<p>Port A - is port enabled</p>|`SNMP agent`|slDriveFibrePortAPortEnabled<p>Update: 1h</p>|
-|[Cleaning] Discovery of Configured warn count threshold|<p>Configured warn count threshold</p>|`SNMP agent`|slLibCleanWarnCount<p>Update: 1h</p>|
 |[LSM] Discovery of LSM Status|<p>The LSM operational state - reported as a string (online, offline, offlinePending). This is hardware-based state, derived from robot state</p>|`SNMP agent`|slLibLSMStatus<p>Update: 1h</p>|
-|[Robot] Discovery of Robot Firmware Version|<p>The robot's firmware version</p>|`SNMP agent`|slRobotFirmwareVer<p>Update: 1h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
@@ -122,6 +124,7 @@ There are no template links in this template.
 |Total Number of Put Retries|<p>The total number of put retries</p>|`SNMP agent`|slLibStatsNumPutRetries<p>Update: 1m</p>|
 |UpTime Since Last Boot|<p>In seconds</p>|`SNMP agent`|slLibStatsUpTimeSinceLastBoot<p>Update: 1m</p>|
 |Base Model|<p>The StorageTek Model Name - see slXXXX section for vendor specific model data</p>|`SNMP agent`|slLibStkBaseModel<p>Update: 1h</p>|
+|Number of Library Initializations|<p>The number of library initializations</p>|`SNMP agent`|slLibStatsNumBoots<p>Update: 1m</p>|
 |Firmware Build Date|<p>The library's embedded firmware build date</p>|`SNMP agent`|slLibVersionFirmDate<p>Update: 1h</p>|
 |Number of Times The Service Door Has Been Opened|<p>The number of times the service door has been opened</p>|`SNMP agent`|slLibStatsNumDoorOpens<p>Update: 1m</p>|
 |Total Number of Get Failures|<p>The total number of get failures</p>|`SNMP agent`|slLibStatsNumGetFails<p>Update: 1m</p>|
@@ -145,7 +148,6 @@ There are no template links in this template.
 |Total of Ptp|<p>Count of the pass-through ports in the library</p>|`SNMP agent`|slPtpCount<p>Update: 1m</p>|
 |Total of Robots|<p>Count of the number of robots in the table</p>|`SNMP agent`|slRobotCount<p>Update: 1m</p>|
 |Total of Tapes|<p>Count of the cartridges in the inventory table</p>|`SNMP agent`|slTapeCount<p>Update: 1m</p>|
-|Number of Library Initializations|<p>The number of library initializations</p>|`SNMP agent`|slLibStatsNumBoots<p>Update: 1m</p>|
 |Serial Number|<p>The library frame serial number</p>|`SNMP agent`|slLibSerialNumber<p>Update: 1h</p>|
 |Agent Ha identifier|<p>RE controller identifier. active=0, standby=1</p>|`SNMP agent`|slAgentHaId<p>Update: 5m</p>|
 |Clean Enabled|<p>Auto clean feature configuration. Not all libraries support this feature, please refer to user documentation.</p>|`SNMP agent`|slLibCleanEnabled<p>Update: 1m</p>|
@@ -171,14 +173,12 @@ There are no template links in this template.
 |Temperature Threshold for Shutdown {#SNMPINDEX} (LLD)|<p>Temp threshold for automated library activity shutdown</p>|`SNMP agent`|slTempSensorFailThreshold[{#SNMPINDEX}]<p>Update: 1m</p>|
 |High Temperature since last boot {#SNMPINDEX} (LLD)|<p>Storage area peak temp since last machine boot</p>|`SNMP agent`|slTempSensorHighTemp[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Cap {#SNMPINDEX} Access State (LLD)|<p>The access state of the cap presented as an enumeration</p>|`SNMP agent`|slCapAccessStateEnum[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Cap {#SNMPINDEX} is Enabled (LLD)|<p>The Enabled state of the Cap false(0), true(1)</p>|`SNMP agent`|slCapEnabled[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Cap {#SNMPINDEX} Accessibility (LLD)|<p>The accessibility of a CAP (open allow/prevent)</p>|`SNMP agent`|slCapAccessibility[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Cap {#SNMPINDEX} Rotation Count (LLD)|<p>The Caps rotation count</p>|`SNMP agent`|slCapRotations[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Cap {#SNMPINDEX} Status (LLD)|<p>The operational status of the CAP presented as an enumeration</p>|`SNMP agent`|slCapStatusEnum[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Drive {#SNMPINDEX} Cell Content Label (LLD)|<p>The label of the cart in the drive (zero len string if empty, '??????' if unreadable)</p>|`SNMP agent`|slDriveCellContentLabel[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Drive {#SNMPINDEX} Cell Status (LLD)|<p>he status of the drive's cell presented as an enumeration unknown(1), empty(2), full(3)</p>|`SNMP agent`|slDriveCellStatusEnum[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Drive {#SNMPINDEX} Command Clean (LLD)|<p>Signal to clean/cancel cleaning of the drive enable(1), cancel(2)</p>|`SNMP agent`|slDriveCommandClean[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Drive {#SNMPINDEX} Fibre Node Name (LLD)|<p>Drive's fibre node name (node WWN)</p>|`SNMP agent`|slDriveFibreNodeName[{#SNMPINDEX}]<p>Update: 5m</p>|
 |Drive {#SNMPINDEX} Fibre Port B is Enabled (LLD)|<p>Port B - is port enabled</p>|`SNMP agent`|slDriveFibrePortBPortEnabled[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Drive {#SNMPINDEX} Fibre Port Count (LLD)|<p>The number of active ports in the drive single(1), dual(2)</p>|`SNMP agent`|slDriveFibrePortCount[{#SNMPINDEX}]<p>Update: 5m</p>|
 |Drive {#SNMPINDEX} Get Retries (LLD)|<p>The number of mount retries performed to the drive</p>|`SNMP agent`|slDriveGetRetries[{#SNMPINDEX}]<p>Update: 1m</p>|
@@ -194,6 +194,12 @@ There are no template links in this template.
 |ID of Cleaning Cartridge Location {#SNMPINDEX} (LLD)|<p>The cleaning cartridge location - SCSI Element ID or translated HLI Address</p>|`SNMP agent`|slLibCleanCartLocationElementID[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Number of times that the cartridge {#SNMPINDEX} has been used to clean (LLD)|<p>Number of times that the cartridge has been used to clean</p>|`SNMP agent`|slLibCleanCartUsageCount[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Power Supply {#SNMPINDEX} is Installed (LLD)|<p>Indicates if the supply is installed(2) or not(1)</p>|`SNMP agent`|slPowerSupplyInstalled[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Cap {#SNMPINDEX} is Enabled (LLD)|<p>The Enabled state of the Cap false(0), true(1)</p>|`SNMP agent`|slCapEnabled[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Controller {#SNMPINDEX} Hardware Version (LLD)|<p>The controller's hardware version</p>|`SNMP agent`|slControllerVersion[{#SNMPINDEX}]<p>Update: 1h</p>|
+|Drive {#SNMPINDEX} Fibre Node Name (LLD)|<p>Drive's fibre node name (node WWN)</p>|`SNMP agent`|slDriveFibreNodeName[{#SNMPINDEX}]<p>Update: 5m</p>|
+|Drive {#SNMPINDEX} Fibre Port A is Enabled (LLD)|<p>Port A - is port enabled</p>|`SNMP agent`|slDriveFibrePortAPortEnabled[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Configured warn count threshold {#SNMPINDEX} (LLD)|<p>Configured warn count threshold</p>|`SNMP agent`|slLibCleanWarnCount[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Robot's {#SNMPINDEX} Firmware Version (LLD)|<p>The robot's firmware version</p>|`SNMP agent`|slRobotFirmwareVer[{#SNMPINDEX}]<p>Update: 1h</p>|
 |Number of Dismount Retries by Robot {#SNMPINDEX} (LLD)|<p>The number of dismount retries performed by the robot</p>|`SNMP agent`|slRobotPutRetries[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Robot Serial Number {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|slRobotSerialNum[{#SNMPINDEX}]<p>Update: 1h</p>|
 |Robot's {#SNMPINDEX} state (LLD)|<p>The robot's state (empty, loaded, moving, etc)</p>|`SNMP agent`|slRobotState[{#SNMPINDEX}]<p>Update: 1m</p>|
@@ -213,11 +219,7 @@ There are no template links in this template.
 |Robot {#SNMPINDEX} Operational Status (LLD)|<p>The robot's operational status in enumerated form ok(0), error(1), warning(2), info(3), trace(4)</p>|`SNMP agent`|slRobotStatusEnum[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Controller {#SNMPINDEX} Status (LLD)|<p>The controller's operational status in enumerated form</p>|`SNMP agent`|slControllerStatusEnum[{#SNMPINDEX}]<p>Update: 1m</p>|
 |Controller {#SNMPINDEX} Code Version (LLD)|<p>The controller's code version</p>|`SNMP agent`|slControllerCodeVer[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Controller {#SNMPINDEX} Hardware Version (LLD)|<p>The controller's hardware version</p>|`SNMP agent`|slControllerVersion[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Drive {#SNMPINDEX} Fibre Port A is Enabled (LLD)|<p>Port A - is port enabled</p>|`SNMP agent`|slDriveFibrePortAPortEnabled[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Configured warn count threshold {#SNMPINDEX} (LLD)|<p>Configured warn count threshold</p>|`SNMP agent`|slLibCleanWarnCount[{#SNMPINDEX}]<p>Update: 1m</p>|
 |LSM {#SNMPINDEX} Status (LLD)|<p>The LSM operational state - reported as a string (online, offline, offlinePending). This is hardware-based state, derived from robot state</p>|`SNMP agent`|slLibLSMStatus[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Robot's {#SNMPINDEX} Firmware Version (LLD)|<p>The robot's firmware version</p>|`SNMP agent`|slRobotFirmwareVer[{#SNMPINDEX}]<p>Update: 1h</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

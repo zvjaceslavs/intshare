@@ -35,6 +35,8 @@ Tested on FreeNAS and Debian should work on any Linux and FreeBSD system
 
 [Based on the Template of Tim Rightnour](cat-server-hardware/lm-sensors-snmp "Based on the Template of Tim Rightnour")
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

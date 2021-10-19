@@ -17,6 +17,8 @@ Device firmware 3.15.0 is recommended. Older firmware versions, such as 3.9.0, d
 
 Due to a limitation in Zabbix, you cannot create a graph of one sensor item across multiple hosts. Please vote for issue <https://support.zabbix.com/browse/ZBXNEXT-1120> to have that feature added.
 
+
+
 ## Author
 
 Webster Massingham

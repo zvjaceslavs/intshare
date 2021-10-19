@@ -28,7 +28,9 @@ Items:
 -MAC Address
 
 
-<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family## Author
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family
+
+## Author
 
 Rafael Gustavo Gassner
 

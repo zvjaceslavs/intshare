@@ -18,6 +18,8 @@ The trigger intentionally don't resolve itself if problem is resolved, because i
 
 Hit me up if someone got an idea for counting the events in a item without powershell on each host.
 
+
+
 ## Author
 
 Olai Wanvik

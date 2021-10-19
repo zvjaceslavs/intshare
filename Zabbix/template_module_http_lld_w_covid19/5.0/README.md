@@ -96,6 +96,8 @@ Ao importar o Template para o Garfana, selecione seu Data Source.
 
  Obs: Caso em paises não apareça a lista, verifique se as aplicações e itens foram gerados no Zabbix.
 
+
+
 ## Author
 
 Bernardo Lankheet

@@ -16,6 +16,8 @@ UnsafeUserParameters=1
 
 AllowKey=system.run[c:\Windows\System32\cscript.exe /nologo c:\Windows\System32\slmgr.vbs /xpr] 
 
+
+
 ## Author
 
 Carlos Eduardo

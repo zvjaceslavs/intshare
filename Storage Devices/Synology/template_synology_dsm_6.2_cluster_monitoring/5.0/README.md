@@ -79,6 +79,8 @@ Nice to read when will deploy Synology HA environment this [Synology HA White Pa
 
  
 
+
+
 ## Author
 
 Tudor Ticau

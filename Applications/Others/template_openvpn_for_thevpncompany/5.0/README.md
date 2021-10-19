@@ -38,6 +38,8 @@ Those templates allows the user to:
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -99,6 +101,8 @@ Those templates allows the user to:
 
 
  
+
+
 
 ## Macros used
 

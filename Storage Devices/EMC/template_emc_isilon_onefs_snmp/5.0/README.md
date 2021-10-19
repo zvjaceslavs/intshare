@@ -34,6 +34,8 @@ This is version 1.1 so it may have some inconsistencies, but I'm pretty good at 
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -106,6 +108,8 @@ This is version 1.1 so it may have some inconsistencies, but I'm pretty good at 
 
 
  
+
+
 
 ## Macros used
 

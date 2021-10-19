@@ -16,6 +16,8 @@ This template needs changing macroses:
 
 {$MIKROTIK\_SSH\_USER}
 
+
+
 ## Author
 
 AlKosmos

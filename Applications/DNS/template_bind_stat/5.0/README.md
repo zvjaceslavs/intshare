@@ -26,6 +26,8 @@ UserParameter=bind.queries.query[*],curl http://127.0.0.1:8053/ 2>/dev/null | xm
 
 ![](http://img.dzek.ru/images/dns.jpg)
 
+
+
 ## Macros used
 
 There are no macros links in this template.

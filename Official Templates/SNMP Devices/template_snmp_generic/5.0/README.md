@@ -4,6 +4,8 @@
 
 Official template from Zabbix distribution to monitor generic device information by SNMP
 
+
+
 ## Author
 
 Zabbix SIA

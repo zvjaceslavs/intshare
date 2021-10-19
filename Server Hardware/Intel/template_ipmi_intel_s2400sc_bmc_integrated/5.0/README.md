@@ -4,6 +4,8 @@
 
 IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage, Watts]
 
+
+
 ## Author
 
 Dorin Sergey

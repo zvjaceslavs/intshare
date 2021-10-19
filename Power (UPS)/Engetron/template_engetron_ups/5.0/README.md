@@ -4,6 +4,8 @@
 
  Este template tem como Objetivo monitorar Nobreaks da Engetron. Os Oid's analisados, estão em conformidade com a tabela SNMP UPS-MIB.
 
+
+
 ## Author
 
 Henrique Soares

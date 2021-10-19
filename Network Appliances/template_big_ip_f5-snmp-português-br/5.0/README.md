@@ -4,6 +4,8 @@
 
 Necessário, criar os Mapeamentos de valores da imagem.
 
+
+
 ## Author
 
 Theo Castelo

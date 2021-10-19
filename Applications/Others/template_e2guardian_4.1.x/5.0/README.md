@@ -32,6 +32,8 @@ Changes
 
 * February 2018: initial commit.
 * 03 April 2018: Switch to Zabbix agent (active) & converted s
+
+
 ## Author
 
 Marco Hofmann

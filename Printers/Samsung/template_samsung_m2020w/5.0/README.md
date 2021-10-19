@@ -4,6 +4,8 @@
 
 Samsung M2020W Printer
 
+
+
 ## Author
 
 Piotr Górski

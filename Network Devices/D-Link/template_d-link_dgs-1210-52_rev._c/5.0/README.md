@@ -10,6 +10,8 @@ LLD Network interfaces.
 
 Do not use with PoE version - vendor changed many OIDs.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

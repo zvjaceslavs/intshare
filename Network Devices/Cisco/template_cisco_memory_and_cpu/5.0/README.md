@@ -13,6 +13,8 @@ Discovery all CPUs and memory pools with dynamic trigger thresholds (macro conte
 
 You need to create a user macro on the template or global level with name {$CRD\_SNMPV2\_R} = "yourSNMPv2ReadCommunity".
 
+
+
 ## Author
 
 Valentin Weber

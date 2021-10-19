@@ -52,6 +52,8 @@ With the default values, interface descriptions that start with "UPLINK" will be
 If you miss some interfaces: run a SNMPWALK over the device to check if it matches the {$INT\_NAME\_PHYSICAL} regex!  
 
 
+
+
 ## Author
 
 Twan Kamans

@@ -30,7 +30,9 @@ Gathered metrics:
 * Ping (`/ping` HTTP endpoint)
 
 
-<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',## Author
+<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+
+## Author
 
 Igor Novgorodov
 

@@ -6,6 +6,8 @@ Based on official SNMP MIBs.
 SGOS 6.5.x+  
 Additional info: <https://bto.bluecoat.com/documentation/All-Documents/ProxySG>
 
+
+
 ## Macros used
 
 There are no macros links in this template.

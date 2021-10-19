@@ -11,6 +11,8 @@ Template with LLD to discover Docker Containers via Docker socket ([Template.Doc
 
  
 
+
+
 ## Author
 
 Martin Schroeter
@@ -53,6 +55,8 @@ Template with LLD to discover Docker Containers via Docker socket ([Template.Doc
 
 
  
+
+
 
 ## Author
 

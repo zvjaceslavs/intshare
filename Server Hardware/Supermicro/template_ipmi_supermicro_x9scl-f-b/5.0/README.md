@@ -7,6 +7,8 @@ IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage]
 
 Items 17, Triggers 17, Graphs 3
 
+
+
 ## Author
 
 Vadzim Smazheuski

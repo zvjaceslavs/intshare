@@ -4,6 +4,8 @@
 
 This will work on NSA 3x00 and 4x00 series firewalls. Derive form the 3600/400 one that is in Portuguese. This one is in English.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

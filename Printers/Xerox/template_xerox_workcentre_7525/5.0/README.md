@@ -4,6 +4,8 @@
 
 Template for Xerox WorkCentre 7525, uses SNMP v.1
 
+
+
 ## Macros used
 
 There are no macros links in this template.

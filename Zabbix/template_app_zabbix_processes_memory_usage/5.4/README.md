@@ -71,6 +71,8 @@ You might want to edit the version in the XML file to suit your Zabbix version:
 ```
 5.0
 ```
+
+
 ## Author
 
 dimir

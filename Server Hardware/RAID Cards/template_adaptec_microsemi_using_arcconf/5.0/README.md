@@ -16,6 +16,8 @@ Main features
 * Discovery of controllers, logical discs, physical discs, batteries
 * Monitoring controllers, logical, physical discs, batteries
 * Comfortable changing of time intervals by macroses.
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -13,6 +13,8 @@ This script get next metrics:
 
 Battery, CagePowerSupply, DiskDrive, DriveCage, DynamicStoragePool, EthernetPort, Fan, FCPort, IDEDrive, NodePowerSupply, NodeSystem, PCICard, PhysicalMemory, SASPort
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

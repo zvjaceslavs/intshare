@@ -39,6 +39,8 @@ Thanks
 
  
 
+
+
 ## Author
 
 LAHOUZE Olivier
@@ -66,6 +68,12 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Process vmware-cm Status|<p>VMware Component Manager</p>|`SNMP agent`|SNMP-Process-vmware_cm-Status<p>Update: 60</p>|
+|Process vmware-vws Perf Memory|<p>VMware System and Hardware Health Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vws-Perf-Memory<p>Update: 60</p>|
+|Process vmcad Perf Memory|<p>VMware Certificate Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmcad-Perf-Memory<p>Update: 60</p>|
+|Name Vcenter|<p>-</p>|`SNMP agent`|SNMP-NamePlateforme<p>Update: 3600</p>|
+|Process vmware-sca Perf CPU|<p>VMware Service Control Agent</p>|`SNMP agent`|SNMP-Process-vmware_sca-Perf-CPU<p>Update: 60</p>|
+|Process vmware-rhttpproxy Status|<p>VMware HTTP Reverse Proxy</p>|`SNMP agent`|SNMP-Process-vmware_rhttpproxy-Status<p>Update: 60</p>|
+|Process vmware-rhttpproxy Perf Memory|<p>VMware HTTP Reverse Proxy Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_rhttpproxy-Perf-Memory<p>Update: 60</p>|
 |Process vmware-stsd Perf Memory|<p>VMware Security Token Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_stsd-Perf-Memory<p>Update: 60</p>|
 |Process vsphere-client Perf CPU|<p>vsphere-client</p>|`SNMP agent`|SNMP-Process-vsphere_client-Perf-CPU<p>Update: 60</p>|
 |Process vmware-vws Status|<p>VMware System and Hardware Health Manager</p>|`SNMP agent`|SNMP-Process-vmware_vws-Status<p>Update: 60</p>|
@@ -80,11 +88,6 @@ There are no template links in this template.
 |Process vmdird Status|<p>VMware Directory Service</p>|`SNMP agent`|SNMP-Process-vmdird-Status<p>Update: 60</p>|
 |Process vmdird Perf Memory|<p>VMware Directory Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmdird-Perf-Memory<p>Update: 60</p>|
 |Process vmcad Status|<p>VMware Certificate Service</p>|`SNMP agent`|SNMP-Process-vmcad-Status<p>Update: 60</p>|
-|Process vmcad Perf Memory|<p>VMware Certificate Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmcad-Perf-Memory<p>Update: 60</p>|
-|Name Vcenter|<p>-</p>|`SNMP agent`|SNMP-NamePlateforme<p>Update: 3600</p>|
-|Process vmware-sca Perf CPU|<p>VMware Service Control Agent</p>|`SNMP agent`|SNMP-Process-vmware_sca-Perf-CPU<p>Update: 60</p>|
-|Process vmware-rhttpproxy Status|<p>VMware HTTP Reverse Proxy</p>|`SNMP agent`|SNMP-Process-vmware_rhttpproxy-Status<p>Update: 60</p>|
-|Process vmware-rhttpproxy Perf Memory|<p>VMware HTTP Reverse Proxy Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_rhttpproxy-Perf-Memory<p>Update: 60</p>|
 |Process vmware-psc-client Perf Memory|<p>Platform Services Controller Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_psc_client-Perf-Memory<p>Update: 60</p>|
 |Process vmware-vapi-endpoint Perf Memory|<p>VMware vAPI Endpoint Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vapi_endpoint-Perf-Memory<p>Update: 60</p>|
 |Process vsphere-client Perf Memory|<p>vsphere-client Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vsphere_client-Perf-Memory<p>Update: 60</p>|
@@ -116,7 +119,6 @@ There are no template links in this template.
 |Process vmware-sps Perf CPU|<p>VMware vSphere Profile-Driven Storage Service</p>|`SNMP agent`|SNMP-Process-vmware_sps-Perf-CPU<p>Update: 60</p>|
 |Process vmware-vsan-health Status|<p>VMware vSAN Health Service</p>|`SNMP agent`|SNMP-Process-vmware_vsan_health-Status<p>Update: 60</p>|
 |Process vsphere-client Status|<p>vsphere-client</p>|`SNMP agent`|SNMP-Process-vsphere_client-Status<p>Update: 60</p>|
-|Process vmware-vws Perf Memory|<p>VMware System and Hardware Health Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vws-Perf-Memory<p>Update: 60</p>|
 |Process vmware-vws Perf CPU|<p>VMware System and Hardware Health Manager</p>|`SNMP agent`|SNMP-Process-vmware_vws-Perf-CPU<p>Update: 60</p>|
 |Process vmware-vsm Status|<p>VMware vService Manager</p>|`SNMP agent`|SNMP-Process-vmware_vsm-Status<p>Update: 60</p>|
 |Process vmware-vsm Perf CPU|<p>VMware vService Manager</p>|`SNMP agent`|SNMP-Process-vmware_vsm-Perf-CPU<p>Update: 60</p>|

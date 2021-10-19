@@ -4,6 +4,8 @@
 
 16 Items, 4 Triggers 5 Graphs and 2 Screens built for IIS 7.5, 8.0, 8.5 and 10 Services, Ports and Performance Counters. Developed through "Template Windows 2008 R2 IIS Server\_RUS" for RUSSIAN Location
 
+
+
 ## Macros used
 
 There are no macros links in this template.

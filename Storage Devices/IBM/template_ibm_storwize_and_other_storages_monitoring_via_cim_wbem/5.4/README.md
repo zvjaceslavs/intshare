@@ -19,6 +19,8 @@ Tested with IBM Storwize
 
 3) Dockerization included.
 
+
+
 ## Author
 
 Denis Pavlov
@@ -42,9 +44,9 @@ Denis Pavlov
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Enclosures|<p>-</p>|`Zabbix trapper`|enclosures.discovery<p>Update: 0</p>|
 |Arrays|<p>-</p>|`Zabbix trapper`|arrays.discovery<p>Update: 0</p>|
 |Disk Drives|<p>-</p>|`Zabbix trapper`|diskdrives.discovery<p>Update: 0</p>|
-|Enclosures|<p>-</p>|`Zabbix trapper`|enclosures.discovery<p>Update: 0</p>|
 |Mdisk Groups|<p>-</p>|`Zabbix trapper`|mdiskgrps.discovery<p>Update: 0</p>|
 |Mdisks|<p>-</p>|`Zabbix trapper`|mdisks.discovery<p>Update: 0</p>|
 |Systems|<p>-</p>|`Zabbix trapper`|systems.discovery<p>Update: 0</p>|
@@ -56,6 +58,30 @@ Denis Pavlov
 |ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1m</p>|
 |ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1m</p>|
 |ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1m</p>|
+|ChassisPackageType of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|ChassisPackageType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|OperationalStatus 0 of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OperationalStatus.0[Enclosure.{#SO_NAME}]<p>Update: 0</p>|
+|TotalPSUs of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|TotalPSUs[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|TotalFanModules of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|TotalFanModules[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|TotalCanisters of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|TotalCanisters[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|Tag of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Tag[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|SerialNumber of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|SerialNumber[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|RemovalConditions of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|RemovalConditions[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|ProductMTM of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|ProductMTM[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|PackageType of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|PackageType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|OperationalStatus 1 of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OperationalStatus.1[Enclosure.{#SO_NAME}]<p>Update: 0</p>|
+|OnlinePSUs of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OnlinePSUs[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|DriveSlots of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|DriveSlots[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|OnlineFanModules of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OnlineFanModules[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|OnlineCanisters of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OnlineCanisters[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|Model of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Model[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|Manufacturer of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Manufacturer[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|Managed of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Managed[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|IOGroupName of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|IOGroupName[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|IOGroupID of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|IOGroupID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|HealthState of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|HealthState[Enclosure.{#SO_NAME}]<p>Update: 0</p>|
+|EnclosureStatus of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|EnclosureStatus[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
+|ElementName of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|ElementName[Enclosure.{#SO_NAME}]<p>Update: 0</p>|
+|Type of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Type[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
 |Access of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Access[Array.{#SO_NAME}]<p>Update: 0</p>|
 |Poolname of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Poolname[Array.{#SO_NAME}]<p>Update: 0</p>|
 |NumberOfBlocks of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|NumberOfBlocks[Array.{#SO_NAME}]<p>Update: 0</p>|
@@ -139,30 +165,6 @@ Denis Pavlov
 |MdiskID of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|MdiskID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
 |Mdisk Name of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|MdiskName[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
 |Accumulated time for all write operations of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|WriteIOTimeCounter[DiskDrive.{#SO_NAME}]<p>Update: 0</p>|
-|ChassisPackageType of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|ChassisPackageType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|OperationalStatus 0 of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OperationalStatus.0[Enclosure.{#SO_NAME}]<p>Update: 0</p>|
-|TotalPSUs of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|TotalPSUs[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|TotalFanModules of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|TotalFanModules[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|TotalCanisters of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|TotalCanisters[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|Tag of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Tag[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|SerialNumber of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|SerialNumber[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|RemovalConditions of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|RemovalConditions[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|ProductMTM of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|ProductMTM[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|PackageType of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|PackageType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|OperationalStatus 1 of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OperationalStatus.1[Enclosure.{#SO_NAME}]<p>Update: 0</p>|
-|OnlinePSUs of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OnlinePSUs[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|DriveSlots of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|DriveSlots[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|OnlineFanModules of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OnlineFanModules[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|OnlineCanisters of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|OnlineCanisters[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|Model of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Model[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|Manufacturer of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Manufacturer[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|Managed of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Managed[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|IOGroupName of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|IOGroupName[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|IOGroupID of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|IOGroupID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|HealthState of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|HealthState[Enclosure.{#SO_NAME}]<p>Update: 0</p>|
-|EnclosureStatus of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|EnclosureStatus[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
-|ElementName of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|ElementName[Enclosure.{#SO_NAME}]<p>Update: 0</p>|
-|Type of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|Type[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
 |ChildCapacity of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|ChildCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
 |ParentPoolID of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|ParentPoolID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
 |VirtualCapacity of {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|`Zabbix trapper`|VirtualCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p>|
@@ -354,6 +356,7 @@ Denis Pavlov
 |Read rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_READ_RATE_MBS} MB/s for 5 minutes|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesRead[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
 |Transfer rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_TRANSFER_RATE_MBS} MB/s for 5 minutes|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesTransferred[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
 |Write rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_WRITE_RATE_MBS} MB/s for 5 minutes|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesWritten[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
+|No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[Enclosure.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[Enclosure.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[Array.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[Array.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |Error {ITEM.VALUE} is occured on {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ErrorSequenceNumber[{#SO_TYPE}.{#SO_NAME}],5m)=0</p><p>**Recovery expression**: </p>|high|
 |Firmware Level of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/FirmwareLevel[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/FirmwareLevel[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|
@@ -365,7 +368,6 @@ Denis Pavlov
 |No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/Name[DiskDrive.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/Name[DiskDrive.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |ProductID of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/ProductID[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/ProductID[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|
 |SlotID of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/SlotID[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/SlotID[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|
-|No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[Enclosure.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[Enclosure.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[mdiskgrp.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[mdiskgrp.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[mdisk.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[mdisk.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |Code Level of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/CodeLevel[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/CodeLevel[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|

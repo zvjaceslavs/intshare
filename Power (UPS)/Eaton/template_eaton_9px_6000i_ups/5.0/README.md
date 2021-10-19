@@ -17,6 +17,8 @@ Should work with other models too. Triggers for temperature and humidity are als
 Created in zabbix v3.2.x
 
 
+
+
 ## Author
 
 Nijaz Sehic

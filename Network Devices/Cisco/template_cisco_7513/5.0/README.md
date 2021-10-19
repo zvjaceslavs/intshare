@@ -31,6 +31,8 @@ Temperature
 
 Voltage
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -178,6 +180,8 @@ Temperature
 
 Voltage
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -243,6 +247,8 @@ Temperature
 
 
 Voltage
+
+
 
 ## Macros used
 

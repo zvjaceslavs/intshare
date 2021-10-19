@@ -4,6 +4,8 @@
 
 Official template from Zabbix distribution to check SMTP service availability
 
+
+
 ## Author
 
 Zabbix SIA

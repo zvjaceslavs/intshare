@@ -69,6 +69,8 @@ Cria o mapeamento de valor:
 6 ⇒ onBypass  
 <span style="color: #1f2c33; fon
 
+
+
 ## Author
 
 Carlos Eduardo

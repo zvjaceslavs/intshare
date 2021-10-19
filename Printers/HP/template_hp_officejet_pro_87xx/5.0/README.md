@@ -4,6 +4,8 @@
 
 Tested with Zabbix 4.03 on HP OfficeJet Pro 8710
 
+
+
 ## Macros used
 
 There are no macros links in this template.

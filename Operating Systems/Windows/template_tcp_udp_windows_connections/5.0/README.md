@@ -26,6 +26,8 @@ UserParameter=sockstat.sockets, netstat -ano | find /V "hola" /C
 
 Restart Zabbix agent
 
+
+
 ## Author
 
 Sancho

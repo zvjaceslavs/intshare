@@ -29,6 +29,8 @@ Requires MIB on SNMP config
 
 https://www.ip-sens.com/downloads/ips2222\_v1.3.mib
 
+
+
 ## Macros used
 
 There are no macros links in this template.

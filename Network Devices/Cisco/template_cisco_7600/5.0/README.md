@@ -40,6 +40,8 @@ OSPF Neighbours (inherited from Template Cisco General)
 
 Power Supplies
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -214,6 +216,8 @@ OSPF Neighbours (inherited from Template Cisco General)
 
 Power Supplies
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -288,6 +292,8 @@ OSPF Neighbours (inherited from Template Cisco General)
 
 
 Power Supplies
+
+
 
 ## Macros used
 

@@ -52,6 +52,8 @@ The agent will connect to localhost; if you have multiple Eocortex servers, just
 
 I'm using Zabbix 4.4.4 but there is nothing very specific so it will probably also work on older versions.
 
+
+
 ## Author
 
 ARAS Security B.V.

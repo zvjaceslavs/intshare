@@ -12,6 +12,8 @@ Platforms DM4050 and DM4610.
 SNMP - Sensors Temperature  
 SNMP - FAN Control, FAN Speed
 
+
+
 ## Author
 
 Guilherme Zamora Rodrigues

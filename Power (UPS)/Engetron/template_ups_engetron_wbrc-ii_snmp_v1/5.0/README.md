@@ -4,6 +4,8 @@
 
 Template para o UPS Nobreak Engetron WBRC-II (v2.6) utilizando SNMP v1, único protocolo aceito pelo equipamento. Criado utilizando UPS-MIB.
 
+
+
 ## Author
 
 Andre Juliano Danielski

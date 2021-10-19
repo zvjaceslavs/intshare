@@ -29,6 +29,8 @@ c) Network interfaces - discover incoming/outgoing traffic, operational state an
 
 d) Processors - discover and monitor with trigger the load on processors
 
+
+
 ## Author
 
 Ticau Tudor

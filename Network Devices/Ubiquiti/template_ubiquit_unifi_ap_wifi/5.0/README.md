@@ -4,6 +4,8 @@
 
 Template para Ubiquiti Unifi AP e Wifi
 
+
+
 ## Author
 
 leonardog50
@@ -37,27 +39,27 @@ There are no template links in this template.
 |Incoming Traffic Unicast 02|<p>-</p>|`SNMP agent`|ifInUcast.2<p>Update: 600</p>|
 |Incoming Traffic Unicast 01|<p>-</p>|`SNMP agent`|ifInUcast.1<p>Update: 600</p>|
 |Incoming Traffic 07|<p>-</p>|`SNMP agent`|ifInOctets.7<p>Update: 300</p>|
-|Incoming Traffic 06|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 300</p>|
-|Incoming Traffic 05|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 300</p>|
-|Incoming Traffic 04|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 300</p>|
-|Incoming Traffic 03|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 300</p>|
 |Incoming Traffic No-Unicast 04|<p>-</p>|`SNMP agent`|ifInNoUcast.4<p>Update: 600</p>|
 |Operation Status 06|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 60</p>|
-|Operation Status 03|<p>-</p>|`SNMP agent`|ifOperStatus.3<p>Update: 60</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.1<p>Update: 600</p>|
 |Device Chipset Version|<p>-</p>|`SNMP agent`|ubntChipsetVersion<p>Update: 60s</p>|
 |Incoming Traffic No-Unicast 07|<p>-</p>|`SNMP agent`|ifInNoUcast.7<p>Update: 600</p>|
 |Incoming Traffic Unicast 07|<p>-</p>|`SNMP agent`|ifInUcast.7<p>Update: 600</p>|
 |Incoming Traffic No-Unicast 06|<p>-</p>|`SNMP agent`|ifInNoUcast.6<p>Update: 600</p>|
-|Radio Rx Rate|<p>-</p>|`SNMP agent`|ubntWlStatRxRate<p>Update: 30s</p>|
-|Radio RSSI|<p>-</p>|`SNMP agent`|ubntWlStatRssi<p>Update: 30s</p>|
 |Device uptime|<p>MIB: SNMPv2-MIB The time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|system.uptime<p>Update: 30s</p>|
-|Operating system|<p>-</p>|`SNMP agent`|system.sw.os<p>Update: 3600s</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.2<p>Update: 600</p>|
 |Outgoing Traffic 05|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 300</p>|
 |Outgoing Traffic 04|<p>-</p>|`SNMP agent`|ifOutOctets.4<p>Update: 300</p>|
 |Outgoing Traffic 03|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 300</p>|
 |SNMP availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 1m</p>|
+|Radio Rx Rate|<p>-</p>|`SNMP agent`|ubntWlStatRxRate<p>Update: 30s</p>|
+|Radio RSSI|<p>-</p>|`SNMP agent`|ubntWlStatRssi<p>Update: 30s</p>|
+|Operating system|<p>-</p>|`SNMP agent`|system.sw.os<p>Update: 3600s</p>|
+|Incoming Traffic 06|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 300</p>|
+|Incoming Traffic 05|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 300</p>|
+|Incoming Traffic 04|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 300</p>|
+|Incoming Traffic 03|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 300</p>|
+|Operation Status 03|<p>-</p>|`SNMP agent`|ifOperStatus.3<p>Update: 60</p>|
 |Radio Frequency|<p>-</p>|`SNMP agent`|ubntRadioFreq<p>Update: 30s</p>|
 |Wireless outgoing drops on {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, stat.tx_dropped]<p>Update: 60s</p>|
 |Serial of {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID},  serial]<p>Update: 3600</p>|

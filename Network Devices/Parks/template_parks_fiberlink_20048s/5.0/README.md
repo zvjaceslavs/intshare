@@ -4,6 +4,8 @@
 
 Template para Olt Parks Modelo 20048S
 
+
+
 ## Author
 
 Parks
@@ -61,11 +63,7 @@ There are no discovery rules in this template.
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[giga-ethernet0/7]<p>Update: 60</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[gpon1/1]<p>Update: 60</p>|
 |Device Uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 3600</p>|
-|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[giga-ethernet0/5]<p>Update: 60</p>|
 |Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/5]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/6]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/7]<p>Update: 60</p>|
-|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[10giga-ethernet0/0]<p>Update: 60</p>|
 |Memory Used|<p>-</p>|`SNMP agent`|MemoryUsed<p>Update: 60;50/1-7,00:00-24:00</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[giga-ethernet0/4]<p>Update: 60</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[giga-ethernet0/5]<p>Update: 60</p>|
@@ -84,22 +82,7 @@ There are no discovery rules in this template.
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[10giga-ethernet0/0]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[giga-ethernet0/0]<p>Update: 60</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[10giga-ethernet1/0]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon1/3]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/4]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon1/4]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/1]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/2]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/3]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/4]<p>Update: 60</p>|
-|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[10giga-ethernet0/1]<p>Update: 60</p>|
-|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[10giga-ethernet1/0]<p>Update: 60</p>|
-|Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[10giga-ethernet0/1]<p>Update: 60</p>|
 |Temperature SFP Gpon 2/2|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_6<p>Update: 1800</p>|
-|Temperature Power Supply|<p>-</p>|`SNMP agent`|pkpwsuplyTemperature<p>Update: 900</p>|
-|Temperature SFP Gpon 1/1|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_1<p>Update: 1800</p>|
-|Temperature SFP Gpon 1/3|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_3<p>Update: 1800</p>|
-|Temperature SFP Gpon 1/4|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_4<p>Update: 1800</p>|
-|Temperature SFP Gpon 2/1|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_5<p>Update: 1800</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[gpon1/1]<p>Update: 60</p>|
 |Memory Free|<p>-</p>|`SNMP agent`|MemoryFree<p>Update: 60</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[gpon1/2]<p>Update: 60</p>|
@@ -114,10 +97,33 @@ There are no discovery rules in this template.
 |Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[gpon2/3]<p>Update: 60</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[giga-ethernet0/2]<p>Update: 60</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[10giga-ethernet0/1]<p>Update: 60</p>|
-|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[10giga-ethernet1/0]<p>Update: 60</p>|
-|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[10giga-ethernet1/1]<p>Update: 60</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[giga-ethernet0/0]<p>Update: 60</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[giga-ethernet0/1]<p>Update: 60</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[giga-ethernet0/5]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon1/3]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/4]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/6]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/7]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon1/4]<p>Update: 60</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[10giga-ethernet1/1]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/1]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/2]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/3]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/4]<p>Update: 60</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[10giga-ethernet0/0]<p>Update: 60</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[10giga-ethernet0/1]<p>Update: 60</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[10giga-ethernet1/0]<p>Update: 60</p>|
+|Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[10giga-ethernet0/1]<p>Update: 60</p>|
+|Temperature Power Supply|<p>-</p>|`SNMP agent`|pkpwsuplyTemperature<p>Update: 900</p>|
+|Temperature SFP Gpon 1/1|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_1<p>Update: 1800</p>|
+|Temperature SFP Gpon 1/3|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_3<p>Update: 1800</p>|
+|Temperature SFP Gpon 1/4|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_4<p>Update: 1800</p>|
+|Temperature SFP Gpon 2/1|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_5<p>Update: 1800</p>|
+|Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/4]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[10giga-ethernet0/0]<p>Update: 60</p>|
+|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[10giga-ethernet0/0]<p>Update: 60</p>|
+|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[10giga-ethernet1/0]<p>Update: 60</p>|
+|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[10giga-ethernet1/1]<p>Update: 60</p>|
 |Inventario - Configuração|<p>-</p>|`External check`|config.sh[{HOST.CONN},{$PWDPON}]<p>Update: 0;md15h0m30</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[giga-ethernet0/4]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[gpon1/1]<p>Update: 60</p>|
@@ -130,15 +136,12 @@ There are no discovery rules in this template.
 |Cpu System|<p>-</p>|`SNMP agent`|CpuSystem<p>Update: 60</p>|
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/5]<p>Update: 60</p>|
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[10giga-ethernet1/0]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[10giga-ethernet0/0]<p>Update: 60</p>|
-|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[10giga-ethernet0/0]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[giga-ethernet0/1]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[gpon1/4]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[gpon2/1]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[gpon2/2]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[gpon2/3]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[giga-ethernet0/2]<p>Update: 60</p>|
-|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[10giga-ethernet1/1]<p>Update: 60</p>|
 |Device Contact Details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 7200</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[giga-ethernet0/0]<p>Update: 60</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[giga-ethernet0/2]<p>Update: 60</p>|
@@ -155,7 +158,6 @@ There are no discovery rules in this template.
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/1]<p>Update: 60</p>|
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/2]<p>Update: 60</p>|
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/3]<p>Update: 60</p>|
-|Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/4]<p>Update: 60</p>|
 |Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[giga-ethernet0/5]<p>Update: 60</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[gpon2/2]<p>Update: 60</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[giga-ethernet0/4]<p>Update: 60</p>|

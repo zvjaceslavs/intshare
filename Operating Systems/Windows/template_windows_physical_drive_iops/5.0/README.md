@@ -34,6 +34,8 @@ PS: powershell macro has been base64 encoded to be more easy to deploy, if you d
 
 Tested from Windows 7 till 2016 with success.
 
+
+
 ## Author
 
 Cédric MARCOUX

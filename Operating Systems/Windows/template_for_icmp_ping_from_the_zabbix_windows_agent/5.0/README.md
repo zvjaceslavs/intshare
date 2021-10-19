@@ -58,6 +58,8 @@ List example:
 
 8.8.8.8,www.ya.ru,10.10.10.10
 
+
+
 ## Author
 
 Oleg Kostikov

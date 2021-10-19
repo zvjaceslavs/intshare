@@ -4,6 +4,8 @@
 
 Official template from Zabbix distribution to discover processors by SNMP
 
+
+
 ## Author
 
 Zabbix SIA

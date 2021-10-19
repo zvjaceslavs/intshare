@@ -25,6 +25,8 @@ You'll need to enable SNMP via the vSTAC Manager Suite, for this to work.
 
 Created and used on Zabbix 3.4.10 but I'm positive this can be used in older version as well.
 
+
+
 ## Author
 
 ScriptByScript

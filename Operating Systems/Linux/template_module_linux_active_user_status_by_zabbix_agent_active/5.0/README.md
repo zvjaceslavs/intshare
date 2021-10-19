@@ -35,6 +35,8 @@ This template try to monitor active users on servers and find out overstay users
 1. Link this template to an existing host or a new host
 1. Update the Macro to specify your Harbor info: [Configuration] --> your host --> [Macros] --> [Inherited and host macros]
  - {$OVERSTAY\_THRESHOLD}
+
+
 ## Author
 
 Yioda

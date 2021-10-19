@@ -22,6 +22,8 @@ This template is made with "zabbix active" item, meaning it can work behind remo
 
  
 
+
+
 ## Author
 
 Cédric MARCOUX

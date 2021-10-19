@@ -29,6 +29,8 @@ Tested on Zabbix 4.0.11
 
 Based on template from https://github.com/heximcz/kresd-stats-zabbix
 
+
+
 ## Author
 
 Václav Nováček

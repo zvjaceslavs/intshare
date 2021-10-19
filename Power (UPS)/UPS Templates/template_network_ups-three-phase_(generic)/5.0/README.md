@@ -25,6 +25,8 @@ New graphs were also added.
 
 I also have a template for non three-phase ups, feel free to check: [https://share.zabbix.com/power-ups/network-ups-generic](power-ups/network-ups-generic)
 
+
+
 ## Author
 
 Diogo Teixeira

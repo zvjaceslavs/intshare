@@ -4,6 +4,8 @@
 
  ESTOU POSTANDO PARA AJUDAR ALGUMAS PESSOAS QUE NECESSITAM DE AJUDA COMO EU PRECISEI UM DIA
 
+
+
 ## Author
 
 Vitor Pereira Rodrigues
@@ -28,6 +30,17 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|oltPonOnlineStatus PON 4/7|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.137887744<p>Update: 300</p>|
+|oltPonOnlineStatus PON 4/4|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.136314880<p>Update: 300</p>|
+|oltPonOnlineStatus PON 4/3|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.135790592<p>Update: 300</p>|
+|oltPonOnlineStatus PON 4/2|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.135266304<p>Update: 300</p>|
+|oltPonOnlineStatus PON 8/3|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.270008320<p>Update: 300</p>|
+|oltPonOnlineStatus PON 7/8|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.239075328<p>Update: 300</p>|
+|oltPonOnlineStatus PON 7/7|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.238551040<p>Update: 300</p>|
+|oltPonOnlineStatus PON 7/6|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.238026752<p>Update: 300</p>|
+|oltPonOnlineStatus PON 7/5|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.237502464<p>Update: 300</p>|
+|oltPonOnlineStatus PON 7/4|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.236978176<p>Update: 300</p>|
+|cardMemUtil.14|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.14<p>Update: 300</p>|
 |oltPonOnlineStatus PON 3/1|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.101187584<p>Update: 300</p>|
 |oltPonOnlineStatus PON 7/2|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.235929600<p>Update: 300</p>|
 |oltPonOnlineStatus PON 5/5|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.170393600<p>Update: 300</p>|
@@ -37,7 +50,6 @@ There are no template links in this template.
 |sysTemperature.0|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.4.5.0<p>Update: 120</p>|
 |cardMemUtil.19|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.19<p>Update: 300</p>|
 |cardMemUtil.18|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.18<p>Update: 300</p>|
-|cardMemUtil.14|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.14<p>Update: 300</p>|
 |cardMemUtil.13|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.13<p>Update: 300</p>|
 |oltPonOnlineStatus PON 8/8|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.272629760<p>Update: 300</p>|
 |tste|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.1.7.0<p>Update: 30</p>|
@@ -59,12 +71,6 @@ There are no template links in this template.
 |oltPonOnlineStatus PON 8/6|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.271581184<p>Update: 300</p>|
 |oltPonOnlineStatus PON 8/5|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.271056896<p>Update: 300</p>|
 |oltPonOnlineStatus PON 8/4|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.270532608<p>Update: 300</p>|
-|oltPonOnlineStatus PON 8/3|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.270008320<p>Update: 300</p>|
-|oltPonOnlineStatus PON 7/8|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.239075328<p>Update: 300</p>|
-|oltPonOnlineStatus PON 7/7|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.238551040<p>Update: 300</p>|
-|oltPonOnlineStatus PON 7/6|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.238026752<p>Update: 300</p>|
-|oltPonOnlineStatus PON 7/5|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.237502464<p>Update: 300</p>|
-|oltPonOnlineStatus PON 7/4|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.236978176<p>Update: 300</p>|
 |oltPonOnlineStatus PON 7/1|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.235405312<p>Update: 300</p>|
 |oltPonOnlineStatus PON 6/8|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.205520896<p>Update: 300</p>|
 |cardMemUtil.5|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.5<p>Update: 300</p>|
@@ -99,10 +105,6 @@ There are no template links in this template.
 |oltPonOnlineStatus PON 3/6|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.103809024<p>Update: 300</p>|
 |oltPonOnlineStatus PON 5/1|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.168296448<p>Update: 300</p>|
 |oltPonOnlineStatus PON 4/8|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.138412032<p>Update: 300</p>|
-|oltPonOnlineStatus PON 4/7|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.137887744<p>Update: 300</p>|
-|oltPonOnlineStatus PON 4/4|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.136314880<p>Update: 300</p>|
-|oltPonOnlineStatus PON 4/3|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.135790592<p>Update: 300</p>|
-|oltPonOnlineStatus PON 4/2|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.135266304<p>Update: 300</p>|
 |oltPonOnlineStatus PON 1/8|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.37748736<p>Update: 300</p>|
 |cardMemUtil.3|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.3<p>Update: 300</p>|
 |cardMemUtil.2|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.2<p>Update: 300</p>|

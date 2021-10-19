@@ -76,6 +76,8 @@ mosquitto\_sub -C 1 -u USERNAME -P PASSWORD -t "$1"
 
  
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -28,6 +28,8 @@ AP7723, included value mapping, using standart MIBs.
 
  
 
+
+
 ## Author
 
 Michal Noga

@@ -16,6 +16,8 @@ UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset
 
  
 
+
+
 ## Author
 
 Jeffrey H. Simonson
@@ -59,6 +61,8 @@ UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset
 
 
  
+
+
 
 ## Author
 

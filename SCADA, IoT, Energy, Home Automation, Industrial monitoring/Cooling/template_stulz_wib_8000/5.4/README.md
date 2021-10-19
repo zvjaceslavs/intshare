@@ -4,6 +4,8 @@
 
 Template for monitoring the Stulz WIB 8000 air conditioning system
 
+
+
 ## Author
 
 Aleksandr Kalugin

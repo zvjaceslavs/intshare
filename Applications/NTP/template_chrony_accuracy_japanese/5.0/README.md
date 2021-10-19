@@ -28,6 +28,8 @@ chrony テンプレートが使用できます。
 
  
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

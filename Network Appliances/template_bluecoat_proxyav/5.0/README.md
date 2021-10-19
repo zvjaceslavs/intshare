@@ -7,6 +7,8 @@ Used on AV510 and AV810.
 Additional info: <https://bto.bluecoat.com/documentation/All-Documents/ProxyAV>.  
 
 
+
+
 ## Macros used
 
 There are no macros links in this template.

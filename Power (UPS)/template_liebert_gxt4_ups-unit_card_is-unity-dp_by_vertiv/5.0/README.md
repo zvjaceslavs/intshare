@@ -8,6 +8,8 @@ If your zabbix hasn't got the Template Module ICMP Ping 3.4, please, download/im
 
 Template Module ICMP Ping link [Template Module ICMP Ping 3.4](?link_id=451&cf_id=42 "Template Module ICMP Ping 3.4")
 
+
+
 ## Author
 
 Peter Franca

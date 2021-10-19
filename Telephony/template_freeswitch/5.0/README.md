@@ -7,6 +7,8 @@ Monitors: service uptime, session rate, active calls, active sessions, peak sess
 
 Requires the mod\_snmp SNMP subagent to be enabled in Freeswitch+net-snmp.
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

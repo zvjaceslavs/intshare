@@ -6,6 +6,8 @@
   
 Monitoring H3C HDM template through SNMP, and the applicable server model is R4900 G2, which is verified on HDM version 1.03.19. Support to obtain information including Inlet Temp, HDM Version, BIOS Version, Health Status of Processor, Health Status of Fan, Status of the PCIe Module, Health status of Power, Manufactory name, Product name.
 
+
+
 ## Author
 
 H3C

@@ -10,6 +10,8 @@ I didn't see any templates for Cyberpower UPS systems so I made a quick and simp
 
 Hope this can help someone else!
 
+
+
 ## Author
 
 Adam Loghides

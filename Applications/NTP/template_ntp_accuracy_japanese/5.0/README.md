@@ -36,6 +36,8 @@ NTP精度情報をグラフ化することが可能です。
 
  
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|
@@ -102,6 +104,8 @@ NTP精度情報をグラフ化することが可能です。
 
 
  
+
+
 
 ## Macros used
 

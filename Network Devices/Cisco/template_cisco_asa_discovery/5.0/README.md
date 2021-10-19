@@ -49,6 +49,8 @@ Example:
 Template REG-EXP: **@Firewalls network interfaces for discovery**  
 Zabbix REG-EXP: **Firewalls network interfaces for discovery**
 
+
+
 ## Author
 
 Manuel Mannello

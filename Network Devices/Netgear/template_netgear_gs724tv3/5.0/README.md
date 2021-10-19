@@ -28,6 +28,8 @@ LAGS IN/OUT traffic
 
 Informations such as uptime, sysname, sw version, serial number, model, mac address, location, IP
 
+
+
 ## Author
 
 Nicolas C.
@@ -48,6 +50,7 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|LAG 08 Traffic OUT|<p>-</p>|`SNMP agent`|lag08.traffic.out<p>Update: 30</p>|
 |Port 09 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.9<p>Update: 60</p>|
 |Port 09 Status|<p>-</p>|`SNMP agent`|ifOperStatus.9<p>Update: 60</p>|
 |Port 07 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 60</p>|
@@ -141,7 +144,6 @@ There are no discovery rules in this template.
 |Port 17 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.17<p>Update: 60</p>|
 |Port 08 Status|<p>-</p>|`SNMP agent`|ifOperStatus.8<p>Update: 60</p>|
 |LAG1 Name|<p>-</p>|`SNMP agent`|lag.name.1<p>Update: 3600</p>|
-|LAG 08 Traffic OUT|<p>-</p>|`SNMP agent`|lag08.traffic.out<p>Update: 30</p>|
 |LAG 04 Traffic OUT|<p>-</p>|`SNMP agent`|lag04.traffic.out<p>Update: 30</p>|
 |Port 24 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.24<p>Update: 60</p>|
 |Port 24 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.24<p>Update: 60</p>|

@@ -49,6 +49,8 @@ Assure also that in Administration -> General -> Value mapping you have under AP
 3 ⇒ batteryLow  
 4 ⇒ batteryDepleted
 
+
+
 ## Author
 
 Tudor Ticau

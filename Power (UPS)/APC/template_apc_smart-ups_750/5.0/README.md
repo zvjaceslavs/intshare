@@ -88,6 +88,8 @@ Diagnostics
 * Average Input Fequency to high
 * Information Frequency is not 50 Hz
 * Average Battery should be replaced
+
+
 ## Author
 
 Jonas Zürcher

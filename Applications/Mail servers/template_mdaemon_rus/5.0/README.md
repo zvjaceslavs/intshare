@@ -4,6 +4,8 @@
 
 Template for Mdaemon russian version. 
 
+
+
 ## Macros used
 
 There are no macros links in this template.

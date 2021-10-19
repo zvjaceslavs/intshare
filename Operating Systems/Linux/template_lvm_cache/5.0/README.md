@@ -42,6 +42,8 @@ This script assumes that you have **ONLY ONE caching device** and polls the firs
 * dmsetup status
 * /etc/zabbix/scripts/lvmcache
 * zabbix\_get -s 192.168.1.1 -k 'lvmcache.raw' (on zabbix server or zabbix proxy)
+
+
 ## Author
 
 pavlozt

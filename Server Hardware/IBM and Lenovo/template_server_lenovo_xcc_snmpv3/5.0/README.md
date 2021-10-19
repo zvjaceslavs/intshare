@@ -4,6 +4,8 @@
 
 For correct use, you need to define the macro "{$SNMP\_SECNAME\_CONTEXT}", this macro is also used in the rest of my templates using SNMPv3.
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

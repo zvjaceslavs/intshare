@@ -26,6 +26,8 @@ Umidade Acima de 90%
 
 Umidade Inferior a 35%
 
+
+
 ## Author
 
 Ruy Mendonça

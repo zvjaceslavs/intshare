@@ -4,6 +4,8 @@
 
 Obtêm informações para inventário e Monitoramento (Modelo, Nome, Uptime, Perda de Pacotes e disponibilidade ICMP) em Português
 
+
+
 ## Author
 
 Leonardo Nascimento da Silva

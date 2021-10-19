@@ -33,7 +33,9 @@ Instalation:
 - second import template "Microsoft\_DHCP.xml" - Download from Dusan's link - https://share.zabbix.com/operating-systems/windows/microsoft-dhcp-server-2012-2016-2019
 
 
-<p style="margin: 0px 0px 1.5em; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; ba## Author
+<p style="margin: 0px 0px 1.5em; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; ba
+
+## Author
 
 Dusan Priechodsky
 

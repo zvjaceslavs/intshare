@@ -15,6 +15,8 @@ Simple IPMI template fetching:
   
 
 
+
+
 ## Author
 
 Mads Falch Larsen

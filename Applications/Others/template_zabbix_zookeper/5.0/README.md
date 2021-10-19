@@ -28,6 +28,8 @@ Zabbix Configuration
 
 UserParameter=echo2nc[*],echo $1 | nc $2 $3
 
+
+
 ## Author
 
 Patrick Fouquet

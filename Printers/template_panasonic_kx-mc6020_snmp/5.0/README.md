@@ -6,6 +6,8 @@ Displays total pages, another informations (count fax messages, copy pages, scan
   
 Panasonic category.
 
+
+
 ## Author
 
 Dorin Sergey

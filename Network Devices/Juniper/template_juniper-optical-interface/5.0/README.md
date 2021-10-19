@@ -42,7 +42,9 @@ This template can monitor RxLaserPower of the optical interface.
 * The virtual interfaces have also been filtered, (vme|lsi|pfe|pfh|.0|bme|gr|gre|tap|irb|dsc|ipip|pimd|pime|mtun|em0|em1|em2|esi|jsrv|vtep|me|lt|ip|lc|ut|mt|vt|pe|cbp|ud|fxp|dem|pip|pp|et|ae)
 * The trigger threshold seting is -19dbm or 0dbm.
 
-<li style="box-sizing: border-box; margin-top: 0.25## Macros used
+<li style="box-sizing: border-box; margin-top: 0.25
+
+## Macros used
 
 There are no macros links in this template.
 

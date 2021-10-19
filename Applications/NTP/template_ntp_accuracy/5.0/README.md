@@ -33,6 +33,8 @@ It will use the NTP template.
  Please use the NTP [Remoto] template.  
  In the NTP [Remoto] template and the IP address of the destination NTP appliance  
 You set the macro as {$ NTP\_IP}.
+
+
 ## Macros used
 
 |Name|Description|Default|Type|
@@ -97,6 +99,8 @@ It will use the NTP template.
  Please use the NTP [Remoto] template.  
  In the NTP [Remoto] template and the IP address of the destination NTP appliance  
 You set the macro as {$ NTP\_IP}.
+
+
 ## Macros used
 
 There are no macros links in this template.

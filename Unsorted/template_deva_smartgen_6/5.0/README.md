@@ -25,6 +25,8 @@ Triggers:
 2. Device is overheat
 3. Free disk space is less than 20%
 4. PS
+
+
 ## Author
 
 Roman Ermakov

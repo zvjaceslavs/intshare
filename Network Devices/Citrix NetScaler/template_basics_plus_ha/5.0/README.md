@@ -8,6 +8,8 @@ Same as v2.0 with valuemap and application prototype added.
 
 Adapted for Zabbix 3 version by [dav3860](owner/tatapoum). Valuemaps included.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

@@ -4,6 +4,8 @@
 
 Based on official MIB from vendor (they done some realy weird stuff this time). Checked on couple of local single and stacked devices. Basic system Items, Triggers and Graphs.
 
+
+
 ## Author
 
 Chirkov V.
@@ -33,8 +35,6 @@ There are no discovery rules in this template.
 |ifOperations_Speed.22|<p>-</p>|`SNMP agent`|ifOperSpeed.22<p>Update: 120</p>|
 |ifOperStatus.1|<p>-</p>|`SNMP agent`|ifOperStatus.1<p>Update: 120</p>|
 |ifOperations_Speed.48|<p>-</p>|`SNMP agent`|ifOperSpeed.48<p>Update: 120</p>|
-|ifOperations_Speed.47|<p>-</p>|`SNMP agent`|ifOperSpeed.47<p>Update: 120</p>|
-|ifOperations_Speed.46|<p>-</p>|`SNMP agent`|ifOperSpeed.46<p>Update: 120</p>|
 |ifDescr27|<p>-</p>|`SNMP agent`|ifDescr27<p>Update: 120</p>|
 |ifOperations_Vlan.3|<p>-</p>|`SNMP agent`|ifOperVlan.3<p>Update: 120</p>|
 |ifOperations_Vlan.4|<p>-</p>|`SNMP agent`|ifOperVlan.4<p>Update: 120</p>|
@@ -43,16 +43,10 @@ There are no discovery rules in this template.
 |ifOperStatus.48|<p>-</p>|`SNMP agent`|ifOperStatus.48<p>Update: 120</p>|
 |ifOperStatus.47|<p>-</p>|`SNMP agent`|ifOperStatus.47<p>Update: 120</p>|
 |ifOperStatus.46|<p>-</p>|`SNMP agent`|ifOperStatus.46<p>Update: 120</p>|
-|ifOperStatus.45|<p>-</p>|`SNMP agent`|ifOperStatus.45<p>Update: 120</p>|
-|ifOperStatus.44|<p>-</p>|`SNMP agent`|ifOperStatus.44<p>Update: 120</p>|
 |ifOperations_Vlan.27|<p>-</p>|`SNMP agent`|ifOperVlan.27<p>Update: 120</p>|
 |ifOperations_Vlan.26|<p>-</p>|`SNMP agent`|ifOperVlan.26<p>Update: 120</p>|
 |ifOperations_Vlan.25|<p>-</p>|`SNMP agent`|ifOperVlan.25<p>Update: 120</p>|
 |ifOperations_Vlan.24|<p>-</p>|`SNMP agent`|ifOperVlan.24<p>Update: 120</p>|
-|ifOperations_Vlan.23|<p>-</p>|`SNMP agent`|ifOperVlan.23<p>Update: 120</p>|
-|ifOperations_Vlan.21|<p>-</p>|`SNMP agent`|ifOperVlan.21<p>Update: 120</p>|
-|ifOperations_Vlan.13|<p>-</p>|`SNMP agent`|ifOperVlan.13<p>Update: 120</p>|
-|ifOperations_Vlan.20|<p>-</p>|`SNMP agent`|ifOperVlan.20<p>Update: 120</p>|
 |ifOperations_Vlan.19|<p>-</p>|`SNMP agent`|ifOperVlan.19<p>Update: 120</p>|
 |ifOperations_Vlan.18|<p>-</p>|`SNMP agent`|ifOperVlan.18<p>Update: 120</p>|
 |ifOperations_Vlan.17|<p>-</p>|`SNMP agent`|ifOperVlan.17<p>Update: 120</p>|
@@ -61,18 +55,34 @@ There are no discovery rules in this template.
 |ifOperStatus.16|<p>-</p>|`SNMP agent`|ifOperStatus.16<p>Update: 120</p>|
 |ifOperStatus.15|<p>-</p>|`SNMP agent`|ifOperStatus.15<p>Update: 120</p>|
 |ifOperStatus.13|<p>-</p>|`SNMP agent`|ifOperStatus.13<p>Update: 120</p>|
-|ifOperStatus.22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 120</p>|
-|ifOperStatus.12|<p>-</p>|`SNMP agent`|ifOperStatus.12<p>Update: 120</p>|
 |ifOperStatus.38|<p>-</p>|`SNMP agent`|ifOperStatus.38<p>Update: 120</p>|
 |ifOperStatus.37|<p>-</p>|`SNMP agent`|ifOperStatus.37<p>Update: 120</p>|
 |ifOperStatus.36|<p>-</p>|`SNMP agent`|ifOperStatus.36<p>Update: 120</p>|
-|ifOperStatus.35|<p>-</p>|`SNMP agent`|ifOperStatus.35<p>Update: 120</p>|
+|ifOperStatus.45|<p>-</p>|`SNMP agent`|ifOperStatus.45<p>Update: 120</p>|
+|ifOperStatus.44|<p>-</p>|`SNMP agent`|ifOperStatus.44<p>Update: 120</p>|
+|ifOperations_Vlan.23|<p>-</p>|`SNMP agent`|ifOperVlan.23<p>Update: 120</p>|
+|ifOperations_Vlan.21|<p>-</p>|`SNMP agent`|ifOperVlan.21<p>Update: 120</p>|
 |ifOperStatus.32|<p>-</p>|`SNMP agent`|ifOperStatus.32<p>Update: 120</p>|
 |ifOperStatus.24|<p>-</p>|`SNMP agent`|ifOperStatus.24<p>Update: 120</p>|
+|ifOperations_Vlan.13|<p>-</p>|`SNMP agent`|ifOperVlan.13<p>Update: 120</p>|
+|ifOperations_Vlan.20|<p>-</p>|`SNMP agent`|ifOperVlan.20<p>Update: 120</p>|
+|ifOperStatus.22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 120</p>|
 |ifOperStatus.28|<p>-</p>|`SNMP agent`|ifOperStatus.28<p>Update: 120</p>|
 |ifOperStatus.27|<p>-</p>|`SNMP agent`|ifOperStatus.27<p>Update: 120</p>|
+|ifOperStatus.12|<p>-</p>|`SNMP agent`|ifOperStatus.12<p>Update: 120</p>|
+|ifOperStatus.21|<p>-</p>|`SNMP agent`|ifOperStatus.21<p>Update: 120</p>|
+|ifOperStatus.35|<p>-</p>|`SNMP agent`|ifOperStatus.35<p>Update: 120</p>|
+|Port26OUT|<p>-</p>|`SNMP agent`|ifOutOctets26<p>Update: 120</p>|
 |ifOperStatus.26|<p>-</p>|`SNMP agent`|ifOperStatus.26<p>Update: 120</p>|
 |ifOperStatus.25|<p>-</p>|`SNMP agent`|ifOperStatus.25<p>Update: 120</p>|
+|ifOperations_Vlan.43|<p>-</p>|`SNMP agent`|ifOperVlan.43<p>Update: 120</p>|
+|Port11OUT|<p>-</p>|`SNMP agent`|ifOutOctets11<p>Update: 120</p>|
+|Port17OUT|<p>-</p>|`SNMP agent`|ifOutOctets17<p>Update: 120</p>|
+|ifOperations_Speed.47|<p>-</p>|`SNMP agent`|ifOperSpeed.47<p>Update: 120</p>|
+|ifOperations_Speed.46|<p>-</p>|`SNMP agent`|ifOperSpeed.46<p>Update: 120</p>|
+|ifOperations_Speed.4|<p>-</p>|`SNMP agent`|ifOperSpeed.4<p>Update: 120</p>|
+|ifOperations_Speed.3|<p>-</p>|`SNMP agent`|ifOperSpeed.3<p>Update: 120</p>|
+|ifOperations_Speed.2|<p>-</p>|`SNMP agent`|ifOperSpeed.2<p>Update: 120</p>|
 |ifOperations_Vlan.31|<p>-</p>|`SNMP agent`|ifOperVlan.31<p>Update: 120</p>|
 |ifOperStatus.5|<p>-</p>|`SNMP agent`|ifOperStatus.5<p>Update: 120</p>|
 |Port29OUT|<p>-</p>|`SNMP agent`|ifOutOctets29<p>Update: 120</p>|
@@ -274,19 +284,14 @@ There are no discovery rules in this template.
 |ifOperStatus.42|<p>-</p>|`SNMP agent`|ifOperStatus.42<p>Update: 120</p>|
 |ifOperations_Vlan.22|<p>-</p>|`SNMP agent`|ifOperVlan.22<p>Update: 120</p>|
 |ifOperStatus.17|<p>-</p>|`SNMP agent`|ifOperStatus.17<p>Update: 120</p>|
-|ifOperStatus.21|<p>-</p>|`SNMP agent`|ifOperStatus.21<p>Update: 120</p>|
 |ifOperStatus.34|<p>-</p>|`SNMP agent`|ifOperStatus.34<p>Update: 120</p>|
 |ifOperStatus.29|<p>-</p>|`SNMP agent`|ifOperStatus.29<p>Update: 120</p>|
 |Port34OUT|<p>-</p>|`SNMP agent`|ifOutOctets34<p>Update: 120</p>|
-|Port26OUT|<p>-</p>|`SNMP agent`|ifOutOctets26<p>Update: 120</p>|
 |Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
 |ifOperations_Vlan.32|<p>-</p>|`SNMP agent`|ifOperVlan.32<p>Update: 120</p>|
 |ifOperations_Vlan.40|<p>-</p>|`SNMP agent`|ifOperVlan.40<p>Update: 120</p>|
 |ifOperations_Vlan.46|<p>-</p>|`SNMP agent`|ifOperVlan.46<p>Update: 120</p>|
 |ifOperations_Vlan.44|<p>-</p>|`SNMP agent`|ifOperVlan.44<p>Update: 120</p>|
-|ifOperations_Vlan.43|<p>-</p>|`SNMP agent`|ifOperVlan.43<p>Update: 120</p>|
-|Port11OUT|<p>-</p>|`SNMP agent`|ifOutOctets11<p>Update: 120</p>|
-|Port17OUT|<p>-</p>|`SNMP agent`|ifOutOctets17<p>Update: 120</p>|
 |ifDescr48|<p>-</p>|`SNMP agent`|ifDescr48<p>Update: 120</p>|
 |ifDescr39|<p>-</p>|`SNMP agent`|ifDescr39<p>Update: 120</p>|
 |Port22IN|<p>-</p>|`SNMP agent`|ifInOctets.22<p>Update: 120</p>|
@@ -304,9 +309,6 @@ There are no discovery rules in this template.
 |Port28IN|<p>-</p>|`SNMP agent`|ifInOctets.28<p>Update: 120</p>|
 |Port46IN|<p>-</p>|`SNMP agent`|ifInOctets.46<p>Update: 120</p>|
 |ifOperations_Speed.5|<p>-</p>|`SNMP agent`|ifOperSpeed.5<p>Update: 120</p>|
-|ifOperations_Speed.4|<p>-</p>|`SNMP agent`|ifOperSpeed.4<p>Update: 120</p>|
-|ifOperations_Speed.3|<p>-</p>|`SNMP agent`|ifOperSpeed.3<p>Update: 120</p>|
-|ifOperations_Speed.2|<p>-</p>|`SNMP agent`|ifOperSpeed.2<p>Update: 120</p>|
 |ifOperations_Vlan.14|<p>-</p>|`SNMP agent`|ifOperVlan.14<p>Update: 120</p>|
 |ifOperStatus.18|<p>-</p>|`SNMP agent`|ifOperStatus.18<p>Update: 120</p>|
 |ifOperStatus.40|<p>-</p>|`SNMP agent`|ifOperStatus.40<p>Update: 120</p>|

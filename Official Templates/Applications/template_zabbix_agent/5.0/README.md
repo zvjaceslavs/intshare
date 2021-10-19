@@ -4,6 +4,8 @@
 
 Official Zabbix Agent Template from Zabbix distribution
 
+
+
 ## Author
 
 Zabbix SIA

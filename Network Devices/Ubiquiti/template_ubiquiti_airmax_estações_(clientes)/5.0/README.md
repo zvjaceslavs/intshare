@@ -18,6 +18,8 @@ Métricas:
 * Sinal
 * Uptime
 * Tx Rate
+
+
 ## Author
 
 Luís Henrique Nascimento

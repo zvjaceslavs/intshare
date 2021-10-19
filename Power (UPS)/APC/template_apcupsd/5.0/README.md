@@ -33,6 +33,8 @@ Russian language.
 
 [Примеры настройки Zabbix agent](https://wiki.yola.ru/apcupsd#zabbix)
 
+
+
 ## Macros used
 
 There are no macros links in this template.

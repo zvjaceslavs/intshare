@@ -27,6 +27,8 @@ Keep in mind, that his might not work with Older Windows versions.
 
 I checked the Min. Zabbix version 3.4, because some items have Regular expression pre-processing. However that could be removed, and template adapted to older Zabbix versions.
 
+
+
 ## Author
 
 Zabbix CookBook

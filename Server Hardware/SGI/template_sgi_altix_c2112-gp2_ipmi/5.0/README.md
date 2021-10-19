@@ -7,6 +7,8 @@ IPMI sensors for SGI Altix C2112-GP2 IPMI:
 
 1.05V PCH, 1.2V BMC, 1.5V PCH, 3.3VCC, 3.3VSB, 5VCC, 5VSB, 12V, CPU1 Temp, CPU2 Temp, FAN1, FAN2, FAN7, FAN8, P1-DIMMA1 Temp, P1-DIMMA2 Temp, P1-DIMMB1 Temp, P1-DIMMB2 Temp, P1-DIMMC1 Temp, P1-DIMMC2 Temp, P1-DIMMD1 Temp, P1-DIMMD2 Temp, P2-DIMME1 Temp, P2-DIMME2 Temp, P2-DIMMF1 Temp, P2-DIMMF2 Temp, P2-DIMMG1 Temp, P2-DIMMG2 Temp, P2-DIMMH1 Temp, P2-DIMMH2 Temp, PCH Temp, Peripheral Temp, Power, PS1 Status, PS2 Status, System Temp, VBAT, Vcpu1, Vcpu1VRM Temp, Vcpu2, Vcpu2VRM Temp, VDIMMAB, VDIMMCD, VDIMMEF, VDIMMGH, VmemABVRM Temp, VmemCDVRM Temp, VmemEFVRM Temp, VmemGHVRM Temp
 
+
+
 ## Author
 
 Daniel Carvalho

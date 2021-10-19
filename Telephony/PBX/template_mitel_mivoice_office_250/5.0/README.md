@@ -37,6 +37,8 @@ Trigger for:
 
 * Alarm state
 * Flash space
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

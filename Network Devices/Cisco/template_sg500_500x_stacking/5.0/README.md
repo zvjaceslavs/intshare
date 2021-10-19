@@ -16,6 +16,8 @@ LLD for Network, Fan and Temperature sensors (if any). Stacking device informati
 
 ciscoEnvMonState{normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6)}
 
+
+
 ## Macros used
 
 There are no macros links in this template.

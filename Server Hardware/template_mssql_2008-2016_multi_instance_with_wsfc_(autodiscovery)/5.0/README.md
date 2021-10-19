@@ -15,6 +15,8 @@ Install instrucitons:
 
 https://github.com/hermanekt/MSSQL-2008-2016-Multi-instance-with-WSFC
 
+
+
 ## Macros used
 
 There are no macros links in this template.

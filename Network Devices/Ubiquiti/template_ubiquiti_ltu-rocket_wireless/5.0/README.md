@@ -13,6 +13,8 @@ Items for CPE discovery: Device Model, Device Name, Distance, Firmware, IdealRxP
   
 Just data retrieval. Template has no triggers, graphs or screens.
 
+
+
 ## Author
 
 Kari Karvonen

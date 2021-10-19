@@ -17,6 +17,8 @@ All items, triggers and discovery rules have brief descriptions.
 
 If SNMP is not your friend, you can check this web page (https://cric.grenoble.cnrs.fr/Administrateurs/Outils/MIBS/?oid=1.3.6.1.2.1) to help you.
 
+
+
 ## Author
 
 Leo Cardao

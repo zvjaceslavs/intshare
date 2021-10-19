@@ -123,6 +123,8 @@ close($fh) or die ( "Running corosync-cfgtool failed" );
 
  
 
+
+
 ## Author
 
 Roland Käser

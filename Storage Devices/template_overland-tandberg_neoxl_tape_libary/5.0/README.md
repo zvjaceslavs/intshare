@@ -22,6 +22,8 @@ The template is based on the "BDT-MS-MIB" (Version 201702211500Z). The SNMP capa
 
 Template was tested with a NEOxl 80 and Firmware 2.80.
 
+
+
 ## Author
 
 Marcel Wiechmann

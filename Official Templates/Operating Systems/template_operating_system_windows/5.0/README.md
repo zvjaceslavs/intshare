@@ -4,6 +4,8 @@
 
 Official OS Windows Template from Zabbix distribution
 
+
+
 ## Author
 
 Zabbix SIA

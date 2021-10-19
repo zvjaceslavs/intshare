@@ -7,6 +7,8 @@ README: <https://github.com/hacktivism-github/zbx-templates-repository/blob/mast
 
  ![ASR9k Optical Monitoring](media/com_mtree/images/listings/m/515.png)
 
+
+
 ## Author
 
 Bruno Teixeira

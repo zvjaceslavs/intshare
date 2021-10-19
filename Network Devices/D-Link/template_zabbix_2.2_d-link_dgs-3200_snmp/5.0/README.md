@@ -10,6 +10,8 @@ NEED in Macros HOST
 
 {$SNMP\_PORT}
 
+
+
 ## Author
 
 AlteraSidus
@@ -30,6 +32,12 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Errors Tx port 15|<p>-</p>|`SNMP agent`|ifOutErrors.15<p>Update: 120</p>|
+|Errors Tx port 14|<p>-</p>|`SNMP agent`|ifOutErrors.14<p>Update: 120</p>|
+|Errors Tx port 13|<p>-</p>|`SNMP agent`|ifOutErrors.13<p>Update: 120</p>|
+|Errors Rx port 5|<p>-</p>|`SNMP agent`|ifInErrors.5<p>Update: 120</p>|
+|Errors Rx port 4|<p>-</p>|`SNMP agent`|ifInErrors.4<p>Update: 120</p>|
+|Bytes Tx port 18|<p>-</p>|`SNMP agent`|ifOutOctets.18<p>Update: 120</p>|
 |Bytes Rx port 1|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 120</p>|
 |Errors Tx port 7|<p>-</p>|`SNMP agent`|ifOutErrors.7<p>Update: 120</p>|
 |Errors Rx port 3|<p>-</p>|`SNMP agent`|ifInErrors.3<p>Update: 120</p>|
@@ -99,7 +107,6 @@ There are no discovery rules in this template.
 |Bytes Tx port 21|<p>-</p>|`SNMP agent`|ifOutOctets.21<p>Update: 120</p>|
 |Bytes Tx port 20|<p>-</p>|`SNMP agent`|ifOutOctets.20<p>Update: 120</p>|
 |Bytes Tx port 19|<p>-</p>|`SNMP agent`|ifOutOctets.19<p>Update: 120</p>|
-|Bytes Tx port 18|<p>-</p>|`SNMP agent`|ifOutOctets.18<p>Update: 120</p>|
 |Errors Rx port 24|<p>-</p>|`SNMP agent`|ifInErrors.24<p>Update: 120</p>|
 |Errors Rx port 23|<p>-</p>|`SNMP agent`|ifInErrors.23<p>Update: 120</p>|
 |Errors Rx port 19|<p>-</p>|`SNMP agent`|ifInErrors.19<p>Update: 120</p>|
@@ -133,9 +140,6 @@ There are no discovery rules in this template.
 |Errors Tx port 11|<p>-</p>|`SNMP agent`|ifOutErrors.11<p>Update: 120</p>|
 |Status port 20|<p>-</p>|`SNMP agent`|ifOperStatus.20<p>Update: 120</p>|
 |Errors Tx port 16|<p>-</p>|`SNMP agent`|ifOutErrors.16<p>Update: 120</p>|
-|Errors Tx port 15|<p>-</p>|`SNMP agent`|ifOutErrors.15<p>Update: 120</p>|
-|Errors Tx port 14|<p>-</p>|`SNMP agent`|ifOutErrors.14<p>Update: 120</p>|
-|Errors Tx port 13|<p>-</p>|`SNMP agent`|ifOutErrors.13<p>Update: 120</p>|
 |Errors Tx port 5|<p>-</p>|`SNMP agent`|ifOutErrors.5<p>Update: 120</p>|
 |Errors Tx port 4|<p>-</p>|`SNMP agent`|ifOutErrors.4<p>Update: 120</p>|
 |Errors Tx port 3|<p>-</p>|`SNMP agent`|ifOutErrors.3<p>Update: 120</p>|
@@ -159,8 +163,6 @@ There are no discovery rules in this template.
 |Bytes Rx port 16|<p>-</p>|`SNMP agent`|ifInOctets.16<p>Update: 120</p>|
 |Errors Rx port 13|<p>-</p>|`SNMP agent`|ifInErrors.13<p>Update: 120</p>|
 |Errors Rx port 12|<p>-</p>|`SNMP agent`|ifInErrors.12<p>Update: 120</p>|
-|Errors Rx port 5|<p>-</p>|`SNMP agent`|ifInErrors.5<p>Update: 120</p>|
-|Errors Rx port 4|<p>-</p>|`SNMP agent`|ifInErrors.4<p>Update: 120</p>|
 |Bytes Tx port 11|<p>-</p>|`SNMP agent`|ifOutOctets.11<p>Update: 120</p>|
 ## Triggers
 

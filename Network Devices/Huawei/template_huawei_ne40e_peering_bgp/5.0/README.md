@@ -8,6 +8,8 @@ Template para monitoramento de sessão BGP
 
 Template to discovery all bgp peers and to create a trigger when the session bgp peer is down
 
+
+
 ## Macros used
 
 There are no macros links in this template.

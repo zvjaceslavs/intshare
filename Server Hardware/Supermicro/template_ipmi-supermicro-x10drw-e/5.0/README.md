@@ -82,6 +82,8 @@ Template for the X10DRW-E motherboard which includes:
 * DIMM temperature
 * FAN speed
 * SYSTEM Temperature
+
+
 ## Author
 
 Jean-Paul van Hamond

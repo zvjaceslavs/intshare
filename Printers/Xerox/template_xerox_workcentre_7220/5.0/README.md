@@ -7,6 +7,8 @@ I upgraded older version Xerox template 7225. Its orchestrated with template Gra
 
 [Dasboard Geafana Xerox 7220](https://grafana.com/api/dashboards/8369/revisions/1/download)
 
+
+
 ## Macros used
 
 There are no macros links in this template.

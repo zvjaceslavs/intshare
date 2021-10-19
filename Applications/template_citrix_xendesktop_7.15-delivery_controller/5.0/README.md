@@ -14,6 +14,8 @@ Installation details
 
 For more information about template configuration setings and template hiistory please visit [citrix24 blog](https://blog.citrix24.com/xendesktop-7-x-monitoring-template-delivery-controller/)
 
+
+
 ## Author
 
 citrix24

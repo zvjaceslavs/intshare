@@ -4,6 +4,8 @@
 
 Basic SNMP v1 monitoring template for the Minuteman UPS 
 
+
+
 ## Macros used
 
 There are no macros links in this template.

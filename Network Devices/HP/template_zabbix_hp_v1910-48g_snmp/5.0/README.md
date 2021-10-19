@@ -17,6 +17,8 @@ The template was tested in Zabbix:
 
 * 2.0.6
 * 2.2.7
+
+
 ## Author
 
 Rômulo Mendes Figueiredo
@@ -37,24 +39,32 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|InErrorsFa0/41|<p>-</p>|`SNMP agent`|ifInErrors.41<p>Update: 120</p>|
-|InErrorsFa0/47|<p>-</p>|`SNMP agent`|ifInErrors.47<p>Update: 120</p>|
 |Status port 36|<p>-</p>|`SNMP agent`|ifOperStatus.36<p>Update: 120</p>|
 |Status port 37|<p>-</p>|`SNMP agent`|ifOperStatus.37<p>Update: 120</p>|
 |Status port 40|<p>-</p>|`SNMP agent`|ifOperStatus.40<p>Update: 120</p>|
 |Status port 41|<p>-</p>|`SNMP agent`|ifOperStatus.41<p>Update: 120</p>|
 |Status port 42|<p>-</p>|`SNMP agent`|ifOperStatus.42<p>Update: 120</p>|
-|Status port 20|<p>-</p>|`SNMP agent`|ifOperStatus.20<p>Update: 120</p>|
 |Status port 10|<p>-</p>|`SNMP agent`|ifOperStatus.10<p>Update: 120</p>|
 |Bytes Rx port 45|<p>-</p>|`SNMP agent`|ifInOctets.45<p>Update: 120</p>|
 |Bytes Tx port 5|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 120</p>|
 |Bytes Tx port 6|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 120</p>|
-|Bytes Tx port 8|<p>-</p>|`SNMP agent`|ifOutOctets.8<p>Update: 120</p>|
 |Bytes Rx port 8|<p>-</p>|`SNMP agent`|ifInOctets.8<p>Update: 120</p>|
+|OutErrorsFa0/26|<p>-</p>|`SNMP agent`|ifOutErrors.26<p>Update: 120</p>|
+|OutErrorsFa0/34|<p>-</p>|`SNMP agent`|ifOutErrors.34<p>Update: 120</p>|
+|OutErrorsFa0/35|<p>-</p>|`SNMP agent`|ifOutErrors.35<p>Update: 120</p>|
+|OutErrorsFa0/9|<p>-</p>|`SNMP agent`|ifOutErrors.9<p>Update: 120</p>|
+|InErrorsFa0/41|<p>-</p>|`SNMP agent`|ifInErrors.41<p>Update: 120</p>|
+|InErrorsFa0/38|<p>-</p>|`SNMP agent`|ifInErrors.38<p>Update: 120</p>|
+|InErrorsFa0/47|<p>-</p>|`SNMP agent`|ifInErrors.47<p>Update: 120</p>|
+|Status port 30|<p>-</p>|`SNMP agent`|ifOperStatus.30<p>Update: 120</p>|
+|Status port 20|<p>-</p>|`SNMP agent`|ifOperStatus.20<p>Update: 120</p>|
+|Bytes Tx port 8|<p>-</p>|`SNMP agent`|ifOutOctets.8<p>Update: 120</p>|
 |Bytes Rx port 9|<p>-</p>|`SNMP agent`|ifInOctets.9<p>Update: 120</p>|
 |Bytes Rx port 10|<p>-</p>|`SNMP agent`|ifInOctets.10<p>Update: 120</p>|
 |Bytes Rx port 12|<p>-</p>|`SNMP agent`|ifInOctets.12<p>Update: 120</p>|
 |Bytes Rx port 14|<p>-</p>|`SNMP agent`|ifInOctets.14<p>Update: 120</p>|
+|InErrorsFa0/9|<p>-</p>|`SNMP agent`|ifInErrors.9<p>Update: 120</p>|
+|InErrorsFa0/10|<p>-</p>|`SNMP agent`|ifInErrors.10<p>Update: 120</p>|
 |Status port 31|<p>-</p>|`SNMP agent`|ifOperStatus.31<p>Update: 120</p>|
 |Status port 32|<p>-</p>|`SNMP agent`|ifOperStatus.32<p>Update: 120</p>|
 |Bytes Rx port 46|<p>-</p>|`SNMP agent`|ifInOctets.46<p>Update: 120</p>|
@@ -100,8 +110,6 @@ There are no discovery rules in this template.
 |InErrorsFa0/1|<p>-</p>|`SNMP agent`|ifInErrors.1<p>Update: 120</p>|
 |InErrorsFa0/7|<p>-</p>|`SNMP agent`|ifInErrors.7<p>Update: 120</p>|
 |InErrorsFa0/8|<p>-</p>|`SNMP agent`|ifInErrors.8<p>Update: 120</p>|
-|InErrorsFa0/9|<p>-</p>|`SNMP agent`|ifInErrors.9<p>Update: 120</p>|
-|InErrorsFa0/10|<p>-</p>|`SNMP agent`|ifInErrors.10<p>Update: 120</p>|
 |OutErrorsFa0/15|<p>-</p>|`SNMP agent`|ifOutErrors.15<p>Update: 120</p>|
 |OutErrorsFa0/16|<p>-</p>|`SNMP agent`|ifOutErrors.16<p>Update: 120</p>|
 |OutErrorsFa0/8|<p>-</p>|`SNMP agent`|ifOutErrors.8<p>Update: 120</p>|
@@ -113,7 +121,6 @@ There are no discovery rules in this template.
 |OutErrorsFa0/31|<p>-</p>|`SNMP agent`|ifOutErrors.31<p>Update: 120</p>|
 |OutErrorsFa0/32|<p>-</p>|`SNMP agent`|ifOutErrors.32<p>Update: 120</p>|
 |OutErrorsFa0/33|<p>-</p>|`SNMP agent`|ifOutErrors.33<p>Update: 120</p>|
-|OutErrorsFa0/34|<p>-</p>|`SNMP agent`|ifOutErrors.34<p>Update: 120</p>|
 |InErrorsFa0/43|<p>-</p>|`SNMP agent`|ifInErrors.43<p>Update: 120</p>|
 |InErrorsFa0/44|<p>-</p>|`SNMP agent`|ifInErrors.44<p>Update: 120</p>|
 |InErrorsFa0/45|<p>-</p>|`SNMP agent`|ifInErrors.45<p>Update: 120</p>|
@@ -197,15 +204,11 @@ There are no discovery rules in this template.
 |Status port 46|<p>-</p>|`SNMP agent`|ifOperStatus.46<p>Update: 120</p>|
 |OutErrorsFa0/23|<p>-</p>|`SNMP agent`|ifOutErrors.23<p>Update: 120</p>|
 |OutErrorsFa0/25|<p>-</p>|`SNMP agent`|ifOutErrors.25<p>Update: 120</p>|
-|OutErrorsFa0/26|<p>-</p>|`SNMP agent`|ifOutErrors.26<p>Update: 120</p>|
-|OutErrorsFa0/35|<p>-</p>|`SNMP agent`|ifOutErrors.35<p>Update: 120</p>|
-|OutErrorsFa0/9|<p>-</p>|`SNMP agent`|ifOutErrors.9<p>Update: 120</p>|
 |OutErrorsFa0/7|<p>-</p>|`SNMP agent`|ifOutErrors.7<p>Update: 120</p>|
 |InErrorsFa0/30|<p>-</p>|`SNMP agent`|ifInErrors.30<p>Update: 120</p>|
 |InErrorsFa0/31|<p>-</p>|`SNMP agent`|ifInErrors.31<p>Update: 120</p>|
 |InErrorsFa0/32|<p>-</p>|`SNMP agent`|ifInErrors.32<p>Update: 120</p>|
 |InErrorsFa0/34|<p>-</p>|`SNMP agent`|ifInErrors.34<p>Update: 120</p>|
-|InErrorsFa0/38|<p>-</p>|`SNMP agent`|ifInErrors.38<p>Update: 120</p>|
 |InErrorsFa0/39|<p>-</p>|`SNMP agent`|ifInErrors.39<p>Update: 120</p>|
 |InErrorsFa0/48|<p>-</p>|`SNMP agent`|ifInErrors.48<p>Update: 120</p>|
 |OutErrorsFa0/36|<p>-</p>|`SNMP agent`|ifOutErrors.36<p>Update: 120</p>|
@@ -213,7 +216,6 @@ There are no discovery rules in this template.
 |Status port 27|<p>-</p>|`SNMP agent`|ifOperStatus.27<p>Update: 120</p>|
 |Status port 28|<p>-</p>|`SNMP agent`|ifOperStatus.28<p>Update: 120</p>|
 |Status port 29|<p>-</p>|`SNMP agent`|ifOperStatus.29<p>Update: 120</p>|
-|Status port 30|<p>-</p>|`SNMP agent`|ifOperStatus.30<p>Update: 120</p>|
 |Status port 43|<p>-</p>|`SNMP agent`|ifOperStatus.43<p>Update: 120</p>|
 |Status port 44|<p>-</p>|`SNMP agent`|ifOperStatus.44<p>Update: 120</p>|
 |Status port 47|<p>-</p>|`SNMP agent`|ifOperStatus.47<p>Update: 120</p>|

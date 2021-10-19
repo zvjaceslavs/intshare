@@ -19,6 +19,8 @@ Triggers will be activated at 11% for toner and 10% for drums, belt and fuser un
 
 EDIT: 2017-06-01 Updated this for adjusted trigger levels on toner and drums as the chosen ones were too low.
 
+
+
 ## Author
 
 Korbinian Grote

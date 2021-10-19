@@ -5,7 +5,9 @@
  Template for D'Link DGS 1100 SNMPv2, Includes discovery(items, graphs, triggers)
 
 
- ## Author
+ 
+
+## Author
 
 Mew
 

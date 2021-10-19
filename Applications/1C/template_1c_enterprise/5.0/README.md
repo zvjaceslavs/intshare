@@ -20,6 +20,8 @@ UPD Added items for monitoring
 UPD2 Added converted to exe Python scripts, so you don't need install Python interpreter, but you need be very fearless to use exe files from Internet :)  
 
 
+
+
 ## Macros used
 
 There are no macros links in this template.

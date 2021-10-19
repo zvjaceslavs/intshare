@@ -13,6 +13,8 @@ This script get next metrics:
 
 BBU, Disk, Disk Array Enclosure, Disk Processor Enclosure, FAN, I/O Module, LCC, Lun, Memory Module, Pool, PortEth, PortFibreChannel, PortSAS, PSU, SSC, SSD, Storage Processors, Uncommitted Port.
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

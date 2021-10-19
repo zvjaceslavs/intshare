@@ -33,6 +33,8 @@ It is required to fill these variables with correct values using host macros.
 
  Created on Zabbix 3.0, should work with newer/older versions.
 
+
+
 ## Author
 
 Jakub Samek

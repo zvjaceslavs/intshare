@@ -7,6 +7,8 @@ Basic template to retrieve sensors from a C6220 node's BMC.
 
 If you are trying to build an IPMI template for your own server, I highly recommend installing the freeipmi-tools package and running ipmi-sensors.
 
+
+
 ## Macros used
 
 There are no macros links in this template.

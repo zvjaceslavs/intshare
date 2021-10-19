@@ -37,6 +37,8 @@ BUGS Conhecidos
   
 * A VOLT criou sua MIB com os campos em sua priori INTEGER (valores inteiros), quando o ideial seria criar como valores Flutuantes (Float/Double). Isso faz com que os valores de Temperatura, Amperagem e Voltagem não apresentem os números fracionados.
 
+
+
 ## Author
 
 Rafael Barboza

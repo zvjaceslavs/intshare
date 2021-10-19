@@ -7,6 +7,8 @@ Updated the template of Sergey.
 
 [Here is a link to its template and source accordingly.](network_devices/d-link/des-3526)
 
+
+
 ## Macros used
 
 There are no macros links in this template.
@@ -152,12 +154,8 @@ There are no discovery rules in this template.
 |ifOperStatus.2|<p>-</p>|`SNMP agent`|ifOperStatus.2<p>Update: 30s</p>|
 |ifInUcastPkts.26|<p>-</p>|`SNMP agent`|ifInUcastPkts.26<p>Update: 30s</p>|
 |ifInUcastPkts.25|<p>-</p>|`SNMP agent`|ifInUcastPkts.25<p>Update: 30s</p>|
-|ifInUcastPkts.24|<p>-</p>|`SNMP agent`|ifInUcastPkts.24<p>Update: 30s</p>|
-|ifOperStatus.22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 30s</p>|
-|Ошибки исходящие порта 15|<p>-</p>|`SNMP agent`|ifOutErrors.15<p>Update: 30s</p>|
 |Ошибки исходящие порта 14|<p>-</p>|`SNMP agent`|ifOutErrors.14<p>Update: 30s</p>|
 |Ошибки исходящие порта 13|<p>-</p>|`SNMP agent`|ifOutErrors.13<p>Update: 30s</p>|
-|Ошибки исходящие порта 11|<p>-</p>|`SNMP agent`|ifOutErrors.11<p>Update: 30s</p>|
 |Ошибки исходящие порта 6|<p>-</p>|`SNMP agent`|ifOutErrors.6<p>Update: 30s</p>|
 |Ошибки исходящие порта 5|<p>-</p>|`SNMP agent`|ifOutErrors.5<p>Update: 30s</p>|
 |Ошибки исходящие порта 4|<p>-</p>|`SNMP agent`|ifOutErrors.4<p>Update: 30s</p>|
@@ -175,11 +173,8 @@ There are no discovery rules in this template.
 |PVID порта 19|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.19<p>Update: 30s</p>|
 |ifOutMulticastPkts.12|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.12<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 20|<p>-</p>|`SNMP agent`|ifOutOctets.20<p>Update: 30s</p>|
-|Скорость исходящего трафика на порту 5|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 4|<p>-</p>|`SNMP agent`|ifOutOctets.4<p>Update: 30s</p>|
 |port description 13|<p>-</p>|`SNMP agent`|ifDescr13<p>Update: 30s</p>|
-|port description 24|<p>-</p>|`SNMP agent`|ifDescr24<p>Update: 30s</p>|
-|port description 7|<p>-</p>|`SNMP agent`|ifDescr7<p>Update: 30s</p>|
 |Дуплекс статус порта 25|<p>-</p>|`SNMP agent`|dot3StatsDuplexStatus.25<p>Update: 30s</p>|
 |Дуплекс статус порта 24|<p>-</p>|`SNMP agent`|dot3StatsDuplexStatus.24<p>Update: 30s</p>|
 |Дуплекс статус порта 23|<p>-</p>|`SNMP agent`|dot3StatsDuplexStatus.23<p>Update: 30s</p>|
@@ -201,7 +196,6 @@ There are no discovery rules in this template.
 |ifHCOutOctets.18|<p>-</p>|`SNMP agent`|ifHCOutOctets.18<p>Update: 30s</p>|
 |ifInBroadcastPkts.8|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.8<p>Update: 30s</p>|
 |ifInBroadcastPkts.3|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.3<p>Update: 30s</p>|
-|ifInBroadcastPkts.2|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.2<p>Update: 30s</p>|
 |ifInBroadcastPkts.1|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.1<p>Update: 30s</p>|
 |Текущая скорость на порту 26|<p>-</p>|`SNMP agent`|ifHighSpeed.26<p>Update: 30s</p>|
 |Текущая скорость на порту 25|<p>-</p>|`SNMP agent`|ifHighSpeed.25<p>Update: 30s</p>|
@@ -215,9 +209,6 @@ There are no discovery rules in this template.
 |ifOperStatus.24|<p>-</p>|`SNMP agent`|ifOperStatus.24<p>Update: 30s</p>|
 |ifInUcastPkts.21|<p>-</p>|`SNMP agent`|ifInUcastPkts.21<p>Update: 30s</p>|
 |Скорость входящего трафика на порту 6|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 30s</p>|
-|Скорость входящего трафика на порту 5|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 30s</p>|
-|Скорость входящего трафика на порту 4|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 30s</p>|
-|Скорость входящего трафика на порту 2|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 30s</p>|
 |ifInMulticastPkts.17|<p>-</p>|`SNMP agent`|ifInMulticastPkts.17<p>Update: 30s</p>|
 |ifInUcastPkts.18|<p>-</p>|`SNMP agent`|ifInUcastPkts.18<p>Update: 30s</p>|
 |ifInUcastPkts.9|<p>-</p>|`SNMP agent`|ifInUcastPkts.9<p>Update: 30s</p>|
@@ -228,10 +219,6 @@ There are no discovery rules in this template.
 |PVID порта 24|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.24<p>Update: 30s</p>|
 |PVID порта 23|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.23<p>Update: 30s</p>|
 |PVID порта 6|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.6<p>Update: 30s</p>|
-|PVID порта 18|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.18<p>Update: 30s</p>|
-|PVID порта 17|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.17<p>Update: 30s</p>|
-|PVID порта 16|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.16<p>Update: 30s</p>|
-|PVID порта 15|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.15<p>Update: 30s</p>|
 |ifOutMulticastPkts.7|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.7<p>Update: 30s</p>|
 |ifOutMulticastPkts.6|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.6<p>Update: 30s</p>|
 |ifOutMulticastPkts.5|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.5<p>Update: 30s</p>|
@@ -239,7 +226,6 @@ There are no discovery rules in this template.
 |Скорость исходящего трафика на порту 24|<p>-</p>|`SNMP agent`|ifOutOctets.24<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 23|<p>-</p>|`SNMP agent`|ifOutOctets.23<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 22|<p>-</p>|`SNMP agent`|ifOutOctets.22<p>Update: 30s</p>|
-|Скорость исходящего трафика на порту 18|<p>-</p>|`SNMP agent`|ifOutOctets.18<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 17|<p>-</p>|`SNMP agent`|ifOutOctets.17<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 15|<p>-</p>|`SNMP agent`|ifOutOctets.15<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 14|<p>-</p>|`SNMP agent`|ifOutOctets.14<p>Update: 30s</p>|
@@ -247,10 +233,8 @@ There are no discovery rules in this template.
 |Скорость исходящего трафика на порту 12|<p>-</p>|`SNMP agent`|ifOutOctets.12<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 11|<p>-</p>|`SNMP agent`|ifOutOctets.11<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 10|<p>-</p>|`SNMP agent`|ifOutOctets.10<p>Update: 30s</p>|
-|Скорость исходящего трафика на порту 9|<p>-</p>|`SNMP agent`|ifOutOctets.9<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 8|<p>-</p>|`SNMP agent`|ifOutOctets.8<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 7|<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 30s</p>|
-|Скорость исходящего трафика на порту 6|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 3|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 30s</p>|
 |ifInMulticastPkts.14|<p>-</p>|`SNMP agent`|ifInMulticastPkts.14<p>Update: 30s</p>|
 |Дуплекс статус порта 1|<p>-</p>|`SNMP agent`|dot3StatsDuplexStatus.1<p>Update: 30s</p>|
@@ -272,8 +256,6 @@ There are no discovery rules in this template.
 |ifHCInOctets.26|<p>-</p>|`SNMP agent`|ifHCInOctets.26<p>Update: 30s</p>|
 |ifHCInOctets.25|<p>-</p>|`SNMP agent`|ifHCInOctets.25<p>Update: 30s</p>|
 |ifHCInOctets.24|<p>-</p>|`SNMP agent`|ifHCInOctets.24<p>Update: 30s</p>|
-|ifHCInOctets.23|<p>-</p>|`SNMP agent`|ifHCInOctets.23<p>Update: 30s</p>|
-|ifHCInOctets.22|<p>-</p>|`SNMP agent`|ifHCInOctets.22<p>Update: 30s</p>|
 |ifHCInOctets.20|<p>-</p>|`SNMP agent`|ifHCInOctets.20<p>Update: 30s</p>|
 |ifHCInOctets.12|<p>-</p>|`SNMP agent`|ifHCInOctets.12<p>Update: 30s</p>|
 |ifHCInOctets.11|<p>-</p>|`SNMP agent`|ifHCInOctets.11<p>Update: 30s</p>|
@@ -297,23 +279,66 @@ There are no discovery rules in this template.
 |Cостояние порта 19|<p>-</p>|`SNMP agent`|ifAdminStatus.19<p>Update: 6s</p>|
 |ifInMulticastPkts.12|<p>-</p>|`SNMP agent`|ifInMulticastPkts.12<p>Update: 30s</p>|
 |Ошибки входящие порта 14|<p>-</p>|`SNMP agent`|ifInErrors.14<p>Update: 30s</p>|
-|ifInBroadcastPkts.11|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.11<p>Update: 30s</p>|
-|ifInBroadcastPkts.9|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.9<p>Update: 30s</p>|
-|ifHCOutOctets.5|<p>-</p>|`SNMP agent`|ifHCOutOctets.5<p>Update: 30s</p>|
 |Текущая скорость на порту 3|<p>-</p>|`SNMP agent`|ifHighSpeed.3<p>Update: 30s</p>|
 |Текущая скорость на порту 2|<p>-</p>|`SNMP agent`|ifHighSpeed.2<p>Update: 30s</p>|
 |Текущая скорость на порту 1|<p>-</p>|`SNMP agent`|ifHighSpeed.1<p>Update: 30s</p>|
-|ifHCOutOctets.26|<p>-</p>|`SNMP agent`|ifHCOutOctets.26<p>Update: 30s</p>|
-|ifHCOutOctets.25|<p>-</p>|`SNMP agent`|ifHCOutOctets.25<p>Update: 30s</p>|
-|ifHCOutOctets.24|<p>-</p>|`SNMP agent`|ifHCOutOctets.24<p>Update: 30s</p>|
-|ifOperStatus.5|<p>-</p>|`SNMP agent`|ifOperStatus.5<p>Update: 30s</p>|
-|Ошибки исходящие порта 9|<p>-</p>|`SNMP agent`|ifOutErrors.9<p>Update: 30s</p>|
-|ifOperStatus.23|<p>-</p>|`SNMP agent`|ifOperStatus.23<p>Update: 30s</p>|
-|Ошибки исходящие порта 8|<p>-</p>|`SNMP agent`|ifOutErrors.8<p>Update: 30s</p>|
+|ifInUcastPkts.24|<p>-</p>|`SNMP agent`|ifInUcastPkts.24<p>Update: 30s</p>|
+|ifOperStatus.22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 30s</p>|
+|Ошибки исходящие порта 15|<p>-</p>|`SNMP agent`|ifOutErrors.15<p>Update: 30s</p>|
+|Ошибки исходящие порта 11|<p>-</p>|`SNMP agent`|ifOutErrors.11<p>Update: 30s</p>|
 |ifOutBroadcastPkts.1|<p>-</p>|`SNMP agent`|ifOutBroadcastPkts.1<p>Update: 30s</p>|
 |ifOperStatus.26|<p>-</p>|`SNMP agent`|ifOperStatus.26<p>Update: 30s</p>|
 |Скорость входящего трафика на порту 12|<p>-</p>|`SNMP agent`|ifInOctets.12<p>Update: 30s</p>|
 |Скорость входящего трафика на порту 11|<p>-</p>|`SNMP agent`|ifInOctets.11<p>Update: 30s</p>|
+|Скорость входящего трафика на порту 5|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 30s</p>|
+|Скорость входящего трафика на порту 4|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 30s</p>|
+|Скорость входящего трафика на порту 2|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 30s</p>|
+|ifInUcastPkts.13|<p>-</p>|`SNMP agent`|ifInUcastPkts.13<p>Update: 30s</p>|
+|ifInUcastPkts.12|<p>-</p>|`SNMP agent`|ifInUcastPkts.12<p>Update: 30s</p>|
+|ifInUcastPkts.11|<p>-</p>|`SNMP agent`|ifInUcastPkts.11<p>Update: 30s</p>|
+|ifInUcastPkts.10|<p>-</p>|`SNMP agent`|ifInUcastPkts.10<p>Update: 30s</p>|
+|Скорость входящего трафика на порту 22|<p>-</p>|`SNMP agent`|ifInOctets.22<p>Update: 30s</p>|
+|ifOutUcastPkts.22|<p>-</p>|`SNMP agent`|ifOutUcastPkts.22<p>Update: 30s</p>|
+|ifOutUcastPkts.21|<p>-</p>|`SNMP agent`|ifOutUcastPkts.21<p>Update: 30s</p>|
+|ifOutUcastPkts.20|<p>-</p>|`SNMP agent`|ifOutUcastPkts.20<p>Update: 30s</p>|
+|ifOutUcastPkts.19|<p>-</p>|`SNMP agent`|ifOutUcastPkts.19<p>Update: 30s</p>|
+|ifOutUcastPkts.17|<p>-</p>|`SNMP agent`|ifOutUcastPkts.17<p>Update: 30s</p>|
+|ifOutUcastPkts.16|<p>-</p>|`SNMP agent`|ifOutUcastPkts.16<p>Update: 30s</p>|
+|ifOutUcastPkts.15|<p>-</p>|`SNMP agent`|ifOutUcastPkts.15<p>Update: 30s</p>|
+|ifOutUcastPkts.8|<p>-</p>|`SNMP agent`|ifOutUcastPkts.8<p>Update: 30s</p>|
+|ifOutUcastPkts.7|<p>-</p>|`SNMP agent`|ifOutUcastPkts.7<p>Update: 30s</p>|
+|ifOutUcastPkts.6|<p>-</p>|`SNMP agent`|ifOutUcastPkts.6<p>Update: 30s</p>|
+|PVID порта 3|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.3<p>Update: 30s</p>|
+|PVID порта 18|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.18<p>Update: 30s</p>|
+|PVID порта 17|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.17<p>Update: 30s</p>|
+|PVID порта 16|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.16<p>Update: 30s</p>|
+|PVID порта 15|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.15<p>Update: 30s</p>|
+|Ошибки исходящие порта 26|<p>-</p>|`SNMP agent`|ifOutErrors.26<p>Update: 30s</p>|
+|Скорость исходящего трафика на порту 21|<p>-</p>|`SNMP agent`|ifOutOctets.21<p>Update: 30s</p>|
+|Скорость исходящего трафика на порту 18|<p>-</p>|`SNMP agent`|ifOutOctets.18<p>Update: 30s</p>|
+|Скорость исходящего трафика на порту 9|<p>-</p>|`SNMP agent`|ifOutOctets.9<p>Update: 30s</p>|
+|Скорость исходящего трафика на порту 6|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 30s</p>|
+|Скорость исходящего трафика на порту 5|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 30s</p>|
+|port description 24|<p>-</p>|`SNMP agent`|ifDescr24<p>Update: 30s</p>|
+|port description 7|<p>-</p>|`SNMP agent`|ifDescr7<p>Update: 30s</p>|
+|ifHCInOctets.23|<p>-</p>|`SNMP agent`|ifHCInOctets.23<p>Update: 30s</p>|
+|ifHCInOctets.22|<p>-</p>|`SNMP agent`|ifHCInOctets.22<p>Update: 30s</p>|
+|ifInBroadcastPkts.26|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.26<p>Update: 30s</p>|
+|ifInBroadcastPkts.11|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.11<p>Update: 30s</p>|
+|ifInBroadcastPkts.9|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.9<p>Update: 30s</p>|
+|ifHCOutOctets.5|<p>-</p>|`SNMP agent`|ifHCOutOctets.5<p>Update: 30s</p>|
+|Текущая скорость на порту 4|<p>-</p>|`SNMP agent`|ifHighSpeed.4<p>Update: 30s</p>|
+|ifHCOutOctets.26|<p>-</p>|`SNMP agent`|ifHCOutOctets.26<p>Update: 30s</p>|
+|ifHCOutOctets.25|<p>-</p>|`SNMP agent`|ifHCOutOctets.25<p>Update: 30s</p>|
+|ifHCOutOctets.24|<p>-</p>|`SNMP agent`|ifHCOutOctets.24<p>Update: 30s</p>|
+|Текущая скорость на порту 6|<p>-</p>|`SNMP agent`|ifHighSpeed.6<p>Update: 30s</p>|
+|ifHCOutOctets.17|<p>-</p>|`SNMP agent`|ifHCOutOctets.17<p>Update: 30s</p>|
+|ifHCOutOctets.13|<p>-</p>|`SNMP agent`|ifHCOutOctets.13<p>Update: 30s</p>|
+|ifInBroadcastPkts.2|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.2<p>Update: 30s</p>|
+|ifOperStatus.5|<p>-</p>|`SNMP agent`|ifOperStatus.5<p>Update: 30s</p>|
+|Ошибки исходящие порта 9|<p>-</p>|`SNMP agent`|ifOutErrors.9<p>Update: 30s</p>|
+|ifOperStatus.23|<p>-</p>|`SNMP agent`|ifOperStatus.23<p>Update: 30s</p>|
+|Ошибки исходящие порта 8|<p>-</p>|`SNMP agent`|ifOutErrors.8<p>Update: 30s</p>|
 |Скорость входящего трафика на порту 16|<p>-</p>|`SNMP agent`|ifInOctets.16<p>Update: 30s</p>|
 |Скорость входящего трафика на порту 1|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 30s</p>|
 |Скорость входящего трафика на порту 19|<p>-</p>|`SNMP agent`|ifInOctets.19<p>Update: 30s</p>|
@@ -356,7 +381,6 @@ There are no discovery rules in this template.
 |ifHCOutOctets.19|<p>-</p>|`SNMP agent`|ifHCOutOctets.19<p>Update: 30s</p>|
 |ifHCOutOctets.23|<p>-</p>|`SNMP agent`|ifHCOutOctets.23<p>Update: 30s</p>|
 |ifHCOutOctets.16|<p>-</p>|`SNMP agent`|ifHCOutOctets.16<p>Update: 30s</p>|
-|ifHCOutOctets.13|<p>-</p>|`SNMP agent`|ifHCOutOctets.13<p>Update: 30s</p>|
 |Текущая скорость на порту 24|<p>-</p>|`SNMP agent`|ifHighSpeed.24<p>Update: 30s</p>|
 |Текущая скорость на порту 23|<p>-</p>|`SNMP agent`|ifHighSpeed.23<p>Update: 30s</p>|
 |Текущая скорость на порту 18|<p>-</p>|`SNMP agent`|ifHighSpeed.18<p>Update: 30s</p>|
@@ -368,24 +392,8 @@ There are no discovery rules in this template.
 |ifInUcastPkts.16|<p>-</p>|`SNMP agent`|ifInUcastPkts.16<p>Update: 30s</p>|
 |ifInUcastPkts.15|<p>-</p>|`SNMP agent`|ifInUcastPkts.15<p>Update: 30s</p>|
 |ifInUcastPkts.14|<p>-</p>|`SNMP agent`|ifInUcastPkts.14<p>Update: 30s</p>|
-|ifInUcastPkts.13|<p>-</p>|`SNMP agent`|ifInUcastPkts.13<p>Update: 30s</p>|
-|ifInUcastPkts.12|<p>-</p>|`SNMP agent`|ifInUcastPkts.12<p>Update: 30s</p>|
-|ifInUcastPkts.11|<p>-</p>|`SNMP agent`|ifInUcastPkts.11<p>Update: 30s</p>|
-|ifInUcastPkts.10|<p>-</p>|`SNMP agent`|ifInUcastPkts.10<p>Update: 30s</p>|
-|Скорость входящего трафика на порту 22|<p>-</p>|`SNMP agent`|ifInOctets.22<p>Update: 30s</p>|
 |ifOutUcastPkts.24|<p>-</p>|`SNMP agent`|ifOutUcastPkts.24<p>Update: 30s</p>|
 |ifOutUcastPkts.23|<p>-</p>|`SNMP agent`|ifOutUcastPkts.23<p>Update: 30s</p>|
-|ifOutUcastPkts.22|<p>-</p>|`SNMP agent`|ifOutUcastPkts.22<p>Update: 30s</p>|
-|ifOutUcastPkts.21|<p>-</p>|`SNMP agent`|ifOutUcastPkts.21<p>Update: 30s</p>|
-|ifOutUcastPkts.20|<p>-</p>|`SNMP agent`|ifOutUcastPkts.20<p>Update: 30s</p>|
-|ifOutUcastPkts.19|<p>-</p>|`SNMP agent`|ifOutUcastPkts.19<p>Update: 30s</p>|
-|ifOutUcastPkts.17|<p>-</p>|`SNMP agent`|ifOutUcastPkts.17<p>Update: 30s</p>|
-|ifOutUcastPkts.16|<p>-</p>|`SNMP agent`|ifOutUcastPkts.16<p>Update: 30s</p>|
-|ifOutUcastPkts.15|<p>-</p>|`SNMP agent`|ifOutUcastPkts.15<p>Update: 30s</p>|
-|ifOutUcastPkts.8|<p>-</p>|`SNMP agent`|ifOutUcastPkts.8<p>Update: 30s</p>|
-|ifOutUcastPkts.7|<p>-</p>|`SNMP agent`|ifOutUcastPkts.7<p>Update: 30s</p>|
-|ifOutUcastPkts.6|<p>-</p>|`SNMP agent`|ifOutUcastPkts.6<p>Update: 30s</p>|
-|PVID порта 3|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.3<p>Update: 30s</p>|
 |Версия прошивки|<p>-</p>|`SNMP agent`|rmon.19.2.0<p>Update: 30s</p>|
 |серийный номер|<p>-</p>|`SNMP agent`|mib-2.47.1.1.1.1.11.1<p>Update: 30s</p>|
 |PVID порта 26|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.26<p>Update: 30s</p>|
@@ -400,8 +408,6 @@ There are no discovery rules in this template.
 |ifOutMulticastPkts.10|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.10<p>Update: 30s</p>|
 |ifOutMulticastPkts.9|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.9<p>Update: 30s</p>|
 |ifOutMulticastPkts.8|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.8<p>Update: 30s</p>|
-|Ошибки исходящие порта 26|<p>-</p>|`SNMP agent`|ifOutErrors.26<p>Update: 30s</p>|
-|Скорость исходящего трафика на порту 21|<p>-</p>|`SNMP agent`|ifOutOctets.21<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 19|<p>-</p>|`SNMP agent`|ifOutOctets.19<p>Update: 30s</p>|
 |port description 6|<p>-</p>|`SNMP agent`|ifDescr6<p>Update: 30s</p>|
 |port description 5|<p>-</p>|`SNMP agent`|ifDescr5<p>Update: 30s</p>|
@@ -416,15 +422,11 @@ There are no discovery rules in this template.
 |ifHCOutOctets.2|<p>-</p>|`SNMP agent`|ifHCOutOctets.2<p>Update: 30s</p>|
 |ifHCOutOctets.4|<p>-</p>|`SNMP agent`|ifHCOutOctets.4<p>Update: 30s</p>|
 |ifInMulticastPkts.13|<p>-</p>|`SNMP agent`|ifInMulticastPkts.13<p>Update: 30s</p>|
-|ifInBroadcastPkts.26|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.26<p>Update: 30s</p>|
 |ifInBroadcastPkts.18|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.18<p>Update: 30s</p>|
 |ifInBroadcastPkts.17|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.17<p>Update: 30s</p>|
 |ifInBroadcastPkts.16|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.16<p>Update: 30s</p>|
 |ifInBroadcastPkts.15|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.15<p>Update: 30s</p>|
 |ifInMulticastPkts.1|<p>-</p>|`SNMP agent`|ifInMulticastPkts.1<p>Update: 30s</p>|
-|Текущая скорость на порту 4|<p>-</p>|`SNMP agent`|ifHighSpeed.4<p>Update: 30s</p>|
-|Текущая скорость на порту 6|<p>-</p>|`SNMP agent`|ifHighSpeed.6<p>Update: 30s</p>|
-|ifHCOutOctets.17|<p>-</p>|`SNMP agent`|ifHCOutOctets.17<p>Update: 30s</p>|
 |ifHCOutOctets.12|<p>-</p>|`SNMP agent`|ifHCOutOctets.12<p>Update: 30s</p>|
 |ifHCOutOctets.11|<p>-</p>|`SNMP agent`|ifHCOutOctets.11<p>Update: 30s</p>|
 |ifHCOutOctets.10|<p>-</p>|`SNMP agent`|ifHCOutOctets.10<p>Update: 30s</p>|

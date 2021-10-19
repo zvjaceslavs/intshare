@@ -22,6 +22,8 @@ The template uses Zabbix dependent items to reduce the number of API calls made 
 <a id="user-content-requirements" class="anchor" style="box-sizing: border-box; background-color: initial; color: #0366d6; float: left; padding-right: 4px; margin-left: -20px; line-height: 1;
 ===============================================================================================================================================================================================
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

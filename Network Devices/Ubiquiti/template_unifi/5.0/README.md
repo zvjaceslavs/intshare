@@ -25,6 +25,8 @@ Versão Firmware.
 
 É necessário habilitar o protocolo SNMP nas antenas.
 
+
+
 ## Author
 
 Carlos Eduardo

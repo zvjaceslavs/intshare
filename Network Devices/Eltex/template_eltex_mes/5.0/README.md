@@ -10,6 +10,8 @@ Added to the Eltex MES switches, serial number, MAC address, firmware version.
 
 23.02.2018 Add Screens and Aliase to Screens
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

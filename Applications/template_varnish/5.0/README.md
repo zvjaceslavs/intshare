@@ -8,6 +8,8 @@ Simple template for the Varnish cache using results from the varnishstat command
 
 Simple template for the Varnish cache using results from the varnishstat command. Ensure that "EnableRemoteCommands=1" is set in the host's agent config file.
 
+
+
 ## Author
 
 Dave Humphrey (dave@uesp.net)

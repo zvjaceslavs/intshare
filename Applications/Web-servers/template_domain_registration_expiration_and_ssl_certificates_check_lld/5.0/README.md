@@ -10,6 +10,8 @@ This is originally based on [https://share.zabbix.com/cat-app/web-servers/ssl-ce
 
 Added domain registration expiration check
 
+
+
 ## Macros used
 
 There are no macros links in this template.

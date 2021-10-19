@@ -122,6 +122,8 @@ External Scripts and Value Mapping on my Github:
 
 https://github.com/flaviojunior1995/Zabbix-Templates
 
+
+
 ## Author
 
 Flavio Camacho Junior

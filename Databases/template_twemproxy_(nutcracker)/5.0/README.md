@@ -15,6 +15,8 @@ Some of the features:
 * Single request for LLD and metrics.
 * Minimum host dependencies - only curl needed if system.run used. No host dependencies with http agent.
 * No host scripts, utilizing Zabbix features: dependent items and JavaScript preprocessing.
+
+
 ## Author
 
 Oleg Morozov aka zigmund

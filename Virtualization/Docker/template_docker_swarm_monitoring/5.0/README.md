@@ -7,6 +7,8 @@ Monitoring with Docker API, no external scripts need. Use {HOST.DNS} for connect
 
 I'm use SSL client certificate to connect to Docker API (here <https://dker.ru/docs/component-projects/docker-swarm/configure-docker-swarm-for-tls/> you can found HOWTO). You must specify filename of the client's certificate in {$CERT\_FNAME} macro and filename of the client's key in {$KEY\_FNAME}. Certificate and key must be in location for SSL client certificate (see SSLCertLocation in zabbix\_server.conf)
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

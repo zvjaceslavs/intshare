@@ -4,6 +4,8 @@
 
 PoE, port usage, uptime
 
+
+
 ## Macros used
 
 There are no macros links in this template.

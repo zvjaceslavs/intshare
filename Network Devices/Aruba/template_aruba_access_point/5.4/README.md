@@ -7,6 +7,8 @@ Template for monitoring Aruba Access points with SNMP agent. Requires ICMP modul
 
 Collects IP address, Location, System description, System Name, System uptime, Interfaces, Ping data and SSIDs.
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

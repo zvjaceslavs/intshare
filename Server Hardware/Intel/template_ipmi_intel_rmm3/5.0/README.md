@@ -31,6 +31,8 @@ Sensors:
 
 note: Authentication algorithm - md5
 
+
+
 ## Macros used
 
 There are no macros links in this template.

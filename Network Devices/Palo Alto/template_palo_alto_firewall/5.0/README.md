@@ -10,6 +10,8 @@ Temperature Discovery
 
 Memory
 
+
+
 ## Macros used
 
 There are no macros links in this template.

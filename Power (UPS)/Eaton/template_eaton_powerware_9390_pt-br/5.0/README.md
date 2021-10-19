@@ -4,6 +4,8 @@
 
 Portuguese items description, graphs names and application, but SNMP keys in English. Input, output, load, battery, external probe, UPS state.
 
+
+
 ## Author
 
 Nilson Espurio

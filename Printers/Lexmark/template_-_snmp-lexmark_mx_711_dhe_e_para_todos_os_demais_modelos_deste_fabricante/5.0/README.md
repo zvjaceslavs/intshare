@@ -58,6 +58,8 @@ Para buscar OID inserir o comando no terminal
 
 Template atualizado pois durante a substituição do fotocondutor, a impressora reporta "0" no status do toner para o Zabbix, o que gerava um falso positivo. Para corrigir esse erro, fizemos uma alteraçao na Trigger para desconsiderar o status "0" do toner, reportando toner esgotado quando estiver em 1%, e "Finalizando" entre 1 e 5%, podendo ser alterado conforme sua necessidade.
 
+
+
 ## Author
 
 Thiago Surette

@@ -7,6 +7,8 @@ This is template for native monitoring systemd services via Zabbix Agent 2. Zabb
 
 New version for zabbix 5.0.6 and 5.2.2 has ben uploaded + fixed regular expression in preprocessing. 
 
+
+
 ## Author
 
 Tomas Hermanek

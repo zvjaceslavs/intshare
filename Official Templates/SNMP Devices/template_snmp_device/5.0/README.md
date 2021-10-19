@@ -4,6 +4,8 @@
 
 Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices
 
+
+
 ## Author
 
 Zabbix SIA
@@ -53,6 +55,8 @@ There are no macros links in this template.
 
 Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices
 
+
+
 ## Author
 
 Zabbix SIA
@@ -94,6 +98,8 @@ There are no template links in this template.
 ## Overview
 
 Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices
+
+
 
 ## Author
 

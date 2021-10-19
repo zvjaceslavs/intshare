@@ -7,6 +7,8 @@
 
 Developed through "Template Windows 2008 R2 IIS Server" template. ([https://share.zabbix.com/cat-app/web-servers/template-windows-2008-r2-iis-server](cat-app/web-servers/template-windows-2008-r2-iis-server))
 
+
+
 ## Macros used
 
 There are no macros links in this template.

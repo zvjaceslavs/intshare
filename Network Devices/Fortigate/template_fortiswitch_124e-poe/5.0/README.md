@@ -10,6 +10,8 @@ Serial No., OS version,% CPU,% RAM, disk (total and used), interface data (link 
 
 Graphs for % CPU, % RAM, disk use and network traffic.
 
+
+
 ## Author
 
 Sergio Román González

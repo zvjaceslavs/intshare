@@ -22,6 +22,8 @@ Need to use macro {$SNMP\_COMMUNITY}
 
 GITHUB: https://github.com/magaiverpr/template-zabbix-apc-pdu
 
+
+
 ## Author
 
 Danielsberton

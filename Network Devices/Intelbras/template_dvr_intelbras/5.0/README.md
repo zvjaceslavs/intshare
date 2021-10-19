@@ -17,6 +17,8 @@ Perca de Pacote
 
 Tempo Ligado Equipamento
 
+
+
 ## Author
 
 Favero

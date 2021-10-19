@@ -4,6 +4,8 @@
 
 Official template from Zabbix distribution to check HTTP service availability
 
+
+
 ## Author
 
 Zabbix SIA

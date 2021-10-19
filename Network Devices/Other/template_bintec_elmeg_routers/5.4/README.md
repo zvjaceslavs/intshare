@@ -56,6 +56,8 @@ Tested devices:
 
 Data is collected via SNMP and the [bintec elmeg MIB](https://www.bintec-elmeg.com/en/downloads/tools/management-information-base-mib-fuer-snmp-manager/) should be installed on the Zabbix system.
 
+
+
 ## Author
 
 Thorben Brinkmann

@@ -16,6 +16,8 @@ Note: if possible use the Emby URL in http, there may be problems using https
 
  
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

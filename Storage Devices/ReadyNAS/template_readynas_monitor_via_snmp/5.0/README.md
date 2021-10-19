@@ -16,6 +16,8 @@ Monitor NETGEAR ReadyNAS storage devices via SNMP. This template was developed f
 
 Appropriate triggers for each item are also provided.
 
+
+
 ## Author
 
 Jeffrey H. Simonson

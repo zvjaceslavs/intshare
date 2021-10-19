@@ -4,6 +4,8 @@
 
 Official template from Zabbix distribution to check LDAP service availability
 
+
+
 ## Author
 
 Zabbix SIA

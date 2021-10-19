@@ -12,6 +12,8 @@ Simple SNMP based Template. Currently features the following checks:
 * Power Supply Status
 * Reference Clock Status
 * PTP Status (Not tested)
+
+
 ## Author
 
 Marcel Wiechmann

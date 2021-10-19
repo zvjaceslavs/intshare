@@ -4,6 +4,8 @@
 
 [Printed pages](http://192.168.0.12/zabbix/items.php?form=update&hostid=10436&itemid=37189)[Status color](http://192.168.0.12/zabbix/items.php?form=update&hostid=10436&itemid=37157)[Status written](http://192.168.0.12/zabbix/items.php?form=update&hostid=10436&itemid=37158)
 
+
+
 ## Macros used
 
 There are no macros links in this template.

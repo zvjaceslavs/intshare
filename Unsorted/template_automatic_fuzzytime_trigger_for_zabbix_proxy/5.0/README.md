@@ -19,6 +19,8 @@ In order to run this solution, you have to have an active session-id in a global
 
  
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

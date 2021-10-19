@@ -19,6 +19,8 @@ if required, replace Zabbix version from 3.4 to 3.0 in the XML to make it work o
 
 **note : template edited on April 6th 2019 to fix issues with triggers, now triggering everything at 15% levels (with high capacity toners)**
 
+
+
 ## Author
 
 Olivier GRIFFIN

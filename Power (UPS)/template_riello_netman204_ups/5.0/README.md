@@ -25,7 +25,9 @@ Monitors the following items:
 * Estimated Charge Remaining
 * Estimated Charge Remaining
 
-<li style="line-height: 20px; margin: 0px; padding: 0px; border: 0## Author
+<li style="line-height: 20px; margin: 0px; padding: 0px; border: 0
+
+## Author
 
 balmag
 

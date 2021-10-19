@@ -37,6 +37,8 @@ NAME : Template Palo Alto SNMPv2 64-bit counters
 
 TESTED : zabbix 4.2 and PAN OS 9.0.3-h3 but should work on zabbix 3.4 and PAN OS 8.1
 
+
+
 ## Author
 
 Remi Chanoine

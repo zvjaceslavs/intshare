@@ -31,6 +31,8 @@ Cisco 803
   
 As it is based on the default Cisco SNMPv2 template it will work on every generic Cisco Router/Switch.
 
+
+
 ## Author
 
 Kjoffy

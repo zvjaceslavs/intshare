@@ -4,6 +4,8 @@
 
 The template is used to monitor health of Zabbix Server parts (processes, caches and etc).
 
+
+
 ## Author
 
 Zabbix SIA

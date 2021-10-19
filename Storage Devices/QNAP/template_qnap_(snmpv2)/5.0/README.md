@@ -10,6 +10,8 @@ This template allows you to quickly get up and running with monitoring of QNAP l
 
 If you wish to see new items added please open an issue @ [albinbatman/zabbix-qnap-template @ GitHub](https://github.com/albinbatman/zabbix-qnap-template). All new updates will be released on github.
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

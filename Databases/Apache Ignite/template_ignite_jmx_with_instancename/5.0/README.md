@@ -17,6 +17,8 @@ To apply them to your cluster you have to:
 
 Template tested with ignite 2.8.0 and GridGain 2.7.16
 
+
+
 ## Macros used
 
 |Name|Description|Default|Type|

@@ -4,6 +4,8 @@
 
 Modify from [https://share.zabbix.com/operating-systems/esxi-snmp](operating-systems/esxi-snmp),Thank Andrew Single.The original templete can not be used on zabbix3.x,so i modify it ..I have tested on esxi 5.0 5.1 5.5 6.
 
+
+
 ## Author
 
 anxinhai

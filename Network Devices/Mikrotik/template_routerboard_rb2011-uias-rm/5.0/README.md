@@ -10,6 +10,8 @@ Template adaptado para RB-2011UIAS-RM
 
 Alterar Macro {$SNMP\_COMMUNITY} para sua necessidade.
 
+
+
 ## Author
 
 Cesar Buffulin

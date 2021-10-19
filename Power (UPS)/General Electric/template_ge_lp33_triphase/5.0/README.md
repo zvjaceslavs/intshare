@@ -14,6 +14,8 @@ Contains most importante items (49), 9 triggers for alerting and 8 graphics.
 
 Because almost OIDs are generic, this template works with other UPS SNMP v2c enabled.
 
+
+
 ## Author
 
 Cláudio Ferreira

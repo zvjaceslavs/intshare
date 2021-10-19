@@ -10,6 +10,8 @@ zabbix template for graphing queue traffic on mikrotik devices
 
 <https://msadighian.com>
 
+
+
 ## Macros used
 
 There are no macros links in this template.
