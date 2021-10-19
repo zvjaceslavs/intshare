@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:37:58Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template TCP Zabbix Agent</template>
+      <name>Template TCP Zabbix Agent</name>
+      <description>Simple template to check the Zabbix Agent Service on server This template uses "Simple Check" of Zabbix (ping and tcp control). by Federico Coppola</description>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>TCP-CHECK-10050</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>PING-CONTROL</name>
+          <type>SIMPLE</type>
+          <key>icmpping</key>
+          <history>5d</history>
+          <description>Simple check about ping</description>
+        </item>
+        <item>
+          <name>TCP-CONTROL</name>
+          <type>SIMPLE</type>
+          <key>net.tcp.service[tcp,,10050]</key>
+          <history>7d</history>
+          <description>Item about check tcp service on port 10050 (Zabbix Agent)</description>
+          <applications>
+            <application>
+              <name>TCP-CHECK-10050</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>Service state</name>
+          </valuemap>
+        </item>
+      </items>
+    </template>
+  </templates>
+  <triggers>
+    <trigger>
+      <expression>{Template TCP Zabbix Agent:icmpping.max(#5)}=0 and {Template TCP Zabbix Agent:net.tcp.service[tcp,,10050].max(#5)}=0</expression>
+      <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+      <recovery_expression>{Template TCP Zabbix Agent:icmpping.max(#5)}>=1 and {Template TCP Zabbix Agent:net.tcp.service[tcp,,10050].max(#5)}>=1</recovery_expression>
+      <name>{HOST.NAME} is not available</name>
+      <priority>HIGH</priority>
+      <description>Double control to check a machine that using Zabbix Agent is available by Federico Coppola</description>
+      <manual_close>YES</manual_close>
+    </trigger>
+  </triggers>
+  <value_maps>
+    <value_map>
+      <name>Service state</name>
+      <mappings>
+        <mapping>
+          <value>0</value>
+          <newvalue>Down</newvalue>
+        </mapping>
+        <mapping>
+          <value>1</value>
+          <newvalue>Up</newvalue>
+        </mapping>
+      </mappings>
+    </value_map>
+  </value_maps>
+</zabbix_export>

@@ -1,0 +1,334 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-10-19T20:41:25Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+    -
+      uuid: f1537448b0da4ebb870d18790c1cec56
+      name: 'Templates SNMP Devices'
+  templates:
+    -
+      uuid: 9d1c2d027cde4fb0a79364c4f5755eb7
+      template: 'Template SNMP Aruba Accesspoint'
+      name: 'Template SNMP Aruba Accesspoint'
+      groups:
+        -
+          name: Templates
+        -
+          name: 'Templates SNMP Devices'
+      items:
+        -
+          uuid: 2bc1f63a3bc5497294b4765b07349cbd
+          name: Ping
+          type: SIMPLE
+          key: icmpping
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Network
+          triggers:
+            -
+              uuid: b5862ec1806e4e73a244e202afbb811d
+              expression: 'max(/Template SNMP Aruba Accesspoint/icmpping,{$PING_LOSS_CRIT})=0'
+              name: '{HOSTNAME} is unreachable'
+              priority: AVERAGE
+              description: 'Device is unreachable by ping'
+        -
+          uuid: a4242d558fa64d11b384d33543b34587
+          name: Pingloss
+          type: SIMPLE
+          key: icmppingloss
+          delay: 30s
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: Network
+          triggers:
+            -
+              uuid: 171aee109d6b4dcab50f03f9d60292e3
+              expression: 'min(/Template SNMP Aruba Accesspoint/icmppingloss,5m)>{$PING_LOSS_WARN} and min(/Template SNMP Aruba Accesspoint/icmppingloss,5m)<100'
+              name: 'High ping loss on {HOSTNAME}'
+              priority: WARNING
+        -
+          uuid: cf62eb8bebc04fce984cbc0cdef6ec0f
+          name: 'Ping response time'
+          type: SIMPLE
+          key: icmppingsec
+          delay: 30s
+          value_type: FLOAT
+          units: s
+          tags:
+            -
+              tag: Application
+              value: Network
+          triggers:
+            -
+              uuid: 86d91a3ea2d945fc99335f48c6f85024
+              expression: 'avg(/Template SNMP Aruba Accesspoint/icmppingsec,5m)>{$PING_RESPONSE_TIME_WARN}'
+              name: 'High ping response time on {HOSTNAME}'
+              priority: WARNING
+        -
+          uuid: 14349314c5e74963a5db0e31f05fa91b
+          name: 'MAC Address'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.2.2.1.6.1
+          key: ifPhysAddress
+          delay: 1h
+          trends: '0'
+          value_type: CHAR
+          inventory_link: MACADDRESS_A
+          tags:
+            -
+              tag: Application
+              value: Interfaces
+          triggers:
+            -
+              uuid: f16fe98d4af84f17ad13d9773d49a9d7
+              expression: '(last(/Template SNMP Aruba Accesspoint/ifPhysAddress,#1)<>last(/Template SNMP Aruba Accesspoint/ifPhysAddress,#2))=1'
+              name: 'MAC Address changed on {HOSTNAME}'
+              priority: WARNING
+        -
+          uuid: 17c6b90a941a4439a63850cb5470c53a
+          name: 'IP Address'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.14823.2.3.3.1.1.5.0
+          key: ipAdEntAddr
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: dfb2941c9bc14fc39e4ac70b196925a5
+          name: 'System Description'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.1.0
+          key: SysDescr
+          delay: 60s
+          trends: '0'
+          value_type: TEXT
+          inventory_link: SOFTWARE_FULL
+          tags:
+            -
+              tag: Application
+              value: General
+          triggers:
+            -
+              uuid: 07a5600c99fd4fefaaa1bb09e2debbbb
+              expression: '(last(/Template SNMP Aruba Accesspoint/SysDescr,#1)<>last(/Template SNMP Aruba Accesspoint/SysDescr,#2))=1'
+              name: 'System description changed on {HOSTNAME}'
+              priority: INFO
+              manual_close: 'YES'
+        -
+          uuid: 1224c64edc5542a8bf3de151fa7aeb3e
+          name: Location
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.6.0
+          key: sysLocation
+          delay: 60s
+          trends: '0'
+          value_type: TEXT
+          inventory_link: LOCATION
+          tags:
+            -
+              tag: Application
+              value: General
+          triggers:
+            -
+              uuid: 980cec122de44529b42bc025ad70605d
+              expression: '(last(/Template SNMP Aruba Accesspoint/sysLocation,#1)<>last(/Template SNMP Aruba Accesspoint/sysLocation,#2))=1'
+              name: 'Location changed on {HOSTNAME}'
+              priority: INFO
+              manual_close: 'YES'
+        -
+          uuid: 003f42e50fdd4a889349bc6769274b12
+          name: 'System name'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.5.0
+          key: SysName
+          delay: 60s
+          trends: '0'
+          value_type: TEXT
+          inventory_link: NAME
+          tags:
+            -
+              tag: Application
+              value: General
+          triggers:
+            -
+              uuid: 59ea6f52e83e41c6aea8406b549e8f65
+              expression: '(last(/Template SNMP Aruba Accesspoint/SysName,#1)<>last(/Template SNMP Aruba Accesspoint/SysName,#2))=1'
+              name: 'System name changed on {HOSTNAME}'
+              priority: INFO
+              manual_close: 'YES'
+        -
+          uuid: 604f1cb042694ab0a255a6ef155e7f12
+          name: 'System uptime'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.3.0
+          key: SysUptime
+          delay: 30s
+          value_type: FLOAT
+          units: uptime
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: General
+      discovery_rules:
+        -
+          uuid: 81210e21bb044d3ab812286b64cebeae
+          name: Interfaces
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},IF-MIB::ifDescr]'
+          key: ifDescr
+          delay: 10m
+          lifetime: '0'
+          item_prototypes:
+            -
+              uuid: 722540be2a054fc799ee41b7d653e6c5
+              name: 'Incoming traffic on interface $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}'
+              key: 'ifInOctets[{#SNMPVALUE}]'
+              delay: 10m
+              value_type: FLOAT
+              units: bps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+              tags:
+                -
+                  tag: Application
+                  value: Interfaces
+            -
+              uuid: 702c4cb0c2ec46039ff0487153b169dd
+              name: 'Interface $1 operational status'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}'
+              key: 'ifOperStatus[{#SNMPVALUE}]'
+              delay: 10m
+              valuemap:
+                name: 'Aruba AP Port status'
+              tags:
+                -
+                  tag: Application
+                  value: Interfaces
+              trigger_prototypes:
+                -
+                  uuid: 24b2d9d768244ea9b262119dadae5545
+                  expression: '(last(/Template SNMP Aruba Accesspoint/ifOperStatus[{#SNMPVALUE}],#1)<>last(/Template SNMP Aruba Accesspoint/ifOperStatus[{#SNMPVALUE}],#2))=1'
+                  name: 'Operational status was changed on {HOSTNAME} interface {#SNMPVALUE}'
+                  priority: AVERAGE
+                  manual_close: 'YES'
+            -
+              uuid: 0049e33e38964dd6a2c53f2a6911ecd3
+              name: 'Outgoing traffic on interface $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}'
+              key: 'ifOutOctets[{#SNMPVALUE}]'
+              delay: 10m
+              value_type: FLOAT
+              units: bps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+              tags:
+                -
+                  tag: Application
+                  value: Interfaces
+          graph_prototypes:
+            -
+              uuid: dc9687d8d944430086b8a7e7ecf7d808
+              name: 'Traffic on {#SNMPVALUE}'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 199C0D
+                  item:
+                    host: 'Template SNMP Aruba Accesspoint'
+                    key: 'ifInOctets[{#SNMPVALUE}]'
+                -
+                  sortorder: '2'
+                  color: F63100
+                  item:
+                    host: 'Template SNMP Aruba Accesspoint'
+                    key: 'ifOutOctets[{#SNMPVALUE}]'
+        -
+          uuid: e0b7871817c54f14ad5b4018f6b2f24a
+          name: SSID
+          type: SNMP_AGENT
+          snmp_oid: 'discover[{#SNMPVALUE},.1.3.6.1.4.1.14823.2.3.3.1.1.7.1.1]'
+          key: wlanAPESSID
+          delay: 5m
+          description: |
+            discovery{[#SNMPVALUE},.1.3.6.1.4.1.14823.2.2.1.5.2.1.7.1.2]
+            
+            Name/OID: .1.3.6.1.4.1.14823.2.3.3.1.1.7.1.2.0; Value (OctetString): fnsgjest
+          item_prototypes:
+            -
+              uuid: bedfe63db0d243c4a33d7b57431a9514
+              name: 'SSID $1'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.14823.2.3.3.1.1.7.1.2.{#SNMPINDEX}'
+              key: 'wlanAPESSID[{#SNMPVALUE}]'
+              delay: 5m
+              trends: '0'
+              value_type: TEXT
+              tags:
+                -
+                  tag: Application
+                  value: SSID
+              trigger_prototypes:
+                -
+                  uuid: b45cc440fef84c7db8520558d89967fe
+                  expression: '(last(/Template SNMP Aruba Accesspoint/wlanAPESSID[{#SNMPVALUE}],#1)<>last(/Template SNMP Aruba Accesspoint/wlanAPESSID[{#SNMPVALUE}],#2))=1'
+                  name: 'SSID on {HOSTNAME} changed {#SNMPVALUE}'
+                  priority: AVERAGE
+                  manual_close: 'YES'
+      macros:
+        -
+          macro: '{$PING_LOSS_CRIT}'
+          value: '3'
+        -
+          macro: '{$PING_LOSS_WARN}'
+          value: '20'
+        -
+          macro: '{$PING_RESPONSE_TIME_WARN}'
+          value: '0.15'
+        -
+          macro: '{$SNMP_COMMUNITY}'
+          value: public
+      valuemaps:
+        -
+          uuid: f059ea4b76aa4983a9377668d18ef9b0
+          name: 'Aruba AP Port status'
+          mappings:
+            -
+              value: '1'
+              newvalue: Up
+            -
+              value: '2'
+              newvalue: Down

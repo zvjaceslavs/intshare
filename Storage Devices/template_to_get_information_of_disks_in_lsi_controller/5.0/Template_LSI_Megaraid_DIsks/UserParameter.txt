@@ -1,0 +1,2 @@
+UserParameter=disk[*],cat /etc/zabbix/scripts/info.json
+UserParameter=diskinfo[*], /etc/zabbix/scripts/raiddisc.sh $1 $2 $3

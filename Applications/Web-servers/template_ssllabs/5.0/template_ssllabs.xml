@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:38:09Z</date>
+  <groups>
+    <group>
+      <name>Templates/Upwork</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template SSLLabs</template>
+      <name>Template SSLLabs</name>
+      <description>SSL certificate monitoring via SSLLabs open API</description>
+      <groups>
+        <group>
+          <name>Templates/Upwork</name>
+        </group>
+      </groups>
+      <items>
+        <item>
+          <name>SSL Certificate Grade</name>
+          <type>TRAP</type>
+          <key>ssllabs.certificate.grade</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>TEXT</value_type>
+          <triggers>
+            <trigger>
+              <expression>{str(A)}=1</expression>
+              <name>Certificate grade is A</name>
+              <priority>INFO</priority>
+            </trigger>
+            <trigger>
+              <expression>{str(A+)}=1</expression>
+              <name>Certificate grade is A+</name>
+              <priority>INFO</priority>
+            </trigger>
+            <trigger>
+              <expression>{str(B)}=1</expression>
+              <name>Certificate grade is B</name>
+              <priority>INFO</priority>
+            </trigger>
+            <trigger>
+              <expression>{str(C)}=1</expression>
+              <name>Certificate grade is C</name>
+              <priority>WARNING</priority>
+            </trigger>
+            <trigger>
+              <expression>{str(D)}=1</expression>
+              <name>Certificate grade is D</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+            <trigger>
+              <expression>{str(F)}=1</expression>
+              <name>Certificate grade is F</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+</zabbix_export>

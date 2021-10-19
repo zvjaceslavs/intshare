@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:40:49Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template App MDaemon</template>
+      <name>Template App MDaemon</name>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>MDaemon</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>File distante figée</name>
+          <key>perf_counter["\MDaemon\File distante figée"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>File entrante figée</name>
+          <key>perf_counter["\MDaemon\File entrante figée"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>File locale figée</name>
+          <key>perf_counter["\MDaemon\File locale figée"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file de quarantaine</name>
+          <key>perf_counter["\MDaemon\Messages de la file de quarantaine"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file de relance</name>
+          <key>perf_counter["\MDaemon\Messages de la file de relance"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file des erreurs</name>
+          <key>perf_counter["\MDaemon\Messages de la file des erreurs"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file distante</name>
+          <key>perf_counter["\MDaemon\Messages de la file distante"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file entrante</name>
+          <key>perf_counter["\MDaemon\Messages de la file entrante"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file LAN</name>
+          <key>perf_counter["\MDaemon\Messages de la file LAN"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file locale</name>
+          <key>perf_counter["\MDaemon\Messages de la file locale"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file RAW</name>
+          <key>perf_counter["\MDaemon\Messages de la file RAW"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages de la file temporaire</name>
+          <key>perf_counter["\MDaemon\Messages de la file temporaire"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages DomainPop (entrant)/Sec</name>
+          <key>perf_counter["\MDaemon\Messages DomainPop (entrant)/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages MultiPOP (entrant)/Sec</name>
+          <key>perf_counter["\MDaemon\Messages MultiPOP (entrant)/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages RAW/Sec</name>
+          <key>perf_counter["\MDaemon\Messages RAW/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages SMTP (entrant)/Sec</name>
+          <key>perf_counter["\MDaemon\Messages SMTP (entrant)/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Messages SMTP (sortant)/Sec</name>
+          <key>perf_counter["\MDaemon\Messages SMTP (sortant)/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions actives de MDaemon</name>
+          <key>perf_counter["\MDaemon\Sessions actives de MDaemon"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions IMAP/Sec</name>
+          <key>perf_counter["\MDaemon\Sessions IMAP/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions IMAP actives</name>
+          <key>perf_counter["\MDaemon\Sessions IMAP actives"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions POP3 (entrant) actives</name>
+          <key>perf_counter["\MDaemon\Sessions POP3 (entrant) actives"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions POP3 (sortant) actives</name>
+          <key>perf_counter["\MDaemon\Sessions POP3 (sortant) actives"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions POP3/Sec</name>
+          <key>perf_counter["\MDaemon\Sessions POP3/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions SMTP (entrant)/Sec</name>
+          <key>perf_counter["\MDaemon\Sessions SMTP (entrant)/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions SMTP (entrant) actives</name>
+          <key>perf_counter["\MDaemon\Sessions SMTP (entrant) actives"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions SMTP (sortant)/Sec</name>
+          <key>perf_counter["\MDaemon\Sessions SMTP (sortant)/Sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions SMTP (sortant) actives</name>
+          <key>perf_counter["\MDaemon\Sessions SMTP (sortant) actives"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Sessions webmail actives</name>
+          <key>perf_counter["\MDaemon\Sessions webmail actives"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Temps d'activité</name>
+          <key>perf_counter["\MDaemon\Temps d'activité"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total DNSBL acceptés</name>
+          <key>perf_counter["\MDaemon\Total DNSBL acceptés"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total DNSBL refusés</name>
+          <key>perf_counter["\MDaemon\Total DNSBL refusés"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total messages DomainPOP (entrant)</name>
+          <key>perf_counter["\MDaemon\Total messages DomainPOP (entrant)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total messages MultiPOP (entrant)</name>
+          <key>perf_counter["\MDaemon\Total messages MultiPOP (entrant)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total messages RAW</name>
+          <key>perf_counter["\MDaemon\Total messages RAW"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total messages SMTP (entrant)</name>
+          <key>perf_counter["\MDaemon\Total messages SMTP (entrant)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total messages SMTP (sortant)</name>
+          <key>perf_counter["\MDaemon\Total messages SMTP (sortant)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total sessions IMAP</name>
+          <key>perf_counter["\MDaemon\Total sessions IMAP"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total sessions POP3</name>
+          <key>perf_counter["\MDaemon\Total sessions POP3"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total sessions SMTP (entrant)</name>
+          <key>perf_counter["\MDaemon\Total sessions SMTP (entrant)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total sessions SMTP (sortant)</name>
+          <key>perf_counter["\MDaemon\Total sessions SMTP (sortant)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total spams acceptés</name>
+          <key>perf_counter["\MDaemon\Total spams acceptés"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total spams refusés</name>
+          <key>perf_counter["\MDaemon\Total spams refusés"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total virus acceptés</name>
+          <key>perf_counter["\MDaemon\Total virus acceptés"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Total virus refusés</name>
+          <key>perf_counter["\MDaemon\Total virus refusés"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>État de fonctionnement de MDaemon</name>
+          <key>perf_counter["\MDaemon\État de fonctionnement de MDaemon"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État de fonctionnement de MDaemon is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur ActiveSync</name>
+          <key>perf_counter["\MDaemon\État du serveur ActiveSync"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur ActiveSync is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur anti-spam</name>
+          <key>perf_counter["\MDaemon\État du serveur anti-spam"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur anti-spam is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur anti-spams is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur antivirus</name>
+          <key>perf_counter["\MDaemon\État du serveur antivirus"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur antivirus is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur DomainPOP</name>
+          <key>perf_counter["\MDaemon\État du serveur DomainPOP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur DomainPOP is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur IMAP</name>
+          <key>perf_counter["\MDaemon\État du serveur IMAP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur IMAP is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur Minger</name>
+          <key>perf_counter["\MDaemon\État du serveur Minger"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur Minger is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur MultiPOP</name>
+          <key>perf_counter["\MDaemon\État du serveur MultiPOP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur MultiPOP is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur POP3</name>
+          <key>perf_counter["\MDaemon\État du serveur POP3"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur POP3 is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur SMTP</name>
+          <key>perf_counter["\MDaemon\État du serveur SMTP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur SMTP is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur WebAdmin</name>
+          <key>perf_counter["\MDaemon\État du serveur WebAdmin"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur WebAdmin is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>État du serveur webmail</name>
+          <key>perf_counter["\MDaemon\État du serveur webmail"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>État du serveur webmail is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+  <graphs>
+    <graph>
+      <name>Etat Serveurs MDaemon</name>
+      <show_work_period>NO</show_work_period>
+      <show_triggers>NO</show_triggers>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État de fonctionnement de MDaemon"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>F63100</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur ActiveSync"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>2774A4</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur anti-spam"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>3</sortorder>
+          <color>F7941D</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur antivirus"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>4</sortorder>
+          <color>FC6EA3</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur DomainPOP"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>5</sortorder>
+          <color>6C59DC</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur IMAP"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>6</sortorder>
+          <color>C7A72D</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur Minger"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>7</sortorder>
+          <color>BA2A5D</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur MultiPOP"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>8</sortorder>
+          <color>F230E0</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur POP3"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>9</sortorder>
+          <color>5CCD18</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur SMTP"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>10</sortorder>
+          <color>BB2A02</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur WebAdmin"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>11</sortorder>
+          <color>AC41A5</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\État du serveur webmail"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MDaemon totals</name>
+      <graph_items>
+        <graph_item>
+          <color>1A7C11</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total DNSBL acceptés"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>F63100</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total DNSBL refusés"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>2774A4</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total messages DomainPOP (entrant)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>3</sortorder>
+          <color>A54F10</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total sessions IMAP"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>4</sortorder>
+          <color>FC6EA3</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total messages MultiPOP (entrant)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>5</sortorder>
+          <color>6C59DC</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total sessions POP3"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>6</sortorder>
+          <color>AC8C14</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total messages RAW"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>7</sortorder>
+          <color>611F27</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total messages SMTP (entrant)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>8</sortorder>
+          <color>F230E0</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total messages SMTP (sortant)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>9</sortorder>
+          <color>5CCD18</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total sessions SMTP (entrant)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>10</sortorder>
+          <color>BB2A02</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total sessions SMTP (sortant)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>11</sortorder>
+          <color>5A2B57</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total spams acceptés"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>12</sortorder>
+          <color>89ABF8</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total spams refusés"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>13</sortorder>
+          <color>7EC25C</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total virus acceptés"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>14</sortorder>
+          <color>274482</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Total virus refusés"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>Messages MDaemon</name>
+      <graph_items>
+        <graph_item>
+          <color>AC41A5</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Messages DomainPop (entrant)/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>89ABF8</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Messages MultiPOP (entrant)/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>7EC25C</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Messages RAW/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>3</sortorder>
+          <color>3165D5</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Messages SMTP (entrant)/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>4</sortorder>
+          <color>79A277</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Messages SMTP (sortant)/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>5</sortorder>
+          <color>AA73DE</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions IMAP/Sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>Sessions MDaemon</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions actives de MDaemon"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>F63100</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions IMAP/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>2774A4</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions IMAP actives"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>3</sortorder>
+          <color>F7941D</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions POP3 (entrant) actives"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>4</sortorder>
+          <color>FC6EA3</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions POP3 (sortant) actives"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>5</sortorder>
+          <color>6C59DC</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions POP3/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>6</sortorder>
+          <color>C7A72D</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions SMTP (entrant)/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>7</sortorder>
+          <color>BA2A5D</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions SMTP (entrant) actives"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>8</sortorder>
+          <color>F230E0</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions SMTP (sortant)/Sec"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>9</sortorder>
+          <color>5CCD18</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions SMTP (sortant) actives"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>10</sortorder>
+          <color>BB2A02</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Sessions webmail actives"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+  </graphs>
+</zabbix_export>

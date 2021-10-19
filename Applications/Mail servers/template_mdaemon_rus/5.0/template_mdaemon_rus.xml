@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:37:52Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template App MDaemon</template>
+      <name>Template App MDaemon</name>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>MDaemon</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Cообщений MultiPOP (вх)/c</name>
+          <key>perf_counter["\MDaemon\Cообщений MultiPOP (вх)/c"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>SMTP-сеансов (вх)/с</name>
+          <key>perf_counter["\MDaemon\SMTP-сеансов (вх)/с"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>SMTP-сеансов (исх)/с</name>
+          <key>perf_counter["\MDaemon\SMTP-сеансов (исх)/с"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>SMTP-сообщений (вх)/с</name>
+          <key>perf_counter["\MDaemon\SMTP-сообщений (вх)/с"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>SMTP-сообщений (исх)/с</name>
+          <key>perf_counter["\MDaemon\SMTP-сообщений (исх)/с"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>SMTP sessions (out)/sec</name>
+          <key>perf_counter["\MDaemon\SMTP sessions (out)/sec"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <status>DISABLED</status>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>SMTP sessions (out) total</name>
+          <key>perf_counter["\MDaemon\SMTP sessions (out) total"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <status>DISABLED</status>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Активные сеансы IMAP</name>
+          <key>perf_counter["\MDaemon\Активные сеансы IMAP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Активные сеансы MDaemon</name>
+          <key>perf_counter["\MDaemon\Активные сеансы MDaemon"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Активные сеансы POP3 (вх)</name>
+          <key>perf_counter["\MDaemon\Активные сеансы POP3 (вх)"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Активные сеансы POP3 (исх)</name>
+          <key>perf_counter["\MDaemon\Активные сеансы POP3 (исх)"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Активные сеансы SMTP (вх)</name>
+          <key>perf_counter["\MDaemon\Активные сеансы SMTP (вх)"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Активные сеансы SMTP (исх)</name>
+          <key>perf_counter["\MDaemon\Активные сеансы SMTP (исх)"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Активные сеансы веб-почты</name>
+          <key>perf_counter["\MDaemon\Активные сеансы веб-почты"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Время работы MDaemon</name>
+          <key>perf_counter["\MDaemon\Время работы MDaemon"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего SMTP-сообщений (вх)</name>
+          <key>perf_counter["\MDaemon\Всего SMTP-сообщений (вх)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего SMTP-сообщений (исх)</name>
+          <key>perf_counter["\MDaemon\Всего SMTP-сообщений (исх)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего отклонено вирусных сообщений</name>
+          <key>perf_counter["\MDaemon\Всего отклонено вирусных сообщений"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего отклонено сообщений DNSBL</name>
+          <key>perf_counter["\MDaemon\Всего отклонено сообщений DNSBL"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего отклонено спам-сообщений</name>
+          <key>perf_counter["\MDaemon\Всего отклонено спам-сообщений"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего принято вирусных сообщений</name>
+          <key>perf_counter["\MDaemon\Всего принято вирусных сообщений"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего принято спам-сообщений</name>
+          <key>perf_counter["\MDaemon\Всего принято спам-сообщений"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего принятых DNSBL</name>
+          <key>perf_counter["\MDaemon\Всего принятых DNSBL"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего сеансов IMAP</name>
+          <key>perf_counter["\MDaemon\Всего сеансов IMAP"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего сеансов POP3</name>
+          <key>perf_counter["\MDaemon\Всего сеансов POP3"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего сообщений DomainPOP (вх)</name>
+          <key>perf_counter["\MDaemon\Всего сообщений DomainPOP (вх)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего сообщений MultiPOP (вх)</name>
+          <key>perf_counter["\MDaemon\Всего сообщений MultiPOP (вх)"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Всего сообщений RAW</name>
+          <key>perf_counter["\MDaemon\Всего сообщений RAW"]</key>
+          <delay>120</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Заморозка локальной очереди</name>
+          <key>perf_counter["\MDaemon\Заморозка локальной очереди"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Заморозка очереди входящих</name>
+          <key>perf_counter["\MDaemon\Заморозка очереди входящих"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Заморозка очереди на отправку</name>
+          <key>perf_counter["\MDaemon\Заморозка очереди на отправку"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сеансов IMAP/с</name>
+          <key>perf_counter["\MDaemon\Сеансов IMAP/с"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сеансов POP3/с</name>
+          <key>perf_counter["\MDaemon\Сеансов POP3/с"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщений DomainPop (вх)/с</name>
+          <key>perf_counter["\MDaemon\Сообщений DomainPop (вх)/с"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщений RAW/c</name>
+          <key>perf_counter["\MDaemon\Сообщений RAW/c"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщения в локальной очереди</name>
+          <key>perf_counter["\MDaemon\Сообщения в локальной очереди"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <units>ед</units>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}>20</expression>
+              <name>Количество сообщений в локальной очереди MDAEMON более 20</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Сообщения в очереди LAN</name>
+          <key>perf_counter["\MDaemon\Сообщения в очереди LAN"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщения в очереди RAW</name>
+          <key>perf_counter["\MDaemon\Сообщения в очереди RAW"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <units>ед</units>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщения в очереди блокировки</name>
+          <key>perf_counter["\MDaemon\Сообщения в очереди блокировки"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщения в очереди входящих</name>
+          <key>perf_counter["\MDaemon\Сообщения в очереди входящих"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщения в очереди карантина</name>
+          <key>perf_counter["\MDaemon\Сообщения в очереди карантина"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <units>ед</units>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщения в очереди на отправку</name>
+          <key>perf_counter["\MDaemon\Сообщения в очереди на отправку"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщения в очереди неверных сообщений</name>
+          <key>perf_counter["\MDaemon\Сообщения в очереди неверных сообщений"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Сообщения в очереди повторов</name>
+          <key>perf_counter["\MDaemon\Сообщения в очереди повторов"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <request_method>POST</request_method>
+        </item>
+        <item>
+          <name>Состояние работы MDaemon</name>
+          <key>perf_counter["\MDaemon\Состояние работы MDaemon"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>MDaemon running state is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера DomainPOP</name>
+          <key>perf_counter["\MDaemon\Состояние сервер DomainPOP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>DomainPOP server state is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера ActiveSync</name>
+          <key>perf_counter["\MDaemon\Состояние сервера ActiveSync"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>ActiveSync server state is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера IMAP</name>
+          <key>perf_counter["\MDaemon\Состояние сервера IMAP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>IMAP server state is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера Minger</name>
+          <key>perf_counter["\MDaemon\Состояние сервера Minger"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>Minger server state is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера MultiPOP</name>
+          <key>perf_counter["\MDaemon\Состояние сервера MultiPOP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>MultiPOP server state is DOWN on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера POP3</name>
+          <key>perf_counter["\MDaemon\Состояние сервера POP3"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>POP3 server state is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера SMTP</name>
+          <key>perf_counter["\MDaemon\Состояние сервера SMTP"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>SMTP server state is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера Web Admin</name>
+          <key>perf_counter["\MDaemon\Состояние сервера Web Admin"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>Web Admin server state is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера Антивирус</name>
+          <key>perf_counter["\MDaemon\Состояние сервера Антивирус"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>AntiVirus server state is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера Антиспам</name>
+          <key>perf_counter["\MDaemon\Состояние сервера Антиспам"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>AntiSpam server state is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Состояние сервера веб-почты</name>
+          <key>perf_counter["\MDaemon\Состояние сервера веб-почты"]</key>
+          <delay>30</delay>
+          <history>7d</history>
+          <applications>
+            <application>
+              <name>MDaemon</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>BOOL_TO_DECIMAL</type>
+              <params></params>
+            </step>
+          </preprocessing>
+          <request_method>POST</request_method>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0</expression>
+              <name>Web Mail server state is DOWN on {HOST.NAME}</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+  <graphs>
+    <graph>
+      <name>MDaemon totals</name>
+      <graph_items>
+        <graph_item>
+          <color>1A7C11</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего принятых DNSBL"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>F63100</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего отклонено сообщений DNSBL"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>2774A4</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего сообщений DomainPOP (вх)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>3</sortorder>
+          <color>A54F10</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего сеансов IMAP"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>4</sortorder>
+          <color>FC6EA3</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего сообщений MultiPOP (вх)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>5</sortorder>
+          <color>6C59DC</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего сеансов POP3"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>6</sortorder>
+          <color>AC8C14</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего сообщений RAW"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>7</sortorder>
+          <color>611F27</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего SMTP-сообщений (вх)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>8</sortorder>
+          <color>F230E0</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего SMTP-сообщений (исх)"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>9</sortorder>
+          <color>5CCD18</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\SMTP-сеансов (исх)/с"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>10</sortorder>
+          <color>BB2A02</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\SMTP sessions (out) total"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>11</sortorder>
+          <color>5A2B57</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего принято спам-сообщений"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>12</sortorder>
+          <color>89ABF8</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего отклонено спам-сообщений"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>13</sortorder>
+          <color>7EC25C</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего принято вирусных сообщений"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>14</sortorder>
+          <color>274482</color>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Всего отклонено вирусных сообщений"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>График локальной очереди</name>
+      <graph_items>
+        <graph_item>
+          <color>1A7C11</color>
+          <calc_fnc>ALL</calc_fnc>
+          <item>
+            <host>Template App MDaemon</host>
+            <key>perf_counter["\MDaemon\Сообщения в локальной очереди"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+  </graphs>
+</zabbix_export>

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:37:57Z</date>
+  <groups>
+    <group>
+      <name>CAM</name>
+    </group>
+    <group>
+      <name>Templates/Modules</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template Module ICMP Ping</template>
+      <name>Template Module ICMP Ping</name>
+      <description>Template Module ICMP Ping version: 0.12</description>
+      <groups>
+        <group>
+          <name>Templates/Modules</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Status</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>ICMP ping</name>
+          <type>SIMPLE</type>
+          <key>icmpping</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>Service state</name>
+          </valuemap>
+          <triggers>
+            <trigger>
+              <expression>{max(#3)}=0</expression>
+              <name>Unavailable by ICMP ping</name>
+              <priority>HIGH</priority>
+              <description>Last value: {ITEM.LASTVALUE1}. Last three attempts returned timeout. Please check device connectivity.</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>ICMP loss</name>
+          <type>SIMPLE</type>
+          <key>icmppingloss</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(5m)}>{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
+              <name>High ICMP ping loss</name>
+              <priority>WARNING</priority>
+              <dependencies>
+                <dependency>
+                  <name>Unavailable by ICMP ping</name>
+                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>ICMP response time</name>
+          <type>SIMPLE</type>
+          <key>icmppingsec</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>s</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(5m)}>{$ICMP_RESPONSE_TIME_WARN}</expression>
+              <name>High ICMP ping response time</name>
+              <priority>WARNING</priority>
+              <dependencies>
+                <dependency>
+                  <name>High ICMP ping loss</name>
+                  <expression>{Template Module ICMP Ping:icmppingloss.min(5m)}>{$ICMP_LOSS_WARN} and {Template Module ICMP Ping:icmppingloss.min(5m)}&lt;100</expression>
+                </dependency>
+                <dependency>
+                  <name>Unavailable by ICMP ping</name>
+                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+      <macros>
+        <macro>
+          <macro>{$ICMP_LOSS_WARN}</macro>
+          <value>20</value>
+        </macro>
+        <macro>
+          <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
+          <value>0.15</value>
+        </macro>
+      </macros>
+    </template>
+    <template>
+      <template>Trassir-server</template>
+      <name>Trassir-server</name>
+      <templates>
+        <template>
+          <name>Template Module ICMP Ping</name>
+        </template>
+      </templates>
+      <groups>
+        <group>
+          <name>CAM</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>trassir server</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Trassir automation status</name>
+          <type>DEPENDENT</type>
+          <key>trassirautomation</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <description>Наличие ошибок при выполнении скриптов на данном сервере</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>trassir disks/database/network/automation status</name>
+          </valuemap>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.automation</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+          <triggers>
+            <trigger>
+              <expression>{max(#2)}=0</expression>
+              <name>Trassir server automation problem</name>
+              <priority>AVERAGE</priority>
+              <description>Наличие ошибок при выполнении скриптов на данном сервере</description>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Trassir channels online</name>
+          <type>DEPENDENT</type>
+          <key>trassirchannelsonline</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <description>Количество камер, работающих без ошибок</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.channels_online</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+        </item>
+        <item>
+          <name>Trassir channels total</name>
+          <type>DEPENDENT</type>
+          <key>trassirchannelstotal</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <description>Общее количество подключенных камер</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.channels_total</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+        </item>
+        <item>
+          <name>Trassir server cpu load</name>
+          <type>DEPENDENT</type>
+          <key>trassircpuload</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <description>Текущая загрузка центрального процессора сервера, в %</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.cpu_load</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+          <triggers>
+            <trigger>
+              <expression>{avg(#5)}>85</expression>
+              <name>Trassir server cpu load too high</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Trassir database status</name>
+          <type>DEPENDENT</type>
+          <key>trassirdatabase</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <description>Наличие ошибок при подключении к базе данных сервера</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>trassir disks/database/network/automation status</name>
+          </valuemap>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.database</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+          <triggers>
+            <trigger>
+              <expression>{max(#2)}=0</expression>
+              <name>Trassir server database problem</name>
+              <priority>AVERAGE</priority>
+              <description>Наличие ошибок при подключении к базе данных сервера</description>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Trassir disks status</name>
+          <type>DEPENDENT</type>
+          <key>trassirdisks</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <description>Наличие ошибок при работе дисков сервера</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>trassir disks/database/network/automation status</name>
+          </valuemap>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.disks</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+          <triggers>
+            <trigger>
+              <expression>{max(#2)}=0</expression>
+              <name>Trassir server disks problem</name>
+              <priority>AVERAGE</priority>
+              <description>Наличие ошибок при работе дисков сервера</description>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Trassir archive main days depth</name>
+          <type>DEPENDENT</type>
+          <key>trassirdisksstatmaindays</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>day</units>
+          <description>Текущая глубина архива основного потока, в днях</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.disks_stat_main_days</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+          <triggers>
+            <trigger>
+              <expression>{max(#5)}&lt;{$TRASSIR_ARCHIVE_DEPTH}</expression>
+              <name>Archive depth on main channels is too low</name>
+              <priority>AVERAGE</priority>
+              <description>Глубина архива по основным каналом меньше заданного лимита.</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Trassir archive privilege days depth</name>
+          <type>DEPENDENT</type>
+          <key>trassirdisksstatprivdays</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>day</units>
+          <description>Текущая глубина архива привилегированных каналов, в днях</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.disks_stat_priv_days</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+        </item>
+        <item>
+          <name>Trassir archive sub days depth</name>
+          <type>DEPENDENT</type>
+          <key>trassirdisksstatsubsdays</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>day</units>
+          <description>Текущая глубина архива дополнительного потока, в днях</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.disks_stat_subs_days</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+        </item>
+        <item>
+          <name>Trassir server health string</name>
+          <type>HTTP_AGENT</type>
+          <key>trassirhealthjson</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <trends>0</trends>
+          <value_type>TEXT</value_type>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>REGEX</type>
+              <params>\{(\n|.)*\} \0</params>
+            </step>
+          </preprocessing>
+          <url>https://{HOST.IP}:{$TRASSIR_SDK_PORT}/health</url>
+          <query_fields>
+            <query_field>
+              <name>password</name>
+              <value>{$TRASSIR_SDK_PASS}</value>
+            </query_field>
+          </query_fields>
+          <follow_redirects>NO</follow_redirects>
+          <triggers>
+            <trigger>
+              <expression>{nodata(5m)}=1</expression>
+              <name>No new data from trassir server</name>
+              <priority>HIGH</priority>
+              <description>Невозможно получить новые данные о сервере trassir</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Trassir network status</name>
+          <type>DEPENDENT</type>
+          <key>trassirnetwork</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <description>Наличие ошибок в сетевых подключениях к другим серверам</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>trassir disks/database/network/automation status</name>
+          </valuemap>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.network</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+          <triggers>
+            <trigger>
+              <expression>{max(#2)}=0</expression>
+              <name>Trassir server network problem</name>
+              <priority>AVERAGE</priority>
+              <description>Наличие ошибок в сетевых подключениях к другим серверам</description>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Trassir SDK connection status</name>
+          <type>DEPENDENT</type>
+          <key>trassirsdkstatus</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <description>Статус подключения к trassir SDK</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>trassir disks/database/network/automation status</name>
+          </valuemap>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.success</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+          <triggers>
+            <trigger>
+              <expression>{last()}=0 and {nodata(5m)}=0</expression>
+              <name>Wrong data from trassir server</name>
+              <priority>HIGH</priority>
+              <description>Получены неверные данные от сервера. Проверьте пароль.</description>
+              <dependencies>
+                <dependency>
+                  <name>No new data from trassir server</name>
+                  <expression>{Trassir-server:trassirhealthjson.nodata(5m)}=1</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Trassir server uptime</name>
+          <type>DEPENDENT</type>
+          <key>trassiruptime</key>
+          <delay>0</delay>
+          <history>1w</history>
+          <units>s</units>
+          <description>Время работы сервера, в сек</description>
+          <applications>
+            <application>
+              <name>trassir server</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>trassir disks/database/network/automation status</name>
+          </valuemap>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.uptime</params>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>trassirhealthjson</key>
+          </master_item>
+          <triggers>
+            <trigger>
+              <expression>{last()}&lt;300</expression>
+              <name>Trassir server was restarted</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+  <triggers>
+    <trigger>
+      <expression>{Trassir-server:trassirchannelstotal.last()}>{Trassir-server:trassirchannelsonline.max(#5)}</expression>
+      <name>Not all cams online on trassir server</name>
+      <priority>AVERAGE</priority>
+    </trigger>
+  </triggers>
+  <graphs>
+    <graph>
+      <name>Trassir server cpu load</name>
+      <show_work_period>NO</show_work_period>
+      <ymin_type_1>FIXED</ymin_type_1>
+      <ymax_type_1>FIXED</ymax_type_1>
+      <graph_items>
+        <graph_item>
+          <drawtype>FILLED_REGION</drawtype>
+          <color>199C0D</color>
+          <item>
+            <host>Trassir-server</host>
+            <key>trassircpuload</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+  </graphs>
+  <value_maps>
+    <value_map>
+      <name>Service state</name>
+      <mappings>
+        <mapping>
+          <value>0</value>
+          <newvalue>Down</newvalue>
+        </mapping>
+        <mapping>
+          <value>1</value>
+          <newvalue>Up</newvalue>
+        </mapping>
+      </mappings>
+    </value_map>
+    <value_map>
+      <name>trassir disks/database/network/automation status</name>
+      <mappings>
+        <mapping>
+          <value>0</value>
+          <newvalue>errors detected</newvalue>
+        </mapping>
+        <mapping>
+          <value>1</value>
+          <newvalue>no errors detected</newvalue>
+        </mapping>
+      </mappings>
+    </value_map>
+  </value_maps>
+</zabbix_export>

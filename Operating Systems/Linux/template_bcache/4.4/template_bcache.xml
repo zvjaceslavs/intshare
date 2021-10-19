@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2020-12-02T14:32:04Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template_BCache</template>
+            <name>Template_BCache</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>BCache Devices</name>
+                    <key>bcache.discover[bcdev]</key>
+                    <delay>60m</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#BCDEV} - Cache Bypassed per 1s</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.cache_bypassed_io[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>B</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.total.bypassed</params>
+                                </step>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - Cache Hit Ratio 1d</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.cache_hit_ratio_1d[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.day.cache_hit_ratio</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - Cache Hit Ratio 1h</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.cache_hit_ratio_1h[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.hour.cache_hit_ratio</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - Cache Hit Ratio 5m</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.cache_hit_ratio_5m[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.five_minute.cache_hit_ratio</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - Cache Hit Ratio Total</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.cache_hit_ratio_total[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.total.cache_hit_ratio</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - Cache Readahead IO per 1s</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.cache_readaheads[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.total.cache_readaheads</params>
+                                </step>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - Dirty data</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.dirty[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>B</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.dirty_data</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - IO Errors</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.io_errors[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.io_errors</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;0</expression>
+                                    <name>BCache: IO errors detected on device {#BCDEV}</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - Running</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.running[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <valuemap>
+                                <name>YesNo</name>
+                            </valuemap>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.running</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;1</expression>
+                                    <name>BCache: Device {#CDEV} is not running</name>
+                                    <priority>DISASTER</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - State</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.state[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>1h</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.state</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{regexp(&quot;^(clean|dirty)$&quot;)}=0</expression>
+                                    <name>BCache: Device {#CDEV} is in unexpected state</name>
+                                    <priority>DISASTER</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#BCDEV} - Running Writeback</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.bcdev.writeback_running[{#BCDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <valuemap>
+                                <name>YesNo</name>
+                            </valuemap>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.writeback_running</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;&gt;1</expression>
+                                    <name>BCache: Device {#CDEV} writeback is not running</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>BDev Vars JSON - {#BCDEV}</name>
+                            <key>bcache.vars[bcdev, {#BCDEV}]</key>
+                            <history>0</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Raw</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>BCache Cache devices</name>
+                    <key>bcache.discover[cdev]</key>
+                    <delay>60m</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#CDEV} - Written BTree per 1s</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cdev.btree_written[{#CDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>B</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cache Devices</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.btree_written</params>
+                                </step>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cdev, {#CDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CDEV} - IO Errors</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cdev.io_errors[{#CDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cache Devices</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.io_errors</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cdev, {#CDEV}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&gt;0</expression>
+                                    <name>BCache: IO errors detected on cache device {#CDEV}</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CDEV} - Written Metadata per 1s</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cdev.metadata_written[{#CDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>B</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cache Devices</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.metadata_written</params>
+                                </step>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cdev, {#CDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CDEV} - Buckets</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cdev.nbuckets[{#CDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cache Devices</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.nbuckets</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cdev, {#CDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CDEV} - Written per 1s</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cdev.written[{#CDEV}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>B</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cache Devices</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.written</params>
+                                </step>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cdev, {#CDEV}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>CDev Vars JSON - {#CDEV}</name>
+                            <key>bcache.vars[cdev, {#CDEV}]</key>
+                            <history>0</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Raw</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>BCache Cachesets</name>
+                    <key>bcache.discover[cset]</key>
+                    <delay>60m</delay>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#CSET} - Avg Key Size</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.average_key_size[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>B</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.average_key_size</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - BTree Cache Size</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.btree_cache_size[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>B</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.btree_cache_size</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Cache Bypassed per 1s</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.bypassed[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>B</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.total.bypassed</params>
+                                </step>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Cache Available</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.cache_available_percent[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.cache_available_percent</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{max(600)}&lt;60</expression>
+                                    <name>BCache Cacheset {#CSET}: Low available cache</name>
+                                    <priority>AVERAGE</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Cache Hit Ratio 1d</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.cache_hit_ratio_1d[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.day.cache_hit_ratio</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Cache Hit Ratio 1h</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.cache_hit_ratio_1h[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.hour.cache_hit_ratio</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Cache Hit Ratio 5m</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.cache_hit_ratio_5m[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.five_minute.cache_hit_ratio</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Cache Hit Ratio Total</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.cache_hit_ratio_total[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.total.cache_hit_ratio</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} -  Cache Readahead IO per 1s</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.cache_readaheads[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.stats.total.cache_readaheads</params>
+                                </step>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Congested</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.congested[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.congested</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Root Usage</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.root_usage_percent[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <units>%</units>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.root_usage_percent</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#CSET} - Tree Depth</name>
+                            <type>DEPENDENT</type>
+                            <key>bcache.cset.tree_depth[{#CSET}]</key>
+                            <delay>0</delay>
+                            <history>30d</history>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>BCache Cachesets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.vars.tree_depth</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>bcache.vars[cset, {#CSET}]</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Cacheset Vars JSON - {#CSET}</name>
+                            <key>bcache.vars[cset, {#CSET}]</key>
+                            <history>0</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Raw</name>
+                                </application_prototype>
+                            </application_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+    <value_maps>
+        <value_map>
+            <name>YesNo</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>No</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Yes</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+- Developed By Dhruva Kumar Katakam
+
+MIT License
+
+Copyright (c) 2021 Dhruva Kumar
+-->
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-08-21T11:24:39Z</date>
+    <groups>
+        <group>
+            <name>SECURITY</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>WINDOWS SECURITY</template>
+            <name>WINDOWS SECURITY CHECKS</name>
+            <groups>
+                <group>
+                    <name>SECURITY</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Security</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Audit log cleared</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^1102$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <description>Audit log was cleared. This can relate to a potential attack</description>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{nodata(60)}=0</expression>
+                            <correlation_mode>TAG_VALUE</correlation_mode>
+                            <correlation_tag>1</correlation_tag>
+                            <name>Audit log was cleared</name>
+                            <opdata>Audit log was cleared. This can relate to a potential attack</opdata>
+                            <priority>DISASTER</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Failed Logon attempt</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^4625$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <description>failed logon on attempt</description>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{nodata(60)}=0</expression>
+                            <correlation_mode>TAG_VALUE</correlation_mode>
+                            <correlation_tag>1</correlation_tag>
+                            <name>A logon attempt failed</name>
+                            <opdata>A logon attempt failed</opdata>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Attempt to install a service</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^4697$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{nodata(60)}=0</expression>
+                            <correlation_mode>TAG_VALUE</correlation_mode>
+                            <correlation_tag>1</correlation_tag>
+                            <name>A service install attempt was made</name>
+                            <opdata>A service install attempt was made</opdata>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Account created</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^4720$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <description>Account created</description>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{nodata(60)}=0</expression>
+                            <correlation_mode>TAG_VALUE</correlation_mode>
+                            <correlation_tag>1</correlation_tag>
+                            <name>A user account was created</name>
+                            <opdata>A user account was created</opdata>
+                            <priority>INFO</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Account enabled</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^4722$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <description>A user account is enabled</description>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Account disabled</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^4725$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Account was deleted</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^4726$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <description>This item checks if any user account was deleted</description>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{nodata(60)}=0</expression>
+                            <correlation_mode>TAG_VALUE</correlation_mode>
+                            <correlation_tag>1</correlation_tag>
+                            <name>Account deleted</name>
+                            <opdata>A user account was deleted</opdata>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Account locked</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^4740$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <description>Account locked out</description>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Account Unlocked</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Security,,,,^4767$,,skip]</key>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <description>Account unlocked</description>
+                    <applications>
+                        <application>
+                            <name>Security</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{WINDOWS SECURITY:eventlog[Security,,,,^4725$,,skip].nodata(60)}=0</expression>
+            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+            <recovery_expression>{WINDOWS SECURITY:eventlog[Security,,,,^4725$,,skip].nodata(60)}&lt;&gt;0 and {WINDOWS SECURITY:eventlog[Security,,,,^4722$,,skip].nodata(60)}=0</recovery_expression>
+            <name>Account disabled</name>
+            <opdata>A user account was disabled</opdata>
+            <url>http://zabbix-serverIP/zabbix</url>
+            <priority>WARNING</priority>
+        </trigger>
+        <trigger>
+            <expression>{WINDOWS SECURITY:eventlog[Security,,,,^4740$,,skip].nodata(60)}=0</expression>
+            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+            <recovery_expression>{WINDOWS SECURITY:eventlog[Security,,,,^4740$,,skip].nodata(60)}&lt;&gt;0 and {WINDOWS SECURITY:eventlog[Security,,,,^4767$,,skip].nodata(60)}=0</recovery_expression>
+            <name>A user account was locked out</name>
+            <opdata>A user account was locked</opdata>
+            <priority>HIGH</priority>
+            <manual_close>YES</manual_close>
+        </trigger>
+    </triggers>
+</zabbix_export>

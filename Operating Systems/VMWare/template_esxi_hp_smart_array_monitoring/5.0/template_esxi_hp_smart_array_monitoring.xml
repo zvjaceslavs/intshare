@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:35:12Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template ESXi HP Smart Array</template>
+      <name>Template ESXi HP Smart Array</name>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>HP Smart Array</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Smart Array: Data Retrieval</name>
+          <type>SSH</type>
+          <key>ssh.run[hpraid.data.retrieval]</key>
+          <delay>600</delay>
+          <trends>0</trends>
+          <value_type>TEXT</value_type>
+          <params>data_tmp="/tmp/hp-raid-data-harvester.tmp" data_out="/tmp/hp-raid-data-harvester.out" hpacucli="/opt/hp/hpssacli/bin/hpssacli" ctrl_list=$(${hpacucli} ctrl all show |grep -oE 'Slot [0-9]+.*?' |awk '{print $2}' |xargs echo) echo -n > $data_tmp # Get adapters list and get info about each. echo "### ctrl section begin ###" >> $data_tmp for slot in $ctrl_list; do echo "### ctrl begin $slot ###" >> $data_tmp $hpacucli ctrl slot=$slot show >> $data_tmp echo "### ctrl end $slot ###" >> $data_tmp done echo "### ctrl section end ###" >> $data_tmp # enumerate all adapters and all logical drives on each adapter. echo "### ld section begin ###" >> $data_tmp for slot in $ctrl_list; do ld_list=$($hpacucli ctrl slot=$slot ld all show |grep -w logicaldrive |awk '{print $2}' |xargs echo) for ld in $ld_list; do echo "### ld begin $slot $ld ###" >> $data_tmp $hpacucli ctrl slot=$slot ld $ld show >> $data_tmp echo "### ld end $slot $ld ###" >> $data_tmp done done echo "### ld section end ###" >> $data_tmp # enumerate all adapters and all physical drives on each adapter. echo "### pd section begin ###" >> $data_tmp for slot in $ctrl_list; do pd_list=$($hpacucli ctrl slot=$slot pd all show |grep -w physicaldrive |awk '{print $2}' |xargs echo) for pd in $pd_list; do echo "### pd begin $slot $pd ###" >> $data_tmp $hpacucli ctrl slot=$slot pd $pd show >> $data_tmp echo "### pd end $slot $pd ###" >> $data_tmp done done echo "### pd section end ###" >> $data_tmp mv $data_tmp $data_out echo "OK"</params>
+          <username>{$ZABBIX_SSH_USER}</username>
+          <password>{$ZABBIX_SSH_PASS}</password>
+          <applications>
+            <application>
+              <name>HP Smart Array</name>
+            </application>
+          </applications>
+        </item>
+      </items>
+      <discovery_rules>
+        <discovery_rule>
+          <name>Controllers Discovery</name>
+          <type>SSH</type>
+          <key>ssh.run[hpraid.ctrl.discovery]</key>
+          <delay>86400</delay>
+          <params>data="/tmp/hp-raid-data-harvester.out" if [ -f "$data" ]; then ctrl_list=$(sed -n -e '/ctrl section begin/,/ctrl section end/p' $data |grep -oE 'Slot [0-9]+.*?' |awk '{print $2}') else echo "$data not found."; exit 1 fi echo -n '{"data":[' for ctrl in $ctrl_list; do echo -n "{\"{#CTRL_SLOT}\": \"$ctrl\"},"; done |sed -e 's:\},$:\}:' echo -n ']}'</params>
+          <username>{$ZABBIX_SSH_USER}</username>
+          <password>{$ZABBIX_SSH_PASS}</password>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#CTRL_SLOT}</macro>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <lifetime>0</lifetime>
+          <item_prototypes>
+            <item_prototype>
+              <name>Smart Array: Battery status on slot {#CTRL_SLOT}</name>
+              <type>SSH</type>
+              <key>ssh.run[hpraid.bbu.status.{#CTRL_SLOT}]</key>
+              <delay>21600</delay>
+              <history>7d</history>
+              <trends>0</trends>
+              <value_type>TEXT</value_type>
+              <params>output=$(sed -n -e "/ctrl begin {#CTRL_SLOT}/,/ctrl end {#CTRL_SLOT}/p" /tmp/hp-raid-data-harvester.out |grep -wE "[ ]+Battery/Capacitor Status:" |awk '{print $3}') if [ -z $output ]; then echo "Not available" else echo "$output" fi</params>
+              <username>{$ZABBIX_SSH_USER}</username>
+              <password>{$ZABBIX_SSH_PASS}</password>
+              <applications>
+                <application>
+                  <name>HP Smart Array</name>
+                </application>
+              </applications>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{regexp(OK|Not available)}=0</expression>
+                  <name>Smart Array: Controller Battery in slot {#CTRL_SLOT} state is {ITEM.LASTVALUE}</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Smart Array: Cache $2 status on slot {#CTRL_SLOT}</name>
+              <type>SSH</type>
+              <key>ssh.run[hpraid.cache.status.{#CTRL_SLOT}]</key>
+              <delay>21600</delay>
+              <history>7d</history>
+              <trends>0</trends>
+              <value_type>TEXT</value_type>
+              <params>output=$(sed -n -e "/ctrl begin {#CTRL_SLOT}/,/ctrl end {#CTRL_SLOT}/p" /tmp/hp-raid-data-harvester.out |grep -wE "[ ]+Cache Status:" |awk '{print $3}') if [ -z $output ]; then echo "Not available" else echo "$output" fi</params>
+              <username>{$ZABBIX_SSH_USER}</username>
+              <password>{$ZABBIX_SSH_PASS}</password>
+              <applications>
+                <application>
+                  <name>HP Smart Array</name>
+                </application>
+              </applications>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{regexp(OK|Not available)}=0</expression>
+                  <name>Smart Array: Controller Cache in slot {#CTRL_SLOT} state is {ITEM.LASTVALUE}</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Smart Array: Controller status on slot {#CTRL_SLOT}</name>
+              <type>SSH</type>
+              <key>ssh.run[hpraid.ctrl.status.{#CTRL_SLOT}]</key>
+              <delay>21600</delay>
+              <history>7d</history>
+              <trends>0</trends>
+              <value_type>TEXT</value_type>
+              <params>sed -n -e "/ctrl begin {#CTRL_SLOT}/,/ctrl end {#CTRL_SLOT}/p" /tmp/hp-raid-data-harvester.out |grep -wE "[ ]+Controller Status:" |awk '{print $3}'</params>
+              <username>{$ZABBIX_SSH_USER}</username>
+              <password>{$ZABBIX_SSH_PASS}</password>
+              <applications>
+                <application>
+                  <name>HP Smart Array</name>
+                </application>
+              </applications>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{regexp(OK)}=0</expression>
+                  <name>Smart Array: Controller in slot {#CTRL_SLOT} state is {ITEM.LASTVALUE}</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{nodata(24h)}=1</expression>
+                  <name>Smart Array: No controller data received for >24h</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+          </item_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>Logical Volumes Discovery</name>
+          <type>SSH</type>
+          <key>ssh.run[hpraid.ld.discovery]</key>
+          <delay>21600</delay>
+          <params>data="/tmp/hp-raid-data-harvester.out" if [ -f $data ]; then ld_list=$(sed -n -e '/ld section begin/,/ld section end/p' $data |grep -w 'ld begin' |awk '{OFS=":"} {print $4,$5}') else echo "$data not found."; exit 1 fi echo -n '{"data":[' for ld in $ld_list; do echo -n "{\"{#LD}\":\"$ld\"},"; done |sed -e 's:\},$:\}:' echo -n ']}'</params>
+          <username>{$ZABBIX_SSH_USER}</username>
+          <password>{$ZABBIX_SSH_PASS}</password>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#LD}</macro>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <lifetime>0</lifetime>
+          <item_prototypes>
+            <item_prototype>
+              <name>Logical volume $1 status</name>
+              <type>SSH</type>
+              <key>ssh.run[hpraid.ld.status.{#LD}]</key>
+              <delay>600</delay>
+              <history>7d</history>
+              <trends>0</trends>
+              <value_type>TEXT</value_type>
+              <params>slot=$(echo "{#LD}" | cut -d ":" -f 1) ld=$(echo "{#LD}" | cut -d ":" -f 2) sed -n -e "/ld begin $slot $ld/,/ld end $slot $ld/p" /tmp/hp-raid-data-harvester.out |grep -wE "[ ]+Status:" |awk '{print $2}'</params>
+              <username>{$ZABBIX_SSH_USER}</username>
+              <password>{$ZABBIX_SSH_PASS}</password>
+              <applications>
+                <application>
+                  <name>HP Smart Array</name>
+                </application>
+              </applications>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{str(OK)}=0</expression>
+                  <name>Smart Array: Logical Volume state is {ITEM.LASTVALUE} on {HOSTNAME}</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+          </item_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>Physical Drives Discovery</name>
+          <type>SSH</type>
+          <key>ssh.run[hpraid.pd.discovery]</key>
+          <delay>86400</delay>
+          <params>data="/tmp/hp-raid-data-harvester.out" if [ -f $data ]; then pd_list=$(sed -n -e '/pd section begin/,/pd section end/p' $data |grep -w 'pd begin' |awk '{OFS=":"} {print $4,$5}') else echo "$data not found."; exit 1 fi echo -n '{"data":[' for pd in $pd_list; do echo -n "{\"{#PD}\":\"$pd\"},"; done |sed -e 's:\},$:\}:' echo -n ']}'</params>
+          <username>{$ZABBIX_SSH_USER}</username>
+          <password>{$ZABBIX_SSH_PASS}</password>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#PD}</macro>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <lifetime>0</lifetime>
+          <item_prototypes>
+            <item_prototype>
+              <name>Physical drive {#PD} status</name>
+              <type>SSH</type>
+              <key>ssh.run[hpraid.pd.status.{#PD}]</key>
+              <delay>600</delay>
+              <history>7d</history>
+              <trends>0</trends>
+              <value_type>TEXT</value_type>
+              <params>slot=$(echo "{#PD}" | cut -d ":" -f 1) pd=$(echo "{#PD}" | cut -d ":" -f 2-) sed -n -e "/pd begin $slot $pd/,/pd end $slot $pd/p" /tmp/hp-raid-data-harvester.out |grep -wE '[ ]+Status:' |awk '{print $2}'</params>
+              <username>{$ZABBIX_SSH_USER}</username>
+              <password>{$ZABBIX_SSH_PASS}</password>
+              <applications>
+                <application>
+                  <name>HP Smart Array</name>
+                </application>
+              </applications>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{str(OK)}=0</expression>
+                  <name>Smart Array: Disk state is {ITEM.LASTVALUE} on {HOSTNAME}</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Physical drive {#PD} temperature</name>
+              <type>SSH</type>
+              <key>ssh.run[hpraid.pd.temperature.{#PD}]</key>
+              <delay>600</delay>
+              <history>7d</history>
+              <params>slot=$(echo "{#PD}" | cut -d ":" -f 1) pd=$(echo "{#PD}" | cut -d ":" -f 2-) sed -n -e "/pd begin $slot $pd/,/pd end $slot $pd/p" /tmp/hp-raid-data-harvester.out |grep -wE '[ ]+Current Temperature \(C\):' |awk '{print $4}'</params>
+              <username>{$ZABBIX_SSH_USER}</username>
+              <password>{$ZABBIX_SSH_PASS}</password>
+              <applications>
+                <application>
+                  <name>HP Smart Array</name>
+                </application>
+              </applications>
+            </item_prototype>
+          </item_prototypes>
+        </discovery_rule>
+      </discovery_rules>
+      <macros>
+        <macro>
+          <macro>{$ZABBIX_SSH_PASS}</macro>
+          <value>zabbixPassword</value>
+        </macro>
+        <macro>
+          <macro>{$ZABBIX_SSH_USER}</macro>
+          <value>zabbixUsername</value>
+        </macro>
+      </macros>
+    </template>
+  </templates>
+</zabbix_export>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:36:45Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template_Linux_Services</template>
+      <name>Template Linux Services</name>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <discovery_rules>
+        <discovery_rule>
+          <name>Linux service discovery</name>
+          <key>service.discovery</key>
+          <delay>1h</delay>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#SERVICE}</macro>
+                <value>@Linux service name for discovery</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <item_prototypes>
+            <item_prototype>
+              <name>Number of processes $1</name>
+              <key>proc.num[{#SERVICE}]</key>
+              <delay>2m</delay>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()}=0</expression>
+                  <name>Service {#SERVICE} is not running</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+          </item_prototypes>
+        </discovery_rule>
+      </discovery_rules>
+    </template>
+  </templates>
+</zabbix_export>

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+############################
+#
+# Redshift Reader for Zabbix
+#
+# This script will be able to read information collected on batch files
+#
+# Originally written by julio.hegedus@sentia.com ## 07-08-2018
+# Modified by a.tutolmin@gagar-in.com ## 24-03-2021
+#
+
+LOCAL=$(dirname $0)
+
+BATCH=$LOCAL/redfish/$1
+TYPE=$2
+NAME=$3
+ITEM=$4
+
+#echo $LOCAL $BATCH i$TYPE $NAME $ITEM
+
+if [[ -z ${BATCH} || -z ${ITEM} || -z ${TYPE} || -z ${NAME} ]]; then
+  echo "Please specify all the parameters!"
+  echo "Try: $0 somehostname-nameofobject.json Voltages 'PCH P1V05 VOUT' Status.Health"
+  exit 1
+fi
+
+if [ ! -f ${BATCH} ]; then
+  echo "no batch file yet"
+  exit 1
+else
+  RES=`cat ${BATCH} | jq --arg TYPE "$TYPE" --arg NAME "$NAME" '.[$TYPE] | .[] | select(.Name==$NAME)' | jq ".${ITEM}" | tr -d "'" | tr -d '"'`
+  if [[ -z $RES ]]; then
+    echo "0"
+  else
+    echo $RES
+  fi
+  exit 0
+fi

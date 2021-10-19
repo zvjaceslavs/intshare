@@ -1,0 +1,1546 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-10-19T20:41:35Z'
+  groups:
+    -
+      uuid: f139982c639844b6aaf16fa8739e7c48
+      name: AGST
+  templates:
+    -
+      uuid: c47d9037b05e4869aadd28ac5213b28d
+      template: ConflexSNMP
+      name: ConflexSNMP
+      groups:
+        -
+          name: AGST
+      items:
+        -
+          uuid: 543738fe177a49f686392b2c74444029
+          name: funcaoPortaSTRed1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.0.0
+          key: funcaoPortaSTRed1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e22b7b47a7b644979b38eece2621939d
+          name: funcaoPortaSTRed2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.1.0
+          key: funcaoPortaSTRed2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: c711e98aa8bd4525aa782f1e9d7503c7
+          name: funcaoPortaSTRed3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.2.0
+          key: funcaoPortaSTRed3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 9032d700c0d1468c8bba3c49ca78a569
+          name: funcaoPortaSTRed4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.3.0
+          key: funcaoPortaSTRed4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: bd70c96c1c9c4b7484eb963c709138af
+          name: funcaoPortaSTRed5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.4.0
+          key: funcaoPortaSTRed5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: fa05138fc84a4a1b904f2068e89a8208
+          name: funcaoPortaSTRed6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.5.0
+          key: funcaoPortaSTRed6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 3057a98a13674cf0ac01b322765e2023
+          name: funcaoPortaSTRed7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.6.0
+          key: funcaoPortaSTRed7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: eb1b56cfa5f8472ba9b26d13ee04948a
+          name: funcaoPortaSTRed8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.7.0
+          key: funcaoPortaSTRed8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e3f1343e22e743f1b3801dce9708a8af
+          name: funcaoPortaSTRed9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.8.0
+          key: funcaoPortaSTRed9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: bb0274eb2d93428196dd4d7a6354a726
+          name: funcaoPortaSTRed10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.9.0
+          key: funcaoPortaSTRed10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 178c653eca5f4580a88a9338b58b99b7
+          name: funcaoPortaSTRed11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.1.10.0
+          key: funcaoPortaSTRed11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 8e2b2ac7a3c84a56b13bf64c0a5b753c
+          name: funcaoPortaSTReu1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.0.0
+          key: funcaoPortaSTReu1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 42be33ba849146439e3e3e1f358dfca8
+          name: funcaoPortaSTReu2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.1.0
+          key: funcaoPortaSTReu2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 52852a2ebc0c4c95830c4e189d6e4ffb
+          name: funcaoPortaSTReu3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.2.0
+          key: funcaoPortaSTReu3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 949d699c287149b994a8f2babf78602f
+          name: funcaoPortaSTReu4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.3.0
+          key: funcaoPortaSTReu4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 71ed70010a6f4deab1bfde8c929ad398
+          name: funcaoPortaSTReu5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.4.0
+          key: funcaoPortaSTReu5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 22eb34312d8d44a6ba363bf3d1c0fe56
+          name: funcaoPortaSTReu6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.5.0
+          key: funcaoPortaSTReu6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: fcf3f7845db047d7a434a9de862d66c9
+          name: funcaoPortaSTReu7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.6.0
+          key: funcaoPortaSTReu7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e927f193968c4e28816dfad3fdca5f99
+          name: funcaoPortaSTReu8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.7.0
+          key: funcaoPortaSTReu8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: f83eeac051cd4126b608c230e6243f7b
+          name: funcaoPortaSTReu9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.8.0
+          key: funcaoPortaSTReu9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e8908b4cb80c45d6a33c84f6a9b523a5
+          name: funcaoPortaSTReu10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.9.0
+          key: funcaoPortaSTReu10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 34166df3c5de4a28acda1477742cbffd
+          name: funcaoPortaSTReu11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.10.0
+          key: funcaoPortaSTReu11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: ca8a8aebe16d47689b6d009dc351dc29
+          name: funcaoPortaSTReu12
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.11.0
+          key: funcaoPortaSTReu12
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 1d1e6001bc714cc880a0f9926f78d862
+          name: funcaoPortaSTReu13
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.12.0
+          key: funcaoPortaSTReu13
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: fb83723eb4d24dc0a70a6c55cdd0cfc2
+          name: funcaoPortaSTReu14
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.13.0
+          key: funcaoPortaSTReu14
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 99e57abd26594e42a3bb085191229368
+          name: funcaoPortaSTReu15
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.14.0
+          key: funcaoPortaSTReu15
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: f2e46cc7f7b94ca0afce6b823c3c177a
+          name: funcaoPortaSTReu16
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.15.0
+          key: funcaoPortaSTReu16
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: cccc6cb100fa474bb275f5acd517de0f
+          name: funcaoPortaSTReu17
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.16.0
+          key: funcaoPortaSTReu17
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 00c17a6bfd4b446e8c7bd253e05836d2
+          name: funcaoPortaSTReu18
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.17.0
+          key: funcaoPortaSTReu18
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 3670bad295424e98acb0d8627393178d
+          name: funcaoPortaSTReu19
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.18.0
+          key: funcaoPortaSTReu19
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 2324350a87db4d5290966a91e3c7d0c7
+          name: funcaoPortaSTReu20
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.19.0
+          key: funcaoPortaSTReu20
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 141b4baf54444866b9d2803beda7d73a
+          name: funcaoPortaSTReu21
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.20.0
+          key: funcaoPortaSTReu21
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 1592bb5968004786b10f27bd5b92f446
+          name: funcaoPortaSTReu22
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.1.21.0
+          key: funcaoPortaSTReu22
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 36b5d26a6ba4466880faf20bfb3a23f3
+          name: funcaoPortaSTRsd1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.0.0
+          key: funcaoPortaSTRsd1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 548ff9cc0bbf48f0a36fbccdd4e33df4
+          name: funcaoPortaSTRsd2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.1.0
+          key: funcaoPortaSTRsd2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 569b3a836b0d48e492ea754dc3db2c11
+          name: funcaoPortaSTRsd3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.2.0
+          key: funcaoPortaSTRsd3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 56bfd3c320314857b702ea79a27ee5b5
+          name: funcaoPortaSTRsd4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.3.0
+          key: funcaoPortaSTRsd4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 360f5a9c94a2414698b2c7e5b611b412
+          name: funcaoPortaSTRsd5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.4.0
+          key: funcaoPortaSTRsd5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 21497edfcf594cb882f4b57737f065ff
+          name: funcaoPortaSTRsd6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.5.0
+          key: funcaoPortaSTRsd6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e5d411778fbb43b986b9c1f843f6a11d
+          name: funcaoPortaSTRsd7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.6.0
+          key: funcaoPortaSTRsd7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 2a9cc76e905e4ba6bc6e5b6090af1a25
+          name: funcaoPortaSTRsd8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.7.0
+          key: funcaoPortaSTRsd8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: dc242ed554e14ea2b6b70237ea412906
+          name: funcaoPortaSTRsd9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.8.0
+          key: funcaoPortaSTRsd9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: c057e0620dc045bcb8fd611526a4c589
+          name: funcaoPortaSTRsd10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.9.0
+          key: funcaoPortaSTRsd10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: ae655bf69e9840759eed475e03e12686
+          name: funcaoPortaSTRsd11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.10.0
+          key: funcaoPortaSTRsd11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: fcf6e6bb83a74757ba823e4dc94c0b13
+          name: funcaoPortaSTRsd12
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.1.11.0
+          key: funcaoPortaSTRsd12
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e1b9e9e981e84f79b14877657098219f
+          name: statusFuncaoPortaSTRed1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.0.0
+          key: statusFuncaoPortaSTRed1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: f13cb28a35d34f7ea8ecc127f402d9e5
+          name: statusFuncaoPortaSTRed2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.1.0
+          key: statusFuncaoPortaSTRed2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: db3909ccb4b04043b1de030e5401bf16
+          name: statusFuncaoPortaSTRed3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.2.0
+          key: statusFuncaoPortaSTRed3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 16041084be5646b9b88e52fb09bb4341
+          name: statusFuncaoPortaSTRed4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.3.0
+          key: statusFuncaoPortaSTRed4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 2ddd350f99134e48a0484fe9720c21b7
+          name: statusFuncaoPortaSTRed5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.4.0
+          key: statusFuncaoPortaSTRed5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 9ae0112d79574ae591e9bfd67d510e21
+          name: statusFuncaoPortaSTRed6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.5.0
+          key: statusFuncaoPortaSTRed6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 78f02be10d0b4df49e777edf5298129c
+          name: statusFuncaoPortaSTRed7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.6.0
+          key: statusFuncaoPortaSTRed7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 7afb1a5cccc0495686337d2ad43e050b
+          name: statusFuncaoPortaSTRed8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.7.0
+          key: statusFuncaoPortaSTRed8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: c208b813cc93454aacc2d5c4a57fa64a
+          name: statusFuncaoPortaSTRed9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.8.0
+          key: statusFuncaoPortaSTRed9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: cf979cd7b0e3456f9a633e791038d732
+          name: statusFuncaoPortaSTRed10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.9.0
+          key: statusFuncaoPortaSTRed10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: a080cea613ff40c8b0ed2d37a6fce326
+          name: statusFuncaoPortaSTRed11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.4.10.0
+          key: statusFuncaoPortaSTRed11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: fb55a25a1a224a30b674570c8d869347
+          name: statusFuncaoPortaSTReu1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.0.0
+          key: statusFuncaoPortaSTReu1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 6c1c6c95c249448894c77c94d5cbef83
+          name: statusFuncaoPortaSTReu2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.1.0
+          key: statusFuncaoPortaSTReu2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 2e81794535374134bd527f652fd09e52
+          name: statusFuncaoPortaSTReu3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.2.0
+          key: statusFuncaoPortaSTReu3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 9aad73bbe0d14c748785ea17e5639b07
+          name: statusFuncaoPortaSTReu4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.3.0
+          key: statusFuncaoPortaSTReu4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e2ffb131eaef48a3babe844a5463d296
+          name: statusFuncaoPortaSTReu5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.4.0
+          key: statusFuncaoPortaSTReu5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: af69f06b19494c6eafd34a798578b127
+          name: statusFuncaoPortaSTReu6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.5.0
+          key: statusFuncaoPortaSTReu6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: d58d8790bf5947c8994ec9b69f6b69f5
+          name: statusFuncaoPortaSTReu7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.6.0
+          key: statusFuncaoPortaSTReu7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: a8386e36c0db4631abae3684f7bab750
+          name: statusFuncaoPortaSTReu8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.7.0
+          key: statusFuncaoPortaSTReu8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 999660082aae4cff9f716630cf425d10
+          name: statusFuncaoPortaSTReu9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.8.0
+          key: statusFuncaoPortaSTReu9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: a599c5122795474da8328bef76c20d02
+          name: statusFuncaoPortaSTReu10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.9.0
+          key: statusFuncaoPortaSTReu10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: df96f0846c03421098d2f4fef1cf9062
+          name: statusFuncaoPortaSTReu11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.10.0
+          key: statusFuncaoPortaSTReu11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 140246ec84044314b49892299a914d71
+          name: statusFuncaoPortaSTReu12
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.11.0
+          key: statusFuncaoPortaSTReu12
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: c5674421dfce4795a32a2bee36c59d84
+          name: statusFuncaoPortaSTReu13
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.12.0
+          key: statusFuncaoPortaSTReu13
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: ac3f05e575744f56a4881ccfa7f5322e
+          name: statusFuncaoPortaSTReu14
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.13.0
+          key: statusFuncaoPortaSTReu14
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 8dfb4a9200ae47c780add15d1ba57bd8
+          name: statusFuncaoPortaSTReu15
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.14.0
+          key: statusFuncaoPortaSTReu15
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 6780b0a557d140f8a96a0e2fdd0625cd
+          name: statusFuncaoPortaSTReu16
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.15.0
+          key: statusFuncaoPortaSTReu16
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: a4c3901caedb4d5ebd38c99b918af8ec
+          name: statusFuncaoPortaSTReu17
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.16.0
+          key: statusFuncaoPortaSTReu17
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: f3c3adc66b384dd4a482d8fe0c7ef17e
+          name: statusFuncaoPortaSTReu18
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.17.0
+          key: statusFuncaoPortaSTReu18
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 577cc58bc7a5426b9ca4c7417bd8cb59
+          name: statusFuncaoPortaSTReu19
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.18.0
+          key: statusFuncaoPortaSTReu19
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: ae1e398cbb5c468984cce66f520c3ec0
+          name: statusFuncaoPortaSTReu20
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.19.0
+          key: statusFuncaoPortaSTReu20
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: be64b189db1f4713a795017f310cdf0a
+          name: statusFuncaoPortaSTReu21
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.20.0
+          key: statusFuncaoPortaSTReu21
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 992a573d8e2c41debc7417ad1351e5c2
+          name: statusFuncaoPortaSTReu22
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.4.21.0
+          key: statusFuncaoPortaSTReu22
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 7a97ef071516418fb0af684f8ec27b39
+          name: statusFuncaoPortaSTRsd1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.0.0
+          key: statusFuncaoPortaSTRsd1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 169806cfdb1e4be3a5fe421512f3dabb
+          name: statusFuncaoPortaSTRsd2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.1.0
+          key: statusFuncaoPortaSTRsd2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 17505655717f4ed9803b04a784b44cd1
+          name: statusFuncaoPortaSTRsd3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.2.0
+          key: statusFuncaoPortaSTRsd3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 176d338984294114a90c11b0a09fd966
+          name: statusFuncaoPortaSTRsd4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.3.0
+          key: statusFuncaoPortaSTRsd4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 0111ab7fa3ef457cad3a9a18a6567af7
+          name: statusFuncaoPortaSTRsd5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.4.0
+          key: statusFuncaoPortaSTRsd5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: df8f909067194e8f880ea0ed0b64ee9c
+          name: statusFuncaoPortaSTRsd6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.5.0
+          key: statusFuncaoPortaSTRsd6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 4fe93518f66b45a1bf92d27f53eddff6
+          name: statusFuncaoPortaSTRsd7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.6.0
+          key: statusFuncaoPortaSTRsd7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: d9074465665046fda7cc81e90bb311e7
+          name: statusFuncaoPortaSTRsd8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.7.0
+          key: statusFuncaoPortaSTRsd8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 22d31c0428a44afbb2e96a5e1ae82ce1
+          name: statusFuncaoPortaSTRsd9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.8.0
+          key: statusFuncaoPortaSTRsd9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 0ba32a1d2b804eb5bd6937eab6b057f5
+          name: statusFuncaoPortaSTRsd10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.9.0
+          key: statusFuncaoPortaSTRsd10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: fba35214c36d40988f6038199f3d5344
+          name: statusFuncaoPortaSTRsd11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.10.0
+          key: statusFuncaoPortaSTRsd11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 2550a754c1f348d1ad0f735292e043bf
+          name: statusFuncaoPortaSTRsd12
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.4.11.0
+          key: statusFuncaoPortaSTRsd12
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 91c75d9bc08845edaaf9cc3e49d0a0b2
+          name: statusPortaINTed1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.0.0
+          key: statusPortaINTed1
+          delay: 30s
+        -
+          uuid: 429fb5e6775a4dc68e0e00c18c20a929
+          name: statusPortaINTed2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.1.0
+          key: statusPortaINTed2
+          delay: 30s
+        -
+          uuid: f38d01fa44ef4480864ab12d26b549f4
+          name: statusPortaINTed3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.2.0
+          key: statusPortaINTed3
+          delay: 30s
+        -
+          uuid: b84e36dcdcea4e969aef775951285512
+          name: statusPortaINTed4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.3.0
+          key: statusPortaINTed4
+          delay: 30s
+        -
+          uuid: bbe8982146f044b48b1904bdc2b2de33
+          name: statusPortaINTed5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.4.0
+          key: statusPortaINTed5
+          delay: 30s
+        -
+          uuid: eba8186539074137941419b1caa369f3
+          name: statusPortaINTed6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.5.0
+          key: statusPortaINTed6
+          delay: 30s
+        -
+          uuid: bf341b89c9af4dc3a5abb8286f6c7324
+          name: statusPortaINTed7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.6.0
+          key: statusPortaINTed7
+          delay: 30s
+        -
+          uuid: f5e684b8581c4549b2e36ace88ac859a
+          name: statusPortaINTed8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.7.0
+          key: statusPortaINTed8
+          delay: 30s
+        -
+          uuid: fcde02c149ba4f18820ebbd572ff920b
+          name: statusPortaINTed9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.8.0
+          key: statusPortaINTed9
+          delay: 30s
+        -
+          uuid: 0bdb9b93b5074eb5bdf6e02fa31a1409
+          name: statusPortaINTed10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.9.0
+          key: statusPortaINTed10
+          delay: 30s
+        -
+          uuid: e920d157d47c48d3b4cec3581e424b39
+          name: statusPortaINTed11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.3.10.0
+          key: statusPortaINTed11
+          delay: 30s
+        -
+          uuid: 5810641a1cf4402baf92ace6ea7198ee
+          name: statusPortaINTeu1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.0.0
+          key: statusPortaINTeu1
+          delay: 30s
+        -
+          uuid: 6d9846ea8c054c369c6d089d9842d984
+          name: statusPortaINTeu2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.1.0
+          key: statusPortaINTeu2
+          delay: 30s
+        -
+          uuid: f117ab34542a42228d57e0c61b12e73c
+          name: statusPortaINTeu3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.2.0
+          key: statusPortaINTeu3
+          delay: 30s
+        -
+          uuid: a9218f1936f246639d11e7b6be544335
+          name: statusPortaINTeu4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.3.0
+          key: statusPortaINTeu4
+          delay: 30s
+        -
+          uuid: d8d669454e2d4869b8ed65e128e3e119
+          name: statusPortaINTeu5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.4.0
+          key: statusPortaINTeu5
+          delay: 30s
+        -
+          uuid: 7d1d4566303b4ffb9ed53c1158a9550b
+          name: statusPortaINTeu6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.5.0
+          key: statusPortaINTeu6
+          delay: 30s
+        -
+          uuid: b8f024f7d3354c688e54bd3777ae29cf
+          name: statusPortaINTeu7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.6.0
+          key: statusPortaINTeu7
+          delay: 30s
+        -
+          uuid: 31ae211f091c487c8697c235ee60fd18
+          name: statusPortaINTeu8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.7.0
+          key: statusPortaINTeu8
+          delay: 30s
+        -
+          uuid: 11dbb1fe9f9a4f5199fc9f23f8f29d54
+          name: statusPortaINTeu9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.8.0
+          key: statusPortaINTeu9
+          delay: 30s
+        -
+          uuid: 3fe0c9c63e1d477b90d97b4ba1c0bb96
+          name: statusPortaINTeu10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.9.0
+          key: statusPortaINTeu10
+          delay: 30s
+        -
+          uuid: e9275c4dfa8243b5b76d32e556b65a89
+          name: statusPortaINTeu11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.10.0
+          key: statusPortaINTeu11
+          delay: 30s
+        -
+          uuid: 05c8d18364f94449a644e8bb13b68e63
+          name: statusPortaINTeu12
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.11.0
+          key: statusPortaINTeu12
+          delay: 30s
+        -
+          uuid: d5a8c942ea1a40bfad0cdaa47b96f926
+          name: statusPortaINTeu13
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.12.0
+          key: statusPortaINTeu13
+          delay: 30s
+        -
+          uuid: 877e444ef9b6403eab8a1e0198d5e065
+          name: statusPortaINTeu14
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.13.0
+          key: statusPortaINTeu14
+          delay: 30s
+        -
+          uuid: f505d5ba81f74249800add60c7cb207a
+          name: statusPortaINTeu15
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.14.0
+          key: statusPortaINTeu15
+          delay: 30s
+        -
+          uuid: 4aaac9fa7a0641f88f1e07fa1154660a
+          name: statusPortaINTeu16
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.15.0
+          key: statusPortaINTeu16
+          delay: 30s
+        -
+          uuid: 2b73c75fcccb48599e21f211d4e2baec
+          name: statusPortaINTeu17
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.16.0
+          key: statusPortaINTeu17
+          delay: 30s
+        -
+          uuid: 064d2f36c0014eb8a75aa628185c6b87
+          name: statusPortaINTeu18
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.17.0
+          key: statusPortaINTeu18
+          delay: 30s
+        -
+          uuid: 5d7913d4d87c4508b8713f02c756c21b
+          name: statusPortaINTeu19
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.18.0
+          key: statusPortaINTeu19
+          delay: 30s
+        -
+          uuid: 8e44286314b4466fbeb0d12405c8f737
+          name: statusPortaINTeu20
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.19.0
+          key: statusPortaINTeu20
+          delay: 30s
+        -
+          uuid: ab5c2f10cb3f45dfa54675884b552bb8
+          name: statusPortaINTeu21
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.20.0
+          key: statusPortaINTeu21
+          delay: 30s
+        -
+          uuid: 6e2782aefbe941a997b6358437f46ca6
+          name: statusPortaINTeu22
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.3.21.0
+          key: statusPortaINTeu22
+          delay: 30s
+        -
+          uuid: 26256e2f65fb40e7ab2d244cadbb4391
+          name: statusPortaINTsd1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.0.0
+          key: statusPortaINTsd1
+          delay: 30s
+        -
+          uuid: 3c0fe8b86e2c4c17ba23640ec8d031cb
+          name: statusPortaINTsd2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.1.0
+          key: statusPortaINTsd2
+          delay: 30s
+        -
+          uuid: b600fa0b28ae44a59b700b78d2560843
+          name: statusPortaINTsd3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.2.0
+          key: statusPortaINTsd3
+          delay: 30s
+        -
+          uuid: 1f470a942d2841d1b86f0a94d6dcb990
+          name: statusPortaINTsd4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.3.0
+          key: statusPortaINTsd4
+          delay: 30s
+        -
+          uuid: 269d40f715ac4186bca2d7b7358d2db7
+          name: statusPortaINTsd5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.4.0
+          key: statusPortaINTsd5
+          delay: 30s
+        -
+          uuid: 0a021bbb9daa4dce90497ad8df331ba3
+          name: statusPortaINTsd6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.5.0
+          key: statusPortaINTsd6
+          delay: 30s
+        -
+          uuid: 6da225f8c70740c99570289901c34b3f
+          name: statusPortaINTsd7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.6.0
+          key: statusPortaINTsd7
+          delay: 30s
+        -
+          uuid: 55ce7e9de6354005a909635590a45c8a
+          name: statusPortaINTsd8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.7.0
+          key: statusPortaINTsd8
+          delay: 30s
+        -
+          uuid: f0727805d1734ce1a969b9b0658b347a
+          name: statusPortaINTsd9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.8.0
+          key: statusPortaINTsd9
+          delay: 30s
+        -
+          uuid: 67407adabd3d4740a87d133897749f81
+          name: statusPortaINTsd10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.9.0
+          key: statusPortaINTsd10
+          delay: 30s
+        -
+          uuid: b58edb4fec2e45b5b9abea9d696aea3c
+          name: statusPortaINTsd11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.10.0
+          key: statusPortaINTsd11
+          delay: 30s
+        -
+          uuid: 9616cb1c5a4946a6a9bbb2c193aeb37e
+          name: statusPortaINTsd12
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.3.11.0
+          key: statusPortaINTsd12
+          delay: 30s
+        -
+          uuid: c34900c1127f447c929ae926f7daa4aa
+          name: statusPortaSTRed1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.0.0
+          key: statusPortaSTRed1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: d78fe59f4fba4358a69a716abd141763
+          name: statusPortaSTRed2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.1.0
+          key: statusPortaSTRed2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 05d42d13d9014ae0a82b2080354b5046
+          name: statusPortaSTRed3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.2.0
+          key: statusPortaSTRed3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 0c2a1c4f25274fac8ff6a69cd55f71eb
+          name: statusPortaSTRed4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.3.0
+          key: statusPortaSTRed4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 0c7e5f76cbcf4203afce083bd25626b3
+          name: statusPortaSTRed5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.4.0
+          key: statusPortaSTRed5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: ad03c0ecc7c84ab18b642f4324e4d1d9
+          name: statusPortaSTRed6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.5.0
+          key: statusPortaSTRed6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: cbbffe0256a54d308cd9de6804354d7f
+          name: statusPortaSTRed7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.6.0
+          key: statusPortaSTRed7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: ed61734e456e442f88d242666f458195
+          name: statusPortaSTRed8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.7.0
+          key: statusPortaSTRed8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: cba0b7bda244409a9fdbf14a4038d2df
+          name: statusPortaSTRed9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.8.0
+          key: statusPortaSTRed9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 686545e4f3874dc7844f8129e7928c0c
+          name: statusPortaSTRed10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.9.0
+          key: statusPortaSTRed10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 1a400a0085484a6283a3afbd2b7e3c6e
+          name: statusPortaSTRed11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.2.2.10.0
+          key: statusPortaSTRed11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: d1458e5d791a4dff9110fa07692f4006
+          name: statusPortaSTReu1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.0.0
+          key: statusPortaSTReu1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 81d19503d718471982888cae4ea863ab
+          name: statusPortaSTReu2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.1.0
+          key: statusPortaSTReu2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e6b1f684dcb049739ae26773f4b2b028
+          name: statusPortaSTReu3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.2.0
+          key: statusPortaSTReu3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: ebb2f210cefa40a9be6686222869c587
+          name: statusPortaSTReu4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.3.0
+          key: statusPortaSTReu4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 5ac632a5fa0d4fdc84d8c04202330323
+          name: statusPortaSTReu5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.4.0
+          key: statusPortaSTReu5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 36ec5613cfc149f48a6e57af996b0466
+          name: statusPortaSTReu6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.5.0
+          key: statusPortaSTReu6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: a3aadfa51d6e47508d6a07ae40e9d44f
+          name: statusPortaSTReu7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.6.0
+          key: statusPortaSTReu7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 08ae445834a747ad8627f51f8365ad67
+          name: statusPortaSTReu8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.7.0
+          key: statusPortaSTReu8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: f99a33ba247a4a28a7b79afc9970cd0e
+          name: statusPortaSTReu9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.8.0
+          key: statusPortaSTReu9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 0c0a218a0f8846abb83b57157e3885fe
+          name: statusPortaSTReu10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.9.0
+          key: statusPortaSTReu10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: f9a907cae4124a428878e41d7357d5fc
+          name: statusPortaSTReu11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.10.0
+          key: statusPortaSTReu11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 0ed10de3e01947379d7a9258a7b84b69
+          name: statusPortaSTReu12
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.11.0
+          key: statusPortaSTReu12
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: d97b8a7402b945329ce17899a1ec7442
+          name: statusPortaSTReu13
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.12.0
+          key: statusPortaSTReu13
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: aec7063a1e1d4fd2990b3ee50909e60e
+          name: statusPortaSTReu14
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.13.0
+          key: statusPortaSTReu14
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: e03d03f1ccd640938ae6f15ecccdbf96
+          name: statusPortaSTReu15
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.14.0
+          key: statusPortaSTReu15
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 2066a74209bd4877a4c1d127129fc365
+          name: statusPortaSTReu16
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.15.0
+          key: statusPortaSTReu16
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: ccc035bb07bd4ca99a3bc633e4b3352a
+          name: statusPortaSTReu17
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.16.0
+          key: statusPortaSTReu17
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 3b28a5b45bef45ac919bb152754e1e7e
+          name: statusPortaSTReu18
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.17.0
+          key: statusPortaSTReu18
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 1195aa34dbc9454eb413c39e49de374c
+          name: statusPortaSTReu19
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.18.0
+          key: statusPortaSTReu19
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: a327d0d906eb41a49b5d9bda10fd5435
+          name: statusPortaSTReu20
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.19.0
+          key: statusPortaSTReu20
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 6d8c2fd4d0c3494db86b7c56e011f688
+          name: statusPortaSTReu21
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.20.0
+          key: statusPortaSTReu21
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 14de14f253b04858aff9bd98e6817e3a
+          name: statusPortaSTReu22
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.4.2.21.0
+          key: statusPortaSTReu22
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: be3422252b854d17afd6a323f8528c3e
+          name: statusPortaSTRsd1
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.0.0
+          key: statusPortaSTRsd1
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 10d56026c92b4b3a80dca3181e610654
+          name: statusPortaSTRsd2
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.1.0
+          key: statusPortaSTRsd2
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 3bc54a99feba4d2280c57c88cb8088de
+          name: statusPortaSTRsd3
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.2.0
+          key: statusPortaSTRsd3
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 85c4faf5814547f49ca15c4c38e0f423
+          name: statusPortaSTRsd4
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.3.0
+          key: statusPortaSTRsd4
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: dd199dbe38d24adabc97ad0753b4ab18
+          name: statusPortaSTRsd5
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.4.0
+          key: statusPortaSTRsd5
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 1d28e1ce97624e13aff1a351b2d2a2fd
+          name: statusPortaSTRsd6
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.5.0
+          key: statusPortaSTRsd6
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: cd1c633d0f1a4cacb8a5f11df33fd691
+          name: statusPortaSTRsd7
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.6.0
+          key: statusPortaSTRsd7
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 4c59f7587ef04bf99b330acf73d9ce9e
+          name: statusPortaSTRsd8
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.7.0
+          key: statusPortaSTRsd8
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 5d40a3dc50a140dcacb168297b02c143
+          name: statusPortaSTRsd9
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.8.0
+          key: statusPortaSTRsd9
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 8cb5594181c947a4994b42dffd56665d
+          name: statusPortaSTRsd10
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.9.0
+          key: statusPortaSTRsd10
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: a4f1e3d74ff54bc482363ac41c610df5
+          name: statusPortaSTRsd11
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.10.0
+          key: statusPortaSTRsd11
+          delay: 30s
+          trends: '0'
+          value_type: TEXT
+        -
+          uuid: 527ebbc679934ee5af5c7d218641556d
+          name: statusPortaSTRsd12
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.42588.3.1.2.11.0
+          key: statusPortaSTRsd12
+          delay: 30s
+          trends: '0'
+          value_type: TEXT

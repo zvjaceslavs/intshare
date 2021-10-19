@@ -1,0 +1,2255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:38:25Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template Microsoft Exchange Server 2019</template>
+      <name>Template Microsoft Exchange Server 2019</name>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Exchange 2019 Client Access</name>
+        </application>
+        <application>
+          <name>Exchange 2019 Mailbox</name>
+        </application>
+        <application>
+          <name>Exchange 2019 Perfmonitor</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections "]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Queues Items Queued for Delivery Per Second</name>
+          <key>perf_counter["\MSExchangeTransport Queues(normal priority)\Items Queued for Delivery Per Second"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Queues Messages Completed Delivery Total</name>
+          <key>perf_counter["\MSExchangeTransport Queues(normal priority)\Messages Completed Delivery Total"]</key>
+          <delay>190s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Queues(_total) Items Completed Delivery Per Second"</name>
+          <key>perf_counter["\MSExchangeTransport Queues(_total)\Items Completed Delivery Per Second"]</key>
+          <delay>30s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Queues(_total) Messages Submitted Per Second</name>
+          <key>perf_counter["\MSExchangeTransport Queues(_total)\Messages Submitted Per Second"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SmtpErrors TLS errors last hour (outbound proxy)</name>
+          <key>perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (outbound proxy)"]</key>
+          <delay>60s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SmtpErrors TLS errors last hour (receive)</name>
+          <key>perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (receive)"]</key>
+          <delay>60s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SmtpErrors TLS errors last hour (send)</name>
+          <key>perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (send)"]</key>
+          <delay>60s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SMTP Receive Connections Total</name>
+          <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Connections Total"]</key>
+          <delay>120s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SMTP Message Bytes Received/sec</name>
+          <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Message Bytes Received/sec"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SMTPReceive Message Bytes Received Total</name>
+          <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Message Bytes Received Total"]</key>
+          <delay>190s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SMTP Messages Received/sec</name>
+          <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Messages Received/sec"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SMTP Messages Received Total</name>
+          <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Messages Received Total"]</key>
+          <delay>120s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SMTP Send Connections Total</name>
+          <key>perf_counter["\MSExchangeTransport SmtpSend(_total)\Connections Total"]</key>
+          <delay>190s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>SMTP Messages Send /sec</name>
+          <key>perf_counter["\MSExchangeTransport SmtpSend(_total)\Messages Sent/sec"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Search Host Controller</name>
+          <key>service_state[HostControllerService]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Search Host Controller Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Active Directory Topology</name>
+          <key>service_state[MSExchangeADTopology]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Active Directory Topology Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Anti-spam update</name>
+          <key>service_state[MSExchangeAntispamUpdate]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Anti-spam Update Service Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Compliance Service</name>
+          <key>service_state[MSExchangeCompliance]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Compliance Service Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange DAG Management</name>
+          <key>service_state[MSExchangeDagMgmt]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange DAG Management Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Transport Delivery</name>
+          <key>service_state[MSExchangeDelivery]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Transport Delivery Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Diagnostics</name>
+          <key>service_state[MSExchangeDiagnostics]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Diagnostics Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange EdgeSync</name>
+          <key>service_state[MSExchangeEdgeSync]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Edge Sync Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Search Indexer</name>
+          <key>service_state[MSExchangeFastSearch]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Search Indexer Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Frontend Transport</name>
+          <key>service_state[MSExchangeFrontEndTransport]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange FrontEnd Transport Delivery Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Health Manager Recovery</name>
+          <key>service_state[MSExchangeHMRecovery]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Health Manager Recovery Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Health Manager</name>
+          <key>service_state[MSExchangeHM]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Health Manager Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange IMAP4</name>
+          <key>service_state[MSExchangeImap4]</key>
+          <delay>30</delay>
+          <status>DISABLED</status>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange IMAP4 Service Stopped</name>
+              <status>DISABLED</status>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Information Store</name>
+          <key>service_state[MSExchangeIS]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Information Store Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Mailbox Assistants</name>
+          <key>service_state[MSExchangeMailboxAssistants]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Mailbox Assistants Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Mailbox Replication</name>
+          <key>service_state[MSExchangeMailboxReplication]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Mailbox Replication Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Notifications Broker</name>
+          <key>service_state[MSExchangeNotificationsBroker]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Notifications Broker Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange POP3</name>
+          <key>service_state[MSExchangePop3]</key>
+          <delay>30</delay>
+          <status>DISABLED</status>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange POP3 Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Replication</name>
+          <key>service_state[MSExchangeRepl]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Replication Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange RPC Client Access</name>
+          <key>service_state[MSExchangeRPC]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange RPC Client Access Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Service Host</name>
+          <key>service_state[MSExchangeServiceHost]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Service Host Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Transport Submission</name>
+          <key>service_state[MSExchangeSubmission]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Transport Submission Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Throttling</name>
+          <key>service_state[MSExchangeThrottling]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Throttling Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Transport Log Search</name>
+          <key>service_state[MSExchangeTransportLogSearch]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Transport Log Search Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Transport</name>
+          <key>service_state[MSExchangeTransport]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Transport Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Unified Messaging Call Router</name>
+          <key>service_state[MSExchangeUMCR]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Client Access</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Unified Messaging Call Router Service Stopped</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Service Status Microsoft Exchange Unified Messaging</name>
+          <key>service_state[MSExchangeUM]</key>
+          <delay>30</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Mailbox</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last(0)}&lt;>0</expression>
+              <name>Microsoft Exchange Unified Messaging Service Stopped</name>
+              <status>DISABLED</status>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+  <graphs>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections "]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>Queues(_total) Items Completed Delivery Per Second</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport Queues(_total)\Items Completed Delivery Per Second"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>Queues(_total) Messages Submitted Per Second</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport Queues(_total)\Messages Submitted Per Second"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>Queues Items Queued for Delivery Per Second</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport Queues(normal priority)\Items Queued for Delivery Per Second"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>Queues Messages Completed Delivery Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport Queues(normal priority)\Messages Completed Delivery Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SmtpErrors TLS errors last hour (outbound proxy)</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (outbound proxy)"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SmtpErrors TLS errors last hour (receive)</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (receive)"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SmtpErrors TLS errors last hour (send)</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (send)"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SMTP Message Bytes Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Message Bytes Received/sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SMTP Messages Received/sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Messages Received/sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SMTP Messages Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Messages Received Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SMTP Receive Connections Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Connections Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SMTP Receive Message Bytes Received Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SMTPReceive(_total)\Message Bytes Received Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SMTP Send Connections /sec</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SmtpSend(_total)\Messages Sent/sec"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>SMTP Send Connections Total</name>
+      <graph_items>
+        <graph_item>
+          <color>199C0D</color>
+          <calc_fnc>MAX</calc_fnc>
+          <item>
+            <host>Template Microsoft Exchange Server 2019</host>
+            <key>perf_counter["\MSExchangeTransport SmtpSend(_total)\Connections Total"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+  </graphs>
+</zabbix_export>

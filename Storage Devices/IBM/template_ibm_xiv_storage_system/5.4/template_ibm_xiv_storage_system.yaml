@@ -1,0 +1,1916 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-10-19T20:41:23Z'
+  groups:
+    -
+      uuid: 57b7ae836ca64446ba2c296389c009b7
+      name: Templates/Modules
+  templates:
+    -
+      uuid: d44ad7ef350d4b44b7b3263dc9b380a0
+      template: 'Template IBM XIV Storage System'
+      name: 'Template IBM XIV Storage System'
+      description: 'Template for monitoring IBM XIV servers with pyxcli'
+      groups:
+        -
+          name: Templates/Modules
+      items:
+        -
+          uuid: 565eea325ffd47ec97fc8f96b45f0080
+          name: pyxcli_discovery
+          type: EXTERNAL
+          key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          delay: 3m
+          history: '0'
+          trends: '0'
+          value_type: TEXT
+          description: 'Scripts that displays all the information, then parsing json'
+          tags:
+            -
+              tag: Application
+              value: 'Zabbix raw'
+          triggers:
+            -
+              uuid: 891b61a0a80742988f67797358ccf427
+              expression: 'last(/Template IBM XIV Storage System/pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}])=1'
+              name: '{HOST.NAME} -> От скрипта pyxcli_discovery нет данных более 10 мин'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: Department
+                  value: MON.RTK
+      discovery_rules:
+        -
+          uuid: a1e6444c74f8415992288f77ec0053d7
+          name: ATS
+          type: DEPENDENT
+          key: ats.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: ab3aa424b0aa4032abc8041f5238cf50
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'ats.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ats.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: ATS
+              trigger_prototypes:
+                -
+                  uuid: 888994c7e1fb439fae209fbfcbd17b60
+                  expression: 'last(/Template IBM XIV Storage System/ats.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: HIGH
+            -
+              uuid: 9b2ca9ca20434ed39b74cff8145e25ad
+              name: '{#COMPONENT.ID} Input l1'
+              type: DEPENDENT
+              key: 'ats.input.l1[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ats.[?(@.component_id==''{#COMPONENT.ID}'')].input_l1.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: ATS
+              trigger_prototypes:
+                -
+                  uuid: d5d7ee6b636442df8ee4415a946021ab
+                  expression: 'last(/Template IBM XIV Storage System/ats.input.l1[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Input l1 to status problem'
+                  priority: HIGH
+            -
+              uuid: bea82ec05ee547bc81187d22d054e072
+              name: '{#COMPONENT.ID} Input_l2'
+              type: DEPENDENT
+              key: 'ats.input.l2[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ats.[?(@.component_id==''{#COMPONENT.ID}'')].input_l2.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: ATS
+              trigger_prototypes:
+                -
+                  uuid: c4c1412d9ded49cf834a577d6ca26467
+                  expression: 'last(/Template IBM XIV Storage System/ats.input.l2[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Input l2 to status problem'
+                  priority: HIGH
+            -
+              uuid: f00ed59f70ba46eca1682b5da98b9144
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'ats.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ats.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: ATS
+              trigger_prototypes:
+                -
+                  uuid: d1b89ca9a8874523b7e7454dc69bee11
+                  expression: 'last(/Template IBM XIV Storage System/ats.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: HIGH
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.ats
+        -
+          uuid: d59065a658474da0ad2d571dbc77eb4d
+          name: CNA
+          type: DEPENDENT
+          key: cna.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: c1ee9ae0393949cc9ab938bd0bd22620
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'cna.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.cna.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: CNA
+              trigger_prototypes:
+                -
+                  uuid: 574fd518822d44f5a82e4d041903d02d
+                  expression: 'last(/Template IBM XIV Storage System/cna.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: HIGH
+            -
+              uuid: 95dbf2552a3f4cd4937e2e347a5484e1
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'cna.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.cna.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: CNA
+              trigger_prototypes:
+                -
+                  uuid: 89ea199c4d3349718e65a5a4f4c8cdc8
+                  expression: 'last(/Template IBM XIV Storage System/cna.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: HIGH
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.cna
+        -
+          uuid: 5ec2a35a9ffc47bba2c34f6cf53ffe6d
+          name: CPU
+          type: DEPENDENT
+          key: cpu.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: 4c4724e4eb194a0db6e5a222f8837c9e
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'cpu.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.cpu.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: CPU
+              trigger_prototypes:
+                -
+                  uuid: 7af7881f48c64360a9f28b01d9388918
+                  expression: 'last(/Template IBM XIV Storage System/cpu.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: HIGH
+            -
+              uuid: 819bdfa3f21c4cbb80d169b45bf07617
+              name: '{#COMPONENT.ID} Hardware status'
+              type: DEPENDENT
+              key: 'cpu.hardware.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.cpu.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: CPU
+              trigger_prototypes:
+                -
+                  uuid: 4106450972354b898c94dc07bf0227e4
+                  expression: 'last(/Template IBM XIV Storage System/cpu.hardware.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Hardware status is BAD'
+                  priority: HIGH
+            -
+              uuid: 3dca56cc5c724b78bf9d7a24878c7a2e
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'cpu.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.cpu.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: CPU
+              trigger_prototypes:
+                -
+                  uuid: 50ad8a011c8a4a4baf560d674bc092ad
+                  expression: 'last(/Template IBM XIV Storage System/cpu.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: HIGH
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.cpu
+        -
+          uuid: 7e4e5f33b40b4373ad5cb959df48d7d6
+          name: DIMM
+          type: DEPENDENT
+          key: dimm.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: 085413c976af4decbc3c0caa63d1e812
+              name: '{#COMPONENT.ID} Hardware status'
+              type: DEPENDENT
+              key: 'dimm.hardware.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.dimm.[?(@.component_id==''{#COMPONENT.ID}'')].hardware_status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: DIMM
+              trigger_prototypes:
+                -
+                  uuid: 0789b94e386f44d5bb182fa2d4d20a52
+                  expression: 'last(/Template IBM XIV Storage System/dimm.hardware.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Hardware status is BAD'
+                  priority: HIGH
+            -
+              uuid: 5012a68576e342b088632741d33e702c
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'dimm.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.dimm.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: DIMM
+              trigger_prototypes:
+                -
+                  uuid: a12dc81dc4bd4b17b0f3d47fe4b01ce7
+                  expression: 'last(/Template IBM XIV Storage System/dimm.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: HIGH
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.dimm
+        -
+          uuid: 32fb2bfb33ca4bd78ebb2b4d7d10e5ed
+          name: DISK
+          type: DEPENDENT
+          key: disk.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: cdf40d7ce093415f8219ecf25b2ca2a2
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'disk.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.disk.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: DISK
+              trigger_prototypes:
+                -
+                  uuid: 156ff7b3bb0a4fccb609e7a76dafe817
+                  expression: 'last(/Template IBM XIV Storage System/disk.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: HIGH
+            -
+              uuid: 8a33562829324892b6b3340e1f508bdf
+              name: '{#COMPONENT.ID} Desc Power is on'
+              type: DEPENDENT
+              key: 'disk.power.is.on[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.disk.[?(@.component_id==''{#COMPONENT.ID}'')].desc.power_is_on.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "no")
+                        return 1
+                      if (value != "no")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: DISK
+              trigger_prototypes:
+                -
+                  uuid: f904aad29d81478cac327a040fa4e806
+                  expression: 'last(/Template IBM XIV Storage System/disk.power.is.on[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Desc Power is off'
+                  priority: HIGH
+            -
+              uuid: d91e42d38d214db5bd06d9fb29cef3c2
+              name: '{#COMPONENT.ID} Desc Read fail'
+              type: DEPENDENT
+              key: 'disk.read.fail[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.disk.[?(@.component_id==''{#COMPONENT.ID}'')].desc.read_fail.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "no")
+                        return 1
+                      if (value != "no")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: DISK
+              trigger_prototypes:
+                -
+                  uuid: f7b916695ba1497f95103ad533168a57
+                  expression: 'last(/Template IBM XIV Storage System/disk.read.fail[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Desc Read fail'
+                  priority: AVERAGE
+            -
+              uuid: b70c595fabfc49759ec2356a736109e8
+              name: '{#COMPONENT.ID} Desc Smart fail'
+              type: DEPENDENT
+              key: 'disk.smart.fail[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.disk.[?(@.component_id==''{#COMPONENT.ID}'')].desc.smart_fail.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "no")
+                        return 1
+                      if (value != "no")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: DISK
+              trigger_prototypes:
+                -
+                  uuid: 9c8a34ee84fb4ab59d9e33f2a56d7a2d
+                  expression: 'last(/Template IBM XIV Storage System/disk.smart.fail[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Desc Smart fail'
+                  priority: AVERAGE
+            -
+              uuid: 29a844ef5d634a2b8893704124124d33
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'disk.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.disk.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: DISK
+              trigger_prototypes:
+                -
+                  uuid: f274b8683d91493ab4c490c760434662
+                  expression: 'last(/Template IBM XIV Storage System/disk.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: HIGH
+            -
+              uuid: 2ac0199e70834f798711bfa4bde7a8f0
+              name: '{#COMPONENT.ID} Temperature'
+              type: DEPENDENT
+              key: 'disk.temperature[{#COMPONENT.ID}]'
+              delay: '0'
+              units: C
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.disk.[?(@.component_id==''{#COMPONENT.ID}'')].temperature.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: DISK
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.disk
+        -
+          uuid: db153f81a6a74e0ab0b4c253729e917d
+          name: FAN
+          type: DEPENDENT
+          key: fan.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: b0afdc7ceb9a4a3291cd54944760726c
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'fan.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.fan.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: FAN
+              trigger_prototypes:
+                -
+                  uuid: 1db4ee14ea94427b9485e12c4da5ec35
+                  expression: 'last(/Template IBM XIV Storage System/fan.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: AVERAGE
+            -
+              uuid: 63591bfb63d04528ae3a39d32679ebbf
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'fan.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.fan.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: FAN
+              trigger_prototypes:
+                -
+                  uuid: c3b39e2a074d4c1093a3d7d1d7d605b8
+                  expression: 'last(/Template IBM XIV Storage System/fan.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: AVERAGE
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.fan
+        -
+          uuid: 69966a4d5fb94bf8bfb65500ab5d398f
+          name: FC_PORT
+          type: DEPENDENT
+          key: fc_port.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: 0571b7fa306e491581f5cd73ac2b72af
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'fc_port.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.fc_port.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: FC_PORT
+              trigger_prototypes:
+                -
+                  uuid: c3184ebeda464958bb19f38fdb92d01c
+                  expression: 'last(/Template IBM XIV Storage System/fc_port.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: AVERAGE
+            -
+              uuid: 55f5cfaeacf0469f9a8ba1d62310eede
+              name: '{#COMPONENT.ID} Error count'
+              type: DEPENDENT
+              key: 'fc_port.error.count[{#COMPONENT.ID}]'
+              delay: '0'
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.fc_port.[?(@.component_id==''{#COMPONENT.ID}'')].error_count.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: FC_PORT
+              trigger_prototypes:
+                -
+                  uuid: d5af42b6ae214cd88ee4a0c8f7c48c5f
+                  expression: 'last(/Template IBM XIV Storage System/fc_port.error.count[{#COMPONENT.ID}])>0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Error count = ({ITEM.VALUE})'
+                  priority: WARNING
+            -
+              uuid: a3895f48411149abb277ea13209c17b3
+              name: '{#COMPONENT.ID} Port state'
+              type: DEPENDENT
+              key: 'fc_port.port.state[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.fc_port.[?(@.component_id==''{#COMPONENT.ID}'')].port_state.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "Online")
+                        return 1
+                      if (value != "Online")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: FC_PORT
+            -
+              uuid: 792c380cc774464a89293e3bdaa5c290
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'fc_port.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.fc_port.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: FC_PORT
+              trigger_prototypes:
+                -
+                  uuid: 57ec672bc7f443408c38857aa64874b9
+                  expression: 'last(/Template IBM XIV Storage System/fc_port.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: AVERAGE
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.fc_port
+        -
+          uuid: 72410df91b3043339428913de21bb073
+          name: MM
+          type: DEPENDENT
+          key: mm.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: 7203186bd14246dfa1027f35066faf6b
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'mm.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.mm.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: 'Maintenance Module'
+              trigger_prototypes:
+                -
+                  uuid: dbe75e1529524f4e9a002f71857d5946
+                  expression: 'last(/Template IBM XIV Storage System/mm.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: AVERAGE
+            -
+              uuid: 4b5f7c66dd2549338f66602e845f6880
+              name: '{#COMPONENT.ID} Enabled state'
+              type: DEPENDENT
+              key: 'mm.enabled[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.mm.[?(@.component_id==''{#COMPONENT.ID}'')].enabled.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: 'Maintenance Module'
+            -
+              uuid: ed6bf9135ee34d708cf7d91260fd8aff
+              name: '{#COMPONENT.ID} Link 1'
+              type: DEPENDENT
+              key: 'mm.link_1[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.mm.[?(@.component_id==''{#COMPONENT.ID}'')].link_1.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: 'Maintenance Module'
+              trigger_prototypes:
+                -
+                  uuid: 0fe12d1dff03414ea7e8a8e390fc0df7
+                  expression: 'last(/Template IBM XIV Storage System/mm.link_1[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Link 1 is BAD'
+                  priority: AVERAGE
+            -
+              uuid: f19cdf163cd64322951d89a92eb0c08d
+              name: '{#COMPONENT.ID} Link 2'
+              type: DEPENDENT
+              key: 'mm.link_2[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.mm.[?(@.component_id==''{#COMPONENT.ID}'')].link_2.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: 'Maintenance Module'
+              trigger_prototypes:
+                -
+                  uuid: 93b971795da64bec901f0f83f281f1cc
+                  expression: 'last(/Template IBM XIV Storage System/mm.link_2[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Link 2 is BAD'
+                  priority: AVERAGE
+            -
+              uuid: 8c4fe7a36ea64a95881c41bb78e3bbab
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'mm.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.mm.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: 'Maintenance Module'
+              trigger_prototypes:
+                -
+                  uuid: ab8af5778dc54de799a57ce80c3a6e83
+                  expression: 'last(/Template IBM XIV Storage System/mm.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: AVERAGE
+            -
+              uuid: c7f40986999a429eabe298d24bec1f91
+              name: '{#COMPONENT.ID} Temperature'
+              type: DEPENDENT
+              key: 'mm.temperature[{#COMPONENT.ID}]'
+              delay: '0'
+              units: C
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.mm.[?(@.component_id==''{#COMPONENT.ID}'')].temperature.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: 'Maintenance Module'
+            -
+              uuid: 739375c8cff542d9b456e683d88adafa
+              name: '{#COMPONENT.ID} Total memory'
+              type: DEPENDENT
+              key: 'mm.total.memory[{#COMPONENT.ID}]'
+              delay: '0'
+              units: bytes
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.mm.[?(@.component_id==''{#COMPONENT.ID}'')].total_memory.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: 'Maintenance Module'
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.mm
+        -
+          uuid: a12f024a488b4cbc8f2e8c1564820a28
+          name: PSU
+          type: DEPENDENT
+          key: psu.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: c3a136b644e843bca4154062909f4317
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'psu.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.psu.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: PSU
+              trigger_prototypes:
+                -
+                  uuid: 62cb58fb7f2044e78b0936dfbd83b3e2
+                  expression: 'last(/Template IBM XIV Storage System/psu.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: DISASTER
+            -
+              uuid: ea29262f86904cde804055dc1db3d8ba
+              name: '{#COMPONENT.ID} Current'
+              type: DEPENDENT
+              key: 'psu.current[{#COMPONENT.ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: A
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.psu.[?(@.component_id==''{#COMPONENT.ID}'')].current.first()'
+                -
+                  type: RTRIM
+                  parameters:
+                    - A
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: PSU
+            -
+              uuid: c2acd906042b4bca8123c4835aa1368f
+              name: '{#COMPONENT.ID} Hardware status'
+              type: DEPENDENT
+              key: 'psu.hardware.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.psu.[?(@.component_id==''{#COMPONENT.ID}'')].hardware_status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: PSU
+              trigger_prototypes:
+                -
+                  uuid: 2b4f80c77a7542c1ada28be4524754be
+                  expression: 'last(/Template IBM XIV Storage System/psu.hardware.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Hardware status is BAD'
+                  priority: DISASTER
+            -
+              uuid: 1c769cdb223e4bd496acd827c38325cd
+              name: '{#COMPONENT.ID} Power'
+              type: DEPENDENT
+              key: 'psu.power[{#COMPONENT.ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: W
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.psu.[?(@.component_id==''{#COMPONENT.ID}'')].power.first()'
+                -
+                  type: RTRIM
+                  parameters:
+                    - W
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: PSU
+            -
+              uuid: 8c8ba2aaba50434d832df8d550745dae
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'psu.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.psu.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: PSU
+              trigger_prototypes:
+                -
+                  uuid: 25e929a677414016af5473ec299504d4
+                  expression: 'last(/Template IBM XIV Storage System/psu.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: DISASTER
+            -
+              uuid: be51394417534de08d0e94e1daeaab48
+              name: '{#COMPONENT.ID} Voltage 5v'
+              type: DEPENDENT
+              key: 'psu.voltage.5v[{#COMPONENT.ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: V
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.psu.[?(@.component_id==''{#COMPONENT.ID}'')].voltage_5v.first()'
+                -
+                  type: RTRIM
+                  parameters:
+                    - V
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: PSU
+            -
+              uuid: 0475e1cb6f84477d8073e7bd7f74a05d
+              name: '{#COMPONENT.ID} Voltage 12v'
+              type: DEPENDENT
+              key: 'psu.voltage.12v[{#COMPONENT.ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: V
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.psu.[?(@.component_id==''{#COMPONENT.ID}'')].voltage_12v.first()'
+                -
+                  type: RTRIM
+                  parameters:
+                    - V
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: PSU
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.psu
+        -
+          uuid: d1816336f9194fd9b1d58da8ba278c1f
+          name: SWITCH
+          type: DEPENDENT
+          key: switch.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: 061b8825797b41f6b63f50c8e12f02ae
+              name: '{#COMPONENT.ID} Cpu util'
+              type: DEPENDENT
+              key: 'switch.cpu.util[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].cpu_util.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+            -
+              uuid: 778071e539044510ab668ea2cc64941d
+              name: '{#COMPONENT.ID} Initialized curr vpd'
+              type: DEPENDENT
+              key: 'switch.curr.vpd[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].curr_vpd.initialized.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+            -
+              uuid: 14e43b202576410ea65f747fd8891e04
+              name: '{#COMPONENT.ID} Fans rpm'
+              type: DEPENDENT
+              key: 'switch.fans.rpm[{#COMPONENT.ID}]'
+              delay: '0'
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].fans_rpm.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+              trigger_prototypes:
+                -
+                  uuid: f70dfb10976b49b3b9d6089449f19bdf
+                  expression: 'last(/Template IBM XIV Storage System/switch.fans.rpm[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Fan is not working'
+                  priority: HIGH
+            -
+              uuid: 50162ccfa5684505a17882f33e204a17
+              name: '{#COMPONENT.ID} Initialized initial vpd'
+              type: DEPENDENT
+              key: 'switch.initial.vpd[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].initial_vpd.initialized.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+            -
+              uuid: 8e5ea0e52bad463ea324af6628a4b070
+              name: '{#COMPONENT.ID} Monitor status'
+              type: DEPENDENT
+              key: 'switch.monitor.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].monitor_status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+              trigger_prototypes:
+                -
+                  uuid: 8fe1f00433d74095b0295fbab6b6b8f4
+                  expression: 'last(/Template IBM XIV Storage System/switch.monitor.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Monitor status is BAD'
+                  priority: AVERAGE
+            -
+              uuid: 04913d3132ae4ffb93078d91abc17d78
+              name: '{#COMPONENT.ID} Initialized prev vpd'
+              type: DEPENDENT
+              key: 'switch.prev.vpd[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].prev_vpd.initialized.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+            -
+              uuid: ebf756628e0c4a1684f0ed420e5d4465
+              name: '{#COMPONENT.ID} Ps1 status'
+              type: DEPENDENT
+              key: 'switch.ps1[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].ps1.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+              trigger_prototypes:
+                -
+                  uuid: c3c88257eaab4f2d94f6780ba6706562
+                  expression: 'last(/Template IBM XIV Storage System/switch.ps1[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Ps1 is BAD'
+                  priority: HIGH
+            -
+              uuid: 4208d49c850549a5b70235e7693a87cb
+              name: '{#COMPONENT.ID} Ps2 status'
+              type: DEPENDENT
+              key: 'switch.ps2[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].ps2.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+              trigger_prototypes:
+                -
+                  uuid: 6ca4ec3eee2e4c1f85168fb98a31f0db
+                  expression: 'last(/Template IBM XIV Storage System/switch.ps2[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Ps2 is BAD'
+                  priority: HIGH
+            -
+              uuid: c2e35c091cba4cd99ac626bd24f1b06f
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'switch.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+              trigger_prototypes:
+                -
+                  uuid: 54669fb7a3434a38a6ec42adcc8ac2ed
+                  expression: 'last(/Template IBM XIV Storage System/switch.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: HIGH
+            -
+              uuid: 2d3edaccfc184ed9b1fa04ca5ef11271
+              name: '{#COMPONENT.ID} Sw mgmt status'
+              type: DEPENDENT
+              key: 'switch.sw.mgmt.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].sw_mgmt_status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+            -
+              uuid: 4dd70864deb54da9b86a519cbe1fc70c
+              name: '{#COMPONENT.ID} Voltage'
+              type: DEPENDENT
+              key: 'switch.voltage[{#COMPONENT.ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: V
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.switch.[?(@.component_id==''{#COMPONENT.ID}'')].voltage.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: SWITCH
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.switch
+        -
+          uuid: 53b3b74e32b74b65bb11902cd0a06923
+          name: UPS
+          type: DEPENDENT
+          key: ups.discovery
+          delay: '0'
+          item_prototypes:
+            -
+              uuid: ee841fd4626e4af1987717bd6a8cd2d6
+              name: '{#COMPONENT.ID} Apparent load power percent'
+              type: DEPENDENT
+              key: 'ups.apparent.load.power.percent[{#COMPONENT.ID}]'
+              delay: '0'
+              units: '%'
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ups.[?(@.component_id==''{#COMPONENT.ID}'')].apparent_load_power_percent.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: UPS
+              trigger_prototypes:
+                -
+                  uuid: eb1bbea3dfbc43ddb30ef0378cf2a58d
+                  expression: 'max(/Template IBM XIV Storage System/ups.apparent.load.power.percent[{#COMPONENT.ID}],10m)>60'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Apparent load power is high ({ITEM.VALUE})'
+                  priority: AVERAGE
+            -
+              uuid: 2016803314c64afaaebc4599f1f601ff
+              name: '{#COMPONENT.ID} Battery charge level'
+              type: DEPENDENT
+              key: 'ups.battery.charge.level[{#COMPONENT.ID}]'
+              delay: '0'
+              units: '%'
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ups.[?(@.component_id==''{#COMPONENT.ID}'')].battery_charge_level.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: UPS
+              trigger_prototypes:
+                -
+                  uuid: 8778b47d00314438ad6c84edf259f7f7
+                  expression: 'last(/Template IBM XIV Storage System/ups.battery.charge.level[{#COMPONENT.ID}])<50'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Battery charge level < 50% ({ITEM.VALUE})'
+                  priority: HIGH
+                -
+                  uuid: fd63ac7711e34b39a74881a9a079f29a
+                  expression: 'last(/Template IBM XIV Storage System/ups.battery.charge.level[{#COMPONENT.ID}])<70'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Battery charge level < 70% ({ITEM.VALUE})'
+                  priority: AVERAGE
+            -
+              uuid: 33c21f472f4b48b5a7b05886bf050a0f
+              name: '{#COMPONENT.ID} Currently functioning'
+              type: DEPENDENT
+              key: 'ups.currently.functioning[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ups.[?(@.component_id==''{#COMPONENT.ID}'')].currently_functioning.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: UPS
+              trigger_prototypes:
+                -
+                  uuid: 2ccc398598da4432bac6a29b2c28941e
+                  expression: 'last(/Template IBM XIV Storage System/ups.currently.functioning[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
+                  priority: HIGH
+            -
+              uuid: dd9a3875dc3b439b8b92a2902be36220
+              name: '{#COMPONENT.ID} Input power on'
+              type: DEPENDENT
+              key: 'ups.input.power.on[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ups.[?(@.component_id==''{#COMPONENT.ID}'')].input_power_on.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: UPS
+              trigger_prototypes:
+                -
+                  uuid: dbdca079312043d09a3f303e28faba8c
+                  expression: 'last(/Template IBM XIV Storage System/ups.input.power.on[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Input power off'
+                  priority: HIGH
+            -
+              uuid: 3cc62750da91464b858a5b9f5da17814
+              name: '{#COMPONENT.ID} Internal temperature'
+              type: DEPENDENT
+              key: 'ups.internal.temperature[{#COMPONENT.ID}]'
+              delay: '0'
+              units: C
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ups.[?(@.component_id==''{#COMPONENT.ID}'')].internal_temperature.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: UPS
+              trigger_prototypes:
+                -
+                  uuid: a9dc3331e5584f9db412681dff405c72
+                  expression: 'max(/Template IBM XIV Storage System/ups.internal.temperature[{#COMPONENT.ID}],30m)>35'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Internal temperature is high ({ITEM.VALUE})'
+                  priority: AVERAGE
+            -
+              uuid: e590578868a0425f8502db9e13dd9f7b
+              name: '{#COMPONENT.ID} Load power percent'
+              type: DEPENDENT
+              key: 'ups.load.power.percent[{#COMPONENT.ID}]'
+              delay: '0'
+              units: '%'
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ups.[?(@.component_id==''{#COMPONENT.ID}'')].load_power_percent.first()'
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: UPS
+              trigger_prototypes:
+                -
+                  uuid: 5928c0570e7e4173b1a9c02e3f5e61cb
+                  expression: 'max(/Template IBM XIV Storage System/ups.load.power.percent[{#COMPONENT.ID}],30m)>60'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Load power is high ({ITEM.VALUE})'
+                  priority: AVERAGE
+            -
+              uuid: 6c6ff26b4d704566bbd7eb6af903d3bc
+              name: '{#COMPONENT.ID} Power Status'
+              type: DEPENDENT
+              key: 'ups.power.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ups.[?(@.component_id==''{#COMPONENT.ID}'')].input_power_on.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "yes")
+                        return 1
+                      if (value != "yes")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: UPS
+              trigger_prototypes:
+                -
+                  uuid: 6696f9320aee49be898a1d9c671713fa
+                  expression: 'last(/Template IBM XIV Storage System/ups.power.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Power status is BAD'
+                  priority: HIGH
+            -
+              uuid: a4aff880c9e04638afb9105315acc3d5
+              name: '{#COMPONENT.ID} Status'
+              type: DEPENDENT
+              key: 'ups.status[{#COMPONENT.ID}]'
+              delay: '0'
+              valuemap:
+                name: 1=OK-0=BAD
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$.ups.[?(@.component_id==''{#COMPONENT.ID}'')].status.first()'
+                -
+                  type: JAVASCRIPT
+                  parameters:
+                    - |
+                      if (value == "OK")
+                        return 1
+                      if (value != "OK")
+                        return 0
+              master_item:
+                key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+              tags:
+                -
+                  tag: Application
+                  value: UPS
+              trigger_prototypes:
+                -
+                  uuid: 156914e9022349e0b66a6e1f426d687e
+                  expression: 'last(/Template IBM XIV Storage System/ups.status[{#COMPONENT.ID}])=0'
+                  name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
+                  priority: HIGH
+          master_item:
+            key: 'pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#COMPONENT.ID}'
+              path: $.component_id
+          preprocessing:
+            -
+              type: JSONPATH
+              parameters:
+                - $.ups
+      macros:
+        -
+          macro: '{$IBM_PASS}'
+          type: SECRET_TEXT
+          description: 'pass for xcli'
+        -
+          macro: '{$IBM_USER}'
+          type: SECRET_TEXT
+          description: 'user for xcli'
+      valuemaps:
+        -
+          uuid: 4a266e67fddf4f27a47f5586e96d5598
+          name: 1=OK-0=BAD
+          mappings:
+            -
+              value: '0'
+              newvalue: BAD
+            -
+              value: '1'
+              newvalue: OK

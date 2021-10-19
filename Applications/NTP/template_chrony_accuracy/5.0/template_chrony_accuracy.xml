@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:35:21Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template App Chrony Service</template>
+      <name>Template App Chrony Service</name>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Time synchronization</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Number of chrony processes</name>
+          <key>proc.num[,chrony]</key>
+          <delay>60</delay>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{max(#1)}=0</expression>
+              <name>Chrony service is down on {HOST.NAME}</name>
+              <status>DISABLED</status>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Chrony Last offset</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>system.run[chronyc tracking|grep "Last offset"|awk '{print $4}']</key>
+          <delay>1800</delay>
+          <value_type>FLOAT</value_type>
+          <units>s</units>
+          <description>This is the estimated local offset on the last clock update.</description>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Chrony Leap status</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>system.run[chronyc tracking|grep "Leap status"|awk '{print $4}']</key>
+          <delay>1800</delay>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <description>This is the leap status, which can be Normal, Insert second, Delete second or Not synchronized.</description>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{regexp("Not synchronized")}=1</expression>
+              <name>{HOST.NAME} is Not synchronized</name>
+              <status>DISABLED</status>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Chrony synchronized server</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>system.run[chronyc tracking|grep "Reference ID"|awk '{print $4$5}']</key>
+          <delay>1800</delay>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <description>This is the reference ID and name (or IP address) if available, of the server to which the computer is currently synchronized.</description>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{diff(0)}=1</expression>
+              <name>Chrony servers are synchronized has been changed .</name>
+              <status>DISABLED</status>
+              <priority>INFO</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Chrony RMS offset</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>system.run[chronyc tracking|grep "RMS offset"|awk '{print $4}']</key>
+          <delay>1800</delay>
+          <value_type>FLOAT</value_type>
+          <units>s</units>
+          <description>This is a long-term average of the offset value.</description>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Chrony Root delay</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>system.run[chronyc tracking|grep "Root delay"|awk '{print $4}']</key>
+          <delay>1800</delay>
+          <value_type>FLOAT</value_type>
+          <units>s</units>
+          <description>This is the total of the network path delays to the stratum-1 computer from which the computer is ultimately synchronized. In certain extreme situations, this value can be negative. (This can arise in a symmetric peer arrangement where the computers’ frequencies are not tracking each other and the network delay is very short relative to the turn-around time at each computer.)</description>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Chrony Stratum</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>system.run[chronyc tracking|grep "Stratum"|awk '{print $3}']</key>
+          <delay>1800</delay>
+          <description>The stratum indicates how many hops away from a computer with an attached reference clock we are. Such a computer is a stratum-1 computer, so the computer in the example is two hops away</description>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Chrony Update interval</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>system.run[chronyc tracking|grep "Update interval"|awk '{print $4}']</key>
+          <delay>1800</delay>
+          <value_type>FLOAT</value_type>
+          <units>s</units>
+          <description>This is the total dispersion accumulated through all the computers back to the stratum-1 computer from which the computer is ultimately synchronized. Dispersion is due to system clock resolution, statistical measurement variations etc.</description>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Version of chrony(d) running</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>system.run[chronyd --version]</key>
+          <delay>3600</delay>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <applications>
+            <application>
+              <name>Time synchronization</name>
+            </application>
+          </applications>
+        </item>
+      </items>
+    </template>
+  </templates>
+</zabbix_export>

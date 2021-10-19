@@ -1,0 +1,76 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-10-19T20:40:41Z'
+  groups:
+    -
+      uuid: a571c0d144b14fd4a87a9d9b2aa9fcd6
+      name: Templates/Applications
+  templates:
+    -
+      uuid: 7e4cc380e742438e85224663c8f5c3fb
+      template: 'Template App Zabbix processes memory usage'
+      name: 'Template App Zabbix processes memory usage'
+      description: |
+        Template requires the following utilities to be available on the Agent host:
+        
+        - pgrep
+        - egrep
+        - sed
+        - jq
+      groups:
+        -
+          name: Templates/Applications
+      discovery_rules:
+        -
+          uuid: 43b7a1708bd04cc2b3d97fb3e19eacfa
+          name: 'Zabbix processes'
+          key: 'system.run["pgrep -a ''{$PGREP.REGEX}'' | egrep -o --color=none ''{$PGREP.REGEX}: .*'' | sed ''s/ [#\[].*//'' | sort -u | jq -Rs ''{\"data\": split(\"\n\") | map(select(length > 0)) | map(split(\": \") | {\"{#COMPONENT}\": .[0], \"{#PROCESS}\": .[1]})}''"]'
+          item_prototypes:
+            -
+              uuid: 79821640a5c44ba99d29bda322011e27
+              name: 'Memory used by {#COMPONENT} {#PROCESS}'
+              type: CALCULATED
+              key: 'proc.mem.total[{#COMPONENT},{#PROCESS}]'
+              delay: 1m;m0-59
+              units: B
+              params: 'last(//proc.mem[{#COMPONENT},,,{#COMPONENT}: {#PROCESS},swap]) + last(//proc.mem[{#COMPONENT},,,{#COMPONENT}: {#PROCESS},rss])'
+              tags:
+                -
+                  tag: Application
+                  value: 'Memory used by {#COMPONENT}'
+            -
+              uuid: c13de1ad739048f3ad8679602b563688
+              name: 'VmRSS used by {#COMPONENT} {#PROCESS}'
+              key: 'proc.mem[{#COMPONENT},,,{#COMPONENT}: {#PROCESS},rss]'
+              delay: 1m;m0-59
+              units: B
+              tags:
+                -
+                  tag: Application
+                  value: 'Memory used by {#COMPONENT}'
+            -
+              uuid: b243ba09d2824ded835be36a54bc0f61
+              name: 'VmSwap used by {#COMPONENT} {#PROCESS}'
+              key: 'proc.mem[{#COMPONENT},,,{#COMPONENT}: {#PROCESS},swap]'
+              delay: 1m;m0-59
+              units: B
+              tags:
+                -
+                  tag: Application
+                  value: 'Memory used by {#COMPONENT}'
+          graph_prototypes:
+            -
+              uuid: 26c87b0a709a4f5f90e8bba094d69e54
+              name: 'Memory used by {#COMPONENT} {#PROCESS}'
+              graph_items:
+                -
+                  color: 1A7C11
+                  calc_fnc: ALL
+                  item:
+                    host: 'Template App Zabbix processes memory usage'
+                    key: 'proc.mem.total[{#COMPONENT},{#PROCESS}]'
+      macros:
+        -
+          macro: '{$PGREP.REGEX}'
+          value: zabbix_(server|agentd|agent2|proxy)
+          description: 'Pattern that will be used by pgrep utility to locate Zabbix processes.'

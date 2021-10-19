@@ -1,0 +1,959 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-10-19T20:40:51Z'
+  groups:
+    -
+      uuid: 57b7ae836ca64446ba2c296389c009b7
+      name: Templates/Modules
+    -
+      uuid: 36bff6c29af64692839d077febfc7079
+      name: 'Templates/Network devices'
+  templates:
+    -
+      uuid: f93b8aae23a742269ca22e1a8afa80b8
+      template: 'bintec Router'
+      name: 'bintec Router'
+      description: |
+        Template for routers from bintec elmeg
+        
+        Tested with RS353jv, be.IP plus and R1202
+      templates:
+        -
+          name: 'ICMP Ping'
+      groups:
+        -
+          name: 'Templates/Network devices'
+      items:
+        -
+          uuid: 576d8946a93c477b9e15af6ca2a2062b
+          name: 'CPU utilization'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.272.4.17.4.1.1.18.1.0
+          key: cpu.utilization
+          units: '%'
+          description: 'LoadIDLE60s: Percentage of idle time measured for the last 60 seconds.'
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - 'return 100 - value'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 2f0e1e5139d94f34b1dc7083bebc41bb
+              expression: 'last(/bintec Router/cpu.utilization)>80'
+              name: 'High CPU usage'
+              priority: WARNING
+        -
+          uuid: 418b0dcd794d4fdab3771fd5f10d2bf9
+          name: 'Flash Memory'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.272.4.17.4.2.1.4.1
+          key: memory.flash
+          delay: 15m
+          units: byte
+          description: 'Onboard Flash memory'
+          tags:
+            -
+              tag: Application
+              value: Memory
+        -
+          uuid: 2f4b5407185d442987bf8591c680f637
+          name: 'Memory in use'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.272.4.17.4.2.1.5.2
+          key: memory.inuse
+          units: byte
+          tags:
+            -
+              tag: Application
+              value: Memory
+        -
+          uuid: 4cd70e5f58f043c7a12af6286e72b705
+          name: 'Memory total'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.272.4.17.4.2.1.4.2
+          key: memory.total
+          delay: 15m
+          units: byte
+          tags:
+            -
+              tag: Application
+              value: Memory
+        -
+          uuid: f39dfb59de53445b807c5df7fd97afbd
+          name: 'Memory utilization'
+          type: CALCULATED
+          key: memory.utilization
+          units: '%'
+          params: '100*last(//memory.inuse)/last(//memory.total)'
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - 'return parseInt(value);'
+          tags:
+            -
+              tag: Application
+              value: Memory
+          triggers:
+            -
+              uuid: 8e4c5f79bd13471bb81277310f1fc285
+              expression: 'last(/bintec Router/memory.utilization)>80'
+              name: 'High memory usage'
+              priority: WARNING
+        -
+          uuid: b5af2b77ce7a4f968c73a7d76926d2ce
+          name: 'Current sessions'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.272.4.5.46.1.0
+          key: sif.currsessions
+          tags:
+            -
+              tag: Application
+              value: SIF
+        -
+          uuid: 226f343db92e480bb800a033888dc58b
+          name: 'Max sessions'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.272.4.5.37.9.0
+          key: sif.maxsessions
+          delay: 1h
+          tags:
+            -
+              tag: Application
+              value: SIF
+        -
+          uuid: 2fb15e04931d4b6b8776b786cee3b46d
+          name: 'SIF Status'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.272.4.5.37.1.0
+          key: sif.status
+          delay: 1h
+          trends: '0'
+          value_type: TEXT
+          description: 'Status of the Stateful inspection firewall (SIF)'
+          preprocessing:
+            -
+              type: STR_REPLACE
+              parameters:
+                - '1'
+                - enabled
+            -
+              type: STR_REPLACE
+              parameters:
+                - '2'
+                - disabled
+          tags:
+            -
+              tag: Application
+              value: SIF
+        -
+          uuid: d9b89fa79cf64455a163f8bd0b81ebe2
+          name: 'System description'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.1.0
+          key: system.description
+          delay: 1h
+          trends: '0'
+          value_type: TEXT
+          inventory_link: HARDWARE
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: 54440b6630054b29a4649a2ed18dd313
+          name: 'Software version'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.272.4.1.26.0
+          key: system.swversion
+          delay: 1h
+          trends: '0'
+          value_type: TEXT
+          inventory_link: OS
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: b219efd0207444a9856a6137ee0c74ef
+          name: Uptime
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.3.0
+          key: system.uptime
+          trends: '0'
+          units: s
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: Status
+      discovery_rules:
+        -
+          uuid: f613ad5af40c4c6a9e7b20a99a75d5aa
+          name: 'xDSL interfaces'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFID},.1.3.6.1.4.1.272.4.30.1.1.1.1.1]'
+          key: dsl.if.discovery
+          delay: 1h
+          description: 'Discover xDSL Interfaces on bintec Router'
+          item_prototypes:
+            -
+              uuid: 5383ec06ec59499caea643b1d3d9e287
+              name: 'xDSL Downstream Attenuation'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.30.1.1.2.1.8.{#IFID}.0'
+              key: 'xdsl.downstream.attenuation[{#IFID}]'
+              delay: 1h
+              units: dB
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '0.1'
+              tags:
+                -
+                  tag: Application
+                  value: xDSL
+            -
+              uuid: 2aea0cc793ae4d9aac0c81eba977b397
+              name: 'xDSL Downstream Max. attainable rate'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.30.1.1.2.1.6.{#IFID}.0'
+              key: 'xdsl.downstream.max[{#IFID}]'
+              delay: 1h
+              units: bps
+              description: 'xDSL Max attainable downstream rate'
+              tags:
+                -
+                  tag: Application
+                  value: xDSL
+            -
+              uuid: ada38fe494db4f498e620519e35bfb41
+              name: 'xDSL Downstream'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.16.10.1.24.{#SNMPINDEX}'
+              key: 'xdsl.downstream[{#IFID}]'
+              delay: 5m
+              units: bps
+              tags:
+                -
+                  tag: Application
+                  value: xDSL
+            -
+              uuid: 5f005534139d4dcf965551b9dc94f700
+              name: 'xDSL Operational Status'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.16.10.1.5.{#SNMPINDEX}'
+              key: 'xdsl.operstatus[{#IFID}]'
+              trends: '0'
+              value_type: TEXT
+              preprocessing:
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '1'
+                    - up
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '2'
+                    - down
+              tags:
+                -
+                  tag: Application
+                  value: xDSL
+              trigger_prototypes:
+                -
+                  uuid: 7cdbd0e57f0048f292fe9c152674f32e
+                  expression: 'last(/bintec Router/xdsl.operstatus[{#IFID}])="down"'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/bintec Router/xdsl.operstatus[{#IFID}])="up"'
+                  name: 'DSL interface went down'
+                  priority: HIGH
+                  description: 'The DSL interface is down'
+                  manual_close: 'YES'
+            -
+              uuid: f421a25a561b4af1bc35e7ac4c222ed7
+              name: 'xDSL Type'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.16.10.1.2.{#SNMPINDEX}'
+              key: 'xdsl.type[{#IFID}]'
+              delay: 1h
+              trends: '0'
+              value_type: TEXT
+              preprocessing:
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '1'
+                    - other
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '2'
+                    - adsl
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '3'
+                    - shdsl
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '4'
+                    - vdsl
+              tags:
+                -
+                  tag: Application
+                  value: xDSL
+            -
+              uuid: 612784f9f4fb400f8c94945e652c357a
+              name: 'xDSL Upstream Attenuation'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.30.1.1.3.1.6.{#IFID}.0'
+              key: 'xdsl.upstream.attenuation[{#IFID}]'
+              delay: 1h
+              units: dB
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '0.1'
+              tags:
+                -
+                  tag: Application
+                  value: xDSL
+            -
+              uuid: b2a1a4449e864833be3f2c2209dc8dd3
+              name: 'xDSL Upstream Max. attainable rate'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.30.1.1.3.1.9.{#IFID}.0'
+              key: 'xdsl.upstream.max[{#IFID}]'
+              delay: 1h
+              units: bps
+              description: 'Max attainable upstream rate'
+              tags:
+                -
+                  tag: Application
+                  value: xDSL
+            -
+              uuid: bfc424736a3b44d7bf8acdcfde038a39
+              name: 'xDSL Upstream'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.16.10.1.25.{#SNMPINDEX}'
+              key: 'xdsl.upstream[{#IFID}]'
+              delay: 5m
+              units: bps
+              tags:
+                -
+                  tag: Application
+                  value: xDSL
+          graph_prototypes:
+            -
+              uuid: 8fbba958186d44b7892239b7c9c200d9
+              name: 'DSL sync speed'
+              graph_items:
+                -
+                  sortorder: '1'
+                  drawtype: FILLED_REGION
+                  color: 1A7C11
+                  item:
+                    host: 'bintec Router'
+                    key: 'xdsl.downstream[{#IFID}]'
+                -
+                  sortorder: '2'
+                  drawtype: FILLED_REGION
+                  color: F63100
+                  item:
+                    host: 'bintec Router'
+                    key: 'xdsl.upstream[{#IFID}]'
+        -
+          uuid: f537c9dda85947f1877ebd10a6127283
+          name: 'VPN License discovery'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#LICID},.1.3.6.1.4.1.272.4.1.32.1.3,{#LICTYPE},.1.3.6.1.4.1.272.4.1.32.1.1,{#LICSTATUS},.1.3.6.1.4.1.272.4.1.32.1.2]'
+          key: lic.vpn.discovery
+          delay: 1h
+          filter:
+            conditions:
+              -
+                macro: '{#LICTYPE}'
+                value: '^[33]{2}$'
+                formulaid: A
+          item_prototypes:
+            -
+              uuid: 2bf11d5fa0194a60b52293e7b7a34a32
+              name: 'IPSec Current Connections'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.1.32.1.6.{#SNMPINDEX}'
+              key: 'vpn.ipsec.currconn[{#LICID}]'
+              tags:
+                -
+                  tag: Application
+                  value: VPN
+            -
+              uuid: ac0531b0c85645179ae30d28e9c91cba
+              name: 'IPSec Max Connections'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.1.32.1.5.{#SNMPINDEX}'
+              key: 'vpn.ipsec.maxconn[{#LICID}]'
+              delay: 1h
+              trends: '0'
+              tags:
+                -
+                  tag: Application
+                  value: VPN
+          trigger_prototypes:
+            -
+              uuid: fa45e1623e92432eae24f025f9b8a6ce
+              expression: 'last(/bintec Router/vpn.ipsec.currconn[{#LICID}])=last(/bintec Router/vpn.ipsec.maxconn[{#LICID}])'
+              name: 'All IPSec connections in use'
+              priority: INFO
+              description: 'All licensed connections are in use!'
+          graph_prototypes:
+            -
+              uuid: a7d96d9edd4b44e5a5aa15d385976584
+              name: 'VPN License usage'
+              ymin_type_1: FIXED
+              ymax_type_1: ITEM
+              ymax_item_1:
+                host: 'bintec Router'
+                key: 'vpn.ipsec.maxconn[{#LICID}]'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 0040FF
+                  item:
+                    host: 'bintec Router'
+                    key: 'vpn.ipsec.currconn[{#LICID}]'
+        -
+          uuid: 971b1de450dd48c5abf971f661d45bf1
+          name: 'Network interfaces'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFDESCR},IF-MIB::ifDescr,{#IFTYPE},IF-MIB::ifType,{#IFPHYSADDRESS},IF-MIB::ifPhysAddress,{#IFID},IF-MIB::ifIndex]'
+          key: net.if.discovery
+          delay: 1h
+          filter:
+            evaltype: AND
+            conditions:
+              -
+                macro: '{#IFTYPE}'
+                value: '^[1]{1}$'
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+          item_prototypes:
+            -
+              uuid: e9ea3c3bb391495ba9c6830b4f7ade20
+              name: 'Incoming traffic on interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifInOctets.{#SNMPINDEX}'
+              key: 'ifInOctets[{#IFDESCR}]'
+              units: bps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+              tags:
+                -
+                  tag: Application
+                  value: 'Network interfaces'
+            -
+              uuid: f77f36af22204f3b9f70653bc2f8a993
+              name: 'Outgoing traffic on interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifOutOctets.{#SNMPINDEX}'
+              key: 'ifOutOctets[{#IFDESCR}]'
+              units: bps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+              tags:
+                -
+                  tag: Application
+                  value: 'Network interfaces'
+            -
+              uuid: 16fd4ba8cbfe4037a193bf5d9b476092
+              name: 'IP Address {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IP-MIB::ipAdEntAddr["index","ipAdEntIfIndex",{#IFID}]'
+              key: 'network.ip[{#IFDESCR}]'
+              delay: 5m
+              trends: '0'
+              value_type: TEXT
+              tags:
+                -
+                  tag: Application
+                  value: 'Network interfaces'
+          graph_prototypes:
+            -
+              uuid: 2543adb66fab42849954fee3d94cc8e3
+              name: 'Traffic on interface {#IFDESCR}'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 1A7C11
+                  item:
+                    host: 'bintec Router'
+                    key: 'ifInOctets[{#IFDESCR}]'
+                -
+                  sortorder: '2'
+                  color: F63100
+                  item:
+                    host: 'bintec Router'
+                    key: 'ifOutOctets[{#IFDESCR}]'
+        -
+          uuid: 3b68a991e7c241caa58b703dbab994c1
+          name: 'PPPoE Discovery'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#PPPOEDESCR},.1.3.6.1.4.1.272.4.24.1.1.15]'
+          key: pppoe.discovery
+          delay: 10m
+          item_prototypes:
+            -
+              uuid: 66adee34fef74ab49bc70261f4351418
+              name: 'PPPoE Age {#PPPOEDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.24.1.1.3.{#SNMPINDEX}'
+              key: 'pppoe.age[{#PPPOEDESCR}]'
+              units: s
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '0.01'
+              tags:
+                -
+                  tag: Application
+                  value: PPPoE
+            -
+              uuid: 1f353a16e34a48049b4854b28f5d2bbd
+              name: 'PPPoE State {#PPPOEDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.24.1.1.4.{#SNMPINDEX}'
+              key: 'pppoe.state[{#PPPOEDESCR}]'
+              trends: '0'
+              value_type: TEXT
+              preprocessing:
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '1'
+                    - idle
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '2'
+                    - wait-pado
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '3'
+                    - wait-padr
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '4'
+                    - wait-pads
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '5'
+                    - established
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '6'
+                    - terminated
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '7'
+                    - close
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '8'
+                    - delete
+              tags:
+                -
+                  tag: Application
+                  value: PPPoE
+        -
+          uuid: 67e33268dbce4fb89bd49e2458b5de39
+          name: 'Sensors discovery'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SENSORDESCR},.1.3.6.1.4.1.272.4.17.7.1.1.1.3,{#SENSORTYPE},.1.3.6.1.4.1.272.4.17.7.1.1.1.4,{#SENSORNR},.1.3.6.1.4.1.272.4.17.7.1.1.1.2]'
+          key: sensors.discovery
+          item_prototypes:
+            -
+              uuid: 33579acb5dc7475e94ac9730ccc68e96
+              name: '{#SENSORDESCR}-Sensor'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.17.7.1.1.1.5.{#SNMPINDEX}'
+              key: 'sensors[{#SENSORID}.{#SENSORDESCR}]'
+              tags:
+                -
+                  tag: Application
+                  value: System
+          graph_prototypes:
+            -
+              uuid: 6d383cbd6f714bafb4d1e68f78cb945f
+              name: '{SENSORDESCR}'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 0080FF
+                  item:
+                    host: 'bintec Router'
+                    key: 'sensors[{#SENSORID}.{#SENSORDESCR}]'
+        -
+          uuid: 139bff7518f645cda2c0cfd38053749f
+          name: 'VoIP Provider Discovery'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IDX},.1.3.6.1.4.1.272.4.53.3.4.1.1,{#DESCR},.1.3.6.1.4.1.272.4.53.3.4.1.4]'
+          key: voip.provider.discovery
+          delay: 1h
+          item_prototypes:
+            -
+              uuid: 1860702fdb0b4a07bac1e448092d29de
+              name: 'Operational Status VoIP Trunk Line {#DESCR}'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.53.3.4.1.15.{#IDX}'
+              key: 'voip.provider.operstat[{#DESCR}]'
+              trends: '0'
+              value_type: TEXT
+              preprocessing:
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '1'
+                    - 'not registered'
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '2'
+                    - registering
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '3'
+                    - registered
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '4'
+                    - reregistering
+              tags:
+                -
+                  tag: Application
+                  value: VoIP
+        -
+          uuid: daee43651e514ee183973850a301cd3f
+          name: 'VPN peers discovery'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#PEERID},.1.3.6.1.4.1.272.4.26.5.1.1,{#PEERDESCR},.1.3.6.1.4.1.272.4.26.5.1.3]'
+          key: vpn.peers.discovery
+          delay: 1h
+          description: 'Discover IPSec Peers'
+          item_prototypes:
+            -
+              uuid: 24079ad5987e400b99ceb5f3f5f64807
+              name: 'Status of VPN connection {#PEERDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.272.4.26.28.1.20.{#PEERID}'
+              key: 'vpn.peers.status[{#PEERDESCR}]'
+              trends: '0'
+              value_type: TEXT
+              preprocessing:
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '1'
+                    - up
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '2'
+                    - down
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '5'
+                    - dormant
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '6'
+                    - blocked
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '33'
+                    - 'awaiting callback'
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '35'
+                    - 'ip lookup'
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '36'
+                    - 'going up'
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '37'
+                    - wait-if
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '38'
+                    - wait-publish
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '39'
+                    - wait-localip
+                -
+                  type: STR_REPLACE
+                  parameters:
+                    - '40'
+                    - going-up-trans
+              tags:
+                -
+                  tag: Application
+                  value: VPN
+      macros:
+        -
+          macro: '{$WANINTERFACE}'
+          description: 'The Wan interface'
+      dashboards:
+        -
+          uuid: 3ec5111424754cca9146c2bb5e6752f3
+          name: 'bintec Router Dashboard'
+          pages:
+            -
+              widgets:
+                -
+                  type: GRAPH_PROTOTYPE
+                  'y': '6'
+                  width: '24'
+                  height: '20'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: columns
+                      value: '3'
+                    -
+                      type: INTEGER
+                      name: rows
+                      value: '6'
+                    -
+                      type: GRAPH_PROTOTYPE
+                      name: graphid
+                      value:
+                        name: 'Traffic on interface {#IFDESCR}'
+                        host: 'bintec Router'
+                -
+                  type: GRAPH_CLASSIC
+                  x: '16'
+                  width: '8'
+                  height: '6'
+                  fields:
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'SIF sessions'
+                        host: 'bintec Router'
+                -
+                  type: GRAPH_CLASSIC
+                  width: '8'
+                  height: '6'
+                  fields:
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'CPU utilization'
+                        host: 'bintec Router'
+                -
+                  type: GRAPH_CLASSIC
+                  x: '8'
+                  width: '8'
+                  height: '6'
+                  fields:
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Memory usage'
+                        host: 'bintec Router'
+    -
+      uuid: 37e5eb5606bc4abba66c8b20381a1e8a
+      template: 'ICMP Ping'
+      name: 'ICMP Ping'
+      description: |
+        Template Module ICMP Ping
+        
+        Template tooling version used: 0.38
+      groups:
+        -
+          name: Templates/Modules
+      items:
+        -
+          uuid: db5a94f6cea14deba957202b2f014469
+          name: 'ICMP ping'
+          type: SIMPLE
+          key: icmpping
+          history: 1w
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: Status
+          triggers:
+            -
+              uuid: b030876299434f3ba43e11c584104a81
+              expression: 'max(/ICMP Ping/icmpping,#3)=0'
+              name: 'Unavailable by ICMP ping'
+              priority: HIGH
+              description: 'Last three attempts returned timeout.  Please check device connectivity.'
+        -
+          uuid: 04b21adaf422473a88df2c52786474ed
+          name: 'ICMP loss'
+          type: SIMPLE
+          key: icmppingloss
+          history: 1w
+          value_type: FLOAT
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: Status
+          triggers:
+            -
+              uuid: 42c4b0310aaf4b9c8cb502542b7dea90
+              expression: 'min(/ICMP Ping/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/ICMP Ping/icmppingloss,5m)<100'
+              name: 'High ICMP ping loss'
+              opdata: 'Loss: {ITEM.LASTVALUE1}'
+              priority: WARNING
+              dependencies:
+                -
+                  name: 'Unavailable by ICMP ping'
+                  expression: 'max(/ICMP Ping/icmpping,#3)=0'
+        -
+          uuid: a79e33e5fd264725b934f603fa071555
+          name: 'ICMP response time'
+          type: SIMPLE
+          key: icmppingsec
+          history: 1w
+          value_type: FLOAT
+          units: s
+          tags:
+            -
+              tag: Application
+              value: Status
+          triggers:
+            -
+              uuid: 32b4d8f3eba34bd380803410111d4b7f
+              expression: 'avg(/ICMP Ping/icmppingsec,5m)>{$ICMP_RESPONSE_TIME_WARN}'
+              name: 'High ICMP ping response time'
+              opdata: 'Value: {ITEM.LASTVALUE1}'
+              priority: WARNING
+              dependencies:
+                -
+                  name: 'High ICMP ping loss'
+                  expression: 'min(/ICMP Ping/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/ICMP Ping/icmppingloss,5m)<100'
+                -
+                  name: 'Unavailable by ICMP ping'
+                  expression: 'max(/ICMP Ping/icmpping,#3)=0'
+      macros:
+        -
+          macro: '{$ICMP_LOSS_WARN}'
+          value: '20'
+        -
+          macro: '{$ICMP_RESPONSE_TIME_WARN}'
+          value: '0.15'
+      valuemaps:
+        -
+          uuid: bdb5d65d925542eaa61c302dc40fbfe8
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up
+  triggers:
+    -
+      uuid: dd62a3ff17e34aba99af2a0cf0c4f081
+      expression: 'last(/bintec Router/sif.currsessions) >= last(/bintec Router/sif.maxsessions)*0.8'
+      name: 'Current sessions reach 80 percent of Max sessions'
+      priority: WARNING
+      description: 'The sessions counter has reached 80 percent of max sessions value'
+  graphs:
+    -
+      uuid: 87d5261035df4c1eaf0a03b41b4f1732
+      name: 'CPU utilization'
+      graph_items:
+        -
+          sortorder: '1'
+          color: FF0000
+          calc_fnc: ALL
+          item:
+            host: 'bintec Router'
+            key: cpu.utilization
+    -
+      uuid: 299fdb74a69f4ca894037b26346e1aab
+      name: 'Memory usage'
+      ymin_type_1: FIXED
+      ymax_type_1: ITEM
+      ymax_item_1:
+        host: 'bintec Router'
+        key: memory.total
+      graph_items:
+        -
+          sortorder: '1'
+          color: 0040FF
+          calc_fnc: ALL
+          item:
+            host: 'bintec Router'
+            key: memory.inuse
+    -
+      uuid: 51ec328fc5504ec7991d1c99e6d9782e
+      name: 'SIF sessions'
+      ymax_type_1: ITEM
+      ymax_item_1:
+        host: 'bintec Router'
+        key: sif.maxsessions
+      graph_items:
+        -
+          sortorder: '1'
+          color: FF8000
+          item:
+            host: 'bintec Router'
+            key: sif.currsessions

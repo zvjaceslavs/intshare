@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-19T20:41:01Z</date>
+  <groups>
+    <group>
+      <name>Templates_Created</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template Cisco ASR 9K Health SNMP</template>
+      <name>Template Cisco ASR 9K Health SNMP</name>
+      <description>Template Cisco ASR 9k Health -CPU -Memory -Power Supply -Temperature ( RSP e LC ) -FAN ( FAN and FANTray ) -Power Consumption By: Flavio Gomes Figueira Camacho Junior Require: Firmware / Software .IOS XR 5.3.1 .IOS XR 5.3.4 ValueMap .CISCO-ENTITY-FRU-CONTROL-MIB::PowerOperType .ENTITY-SENSORS-MIB::EntitySensorStatus .CISCO-ENTITY-FRU-CONTROL-MIB::CefcFanTrayStatusEntry .CISCO-ENTITY-SENSOR-MIB::SensorStatus Base: CISCO-MEMORY-POOL-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-MEMORY-POOL-MIB.php CISCO-PROCESS-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-PROCESS-MIB.php ENTITY-MIB http://www.circitor.fr/Mibs/Html/E/ENTITY-MIB.php CISCO-ENTITY-FRU-CONTROL-MIB.mib https://circitor.fr/Mibs/Html/C/CISCO-ENTITY-FRU-CONTROL-MIB.php CISCO-ENTITY-SENSOR-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-ENTITY-SENSOR-MIB.php https://share.zabbix.com/network_devices/cisco/template-cisco-asr-9k External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates</description>
+      <groups>
+        <group>
+          <name>Templates_Created</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>CPU</name>
+        </application>
+        <application>
+          <name>FAN</name>
+        </application>
+        <application>
+          <name>Memory</name>
+        </application>
+        <application>
+          <name>Power Consumption</name>
+        </application>
+        <application>
+          <name>Power Current</name>
+        </application>
+        <application>
+          <name>Power Supply</name>
+        </application>
+        <application>
+          <name>Power Voltage</name>
+        </application>
+        <application>
+          <name>Temperature LC</name>
+        </application>
+        <application>
+          <name>Temperature RSP</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Power Consumption</name>
+          <type>CALCULATED</type>
+          <key>powerConsumption</key>
+          <value_type>FLOAT</value_type>
+          <units>W</units>
+          <params>( last(entPhysicalContainedInCurrent["current 0/PS0/M0/SP"]) * last(entPhysicalContainedInVoltage["voltage 0/PS0/M0/SP"]) ) + ( last(entPhysicalContainedInCurrent["current 0/PS0/M1/SP"]) * last(entPhysicalContainedInVoltage["voltage 0/PS0/M1/SP"]) ) + ( last(entPhysicalContainedInCurrent["current 0/PS0/M2/SP"]) * last(entPhysicalContainedInVoltage["voltage 0/PS0/M2/SP"]) ) + ( last(entPhysicalContainedInCurrent["current 0/PS1/M0/SP"]) * last(entPhysicalContainedInVoltage["voltage 0/PS1/M0/SP"]) ) + ( last(entPhysicalContainedInCurrent["current 0/PS1/M1/SP"]) * last(entPhysicalContainedInVoltage["voltage 0/PS1/M1/SP"]) ) + ( last(entPhysicalContainedInCurrent["current 0/PS1/M2/SP"]) * last(entPhysicalContainedInVoltage["voltage 0/PS1/M2/SP"]) )</params>
+          <applications>
+            <application>
+              <name>Power Consumption</name>
+            </application>
+          </applications>
+        </item>
+      </items>
+      <discovery_rules>
+        <discovery_rule>
+          <name>Memory Pool Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.48.1.1.1.2]</snmp_oid>
+          <key>ciscoMemoryPoolName["Memory"]</key>
+          <delay>1h</delay>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>^(image|reserved)</value>
+                <operator>NOT_MATCHES_REGEX</operator>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <description>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolName A textual name assigned to the memory pool.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>Free memory on Memory Pool "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.48.1.1.1.6.{#SNMPINDEX}</snmp_oid>
+              <key>ciscoMemoryPoolFree["{#SNMPVALUE}"]</key>
+              <delay>5m</delay>
+              <units>B</units>
+              <description>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolFree Indicates the number of bytes from the memory pool that are currently unused on the managed device.</description>
+              <applications>
+                <application>
+                  <name>Memory</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Memory {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Total Memory Pool "$1"</name>
+              <type>CALCULATED</type>
+              <key>ciscoMemoryPoolTotal["{#SNMPVALUE}"]</key>
+              <delay>1h</delay>
+              <history>7d</history>
+              <trends>180d</trends>
+              <units>B</units>
+              <params>last(ciscoMemoryPoolFree["{#SNMPVALUE}"]) + last(ciscoMemoryPoolUsed["{#SNMPVALUE}"])</params>
+              <applications>
+                <application>
+                  <name>Memory</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Memory {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Used memory on Memory Pool "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.48.1.1.1.5.{#SNMPINDEX}</snmp_oid>
+              <key>ciscoMemoryPoolUsed["{#SNMPVALUE}"]</key>
+              <delay>5m</delay>
+              <units>B</units>
+              <description>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUsed Indicates the number of bytes from the memory pool that are currently in use by applications on the managed device.</description>
+              <applications>
+                <application>
+                  <name>Memory</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Memory {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Utilization on Memory Pool "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.48.1.2.1.2.{#SNMPINDEX}</snmp_oid>
+              <key>ciscoMemoryPoolUtilization5Min["{#SNMPVALUE}"]</key>
+              <delay>5m</delay>
+              <units>%</units>
+              <description>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUtilization5Min This is the memory pool utilization for 5 minutes.</description>
+              <applications>
+                <application>
+                  <name>Memory</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Memory {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()} > {$MEMORY_HIGH_WARNING}</expression>
+                  <name>High utilization of Memory Pool "{#SNMPVALUE}"</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+          </item_prototypes>
+          <trigger_prototypes>
+            <trigger_prototype>
+              <expression>( {Template Cisco ASR 9K Health SNMP:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()} * 100 ) / {Template Cisco ASR 9K Health SNMP:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()} > {$MEMORY_HIGH_ALARM}</expression>
+              <name>High memory utilizarion alarm on Pool "{#SNMPVALUE}"</name>
+              <priority>HIGH</priority>
+            </trigger_prototype>
+          </trigger_prototypes>
+          <graph_prototypes>
+            <graph_prototype>
+              <name>Memory Utilization Pool "{#SNMPVALUE}"</name>
+              <graph_items>
+                <graph_item>
+                  <drawtype>GRADIENT_LINE</drawtype>
+                  <color>00FF00</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>ciscoMemoryPoolUtilization5Min["{#SNMPVALUE}"]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+            <graph_prototype>
+              <name>Memory {#SNMPVALUE}</name>
+              <graph_items>
+                <graph_item>
+                  <drawtype>BOLD_LINE</drawtype>
+                  <color>00FF00</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>ciscoMemoryPoolTotal["{#SNMPVALUE}"]</key>
+                  </item>
+                </graph_item>
+                <graph_item>
+                  <sortorder>1</sortorder>
+                  <drawtype>GRADIENT_LINE</drawtype>
+                  <color>FF0000</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>ciscoMemoryPoolUsed["{#SNMPVALUE}"]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+          </graph_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>CPU Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.109.1.1.1.1.2]</snmp_oid>
+          <key>cpmCPUTotalPhysicalIndex["CPU"]</key>
+          <delay>1h</delay>
+          <description>CISCO-PROCESS-MIB::cpmCPUTotalPhysicalIndex The entPhysicalIndex of the physical entity for which the CPU statistics in this entry are maintained. The physical entity can be a CPU chip, a group of CPUs, a CPU card etc. The exact type of this entity is described by its entPhysicalVendorType value. If the CPU statistics in this entry correspond to more than one physical entity (or to no physical entity), or if the entPhysicalTable is not supported on the SNMP agent, the value of this object must be zero.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>CPU #$1 Usage 1min Rev</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.109.1.1.1.1.7.{#SNMPINDEX}</snmp_oid>
+              <key>cpmCPUTotal1minRev["{#SNMPINDEX}"]</key>
+              <units>%</units>
+              <description>CISCO-PROCESS-MIB::cpmCPUTotal1minRev The overall CPU busy percentage in the last 1 minute period. This object deprecates the object cpmCPUTotal1min and increases the value range to (0..100).</description>
+              <applications>
+                <application>
+                  <name>CPU</name>
+                </application>
+              </applications>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()}>{$CPU_HIGH_ALARM}</expression>
+                  <name>High CPU Alarm #{#SNMPINDEX} 1min Usage</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}>{$CPU_HIGH_WARNING}</expression>
+                  <name>High CPU Warning #{#SNMPINDEX} 1min Usage</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>CPU #$1 Usage 5min Rev</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.109.1.1.1.1.8.{#SNMPINDEX}</snmp_oid>
+              <key>cpmCPUTotal5minRev["{#SNMPINDEX}"]</key>
+              <delay>5m</delay>
+              <units>%</units>
+              <description>CISCO-PROCESS-MIB::cpmCPUTotal5minRev The overall CPU busy percentage in the last 5 minute period. This object deprecates the object cpmCPUTotal5min and increases the value range to (0..100).</description>
+              <applications>
+                <application>
+                  <name>CPU</name>
+                </application>
+              </applications>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()}>{$CPU_HIGH_ALARM}</expression>
+                  <name>High CPU Alarm #{#SNMPINDEX} 5min Usage</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}>{$CPU_HIGH_WARNING}</expression>
+                  <name>High CPU Warning #{#SNMPINDEX} 5min Usage</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+          </item_prototypes>
+          <graph_prototypes>
+            <graph_prototype>
+              <name>CPU #"{#SNMPINDEX}" 1min Usage</name>
+              <graph_items>
+                <graph_item>
+                  <drawtype>GRADIENT_LINE</drawtype>
+                  <color>00FF00</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>cpmCPUTotal1minRev["{#SNMPINDEX}"]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+            <graph_prototype>
+              <name>CPU #"{#SNMPINDEX}" 5min Usage</name>
+              <graph_items>
+                <graph_item>
+                  <drawtype>GRADIENT_LINE</drawtype>
+                  <color>00FF00</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>cpmCPUTotal5minRev["{#SNMPINDEX}"]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+          </graph_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>FAN Sensor Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.47.1.1.1.1.7]</snmp_oid>
+          <key>entPhysicalName["FAN"]</key>
+          <delay>1h</delay>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>^speed</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <description>The textual name of the physical entity.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>Status of FAN Sensor "{#SNMPVALUE}"/{#SNMPINDEX}</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.1.1.1.5.{#SNMPINDEX}</snmp_oid>
+              <key>entSensorStatus["{#SNMPVALUE}",FAN,{#SNMPINDEX}]</key>
+              <history>30d</history>
+              <trends>0</trends>
+              <description>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</description>
+              <applications>
+                <application>
+                  <name>FAN</name>
+                </application>
+              </applications>
+              <valuemap>
+                <name>ENTITY-SENSORS-MIB::EntitySensorStatus</name>
+              </valuemap>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()}=3</expression>
+                  <name>FAN Sensor "{#SNMPVALUE}"/{#SNMPINDEX} is nonoperational</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=2</expression>
+                  <name>FAN Sensor "{#SNMPVALUE}"/{#SNMPINDEX} is unavailable</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Speed of FAN Sensor "{#SNMPVALUE}"/{#SNMPINDEX}</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.1.1.1.4.{#SNMPINDEX}</snmp_oid>
+              <key>entSensorValue["{#SNMPVALUE}",FAN,{#SNMPINDEX}]</key>
+              <delay>5m</delay>
+              <units>rpm</units>
+              <description>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</description>
+              <applications>
+                <application>
+                  <name>FAN</name>
+                </application>
+              </applications>
+            </item_prototype>
+          </item_prototypes>
+          <graph_prototypes>
+            <graph_prototype>
+              <name>FAN speed "{#SNMPVALUE}"/{#SNMPINDEX}</name>
+              <show_work_period>NO</show_work_period>
+              <show_triggers>NO</show_triggers>
+              <graph_items>
+                <graph_item>
+                  <color>199C0D</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>entSensorValue["{#SNMPVALUE}",FAN,{#SNMPINDEX}]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+          </graph_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>FAN Tray Sensor Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.47.1.1.1.1.7]</snmp_oid>
+          <key>entPhysicalName["FAN Tray"]</key>
+          <delay>1h</delay>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>^fantray</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <description>The textual name of the physical entity.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>Operational Status of "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.117.1.4.1.1.1.{#SNMPINDEX}</snmp_oid>
+              <key>cefcFanTrayOperStatus["{#SNMPVALUE}"]</key>
+              <history>30d</history>
+              <trends>0</trends>
+              <description>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFanTrayOperStatus The operational state of the fan or fan tray.</description>
+              <applications>
+                <application>
+                  <name>FAN</name>
+                </application>
+              </applications>
+              <valuemap>
+                <name>CISCO-ENTITY-FRU-CONTROL-MIB::CefcFanTrayStatusEntry</name>
+              </valuemap>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()}=4</expression>
+                  <name>Status of "{#SNMPVALUE}" is in partial failure</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=3</expression>
+                  <name>Status of "{#SNMPVALUE}" is powered down</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=1</expression>
+                  <name>Status of "{#SNMPVALUE}" is unknown</name>
+                  <priority>INFO</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+          </item_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>Temperature LC Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.47.1.1.1.1.7,{#SNMPDESC},.1.3.6.1.2.1.47.1.1.1.1.2]</snmp_oid>
+          <key>entPhysicalName["LC"]</key>
+          <delay>1h</delay>
+          <filter>
+            <evaltype>AND</evaltype>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>^temperature [0-1]/[0-9]/CPU[0-1]$</value>
+                <formulaid>B</formulaid>
+              </condition>
+              <condition>
+                <macro>{#SNMPDESC}</macro>
+                <value>Hot Temperature SensorHotspot0</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <description>The textual name of the physical entity.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>Status of Temperature Sensor "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.1.1.1.5.{#SNMPINDEX}</snmp_oid>
+              <key>entSensorStatus["{#SNMPVALUE}","Temperature LC"]</key>
+              <history>30d</history>
+              <trends>0</trends>
+              <description>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</description>
+              <applications>
+                <application>
+                  <name>Temperature LC</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Temperature LC {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+              <valuemap>
+                <name>ENTITY-SENSORS-MIB::EntitySensorStatus</name>
+              </valuemap>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()}=3</expression>
+                  <name>Temperature Sensor "{#SNMPVALUE}" is nonoperational</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=2</expression>
+                  <name>Temperature Sensor "{#SNMPVALUE}" is unavailable</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Thresholds::"$1" | Temperature Alarm</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.2.1.1.4.{#SNMPINDEX}.6</snmp_oid>
+              <key>entSensorThresholdValue["{#SNMPVALUE}","Temperature LC","Alarm"]</key>
+              <delay>1h</delay>
+              <history>7d</history>
+              <trends>180d</trends>
+              <value_type>FLOAT</value_type>
+              <units>°C</units>
+              <applications>
+                <application>
+                  <name>Temperature LC</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Temperature LC {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+              <preprocessing>
+                <step>
+                  <type>MULTIPLIER</type>
+                  <params>0.1</params>
+                </step>
+              </preprocessing>
+            </item_prototype>
+            <item_prototype>
+              <name>Temperature on Sensor "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.1.1.1.4.{#SNMPINDEX}</snmp_oid>
+              <key>entSensorValue["{#SNMPVALUE}","Temperature LC"]</key>
+              <units>°C</units>
+              <description>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</description>
+              <applications>
+                <application>
+                  <name>Temperature LC</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Temperature LC {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+              <preprocessing>
+                <step>
+                  <type>MULTIPLIER</type>
+                  <params>0.1</params>
+                </step>
+              </preprocessing>
+            </item_prototype>
+          </item_prototypes>
+          <trigger_prototypes>
+            <trigger_prototype>
+              <expression>{Template Cisco ASR 9K Health SNMP:entSensorValue["{#SNMPVALUE}","Temperature LC"].last()}>{Template Cisco ASR 9K Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Temperature LC","Alarm"].last()}</expression>
+              <name>High Temperature Alarm "{#SNMPVALUE}"</name>
+              <priority>HIGH</priority>
+            </trigger_prototype>
+          </trigger_prototypes>
+          <graph_prototypes>
+            <graph_prototype>
+              <name>Temperature LC "{#SNMPVALUE}"</name>
+              <graph_items>
+                <graph_item>
+                  <drawtype>GRADIENT_LINE</drawtype>
+                  <color>00FF00</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>entSensorValue["{#SNMPVALUE}","Temperature LC"]</key>
+                  </item>
+                </graph_item>
+                <graph_item>
+                  <sortorder>1</sortorder>
+                  <drawtype>BOLD_LINE</drawtype>
+                  <color>FF0000</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>entSensorThresholdValue["{#SNMPVALUE}","Temperature LC","Alarm"]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+          </graph_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>Power Supply Sensors Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.47.1.1.1.1.7]</snmp_oid>
+          <key>entPhysicalName["Power Supply"]</key>
+          <delay>1h</delay>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>^power\-module</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <lifetime>0</lifetime>
+          <description>The textual name of the physical entity.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>Current Supplied by PowerSupply "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.117.1.1.2.1.3.{#SNMPINDEX}</snmp_oid>
+              <key>cefcFRUCurrent["{#SNMPVALUE}","Power Supply"]</key>
+              <delay>30m</delay>
+              <history>30d</history>
+              <trends>0</trends>
+              <value_type>FLOAT</value_type>
+              <units>W</units>
+              <description>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFRUCurrent Current supplied by the FRU (positive values) or current required to operate the FRU (negative values).</description>
+              <applications>
+                <application>
+                  <name>Power Supply</name>
+                </application>
+              </applications>
+            </item_prototype>
+            <item_prototype>
+              <name>Operational Status of PowerSupply "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.117.1.1.2.1.2.{#SNMPINDEX}</snmp_oid>
+              <key>cefcFRUPowerOperStatus["{#SNMPVALUE}","Power Supply"]</key>
+              <history>30d</history>
+              <trends>0</trends>
+              <description>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFRUPowerOperStatus Operational FRU power state.</description>
+              <applications>
+                <application>
+                  <name>Power Supply</name>
+                </application>
+              </applications>
+              <valuemap>
+                <name>CISCO-ENTITY-FRU-CONTROL-MIB::PowerOperType</name>
+              </valuemap>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()}=11</expression>
+                  <name>Connector rating exceeded on Power Supply "{#SNMPVALUE}"</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=10</expression>
+                  <name>Cooling capacity is insufficient on Power Supply "{#SNMPVALUE}"</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=9</expression>
+                  <name>FAN failed on Power Supply "{#SNMPVALUE}"</name>
+                  <priority>WARNING</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=7</expression>
+                  <name>FAN problem on Power Supply "{#SNMPVALUE}"</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=5</expression>
+                  <name>Power problem on Power Supply "{#SNMPVALUE}"</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=8 and {last()}=12</expression>
+                  <name>Power Supply "{#SNMPVALUE}" is failed</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=1</expression>
+                  <name>Power Supply "{#SNMPVALUE}" is powered off</name>
+                  <priority>WARNING</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=4</expression>
+                  <name>System power is insufficient on Power Supply "{#SNMPVALUE}"</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=6</expression>
+                  <name>Temperature problem on Power Supply "{#SNMPVALUE}"</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+          </item_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>Power Supply Current (A) Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.47.1.1.1.1.7]</snmp_oid>
+          <key>entPhysicalName["Power Supply Current"]</key>
+          <delay>1h</delay>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>^current [0|1]/PS[0|1]/M[0-2]/SP$</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <description>The textual name of the physical entity.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>"$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.1.1.1.4.{#SNMPINDEX}</snmp_oid>
+              <key>entPhysicalContainedInCurrent["{#SNMPVALUE}"]</key>
+              <value_type>FLOAT</value_type>
+              <units>A</units>
+              <applications>
+                <application>
+                  <name>Power Current</name>
+                </application>
+              </applications>
+              <preprocessing>
+                <step>
+                  <type>MULTIPLIER</type>
+                  <params>0.001</params>
+                </step>
+              </preprocessing>
+            </item_prototype>
+          </item_prototypes>
+          <graph_prototypes>
+            <graph_prototype>
+              <name>Current "{#SNMPVALUE}"</name>
+              <graph_items>
+                <graph_item>
+                  <drawtype>BOLD_LINE</drawtype>
+                  <color>FFFF00</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>entPhysicalContainedInCurrent["{#SNMPVALUE}"]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+          </graph_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>Power Supply Voltage (V) Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.47.1.1.1.1.7]</snmp_oid>
+          <key>entPhysicalName["Power Supply Voltage"]</key>
+          <delay>1h</delay>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>^voltage [0|1]/PS[0|1]/M[0-2]/SP$</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <description>The textual name of the physical entity.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>"$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.1.1.1.4.{#SNMPINDEX}</snmp_oid>
+              <key>entPhysicalContainedInVoltage["{#SNMPVALUE}"]</key>
+              <value_type>FLOAT</value_type>
+              <units>V</units>
+              <applications>
+                <application>
+                  <name>Power Voltage</name>
+                </application>
+              </applications>
+              <preprocessing>
+                <step>
+                  <type>MULTIPLIER</type>
+                  <params>0.001</params>
+                </step>
+              </preprocessing>
+            </item_prototype>
+          </item_prototypes>
+          <graph_prototypes>
+            <graph_prototype>
+              <name>Voltage "{#SNMPVALUE}"</name>
+              <graph_items>
+                <graph_item>
+                  <drawtype>BOLD_LINE</drawtype>
+                  <color>00FF00</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>entPhysicalContainedInVoltage["{#SNMPVALUE}"]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+          </graph_prototypes>
+        </discovery_rule>
+        <discovery_rule>
+          <name>Temperature RSP Discovery</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.47.1.1.1.1.7,{#SNMPDESC},.1.3.6.1.2.1.47.1.1.1.1.2]</snmp_oid>
+          <key>entPhysicalName["RSP"]</key>
+          <delay>1h</delay>
+          <filter>
+            <evaltype>AND</evaltype>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>^temperature [0-1]/RSP[0-1]/CPU[0-1]$</value>
+                <formulaid>B</formulaid>
+              </condition>
+              <condition>
+                <macro>{#SNMPDESC}</macro>
+                <value>Hot Temperature SensorHotspot0</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <description>The textual name of the physical entity.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>Status of Temperature Sensor "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.1.1.1.5.{#SNMPINDEX}</snmp_oid>
+              <key>entSensorStatus["{#SNMPVALUE}","Temperature RSP"]</key>
+              <history>30d</history>
+              <trends>0</trends>
+              <description>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</description>
+              <applications>
+                <application>
+                  <name>Temperature RSP</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Temperature RSP {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+              <valuemap>
+                <name>CISCO-ENTITY-SENSOR-MIB::SensorStatus</name>
+              </valuemap>
+              <trigger_prototypes>
+                <trigger_prototype>
+                  <expression>{last()}=3</expression>
+                  <name>Temperature Sensor "{#SNMPVALUE}" is nonoperational</name>
+                  <priority>HIGH</priority>
+                </trigger_prototype>
+                <trigger_prototype>
+                  <expression>{last()}=2</expression>
+                  <name>Temperature Sensor "{#SNMPVALUE}" is unavailable</name>
+                  <priority>AVERAGE</priority>
+                </trigger_prototype>
+              </trigger_prototypes>
+            </item_prototype>
+            <item_prototype>
+              <name>Thresholds::"$1" | Temperature Alarm</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.2.1.1.4.{#SNMPINDEX}.6</snmp_oid>
+              <key>entSensorThresholdValue["{#SNMPVALUE}","Temperature RSP","Alarm"]</key>
+              <delay>1h</delay>
+              <history>7d</history>
+              <trends>180d</trends>
+              <units>°C</units>
+              <applications>
+                <application>
+                  <name>Temperature RSP</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Temperature RSP {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+              <preprocessing>
+                <step>
+                  <type>MULTIPLIER</type>
+                  <params>0.1</params>
+                </step>
+              </preprocessing>
+            </item_prototype>
+            <item_prototype>
+              <name>Temperature on Sensor "$1"</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>1.3.6.1.4.1.9.9.91.1.1.1.1.4.{#SNMPINDEX}</snmp_oid>
+              <key>entSensorValue["{#SNMPVALUE}","Temperature RSP"]</key>
+              <value_type>FLOAT</value_type>
+              <units>°C</units>
+              <description>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</description>
+              <applications>
+                <application>
+                  <name>Temperature RSP</name>
+                </application>
+              </applications>
+              <application_prototypes>
+                <application_prototype>
+                  <name>Temperature RSP {#SNMPVALUE}</name>
+                </application_prototype>
+              </application_prototypes>
+              <preprocessing>
+                <step>
+                  <type>MULTIPLIER</type>
+                  <params>0.1</params>
+                </step>
+              </preprocessing>
+            </item_prototype>
+          </item_prototypes>
+          <trigger_prototypes>
+            <trigger_prototype>
+              <expression>{Template Cisco ASR 9K Health SNMP:entSensorValue["{#SNMPVALUE}","Temperature RSP"].last()}>{Template Cisco ASR 9K Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Temperature RSP","Alarm"].last()}</expression>
+              <name>High Temperature Alarm "{#SNMPVALUE}"</name>
+              <priority>HIGH</priority>
+            </trigger_prototype>
+          </trigger_prototypes>
+          <graph_prototypes>
+            <graph_prototype>
+              <name>Temperature RSP "{#SNMPVALUE}"</name>
+              <graph_items>
+                <graph_item>
+                  <drawtype>GRADIENT_LINE</drawtype>
+                  <color>00FF00</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>entSensorValue["{#SNMPVALUE}","Temperature RSP"]</key>
+                  </item>
+                </graph_item>
+                <graph_item>
+                  <sortorder>1</sortorder>
+                  <color>FF0000</color>
+                  <item>
+                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <key>entSensorThresholdValue["{#SNMPVALUE}","Temperature RSP","Alarm"]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+          </graph_prototypes>
+        </discovery_rule>
+      </discovery_rules>
+      <macros>
+        <macro>
+          <macro>{$CPU_HIGH_ALARM}</macro>
+          <value>80</value>
+          <description>% maximum alarm cpu</description>
+        </macro>
+        <macro>
+          <macro>{$CPU_HIGH_WARNING}</macro>
+          <value>70</value>
+          <description>% maximum warning cpu</description>
+        </macro>
+        <macro>
+          <macro>{$MEMORY_HIGH_ALARM}</macro>
+          <value>80</value>
+          <description>% maximum alarm memory</description>
+        </macro>
+        <macro>
+          <macro>{$MEMORY_HIGH_WARNING}</macro>
+          <value>70</value>
+          <description>% maximum warning memory</description>
+        </macro>
+      </macros>
+      <screens>
+        <screen>
+          <name>Screen CPU</name>
+          <hsize>1</hsize>
+          <vsize>2</vsize>
+          <screen_items>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>CPU #"{#SNMPINDEX}" 1min Usage</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>0</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>CPU #"{#SNMPINDEX}" 5min Usage</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>1</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+          </screen_items>
+        </screen>
+        <screen>
+          <name>Screen FAN</name>
+          <hsize>1</hsize>
+          <vsize>1</vsize>
+          <screen_items>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>FAN speed "{#SNMPVALUE}"/{#SNMPINDEX}</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>0</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+          </screen_items>
+        </screen>
+        <screen>
+          <name>Screen Memory</name>
+          <hsize>1</hsize>
+          <vsize>2</vsize>
+          <screen_items>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Memory {#SNMPVALUE}</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>0</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Memory Utilization Pool "{#SNMPVALUE}"</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>1</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+          </screen_items>
+        </screen>
+        <screen>
+          <name>Screen Power</name>
+          <hsize>1</hsize>
+          <vsize>3</vsize>
+          <screen_items>
+            <screen_item>
+              <resourcetype>0</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Power Consumption</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>0</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Current "{#SNMPVALUE}"</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>1</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Voltage "{#SNMPVALUE}"</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>2</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+          </screen_items>
+        </screen>
+        <screen>
+          <name>Screen Temperature</name>
+          <hsize>1</hsize>
+          <vsize>2</vsize>
+          <screen_items>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Temperature RSP "{#SNMPVALUE}"</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>0</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>20</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Temperature LC "{#SNMPVALUE}"</name>
+                <host>Template Cisco ASR 9K Health SNMP</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>0</x>
+              <y>1</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+          </screen_items>
+        </screen>
+      </screens>
+    </template>
+  </templates>
+  <graphs>
+    <graph>
+      <name>Power Consumption</name>
+      <graph_items>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>FF0000</color>
+          <item>
+            <host>Template Cisco ASR 9K Health SNMP</host>
+            <key>powerConsumption</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+  </graphs>
+  <value_maps>
+    <value_map>
+      <name>CISCO-ENTITY-FRU-CONTROL-MIB::CefcFanTrayStatusEntry</name>
+      <mappings>
+        <mapping>
+          <value>1</value>
+          <newvalue>unknown</newvalue>
+        </mapping>
+        <mapping>
+          <value>2</value>
+          <newvalue>up</newvalue>
+        </mapping>
+        <mapping>
+          <value>3</value>
+          <newvalue>down</newvalue>
+        </mapping>
+        <mapping>
+          <value>4</value>
+          <newvalue>warning</newvalue>
+        </mapping>
+      </mappings>
+    </value_map>
+    <value_map>
+      <name>CISCO-ENTITY-FRU-CONTROL-MIB::PowerOperType</name>
+      <mappings>
+        <mapping>
+          <value>1</value>
+          <newvalue>offEnvOther</newvalue>
+        </mapping>
+        <mapping>
+          <value>2</value>
+          <newvalue>on</newvalue>
+        </mapping>
+        <mapping>
+          <value>3</value>
+          <newvalue>offAdmin</newvalue>
+        </mapping>
+        <mapping>
+          <value>4</value>
+          <newvalue>offDenied</newvalue>
+        </mapping>
+        <mapping>
+          <value>5</value>
+          <newvalue>offEnvPower</newvalue>
+        </mapping>
+        <mapping>
+          <value>6</value>
+          <newvalue>offEnvTemp</newvalue>
+        </mapping>
+        <mapping>
+          <value>7</value>
+          <newvalue>offEnvFan</newvalue>
+        </mapping>
+        <mapping>
+          <value>8</value>
+          <newvalue>failed</newvalue>
+        </mapping>
+        <mapping>
+          <value>9</value>
+          <newvalue>onButFanFail</newvalue>
+        </mapping>
+        <mapping>
+          <value>10</value>
+          <newvalue>offCooling</newvalue>
+        </mapping>
+        <mapping>
+          <value>11</value>
+          <newvalue>offConnectorRating</newvalue>
+        </mapping>
+        <mapping>
+          <value>12</value>
+          <newvalue>onButInlinePowerFail</newvalue>
+        </mapping>
+      </mappings>
+    </value_map>
+    <value_map>
+      <name>CISCO-ENTITY-SENSOR-MIB::SensorStatus</name>
+      <mappings>
+        <mapping>
+          <value>1</value>
+          <newvalue>ok</newvalue>
+        </mapping>
+        <mapping>
+          <value>2</value>
+          <newvalue>unavailable</newvalue>
+        </mapping>
+        <mapping>
+          <value>3</value>
+          <newvalue>nonoperational</newvalue>
+        </mapping>
+      </mappings>
+    </value_map>
+    <value_map>
+      <name>ENTITY-SENSORS-MIB::EntitySensorStatus</name>
+      <mappings>
+        <mapping>
+          <value>1</value>
+          <newvalue>ok</newvalue>
+        </mapping>
+        <mapping>
+          <value>2</value>
+          <newvalue>unavailable</newvalue>
+        </mapping>
+        <mapping>
+          <value>3</value>
+          <newvalue>nonoperational</newvalue>
+        </mapping>
+      </mappings>
+    </value_map>
+  </value_maps>
+</zabbix_export>

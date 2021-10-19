@@ -1,0 +1,93 @@
+zabbix_export:
+  version: '5.2'
+  date: '2021-03-29T13:01:00Z'
+  groups:
+    -
+      name: Templates
+  templates:
+    -
+      template: RDPUsers
+      name: RDPUsers
+      groups:
+        -
+          name: Templates
+      applications:
+        -
+          name: Audit
+      items:
+        -
+          name: 'RDP Users amount'
+          type: ZABBIX_ACTIVE
+          key: RDPCountUsers
+          delay: 10s
+          applications:
+            -
+              name: Audit
+        -
+          name: 'Logged Users'
+          type: ZABBIX_ACTIVE
+          key: RDPUsers
+          delay: 10s
+          history: 2d
+          trends: '0'
+          value_type: TEXT
+          applications:
+            -
+              name: Audit
+        -
+          name: 'Unlogged Users'
+          type: ZABBIX_ACTIVE
+          key: RDPUsersUnlogged
+          delay: 10s
+          history: 2d
+          trends: '0'
+          value_type: TEXT
+          applications:
+            -
+              name: Audit
+      dashboards:
+        -
+          name: 'RDP  Users'
+          widgets:
+            -
+              type: PLAIN_TEXT
+              name: 'Logged Users'
+              width: '9'
+              height: '8'
+              fields:
+                -
+                  type: ITEM
+                  name: itemids
+                  value:
+                    key: RDPUsers
+                    host: RDPUsers
+            -
+              type: GRAPH_CLASSIC
+              name: 'RDP Users amount'
+              'y': '8'
+              width: '18'
+              height: '5'
+              fields:
+                -
+                  type: INTEGER
+                  name: source_type
+                  value: '1'
+                -
+                  type: ITEM
+                  name: itemid
+                  value:
+                    key: RDPCountUsers
+                    host: RDPUsers
+            -
+              type: PLAIN_TEXT
+              name: 'Unlogged Users'
+              x: '9'
+              width: '9'
+              height: '8'
+              fields:
+                -
+                  type: ITEM
+                  name: itemids
+                  value:
+                    key: RDPUsersUnlogged
+                    host: RDPUsers
