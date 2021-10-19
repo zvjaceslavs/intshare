@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:14:40Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template Bind queries</template><name>Template Bind queries</name><description>/etc/zabbix/zabbix_agentd.d/userparameter_bind.conf:&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:47:55Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template Bind queries</template><name>Template Bind queries</name><description>/etc/zabbix/zabbix_agentd.d/userparameter_bind.conf:&#13;
 &#13;
 UserParameter=bind.tcpcl,/bin/cat /tmp/namedtcp.log&#13;
 UserParameter=bind.udpcl,/bin/cat /tmp/namedudp.log&#13;

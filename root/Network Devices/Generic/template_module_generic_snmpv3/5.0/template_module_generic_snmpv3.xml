@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:20Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>Template Module Generic SNMPv3</template><name>Template Module Generic SNMPv3</name><description>Template Module Generic SNMPv3&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:11Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>Template Module Generic SNMPv3</template><name>Template Module Generic SNMPv3</name><description>Template Module Generic SNMPv3&#13;
 Template used Template Module Generic SNMPv2&#13;
 &#13;
 Ville Leinonen&#13;

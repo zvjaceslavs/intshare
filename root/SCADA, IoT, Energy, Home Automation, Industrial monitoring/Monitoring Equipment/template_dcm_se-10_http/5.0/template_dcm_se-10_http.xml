@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:30Z</date><groups><group><name>Hosts Datacenter Telegram</name></group></groups><templates><template><template>DCM SE-10</template><name>DCM SE-10</name><groups><group><name>Hosts Datacenter Telegram</name></group></groups><items><item><name>Entrada 1</name><type>DEPENDENT</type><key>entrada1</key><delay>0</delay><units>C</units><preprocessing><step><type>JAVASCRIPT</type><params>var values  = value.match(/\w+/g);
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:03Z</date><groups><group><name>Hosts Datacenter Telegram</name></group></groups><templates><template><template>DCM SE-10</template><name>DCM SE-10</name><groups><group><name>Hosts Datacenter Telegram</name></group></groups><items><item><name>Entrada 1</name><type>DEPENDENT</type><key>entrada1</key><delay>0</delay><units>C</units><preprocessing><step><type>JAVASCRIPT</type><params>var values  = value.match(/\w+/g);
 var v_int = parseInt(values[6], 16);
 return v_int;</params></step></preprocessing><master_item><key>http_get</key></master_item></item><item><name>Entrada 2</name><type>DEPENDENT</type><key>entrada2</key><delay>0</delay><units>C</units><preprocessing><step><type>JAVASCRIPT</type><params>var values  = value.match(/\w+/g);
 var v_int = parseInt(values[7], 16);

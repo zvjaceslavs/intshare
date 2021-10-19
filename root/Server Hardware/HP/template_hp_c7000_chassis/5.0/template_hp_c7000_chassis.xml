@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:26Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>bl7000_EN</template><name>HP C7000 Chassis (EN)</name><description>This template requires the MIBs:&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:48:59Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>bl7000_EN</template><name>HP C7000 Chassis (EN)</name><description>This template requires the MIBs:&#13;
 &#13;
 CPQRACK-MIB&#13;
 CPQHOST-MIB&#13;

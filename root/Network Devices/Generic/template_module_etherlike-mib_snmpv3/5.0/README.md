@@ -1,206 +1,37 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Template Module EtherLike-MIB SNMPv3",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Template Module EtherLike-MIB SNMPv3",
-        "flags": "0",
-        "templateid": "11119",
-        "description": "Template Module EtherLike-MIB SNMPv3\r\nTemplate used Template Module EtherLike-MIB SNMPv2\r\n\r\nVille Leinonen\r\nhttps://www.hacknetwork.org\r\nVersion 1.1",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [],
-        "triggers": [],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": [
-            {
-                "itemid": "57491",
-                "type": "20",
-                "snmp_oid": "discovery[{#SNMPVALUE},1.3.6.1.2.1.10.7.2.1.19,{#IFOPERSTATUS},1.3.6.1.2.1.2.2.1.8,{#IFALIAS},1.3.6.1.2.1.31.1.1.1.18,{#IFNAME},1.3.6.1.2.1.31.1.1.1.1,{#IFDESCR},1.3.6.1.2.1.2.2.1.2]",
-                "hostid": "11119",
-                "name": "EtherLike-MIB Discovery",
-                "key_": "net.if.duplex.discoveryV3",
-                "delay": "1h",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "1",
-                "interfaceid": "0",
-                "description": "Discovering interfaces from IF-MIB and EtherLike-MIB. Interfaces with up(1) Operational Status are discovered.",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "discover": "0",
-                "state": "0",
-                "error": "",
-                "items": [
-                    {
-                        "itemid": "57492",
-                        "type": "20",
-                        "snmp_oid": "1.3.6.1.2.1.10.7.2.1.19.{#SNMPINDEX}",
-                        "hostid": "11119",
-                        "name": "Interface {#IFNAME}({#IFALIAS}): Duplex status",
-                        "key_": "net.if.duplex[dot3StatsDuplexStatus.{#SNMPINDEX}]",
-                        "delay": "1m",
-                        "history": "7d",
-                        "trends": "365d",
-                        "status": "0",
-                        "value_type": "3",
-                        "trapper_hosts": "",
-                        "units": "",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "19",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "MIB: EtherLike-MIB\r\nThe current mode of operation of the MAC\r\nentity.  'unknown' indicates that the current\r\nduplex mode could not be determined.\r\n\r\nManagement control of the duplex mode is\r\naccomplished through the MAU MIB.  When\r\nan interface does not support autonegotiation,\r\nor when autonegotiation is not enabled, the\r\nduplex mode is controlled using\r\nifMauDefaultType.  When autonegotiation is\r\nsupported and enabled, duplex mode is controlled\r\nusing ifMauAutoNegAdvertisedBits.  In either\r\ncase, the currently operating duplex mode is\r\nreflected both in this object and in ifMauType.\r\n\r\nNote that this object provides redundant\r\ninformation with ifMauType.  Normally, redundant\r\nobjects are discouraged.  However, in this\r\ninstance, it allows a management application to\r\ndetermine the duplex status of an interface\r\nwithout having to know every possible value of\r\nifMauType.  This was felt to be sufficiently\r\nvaluable to justify the redundancy.\r\nReference: [IEEE 802.3 Std.], 30.3.1.1.32,aDuplexStatus.",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "0",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    }
-                ],
-                "triggers": [
-                    {
-                        "triggerid": "27767",
-                        "expression": "{33640}=2",
-                        "description": "Interface {#IFNAME}({#IFALIAS}): In half-duplex mode",
-                        "url": "",
-                        "status": "0",
-                        "value": "0",
-                        "priority": "2",
-                        "lastchange": "0",
-                        "comments": "Please check autonegotiation settings and cabling",
-                        "error": "",
-                        "templateid": "0",
-                        "type": "0",
-                        "state": "0",
-                        "flags": "2",
-                        "recovery_mode": "0",
-                        "recovery_expression": "",
-                        "correlation_mode": "0",
-                        "correlation_tag": "",
-                        "manual_close": "0",
-                        "opdata": "",
-                        "discover": "0"
-                    }
-                ],
-                "graphs": [],
-                "hostPrototypes": [],
-                "filter": {
-                    "evaltype": "1",
-                    "formula": "",
-                    "conditions": [
-                        {
-                            "macro": "{#IFOPERSTATUS}",
-                            "value": "1",
-                            "operator": "8",
-                            "formulaid": "A"
-                        },
-                        {
-                            "macro": "{#SNMPVALUE}",
-                            "value": "(2|3)",
-                            "operator": "8",
-                            "formulaid": "B"
-                        }
-                    ],
-                    "eval_formula": "A and B"
-                }
-            }
-        ]
-    }
-]
+# Template Module EtherLike-MIB SNMPv3
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|EtherLike-MIB Discovery|<p>Discovering interfaces from IF-MIB and EtherLike-MIB. Interfaces with up(1) Operational Status are discovered.</p>|`SNMP agent`|net.if.duplex.discoveryV3<p>Update: 1h</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Interface {#IFNAME}({#IFALIAS}): Duplex status|<p>MIB: EtherLike-MIB The current mode of operation of the MAC entity. 'unknown' indicates that the current duplex mode could not be determined. Management control of the duplex mode is accomplished through the MAU MIB. When an interface does not support autonegotiation, or when autonegotiation is not enabled, the duplex mode is controlled using ifMauDefaultType. When autonegotiation is supported and enabled, duplex mode is controlled using ifMauAutoNegAdvertisedBits. In either case, the currently operating duplex mode is reflected both in this object and in ifMauType. Note that this object provides redundant information with ifMauType. Normally, redundant objects are discouraged. However, in this instance, it allows a management application to determine the duplex status of an interface without having to know every possible value of ifMauType. This was felt to be sufficiently valuable to justify the redundancy. Reference: [IEEE 802.3 Std.], 30.3.1.1.32,aDuplexStatus.</p>|`SNMP agent`|net.if.duplex[dot3StatsDuplexStatus.{#SNMPINDEX}]<p>Update: 1m</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|Interface {#IFNAME}({#IFALIAS}): In half-duplex mode|<p>Please check autonegotiation settings and cabling</p>|warning|

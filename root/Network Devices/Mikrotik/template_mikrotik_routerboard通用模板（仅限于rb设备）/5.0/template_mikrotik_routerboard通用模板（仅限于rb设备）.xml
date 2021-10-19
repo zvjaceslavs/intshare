@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:32Z</date><groups><group><name>Templates/Mikrotik Network Devices</name></group></groups><templates><template><template>Mikrotik RouterBOARD</template><name>Mikrotik RouterBOARD</name><description>Ros 专用模板（RB设备）&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:07Z</date><groups><group><name>Templates/Mikrotik Network Devices</name></group></groups><templates><template><template>Mikrotik RouterBOARD</template><name>Mikrotik RouterBOARD</name><description>Ros 专用模板（RB设备）&#13;
 &#13;
 该模板只用于RouterOS路由系统监控，其它设备请绕路。&#13;
 &#13;

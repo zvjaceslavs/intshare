@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:59Z</date><groups><group><name>Juniper Optical  Interfaces</name></group></groups><templates><template><template>Juniper-Optical-Interfaces</template><name>Juniper-Optical-Interfaces</name><description>Based on Zabbix's official Template Net Juniper SNMPv2, only minor modifications have been made.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:43Z</date><groups><group><name>Juniper Optical  Interfaces</name></group></groups><templates><template><template>Juniper-Optical-Interfaces</template><name>Juniper-Optical-Interfaces</name><description>Based on Zabbix's official Template Net Juniper SNMPv2, only minor modifications have been made.&#13;
 1.The interfaces in the down and shutdown states have been filtered,virtual interfaces have also been filtered&#13;
 2.The trigger threshold seting is -19dbm or 0dbm.&#13;
 3.only RxLaserPower items,if you need TxLaserPower items but don’t know how to do it, please email me.&#13;

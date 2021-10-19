@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:51Z</date><groups><group><name>_Templates_Linux</name></group></groups><templates><template><template>_T_Zbx_Lin_HAPROXY2_stats_Prometheus</template><name>_T_Zbx_Lin_HAPROXY2_stats_Prometheus</name><description>frontend stats&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:32Z</date><groups><group><name>_Templates_Linux</name></group></groups><templates><template><template>_T_Zbx_Lin_HAPROXY2_stats_Prometheus</template><name>_T_Zbx_Lin_HAPROXY2_stats_Prometheus</name><description>frontend stats&#13;
     bind *:8880&#13;
     http-request use-service prometheus-exporter if { path /metrics }&#13;
     stats enable&#13;

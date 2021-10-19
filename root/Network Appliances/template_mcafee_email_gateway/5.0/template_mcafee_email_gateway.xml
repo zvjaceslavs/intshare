@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:19Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template SNMP McAfee Email Gateway</template><name>Template SNMP McAfee Email Gateway (SMTP - POP3)</name><description>Created by Samuel Martins&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:08Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template SNMP McAfee Email Gateway</template><name>Template SNMP McAfee Email Gateway (SMTP - POP3)</name><description>Created by Samuel Martins&#13;
 2019-04-24&#13;
 Version 1.00&#13;
 https://github.com/slunart/Zabbix-Templates&#13;

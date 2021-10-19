@@ -1,299 +1,39 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Sinal SFP Mikrotik",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Sinal SFP Mikrotik",
-        "flags": "0",
-        "templateid": "10960",
-        "description": "Igor Dib",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [],
-        "triggers": [],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": [
-            {
-                "itemid": "52945",
-                "type": "20",
-                "snmp_oid": "discovery[{#IFOPERSTATUS},1.3.6.1.2.1.2.2.1.8,{#IFADMINSTATUS},1.3.6.1.2.1.2.2.1.7,{#IFALIAS},1.3.6.1.2.1.31.1.1.1.18,{#IFNAME},1.3.6.1.2.1.31.1.1.1.1,{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFTYPE},1.3.6.1.2.1.2.2.1.3]",
-                "hostid": "10960",
-                "name": "Network Interfaces Discovery",
-                "key_": "net.if2.discovery",
-                "delay": "1h",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "1",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "discover": "0",
-                "state": "0",
-                "error": "",
-                "items": [
-                    {
-                        "itemid": "52946",
-                        "type": "20",
-                        "snmp_oid": "1.3.6.1.4.1.14988.1.1.19.1.1.10.{#SNMPINDEX}",
-                        "hostid": "10960",
-                        "name": "Interface {#IFNAME}({#IFALIAS}): RX Power",
-                        "key_": "enterprises.[RXenterprises.{#SNMPINDEX}]",
-                        "delay": "30s",
-                        "history": "90d",
-                        "trends": "365d",
-                        "status": "0",
-                        "value_type": "0",
-                        "trapper_hosts": "",
-                        "units": "dBm",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "0",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "0",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    },
-                    {
-                        "itemid": "52947",
-                        "type": "20",
-                        "snmp_oid": "1.3.6.1.4.1.14988.1.1.19.1.1.9.{#SNMPINDEX}",
-                        "hostid": "10960",
-                        "name": "Interface {#IFNAME}({#IFALIAS}): TX Power",
-                        "key_": "enterprises.[TXenterprises.{#SNMPINDEX}]",
-                        "delay": "30s",
-                        "history": "90d",
-                        "trends": "365d",
-                        "status": "0",
-                        "value_type": "0",
-                        "trapper_hosts": "",
-                        "units": "dBm",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "0",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "0",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    }
-                ],
-                "triggers": [
-                    {
-                        "triggerid": "25994",
-                        "expression": "{31462}<-25.",
-                        "description": "Interface {#IFNAME}({#IFALIAS}): Sinal RX Est\u00e1 acima de -25dBm",
-                        "url": "",
-                        "status": "0",
-                        "value": "0",
-                        "priority": "2",
-                        "lastchange": "0",
-                        "comments": "",
-                        "error": "",
-                        "templateid": "0",
-                        "type": "0",
-                        "state": "0",
-                        "flags": "2",
-                        "recovery_mode": "1",
-                        "recovery_expression": "{31462}>-25.",
-                        "correlation_mode": "0",
-                        "correlation_tag": "",
-                        "manual_close": "0",
-                        "opdata": "",
-                        "discover": "0"
-                    },
-                    {
-                        "triggerid": "25995",
-                        "expression": "{31463}<-25",
-                        "description": "Interface {#IFNAME}({#IFALIAS}): Sinal TX Est\u00e1 acima de -25dBm",
-                        "url": "",
-                        "status": "0",
-                        "value": "0",
-                        "priority": "2",
-                        "lastchange": "0",
-                        "comments": "",
-                        "error": "",
-                        "templateid": "0",
-                        "type": "0",
-                        "state": "0",
-                        "flags": "2",
-                        "recovery_mode": "1",
-                        "recovery_expression": "{31463}>-25",
-                        "correlation_mode": "0",
-                        "correlation_tag": "",
-                        "manual_close": "0",
-                        "opdata": "",
-                        "discover": "0"
-                    }
-                ],
-                "graphs": [
-                    {
-                        "graphid": "3522",
-                        "name": "Interface {#IFNAME}({#IFALIAS}): Sinal SFP",
-                        "width": "900",
-                        "height": "200",
-                        "yaxismin": "0",
-                        "yaxismax": "100",
-                        "templateid": "0",
-                        "show_work_period": "1",
-                        "show_triggers": "1",
-                        "graphtype": "0",
-                        "show_legend": "1",
-                        "show_3d": "0",
-                        "percent_left": "0",
-                        "percent_right": "0",
-                        "ymin_type": "0",
-                        "ymax_type": "0",
-                        "ymin_itemid": "0",
-                        "ymax_itemid": "0",
-                        "flags": "2",
-                        "discover": "0"
-                    }
-                ],
-                "hostPrototypes": [],
-                "filter": {
-                    "evaltype": "0",
-                    "formula": "",
-                    "conditions": [
-                        {
-                            "macro": "{#IFNAME}",
-                            "value": "@EXCLUSAO_ETHER-SINAL SFP",
-                            "operator": "8",
-                            "formulaid": "A"
-                        }
-                    ],
-                    "eval_formula": "A"
-                }
-            }
-        ]
-    }
-]
+# Sinal SFP Mikrotik
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Network Interfaces Discovery|<p>-</p>|`SNMP agent`|net.if2.discovery<p>Update: 1h</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Interface {#IFNAME}({#IFALIAS}): RX Power|<p>-</p>|`SNMP agent`|enterprises.[RXenterprises.{#SNMPINDEX}]<p>Update: 30s</p>|
+|Interface {#IFNAME}({#IFALIAS}): TX Power|<p>-</p>|`SNMP agent`|enterprises.[TXenterprises.{#SNMPINDEX}]<p>Update: 30s</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|Interface {#IFNAME}({#IFALIAS}): Sinal RX Está acima de -25dBm|<p>-</p>|warning|
+|Interface {#IFNAME}({#IFALIAS}): Sinal TX Está acima de -25dBm|<p>-</p>|warning|

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:25Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>OS Linux diskstats</template><name>OS Linux diskstats</name><description>Self-contained template for monitoring disk statistics on Linux systems.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:17Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>OS Linux diskstats</template><name>OS Linux diskstats</name><description>Self-contained template for monitoring disk statistics on Linux systems.&#13;
 &#13;
 Source: https://github.com/frei-style/zabbix-linux-diskstats-template</description><groups><group><name>Templates</name></group></groups><applications><application><name>diskstats</name></application></applications><items><item><name>diskstats (master)</name><type>ZABBIX_ACTIVE</type><key>vfs.file.contents[/proc/diskstats]</key><delay>30s</delay><history>0</history><trends>0</trends><value_type>TEXT</value_type><applications><application><name>diskstats</name></application></applications><preprocessing><step><type>JAVASCRIPT</type><params>// https://www.kernel.org/doc/Documentation/ABI/testing/procfs-diskstats
 // https://www.kernel.org/doc/Documentation/admin-guide/iostats.rst

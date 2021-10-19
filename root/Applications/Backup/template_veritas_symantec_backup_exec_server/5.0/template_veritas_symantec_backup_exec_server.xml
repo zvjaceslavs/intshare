@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:13Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template Backup Exec Server</template><name>Template Backup Exec Server</name><description>Veritas/Simantec Backup Exec Server template&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:48:41Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template Backup Exec Server</template><name>Template Backup Exec Server</name><description>Veritas/Simantec Backup Exec Server template&#13;
 All checks executes with T-SQL, so you must configure Zabbix to use FreeTDS for MS SQL Server.&#13;
 Backup Jobs ODBC LLD rules:&#13;
 - Backup Exec Windows Service&#13;

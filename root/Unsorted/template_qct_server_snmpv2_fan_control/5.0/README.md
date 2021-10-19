@@ -1,222 +1,37 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "QCT Hardware Health",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "QCT Hardware Health",
-        "flags": "0",
-        "templateid": "11128",
-        "description": "",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [],
-        "triggers": [],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": [
-            {
-                "itemid": "57923",
-                "type": "20",
-                "snmp_oid": "discovery[{#SNMPVALUE},.1.3.6.1.4.1.7244.1.2.1.3.3.1.1,{#FANNAME},.1.3.6.1.4.1.7244.1.2.1.3.3.1.3]",
-                "hostid": "11128",
-                "name": "Fan Index",
-                "key_": "fan.index",
-                "delay": "1m",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "1",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "discover": "0",
-                "state": "0",
-                "error": "",
-                "items": [
-                    {
-                        "itemid": "57924",
-                        "type": "20",
-                        "snmp_oid": ".1.3.6.1.4.1.7244.1.2.1.3.3.1.4.{#SNMPINDEX}",
-                        "hostid": "11128",
-                        "name": "{#FANNAME} Fan RPM",
-                        "key_": "fan.rpm.[{#SNMPINDEX}]",
-                        "delay": "1m",
-                        "history": "90d",
-                        "trends": "365d",
-                        "status": "0",
-                        "value_type": "0",
-                        "trapper_hosts": "",
-                        "units": "",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "0",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "0",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    },
-                    {
-                        "itemid": "57925",
-                        "type": "20",
-                        "snmp_oid": ".1.3.6.1.4.1.7244.1.2.1.3.3.1.2.{#SNMPINDEX}",
-                        "hostid": "11128",
-                        "name": "{#FANNAME} Fan Status",
-                        "key_": "fan.status.[{#SNMPINDEX}]",
-                        "delay": "1m",
-                        "history": "90d",
-                        "trends": "365d",
-                        "status": "0",
-                        "value_type": "0",
-                        "trapper_hosts": "",
-                        "units": "",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "734",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "0",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    }
-                ],
-                "triggers": [],
-                "graphs": [],
-                "hostPrototypes": [],
-                "filter": {
-                    "evaltype": "0",
-                    "formula": "",
-                    "conditions": [],
-                    "eval_formula": ""
-                }
-            }
-        ]
-    }
-]
+# QCT Hardware Health
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Fan Index|<p>-</p>|`SNMP agent`|fan.index<p>Update: 1m</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|{#FANNAME} Fan RPM|<p>-</p>|`SNMP agent`|fan.rpm.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|{#FANNAME} Fan Status|<p>-</p>|`SNMP agent`|fan.status.[{#SNMPINDEX}]<p>Update: 1m</p>|
+## Triggers
+
+There are no triggers in this template.
+

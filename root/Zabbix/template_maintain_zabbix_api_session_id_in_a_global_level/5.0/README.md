@@ -1,156 +1,37 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Check if Zabbix session key is valid via API",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Check if Zabbix session key is valid via API",
-        "flags": "0",
-        "templateid": "11061",
-        "description": "To use template create new user 'api' and set user type 'Zabbix Super Admin'.\r\n\r\nSetup global macros:\r\n{$Z_API_USER}\r\n{$Z_API_PASSWORD}\r\n{$Z_API_PHP}\r\n{$Z_API_SESSIONID}\r\n\r\nfor example:\r\n\r\n{$Z_API_USER} = 'api'\r\n{$Z_API_PASSWORD} = 'jp5Jda5ABveGVEbSyJgZ'\r\n{$Z_API_PHP} = 'http://127.0.0.1/api_jsonrpc.php'\r\n\r\nObtain new session id instantly\r\ncurl -sk http://127.0.0.1/api_jsonrpc.php -X POST -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d '{\"jsonrpc\":\"2.0\",\"method\":\"user.login\",\"params\":{\"user\":\"api\",\"password\":\"jp5Jda5ABveGVEbSyJgZ\"},\"id\":1}' | grep -E -o \"([0-9a-f]{32,32})\"\r\n\r\nInstall session:\r\n{$Z_API_SESSIONID} = '2fdcdb96409fb134f82a2029342ce933'",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [
-            {
-                "itemid": "56154",
-                "type": "19",
-                "snmp_oid": "",
-                "hostid": "11061",
-                "name": "Validate session key",
-                "key_": "check.session.key",
-                "delay": "15s",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "formula": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "0",
-                "interfaceid": "0",
-                "description": "Validate session key by listing proxies",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "evaltype": "0",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "{$Z_API_PHP}",
-                "query_fields": [],
-                "posts": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"method\": \"proxy.get\",\r\n    \"params\": {\r\n        \"output\": [\"name\"]\r\n    },\r\n    \"auth\": \"{$Z_API_SESSIONID}\",\r\n    \"id\": 1\r\n}",
-                "status_codes": "200",
-                "follow_redirects": "0",
-                "post_type": "2",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "1",
-                "output_format": "1",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "state": "0",
-                "error": "",
-                "lastclock": "0",
-                "lastns": "0",
-                "lastvalue": "",
-                "prevvalue": ""
-            }
-        ],
-        "triggers": [
-            {
-                "triggerid": "27306",
-                "expression": "{33064}=2",
-                "description": "Invalid URL configureded for Zabbix API",
-                "url": "",
-                "status": "0",
-                "value": "0",
-                "priority": "5",
-                "lastchange": "0",
-                "comments": "Please install the right value for { $Z_API_PHP} under:\r\nAdministration -> General -> Macros\r\nCurrently, the value is installed as {$Z_API_PHP} and it is not working.\r\n\r\nThen reload the configuration cache:\r\nzabbix_server -R config_cache_reload",
-                "error": "",
-                "templateid": "0",
-                "type": "0",
-                "state": "0",
-                "flags": "0",
-                "recovery_mode": "0",
-                "recovery_expression": "",
-                "correlation_mode": "0",
-                "correlation_tag": "",
-                "manual_close": "0",
-                "opdata": ""
-            },
-            {
-                "triggerid": "27307",
-                "expression": "{33065}=1",
-                "description": "Session key is not valid. HTTP works fine",
-                "url": "",
-                "status": "0",
-                "value": "0",
-                "priority": "5",
-                "lastchange": "0",
-                "comments": "You may need to obtain a new session key:\r\n\r\ncurl -sk {$Z_API_PHP} -X POST -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d '{\"jsonrpc\":\"2.0\",\"method\":\"user.login\",\"params\":{\"user\":\"{$Z_API_USER}\",\"password\":\"{$Z_API_PASSWORD}\"},\"id\":1}' | grep -E -o \"([0-9a-f]{32,32})\"",
-                "error": "",
-                "templateid": "0",
-                "type": "0",
-                "state": "0",
-                "flags": "0",
-                "recovery_mode": "0",
-                "recovery_expression": "",
-                "correlation_mode": "0",
-                "correlation_tag": "",
-                "manual_close": "1",
-                "opdata": ""
-            }
-        ],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": []
-    }
-]
+# Check if Zabbix session key is valid via API
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Validate session key|<p>Validate session key by listing proxies</p>|`HTTP agent`|check.session.key<p>Update: 15s</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|Invalid URL configureded for Zabbix API|<p>Please install the right value for { $Z_API_PHP} under: Administration -> General -> Macros Currently, the value is installed as {$Z_API_PHP} and it is not working. Then reload the configuration cache: zabbix_server -R config_cache_reload</p>|disaster|
+|Session key is not valid. HTTP works fine|<p>You may need to obtain a new session key: curl -sk {$Z_API_PHP} -X POST -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d '{"jsonrpc":"2.0","method":"user.login","params":{"user":"{$Z_API_USER}","password":"{$Z_API_PASSWORD}"},"id":1}' | grep -E -o "([0-9a-f]{32,32})"</p>|disaster|

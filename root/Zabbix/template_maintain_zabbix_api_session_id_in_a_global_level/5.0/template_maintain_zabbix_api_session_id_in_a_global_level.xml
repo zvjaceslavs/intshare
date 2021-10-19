@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:06Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>Check if Zabbix session key is valid via API</template><name>Check if Zabbix session key is valid via API</name><description>To use template create new user 'api' and set user type 'Zabbix Super Admin'.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:51Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>Check if Zabbix session key is valid via API</template><name>Check if Zabbix session key is valid via API</name><description>To use template create new user 'api' and set user type 'Zabbix Super Admin'.&#13;
 &#13;
 Setup global macros:&#13;
 {$Z_API_USER}&#13;

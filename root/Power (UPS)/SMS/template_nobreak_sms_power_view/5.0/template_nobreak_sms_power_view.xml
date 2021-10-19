@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:47Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template Nobreak SMS Powerview by HTTP</template><name>Template Nobreak SMS Powerview by HTTP</name><description>Version 1.0.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:43Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template Nobreak SMS Powerview by HTTP</template><name>Template Nobreak SMS Powerview by HTTP</name><description>Version 1.0.&#13;
 &#13;
 Para utilização com o software SMS Power View, testado com o aplicativo versão Versão: V3.00.02.00.&#13;
 Meu Nobreak é Entrada/Saída 220V, portanto para 110V seriam necessários ajustes. Se tiver alguém utilizando eu posso utilizar parâmetros como Macro.&#13;

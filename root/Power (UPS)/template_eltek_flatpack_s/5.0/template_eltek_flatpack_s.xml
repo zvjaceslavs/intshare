@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:47Z</date><groups><group><name>DC-power systems</name></group></groups><templates><template><template>Flatpack S</template><name>Eltek Flatpack S</name><description>Eltek Flatpack S DC-power system.  Template for 2 rectifiers, 1 battery set. No solar power. No wind. No generator.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:26Z</date><groups><group><name>DC-power systems</name></group></groups><templates><template><template>Flatpack S</template><name>Eltek Flatpack S</name><description>Eltek Flatpack S DC-power system.  Template for 2 rectifiers, 1 battery set. No solar power. No wind. No generator.&#13;
 &#13;
 Version 0.3 - Kari Karvonen &lt;kari.karvonen@kasenet.fi&gt;&#13;
 &#13;

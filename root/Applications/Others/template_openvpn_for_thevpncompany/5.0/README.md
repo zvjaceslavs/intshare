@@ -1,278 +1,71 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Template OpenVPN",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Template OpenVPN",
-        "flags": "0",
-        "templateid": "11042",
-        "description": "Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au\r\n\r\nThe VPN Company provides the source code to create an end-to-end VPN Company.",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [],
-        "triggers": [],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": [
-            {
-                "itemid": "55632",
-                "type": "0",
-                "snmp_oid": "",
-                "hostid": "11042",
-                "name": "Discover Connected Users",
-                "key_": "thevpncompany.openvpn.client.discovery",
-                "delay": "1m",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "1",
-                "interfaceid": "0",
-                "description": "Discover the users that are connected to an OpenVPN Server",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "discover": "0",
-                "state": "0",
-                "error": "",
-                "items": [
-                    {
-                        "itemid": "55633",
-                        "type": "0",
-                        "snmp_oid": "",
-                        "hostid": "11042",
-                        "name": "Data for {#ID}",
-                        "key_": "thevpncompany.openvpn.client.if.size[{#ID}]",
-                        "delay": "30s",
-                        "history": "90d",
-                        "trends": "365d",
-                        "status": "0",
-                        "value_type": "3",
-                        "trapper_hosts": "",
-                        "units": "B",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "0",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "0",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    }
-                ],
-                "triggers": [],
-                "graphs": [],
-                "hostPrototypes": [],
-                "filter": {
-                    "evaltype": "0",
-                    "formula": "",
-                    "conditions": [],
-                    "eval_formula": ""
-                }
-            }
-        ]
-    },
-    {
-        "proxy_hostid": "0",
-        "host": "Template VPN Server",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Template VPN Server",
-        "flags": "0",
-        "templateid": "11043",
-        "description": "Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au\r\n\r\nThe VPN Company provides the source code to create an end-to-end VPN Company.",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [
-            {
-                "itemid": "55631",
-                "type": "0",
-                "snmp_oid": "",
-                "hostid": "11043",
-                "name": "Total Network Usage",
-                "key_": "vpncompany.if.size",
-                "delay": "1m",
-                "history": "45d",
-                "trends": "365d",
-                "status": "0",
-                "value_type": "3",
-                "trapper_hosts": "",
-                "units": "B",
-                "formula": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "0",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "evaltype": "0",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "output_format": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "state": "0",
-                "error": "",
-                "lastclock": "0",
-                "lastns": "0",
-                "lastvalue": "0",
-                "prevvalue": "0"
-            }
-        ],
-        "triggers": [],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": []
-    }
-]
+# Template OpenVPN
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Discover Connected Users|<p>Discover the users that are connected to an OpenVPN Server</p>|`Zabbix agent`|thevpncompany.openvpn.client.discovery<p>Update: 1m</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Data for {#ID}|<p>-</p>|`Zabbix agent`|thevpncompany.openvpn.client.if.size[{#ID}]<p>Update: 30s</p>|
+## Triggers
+
+There are no triggers in this template.
+
+# Template VPN Server
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Total Network Usage|<p>-</p>|`Zabbix agent`|vpncompany.if.size<p>Update: 1m</p>|
+## Triggers
+
+There are no triggers in this template.
+

@@ -1,134 +1,36 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Auto register an active Zabbix proxy",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Auto register an active Zabbix proxy",
-        "flags": "0",
-        "templateid": "11062",
-        "description": "prxid=$(/usr/bin/curl -sk {$Z_API_PHP} -X POST -H \"Content-Type: application/json\" -d '\r\n{\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"proxy.create\",\r\n\t\"params\": {\r\n\t\t\"host\": \"{EVENT.TAGS}\",\r\n\t\t\"status\": \"5\"\r\n\t},\r\n\t\"auth\": \"{$Z_API_SESSIONID}\",\r\n\t\"id\": 1\r\n}\r\n' | grep -o -E \"[0-9]+{3,}\") && \\\r\n\r\n/usr/bin/curl -sk {$Z_API_PHP} -X POST -H \"Content-Type: application/json\" -d \"\r\n{\r\n    \\\"jsonrpc\\\": \\\"2.0\\\",\r\n    \\\"method\\\": \\\"host.create\\\",\r\n    \\\"params\\\": {\r\n        \\\"host\\\": \\\"{EVENT.TAGS}\\\",\r\n        \\\"interfaces\\\": [\r\n            {\r\n                \\\"type\\\": 1,\r\n                \\\"main\\\": 1,\r\n                \\\"useip\\\": 1,\r\n                \\\"ip\\\": \\\"127.0.0.1\\\",\r\n                \\\"dns\\\": \\\"\\\",\r\n                \\\"port\\\": \\\"10050\\\"\r\n            }\r\n        ],\r\n        \\\"groups\\\": [\r\n            {\r\n                \\\"groupid\\\": \\\"4\\\"\r\n            }\r\n        ],\r\n        \\\"templates\\\": [\r\n            {\r\n                \\\"templateid\\\": \\\"10048\\\"\r\n            }\r\n        ],\r\n        \\\"proxy_hostid\\\":\\\"$prxid\\\"\r\n    },\r\n    \\\"auth\\\": \\\"{$Z_API_SESSIONID}\\\",\r\n    \\\"id\\\": 1\r\n}\r\n\" && \\\r\n\r\n/usr/sbin/zabbix_server -R config_cache_reload && \\\r\n\r\n/usr/bin/sleep 20 && \\\r\n\r\n/usr/bin/curl -sk {$Z_API_PHP} -X POST -H \"Content-Type: application/json\" -d '\r\n{\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"event.acknowledge\",\r\n\t\"params\": {\r\n\t\t\"eventids\": \"{EVENT.ID}\",\r\n\t\t\"action\": 1,\r\n\t\t\"message\": \"Problem resolved.\"\r\n\t},\r\n\t\"auth\": \"{$Z_API_SESSIONID}\",\r\n\t\"id\": 1\r\n}\r\n'",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [
-            {
-                "itemid": "56155",
-                "type": "7",
-                "snmp_oid": "",
-                "hostid": "11062",
-                "name": "zabbix_server.log proxy not found",
-                "key_": "log[/var/log/zabbix/zabbix_server.log,\"cannot parse proxy data from active proxy at.*proxy.*not found\",,,skip,,]",
-                "delay": "1s",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "2",
-                "trapper_hosts": "",
-                "units": "",
-                "formula": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "0",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "evaltype": "0",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "output_format": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "state": "0",
-                "error": "",
-                "lastclock": "0",
-                "lastns": "0",
-                "lastvalue": "",
-                "prevvalue": ""
-            }
-        ],
-        "triggers": [
-            {
-                "triggerid": "27308",
-                "expression": "{33066}=1",
-                "description": "{{ITEM.VALUE}.regsub(\"(proxy \\\".*\\\" not found)\",\\1)}",
-                "url": "",
-                "status": "0",
-                "value": "0",
-                "priority": "3",
-                "lastchange": "0",
-                "comments": "",
-                "error": "",
-                "templateid": "0",
-                "type": "0",
-                "state": "0",
-                "flags": "0",
-                "recovery_mode": "0",
-                "recovery_expression": "",
-                "correlation_mode": "0",
-                "correlation_tag": "",
-                "manual_close": "1",
-                "opdata": ""
-            }
-        ],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": []
-    }
-]
+# Auto register an active Zabbix proxy
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|zabbix_server.log proxy not found|<p>-</p>|`Zabbix agent (active)`|log[/var/log/zabbix/zabbix_server.log,"cannot parse proxy data from active proxy at.*proxy.*not found",,,skip,,]<p>Update: 1s</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|{{ITEM.VALUE}.regsub("(proxy \".*\" not found)",\1)}|<p>-</p>|average|

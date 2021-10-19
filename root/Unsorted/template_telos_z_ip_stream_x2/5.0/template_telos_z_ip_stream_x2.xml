@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:14Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template SNMP Telos ZIPStream-X2</template><name>Template SNMP Telos ZIPStream-X2</name><description>Telos Z/IPStream-X2 SNMP Template.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:48:42Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template SNMP Telos ZIPStream-X2</template><name>Template SNMP Telos ZIPStream-X2</name><description>Telos Z/IPStream-X2 SNMP Template.&#13;
 Created by Roman Ermakov r.ermakov@emg.fm&#13;
 v1.0 - 2019-01-29 - Initial release&#13;
 &#13;

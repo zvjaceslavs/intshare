@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:30Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>LANTRONIX-UDS1100</template><name>LANTRONIX-UDS1100</name><description>Simple LANTRONIX-UDS1100 template&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:23Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>LANTRONIX-UDS1100</template><name>LANTRONIX-UDS1100</name><description>Simple LANTRONIX-UDS1100 template&#13;
 &#13;
 by Federico Coppola</description><groups><group><name>Templates</name></group></groups><applications><application><name>HTTP Lantronix Check</name></application><application><name>SNMP Lantronix Check</name></application><application><name>Telnet Lantronix Check</name></application></applications><items><item><name>Ethernet Input Bytes</name><type>SNMP_AGENT</type><snmp_oid>.1.3.6.1.2.1.2.2.1.10.1</snmp_oid><key>eth.input.bytes</key><delay>60s</delay><description>Counter input bytes (received bytes)</description></item><item><name>Ethernet Interface Status</name><type>SNMP_AGENT</type><snmp_oid>.1.3.6.1.2.1.2.2.1.7.1</snmp_oid><key>eth.int.status</key><delay>30s</delay><description>Ethernet Interface status&#13;
 Value = 1 (UP)&#13;

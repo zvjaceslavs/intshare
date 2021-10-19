@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:01Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>Template Module ICMP ping from the Zabbix Windows agent</template><name>Template Module ICMP ping from the Zabbix Windows agent</name><description>Oleg Kostikov aka Semiadmin&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:45Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>Template Module ICMP ping from the Zabbix Windows agent</template><name>Template Module ICMP ping from the Zabbix Windows agent</name><description>Oleg Kostikov aka Semiadmin&#13;
 Module for ICMP ping test from the Zabbix Windows agent. &#13;
 Put the comma-separated target list in user macro {$PING_LIST} at the template or host level and run the &quot;get ICMP ping list&quot; item.&#13;
 List example:&#13;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:42Z</date><groups><group><name>Templates/Modules</name></group><group><name>Templates/Network Devices</name></group></groups><templates><template><template>Template Module Generic SNMP</template><name>Template Module Generic SNMP</name><description>Template Module Generic&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:36Z</date><groups><group><name>Templates/Modules</name></group><group><name>Templates/Network Devices</name></group></groups><templates><template><template>Template Module Generic SNMP</template><name>Template Module Generic SNMP</name><description>Template Module Generic&#13;
 &#13;
 MIBs used:&#13;
 SNMPv2-MIB&#13;

@@ -1,156 +1,36 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Template App TACACS Service",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Template App TACACS Service",
-        "flags": "0",
-        "templateid": "10525",
-        "description": "",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [
-            {
-                "itemid": "39341",
-                "type": "3",
-                "snmp_oid": "",
-                "hostid": "10525",
-                "name": "TACACS service is running",
-                "key_": "net.tcp.service[tcp,,49]",
-                "delay": "60",
-                "history": "1d",
-                "trends": "365d",
-                "status": "0",
-                "value_type": "3",
-                "trapper_hosts": "",
-                "units": "",
-                "formula": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "1",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "0",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "evaltype": "0",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "output_format": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "state": "0",
-                "error": "",
-                "lastclock": "0",
-                "lastns": "0",
-                "lastvalue": "0",
-                "prevvalue": "0"
-            }
-        ],
-        "triggers": [
-            {
-                "triggerid": "20788",
-                "expression": "{24796}=0",
-                "description": "TACACS service is down on {HOST.NAME}",
-                "url": "",
-                "status": "0",
-                "value": "0",
-                "priority": "1",
-                "lastchange": "0",
-                "comments": "",
-                "error": "",
-                "templateid": "0",
-                "type": "0",
-                "state": "0",
-                "flags": "0",
-                "recovery_mode": "0",
-                "recovery_expression": "",
-                "correlation_mode": "0",
-                "correlation_tag": "",
-                "manual_close": "0",
-                "opdata": ""
-            }
-        ],
-        "graphs": [
-            {
-                "graphid": "2156",
-                "name": "TACACS Service Statistics",
-                "width": "900",
-                "height": "200",
-                "yaxismin": "0",
-                "yaxismax": "100",
-                "templateid": "0",
-                "show_work_period": "1",
-                "show_triggers": "1",
-                "graphtype": "0",
-                "show_legend": "1",
-                "show_3d": "0",
-                "percent_left": "0",
-                "percent_right": "0",
-                "ymin_type": "0",
-                "ymax_type": "0",
-                "ymin_itemid": "0",
-                "ymax_itemid": "0",
-                "flags": "0"
-            }
-        ],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": []
-    }
-]
+# Template App TACACS Service
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|TACACS service is running|<p>-</p>|`Simple check`|net.tcp.service[tcp,,49]<p>Update: 60</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|TACACS service is down on {HOST.NAME}|<p>-</p>|information|

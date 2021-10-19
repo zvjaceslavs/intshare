@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:41Z</date><groups><group><name>Templates</name></group><group><name>Templates/Operating systems</name></group></groups><templates><template><template>Template OS Windows Server 2012-2016</template><name>Template OS Windows Server 2012-2016</name><description>Шаблон подходит для ОС Windows Server 2012, 2016.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:18Z</date><groups><group><name>Templates</name></group><group><name>Templates/Operating systems</name></group></groups><templates><template><template>Template OS Windows Server 2012-2016</template><name>Template OS Windows Server 2012-2016</name><description>Шаблон подходит для ОС Windows Server 2012, 2016.&#13;
 &#13;
 Посетите.&#13;
 Группа ВК:https://vk.com/simplezabbix&#13;

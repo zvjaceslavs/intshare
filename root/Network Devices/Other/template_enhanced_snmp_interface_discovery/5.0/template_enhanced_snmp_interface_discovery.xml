@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:14:47Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>enhanced_snmp_interface_discovery</template><name>Enhanced SNMP Interface Discovery</name><description>Enhanced SNMP interface discovery 1.0.1&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:48:04Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>enhanced_snmp_interface_discovery</template><name>Enhanced SNMP Interface Discovery</name><description>Enhanced SNMP interface discovery 1.0.1&#13;
 Template made by Twan Kamans.&#13;
 https://www.twan-it.nl&#13;
 &#13;

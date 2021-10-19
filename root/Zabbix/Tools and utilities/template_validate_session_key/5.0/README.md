@@ -1,156 +1,37 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "check if session key is valid api",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "check if session key is valid api",
-        "flags": "0",
-        "templateid": "11033",
-        "description": "You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'\r\n\r\ncurl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"method\\\":\\\"user.login\\\",\\\"params\\\":{\\\"user\\\":\\\"Admin\\\",\\\"password\\\":\\\"zabbix\\\"},\\\"id\\\":1}\" | grep -E -o \"([0-9a-f]{32,32})\"\r\n\r\ncurl -s -X POST http://127.0.0.1/zabbix/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"method\\\":\\\"user.login\\\",\\\"params\\\":{\\\"user\\\":\\\"Admin\\\",\\\"password\\\":\\\"zabbix\\\"},\\\"id\\\":1}\" | grep -E -o \"([0-9a-f]{32,32})\"",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [
-            {
-                "itemid": "55444",
-                "type": "19",
-                "snmp_oid": "",
-                "hostid": "11033",
-                "name": "check session key",
-                "key_": "check.session.key",
-                "delay": "30s",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "formula": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "0",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "evaltype": "0",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "{$JSONRPC.PHP}",
-                "query_fields": [],
-                "posts": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"method\": \"proxy.get\",\r\n    \"params\": {\r\n        \"output\": [\"name\"]\r\n    },\r\n    \"auth\": \"{$APIKEY}\",\r\n    \"id\": 1\r\n}",
-                "status_codes": "200",
-                "follow_redirects": "0",
-                "post_type": "2",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "1",
-                "output_format": "1",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "state": "0",
-                "error": "",
-                "lastclock": "0",
-                "lastns": "0",
-                "lastvalue": "",
-                "prevvalue": ""
-            }
-        ],
-        "triggers": [
-            {
-                "triggerid": "27126",
-                "expression": "{32848}=2",
-                "description": "invalid url configureded for zabbix api",
-                "url": "",
-                "status": "0",
-                "value": "0",
-                "priority": "5",
-                "lastchange": "0",
-                "comments": "You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'\r\n\r\ncurl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"method\\\":\\\"user.login\\\",\\\"params\\\":{\\\"user\\\":\\\"Admin\\\",\\\"password\\\":\\\"zabbix\\\"},\\\"id\\\":1}\" | grep -E -o \"([0-9a-f]{32,32})\"",
-                "error": "",
-                "templateid": "0",
-                "type": "0",
-                "state": "0",
-                "flags": "0",
-                "recovery_mode": "0",
-                "recovery_expression": "",
-                "correlation_mode": "0",
-                "correlation_tag": "",
-                "manual_close": "0",
-                "opdata": ""
-            },
-            {
-                "triggerid": "27127",
-                "expression": "{32849}=1",
-                "description": "session key now valid. http works fine",
-                "url": "",
-                "status": "0",
-                "value": "0",
-                "priority": "5",
-                "lastchange": "0",
-                "comments": "You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'\r\n\r\ncurl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"method\\\":\\\"user.login\\\",\\\"params\\\":{\\\"user\\\":\\\"Admin\\\",\\\"password\\\":\\\"zabbix\\\"},\\\"id\\\":1}\" | grep -E -o \"([0-9a-f]{32,32})\"",
-                "error": "",
-                "templateid": "0",
-                "type": "0",
-                "state": "0",
-                "flags": "0",
-                "recovery_mode": "0",
-                "recovery_expression": "",
-                "correlation_mode": "0",
-                "correlation_tag": "",
-                "manual_close": "0",
-                "opdata": ""
-            }
-        ],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": []
-    }
-]
+# check if session key is valid api
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|check session key|<p>-</p>|`HTTP agent`|check.session.key<p>Update: 30s</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|invalid url configureded for zabbix api|<p>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix' curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d "{ "jsonrpc ": "2.0 ", "method ": "user.login ", "params ":{ "user ": "Admin ", "password ": "zabbix "}, "id ":1}" | grep -E -o "([0-9a-f]{32,32})"</p>|disaster|
+|session key now valid. http works fine|<p>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix' curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d "{ "jsonrpc ": "2.0 ", "method ": "user.login ", "params ":{ "user ": "Admin ", "password ": "zabbix "}, "id ":1}" | grep -E -o "([0-9a-f]{32,32})"</p>|disaster|

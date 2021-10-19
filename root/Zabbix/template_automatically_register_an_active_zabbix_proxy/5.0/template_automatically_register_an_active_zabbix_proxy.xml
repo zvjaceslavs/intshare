@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:06Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>Auto register an active Zabbix proxy</template><name>Auto register an active Zabbix proxy</name><description>prxid=$(/usr/bin/curl -sk {$Z_API_PHP} -X POST -H &quot;Content-Type: application/json&quot; -d '&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:51Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>Auto register an active Zabbix proxy</template><name>Auto register an active Zabbix proxy</name><description>prxid=$(/usr/bin/curl -sk {$Z_API_PHP} -X POST -H &quot;Content-Type: application/json&quot; -d '&#13;
 {&#13;
 	&quot;jsonrpc&quot;: &quot;2.0&quot;,&#13;
 	&quot;method&quot;: &quot;proxy.create&quot;,&#13;

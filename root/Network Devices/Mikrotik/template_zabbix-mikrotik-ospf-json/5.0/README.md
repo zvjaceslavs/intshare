@@ -1,353 +1,43 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Mikrotik - OSPF LLD",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Mikrotik - OSPF LLD",
-        "flags": "0",
-        "templateid": "10965",
-        "description": "",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [
-            {
-                "itemid": "53026",
-                "type": "13",
-                "snmp_oid": "",
-                "hostid": "10965",
-                "name": "OSPF - Neighbor JSON",
-                "key_": "ssh.run[OSPF - Neighbor JSON,,{$MIKROTIK_SSH_PORT},]",
-                "delay": "{$UPDATEINT}",
-                "history": "1d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "formula": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": ":global list [/routing ospf neighbor find]; :global count 0; :global total [:len $list]; :put \"{\";   :foreach i in=$list do={ :local router [/routing ospf neighbor get value-name=router-id number=$i];  :local address [/routing  ospf neighbor get value-name=address number=$i]; :local statechanges [/routing  ospf neighbor get value-name=state-changes number=$i]; :local interface [/routing ospf neighbor get value-name=interface number=$i];  :local state [/routing ospf neighbor get value-name=state number=$i];  :if ( $count < $total-1) do={; :put \"\\\"$count\\\":{\\\"ID\\\":\\\"$i\\\",\\\"STATECHANGES\\\":\\\"$statechanges\\\",\\\"ROUTERID\\\":\\\"$router\\\",\\\"ADDRESS\\\":\\\"$address\\\",\\\"INTERFACE\\\":\\\"$interface\\\",\\\"STATEOSPF\\\":\\\"$state\\\"},\";} else={; :put \"\\\"$count\\\":{\\\"ID\\\":\\\"$i\\\",\\\"STATECHANGES\\\":\\\"$statechanges\\\",\\\"ROUTERID\\\":\\\"$router\\\",\\\"ADDRESS\\\":\\\"$address\\\",\\\"INTERFACE\\\":\\\"$interface\\\",\\\"STATEOSPF\\\":\\\"$state\\\"}\";};   :set count ($count + 1); }; :put \"}\";",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "{$MIKROTIK_SSH_USER}",
-                "password": "{$MIKROTIK_SSH_PASS}",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "0",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "evaltype": "0",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "output_format": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "state": "0",
-                "error": "",
-                "lastclock": "0",
-                "lastns": "0",
-                "lastvalue": "",
-                "prevvalue": ""
-            }
-        ],
-        "triggers": [],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [
-            {
-                "hostmacroid": "3052",
-                "hostid": "10965",
-                "macro": "{$MIKROTIK_SSH_PASS}",
-                "value": "11111",
-                "description": "",
-                "type": "0"
-            },
-            {
-                "hostmacroid": "3053",
-                "hostid": "10965",
-                "macro": "{$MIKROTIK_SSH_PORT}",
-                "value": "22",
-                "description": "",
-                "type": "0"
-            },
-            {
-                "hostmacroid": "3054",
-                "hostid": "10965",
-                "macro": "{$MIKROTIK_SSH_USER}",
-                "value": "mikmon",
-                "description": "",
-                "type": "0"
-            }
-        ],
-        "screens": [],
-        "discoveries": [
-            {
-                "itemid": "53027",
-                "type": "13",
-                "snmp_oid": "",
-                "hostid": "10965",
-                "name": "OSPF - Neighbor",
-                "key_": "ssh.run[OSPF - Neighbor,,{$MIKROTIK_SSH_PORT},]",
-                "delay": "1h",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": ":global list [/routing ospf neighbor find]; :global count 0; :global total [:len $list]; :put \"{\\\"data\\\":[\";   :foreach i in=$list do={ :local router [/routing ospf neighbor get value-name=router-id number=$i];  :local address [/routing  ospf neighbor get value-name=address number=$i]; :local statechanges [/routing  ospf neighbor get value-name=state-changes number=$i]; :local interface [/routing ospf neighbor get value-name=interface number=$i];  :local state [/routing ospf neighbor get value-name=state number=$i];  :if ( $count < $total-1) do={; :put \"{\\\"{#NUMBER}\\\":\\\"$count\\\",\\\"{#ID}\\\":\\\"$i\\\",\\\"{#STATECHANGES}\\\":\\\"$statechanges\\\",\\\"{#ROUTERID}\\\":\\\"$router\\\",\\\"{#ADDRESS}\\\":\\\"$address\\\",\\\"{#INTERFACE}\\\":\\\"$interface\\\",\\\"{#STATE}\\\":\\\"$state\\\"},\";} else={; :put \"{\\\"{#NUMBER}\\\":\\\"$count\\\",\\\"{#ID}\\\":\\\"$i\\\",\\\"{#STATECHANGES}\\\":\\\"$statechanges\\\",\\\"{#ROUTERID}\\\":\\\"$router\\\",\\\"{#ADDRESS}\\\":\\\"$address\\\",\\\"{#INTERFACE}\\\":\\\"$interface\\\",\\\"{#STATE}\\\":\\\"$state\\\"}\";};   :set count ($count + 1); }; :put \"]}\";",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "{$MIKROTIK_SSH_USER}",
-                "password": "{$MIKROTIK_SSH_PASS}",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "1",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "discover": "0",
-                "state": "0",
-                "error": "",
-                "items": [
-                    {
-                        "itemid": "53028",
-                        "type": "18",
-                        "snmp_oid": "",
-                        "hostid": "10965",
-                        "name": "{#NUMBER}-{#ROUTERID}-{#ADDRESS}-{#INTERFACE}-state",
-                        "key_": "state.[{#NUMBER},{#ROUTERID},{#ADDRESS},{#INTERFACE}]",
-                        "delay": "0",
-                        "history": "{$HISTORY}",
-                        "trends": "0",
-                        "status": "0",
-                        "value_type": "4",
-                        "trapper_hosts": "",
-                        "units": "",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "0",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "53026",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    },
-                    {
-                        "itemid": "53029",
-                        "type": "18",
-                        "snmp_oid": "",
-                        "hostid": "10965",
-                        "name": "{#NUMBER}-{#ROUTERID}-{#ADDRESS}-{#INTERFACE}-statechange",
-                        "key_": "statechange.[{#NUMBER},{#ROUTERID},{#ADDRESS},{#INTERFACE}]",
-                        "delay": "0",
-                        "history": "{$HISTORY}",
-                        "trends": "0",
-                        "status": "0",
-                        "value_type": "4",
-                        "trapper_hosts": "",
-                        "units": "",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "0",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "53026",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    }
-                ],
-                "triggers": [
-                    {
-                        "triggerid": "26074",
-                        "expression": "{31599}=0",
-                        "description": "OSPF Neighbor ({#NUMBER}-{#ROUTERID}-{#ADDRESS}-{#INTERFACE}) is not FULL",
-                        "url": "",
-                        "status": "0",
-                        "value": "0",
-                        "priority": "5",
-                        "lastchange": "0",
-                        "comments": "",
-                        "error": "",
-                        "templateid": "0",
-                        "type": "0",
-                        "state": "0",
-                        "flags": "2",
-                        "recovery_mode": "0",
-                        "recovery_expression": "",
-                        "correlation_mode": "0",
-                        "correlation_tag": "",
-                        "manual_close": "0",
-                        "opdata": "",
-                        "discover": "0"
-                    },
-                    {
-                        "triggerid": "26075",
-                        "expression": "{31600}>10",
-                        "description": "OSPF Neighbor ({#NUMBER}-{#ROUTERID}-{#ADDRESS}-{#INTERFACE}) state change  is to high",
-                        "url": "",
-                        "status": "0",
-                        "value": "0",
-                        "priority": "5",
-                        "lastchange": "0",
-                        "comments": "",
-                        "error": "",
-                        "templateid": "0",
-                        "type": "0",
-                        "state": "0",
-                        "flags": "2",
-                        "recovery_mode": "0",
-                        "recovery_expression": "",
-                        "correlation_mode": "0",
-                        "correlation_tag": "",
-                        "manual_close": "0",
-                        "opdata": "",
-                        "discover": "0"
-                    }
-                ],
-                "graphs": [],
-                "hostPrototypes": [],
-                "filter": {
-                    "evaltype": "0",
-                    "formula": "",
-                    "conditions": [],
-                    "eval_formula": ""
-                }
-            }
-        ]
-    }
-]
+# Mikrotik - OSPF LLD
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+|Name|Description|Default|Type|
+|----|-----------|-------|----|
+|{$MIKROTIK_SSH_PASS}|<p>-</p>|`11111`|Text macro|
+|{$MIKROTIK_SSH_PORT}|<p>-</p>|`22`|Text macro|
+|{$MIKROTIK_SSH_USER}|<p>-</p>|`mikmon`|Text macro|
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|OSPF - Neighbor|<p>-</p>|`SSH agent`|ssh.run[OSPF - Neighbor,,{$MIKROTIK_SSH_PORT},]<p>Update: 1h</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|OSPF - Neighbor JSON|<p>-</p>|`SSH agent`|ssh.run[OSPF - Neighbor JSON,,{$MIKROTIK_SSH_PORT},]<p>Update: {$UPDATEINT}</p>|
+|{#NUMBER}-{#ROUTERID}-{#ADDRESS}-{#INTERFACE}-state|<p>-</p>|`Dependent item`|state.[{#NUMBER},{#ROUTERID},{#ADDRESS},{#INTERFACE}]<p>Update: 0</p>|
+|{#NUMBER}-{#ROUTERID}-{#ADDRESS}-{#INTERFACE}-statechange|<p>-</p>|`Dependent item`|statechange.[{#NUMBER},{#ROUTERID},{#ADDRESS},{#INTERFACE}]<p>Update: 0</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|OSPF Neighbor ({#NUMBER}-{#ROUTERID}-{#ADDRESS}-{#INTERFACE}) is not FULL|<p>-</p>|disaster|
+|OSPF Neighbor ({#NUMBER}-{#ROUTERID}-{#ADDRESS}-{#INTERFACE}) state change  is to high|<p>-</p>|disaster|

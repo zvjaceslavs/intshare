@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:23Z</date><groups><group><name>Templates/Applications</name></group></groups><templates><template><template>Template App Elasticsearch Cluster by Zabbix agent</template><name>Template App Elasticsearch Cluster by Zabbix agent</name><description>This is the &quot;Zabbix agent&quot; version of the Elasticsearch template which ships with Zabbix 5.0 - Evren Yurtesen&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:15Z</date><groups><group><name>Templates/Applications</name></group></groups><templates><template><template>Template App Elasticsearch Cluster by Zabbix agent</template><name>Template App Elasticsearch Cluster by Zabbix agent</name><description>This is the &quot;Zabbix agent&quot; version of the Elasticsearch template which ships with Zabbix 5.0 - Evren Yurtesen&#13;
 &#13;
 The template to monitor Elasticsearch by Zabbix that work without any external scripts.&#13;
 It works with both standalone and cluster instances.&#13;

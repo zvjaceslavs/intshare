@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:13:00Z</date><groups><group><name>自宅ラックテンプレート</name></group></groups><templates><template><template>NTP-remote-Japanese</template><name>NTPテンプレート（リモート）</name><groups><group><name>自宅ラックテンプレート</name></group></groups><applications><application><name>NTP(リモート)</name></application></applications><items><item><name>ntpq({$NTP_IP})</name><type>ZABBIX_ACTIVE</type><key>system.run[ntpq -p {$NTP_IP}]</key><delay>3600</delay><trends>0</trends><value_type>TEXT</value_type><description>&quot;*&quot;	参照同期中のサーバーを表している&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:45:48Z</date><groups><group><name>自宅ラックテンプレート</name></group></groups><templates><template><template>NTP-remote-Japanese</template><name>NTPテンプレート（リモート）</name><groups><group><name>自宅ラックテンプレート</name></group></groups><applications><application><name>NTP(リモート)</name></application></applications><items><item><name>ntpq({$NTP_IP})</name><type>ZABBIX_ACTIVE</type><key>system.run[ntpq -p {$NTP_IP}]</key><delay>3600</delay><trends>0</trends><value_type>TEXT</value_type><description>&quot;*&quot;	参照同期中のサーバーを表している&#13;
 &quot;+&quot;	クロック誤り検査に合格したサーバー&#13;
 &quot;#&quot;	参照同期中ではあるが、距離が遠いサーバー&#13;
 &quot; &quot;	左に何も表示されない場合（空欄）、サーバーを参照していない&#13;

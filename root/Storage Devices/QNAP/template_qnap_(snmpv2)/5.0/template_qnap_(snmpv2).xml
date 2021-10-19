@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:37Z</date><groups><group><name>Templates/Modules</name></group><group><name>Templates/Network devices</name></group></groups><templates><template><template>Template Module EtherLike-MIB SNMP</template><name>Template Module EtherLike-MIB SNMP</name><description>Template EtherLike-MIB (duplex control only)&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:29Z</date><groups><group><name>Templates/Modules</name></group><group><name>Templates/Network devices</name></group></groups><templates><template><template>Template Module EtherLike-MIB SNMP</template><name>Template Module EtherLike-MIB SNMP</name><description>Template EtherLike-MIB (duplex control only)&#13;
 &#13;
 MIBs used:&#13;
 EtherLike-MIB&#13;

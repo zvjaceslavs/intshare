@@ -1,212 +1,37 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Template Module Linux systemd by Zabbix agent 2",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Template Module Linux systemd by Zabbix agent 2",
-        "flags": "0",
-        "templateid": "11126",
-        "description": "",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [],
-        "triggers": [],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": [
-            {
-                "itemid": "57848",
-                "type": "0",
-                "snmp_oid": "",
-                "hostid": "11126",
-                "name": "Systemd services discovery",
-                "key_": "systemd.unit.discovery",
-                "delay": "1h",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "1",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "discover": "0",
-                "state": "0",
-                "error": "",
-                "items": [
-                    {
-                        "itemid": "57849",
-                        "type": "0",
-                        "snmp_oid": "",
-                        "hostid": "11126",
-                        "name": "State of service: {#UNIT.NAME}",
-                        "key_": "systemd.unit.info[\"{#UNIT.NAME}\"]",
-                        "delay": "1m",
-                        "history": "90d",
-                        "trends": "0",
-                        "status": "0",
-                        "value_type": "1",
-                        "trapper_hosts": "",
-                        "units": "",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "1",
-                        "params": "",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "Description: {#UNIT.DESCRIPTION}\r\nPath: {#UNIT.PATH}",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "0",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    }
-                ],
-                "triggers": [
-                    {
-                        "triggerid": "27822",
-                        "expression": "{33703}<>1",
-                        "description": "Service {#UNIT.NAME} is not running!",
-                        "url": "",
-                        "status": "0",
-                        "value": "0",
-                        "priority": "2",
-                        "lastchange": "0",
-                        "comments": "Description: {#UNIT.DESCRIPTION}\r\nPath: {#UNIT.PATH}",
-                        "error": "",
-                        "templateid": "0",
-                        "type": "0",
-                        "state": "0",
-                        "flags": "2",
-                        "recovery_mode": "0",
-                        "recovery_expression": "",
-                        "correlation_mode": "0",
-                        "correlation_tag": "",
-                        "manual_close": "0",
-                        "opdata": "Service current state: {ITEM.LASTVALUE}",
-                        "discover": "0"
-                    }
-                ],
-                "graphs": [],
-                "hostPrototypes": [],
-                "filter": {
-                    "evaltype": "1",
-                    "formula": "",
-                    "conditions": [
-                        {
-                            "macro": "{#UNIT.LOADSTATE}",
-                            "value": "loaded",
-                            "operator": "8",
-                            "formulaid": "A"
-                        },
-                        {
-                            "macro": "{#UNIT.NAME}",
-                            "value": "systemd-timesyncd.service|systemd-fsck-root.service|rsync.service",
-                            "operator": "9",
-                            "formulaid": "B"
-                        },
-                        {
-                            "macro": "{#UNIT.UNITFILESTATE}",
-                            "value": "enabled|generated",
-                            "operator": "8",
-                            "formulaid": "C"
-                        }
-                    ],
-                    "eval_formula": "A and B and C"
-                }
-            }
-        ]
-    }
-]
+# Template Module Linux systemd by Zabbix agent 2
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Systemd services discovery|<p>-</p>|`Zabbix agent`|systemd.unit.discovery<p>Update: 1h</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|State of service: {#UNIT.NAME}|<p>Description: {#UNIT.DESCRIPTION} Path: {#UNIT.PATH}</p>|`Zabbix agent`|systemd.unit.info["{#UNIT.NAME}"]<p>Update: 1m</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|Service {#UNIT.NAME} is not running!|<p>Description: {#UNIT.DESCRIPTION} Path: {#UNIT.PATH}</p>|warning|

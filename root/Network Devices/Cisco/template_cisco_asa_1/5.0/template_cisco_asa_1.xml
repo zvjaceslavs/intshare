@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:19Z</date><groups><group><name>Templates/Network devices</name></group></groups><templates><template><template>Template Cisco ASA</template><name>Template Cisco ASA</name><description>Version 1.1.3, Release date 29.4.2020&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:09Z</date><groups><group><name>Templates/Network devices</name></group></groups><templates><template><template>Template Cisco ASA</template><name>Template Cisco ASA</name><description>Version 1.1.3, Release date 29.4.2020&#13;
 Made by: Ville Leinonen/www.hacknetwork.org&#13;
 &#13;
 Template is tested in Zabbix 4.4 and ASA version 9.14(1)&#13;

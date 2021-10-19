@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:15Z</date><groups><group><name>Templates/Server hardware</name></group></groups><templates><template><template>Template Raritan PDU PX3</template><name>Template Raritan PDU PX3</name><description>Zabbix monitoring template for Raritan PDU PX3-5466R&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:03Z</date><groups><group><name>Templates/Server hardware</name></group></groups><templates><template><template>Template Raritan PDU PX3</template><name>Template Raritan PDU PX3</name><description>Zabbix monitoring template for Raritan PDU PX3-5466R&#13;
 &#13;
 This template was tested only on Zabbix 4.4 and PX3-5466R devices but may work on other models too. The sensor discovery is simplistic and many assumptions were made, which might require little changes to make it work on other models.&#13;
 &#13;

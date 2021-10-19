@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:57Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>check if session key is valid api</template><name>check if session key is valid api</name><description>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:40Z</date><groups><group><name>Templates/Modules</name></group></groups><templates><template><template>check if session key is valid api</template><name>check if session key is valid api</name><description>You may need to obtain a new session key. Replace user 'Admin' and password 'zabbix'&#13;
 &#13;
 curl -s -X POST http://127.0.0.1/api_jsonrpc.php -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;user.login\&quot;,\&quot;params\&quot;:{\&quot;user\&quot;:\&quot;Admin\&quot;,\&quot;password\&quot;:\&quot;zabbix\&quot;},\&quot;id\&quot;:1}&quot; | grep -E -o &quot;([0-9a-f]{32,32})&quot;&#13;
 &#13;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:30Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template App Pi-Hole</template><name>Template App Pi-Hole</name><description>Domains Blocked&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:22Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template App Pi-Hole</template><name>Template App Pi-Hole</name><description>Domains Blocked&#13;
 DNS Queries Today&#13;
 Ads Blocked Today&#13;
 Ads Blocked Percentage Today&#13;

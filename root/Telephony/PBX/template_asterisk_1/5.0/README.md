@@ -1,227 +1,37 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "Asterisk",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "Asterisk",
-        "flags": "0",
-        "templateid": "10703",
-        "description": "Asterisk IP PBX template",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [],
-        "triggers": [],
-        "graphs": [],
-        "httpTests": [],
-        "macros": [],
-        "screens": [
-            {
-                "screenid": "122",
-                "name": "Calls",
-                "hsize": "1",
-                "vsize": "1",
-                "templateid": "10703",
-                "userid": "0",
-                "private": "1",
-                "hostid": "10703"
-            }
-        ],
-        "discoveries": [
-            {
-                "itemid": "45004",
-                "type": "0",
-                "snmp_oid": "",
-                "hostid": "10703",
-                "name": "Asterisk trunks",
-                "key_": "asterisk.calls.discovery",
-                "delay": "6;6/1-7,07:55-21:05;30/1-7,00:00-07:54;30/1-7,21:06-23:59",
-                "history": "90d",
-                "trends": "0",
-                "status": "0",
-                "value_type": "4",
-                "trapper_hosts": "",
-                "units": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "1",
-                "interfaceid": "0",
-                "description": "Finds out number of channels sorted by trunks. Each thunk's name should start with \"tru_\"",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "discover": "0",
-                "state": "0",
-                "error": "",
-                "items": [
-                    {
-                        "itemid": "45005",
-                        "type": "15",
-                        "snmp_oid": "",
-                        "hostid": "10703",
-                        "name": "Calls in {#TRUNK}",
-                        "key_": "asterisk.calls[{#TRUNK}]",
-                        "delay": "6",
-                        "history": "90d",
-                        "trends": "365d",
-                        "status": "0",
-                        "value_type": "3",
-                        "trapper_hosts": "",
-                        "units": "",
-                        "formula": "",
-                        "logtimefmt": "",
-                        "templateid": "0",
-                        "valuemapid": "0",
-                        "params": "{#CALLS}",
-                        "ipmi_sensor": "",
-                        "authtype": "0",
-                        "username": "",
-                        "password": "",
-                        "publickey": "",
-                        "privatekey": "",
-                        "flags": "2",
-                        "interfaceid": "0",
-                        "description": "",
-                        "inventory_link": "0",
-                        "lifetime": "30d",
-                        "evaltype": "0",
-                        "jmx_endpoint": "",
-                        "master_itemid": "0",
-                        "timeout": "3s",
-                        "url": "",
-                        "query_fields": [],
-                        "posts": "",
-                        "status_codes": "200",
-                        "follow_redirects": "1",
-                        "post_type": "0",
-                        "http_proxy": "",
-                        "headers": [],
-                        "retrieve_mode": "0",
-                        "request_method": "0",
-                        "output_format": "0",
-                        "ssl_cert_file": "",
-                        "ssl_key_file": "",
-                        "ssl_key_password": "",
-                        "verify_peer": "0",
-                        "verify_host": "0",
-                        "allow_traps": "0",
-                        "discover": "0"
-                    }
-                ],
-                "triggers": [
-                    {
-                        "triggerid": "23339",
-                        "expression": "{27948}>40",
-                        "description": "Number of calls in {#TRUNK} is {#CALLS}",
-                        "url": "",
-                        "status": "0",
-                        "value": "0",
-                        "priority": "3",
-                        "lastchange": "0",
-                        "comments": "",
-                        "error": "",
-                        "templateid": "0",
-                        "type": "0",
-                        "state": "0",
-                        "flags": "2",
-                        "recovery_mode": "0",
-                        "recovery_expression": "",
-                        "correlation_mode": "0",
-                        "correlation_tag": "",
-                        "manual_close": "0",
-                        "opdata": "",
-                        "discover": "0"
-                    }
-                ],
-                "graphs": [
-                    {
-                        "graphid": "2712",
-                        "name": "Calls in {#TRUNK}",
-                        "width": "600",
-                        "height": "100",
-                        "yaxismin": "0",
-                        "yaxismax": "100",
-                        "templateid": "0",
-                        "show_work_period": "1",
-                        "show_triggers": "1",
-                        "graphtype": "0",
-                        "show_legend": "1",
-                        "show_3d": "0",
-                        "percent_left": "0",
-                        "percent_right": "0",
-                        "ymin_type": "1",
-                        "ymax_type": "0",
-                        "ymin_itemid": "0",
-                        "ymax_itemid": "0",
-                        "flags": "2",
-                        "discover": "0"
-                    }
-                ],
-                "hostPrototypes": [],
-                "filter": {
-                    "evaltype": "0",
-                    "formula": "",
-                    "conditions": [],
-                    "eval_formula": ""
-                }
-            }
-        ]
-    }
-]
+# Asterisk
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Asterisk trunks|<p>Finds out number of channels sorted by trunks. Each thunk's name should start with "tru_"</p>|`Zabbix agent`|asterisk.calls.discovery<p>Update: 6;6/1-7,07:55-21:05;30/1-7,00:00-07:54;30/1-7,21:06-23:59</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Calls in {#TRUNK}|<p>-</p>|`Calculated`|asterisk.calls[{#TRUNK}]<p>Update: 6</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|Number of calls in {#TRUNK} is {#CALLS}|<p>-</p>|average|

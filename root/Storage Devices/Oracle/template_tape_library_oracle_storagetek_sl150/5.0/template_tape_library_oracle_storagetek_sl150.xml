@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:18Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template SNMP Tape Library Oracle StorageTek SL150</template><name>Template SNMP Tape Library Oracle StorageTek SL150</name><description>Based on MIB File: STREAMLINE-TAPE-LIBRARY-MIB&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:08Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template SNMP Tape Library Oracle StorageTek SL150</template><name>Template SNMP Tape Library Oracle StorageTek SL150</name><description>Based on MIB File: STREAMLINE-TAPE-LIBRARY-MIB&#13;
 &#13;
 Created by Samuel Martins&#13;
 https://github.com/slunart/&#13;

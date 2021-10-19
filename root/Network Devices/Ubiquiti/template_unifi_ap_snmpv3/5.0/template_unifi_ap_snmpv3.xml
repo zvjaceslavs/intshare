@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:18Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template UBQT UNIFI SNMP V3 HN</template><name>Template UBQT UNIFI SNMP V3 HN</name><description>This template retrieve SNMP data from Unifi AP devices.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:07Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>Template UBQT UNIFI SNMP V3 HN</template><name>Template UBQT UNIFI SNMP V3 HN</name><description>This template retrieve SNMP data from Unifi AP devices.&#13;
 MIBS requiriments:&#13;
 FROGFOOT-RESOURCES-MIB&#13;
 IANAifType-MIB&#13;

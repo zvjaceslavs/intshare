@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:16:28Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>1wire-temperature-probe</template><name>1wire Temperature Probe</name><description>Automatically finds all 1wire devices and assumes them to be temperature probes.&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:50:20Z</date><groups><group><name>Templates</name></group></groups><templates><template><template>1wire-temperature-probe</template><name>1wire Temperature Probe</name><description>Automatically finds all 1wire devices and assumes them to be temperature probes.&#13;
 Specifically made for DS18B20 sensor probes in combination with Raspberry Pis.&#13;
 &#13;
 Useful macros:&#13;

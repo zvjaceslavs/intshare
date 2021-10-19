@@ -1,257 +1,38 @@
-[
-    {
-        "proxy_hostid": "0",
-        "host": "DCM SW-11-DSP",
-        "status": "3",
-        "disable_until": "0",
-        "error": "",
-        "available": "0",
-        "errors_from": "0",
-        "lastaccess": "0",
-        "ipmi_authtype": "-1",
-        "ipmi_privilege": "2",
-        "ipmi_username": "",
-        "ipmi_password": "",
-        "ipmi_disable_until": "0",
-        "ipmi_available": "0",
-        "snmp_disable_until": "0",
-        "snmp_available": "0",
-        "maintenanceid": "0",
-        "maintenance_status": "0",
-        "maintenance_type": "0",
-        "maintenance_from": "0",
-        "ipmi_errors_from": "0",
-        "snmp_errors_from": "0",
-        "ipmi_error": "",
-        "snmp_error": "",
-        "jmx_disable_until": "0",
-        "jmx_available": "0",
-        "jmx_errors_from": "0",
-        "jmx_error": "",
-        "name": "DCM SW-11-DSP",
-        "flags": "0",
-        "templateid": "11077",
-        "description": "",
-        "tls_connect": "1",
-        "tls_accept": "1",
-        "tls_issuer": "",
-        "tls_subject": "",
-        "tls_psk_identity": "",
-        "tls_psk": "",
-        "proxy_address": "",
-        "auto_compress": "1",
-        "parentTemplates": [],
-        "items": [
-            {
-                "itemid": "56321",
-                "type": "20",
-                "snmp_oid": ".1.3.6.1.4.1.49542.1.1",
-                "hostid": "11077",
-                "name": "Temperatura",
-                "key_": "temperatura",
-                "delay": "30",
-                "history": "90d",
-                "trends": "365d",
-                "status": "0",
-                "value_type": "0",
-                "trapper_hosts": "",
-                "units": "C",
-                "formula": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "0",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "evaltype": "0",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "output_format": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "state": "0",
-                "error": "",
-                "lastclock": "0",
-                "lastns": "0",
-                "lastvalue": "0",
-                "prevvalue": "0"
-            },
-            {
-                "itemid": "56322",
-                "type": "20",
-                "snmp_oid": ".1.3.6.1.4.1.49542.1.2",
-                "hostid": "11077",
-                "name": "Umidade",
-                "key_": "umidade",
-                "delay": "30",
-                "history": "90d",
-                "trends": "365d",
-                "status": "0",
-                "value_type": "0",
-                "trapper_hosts": "",
-                "units": "HR",
-                "formula": "",
-                "logtimefmt": "",
-                "templateid": "0",
-                "valuemapid": "0",
-                "params": "",
-                "ipmi_sensor": "",
-                "authtype": "0",
-                "username": "",
-                "password": "",
-                "publickey": "",
-                "privatekey": "",
-                "flags": "0",
-                "interfaceid": "0",
-                "description": "",
-                "inventory_link": "0",
-                "lifetime": "30d",
-                "evaltype": "0",
-                "jmx_endpoint": "",
-                "master_itemid": "0",
-                "timeout": "3s",
-                "url": "",
-                "query_fields": [],
-                "posts": "",
-                "status_codes": "200",
-                "follow_redirects": "1",
-                "post_type": "0",
-                "http_proxy": "",
-                "headers": [],
-                "retrieve_mode": "0",
-                "request_method": "0",
-                "output_format": "0",
-                "ssl_cert_file": "",
-                "ssl_key_file": "",
-                "ssl_key_password": "",
-                "verify_peer": "0",
-                "verify_host": "0",
-                "allow_traps": "0",
-                "state": "0",
-                "error": "",
-                "lastclock": "0",
-                "lastns": "0",
-                "lastvalue": "0",
-                "prevvalue": "0"
-            }
-        ],
-        "triggers": [
-            {
-                "triggerid": "27376",
-                "expression": "{33142}>30",
-                "description": "Temperatura local alta",
-                "url": "",
-                "status": "0",
-                "value": "0",
-                "priority": "4",
-                "lastchange": "0",
-                "comments": "",
-                "error": "",
-                "templateid": "0",
-                "type": "0",
-                "state": "0",
-                "flags": "0",
-                "recovery_mode": "0",
-                "recovery_expression": "",
-                "correlation_mode": "0",
-                "correlation_tag": "",
-                "manual_close": "0",
-                "opdata": ""
-            },
-            {
-                "triggerid": "27377",
-                "expression": "{33143}>40",
-                "description": "Temperatura local cr\u00edtica",
-                "url": "",
-                "status": "0",
-                "value": "0",
-                "priority": "5",
-                "lastchange": "0",
-                "comments": "",
-                "error": "",
-                "templateid": "0",
-                "type": "0",
-                "state": "0",
-                "flags": "0",
-                "recovery_mode": "0",
-                "recovery_expression": "",
-                "correlation_mode": "0",
-                "correlation_tag": "",
-                "manual_close": "0",
-                "opdata": ""
-            }
-        ],
-        "graphs": [
-            {
-                "graphid": "3867",
-                "name": "Temperatura",
-                "width": "900",
-                "height": "200",
-                "yaxismin": "0",
-                "yaxismax": "60",
-                "templateid": "0",
-                "show_work_period": "1",
-                "show_triggers": "1",
-                "graphtype": "0",
-                "show_legend": "1",
-                "show_3d": "0",
-                "percent_left": "0",
-                "percent_right": "0",
-                "ymin_type": "0",
-                "ymax_type": "1",
-                "ymin_itemid": "0",
-                "ymax_itemid": "0",
-                "flags": "0"
-            },
-            {
-                "graphid": "3868",
-                "name": "Umidade",
-                "width": "900",
-                "height": "200",
-                "yaxismin": "0",
-                "yaxismax": "100",
-                "templateid": "0",
-                "show_work_period": "1",
-                "show_triggers": "1",
-                "graphtype": "0",
-                "show_legend": "1",
-                "show_3d": "0",
-                "percent_left": "0",
-                "percent_right": "0",
-                "ymin_type": "0",
-                "ymax_type": "1",
-                "ymin_itemid": "0",
-                "ymax_itemid": "0",
-                "flags": "0"
-            }
-        ],
-        "httpTests": [],
-        "macros": [],
-        "screens": [],
-        "discoveries": []
-    }
-]
+# DCM SW-11-DSP
+
+## Overview
+
+For Zabbix version: 5.0 and higher
+
+## Setup
+
+Refer to the vendor documentation.
+
+## Zabbix configuration
+
+No specific Zabbix configuration is required.
+
+### Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Temperatura|<p>-</p>|`SNMP agent`|temperatura<p>Update: 30</p>|
+|Umidade|<p>-</p>|`SNMP agent`|umidade<p>Update: 30</p>|
+## Triggers
+
+|Name|Description|Priority|
+|----|-----------|----|
+|Temperatura local alta|<p>-</p>|high|
+|Temperatura local crítica|<p>-</p>|disaster|

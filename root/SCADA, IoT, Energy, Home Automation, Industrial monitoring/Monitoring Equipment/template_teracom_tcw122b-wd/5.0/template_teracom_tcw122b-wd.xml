@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export><version>5.0</version><date>2021-10-19T06:15:58Z</date><groups><group><name>Templates/Network Devices</name></group></groups><templates><template><template>TCW122B-WD</template><name>Template Teracom TCW122B-WD SNMPv1</name><description>Teracom TCW122B-WD IP watchdog monitoring module&#13;
+<zabbix_export><version>5.0</version><date>2021-10-19T09:49:41Z</date><groups><group><name>Templates/Network Devices</name></group></groups><templates><template><template>TCW122B-WD</template><name>Template Teracom TCW122B-WD SNMPv1</name><description>Teracom TCW122B-WD IP watchdog monitoring module&#13;
 &#13;
 TCW122B-WD is an IP watchdog monitoring module, based on TCW122 hardware. It has 2 digital and 2 analog inputs. It supports up to two temperature/humidity sensors on its 1-Wire interface. The IP watchdog controller has also two relays with normally open and normally closed contacts. TCW122B-WD is dedicated to IP watchdog monitoring as a stand-alone device.The controller supports also SNMP v1 as M2M protocol. It can also be used as a part of small to medium SCADA systems for environmental monitoring of server rooms.&#13;
 &#13;
