@@ -54,8 +54,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Name.{#ITEM.NAME} (LLD)|<p>-</p>|`Calculated`|MerakiDeviceIndex.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#ITEM.NAME}.Status:{#ITEM.STATUS} (LLD)|<p>-</p>|`Calculated`|MerakiDeviceIndexStatus.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|Name.{#ITEM.NAME}|<p>-</p>|`Calculated`|MerakiDeviceIndex.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#ITEM.NAME}.Status:{#ITEM.STATUS}|<p>-</p>|`Calculated`|MerakiDeviceIndexStatus.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

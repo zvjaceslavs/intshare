@@ -52,9 +52,6 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |1 PPS Input|<p>Alarm of 1 PPS Input Expected values Integer: - 0 - notPresent; - 1 - error; - 2 - present</p>|`SNMP agent`|multiplexer.Sfn.1PPsInput<p>Update: 15s</p>|
 |BTS Alignment|<p>Alarm of 1 PPS Input Expected values Integer: - 0 - none; - 1 - CLK; - 2 - TSP - 3 - tsPandCLK</p>|`SNMP agent`|multiplexer.sfn.bts.alignment<p>Update: 1m</p>|
 |SFN Info|<p>Alarm of SFN Info Expected values Integer: - 0 off; - 1 error; - 2 on</p>|`SNMP agent`|multiplexer.Sfn.Info<p>Update: 1m</p>|

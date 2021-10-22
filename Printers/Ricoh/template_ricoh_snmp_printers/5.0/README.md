@@ -51,16 +51,11 @@ There are no macros links in this template.
 |Page Count|<p>-</p>|`SNMP agent`|PageCount<p>Update: 60</p>|
 |Page Count / Min|<p>-</p>|`SNMP agent`|PageCountPerMinute<p>Update: 60</p>|
 |Status|<p>-</p>|`SNMP agent`|PrinterStatus<p>Update: 60</p>|
-|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
-|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
-|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
-|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
-|Tray {#SNMPVALUE} Current Level (LLD)|<p>-</p>|`SNMP agent`|TrayCurrentLevel[{#SNMPVALUE}]<p>Update: 300</p>|
-|Tray {#SNMPVALUE} Max Level (LLD)|<p>-</p>|`SNMP agent`|TrayMaxLevel[{#SNMPVALUE}]<p>Update: 300</p>|
-|DetailCounters[{#SNMPVALUE}] (LLD)|<p>-</p>|`SNMP agent`|DetailCountersID[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Tonor {#SNMPVALUE} Level (LLD)|<p>-</p>|`SNMP agent`|TonerLevel[{#SNMPVALUE}]<p>Update: 300</p>|
-|Part {#SNMPVALUE} Status (LLD)|<p>-</p>|`SNMP agent`|PartStatus[{#SNMPVALUE}]<p>Update: 300</p>|
+|Tray {#SNMPVALUE} Current Level|<p>-</p>|`SNMP agent`|TrayCurrentLevel[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Tray {#SNMPVALUE} Max Level|<p>-</p>|`SNMP agent`|TrayMaxLevel[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|DetailCounters[{#SNMPVALUE}]|<p>-</p>|`SNMP agent`|DetailCountersID[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Tonor {#SNMPVALUE} Level|<p>-</p>|`SNMP agent`|TonerLevel[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Part {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|PartStatus[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

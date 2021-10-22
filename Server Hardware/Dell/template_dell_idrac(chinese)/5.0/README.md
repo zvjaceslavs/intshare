@@ -49,38 +49,38 @@ There are no template links in this template.
 |RAID 控制器状态|<p>-</p>|`SNMP agent`|RAIDControllerStatus<p>Update: 60</p>|
 |BIOS 状态|<p>-</p>|`SNMP agent`|SystemBiosStatus<p>Update: 60</p>|
 |电压状态|<p>-</p>|`SNMP agent`|VoltageStatusCombined<p>Update: 120</p>|
-|内存 {#MEM} 制造商 (LLD)|<p>-</p>|`SNMP agent`|MemManufacturer[{#SNMPINDEX}]<p>Update: 86400</p>|
-|内存 {#MEM} 序列号 (LLD)|<p>-</p>|`SNMP agent`|MemSerialNo.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|内存 {#MEM} 大小 (LLD)|<p>-</p>|`SNMP agent`|MemSize.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|内存 {#MEM} 速度 (LLD)|<p>-</p>|`SNMP agent`|MemSpeed.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|内存 {#MEM} 状态 (LLD)|<p>-</p>|`SNMP agent`|MemStatus.[{#SNMPINDEX}]<p>Update: 60</p>|
-|磁盘 {#DISKNAME} : 生产日 (LLD)|<p>-</p>|`SNMP agent`|DiskManufactureDay.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘 {#SNMPINDEX} : 制造商 (LLD)|<p>-</p>|`SNMP agent`|DiskManufacturer.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘 {#SNMPINDEX} : 生产周 (LLD)|<p>-</p>|`SNMP agent`|DiskManufactureWeek.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘 {#DISKNAME} : 生产年份 (LLD)|<p>-</p>|`SNMP agent`|DiskManufactureYear.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘 {#DISKNAME} : 型号 (LLD)|<p>-</p>|`SNMP agent`|DiskModel.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘 {#DISKNAME} : 名称 (LLD)|<p>-</p>|`SNMP agent`|DiskName.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘 {#DISKNAME} : 序列号 (LLD)|<p>-</p>|`SNMP agent`|DiskSerialNo.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘 {#DISKNAME} : 磁盘大小 (LLD)|<p>-</p>|`SNMP agent`|DiskSize.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘 {#DISKNAME} : 状态 (LLD)|<p>-</p>|`SNMP agent`|DiskState.[{#SNMPINDEX}]<p>Update: 300</p>|
-|组件 {#VOLTAGE} : 电压状态 (LLD)|<p>-</p>|`SNMP agent`|VoltageStatus.[{#SNMPINDEX}]<p>Update: 120</p>|
-|网卡 {#NETIF} : 连接状态 (LLD)|<p>-</p>|`SNMP agent`|NetConnStatus.[{#SNMPINDEX}]<p>Update: 120</p>|
-|网卡 {#NETIF} : 名称 (LLD)|<p>-</p>|`SNMP agent`|NetName.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|网卡 {#NETIF} : 槽位 (LLD)|<p>-</p>|`SNMP agent`|NetSlot.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|网卡 {#NETIF} : 状态 (LLD)|<p>-</p>|`SNMP agent`|NetStatus.[{#SNMPINDEX}]<p>Update: 60</p>|
-|电源 {#POWER} 输入电压 (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyInputVoltage.[{#SNMPINDEX}]<p>Update: 300</p>|
-|电源 {#POWER} 最大功率 (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyMaxPower.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|电源 {#POWER} 传感器状态 (LLD)|<p>-</p>|`SNMP agent`|PowerSupplySensorState.[{#SNMPINDEX}]<p>Update: 300</p>|
-|电源 {#POWER} 状态 (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyStateSettings.[{#SNMPINDEX}]<p>Update: 120</p>|
-|温度传感器 {#TEMP} 状态 (LLD)|<p>-</p>|`SNMP agent`|TempStatus.[{#SNMPINDEX}]<p>Update: 300</p>|
-|温度传感器 {#TEMP} 温度值 (LLD)|<p>-</p>|`SNMP agent`|TempValue.[{#SNMPINDEX}]<p>Update: 60</p>|
-|处理器 {#SNMPINDEX} 状态 (LLD)|<p>-</p>|`SNMP agent`|ProcStatus.[{#SNMPINDEX}]<p>Update: 300</p>|
-|风扇 {#FAN} 转速 (LLD)|<p>-</p>|`SNMP agent`|FanSpeed.[{#SNMPINDEX}]<p>Update: 120</p>|
-|风扇 {#FAN} 状态 (LLD)|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 120</p>|
-|磁盘卷 {#VOLNAME} : 状态 (LLD)|<p>-</p>|`SNMP agent`|VolumeDiskState.[{#SNMPINDEX}]<p>Update: 90</p>|
-|磁盘卷 {#SNMPINDEX} : 名称 (LLD)|<p>-</p>|`SNMP agent`|VolumeName.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘卷 {#SNMPINDEX} : 大小 (LLD)|<p>-</p>|`SNMP agent`|VolumeSize.[{#SNMPINDEX}]<p>Update: 86400</p>|
-|磁盘卷 {#SNMPINDEX} : Raid级别 (LLD)|<p>-</p>|`SNMP agent`|VolumeState.[{#SNMPINDEX}]<p>Update: 3600</p>|
+|内存 {#MEM} 制造商|<p>-</p>|`SNMP agent`|MemManufacturer[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|内存 {#MEM} 序列号|<p>-</p>|`SNMP agent`|MemSerialNo.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|内存 {#MEM} 大小|<p>-</p>|`SNMP agent`|MemSize.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|内存 {#MEM} 速度|<p>-</p>|`SNMP agent`|MemSpeed.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|内存 {#MEM} 状态|<p>-</p>|`SNMP agent`|MemStatus.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|磁盘 {#DISKNAME} : 生产日|<p>-</p>|`SNMP agent`|DiskManufactureDay.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘 {#SNMPINDEX} : 制造商|<p>-</p>|`SNMP agent`|DiskManufacturer.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘 {#SNMPINDEX} : 生产周|<p>-</p>|`SNMP agent`|DiskManufactureWeek.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘 {#DISKNAME} : 生产年份|<p>-</p>|`SNMP agent`|DiskManufactureYear.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘 {#DISKNAME} : 型号|<p>-</p>|`SNMP agent`|DiskModel.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘 {#DISKNAME} : 名称|<p>-</p>|`SNMP agent`|DiskName.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘 {#DISKNAME} : 序列号|<p>-</p>|`SNMP agent`|DiskSerialNo.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘 {#DISKNAME} : 磁盘大小|<p>-</p>|`SNMP agent`|DiskSize.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘 {#DISKNAME} : 状态|<p>-</p>|`SNMP agent`|DiskState.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|组件 {#VOLTAGE} : 电压状态|<p>-</p>|`SNMP agent`|VoltageStatus.[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
+|网卡 {#NETIF} : 连接状态|<p>-</p>|`SNMP agent`|NetConnStatus.[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
+|网卡 {#NETIF} : 名称|<p>-</p>|`SNMP agent`|NetName.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|网卡 {#NETIF} : 槽位|<p>-</p>|`SNMP agent`|NetSlot.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|网卡 {#NETIF} : 状态|<p>-</p>|`SNMP agent`|NetStatus.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|电源 {#POWER} 输入电压|<p>-</p>|`SNMP agent`|PowerSupplyInputVoltage.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|电源 {#POWER} 最大功率|<p>-</p>|`SNMP agent`|PowerSupplyMaxPower.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|电源 {#POWER} 传感器状态|<p>-</p>|`SNMP agent`|PowerSupplySensorState.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|电源 {#POWER} 状态|<p>-</p>|`SNMP agent`|PowerSupplyStateSettings.[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
+|温度传感器 {#TEMP} 状态|<p>-</p>|`SNMP agent`|TempStatus.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|温度传感器 {#TEMP} 温度值|<p>-</p>|`SNMP agent`|TempValue.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|处理器 {#SNMPINDEX} 状态|<p>-</p>|`SNMP agent`|ProcStatus.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|风扇 {#FAN} 转速|<p>-</p>|`SNMP agent`|FanSpeed.[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
+|风扇 {#FAN} 状态|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
+|磁盘卷 {#VOLNAME} : 状态|<p>-</p>|`SNMP agent`|VolumeDiskState.[{#SNMPINDEX}]<p>Update: 90</p><p>LLD</p>|
+|磁盘卷 {#SNMPINDEX} : 名称|<p>-</p>|`SNMP agent`|VolumeName.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘卷 {#SNMPINDEX} : 大小|<p>-</p>|`SNMP agent`|VolumeSize.[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|磁盘卷 {#SNMPINDEX} : Raid级别|<p>-</p>|`SNMP agent`|VolumeState.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

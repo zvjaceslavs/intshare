@@ -50,11 +50,8 @@ Michał Sternadel
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
-|{#NAME} Humidity (LLD)|<p>-</p>|`HTTP agent`|sensor.humidity[{#INDEX}]<p>Update: {$UPINTERVALLLD}</p>|
-|{#NAME} Temperature (LLD)|<p>-</p>|`HTTP agent`|sensor.temperature[{#INDEX}]<p>Update: {$UPINTERVALLLD}</p>|
+|{#NAME} Humidity|<p>-</p>|`HTTP agent`|sensor.humidity[{#INDEX}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|{#NAME} Temperature|<p>-</p>|`HTTP agent`|sensor.temperature[{#INDEX}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

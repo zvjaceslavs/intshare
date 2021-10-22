@@ -52,23 +52,23 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Sensor threshold eval 1: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorte1[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold severity 2: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorts2[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold value 4: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensortv4[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold value 3: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensortv3[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold value 2: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensortv2[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold value 1: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensortv1[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold severity 4: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorts4[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold severity 3: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorts3[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold severity 1: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorts1[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold eval 2: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorte2[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold relation 4: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensortr4[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold relation 3: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensortr3[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold relation 2: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensortr2[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold relation 1: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensortr1[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold eval 4: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorte4[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor threshold eval 3: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorte3[{#SNMPINDEX}]<p>Update: 300</p>|
-|Sensor value: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sensorvalue[{#SNMPINDEX}]<p>Update: 300</p>|
+|Sensor threshold eval 1: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorte1[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold severity 2: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorts2[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold value 4: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensortv4[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold value 3: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensortv3[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold value 2: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensortv2[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold value 1: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensortv1[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold severity 4: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorts4[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold severity 3: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorts3[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold severity 1: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorts1[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold eval 2: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorte2[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold relation 4: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensortr4[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold relation 3: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensortr3[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold relation 2: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensortr2[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold relation 1: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensortr1[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold eval 4: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorte4[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor threshold eval 3: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorte3[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Sensor value: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sensorvalue[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -63,9 +63,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|RX $1 (LLD)|<p>-</p>|`SNMP agent`|RX[{#SNMPVALUE}]<p>Update: 30s</p>|
-|Temperatura $1 (LLD)|<p>-</p>|`SNMP agent`|temperatura[{#SNMPVALUE}]<p>Update: 30s</p>|
-|TX $1 (LLD)|<p>-</p>|`SNMP agent`|TX[{#SNMPVALUE}]<p>Update: 30s</p>|
+|RX $1|<p>-</p>|`SNMP agent`|RX[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|Temperatura $1|<p>-</p>|`SNMP agent`|temperatura[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|TX $1|<p>-</p>|`SNMP agent`|TX[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

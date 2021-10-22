@@ -55,10 +55,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Free disk space on {#FSNAME} (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},free]<p>Update: 60</p>|
-|Free disk space on {#FSNAME} (percentage) (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},pfree]<p>Update: 60</p>|
-|Total disk space on {#FSNAME} (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},total]<p>Update: 3600</p>|
-|Used disk space on {#FSNAME} (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},used]<p>Update: 60</p>|
+|Free disk space on {#FSNAME}|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},free]<p>Update: 60</p><p>LLD</p>|
+|Free disk space on {#FSNAME} (percentage)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},pfree]<p>Update: 60</p><p>LLD</p>|
+|Total disk space on {#FSNAME}|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},total]<p>Update: 3600</p><p>LLD</p>|
+|Used disk space on {#FSNAME}|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},used]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

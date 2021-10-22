@@ -42,13 +42,13 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|[$2 - $3] [ HDB CompileServer ] (LLD)|<p>-</p>|`Zabbix agent`|sap.availability[hdbcompileserver,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p>|
-|[$2 - $3] [ HDB Daemon ] (LLD)|<p>-</p>|`Zabbix agent`|sap.availability[hdbdaemon,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p>|
-|[$2 - $3] [ HDB IndexServer ] (LLD)|<p>-</p>|`Zabbix agent`|sap.availability[hdbindexserver,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p>|
-|[$2 - $3] [ HDB NameServer ] (LLD)|<p>-</p>|`Zabbix agent`|sap.availability[hdbnameserver,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p>|
-|[$2 - $3] [ HDB PreProcessor ] (LLD)|<p>-</p>|`Zabbix agent`|sap.availability[hdbpreprocessor,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p>|
-|[$2 - $3] [ HDB Webdispatcher ] (LLD)|<p>-</p>|`Zabbix agent`|sap.availability[hdbwebdispatcher,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p>|
-|[$2 - $3] [ HDB Engine ] (LLD)|<p>-</p>|`Zabbix agent`|sap.availability[hdbxsengine,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p>|
+|[$2 - $3] [ HDB CompileServer ]|<p>-</p>|`Zabbix agent`|sap.availability[hdbcompileserver,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p><p>LLD</p>|
+|[$2 - $3] [ HDB Daemon ]|<p>-</p>|`Zabbix agent`|sap.availability[hdbdaemon,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p><p>LLD</p>|
+|[$2 - $3] [ HDB IndexServer ]|<p>-</p>|`Zabbix agent`|sap.availability[hdbindexserver,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p><p>LLD</p>|
+|[$2 - $3] [ HDB NameServer ]|<p>-</p>|`Zabbix agent`|sap.availability[hdbnameserver,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p><p>LLD</p>|
+|[$2 - $3] [ HDB PreProcessor ]|<p>-</p>|`Zabbix agent`|sap.availability[hdbpreprocessor,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p><p>LLD</p>|
+|[$2 - $3] [ HDB Webdispatcher ]|<p>-</p>|`Zabbix agent`|sap.availability[hdbwebdispatcher,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p><p>LLD</p>|
+|[$2 - $3] [ HDB Engine ]|<p>-</p>|`Zabbix agent`|sap.availability[hdbxsengine,{#COD_ID},{#NAME_ID}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

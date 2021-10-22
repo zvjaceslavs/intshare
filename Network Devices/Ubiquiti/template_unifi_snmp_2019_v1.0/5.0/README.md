@@ -76,10 +76,10 @@ There are no template links in this template.
 |Interface Speed (Mbit/s)|<p>-</p>|`SNMP agent`|unifiIfSpeed.1<p>Update: 1m</p>|
 |Traffic Outgoing|<p>-</p>|`SNMP agent`|unifiIfTxBytes.1<p>Update: 1m</p>|
 |AP Hostname|<p>-</p>|`SNMP agent`|unifiSysName.0<p>Update: 1m</p>|
-|Alias of interface $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapEssId[{#UNIFIVAPNAME}]<p>Update: 30s</p>|
-|Users on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapNumStations[{#UNIFIVAPNAME}]<p>Update: 30s</p>|
-|Traffic Incoming on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapRxBytes[{#UNIFIVAPNAME}]<p>Update: 30s</p>|
-|Traffic Outgoing on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapTxBytes[{#UNIFIVAPNAME}]<p>Update: 30s</p>|
+|Alias of interface $1|<p>-</p>|`SNMP agent`|unifiVapEssId[{#UNIFIVAPNAME}]<p>Update: 30s</p><p>LLD</p>|
+|Users on $1|<p>-</p>|`SNMP agent`|unifiVapNumStations[{#UNIFIVAPNAME}]<p>Update: 30s</p><p>LLD</p>|
+|Traffic Incoming on $1|<p>-</p>|`SNMP agent`|unifiVapRxBytes[{#UNIFIVAPNAME}]<p>Update: 30s</p><p>LLD</p>|
+|Traffic Outgoing on $1|<p>-</p>|`SNMP agent`|unifiVapTxBytes[{#UNIFIVAPNAME}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

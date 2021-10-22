@@ -43,12 +43,12 @@ There are no template links in this template.
 |All Lds info|<p>-</p>|`Zabbix agent`|adaptec.raid[info,ld]<p>Update: {$LD_REQUEST_PERIOD}</p>|
 |All Pds info|<p>-</p>|`Zabbix agent`|adaptec.raid[info,pd]<p>Update: {$PD_REQUEST_PERIOD}</p>|
 |Controller battery state|<p>-</p>|`Dependent item`|adaptec.zmm.state<p>Update: 0</p>|
-|Logical disk "{#LDNAME}" level (LLD)|<p>-</p>|`Dependent item`|adaptec.raid.level.[{#LDNAME}]<p>Update: 0</p>|
-|Logical disk "{#LDNAME}" state (LLD)|<p>-</p>|`Dependent item`|adaptec.raid.state.[{#LDNAME}]<p>Update: 0</p>|
-|Physical disk "{#SLOT}" model (LLD)|<p>-</p>|`Dependent item`|adaptec.pd.model.["{#SLOT}"]<p>Update: 0</p>|
-|Physical disk "{#SLOT}" SMART warnings (LLD)|<p>-</p>|`Dependent item`|adaptec.pd.smartwarn.["{#SLOT}"]<p>Update: 0</p>|
-|Physical disk "{#SLOT}" serial number (LLD)|<p>-</p>|`Dependent item`|adaptec.pd.sn.["{#SLOT}"]<p>Update: 0</p>|
-|Physical disk "{#SLOT}" state (LLD)|<p>-</p>|`Dependent item`|adaptec.pd.state.["{#SLOT}"]<p>Update: 0</p>|
+|Logical disk "{#LDNAME}" level|<p>-</p>|`Dependent item`|adaptec.raid.level.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" state|<p>-</p>|`Dependent item`|adaptec.raid.state.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#SLOT}" model|<p>-</p>|`Dependent item`|adaptec.pd.model.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#SLOT}" SMART warnings|<p>-</p>|`Dependent item`|adaptec.pd.smartwarn.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#SLOT}" serial number|<p>-</p>|`Dependent item`|adaptec.pd.sn.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#SLOT}" state|<p>-</p>|`Dependent item`|adaptec.pd.state.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

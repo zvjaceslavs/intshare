@@ -69,18 +69,18 @@ There are no template links in this template.
 |5分钟内来自服务器端流量|<p>-</p>|`SNMP agent`|TrafficFromServerIn5Min<p>Update: 5m</p>|
 |5分钟内发送至客户端流量|<p>-</p>|`SNMP agent`|TrafficToClientIn5Min<p>Update: 5m</p>|
 |5分钟内发送至服务器端流量|<p>-</p>|`SNMP agent`|TrafficToServerIn5Min<p>Update: 5m</p>|
-|电源状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|风扇状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|端口带宽 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceBandwidth.[{#SNMPINDEX}]<p>Update: 12h</p>|
-|入方向丢包 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceInPacketDropped.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|入方向错包 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceInPacketError.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|入方向报文速率 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceInPacketsTraffic.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|入方向流量 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceInTraffic.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|出方向丢包 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutPacketDropped.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|出方向错包 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutPacketError.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|出方向报文速率 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutPacketsTraffic.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|出方向流量 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutTraffic.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|端口状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|InterfaceStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
+|电源状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|PowerSupplyStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|风扇状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|端口带宽 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceBandwidth.[{#SNMPINDEX}]<p>Update: 12h</p><p>LLD</p>|
+|入方向丢包 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceInPacketDropped.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|入方向错包 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceInPacketError.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|入方向报文速率 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceInPacketsTraffic.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|入方向流量 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceInTraffic.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|出方向丢包 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceOutPacketDropped.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|出方向错包 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceOutPacketError.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|出方向报文速率 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceOutPacketsTraffic.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|出方向流量 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceOutTraffic.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|端口状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|InterfaceStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -100,21 +100,21 @@ There are no template links in this template.
 |Device location|<p>SNMPv2-MIB::sysLocation.0 - The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 300</p>|
 |Device name|<p>SNMPv2-MIB::sysName.0 - An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 300</p>|
 |SysUptime|<p>DISMAN-EVENT-MIB::sysUpTimeInstance - Uptime of the system in TimeTicks (100 timeticks == 1 second)</p>|`SNMP agent`|SysUptime<p>Update: 60</p>|
-|InOctets {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inoctets.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|OutOctets {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|outoctets.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|CPU usage 1 day avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|cpu1dayavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|CPU usage 1 hr avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|cpu1hravg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|CPU usage 1 min avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|cpu1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Memory usage 1 day avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|memory1dayavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Memory usage 1 hr avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|memory1hravg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Memory usage 1 min avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|memory1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|RXTX usage 1 day avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|rxtx1dayavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|RXTX usage 1 hr avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|rxtx1hravg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|RXTX usage 1 min avg chassis {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|rxtx1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Device type of slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|devicemodel.slot.[{#SNMPINDEX}]<p>Update: 300</p>|
-|Freespace /flash chassis {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|freespace.slot.[{#SNMPINDEX}]<p>Update: 300</p>|
-|Device serial number of slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|serialnumber.slot.[{#SNMPINDEX}]<p>Update: 300</p>|
-|Temperature chassis {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|temperature.slot.[{#SNMPINDEX}]<p>Update: 60s</p>|
+|InOctets {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inoctets.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|OutOctets {#SNMPVALUE}|<p>-</p>|`SNMP agent`|outoctets.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|CPU usage 1 day avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|cpu1dayavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|CPU usage 1 hr avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|cpu1hravg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|CPU usage 1 min avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|cpu1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Memory usage 1 day avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|memory1dayavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Memory usage 1 hr avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|memory1hravg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Memory usage 1 min avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|memory1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|RXTX usage 1 day avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|rxtx1dayavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|RXTX usage 1 hr avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|rxtx1hravg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|RXTX usage 1 min avg chassis {#SNMPVALUE}|<p>-</p>|`SNMP agent`|rxtx1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Device type of slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|devicemodel.slot.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Freespace /flash chassis {#SNMPINDEX}|<p>-</p>|`SNMP agent`|freespace.slot.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Device serial number of slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|serialnumber.slot.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Temperature chassis {#SNMPINDEX}|<p>-</p>|`SNMP agent`|temperature.slot.[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

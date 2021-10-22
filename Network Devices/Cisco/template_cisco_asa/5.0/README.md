@@ -108,8 +108,8 @@ There are no template links in this template.
 |Description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 60m</p>|
 |sysUpTime|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 5m</p>|
 |Total VPN sessions|<p>Total number of VPN sessions.</p>|`Calculated`|totalVPNsessions<p>Update: 5m</p>|
-|Core {#SNMPINDEX} 1min (LLD)|<p>-</p>|`SNMP agent`|cpmCPUTotal1minRev[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Core {#SNMPINDEX} 5min (LLD)|<p>-</p>|`SNMP agent`|cpmCPUTotal5minRev[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Core {#SNMPINDEX} 1min|<p>-</p>|`SNMP agent`|cpmCPUTotal1minRev[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Core {#SNMPINDEX} 5min|<p>-</p>|`SNMP agent`|cpmCPUTotal5minRev[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

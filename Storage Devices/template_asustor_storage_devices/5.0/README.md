@@ -49,14 +49,14 @@ There are no template links in this template.
 |sysSerialNumber|<p>-</p>|`SNMP agent`|sysSerialNumber<p>Update: 5m</p>|
 |sysUpgradeAvailable|<p>-</p>|`SNMP agent`|sysUpgradeAvailable<p>Update: 5m</p>|
 |sysUptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 5m</p>|
-|Volume {#VOLUMEINDEX} Free Size (LLD)|<p>-</p>|`SNMP agent`|VolumeFreeSize[{#VOLUMEINDEX}]<p>Update: 5m</p>|
-|Volume {#VOLUMEINDEX} Name (LLD)|<p>-</p>|`SNMP agent`|VolumeName[{#VOLUMEINDEX}]<p>Update: 5m</p>|
-|Volume {#VOLUMEINDEX} RAID (LLD)|<p>-</p>|`SNMP agent`|VolumeRaid[{#VOLUMEINDEX}]<p>Update: 5m</p>|
-|Volume {#VOLUMEINDEX} Status (LLD)|<p>-</p>|`SNMP agent`|VolumeStatus[{#VOLUMEINDEX}]<p>Update: 5m</p>|
-|Volume {#VOLUMEINDEX} Total Size (LLD)|<p>-</p>|`SNMP agent`|VolumeTotalSize[{#VOLUMEINDEX}]<p>Update: 5m</p>|
-|Disk {#DISKINDEX} Model (LLD)|<p>-</p>|`SNMP agent`|DiskModel[{#DISKINDEX}]<p>Update: 5m</p>|
-|Disk {#DISKINDEX} Status (LLD)|<p>-</p>|`SNMP agent`|DiskStatus[{#DISKINDEX}]<p>Update: 5m</p>|
-|Disk {#DISKINDEX} Temperature (LLD)|<p>-</p>|`SNMP agent`|DiskTemperature[{#DISKINDEX}]<p>Update: 5m</p>|
+|Volume {#VOLUMEINDEX} Free Size|<p>-</p>|`SNMP agent`|VolumeFreeSize[{#VOLUMEINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Volume {#VOLUMEINDEX} Name|<p>-</p>|`SNMP agent`|VolumeName[{#VOLUMEINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Volume {#VOLUMEINDEX} RAID|<p>-</p>|`SNMP agent`|VolumeRaid[{#VOLUMEINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Volume {#VOLUMEINDEX} Status|<p>-</p>|`SNMP agent`|VolumeStatus[{#VOLUMEINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Volume {#VOLUMEINDEX} Total Size|<p>-</p>|`SNMP agent`|VolumeTotalSize[{#VOLUMEINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Disk {#DISKINDEX} Model|<p>-</p>|`SNMP agent`|DiskModel[{#DISKINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Disk {#DISKINDEX} Status|<p>-</p>|`SNMP agent`|DiskStatus[{#DISKINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Disk {#DISKINDEX} Temperature|<p>-</p>|`SNMP agent`|DiskTemperature[{#DISKINDEX}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

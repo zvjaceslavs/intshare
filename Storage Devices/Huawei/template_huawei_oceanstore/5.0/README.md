@@ -46,40 +46,40 @@ There are no template links in this template.
 |----|-----------|----|----|
 |get discovery|<p>-</p>|`External check`|huawei_get_state.py["--api_ip={HOST.IP}","--api_port={$API_PORT}","--api_user={$API_USER}","--api_password={$API_PASSWORD}","--storage_name={HOST.NAME}","--discovery"]<p>Update: 1h</p>|
 |get health state|<p>-</p>|`External check`|huawei_get_state.py["--api_ip={HOST.IP}","--api_port={$API_PORT}","--api_user={$API_USER}","--api_password={$API_PASSWORD}","--storage_name={HOST.NAME}","--status"]<p>Update: 1m</p>|
-|Health status of a DiskDomain "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.diskpool.[{#NAME}]<p>Update: 0</p>|
-|Running status of a DiskDomain "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|running.diskpool.[{#NAME}]<p>Update: 0</p>|
-|Health status of the LUN "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lun.[{#NAME}]<p>Update: 0</p>|
-|Running status of the LUN "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|running.lun.[{#NAME}]<p>Update: 0</p>|
-|Health status of a Fibre Channel port "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.fc_port.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of a Fibre Channel port "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.fc_port.[{#LOCATION}]<p>Update: 0</p>|
-|Health status of a BBU "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.backup_power.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of a BBU "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.backup_power.[{#LOCATION}]<p>Update: 0</p>|
-|Health Status of a PSU "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.power.[{#LOCATION}]<p>Update: 0</p>|
-|Running Status of a PSU "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.power.[{#LOCATION}]<p>Update: 0</p>|
-|Health Status of a FAN "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.fan.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of a FAN "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.fan.[{#LOCATION}]<p>Update: 0</p>|
-|Health status of a Controller "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.controller.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of a Controller "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.controller.[{#LOCATION}]<p>Update: 0</p>|
-|Health status of an interface module "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.intf_module.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of an interface module "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.intf_module.[{#LOCATION}]<p>Update: 0</p>|
-|Free capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|free.capacity.storagepool.[{#NAME}]<p>Update: 0</p>|
-|Health status of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.storagepool.[{#NAME}]<p>Update: 0</p>|
-|Running status of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|running.storagepool.[{#NAME}]<p>Update: 0</p>|
-|Subscribed capacity of a Pool "{#NAME}" in percent (LLD)|<p>-</p>|`Calculated`|subscribed.capacity.percent.storagepool.[{#NAME}]<p>Update: 3m</p>|
-|Subscribed capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|subscribed.capacity.storagepool.[{#NAME}]<p>Update: 0</p>|
-|Total capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|total.capacity.storagepool.[{#NAME}]<p>Update: 0</p>|
-|Used capacity of a Pool "{#NAME}" in percent (LLD)|<p>-</p>|`Calculated`|used.capacity.percent.storagepool.[{#NAME}]<p>Update: 3m</p>|
-|Used capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|used.capacity.storagepool.[{#NAME}]<p>Update: 0</p>|
-|Health status of disk "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.disk.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of disk "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.disk.[{#LOCATION}]<p>Update: 0</p>|
-|Health status of an Ethernet port "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.eth_port.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of an Ethernet port "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.eth_port.[{#LOCATION}]<p>Update: 0</p>|
-|Health status of an enclosure "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.enclosure.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of an enclosure "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.enclosure.[{#LOCATION}]<p>Update: 0</p>|
-|Health status of an expansion module "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.expboard.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of an expansion module "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.expboard.[{#LOCATION}]<p>Update: 0</p>|
-|Health status of a SAS port "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|health.sas_port.[{#LOCATION}]<p>Update: 0</p>|
-|Running status of a SAS port "{#LOCATION}" (LLD)|<p>-</p>|`Zabbix trapper`|running.sas_port.[{#LOCATION}]<p>Update: 0</p>|
+|Health status of a DiskDomain "{#NAME}"|<p>-</p>|`Zabbix trapper`|health.diskpool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Running status of a DiskDomain "{#NAME}"|<p>-</p>|`Zabbix trapper`|running.diskpool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of the LUN "{#NAME}"|<p>-</p>|`Zabbix trapper`|health.lun.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Running status of the LUN "{#NAME}"|<p>-</p>|`Zabbix trapper`|running.lun.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a Fibre Channel port "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.fc_port.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of a Fibre Channel port "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.fc_port.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a BBU "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.backup_power.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of a BBU "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.backup_power.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health Status of a PSU "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.power.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running Status of a PSU "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.power.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health Status of a FAN "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.fan.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of a FAN "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.fan.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a Controller "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.controller.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of a Controller "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.controller.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health status of an interface module "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.intf_module.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of an interface module "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.intf_module.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Free capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|free.capacity.storagepool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|health.storagepool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Running status of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|running.storagepool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Subscribed capacity of a Pool "{#NAME}" in percent|<p>-</p>|`Calculated`|subscribed.capacity.percent.storagepool.[{#NAME}]<p>Update: 3m</p><p>LLD</p>|
+|Subscribed capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|subscribed.capacity.storagepool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Total capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|total.capacity.storagepool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Used capacity of a Pool "{#NAME}" in percent|<p>-</p>|`Calculated`|used.capacity.percent.storagepool.[{#NAME}]<p>Update: 3m</p><p>LLD</p>|
+|Used capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|used.capacity.storagepool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of disk "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.disk.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of disk "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.disk.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health status of an Ethernet port "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.eth_port.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of an Ethernet port "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.eth_port.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health status of an enclosure "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.enclosure.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of an enclosure "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.enclosure.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health status of an expansion module "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.expboard.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of an expansion module "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.expboard.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a SAS port "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|health.sas_port.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
+|Running status of a SAS port "{#LOCATION}"|<p>-</p>|`Zabbix trapper`|running.sas_port.[{#LOCATION}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

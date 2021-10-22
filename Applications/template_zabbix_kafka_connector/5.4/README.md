@@ -27,8 +27,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|State of {#CONNECTOR}  connector (LLD)|<p>Check the state of a Kafka connector. Value's PAUSED RUNNING or FAILED.</p>|`Zabbix agent`|state[{#CONNECTOR}]<p>Update: 5m</p>|
-|State of {#CONNECTOR_ID} task (LLD)|<p>Check the state of a Kafka connector task. Value's PAUSED RUNNING or FAILED.</p>|`Zabbix agent`|task[{#CONNECTOR_ID}]<p>Update: 5m</p>|
+|State of {#CONNECTOR}  connector|<p>Check the state of a Kafka connector. Value's PAUSED RUNNING or FAILED.</p>|`Zabbix agent`|state[{#CONNECTOR}]<p>Update: 5m</p><p>LLD</p>|
+|State of {#CONNECTOR_ID} task|<p>Check the state of a Kafka connector task. Value's PAUSED RUNNING or FAILED.</p>|`Zabbix agent`|task[{#CONNECTOR_ID}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

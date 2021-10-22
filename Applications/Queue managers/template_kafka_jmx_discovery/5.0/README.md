@@ -88,23 +88,23 @@ There are no template links in this template.
 |Leader replica counts|<p>-</p>|`JMX agent`|jmx["kafka.server:type=ReplicaManager,name=LeaderCount","Value"]<p>Update: 60s</p>|
 |Partition Count|<p>-</p>|`JMX agent`|jmx["kafka.server:type=ReplicaManager,name=PartitionCount","Value"]<p>Update: 60s</p>|
 |# of under replicated partitions (|ISR| < |all replicas|)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=ReplicaManager,name=UnderReplicatedPartitions","Value"]<p>Update: 60s</p>|
-|{#JMXTOPIC} under replicated partition {#JMXPARTITION} (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.cluster:type=Partition,name=UnderReplicated,topic={#JMXTOPIC},partition={#JMXPARTITION}","Value"]<p>Update: 30s</p>|
-|Request rate Fetch Consumer v{#JMXVERSION} (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.network:type=RequestMetrics,name=RequestsPerSec,request=FetchConsumer,version={#JMXVERSION}","Count"]<p>Update: 60s</p>|
-|Request rate Fetch Follower v{#JMXVERSION} (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.network:type=RequestMetrics,name=RequestsPerSec,request=FetchFollower,version={#JMXVERSION}","Count"]<p>Update: 60s</p>|
-|Request rate Produce v{#JMXVERSION} (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.network:type=RequestMetrics,name=RequestsPerSec,request=Produce,version={#JMXVERSION}","Count"]<p>Update: 60s</p>|
-|{#JMXTOPIC} BytesInPerSec FifteenMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} BytesInPerSec FiveMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} BytesInPerSec MeanRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","MeanRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} BytesInPerSec OneMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","OneMinuteRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} BytesOutPerSec FifteenMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} BytesOutPerSec FiveMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} BytesOutPerSec MeanRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","MeanRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} BytesOutPerSec OneMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","OneMinuteRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} MessagesInPerSec FifteenMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} MessagesInPerSec FiveMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} MessagesInPerSec MeanRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","MeanRate"]<p>Update: 60s</p>|
-|{#JMXTOPIC} MessagesInPerSec OneMinuteRate (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","OneMinuteRate"]<p>Update: 60s</p>|
-|Lag in messages per follower: node {#JMXCLIENTID} {#JMXTOPIC} {#JMXPARTITION} (LLD)|<p>-</p>|`JMX agent`|jmx["kafka.server:type=FetcherLagMetrics,name=ConsumerLag,clientId={#JMXCLIENTID},topic={#JMXTOPIC},partition={#JMXPARTITION}","Value"]<p>Update: 60s</p>|
+|{#JMXTOPIC} under replicated partition {#JMXPARTITION}|<p>-</p>|`JMX agent`|jmx["kafka.cluster:type=Partition,name=UnderReplicated,topic={#JMXTOPIC},partition={#JMXPARTITION}","Value"]<p>Update: 30s</p><p>LLD</p>|
+|Request rate Fetch Consumer v{#JMXVERSION}|<p>-</p>|`JMX agent`|jmx["kafka.network:type=RequestMetrics,name=RequestsPerSec,request=FetchConsumer,version={#JMXVERSION}","Count"]<p>Update: 60s</p><p>LLD</p>|
+|Request rate Fetch Follower v{#JMXVERSION}|<p>-</p>|`JMX agent`|jmx["kafka.network:type=RequestMetrics,name=RequestsPerSec,request=FetchFollower,version={#JMXVERSION}","Count"]<p>Update: 60s</p><p>LLD</p>|
+|Request rate Produce v{#JMXVERSION}|<p>-</p>|`JMX agent`|jmx["kafka.network:type=RequestMetrics,name=RequestsPerSec,request=Produce,version={#JMXVERSION}","Count"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} BytesInPerSec FifteenMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} BytesInPerSec FiveMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} BytesInPerSec MeanRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","MeanRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} BytesInPerSec OneMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","OneMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} BytesOutPerSec FifteenMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} BytesOutPerSec FiveMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} BytesOutPerSec MeanRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","MeanRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} BytesOutPerSec OneMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","OneMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} MessagesInPerSec FifteenMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} MessagesInPerSec FiveMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} MessagesInPerSec MeanRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","MeanRate"]<p>Update: 60s</p><p>LLD</p>|
+|{#JMXTOPIC} MessagesInPerSec OneMinuteRate|<p>-</p>|`JMX agent`|jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","OneMinuteRate"]<p>Update: 60s</p><p>LLD</p>|
+|Lag in messages per follower: node {#JMXCLIENTID} {#JMXTOPIC} {#JMXPARTITION}|<p>-</p>|`JMX agent`|jmx["kafka.server:type=FetcherLagMetrics,name=ConsumerLag,clientId={#JMXCLIENTID},topic={#JMXTOPIC},partition={#JMXPARTITION}","Value"]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

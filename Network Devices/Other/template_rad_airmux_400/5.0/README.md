@@ -29,9 +29,6 @@ There are no discovery rules in this template.
 |ESSID|<p>SELUCREH - not used</p>|`SNMP agent`|frequency.essid<p>Update: 1d</p>|
 |Transmit Power|<p>-</p>|`SNMP agent`|frequency.power<p>Update: 1d</p>|
 |Received RSSI|<p>-</p>|`SNMP agent`|frequency.rssi<p>Update: 60</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |Port Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards<p>Update: 60</p>|
 |Port Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.in.errors<p>Update: 60</p>|
 |Port Bits received|<p>-</p>|`SNMP agent`|net.if.InOctets<p>Update: 60</p>|

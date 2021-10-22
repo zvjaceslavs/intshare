@@ -69,8 +69,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#FANNAME} Fan RPM (LLD)|<p>-</p>|`SNMP agent`|fan.rpm.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#FANNAME} Fan Status (LLD)|<p>-</p>|`SNMP agent`|fan.status.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|{#FANNAME} Fan RPM|<p>-</p>|`SNMP agent`|fan.rpm.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#FANNAME} Fan Status|<p>-</p>|`SNMP agent`|fan.status.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

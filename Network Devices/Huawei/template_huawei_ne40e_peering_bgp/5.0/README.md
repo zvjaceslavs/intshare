@@ -27,7 +27,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Peer: {#PEERADDR}-AS{#PEERASN} (LLD)|<p>Item que busca o estado da sessão bgp de cada peer. O estado varia de 1 a 6</p>|`SNMP agent`|snmp.bgp.rem.addr.[{#PEERADDR}]<p>Update: 30s</p>|
+|Peer: {#PEERADDR}-AS{#PEERASN}|<p>Item que busca o estado da sessão bgp de cada peer. O estado varia de 1 a 6</p>|`SNMP agent`|snmp.bgp.rem.addr.[{#PEERADDR}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

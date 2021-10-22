@@ -52,15 +52,15 @@ There are no template links in this template.
 |ping时延|<p>-</p>|`Simple check`|icmppingsec[,10,,,,avg]<p>Update: 5m</p>|
 |系统信息|<p>-</p>|`SNMP agent`|SystemDescription<p>Update: 1h</p>|
 |运行时间|<p>-</p>|`SNMP agent`|SystemUpTime<p>Update: 1h</p>|
-|Raid电池运行状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|RaidBatteryStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|端口:{#IFDESCR}({#IFALIAS})状态 (LLD)|<p>The current operational state of the interface.</p>|`SNMP agent`|InterfaceOperationStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|内存运行状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|MemoryStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|电源运行状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyOperationStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|刀片运行状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|BladeOperationStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|CPU运行状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|CPUStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|风扇运行状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|FanOperationStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|Raid控制器运行状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|RaidControllerStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|硬盘运行状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
+|Raid电池运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|RaidBatteryStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|端口:{#IFDESCR}({#IFALIAS})状态|<p>The current operational state of the interface.</p>|`SNMP agent`|InterfaceOperationStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|内存运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|MemoryStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|电源运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|PowerSupplyOperationStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|刀片运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|BladeOperationStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|CPU运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|CPUStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|风扇运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|FanOperationStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Raid控制器运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|RaidControllerStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|硬盘运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

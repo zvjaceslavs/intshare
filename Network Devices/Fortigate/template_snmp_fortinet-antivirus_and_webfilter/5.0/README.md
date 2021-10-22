@@ -58,31 +58,31 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|FTP Virus Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over FTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvFTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Oversized Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of over-sized file transmissions blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvOversizedBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Virus Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|SMTP Virus Detected ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over SMTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvSMTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|SMTP Virus Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over SMTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvSMTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|POP3 Virus Detected ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over POP3 detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvPOP3VirusDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|POP3 Virus Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over POP3 blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvPOP3VirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Oversized Detected ID #{#SNMPINDEX} (LLD)|<p>Number of over-sized file transmissions detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvOversizedDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|NNTP Virus Detected ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over NNTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvNNTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|FTP Virus Detected ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over FTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvFTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|NNTP Virus Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over NNTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvNNTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|IM Virus Detected ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over IM protocols detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvIMVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|IM Virus Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over IM protocols blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvIMVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|IMAP Virus Detected ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over IMAP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvIMAPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|IMAP Virus Blocked  ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over IMAP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvIMAPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|HTTP Virus Detected  ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over HTTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvHTTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|HTTP Virus Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions over HTTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvHTTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Virus Detected ID #{#SNMPINDEX} (LLD)|<p>Number of virus transmissions detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p>|
-|ActiveX Downloads Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of ActiveX downloads blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfActiveXBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Applets Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of Applets blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfAppletBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Cookies Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of HTTP Cookies blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfCookieBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|HTTP Sessions Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of HTTP sessions blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|HTTPS Sessions Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of HTTPS sessions blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPSBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|HTTPS URLS Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of HTTPS URLs blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPSURLBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
-|HTTP URLS Blocked ID #{#SNMPINDEX} (LLD)|<p>Number of HTTP URLs blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPURLBlocked[{#SNMPINDEX}]<p>Update: 1m</p>|
+|FTP Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions over FTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvFTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Oversized Blocked ID #{#SNMPINDEX}|<p>Number of over-sized file transmissions blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvOversizedBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|SMTP Virus Detected ID #{#SNMPINDEX}|<p>Number of virus transmissions over SMTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvSMTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|SMTP Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions over SMTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvSMTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|POP3 Virus Detected ID #{#SNMPINDEX}|<p>Number of virus transmissions over POP3 detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvPOP3VirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|POP3 Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions over POP3 blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvPOP3VirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Oversized Detected ID #{#SNMPINDEX}|<p>Number of over-sized file transmissions detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvOversizedDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|NNTP Virus Detected ID #{#SNMPINDEX}|<p>Number of virus transmissions over NNTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvNNTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|FTP Virus Detected ID #{#SNMPINDEX}|<p>Number of virus transmissions over FTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvFTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|NNTP Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions over NNTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvNNTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|IM Virus Detected ID #{#SNMPINDEX}|<p>Number of virus transmissions over IM protocols detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvIMVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|IM Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions over IM protocols blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvIMVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|IMAP Virus Detected ID #{#SNMPINDEX}|<p>Number of virus transmissions over IMAP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvIMAPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|IMAP Virus Blocked  ID #{#SNMPINDEX}|<p>Number of virus transmissions over IMAP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvIMAPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTP Virus Detected  ID #{#SNMPINDEX}|<p>Number of virus transmissions over HTTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvHTTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTP Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions over HTTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvHTTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Virus Detected ID #{#SNMPINDEX}|<p>Number of virus transmissions detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|ActiveX Downloads Blocked ID #{#SNMPINDEX}|<p>Number of ActiveX downloads blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfActiveXBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Applets Blocked ID #{#SNMPINDEX}|<p>Number of Applets blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfAppletBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Cookies Blocked ID #{#SNMPINDEX}|<p>Number of HTTP Cookies blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfCookieBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTP Sessions Blocked ID #{#SNMPINDEX}|<p>Number of HTTP sessions blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTPS Sessions Blocked ID #{#SNMPINDEX}|<p>Number of HTTPS sessions blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPSBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTPS URLS Blocked ID #{#SNMPINDEX}|<p>Number of HTTPS URLs blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPSURLBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTP URLS Blocked ID #{#SNMPINDEX}|<p>Number of HTTP URLs blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPURLBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

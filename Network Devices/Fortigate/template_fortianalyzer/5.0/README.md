@@ -73,8 +73,8 @@ There are no template links in this template.
 |Up Time|<p>The 64bit time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|fmSysUpTime<p>Update: 1m</p>|
 |Firmware Version|<p>Firmware version of the device</p>|`SNMP agent`|fmSysVersion<p>Update: 5m</p>|
 |Serial Number|<p>-</p>|`SNMP agent`|fnSysSerial<p>Update: 1h</p>|
-|Connected Device IP {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|fmDeviceEntIp[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Connected Device Name {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|fmDeviceEntName[{#SNMPVALUE}]<p>Update: 1m</p>|
+|Connected Device IP {#SNMPINDEX}|<p>-</p>|`SNMP agent`|fmDeviceEntIp[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Connected Device Name {#SNMPINDEX}|<p>-</p>|`SNMP agent`|fmDeviceEntName[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

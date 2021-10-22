@@ -149,10 +149,7 @@ There are no macros links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
-|number of current associations on $1 (LLD)|<p>-</p>|`SNMP agent`|hh3cDot11ApStationCurAssocSum[{#APNAME}]<p>Update: 60s</p>|
+|number of current associations on $1|<p>-</p>|`SNMP agent`|hh3cDot11ApStationCurAssocSum[{#APNAME}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

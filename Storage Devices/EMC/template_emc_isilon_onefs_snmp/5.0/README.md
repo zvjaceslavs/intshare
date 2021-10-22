@@ -161,17 +161,17 @@ There are no template links in this template.
 |offlineNodes|<p>-</p>|`SNMP agent`|offlineNodes.0<p>Update: 300</p>|
 |onlineNodes|<p>-</p>|`SNMP agent`|onlineNodes.0<p>Update: 300</p>|
 |readOnly|<p>-</p>|`SNMP agent`|readOnly.0<p>Update: 300</p>|
-|License $1 Expiration Date (LLD)|<p>-</p>|`SNMP agent`|licenseExpirationDate.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|License $1 Module Name (LLD)|<p>-</p>|`SNMP agent`|licenseModuleName.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|License $1 Status (LLD)|<p>-</p>|`SNMP agent`|licenseStatus.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Disk $1 Status (LLD)|<p>-</p>|`SNMP agent`|diskDeviceStatus.[{#SNMPINDEX}]<p>Update: 300</p>|
-|Disk $1 Firmware Version (LLD)|<p>-</p>|`SNMP agent`|diskFirmwareVersion.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Disk $1 Model (LLD)|<p>-</p>|`SNMP agent`|diskModel.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Disk $1 Serial Number (LLD)|<p>-</p>|`SNMP agent`|diskSerialNumber.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Disk $1 Size (LLD)|<p>-</p>|`SNMP agent`|diskSizeBytes.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Temperature Sensor $1 Description (LLD)|<p>-</p>|`SNMP agent`|tempSensorDescription.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Temperature Sensor $1 Name (LLD)|<p>-</p>|`SNMP agent`|tempSensorName.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Temperature Sensor $1 Value (LLD)|<p>-</p>|`SNMP agent`|tempSensorValue.[{#SNMPINDEX}]<p>Update: 120</p>|
+|License $1 Expiration Date|<p>-</p>|`SNMP agent`|licenseExpirationDate.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|License $1 Module Name|<p>-</p>|`SNMP agent`|licenseModuleName.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|License $1 Status|<p>-</p>|`SNMP agent`|licenseStatus.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Disk $1 Status|<p>-</p>|`SNMP agent`|diskDeviceStatus.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Disk $1 Firmware Version|<p>-</p>|`SNMP agent`|diskFirmwareVersion.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Disk $1 Model|<p>-</p>|`SNMP agent`|diskModel.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Disk $1 Serial Number|<p>-</p>|`SNMP agent`|diskSerialNumber.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Disk $1 Size|<p>-</p>|`SNMP agent`|diskSizeBytes.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Temperature Sensor $1 Description|<p>-</p>|`SNMP agent`|tempSensorDescription.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Temperature Sensor $1 Name|<p>-</p>|`SNMP agent`|tempSensorName.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Temperature Sensor $1 Value|<p>-</p>|`SNMP agent`|tempSensorValue.[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

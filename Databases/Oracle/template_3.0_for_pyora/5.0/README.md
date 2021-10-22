@@ -77,13 +77,13 @@ There are no template links in this template.
 |Oracle/Table scans (long tables) on {$DATABASE}|<p>-</p>|`Zabbix trapper`|tblscans<p>Update: 0</p>|
 |Oracle/Uptime on {$DATABASE}|<p>-</p>|`Zabbix trapper`|uptime<p>Update: 0</p>|
 |Oracle/Version on {$DATABASE}|<p>-</p>|`Zabbix trapper`|version<p>Update: 0</p>|
-|Tablespace percentual use on {#TABLESPACE} (LLD)|<p>-</p>|`Zabbix trapper`|tablespace[{#TABLESPACE}]<p>Update: 0</p>|
-|Tablespace free on {#TABLESPACE} (LLD)|<p>-</p>|`Zabbix trapper`|tablespace_abs[{#TABLESPACE}]<p>Update: 0</p>|
-|ASM Volume Free on {#ASMVOLUME} (LLD)|<p>-</p>|`Zabbix trapper`|asm_volume_free[{#ASMVOLUME}]<p>Update: 0</p>|
-|ASM Volume Size on {#ASMVOLUME} (LLD)|<p>-</p>|`Zabbix trapper`|asm_volume_size[{#ASMVOLUME}]<p>Update: 0</p>|
-|ASM Volume Use on {#ASMVOLUME} (LLD)|<p>-</p>|`Zabbix trapper`|asm_volume_use[{#ASMVOLUME}]<p>Update: 0</p>|
-|Temp Tablespace Use on {#TABLESPACE_TEMP} (LLD)|<p>-</p>|`Zabbix trapper`|tablespace_temp[{#TABLESPACE_TEMP}]<p>Update: 0</p>|
-|{#DBUSER} user status (LLD)|<p>-</p>|`Zabbix trapper`|user_status[{#DBUSER}]<p>Update: 0</p>|
+|Tablespace percentual use on {#TABLESPACE}|<p>-</p>|`Zabbix trapper`|tablespace[{#TABLESPACE}]<p>Update: 0</p><p>LLD</p>|
+|Tablespace free on {#TABLESPACE}|<p>-</p>|`Zabbix trapper`|tablespace_abs[{#TABLESPACE}]<p>Update: 0</p><p>LLD</p>|
+|ASM Volume Free on {#ASMVOLUME}|<p>-</p>|`Zabbix trapper`|asm_volume_free[{#ASMVOLUME}]<p>Update: 0</p><p>LLD</p>|
+|ASM Volume Size on {#ASMVOLUME}|<p>-</p>|`Zabbix trapper`|asm_volume_size[{#ASMVOLUME}]<p>Update: 0</p><p>LLD</p>|
+|ASM Volume Use on {#ASMVOLUME}|<p>-</p>|`Zabbix trapper`|asm_volume_use[{#ASMVOLUME}]<p>Update: 0</p><p>LLD</p>|
+|Temp Tablespace Use on {#TABLESPACE_TEMP}|<p>-</p>|`Zabbix trapper`|tablespace_temp[{#TABLESPACE_TEMP}]<p>Update: 0</p><p>LLD</p>|
+|{#DBUSER} user status|<p>-</p>|`Zabbix trapper`|user_status[{#DBUSER}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -44,9 +44,6 @@ There are no macros links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Host name of zabbix_agentd running|<p>-</p>|`Zabbix agent`|agent.hostname<p>Update: 3600</p>|
-|Agent ping|<p>The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.</p>|`Zabbix agent`|agent.ping<p>Update: 60</p>|
-|Version of zabbix_agent(d) running|<p>-</p>|`Zabbix agent`|agent.version<p>Update: 3600</p>|
 |Maximum number of opened files|<p>It could be increased by using sysctrl utility or modifying file /etc/sysctl.conf.</p>|`Zabbix agent`|kernel.maxfiles<p>Update: 1h</p>|
 |Maximum number of processes|<p>It could be increased by using sysctrl utility or modifying file /etc/sysctl.conf.</p>|`Zabbix agent`|kernel.maxproc<p>Update: 1h</p>|
 |Number of processes|<p>Total number of processes in any state.</p>|`Zabbix agent`|proc.num[]<p>Update: 1m</p>|
@@ -79,13 +76,13 @@ There are no macros links in this template.
 |Used memory in %|<p>-</p>|`Zabbix agent`|vm.memory.size[pused]<p>Update: 1m</p>|
 |Total memory|<p>-</p>|`Zabbix agent`|vm.memory.size[total]<p>Update: 1h</p>|
 |Used memory|<p>-</p>|`Zabbix agent`|vm.memory.size[used]<p>Update: 1m</p>|
-|Incoming network traffic on $1 (LLD)|<p>-</p>|`Zabbix agent`|net.if.in[{#IFNAME}]<p>Update: 1m</p>|
-|Outgoing network traffic on $1 (LLD)|<p>-</p>|`Zabbix agent`|net.if.out[{#IFNAME}]<p>Update: 1m</p>|
-|Free inodes on $1 in % (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.inode[{#FSNAME},pfree]<p>Update: 1m</p>|
-|Free disk space on $1 (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},free]<p>Update: 1m</p>|
-|Free disk space on $1 in % (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},pfree]<p>Update: 1m</p>|
-|Total disk space on $1 (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},total]<p>Update: 1h</p>|
-|Used disk space on $1 (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},used]<p>Update: 1m</p>|
+|Incoming network traffic on $1|<p>-</p>|`Zabbix agent`|net.if.in[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Outgoing network traffic on $1|<p>-</p>|`Zabbix agent`|net.if.out[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Free inodes on $1 in %|<p>-</p>|`Zabbix agent`|vfs.fs.inode[{#FSNAME},pfree]<p>Update: 1m</p><p>LLD</p>|
+|Free disk space on $1|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},free]<p>Update: 1m</p><p>LLD</p>|
+|Free disk space on $1 in %|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},pfree]<p>Update: 1m</p><p>LLD</p>|
+|Total disk space on $1|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},total]<p>Update: 1h</p><p>LLD</p>|
+|Used disk space on $1|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},used]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

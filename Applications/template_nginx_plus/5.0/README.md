@@ -71,61 +71,61 @@ There are no template links in this template.
 |handshakes|<p>-</p>|`Dependent item`|nginxplus.ssl.handshakes<p>Update: 0</p>|
 |handshakes failed|<p>-</p>|`Dependent item`|nginxplus.ssl.handshakes_failed<p>Update: 0</p>|
 |session reuses|<p>-</p>|`Dependent item`|nginxplus.ssl.session_reuses<p>Update: 0</p>|
-|Nginx+ cache {#CACHE} (LLD)|<p>-</p>|`HTTP agent`|nginxplus.http.caches[{#CACHE}]<p>Update: 1m</p>|
-|miss bytes written (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},miss_bytes_written]<p>Update: 0</p>|
-|updating responses (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},updating_responses]<p>Update: 0</p>|
-|updating bytes (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},updating_bytes]<p>Update: 0</p>|
-|stale responses (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},stale_responses]<p>Update: 0</p>|
-|stale bytes (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},stale_bytes]<p>Update: 0</p>|
-|size (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},size]<p>Update: 0</p>|
-|revalidated responses (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},revalidated_responses]<p>Update: 0</p>|
-|revalidated bytes (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},revalidated_bytes]<p>Update: 0</p>|
-|miss responses written (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},miss_responses_written]<p>Update: 0</p>|
-|miss responses (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},miss_responses]<p>Update: 0</p>|
-|bypass bytes (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},bypass_bytes]<p>Update: 0</p>|
-|bypass bytes written (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},bypass_bytes_written]<p>Update: 0</p>|
-|maxsize (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},max_size]<p>Update: 0</p>|
-|hit responses (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},hit_responses]<p>Update: 0</p>|
-|hit bytes (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},hit_bytes]<p>Update: 0</p>|
-|expired responses written (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},expired_responses_written]<p>Update: 0</p>|
-|expired responses (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},expired_responses]<p>Update: 0</p>|
-|expired bytes written (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},expired_bytes_written]<p>Update: 0</p>|
-|expired bytes (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},expired_bytes]<p>Update: 0</p>|
-|cold (LLD)|<p>A boolean value indicating whether the "cache loader" process is still loading data from disk into the cache.</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},cold]<p>Update: 0</p>|
-|bypass responses written (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},bypass_responses_written]<p>Update: 0</p>|
-|bypass responses (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},bypass_responses]<p>Update: 0</p>|
-|miss bytes (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},miss_bytes]<p>Update: 0</p>|
-|Nginx+ limit_req {#LIMIT_REQ} (LLD)|<p>-</p>|`HTTP agent`|nginxplus.http.limit_reqs[{#LIMIT_REQ}]<p>Update: 1m</p>|
-|delayed (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},delayed]<p>Update: 0</p>|
-|delayed dry run (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},delayed_dry_run]<p>Update: 0</p>|
-|passed (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},passed]<p>Update: 0</p>|
-|rejected (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},rejected]<p>Update: 0</p>|
-|rejected dry run (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},rejected_dry_run]<p>Update: 0</p>|
-|Nginx+ HTTP upstream {#UPSTREAM} (LLD)|<p>-</p>|`HTTP agent`|nginxplus.http.upstream[{#UPSTREAM}]<p>Update: 1m</p>|
-|peer #0 (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_0]<p>Update: 0</p>|
-|peer #1 (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_1]<p>Update: 0</p>|
-|peer #2 (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_2]<p>Update: 0</p>|
-|peer #3 (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_3]<p>Update: 0</p>|
-|zombies (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},zombies]<p>Update: 0</p>|
-|state (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_0,state]<p>Update: 0</p>|
-|unhealthy (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_0,unhealthy]<p>Update: 0</p>|
-|state (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_1,state]<p>Update: 0</p>|
-|unhealthy (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_1,unhealthy]<p>Update: 0</p>|
-|state (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_2,state]<p>Update: 0</p>|
-|unhealthy (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_2,unhealthy]<p>Update: 0</p>|
-|state (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_3,state]<p>Update: 0</p>|
-|unhealthy (LLD)|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_3,unhealthy]<p>Update: 0</p>|
-|Nginx+ STREAM upstream {#STREAM} (LLD)|<p>-</p>|`HTTP agent`|nginxplus.stream.upstream[{#STREAM}]<p>Update: 1m</p>|
-|peer #0 (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_0]<p>Update: 0</p>|
-|peer #1 (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_1]<p>Update: 0</p>|
-|peer #2 (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_2]<p>Update: 0</p>|
-|zombies (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},zombies]<p>Update: 0</p>|
-|state (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_0,state]<p>Update: 0</p>|
-|unhealthy (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_0,unhealthy]<p>Update: 0</p>|
-|state (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_1,state]<p>Update: 0</p>|
-|unhealthy (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_1,unhealthy]<p>Update: 0</p>|
-|state (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_2,state]<p>Update: 0</p>|
-|unhealthy (LLD)|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_2,unhealthy]<p>Update: 0</p>|
+|Nginx+ cache {#CACHE}|<p>-</p>|`HTTP agent`|nginxplus.http.caches[{#CACHE}]<p>Update: 1m</p><p>LLD</p>|
+|miss bytes written|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},miss_bytes_written]<p>Update: 0</p><p>LLD</p>|
+|updating responses|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},updating_responses]<p>Update: 0</p><p>LLD</p>|
+|updating bytes|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},updating_bytes]<p>Update: 0</p><p>LLD</p>|
+|stale responses|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},stale_responses]<p>Update: 0</p><p>LLD</p>|
+|stale bytes|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},stale_bytes]<p>Update: 0</p><p>LLD</p>|
+|size|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},size]<p>Update: 0</p><p>LLD</p>|
+|revalidated responses|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},revalidated_responses]<p>Update: 0</p><p>LLD</p>|
+|revalidated bytes|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},revalidated_bytes]<p>Update: 0</p><p>LLD</p>|
+|miss responses written|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},miss_responses_written]<p>Update: 0</p><p>LLD</p>|
+|miss responses|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},miss_responses]<p>Update: 0</p><p>LLD</p>|
+|bypass bytes|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},bypass_bytes]<p>Update: 0</p><p>LLD</p>|
+|bypass bytes written|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},bypass_bytes_written]<p>Update: 0</p><p>LLD</p>|
+|maxsize|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},max_size]<p>Update: 0</p><p>LLD</p>|
+|hit responses|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},hit_responses]<p>Update: 0</p><p>LLD</p>|
+|hit bytes|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},hit_bytes]<p>Update: 0</p><p>LLD</p>|
+|expired responses written|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},expired_responses_written]<p>Update: 0</p><p>LLD</p>|
+|expired responses|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},expired_responses]<p>Update: 0</p><p>LLD</p>|
+|expired bytes written|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},expired_bytes_written]<p>Update: 0</p><p>LLD</p>|
+|expired bytes|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},expired_bytes]<p>Update: 0</p><p>LLD</p>|
+|cold|<p>A boolean value indicating whether the "cache loader" process is still loading data from disk into the cache.</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},cold]<p>Update: 0</p><p>LLD</p>|
+|bypass responses written|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},bypass_responses_written]<p>Update: 0</p><p>LLD</p>|
+|bypass responses|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},bypass_responses]<p>Update: 0</p><p>LLD</p>|
+|miss bytes|<p>-</p>|`Dependent item`|nginxplus.http.caches[{#CACHE},miss_bytes]<p>Update: 0</p><p>LLD</p>|
+|Nginx+ limit_req {#LIMIT_REQ}|<p>-</p>|`HTTP agent`|nginxplus.http.limit_reqs[{#LIMIT_REQ}]<p>Update: 1m</p><p>LLD</p>|
+|delayed|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},delayed]<p>Update: 0</p><p>LLD</p>|
+|delayed dry run|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},delayed_dry_run]<p>Update: 0</p><p>LLD</p>|
+|passed|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},passed]<p>Update: 0</p><p>LLD</p>|
+|rejected|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},rejected]<p>Update: 0</p><p>LLD</p>|
+|rejected dry run|<p>-</p>|`Dependent item`|nginxplus.http.limit_reqs[{#LIMIT_REQ},rejected_dry_run]<p>Update: 0</p><p>LLD</p>|
+|Nginx+ HTTP upstream {#UPSTREAM}|<p>-</p>|`HTTP agent`|nginxplus.http.upstream[{#UPSTREAM}]<p>Update: 1m</p><p>LLD</p>|
+|peer #0|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_0]<p>Update: 0</p><p>LLD</p>|
+|peer #1|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_1]<p>Update: 0</p><p>LLD</p>|
+|peer #2|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_2]<p>Update: 0</p><p>LLD</p>|
+|peer #3|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_3]<p>Update: 0</p><p>LLD</p>|
+|zombies|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},zombies]<p>Update: 0</p><p>LLD</p>|
+|state|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_0,state]<p>Update: 0</p><p>LLD</p>|
+|unhealthy|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_0,unhealthy]<p>Update: 0</p><p>LLD</p>|
+|state|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_1,state]<p>Update: 0</p><p>LLD</p>|
+|unhealthy|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_1,unhealthy]<p>Update: 0</p><p>LLD</p>|
+|state|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_2,state]<p>Update: 0</p><p>LLD</p>|
+|unhealthy|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_2,unhealthy]<p>Update: 0</p><p>LLD</p>|
+|state|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_3,state]<p>Update: 0</p><p>LLD</p>|
+|unhealthy|<p>-</p>|`Dependent item`|nginxplus.http.upstream[{#UPSTREAM},peer_3,unhealthy]<p>Update: 0</p><p>LLD</p>|
+|Nginx+ STREAM upstream {#STREAM}|<p>-</p>|`HTTP agent`|nginxplus.stream.upstream[{#STREAM}]<p>Update: 1m</p><p>LLD</p>|
+|peer #0|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_0]<p>Update: 0</p><p>LLD</p>|
+|peer #1|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_1]<p>Update: 0</p><p>LLD</p>|
+|peer #2|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_2]<p>Update: 0</p><p>LLD</p>|
+|zombies|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},zombies]<p>Update: 0</p><p>LLD</p>|
+|state|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_0,state]<p>Update: 0</p><p>LLD</p>|
+|unhealthy|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_0,unhealthy]<p>Update: 0</p><p>LLD</p>|
+|state|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_1,state]<p>Update: 0</p><p>LLD</p>|
+|unhealthy|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_1,unhealthy]<p>Update: 0</p><p>LLD</p>|
+|state|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_2,state]<p>Update: 0</p><p>LLD</p>|
+|unhealthy|<p>-</p>|`Dependent item`|nginxplus.stream.upstream[{#STREAM},peer_2,unhealthy]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

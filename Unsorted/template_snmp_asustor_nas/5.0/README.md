@@ -51,30 +51,30 @@ There are no template links in this template.
 |sysTime|<p>Текущее время данного NAS</p>|`SNMP agent`|sysTime<p>Update: 1h</p>|
 |sysTimeZone|<p>Часовой пояс данного NAS</p>|`SNMP agent`|sysTimeZone<p>Update: 1h</p>|
 |sysUptime|<p>Время безотказной работы данного NAS</p>|`SNMP agent`|sysUptime<p>Update: 1h</p>|
-|Disk #{#SNMPINDEX} index (LLD)|<p>-</p>|`SNMP agent`|storage.diskIndex[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk #{#SNMPINDEX} interface (LLD)|<p>Тип диска (SATA/SSD)</p>|`SNMP agent`|storage.diskInterface[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk #{#SNMPINDEX} model (LLD)|<p>Модель диска</p>|`SNMP agent`|storage.diskModel[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk #{#SNMPINDEX} name (LLD)|<p>ID дискового отсека</p>|`SNMP agent`|storage.diskName[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk #{#SNMPINDEX} size (LLD)|<p>Размер диска в гигабайтах (ГБ)</p>|`SNMP agent`|storage.diskSize[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk #{#SNMPINDEX} SmartInfo (LLD)|<p>Информация S.M.A.R.T. диска</p>|`SNMP agent`|storage.diskSmartInfo[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk #{#SNMPINDEX} status (LLD)|<p>S.M.A.R.T. статус диска (Healthy, Normal, Risky, Dangerous, Bad)</p>|`SNMP agent`|storage.diskStatus[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk #{#SNMPINDEX} temperature (LLD)|<p>Температура диска в градусах Цельсия</p>|`SNMP agent`|storage.diskTemperature[{#SNMPINDEX}]<p>Update: 1m</p>|
-|CPU #{#SNMPINDEX} usage (LLD)|<p>Процент использования процессора</p>|`SNMP agent`|CPUUsage[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Net #{#SNMPINDEX} index (LLD)|<p>-</p>|`SNMP agent`|netIndex[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Net #{#SNMPINDEX} interface (LLD)|<p>Интерфейс сети</p>|`SNMP agent`|netInterface[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Net #{#SNMPINDEX} IP4-address (LLD)|<p>IPv4-адрес сетевого интерфейса</p>|`SNMP agent`|netIPv4Address[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Net #{#SNMPINDEX} IP6-address (LLD)|<p>IPv6-адрес сетевого интерфейса</p>|`SNMP agent`|netIPv6Address[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Net #{#SNMPINDEX} MAC-address (LLD)|<p>MAC-адрес сетевого интерфейса</p>|`SNMP agent`|netMacAddress[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Net #{#SNMPINDEX} Received (LLD)|<p>Входящие пакеты в килобайтах (КБ)</p>|`SNMP agent`|netPacketReceived[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Net #{#SNMPINDEX} Sent (LLD)|<p>Исходящие пакеты в килобайтах (КБ)</p>|`SNMP agent`|netPacketSent[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume #{#SNMPINDEX} filesystem (LLD)|<p>Тип файловой системы тома</p>|`SNMP agent`|volumeFileSystem[{#SNMPINDEX}]<p>Update: 15m</p>|
-|Volume #{#SNMPINDEX} free size (LLD)|<p>Свободный объем тома в гигабайтах (ГБ)</p>|`SNMP agent`|volumeFreeSize[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Volume #{#SNMPINDEX} index (LLD)|<p>-</p>|`SNMP agent`|volumeIndex[{#SNMPINDEX}]<p>Update: 15m</p>|
-|Volume #{#SNMPINDEX} level (LLD)|<p>Уровень тома (Single / JBOD / Raid0 / Raid1 / Raid10 / Raid5 / Raid6)</p>|`SNMP agent`|volumeLevel[{#SNMPINDEX}]<p>Update: 15m</p>|
-|Volume #{#SNMPINDEX} name (LLD)|<p>Имя тома</p>|`SNMP agent`|volumeName[{#SNMPINDEX}]<p>Update: 15m</p>|
-|Volume #{#SNMPINDEX} status (LLD)|<p>Статус тома (Healthy, Clean, Active, Resyncing, Recovering, Reshaping, Appending, Migrating, fsExpanding fsIniting Degraded, Failed, Inactive)</p>|`SNMP agent`|volumeStatus[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume #{#SNMPINDEX} total size (LLD)|<p>Общий размер тома в гигабайтах (ГБ)</p>|`SNMP agent`|volumeTotalSize[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Fan #{#SNMPINDEX} speed (LLD)|<p>Скорость вращения вентилятора, об/м</p>|`SNMP agent`|fanSpeed[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Disk #{#SNMPINDEX} index|<p>-</p>|`SNMP agent`|storage.diskIndex[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk #{#SNMPINDEX} interface|<p>Тип диска (SATA/SSD)</p>|`SNMP agent`|storage.diskInterface[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk #{#SNMPINDEX} model|<p>Модель диска</p>|`SNMP agent`|storage.diskModel[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk #{#SNMPINDEX} name|<p>ID дискового отсека</p>|`SNMP agent`|storage.diskName[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk #{#SNMPINDEX} size|<p>Размер диска в гигабайтах (ГБ)</p>|`SNMP agent`|storage.diskSize[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk #{#SNMPINDEX} SmartInfo|<p>Информация S.M.A.R.T. диска</p>|`SNMP agent`|storage.diskSmartInfo[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk #{#SNMPINDEX} status|<p>S.M.A.R.T. статус диска (Healthy, Normal, Risky, Dangerous, Bad)</p>|`SNMP agent`|storage.diskStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk #{#SNMPINDEX} temperature|<p>Температура диска в градусах Цельсия</p>|`SNMP agent`|storage.diskTemperature[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|CPU #{#SNMPINDEX} usage|<p>Процент использования процессора</p>|`SNMP agent`|CPUUsage[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Net #{#SNMPINDEX} index|<p>-</p>|`SNMP agent`|netIndex[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Net #{#SNMPINDEX} interface|<p>Интерфейс сети</p>|`SNMP agent`|netInterface[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Net #{#SNMPINDEX} IP4-address|<p>IPv4-адрес сетевого интерфейса</p>|`SNMP agent`|netIPv4Address[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Net #{#SNMPINDEX} IP6-address|<p>IPv6-адрес сетевого интерфейса</p>|`SNMP agent`|netIPv6Address[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Net #{#SNMPINDEX} MAC-address|<p>MAC-адрес сетевого интерфейса</p>|`SNMP agent`|netMacAddress[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Net #{#SNMPINDEX} Received|<p>Входящие пакеты в килобайтах (КБ)</p>|`SNMP agent`|netPacketReceived[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Net #{#SNMPINDEX} Sent|<p>Исходящие пакеты в килобайтах (КБ)</p>|`SNMP agent`|netPacketSent[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume #{#SNMPINDEX} filesystem|<p>Тип файловой системы тома</p>|`SNMP agent`|volumeFileSystem[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|Volume #{#SNMPINDEX} free size|<p>Свободный объем тома в гигабайтах (ГБ)</p>|`SNMP agent`|volumeFreeSize[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Volume #{#SNMPINDEX} index|<p>-</p>|`SNMP agent`|volumeIndex[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|Volume #{#SNMPINDEX} level|<p>Уровень тома (Single / JBOD / Raid0 / Raid1 / Raid10 / Raid5 / Raid6)</p>|`SNMP agent`|volumeLevel[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|Volume #{#SNMPINDEX} name|<p>Имя тома</p>|`SNMP agent`|volumeName[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|Volume #{#SNMPINDEX} status|<p>Статус тома (Healthy, Clean, Active, Resyncing, Recovering, Reshaping, Appending, Migrating, fsExpanding fsIniting Degraded, Failed, Inactive)</p>|`SNMP agent`|volumeStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume #{#SNMPINDEX} total size|<p>Общий размер тома в гигабайтах (ГБ)</p>|`SNMP agent`|volumeTotalSize[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Fan #{#SNMPINDEX} speed|<p>Скорость вращения вентилятора, об/м</p>|`SNMP agent`|fanSpeed[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -52,11 +52,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Service {#SERVICE.NAME} status (LLD)|<p>{#SERVICE.NAME} status Display name: {#SERVICE.DISPLAYNAME} Description: {#SERVICE.DESCRIPTION}</p>|`Zabbix agent (active)`|service.info[{#SERVICE.NAME}]<p>Update: 1m</p>|
-|{#JOB.NAME}: Final Job Status (LLD)|<p>{#JOB.NAME} final job status</p>|`Database monitor`|db.odbc.select[be.job.incr.{#JOB.NAME}.finaljobstatus,{HOST.HOST}]<p>Update: 15m</p>|
-|{#JOB.NAME}: Total Data Size, bytes (LLD)|<p>{#JOB.NAME} total bytes</p>|`Database monitor`|db.odbc.select[be.job.incr.{#JOB.NAME}.totalbytes,{HOST.HOST}]<p>Update: 15m</p>|
-|{#JOB.NAME}: Final Job Status (LLD)|<p>{#JOB.NAME} final job status</p>|`Database monitor`|db.odbc.select[be.job.full.{#JOB.NAME}.finaljobstatus,{HOST.HOST}]<p>Update: 15m</p>|
-|{#JOB.NAME}: Total Data Size, bytes (LLD)|<p>{#JOB.NAME} total bytes</p>|`Database monitor`|db.odbc.select[be.job.full.{#JOB.NAME}.totalbytes,{HOST.HOST}]<p>Update: 15m</p>|
+|Service {#SERVICE.NAME} status|<p>{#SERVICE.NAME} status Display name: {#SERVICE.DISPLAYNAME} Description: {#SERVICE.DESCRIPTION}</p>|`Zabbix agent (active)`|service.info[{#SERVICE.NAME}]<p>Update: 1m</p><p>LLD</p>|
+|{#JOB.NAME}: Final Job Status|<p>{#JOB.NAME} final job status</p>|`Database monitor`|db.odbc.select[be.job.incr.{#JOB.NAME}.finaljobstatus,{HOST.HOST}]<p>Update: 15m</p><p>LLD</p>|
+|{#JOB.NAME}: Total Data Size, bytes|<p>{#JOB.NAME} total bytes</p>|`Database monitor`|db.odbc.select[be.job.incr.{#JOB.NAME}.totalbytes,{HOST.HOST}]<p>Update: 15m</p><p>LLD</p>|
+|{#JOB.NAME}: Final Job Status|<p>{#JOB.NAME} final job status</p>|`Database monitor`|db.odbc.select[be.job.full.{#JOB.NAME}.finaljobstatus,{HOST.HOST}]<p>Update: 15m</p><p>LLD</p>|
+|{#JOB.NAME}: Total Data Size, bytes|<p>{#JOB.NAME} total bytes</p>|`Database monitor`|db.odbc.select[be.job.full.{#JOB.NAME}.totalbytes,{HOST.HOST}]<p>Update: 15m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

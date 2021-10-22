@@ -63,23 +63,23 @@ There are no template links in this template.
 |S/N of Chassis|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureSerialNum.1<p>Update: 72000</p>|
 |Power redundancy state|<p>-</p>|`SNMP agent`|cpqRackPowerEnclosureRedundant.1<p>Update: 600</p>|
 |Uptime|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 300</p>|
-|PN Interconnect-module (Slot: {#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|cpqRackNetConnectorPartNumber[{#SNMPINDEX}]<p>Update: 3600</p>|
-|SN Interconnect-module (Slot: {#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|cpqRackNetConnectorSerialNum[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Output load on PU {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|cpqRackPowerSupplyCurPwrOutput[{#SNMPINDEX}]<p>Update: 600</p>|
-|PU Input status {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|cpqRackPowerSupplyInputLineStatus[{#SNMPINDEX}]<p>Update: 600</p>|
-|PU Status {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|cpqRackPowerSupplyStatus[{#SNMPINDEX}]<p>Update: 600</p>|
-|Fan module state {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureFanCondition[{#SNMPINDEX}]<p>Update: 600</p>|
-|PN blade {#SNMPVALUE} (Slot: {#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|cpqRackServerBladePartNumber[{#SNMPINDEX}]<p>Update: 3600</p>|
-|SN blade {#SNMPVALUE} (Slot: {#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|cpqRackServerBladeSerialNum[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Blade state {#SNMPVALUE} (Slot: {#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|cpqRackServerBladeStatus[{#SNMPINDEX}]<p>Update: 180</p>|
-|Temperature ({#SNMPVALUE}, ID: {#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureTempCurrent[{#SNMPINDEX}]<p>Update: 300</p>|
-|Critical temperature ({#SNMPVALUE} ID: {#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureTempThreshold[{#SNMPINDEX}]<p>Update: 300</p>|
-|OA {#MGR_INDEX} Condition (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerCondition[{#SNMPINDEX}]<p>Update: 60s</p>|
-|OA {#MGR_INDEX} Firmware (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerFWRev[{#SNMPINDEX}]<p>Update: 3600</p>|
-|OA {#MGR_INDEX} Part Number (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerPartNumber[{#SNMPINDEX}]<p>Update: 86400</p>|
-|OA {#MGR_INDEX} Redundant (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerRedundant[{#SNMPINDEX}]<p>Update: 60s</p>|
-|OA {#MGR_INDEX} Role (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerRole[{#SNMPINDEX}]<p>Update: 60s</p>|
-|OA {#MGR_INDEX} Serial Number (LLD)|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerSerialNum[{#SNMPINDEX}]<p>Update: 86400</p>|
+|PN Interconnect-module (Slot: {#SNMPINDEX})|<p>-</p>|`SNMP agent`|cpqRackNetConnectorPartNumber[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|SN Interconnect-module (Slot: {#SNMPINDEX})|<p>-</p>|`SNMP agent`|cpqRackNetConnectorSerialNum[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Output load on PU {#SNMPINDEX}|<p>-</p>|`SNMP agent`|cpqRackPowerSupplyCurPwrOutput[{#SNMPINDEX}]<p>Update: 600</p><p>LLD</p>|
+|PU Input status {#SNMPINDEX}|<p>-</p>|`SNMP agent`|cpqRackPowerSupplyInputLineStatus[{#SNMPINDEX}]<p>Update: 600</p><p>LLD</p>|
+|PU Status {#SNMPINDEX}|<p>-</p>|`SNMP agent`|cpqRackPowerSupplyStatus[{#SNMPINDEX}]<p>Update: 600</p><p>LLD</p>|
+|Fan module state {#SNMPINDEX}|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureFanCondition[{#SNMPINDEX}]<p>Update: 600</p><p>LLD</p>|
+|PN blade {#SNMPVALUE} (Slot: {#SNMPINDEX})|<p>-</p>|`SNMP agent`|cpqRackServerBladePartNumber[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|SN blade {#SNMPVALUE} (Slot: {#SNMPINDEX})|<p>-</p>|`SNMP agent`|cpqRackServerBladeSerialNum[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Blade state {#SNMPVALUE} (Slot: {#SNMPINDEX})|<p>-</p>|`SNMP agent`|cpqRackServerBladeStatus[{#SNMPINDEX}]<p>Update: 180</p><p>LLD</p>|
+|Temperature ({#SNMPVALUE}, ID: {#SNMPINDEX})|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureTempCurrent[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Critical temperature ({#SNMPVALUE} ID: {#SNMPINDEX})|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureTempThreshold[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|OA {#MGR_INDEX} Condition|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerCondition[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
+|OA {#MGR_INDEX} Firmware|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerFWRev[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|OA {#MGR_INDEX} Part Number|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerPartNumber[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|OA {#MGR_INDEX} Redundant|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerRedundant[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
+|OA {#MGR_INDEX} Role|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerRole[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
+|OA {#MGR_INDEX} Serial Number|<p>-</p>|`SNMP agent`|cpqRackCommonEnclosureManagerSerialNum[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

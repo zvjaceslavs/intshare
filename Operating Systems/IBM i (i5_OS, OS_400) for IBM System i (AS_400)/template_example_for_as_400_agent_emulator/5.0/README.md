@@ -50,9 +50,6 @@ Constantin Oshmyan
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Host name of zabbix_agentd running|<p>-</p>|`Zabbix agent`|agent.hostname<p>Update: 3600</p>|
-|Agent ping|<p>The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.</p>|`Zabbix agent`|agent.ping<p>Update: 60</p>|
-|Version of zabbix_agent(d) running|<p>-</p>|`Zabbix agent`|agent.version<p>Update: 3600</p>|
 |Size of output queue $1 in library $2|<p>-</p>|`Zabbix agent (active)`|as400.outputqueue.size[QEZDEBUG,QUSRSYS]<p>Update: 900</p>|
 |Size of output queue $1 in library $2|<p>-</p>|`Zabbix agent (active)`|as400.outputqueue.size[QEZJOBLOG,QUSRSYS]<p>Update: 900</p>|
 |Size of output queue $1 in library $2|<p>-</p>|`Zabbix agent (active)`|as400.outputqueue.size[QPRINT,QGPL]<p>Update: 900</p>|
@@ -63,19 +60,19 @@ Constantin Oshmyan
 |Number of running jobs (total)|<p>-</p>|`Zabbix agent (active)`|proc.num[,,run]<p>Update: 300</p>|
 |System information|<p>-</p>|`Zabbix agent`|system.uname<p>Update: 120</p>|
 |Number of users|<p>-</p>|`Zabbix agent (active)`|system.users.num<p>Update: 60</p>|
-|Disk {#DSK_ID}: {#DSK_NAME} free space (LLD)|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},free]<p>Update: 300</p>|
-|Disk {#DSK_ID}: {#DSK_NAME} free space, % (LLD)|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},pfree]<p>Update: 300</p>|
-|Disk {#DSK_ID}: {#DSK_NAME} used space, % (LLD)|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},pused]<p>Update: 300</p>|
-|Disk {#DSK_ID}: {#DSK_NAME} capacity (LLD)|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},total]<p>Update: 3600</p>|
-|Disk {#DSK_ID}: {#DSK_NAME} used space (LLD)|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},used]<p>Update: 300</p>|
-|Disk {#DSK_ID}: {#DSK_NAME} ({#DSK_TYPE} {#DSK_MODEL}, {#DSK_SN}) status (LLD)|<p>-</p>|`Zabbix agent (active)`|as400.disk.state[{#DSK_SN}]<p>Update: 300</p>|
-|CPU Usage by process $6/$2/$1 (LLD)|<p>-</p>|`Zabbix agent (active)`|proc.cpu.util[{#NAME},{#USER},total,,avg1,{#NUM}]<p>Update: 60</p>|
-|ASP{#FSNAME} free (LLD)|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},free]<p>Update: 300</p>|
-|ASP{#FSNAME} free, % (LLD)|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},pfree]<p>Update: 300</p>|
-|ASP{#FSNAME} pused, % (LLD)|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},pused]<p>Update: 300</p>|
-|ASP{#FSNAME} capacity (LLD)|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},total]<p>Update: 3600</p>|
-|ASP{#FSNAME} used (LLD)|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},used]<p>Update: 300</p>|
-|ASP{#FSNAME} status (LLD)|<p>-</p>|`Zabbix agent (active)`|vfs.fs.state[{#FSNAME}]<p>Update: 300</p>|
+|Disk {#DSK_ID}: {#DSK_NAME} free space|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},free]<p>Update: 300</p><p>LLD</p>|
+|Disk {#DSK_ID}: {#DSK_NAME} free space, %|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},pfree]<p>Update: 300</p><p>LLD</p>|
+|Disk {#DSK_ID}: {#DSK_NAME} used space, %|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},pused]<p>Update: 300</p><p>LLD</p>|
+|Disk {#DSK_ID}: {#DSK_NAME} capacity|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},total]<p>Update: 3600</p><p>LLD</p>|
+|Disk {#DSK_ID}: {#DSK_NAME} used space|<p>-</p>|`Zabbix agent (active)`|as400.disk.size[{#DSK_SN},used]<p>Update: 300</p><p>LLD</p>|
+|Disk {#DSK_ID}: {#DSK_NAME} ({#DSK_TYPE} {#DSK_MODEL}, {#DSK_SN}) status|<p>-</p>|`Zabbix agent (active)`|as400.disk.state[{#DSK_SN}]<p>Update: 300</p><p>LLD</p>|
+|CPU Usage by process $6/$2/$1|<p>-</p>|`Zabbix agent (active)`|proc.cpu.util[{#NAME},{#USER},total,,avg1,{#NUM}]<p>Update: 60</p><p>LLD</p>|
+|ASP{#FSNAME} free|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},free]<p>Update: 300</p><p>LLD</p>|
+|ASP{#FSNAME} free, %|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},pfree]<p>Update: 300</p><p>LLD</p>|
+|ASP{#FSNAME} pused, %|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},pused]<p>Update: 300</p><p>LLD</p>|
+|ASP{#FSNAME} capacity|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},total]<p>Update: 3600</p><p>LLD</p>|
+|ASP{#FSNAME} used|<p>-</p>|`Zabbix agent (active)`|vfs.fs.size[{#FSNAME},used]<p>Update: 300</p><p>LLD</p>|
+|ASP{#FSNAME} status|<p>-</p>|`Zabbix agent (active)`|vfs.fs.state[{#FSNAME}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

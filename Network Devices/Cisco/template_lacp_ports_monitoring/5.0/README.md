@@ -28,11 +28,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#IFNAME} InErrors (LLD)|<p>-</p>|`SNMP agent`|if.in.errors.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|Po{#SNMPVALUE}|{#IFNAME} LAG Status (LLD)|<p>{#IFALIAS}</p>|`SNMP agent`|if.lag.status.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|{#IFNAME} OutErrors (LLD)|<p>-</p>|`SNMP agent`|if.out.errors.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|Po{#POINDEX} InOctets (LLD)|<p>-</p>|`SNMP agent`|if.po[{#POINDEX}.in]<p>Update: 1m</p>|
-|Po{#POINDEX} OutOctets (LLD)|<p>-</p>|`SNMP agent`|if.po[{#POINDEX}.out]<p>Update: 1m</p>|
+|{#IFNAME} InErrors|<p>-</p>|`SNMP agent`|if.in.errors.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|Po{#SNMPVALUE}|{#IFNAME} LAG Status|<p>{#IFALIAS}</p>|`SNMP agent`|if.lag.status.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|{#IFNAME} OutErrors|<p>-</p>|`SNMP agent`|if.out.errors.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|Po{#POINDEX} InOctets|<p>-</p>|`SNMP agent`|if.po[{#POINDEX}.in]<p>Update: 1m</p><p>LLD</p>|
+|Po{#POINDEX} OutOctets|<p>-</p>|`SNMP agent`|if.po[{#POINDEX}.out]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

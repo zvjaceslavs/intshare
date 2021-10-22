@@ -65,7 +65,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#ARPIFNAME} - {#ARPIP} (LLD)|<p>Find IP(+ Name of the Interface) to MAC</p>|`SNMP agent`|net.interface.arp.[net.{#ARPINDEX}]<p>Update: 30m</p>|
+|{#ARPIFNAME} - {#ARPIP}|<p>Find IP(+ Name of the Interface) to MAC</p>|`SNMP agent`|net.interface.arp.[net.{#ARPINDEX}]<p>Update: 30m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

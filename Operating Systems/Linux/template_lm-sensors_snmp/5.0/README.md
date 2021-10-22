@@ -58,10 +58,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|FAN Speed {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|lmsensors.fan[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Temperature Sensor {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|lmTempSensorsValue[{#SNMPVALUE}]<p>Update: 1m</p>|
-|PSU Voltage {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|lmsensors.volt[{#SNMPVALUE}]<p>Update: 1m</p>|
-|CPU Temperature {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|lmsensors.cpu[{#SNMPVALUE}]<p>Update: 1m</p>|
+|FAN Speed {#SNMPVALUE}|<p>-</p>|`SNMP agent`|lmsensors.fan[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE}|<p>-</p>|`SNMP agent`|lmTempSensorsValue[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|PSU Voltage {#SNMPVALUE}|<p>-</p>|`SNMP agent`|lmsensors.volt[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|CPU Temperature {#SNMPVALUE}|<p>-</p>|`SNMP agent`|lmsensors.cpu[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

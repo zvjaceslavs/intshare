@@ -57,23 +57,23 @@ There are no template links in this template.
 |trap消息|<p>-</p>|`SNMP trap`|snmptrap[""]<p>Update: 0</p>|
 |系统信息|<p>-</p>|`SNMP agent`|SystemDescription<p>Update: 1h</p>|
 |运行时间|<p>-</p>|`SNMP agent`|SystemUpTime<p>Update: 1h</p>|
-|实体运行状态 {#ENTITYDESCR} (LLD)|<p>-</p>|`SNMP agent`|EntityOperationStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|CPU利用率 {#ENTITYDESCR} (LLD)|<p>-</p>|`SNMP agent`|MONITOR_CPUUsage.[{#SNMPINDEX},{#ENTITYDESCR}]<p>Update: 5m</p>|
-|内存利用率 {#ENTITYDESCR} (LLD)|<p>-</p>|`SNMP agent`|MONITOR_MemoryUsage.[{#SNMPINDEX},{#ENTITYDESCR}]<p>Update: 5m</p>|
-|端口带宽 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 12h</p>|
-|入方向带宽利用率 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`Calculated`|InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|入方向广播报文速率 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceInBroadcastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|入方向组播报文速率 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceInMulticastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|入方向错包 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceInPacketError.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|入方向流量 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceInTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|入方向单播报文速率 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceInUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|出方向带宽利用率 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`Calculated`|InterfaceOutBandwidthUsage[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|出方向广播报文速率 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutBroadcastPacketTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|出方向组播报文速率 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutMulticastPackestTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|出方向错包 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|出方向流量 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|出方向单播报文速率 {#IFDESCR}({#IFALIAS}) (LLD)|<p>-</p>|`SNMP agent`|InterfaceOutUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p>|
-|端口:{#IFDESCR}({#IFALIAS})状态 (LLD)|<p>The current operational state of the interface.</p>|`SNMP agent`|InterfaceOperationStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
+|实体运行状态 {#ENTITYDESCR}|<p>-</p>|`SNMP agent`|EntityOperationStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|CPU利用率 {#ENTITYDESCR}|<p>-</p>|`SNMP agent`|MONITOR_CPUUsage.[{#SNMPINDEX},{#ENTITYDESCR}]<p>Update: 5m</p><p>LLD</p>|
+|内存利用率 {#ENTITYDESCR}|<p>-</p>|`SNMP agent`|MONITOR_MemoryUsage.[{#SNMPINDEX},{#ENTITYDESCR}]<p>Update: 5m</p><p>LLD</p>|
+|端口带宽 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 12h</p><p>LLD</p>|
+|入方向带宽利用率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`Calculated`|InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|入方向广播报文速率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceInBroadcastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|入方向组播报文速率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceInMulticastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|入方向错包 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceInPacketError.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|入方向流量 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceInTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|入方向单播报文速率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceInUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|出方向带宽利用率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`Calculated`|InterfaceOutBandwidthUsage[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|出方向广播报文速率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceOutBroadcastPacketTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|出方向组播报文速率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceOutMulticastPackestTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|出方向错包 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|出方向流量 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceOutTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|出方向单播报文速率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceOutUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|端口:{#IFDESCR}({#IFALIAS})状态|<p>The current operational state of the interface.</p>|`SNMP agent`|InterfaceOperationStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

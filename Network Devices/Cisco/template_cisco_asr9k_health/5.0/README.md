@@ -146,25 +146,25 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Power Consumption|<p>-</p>|`Calculated`|powerConsumption<p>Update: 1m</p>|
-|CPU #$1 Usage 1min Rev (LLD)|<p>CISCO-PROCESS-MIB::cpmCPUTotal1minRev The overall CPU busy percentage in the last 1 minute period. This object deprecates the object cpmCPUTotal1min and increases the value range to (0..100).</p>|`SNMP agent`|cpmCPUTotal1minRev["{#SNMPINDEX}"]<p>Update: 1m</p>|
-|CPU #$1 Usage 5min Rev (LLD)|<p>CISCO-PROCESS-MIB::cpmCPUTotal5minRev The overall CPU busy percentage in the last 5 minute period. This object deprecates the object cpmCPUTotal5min and increases the value range to (0..100).</p>|`SNMP agent`|cpmCPUTotal5minRev["{#SNMPINDEX}"]<p>Update: 5m</p>|
-|Current Supplied by PowerSupply "$1" (LLD)|<p>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFRUCurrent Current supplied by the FRU (positive values) or current required to operate the FRU (negative values).</p>|`SNMP agent`|cefcFRUCurrent["{#SNMPVALUE}","Power Supply"]<p>Update: 30m</p>|
-|Operational Status of PowerSupply "$1" (LLD)|<p>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFRUPowerOperStatus Operational FRU power state.</p>|`SNMP agent`|cefcFRUPowerOperStatus["{#SNMPVALUE}","Power Supply"]<p>Update: 1m</p>|
-|"$1" (LLD)|<p>-</p>|`SNMP agent`|entPhysicalContainedInVoltage["{#SNMPVALUE}"]<p>Update: 1m</p>|
-|Status of FAN Sensor "{#SNMPVALUE}"/{#SNMPINDEX} (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</p>|`SNMP agent`|entSensorStatus["{#SNMPVALUE}",FAN,{#SNMPINDEX}]<p>Update: 1m</p>|
-|Speed of FAN Sensor "{#SNMPVALUE}"/{#SNMPINDEX} (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</p>|`SNMP agent`|entSensorValue["{#SNMPVALUE}",FAN,{#SNMPINDEX}]<p>Update: 5m</p>|
-|"$1" (LLD)|<p>-</p>|`SNMP agent`|entPhysicalContainedInCurrent["{#SNMPVALUE}"]<p>Update: 1m</p>|
-|Status of Temperature Sensor "$1" (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</p>|`SNMP agent`|entSensorStatus["{#SNMPVALUE}","Temperature LC"]<p>Update: 1m</p>|
-|Thresholds::"$1" | Temperature Alarm (LLD)|<p>-</p>|`SNMP agent`|entSensorThresholdValue["{#SNMPVALUE}","Temperature LC","Alarm"]<p>Update: 1h</p>|
-|Temperature on Sensor "$1" (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</p>|`SNMP agent`|entSensorValue["{#SNMPVALUE}","Temperature LC"]<p>Update: 1m</p>|
-|Status of Temperature Sensor "$1" (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</p>|`SNMP agent`|entSensorStatus["{#SNMPVALUE}","Temperature RSP"]<p>Update: 1m</p>|
-|Thresholds::"$1" | Temperature Alarm (LLD)|<p>-</p>|`SNMP agent`|entSensorThresholdValue["{#SNMPVALUE}","Temperature RSP","Alarm"]<p>Update: 1h</p>|
-|Temperature on Sensor "$1" (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</p>|`SNMP agent`|entSensorValue["{#SNMPVALUE}","Temperature RSP"]<p>Update: 1m</p>|
-|Operational Status of "$1" (LLD)|<p>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFanTrayOperStatus The operational state of the fan or fan tray.</p>|`SNMP agent`|cefcFanTrayOperStatus["{#SNMPVALUE}"]<p>Update: 1m</p>|
-|Free memory on Memory Pool "$1" (LLD)|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolFree Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree["{#SNMPVALUE}"]<p>Update: 5m</p>|
-|Total Memory Pool "$1" (LLD)|<p>-</p>|`Calculated`|ciscoMemoryPoolTotal["{#SNMPVALUE}"]<p>Update: 1h</p>|
-|Used memory on Memory Pool "$1" (LLD)|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUsed Indicates the number of bytes from the memory pool that are currently in use by applications on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolUsed["{#SNMPVALUE}"]<p>Update: 5m</p>|
-|Utilization on Memory Pool "$1" (LLD)|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUtilization5Min This is the memory pool utilization for 5 minutes.</p>|`SNMP agent`|ciscoMemoryPoolUtilization5Min["{#SNMPVALUE}"]<p>Update: 5m</p>|
+|CPU #$1 Usage 1min Rev|<p>CISCO-PROCESS-MIB::cpmCPUTotal1minRev The overall CPU busy percentage in the last 1 minute period. This object deprecates the object cpmCPUTotal1min and increases the value range to (0..100).</p>|`SNMP agent`|cpmCPUTotal1minRev["{#SNMPINDEX}"]<p>Update: 1m</p><p>LLD</p>|
+|CPU #$1 Usage 5min Rev|<p>CISCO-PROCESS-MIB::cpmCPUTotal5minRev The overall CPU busy percentage in the last 5 minute period. This object deprecates the object cpmCPUTotal5min and increases the value range to (0..100).</p>|`SNMP agent`|cpmCPUTotal5minRev["{#SNMPINDEX}"]<p>Update: 5m</p><p>LLD</p>|
+|Current Supplied by PowerSupply "$1"|<p>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFRUCurrent Current supplied by the FRU (positive values) or current required to operate the FRU (negative values).</p>|`SNMP agent`|cefcFRUCurrent["{#SNMPVALUE}","Power Supply"]<p>Update: 30m</p><p>LLD</p>|
+|Operational Status of PowerSupply "$1"|<p>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFRUPowerOperStatus Operational FRU power state.</p>|`SNMP agent`|cefcFRUPowerOperStatus["{#SNMPVALUE}","Power Supply"]<p>Update: 1m</p><p>LLD</p>|
+|"$1"|<p>-</p>|`SNMP agent`|entPhysicalContainedInVoltage["{#SNMPVALUE}"]<p>Update: 1m</p><p>LLD</p>|
+|Status of FAN Sensor "{#SNMPVALUE}"/{#SNMPINDEX}|<p>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</p>|`SNMP agent`|entSensorStatus["{#SNMPVALUE}",FAN,{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Speed of FAN Sensor "{#SNMPVALUE}"/{#SNMPINDEX}|<p>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</p>|`SNMP agent`|entSensorValue["{#SNMPVALUE}",FAN,{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|"$1"|<p>-</p>|`SNMP agent`|entPhysicalContainedInCurrent["{#SNMPVALUE}"]<p>Update: 1m</p><p>LLD</p>|
+|Status of Temperature Sensor "$1"|<p>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</p>|`SNMP agent`|entSensorStatus["{#SNMPVALUE}","Temperature LC"]<p>Update: 1m</p><p>LLD</p>|
+|Thresholds::"$1" | Temperature Alarm|<p>-</p>|`SNMP agent`|entSensorThresholdValue["{#SNMPVALUE}","Temperature LC","Alarm"]<p>Update: 1h</p><p>LLD</p>|
+|Temperature on Sensor "$1"|<p>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</p>|`SNMP agent`|entSensorValue["{#SNMPVALUE}","Temperature LC"]<p>Update: 1m</p><p>LLD</p>|
+|Status of Temperature Sensor "$1"|<p>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</p>|`SNMP agent`|entSensorStatus["{#SNMPVALUE}","Temperature RSP"]<p>Update: 1m</p><p>LLD</p>|
+|Thresholds::"$1" | Temperature Alarm|<p>-</p>|`SNMP agent`|entSensorThresholdValue["{#SNMPVALUE}","Temperature RSP","Alarm"]<p>Update: 1h</p><p>LLD</p>|
+|Temperature on Sensor "$1"|<p>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</p>|`SNMP agent`|entSensorValue["{#SNMPVALUE}","Temperature RSP"]<p>Update: 1m</p><p>LLD</p>|
+|Operational Status of "$1"|<p>CISCO-ENTITY-FRU-CONTROL-MIB::cefcFanTrayOperStatus The operational state of the fan or fan tray.</p>|`SNMP agent`|cefcFanTrayOperStatus["{#SNMPVALUE}"]<p>Update: 1m</p><p>LLD</p>|
+|Free memory on Memory Pool "$1"|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolFree Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree["{#SNMPVALUE}"]<p>Update: 5m</p><p>LLD</p>|
+|Total Memory Pool "$1"|<p>-</p>|`Calculated`|ciscoMemoryPoolTotal["{#SNMPVALUE}"]<p>Update: 1h</p><p>LLD</p>|
+|Used memory on Memory Pool "$1"|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUsed Indicates the number of bytes from the memory pool that are currently in use by applications on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolUsed["{#SNMPVALUE}"]<p>Update: 5m</p><p>LLD</p>|
+|Utilization on Memory Pool "$1"|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUtilization5Min This is the memory pool utilization for 5 minutes.</p>|`SNMP agent`|ciscoMemoryPoolUtilization5Min["{#SNMPVALUE}"]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

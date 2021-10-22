@@ -48,23 +48,23 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Jitter AVG from {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_JitterAVG_from.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Lantancy MAX to {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_LatancyMAX_to.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|RTTmax between {#SNMPVALUE} and host (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_RTTmax.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|MOS score {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_MOS.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Packet Loss from {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_Lost_to_host.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Packet Loss to {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_Lost_from_host.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Lantancy MIN to {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_Latancymin_to.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Lantancy MIN from {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_Latancymin_from.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Lantancy MAX from {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_LatancyMAX_from.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Jitter AVG to {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_JitterAVG_to.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Lantancy AVG to {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_LatancyAVG_to.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Lantancy AVG from {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_LatancyAVG_from.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Jitter MIN to {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_JitterMIN_to.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Jitter MIN from {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_JitterMIN_from.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Jitter MAX to {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_JitterMAX_to.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Jitter MAX from {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_JitterMAX_from.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|RTTmin between {#SNMPVALUE} and host (LLD)|<p>-</p>|`SNMP agent`|SLADiscovery_RTTmin.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|Jitter AVG from {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_JitterAVG_from.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Lantancy MAX to {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_LatancyMAX_to.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|RTTmax between {#SNMPVALUE} and host|<p>-</p>|`SNMP agent`|SLADiscovery_RTTmax.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|MOS score {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_MOS.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Packet Loss from {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_Lost_to_host.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Packet Loss to {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_Lost_from_host.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Lantancy MIN to {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_Latancymin_to.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Lantancy MIN from {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_Latancymin_from.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Lantancy MAX from {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_LatancyMAX_from.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Jitter AVG to {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_JitterAVG_to.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Lantancy AVG to {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_LatancyAVG_to.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Lantancy AVG from {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_LatancyAVG_from.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Jitter MIN to {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_JitterMIN_to.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Jitter MIN from {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_JitterMIN_from.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Jitter MAX to {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_JitterMAX_to.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Jitter MAX from {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SLADiscovery_JitterMAX_from.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|RTTmin between {#SNMPVALUE} and host|<p>-</p>|`SNMP agent`|SLADiscovery_RTTmin.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

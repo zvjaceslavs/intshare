@@ -37,14 +37,14 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Station Connection Time $1 (LLD)|<p>-</p>|`SNMP agent`|ubntStaConnTime[{#SNMPVALUE}]<p>Update: 30</p>|
-|Station MAC Address $1 (LLD)|<p>-</p>|`SNMP agent`|ubntStaMac[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Station Name $1 (LLD)|<p>-</p>|`SNMP agent`|ubntStaName[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Station Noise Floor $1 (LLD)|<p>-</p>|`SNMP agent`|ubntStaNoiseFloor[{#SNMPVALUE}]<p>Update: 30</p>|
-|Station  Rx Capacity $1 (LLD)|<p>-</p>|`SNMP agent`|ubntStaRxCapacity[{#SNMPVALUE}]<p>Update: 30</p>|
-|Station Signal Strength $1 (LLD)|<p>-</p>|`SNMP agent`|ubntStaSignal[{#SNMPVALUE}]<p>Update: 30</p>|
-|Station Tx Capacity $1 (LLD)|<p>-</p>|`SNMP agent`|ubntStaTxCapacity[{#SNMPVALUE}]<p>Update: 30</p>|
-|Station  Tx Latency $1 (LLD)|<p>-</p>|`SNMP agent`|ubntStaTxLatency[{#SNMPVALUE}]<p>Update: 30</p>|
+|Station Connection Time $1|<p>-</p>|`SNMP agent`|ubntStaConnTime[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Station MAC Address $1|<p>-</p>|`SNMP agent`|ubntStaMac[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Station Name $1|<p>-</p>|`SNMP agent`|ubntStaName[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Station Noise Floor $1|<p>-</p>|`SNMP agent`|ubntStaNoiseFloor[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Station  Rx Capacity $1|<p>-</p>|`SNMP agent`|ubntStaRxCapacity[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Station Signal Strength $1|<p>-</p>|`SNMP agent`|ubntStaSignal[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Station Tx Capacity $1|<p>-</p>|`SNMP agent`|ubntStaTxCapacity[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Station  Tx Latency $1|<p>-</p>|`SNMP agent`|ubntStaTxLatency[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

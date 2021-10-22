@@ -139,21 +139,21 @@ There are no template links in this template.
 |Elasticsearch Snapshots in last {$ELASTICSEARCH_SNAPSHOTP_DAYS} days|<p>Total snapshots in the last 3 days</p>|`Dependent item`|elasticsearch.snapshots[total]<p>Update: 0</p>|
 |Elasticsearch version|<p>-</p>|`Dependent item`|elasticsearch.version<p>Update: 0</p>|
 |Elasticsearch port listen|<p>-</p>|`Simple check`|net.tcp.service[tcp,{$ELASTICSEARCH_HOST},{$ELASTICSEARCH_PORT}]<p>Update: 1m</p>|
-|Elasticsearch index full info [ {#ELASTICSEARCH_INDEX} ] (LLD)|<p>-</p>|`HTTP agent`|elasticsearch.index[all,{#ELASTICSEARCH_INDEX}]<p>Update: 1m</p>|
-|Elasticsearch index documents [ {#ELASTICSEARCH_INDEX} ] (LLD)|<p>-</p>|`Dependent item`|elasticsearch.index[documents,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p>|
-|Elasticsearch index documents deleted [ {#ELASTICSEARCH_INDEX} ] (LLD)|<p>-</p>|`Dependent item`|elasticsearch.index[documentsdeleted,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p>|
-|Elasticsearch index health [ {#ELASTICSEARCH_INDEX} ] (LLD)|<p>-</p>|`Dependent item`|elasticsearch.index[health,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p>|
-|Elasticsearch index latency [ {#ELASTICSEARCH_INDEX} ]  (ms) (LLD)|<p>Average time that takes a shard to complete a search operation. Specific for a index.</p>|`Dependent item`|elasticsearch.index[latency,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p>|
-|Elasticsearch queries [ {#ELASTICSEARCH_INDEX} ] (LLD)|<p>Number of queries on this index</p>|`Dependent item`|elasticsearch.index[queries,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p>|
-|Elasticsearch index query latency [ {#ELASTICSEARCH_INDEX} ] (LLD)|<p>Search time in this index</p>|`Dependent item`|elasticsearch.index[querylatency,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p>|
-|Elasticsearch index size [ {#ELASTICSEARCH_INDEX} ] (LLD)|<p>-</p>|`Dependent item`|elasticsearch.index[size,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p>|
-|Elasticsearch full allocation info [ {#ELASTICSEARCH_NODE} ] (LLD)|<p>Provides a snapshot of the number of shards allocated to each data node and their disk space. https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-allocation.html</p>|`HTTP agent`|elasticsearch.node.disk[all,{#ELASTICSEARCH_NODE}]<p>Update: 1m</p>|
-|Elasticsearch node [ {#ELASTICSEARCH_NODE} ] is master? (LLD)|<p>Get information about master node. https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-master.html</p>|`HTTP agent`|elasticsearch.node.master[{#ELASTICSEARCH_NODE}]<p>Update: 1m</p>|
-|Elasticsearch full stats for node [ {#ELASTICSEARCH_NODE} ] (LLD)|<p>Full stats for specific node as seen on https://www.elastic.co/guide/en/elasticsearch/reference/6.2/cluster-nodes-stats.html</p>|`HTTP agent`|elasticsearch.node.query_cache[all,{#ELASTICSEARCH_NODE}]<p>Update: 1m</p>|
-|Elasticsearch CPU Load (1min)  [ {#ELASTICSEARCH_NODE} ] (LLD)|<p>-</p>|`Dependent item`|elasticsearch.node[cpu1m,{#ELASTICSEARCH_NODE}]<p>Update: 0</p>|
-|Elasticsearch Storage Total [ {#ELASTICSEARCH_NODE} ] (LLD)|<p>https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-allocation.html</p>|`Dependent item`|elasticsearch.node[disk,{#ELASTICSEARCH_NODE},total]<p>Update: 0</p>|
-|Elasticsearch Storage Used (in %) [ {#ELASTICSEARCH_NODE} ] (LLD)|<p>https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-allocation.html</p>|`Dependent item`|elasticsearch.node[disk,{#ELASTICSEARCH_NODE},usedp]<p>Update: 0</p>|
-|Elasticsearch Storage Used [ {#ELASTICSEARCH_NODE} ] (LLD)|<p>https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-allocation.html</p>|`Dependent item`|elasticsearch.node[disk,{#ELASTICSEARCH_NODE},used]<p>Update: 0</p>|
+|Elasticsearch index full info [ {#ELASTICSEARCH_INDEX} ]|<p>-</p>|`HTTP agent`|elasticsearch.index[all,{#ELASTICSEARCH_INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Elasticsearch index documents [ {#ELASTICSEARCH_INDEX} ]|<p>-</p>|`Dependent item`|elasticsearch.index[documents,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch index documents deleted [ {#ELASTICSEARCH_INDEX} ]|<p>-</p>|`Dependent item`|elasticsearch.index[documentsdeleted,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch index health [ {#ELASTICSEARCH_INDEX} ]|<p>-</p>|`Dependent item`|elasticsearch.index[health,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch index latency [ {#ELASTICSEARCH_INDEX} ]  (ms)|<p>Average time that takes a shard to complete a search operation. Specific for a index.</p>|`Dependent item`|elasticsearch.index[latency,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch queries [ {#ELASTICSEARCH_INDEX} ]|<p>Number of queries on this index</p>|`Dependent item`|elasticsearch.index[queries,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch index query latency [ {#ELASTICSEARCH_INDEX} ]|<p>Search time in this index</p>|`Dependent item`|elasticsearch.index[querylatency,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch index size [ {#ELASTICSEARCH_INDEX} ]|<p>-</p>|`Dependent item`|elasticsearch.index[size,{#ELASTICSEARCH_INDEX}]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch full allocation info [ {#ELASTICSEARCH_NODE} ]|<p>Provides a snapshot of the number of shards allocated to each data node and their disk space. https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-allocation.html</p>|`HTTP agent`|elasticsearch.node.disk[all,{#ELASTICSEARCH_NODE}]<p>Update: 1m</p><p>LLD</p>|
+|Elasticsearch node [ {#ELASTICSEARCH_NODE} ] is master?|<p>Get information about master node. https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-master.html</p>|`HTTP agent`|elasticsearch.node.master[{#ELASTICSEARCH_NODE}]<p>Update: 1m</p><p>LLD</p>|
+|Elasticsearch full stats for node [ {#ELASTICSEARCH_NODE} ]|<p>Full stats for specific node as seen on https://www.elastic.co/guide/en/elasticsearch/reference/6.2/cluster-nodes-stats.html</p>|`HTTP agent`|elasticsearch.node.query_cache[all,{#ELASTICSEARCH_NODE}]<p>Update: 1m</p><p>LLD</p>|
+|Elasticsearch CPU Load (1min)  [ {#ELASTICSEARCH_NODE} ]|<p>-</p>|`Dependent item`|elasticsearch.node[cpu1m,{#ELASTICSEARCH_NODE}]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch Storage Total [ {#ELASTICSEARCH_NODE} ]|<p>https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-allocation.html</p>|`Dependent item`|elasticsearch.node[disk,{#ELASTICSEARCH_NODE},total]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch Storage Used (in %) [ {#ELASTICSEARCH_NODE} ]|<p>https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-allocation.html</p>|`Dependent item`|elasticsearch.node[disk,{#ELASTICSEARCH_NODE},usedp]<p>Update: 0</p><p>LLD</p>|
+|Elasticsearch Storage Used [ {#ELASTICSEARCH_NODE} ]|<p>https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-allocation.html</p>|`Dependent item`|elasticsearch.node[disk,{#ELASTICSEARCH_NODE},used]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

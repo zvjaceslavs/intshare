@@ -35,24 +35,24 @@ There are no template links in this template.
 |System Hardware Version|<p>-</p>|`SNMP agent`|sysHardVersion<p>Update: 1d</p>|
 |System Software Version|<p>-</p>|`SNMP agent`|sysSoftVersion<p>Update: 1d</p>|
 |System Temperature|<p>-</p>|`SNMP agent`|sysTemperature<p>Update: 90s</p>|
-|ONU Number {#oltPonDesc} (LLD)|<p>-</p>|`SNMP agent`|oltPonAuthOnuNum[{#SNMPVALUE}]<p>Update: 20m</p>|
-|MGMT Card CPU Util Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|MgmtCardCpuUtil.["{#SNMPINDEX}"]<p>Update: 10m</p>|
-|MGMT Card Hardware Version Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|mgmtCardHardwareVersion.["{#SNMPINDEX}"]<p>Update: 1d</p>|
-|MGMT Card Mem Util Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|MgmtCardMemUtil.["{#SNMPINDEX}"]<p>Update: 10m</p>|
-|MGMT Card Software Version Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|mgmtCardSoftwareVersion.["{#SNMPINDEX}"]<p>Update: 1d</p>|
-|Incoming traffic on interface $1 64bits (LLD)|<p>-</p>|`SNMP agent`|ifHCInOctets[{#SNMPVALUE}]<p>Update: 60</p>|
-|Outgoing traffic on interface $1 64bits (LLD)|<p>-</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 60</p>|
-|ONU Name {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|onuPonName.["{#SNMPINDEX}"]<p>Update: 1d</p>|
-|ONU RX Power {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|onuPonRXOpticalPower.["{#SNMPINDEX}"]<p>Update: 1h</p>|
-|ONU TX Power {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|onuPonTXOpticalPower.["{#SNMPINDEX}"]<p>Update: 1h</p>|
-|Card Available Ports Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|cardAvailablePorts.["{#SNMPINDEX}"]<p>Update: 1d</p>|
-|Card CPU Util Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|cardCpuUtil.["{#SNMPINDEX}"]<p>Update: 10m</p>|
-|Card Hardware Version Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|cardHardwareVersion.["{#SNMPINDEX}"]<p>Update: 1d</p>|
-|Card Mem Util Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|cardMemUtil.["{#SNMPINDEX}"]<p>Update: 10m</p>|
-|Card Num of Ports Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|cardNumOfPorts.["{#SNMPINDEX}"]<p>Update: 1d</p>|
-|Card Software Version Slot ["{#SNMPINDEX}"] (LLD)|<p>-</p>|`SNMP agent`|cardSoftwateVersion.["{#SNMPINDEX}"]<p>Update: 1d</p>|
-|Card Status Slot ["{#SNMPINDEX}"] (LLD)|<p>Column Description: 1:normal(1) 2:communication interrupt(0)</p>|`SNMP agent`|cardStatus.["{#SNMPINDEX}"]<p>Update: 10m</p>|
-|Card Type Slot ["{#SNMPINDEX}"] (LLD)|<p>Column Description: 260:EC2 724:EC2-X 16384:AC16 the other type could see the card type table</p>|`SNMP agent`|cardType.["{#SNMPINDEX}"]<p>Update: 1d</p>|
+|ONU Number {#oltPonDesc}|<p>-</p>|`SNMP agent`|oltPonAuthOnuNum[{#SNMPVALUE}]<p>Update: 20m</p><p>LLD</p>|
+|MGMT Card CPU Util Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|MgmtCardCpuUtil.["{#SNMPINDEX}"]<p>Update: 10m</p><p>LLD</p>|
+|MGMT Card Hardware Version Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|mgmtCardHardwareVersion.["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|MGMT Card Mem Util Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|MgmtCardMemUtil.["{#SNMPINDEX}"]<p>Update: 10m</p><p>LLD</p>|
+|MGMT Card Software Version Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|mgmtCardSoftwareVersion.["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|Incoming traffic on interface $1 64bits|<p>-</p>|`SNMP agent`|ifHCInOctets[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Outgoing traffic on interface $1 64bits|<p>-</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|ONU Name {#SNMPVALUE}|<p>-</p>|`SNMP agent`|onuPonName.["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|ONU RX Power {#SNMPVALUE}|<p>-</p>|`SNMP agent`|onuPonRXOpticalPower.["{#SNMPINDEX}"]<p>Update: 1h</p><p>LLD</p>|
+|ONU TX Power {#SNMPVALUE}|<p>-</p>|`SNMP agent`|onuPonTXOpticalPower.["{#SNMPINDEX}"]<p>Update: 1h</p><p>LLD</p>|
+|Card Available Ports Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|cardAvailablePorts.["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|Card CPU Util Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|cardCpuUtil.["{#SNMPINDEX}"]<p>Update: 10m</p><p>LLD</p>|
+|Card Hardware Version Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|cardHardwareVersion.["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|Card Mem Util Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|cardMemUtil.["{#SNMPINDEX}"]<p>Update: 10m</p><p>LLD</p>|
+|Card Num of Ports Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|cardNumOfPorts.["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|Card Software Version Slot ["{#SNMPINDEX}"]|<p>-</p>|`SNMP agent`|cardSoftwateVersion.["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|Card Status Slot ["{#SNMPINDEX}"]|<p>Column Description: 1:normal(1) 2:communication interrupt(0)</p>|`SNMP agent`|cardStatus.["{#SNMPINDEX}"]<p>Update: 10m</p><p>LLD</p>|
+|Card Type Slot ["{#SNMPINDEX}"]|<p>Column Description: 260:EC2 724:EC2-X 16384:AC16 the other type could see the card type table</p>|`SNMP agent`|cardType.["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

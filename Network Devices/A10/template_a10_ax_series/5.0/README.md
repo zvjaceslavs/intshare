@@ -46,10 +46,10 @@ There are no template links in this template.
 |Used memory|<p>A10-AX-MIB::axSysMemoryUsage The usage memory(KB).</p>|`SNMP agent`|axSysMemoryUsage<p>Update: 300</p>|
 |Serial Number|<p>A10-AX-MIB::axSysSerialNumber The system serial number.</p>|`SNMP agent`|axSysSerialNumber<p>Update: 86400</p>|
 |Status of Right or Upper Power Supply|<p>A10-AX-MIB::axSysUpperOrRightPowerSupplyStatus The upper/right power supply status.</p>|`SNMP agent`|axSysUpperOrRightPowerSupplyStatus<p>Update: 60</p>|
-|Status of Power Supply Voltage "$1" (LLD)|<p>A10-AX-MIB::axPowerSupplyVoltageStatus The status of the indexed system power supply voltage. This is only supported for the platform where the sensor data is available.</p>|`SNMP agent`|axPowerSupplyVoltageStatus["{#SNMPVALUE}"]<p>Update: 60</p>|
-|Speed of FAN "$1" (LLD)|<p>A10-AX-MIB::axFanSpeed The fan speed.</p>|`SNMP agent`|axFanSpeed["{#SNMPVALUE}"]<p>Update: 300</p>|
-|Status of "$1" FAN (LLD)|<p>A10-AX-MIB::axFanStatus Fan status: 0: Failed, 4: OK-fixed/high, 5: OK-low/med, 6: OK-med/med, 7: OK-med/high, -2: not ready, -1: unknown.</p>|`SNMP agent`|axFanStatus["{#SNMPVALUE}"]<p>Update: 60</p>|
-|Status of Power Supply "$1" (LLD)|<p>A10-AX-MIB::axPowerSupplyStatus The power supply status.</p>|`SNMP agent`|axPowerSupplyStatus["{#SNMPVALUE}"]<p>Update: 30</p>|
+|Status of Power Supply Voltage "$1"|<p>A10-AX-MIB::axPowerSupplyVoltageStatus The status of the indexed system power supply voltage. This is only supported for the platform where the sensor data is available.</p>|`SNMP agent`|axPowerSupplyVoltageStatus["{#SNMPVALUE}"]<p>Update: 60</p><p>LLD</p>|
+|Speed of FAN "$1"|<p>A10-AX-MIB::axFanSpeed The fan speed.</p>|`SNMP agent`|axFanSpeed["{#SNMPVALUE}"]<p>Update: 300</p><p>LLD</p>|
+|Status of "$1" FAN|<p>A10-AX-MIB::axFanStatus Fan status: 0: Failed, 4: OK-fixed/high, 5: OK-low/med, 6: OK-med/med, 7: OK-med/high, -2: not ready, -1: unknown.</p>|`SNMP agent`|axFanStatus["{#SNMPVALUE}"]<p>Update: 60</p><p>LLD</p>|
+|Status of Power Supply "$1"|<p>A10-AX-MIB::axPowerSupplyStatus The power supply status.</p>|`SNMP agent`|axPowerSupplyStatus["{#SNMPVALUE}"]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

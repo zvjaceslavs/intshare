@@ -85,11 +85,11 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Quota on all filesystems|<p>-</p>|`HTTP agent`|snquotas.onfs.all<p>Update: 30m</p>|
-|Used space on fs {#SNQUOTAID} (LLD)|<p>-</p>|`Calculated`|snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}]<p>Update: 30m</p>|
-|Quota on fs {#SNQUOTAID} Current Size (LLD)|<p>-</p>|`Dependent item`|snquotas.onfs.curSize.[{#SNQUOTAID}]<p>Update: 0</p>|
-|Quota on fs {#SNQUOTAID} Grace Period (LLD)|<p>-</p>|`Dependent item`|snquotas.onfs.gracePeriod.[{#SNQUOTAID}]<p>Update: 0</p>|
-|Quota on fs {#SNQUOTAID} Hard Limit (LLD)|<p>-</p>|`Dependent item`|snquotas.onfs.hardLimit.[{#SNQUOTAID}]<p>Update: 0</p>|
-|Quota on fs {#SNQUOTAID} Soft Limit (LLD)|<p>-</p>|`Dependent item`|snquotas.onfs.softLimit.[{#SNQUOTAID}]<p>Update: 0</p>|
+|Used space on fs {#SNQUOTAID}|<p>-</p>|`Calculated`|snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}]<p>Update: 30m</p><p>LLD</p>|
+|Quota on fs {#SNQUOTAID} Current Size|<p>-</p>|`Dependent item`|snquotas.onfs.curSize.[{#SNQUOTAID}]<p>Update: 0</p><p>LLD</p>|
+|Quota on fs {#SNQUOTAID} Grace Period|<p>-</p>|`Dependent item`|snquotas.onfs.gracePeriod.[{#SNQUOTAID}]<p>Update: 0</p><p>LLD</p>|
+|Quota on fs {#SNQUOTAID} Hard Limit|<p>-</p>|`Dependent item`|snquotas.onfs.hardLimit.[{#SNQUOTAID}]<p>Update: 0</p><p>LLD</p>|
+|Quota on fs {#SNQUOTAID} Soft Limit|<p>-</p>|`Dependent item`|snquotas.onfs.softLimit.[{#SNQUOTAID}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

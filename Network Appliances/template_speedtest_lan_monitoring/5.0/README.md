@@ -26,9 +26,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Speedtest {#IPERFNAME} - Download (LLD)|<p>-</p>|`Zabbix agent`|speedtest-lan.download.server[{#IPERFID}]<p>Update: 600s</p>|
-|Speedtest {#IPERFNAME} - Ping (LLD)|<p>-</p>|`Zabbix agent`|speedtest-lan.ping.server[{#IPERFID}]<p>Update: 600s</p>|
-|Speedtest {#IPERFNAME} - Upload (LLD)|<p>-</p>|`Zabbix agent`|speedtest-lan.upload.server[{#IPERFID}]<p>Update: 600s</p>|
+|Speedtest {#IPERFNAME} - Download|<p>-</p>|`Zabbix agent`|speedtest-lan.download.server[{#IPERFID}]<p>Update: 600s</p><p>LLD</p>|
+|Speedtest {#IPERFNAME} - Ping|<p>-</p>|`Zabbix agent`|speedtest-lan.ping.server[{#IPERFID}]<p>Update: 600s</p><p>LLD</p>|
+|Speedtest {#IPERFNAME} - Upload|<p>-</p>|`Zabbix agent`|speedtest-lan.upload.server[{#IPERFID}]<p>Update: 600s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -28,10 +28,10 @@ There are no template links in this template.
 |Software Version|<p>Contains the version string of the system software.</p>|`SNMP agent`|sysSoftwareVersion<p>Update: 240s</p>|
 |System State|<p>-</p>|`SNMP agent`|sysState<p>Update: 60s</p>|
 |Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 90s</p>|
-|Slot Card Serial Number {#CARDTYPE} (LLD)|<p>-</p>|`SNMP agent`|cardCodeNumber[{#CARDTYPE}]<p>Update: 60s</p>|
-|Slot Card Number {#CARDTYPE} (LLD)|<p>-</p>|`SNMP agent`|cardSlotNum[{#CARDTYPE}]<p>Update: 60s</p>|
-|Slot Card State {#CARDTYPE} (LLD)|<p>-</p>|`SNMP agent`|cardState[{#CARDTYPE}]<p>Update: 60s</p>|
-|StatusPort {#PORTTYPE} (LLD)|<p>-</p>|`SNMP agent`|portStatusIndex.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|Slot Card Serial Number {#CARDTYPE}|<p>-</p>|`SNMP agent`|cardCodeNumber[{#CARDTYPE}]<p>Update: 60s</p><p>LLD</p>|
+|Slot Card Number {#CARDTYPE}|<p>-</p>|`SNMP agent`|cardSlotNum[{#CARDTYPE}]<p>Update: 60s</p><p>LLD</p>|
+|Slot Card State {#CARDTYPE}|<p>-</p>|`SNMP agent`|cardState[{#CARDTYPE}]<p>Update: 60s</p><p>LLD</p>|
+|StatusPort {#PORTTYPE}|<p>-</p>|`SNMP agent`|portStatusIndex.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

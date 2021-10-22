@@ -105,21 +105,21 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|AS Name for IPv6 peer "$2" ASN "$1" (LLD)|<p>-</p>|`External check`|as_name["{#SNMPASN}","{#SNMPINDEX}","BGPv6"]<p>Update: 1d</p>|
-|Administrative status for peer "$1" ASN "$2" (LLD)|<p>-</p>|`SNMP agent`|cbgp6Peer2AdminStatus["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 10m</p>|
-|Established time for peer "$1" ASN "$2" (LLD)|<p>-</p>|`SNMP agent`|cbgp6Peer2FsmEstablishedTime["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 10m</p>|
-|Remote AS for peer "$1" ASN "$2" (LLD)|<p>-</p>|`SNMP agent`|cbgp6Peer2RemoteAs["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 1d</p>|
-|Operational status for peer "$1" ASN "$2" (LLD)|<p>-</p>|`SNMP agent`|cbgp6Peer2State["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 1m</p>|
-|BGP peer last error "$1" ASN "$2" (LLD)|<p>-</p>|`SNMP agent`|cbgpPeer2LastError["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 10m</p>|
-|Remote IPv6 Peer "$1" (LLD)|<p>-</p>|`External check`|oid_to_ipv6["{#SNMPINDEX}"]<p>Update: 1d</p>|
-|AS Name for IPv4 peer "{#SNMPINDEX}" (LLD)|<p>-</p>|`External check`|as_name["{#SNMPASN}","{#SNMPINDEX}"]<p>Update: 1d</p>|
-|Administrative status for peer "$1" (LLD)|<p>-</p>|`SNMP agent`|cbgpPeer2AdminStatus[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Established time for peer "$1" (LLD)|<p>-</p>|`SNMP agent`|cbgpPeer2FsmEstablishedTime[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Remote AS for peer "$1" (LLD)|<p>-</p>|`SNMP agent`|cbgpPeer2RemoteAs[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Operational status for peer "$1" (LLD)|<p>-</p>|`SNMP agent`|cbgpPeer2State[{#SNMPINDEX}]<p>Update: 1m</p>|
-|BGP peer last error "$1" (LLD)|<p>-</p>|`SNMP agent`|cbgpPeerLastErrorTxt["{#SNMPINDEX}"]<p>Update: 10m</p>|
-|Accepted prefix for peer "$1" (LLD)|<p>-</p>|`SNMP agent`|cbgpPeerPrefixAccepted[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Maximum prefix for peer "$1" (LLD)|<p>-</p>|`SNMP agent`|cbgpPeerPrefixLimit[{#SNMPINDEX}]<p>Update: 1h</p>|
+|AS Name for IPv6 peer "$2" ASN "$1"|<p>-</p>|`External check`|as_name["{#SNMPASN}","{#SNMPINDEX}","BGPv6"]<p>Update: 1d</p><p>LLD</p>|
+|Administrative status for peer "$1" ASN "$2"|<p>-</p>|`SNMP agent`|cbgp6Peer2AdminStatus["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 10m</p><p>LLD</p>|
+|Established time for peer "$1" ASN "$2"|<p>-</p>|`SNMP agent`|cbgp6Peer2FsmEstablishedTime["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 10m</p><p>LLD</p>|
+|Remote AS for peer "$1" ASN "$2"|<p>-</p>|`SNMP agent`|cbgp6Peer2RemoteAs["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 1d</p><p>LLD</p>|
+|Operational status for peer "$1" ASN "$2"|<p>-</p>|`SNMP agent`|cbgp6Peer2State["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 1m</p><p>LLD</p>|
+|BGP peer last error "$1" ASN "$2"|<p>-</p>|`SNMP agent`|cbgpPeer2LastError["{#SNMPINDEX}","{#SNMPASN}"]<p>Update: 10m</p><p>LLD</p>|
+|Remote IPv6 Peer "$1"|<p>-</p>|`External check`|oid_to_ipv6["{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|AS Name for IPv4 peer "{#SNMPINDEX}"|<p>-</p>|`External check`|as_name["{#SNMPASN}","{#SNMPINDEX}"]<p>Update: 1d</p><p>LLD</p>|
+|Administrative status for peer "$1"|<p>-</p>|`SNMP agent`|cbgpPeer2AdminStatus[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Established time for peer "$1"|<p>-</p>|`SNMP agent`|cbgpPeer2FsmEstablishedTime[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Remote AS for peer "$1"|<p>-</p>|`SNMP agent`|cbgpPeer2RemoteAs[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Operational status for peer "$1"|<p>-</p>|`SNMP agent`|cbgpPeer2State[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|BGP peer last error "$1"|<p>-</p>|`SNMP agent`|cbgpPeerLastErrorTxt["{#SNMPINDEX}"]<p>Update: 10m</p><p>LLD</p>|
+|Accepted prefix for peer "$1"|<p>-</p>|`SNMP agent`|cbgpPeerPrefixAccepted[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Maximum prefix for peer "$1"|<p>-</p>|`SNMP agent`|cbgpPeerPrefixLimit[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -36,10 +36,10 @@ There are no template links in this template.
 |----|-----------|----|----|
 |Device Type|<p>-</p>|`SNMP agent`|hrDeviceDescr<p>Update: 43200</p>|
 |Device MAC address|<p>-</p>|`SNMP agent`|ifPhysAddress<p>Update: 3600</p>|
-|temperaturesensor $1 (LLD)|<p>-</p>|`SNMP agent`|TempDescr[{#SNMPVALUE}]<p>Update: 60</p>|
-|temperature $1 (LLD)|<p>-</p>|`SNMP agent`|TempValue[{#SNMPVALUE}]<p>Update: 60</p>|
-|humiditysensor $1 (LLD)|<p>-</p>|`SNMP agent`|HumiDescr[{#SNMPVALUE}]<p>Update: 60</p>|
-|humidity $1 (LLD)|<p>-</p>|`SNMP agent`|HumiValue[{#SNMPVALUE}]<p>Update: 60</p>|
+|temperaturesensor $1|<p>-</p>|`SNMP agent`|TempDescr[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|temperature $1|<p>-</p>|`SNMP agent`|TempValue[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|humiditysensor $1|<p>-</p>|`SNMP agent`|HumiDescr[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|humidity $1|<p>-</p>|`SNMP agent`|HumiValue[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

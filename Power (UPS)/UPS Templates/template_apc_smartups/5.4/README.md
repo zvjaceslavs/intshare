@@ -93,21 +93,21 @@ There are no template links in this template.
 |Estimated Charge Remaining|<p>-</p>|`SNMP agent`|upsEstimatedChargeRemaining<p>Update: 1m</p>|
 |Output Voltage|<p>-</p>|`SNMP agent`|upsHighPrecOutputVoltage<p>Update: 1m</p>|
 |Runtime Remaining|<p>-</p>|`SNMP agent`|mib_battery_runtime_remain<p>Update: 1m</p>|
-|Bypass {#INDEX}: Index (LLD)|<p>-</p>|`SNMP agent`|upsBypassLineIndex<p>Update: 1m</p>|
-|Bypass {#INDEX}: Voltage (LLD)|<p>-</p>|`SNMP agent`|upsBypassVoltage<p>Update: 1m</p>|
-|Output {#INDEX}: Amps (LLD)|<p>-</p>|`SNMP agent`|upsOutputCurrent[{#INDEX}]<p>Update: 1m</p>|
-|Output {#INDEX}: Index (LLD)|<p>-</p>|`SNMP agent`|upsOutputLineIndex[{#INDEX}]<p>Update: 1m</p>|
-|Output {#INDEX}: Percentage Load (LLD)|<p>-</p>|`SNMP agent`|upsOutputPercentLoad[{#INDEX}]<p>Update: 1m</p>|
-|Output {#INDEX}: Power (LLD)|<p>-</p>|`SNMP agent`|upsOutputPower[{#INDEX}]<p>Update: 1m</p>|
-|Output {#INDEX}: Voltages (LLD)|<p>-</p>|`SNMP agent`|upsOutputVoltage[{#INDEX}]<p>Update: 1m</p>|
-|Alarm {#ALARM}: Description (LLD)|<p>-</p>|`SNMP agent`|upsAlarmDescr[{#ALARM}]<p>Update: 1m</p>|
-|Alarm {#ALARM} (LLD)|<p>-</p>|`SNMP agent`|upsAlarmId[{#ALARM}]<p>Update: 1m</p>|
-|Alarm {#ALARM}: Time (LLD)|<p>The value of sysUpTime when the alarm condition was detected. If the alarm condition was detected at the time of agent startup and presumably existed before agent startup, the value of upsAlarmTime shall equal 0.</p>|`SNMP agent`|upsAlarmTime[{#ALARM}]<p>Update: 1m</p>|
-|Input {#INDEX}: Amp (LLD)|<p>The magnitude of the present input current.</p>|`SNMP agent`|upsInputCurren[{#INDEX}]<p>Update: 1m</p>|
-|Input {#INDEX}: Frequency (LLD)|<p>The present input frequency.</p>|`SNMP agent`|upsInputFrequency[{#INDEX}]<p>Update: 1m</p>|
-|Input {#INDEX}: Index (LLD)|<p>-</p>|`SNMP agent`|upsInputLineIndex[{#INDEX}]<p>Update: 1d</p>|
-|Input {#INDEX}: Power (LLD)|<p>The magnitude of the present input true power.</p>|`SNMP agent`|upsInputTruePower[{#INDEX}]<p>Update: 1m</p>|
-|Input {#INDEX}: Voltage (LLD)|<p>The magnitude of the present input voltage.</p>|`SNMP agent`|upsInputVoltage[{#INDEX}]<p>Update: 1m</p>|
+|Bypass {#INDEX}: Index|<p>-</p>|`SNMP agent`|upsBypassLineIndex<p>Update: 1m</p><p>LLD</p>|
+|Bypass {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|upsBypassVoltage<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: Amps|<p>-</p>|`SNMP agent`|upsOutputCurrent[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: Index|<p>-</p>|`SNMP agent`|upsOutputLineIndex[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: Percentage Load|<p>-</p>|`SNMP agent`|upsOutputPercentLoad[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: Power|<p>-</p>|`SNMP agent`|upsOutputPower[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: Voltages|<p>-</p>|`SNMP agent`|upsOutputVoltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Alarm {#ALARM}: Description|<p>-</p>|`SNMP agent`|upsAlarmDescr[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Alarm {#ALARM}|<p>-</p>|`SNMP agent`|upsAlarmId[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Alarm {#ALARM}: Time|<p>The value of sysUpTime when the alarm condition was detected. If the alarm condition was detected at the time of agent startup and presumably existed before agent startup, the value of upsAlarmTime shall equal 0.</p>|`SNMP agent`|upsAlarmTime[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Input {#INDEX}: Amp|<p>The magnitude of the present input current.</p>|`SNMP agent`|upsInputCurren[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input {#INDEX}: Frequency|<p>The present input frequency.</p>|`SNMP agent`|upsInputFrequency[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input {#INDEX}: Index|<p>-</p>|`SNMP agent`|upsInputLineIndex[{#INDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Input {#INDEX}: Power|<p>The magnitude of the present input true power.</p>|`SNMP agent`|upsInputTruePower[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input {#INDEX}: Voltage|<p>The magnitude of the present input voltage.</p>|`SNMP agent`|upsInputVoltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

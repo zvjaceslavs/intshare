@@ -87,17 +87,17 @@ There are no template links in this template.
 |Output Frequency|<p>-</p>|`SNMP agent`|get.output.frequency<p>Update: 1m</p>|
 |Seconds on Battery|<p>-</p>|`SNMP agent`|get.battery.seconds<p>Update: 1m</p>|
 |Serial Number|<p>-</p>|`SNMP agent`|get.upserial<p>Update: 1d</p>|
-|Output {#INDEX}: Amps (LLD)|<p>The present output current.</p>|`SNMP agent`|get.output.amps[{#INDEX}]<p>Update: 1m</p>|
-|Output {#INDEX}: Percentage Load (LLD)|<p>-</p>|`SNMP agent`|get.output.load[{#INDEX}]<p>Update: 1m</p>|
-|Output {#INDEX}: Power (LLD)|<p>The present output true power.</p>|`SNMP agent`|get.output.power[{#INDEX}]<p>Update: 1m</p>|
-|Output {#INDEX}: Voltage (LLD)|<p>The present output voltage.</p>|`SNMP agent`|get.output.voltage[{#INDEX}]<p>Update: 1m</p>|
-|Input {#INDEX}: Frequency (LLD)|<p>-</p>|`SNMP agent`|get.input.frequency[{#INDEX}]<p>Update: 1m</p>|
-|Input {#INDEX}: Voltage (LLD)|<p>-</p>|`SNMP agent`|get.input.voltage[{#INDEX}]<p>Update: 1m</p>|
-|Alarms Description (LLD)|<p>A reference to an alarm description object. The object referenced should not be accessible, but rather be used to provide a unique description of the alarm condition.</p>|`SNMP agent`|get.alarms.description[{#ALARM}]<p>Update: 1m</p>|
-|Alarms ID (LLD)|<p>A reference to an alarm description object. The object referenced should not be accessible, but rather be used to provide a unique description of the alarm condition.</p>|`SNMP agent`|get.alarms.id[{#ALARM}]<p>Update: 1m</p>|
-|Alarms Time (LLD)|<p>The value of sysUpTime when the alarm condition was detected. If the alarm condition was detected at the time of agent startup and presumably existed before agent startup, the value of upsAlarmTime shall equal 0.</p>|`SNMP agent`|get.alarms.time[{#ALARM}]<p>Update: 1m</p>|
-|Bypass {#INDEX}:  Amps (LLD)|<p>The present bypass current.</p>|`SNMP agent`|get.bypass.amps[{#INDEX}]<p>Update: 1m</p>|
-|Bypass {#INDEX}: Voltage (LLD)|<p>-</p>|`SNMP agent`|get.bypass.voltage[{#INDEX}]<p>Update: 1m</p>|
+|Output {#INDEX}: Amps|<p>The present output current.</p>|`SNMP agent`|get.output.amps[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: Percentage Load|<p>-</p>|`SNMP agent`|get.output.load[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: Power|<p>The present output true power.</p>|`SNMP agent`|get.output.power[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: Voltage|<p>The present output voltage.</p>|`SNMP agent`|get.output.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input {#INDEX}: Frequency|<p>-</p>|`SNMP agent`|get.input.frequency[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.input.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Alarms Description|<p>A reference to an alarm description object. The object referenced should not be accessible, but rather be used to provide a unique description of the alarm condition.</p>|`SNMP agent`|get.alarms.description[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Alarms ID|<p>A reference to an alarm description object. The object referenced should not be accessible, but rather be used to provide a unique description of the alarm condition.</p>|`SNMP agent`|get.alarms.id[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Alarms Time|<p>The value of sysUpTime when the alarm condition was detected. If the alarm condition was detected at the time of agent startup and presumably existed before agent startup, the value of upsAlarmTime shall equal 0.</p>|`SNMP agent`|get.alarms.time[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Bypass {#INDEX}:  Amps|<p>The present bypass current.</p>|`SNMP agent`|get.bypass.amps[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bypass {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.bypass.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

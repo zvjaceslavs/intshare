@@ -88,19 +88,19 @@ There are no template links in this template.
 |----|-----------|----|----|
 |Supermicro mainboard bios version|<p>-</p>|`SNMP agent`|supermicro_mb_biosversion<p>Update: 1d</p>|
 |Supermicro mainboard model|<p>-</p>|`SNMP agent`|supermicro_mb_model<p>Update: 1d</p>|
-|Supermicro memory $1 capacity (LLD)|<p>-</p>|`SNMP agent`|supermicro_memory_cap[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Supermicro memory $1 error count (LLD)|<p>-</p>|`SNMP agent`|supermicro_memory_errcount[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Supermicro memory $1 location (LLD)|<p>-</p>|`SNMP agent`|supermicro_memory_location[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Supermicro memory $1 manufacturer (LLD)|<p>-</p>|`SNMP agent`|supermicro_memory_manufacturer[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Supermicro memory $1 model (LLD)|<p>-</p>|`SNMP agent`|supermicro_memory_model[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Supermicro memory $1 sn (LLD)|<p>-</p>|`SNMP agent`|supermicro_memory_sn[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Supermicro disk {#SNMPINDEX} model (LLD)|<p>-</p>|`SNMP agent`|supermicro_disc_model[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p>|
-|Supermicro disk {#SNMPINDEX} smart status (LLD)|<p>-</p>|`SNMP agent`|supermicro_disk_smart[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p>|
-|Supermicro disk {#SNMPINDEX} serial number (LLD)|<p>-</p>|`SNMP agent`|supermicro_disk_sn[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p>|
-|Supermicro $1 (LLD)|<p>-</p>|`SNMP agent`|supermicro_psstatus[{#MONITEMNAME}]<p>Update: 15m</p>|
-|Supermicro $1 RPMs (LLD)|<p>-</p>|`SNMP agent`|supermicro_fanrpms[{#MONITEMNAME}]<p>Update: 5m</p>|
-|Supermicro $1 (LLD)|<p>-</p>|`SNMP agent`|supermicro_acinp[{#SNMPVALUE}]<p>Update: 5m</p>|
-|Supermicro $1 (LLD)|<p>-</p>|`SNMP agent`|supermicro_temp[{#MONITEMNAME}]<p>Update: 5m</p>|
+|Supermicro memory $1 capacity|<p>-</p>|`SNMP agent`|supermicro_memory_cap[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Supermicro memory $1 error count|<p>-</p>|`SNMP agent`|supermicro_memory_errcount[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Supermicro memory $1 location|<p>-</p>|`SNMP agent`|supermicro_memory_location[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Supermicro memory $1 manufacturer|<p>-</p>|`SNMP agent`|supermicro_memory_manufacturer[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Supermicro memory $1 model|<p>-</p>|`SNMP agent`|supermicro_memory_model[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Supermicro memory $1 sn|<p>-</p>|`SNMP agent`|supermicro_memory_sn[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Supermicro disk {#SNMPINDEX} model|<p>-</p>|`SNMP agent`|supermicro_disc_model[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p><p>LLD</p>|
+|Supermicro disk {#SNMPINDEX} smart status|<p>-</p>|`SNMP agent`|supermicro_disk_smart[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p><p>LLD</p>|
+|Supermicro disk {#SNMPINDEX} serial number|<p>-</p>|`SNMP agent`|supermicro_disk_sn[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p><p>LLD</p>|
+|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_psstatus[{#MONITEMNAME}]<p>Update: 15m</p><p>LLD</p>|
+|Supermicro $1 RPMs|<p>-</p>|`SNMP agent`|supermicro_fanrpms[{#MONITEMNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_acinp[{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
+|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_temp[{#MONITEMNAME}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -47,18 +47,18 @@ There are no template links in this template.
 |Uncommitted storage space|<p>Additional storage space, in bytes, potentially used by this virtual machine on all datastores.</p>|`Simple check`|vmware.vm.storage.uncommitted[{$URL},{HOST.HOST}]<p>Update: 60</p>|
 |Unshared storage space|<p>Total storage space, in bytes, occupied by the virtual machine across all datastores, that is not shared with any other virtual machine.</p>|`Simple check`|vmware.vm.storage.unshared[{$URL},{HOST.HOST}]<p>Update: 60</p>|
 |Uptime|<p>System uptime.</p>|`Simple check`|vmware.vm.uptime[{$URL},{HOST.HOST}]<p>Update: 60</p>|
-|Average number of bytes read from the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{HOST.HOST},{#DISKNAME},bps]<p>Update: 60</p>|
-|Average number of reads from the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{HOST.HOST},{#DISKNAME},ops]<p>Update: 60</p>|
-|Average number of bytes written to the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{HOST.HOST},{#DISKNAME},bps]<p>Update: 60</p>|
-|Average number of writes to the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{HOST.HOST},{#DISKNAME},ops]<p>Update: 60</p>|
-|Number of bytes received on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{HOST.HOST},{#IFNAME},bps]<p>Update: 60</p>|
-|Number of packets received on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{HOST.HOST},{#IFNAME},pps]<p>Update: 60</p>|
-|Number of bytes transmitted on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{HOST.HOST},{#IFNAME},bps]<p>Update: 60</p>|
-|Number of packets transmitted on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{HOST.HOST},{#IFNAME},pps]<p>Update: 60</p>|
-|Free disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},free]<p>Update: 60</p>|
-|Free disk space on {#FSNAME} (percentage) (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},pfree]<p>Update: 60</p>|
-|Total disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},total]<p>Update: 3600</p>|
-|Used disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},used]<p>Update: 60</p>|
+|Average number of bytes read from the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{HOST.HOST},{#DISKNAME},bps]<p>Update: 60</p><p>LLD</p>|
+|Average number of reads from the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{HOST.HOST},{#DISKNAME},ops]<p>Update: 60</p><p>LLD</p>|
+|Average number of bytes written to the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{HOST.HOST},{#DISKNAME},bps]<p>Update: 60</p><p>LLD</p>|
+|Average number of writes to the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{HOST.HOST},{#DISKNAME},ops]<p>Update: 60</p><p>LLD</p>|
+|Number of bytes received on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{HOST.HOST},{#IFNAME},bps]<p>Update: 60</p><p>LLD</p>|
+|Number of packets received on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{HOST.HOST},{#IFNAME},pps]<p>Update: 60</p><p>LLD</p>|
+|Number of bytes transmitted on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{HOST.HOST},{#IFNAME},bps]<p>Update: 60</p><p>LLD</p>|
+|Number of packets transmitted on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{HOST.HOST},{#IFNAME},pps]<p>Update: 60</p><p>LLD</p>|
+|Free disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},free]<p>Update: 60</p><p>LLD</p>|
+|Free disk space on {#FSNAME} (percentage)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},pfree]<p>Update: 60</p><p>LLD</p>|
+|Total disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},total]<p>Update: 3600</p><p>LLD</p>|
+|Used disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},used]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

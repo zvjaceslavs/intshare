@@ -77,9 +77,9 @@ There are no template links in this template.
 |Uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 1m</p>|
 |Voltage|<p>-</p>|`SNMP agent`|voltage<p>Update: 5m</p>|
 |SNMP Availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 5m</p>|
-|{#SNMPVALUE} In (LLD)|<p>-</p>|`SNMP agent`|interface.in.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#SNMPVALUE} Out (LLD)|<p>-</p>|`SNMP agent`|interface.out.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|CPU {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|cpu.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|{#SNMPVALUE} In|<p>-</p>|`SNMP agent`|interface.in.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} Out|<p>-</p>|`SNMP agent`|interface.out.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|CPU {#SNMPINDEX}|<p>-</p>|`SNMP agent`|cpu.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

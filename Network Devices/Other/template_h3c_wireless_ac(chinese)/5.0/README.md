@@ -72,13 +72,13 @@ There are no template links in this template.
 |每秒mac认证用户异常掉线数|<p>-</p>|`SNMP agent`|user.mac_lostcon<p>Update: 60</p>|
 |当前portal认证用户总数|<p>-</p>|`SNMP agent`|user.portal<p>Update: 60</p>|
 |每秒portal认证用户异常掉线数|<p>-</p>|`SNMP agent`|user.portal_lostcon<p>Update: 60</p>|
-|DHCP 地址池 $1 利用率 (LLD)|<p>-</p>|`SNMP agent`|dhcp.pool[{#DHCPPOOL}]<p>Update: 120</p>|
-|AP $1 关联认证在线用户数 (LLD)|<p>-</p>|`SNMP agent`|ap.asso[{#APNAME}]<p>Update: 120</p>|
-|AP $1 免认证在线用户数 (LLD)|<p>-</p>|`SNMP agent`|ap.free[{#APNAME}]<p>Update: 120</p>|
-|AP $1 地址 (LLD)|<p>-</p>|`SNMP agent`|ap.ip[{#APNAME}]<p>Update: 7200</p>|
-|AP $1 mac认证在线用户数 (LLD)|<p>-</p>|`SNMP agent`|ap.mac[{#APNAME}]<p>Update: 30</p>|
-|AP $1 在线时间 (LLD)|<p>-</p>|`SNMP agent`|ap.onlinetime[{#APNAME}]<p>Update: 120</p>|
-|AP $1 portal认证在线用户数 (LLD)|<p>-</p>|`SNMP agent`|ap.portal[{#APNAME}]<p>Update: 120</p>|
+|DHCP 地址池 $1 利用率|<p>-</p>|`SNMP agent`|dhcp.pool[{#DHCPPOOL}]<p>Update: 120</p><p>LLD</p>|
+|AP $1 关联认证在线用户数|<p>-</p>|`SNMP agent`|ap.asso[{#APNAME}]<p>Update: 120</p><p>LLD</p>|
+|AP $1 免认证在线用户数|<p>-</p>|`SNMP agent`|ap.free[{#APNAME}]<p>Update: 120</p><p>LLD</p>|
+|AP $1 地址|<p>-</p>|`SNMP agent`|ap.ip[{#APNAME}]<p>Update: 7200</p><p>LLD</p>|
+|AP $1 mac认证在线用户数|<p>-</p>|`SNMP agent`|ap.mac[{#APNAME}]<p>Update: 30</p><p>LLD</p>|
+|AP $1 在线时间|<p>-</p>|`SNMP agent`|ap.onlinetime[{#APNAME}]<p>Update: 120</p><p>LLD</p>|
+|AP $1 portal认证在线用户数|<p>-</p>|`SNMP agent`|ap.portal[{#APNAME}]<p>Update: 120</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

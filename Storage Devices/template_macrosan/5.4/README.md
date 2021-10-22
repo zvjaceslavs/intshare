@@ -65,16 +65,16 @@ There are no template links in this template.
 |总缓存命中率|<p>-</p>|`SNMP agent`|cacheHitsIos<p>Update: 1m</p>|
 |已用容量|<p>-</p>|`SNMP agent`|usedcap<p>Update: 1h</p>|
 |totalKbps|<p>-</p>|`SNMP agent`|totalKbps<p>Update: 1m</p>|
-|{#SNMPVALUE}  缓存命中率 (LLD)|<p>-</p>|`SNMP agent`|luncachehitsIos[{#SNMPVALUE}]<p>Update: 1m</p>|
-|{#SNMPVALUE} lunReadAvrDelay (LLD)|<p>-</p>|`SNMP agent`|lunReadAvrDelay[{#SNMPVALUE}]<p>Update: 1m</p>|
-|{#SNMPVALUE}  总吞吐 (LLD)|<p>-</p>|`SNMP agent`|lunreadiops[{#SNMPVALUE}]<p>Update: 1m</p>|
-|{#SNMPVALUE} lunReadMaxDelay (LLD)|<p>-</p>|`SNMP agent`|lunReadMaxDelay[{#SNMPVALUE}]<p>Update: 1m</p>|
-|{#SNMPVALUE}  totalIops (LLD)|<p>-</p>|`SNMP agent`|luntotaliops[{#SNMPVALUE}]<p>Update: 1m</p>|
-|{#SNMPVALUE} lunWriteAvrDelay (LLD)|<p>-</p>|`SNMP agent`|lunWriteAvrDelay[{#SNMPVALUE}]<p>Update: 1m</p>|
-|{#SNMPVALUE} lunWriteMaxDelay (LLD)|<p>-</p>|`SNMP agent`|lunWriteMaxDelay[{#SNMPVALUE}]<p>Update: 1m</p>|
-|{#SNMPVALUE}  总容量 (LLD)|<p>-</p>|`SNMP agent`|CAP[{#SNMPVALUE} ]<p>Update: 1h</p>|
-|{#SNMPVALUE}  可用容量 (LLD)|<p>-</p>|`SNMP agent`|FREECAP[{#SNMPVALUE} ]<p>Update: 1h</p>|
-|{#SNMPVALUE}  可用% (LLD)|<p>-</p>|`Calculated`|USDEDP[{#SNMPVALUE} ]<p>Update: 1h</p>|
+|{#SNMPVALUE}  缓存命中率|<p>-</p>|`SNMP agent`|luncachehitsIos[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} lunReadAvrDelay|<p>-</p>|`SNMP agent`|lunReadAvrDelay[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE}  总吞吐|<p>-</p>|`SNMP agent`|lunreadiops[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} lunReadMaxDelay|<p>-</p>|`SNMP agent`|lunReadMaxDelay[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE}  totalIops|<p>-</p>|`SNMP agent`|luntotaliops[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} lunWriteAvrDelay|<p>-</p>|`SNMP agent`|lunWriteAvrDelay[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} lunWriteMaxDelay|<p>-</p>|`SNMP agent`|lunWriteMaxDelay[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE}  总容量|<p>-</p>|`SNMP agent`|CAP[{#SNMPVALUE} ]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE}  可用容量|<p>-</p>|`SNMP agent`|FREECAP[{#SNMPVALUE} ]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE}  可用%|<p>-</p>|`Calculated`|USDEDP[{#SNMPVALUE} ]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

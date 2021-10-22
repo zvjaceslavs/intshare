@@ -94,7 +94,7 @@ There are no template links in this template.
 |Battery Time Remaining|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 1m</p>|
 |System Model|<p>-</p>|`SNMP agent`|upsIdenModel<p>Update: 1m</p>|
 |Output Source|<p>-</p>|`SNMP agent`|upsOutputSource<p>Update: 30s</p>|
-|Output Load at Line {#SNMPINDEX} (LLD)|<p>Discovered Output Load Percentual</p>|`SNMP agent`|ups.Output.Percentload.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|Output Load at Line {#SNMPINDEX}|<p>Discovered Output Load Percentual</p>|`SNMP agent`|ups.Output.Percentload.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

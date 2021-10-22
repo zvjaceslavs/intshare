@@ -156,22 +156,22 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Free memory on Memory Pool "$1" (LLD)|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolFree Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree["{#SNMPVALUE}"]<p>Update: 5m</p>|
-|Total Memory Pool "$1" (LLD)|<p>-</p>|`Calculated`|ciscoMemoryPoolTotal["{#SNMPVALUE}"]<p>Update: 1h</p>|
-|Used memory on Memory Pool "$1" (LLD)|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUsed Indicates the number of bytes from the memory pool that are currently in use by applications on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolUsed["{#SNMPVALUE}"]<p>Update: 5m</p>|
-|"{#SNMPVALUE}": Fan status (LLD)|<p>MIB: CISCO-ENVMON-MIB</p>|`SNMP agent`|ciscoEnvMonFanState["{#SNMPINDEX}"]<p>Update: 1m</p>|
-|Status Temperature Sensor "$1" (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</p>|`SNMP agent`|entSensorStatus["{#SNMPVALUE}"]<p>Update: 1m</p>|
-|Thresholds::"$1" | Temperature Alarm (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorThresholdValue This variable indicates the value of the threshold.</p>|`SNMP agent`|entSensorThresholdValue["{#SNMPVALUE}","Alarm"]<p>Update: 1h</p>|
-|Thresholds::"$1" | Temperature Warning (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorThresholdValue This variable indicates the value of the threshold.</p>|`SNMP agent`|entSensorThresholdValue["{#SNMPVALUE}","Warning"]<p>Update: 1h</p>|
-|Temperature on Sensor "$1" (LLD)|<p>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</p>|`SNMP agent`|entSensorValue["{#SNMPVALUE}"]<p>Update: 1m</p>|
-|Status "$1" (LLD)|<p>CISCO-ENVMON-MIB::ciscoEnvMonSupplyState The current state of the power supply being instrumented.</p>|`SNMP agent`|ciscoEnvMonSupplyState["{#SNMPVALUE}"]<p>Update: 1m</p>|
-|CEF Failure Reason "$1" (LLD)|<p>-</p>|`SNMP agent`|cefResourceFailureReason["{#SNMPINDEX}"]<p>Update: 1m</p>|
-|CEF Memory Used "$1" (LLD)|<p>-</p>|`SNMP agent`|cefResourceMemoryUsed["{#SNMPINDEX}"]<p>Update: 1m</p>|
-|CPU #"$1" Usage 1min Rev (LLD)|<p>CISCO-PROCESS-MIB::cpmCPUTotal1minRev The overall CPU busy percentage in the last 1 minute period. This object deprecates the object cpmCPUTotal1min and increases the value range to (0..100).</p>|`SNMP agent`|cpmCPUTotal1minRev["{#SNMPINDEX}"]<p>Update: 1m</p>|
-|CPU #"$1" Usage 5min Rev (LLD)|<p>CISCO-PROCESS-MIB::cpmCPUTotal5minRev The overall CPU busy percentage in the last 5 minute period. This object deprecates the object cpmCPUTotal5min and increases the value range to (0..100).</p>|`SNMP agent`|cpmCPUTotal5minRev["{#SNMPINDEX}"]<p>Update: 5m</p>|
-|Module "$1" Voltage (V) (LLD)|<p>-</p>|`SNMP agent`|cefcConnectorRating["{#SNMPINDEX}"]<p>Update: 5m</p>|
-|Module "$1" Current (A) (LLD)|<p>-</p>|`SNMP agent`|cefcModulePowerConsumptionTable["{#SNMPINDEX}"]<p>Update: 5m</p>|
-|Module "$1" Power (W) (LLD)|<p>-</p>|`Calculated`|moduleComsumption["{#SNMPINDEX}"]<p>Update: 5m</p>|
+|Free memory on Memory Pool "$1"|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolFree Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree["{#SNMPVALUE}"]<p>Update: 5m</p><p>LLD</p>|
+|Total Memory Pool "$1"|<p>-</p>|`Calculated`|ciscoMemoryPoolTotal["{#SNMPVALUE}"]<p>Update: 1h</p><p>LLD</p>|
+|Used memory on Memory Pool "$1"|<p>CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUsed Indicates the number of bytes from the memory pool that are currently in use by applications on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolUsed["{#SNMPVALUE}"]<p>Update: 5m</p><p>LLD</p>|
+|"{#SNMPVALUE}": Fan status|<p>MIB: CISCO-ENVMON-MIB</p>|`SNMP agent`|ciscoEnvMonFanState["{#SNMPINDEX}"]<p>Update: 1m</p><p>LLD</p>|
+|Status Temperature Sensor "$1"|<p>CISCO-ENTITY-SENSOR-MIB::entSensorStatus This variable indicates the present operational status of the sensor.</p>|`SNMP agent`|entSensorStatus["{#SNMPVALUE}"]<p>Update: 1m</p><p>LLD</p>|
+|Thresholds::"$1" | Temperature Alarm|<p>CISCO-ENTITY-SENSOR-MIB::entSensorThresholdValue This variable indicates the value of the threshold.</p>|`SNMP agent`|entSensorThresholdValue["{#SNMPVALUE}","Alarm"]<p>Update: 1h</p><p>LLD</p>|
+|Thresholds::"$1" | Temperature Warning|<p>CISCO-ENTITY-SENSOR-MIB::entSensorThresholdValue This variable indicates the value of the threshold.</p>|`SNMP agent`|entSensorThresholdValue["{#SNMPVALUE}","Warning"]<p>Update: 1h</p><p>LLD</p>|
+|Temperature on Sensor "$1"|<p>CISCO-ENTITY-SENSOR-MIB::entSensorValue This variable reports the most recent measurement seen by the sensor.</p>|`SNMP agent`|entSensorValue["{#SNMPVALUE}"]<p>Update: 1m</p><p>LLD</p>|
+|Status "$1"|<p>CISCO-ENVMON-MIB::ciscoEnvMonSupplyState The current state of the power supply being instrumented.</p>|`SNMP agent`|ciscoEnvMonSupplyState["{#SNMPVALUE}"]<p>Update: 1m</p><p>LLD</p>|
+|CEF Failure Reason "$1"|<p>-</p>|`SNMP agent`|cefResourceFailureReason["{#SNMPINDEX}"]<p>Update: 1m</p><p>LLD</p>|
+|CEF Memory Used "$1"|<p>-</p>|`SNMP agent`|cefResourceMemoryUsed["{#SNMPINDEX}"]<p>Update: 1m</p><p>LLD</p>|
+|CPU #"$1" Usage 1min Rev|<p>CISCO-PROCESS-MIB::cpmCPUTotal1minRev The overall CPU busy percentage in the last 1 minute period. This object deprecates the object cpmCPUTotal1min and increases the value range to (0..100).</p>|`SNMP agent`|cpmCPUTotal1minRev["{#SNMPINDEX}"]<p>Update: 1m</p><p>LLD</p>|
+|CPU #"$1" Usage 5min Rev|<p>CISCO-PROCESS-MIB::cpmCPUTotal5minRev The overall CPU busy percentage in the last 5 minute period. This object deprecates the object cpmCPUTotal5min and increases the value range to (0..100).</p>|`SNMP agent`|cpmCPUTotal5minRev["{#SNMPINDEX}"]<p>Update: 5m</p><p>LLD</p>|
+|Module "$1" Voltage (V)|<p>-</p>|`SNMP agent`|cefcConnectorRating["{#SNMPINDEX}"]<p>Update: 5m</p><p>LLD</p>|
+|Module "$1" Current (A)|<p>-</p>|`SNMP agent`|cefcModulePowerConsumptionTable["{#SNMPINDEX}"]<p>Update: 5m</p><p>LLD</p>|
+|Module "$1" Power (W)|<p>-</p>|`Calculated`|moduleComsumption["{#SNMPINDEX}"]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

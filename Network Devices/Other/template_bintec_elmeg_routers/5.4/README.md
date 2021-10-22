@@ -89,11 +89,8 @@ Thorben Brinkmann
 |----|-----------|----|----|
 |Memory total|<p>-</p>|`SNMP agent`|memory.total<p>Update: 15m</p>|
 |CPU utilization|<p>LoadIDLE60s: Percentage of idle time measured for the last 60 seconds.</p>|`SNMP agent`|cpu.utilization<p>Update: 1m</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1m</p>|
 |System description|<p>-</p>|`SNMP agent`|system.description<p>Update: 1h</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1m</p>|
 |Current sessions|<p>-</p>|`SNMP agent`|sif.currsessions<p>Update: 1m</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1m</p>|
 |Max sessions|<p>-</p>|`SNMP agent`|sif.maxsessions<p>Update: 1h</p>|
 |SIF Status|<p>Status of the Stateful inspection firewall (SIF)</p>|`SNMP agent`|sif.status<p>Update: 1h</p>|
 |Uptime|<p>-</p>|`SNMP agent`|system.uptime<p>Update: 1m</p>|
@@ -101,24 +98,24 @@ Thorben Brinkmann
 |Flash Memory|<p>Onboard Flash memory</p>|`SNMP agent`|memory.flash<p>Update: 15m</p>|
 |Software version|<p>-</p>|`SNMP agent`|system.swversion<p>Update: 1h</p>|
 |Memory in use|<p>-</p>|`SNMP agent`|memory.inuse<p>Update: 1m</p>|
-|xDSL Downstream Attenuation (LLD)|<p>-</p>|`SNMP agent`|xdsl.downstream.attenuation[{#IFID}]<p>Update: 1h</p>|
-|xDSL Downstream Max. attainable rate (LLD)|<p>xDSL Max attainable downstream rate</p>|`SNMP agent`|xdsl.downstream.max[{#IFID}]<p>Update: 1h</p>|
-|xDSL Downstream (LLD)|<p>-</p>|`SNMP agent`|xdsl.downstream[{#IFID}]<p>Update: 5m</p>|
-|xDSL Operational Status (LLD)|<p>-</p>|`SNMP agent`|xdsl.operstatus[{#IFID}]<p>Update: 1m</p>|
-|xDSL Type (LLD)|<p>-</p>|`SNMP agent`|xdsl.type[{#IFID}]<p>Update: 1h</p>|
-|xDSL Upstream Attenuation (LLD)|<p>-</p>|`SNMP agent`|xdsl.upstream.attenuation[{#IFID}]<p>Update: 1h</p>|
-|xDSL Upstream Max. attainable rate (LLD)|<p>Max attainable upstream rate</p>|`SNMP agent`|xdsl.upstream.max[{#IFID}]<p>Update: 1h</p>|
-|xDSL Upstream (LLD)|<p>-</p>|`SNMP agent`|xdsl.upstream[{#IFID}]<p>Update: 5m</p>|
-|Status of VPN connection {#PEERDESCR} (LLD)|<p>-</p>|`SNMP agent`|vpn.peers.status[{#PEERDESCR}]<p>Update: 1m</p>|
-|IPSec Current Connections (LLD)|<p>-</p>|`SNMP agent`|vpn.ipsec.currconn[{#LICID}]<p>Update: 1m</p>|
-|IPSec Max Connections (LLD)|<p>-</p>|`SNMP agent`|vpn.ipsec.maxconn[{#LICID}]<p>Update: 1h</p>|
-|Operational Status VoIP Trunk Line {#DESCR} (LLD)|<p>-</p>|`SNMP agent`|voip.provider.operstat[{#DESCR}]<p>Update: 1m</p>|
-|PPPoE Age {#PPPOEDESCR} (LLD)|<p>-</p>|`SNMP agent`|pppoe.age[{#PPPOEDESCR}]<p>Update: 1m</p>|
-|PPPoE State {#PPPOEDESCR} (LLD)|<p>-</p>|`SNMP agent`|pppoe.state[{#PPPOEDESCR}]<p>Update: 1m</p>|
-|Incoming traffic on interface {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#IFDESCR}]<p>Update: 1m</p>|
-|Outgoing traffic on interface {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets[{#IFDESCR}]<p>Update: 1m</p>|
-|IP Address {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|network.ip[{#IFDESCR}]<p>Update: 5m</p>|
-|{#SENSORDESCR}-Sensor (LLD)|<p>-</p>|`SNMP agent`|sensors[{#SENSORID}.{#SENSORDESCR}]<p>Update: 1m</p>|
+|xDSL Downstream Attenuation|<p>-</p>|`SNMP agent`|xdsl.downstream.attenuation[{#IFID}]<p>Update: 1h</p><p>LLD</p>|
+|xDSL Downstream Max. attainable rate|<p>xDSL Max attainable downstream rate</p>|`SNMP agent`|xdsl.downstream.max[{#IFID}]<p>Update: 1h</p><p>LLD</p>|
+|xDSL Downstream|<p>-</p>|`SNMP agent`|xdsl.downstream[{#IFID}]<p>Update: 5m</p><p>LLD</p>|
+|xDSL Operational Status|<p>-</p>|`SNMP agent`|xdsl.operstatus[{#IFID}]<p>Update: 1m</p><p>LLD</p>|
+|xDSL Type|<p>-</p>|`SNMP agent`|xdsl.type[{#IFID}]<p>Update: 1h</p><p>LLD</p>|
+|xDSL Upstream Attenuation|<p>-</p>|`SNMP agent`|xdsl.upstream.attenuation[{#IFID}]<p>Update: 1h</p><p>LLD</p>|
+|xDSL Upstream Max. attainable rate|<p>Max attainable upstream rate</p>|`SNMP agent`|xdsl.upstream.max[{#IFID}]<p>Update: 1h</p><p>LLD</p>|
+|xDSL Upstream|<p>-</p>|`SNMP agent`|xdsl.upstream[{#IFID}]<p>Update: 5m</p><p>LLD</p>|
+|Status of VPN connection {#PEERDESCR}|<p>-</p>|`SNMP agent`|vpn.peers.status[{#PEERDESCR}]<p>Update: 1m</p><p>LLD</p>|
+|IPSec Current Connections|<p>-</p>|`SNMP agent`|vpn.ipsec.currconn[{#LICID}]<p>Update: 1m</p><p>LLD</p>|
+|IPSec Max Connections|<p>-</p>|`SNMP agent`|vpn.ipsec.maxconn[{#LICID}]<p>Update: 1h</p><p>LLD</p>|
+|Operational Status VoIP Trunk Line {#DESCR}|<p>-</p>|`SNMP agent`|voip.provider.operstat[{#DESCR}]<p>Update: 1m</p><p>LLD</p>|
+|PPPoE Age {#PPPOEDESCR}|<p>-</p>|`SNMP agent`|pppoe.age[{#PPPOEDESCR}]<p>Update: 1m</p><p>LLD</p>|
+|PPPoE State {#PPPOEDESCR}|<p>-</p>|`SNMP agent`|pppoe.state[{#PPPOEDESCR}]<p>Update: 1m</p><p>LLD</p>|
+|Incoming traffic on interface {#IFDESCR}|<p>-</p>|`SNMP agent`|ifInOctets[{#IFDESCR}]<p>Update: 1m</p><p>LLD</p>|
+|Outgoing traffic on interface {#IFDESCR}|<p>-</p>|`SNMP agent`|ifOutOctets[{#IFDESCR}]<p>Update: 1m</p><p>LLD</p>|
+|IP Address {#IFDESCR}|<p>-</p>|`SNMP agent`|network.ip[{#IFDESCR}]<p>Update: 5m</p><p>LLD</p>|
+|{#SENSORDESCR}-Sensor|<p>-</p>|`SNMP agent`|sensors[{#SENSORID}.{#SENSORDESCR}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

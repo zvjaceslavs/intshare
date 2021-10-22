@@ -29,9 +29,6 @@ There are no macros links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Host name of zabbix_agentd running|<p>-</p>|`Zabbix agent`|agent.hostname<p>Update: 3600</p>|
-|Agent ping|<p>The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.</p>|`Zabbix agent`|agent.ping<p>Update: 60</p>|
-|Version of zabbix_agent(d) running|<p>-</p>|`Zabbix agent`|agent.version<p>Update: 3600</p>|
 |File read bytes per second|<p>Full counter name: System File Read Bytes/sec</p>|`Zabbix agent`|perf_counter[\2\16]<p>Update: 60</p>|
 |File write bytes per second|<p>Full counter name: System File Write Bytes/sec</p>|`Zabbix agent`|perf_counter[\2\18]<p>Update: 60</p>|
 |Number of threads|<p>Full counter name: System Threads</p>|`Zabbix agent`|perf_counter[\2\250]<p>Update: 60</p>|
@@ -47,12 +44,12 @@ There are no macros links in this template.
 |System uptime|<p>-</p>|`Zabbix agent`|system.uptime<p>Update: 60</p>|
 |Free memory|<p>-</p>|`Zabbix agent`|vm.memory.size[free]<p>Update: 60</p>|
 |Total memory|<p>-</p>|`Zabbix agent`|vm.memory.size[total]<p>Update: 3600</p>|
-|Incoming network traffic on $1 (LLD)|<p>-</p>|`Zabbix agent`|net.if.in[{#IFNAME}]<p>Update: 60</p>|
-|Outgoing network traffic on $1 (LLD)|<p>-</p>|`Zabbix agent`|net.if.out[{#IFNAME}]<p>Update: 60</p>|
-|Free disk space on $1 (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},free]<p>Update: 60</p>|
-|Free disk space on $1 (percentage) (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},pfree]<p>Update: 60</p>|
-|Total disk space on $1 (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},total]<p>Update: 3600</p>|
-|Used disk space on $1 (LLD)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},used]<p>Update: 60</p>|
+|Incoming network traffic on $1|<p>-</p>|`Zabbix agent`|net.if.in[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Outgoing network traffic on $1|<p>-</p>|`Zabbix agent`|net.if.out[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Free disk space on $1|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},free]<p>Update: 60</p><p>LLD</p>|
+|Free disk space on $1 (percentage)|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},pfree]<p>Update: 60</p><p>LLD</p>|
+|Total disk space on $1|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},total]<p>Update: 3600</p><p>LLD</p>|
+|Used disk space on $1|<p>-</p>|`Zabbix agent`|vfs.fs.size[{#FSNAME},used]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

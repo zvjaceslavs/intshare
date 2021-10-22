@@ -73,7 +73,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|CPU Core {#CPUCORE} Temp (LLD)|<p>-</p>|`Zabbix agent`|coretemp.cpu[{#CPUCORE}]<p>Update: 1m</p>|
+|CPU Core {#CPUCORE} Temp|<p>-</p>|`Zabbix agent`|coretemp.cpu[{#CPUCORE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

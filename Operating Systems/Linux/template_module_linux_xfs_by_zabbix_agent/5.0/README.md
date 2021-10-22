@@ -84,9 +84,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#XFSNAME}: Space utilization (LLD)|<p>-</p>|`Zabbix agent`|xfs.quota.project.pused[{#XFSNAME}]<p>Update: 1m</p>|
-|{#XFSNAME}: Total space (LLD)|<p>-</p>|`Zabbix agent`|xfs.quota.project.total[{#XFSNAME}]<p>Update: 1m</p>|
-|{#XFSNAME}: Used space (LLD)|<p>-</p>|`Zabbix agent`|xfs.quota.project.used[{#XFSNAME}]<p>Update: 1m</p>|
+|{#XFSNAME}: Space utilization|<p>-</p>|`Zabbix agent`|xfs.quota.project.pused[{#XFSNAME}]<p>Update: 1m</p><p>LLD</p>|
+|{#XFSNAME}: Total space|<p>-</p>|`Zabbix agent`|xfs.quota.project.total[{#XFSNAME}]<p>Update: 1m</p><p>LLD</p>|
+|{#XFSNAME}: Used space|<p>-</p>|`Zabbix agent`|xfs.quota.project.used[{#XFSNAME}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

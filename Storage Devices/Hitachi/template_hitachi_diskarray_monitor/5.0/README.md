@@ -38,18 +38,18 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|DKC Battery Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKCBatteryCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKC Cache Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKCCacheCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKC Environment Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKCEnvironmentCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKC Fan Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKCFanCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKC Internal Bus Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKCInternalBusCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKC Power Supply Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKCPowerSupplyCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKC Processor Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKCProcessorCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKC Shared Memory Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKCSharedMemoryCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKU Drive Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKUDriveCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKU Environment Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKUEnvironmentCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKU Fan Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKUFanCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DKU Power Supply Condition {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DKUPowerSupplyCondition.[{#SNMPINDEX}]<p>Update: 10m</p>|
+|DKC Battery Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKCBatteryCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKC Cache Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKCCacheCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKC Environment Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKCEnvironmentCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKC Fan Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKCFanCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKC Internal Bus Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKCInternalBusCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKC Power Supply Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKCPowerSupplyCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKC Processor Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKCProcessorCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKC Shared Memory Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKCSharedMemoryCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKU Drive Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKUDriveCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKU Environment Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKUEnvironmentCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKU Fan Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKUFanCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DKU Power Supply Condition {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DKUPowerSupplyCondition.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

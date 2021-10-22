@@ -46,17 +46,17 @@ There are no template links in this template.
 |System SNMP Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 1d</p>|
 |System Identity|<p>-</p>|`SNMP agent`|sys.Name<p>Update: 1d</p>|
 |System Uptime|<p>-</p>|`SNMP agent`|system.uptimet<p>Update: 60s</p>|
-|Interface Name:{#IFNAME} Alias:{#IFALIAS} Speed (LLD)|<p>-</p>|`SNMP agent`|ifHighSpeed.["({#SNMPINDEX})"]<p>Update: 30s</p>|
-|Interface Name:{#IFNAME} Alias:{#IFALIAS}  MTU (LLD)|<p>-</p>|`SNMP agent`|ifMtu.["({#SNMPINDEX})"]<p>Update: 30s</p>|
-|Interface Name:{#IFNAME} Alias:{#IFALIAS} Type (LLD)|<p>-</p>|`SNMP agent`|ifType.["({#SNMPINDEX})"]<p>Update: 30s</p>|
-|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Inbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Inbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Bits received (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 3s</p>|
-|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Outbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Outbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Bits sent (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 3s</p>|
-|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Admin status (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Operational status (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 30s</p>|
+|Interface Name:{#IFNAME} Alias:{#IFALIAS} Speed|<p>-</p>|`SNMP agent`|ifHighSpeed.["({#SNMPINDEX})"]<p>Update: 30s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:{#IFALIAS}  MTU|<p>-</p>|`SNMP agent`|ifMtu.["({#SNMPINDEX})"]<p>Update: 30s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:{#IFALIAS} Type|<p>-</p>|`SNMP agent`|ifType.["({#SNMPINDEX})"]<p>Update: 30s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Bits received|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 3s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Outbound packets discarded|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Outbound packets with errors|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Bits sent|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 3s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Admin status|<p>-</p>|`SNMP agent`|net.if.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface Name:{#IFNAME} Alias:({#IFALIAS}): Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

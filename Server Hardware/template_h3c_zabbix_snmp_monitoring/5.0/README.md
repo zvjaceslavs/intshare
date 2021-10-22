@@ -49,25 +49,25 @@ There are no template links in this template.
 |h3cPowerTotalCost|<p>-</p>|`SNMP agent`|h3cPowerTotalCost<p>Update: 30s</p>|
 |h3cSrvBiosVersion|<p>-</p>|`SNMP agent`|h3cSrvBiosVersion<p>Update: 60s</p>|
 |h3cSrvHdmVersion|<p>-</p>|`SNMP agent`|h3cSrvHdmVersion<p>Update: 60s</p>|
-|TempSensor_[{#SNMPINDEX}]_Reading (LLD)|<p>Information about temperature reading, the unit is degree C.</p>|`SNMP agent`|TempSensorReading[{#SNMPINDEX}]<p>Update: 30s</p>|
-|TempSensor_[{#SNMPINDEX}]_Status (LLD)|<p>-</p>|`SNMP agent`|TempSensorStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Mem_[{#SNMPINDEX}]_Status (LLD)|<p>-</p>|`SNMP agent`|MemStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|HardDisk_[{#SNMPINDEX}]_HealthStatus (LLD)|<p>The hard disk health status</p>|`SNMP agent`|HardDiskHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|HardDisk_[{#SNMPINDEX}]_Location (LLD)|<p>The location of hard disk</p>|`SNMP agent`|HardDiskStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|FAN_[{#SNMPINDEX}]_PresentStatus (LLD)|<p>-</p>|`SNMP agent`|FANPresentStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|FAN_[{#SNMPINDEX}]_Speed (LLD)|<p>-</p>|`SNMP agent`|FANSpeed[{#SNMPINDEX}]<p>Update: 30s</p>|
-|CPU_[{#SNMPINDEX}]_PresentStatus (LLD)|<p>The present status of CPU associated with the ID.</p>|`SNMP agent`|CPUPresentStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|CPU_[{#SNMPINDEX}]_Status (LLD)|<p>The working status of the CPU associated with the ID</p>|`SNMP agent`|CPUStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|h3cCPUHealthStatus[{#SNMPINDEX}] (LLD)|<p>Health status of the CPU overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cCPUHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|h3cDiskHealthStatus[{#SNMPINDEX}] (LLD)|<p>Health status of the disk overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cDiskHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|h3cEntiretyHealthStatus[{#SNMPINDEX}] (LLD)|<p>The entirety health status of this machine, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cEntiretyHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|h3cFanHealthStatus[{#SNMPINDEX}] (LLD)|<p>Health status of the FAN overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cFanHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|h3cMemHealthStatus[{#SNMPINDEX}] (LLD)|<p>Health status of the memory overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cMemHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|h3cPwrHealthStatus[{#SNMPINDEX}] (LLD)|<p>Health status of the power supply overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cPwrHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|h3cTempHealthStatus[{#SNMPINDEX}] (LLD)|<p>Health status of the temprature overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cTempHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Fru_[{#SNMPINDEX}]_Name (LLD)|<p>-</p>|`SNMP agent`|FruName[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Power_[{#SNMPINDEX}]_Cost (LLD)|<p>Information about the cost of power. The unit is watt.</p>|`SNMP agent`|PowerCost[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Power_[{#SNMPINDEX}]_PresnetStatus (LLD)|<p>The present status of power supply , absence(0), presence(1)</p>|`SNMP agent`|PowerPresnetStatus[{#SNMPINDEX}]<p>Update: 30s</p>|
+|TempSensor_[{#SNMPINDEX}]_Reading|<p>Information about temperature reading, the unit is degree C.</p>|`SNMP agent`|TempSensorReading[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|TempSensor_[{#SNMPINDEX}]_Status|<p>-</p>|`SNMP agent`|TempSensorStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Mem_[{#SNMPINDEX}]_Status|<p>-</p>|`SNMP agent`|MemStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|HardDisk_[{#SNMPINDEX}]_HealthStatus|<p>The hard disk health status</p>|`SNMP agent`|HardDiskHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|HardDisk_[{#SNMPINDEX}]_Location|<p>The location of hard disk</p>|`SNMP agent`|HardDiskStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|FAN_[{#SNMPINDEX}]_PresentStatus|<p>-</p>|`SNMP agent`|FANPresentStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|FAN_[{#SNMPINDEX}]_Speed|<p>-</p>|`SNMP agent`|FANSpeed[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|CPU_[{#SNMPINDEX}]_PresentStatus|<p>The present status of CPU associated with the ID.</p>|`SNMP agent`|CPUPresentStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|CPU_[{#SNMPINDEX}]_Status|<p>The working status of the CPU associated with the ID</p>|`SNMP agent`|CPUStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|h3cCPUHealthStatus[{#SNMPINDEX}]|<p>Health status of the CPU overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cCPUHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|h3cDiskHealthStatus[{#SNMPINDEX}]|<p>Health status of the disk overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cDiskHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|h3cEntiretyHealthStatus[{#SNMPINDEX}]|<p>The entirety health status of this machine, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cEntiretyHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|h3cFanHealthStatus[{#SNMPINDEX}]|<p>Health status of the FAN overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cFanHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|h3cMemHealthStatus[{#SNMPINDEX}]|<p>Health status of the memory overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cMemHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|h3cPwrHealthStatus[{#SNMPINDEX}]|<p>Health status of the power supply overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cPwrHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|h3cTempHealthStatus[{#SNMPINDEX}]|<p>Health status of the temprature overall, normal(0), caution(1), warning(2), critical(3)</p>|`SNMP agent`|h3cTempHealthStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Fru_[{#SNMPINDEX}]_Name|<p>-</p>|`SNMP agent`|FruName[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Power_[{#SNMPINDEX}]_Cost|<p>Information about the cost of power. The unit is watt.</p>|`SNMP agent`|PowerCost[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Power_[{#SNMPINDEX}]_PresnetStatus|<p>The present status of power supply , absence(0), presence(1)</p>|`SNMP agent`|PowerPresnetStatus[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -45,8 +45,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|CPU - usage on core '{#CPUID}' (LLD)|<p>The overall CPU busy percentage in the last 5 minute period.</p>|`SNMP agent`|cpmCPUTotal5minRev[{#SNMPINDEX}]<p>Update: 300</p>|
-|Memory - free in pool '{#MEMNAME}' (LLD)|<p>Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPINDEX}]<p>Update: 600</p>|
+|CPU - usage on core '{#CPUID}'|<p>The overall CPU busy percentage in the last 5 minute period.</p>|`SNMP agent`|cpmCPUTotal5minRev[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Memory - free in pool '{#MEMNAME}'|<p>Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPINDEX}]<p>Update: 600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -36,7 +36,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Number of addresses that are free on scope {#IPSCOPE} (LLD)|<p>-</p>|`SNMP agent`|ipfree[{#IPSCOPE}]<p>Update: 30</p>|
+|Number of addresses that are free on scope {#IPSCOPE}|<p>-</p>|`SNMP agent`|ipfree[{#IPSCOPE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

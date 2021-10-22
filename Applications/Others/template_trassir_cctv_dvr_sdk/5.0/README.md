@@ -37,9 +37,6 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |Trassir automation status|<p>Наличие ошибок при выполнении скриптов на данном сервере</p>|`Dependent item`|trassirautomation<p>Update: 0</p>|
 |Trassir channels online|<p>Количество камер, работающих без ошибок</p>|`Dependent item`|trassirchannelsonline<p>Update: 0</p>|
 |Trassir channels total|<p>Общее количество подключенных камер</p>|`Dependent item`|trassirchannelstotal<p>Update: 0</p>|

@@ -46,26 +46,26 @@ There are no template links in this template.
 |get discovery|<p>-</p>|`External check`|storwize_get_state.py["--storwize_ip={HOST.IP}","--storwize_port={$STORWIZE_PORT}","--storwize_user={$STORWIZE_USER}","--storwize_password={$STORWIZE_PASSWORD}","--storage_name={HOST.NAME}","--discovery"]<p>Update: 30m</p>|
 |get status|<p>-</p>|`External check`|storwize_get_state.py["--storwize_ip={HOST.IP}","--storwize_port={$STORWIZE_PORT}","--storwize_user={$STORWIZE_USER}","--storwize_password={$STORWIZE_PASSWORD}","--storage_name={HOST.NAME}","--status"]<p>Update: 3m</p>|
 |Count of unsupported items|<p>-</p>|`Zabbix internal`|zabbix[host,,items_unsupported]<p>Update: 10m</p>|
-|Health status of BBU "{#BATTERY_ID}" in enclosure "{#ENCLOSURE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lsenclosurebattery.[{#ENCLOSURE_ID}.{#BATTERY_ID}]<p>Update: 0</p>|
-|Running status of Fibre Channel port ID - "{#PORT_ID}", node name - "{#NODE_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|running.lsportfc.[{#PORT_ID}.{#NODE_NAME}]<p>Update: 0</p>|
-|Health status of disk "{#SLOT_ID}" in enclosure "{#ENCLOSURE_ID}" (LLD)|<p>online - which indicates that the drive is available through all drive ports degraded - which indicates that the drive is available but not through all drive ports offline - which indicates that the drive is unavailable</p>|`Zabbix trapper`|health.lsdrive.[{#ENCLOSURE_ID}.{#SLOT_ID}]<p>Update: 0</p>|
-|Free capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|free.lsmdiskgrp.[{#NAME}]<p>Update: 0</p>|
-|Health status of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lsmdiskgrp.[{#NAME}]<p>Update: 0</p>|
-|Percent overallocation on Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|overallocation.lsmdiskgrp.[{#NAME}]<p>Update: 0</p>|
-|Real capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|real.lsmdiskgrp.[{#NAME}]<p>Update: 0</p>|
-|Total capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|total.lsmdiskgrp.[{#NAME}]<p>Update: 0</p>|
-|Used capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|used.lsmdiskgrp.[{#NAME}]<p>Update: 0</p>|
-|Virtual capacity of a Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|virtual.lsmdiskgrp.[{#NAME}]<p>Update: 0</p>|
-|Fault LED of enclosure ID - "{#ID}", Serial Number - "{#SERIAL_NUMBER}" (LLD)|<p>-</p>|`Zabbix trapper`|faultLED.lsenclosure.[{#ID}.{#SERIAL_NUMBER}]<p>Update: 0</p>|
-|Health status of enclosure ID - "{#ID}", Serial Number - "{#SERIAL_NUMBER}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lsenclosure.[{#ID}.{#SERIAL_NUMBER}]<p>Update: 0</p>|
-|Fan of PSU "{#PSU_ID}" in enclosure "{#ENCLOSURE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|fanFailed.lsenclosurepsu.[{#ENCLOSURE_ID}.{#PSU_ID}]<p>Update: 0</p>|
-|Health status of PSU "{#PSU_ID}" in enclosure "{#ENCLOSURE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lsenclosurepsu.[{#ENCLOSURE_ID}.{#PSU_ID}]<p>Update: 0</p>|
-|Input Power of PSU "{#PSU_ID}" in enclosure "{#ENCLOSURE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|inFailed.lsenclosurepsu.[{#ENCLOSURE_ID}.{#PSU_ID}]<p>Update: 0</p>|
-|Output Power of PSU "{#PSU_ID}" in enclosure "{#ENCLOSURE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|outFailed.lsenclosurepsu.[{#ENCLOSURE_ID}.{#PSU_ID}]<p>Update: 0</p>|
-|Health status of Canister "{#CANISTER_ID}" in enclosure "{#ENCLOSURE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lsenclosurecanister.[{#ENCLOSURE_ID}.{#CANISTER_ID}]<p>Update: 0</p>|
-|Health status of Volume "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lsvdisk.[{#NAME}]<p>Update: 0</p>|
-|Health status of Mdisk "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lsmdisk.[{#NAME}]<p>Update: 0</p>|
-|Running status of SAS port ID - "{#PORT_ID}", node name - "{#NODE_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|running.lsportsas.[{#PORT_ID}.{#NODE_NAME}]<p>Update: 0</p>|
+|Health status of BBU "{#BATTERY_ID}" in enclosure "{#ENCLOSURE_ID}"|<p>-</p>|`Zabbix trapper`|health.lsenclosurebattery.[{#ENCLOSURE_ID}.{#BATTERY_ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of Fibre Channel port ID - "{#PORT_ID}", node name - "{#NODE_NAME}"|<p>-</p>|`Zabbix trapper`|running.lsportfc.[{#PORT_ID}.{#NODE_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of disk "{#SLOT_ID}" in enclosure "{#ENCLOSURE_ID}"|<p>online - which indicates that the drive is available through all drive ports degraded - which indicates that the drive is available but not through all drive ports offline - which indicates that the drive is unavailable</p>|`Zabbix trapper`|health.lsdrive.[{#ENCLOSURE_ID}.{#SLOT_ID}]<p>Update: 0</p><p>LLD</p>|
+|Free capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|free.lsmdiskgrp.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|health.lsmdiskgrp.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Percent overallocation on Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|overallocation.lsmdiskgrp.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Real capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|real.lsmdiskgrp.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Total capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|total.lsmdiskgrp.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Used capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|used.lsmdiskgrp.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Virtual capacity of a Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|virtual.lsmdiskgrp.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Fault LED of enclosure ID - "{#ID}", Serial Number - "{#SERIAL_NUMBER}"|<p>-</p>|`Zabbix trapper`|faultLED.lsenclosure.[{#ID}.{#SERIAL_NUMBER}]<p>Update: 0</p><p>LLD</p>|
+|Health status of enclosure ID - "{#ID}", Serial Number - "{#SERIAL_NUMBER}"|<p>-</p>|`Zabbix trapper`|health.lsenclosure.[{#ID}.{#SERIAL_NUMBER}]<p>Update: 0</p><p>LLD</p>|
+|Fan of PSU "{#PSU_ID}" in enclosure "{#ENCLOSURE_ID}"|<p>-</p>|`Zabbix trapper`|fanFailed.lsenclosurepsu.[{#ENCLOSURE_ID}.{#PSU_ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of PSU "{#PSU_ID}" in enclosure "{#ENCLOSURE_ID}"|<p>-</p>|`Zabbix trapper`|health.lsenclosurepsu.[{#ENCLOSURE_ID}.{#PSU_ID}]<p>Update: 0</p><p>LLD</p>|
+|Input Power of PSU "{#PSU_ID}" in enclosure "{#ENCLOSURE_ID}"|<p>-</p>|`Zabbix trapper`|inFailed.lsenclosurepsu.[{#ENCLOSURE_ID}.{#PSU_ID}]<p>Update: 0</p><p>LLD</p>|
+|Output Power of PSU "{#PSU_ID}" in enclosure "{#ENCLOSURE_ID}"|<p>-</p>|`Zabbix trapper`|outFailed.lsenclosurepsu.[{#ENCLOSURE_ID}.{#PSU_ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Canister "{#CANISTER_ID}" in enclosure "{#ENCLOSURE_ID}"|<p>-</p>|`Zabbix trapper`|health.lsenclosurecanister.[{#ENCLOSURE_ID}.{#CANISTER_ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Volume "{#NAME}"|<p>-</p>|`Zabbix trapper`|health.lsvdisk.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Mdisk "{#NAME}"|<p>-</p>|`Zabbix trapper`|health.lsmdisk.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Running status of SAS port ID - "{#PORT_ID}", node name - "{#NODE_NAME}"|<p>-</p>|`Zabbix trapper`|running.lsportsas.[{#PORT_ID}.{#NODE_NAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

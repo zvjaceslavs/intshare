@@ -47,14 +47,14 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Interface {#ADVSNMPVALUE} fwAcceptBytesIn (LLD)|<p>-</p>|`SNMP agent`|fwAcceptBytesIn["{#ADVSNMPVALUE}"]<p>Update: 120</p>|
-|Interface {#ADVSNMPVALUE} fwAcceptBytesOut (LLD)|<p>-</p>|`SNMP agent`|fwAcceptBytesOut["{#ADVSNMPVALUE}"]<p>Update: 120</p>|
-|Interface {#ADVSNMPVALUE} fwAcceptPcktsIn (LLD)|<p>-</p>|`SNMP agent`|fwAcceptPcktsIn["{#ADVSNMPVALUE}"]<p>Update: 120</p>|
-|Interface {#ADVSNMPVALUE} fwAcceptPcktsOut (LLD)|<p>-</p>|`SNMP agent`|fwAcceptPcktsOut["{#ADVSNMPVALUE}"]<p>Update: 120</p>|
-|Interface {#ADVSNMPVALUE} fwDropPcktsIn (LLD)|<p>-</p>|`SNMP agent`|fwDropPcktsIn["{#ADVSNMPVALUE}"]<p>Update: 120</p>|
-|Interface {#ADVSNMPVALUE} fwDropPcktsOut (LLD)|<p>-</p>|`SNMP agent`|fwDropPcktsOut["{#ADVSNMPVALUE}"]<p>Update: 120</p>|
-|Interface {#ADVSNMPVALUE} fwRejectPcktsIn (LLD)|<p>-</p>|`SNMP agent`|fwRejectPcktsIn["{#ADVSNMPVALUE}"]<p>Update: 120</p>|
-|Interface {#ADVSNMPVALUE} fwRejectPcktsOut (LLD)|<p>-</p>|`SNMP agent`|fwRejectPcktsOut["{#ADVSNMPVALUE}"]<p>Update: 120</p>|
+|Interface {#ADVSNMPVALUE} fwAcceptBytesIn|<p>-</p>|`SNMP agent`|fwAcceptBytesIn["{#ADVSNMPVALUE}"]<p>Update: 120</p><p>LLD</p>|
+|Interface {#ADVSNMPVALUE} fwAcceptBytesOut|<p>-</p>|`SNMP agent`|fwAcceptBytesOut["{#ADVSNMPVALUE}"]<p>Update: 120</p><p>LLD</p>|
+|Interface {#ADVSNMPVALUE} fwAcceptPcktsIn|<p>-</p>|`SNMP agent`|fwAcceptPcktsIn["{#ADVSNMPVALUE}"]<p>Update: 120</p><p>LLD</p>|
+|Interface {#ADVSNMPVALUE} fwAcceptPcktsOut|<p>-</p>|`SNMP agent`|fwAcceptPcktsOut["{#ADVSNMPVALUE}"]<p>Update: 120</p><p>LLD</p>|
+|Interface {#ADVSNMPVALUE} fwDropPcktsIn|<p>-</p>|`SNMP agent`|fwDropPcktsIn["{#ADVSNMPVALUE}"]<p>Update: 120</p><p>LLD</p>|
+|Interface {#ADVSNMPVALUE} fwDropPcktsOut|<p>-</p>|`SNMP agent`|fwDropPcktsOut["{#ADVSNMPVALUE}"]<p>Update: 120</p><p>LLD</p>|
+|Interface {#ADVSNMPVALUE} fwRejectPcktsIn|<p>-</p>|`SNMP agent`|fwRejectPcktsIn["{#ADVSNMPVALUE}"]<p>Update: 120</p><p>LLD</p>|
+|Interface {#ADVSNMPVALUE} fwRejectPcktsOut|<p>-</p>|`SNMP agent`|fwRejectPcktsOut["{#ADVSNMPVALUE}"]<p>Update: 120</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

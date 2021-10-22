@@ -36,13 +36,13 @@ There are no template links in this template.
 |Device location|<p>-</p>|`SNMP agent`|dlink.des1210.sysLocation<p>Update: 3600</p>|
 |Device name|<p>-</p>|`SNMP agent`|dlink.des1210.sysName<p>Update: 3600</p>|
 |Device uptime|<p>-</p>|`SNMP agent`|dlink.des1210.sysUpTime<p>Update: 60</p>|
-|Interface {#SNMPINDEX} DuplexStatus (LLD)|<p>unknown(1) halfDuplex(2) fullDuplex(3)</p>|`SNMP agent`|dlink.des1210.duplexstatus[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface $1 Inbound errors (LLD)|<p>-</p>|`SNMP agent`|dlink.des1210.ifInErrors[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface $1 In (LLD)|<p>Incoming traffic on interface</p>|`SNMP agent`|dlink.des1210.ifInOctets[{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface $1 Operational status (LLD)|<p>-</p>|`SNMP agent`|dlink.des1210.ifOperStatus[{#SNMPINDEX}]<p>Update: 30</p>|
-|interface $1 Outbound errors (LLD)|<p>-</p>|`SNMP agent`|dlink.des1210.ifOutErrors[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface $1 Out (LLD)|<p>Outgoing traffic on interface</p>|`SNMP agent`|dlink.des1210.ifOutOctets[{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface $1 Speed (LLD)|<p>-</p>|`SNMP agent`|dlink.des1210.ifSpeed[{#SNMPINDEX}]<p>Update: 60</p>|
+|Interface {#SNMPINDEX} DuplexStatus|<p>unknown(1) halfDuplex(2) fullDuplex(3)</p>|`SNMP agent`|dlink.des1210.duplexstatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface $1 Inbound errors|<p>-</p>|`SNMP agent`|dlink.des1210.ifInErrors[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface $1 In|<p>Incoming traffic on interface</p>|`SNMP agent`|dlink.des1210.ifInOctets[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface $1 Operational status|<p>-</p>|`SNMP agent`|dlink.des1210.ifOperStatus[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|interface $1 Outbound errors|<p>-</p>|`SNMP agent`|dlink.des1210.ifOutErrors[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface $1 Out|<p>Outgoing traffic on interface</p>|`SNMP agent`|dlink.des1210.ifOutOctets[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface $1 Speed|<p>-</p>|`SNMP agent`|dlink.des1210.ifSpeed[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

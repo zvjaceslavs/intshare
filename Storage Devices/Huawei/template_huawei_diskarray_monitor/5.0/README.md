@@ -44,10 +44,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|PowerHealthStatus {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|PowerHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|FanHealthStatus {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|FanHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|ControllerHealthStatus {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ControllerHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|DiskHealthStatus {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|DiskHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
+|PowerHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|PowerHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|FanHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|FanHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|ControllerHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ControllerHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DiskHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DiskHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

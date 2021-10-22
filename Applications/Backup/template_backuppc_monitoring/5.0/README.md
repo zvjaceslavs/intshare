@@ -65,26 +65,26 @@ There are no template links in this template.
 |Start time|<p>-</p>|`Dependent item`|backuppc.server.start_time<p>Update: 0</p>|
 |Version|<p>-</p>|`Dependent item`|backuppc.server.version<p>Update: 0</p>|
 |BackupPC get metrics|<p>Fetches BackupPC server metrics</p>|`Zabbix agent`|web.page.get[{$BACKUPPC.SCHEME}://{$BACKUPPC.USERNAME}:{$BACKUPPC.PASSWORD}@{$BACKUPPC.HOST}:{$BACKUPPC.PORT}/{$BACKUPPC.PATH}?action=metrics]<p>Update: 5m</p>|
-|[{#HOST}] Disabled (LLD)|<p>-</p>|`Dependent item`|backuppc.disabled.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Incr duration (LLD)|<p>-</p>|`Dependent item`|backuppc.incr_duration.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Reason (LLD)|<p>-</p>|`Dependent item`|backuppc.reason.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Incr start time (LLD)|<p>-</p>|`Dependent item`|backuppc.incr_start_time.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Incr size (LLD)|<p>-</p>|`Dependent item`|backuppc.incr_size.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Incr rate (LLD)|<p>-</p>|`Dependent item`|backuppc.incr_rate.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Error (LLD)|<p>-</p>|`Dependent item`|backuppc.error.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Incr keep count (LLD)|<p>-</p>|`Dependent item`|backuppc.incr_keep_count.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Incr count (LLD)|<p>-</p>|`Dependent item`|backuppc.incr_count.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Full start time (LLD)|<p>-</p>|`Dependent item`|backuppc.full_start_time.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Full size (LLD)|<p>-</p>|`Dependent item`|backuppc.full_size.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Full rate (LLD)|<p>-</p>|`Dependent item`|backuppc.full_rate.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Full keep count (LLD)|<p>-</p>|`Dependent item`|backuppc.full_keep_count.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Full duration (LLD)|<p>-</p>|`Dependent item`|backuppc.full_duration.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Full count (LLD)|<p>-</p>|`Dependent item`|backuppc.full_count.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] State (LLD)|<p>-</p>|`Dependent item`|backuppc.state.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Last # of new files (LLD)|<p>-</p>|`Dependent item`|backuppc.last_nfiles_new.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Last size (LLD)|<p>-</p>|`Dependent item`|backuppc.last_size.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Last new files size (LLD)|<p>-</p>|`Dependent item`|backuppc.last_size_new.[{#HOST}]<p>Update: 0</p>|
-|[{#HOST}] Last start time (LLD)|<p>-</p>|`Dependent item`|backuppc.last_start_time.[{#HOST}]<p>Update: 0</p>|
+|[{#HOST}] Disabled|<p>-</p>|`Dependent item`|backuppc.disabled.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Incr duration|<p>-</p>|`Dependent item`|backuppc.incr_duration.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Reason|<p>-</p>|`Dependent item`|backuppc.reason.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Incr start time|<p>-</p>|`Dependent item`|backuppc.incr_start_time.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Incr size|<p>-</p>|`Dependent item`|backuppc.incr_size.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Incr rate|<p>-</p>|`Dependent item`|backuppc.incr_rate.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Error|<p>-</p>|`Dependent item`|backuppc.error.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Incr keep count|<p>-</p>|`Dependent item`|backuppc.incr_keep_count.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Incr count|<p>-</p>|`Dependent item`|backuppc.incr_count.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Full start time|<p>-</p>|`Dependent item`|backuppc.full_start_time.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Full size|<p>-</p>|`Dependent item`|backuppc.full_size.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Full rate|<p>-</p>|`Dependent item`|backuppc.full_rate.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Full keep count|<p>-</p>|`Dependent item`|backuppc.full_keep_count.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Full duration|<p>-</p>|`Dependent item`|backuppc.full_duration.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Full count|<p>-</p>|`Dependent item`|backuppc.full_count.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] State|<p>-</p>|`Dependent item`|backuppc.state.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Last # of new files|<p>-</p>|`Dependent item`|backuppc.last_nfiles_new.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Last size|<p>-</p>|`Dependent item`|backuppc.last_size.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Last new files size|<p>-</p>|`Dependent item`|backuppc.last_size_new.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
+|[{#HOST}] Last start time|<p>-</p>|`Dependent item`|backuppc.last_start_time.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

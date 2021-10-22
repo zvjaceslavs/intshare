@@ -58,7 +58,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Temperature reading of probe "{#DEVICE}" ({$PROBE:"{#DEVICE}"}) (LLD)|<p>-</p>|`Zabbix agent`|system.run[cat /sys/bus/w1/devices/{#DEVICE}/w1_slave | tail -n +2  | cut -d= -f2-]<p>Update: 15s</p>|
+|Temperature reading of probe "{#DEVICE}" ({$PROBE:"{#DEVICE}"})|<p>-</p>|`Zabbix agent`|system.run[cat /sys/bus/w1/devices/{#DEVICE}/w1_slave | tail -n +2  | cut -d= -f2-]<p>Update: 15s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

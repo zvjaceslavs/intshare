@@ -64,68 +64,68 @@ There are no template links in this template.
 |Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
 |Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Total In (LLD)|<p>-</p>|`SNMP agent`|ifHCInOctets.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Total Out (LLD)|<p>-</p>|`SNMP agent`|ifHCOutOctets.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Speed (LLD)|<p>-</p>|`SNMP agent`|ifHighSpeed.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Interface {#SNMPVALUE} - Bcast In (LLD)|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Discards In (LLD)|<p>-</p>|`SNMP agent`|ifInDiscards.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Errors In (LLD)|<p>-</p>|`SNMP agent`|ifInErrors.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Mcast In (LLD)|<p>-</p>|`SNMP agent`|ifInMulticastPkts.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Ucast In (LLD)|<p>-</p>|`SNMP agent`|ifInUcastPkts.[{#SNMPINDEX}]<p>Update: 60;50/1-7,00:00-24:00</p>|
-|Interface {#SNMPVALUE} - Bcast Out (LLD)|<p>-</p>|`SNMP agent`|ifOutBroadcastPkts.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Discards Out (LLD)|<p>-</p>|`SNMP agent`|ifOutDiscards.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Errors Out (LLD)|<p>-</p>|`SNMP agent`|ifOutErrors.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Mcast Out (LLD)|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interface {#SNMPVALUE} - Ucast Out (LLD)|<p>-</p>|`SNMP agent`|ifOutUcastPkts.[{#SNMPINDEX}]<p>Update: 60;50/1-7,00:00-24:00</p>|
-|Active CPU core last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesActive[{#SNMPINDEX}]<p>Update: 60</p>|
-|System CPU core last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsSystem[{#SNMPINDEX}]<p>Update: 5</p>|
-|User CPU core last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteUser[{#SNMPINDEX}]<p>Update: 60</p>|
-|System CPU core last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteSystem[{#SNMPINDEX}]<p>Update: 60</p>|
-|Softirq CPU core last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteSoftirq[{#SNMPINDEX}]<p>Update: 60</p>|
-|Nice CPU core last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteNice[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interrupt CPU core last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteInterrupt[{#SNMPINDEX}]<p>Update: 60</p>|
-|Idle CPU core last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteIdle[{#SNMPINDEX}]<p>Update: 60</p>|
-|Active CPU core last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteActive[{#SNMPINDEX}]<p>Update: 60</p>|
-|Wait CPU core last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsWait[{#SNMPINDEX}]<p>Update: 5</p>|
-|User CPU core last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsUser[{#SNMPINDEX}]<p>Update: 5</p>|
-|Softirq CPU core last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsSoftirq[{#SNMPINDEX}]<p>Update: 5</p>|
-|Idle CPU core last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesIdle[{#SNMPINDEX}]<p>Update: 60</p>|
-|Nice CPU core last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsNice[{#SNMPINDEX}]<p>Update: 5</p>|
-|Interrupt CPU core last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsInterrupt[{#SNMPINDEX}]<p>Update: 5</p>|
-|Idle CPU core last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsIdle[{#SNMPINDEX}]<p>Update: 5</p>|
-|Active CPU core last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsActive[{#SNMPINDEX}]<p>Update: 5</p>|
-|Wait CPU core last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesWait[{#SNMPINDEX}]<p>Update: 60</p>|
-|User CPU core last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesUser[{#SNMPINDEX}]<p>Update: 60</p>|
-|System CPU core last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesSystem[{#SNMPINDEX}]<p>Update: 60</p>|
-|Softirq CPU core last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesSoftirq[{#SNMPINDEX}]<p>Update: 60</p>|
-|Nice CPU core last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesNIce[{#SNMPINDEX}]<p>Update: 60</p>|
-|Interrupt CPU core last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesInterrupt[{#SNMPINDEX}]<p>Update: 60</p>|
-|Wait CPU core last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteWait[{#SNMPINDEX}]<p>Update: 60</p>|
-|Active CPU load last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuLoadFiveMinutesActive[{#SNMPINDEX}]<p>Update: 60</p>|
-|Idle CPU load last 5 minutes (LLD)|<p>-</p>|`SNMP agent`|cpuLoadFiveMinutesIdle[{#SNMPINDEX}]<p>Update: 60</p>|
-|Active CPU load last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuLoadFiveSecondsActive[{#SNMPINDEX}]<p>Update: 5</p>|
-|Idle CPU load last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|cpuLoadFiveSecondsIdle[{#SNMPINDEX}]<p>Update: 5</p>|
-|Active CPU load last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuLoadOneMinuteActive[{#SNMPINDEX}]<p>Update: 60</p>|
-|Idle CPU load last 1 minute (LLD)|<p>-</p>|`SNMP agent`|cpuLoadOneMinuteIdle[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Power (LLD)|<p>-</p>|`SNMP agent`|fanControl[{#SNMPINDEX}]<p>Update: 10</p>|
-|{#SNMPVALUE} - Description (LLD)|<p>-</p>|`SNMP agent`|fanDescription[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Read Error (LLD)|<p>-</p>|`SNMP agent`|fanSpeedReadError[{#SNMPINDEX}]<p>Update: 10</p>|
-|{#SNMPVALUE} - Status (LLD)|<p>-</p>|`SNMP agent`|fanSpeedStatus[{#SNMPINDEX}]<p>Update: 10</p>|
-|{#SNMPVALUE} - Speed (LLD)|<p>-</p>|`SNMP agent`|fanSpeed[{#SNMPINDEX}]<p>Update: 10</p>|
-|Available memory last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|memoryFiveSecondsAvailable[{#SNMPINDEX}]<p>Update: 5</p>|
-|Buffered memory last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|memoryFiveSecondsBuffered[{#SNMPINDEX}]<p>Update: 5</p>|
-|Cached memory last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|memoryFiveSecondsCached[{#SNMPINDEX}]<p>Update: 5</p>|
-|Free memory last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|memoryFiveSecondsFree[{#SNMPINDEX}]<p>Update: 5</p>|
-|Slab Reclaimed last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|memoryFiveSecondsSlabRecl[{#SNMPINDEX}]<p>Update: 5</p>|
-|Slab Unreclaimed last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|memoryFiveSecondsSlabUnrecl[{#SNMPINDEX}]<p>Update: 5</p>|
-|Total memory last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|memoryFiveSecondsTotal[{#SNMPINDEX}]<p>Update: 5</p>|
-|Used memory last 5 seconds (LLD)|<p>-</p>|`SNMP agent`|memoryFiveSecondsUsed[{#SNMPINDEX}]<p>Update: 5</p>|
-|{#SNMPVALUE} - Current Temperature (LLD)|<p>-</p>|`SNMP agent`|temperatureSensorCurrentTemperature[{#SNMPINDEX}]<p>Update: 10</p>|
-|{#SNMPVALUE} - Description (LLD)|<p>-</p>|`SNMP agent`|temperatureSensorDescription[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Hyst Temperature (LLD)|<p>-</p>|`SNMP agent`|temperatureSensorHysteresis[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Max Temperature (LLD)|<p>-</p>|`SNMP agent`|temperatureSensorMaxTemperature[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Min Temperature (LLD)|<p>-</p>|`SNMP agent`|temperatureSensorMinTemperature[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Read Error (LLD)|<p>-</p>|`SNMP agent`|temperatureSensorTemperatureReadError[{#SNMPINDEX}]<p>Update: 10</p>|
+|Interface {#SNMPVALUE} - Total In|<p>-</p>|`SNMP agent`|ifHCInOctets.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Total Out|<p>-</p>|`SNMP agent`|ifHCOutOctets.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Speed|<p>-</p>|`SNMP agent`|ifHighSpeed.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Bcast In|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Discards In|<p>-</p>|`SNMP agent`|ifInDiscards.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Errors In|<p>-</p>|`SNMP agent`|ifInErrors.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Mcast In|<p>-</p>|`SNMP agent`|ifInMulticastPkts.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Ucast In|<p>-</p>|`SNMP agent`|ifInUcastPkts.[{#SNMPINDEX}]<p>Update: 60;50/1-7,00:00-24:00</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Bcast Out|<p>-</p>|`SNMP agent`|ifOutBroadcastPkts.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Discards Out|<p>-</p>|`SNMP agent`|ifOutDiscards.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Errors Out|<p>-</p>|`SNMP agent`|ifOutErrors.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Mcast Out|<p>-</p>|`SNMP agent`|ifOutMulticastPkts.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#SNMPVALUE} - Ucast Out|<p>-</p>|`SNMP agent`|ifOutUcastPkts.[{#SNMPINDEX}]<p>Update: 60;50/1-7,00:00-24:00</p><p>LLD</p>|
+|Active CPU core last 5 minutes|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesActive[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|System CPU core last 5 seconds|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsSystem[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|User CPU core last 1 minute|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteUser[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|System CPU core last 1 minute|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteSystem[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Softirq CPU core last 1 minute|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteSoftirq[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Nice CPU core last 1 minute|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteNice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interrupt CPU core last 1 minute|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteInterrupt[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Idle CPU core last 1 minute|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteIdle[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Active CPU core last 1 minute|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteActive[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Wait CPU core last 5 seconds|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsWait[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|User CPU core last 5 seconds|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsUser[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Softirq CPU core last 5 seconds|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsSoftirq[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Idle CPU core last 5 minutes|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesIdle[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Nice CPU core last 5 seconds|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsNice[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Interrupt CPU core last 5 seconds|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsInterrupt[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Idle CPU core last 5 seconds|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsIdle[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Active CPU core last 5 seconds|<p>-</p>|`SNMP agent`|cpuCoreFiveSecondsActive[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Wait CPU core last 5 minutes|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesWait[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|User CPU core last 5 minutes|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesUser[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|System CPU core last 5 minutes|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesSystem[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Softirq CPU core last 5 minutes|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesSoftirq[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Nice CPU core last 5 minutes|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesNIce[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interrupt CPU core last 5 minutes|<p>-</p>|`SNMP agent`|cpuCoreFiveMinutesInterrupt[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Wait CPU core last 1 minute|<p>-</p>|`SNMP agent`|cpuCoreOneMinuteWait[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Active CPU load last 5 minutes|<p>-</p>|`SNMP agent`|cpuLoadFiveMinutesActive[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Idle CPU load last 5 minutes|<p>-</p>|`SNMP agent`|cpuLoadFiveMinutesIdle[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Active CPU load last 5 seconds|<p>-</p>|`SNMP agent`|cpuLoadFiveSecondsActive[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Idle CPU load last 5 seconds|<p>-</p>|`SNMP agent`|cpuLoadFiveSecondsIdle[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Active CPU load last 1 minute|<p>-</p>|`SNMP agent`|cpuLoadOneMinuteActive[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Idle CPU load last 1 minute|<p>-</p>|`SNMP agent`|cpuLoadOneMinuteIdle[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Power|<p>-</p>|`SNMP agent`|fanControl[{#SNMPINDEX}]<p>Update: 10</p><p>LLD</p>|
+|{#SNMPVALUE} - Description|<p>-</p>|`SNMP agent`|fanDescription[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Read Error|<p>-</p>|`SNMP agent`|fanSpeedReadError[{#SNMPINDEX}]<p>Update: 10</p><p>LLD</p>|
+|{#SNMPVALUE} - Status|<p>-</p>|`SNMP agent`|fanSpeedStatus[{#SNMPINDEX}]<p>Update: 10</p><p>LLD</p>|
+|{#SNMPVALUE} - Speed|<p>-</p>|`SNMP agent`|fanSpeed[{#SNMPINDEX}]<p>Update: 10</p><p>LLD</p>|
+|Available memory last 5 seconds|<p>-</p>|`SNMP agent`|memoryFiveSecondsAvailable[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Buffered memory last 5 seconds|<p>-</p>|`SNMP agent`|memoryFiveSecondsBuffered[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Cached memory last 5 seconds|<p>-</p>|`SNMP agent`|memoryFiveSecondsCached[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Free memory last 5 seconds|<p>-</p>|`SNMP agent`|memoryFiveSecondsFree[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Slab Reclaimed last 5 seconds|<p>-</p>|`SNMP agent`|memoryFiveSecondsSlabRecl[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Slab Unreclaimed last 5 seconds|<p>-</p>|`SNMP agent`|memoryFiveSecondsSlabUnrecl[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Total memory last 5 seconds|<p>-</p>|`SNMP agent`|memoryFiveSecondsTotal[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|Used memory last 5 seconds|<p>-</p>|`SNMP agent`|memoryFiveSecondsUsed[{#SNMPINDEX}]<p>Update: 5</p><p>LLD</p>|
+|{#SNMPVALUE} - Current Temperature|<p>-</p>|`SNMP agent`|temperatureSensorCurrentTemperature[{#SNMPINDEX}]<p>Update: 10</p><p>LLD</p>|
+|{#SNMPVALUE} - Description|<p>-</p>|`SNMP agent`|temperatureSensorDescription[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Hyst Temperature|<p>-</p>|`SNMP agent`|temperatureSensorHysteresis[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Max Temperature|<p>-</p>|`SNMP agent`|temperatureSensorMaxTemperature[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Min Temperature|<p>-</p>|`SNMP agent`|temperatureSensorMinTemperature[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Read Error|<p>-</p>|`SNMP agent`|temperatureSensorTemperatureReadError[{#SNMPINDEX}]<p>Update: 10</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -35,38 +35,38 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalRxHighThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Warning Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalRxHighWarnThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Warning Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalRxLowWarnThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: Temperature (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTemperature[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTxHighThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Warning Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTxHighWarnThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Warning Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTxLowWarnThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: Vendor Name (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalVenderName[{#ENTPHYSICALNAME}]<p>Update: 1h</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: Type (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalVenderPn[{#ENTPHYSICALNAME}]<p>Update: 1h</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane0 (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalRxLowThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: Vendor Name (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalVenderNameML[{#ENTPHYSICALNAME}]<p>Update: 1h</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Warning Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTxLowThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Warning Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTxHighWarnThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTxHighThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: Temperature (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalTemperatureML[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Warning Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Warning Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalRxHighWarnThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane1 (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Threshold (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalRxHighThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane3 (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane2 (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane1 (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane0 (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane3 (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane2 (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]<p>Update: 5m</p>|
-|Optical Module Interface {#ENTPHYSICALNAME}: Type (LLD)|<p>-</p>|`SNMP agent`|hwEntityOpticalVenderPnML[{#ENTPHYSICALNAME}]<p>Update: 1h</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalRxHighThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Warning Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalRxHighWarnThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Warning Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalRxLowWarnThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: Temperature|<p>-</p>|`SNMP agent`|hwEntityOpticalTemperature[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalTxHighThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Warning Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalTxHighWarnThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Warning Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalTxLowWarnThreshold[{#ENTPHYSICALNAME}]<p>Update: 10m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: Vendor Name|<p>-</p>|`SNMP agent`|hwEntityOpticalVenderName[{#ENTPHYSICALNAME}]<p>Update: 1h</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: Type|<p>-</p>|`SNMP agent`|hwEntityOpticalVenderPn[{#ENTPHYSICALNAME}]<p>Update: 1h</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane0|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalRxLowThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: Vendor Name|<p>-</p>|`SNMP agent`|hwEntityOpticalVenderNameML[{#ENTPHYSICALNAME}]<p>Update: 1h</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Warning Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalTxLowThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Warning Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalTxHighWarnThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalTxHighThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: Temperature|<p>-</p>|`SNMP agent`|hwEntityOpticalTemperatureML[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Warning Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Warning Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalRxHighWarnThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane1|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Threshold|<p>-</p>|`SNMP agent`|hwEntityOpticalRxHighThresholdML[{#ENTPHYSICALNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane3|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane2|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane1|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane0|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane3|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane2|<p>-</p>|`SNMP agent`|hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Optical Module Interface {#ENTPHYSICALNAME}: Type|<p>-</p>|`SNMP agent`|hwEntityOpticalVenderPnML[{#ENTPHYSICALNAME}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

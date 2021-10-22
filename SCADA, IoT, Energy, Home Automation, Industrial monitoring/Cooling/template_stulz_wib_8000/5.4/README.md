@@ -33,43 +33,32 @@ Aleksandr Kalugin
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|SNMP agent availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 1m</p>|
-|System location|<p>MIB: SNMPv2-MIB The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|system.location[sysLocation.0]<p>Update: 1h</p>|
-|System description|<p>MIB: SNMPv2-MIB A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|system.descr[sysDescr.0]<p>Update: 1h</p>|
-|System name|<p>MIB: SNMPv2-MIB An administratively-assigned name for this managed node.By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|system.name<p>Update: 1h</p>|
-|Uptime|<p>MIB: SNMPv2-MIB The time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|system.uptime[sysUpTime.0]<p>Update: 30s</p>|
-|System object ID|<p>MIB: SNMPv2-MIB The vendor's authoritative identification of the network management subsystem contained in the entity. This value is allocated within the SMI enterprises subtree (1.3.6.1.4.1) and provides an easy and unambiguous means for determining`what kind of box' is being managed. For example, if vendor`Flintstones, Inc.' was assigned the subtree1.3.6.1.4.1.4242, it could assign the identifier 1.3.6.1.4.1.4242.1.1 to its `Fred Router'.</p>|`SNMP agent`|system.objectid[sysObjectID.0]<p>Update: 15m</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1m</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1m</p>|
-|System contact details|<p>MIB: SNMPv2-MIB The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|system.contact[sysContact.0]<p>Update: 1h</p>|
-|SNMP traps (fallback)|<p>Item is used to collect all SNMP traps unmatched by other snmptrap items</p>|`SNMP trap`|snmptrap.fallback<p>Update: 1m</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1m</p>|
-|{#MODULE_NAME}: Compressor Speed (LLD)|<p>-</p>|`SNMP agent`|compressor.speed.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Limit room temp max (LLD)|<p>-</p>|`SNMP agent`|limit.room.temp.max.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Supply air temperature 3 (LLD)|<p>-</p>|`SNMP agent`|supply.temperature.3.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Supply air temperature 2 (LLD)|<p>-</p>|`SNMP agent`|supply.temperature.2.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Supply air temperature 1 (LLD)|<p>-</p>|`SNMP agent`|supply.temperature.1.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Сlimate control system status (LLD)|<p>-</p>|`SNMP agent`|stulz.status.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Return air temperature (LLD)|<p>-</p>|`SNMP agent`|return.temperature.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Return air temperature 3 (LLD)|<p>-</p>|`SNMP agent`|return.temperature.3.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Return air temperature 2 (LLD)|<p>-</p>|`SNMP agent`|return.temperature.2.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Return air temperature 1 (LLD)|<p>-</p>|`SNMP agent`|return.temperature.1.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Low temperature alarm threshold (LLD)|<p>-</p>|`SNMP agent`|low.temperature.alarm.threshold.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Limit room temp min (LLD)|<p>-</p>|`SNMP agent`|limit.room.temp.min.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Inverter Status (LLD)|<p>-</p>|`SNMP agent`|inberter.status.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Compressor Status (LLD)|<p>-</p>|`SNMP agent`|compressor.status.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: High temperature alarm threshold (LLD)|<p>-</p>|`SNMP agent`|high.temperature.alarm.threshold.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Fans Status (LLD)|<p>-</p>|`SNMP agent`|fans.status.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Fan 3 speed (LLD)|<p>-</p>|`SNMP agent`|fan.3.speed.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Fan 3 runtime (LLD)|<p>-</p>|`SNMP agent`|fan.3.runtime.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Fan 2 speed (LLD)|<p>-</p>|`SNMP agent`|fan.2.speed.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Fan 2 runtime (LLD)|<p>-</p>|`SNMP agent`|fan.2.runtime.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Fan 1 speed (LLD)|<p>-</p>|`SNMP agent`|fan.1.speed.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Fan 1 runtime (LLD)|<p>-</p>|`SNMP agent`|fan.1.runtime.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Evaporation pressure (LLD)|<p>-</p>|`SNMP agent`|evaporation.pressure.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Cooling Setpoint (LLD)|<p>-</p>|`SNMP agent`|cooling.setpoint.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Condensation pressure (LLD)|<p>-</p>|`SNMP agent`|condensation.pressure.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#MODULE_NAME}: Supply air temperature (LLD)|<p>-</p>|`SNMP agent`|supply.temperature.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|{#MODULE_NAME}: Compressor Speed|<p>-</p>|`SNMP agent`|compressor.speed.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Limit room temp max|<p>-</p>|`SNMP agent`|limit.room.temp.max.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Supply air temperature 3|<p>-</p>|`SNMP agent`|supply.temperature.3.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Supply air temperature 2|<p>-</p>|`SNMP agent`|supply.temperature.2.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Supply air temperature 1|<p>-</p>|`SNMP agent`|supply.temperature.1.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Сlimate control system status|<p>-</p>|`SNMP agent`|stulz.status.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Return air temperature|<p>-</p>|`SNMP agent`|return.temperature.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Return air temperature 3|<p>-</p>|`SNMP agent`|return.temperature.3.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Return air temperature 2|<p>-</p>|`SNMP agent`|return.temperature.2.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Return air temperature 1|<p>-</p>|`SNMP agent`|return.temperature.1.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Low temperature alarm threshold|<p>-</p>|`SNMP agent`|low.temperature.alarm.threshold.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Limit room temp min|<p>-</p>|`SNMP agent`|limit.room.temp.min.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Inverter Status|<p>-</p>|`SNMP agent`|inberter.status.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Compressor Status|<p>-</p>|`SNMP agent`|compressor.status.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: High temperature alarm threshold|<p>-</p>|`SNMP agent`|high.temperature.alarm.threshold.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Fans Status|<p>-</p>|`SNMP agent`|fans.status.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Fan 3 speed|<p>-</p>|`SNMP agent`|fan.3.speed.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Fan 3 runtime|<p>-</p>|`SNMP agent`|fan.3.runtime.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Fan 2 speed|<p>-</p>|`SNMP agent`|fan.2.speed.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Fan 2 runtime|<p>-</p>|`SNMP agent`|fan.2.runtime.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Fan 1 speed|<p>-</p>|`SNMP agent`|fan.1.speed.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Fan 1 runtime|<p>-</p>|`SNMP agent`|fan.1.runtime.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Evaporation pressure|<p>-</p>|`SNMP agent`|evaporation.pressure.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Cooling Setpoint|<p>-</p>|`SNMP agent`|cooling.setpoint.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Condensation pressure|<p>-</p>|`SNMP agent`|condensation.pressure.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#MODULE_NAME}: Supply air temperature|<p>-</p>|`SNMP agent`|supply.temperature.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

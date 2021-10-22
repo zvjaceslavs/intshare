@@ -48,7 +48,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Port {#PORT} is listening (LLD)|<p>-</p>|`Zabbix agent (active)`|net.tcp.listen[{#PORT}]<p>Update: 5m</p>|
+|Port {#PORT} is listening|<p>-</p>|`Zabbix agent (active)`|net.tcp.listen[{#PORT}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

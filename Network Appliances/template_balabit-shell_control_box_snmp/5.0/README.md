@@ -95,20 +95,20 @@ There are no template links in this template.
 |Process workercontroller - Status|<p>-</p>|`SNMP agent`|SNMP-Process-workercontroller-Status<p>Update: 60</p>|
 |System Description|<p>-</p>|`SNMP agent`|SNMP-SysDescr<p>Update: 3600</p>|
 |Snmp Availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 60</p>|
-|Interface [{#SNMPVALUE}] - IN Octets (LLD)|<p>-</p>|`SNMP agent`|SNMP-Interface-IN-Octets-[{#SNMPVALUE}]<p>Update: 60</p>|
-|Interface [{#SNMPVALUE}] - MAC (LLD)|<p>-</p>|`SNMP agent`|SNMP-Interface-MAC-[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Interface [{#SNMPVALUE}] - MTU (LLD)|<p>-</p>|`SNMP agent`|SNMP-Interface-MTU-[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Interface [{#SNMPVALUE}] - Operational Status (LLD)|<p>-</p>|`SNMP agent`|SNMP-Interface-Op-Status-[{#SNMPVALUE}]<p>Update: 60</p>|
-|Interface [{#SNMPVALUE}] - OUT Errors (LLD)|<p>-</p>|`SNMP agent`|SNMP-Interface-OUT-Errors-[{#SNMPVALUE}]<p>Update: 60</p>|
-|Interface [{#SNMPVALUE}] - OUT Octets (LLD)|<p>-</p>|`SNMP agent`|SNMP-Interface-OUT-Octets-[{#SNMPVALUE}]<p>Update: 60</p>|
-|Interface [{#SNMPVALUE}] - Speed (LLD)|<p>-</p>|`SNMP agent`|SNMP-Interface-Speed-[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Interface [{#SNMPVALUE}] - Type (LLD)|<p>-</p>|`SNMP agent`|SNMP-Interface-Type-[{#SNMPVALUE}]<p>Update: 3600</p>|
-|File System {#SNMPVALUE} - Used Percentage (LLD)|<p>-</p>|`Calculated`|File-System-Space-Used-Percentage-[{#SNMPVALUE}]<p>Update: 60</p>|
-|File System {#SNMPVALUE} - Espace Alloue (LLD)|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Allocated-[{#SNMPVALUE}]<p>Update: 60</p>|
-|File System {#SNMPVALUE} - Espace Utilise (LLD)|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Used-[{#SNMPVALUE}]<p>Update: 60</p>|
-|CPU {#SNMPINDEX} - Charge (LLD)|<p>-</p>|`SNMP agent`|SNMP-Charge-CPU-[{#SNMPINDEX}]<p>Update: 60</p>|
-|CPU {#SNMPINDEX} - Etat (LLD)|<p>-</p>|`SNMP agent`|SNMP-Etat-CPU-[{#SNMPINDEX}]<p>Update: 60</p>|
-|CPU {#SNMPINDEX} - Name (LLD)|<p>-</p>|`SNMP agent`|SNMP-Name-CPU-[{#SNMPINDEX}]<p>Update: 3600</p>|
+|Interface [{#SNMPVALUE}] - IN Octets|<p>-</p>|`SNMP agent`|SNMP-Interface-IN-Octets-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Interface [{#SNMPVALUE}] - MAC|<p>-</p>|`SNMP agent`|SNMP-Interface-MAC-[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Interface [{#SNMPVALUE}] - MTU|<p>-</p>|`SNMP agent`|SNMP-Interface-MTU-[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Interface [{#SNMPVALUE}] - Operational Status|<p>-</p>|`SNMP agent`|SNMP-Interface-Op-Status-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Interface [{#SNMPVALUE}] - OUT Errors|<p>-</p>|`SNMP agent`|SNMP-Interface-OUT-Errors-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Interface [{#SNMPVALUE}] - OUT Octets|<p>-</p>|`SNMP agent`|SNMP-Interface-OUT-Octets-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Interface [{#SNMPVALUE}] - Speed|<p>-</p>|`SNMP agent`|SNMP-Interface-Speed-[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Interface [{#SNMPVALUE}] - Type|<p>-</p>|`SNMP agent`|SNMP-Interface-Type-[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|File System {#SNMPVALUE} - Used Percentage|<p>-</p>|`Calculated`|File-System-Space-Used-Percentage-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|File System {#SNMPVALUE} - Espace Alloue|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Allocated-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|File System {#SNMPVALUE} - Espace Utilise|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Used-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|CPU {#SNMPINDEX} - Charge|<p>-</p>|`SNMP agent`|SNMP-Charge-CPU-[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|CPU {#SNMPINDEX} - Etat|<p>-</p>|`SNMP agent`|SNMP-Etat-CPU-[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|CPU {#SNMPINDEX} - Name|<p>-</p>|`SNMP agent`|SNMP-Name-CPU-[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -32,7 +32,7 @@ There are no template links in this template.
 |Event log|<p>-</p>|`Simple check`|vmware.eventlog[{$URL}]<p>Update: 60</p>|
 |Full name|<p>-</p>|`Simple check`|vmware.fullname[{$URL}]<p>Update: 3600</p>|
 |Version|<p>-</p>|`Simple check`|vmware.version[{$URL}]<p>Update: 3600</p>|
-|Status of "$2" cluster (LLD)|<p>-</p>|`Simple check`|vmware.cluster.status[{$URL},{#CLUSTER.NAME}]<p>Update: 60</p>|
+|Status of "$2" cluster|<p>-</p>|`Simple check`|vmware.cluster.status[{$URL},{#CLUSTER.NAME}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

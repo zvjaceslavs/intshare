@@ -35,8 +35,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#SNMPVALUE} Sensor Humidity (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.int.hum.["{#SNMPINDEX}"]<p>Update: 30</p>|
-|{#SNMPVALUE} Sensor Temperature (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.int.temp.["{#SNMPINDEX}"]<p>Update: 30</p>|
+|{#SNMPVALUE} Sensor Humidity|<p>-</p>|`SNMP agent`|apc.enviro.sensor.int.hum.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} Sensor Temperature|<p>-</p>|`SNMP agent`|apc.enviro.sensor.int.temp.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

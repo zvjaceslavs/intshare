@@ -28,12 +28,12 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Inbound broadcast packets on interface {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Inbound multicast packets on interface {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Inbound unicast packets on interface {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ifHCInUcastPkts.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Outbound broadcast packets on interface {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ifHCOutBroadcastPkts.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Outbound multicast packets on interface {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ifHCOutMulticastPkts.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Outbound unicast packets on interface {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ifHCOutUcastPkts.[{#SNMPVALUE}]<p>Update: 30</p>|
+|Inbound broadcast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Inbound multicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Inbound unicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInUcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Outbound broadcast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutBroadcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Outbound multicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutMulticastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Outbound unicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutUcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.
@@ -102,8 +102,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|DDM - Statistic RX Port:{#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|ddmstatrx[{#SNMPINDEX}]<p>Update: 30</p>|
-|DDM - Statistic TX Port:{#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|ddmstattx[{#SNMPINDEX}]<p>Update: 30</p>|
+|DDM - Statistic RX Port:{#SNMPINDEX}|<p>-</p>|`SNMP agent`|ddmstatrx[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|DDM - Statistic TX Port:{#SNMPINDEX}|<p>-</p>|`SNMP agent`|ddmstattx[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.
@@ -139,10 +139,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Interface {#IFNAME}({#IFALIAS}): Inbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface {#IFNAME}({#IFALIAS}): Inbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface {#IFNAME}({#IFALIAS}): Outbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface {#IFNAME}({#IFALIAS}): Outbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 30</p>|
+|Interface {#IFNAME}({#IFALIAS}): Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Outbound packets discarded|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Outbound packets with errors|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -181,11 +181,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Interface {#IFNAME}({#IFALIAS}): Bits received (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface {#IFNAME}({#IFALIAS}): Bits sent (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface {#IFNAME}({#IFALIAS}): Speed (LLD)|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface {#IFNAME}({#IFALIAS}): Operational status (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 30</p>|
-|Interface {#IFNAME}({#IFALIAS}): Interface type (LLD)|<p>-</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 30</p>|
+|Interface {#IFNAME}({#IFALIAS}): Bits received|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Bits sent|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Speed|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Interface type|<p>-</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -262,8 +262,8 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |POE - General Power|<p>-</p>|`SNMP agent`|poepower.general<p>Update: 30</p>|
-|POE - Power Current on Port:{#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|poepower.current[{#SNMPINDEX}]<p>Update: 30</p>|
-|POE - Max Power on Port:{#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|poepowermax.onport[{#SNMPINDEX}]<p>Update: 30</p>|
+|POE - Power Current on Port:{#SNMPINDEX}|<p>-</p>|`SNMP agent`|poepower.current[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|POE - Max Power on Port:{#SNMPINDEX}|<p>-</p>|`SNMP agent`|poepowermax.onport[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

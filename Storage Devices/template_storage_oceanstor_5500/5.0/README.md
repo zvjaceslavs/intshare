@@ -40,28 +40,28 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Состояние системы|<p>-</p>|`SNMP agent`|status.0<p>Update: 1m</p>|
-|Port: {#PORTLOCATION} I/O latancy (LLD)|<p>-</p>|`SNMP agent`|hwPerfPortDelay.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Read IOPS (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunReadIOPS.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Read bandwidth MB/s (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunReadTraffic.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Total IOPS (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunTotalIOPS.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Total bandwidth MB/s (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunTotalTraffic.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Write IOPS (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunWriteIOPS.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Write bandwidth MB/s (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunWriteTraffic.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Использование CPU контроллера: {#CONLOCATION} в % (LLD)|<p>-</p>|`SNMP agent`|hwInfoControllerCPUUsage.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Состояние контроллера: {#CONLOCATION} (LLD)|<p>-</p>|`SNMP agent`|hwInfoControllerHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Использование Memory контроллера: {#CONLOCATION} в % (LLD)|<p>-</p>|`SNMP agent`|hwInfoControllerMemoryUsage.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Состояние Disk Domain: {#DISKDNAME} (LLD)|<p>-</p>|`SNMP agent`|hwInfoDiskDomainHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Running статус Disk Domain: {#DISKDNAME} (LLD)|<p>-</p>|`SNMP agent`|hwInfoDiskDomainRunningStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Storage Pool: {#POOLNAME} Allocated Capacity в % (LLD)|<p>-</p>|`Calculated`|hwInfoStoragePoolCapacityProc.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Состояние Storage Pool: {#POOLNAME} (LLD)|<p>-</p>|`SNMP agent`|hwInfoStoragePoolHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Storage Pool: {#POOLNAME} Capacity в байтах (LLD)|<p>-</p>|`SNMP agent`|hwInfoStoragePoolTotal.[{#SNMPINDEX}]<p>Update: 24h</p>|
-|Storage Pool: {#POOLNAME} Allocated Capacity в байтах (LLD)|<p>-</p>|`SNMP agent`|hwInfoStoragePoolUsed.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|LUN {#LUNNAME} Capacity в байтах (LLD)|<p>-</p>|`SNMP agent`|hwInfoLunCapacity.[{#SNMPINDEX}]<p>Update: 24h</p>|
-|LUN {#LUNNAME} Allocated Capacity в % (LLD)|<p>-</p>|`Calculated`|hwInfoLunCapacityProc.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Состояние LUN {#LUNNAME} (LLD)|<p>-</p>|`SNMP agent`|hwInfoLunHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|LUN {#LUNNAME} Allocated Capacity в байтах (LLD)|<p>-</p>|`SNMP agent`|hwInfoLunSubscribedCapacity.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Состояние БП: {#PLOCATION} (LLD)|<p>-</p>|`SNMP agent`|hwInfoPowerHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Состояние вентилятора БП: {#FANLOCATION} (LLD)|<p>-</p>|`SNMP agent`|hwInfoFanHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
+|Port: {#PORTLOCATION} I/O latancy|<p>-</p>|`SNMP agent`|hwPerfPortDelay.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Read IOPS|<p>-</p>|`SNMP agent`|hwPerfLunReadIOPS.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Read bandwidth MB/s|<p>-</p>|`SNMP agent`|hwPerfLunReadTraffic.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Total IOPS|<p>-</p>|`SNMP agent`|hwPerfLunTotalIOPS.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Total bandwidth MB/s|<p>-</p>|`SNMP agent`|hwPerfLunTotalTraffic.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Write IOPS|<p>-</p>|`SNMP agent`|hwPerfLunWriteIOPS.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Write bandwidth MB/s|<p>-</p>|`SNMP agent`|hwPerfLunWriteTraffic.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Использование CPU контроллера: {#CONLOCATION} в %|<p>-</p>|`SNMP agent`|hwInfoControllerCPUUsage.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Состояние контроллера: {#CONLOCATION}|<p>-</p>|`SNMP agent`|hwInfoControllerHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Использование Memory контроллера: {#CONLOCATION} в %|<p>-</p>|`SNMP agent`|hwInfoControllerMemoryUsage.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Состояние Disk Domain: {#DISKDNAME}|<p>-</p>|`SNMP agent`|hwInfoDiskDomainHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Running статус Disk Domain: {#DISKDNAME}|<p>-</p>|`SNMP agent`|hwInfoDiskDomainRunningStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Storage Pool: {#POOLNAME} Allocated Capacity в %|<p>-</p>|`Calculated`|hwInfoStoragePoolCapacityProc.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Состояние Storage Pool: {#POOLNAME}|<p>-</p>|`SNMP agent`|hwInfoStoragePoolHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Storage Pool: {#POOLNAME} Capacity в байтах|<p>-</p>|`SNMP agent`|hwInfoStoragePoolTotal.[{#SNMPINDEX}]<p>Update: 24h</p><p>LLD</p>|
+|Storage Pool: {#POOLNAME} Allocated Capacity в байтах|<p>-</p>|`SNMP agent`|hwInfoStoragePoolUsed.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|LUN {#LUNNAME} Capacity в байтах|<p>-</p>|`SNMP agent`|hwInfoLunCapacity.[{#SNMPINDEX}]<p>Update: 24h</p><p>LLD</p>|
+|LUN {#LUNNAME} Allocated Capacity в %|<p>-</p>|`Calculated`|hwInfoLunCapacityProc.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Состояние LUN {#LUNNAME}|<p>-</p>|`SNMP agent`|hwInfoLunHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|LUN {#LUNNAME} Allocated Capacity в байтах|<p>-</p>|`SNMP agent`|hwInfoLunSubscribedCapacity.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Состояние БП: {#PLOCATION}|<p>-</p>|`SNMP agent`|hwInfoPowerHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Состояние вентилятора БП: {#FANLOCATION}|<p>-</p>|`SNMP agent`|hwInfoFanHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

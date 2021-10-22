@@ -47,9 +47,9 @@ There are no template links in this template.
 |LCD状态|<p>-</p>|`SNMP agent`|SystemLCDStatus<p>Update: 10m</p>|
 |电源状态|<p>-</p>|`SNMP agent`|SystemPowerStatus<p>Update: 10m</p>|
 |运行时间|<p>-</p>|`SNMP agent`|SystemUpTime<p>Update: 1h</p>|
-|风扇状态 {#FANNAME} (LLD)|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|内存状态 {#MEMORYNAME} (LLD)|<p>-</p>|`SNMP agent`|MemoryStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|CPU状态 [{#CPUNAME}] (LLD)|<p>-</p>|`SNMP agent`|CPUStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
+|风扇状态 {#FANNAME}|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|内存状态 {#MEMORYNAME}|<p>-</p>|`SNMP agent`|MemoryStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|CPU状态 [{#CPUNAME}]|<p>-</p>|`SNMP agent`|CPUStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -30,18 +30,18 @@ There are no template links in this template.
 |Desctiption|<p>-</p>|`SNMP agent`|SYSDescr<p>Update: 24h</p>|
 |Location|<p>-</p>|`SNMP agent`|SYSLocation<p>Update: 24h</p>|
 |Uptime|<p>-</p>|`SNMP agent`|SYSUptime<p>Update: 1m</p>|
-|Interface {#IFDESCR} Inbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFDESCR}: Inbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Bits received: {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFDESCR}: Outbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFDESCR}: Outbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Bits sent: {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFDESCR}: Speed (LLD)|<p>-</p>|`SNMP agent`|net.if.speed[ifSpeed.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFDESCR}: Operational status (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFDESCR}: Interface description (LLD)|<p>-</p>|`SNMP agent`|net.if.type[ifDescr.{#SNMPINDEX}]<p>Update: 1h</p>|
-|Interface {#IFDESCR}: Interface last change (LLD)|<p>-</p>|`SNMP agent`|net.if.type[ifLastChange.{#SNMPINDEX}]<p>Update: 10m</p>|
-|Interface {#IFDESCR}: Interface MAC address (LLD)|<p>-</p>|`SNMP agent`|net.if.type[ifPhysAddress.{#SNMPINDEX}]<p>Update: 1h</p>|
-|Interface {#IFDESCR}: Interface type (LLD)|<p>-</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 1h</p>|
+|Interface {#IFDESCR} Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFDESCR}: Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bits received: {#IFDESCR}|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFDESCR}: Outbound packets discarded|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFDESCR}: Outbound packets with errors|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bits sent: {#IFDESCR}|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFDESCR}: Speed|<p>-</p>|`SNMP agent`|net.if.speed[ifSpeed.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFDESCR}: Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFDESCR}: Interface description|<p>-</p>|`SNMP agent`|net.if.type[ifDescr.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Interface {#IFDESCR}: Interface last change|<p>-</p>|`SNMP agent`|net.if.type[ifLastChange.{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Interface {#IFDESCR}: Interface MAC address|<p>-</p>|`SNMP agent`|net.if.type[ifPhysAddress.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Interface {#IFDESCR}: Interface type|<p>-</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -98,12 +98,12 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|AS Name for IPv4 peer $1 (LLD)|<p>-</p>|`External check`|as_name["{#SNMPVALUE}","{#SNMPASN}"]<p>Update: 1d</p>|
-|Administrative status for peer $1 (LLD)|<p>-</p>|`SNMP agent`|bgpPeerAdminStatus[{#SNMPVALUE}]<p>Update: 10m</p>|
-|Established time for peer $1 (LLD)|<p>-</p>|`SNMP agent`|bgpPeerFsmEstablishedTime[{#SNMPVALUE}]<p>Update: 10m</p>|
-|BGP peer last error {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|bgpPeerLastError[{#SNMPVALUE}]<p>Update: 10m</p>|
-|Remote AS for peer $1 (LLD)|<p>-</p>|`SNMP agent`|bgpPeerRemoteAs[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Operational status for peer $1 (LLD)|<p>-</p>|`SNMP agent`|bgpPeerState[{#SNMPVALUE}]<p>Update: 1m</p>|
+|AS Name for IPv4 peer $1|<p>-</p>|`External check`|as_name["{#SNMPVALUE}","{#SNMPASN}"]<p>Update: 1d</p><p>LLD</p>|
+|Administrative status for peer $1|<p>-</p>|`SNMP agent`|bgpPeerAdminStatus[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Established time for peer $1|<p>-</p>|`SNMP agent`|bgpPeerFsmEstablishedTime[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|BGP peer last error {#SNMPVALUE}|<p>-</p>|`SNMP agent`|bgpPeerLastError[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Remote AS for peer $1|<p>-</p>|`SNMP agent`|bgpPeerRemoteAs[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Operational status for peer $1|<p>-</p>|`SNMP agent`|bgpPeerState[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -67,18 +67,18 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Name of this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpConfigWtpName[{#SNMPVALUE}]<p>Update: 300s</p>|
-|Session Connection State of this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionConnectionState[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Base Mac Address of this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpBaseMacAddress[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Number of bytes received by this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpByteRxCount[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Number of bytes transmitted by this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpByteTxCount[{#SNMPVALUE}]<p>Update: 60s</p>|
-|CPU usage of a WTP (percentage) $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpCpuUsage[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Total physical memory (RAM) installed (KB) $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpMemoryCapacity[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Current memory usage of a WTP (percentage) $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpMemoryUsage[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Profile Name of this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpProfileName[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Number of clients currently connected to this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpStationCount[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Sw Version of this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpSwVersion[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Uptime of this WTP $1 (LLD)|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpUpTime[{#SNMPVALUE}]<p>Update: 60s</p>|
+|Name of this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpConfigWtpName[{#SNMPVALUE}]<p>Update: 300s</p><p>LLD</p>|
+|Session Connection State of this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionConnectionState[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Base Mac Address of this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpBaseMacAddress[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Number of bytes received by this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpByteRxCount[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Number of bytes transmitted by this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpByteTxCount[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|CPU usage of a WTP (percentage) $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpCpuUsage[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Total physical memory (RAM) installed (KB) $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpMemoryCapacity[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Current memory usage of a WTP (percentage) $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpMemoryUsage[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Profile Name of this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpProfileName[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Number of clients currently connected to this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpStationCount[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Sw Version of this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpSwVersion[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Uptime of this WTP $1|<p>-</p>|`SNMP agent`|fgWcWtpSessionWtpUpTime[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

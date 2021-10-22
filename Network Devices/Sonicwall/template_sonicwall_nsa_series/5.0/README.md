@@ -29,8 +29,8 @@ There are no template links in this template.
 |Firmware Version|<p>-</p>|`SNMP agent`|SysmFirmwareVersion<p>Update: 3600</p>|
 |Sonicwall Model|<p>-</p>|`SNMP agent`|SysmModel<p>Update: 3600</p>|
 |Sonicwall Serial Number|<p>-</p>|`SNMP agent`|SysmSerialNumber<p>Update: 3600</p>|
-|Incoming Traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInOctets.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Outgoing Traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets.[{#SNMPVALUE}]<p>Update: 30</p>|
+|Incoming Traffic on interface $1|<p>-</p>|`SNMP agent`|ifInOctets.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Outgoing Traffic on interface $1|<p>-</p>|`SNMP agent`|ifOutOctets.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

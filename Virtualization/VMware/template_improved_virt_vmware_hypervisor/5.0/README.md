@@ -79,11 +79,11 @@ There are no template links in this template.
 |Uptime|<p>System uptime.</p>|`Simple check`|vmware.hv.uptime[{$URL},{HOST.HOST}]<p>Update: 3600</p>|
 |Version|<p>Dot-separated version string.</p>|`Simple check`|vmware.hv.version[{$URL},{HOST.HOST}]<p>Update: 3600</p>|
 |Number of guest VMs|<p>Number of guest virtual machines.</p>|`Simple check`|vmware.hv.vm.num[{$URL},{HOST.HOST}]<p>Update: 3600</p>|
-|Average read latency of the datastore $3 (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.read[{$URL},{HOST.HOST},{#DATASTORE},latency]<p>Update: 300</p>|
-|Average write latency of the datastore $3 (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.write[{$URL},{HOST.HOST},{#DATASTORE},latency]<p>Update: 300</p>|
-|Free space on datastore $3 (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},free]<p>Update: 300</p>|
-|Free space on datastore $3 (percentage) (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree]<p>Update: 300</p>|
-|Total size of datastore $3 (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE}]<p>Update: 300</p>|
+|Average read latency of the datastore $3|<p>-</p>|`Simple check`|vmware.hv.datastore.read[{$URL},{HOST.HOST},{#DATASTORE},latency]<p>Update: 300</p><p>LLD</p>|
+|Average write latency of the datastore $3|<p>-</p>|`Simple check`|vmware.hv.datastore.write[{$URL},{HOST.HOST},{#DATASTORE},latency]<p>Update: 300</p><p>LLD</p>|
+|Free space on datastore $3|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},free]<p>Update: 300</p><p>LLD</p>|
+|Free space on datastore $3 (percentage)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree]<p>Update: 300</p><p>LLD</p>|
+|Total size of datastore $3|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

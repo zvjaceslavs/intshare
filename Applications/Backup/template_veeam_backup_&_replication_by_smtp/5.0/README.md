@@ -64,8 +64,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Job {#VEEAMJOB} message (LLD)|<p>-</p>|`Zabbix trapper`|smtp.trap.subject.match.body[veeamjob,{#VEEAMJOB}]<p>Update: 0</p>|
-|Job {#VEEAMJOB} status (LLD)|<p>-</p>|`Zabbix trapper`|smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status]<p>Update: 0</p>|
+|Job {#VEEAMJOB} message|<p>-</p>|`Zabbix trapper`|smtp.trap.subject.match.body[veeamjob,{#VEEAMJOB}]<p>Update: 0</p><p>LLD</p>|
+|Job {#VEEAMJOB} status|<p>-</p>|`Zabbix trapper`|smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -69,12 +69,12 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Active time of  tunnel {#LOCAL}---{#REMOTE} (LLD)|<p>-</p>|`SNMP agent`|cikeTunActiveTime[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p>|
-|In bytes of  tunnel {#LOCAL}---{#REMOTE} (LLD)|<p>-</p>|`SNMP agent`|cikeTunInOctets[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p>|
-|In packets of  tunnel {#LOCAL}---{#REMOTE} (LLD)|<p>-</p>|`SNMP agent`|cikeTunInPkts[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p>|
-|Out bytes of  tunnel {#LOCAL}---{#REMOTE} (LLD)|<p>-</p>|`SNMP agent`|cikeTunOutOctets[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p>|
-|Out packets of  tunnel {#LOCAL}---{#REMOTE} (LLD)|<p>-</p>|`SNMP agent`|cikeTunOutPkts[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p>|
-|Status of  tunnel {#LOCAL}---{#REMOTE} (LLD)|<p>-</p>|`SNMP agent`|cikeTunStatus[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p>|
+|Active time of  tunnel {#LOCAL}---{#REMOTE}|<p>-</p>|`SNMP agent`|cikeTunActiveTime[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p><p>LLD</p>|
+|In bytes of  tunnel {#LOCAL}---{#REMOTE}|<p>-</p>|`SNMP agent`|cikeTunInOctets[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p><p>LLD</p>|
+|In packets of  tunnel {#LOCAL}---{#REMOTE}|<p>-</p>|`SNMP agent`|cikeTunInPkts[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p><p>LLD</p>|
+|Out bytes of  tunnel {#LOCAL}---{#REMOTE}|<p>-</p>|`SNMP agent`|cikeTunOutOctets[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p><p>LLD</p>|
+|Out packets of  tunnel {#LOCAL}---{#REMOTE}|<p>-</p>|`SNMP agent`|cikeTunOutPkts[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p><p>LLD</p>|
+|Status of  tunnel {#LOCAL}---{#REMOTE}|<p>-</p>|`SNMP agent`|cikeTunStatus[{#LOCAL}---{#REMOTE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

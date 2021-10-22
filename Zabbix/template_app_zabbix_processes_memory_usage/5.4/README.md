@@ -95,9 +95,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Memory used by {#COMPONENT} {#PROCESS} (LLD)|<p>-</p>|`Calculated`|proc.mem.total[{#COMPONENT},{#PROCESS}]<p>Update: 1m;m0-59</p>|
-|VmRSS used by {#COMPONENT} {#PROCESS} (LLD)|<p>-</p>|`Zabbix agent`|proc.mem[{#COMPONENT},,,{#COMPONENT}: {#PROCESS},rss]<p>Update: 1m;m0-59</p>|
-|VmSwap used by {#COMPONENT} {#PROCESS} (LLD)|<p>-</p>|`Zabbix agent`|proc.mem[{#COMPONENT},,,{#COMPONENT}: {#PROCESS},swap]<p>Update: 1m;m0-59</p>|
+|Memory used by {#COMPONENT} {#PROCESS}|<p>-</p>|`Calculated`|proc.mem.total[{#COMPONENT},{#PROCESS}]<p>Update: 1m;m0-59</p><p>LLD</p>|
+|VmRSS used by {#COMPONENT} {#PROCESS}|<p>-</p>|`Zabbix agent`|proc.mem[{#COMPONENT},,,{#COMPONENT}: {#PROCESS},rss]<p>Update: 1m;m0-59</p><p>LLD</p>|
+|VmSwap used by {#COMPONENT} {#PROCESS}|<p>-</p>|`Zabbix agent`|proc.mem[{#COMPONENT},,,{#COMPONENT}: {#PROCESS},swap]<p>Update: 1m;m0-59</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

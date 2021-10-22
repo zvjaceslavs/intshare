@@ -137,9 +137,9 @@ There are no template links in this template.
 |sPDUIdentModelNumber.0|<p>-</p>|`SNMP agent`|sPDUIdentModelNumber.0<p>Update: 86400</p>|
 |sPDUMasterPending.0|<p>-</p>|`SNMP agent`|sPDUMasterPending.0<p>Update: 60</p>|
 |sPDUMasterState.0|<p>-</p>|`SNMP agent`|sPDUMasterState.0<p>Update: 60</p>|
-|Outlet $1 Name (LLD)|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedConfigName[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Outlet $1 Bank (LLD)|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedPropertiesBank[{#SNMPINDEX}]<p>Update: 86400</p>|
-|Outlet $1 State (LLD)|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedStatusState[{#SNMPINDEX}]<p>Update: 60</p>|
+|Outlet $1 Name|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedConfigName[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Outlet $1 Bank|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedPropertiesBank[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|Outlet $1 State|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedStatusState[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

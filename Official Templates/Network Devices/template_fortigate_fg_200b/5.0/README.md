@@ -90,10 +90,10 @@ There are no template links in this template.
 |Firmware Version|<p>-</p>|`SNMP agent`|SysmFirmwareVersion<p>Update: 3600</p>|
 |Serial Number|<p>-</p>|`SNMP agent`|SysmSerialNumber<p>Update: 3600</p>|
 |System Sessions|<p>-</p>|`SNMP agent`|sysSessions<p>Update: 30s</p>|
-|Status {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface Description {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 30s</p>|
-|Download {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 30s</p>|
-|Upload $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 30s</p>|
+|Status {#SNMPVALUE}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface Description {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|Download {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|Upload $1|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

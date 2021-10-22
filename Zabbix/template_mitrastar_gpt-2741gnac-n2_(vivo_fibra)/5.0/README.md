@@ -56,21 +56,21 @@ There are no template links in this template.
 |System name|<p>MIB: SNMPv2-MIB An administratively-assigned name for this managed node.By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|system.name<p>Update: 1h</p>|
 |Uptime|<p>MIB: SNMPv2-MIB The time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|system.uptime[sysUpTime.0]<p>Update: 10m</p>|
 |SNMP agent availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 1m</p>|
-|Status administrativo - interface {#IFDESCR} (LLD)|<p>Disponibiliza o nome e o status das interfaces</p>|`SNMP agent`|ifAdminStatus[{#IFDESCR}]<p>Update: 10m</p>|
-|Descartes de entrada da interface {#IFDESCR} (LLD)|<p>Disponibiliza os descartes de entrada das interfaces</p>|`SNMP agent`|ifInDiscards.[{#IFDESCR}]<p>Update: 10m</p>|
-|Erros de entrada da interface {#IFDESCR} (LLD)|<p>Disponibiliza os erros de entrada das interfaces</p>|`SNMP agent`|ifInErrors[{#IFDESCR}]<p>Update: 10m</p>|
-|Tráfego de entrada da interface {#IFDESCR} (LLD)|<p>Disponibiliza o tráfego de entrada das interfaces</p>|`SNMP agent`|ifInOctets[{#IFDESCR}]<p>Update: 10m</p>|
-|Valor do MTU da interface {#IFDESCR} (LLD)|<p>Disponibiliza o nome e o MTU das interfaces</p>|`SNMP agent`|ifMtu[{#IFDESCR}]<p>Update: 10m</p>|
-|Status operacional - interface {#IFDESCR} (LLD)|<p>Disponibiliza o nome e o status das interfaces</p>|`SNMP agent`|ifOperStatus[{#IFDESCR}]<p>Update: 10m</p>|
-|Descartes de saída da interface {#IFDESCR} (LLD)|<p>Disponibiliza os descartes de saída das interfaces</p>|`SNMP agent`|ifOutDiscards[{#IFDESCR}]<p>Update: 10m</p>|
-|Erros de saída da interface {#IFDESCR} (LLD)|<p>Disponibiliza os erros de saída das interfaces</p>|`SNMP agent`|ifOutErrors[{#IFDESCR}]<p>Update: 10m</p>|
-|Tráfego de saída da interface {#IFDESCR} (LLD)|<p>Disponibiliza o tráfego de entrada das interfaces</p>|`SNMP agent`|ifOutOctets[{#IFDESCR}]<p>Update: 10m</p>|
-|Endereço MAC da interface {#IFDESCR} (LLD)|<p>Disponibiliza o nome e o endereço MAC das interfaces</p>|`SNMP agent`|ifPhysAddress[{#IFDESCR}]<p>Update: 10m</p>|
-|Velocidade da interface {#IFDESCR} (LLD)|<p>Disponibiliza o nome e a velocidade das interfaces</p>|`SNMP agent`|ifSpeed[{#IFDESCR}]<p>Update: 10m</p>|
-|Endereços MAC do endereço IP - {#IPADDRESS} (LLD)|<p>-</p>|`SNMP agent`|ipNetToMediaPhysAddress.16[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Endereços IP da LAN (LLD)|<p>iso.3.6.1.2.1.3.1.1.3.16.1</p>|`SNMP agent`|lan.ipaddr<p>Update: 10m</p>|
-|Endereços IP da LAN (LLD)|<p>SNMPv2-SMI::mib-2.3.1.1.3.16.1.</p>|`SNMP agent`|mib-2.3.1.1.3.16.1[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Endereços IP da WAN (LLD)|<p>ifPhysAddress {#SNMPINDEX}</p>|`SNMP agent`|ipAdEntAddr[{#SNMPINDEX}]<p>Update: 10m</p>|
+|Status administrativo - interface {#IFDESCR}|<p>Disponibiliza o nome e o status das interfaces</p>|`SNMP agent`|ifAdminStatus[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Descartes de entrada da interface {#IFDESCR}|<p>Disponibiliza os descartes de entrada das interfaces</p>|`SNMP agent`|ifInDiscards.[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Erros de entrada da interface {#IFDESCR}|<p>Disponibiliza os erros de entrada das interfaces</p>|`SNMP agent`|ifInErrors[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Tráfego de entrada da interface {#IFDESCR}|<p>Disponibiliza o tráfego de entrada das interfaces</p>|`SNMP agent`|ifInOctets[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Valor do MTU da interface {#IFDESCR}|<p>Disponibiliza o nome e o MTU das interfaces</p>|`SNMP agent`|ifMtu[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Status operacional - interface {#IFDESCR}|<p>Disponibiliza o nome e o status das interfaces</p>|`SNMP agent`|ifOperStatus[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Descartes de saída da interface {#IFDESCR}|<p>Disponibiliza os descartes de saída das interfaces</p>|`SNMP agent`|ifOutDiscards[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Erros de saída da interface {#IFDESCR}|<p>Disponibiliza os erros de saída das interfaces</p>|`SNMP agent`|ifOutErrors[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Tráfego de saída da interface {#IFDESCR}|<p>Disponibiliza o tráfego de entrada das interfaces</p>|`SNMP agent`|ifOutOctets[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Endereço MAC da interface {#IFDESCR}|<p>Disponibiliza o nome e o endereço MAC das interfaces</p>|`SNMP agent`|ifPhysAddress[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Velocidade da interface {#IFDESCR}|<p>Disponibiliza o nome e a velocidade das interfaces</p>|`SNMP agent`|ifSpeed[{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|Endereços MAC do endereço IP - {#IPADDRESS}|<p>-</p>|`SNMP agent`|ipNetToMediaPhysAddress.16[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Endereços IP da LAN|<p>iso.3.6.1.2.1.3.1.1.3.16.1</p>|`SNMP agent`|lan.ipaddr<p>Update: 10m</p><p>LLD</p>|
+|Endereços IP da LAN|<p>SNMPv2-SMI::mib-2.3.1.1.3.16.1.</p>|`SNMP agent`|mib-2.3.1.1.3.16.1[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Endereços IP da WAN|<p>ifPhysAddress {#SNMPINDEX}</p>|`SNMP agent`|ipAdEntAddr[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

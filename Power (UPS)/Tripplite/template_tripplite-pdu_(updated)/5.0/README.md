@@ -84,9 +84,6 @@ Ceillian
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |SNMP traps (fallback)|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
 |Agent Software Version|<p>The UPS agent software version. This variable may or may not have the same value as upsIdentUPSSoftwareVersion in some implementations.</p>|`SNMP agent`|tlpAgentVersion<p>Update: 86400</p>|
 |Low Transfer Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsConfigLowVoltageTransfer<p>Update: {$UPDATEINT}</p>|
@@ -103,13 +100,13 @@ Ceillian
 |Manufacturer Identification|<p>The name of the UPS manufacturer.</p>|`SNMP agent`|tlpDeviceManufacturer<p>Update: 86400</p>|
 |Model Identification|<p>The UPS Model designation.</p>|`SNMP agent`|tlpDeviceModel<p>Update: 86400</p>|
 |Device Name|<p>A string identifying the UPS. This object should be set by the administrator.</p>|`SNMP agent`|tlpDeviceName<p>Update: 86400</p>|
-|Outlet - Ramp data type of outlet $1 (LLD)|<p>The type of data associated with ramp action.</p>|`SNMP agent`|tlAtsOutletRampDataType[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Outlet - Ndx group of outlet $1 (LLD)|<p>tlPDUOutletGroupIndex of corresponding outlet group, or 0 if ungrouped.</p>|`SNMP agent`|tlpAtsOutletGroup[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Outlet - Name of outlet $1 (LLD)|<p>A string identifying the devices attached to the output(s) of the device.</p>|`SNMP agent`|tlpAtsOutletName[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Outlet - Ramp action of outlet $1 (LLD)|<p>The ramp action to take on the Outlet.</p>|`SNMP agent`|tlpAtsOutletRampAction[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Outlet - Shed action of outlet $1 (LLD)|<p>The shed action to take on the Outlet.</p>|`SNMP agent`|tlpAtsOutletShedAction[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Outlet - Shed action data type of outlet $1 (LLD)|<p>The type of data associated with shed action.</p>|`SNMP agent`|tlpAtsOutletShedDataType[{#SNMPVALUE}]<p>Update: 1d</p>|
-|Outlet - State of outlet $1 (LLD)|<p>The current state of the Outlet.</p>|`SNMP agent`|tlpAtsOutletState[{#SNMPVALUE}]<p>Update: 2m</p>|
+|Outlet - Ramp data type of outlet $1|<p>The type of data associated with ramp action.</p>|`SNMP agent`|tlAtsOutletRampDataType[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Outlet - Ndx group of outlet $1|<p>tlPDUOutletGroupIndex of corresponding outlet group, or 0 if ungrouped.</p>|`SNMP agent`|tlpAtsOutletGroup[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Outlet - Name of outlet $1|<p>A string identifying the devices attached to the output(s) of the device.</p>|`SNMP agent`|tlpAtsOutletName[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Outlet - Ramp action of outlet $1|<p>The ramp action to take on the Outlet.</p>|`SNMP agent`|tlpAtsOutletRampAction[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Outlet - Shed action of outlet $1|<p>The shed action to take on the Outlet.</p>|`SNMP agent`|tlpAtsOutletShedAction[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Outlet - Shed action data type of outlet $1|<p>The type of data associated with shed action.</p>|`SNMP agent`|tlpAtsOutletShedDataType[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|Outlet - State of outlet $1|<p>The current state of the Outlet.</p>|`SNMP agent`|tlpAtsOutletState[{#SNMPVALUE}]<p>Update: 2m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

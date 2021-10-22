@@ -36,12 +36,12 @@ There are no template links in this template.
 |Session Utilization|<p>PAN-COMMON-MIB::panSessionUtilization Session table utilization percentage.</p>|`SNMP agent`|panSessionUtilization<p>Update: 300</p>|
 |Hardware Version|<p>PAN-COMMON-MIB::panSysHwVersion Hardware version of the unit.</p>|`SNMP agent`|panSysHwVersion<p>Update: 3600</p>|
 |Software Version|<p>PAN-COMMON-MIB::panSysSwVersion Full software version. The first two components of the full version are the major and minor versions. The third component indicates the maintenance release number and the fourth, the build number.</p>|`SNMP agent`|panSysSwVersion<p>Update: 3600</p>|
-|{#SNMPVALUE} Size (LLD)|<p>-</p>|`SNMP agent`|hrStorageSize[memory,{#SNMPINDEX}]<p>Update: 300</p>|
-|{#SNMPVALUE} Used (LLD)|<p>-</p>|`SNMP agent`|hrStorageUsed[memory,{#SNMPINDEX}]<p>Update: 300</p>|
-|Operational status of $2 Sensor $1 (LLD)|<p>ENTITY-SENSOR-MIB::entPhySensorOperStatus The operational status of the sensor.</p>|`SNMP agent`|entPhySensorOperStatus[{#SNMPVALUE},Temperature]<p>Update: 30</p>|
-|Temperature on Sensor #$1 (LLD)|<p>ENTITY-SENSOR-MIB::entPhySensorValue The most recent measurement obtained by the agent for this sensor.</p>|`SNMP agent`|entPhySensorValue[{#SNMPVALUE},Temperature]<p>Update: 60</p>|
-|Current speed of $2 $1 (LLD)|<p>ENTITY-SENSOR-MIB::entPhySensorValue The most recent measurement obtained by the agent for this sensor.</p>|`SNMP agent`|entPhySensorValue[{#SNMPVALUE},FAN]<p>Update: 60</p>|
-|Operational status of FAN $1 (LLD)|<p>ENTITY-SENSOR-MIB::entPhySensorOperStatus The operational status of the sensor.</p>|`SNMP agent`|entPhySensorOperStatus[{#SNMPVALUE},FAN]<p>Update: 30</p>|
+|{#SNMPVALUE} Size|<p>-</p>|`SNMP agent`|hrStorageSize[memory,{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|{#SNMPVALUE} Used|<p>-</p>|`SNMP agent`|hrStorageUsed[memory,{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Operational status of $2 Sensor $1|<p>ENTITY-SENSOR-MIB::entPhySensorOperStatus The operational status of the sensor.</p>|`SNMP agent`|entPhySensorOperStatus[{#SNMPVALUE},Temperature]<p>Update: 30</p><p>LLD</p>|
+|Temperature on Sensor #$1|<p>ENTITY-SENSOR-MIB::entPhySensorValue The most recent measurement obtained by the agent for this sensor.</p>|`SNMP agent`|entPhySensorValue[{#SNMPVALUE},Temperature]<p>Update: 60</p><p>LLD</p>|
+|Current speed of $2 $1|<p>ENTITY-SENSOR-MIB::entPhySensorValue The most recent measurement obtained by the agent for this sensor.</p>|`SNMP agent`|entPhySensorValue[{#SNMPVALUE},FAN]<p>Update: 60</p><p>LLD</p>|
+|Operational status of FAN $1|<p>ENTITY-SENSOR-MIB::entPhySensorOperStatus The operational status of the sensor.</p>|`SNMP agent`|entPhySensorOperStatus[{#SNMPVALUE},FAN]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

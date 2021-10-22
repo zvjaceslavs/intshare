@@ -69,12 +69,12 @@ There are no template links in this template.
 |AP Hostname|<p>-</p>|`SNMP agent`|unifiSysName.0<p>Update: 60m</p>|
 |Channel 2G (N/G)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiVapChannel.1<p>Update: 1m</p>|
 |Channel 5G (N/AC)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiVapChannel.5<p>Update: 1m</p>|
-|WIFI Channel $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapChannel[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 1m</p>|
-|Users $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapNumStations[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 30s</p>|
-|Traffic Incoming $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapRxBytes[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 30s</p>|
-|Traffic Incoming Errors per Second $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapRxErrors[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 60s</p>|
-|Traffic Outgoing $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapTxBytes[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 30s</p>|
-|Traffic Outgoing Errors per Second $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|unifiVapTxErrors[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 60s</p>|
+|WIFI Channel $2 on $1|<p>-</p>|`SNMP agent`|unifiVapChannel[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 1m</p><p>LLD</p>|
+|Users $2 on $1|<p>-</p>|`SNMP agent`|unifiVapNumStations[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 30s</p><p>LLD</p>|
+|Traffic Incoming $2 on $1|<p>-</p>|`SNMP agent`|unifiVapRxBytes[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 30s</p><p>LLD</p>|
+|Traffic Incoming Errors per Second $2 on $1|<p>-</p>|`SNMP agent`|unifiVapRxErrors[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 60s</p><p>LLD</p>|
+|Traffic Outgoing $2 on $1|<p>-</p>|`SNMP agent`|unifiVapTxBytes[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 30s</p><p>LLD</p>|
+|Traffic Outgoing Errors per Second $2 on $1|<p>-</p>|`SNMP agent`|unifiVapTxErrors[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

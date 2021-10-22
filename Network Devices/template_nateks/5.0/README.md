@@ -48,7 +48,7 @@ There are no template links in this template.
 |----|-----------|----|----|
 |DeviceLocation|<p>-</p>|`SNMP agent`|DevLocation<p>Update: 60s</p>|
 |DeviceModel|<p>-</p>|`SNMP agent`|DevModel<p>Update: 60s</p>|
-|Channel[{#CHANNUM}][{#CHANIP}]Status (LLD)|<p>-</p>|`SNMP agent`|ChanStatus[{#CHANNUM}]<p>Update: 60s</p>|
+|Channel[{#CHANNUM}][{#CHANIP}]Status|<p>-</p>|`SNMP agent`|ChanStatus[{#CHANNUM}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -82,14 +82,14 @@ There are no template links in this template.
 |System partition usage|<p>IDS system partition usage</p>|`SNMP agent`|systempartition.usage<p>Update: 1h</p>|
 |Uptime|<p>MIB: SNMPv2-MIB The time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|system.uptime[sysUpTime.0]<p>Update: 30s</p>|
 |Total attacks|<p>IDS DB total attacks</p>|`SNMP agent`|total.attacks<p>Update: 15m</p>|
-|Last day events URL №{#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|lastday.attacks.events.url[{#SNMPINDEX}]<p>Update: 15m</p>|
-|Last day attacks (attacked ip address №{#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|lastday.attacks.attacked.ip[{#SNMPINDEX}]<p>Update: 15m</p>|
-|Last day events name №{#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|lastdayevents.events.name[{#SNMPINDEX}]<p>Update: 15m</p>|
-|Detection interface name {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|detection.interface.name.[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Detection interface state discription {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|detection.interface.state.discription.[{#SNMPVALUE}]<p>Update: 2m</p>|
-|Detection interface state {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|detection.interface.state.[{#SNMPVALUE}]<p>Update: 2m</p>|
-|Last day attacks (events count) №{#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|lastday.attacks.events.count[{#SNMPINDEX}]<p>Update: 15m</p>|
-|Last day attacks (attacker ip addresses №{#SNMPINDEX}) (LLD)|<p>-</p>|`SNMP agent`|lastday.attacks.attacker.ip[{#SNMPINDEX}]<p>Update: 15m</p>|
+|Last day events URL №{#SNMPINDEX}|<p>-</p>|`SNMP agent`|lastday.attacks.events.url[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|Last day attacks (attacked ip address №{#SNMPINDEX})|<p>-</p>|`SNMP agent`|lastday.attacks.attacked.ip[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|Last day events name №{#SNMPINDEX}|<p>-</p>|`SNMP agent`|lastdayevents.events.name[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|Detection interface name {#SNMPVALUE}|<p>-</p>|`SNMP agent`|detection.interface.name.[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Detection interface state discription {#SNMPVALUE}|<p>-</p>|`SNMP agent`|detection.interface.state.discription.[{#SNMPVALUE}]<p>Update: 2m</p><p>LLD</p>|
+|Detection interface state {#SNMPVALUE}|<p>-</p>|`SNMP agent`|detection.interface.state.[{#SNMPVALUE}]<p>Update: 2m</p><p>LLD</p>|
+|Last day attacks (events count) №{#SNMPINDEX}|<p>-</p>|`SNMP agent`|lastday.attacks.events.count[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|Last day attacks (attacker ip addresses №{#SNMPINDEX})|<p>-</p>|`SNMP agent`|lastday.attacks.attacker.ip[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

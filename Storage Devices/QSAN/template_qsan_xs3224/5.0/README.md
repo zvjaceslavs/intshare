@@ -73,7 +73,6 @@ There are no macros links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|SNMP trap fallback|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
 |Backplane FAN1 Status|<p>-</p>|`SNMP agent`|sys-bpl-fan1-status<p>Update: 120</p>|
 |Backplane FAN2 Status|<p>-</p>|`SNMP agent`|sys-bpl-fan2-status<p>Update: 120</p>|
 |Backplane FAN3 Status|<p>-</p>|`SNMP agent`|sys-bpl-fan3-status<p>Update: 120</p>|
@@ -86,7 +85,6 @@ There are no macros links in this template.
 |Backplane PSU2 Status|<p>-</p>|`SNMP agent`|sys-bpl-psu2-status<p>Update: 120</p>|
 |Backplane Right Temperature Status|<p>-</p>|`SNMP agent`|sys-bpl-right-temp-status<p>Update: 120</p>|
 |Backplane Right Temperature Value|<p>-</p>|`SNMP agent`|sys-bpl-right-temp-val<p>Update: 120</p>|
-|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
 |CTRL1 CPU Temperature Status|<p>-</p>|`SNMP agent`|sys-ctrl1-cpu-temp-status<p>Update: 120</p>|
 |CTRL1 CPU Temperature Value|<p>-</p>|`SNMP agent`|sys-ctrl1-cpu-temp-val<p>Update: 120</p>|
 |CTRL1 SAS Expander Temperature Status|<p>-</p>|`SNMP agent`|sys-ctrl1-sas-temp-status<p>Update: 120</p>|
@@ -99,20 +97,16 @@ There are no macros links in this template.
 |CTRL2 SAS Expander Temperature Value|<p>-</p>|`SNMP agent`|sys-ctrl2-sas-temp-val<p>Update: 120</p>|
 |CTRL2 SLOT1 Temperature Status|<p>-</p>|`SNMP agent`|sys-ctrl2-slot1-temp-status<p>Update: 120</p>|
 |CTRL2 SLOT1 Temperature Value|<p>-</p>|`SNMP agent`|sys-ctrl2-slot1-temp-val<p>Update: 120</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
-|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
-|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
-|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
 |Zabbix SNMP Connected|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 60</p>|
-|Name of Volume {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sanVolumeName[{#SNMPVALUE}]<p>Update: 3600</p>|
-|State of Volume {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sanVolumeState[{#SNMPVALUE}]<p>Update: 120</p>|
-|Status of Volume {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sanVolumeStatus[{#SNMPVALUE}]<p>Update: 120</p>|
-|Name of Disk $1 (LLD)|<p>-</p>|`SNMP agent`|sanDiskName[{#SNMPINDEX}]<p>Update: 3600</p>|
-|State of Disk $1 (LLD)|<p>-</p>|`SNMP agent`|sanDiskState[{#SNMPINDEX}]<p>Update: 120</p>|
-|Status of Disk $1 (LLD)|<p>-</p>|`SNMP agent`|sanDiskStatus[{#SNMPINDEX}]<p>Update: 120</p>|
-|Name of Pool {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sanPoolName[{#SNMPVALUE}]<p>Update: 3600</p>|
-|State of Pool {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sanPoolState[{#SNMPVALUE}]<p>Update: 120</p>|
-|Status of Pool {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|sanPoolStatus[{#SNMPVALUE}]<p>Update: 120</p>|
+|Name of Volume {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sanVolumeName[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|State of Volume {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sanVolumeState[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Status of Volume {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sanVolumeStatus[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Name of Disk $1|<p>-</p>|`SNMP agent`|sanDiskName[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|State of Disk $1|<p>-</p>|`SNMP agent`|sanDiskState[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
+|Status of Disk $1|<p>-</p>|`SNMP agent`|sanDiskStatus[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
+|Name of Pool {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sanPoolName[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|State of Pool {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sanPoolState[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Status of Pool {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sanPoolStatus[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -158,9 +152,8 @@ There are no discovery rules in this template.
 
 ## Items collected
 
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|SNMP trap fallback|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
+There are no items in this template.
+
 ## Triggers
 
 There are no triggers in this template.

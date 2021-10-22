@@ -32,8 +32,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|BGP peer {#BGP_PEER_NAME} state (LLD)|<p>-</p>|`External check`|bgp_peer_field.sh["{HOST.CONN}", "{$ROUTEROS_USERNAME}", "{$ROUTEROS_PASSWORD}", {#BGP_PEER_NAME}, "state"]<p>Update: 5</p>|
-|BGP peer {#BGP_PEER_NAME} uptime (LLD)|<p>-</p>|`External check`|bgp_peer_field.sh["{HOST.CONN}", "{$ROUTEROS_USERNAME}", "{$ROUTEROS_PASSWORD}", {#BGP_PEER_NAME}, "uptime"]<p>Update: 5</p>|
+|BGP peer {#BGP_PEER_NAME} state|<p>-</p>|`External check`|bgp_peer_field.sh["{HOST.CONN}", "{$ROUTEROS_USERNAME}", "{$ROUTEROS_PASSWORD}", {#BGP_PEER_NAME}, "state"]<p>Update: 5</p><p>LLD</p>|
+|BGP peer {#BGP_PEER_NAME} uptime|<p>-</p>|`External check`|bgp_peer_field.sh["{HOST.CONN}", "{$ROUTEROS_USERNAME}", "{$ROUTEROS_PASSWORD}", {#BGP_PEER_NAME}, "uptime"]<p>Update: 5</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

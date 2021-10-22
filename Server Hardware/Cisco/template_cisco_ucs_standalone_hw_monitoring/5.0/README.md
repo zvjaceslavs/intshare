@@ -43,11 +43,11 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Storage controller status|<p>-</p>|`SNMP agent`|cucsStorageControllerOperState<p>Update: 30</p>|
-|{#SNMPVALUE} array status (LLD)|<p>-</p>|`SNMP agent`|arrstatus[{#SNMPVALUE}]<p>Update: 30</p>|
-|{#SNMPVALUE} disk status (LLD)|<p>-</p>|`SNMP agent`|diskstatus[{#SNMPVALUE}]<p>Update: 30</p>|
-|{#SNMPVALUE} status (LLD)|<p>-</p>|`SNMP agent`|fanstatus[{#SNMPVALUE}]<p>Update: 30</p>|
-|{#SNMPVALUE} power source status (LLD)|<p>-</p>|`SNMP agent`|powerstate[{#SNMPVALUE}]<p>Update: 30</p>|
-|{#SNMPVALUE} status (LLD)|<p>-</p>|`SNMP agent`|status[{#SNMPVALUE}]<p>Update: 30</p>|
+|{#SNMPVALUE} array status|<p>-</p>|`SNMP agent`|arrstatus[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} disk status|<p>-</p>|`SNMP agent`|diskstatus[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} status|<p>-</p>|`SNMP agent`|fanstatus[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} power source status|<p>-</p>|`SNMP agent`|powerstate[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} status|<p>-</p>|`SNMP agent`|status[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

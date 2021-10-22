@@ -31,9 +31,6 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |Firmware version|<p>-</p>|`SNMP agent`|lgpAgentDeviceFirmwareVersion<p>Update: 24h</p>|
 |Manufacture date|<p>-</p>|`SNMP agent`|lgpAgentDeviceManufactureDate<p>Update: 24h</p>|
 |Model|<p>-</p>|`SNMP agent`|lgpAgentDeviceModel<p>Update: 24h</p>|

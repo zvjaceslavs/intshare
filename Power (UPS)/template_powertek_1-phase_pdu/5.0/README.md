@@ -63,37 +63,37 @@ There are no template links in this template.
 |Energy used|<p>The total energy used by the PDU.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.4.1<p>Update: 1h</p>|
 |Amps|<p>The amps currently used by the PDU.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.1<p>Update: 1m</p>|
 |PDU Inlet Voltage|<p>The current voltage of the PDU.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.9.1<p>Update: 1m</p>|
-|Active Power[{#SNMPINDEX}] (LLD)|<p>The total power of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|PDU Reset Date[{#SNMPINDEX}] (LLD)|<p>The reset date of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.3.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Energy used[{#SNMPINDEX}] (LLD)|<p>The total energy of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.4.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|PDU Status[{#SNMPINDEX}] (LLD)|<p>The Status of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.5.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Amps[{#SNMPINDEX}] (LLD)|<p>The phase1 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|PDU Inlet Voltage[{#SNMPINDEX}] (LLD)|<p>The phase1 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.9.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Supposedly the Power Factor of the PDU[{#SNMPINDEX}] (LLD)|<p>The phase1 power factor of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.12.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Voltage[{#SNMPINDEX}] (LLD)|<p>The phase1 power of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.15.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|PDU Power Factor ?[{#SNMPINDEX}] (LLD)|<p>The phase1 status of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.18.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgLoadCritical[{#SNMPINDEX}] (LLD)|<p>The Critical Threshold of inlet load.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.2.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgLoadWarning[{#SNMPINDEX}] (LLD)|<p>The Warning Threshold of inlet load.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.3.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgCurrCritPhase1[{#SNMPINDEX}] (LLD)|<p>The Critical Threshold of pahse1 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.4.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgCurrCritPhase2[{#SNMPINDEX}] (LLD)|<p>The Critical Threshold of pahse2 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.5.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgCurrCritPhase3[{#SNMPINDEX}] (LLD)|<p>The Critical Threshold of pahse3 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.6.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgCurrWarnPhase1[{#SNMPINDEX}] (LLD)|<p>The Warning Threshold of pahse1 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.7.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgCurrWarnPhase2[{#SNMPINDEX}] (LLD)|<p>The Warning Threshold of pahse2 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.8.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgCurrWarnPhase3[{#SNMPINDEX}] (LLD)|<p>The Warning Threshold of pahse3 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.9.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgVoltCritPhase1[{#SNMPINDEX}] (LLD)|<p>The Critical Threshold of pahse1 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.10.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgVoltCritPhase2[{#SNMPINDEX}] (LLD)|<p>The Critical Threshold of pahse2 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.11.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgVoltCritPhase3[{#SNMPINDEX}] (LLD)|<p>The Critical Threshold of pahse3 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.12.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgVoltWarnPhase1[{#SNMPINDEX}] (LLD)|<p>The Warning Threshold of pahse1 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.13.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgVoltWarnPhase2[{#SNMPINDEX}] (LLD)|<p>The Warning Threshold of pahse2 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.14.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::inletCfgVoltWarnPhase3[{#SNMPINDEX}] (LLD)|<p>The Warning Threshold of pahse3 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.15.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::trapsReceiverAddr[{#SNMPINDEX}] (LLD)|<p>The IP address of the manager to send a trap to.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.4.4.1.2.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::receiverEventLevel[{#SNMPINDEX}] (LLD)|<p>The severity level of traps to be received by this manager.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.4.4.1.3.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::receiverSnmpVer[{#SNMPINDEX}] (LLD)|<p>The SNMP Trap version of trap receivers.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.4.4.1.4.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::receiverDescription[{#SNMPINDEX}] (LLD)|<p>Description of trap receivers</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.4.4.1.5.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::mailRecvReceiverAddr[{#SNMPINDEX}] (LLD)|<p>The Email address of the manager to send a email notification to.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.5.8.1.2.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::mailRecvEmailType[{#SNMPINDEX}] (LLD)|<p>The Email Type of email notification receivers.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.5.8.1.3.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::mailRecvEventLevel[{#SNMPINDEX}] (LLD)|<p>The severity level of email notification to be received by this manager.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.5.8.1.4.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|SPSv1-MIB::mailRecvDescription[{#SNMPINDEX}] (LLD)|<p>Description of email notification receivers</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.5.8.1.5.[{#SNMPINDEX}]<p>Update: 1h</p>|
+|Active Power[{#SNMPINDEX}]|<p>The total power of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|PDU Reset Date[{#SNMPINDEX}]|<p>The reset date of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.3.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Energy used[{#SNMPINDEX}]|<p>The total energy of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.4.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|PDU Status[{#SNMPINDEX}]|<p>The Status of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.5.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Amps[{#SNMPINDEX}]|<p>The phase1 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|PDU Inlet Voltage[{#SNMPINDEX}]|<p>The phase1 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.9.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Supposedly the Power Factor of the PDU[{#SNMPINDEX}]|<p>The phase1 power factor of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.12.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Voltage[{#SNMPINDEX}]|<p>The phase1 power of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.15.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|PDU Power Factor ?[{#SNMPINDEX}]|<p>The phase1 status of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.18.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgLoadCritical[{#SNMPINDEX}]|<p>The Critical Threshold of inlet load.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.2.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgLoadWarning[{#SNMPINDEX}]|<p>The Warning Threshold of inlet load.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.3.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgCurrCritPhase1[{#SNMPINDEX}]|<p>The Critical Threshold of pahse1 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.4.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgCurrCritPhase2[{#SNMPINDEX}]|<p>The Critical Threshold of pahse2 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.5.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgCurrCritPhase3[{#SNMPINDEX}]|<p>The Critical Threshold of pahse3 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.6.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgCurrWarnPhase1[{#SNMPINDEX}]|<p>The Warning Threshold of pahse1 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.7.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgCurrWarnPhase2[{#SNMPINDEX}]|<p>The Warning Threshold of pahse2 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.8.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgCurrWarnPhase3[{#SNMPINDEX}]|<p>The Warning Threshold of pahse3 current of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.9.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgVoltCritPhase1[{#SNMPINDEX}]|<p>The Critical Threshold of pahse1 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.10.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgVoltCritPhase2[{#SNMPINDEX}]|<p>The Critical Threshold of pahse2 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.11.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgVoltCritPhase3[{#SNMPINDEX}]|<p>The Critical Threshold of pahse3 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.12.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgVoltWarnPhase1[{#SNMPINDEX}]|<p>The Warning Threshold of pahse1 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.13.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgVoltWarnPhase2[{#SNMPINDEX}]|<p>The Warning Threshold of pahse2 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.14.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::inletCfgVoltWarnPhase3[{#SNMPINDEX}]|<p>The Warning Threshold of pahse3 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.15.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::trapsReceiverAddr[{#SNMPINDEX}]|<p>The IP address of the manager to send a trap to.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.4.4.1.2.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::receiverEventLevel[{#SNMPINDEX}]|<p>The severity level of traps to be received by this manager.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.4.4.1.3.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::receiverSnmpVer[{#SNMPINDEX}]|<p>The SNMP Trap version of trap receivers.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.4.4.1.4.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::receiverDescription[{#SNMPINDEX}]|<p>Description of trap receivers</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.4.4.1.5.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::mailRecvReceiverAddr[{#SNMPINDEX}]|<p>The Email address of the manager to send a email notification to.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.5.8.1.2.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::mailRecvEmailType[{#SNMPINDEX}]|<p>The Email Type of email notification receivers.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.5.8.1.3.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::mailRecvEventLevel[{#SNMPINDEX}]|<p>The severity level of email notification to be received by this manager.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.5.8.1.4.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|SPSv1-MIB::mailRecvDescription[{#SNMPINDEX}]|<p>Description of email notification receivers</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.5.8.1.5.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

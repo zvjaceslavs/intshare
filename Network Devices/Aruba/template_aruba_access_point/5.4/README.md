@@ -40,10 +40,10 @@ There are no template links in this template.
 |IP Address|<p>-</p>|`SNMP agent`|ipAdEntAddr<p>Update: 30s</p>|
 |Ping response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 30s</p>|
 |System uptime|<p>-</p>|`SNMP agent`|SysUptime<p>Update: 30s</p>|
-|SSID $1 (LLD)|<p>-</p>|`SNMP agent`|wlanAPESSID[{#SNMPVALUE}]<p>Update: 5m</p>|
-|Incoming traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10m</p>|
-|Interface $1 operational status (LLD)|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 10m</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 10m</p>|
+|SSID $1|<p>-</p>|`SNMP agent`|wlanAPESSID[{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Interface $1 operational status|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

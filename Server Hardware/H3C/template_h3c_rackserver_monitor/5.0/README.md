@@ -47,10 +47,10 @@ There are no template links in this template.
 |Entity Health Status|<p>-</p>|`SNMP agent`|hh3cEntityHealthStatus<p>Update: 10m</p>|
 |Fan Health Status|<p>-</p>|`SNMP agent`|hh3cFanHealthStatus<p>Update: 10m</p>|
 |Power Health Status|<p>-</p>|`SNMP agent`|hh3cPwrHealthStatus<p>Update: 10m</p>|
-|CPU Status [{#SNMPVALUE}] (LLD)|<p>-</p>|`SNMP agent`|CPUStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Memory  Status {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|MemoryStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Disk Status [{#SNMPVALUE}] (LLD)|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|PCIE Status Slot[{#SNMPVALUE}] (LLD)|<p>-</p>|`SNMP agent`|NetCardStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
+|CPU Status [{#SNMPVALUE}]|<p>-</p>|`SNMP agent`|CPUStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Memory  Status {#SNMPVALUE}|<p>-</p>|`SNMP agent`|MemoryStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Disk Status [{#SNMPVALUE}]|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|PCIE Status Slot[{#SNMPVALUE}]|<p>-</p>|`SNMP agent`|NetCardStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

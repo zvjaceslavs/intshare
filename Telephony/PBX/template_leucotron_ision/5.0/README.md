@@ -74,22 +74,22 @@ There are no template links in this template.
 |Voltagem 12Volts|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.2.2.8<p>Update: 30s</p>|
 |Campainha|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.2.2.9<p>Update: 30s</p>|
 |Modem|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.3.1<p>Update: 1d</p>|
-|Código {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.2.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Status {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.3.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Instalada {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.4.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Tipo de licença {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.5.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Quantidade {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.6.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Validade {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.7.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Descrição {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.8.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Data Instalação {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.9.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Valor {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.2.3.2.1.2.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Descrição {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.2.3.2.1.3.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Posição {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.2.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Descrição {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.3.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Versão do software - SLOT {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.4.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Número do TDM {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.5.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Número Serial {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.6.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Data inclusão/exclusão {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.7.[{#SNMPINDEX}]<p>Update: 1h</p>|
+|Código {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.2.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Status {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.3.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Instalada {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.4.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Tipo de licença {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.5.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Quantidade {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.6.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Validade {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.7.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Descrição {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.8.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Data Instalação {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.2.1.1.9.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Valor {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.2.3.2.1.2.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Descrição {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.2.3.2.1.3.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Posição {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.2.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Descrição {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.3.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Versão do software - SLOT {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.4.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Número do TDM {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.5.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Número Serial {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.6.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Data inclusão/exclusão {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.17069.1.3.1.3.1.2.1.7.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

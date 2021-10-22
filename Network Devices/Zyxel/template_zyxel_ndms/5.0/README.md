@@ -31,10 +31,10 @@ There are no template links in this template.
 |System Description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
 |System Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
 |System Uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 60</p>|
-|$1 Administration status (LLD)|<p>-</p>|`SNMP agent`|ifAdminStatus[{#IFDESCR}]<p>Update: 60</p>|
-|$1 Incoming (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#IFDESCR}]<p>Update: 60</p>|
-|$1 Operation status (LLD)|<p>-</p>|`SNMP agent`|ifOperStatus[{#IFDESCR}]<p>Update: 60</p>|
-|$1 Outgoing (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets[{#IFDESCR}]<p>Update: 60</p>|
+|$1 Administration status|<p>-</p>|`SNMP agent`|ifAdminStatus[{#IFDESCR}]<p>Update: 60</p><p>LLD</p>|
+|$1 Incoming|<p>-</p>|`SNMP agent`|ifInOctets[{#IFDESCR}]<p>Update: 60</p><p>LLD</p>|
+|$1 Operation status|<p>-</p>|`SNMP agent`|ifOperStatus[{#IFDESCR}]<p>Update: 60</p><p>LLD</p>|
+|$1 Outgoing|<p>-</p>|`SNMP agent`|ifOutOctets[{#IFDESCR}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

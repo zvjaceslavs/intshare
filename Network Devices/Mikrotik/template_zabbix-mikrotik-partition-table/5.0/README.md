@@ -42,10 +42,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|mtxrPartitionActive.[{#MKTPARTITIONNAME}] (LLD)|<p>-</p>|`SNMP agent`|mtxrPartitionActive.[{#MKTPARTITIONNAME}]<p>Update: 1h</p>|
-|mtxrPartitionRunning.[{#MKTPARTITIONNAME}] (LLD)|<p>-</p>|`SNMP agent`|mtxrPartitionRunning.[{#MKTPARTITIONNAME}]<p>Update: 1h</p>|
-|mtxrPartitionSize.[{#MKTPARTITIONNAME}] (LLD)|<p>-</p>|`SNMP agent`|mtxrPartitionSize.[{#MKTPARTITIONNAME}]<p>Update: 1h</p>|
-|mtxrPartitionVersion.[{#MKTPARTITIONNAME}] (LLD)|<p>-</p>|`SNMP agent`|mtxrPartitionVersion.[{#MKTPARTITIONNAME}]<p>Update: 1h</p>|
+|mtxrPartitionActive.[{#MKTPARTITIONNAME}]|<p>-</p>|`SNMP agent`|mtxrPartitionActive.[{#MKTPARTITIONNAME}]<p>Update: 1h</p><p>LLD</p>|
+|mtxrPartitionRunning.[{#MKTPARTITIONNAME}]|<p>-</p>|`SNMP agent`|mtxrPartitionRunning.[{#MKTPARTITIONNAME}]<p>Update: 1h</p><p>LLD</p>|
+|mtxrPartitionSize.[{#MKTPARTITIONNAME}]|<p>-</p>|`SNMP agent`|mtxrPartitionSize.[{#MKTPARTITIONNAME}]<p>Update: 1h</p><p>LLD</p>|
+|mtxrPartitionVersion.[{#MKTPARTITIONNAME}]|<p>-</p>|`SNMP agent`|mtxrPartitionVersion.[{#MKTPARTITIONNAME}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

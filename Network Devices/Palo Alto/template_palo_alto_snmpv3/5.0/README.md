@@ -55,39 +55,39 @@ There are no template links in this template.
 |Hardware Version|<p>-</p>|`SNMP agent`|panSysHwVersion<p>Update: 1h</p>|
 |PAN-OS Version|<p>-</p>|`SNMP agent`|panSysSwVersion<p>Update: 1h</p>|
 |System Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 1h</p>|
-|{#SNMPVALUE} Size (LLD)|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#SNMPVALUE} Used (LLD)|<p>-</p>|`SNMP agent`|hrStorageUsed[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Total broadcast packets incoming on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Total multicast packets incoming on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Total traffic incoming on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCInOctets[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Total unicast packets incoming on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCInUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Total broadcast packets incoming on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Total multicast packets outgoing on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Total traffic outgoing on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Total unicast packets outgoing on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Broadcast packets incoming on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Multicast packets incoming on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Broadcast packets outgoing on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Multicast packets outgoing on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Interface $1 admin status (LLD)|<p>-</p>|`SNMP agent`|ifAdminStatus[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Incoming discarded packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInDiscards[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Incoming packets with errors on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Incoming non-unicast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInNUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Incoming traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Incoming unicast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Interface $1 operational status (LLD)|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outgoing discarded packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutDiscards[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outgoing packets with errors on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outgoing non-unicast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutNUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outgoing unicast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Core Temperature - Operational Status of Sensor: $1 (LLD)|<p>-</p>|`SNMP agent`|entPhyCoreTempOperStatus[{#SENSORNAME}]<p>Update: 30s</p>|
-|Core Temperature - Temperature of Sensor: $1 (LLD)|<p>-</p>|`SNMP agent`|entPhyCoreTempValue[{#SENSORNAME}]<p>Update: 30s</p>|
-|Temperature of $1 (LLD)|<p>-</p>|`SNMP agent`|entPhySensorTemp[{#SENSORNAME}]<p>Update: 30s</p>|
-|Operational status of $1 (LLD)|<p>-</p>|`SNMP agent`|entPhySensorOperStatus[{#SNMPVALUE}]<p>Update: 30s</p>|
-|Speed of $1 (LLD)|<p>-</p>|`SNMP agent`|entPhySensorValue[{#SNMPVALUE}]<p>Update: 1m</p>|
-|System Temperature - Operational Status of Sensor: $1 (LLD)|<p>-</p>|`SNMP agent`|entPhySystemTempOperStatus[{#SENSORNAME}]<p>Update: 30s</p>|
-|System Temperature - Temperature of Sensor: $1 (LLD)|<p>-</p>|`SNMP agent`|entPhySystemTempValue[{#SENSORNAME}]<p>Update: 30s</p>|
+|{#SNMPVALUE} Size|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#SNMPVALUE} Used|<p>-</p>|`SNMP agent`|hrStorageUsed[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Total broadcast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Total multicast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Total traffic incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCInOctets[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Total unicast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCInUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Total broadcast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCOutBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Total multicast packets outgoing on interface $1|<p>-</p>|`SNMP agent`|ifHCOutMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Total traffic outgoing on interface $1|<p>-</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Total unicast packets outgoing on interface $1|<p>-</p>|`SNMP agent`|ifHCOutUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Broadcast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifInBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Multicast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifInMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Broadcast packets outgoing on interface $1|<p>-</p>|`SNMP agent`|ifOutBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Multicast packets outgoing on interface $1|<p>-</p>|`SNMP agent`|ifOutMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Interface $1 admin status|<p>-</p>|`SNMP agent`|ifAdminStatus[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Incoming discarded packets on interface $1|<p>-</p>|`SNMP agent`|ifInDiscards[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Incoming packets with errors on interface $1|<p>-</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Incoming non-unicast packets on interface $1|<p>-</p>|`SNMP agent`|ifInNUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Incoming unicast packets on interface $1|<p>-</p>|`SNMP agent`|ifInUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Interface $1 operational status|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outgoing discarded packets on interface $1|<p>-</p>|`SNMP agent`|ifOutDiscards[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outgoing packets with errors on interface $1|<p>-</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outgoing non-unicast packets on interface $1|<p>-</p>|`SNMP agent`|ifOutNUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outgoing unicast packets on interface $1|<p>-</p>|`SNMP agent`|ifOutUcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Core Temperature - Operational Status of Sensor: $1|<p>-</p>|`SNMP agent`|entPhyCoreTempOperStatus[{#SENSORNAME}]<p>Update: 30s</p><p>LLD</p>|
+|Core Temperature - Temperature of Sensor: $1|<p>-</p>|`SNMP agent`|entPhyCoreTempValue[{#SENSORNAME}]<p>Update: 30s</p><p>LLD</p>|
+|Temperature of $1|<p>-</p>|`SNMP agent`|entPhySensorTemp[{#SENSORNAME}]<p>Update: 30s</p><p>LLD</p>|
+|Operational status of $1|<p>-</p>|`SNMP agent`|entPhySensorOperStatus[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|Speed of $1|<p>-</p>|`SNMP agent`|entPhySensorValue[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|System Temperature - Operational Status of Sensor: $1|<p>-</p>|`SNMP agent`|entPhySystemTempOperStatus[{#SENSORNAME}]<p>Update: 30s</p><p>LLD</p>|
+|System Temperature - Temperature of Sensor: $1|<p>-</p>|`SNMP agent`|entPhySystemTempValue[{#SENSORNAME}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

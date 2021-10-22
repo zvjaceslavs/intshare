@@ -74,24 +74,24 @@ There are no template links in this template.
 |System shutdown|<p>-</p>|`SNMP trap`|snmptrap["System shutdown"]<p>Update: 0</p>|
 |Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software. It is mandatory that this only contain printable ASCII characters.</p>|`SNMP agent`|sysDescr.0<p>Update: 1d</p>|
 |Hostname|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name.</p>|`SNMP agent`|sysName.0<p>Update: 1d</p>|
-|$1 opration status (LLD)|<p>-</p>|`SNMP agent`|entPhySensorOperStatus.fan.["{#PHY}"]<p>Update: 1m</p>|
-|$1 sensor value (LLD)|<p>-</p>|`SNMP agent`|entPhySensorValue.fan.["{#PHY}"]<p>Update: 1m</p>|
-|$1 class (LLD)|<p>-</p>|`SNMP agent`|entPhysicalClass.fan.["{#PHY}"]<p>Update: 1m</p>|
-|$1 sensor description (LLD)|<p>-</p>|`SNMP agent`|entPhysicalDescr.fan.["{#PHY}"]<p>Update: 1d</p>|
-|$1 storage size (LLD)|<p>-</p>|`SNMP agent`|hrStorageSize.["{#STOR}"]<p>Update: 30m</p>|
-|$1 storage type (LLD)|<p>-</p>|`SNMP agent`|hrStorageType.["{#STOR}"]<p>Update: 12h</p>|
-|$1 storage used (LLD)|<p>-</p>|`SNMP agent`|hrStorageUsed.["{#STOR}"]<p>Update: 1m</p>|
-|{#CPU} status (LLD)|<p>"The current operational state of the device described by this row of the table. A value unknown(1) indicates that the current state of the device is unknown. running(2) indicates that the device is up and running and that no unusual error conditions are known. The warning(3) state indicates that agent has been informed of an unusual error condition by the operational software (e.g., a disk device driver) but that the device is still 'operational'. An example would be a high number of soft errors on a disk. A value of testing(4), indicates that the device is not available for use because it is in the testing state. The state of down(5) is used only when the agent has been informed that the device is not available for any use."</p>|`SNMP agent`|hrDeviceStatus.["{#CPU}"]<p>Update: 1m</p>|
-|{#CPU} load - percentage (LLD)|<p>"The average, over the last minute, of the percentage of time that this processor was not idle. Implementations may approximate this one minute smoothing period if necessary."</p>|`SNMP agent`|hrProcessorLoad.["{#CPU}"]<p>Update: 1m</p>|
-|$1 admin status (LLD)|<p>-</p>|`SNMP agent`|ifAdminStatus.["{#IFNAME}"]<p>Update: 2m</p>|
-|$1 alias (description) (LLD)|<p>-</p>|`SNMP agent`|ifAlias.["{#IFNAME}"]<p>Update: 6h</p>|
-|$1 input traffic (30 sec) (LLD)|<p>-</p>|`SNMP agent`|ifHCInOctets.["{#IFNAME}"]<p>Update: 30s</p>|
-|$1 output traffic (30 sec) (LLD)|<p>-</p>|`SNMP agent`|ifHCOutOctets.["{#IFNAME}"]<p>Update: 30s</p>|
-|$1 link status (LLD)|<p>-</p>|`SNMP agent`|ifOperStatus.["{#IFNAME}"]<p>Update: 2m</p>|
-|$1 opration status (LLD)|<p>"The operational status of the sensor."</p>|`SNMP agent`|entPhySensorOperStatus.["{#PHY}"]<p>Update: 1m</p>|
-|$1 sensor value (LLD)|<p>The most recent measurement obtained by the agent for this sensor.</p>|`SNMP agent`|entPhySensorValue.["{#PHY}"]<p>Update: 1m</p>|
-|$1 class (LLD)|<p>-</p>|`SNMP agent`|entPhysicalClass.["{#PHY}"]<p>Update: 1m</p>|
-|$1 sensor description (LLD)|<p>-</p>|`SNMP agent`|entPhysicalDescr.["{#PHY}"]<p>Update: 1d</p>|
+|$1 opration status|<p>-</p>|`SNMP agent`|entPhySensorOperStatus.fan.["{#PHY}"]<p>Update: 1m</p><p>LLD</p>|
+|$1 sensor value|<p>-</p>|`SNMP agent`|entPhySensorValue.fan.["{#PHY}"]<p>Update: 1m</p><p>LLD</p>|
+|$1 class|<p>-</p>|`SNMP agent`|entPhysicalClass.fan.["{#PHY}"]<p>Update: 1m</p><p>LLD</p>|
+|$1 sensor description|<p>-</p>|`SNMP agent`|entPhysicalDescr.fan.["{#PHY}"]<p>Update: 1d</p><p>LLD</p>|
+|$1 storage size|<p>-</p>|`SNMP agent`|hrStorageSize.["{#STOR}"]<p>Update: 30m</p><p>LLD</p>|
+|$1 storage type|<p>-</p>|`SNMP agent`|hrStorageType.["{#STOR}"]<p>Update: 12h</p><p>LLD</p>|
+|$1 storage used|<p>-</p>|`SNMP agent`|hrStorageUsed.["{#STOR}"]<p>Update: 1m</p><p>LLD</p>|
+|{#CPU} status|<p>"The current operational state of the device described by this row of the table. A value unknown(1) indicates that the current state of the device is unknown. running(2) indicates that the device is up and running and that no unusual error conditions are known. The warning(3) state indicates that agent has been informed of an unusual error condition by the operational software (e.g., a disk device driver) but that the device is still 'operational'. An example would be a high number of soft errors on a disk. A value of testing(4), indicates that the device is not available for use because it is in the testing state. The state of down(5) is used only when the agent has been informed that the device is not available for any use."</p>|`SNMP agent`|hrDeviceStatus.["{#CPU}"]<p>Update: 1m</p><p>LLD</p>|
+|{#CPU} load - percentage|<p>"The average, over the last minute, of the percentage of time that this processor was not idle. Implementations may approximate this one minute smoothing period if necessary."</p>|`SNMP agent`|hrProcessorLoad.["{#CPU}"]<p>Update: 1m</p><p>LLD</p>|
+|$1 admin status|<p>-</p>|`SNMP agent`|ifAdminStatus.["{#IFNAME}"]<p>Update: 2m</p><p>LLD</p>|
+|$1 alias (description)|<p>-</p>|`SNMP agent`|ifAlias.["{#IFNAME}"]<p>Update: 6h</p><p>LLD</p>|
+|$1 input traffic (30 sec)|<p>-</p>|`SNMP agent`|ifHCInOctets.["{#IFNAME}"]<p>Update: 30s</p><p>LLD</p>|
+|$1 output traffic (30 sec)|<p>-</p>|`SNMP agent`|ifHCOutOctets.["{#IFNAME}"]<p>Update: 30s</p><p>LLD</p>|
+|$1 link status|<p>-</p>|`SNMP agent`|ifOperStatus.["{#IFNAME}"]<p>Update: 2m</p><p>LLD</p>|
+|$1 opration status|<p>"The operational status of the sensor."</p>|`SNMP agent`|entPhySensorOperStatus.["{#PHY}"]<p>Update: 1m</p><p>LLD</p>|
+|$1 sensor value|<p>The most recent measurement obtained by the agent for this sensor.</p>|`SNMP agent`|entPhySensorValue.["{#PHY}"]<p>Update: 1m</p><p>LLD</p>|
+|$1 class|<p>-</p>|`SNMP agent`|entPhysicalClass.["{#PHY}"]<p>Update: 1m</p><p>LLD</p>|
+|$1 sensor description|<p>-</p>|`SNMP agent`|entPhysicalDescr.["{#PHY}"]<p>Update: 1d</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

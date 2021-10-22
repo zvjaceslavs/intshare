@@ -49,14 +49,14 @@ There are no template links in this template.
 |Covid19 - Total of Deaths|<p>-</p>|`Dependent item`|covid19.data[TotalDeaths]<p>Update: 0</p>|
 |Covid19 - Total Recovered|<p>-</p>|`Dependent item`|covid19.data[TotalRecovered]<p>Update: 0</p>|
 |Covid19 Full Info|<p>-</p>|`External check`|covid19_status.py<p>Update: 60m</p>|
-|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalCases (LLD)|<p>-</p>|`Calculated`|covid19.data["{#COUNTRY_NAME}", TotalCases]<p>Update: 30m</p>|
-|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - ActiveCases (LLD)|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", ActiveCases]<p>Update: 0</p>|
-|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Cases per Million habitants (LLD)|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", CasesperMillion]<p>Update: 0</p>|
-|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - NewCases (LLD)|<p>-</p>|`Dependent item`|covid19.data[ "{#COUNTRY_NAME}", NewCases]<p>Update: 0</p>|
-|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - NewDeaths (LLD)|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", NewDeaths]<p>Update: 0</p>|
-|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Serious,Critical (LLD)|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", Serious]<p>Update: 0</p>|
-|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalDeaths (LLD)|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", TotalDeaths]<p>Update: 0</p>|
-|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalRecovered (LLD)|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", TotalRecovered]<p>Update: 0</p>|
+|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalCases|<p>-</p>|`Calculated`|covid19.data["{#COUNTRY_NAME}", TotalCases]<p>Update: 30m</p><p>LLD</p>|
+|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - ActiveCases|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", ActiveCases]<p>Update: 0</p><p>LLD</p>|
+|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Cases per Million habitants|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", CasesperMillion]<p>Update: 0</p><p>LLD</p>|
+|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - NewCases|<p>-</p>|`Dependent item`|covid19.data[ "{#COUNTRY_NAME}", NewCases]<p>Update: 0</p><p>LLD</p>|
+|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - NewDeaths|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", NewDeaths]<p>Update: 0</p><p>LLD</p>|
+|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Serious,Critical|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", Serious]<p>Update: 0</p><p>LLD</p>|
+|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalDeaths|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", TotalDeaths]<p>Update: 0</p><p>LLD</p>|
+|[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalRecovered|<p>-</p>|`Dependent item`|covid19.data["{#COUNTRY_NAME}", TotalRecovered]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

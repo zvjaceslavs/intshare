@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-19T21:22:01Z</date>
+  <date>2021-10-22T08:01:16Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -90,7 +90,7 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message "]</key>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message"]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -100,7 +100,7 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message"]</key>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -170,16 +170,6 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour "]</key>
-          <delay>1s</delay>
-          <applications>
-            <application>
-              <name>Exchange 2019 Perfmonitor</name>
-            </application>
-          </applications>
-        </item>
-        <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour"]</key>
           <delay>1s</delay>
           <applications>
@@ -189,8 +179,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -201,6 +191,16 @@
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -230,7 +230,7 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages "]</key>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages"]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -240,7 +240,7 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages"]</key>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -290,16 +290,6 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec "]</key>
-          <delay>1s</delay>
-          <applications>
-            <application>
-              <name>Exchange 2019 Perfmonitor</name>
-            </application>
-          </applications>
-        </item>
-        <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec"]</key>
           <delay>1s</delay>
           <applications>
@@ -309,8 +299,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -329,8 +319,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -341,6 +331,16 @@
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -410,16 +410,6 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour "]</key>
-          <delay>1s</delay>
-          <applications>
-            <application>
-              <name>Exchange 2019 Perfmonitor</name>
-            </application>
-          </applications>
-        </item>
-        <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour"]</key>
           <delay>1s</delay>
           <applications>
@@ -429,8 +419,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -449,8 +439,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -469,8 +459,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -489,8 +479,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -501,6 +491,16 @@
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -530,16 +530,6 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total"]</key>
-          <delay>1s</delay>
-          <applications>
-            <application>
-              <name>Exchange 2019 Perfmonitor</name>
-            </application>
-          </applications>
-        </item>
-        <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total "]</key>
           <delay>1s</delay>
           <applications>
@@ -549,8 +539,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total"]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -569,8 +559,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -581,6 +571,16 @@
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -610,16 +610,6 @@
         </item>
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections "]</key>
-          <delay>1s</delay>
-          <applications>
-            <application>
-              <name>Exchange 2019 Perfmonitor</name>
-            </application>
-          </applications>
-        </item>
-        <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections"]</key>
           <delay>1s</delay>
           <applications>
@@ -629,8 +619,8 @@
           </applications>
         </item>
         <item>
-          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections</name>
-          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections "]</key>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections "]</key>
           <delay>1s</delay>
           <applications>
             <application>
@@ -641,6 +631,16 @@
         <item>
           <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections</name>
           <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections"]</key>
+          <delay>1s</delay>
+          <applications>
+            <application>
+              <name>Exchange 2019 Perfmonitor</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections</name>
+          <key>perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections "]</key>
           <delay>1s</delay>
           <applications>
             <application>

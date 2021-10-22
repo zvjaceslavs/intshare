@@ -122,7 +122,7 @@ There are no template links in this template.
 |[Oracle] Database size|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_size,1]<p>Update: 86400</p>|
 |[Oracle] Database uptime|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_uptime,1]<p>Update: 600</p>|
 |[Oracle] Database version|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_version,1]<p>Update: 86400</p>|
-|[Oracle] Tablespace $3 percentage used (LLD)|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}]<p>Update: 600</p>|
+|[Oracle] Tablespace $3 percentage used|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}]<p>Update: 600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

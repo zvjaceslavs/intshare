@@ -27,12 +27,12 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Inbound broadcast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Inbound multicast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Inbound unicast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCInUcastPkts.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outbound broadcast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutBroadcastPkts.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outbound multicast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutMulticastPkts.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outbound unicast packets on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutUcastPkts.[{#SNMPVALUE}]<p>Update: 1m</p>|
+|Inbound broadcast packets on interface $1|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Inbound multicast packets on interface $1|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Inbound unicast packets on interface $1|<p>-</p>|`SNMP agent`|ifHCInUcastPkts.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outbound broadcast packets on interface $1|<p>-</p>|`SNMP agent`|ifHCOutBroadcastPkts.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outbound multicast packets on interface $1|<p>-</p>|`SNMP agent`|ifHCOutMulticastPkts.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outbound unicast packets on interface $1|<p>-</p>|`SNMP agent`|ifHCOutUcastPkts.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

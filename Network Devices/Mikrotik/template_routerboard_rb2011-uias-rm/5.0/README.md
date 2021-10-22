@@ -50,14 +50,14 @@ There are no template links in this template.
 |Voltagem|<p>-</p>|`SNMP agent`|mtxrHlVoltage<p>Update: 1m</p>|
 |System Software Version Running|<p>-</p>|`SNMP agent`|mtxrLicVersion<p>Update: 10m</p>|
 |Serial Number|<p>-</p>|`SNMP agent`|mtxrSerialNumber<p>Update: 30s</p>|
-|Interface {#IFNAME}({#IFALIAS}): Discards In (LLD)|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 300s</p>|
-|Interface {#IFNAME}({#IFALIAS}): Erros In (LLD)|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 300s</p>|
-|Interface {#IFNAME}({#IFALIAS}): Bytes In (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 120;30/2-6,07:00-21:00</p>|
-|Interface {#IFNAME}({#IFALIAS}): Discards Out (LLD)|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 300s</p>|
-|Interface {#IFNAME}({#IFALIAS}): Erros Out (LLD)|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 300</p>|
-|Interface {#IFNAME}({#IFALIAS}): Bytes Out (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 120;30/2-6,07:00-21:00</p>|
-|Interface {#IFNAME}({#IFALIAS}): Speed (LLD)|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 300</p>|
-|Interface {#IFNAME}({#IFALIAS}): Operational status (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 240s;120s/2-6,07:00-21:00</p>|
+|Interface {#IFNAME}({#IFALIAS}): Discards In|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Erros In|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Bytes In|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 120;30/2-6,07:00-21:00</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Discards Out|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Erros Out|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Bytes Out|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 120;30/2-6,07:00-21:00</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Speed|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 240s;120s/2-6,07:00-21:00</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

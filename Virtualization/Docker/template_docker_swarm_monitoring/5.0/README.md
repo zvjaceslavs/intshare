@@ -39,23 +39,23 @@ There are no template links in this template.
 |Docker swarm services raw|<p>-</p>|`HTTP agent`|docker.swarm.services.raw<p>Update: 5m</p>|
 |Docker swarm tasks raw info|<p>-</p>|`HTTP agent`|docker.swarm.tasks.raw.info<p>Update: 1m</p>|
 |Docker swarm updated at|<p>-</p>|`Dependent item`|docker.swarm.updated_at<p>Update: 0</p>|
-|Docker swarm uptime {#SERVICE} (LLD)|<p>-</p>|`Dependent item`|docker.swarm.service.uptime[{#SERVICE}]<p>Update: 0</p>|
-|Docker swarm number running tasks for {#SERVICE} (LLD)|<p>-</p>|`Dependent item`|docker.swarm.tasks.running[{#SERVICE}]<p>Update: 0</p>|
-|Raw data node {#NAME} at {#ADDR} (LLD)|<p>-</p>|`HTTP agent`|docker.nodes[{#ID}]<p>Update: 5m</p>|
-|Node {#NAME} availability (LLD)|<p>-</p>|`Dependent item`|docker.node.availability[{#ID}]<p>Update: 0</p>|
-|Node {#NAME} engine version (LLD)|<p>-</p>|`Dependent item`|docker.node.engine_version[{#ID}]<p>Update: 0</p>|
-|Node {#NAME} manager status (LLD)|<p>-</p>|`Dependent item`|docker.node.manager_status[{#ID}]<p>Update: 0</p>|
-|Node {#NAME} resources CPUs (LLD)|<p>-</p>|`Dependent item`|docker.node.resources.cpu[{#ID}]<p>Update: 0</p>|
-|Node {#NAME} resources memory (LLD)|<p>-</p>|`Dependent item`|docker.node.resources.mem[{#ID}]<p>Update: 0</p>|
-|Node {#NAME} role (LLD)|<p>-</p>|`Dependent item`|docker.node.role[{#ID}]<p>Update: 0</p>|
-|Node {#NAME} status (LLD)|<p>-</p>|`Dependent item`|docker.node.status[{#ID}]<p>Update: 0</p>|
-|{#NAME} CPU load % (LLD)|<p>-</p>|`Calculated`|docker.container.cpu_load[{#ID}]<p>Update: 1m</p>|
-|Raw data container stats {#NAME} (LLD)|<p>-</p>|`HTTP agent`|docker.container.stats[{#ID}]<p>Update: 1m</p>|
-|Raw data container info {#NAME} (LLD)|<p>-</p>|`HTTP agent`|docker.container[{#ID}]<p>Update: 5m</p>|
-|{#NAME} CPU usage (LLD)|<p>-</p>|`Dependent item`|docker.container.cpu[{#ID}]<p>Update: 0</p>|
-|{#NAME} CPU number (LLD)|<p>-</p>|`Dependent item`|docker.container.cpu_num[{#ID}]<p>Update: 0</p>|
-|{#NAME} Mem usage (LLD)|<p>-</p>|`Dependent item`|docker.container.mem[{#ID}]<p>Update: 0</p>|
-|{#NAME} CPU system usage (LLD)|<p>-</p>|`Dependent item`|docker.container.system_cpu[{#ID}]<p>Update: 0</p>|
+|Docker swarm uptime {#SERVICE}|<p>-</p>|`Dependent item`|docker.swarm.service.uptime[{#SERVICE}]<p>Update: 0</p><p>LLD</p>|
+|Docker swarm number running tasks for {#SERVICE}|<p>-</p>|`Dependent item`|docker.swarm.tasks.running[{#SERVICE}]<p>Update: 0</p><p>LLD</p>|
+|Raw data node {#NAME} at {#ADDR}|<p>-</p>|`HTTP agent`|docker.nodes[{#ID}]<p>Update: 5m</p><p>LLD</p>|
+|Node {#NAME} availability|<p>-</p>|`Dependent item`|docker.node.availability[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Node {#NAME} engine version|<p>-</p>|`Dependent item`|docker.node.engine_version[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Node {#NAME} manager status|<p>-</p>|`Dependent item`|docker.node.manager_status[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Node {#NAME} resources CPUs|<p>-</p>|`Dependent item`|docker.node.resources.cpu[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Node {#NAME} resources memory|<p>-</p>|`Dependent item`|docker.node.resources.mem[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Node {#NAME} role|<p>-</p>|`Dependent item`|docker.node.role[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Node {#NAME} status|<p>-</p>|`Dependent item`|docker.node.status[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|{#NAME} CPU load %|<p>-</p>|`Calculated`|docker.container.cpu_load[{#ID}]<p>Update: 1m</p><p>LLD</p>|
+|Raw data container stats {#NAME}|<p>-</p>|`HTTP agent`|docker.container.stats[{#ID}]<p>Update: 1m</p><p>LLD</p>|
+|Raw data container info {#NAME}|<p>-</p>|`HTTP agent`|docker.container[{#ID}]<p>Update: 5m</p><p>LLD</p>|
+|{#NAME} CPU usage|<p>-</p>|`Dependent item`|docker.container.cpu[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|{#NAME} CPU number|<p>-</p>|`Dependent item`|docker.container.cpu_num[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|{#NAME} Mem usage|<p>-</p>|`Dependent item`|docker.container.mem[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|{#NAME} CPU system usage|<p>-</p>|`Dependent item`|docker.container.system_cpu[{#ID}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

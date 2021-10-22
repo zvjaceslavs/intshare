@@ -71,21 +71,21 @@ There are no template links in this template.
 |Net type|<p>-</p>|`SNMP agent`|netType<p>Update: 1h</p>|
 |Software version|<p>-</p>|`SNMP agent`|softwareVersion<p>Update: 1h</p>|
 |Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 1m</p>|
-|UPS No{#SNMPINDEX} Battery Charge (LLD)|<p>-</p>|`SNMP agent`|upsBattery[{#SNMPINDEX}]<p>Update: 1m</p>|
-|UPS No{#SNMPINDEX} Manufacturer (LLD)|<p>-</p>|`SNMP agent`|upsManufacturer[{#SNMPINDEX}]<p>Update: 1h</p>|
-|UPS No{#SNMPINDEX} Mode (LLD)|<p>-</p>|`SNMP agent`|upsMode[{#SNMPINDEX}]<p>Update: 1h</p>|
-|UPS No{#SNMPINDEX} Product (LLD)|<p>-</p>|`SNMP agent`|upsProduct[{#SNMPINDEX}]<p>Update: 1h</p>|
-|UPS No{#SNMPINDEX} Status (LLD)|<p>-</p>|`SNMP agent`|upsStatus[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk capacity in slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|pd.capacity[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Disk model in slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|pd.model[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Disk SN in slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|pd.SN[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Disk temperature in slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|pd.temperature[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Disk vendor in slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|pd.Vendor[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Logical disk {#VOLUMENAME} free space (LLD)|<p>-</p>|`SNMP agent`|ld.freespace[{#VOLUMENAME}]<p>Update: 1m</p>|
-|Logical disk {#VOLUMENAME} FS type (LLD)|<p>-</p>|`SNMP agent`|ld.fstype[{#VOLUMENAME}]<p>Update: 1h</p>|
-|Logical disk {#VOLUMENAME} free percent (LLD)|<p>-</p>|`Calculated`|ld.pfree[{#VOLUMENAME}]<p>Update: 1m</p>|
-|Logical disk {#VOLUMENAME} RAID level (LLD)|<p>-</p>|`SNMP agent`|ld.raid[{#VOLUMENAME}]<p>Update: 1h</p>|
-|Logical disk {#VOLUMENAME} size (LLD)|<p>-</p>|`SNMP agent`|pd.size[{#VOLUMENAME}]<p>Update: 1h</p>|
+|UPS No{#SNMPINDEX} Battery Charge|<p>-</p>|`SNMP agent`|upsBattery[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|UPS No{#SNMPINDEX} Manufacturer|<p>-</p>|`SNMP agent`|upsManufacturer[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|UPS No{#SNMPINDEX} Mode|<p>-</p>|`SNMP agent`|upsMode[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|UPS No{#SNMPINDEX} Product|<p>-</p>|`SNMP agent`|upsProduct[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|UPS No{#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|upsStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk capacity in slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|pd.capacity[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Disk model in slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|pd.model[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Disk SN in slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|pd.SN[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Disk temperature in slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|pd.temperature[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk vendor in slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|pd.Vendor[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Logical disk {#VOLUMENAME} free space|<p>-</p>|`SNMP agent`|ld.freespace[{#VOLUMENAME}]<p>Update: 1m</p><p>LLD</p>|
+|Logical disk {#VOLUMENAME} FS type|<p>-</p>|`SNMP agent`|ld.fstype[{#VOLUMENAME}]<p>Update: 1h</p><p>LLD</p>|
+|Logical disk {#VOLUMENAME} free percent|<p>-</p>|`Calculated`|ld.pfree[{#VOLUMENAME}]<p>Update: 1m</p><p>LLD</p>|
+|Logical disk {#VOLUMENAME} RAID level|<p>-</p>|`SNMP agent`|ld.raid[{#VOLUMENAME}]<p>Update: 1h</p><p>LLD</p>|
+|Logical disk {#VOLUMENAME} size|<p>-</p>|`SNMP agent`|pd.size[{#VOLUMENAME}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

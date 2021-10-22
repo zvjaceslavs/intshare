@@ -52,18 +52,18 @@ There are no template links in this template.
 |Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
 |Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
-|Alias of interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifAlias[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Inbound errors on interface $1 (LLD)|<p>The number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Incoming traffic on interface $1 (LLD)|<p>The total number of octets received on the interface, including framing characters.</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 300</p>|
-|Operational status of interface $1 (LLD)|<p>The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>The total number of octets transmitted out of the interface, including framing characters.</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 300</p>|
-|Speed of interface $1 (LLD)|<p>An estimate of the interface's current bandwidth in bits per second. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.</p>|`SNMP agent`|ifSpeed[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Device fan $1-1 (LLD)|<p>-</p>|`SNMP agent`|swFanSpeed.1.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Device fan $1-2 (LLD)|<p>-</p>|`SNMP agent`|swFanSpeed.2.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Device memory total, unit $1 (LLD)|<p>-</p>|`SNMP agent`|agentDRAMutilizationTotalDRAM[{#SNMPVALUE}]<p>Update: 300</p>|
-|Device memory used, unit $1 (LLD)|<p>-</p>|`SNMP agent`|agentDRAMutilizationUsedDRAM[{#SNMPVALUE}]<p>Update: 300</p>|
-|Device memory utilization, unit $1 (LLD)|<p>-</p>|`SNMP agent`|agentDRAMutilization[{#SNMPVALUE}]<p>Update: 300</p>|
-|Device temperature, unit $1 (LLD)|<p>-</p>|`SNMP agent`|swTemperatureCurrent[{#SNMPVALUE}]<p>Update: 300</p>|
+|Alias of interface $1|<p>-</p>|`SNMP agent`|ifAlias[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Inbound errors on interface $1|<p>The number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>The total number of octets received on the interface, including framing characters.</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Operational status of interface $1|<p>The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>The total number of octets transmitted out of the interface, including framing characters.</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Speed of interface $1|<p>An estimate of the interface's current bandwidth in bits per second. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.</p>|`SNMP agent`|ifSpeed[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Device fan $1-1|<p>-</p>|`SNMP agent`|swFanSpeed.1.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Device fan $1-2|<p>-</p>|`SNMP agent`|swFanSpeed.2.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Device memory total, unit $1|<p>-</p>|`SNMP agent`|agentDRAMutilizationTotalDRAM[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Device memory used, unit $1|<p>-</p>|`SNMP agent`|agentDRAMutilizationUsedDRAM[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Device memory utilization, unit $1|<p>-</p>|`SNMP agent`|agentDRAMutilization[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Device temperature, unit $1|<p>-</p>|`SNMP agent`|swTemperatureCurrent[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

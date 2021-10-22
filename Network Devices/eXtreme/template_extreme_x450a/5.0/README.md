@@ -29,12 +29,12 @@ There are no template links in this template.
 |Operational Status of Redundant Power Supply|<p>EXTREME-SYSTEM-MIB::extremeRedundantPowerStatus Operational status of an external redundant power supply to a device.</p>|`SNMP agent`|extremeRedundantPowerStatus<p>Update: 60</p>|
 |Secondary Software Revision|<p>EXTREME-SYSTEM-MIB::extremeSecondarySoftwareRev The software revision of the secondary image stored in this device.</p>|`SNMP agent`|extremeSecondarySoftwareRev<p>Update: 86400</p>|
 |System ID|<p>EXTREME-SYSTEM-MIB::extremeSystemID This represents the System ID of the Summit Switch.</p>|`SNMP agent`|extremeSystemID<p>Update: 86400</p>|
-|CPU #$1 Utilization (5min) (LLD)|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeCpuMonitorSystemUtilization5mins The CPU utilization by system resources. This is the utilization of the system resourcesin the last 5 minutes.</p>|`SNMP agent`|extremeCpuMonitorSystemUtilization5mins[{#SNMPINDEX}]<p>Update: 300</p>|
-|Free Memory #$1 (LLD)|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeMemoryMonitorSystemFree Total amount of free memory in Kbytes in the system.</p>|`SNMP agent`|extremeMemoryMonitorSystemFree[{#SNMPVALUE}]<p>Update: 60</p>|
-|Total Memory #$1 (LLD)|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeMemoryMonitorSystemTotal Total amount of DRAM in Kbytes in the system.</p>|`SNMP agent`|extremeMemoryMonitorSystemTotal[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Used Memory #$1 (LLD)|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeMemoryMonitorSystemUsage Total amount of memory used by system services in Kbytes in the system.</p>|`SNMP agent`|extremeMemoryMonitorSystemUsage[{#SNMPVALUE}]<p>Update: 60</p>|
-|Used Memory #$1 by Applications (LLD)|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeMemoryMonitorUserUsage Total amount of memory used by applications in Kbytes in the system.</p>|`SNMP agent`|extremeMemoryMonitorUserUsage[{#SNMPVALUE}]<p>Update: 300</p>|
-|Status of FAN #$1 (LLD)|<p>EXTREME-SYSTEM-MIB::extremeFanOperational Operational status of a cooling fan.</p>|`SNMP agent`|extremeFanOperational[{#SNMPVALUE}]<p>Update: 30</p>|
+|CPU #$1 Utilization (5min)|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeCpuMonitorSystemUtilization5mins The CPU utilization by system resources. This is the utilization of the system resourcesin the last 5 minutes.</p>|`SNMP agent`|extremeCpuMonitorSystemUtilization5mins[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Free Memory #$1|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeMemoryMonitorSystemFree Total amount of free memory in Kbytes in the system.</p>|`SNMP agent`|extremeMemoryMonitorSystemFree[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Total Memory #$1|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeMemoryMonitorSystemTotal Total amount of DRAM in Kbytes in the system.</p>|`SNMP agent`|extremeMemoryMonitorSystemTotal[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Used Memory #$1|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeMemoryMonitorSystemUsage Total amount of memory used by system services in Kbytes in the system.</p>|`SNMP agent`|extremeMemoryMonitorSystemUsage[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Used Memory #$1 by Applications|<p>EXTREME-SOFTWARE-MONITOR-MIB::extremeMemoryMonitorUserUsage Total amount of memory used by applications in Kbytes in the system.</p>|`SNMP agent`|extremeMemoryMonitorUserUsage[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Status of FAN #$1|<p>EXTREME-SYSTEM-MIB::extremeFanOperational Operational status of a cooling fan.</p>|`SNMP agent`|extremeFanOperational[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

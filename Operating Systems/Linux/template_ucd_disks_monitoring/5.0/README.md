@@ -57,14 +57,14 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Disk Load Average 1 Minute of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ucdDiskIOLA1[{#SNMPVALUE}]<p>Update: 30</p>|
-|Disk Load Average 5 Minutes of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ucdDiskIOLA5[{#SNMPVALUE}]<p>Update: 30</p>|
-|Disk Load Average 15 Minutes of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ucdDiskIOLA15[{#SNMPVALUE}]<p>Update: 30</p>|
-|Bytes Read From Disk Since Boot $1 (LLD)|<p>-</p>|`SNMP agent`|ucdStorageBytesDiskRead[{#SNMPVALUE}]<p>Update: 30</p>|
-|Bytes Written To Disk Since Boot $1 (LLD)|<p>-</p>|`SNMP agent`|ucdStorageBytesDiskWritten[{#SNMPVALUE}]<p>Update: 30</p>|
-|Description of Disk $1 (LLD)|<p>-</p>|`SNMP agent`|ucdStorageDesc[{#SNMPVALUE}]<p>Update: 30</p>|
-|Read Access From Disk Since Boot $1 (LLD)|<p>-</p>|`SNMP agent`|ucdStorageDiskReads[{#SNMPVALUE}]<p>Update: 30</p>|
-|Write Access To Disk Since Boot $1 (LLD)|<p>-</p>|`SNMP agent`|ucdStorageDiskWrites[{#SNMPVALUE}]<p>Update: 30</p>|
+|Disk Load Average 1 Minute of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ucdDiskIOLA1[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Disk Load Average 5 Minutes of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ucdDiskIOLA5[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Disk Load Average 15 Minutes of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ucdDiskIOLA15[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Bytes Read From Disk Since Boot $1|<p>-</p>|`SNMP agent`|ucdStorageBytesDiskRead[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Bytes Written To Disk Since Boot $1|<p>-</p>|`SNMP agent`|ucdStorageBytesDiskWritten[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Description of Disk $1|<p>-</p>|`SNMP agent`|ucdStorageDesc[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Read Access From Disk Since Boot $1|<p>-</p>|`SNMP agent`|ucdStorageDiskReads[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Write Access To Disk Since Boot $1|<p>-</p>|`SNMP agent`|ucdStorageDiskWrites[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

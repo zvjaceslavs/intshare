@@ -65,17 +65,17 @@ There are no template links in this template.
 |Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 30</p>|
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 30</p>|
 |Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 30</p>|
-|Inbound errors on interface $1 (LLD)|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Incoming traffic on interface $1 (LLD)|<p>The number of octets in valid MAC frames received on this interface in 1 second, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 30s</p>|
-|Operational status of interface $1 (LLD)|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outbound errors on interface $1 (LLD)|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>The number of octets transmitted in MAC frames on this interface per second , including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Traffic on {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|Traffic[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Processor $1 type (LLD)|<p>Processor type</p>|`SNMP agent`|hrDeviceDescr[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Utilization of processor $1 (LLD)|<p>The average, over the last minute, of the percentage of time that this processor was not idle. Implementations may approximate this one minute smoothing period if necessary.</p>|`SNMP agent`|hrProcessorLoad[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Description of storage $1 (LLD)|<p>A description of the type and instance of the storage described by this entry.</p>|`SNMP agent`|hrStorageDescr[{#SNMPVALUE}]<p>Update: 30s</p>|
-|Total disk space on $1 (LLD)|<p>total disk space in bytes.</p>|`SNMP agent`|hrStorageSize[{#SNMPVALUE}]<p>Update: 30s</p>|
-|Used disk space on $1 (LLD)|<p>Used disk space in bytes.</p>|`SNMP agent`|hrStorageUsed[{#SNMPVALUE}]<p>Update: 30s</p>|
+|Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface in 1 second, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface per second , including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Traffic on {#SNMPVALUE}|<p>-</p>|`SNMP agent`|Traffic[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Processor $1 type|<p>Processor type</p>|`SNMP agent`|hrDeviceDescr[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Utilization of processor $1|<p>The average, over the last minute, of the percentage of time that this processor was not idle. Implementations may approximate this one minute smoothing period if necessary.</p>|`SNMP agent`|hrProcessorLoad[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Description of storage $1|<p>A description of the type and instance of the storage described by this entry.</p>|`SNMP agent`|hrStorageDescr[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|Total disk space on $1|<p>total disk space in bytes.</p>|`SNMP agent`|hrStorageSize[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|Used disk space on $1|<p>Used disk space in bytes.</p>|`SNMP agent`|hrStorageUsed[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

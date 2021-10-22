@@ -39,16 +39,16 @@ There are no template links in this template.
 |Серийный номер видеосервера|<p>-</p>|`SNMP agent`|DnSerial<p>Update: 24h</p>|
 |Число потерянных кадров|<p>Число потерянных кадров от камер, которое не успевают записывать HDD видеосервера.</p>|`SNMP agent`|DnStorageDroppedFrames<p>Update: 30s</p>|
 |Исходящий трафик|<p>-</p>|`SNMP agent`|Dn_TX_SPEED<p>Update: 30s</p>|
-|Свободное место HDD $1 (LLD)|<p>-</p>|`SNMP agent`|DnDiskFreeSpace[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Жесткий диск $1 (LLD)|<p>-</p>|`SNMP agent`|DnDiskIndex[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Модель и SN HDD $1 (LLD)|<p>-</p>|`SNMP agent`|DnDiskSerial[{#SNMPINDEX}]<p>Update: 24h</p>|
-|Статус HDD $1 (LLD)|<p>-</p>|`SNMP agent`|DnDiskStatus[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Объем HDD $1 (LLD)|<p>-</p>|`SNMP agent`|DnDiskTotalSpace[{#SNMPINDEX}]<p>Update: 24h</p>|
-|IP-адрес камеры $1 (LLD)|<p>-</p>|`SNMP agent`|CamIPAddress.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Состояние камеры $1 (LLD)|<p>-</p>|`SNMP agent`|DnCamConnected.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Состояние канала $1 (LLD)|<p>-</p>|`SNMP agent`|DnCamEnabled.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Количество FPS 1-го потока камеры $1 (LLD)|<p>-</p>|`SNMP agent`|DnCamFramerate.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|Статус второго потока Камера $1 (LLD)|<p>-</p>|`SNMP agent`|DnCamHasSubstream.[{#SNMPINDEX}]<p>Update: 2m</p>|
+|Свободное место HDD $1|<p>-</p>|`SNMP agent`|DnDiskFreeSpace[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Жесткий диск $1|<p>-</p>|`SNMP agent`|DnDiskIndex[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Модель и SN HDD $1|<p>-</p>|`SNMP agent`|DnDiskSerial[{#SNMPINDEX}]<p>Update: 24h</p><p>LLD</p>|
+|Статус HDD $1|<p>-</p>|`SNMP agent`|DnDiskStatus[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Объем HDD $1|<p>-</p>|`SNMP agent`|DnDiskTotalSpace[{#SNMPINDEX}]<p>Update: 24h</p><p>LLD</p>|
+|IP-адрес камеры $1|<p>-</p>|`SNMP agent`|CamIPAddress.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Состояние камеры $1|<p>-</p>|`SNMP agent`|DnCamConnected.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Состояние канала $1|<p>-</p>|`SNMP agent`|DnCamEnabled.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Количество FPS 1-го потока камеры $1|<p>-</p>|`SNMP agent`|DnCamFramerate.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|Статус второго потока Камера $1|<p>-</p>|`SNMP agent`|DnCamHasSubstream.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

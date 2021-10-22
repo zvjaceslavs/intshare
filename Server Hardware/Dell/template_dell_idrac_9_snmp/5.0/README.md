@@ -73,47 +73,47 @@ There are no template links in this template.
 |System BIOS Status|<p>-</p>|`SNMP agent`|SystemBiosStatus<p>Update: 1h</p>|
 |System Power State|<p>4 server is on 3 server is on stand-by</p>|`SNMP agent`|SystemPowerState<p>Update: 5m</p>|
 |Voltage Status Combined|<p>-</p>|`SNMP agent`|VoltageStatusCombined<p>Update: 10m</p>|
-|Disk {#SNMPINDEX} : Manufacture Day (LLD)|<p>-</p>|`SNMP agent`|DiskManufactureDay.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Disk {#SNMPINDEX} : Manufacturer (LLD)|<p>-</p>|`SNMP agent`|DiskManufacturer.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Disk {#SNMPINDEX} : Manufacture Week (LLD)|<p>-</p>|`SNMP agent`|DiskManufactureWeek.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Disk {#SNMPINDEX} : Manufacture Year (LLD)|<p>-</p>|`SNMP agent`|DiskManufactureYear.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Disk {#SNMPINDEX} : Model Number (LLD)|<p>-</p>|`SNMP agent`|DiskModel.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Disk {#SNMPINDEX} : Name (LLD)|<p>-</p>|`SNMP agent`|DiskName.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Disk {#SNMPINDEX} : Serial Number (LLD)|<p>-</p>|`SNMP agent`|DiskSerialNo.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Disk {#SNMPINDEX} : Disk Size (LLD)|<p>-</p>|`SNMP agent`|DiskSize.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Disk {#SNMPINDEX} : Disk State (LLD)|<p>-</p>|`SNMP agent`|DiskState.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Disk {#SNMPINDEX} : Disk Status (LLD)|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Fan {#SNMPVALUE} Speed (LLD)|<p>-</p>|`SNMP agent`|FanSpeed.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Fan {#SNMPVALUE} Status (LLD)|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Memory Slot {#SNMPVALUE} Manufacturer (LLD)|<p>-</p>|`SNMP agent`|MemManufacturer[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Memory Slot {#SNMPVALUE} Part Number (LLD)|<p>-</p>|`SNMP agent`|MemPartlNo.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Memory Slot {#SNMPVALUE} Serial Number (LLD)|<p>-</p>|`SNMP agent`|MemSerialNo.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Memory Slot {#SNMPVALUE} Size (LLD)|<p>-</p>|`SNMP agent`|MemSize.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Memory Slot {#SNMPVALUE} Speed (LLD)|<p>-</p>|`SNMP agent`|MemSpeed.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Memory Slot {#SNMPVALUE} Status (LLD)|<p>-</p>|`SNMP agent`|MemStatus.[{#SNMPINDEX}]<p>Update: 30m</p>|
-|NIC {#SNMPINDEX} : Connection Status (LLD)|<p>-</p>|`SNMP agent`|NetConnStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|NIC {#SNMPINDEX} : MAC Address (LLD)|<p>-</p>|`SNMP agent`|NetMAC.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|NIC {#SNMPINDEX} : Name (LLD)|<p>-</p>|`SNMP agent`|NetName.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|NIC {#SNMPINDEX} : Slot (LLD)|<p>-</p>|`SNMP agent`|NetSlot.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|NIC {#SNMPINDEX} : Status (LLD)|<p>-</p>|`SNMP agent`|NetStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Power Supply {#SNMPINDEX} Input Voltage (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyInputVoltage.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Power Supply {#SNMPINDEX} Maximum Power (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyMaxPower.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Power Supply {#SNMPINDEX} Sensor State (LLD)|<p>-</p>|`SNMP agent`|PowerSupplySensorState.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Power Supply {#SNMPINDEX} State Settings (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyStateSettings.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Power Supply {#SNMPINDEX} Status (LLD)|<p>-</p>|`SNMP agent`|PowerSupplyStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Processor {#SNMPINDEX} Status (LLD)|<p>-</p>|`SNMP agent`|ProcStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Temperature Sensor {#SNMPVALUE} Critical Low-Limit (LLD)|<p>-</p>|`SNMP agent`|TempCritLowLimit.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Temperature Sensor {#SNMPVALUE} Critical Up-Limit (LLD)|<p>-</p>|`SNMP agent`|TempCritUpLimit.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Temperature Sensor {#SNMPVALUE} Status (LLD)|<p>-</p>|`SNMP agent`|TempStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Temperature Sensor {#SNMPVALUE} Value (LLD)|<p>-</p>|`SNMP agent`|TempValue.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Temperature Sensor {#SNMPVALUE} Warning Low-Limit (LLD)|<p>-</p>|`SNMP agent`|TempWarnLowLimit.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Temperature Sensor {#SNMPVALUE} Warning Up-Limit (LLD)|<p>-</p>|`SNMP agent`|TempWarnUpLimit.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Voltage : {#SNMPVALUE} Status (LLD)|<p>-</p>|`SNMP agent`|VoltageStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Volume {#SNMPINDEX} : Virtual Disk State (LLD)|<p>-</p>|`SNMP agent`|VolumeDiskState.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Volume {#SNMPINDEX} : Name (LLD)|<p>-</p>|`SNMP agent`|VolumeName.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Volume {#SNMPINDEX} : Size (LLD)|<p>-</p>|`SNMP agent`|VolumeSize.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|Volume {#SNMPINDEX} : State (LLD)|<p>-</p>|`SNMP agent`|VolumeState.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Volume {#SNMPINDEX} : Status (LLD)|<p>-</p>|`SNMP agent`|VolumeStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
+|Disk {#SNMPINDEX} : Manufacture Day|<p>-</p>|`SNMP agent`|DiskManufactureDay.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Manufacturer|<p>-</p>|`SNMP agent`|DiskManufacturer.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Manufacture Week|<p>-</p>|`SNMP agent`|DiskManufactureWeek.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Manufacture Year|<p>-</p>|`SNMP agent`|DiskManufactureYear.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Model Number|<p>-</p>|`SNMP agent`|DiskModel.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Name|<p>-</p>|`SNMP agent`|DiskName.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Serial Number|<p>-</p>|`SNMP agent`|DiskSerialNo.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Disk Size|<p>-</p>|`SNMP agent`|DiskSize.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Disk State|<p>-</p>|`SNMP agent`|DiskState.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Disk {#SNMPINDEX} : Disk Status|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Fan {#SNMPVALUE} Speed|<p>-</p>|`SNMP agent`|FanSpeed.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Fan {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Memory Slot {#SNMPVALUE} Manufacturer|<p>-</p>|`SNMP agent`|MemManufacturer[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Memory Slot {#SNMPVALUE} Part Number|<p>-</p>|`SNMP agent`|MemPartlNo.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Memory Slot {#SNMPVALUE} Serial Number|<p>-</p>|`SNMP agent`|MemSerialNo.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Memory Slot {#SNMPVALUE} Size|<p>-</p>|`SNMP agent`|MemSize.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Memory Slot {#SNMPVALUE} Speed|<p>-</p>|`SNMP agent`|MemSpeed.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Memory Slot {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|MemStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|NIC {#SNMPINDEX} : Connection Status|<p>-</p>|`SNMP agent`|NetConnStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|NIC {#SNMPINDEX} : MAC Address|<p>-</p>|`SNMP agent`|NetMAC.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|NIC {#SNMPINDEX} : Name|<p>-</p>|`SNMP agent`|NetName.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|NIC {#SNMPINDEX} : Slot|<p>-</p>|`SNMP agent`|NetSlot.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|NIC {#SNMPINDEX} : Status|<p>-</p>|`SNMP agent`|NetStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Power Supply {#SNMPINDEX} Input Voltage|<p>-</p>|`SNMP agent`|PowerSupplyInputVoltage.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Power Supply {#SNMPINDEX} Maximum Power|<p>-</p>|`SNMP agent`|PowerSupplyMaxPower.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Power Supply {#SNMPINDEX} Sensor State|<p>-</p>|`SNMP agent`|PowerSupplySensorState.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Power Supply {#SNMPINDEX} State Settings|<p>-</p>|`SNMP agent`|PowerSupplyStateSettings.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Power Supply {#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|PowerSupplyStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Processor {#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|ProcStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Critical Low-Limit|<p>-</p>|`SNMP agent`|TempCritLowLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Critical Up-Limit|<p>-</p>|`SNMP agent`|TempCritUpLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|TempStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Value|<p>-</p>|`SNMP agent`|TempValue.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Warning Low-Limit|<p>-</p>|`SNMP agent`|TempWarnLowLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Warning Up-Limit|<p>-</p>|`SNMP agent`|TempWarnUpLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Voltage : {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|VoltageStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : Virtual Disk State|<p>-</p>|`SNMP agent`|VolumeDiskState.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : Name|<p>-</p>|`SNMP agent`|VolumeName.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : Size|<p>-</p>|`SNMP agent`|VolumeSize.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : State|<p>-</p>|`SNMP agent`|VolumeState.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : Status|<p>-</p>|`SNMP agent`|VolumeStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

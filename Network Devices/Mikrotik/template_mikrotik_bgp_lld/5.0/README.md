@@ -81,8 +81,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#PEERNAME} ({#REMOTEAS}) - Prefix (LLD)|<p>-</p>|`SSH agent`|ssh.run[{#PEERNAME}-prefix,,{$MIKROTIK_SSH_PORT},]<p>Update: 60s</p>|
-|{#PEERNAME} ({#REMOTEAS}) - Status (LLD)|<p>-</p>|`SSH agent`|ssh.run[{#PEERNAME}-status,,{$MIKROTIK_SSH_PORT},]<p>Update: 60s</p>|
+|{#PEERNAME} ({#REMOTEAS}) - Prefix|<p>-</p>|`SSH agent`|ssh.run[{#PEERNAME}-prefix,,{$MIKROTIK_SSH_PORT},]<p>Update: 60s</p><p>LLD</p>|
+|{#PEERNAME} ({#REMOTEAS}) - Status|<p>-</p>|`SSH agent`|ssh.run[{#PEERNAME}-status,,{$MIKROTIK_SSH_PORT},]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

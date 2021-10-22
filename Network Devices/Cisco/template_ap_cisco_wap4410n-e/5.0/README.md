@@ -56,9 +56,6 @@ There are no discovery rules in this template.
 |SSID3 Packet Out|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.9.6.1.32.4410.1.1.3.2.1.8.1.3<p>Update: 60</p>|
 |SSID4 Packet Out|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.9.6.1.32.4410.1.1.3.2.1.8.1.4<p>Update: 60</p>|
 |Users Connected|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.9.6.1.32.4410.1.3.3.3.1.1.1.1<p>Update: 30s</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 ## Triggers
 
 There are no triggers in this template.

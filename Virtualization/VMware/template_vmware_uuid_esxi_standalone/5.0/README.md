@@ -118,10 +118,10 @@ There are no template links in this template.
 |Uptime|<p>System uptime.</p>|`Simple check`|vmware.hv.uptime[{$URL},{$UUID}]<p>Update: 1h</p>|
 |Version|<p>Dot-separated version string.</p>|`Simple check`|vmware.hv.version[{$URL},{$UUID}]<p>Update: 1h</p>|
 |Number of guest VMs|<p>Number of guest virtual machines.</p>|`Simple check`|vmware.hv.vm.num[{$URL},{$UUID}]<p>Update: 1h</p>|
-|Average read latency of the datastore $3 (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.read[{$URL},{$UUID},{#DATASTORE},latency]<p>Update: 1m</p>|
-|Free space on datastore $3 (percentage) (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{$UUID},{#DATASTORE},pfree]<p>Update: 1m</p>|
-|Total size of datastore $3 (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{$UUID},{#DATASTORE}]<p>Update: 1m</p>|
-|Average write latency of the datastore $3 (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.write[{$URL},{$UUID},{#DATASTORE},latency]<p>Update: 1m</p>|
+|Average read latency of the datastore $3|<p>-</p>|`Simple check`|vmware.hv.datastore.read[{$URL},{$UUID},{#DATASTORE},latency]<p>Update: 1m</p><p>LLD</p>|
+|Free space on datastore $3 (percentage)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{$UUID},{#DATASTORE},pfree]<p>Update: 1m</p><p>LLD</p>|
+|Total size of datastore $3|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{$UUID},{#DATASTORE}]<p>Update: 1m</p><p>LLD</p>|
+|Average write latency of the datastore $3|<p>-</p>|`Simple check`|vmware.hv.datastore.write[{$URL},{$UUID},{#DATASTORE},latency]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

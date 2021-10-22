@@ -52,14 +52,14 @@ There are no template links in this template.
 |Sys3FAN_RPM|<p>-</p>|`SNMP agent`|sys3_fan_RPM<p>Update: 30</p>|
 |Sys temp|<p>CPU temp</p>|`SNMP agent`|systemp<p>Update: 30</p>|
 |System uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 30</p>|
-|[{#SNMPVALUE}]_VolumeFreeSpace (LLD)|<p>-</p>|`SNMP agent`|volumeFreeSpace[{#SNMPVALUE}]<p>Update: 30</p>|
-|[{#SNMPVALUE}]_VolumeName (LLD)|<p>-</p>|`SNMP agent`|volumeName[{#SNMPVALUE}]<p>Update: 30</p>|
-|[{#SNMPVALUE}]_volumeRAIDLevel (LLD)|<p>-</p>|`SNMP agent`|volumeRAIDLevel[{#SNMPVALUE}]<p>Update: 30</p>|
-|[{#SNMPVALUE}]_VolumeSize (LLD)|<p>-</p>|`SNMP agent`|volumeSize[{#SNMPVALUE}]<p>Update: 30</p>|
-|[{#SNMPVALUE}]_VolumeStatus (LLD)|<p>-</p>|`SNMP agent`|volumeStatus[{#SNMPVALUE}]<p>Update: 30</p>|
-|[{#SNMPVALUE}]_DiskInfo (LLD)|<p>-</p>|`SNMP agent`|DiskInfo[{#SNMPVALUE}]<p>Update: 30</p>|
-|[{#SNMPVALUE}]_DiskState (LLD)|<p>-</p>|`SNMP agent`|DiskState[{#SNMPVALUE}]<p>Update: 30</p>|
-|[{#SNMPVALUE}]_DiskTemperature (LLD)|<p>-</p>|`SNMP agent`|DiskTemperature[{#SNMPVALUE}]<p>Update: 30</p>|
+|[{#SNMPVALUE}]_VolumeFreeSpace|<p>-</p>|`SNMP agent`|volumeFreeSpace[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|[{#SNMPVALUE}]_VolumeName|<p>-</p>|`SNMP agent`|volumeName[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|[{#SNMPVALUE}]_volumeRAIDLevel|<p>-</p>|`SNMP agent`|volumeRAIDLevel[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|[{#SNMPVALUE}]_VolumeSize|<p>-</p>|`SNMP agent`|volumeSize[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|[{#SNMPVALUE}]_VolumeStatus|<p>-</p>|`SNMP agent`|volumeStatus[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|[{#SNMPVALUE}]_DiskInfo|<p>-</p>|`SNMP agent`|DiskInfo[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|[{#SNMPVALUE}]_DiskState|<p>-</p>|`SNMP agent`|DiskState[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|[{#SNMPVALUE}]_DiskTemperature|<p>-</p>|`SNMP agent`|DiskTemperature[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

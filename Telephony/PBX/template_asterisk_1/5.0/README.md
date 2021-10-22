@@ -55,7 +55,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Calls in {#TRUNK} (LLD)|<p>-</p>|`Calculated`|asterisk.calls[{#TRUNK}]<p>Update: 6</p>|
+|Calls in {#TRUNK}|<p>-</p>|`Calculated`|asterisk.calls[{#TRUNK}]<p>Update: 6</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

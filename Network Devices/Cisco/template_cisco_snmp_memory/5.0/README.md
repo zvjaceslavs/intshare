@@ -17,10 +17,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Amount of free memory pool {#SNMPVALUE} (LLD)|<p>Indicates the number of bytes from the memory pool that are currently unused on the managed device. Note that the sum of ciscoMemoryPoolUsed and ciscoMemoryPoolFree is the total amount of memory in the pool</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPVALUE}]<p>Update: 60</p>|
-|Amount of largest contiguous free memory pool {#SNMPVALUE} (LLD)|<p>Indicates the largest number of contiguous bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolLargestFree[{#SNMPVALUE}]<p>Update: 60</p>|
-|Amount of used memory pool {#SNMPVALUE} (LLD)|<p>Indicates the number of bytes from the memory pool that are currently in use by applications on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolUsed[{#SNMPVALUE}]<p>Update: 60</p>|
-|Utilization memory pool {#SNMPVALUE} (LLD)|<p>-</p>|`Calculated`|ciscoMemoryPoolUtilization[{#SNMPVALUE}]<p>Update: 60</p>|
+|Amount of free memory pool {#SNMPVALUE}|<p>Indicates the number of bytes from the memory pool that are currently unused on the managed device. Note that the sum of ciscoMemoryPoolUsed and ciscoMemoryPoolFree is the total amount of memory in the pool</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Amount of largest contiguous free memory pool {#SNMPVALUE}|<p>Indicates the largest number of contiguous bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolLargestFree[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Amount of used memory pool {#SNMPVALUE}|<p>Indicates the number of bytes from the memory pool that are currently in use by applications on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolUsed[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Utilization memory pool {#SNMPVALUE}|<p>-</p>|`Calculated`|ciscoMemoryPoolUtilization[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -57,7 +57,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Backup "{#BPNAME}" status (LLD)|<p>Monitor the backup {#BPNAME} status and return date and task status. This backup is configured to be done every {$BPERIOD1}</p>|`Zabbix agent`|backupt[{$NAS.IP},{#BPNAME}]<p>Update: {$BPERIOD1}</p>|
+|Backup "{#BPNAME}" status|<p>Monitor the backup {#BPNAME} status and return date and task status. This backup is configured to be done every {$BPERIOD1}</p>|`Zabbix agent`|backupt[{$NAS.IP},{#BPNAME}]<p>Update: {$BPERIOD1}</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

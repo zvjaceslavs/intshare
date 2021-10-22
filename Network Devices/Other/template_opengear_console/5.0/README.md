@@ -25,17 +25,17 @@ There are no template links in this template.
 |Firmware Version|<p>-</p>|`SNMP agent`|opengear.firmwareversion<p>Update: 3600</p>|
 |Serial Number|<p>-</p>|`SNMP agent`|opengear.serialnumber<p>Update: 3600</p>|
 |System Uptime|<p>System Uptime in centiseconds (hundredths of a second: 0.01s)</p>|`SNMP agent`|opengear.systemuptime<p>Update: 60</p>|
-|Interface {#IFNAME} Inbound Discards (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.netif.indiscards[{#IFNAME}]<p>Update: 60</p>|
-|Interface {#IFNAME} Inbound Errors (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.netif.inerr[{#IFNAME}]<p>Update: 60</p>|
-|Interface {#IFNAME} Inbound Traffic (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.netif.in[{#IFNAME}]<p>Update: 60</p>|
-|Interface {#IFNAME} SysUptime At Last Status Change (LLD)|<p>The value of sysUpTime at the time the interface entered its current operational state. If the current state was entered prior to the last re-initialization of the local network management subsystem, then this object contains a zero value.</p>|`SNMP agent`|opengear.snmp.netif.lastchange[{#IFNAME}]<p>Update: 60</p>|
-|Interface {#IFNAME} Outbound Discards (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.netif.outdiscards[{#IFNAME}]<p>Update: 60</p>|
-|Interface {#IFNAME} Outbound Errors (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.netif.outerr[{#IFNAME}]<p>Update: 60</p>|
-|Interface {#IFNAME} Outbound Traffic (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.netif.out[{#IFNAME}]<p>Update: 60</p>|
-|Interface {#IFNAME} Operational Status (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.netif.status[{#IFNAME}]<p>Update: 60</p>|
-|Port {#SNMPINDEX} ({#PORTNAME}) Traffic Inbound (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.rxbytes[{#PORTNAME}]<p>Update: 300</p>|
-|Port {#SNMPINDEX} ({#PORTNAME}) Speed (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.speed[{#PORTNAME}]<p>Update: 3600</p>|
-|Port {#SNMPINDEX} ({#PORTNAME}) Traffic Outbound (LLD)|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.txbytes[{#PORTNAME}]<p>Update: 300</p>|
+|Interface {#IFNAME} Inbound Discards|<p>-</p>|`SNMP agent`|opengear.snmp.netif.indiscards[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#IFNAME} Inbound Errors|<p>-</p>|`SNMP agent`|opengear.snmp.netif.inerr[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#IFNAME} Inbound Traffic|<p>-</p>|`SNMP agent`|opengear.snmp.netif.in[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#IFNAME} SysUptime At Last Status Change|<p>The value of sysUpTime at the time the interface entered its current operational state. If the current state was entered prior to the last re-initialization of the local network management subsystem, then this object contains a zero value.</p>|`SNMP agent`|opengear.snmp.netif.lastchange[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#IFNAME} Outbound Discards|<p>-</p>|`SNMP agent`|opengear.snmp.netif.outdiscards[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#IFNAME} Outbound Errors|<p>-</p>|`SNMP agent`|opengear.snmp.netif.outerr[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#IFNAME} Outbound Traffic|<p>-</p>|`SNMP agent`|opengear.snmp.netif.out[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Interface {#IFNAME} Operational Status|<p>-</p>|`SNMP agent`|opengear.snmp.netif.status[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
+|Port {#SNMPINDEX} ({#PORTNAME}) Traffic Inbound|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.rxbytes[{#PORTNAME}]<p>Update: 300</p><p>LLD</p>|
+|Port {#SNMPINDEX} ({#PORTNAME}) Speed|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.speed[{#PORTNAME}]<p>Update: 3600</p><p>LLD</p>|
+|Port {#SNMPINDEX} ({#PORTNAME}) Traffic Outbound|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.txbytes[{#PORTNAME}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

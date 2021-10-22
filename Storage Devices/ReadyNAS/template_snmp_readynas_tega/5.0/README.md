@@ -58,18 +58,18 @@ There are no template links in this template.
 |sysDescr|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 7200</p>|
 |sysName|<p>-</p>|`SNMP agent`|sysName<p>Update: 7200</p>|
 |sysUpTime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
-|Disk $1 model (LLD)|<p>-</p>|`SNMP agent`|diskmodel[{#DISKNUMBER}]<p>Update: 3600</p>|
-|Disk $1 status digital (LLD)|<p>The disk status in digital format. "1" the disk is status "ok"</p>|`Calculated`|diskstatusn[{#DISKNUMBER}]<p>Update: 3600</p>|
-|Disk $1 status (LLD)|<p>-</p>|`SNMP agent`|diskstatus[{#DISKNUMBER}]<p>Update: 3600</p>|
-|Disk $1 temperature (LLD)|<p>The data received from the device. Original data are obtained in Fahrenheit.</p>|`SNMP agent`|disktemperature[{#DISKNUMBER}]<p>Update: 3600</p>|
-|Disk $1 temperature celsius (LLD)|<p>Conversion of Fahrenheit in celsius</p>|`Calculated`|disktemperature_c[{#DISKNUMBER}]<p>Update: 3600</p>|
-|Volume $1 free space (percentage) (LLD)|<p>-</p>|`Calculated`|volumefreepercent[{#VOLUMENUMBER}]<p>Update: 3600</p>|
-|Volume $1 free space (LLD)|<p>Free Space on volume</p>|`SNMP agent`|volumefreesize[{#VOLUMENUMBER}]<p>Update: 3600</p>|
-|Volume $1 used space (LLD)|<p>-</p>|`Calculated`|volumefreeusedsize[{#VOLUMENUMBER}]<p>Update: 3600</p>|
-|Volume $1 name (LLD)|<p>Volume name</p>|`SNMP agent`|volumename[{#VOLUMENUMBER}]<p>Update: 3600</p>|
-|Volume $1 RAID Level (LLD)|<p>Volume RAID level</p>|`SNMP agent`|volumeraidlevel[{#VOLUMENUMBER}]<p>Update: 3600</p>|
-|Volume $1 size (LLD)|<p>Volume size</p>|`SNMP agent`|volumesize[{#VOLUMENUMBER}]<p>Update: 3600</p>|
-|Volume $1 status (LLD)|<p>Volume status</p>|`SNMP agent`|volumestatus[{#VOLUMENUMBER}]<p>Update: 3600</p>|
+|Disk $1 model|<p>-</p>|`SNMP agent`|diskmodel[{#DISKNUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Disk $1 status digital|<p>The disk status in digital format. "1" the disk is status "ok"</p>|`Calculated`|diskstatusn[{#DISKNUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Disk $1 status|<p>-</p>|`SNMP agent`|diskstatus[{#DISKNUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Disk $1 temperature|<p>The data received from the device. Original data are obtained in Fahrenheit.</p>|`SNMP agent`|disktemperature[{#DISKNUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Disk $1 temperature celsius|<p>Conversion of Fahrenheit in celsius</p>|`Calculated`|disktemperature_c[{#DISKNUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Volume $1 free space (percentage)|<p>-</p>|`Calculated`|volumefreepercent[{#VOLUMENUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Volume $1 free space|<p>Free Space on volume</p>|`SNMP agent`|volumefreesize[{#VOLUMENUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Volume $1 used space|<p>-</p>|`Calculated`|volumefreeusedsize[{#VOLUMENUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Volume $1 name|<p>Volume name</p>|`SNMP agent`|volumename[{#VOLUMENUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Volume $1 RAID Level|<p>Volume RAID level</p>|`SNMP agent`|volumeraidlevel[{#VOLUMENUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Volume $1 size|<p>Volume size</p>|`SNMP agent`|volumesize[{#VOLUMENUMBER}]<p>Update: 3600</p><p>LLD</p>|
+|Volume $1 status|<p>Volume status</p>|`SNMP agent`|volumestatus[{#VOLUMENUMBER}]<p>Update: 3600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

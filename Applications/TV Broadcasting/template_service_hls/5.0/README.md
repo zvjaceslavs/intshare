@@ -94,13 +94,13 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|HLS playlist $2 (LLD)|<p>-</p>|`Zabbix agent`|hls["-g",{#PROFILE}]<p>Update: 2m</p>|
-|HLS average speed $1 (LLD)|<p>-</p>|`Dependent item`|hls.averagespeed[{#PROFILE}]<p>Update: 0</p>|
-|HLS duration $1 (LLD)|<p>-</p>|`Dependent item`|hls.duration[{#PROFILE}]<p>Update: 0</p>|
-|HLS spended time $1 (LLD)|<p>-</p>|`Dependent item`|hls.spendedtime[{#PROFILE}]<p>Update: 0</p>|
-|HLS target duration $1 (LLD)|<p>-</p>|`Dependent item`|hls.target_duration[{#PROFILE}]<p>Update: 0</p>|
-|HLS total legth $1 (LLD)|<p>-</p>|`Dependent item`|hls.totallength[{#PROFILE}]<p>Update: 0</p>|
-|HLS ts present $1 (LLD)|<p>-</p>|`Dependent item`|hls.tsuri[{#PROFILE}]<p>Update: 0</p>|
+|HLS playlist $2|<p>-</p>|`Zabbix agent`|hls["-g",{#PROFILE}]<p>Update: 2m</p><p>LLD</p>|
+|HLS average speed $1|<p>-</p>|`Dependent item`|hls.averagespeed[{#PROFILE}]<p>Update: 0</p><p>LLD</p>|
+|HLS duration $1|<p>-</p>|`Dependent item`|hls.duration[{#PROFILE}]<p>Update: 0</p><p>LLD</p>|
+|HLS spended time $1|<p>-</p>|`Dependent item`|hls.spendedtime[{#PROFILE}]<p>Update: 0</p><p>LLD</p>|
+|HLS target duration $1|<p>-</p>|`Dependent item`|hls.target_duration[{#PROFILE}]<p>Update: 0</p><p>LLD</p>|
+|HLS total legth $1|<p>-</p>|`Dependent item`|hls.totallength[{#PROFILE}]<p>Update: 0</p><p>LLD</p>|
+|HLS ts present $1|<p>-</p>|`Dependent item`|hls.tsuri[{#PROFILE}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

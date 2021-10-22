@@ -46,10 +46,10 @@ There are no template links in this template.
 |Writes / sec|<p>-</p>|`Dependent item`|DiskWritesPersec<p>Update: 0</p>|
 |Disk I/O|<p>-</p>|`External check`|zbxwmi["-action","json","-fields","DiskWritesPersec,DiskWriteBytesPersec,DiskReadsPersec,DiskReadBytesPersec","-filter","Name='_Total'","Win32_PerfRawData_PerfDisk_LogicalDisk","{$WMI_AUTHFILE}",{HOST.HOST}]<p>Update: 5m</p>|
 |Processors|<p>-</p>|`External check`|zbxwmi["-action","json","-fields","PercentProcessorTime","-filter","Name<>'_Total'","Win32_PerfFormattedData_PerfOS_Processor","{$WMI_AUTHFILE}",{HOST.HOST}]<p>Update: 5m</p>|
-|Used {#WMI.DEVICEID} (LLD)|<p>-</p>|`Calculated`|Used[{#WMI.DEVICEID}]<p>Update: 5m</p>|
-|Disk info {#WMI.DEVICEID} (LLD)|<p>-</p>|`External check`|zbxwmi["-action","json","-k","DeviceID","-fields","FreeSpace,Size","-item","{#WMI.DEVICEID}","Win32_LogicalDisk","{$WMI_AUTHFILE}","{HOST.HOST}"]<p>Update: 5m</p>|
-|Free Space {#WMI.DEVICEID} (LLD)|<p>-</p>|`Dependent item`|FreeSpace[{#WMI.DEVICEID}]<p>Update: 0</p>|
-|Size {#WMI.DEVICEID} (LLD)|<p>-</p>|`Dependent item`|Size[{#WMI.DEVICEID}]<p>Update: 0</p>|
+|Used {#WMI.DEVICEID}|<p>-</p>|`Calculated`|Used[{#WMI.DEVICEID}]<p>Update: 5m</p><p>LLD</p>|
+|Disk info {#WMI.DEVICEID}|<p>-</p>|`External check`|zbxwmi["-action","json","-k","DeviceID","-fields","FreeSpace,Size","-item","{#WMI.DEVICEID}","Win32_LogicalDisk","{$WMI_AUTHFILE}","{HOST.HOST}"]<p>Update: 5m</p><p>LLD</p>|
+|Free Space {#WMI.DEVICEID}|<p>-</p>|`Dependent item`|FreeSpace[{#WMI.DEVICEID}]<p>Update: 0</p><p>LLD</p>|
+|Size {#WMI.DEVICEID}|<p>-</p>|`Dependent item`|Size[{#WMI.DEVICEID}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -39,7 +39,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Last access for {#PROXYNAME} (LLD)|<p>-</p>|`Zabbix internal`|zabbix[proxy,{#PROXYNAME},lastaccess]<p>Update: 1m</p>|
+|Last access for {#PROXYNAME}|<p>-</p>|`Zabbix internal`|zabbix[proxy,{#PROXYNAME},lastaccess]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

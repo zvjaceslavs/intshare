@@ -107,18 +107,18 @@ There are no template links in this template.
 |Uncommitted storage space|<p>Additional storage space, in bytes, potentially used by this virtual machine on all datastores.</p>|`Simple check`|vmware.vm.storage.uncommitted[{$URL},{$UUID}]<p>Update: 1m</p>|
 |Unshared storage space|<p>Total storage space, in bytes, occupied by the virtual machine across all datastores, that is not shared with any other virtual machine.</p>|`Simple check`|vmware.vm.storage.unshared[{$URL},{$UUID}]<p>Update: 1m</p>|
 |Uptime|<p>System uptime.</p>|`Simple check`|vmware.vm.uptime[{$URL},{$UUID}]<p>Update: 1m</p>|
-|Number of bytes received on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{$UUID},{#IFNAME},bps]<p>Update: 1m</p>|
-|Number of packets received on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{$UUID},{#IFNAME},pps]<p>Update: 1m</p>|
-|Number of bytes transmitted on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{$UUID},{#IFNAME},bps]<p>Update: 1m</p>|
-|Number of packets transmitted on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{$UUID},{#IFNAME},pps]<p>Update: 1m</p>|
-|Average number of bytes read from the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{$UUID},{#DISKNAME},bps]<p>Update: 1m</p>|
-|Average number of reads from the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{$UUID},{#DISKNAME},ops]<p>Update: 1m</p>|
-|Average number of bytes written to the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{$UUID},{#DISKNAME},bps]<p>Update: 1m</p>|
-|Average number of writes to the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{$UUID},{#DISKNAME},ops]<p>Update: 1m</p>|
-|Free disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{$UUID},{#FSNAME},free]<p>Update: 1m</p>|
-|Free disk space on {#FSNAME} (percentage) (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{$UUID},{#FSNAME},pfree]<p>Update: 1m</p>|
-|Total disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{$UUID},{#FSNAME},total]<p>Update: 1h</p>|
-|Used disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{$UUID},{#FSNAME},used]<p>Update: 1m</p>|
+|Number of bytes received on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{$UUID},{#IFNAME},bps]<p>Update: 1m</p><p>LLD</p>|
+|Number of packets received on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{$UUID},{#IFNAME},pps]<p>Update: 1m</p><p>LLD</p>|
+|Number of bytes transmitted on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{$UUID},{#IFNAME},bps]<p>Update: 1m</p><p>LLD</p>|
+|Number of packets transmitted on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{$UUID},{#IFNAME},pps]<p>Update: 1m</p><p>LLD</p>|
+|Average number of bytes read from the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{$UUID},{#DISKNAME},bps]<p>Update: 1m</p><p>LLD</p>|
+|Average number of reads from the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{$UUID},{#DISKNAME},ops]<p>Update: 1m</p><p>LLD</p>|
+|Average number of bytes written to the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{$UUID},{#DISKNAME},bps]<p>Update: 1m</p><p>LLD</p>|
+|Average number of writes to the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{$UUID},{#DISKNAME},ops]<p>Update: 1m</p><p>LLD</p>|
+|Free disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{$UUID},{#FSNAME},free]<p>Update: 1m</p><p>LLD</p>|
+|Free disk space on {#FSNAME} (percentage)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{$UUID},{#FSNAME},pfree]<p>Update: 1m</p><p>LLD</p>|
+|Total disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{$UUID},{#FSNAME},total]<p>Update: 1h</p><p>LLD</p>|
+|Used disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{$UUID},{#FSNAME},used]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

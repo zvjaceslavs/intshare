@@ -52,24 +52,24 @@ There are no template links in this template.
 |System status|<p>-</p>|`SNMP agent`|systemStatus<p>Update: 60</p>|
 |System temperature|<p>System temperature in centigrade</p>|`SNMP agent`|systemTemperature<p>Update: 60</p>|
 |System vendor|<p>-</p>|`SNMP agent`|systemVendor<p>Update: 3h</p>|
-|Disk Capacity {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskCapacity[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Disk ID {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskID[{#SNMPINDEX}]<p>Update: 3h</p>|
-|Model of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskModel[{#SNMPINDEX}]<p>Update: 3h</p>|
-|Reallocate_Sector_Ct {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskSMARTAttr5[{#SNMPINDEX}]<p>Update: 60</p>|
-|Power_On_hours{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskSMARTAttr9[{#SNMPINDEX}]<p>Update: 60</p>|
-|End-to-End Error {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskSMARTAttr184[{#SNMPINDEX}]<p>Update: 60</p>|
-|Temperature of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskSMARTAttr194[{#SNMPINDEX}]<p>Update: 60</p>|
-|Current__Pending_Sector {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskSMARTAttr197[{#SNMPINDEX}]<p>Update: 60</p>|
-|S.M.A.R.T. info of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskSMARTHealthCheck[{#SNMPINDEX}]<p>Update: 60</p>|
-|Status of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskStatus[{#SNMPINDEX}]<p>Update: 60</p>|
-|Disk Tray Number {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|diskTrayNum[{#SNMPINDEX}]<p>Update: 3h</p>|
-|RAID ID of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|raidID[{#SNMPINDEX}]<p>Update: 3h</p>|
-|RAID level of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|raidLevel[{#SNMPINDEX}]<p>Update: 3h</p>|
-|RAID number of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|raidNum[{#SNMPINDEX}]<p>Update: 3h</p>|
-|RAID size of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|raidSize[{#SNMPINDEX}]<p>Update: 1h</p>|
-|RAID status of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|raidStatus[{#SNMPINDEX}]<p>Update: 60</p>|
-|RAID units of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|raidUnits[{#SNMPINDEX}]<p>Update: 3h</p>|
-|RAID used percent of {#SNMPVALUE} (%) (LLD)|<p>-</p>|`SNMP agent`|raidUsedPercentage[{#SNMPINDEX}]<p>Update: 1h</p>|
+|Disk Capacity {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskCapacity[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Disk ID {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskID[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|Model of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskModel[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|Reallocate_Sector_Ct {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskSMARTAttr5[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Power_On_hours{#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskSMARTAttr9[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|End-to-End Error {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskSMARTAttr184[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Temperature of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskSMARTAttr194[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Current__Pending_Sector {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskSMARTAttr197[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|S.M.A.R.T. info of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskSMARTHealthCheck[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Status of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskStatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Disk Tray Number {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskTrayNum[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID ID of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidID[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID level of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidLevel[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID number of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidNum[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID size of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidSize[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|RAID status of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidStatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|RAID units of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidUnits[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID used percent of {#SNMPVALUE} (%)|<p>-</p>|`SNMP agent`|raidUsedPercentage[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

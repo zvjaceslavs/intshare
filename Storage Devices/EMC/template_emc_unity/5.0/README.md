@@ -57,47 +57,47 @@ There are no template links in this template.
 |get discovery|<p>-</p>|`External check`|unity_get_state.py["--api_ip={HOST.IP}","--api_port={$API_PORT}","--api_user={$API_USER}","--api_password={$API_PASSWORD}","--storage_name={HOST.NAME}","--discovery"]<p>Update: 15m</p>|
 |get health state|<p>-</p>|`External check`|unity_get_state.py["--api_ip={HOST.IP}","--api_port={$API_PORT}","--api_user={$API_USER}","--api_password={$API_PASSWORD}","--storage_name={HOST.NAME}","--status"]<p>Update: 3m</p>|
 |Count of unsupported items|<p>-</p>|`Zabbix internal`|zabbix[host,,items_unsupported]<p>Update: 5m</p>|
-|Health status of ioModule "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.ioModule.[{#ID}]<p>Update: 0</p>|
-|Running status of ioModule "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.ioModule.[{#ID}]<p>Update: 0</p>|
-|Health status of DAE "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.dae.[{#ID}]<p>Update: 0</p>|
-|Running status of DAE "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.dae.[{#ID}]<p>Update: 0</p>|
-|Health Status of FAN "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.fan.[{#ID}]<p>Update: 0</p>|
-|Running Status of FAN "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.fan.[{#ID}]<p>Update: 0</p>|
-|Health status of disk "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.disk.[{#ID}]<p>Update: 0</p>|
-|Running status of disk "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.disk.[{#ID}]<p>Update: 0</p>|
-|Health Status of PSU "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.powerSupply.[{#ID}]<p>Update: 0</p>|
-|Running Status of PSU "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.powerSupply.[{#ID}]<p>Update: 0</p>|
-|Health status of Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.pool.[{#NAME}]<p>Update: 0</p>|
-|Subscribed size of Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|sizeSubscribedBytes.pool.[{#NAME}]<p>Update: 0</p>|
-|Subscribed size of Pool "{#NAME}" in percent (LLD)|<p>-</p>|`Calculated`|sizeSubscribedPercent.pool.[{#NAME}]<p>Update: 3m</p>|
-|Total size of Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|sizeTotalBytes.pool.[{#NAME}]<p>Update: 0</p>|
-|Used size of Pool "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|sizeUsedBytes.pool.[{#NAME}]<p>Update: 0</p>|
-|Used size of Pool "{#NAME}" in percent (LLD)|<p>-</p>|`Calculated`|sizeUsedPercent.pool.[{#NAME}]<p>Update: 3m</p>|
-|Health status of Uncommitted Port "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.uncommittedPort.[{#ID}]<p>Update: 0</p>|
-|Running status of Uncommitted Port "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.uncommittedPort.[{#ID}]<p>Update: 0</p>|
-|Health status of Memory Module "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.memoryModule.[{#ID}]<p>Update: 0</p>|
-|Running status of Memory Module "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.memoryModule.[{#ID}]<p>Update: 0</p>|
-|Health status of LLC "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lcc.[{#ID}]<p>Update: 0</p>|
-|Running status of LLC "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.lcc.[{#ID}]<p>Update: 0</p>|
-|Health status of Fibre Channel port "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.fcPort.[{#ID}]<p>Update: 0</p>|
-|Running status of Fibre Channel port "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|link.fcPort.[{#ID}]<p>Update: 0</p>|
-|Health status of BBU "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.battery.[{#ID}]<p>Update: 0</p>|
-|Running status of BBU "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.battery.[{#ID}]<p>Update: 0</p>|
-|Health status of Ethernet port "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.ethernetPort.[{#ID}]<p>Update: 0</p>|
-|Running status of Ethernet port "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|link.ethernetPort.[{#ID}]<p>Update: 0</p>|
-|Health status of DPE "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.dpe.[{#ID}]<p>Update: 0</p>|
-|Running status of DPE "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.dpe.[{#ID}]<p>Update: 0</p>|
-|Health status of SAS port "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.sasPort.[{#ID}]<p>Update: 0</p>|
-|Running status of SAS port "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|link.sasPort.[{#ID}]<p>Update: 0</p>|
-|Health status of Storage Processors "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.storageProcessor.[{#ID}]<p>Update: 0</p>|
-|Running status of Storage Processors "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.storageProcessor.[{#ID}]<p>Update: 0</p>|
-|Health status of SSC "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.ssc.[{#ID}]<p>Update: 0</p>|
-|Running status of SSC "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.ssc.[{#ID}]<p>Update: 0</p>|
-|Health status of SSD "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.ssd.[{#ID}]<p>Update: 0</p>|
-|Running status of SSD "{#ID}" (LLD)|<p>-</p>|`Zabbix trapper`|running.ssd.[{#ID}]<p>Update: 0</p>|
-|Health status of Lun "{#NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.lun.[{#NAME}]<p>Update: 0</p>|
-|Allocated size of Lun "{#NAME}" (LLD)|<p>Size of space actually allocated in the pool for the LUN: For thin-provisioned LUNs this as a rule is less than the sizeTotal attribute until the LUN is not fully populated with user data. For not thin-provisioned LUNs this is approximately equal to the sizeTotal.</p>|`Zabbix trapper`|sizeAllocated.lun.[{#NAME}]<p>Update: 0</p>|
-|Total size of Lun "{#NAME}" (LLD)|<p>LUN size that the system presents to the host or end user.</p>|`Zabbix trapper`|sizeTotal.lun.[{#NAME}]<p>Update: 0</p>|
+|Health status of ioModule "{#ID}"|<p>-</p>|`Zabbix trapper`|health.ioModule.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of ioModule "{#ID}"|<p>-</p>|`Zabbix trapper`|running.ioModule.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of DAE "{#ID}"|<p>-</p>|`Zabbix trapper`|health.dae.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of DAE "{#ID}"|<p>-</p>|`Zabbix trapper`|running.dae.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health Status of FAN "{#ID}"|<p>-</p>|`Zabbix trapper`|health.fan.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running Status of FAN "{#ID}"|<p>-</p>|`Zabbix trapper`|running.fan.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of disk "{#ID}"|<p>-</p>|`Zabbix trapper`|health.disk.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of disk "{#ID}"|<p>-</p>|`Zabbix trapper`|running.disk.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health Status of PSU "{#ID}"|<p>-</p>|`Zabbix trapper`|health.powerSupply.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running Status of PSU "{#ID}"|<p>-</p>|`Zabbix trapper`|running.powerSupply.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|health.pool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Subscribed size of Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|sizeSubscribedBytes.pool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Subscribed size of Pool "{#NAME}" in percent|<p>-</p>|`Calculated`|sizeSubscribedPercent.pool.[{#NAME}]<p>Update: 3m</p><p>LLD</p>|
+|Total size of Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|sizeTotalBytes.pool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Used size of Pool "{#NAME}"|<p>-</p>|`Zabbix trapper`|sizeUsedBytes.pool.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Used size of Pool "{#NAME}" in percent|<p>-</p>|`Calculated`|sizeUsedPercent.pool.[{#NAME}]<p>Update: 3m</p><p>LLD</p>|
+|Health status of Uncommitted Port "{#ID}"|<p>-</p>|`Zabbix trapper`|health.uncommittedPort.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of Uncommitted Port "{#ID}"|<p>-</p>|`Zabbix trapper`|running.uncommittedPort.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Memory Module "{#ID}"|<p>-</p>|`Zabbix trapper`|health.memoryModule.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of Memory Module "{#ID}"|<p>-</p>|`Zabbix trapper`|running.memoryModule.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of LLC "{#ID}"|<p>-</p>|`Zabbix trapper`|health.lcc.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of LLC "{#ID}"|<p>-</p>|`Zabbix trapper`|running.lcc.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Fibre Channel port "{#ID}"|<p>-</p>|`Zabbix trapper`|health.fcPort.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of Fibre Channel port "{#ID}"|<p>-</p>|`Zabbix trapper`|link.fcPort.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of BBU "{#ID}"|<p>-</p>|`Zabbix trapper`|health.battery.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of BBU "{#ID}"|<p>-</p>|`Zabbix trapper`|running.battery.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Ethernet port "{#ID}"|<p>-</p>|`Zabbix trapper`|health.ethernetPort.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of Ethernet port "{#ID}"|<p>-</p>|`Zabbix trapper`|link.ethernetPort.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of DPE "{#ID}"|<p>-</p>|`Zabbix trapper`|health.dpe.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of DPE "{#ID}"|<p>-</p>|`Zabbix trapper`|running.dpe.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of SAS port "{#ID}"|<p>-</p>|`Zabbix trapper`|health.sasPort.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of SAS port "{#ID}"|<p>-</p>|`Zabbix trapper`|link.sasPort.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Storage Processors "{#ID}"|<p>-</p>|`Zabbix trapper`|health.storageProcessor.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of Storage Processors "{#ID}"|<p>-</p>|`Zabbix trapper`|running.storageProcessor.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of SSC "{#ID}"|<p>-</p>|`Zabbix trapper`|health.ssc.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of SSC "{#ID}"|<p>-</p>|`Zabbix trapper`|running.ssc.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of SSD "{#ID}"|<p>-</p>|`Zabbix trapper`|health.ssd.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Running status of SSD "{#ID}"|<p>-</p>|`Zabbix trapper`|running.ssd.[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Lun "{#NAME}"|<p>-</p>|`Zabbix trapper`|health.lun.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Allocated size of Lun "{#NAME}"|<p>Size of space actually allocated in the pool for the LUN: For thin-provisioned LUNs this as a rule is less than the sizeTotal attribute until the LUN is not fully populated with user data. For not thin-provisioned LUNs this is approximately equal to the sizeTotal.</p>|`Zabbix trapper`|sizeAllocated.lun.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
+|Total size of Lun "{#NAME}"|<p>LUN size that the system presents to the host or end user.</p>|`Zabbix trapper`|sizeTotal.lun.[{#NAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

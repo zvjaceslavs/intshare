@@ -55,29 +55,29 @@ There are no template links in this template.
 |All cvs info|<p>-</p>|`Zabbix agent`|lsi.cvsinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
 |All Lds info|<p>-</p>|`Zabbix agent`|lsi.ldsinfo<p>Update: {$LD_REQUEST_PERIOD}</p>|
 |All Pds info|<p>-</p>|`Zabbix agent`|lsi.pdsinfo<p>Update: {$PD_REQUEST_PERIOD}</p>|
-|Physical disk "{#PDID}" media error count (LLD)|<p>-</p>|`Dependent item`|lsi.pd.merrcount.["{#PDID}"]<p>Update: 0</p>|
-|Physical disk "{#PDID}" model (LLD)|<p>-</p>|`Dependent item`|lsi.pd.model.["{#PDID}"]<p>Update: 0</p>|
-|Physical disk "{#PDID}" other error count (LLD)|<p>-</p>|`Dependent item`|lsi.pd.otherrcount.["{#PDID}"]<p>Update: 0</p>|
-|Physical disk "{#PDID}" predictive failure count (LLD)|<p>-</p>|`Dependent item`|lsi.pd.predicterrcount.["{#PDID}"]<p>Update: 0</p>|
-|Physical disk "{#PDID}" SMART flag (LLD)|<p>-</p>|`Dependent item`|lsi.pd.smartflag.["{#PDID}"]<p>Update: 0</p>|
-|Physical disk "{#PDID}" serial number (LLD)|<p>-</p>|`Dependent item`|lsi.pd.sn.["{#PDID}"]<p>Update: 0</p>|
-|Physical disk "{#PDID}" state (LLD)|<p>-</p>|`Dependent item`|lsi.pd.state.["{#PDID}"]<p>Update: 0</p>|
-|Logical disk "{#LDNAME}" (id {#LDID}) level (LLD)|<p>-</p>|`Dependent item`|lsi.ld.level.["{#LDID}"]<p>Update: 0</p>|
-|Logical disk "{#LDNAME}" (id {#LDID})  state (LLD)|<p>-</p>|`Dependent item`|lsi.ld.state.["{#LDID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" cache vault data (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.cvdata.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" cache bbu data (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.bbu.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" model (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.model.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" serial number (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.sn.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" state (health) (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.state.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" bbu low charge level (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.bbulowcharge.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" bbu need to replace (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.bbureplace.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" bbu serial number (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.bbusn.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" bbu state (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.bbustate.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" bbu type (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.bbutype.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" cache vault need to replace (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.cvreplace.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" cache vault serial number (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.cvsn.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" cache vault state (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.cvstate.["{#CTLID}"]<p>Update: 0</p>|
-|Controller "{#CTLID}" cache vault type (LLD)|<p>-</p>|`Dependent item`|lsi.ctl.cvtype.["{#CTLID}"]<p>Update: 0</p>|
+|Physical disk "{#PDID}" media error count|<p>-</p>|`Dependent item`|lsi.pd.merrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" model|<p>-</p>|`Dependent item`|lsi.pd.model.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" other error count|<p>-</p>|`Dependent item`|lsi.pd.otherrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" predictive failure count|<p>-</p>|`Dependent item`|lsi.pd.predicterrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" SMART flag|<p>-</p>|`Dependent item`|lsi.pd.smartflag.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" serial number|<p>-</p>|`Dependent item`|lsi.pd.sn.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" state|<p>-</p>|`Dependent item`|lsi.pd.state.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" (id {#LDID}) level|<p>-</p>|`Dependent item`|lsi.ld.level.["{#LDID}"]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" (id {#LDID})  state|<p>-</p>|`Dependent item`|lsi.ld.state.["{#LDID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" cache vault data|<p>-</p>|`Dependent item`|lsi.ctl.cvdata.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" cache bbu data|<p>-</p>|`Dependent item`|lsi.ctl.bbu.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" model|<p>-</p>|`Dependent item`|lsi.ctl.model.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" serial number|<p>-</p>|`Dependent item`|lsi.ctl.sn.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" state (health)|<p>-</p>|`Dependent item`|lsi.ctl.state.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" bbu low charge level|<p>-</p>|`Dependent item`|lsi.ctl.bbulowcharge.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" bbu need to replace|<p>-</p>|`Dependent item`|lsi.ctl.bbureplace.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" bbu serial number|<p>-</p>|`Dependent item`|lsi.ctl.bbusn.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" bbu state|<p>-</p>|`Dependent item`|lsi.ctl.bbustate.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" bbu type|<p>-</p>|`Dependent item`|lsi.ctl.bbutype.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" cache vault need to replace|<p>-</p>|`Dependent item`|lsi.ctl.cvreplace.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" cache vault serial number|<p>-</p>|`Dependent item`|lsi.ctl.cvsn.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" cache vault state|<p>-</p>|`Dependent item`|lsi.ctl.cvstate.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Controller "{#CTLID}" cache vault type|<p>-</p>|`Dependent item`|lsi.ctl.cvtype.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

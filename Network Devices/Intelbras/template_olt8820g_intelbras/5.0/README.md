@@ -74,11 +74,11 @@ There are no template links in this template.
 |GPON - 6 - OltOpticVoltage|<p>-</p>|`SNMP agent`|zhoneGponOltOpticVoltage6<p>Update: 10m</p>|
 |GPON - 7 - OltOpticVoltage|<p>-</p>|`SNMP agent`|zhoneGponOltOpticVoltage7<p>Update: 10m</p>|
 |GPON - 8 - OltOpticVoltage|<p>-</p>|`SNMP agent`|zhoneGponOltOpticVoltage8<p>Update: 10m</p>|
-|Trafego Recebido - RX - $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCInOctets.[{#IFDESCR}]<p>Update: 5m</p>|
-|Trafego Enviado - TX  - $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutOctets.[{#IFDESCR}]<p>Update: 5m</p>|
-|Erros de Entrada - RX-error  - $1 (LLD)|<p>-</p>|`SNMP agent`|ifInErrors.[{#IFDESCR}]<p>Update: 5m</p>|
-|Erros de Saida - TX-error  - $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutErrors.[{#IFDESCR}]<p>Update: 5m</p>|
-|Velocidade da Interface - $1 (LLD)|<p>-</p>|`SNMP agent`|ifSpeed.[{#IFDESCR}]<p>Update: 5m</p>|
+|Trafego Recebido - RX - $1|<p>-</p>|`SNMP agent`|ifHCInOctets.[{#IFDESCR}]<p>Update: 5m</p><p>LLD</p>|
+|Trafego Enviado - TX  - $1|<p>-</p>|`SNMP agent`|ifHCOutOctets.[{#IFDESCR}]<p>Update: 5m</p><p>LLD</p>|
+|Erros de Entrada - RX-error  - $1|<p>-</p>|`SNMP agent`|ifInErrors.[{#IFDESCR}]<p>Update: 5m</p><p>LLD</p>|
+|Erros de Saida - TX-error  - $1|<p>-</p>|`SNMP agent`|ifOutErrors.[{#IFDESCR}]<p>Update: 5m</p><p>LLD</p>|
+|Velocidade da Interface - $1|<p>-</p>|`SNMP agent`|ifSpeed.[{#IFDESCR}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

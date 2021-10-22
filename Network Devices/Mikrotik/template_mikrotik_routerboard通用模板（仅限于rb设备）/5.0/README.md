@@ -73,17 +73,17 @@ There are no template links in this template.
 |内存使用率|<p>-</p>|`Calculated`|vm.memory.pused[memoryUsedPercentage.Memory]<p>Update: 30s</p>|
 |内存大小|<p>-</p>|`SNMP agent`|vm.memory.total[hrStorageSize.Memory]<p>Update: 15s</p>|
 |已用内存|<p>-</p>|`SNMP agent`|vm.memory.used[hrStorageUsed.Memory]<p>Update: 15s</p>|
-|{#IFNAME}接收总量获取 (LLD)|<p>-</p>|`SNMP agent`|net.if[interface.in.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}发送总量获取 (LLD)|<p>-</p>|`SNMP agent`|net.if[interface.out.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}本地网卡接收总量获取 (LLD)|<p>-</p>|`SNMP agent`|net.if[localinterface.in.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}本地网卡发送总量获取 (LLD)|<p>-</p>|`SNMP agent`|net.if[localinterface.out{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}流量接收 (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 1s</p>|
-|{#IFNAME}流量发送 (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 1s</p>|
-|{#IFNAME}流量接收 (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctetsppp.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}流量发送 (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctetsppp.{#SNMPINDEX}]<p>Update: 30s</p>|
-|CPU{#SNMPINDEX}使用 (LLD)|<p>-</p>|`SNMP agent`|cpucore[ifnum{#SNMPINDEX}]<p>Update: 15s</p>|
-|{#IFNAME}网卡流量接收 (LLD)|<p>-</p>|`SNMP agent`|net.if.in[localin.{#SNMPINDEX}]<p>Update: 1s</p>|
-|{#IFNAME}网卡流量发送 (LLD)|<p>-</p>|`SNMP agent`|net.if.out[localout.{#SNMPINDEX}]<p>Update: 1s</p>|
+|{#IFNAME}接收总量获取|<p>-</p>|`SNMP agent`|net.if[interface.in.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}发送总量获取|<p>-</p>|`SNMP agent`|net.if[interface.out.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}本地网卡接收总量获取|<p>-</p>|`SNMP agent`|net.if[localinterface.in.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}本地网卡发送总量获取|<p>-</p>|`SNMP agent`|net.if[localinterface.out{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}流量接收|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 1s</p><p>LLD</p>|
+|{#IFNAME}流量发送|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 1s</p><p>LLD</p>|
+|{#IFNAME}流量接收|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctetsppp.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}流量发送|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctetsppp.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|CPU{#SNMPINDEX}使用|<p>-</p>|`SNMP agent`|cpucore[ifnum{#SNMPINDEX}]<p>Update: 15s</p><p>LLD</p>|
+|{#IFNAME}网卡流量接收|<p>-</p>|`SNMP agent`|net.if.in[localin.{#SNMPINDEX}]<p>Update: 1s</p><p>LLD</p>|
+|{#IFNAME}网卡流量发送|<p>-</p>|`SNMP agent`|net.if.out[localout.{#SNMPINDEX}]<p>Update: 1s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

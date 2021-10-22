@@ -51,22 +51,22 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Haproxy Prometheus Metrics|<p>-</p>|`HTTP agent`|haproxy.prometheus.allmetrics<p>Update: 1m</p>|
-|backend  [{#BACKEND_NAME}] active (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,act]<p>Update: 0</p>|
-|backend [{#BACKEND_NAME}] backup (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,bck]<p>Update: 0</p>|
-|backend  [{#BACKEND_NAME}] backend up-down transitions (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,chkdown]<p>Update: 0</p>|
-|backend [{#BACKEND_NAME}] downtime (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,downtime]<p>Update: 0</p>|
-|backend [{#BACKEND_NAME}] Number of available servers (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,nb_available_servers_by_backend]<p>Update: 0</p>|
-|backend [{#BACKEND_NAME}] Number of servers (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,nb_servers_by_backend]<p>Update: 0</p>|
-|backend [{#BACKEND_NAME}] current sessions (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,scur]<p>Update: 0</p>|
-|backend [{#BACKEND_NAME}] max sessions (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,smax]<p>Update: 0</p>|
-|backend [{#BACKEND_NAME}] status (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,status]<p>Update: 0</p>|
-|Server [{#BACKEND_NAME}/{#SERVER_NAME}] backend server up-down transitions (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},{#SERVER_NAME},chkdown]<p>Update: 0</p>|
-|Server [{#BACKEND_NAME}/{#SERVER_NAME}] backend server downtime (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},{#SERVER_NAME},downtime]<p>Update: 0</p>|
-|Server [{#BACKEND_NAME}/{#SERVER_NAME}] backend server status (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},{#SERVER_NAME},status]<p>Update: 0</p>|
-|frontend [{#FRONTEND_NAME}] current sessions (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#FRONTEND_NAME},FRONTEND,scur]<p>Update: 0</p>|
-|frontend [{#FRONTEND_NAME}] session limit (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#FRONTEND_NAME},FRONTEND,slim]<p>Update: 0</p>|
-|frontend [{#FRONTEND_NAME}] max sessions (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#FRONTEND_NAME},FRONTEND,smax]<p>Update: 0</p>|
-|frontend [{#FRONTEND_NAME}] status (LLD)|<p>-</p>|`Dependent item`|haproxy.stats[{#FRONTEND_NAME},FRONTEND,status]<p>Update: 0</p>|
+|backend  [{#BACKEND_NAME}] active|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,act]<p>Update: 0</p><p>LLD</p>|
+|backend [{#BACKEND_NAME}] backup|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,bck]<p>Update: 0</p><p>LLD</p>|
+|backend  [{#BACKEND_NAME}] backend up-down transitions|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,chkdown]<p>Update: 0</p><p>LLD</p>|
+|backend [{#BACKEND_NAME}] downtime|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,downtime]<p>Update: 0</p><p>LLD</p>|
+|backend [{#BACKEND_NAME}] Number of available servers|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,nb_available_servers_by_backend]<p>Update: 0</p><p>LLD</p>|
+|backend [{#BACKEND_NAME}] Number of servers|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,nb_servers_by_backend]<p>Update: 0</p><p>LLD</p>|
+|backend [{#BACKEND_NAME}] current sessions|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,scur]<p>Update: 0</p><p>LLD</p>|
+|backend [{#BACKEND_NAME}] max sessions|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,smax]<p>Update: 0</p><p>LLD</p>|
+|backend [{#BACKEND_NAME}] status|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},BACKEND,status]<p>Update: 0</p><p>LLD</p>|
+|Server [{#BACKEND_NAME}/{#SERVER_NAME}] backend server up-down transitions|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},{#SERVER_NAME},chkdown]<p>Update: 0</p><p>LLD</p>|
+|Server [{#BACKEND_NAME}/{#SERVER_NAME}] backend server downtime|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},{#SERVER_NAME},downtime]<p>Update: 0</p><p>LLD</p>|
+|Server [{#BACKEND_NAME}/{#SERVER_NAME}] backend server status|<p>-</p>|`Dependent item`|haproxy.stats[{#BACKEND_NAME},{#SERVER_NAME},status]<p>Update: 0</p><p>LLD</p>|
+|frontend [{#FRONTEND_NAME}] current sessions|<p>-</p>|`Dependent item`|haproxy.stats[{#FRONTEND_NAME},FRONTEND,scur]<p>Update: 0</p><p>LLD</p>|
+|frontend [{#FRONTEND_NAME}] session limit|<p>-</p>|`Dependent item`|haproxy.stats[{#FRONTEND_NAME},FRONTEND,slim]<p>Update: 0</p><p>LLD</p>|
+|frontend [{#FRONTEND_NAME}] max sessions|<p>-</p>|`Dependent item`|haproxy.stats[{#FRONTEND_NAME},FRONTEND,smax]<p>Update: 0</p><p>LLD</p>|
+|frontend [{#FRONTEND_NAME}] status|<p>-</p>|`Dependent item`|haproxy.stats[{#FRONTEND_NAME},FRONTEND,status]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

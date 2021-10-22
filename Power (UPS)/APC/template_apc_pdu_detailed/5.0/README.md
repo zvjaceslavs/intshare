@@ -105,9 +105,9 @@ There are no template links in this template.
 |Phase 2 Load|<p>-</p>|`SNMP agent`|rPDULoadStatusLoad.2<p>Update: 10s</p>|
 |Phase 3 Load|<p>-</p>|`SNMP agent`|rPDULoadStatusLoad.3<p>Update: 10s</p>|
 |System Up Time|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 1h</p>|
-|Outlet $1 Name (LLD)|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedConfigName[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Outlet $1 Bank (LLD)|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedPropertiesBank[{#SNMPINDEX}]<p>Update: 86400</p>|
-|Outlet $1 State (LLD)|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedStatusState[{#SNMPINDEX}]<p>Update: 60</p>|
+|Outlet $1 Name|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedConfigName[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Outlet $1 Bank|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedPropertiesBank[{#SNMPINDEX}]<p>Update: 86400</p><p>LLD</p>|
+|Outlet $1 State|<p>-</p>|`SNMP agent`|rPDU2OutletSwitchedStatusState[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

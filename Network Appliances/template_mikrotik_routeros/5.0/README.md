@@ -99,17 +99,17 @@ There are no template links in this template.
 |Uso de memória|<p>-</p>|`Calculated`|vm.memory.pused[memoryUsedPercentage.Memory]<p>Update: 30s</p>|
 |Tamanho da memória|<p>-</p>|`SNMP agent`|vm.memory.total[hrStorageSize.Memory]<p>Update: 15s</p>|
 |Memória usada|<p>-</p>|`SNMP agent`|vm.memory.used[hrStorageUsed.Memory]<p>Update: 15s</p>|
-|{#IFNAME}Recepção de tráfego (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 1s</p>|
-|{#IFNAME}Envio de tráfego (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 1s</p>|
-|{#IFNAME}Recepção de tráfego (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctetsppp.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}Envio de tráfego (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctetsppp.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}Recebendo aquisição total (LLD)|<p>-</p>|`SNMP agent`|net.if[interface.in.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}Obter o valor total (LLD)|<p>-</p>|`SNMP agent`|net.if[interface.out.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}Obter a quantidade total de placas de rede locais recebidas (LLD)|<p>-</p>|`SNMP agent`|net.if[localinterface.in.{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#IFNAME}Obter o valor total enviado pela placa de rede local (LLD)|<p>-</p>|`SNMP agent`|net.if[localinterface.out{#SNMPINDEX}]<p>Update: 30s</p>|
-|CPU{#SNMPINDEX}Use (LLD)|<p>-</p>|`SNMP agent`|cpucore[ifnum{#SNMPINDEX}]<p>Update: 15s</p>|
-|{#IFNAME}Recepção de tráfego da placa de rede (LLD)|<p>-</p>|`SNMP agent`|net.if.in[localin.{#SNMPINDEX}]<p>Update: 1s</p>|
-|{#IFNAME}Envio de tráfego NIC (LLD)|<p>-</p>|`SNMP agent`|net.if.out[localout.{#SNMPINDEX}]<p>Update: 1s</p>|
+|{#IFNAME}Recepção de tráfego|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 1s</p><p>LLD</p>|
+|{#IFNAME}Envio de tráfego|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 1s</p><p>LLD</p>|
+|{#IFNAME}Recepção de tráfego|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctetsppp.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}Envio de tráfego|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctetsppp.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}Recebendo aquisição total|<p>-</p>|`SNMP agent`|net.if[interface.in.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}Obter o valor total|<p>-</p>|`SNMP agent`|net.if[interface.out.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}Obter a quantidade total de placas de rede locais recebidas|<p>-</p>|`SNMP agent`|net.if[localinterface.in.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#IFNAME}Obter o valor total enviado pela placa de rede local|<p>-</p>|`SNMP agent`|net.if[localinterface.out{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|CPU{#SNMPINDEX}Use|<p>-</p>|`SNMP agent`|cpucore[ifnum{#SNMPINDEX}]<p>Update: 15s</p><p>LLD</p>|
+|{#IFNAME}Recepção de tráfego da placa de rede|<p>-</p>|`SNMP agent`|net.if.in[localin.{#SNMPINDEX}]<p>Update: 1s</p><p>LLD</p>|
+|{#IFNAME}Envio de tráfego NIC|<p>-</p>|`SNMP agent`|net.if.out[localout.{#SNMPINDEX}]<p>Update: 1s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

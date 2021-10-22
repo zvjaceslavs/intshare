@@ -58,9 +58,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#REMONAME} 湿度 (LLD)|<p>-</p>|`Zabbix agent`|natureremo.humi[{#REMONAME}]<p>Update: 30s</p>|
-|{#REMONAME} 照度 (LLD)|<p>-</p>|`Zabbix agent`|natureremo.illumi[{#REMONAME}]<p>Update: 30s</p>|
-|{#REMONAME} 室温 (LLD)|<p>-</p>|`Zabbix agent`|natureremo.temp[{#REMONAME}]<p>Update: 30s</p>|
+|{#REMONAME} 湿度|<p>-</p>|`Zabbix agent`|natureremo.humi[{#REMONAME}]<p>Update: 30s</p><p>LLD</p>|
+|{#REMONAME} 照度|<p>-</p>|`Zabbix agent`|natureremo.illumi[{#REMONAME}]<p>Update: 30s</p><p>LLD</p>|
+|{#REMONAME} 室温|<p>-</p>|`Zabbix agent`|natureremo.temp[{#REMONAME}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -44,8 +44,8 @@ There are no template links in this template.
 |Load State Status Total|<p>-</p>|`SNMP agent`|rPDULoadStatusLoadState.1<p>Update: 30</p>|
 |Load State Status Bank B1|<p>-</p>|`SNMP agent`|rPDULoadStatusLoadState.2<p>Update: 30</p>|
 |Load State Status Bank B2|<p>-</p>|`SNMP agent`|rPDULoadStatusLoadState.3<p>Update: 30</p>|
-|Outlet $1 Name (LLD)|<p>-</p>|`SNMP agent`|rPDUOutletConfigOutletName[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Outlet $1 State Status (LLD)|<p>-</p>|`SNMP agent`|rPDUOutletStatusOutletState[{#SNMPINDEX}]<p>Update: 30</p>|
+|Outlet $1 Name|<p>-</p>|`SNMP agent`|rPDUOutletConfigOutletName[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Outlet $1 State Status|<p>-</p>|`SNMP agent`|rPDUOutletStatusOutletState[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

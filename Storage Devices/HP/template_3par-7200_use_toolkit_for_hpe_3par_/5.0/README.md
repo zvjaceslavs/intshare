@@ -68,24 +68,24 @@ There are no template links in this template.
 |3par Json StatPort|<p>-</p>|`Zabbix agent`|StatPortNew<p>Update: 15s</p>|
 |3par Json StatVlun|<p>-</p>|`Zabbix agent`|StatVlunNew<p>Update: 15s</p>|
 |3par Json StatVV|<p>-</p>|`Zabbix agent`|StatVVNew<p>Update: 15s</p>|
-|3parVV B/s {#ID} {#PROV} {#NAME} (LLD)|<p>-</p>|`Dependent item`|3parVVB["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p>|
-|3parVV IO/s {#ID} {#PROV} {#NAME} (LLD)|<p>-</p>|`Dependent item`|3parVVIO["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p>|
-|3parVV STATE {#ID} {#PROV} {#NAME} (LLD)|<p>-</p>|`Dependent item`|3parVVSTATE["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p>|
-|3parVV TOTAL B {#ID} {#PROV} {#NAME} (LLD)|<p>-</p>|`Dependent item`|3parVVTOTALB["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p>|
-|3parVV USED B {#ID} {#PROV} {#NAME} (LLD)|<p>-</p>|`Dependent item`|3parVVUSEDB["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p>|
-|3parVLun B/s {#NAMEVLUN} (LLD)|<p>-</p>|`Dependent item`|3parVLunB["{#NAMEVLUN}"]<p>Update: 0</p>|
-|3parVLun IO/s {#NAMEVLUN} (LLD)|<p>-</p>|`Dependent item`|3parVLunIO["{#NAMEVLUN}"]<p>Update: 0</p>|
-|3parDisk FREE B {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS} (LLD)|<p>-</p>|`Dependent item`|3parDiskFREEB["{#DISKID}","{#CAGEPOS}"]<p>Update: 0</p>|
-|3parDisk STATE {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS} (LLD)|<p>-</p>|`Dependent item`|3parDiskSTATE["{#DISKID}","{#CAGEPOS}"]<p>Update: 0</p>|
-|3parDisk TOTAL B {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS} (LLD)|<p>-</p>|`Dependent item`|3parDiskTOTALB["{#DISKID}","{#CAGEPOS}"]<p>Update: 0</p>|
-|3parDisk IO/s {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS} (LLD)|<p>-</p>|`Dependent item`|3pardisk["{#DISKID}","{#CAGEPOS}","IOCur"]<p>Update: 0</p>|
-|3parDisk B/s {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS} (LLD)|<p>-</p>|`Dependent item`|3pardisk["{#DISKID}","{#CAGEPOS}","KBCur"]<p>Update: 0</p>|
-|3parPort B/s {#PROTOCOL} {#DEVICE} {#LABEL} (LLD)|<p>-</p>|`Dependent item`|3parPortB["{#DEVICE}"]<p>Update: 0</p>|
-|3parPort IOSzCur {#PROTOCOL} {#DEVICE} {#LABEL} (LLD)|<p>-</p>|`Dependent item`|3parPortIOSzCur["{#DEVICE}"]<p>Update: 0</p>|
-|3parPort IO/s {#PROTOCOL} {#DEVICE} {#LABEL} (LLD)|<p>-</p>|`Dependent item`|3parPortIO["{#DEVICE}"]<p>Update: 0</p>|
-|3parPort STATE {#PROTOCOL} {#DEVICE} {#LABEL} Port {#PORTWWN} Node {#NODEWWN} (LLD)|<p>-</p>|`Dependent item`|3parPortSTATE["{#PROTOCOL}","{#DEVICE}","{#LABEL}","{#PORTWWN}"]<p>Update: 0</p>|
-|3parPort SvtCur {#PROTOCOL} {#DEVICE} {#LABEL} (LLD)|<p>-</p>|`Dependent item`|3parPortSvtCur["{#DEVICE}"]<p>Update: 0</p>|
-|3parPort TYPE {#PROTOCOL} {#DEVICE} {#LABEL} Port {#PORTWWN} Node {#NODEWWN} (LLD)|<p>-</p>|`Dependent item`|3parPortTYPE["{#PROTOCOL}","{#DEVICE}","{#LABEL}","{#PORTWWN}"]<p>Update: 0</p>|
+|3parVV B/s {#ID} {#PROV} {#NAME}|<p>-</p>|`Dependent item`|3parVVB["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p><p>LLD</p>|
+|3parVV IO/s {#ID} {#PROV} {#NAME}|<p>-</p>|`Dependent item`|3parVVIO["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p><p>LLD</p>|
+|3parVV STATE {#ID} {#PROV} {#NAME}|<p>-</p>|`Dependent item`|3parVVSTATE["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p><p>LLD</p>|
+|3parVV TOTAL B {#ID} {#PROV} {#NAME}|<p>-</p>|`Dependent item`|3parVVTOTALB["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p><p>LLD</p>|
+|3parVV USED B {#ID} {#PROV} {#NAME}|<p>-</p>|`Dependent item`|3parVVUSEDB["{#ID}","{#PROV}","{#NAME}"]<p>Update: 0</p><p>LLD</p>|
+|3parVLun B/s {#NAMEVLUN}|<p>-</p>|`Dependent item`|3parVLunB["{#NAMEVLUN}"]<p>Update: 0</p><p>LLD</p>|
+|3parVLun IO/s {#NAMEVLUN}|<p>-</p>|`Dependent item`|3parVLunIO["{#NAMEVLUN}"]<p>Update: 0</p><p>LLD</p>|
+|3parDisk FREE B {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS}|<p>-</p>|`Dependent item`|3parDiskFREEB["{#DISKID}","{#CAGEPOS}"]<p>Update: 0</p><p>LLD</p>|
+|3parDisk STATE {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS}|<p>-</p>|`Dependent item`|3parDiskSTATE["{#DISKID}","{#CAGEPOS}"]<p>Update: 0</p><p>LLD</p>|
+|3parDisk TOTAL B {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS}|<p>-</p>|`Dependent item`|3parDiskTOTALB["{#DISKID}","{#CAGEPOS}"]<p>Update: 0</p><p>LLD</p>|
+|3parDisk IO/s {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS}|<p>-</p>|`Dependent item`|3pardisk["{#DISKID}","{#CAGEPOS}","IOCur"]<p>Update: 0</p><p>LLD</p>|
+|3parDisk B/s {#RPM}K {#TYPE} {#DISKID} {#CAGEPOS}|<p>-</p>|`Dependent item`|3pardisk["{#DISKID}","{#CAGEPOS}","KBCur"]<p>Update: 0</p><p>LLD</p>|
+|3parPort B/s {#PROTOCOL} {#DEVICE} {#LABEL}|<p>-</p>|`Dependent item`|3parPortB["{#DEVICE}"]<p>Update: 0</p><p>LLD</p>|
+|3parPort IOSzCur {#PROTOCOL} {#DEVICE} {#LABEL}|<p>-</p>|`Dependent item`|3parPortIOSzCur["{#DEVICE}"]<p>Update: 0</p><p>LLD</p>|
+|3parPort IO/s {#PROTOCOL} {#DEVICE} {#LABEL}|<p>-</p>|`Dependent item`|3parPortIO["{#DEVICE}"]<p>Update: 0</p><p>LLD</p>|
+|3parPort STATE {#PROTOCOL} {#DEVICE} {#LABEL} Port {#PORTWWN} Node {#NODEWWN}|<p>-</p>|`Dependent item`|3parPortSTATE["{#PROTOCOL}","{#DEVICE}","{#LABEL}","{#PORTWWN}"]<p>Update: 0</p><p>LLD</p>|
+|3parPort SvtCur {#PROTOCOL} {#DEVICE} {#LABEL}|<p>-</p>|`Dependent item`|3parPortSvtCur["{#DEVICE}"]<p>Update: 0</p><p>LLD</p>|
+|3parPort TYPE {#PROTOCOL} {#DEVICE} {#LABEL} Port {#PORTWWN} Node {#NODEWWN}|<p>-</p>|`Dependent item`|3parPortTYPE["{#PROTOCOL}","{#DEVICE}","{#LABEL}","{#PORTWWN}"]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

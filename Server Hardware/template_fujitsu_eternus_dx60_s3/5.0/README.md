@@ -44,9 +44,6 @@ Serpentarius Software
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Machine Pool Used Status|<p>This is a summary of the pool used status. Syntax INTEGER {normal(1), attention(2), warning(3) KIHAGYTAM: <preprocessing> <step> <type>DISCARD_UNCHANGED_HEARTBEAT</type> <params>1800</params> </step> </preprocessing></p>|`SNMP agent`|fjdaryMgtMachinePoolUsedStatus<p>Update: 30s</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |SNMP traps (fallback)|<p>Item is used to collect all SNMP traps unmatched by other snmptrap items</p>|`SNMP trap`|snmptrap.fallback<p>Update: 5m</p>|
 |Device contact details|<p>MIB: SNMPv2-MIB The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|system.contact<p>Update: 1h</p>|
 |Device description|<p>MIB: SNMPv2-MIB A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|system.descr<p>Update: 1h</p>|
@@ -58,10 +55,10 @@ Serpentarius Software
 |Maximum temperature in the last hour|<p>The maximum temperature is shown during one hour in the past. kihagytam: <preprocessing> <step> <type>DISCARD_UNCHANGED_HEARTBEAT</type> <params>1800</params> </step> </preprocessing></p>|`SNMP agent`|unit.temperature<p>Update: 30s</p>|
 |Maximum temperature enclosure in the last hour|<p>The maximum temperature is shown during one hour in the past. kihagytam: <preprocessing> <step> <type>DISCARD_UNCHANGED_HEARTBEAT</type> <params>1800</params> </step> </preprocessing></p>|`SNMP agent`|unit.temperature.enclosur<p>Update: 30s</p>|
 |SNMP availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 1m</p>|
-|RAID №{#RAID_GROUP} - Capacity (LLD)|<p>-</p>|`SNMP agent`|raid.group.capacity.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|RAID №{#RAID_GROUP} - Level (LLD)|<p>-</p>|`SNMP agent`|raid.group.level.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|RAID №{#RAID_GROUP} - Status (LLD)|<p>-</p>|`SNMP agent`|raid.group.status.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Disk №{#SNMPINDEX} - Status (LLD)|<p>-</p>|`SNMP agent`|disk.status.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|RAID №{#RAID_GROUP} - Capacity|<p>-</p>|`SNMP agent`|raid.group.capacity.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|RAID №{#RAID_GROUP} - Level|<p>-</p>|`SNMP agent`|raid.group.level.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|RAID №{#RAID_GROUP} - Status|<p>-</p>|`SNMP agent`|raid.group.status.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Disk №{#SNMPINDEX} - Status|<p>-</p>|`SNMP agent`|disk.status.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

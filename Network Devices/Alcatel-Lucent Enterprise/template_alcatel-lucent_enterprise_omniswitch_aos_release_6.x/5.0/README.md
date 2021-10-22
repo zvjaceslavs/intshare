@@ -98,20 +98,20 @@ There are no template links in this template.
 |Device location|<p>SNMPv2-MIB::sysLocation.0 - The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 300</p>|
 |Device name|<p>SNMPv2-MIB::sysName.0 - An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 300</p>|
 |SysUptime|<p>DISMAN-EVENT-MIB::sysUpTimeInstance - Uptime of the system in TimeTicks (100 timeticks == 1 second)</p>|`SNMP agent`|SysUptime<p>Update: 60</p>|
-|PoE Power Actual {{#SNMPINDEX}.regsub("([0-9]+)\.([0-9]+)", \1/\2)} (LLD)|<p>AlcatelIND1InLinePowerEthernet::alaPethPsePortPowerActual -- This object contains the actual amount of power used by a port</p>|`SNMP agent`|poepoweractual.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|PoE Power Maximum {{#SNMPINDEX}.regsub("([0-9]+)\.([0-9]+)", \1/\2)} (LLD)|<p>AlcatelIND1InLinePowerEthernet::alaPethPsePortPowerMaximum -- This object controls maximum amount of power per port</p>|`SNMP agent`|poepowermax.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|InOctets {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inoctets.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|OutOctets {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|outoctets.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Device type of slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|devicemodel.slot.[{#SNMPINDEX}]<p>Update: 300</p>|
-|Device serial number of slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|serialnumber.slot.[{#SNMPINDEX}]<p>Update: 300</p>|
-|Temperature on slot {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|temperature.slot.[{#SNMPINDEX}]<p>Update: 60s</p>|
-|CPU usage 1 hr max slot {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|cpu1hrmax.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|CPU usage 1 min avg slot {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|cpu1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Freespace /flash slot {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|flashfreespace.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Memory usage 1 hr max slot {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|memory1hrmax.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Memory usage 1 min avg slot {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|memory1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|RXTX usage 1 hr max slot {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|rxtx1hrmax.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
-|RXTX usage 1 min avg slot {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|rxtx1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p>|
+|PoE Power Actual {{#SNMPINDEX}.regsub("([0-9]+)\.([0-9]+)", \1/\2)}|<p>AlcatelIND1InLinePowerEthernet::alaPethPsePortPowerActual -- This object contains the actual amount of power used by a port</p>|`SNMP agent`|poepoweractual.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|PoE Power Maximum {{#SNMPINDEX}.regsub("([0-9]+)\.([0-9]+)", \1/\2)}|<p>AlcatelIND1InLinePowerEthernet::alaPethPsePortPowerMaximum -- This object controls maximum amount of power per port</p>|`SNMP agent`|poepowermax.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|InOctets {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inoctets.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|OutOctets {#SNMPVALUE}|<p>-</p>|`SNMP agent`|outoctets.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Device type of slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|devicemodel.slot.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Device serial number of slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|serialnumber.slot.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Temperature on slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|temperature.slot.[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
+|CPU usage 1 hr max slot {#SNMPVALUE}|<p>-</p>|`SNMP agent`|cpu1hrmax.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|CPU usage 1 min avg slot {#SNMPVALUE}|<p>-</p>|`SNMP agent`|cpu1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Freespace /flash slot {#SNMPVALUE}|<p>-</p>|`SNMP agent`|flashfreespace.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Memory usage 1 hr max slot {#SNMPVALUE}|<p>-</p>|`SNMP agent`|memory1hrmax.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Memory usage 1 min avg slot {#SNMPVALUE}|<p>-</p>|`SNMP agent`|memory1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|RXTX usage 1 hr max slot {#SNMPVALUE}|<p>-</p>|`SNMP agent`|rxtx1hrmax.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|RXTX usage 1 min avg slot {#SNMPVALUE}|<p>-</p>|`SNMP agent`|rxtx1minavg.slot.[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

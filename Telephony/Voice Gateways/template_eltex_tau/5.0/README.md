@@ -52,7 +52,7 @@ There are no template links in this template.
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 1h</p>|
 |Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 5m</p>|
 |smgVoip0busyChannels|<p>-</p>|`SNMP agent`|Voip0busyChannels<p>Update: 30s</p>|
-|Статус FXS {#FXSNAME} (LLD)|<p>-</p>|`SNMP agent`|fxsPort.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|Статус FXS {#FXSNAME}|<p>-</p>|`SNMP agent`|fxsPort.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

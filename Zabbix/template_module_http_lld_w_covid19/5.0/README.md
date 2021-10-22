@@ -130,15 +130,15 @@ There are no template links in this template.
 |Total All Deaths|<p>-</p>|`Dependent item`|total.all.deaths<p>Update: 0</p>|
 |Total All Recovered|<p>-</p>|`Dependent item`|total.all.recovered<p>Update: 0</p>|
 |Total All updated|<p>-</p>|`Dependent item`|total.all.updated<p>Update: 0</p>|
-|"{#COUNTRY} - {#ISO3}" - ActiveCases (LLD)|<p>-</p>|`HTTP agent`|active.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
-|"{#COUNTRY} - {#ISO3}" - Cases (LLD)|<p>-</p>|`HTTP agent`|cases.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
-|"{#COUNTRY} - {#ISO3}" - CasesPerOneMillion (LLD)|<p>-</p>|`HTTP agent`|casesPerOneMillion.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
-|"{#COUNTRY} - {#ISO3}" - Critical (LLD)|<p>-</p>|`HTTP agent`|critical.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
-|"{#COUNTRY} - {#ISO3}" - Deaths (LLD)|<p>-</p>|`HTTP agent`|deaths.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
-|"{#COUNTRY} - {#ISO3}" - DeathsPerOneMillion (LLD)|<p>-</p>|`HTTP agent`|deathsPerOneMillion.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
-|"{#COUNTRY} - {#ISO3}" - Recovered (LLD)|<p>-</p>|`HTTP agent`|recovered.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
-|"{#COUNTRY} - {#ISO3}" - TodayCases (LLD)|<p>-</p>|`HTTP agent`|today.cases.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
-|"{#COUNTRY} - {#ISO3}" - TodayDeaths (LLD)|<p>-</p>|`HTTP agent`|today.deaths.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p>|
+|"{#COUNTRY} - {#ISO3}" - ActiveCases|<p>-</p>|`HTTP agent`|active.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|"{#COUNTRY} - {#ISO3}" - Cases|<p>-</p>|`HTTP agent`|cases.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|"{#COUNTRY} - {#ISO3}" - CasesPerOneMillion|<p>-</p>|`HTTP agent`|casesPerOneMillion.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|"{#COUNTRY} - {#ISO3}" - Critical|<p>-</p>|`HTTP agent`|critical.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|"{#COUNTRY} - {#ISO3}" - Deaths|<p>-</p>|`HTTP agent`|deaths.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|"{#COUNTRY} - {#ISO3}" - DeathsPerOneMillion|<p>-</p>|`HTTP agent`|deathsPerOneMillion.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|"{#COUNTRY} - {#ISO3}" - Recovered|<p>-</p>|`HTTP agent`|recovered.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|"{#COUNTRY} - {#ISO3}" - TodayCases|<p>-</p>|`HTTP agent`|today.cases.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
+|"{#COUNTRY} - {#ISO3}" - TodayDeaths|<p>-</p>|`HTTP agent`|today.deaths.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

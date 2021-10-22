@@ -30,7 +30,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|State of service: {#UNIT.NAME} (LLD)|<p>Description: {#UNIT.DESCRIPTION} Path: {#UNIT.PATH}</p>|`Zabbix agent`|systemd.unit.info["{#UNIT.NAME}"]<p>Update: 1m</p>|
+|State of service: {#UNIT.NAME}|<p>Description: {#UNIT.DESCRIPTION} Path: {#UNIT.PATH}</p>|`Zabbix agent`|systemd.unit.info["{#UNIT.NAME}"]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

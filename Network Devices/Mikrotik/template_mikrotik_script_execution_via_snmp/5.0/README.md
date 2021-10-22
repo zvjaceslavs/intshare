@@ -27,7 +27,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Execution of  {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|ExecScript.[{#SNMPINDEX}]<p>Update: 300</p>|
+|Execution of  {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ExecScript.[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

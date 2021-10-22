@@ -95,18 +95,18 @@ There are no template links in this template.
 |Seconds on Battery|<p>-</p>|`SNMP agent`|upsSecondsOnBattery<p>Update: 1m</p>|
 |Estimated Charge Remaining|<p>-</p>|`SNMP agent`|upsEstimatedChargeRemaining<p>Update: 30m</p>|
 |Output Number Lines|<p>-</p>|`SNMP agent`|get.output.lines[]<p>Update: 30m</p>|
-|Alarms Description (LLD)|<p>-</p>|`SNMP agent`|get.alarms.description[{#ALARM}]<p>Update: 1m</p>|
-|Alarms ID (LLD)|<p>-</p>|`SNMP agent`|get.alarms.id[{#ALARM}]<p>Update: 1m</p>|
-|Output {#INDEX}: A (LLD)|<p>-</p>|`SNMP agent`|get.output.current[{#INDEX}]<p>Update: 30m</p>|
-|Output {#INDEX}: kVA (LLD)|<p>-</p>|`SNMP agent`|get.output.kva[{#INDEX}]<p>Update: 30m</p>|
-|Output {#INDEX}: Percentage Load (LLD)|<p>-</p>|`SNMP agent`|get.output.percload[{#INDEX}]<p>Update: 30m</p>|
-|Output {#INDEX}: Voltage (LLD)|<p>-</p>|`SNMP agent`|get.output.voltage[{#INDEX}]<p>Update: 1m</p>|
-|Bypass {#INDEX}: A (LLD)|<p>-</p>|`SNMP agent`|get.bypass.amps[{#INDEX}]<p>Update: 30m</p>|
-|Bypass {#INDEX}: Voltage (LLD)|<p>-</p>|`SNMP agent`|get.bypass.voltage[{#INDEX}]<p>Update: 30m</p>|
-|Input {#INDEX}: A (LLD)|<p>-</p>|`SNMP agent`|get.input.current[{#INDEX}]<p>Update: 30m</p>|
-|Input {#INDEX}: Votage Max (LLD)|<p>-</p>|`SNMP agent`|get.input.voltage.max[{#INDEX}]<p>Update: 30m</p>|
-|Input {#INDEX}: Votage Min (LLD)|<p>-</p>|`SNMP agent`|get.input.voltage.min[{#INDEX}]<p>Update: 30m</p>|
-|Input {#INDEX}: Voltage (LLD)|<p>-</p>|`SNMP agent`|get.input.voltage[{#INDEX}]<p>Update: 30m</p>|
+|Alarms Description|<p>-</p>|`SNMP agent`|get.alarms.description[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Alarms ID|<p>-</p>|`SNMP agent`|get.alarms.id[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Output {#INDEX}: A|<p>-</p>|`SNMP agent`|get.output.current[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Output {#INDEX}: kVA|<p>-</p>|`SNMP agent`|get.output.kva[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Output {#INDEX}: Percentage Load|<p>-</p>|`SNMP agent`|get.output.percload[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Output {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.output.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bypass {#INDEX}: A|<p>-</p>|`SNMP agent`|get.bypass.amps[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Bypass {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.bypass.voltage[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Input {#INDEX}: A|<p>-</p>|`SNMP agent`|get.input.current[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Input {#INDEX}: Votage Max|<p>-</p>|`SNMP agent`|get.input.voltage.max[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Input {#INDEX}: Votage Min|<p>-</p>|`SNMP agent`|get.input.voltage.min[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Input {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.input.voltage[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

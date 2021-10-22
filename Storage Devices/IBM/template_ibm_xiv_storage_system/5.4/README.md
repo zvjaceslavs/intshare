@@ -83,62 +83,62 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |pyxcli_discovery|<p>Scripts that displays all the information, then parsing json</p>|`External check`|pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}]<p>Update: 3m</p>|
-|{#COMPONENT.ID} Cpu util (LLD)|<p>-</p>|`Dependent item`|switch.cpu.util[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Initialized curr vpd (LLD)|<p>-</p>|`Dependent item`|switch.curr.vpd[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Fans rpm (LLD)|<p>-</p>|`Dependent item`|switch.fans.rpm[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Initialized initial vpd (LLD)|<p>-</p>|`Dependent item`|switch.initial.vpd[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Monitor status (LLD)|<p>-</p>|`Dependent item`|switch.monitor.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Initialized prev vpd (LLD)|<p>-</p>|`Dependent item`|switch.prev.vpd[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Ps1 status (LLD)|<p>-</p>|`Dependent item`|switch.ps1[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Ps2 status (LLD)|<p>-</p>|`Dependent item`|switch.ps2[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|switch.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Sw mgmt status (LLD)|<p>-</p>|`Dependent item`|switch.sw.mgmt.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Voltage (LLD)|<p>-</p>|`Dependent item`|switch.voltage[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|cpu.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Hardware status (LLD)|<p>-</p>|`Dependent item`|cpu.hardware.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|cpu.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|psu.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Current (LLD)|<p>-</p>|`Dependent item`|psu.current[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Hardware status (LLD)|<p>-</p>|`Dependent item`|psu.hardware.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Power (LLD)|<p>-</p>|`Dependent item`|psu.power[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|psu.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Voltage 5v (LLD)|<p>-</p>|`Dependent item`|psu.voltage.5v[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Voltage 12v (LLD)|<p>-</p>|`Dependent item`|psu.voltage.12v[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|fc_port.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Error count (LLD)|<p>-</p>|`Dependent item`|fc_port.error.count[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Port state (LLD)|<p>-</p>|`Dependent item`|fc_port.port.state[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|fc_port.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|cna.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|cna.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|ats.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Input l1 (LLD)|<p>-</p>|`Dependent item`|ats.input.l1[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Input_l2 (LLD)|<p>-</p>|`Dependent item`|ats.input.l2[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|ats.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|fan.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|fan.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|mm.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Enabled state (LLD)|<p>-</p>|`Dependent item`|mm.enabled[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Link 1 (LLD)|<p>-</p>|`Dependent item`|mm.link_1[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Link 2 (LLD)|<p>-</p>|`Dependent item`|mm.link_2[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|mm.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Temperature (LLD)|<p>-</p>|`Dependent item`|mm.temperature[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Total memory (LLD)|<p>-</p>|`Dependent item`|mm.total.memory[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Hardware status (LLD)|<p>-</p>|`Dependent item`|dimm.hardware.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|dimm.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|disk.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Desc Power is on (LLD)|<p>-</p>|`Dependent item`|disk.power.is.on[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Desc Read fail (LLD)|<p>-</p>|`Dependent item`|disk.read.fail[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Desc Smart fail (LLD)|<p>-</p>|`Dependent item`|disk.smart.fail[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|disk.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Temperature (LLD)|<p>-</p>|`Dependent item`|disk.temperature[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Apparent load power percent (LLD)|<p>-</p>|`Dependent item`|ups.apparent.load.power.percent[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Battery charge level (LLD)|<p>-</p>|`Dependent item`|ups.battery.charge.level[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Currently functioning (LLD)|<p>-</p>|`Dependent item`|ups.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Input power on (LLD)|<p>-</p>|`Dependent item`|ups.input.power.on[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Internal temperature (LLD)|<p>-</p>|`Dependent item`|ups.internal.temperature[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Load power percent (LLD)|<p>-</p>|`Dependent item`|ups.load.power.percent[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Power Status (LLD)|<p>-</p>|`Dependent item`|ups.power.status[{#COMPONENT.ID}]<p>Update: 0</p>|
-|{#COMPONENT.ID} Status (LLD)|<p>-</p>|`Dependent item`|ups.status[{#COMPONENT.ID}]<p>Update: 0</p>|
+|{#COMPONENT.ID} Cpu util|<p>-</p>|`Dependent item`|switch.cpu.util[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Initialized curr vpd|<p>-</p>|`Dependent item`|switch.curr.vpd[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Fans rpm|<p>-</p>|`Dependent item`|switch.fans.rpm[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Initialized initial vpd|<p>-</p>|`Dependent item`|switch.initial.vpd[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Monitor status|<p>-</p>|`Dependent item`|switch.monitor.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Initialized prev vpd|<p>-</p>|`Dependent item`|switch.prev.vpd[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Ps1 status|<p>-</p>|`Dependent item`|switch.ps1[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Ps2 status|<p>-</p>|`Dependent item`|switch.ps2[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|switch.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Sw mgmt status|<p>-</p>|`Dependent item`|switch.sw.mgmt.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Voltage|<p>-</p>|`Dependent item`|switch.voltage[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|cpu.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Hardware status|<p>-</p>|`Dependent item`|cpu.hardware.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|cpu.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|psu.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Current|<p>-</p>|`Dependent item`|psu.current[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Hardware status|<p>-</p>|`Dependent item`|psu.hardware.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Power|<p>-</p>|`Dependent item`|psu.power[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|psu.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Voltage 5v|<p>-</p>|`Dependent item`|psu.voltage.5v[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Voltage 12v|<p>-</p>|`Dependent item`|psu.voltage.12v[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|fc_port.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Error count|<p>-</p>|`Dependent item`|fc_port.error.count[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Port state|<p>-</p>|`Dependent item`|fc_port.port.state[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|fc_port.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|cna.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|cna.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|ats.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Input l1|<p>-</p>|`Dependent item`|ats.input.l1[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Input_l2|<p>-</p>|`Dependent item`|ats.input.l2[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|ats.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|fan.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|fan.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|mm.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Enabled state|<p>-</p>|`Dependent item`|mm.enabled[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Link 1|<p>-</p>|`Dependent item`|mm.link_1[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Link 2|<p>-</p>|`Dependent item`|mm.link_2[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|mm.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Temperature|<p>-</p>|`Dependent item`|mm.temperature[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Total memory|<p>-</p>|`Dependent item`|mm.total.memory[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Hardware status|<p>-</p>|`Dependent item`|dimm.hardware.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|dimm.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|disk.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Desc Power is on|<p>-</p>|`Dependent item`|disk.power.is.on[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Desc Read fail|<p>-</p>|`Dependent item`|disk.read.fail[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Desc Smart fail|<p>-</p>|`Dependent item`|disk.smart.fail[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|disk.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Temperature|<p>-</p>|`Dependent item`|disk.temperature[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Apparent load power percent|<p>-</p>|`Dependent item`|ups.apparent.load.power.percent[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Battery charge level|<p>-</p>|`Dependent item`|ups.battery.charge.level[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Currently functioning|<p>-</p>|`Dependent item`|ups.currently.functioning[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Input power on|<p>-</p>|`Dependent item`|ups.input.power.on[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Internal temperature|<p>-</p>|`Dependent item`|ups.internal.temperature[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Load power percent|<p>-</p>|`Dependent item`|ups.load.power.percent[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Power Status|<p>-</p>|`Dependent item`|ups.power.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
+|{#COMPONENT.ID} Status|<p>-</p>|`Dependent item`|ups.status[{#COMPONENT.ID}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

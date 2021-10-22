@@ -59,7 +59,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Number of processes $1 (LLD)|<p>-</p>|`Zabbix agent`|proc.num[{#SERVICE}]<p>Update: 2m</p>|
+|Number of processes $1|<p>-</p>|`Zabbix agent`|proc.num[{#SERVICE}]<p>Update: 2m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

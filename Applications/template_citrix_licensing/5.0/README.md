@@ -38,7 +38,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Citrix License {#CITRIX_LIC} validity period (LLD)|<p>-</p>|`Zabbix agent`|wmi.get["ROOT\CitrixLicensing","SELECT ExpirationDate FROM Citrix_GT_License WHERE SerialNumber = '{#CITRIX_LIC}'"]<p>Update: 1h</p>|
+|Citrix License {#CITRIX_LIC} validity period|<p>-</p>|`Zabbix agent`|wmi.get["ROOT\CitrixLicensing","SELECT ExpirationDate FROM Citrix_GT_License WHERE SerialNumber = '{#CITRIX_LIC}'"]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -89,12 +89,12 @@ There are no template links in this template.
 |gei_1/4/1|<p>-</p>|`SNMP agent`|3902.1015.3.1.13.1.12.268632064<p>Update: 60s</p>|
 |xgei_1/4/2|<p>-</p>|`SNMP agent`|3902.1015.3.1.13.1.12.268632320<p>Update: 60s</p>|
 |Device uptime|<p>MIB: SNMPv2-MIB The time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|system.uptime<p>Update: 1m</p>|
-|{#SNMPVALUE} Status (LLD)|<p>-</p>|`SNMP agent`|ifOperStatus.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|CPU Load Placa {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1015.2.1.1.3.1.9.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Temperatura Placa {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1015.2.1.3.13.5.1.1.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Status Placa {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.3902.1015.2.1.1.3.1.5.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.13.1.1.13.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Fan {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1015.2.1.3.10.10.10.1.7.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|{#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|ifOperStatus.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|CPU Load Placa {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1015.2.1.1.3.1.9.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Temperatura Placa {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1015.2.1.3.13.5.1.1.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Status Placa {#SNMPINDEX}|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.3902.1015.2.1.1.3.1.5.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.13.1.1.13.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Fan {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1015.2.1.3.10.10.10.1.7.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -36,9 +36,9 @@ There are no template links in this template.
 |System Description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 3400;wd1h00-01</p>|
 |System Name|<p>-</p>|`SNMP agent`|systemName<p>Update: 3600;wd1h00-01</p>|
 |System uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 3600</p>|
-|Incoming traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 30</p>|
-|Operational status of interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 30</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 30</p>|
+|Incoming traffic on interface $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Operational status of interface $1|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

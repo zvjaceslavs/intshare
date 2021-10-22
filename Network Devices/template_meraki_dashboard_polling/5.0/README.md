@@ -34,8 +34,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|SSID: {#SSIDNAME} (LLD)|<p>-</p>|`SNMP agent`|MerakiDeviceIndex.SSID.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Access Point {#ITEM.NAME}: Clients Connected (LLD)|<p>-</p>|`SNMP agent`|MerakiDeviceIndex.Clients.[{#SNMPINDEX}]<p>Update: 5m</p>|
+|SSID: {#SSIDNAME}|<p>-</p>|`SNMP agent`|MerakiDeviceIndex.SSID.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Access Point {#ITEM.NAME}: Clients Connected|<p>-</p>|`SNMP agent`|MerakiDeviceIndex.Clients.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

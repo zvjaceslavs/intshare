@@ -43,26 +43,26 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#DESC} availability (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[airFlowSensorAvail.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} dew point (F) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[airFlowSensorDewPointF.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} airflow (%) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[airFlowSensorFlow.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} relative humidity (%) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[airFlowSensorHumidity.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} temperature (C) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[airflowSensorTempC.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} temperature (F) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[airflowSensorTempF.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} availability (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[tempSensorAvail.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} temperature (C) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[tempSensorTempC.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} temperature (F) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[tempSensorTempF.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} airflow (%) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateAirflow.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} availability (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateAvail.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} IO1 (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateIO1.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} IO2 (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateIO2.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} IO3 (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateIO3.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} light (%) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateLight.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} sound (%) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateSound.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} temperature (C) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateTempC.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} temperature (F) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[climateTempF.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} availability (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[waterSensorAvail.{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#DESC} dampness (%) (LLD)|<p>-</p>|`SNMP agent`|enviro.tempf[waterSensorDampness.{#SNMPINDEX}]<p>Update: 1m</p>|
+|{#DESC} availability|<p>-</p>|`SNMP agent`|enviro.tempf[airFlowSensorAvail.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} dew point (F)|<p>-</p>|`SNMP agent`|enviro.tempf[airFlowSensorDewPointF.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} airflow (%)|<p>-</p>|`SNMP agent`|enviro.tempf[airFlowSensorFlow.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} relative humidity (%)|<p>-</p>|`SNMP agent`|enviro.tempf[airFlowSensorHumidity.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} temperature (C)|<p>-</p>|`SNMP agent`|enviro.tempf[airflowSensorTempC.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} temperature (F)|<p>-</p>|`SNMP agent`|enviro.tempf[airflowSensorTempF.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} availability|<p>-</p>|`SNMP agent`|enviro.tempf[tempSensorAvail.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} temperature (C)|<p>-</p>|`SNMP agent`|enviro.tempf[tempSensorTempC.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} temperature (F)|<p>-</p>|`SNMP agent`|enviro.tempf[tempSensorTempF.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} airflow (%)|<p>-</p>|`SNMP agent`|enviro.tempf[climateAirflow.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} availability|<p>-</p>|`SNMP agent`|enviro.tempf[climateAvail.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} IO1|<p>-</p>|`SNMP agent`|enviro.tempf[climateIO1.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} IO2|<p>-</p>|`SNMP agent`|enviro.tempf[climateIO2.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} IO3|<p>-</p>|`SNMP agent`|enviro.tempf[climateIO3.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} light (%)|<p>-</p>|`SNMP agent`|enviro.tempf[climateLight.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} sound (%)|<p>-</p>|`SNMP agent`|enviro.tempf[climateSound.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} temperature (C)|<p>-</p>|`SNMP agent`|enviro.tempf[climateTempC.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} temperature (F)|<p>-</p>|`SNMP agent`|enviro.tempf[climateTempF.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} availability|<p>-</p>|`SNMP agent`|enviro.tempf[waterSensorAvail.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#DESC} dampness (%)|<p>-</p>|`SNMP agent`|enviro.tempf[waterSensorDampness.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

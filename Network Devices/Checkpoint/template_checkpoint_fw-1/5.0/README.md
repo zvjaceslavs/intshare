@@ -78,10 +78,10 @@ There are no template links in this template.
 |Memory Free|<p>-</p>|`SNMP agent`|memFreeReal<p>Update: 120</p>|
 |Memory Total|<p>-</p>|`SNMP agent`|memTotalReal<p>Update: 120</p>|
 |Product Version|<p>-</p>|`SNMP agent`|svnVersion<p>Update: 3600</p>|
-|HA Problem Status {#ADVSNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|haProblemStatus[{#ADVSNMPVALUE}]<p>Update: 120</p>|
-|Processor {#ADVSNMPVALUE} Idle Time (LLD)|<p>-</p>|`SNMP agent`|multiProcIdleTime[{#ADVSNMPVALUE}]<p>Update: 90</p>|
-|Processor {#ADVSNMPVALUE} System Time (LLD)|<p>-</p>|`SNMP agent`|multiProcSystemTime[{#ADVSNMPVALUE}]<p>Update: 90</p>|
-|Processor {#ADVSNMPVALUE} User Time (LLD)|<p>-</p>|`SNMP agent`|multiProcUserTime[{#ADVSNMPVALUE}]<p>Update: 90</p>|
+|HA Problem Status {#ADVSNMPVALUE}|<p>-</p>|`SNMP agent`|haProblemStatus[{#ADVSNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Processor {#ADVSNMPVALUE} Idle Time|<p>-</p>|`SNMP agent`|multiProcIdleTime[{#ADVSNMPVALUE}]<p>Update: 90</p><p>LLD</p>|
+|Processor {#ADVSNMPVALUE} System Time|<p>-</p>|`SNMP agent`|multiProcSystemTime[{#ADVSNMPVALUE}]<p>Update: 90</p><p>LLD</p>|
+|Processor {#ADVSNMPVALUE} User Time|<p>-</p>|`SNMP agent`|multiProcUserTime[{#ADVSNMPVALUE}]<p>Update: 90</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

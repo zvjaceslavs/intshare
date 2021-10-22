@@ -21,32 +21,32 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#INSTANCES} Access Methods Forwarded Records/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Forwarded Records/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} General Statistics Logins/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:General Statistics\Logins/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} SQL Statistics SQL Compilations/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:SQL Statistics\SQL Compilations/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} SQL Statistics Batch Requests/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Service (LLD)|<p>-</p>|`Zabbix agent`|service_state[{#INSTANCES}]<p>Update: 30</p>|
-|{#INSTANCES} Memory Manager Total Server Memory (KB) (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Memory Manager\Total Server Memory (KB)",300]<p>Update: 30</p>|
-|{#INSTANCES} Locks _Total Number of Deadlocks/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Locks(_Total)\Number of Deadlocks/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Locks _Total Lock Waits/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Locks(_Total)\Lock Waits/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Latches Total Latch Wait Time (ms) (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Latches\Total Latch Wait Time (ms)",300]<p>Update: 30</p>|
-|{#INSTANCES} Latches Latch Waits/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Latches\Latch Waits/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} General Statistics User Connections (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:General Statistics\User Connections",300]<p>Update: 30</p>|
-|{#INSTANCES} General Statistics Logouts/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:General Statistics\Logouts/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Databases _Total Transactions/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Databases(_Total)\Transactions/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Access Methods Full Scans/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Full Scans/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Databases _Total Log Flushes/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Databases(_Total)\Log Flushes/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Buffer Manager Page writes/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Page writes/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Buffer Manager Page reads/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Page reads/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Buffer Manager Page lookups/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Page lookups/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Buffer Manager Page Life Expectancy (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Page Life Expectancy",300]<p>Update: 30</p>|
-|{#INSTANCES} Buffer Manager Lazy Writes/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Lazy Writes/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Buffer Manager Free list stalls/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Free list stalls/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Buffer Manager Buffer cache hit ratio (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Buffer cache hit ratio",300]<p>Update: 30</p>|
-|{#INSTANCES} Access Methods Table Lock Escalations (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Table Lock Escalations/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Access Methods Page Splits/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Page Splits/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} Access Methods Index Searches/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Index Searches/sec",300]<p>Update: 30</p>|
-|{#INSTANCES} SQL Statistics SQL Re-Compilations/sec (LLD)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:SQL Statistics\SQL Re-Compilations/sec",300]<p>Update: 30</p>|
+|{#INSTANCES} Access Methods Forwarded Records/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Forwarded Records/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} General Statistics Logins/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:General Statistics\Logins/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} SQL Statistics SQL Compilations/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:SQL Statistics\SQL Compilations/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} SQL Statistics Batch Requests/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Service|<p>-</p>|`Zabbix agent`|service_state[{#INSTANCES}]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Memory Manager Total Server Memory (KB)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Memory Manager\Total Server Memory (KB)",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Locks _Total Number of Deadlocks/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Locks(_Total)\Number of Deadlocks/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Locks _Total Lock Waits/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Locks(_Total)\Lock Waits/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Latches Total Latch Wait Time (ms)|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Latches\Total Latch Wait Time (ms)",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Latches Latch Waits/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Latches\Latch Waits/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} General Statistics User Connections|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:General Statistics\User Connections",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} General Statistics Logouts/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:General Statistics\Logouts/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Databases _Total Transactions/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Databases(_Total)\Transactions/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Access Methods Full Scans/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Full Scans/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Databases _Total Log Flushes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Databases(_Total)\Log Flushes/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Buffer Manager Page writes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Page writes/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Buffer Manager Page reads/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Page reads/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Buffer Manager Page lookups/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Page lookups/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Buffer Manager Page Life Expectancy|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Page Life Expectancy",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Buffer Manager Lazy Writes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Lazy Writes/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Buffer Manager Free list stalls/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Free list stalls/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Buffer Manager Buffer cache hit ratio|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Buffer Manager\Buffer cache hit ratio",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Access Methods Table Lock Escalations|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Table Lock Escalations/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Access Methods Page Splits/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Page Splits/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} Access Methods Index Searches/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:Access Methods\Index Searches/sec",300]<p>Update: 30</p><p>LLD</p>|
+|{#INSTANCES} SQL Statistics SQL Re-Compilations/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#INSTANCES}:SQL Statistics\SQL Re-Compilations/sec",300]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

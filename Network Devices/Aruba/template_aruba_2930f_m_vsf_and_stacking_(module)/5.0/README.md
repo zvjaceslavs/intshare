@@ -37,20 +37,20 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ChassisTemperature Value $1 (LLD)|<p>-</p>|`SNMP agent`|hpChassisTemperatureValue[{#SNMPVALUE}.{#SNMPINDEX}]<p>Update: 1m</p>|
-|PowerSupply $1 (LLD)|<p>-</p>|`SNMP agent`|hpicfPsState[{#SNMPVALUE}.{#SNMPINDEX}]<p>Update: 1m</p>|
-|VSF Stack Link $1 (LLD)|<p>-</p>|`SNMP agent`|hpeVSFStackLink[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Stacking Meber State $1 (LLD)|<p>-</p>|`SNMP agent`|hpicfVsfVCMemberState[{#SNMPVALUE}.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Stacking Admin Status (LLD)|<p>-</p>|`SNMP agent`|hpStackSwitchAdminStatus.0<p>Update: 1m</p>|
-|Stacking Oper Status (LLD)|<p>-</p>|`SNMP agent`|hpStackSwitchOperStatus.0<p>Update: 1m</p>|
-|VSF Stack ROM Version $1 (LLD)|<p>-</p>|`SNMP agent`|hpeVSFStackROMVersion[{#SNMPINDEX}]<p>Update: 1h</p>|
-|VSF Stack Seriennummer $1 (LLD)|<p>-</p>|`SNMP agent`|hpeSerialnumber[{#SNMPINDEX}]<p>Update: 5m</p>|
-|FanState $1 (LLD)|<p>-</p>|`SNMP agent`|hpicfFanState[{#SNMPVALUE}.{#SNMPINDEX}]<p>Update: 1m</p>|
-|VSF Stack Admin Status (LLD)|<p>-</p>|`SNMP agent`|hpicfVsfVCAdminStatus[{#SNMPINDEX}]<p>Update: 5m</p>|
-|VSF Stack Oper Status (LLD)|<p>-</p>|`SNMP agent`|hpicfVsfVCOperStatus[{#SNMPINDEX}]<p>Update: 5m</p>|
-|VSF Stack OS Version $1 (LLD)|<p>-</p>|`SNMP agent`|hpeVSFStackOSVersion[{#SNMPINDEX}]<p>Update: 10m</p>|
-|VSF Stack VC Member Status $1 (LLD)|<p>-</p>|`SNMP agent`|hpeVSFStackVCMeberStatus[{#SNMPINDEX}]<p>Update: 1m</p>|
-|VSF Stack Model $1 (LLD)|<p>-</p>|`SNMP agent`|hpeVSFStackModel[{#SNMPINDEX}]<p>Update: 1h</p>|
+|ChassisTemperature Value $1|<p>-</p>|`SNMP agent`|hpChassisTemperatureValue[{#SNMPVALUE}.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|PowerSupply $1|<p>-</p>|`SNMP agent`|hpicfPsState[{#SNMPVALUE}.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|VSF Stack Link $1|<p>-</p>|`SNMP agent`|hpeVSFStackLink[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Stacking Meber State $1|<p>-</p>|`SNMP agent`|hpicfVsfVCMemberState[{#SNMPVALUE}.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Stacking Admin Status|<p>-</p>|`SNMP agent`|hpStackSwitchAdminStatus.0<p>Update: 1m</p><p>LLD</p>|
+|Stacking Oper Status|<p>-</p>|`SNMP agent`|hpStackSwitchOperStatus.0<p>Update: 1m</p><p>LLD</p>|
+|VSF Stack ROM Version $1|<p>-</p>|`SNMP agent`|hpeVSFStackROMVersion[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|VSF Stack Seriennummer $1|<p>-</p>|`SNMP agent`|hpeSerialnumber[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|FanState $1|<p>-</p>|`SNMP agent`|hpicfFanState[{#SNMPVALUE}.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|VSF Stack Admin Status|<p>-</p>|`SNMP agent`|hpicfVsfVCAdminStatus[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|VSF Stack Oper Status|<p>-</p>|`SNMP agent`|hpicfVsfVCOperStatus[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|VSF Stack OS Version $1|<p>-</p>|`SNMP agent`|hpeVSFStackOSVersion[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|VSF Stack VC Member Status $1|<p>-</p>|`SNMP agent`|hpeVSFStackVCMeberStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|VSF Stack Model $1|<p>-</p>|`SNMP agent`|hpeVSFStackModel[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -85,18 +85,18 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#SNMPVALUE} - Inbound traffic (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.10.[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Inbound discarded packets (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.13.[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Inbound error packets (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.14.[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Outbound traffic (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.16.[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Outbound discarded packets (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.19.[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - Outbound error packets (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.20.[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPINDEX} temperature (LLD)|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.9.9.13.1.3.1.3.[{#SNMPINDEX}]<p>Update: 30</p>|
-|CPU - usage on core '{#CPUID}' (LLD)|<p>The overall CPU busy percentage in the last 5 minute period.</p>|`SNMP agent`|cpmCPUTotal5minRev[{#SNMPINDEX}]<p>Update: 300</p>|
-|ospfNbrState {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.14.10.1.6.[{#SNMPINDEX}]<p>Update: 30</p>|
-|BGP Peer State {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.2.[{#SNMPINDEX}]<p>Update: 30</p>|
-|BGP Admin Status {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.3.[{#SNMPINDEX}]<p>Update: 30</p>|
-|Memory - free in pool '{#MEMNAME}' (LLD)|<p>Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPINDEX}]<p>Update: 600</p>|
+|{#SNMPVALUE} - Inbound traffic|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.10.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Inbound discarded packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.13.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Inbound error packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.14.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Outbound traffic|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.16.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Outbound discarded packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.19.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - Outbound error packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.20.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPINDEX} temperature|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.9.9.13.1.3.1.3.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|CPU - usage on core '{#CPUID}'|<p>The overall CPU busy percentage in the last 5 minute period.</p>|`SNMP agent`|cpmCPUTotal5minRev[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|ospfNbrState {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.14.10.1.6.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|BGP Peer State {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.2.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|BGP Admin Status {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.3.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Memory - free in pool '{#MEMNAME}'|<p>Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPINDEX}]<p>Update: 600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

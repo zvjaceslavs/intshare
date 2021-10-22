@@ -31,7 +31,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Peer {#BGPPEER} (LLD)|<p>-</p>|`Zabbix agent`|bgpmon[{#BGPPEER}]<p>Update: 60</p>|
+|Peer {#BGPPEER}|<p>-</p>|`Zabbix agent`|bgpmon[{#BGPPEER}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

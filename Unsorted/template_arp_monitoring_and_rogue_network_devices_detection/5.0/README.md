@@ -57,10 +57,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Ip address count for mac {#HWADDRESS} (LLD)|<p>-</p>|`Zabbix trapper`|arp.ipCount[{#HWADDRESS}]<p>Update: 0</p>|
-|Mac(s) associated with IP {#IPADDRESS} (LLD)|<p>-</p>|`Zabbix trapper`|arp.ipMacs[{#IPADDRESS}]<p>Update: 0</p>|
-|Mac address count for IP {#IPADDRESS} (LLD)|<p>-</p>|`Zabbix trapper`|arp.macCount[{#IPADDRESS}]<p>Update: 0</p>|
-|Ip address(es) associated with mac {#HWADDRESS} (LLD)|<p>-</p>|`Zabbix trapper`|arp.macIps[{#HWADDRESS}]<p>Update: 0</p>|
+|Ip address count for mac {#HWADDRESS}|<p>-</p>|`Zabbix trapper`|arp.ipCount[{#HWADDRESS}]<p>Update: 0</p><p>LLD</p>|
+|Mac(s) associated with IP {#IPADDRESS}|<p>-</p>|`Zabbix trapper`|arp.ipMacs[{#IPADDRESS}]<p>Update: 0</p><p>LLD</p>|
+|Mac address count for IP {#IPADDRESS}|<p>-</p>|`Zabbix trapper`|arp.macCount[{#IPADDRESS}]<p>Update: 0</p><p>LLD</p>|
+|Ip address(es) associated with mac {#HWADDRESS}|<p>-</p>|`Zabbix trapper`|arp.macIps[{#HWADDRESS}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

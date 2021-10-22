@@ -123,38 +123,38 @@ There are no template links in this template.
 |Shared Pool Free %|<p>-</p>|`Database monitor`|db.odbc.select[Shared Pool Free %,{$DSN}]<p>Update: 5m</p>|
 |Soft Parse Ratio|<p>-</p>|`Database monitor`|db.odbc.select[Soft Parse Ratio,{$DSN}]<p>Update: 5m</p>|
 |Waiting sessions count|<p>-</p>|`Database monitor`|db.odbc.select[Waiting sessions count,{$DSN}]<p>Update: 5m</p>|
-|Session {#SID} CPU used in seconds (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[session {#SID} CPU time,{$DSN}]<p>Update: 2m</p>|
-|Session {#SID} SQL ID (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[session {#SID} SQL ID,{$DSN}]<p>Update: 5m</p>|
-|Session {#SID} username (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[session {#SID} username,{$DSN}]<p>Update: 5m</p>|
-|Session {#SID} change in CPU time per sec (LLD)|<p>-</p>|`Dependent item`|oracle.db.session.cpu_time_change[{#SID}]<p>Update: 0</p>|
-|Destination {#DEST_ID} status (LLD)|<p>'VALID' 1 'INACTIVE' 2 'DEFERRED' 3 'ERROR' 4 'DISABLED' 5 'BAD PARAM' 6 'ALTERNATE' 7 'FULL' 8 else -1</p>|`Database monitor`|db.odbc.select[Dest {#DEST_ID} status. {#DSN}]<p>Update: 5m</p>|
-|ASM disk: {#DISK_NAME}: mode status (LLD)|<p>when 'OFFLINE' then 0 when 'ONLINE' then 1</p>|`Calculated`|oracle.asm.disk.mode_status[{#DISK_NAME}]<p>Update: 5m</p>|
-|ASM disk: {#DISK_NAME}: mount status (LLD)|<p>when 'MISSING' then -3 when 'CLOSED' then -2 when 'CLOSING' then -1 when 'IGNORED' then 0 when 'OPENED' then 1 when 'CACHED' then 2</p>|`Calculated`|oracle.asm.disk.mount_status[{#DISK_NAME}]<p>Update: 5m</p>|
-|ASM disk: {#DISK_NAME}: state (LLD)|<p>when 'NORMAL' then 1 when 'UNKNOWN' then 0 when 'ADDING' then 2 when 'DROPPING' then 3 when 'HUNG' then -1 when 'FORCING' then -2</p>|`Calculated`|oracle.asm.disk.state[{#DISK_NAME}]<p>Update: 1m</p>|
-|ASM disk: {#DISK_NAME}: total space (LLD)|<p>-</p>|`Calculated`|oracle.asm.disk.total_space[{#DISK_NAME}]<p>Update: 5m</p>|
-|ASM disk: {#DISK_NAME}: free space (LLD)|<p>-</p>|`Calculated`|oracle.db.disk.free_space[{#DISK_NAME}]<p>Update: 5m</p>|
-|ASM disk: {#DISK_NAME}: pct free (LLD)|<p>-</p>|`Calculated`|oracle.db.disk.pct_free[{#DISK_NAME}]<p>Update: 5m</p>|
-|Total wait time on Blocking session: {#SID} (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[waiting time -  {#SID},{$DSN}]<p>Update: 5m</p>|
-|FRA: {#NAME}: pct_used (LLD)|<p>-</p>|`Calculated`|db.oracle.fra.pct_used[{#NAME}]<p>Update: 4m</p>|
-|FRA: {#NAME}: size (LLD)|<p>-</p>|`Calculated`|db.oracle.fra.size[{#NAME}]<p>Update: 4m</p>|
-|FRA: {#NAME}: space_used (LLD)|<p>-</p>|`Calculated`|db.oracle.fra.space_used[{#NAME}]<p>Update: 4m</p>|
-|Schema {#OWNER}: size (LLD)|<p>SIze of the schema.</p>|`Database monitor`|db.odbc.select[Schema {#OWNER} size,{$DSN}]<p>Update: 1h</p>|
-|Tablespace: {#TABLESPACE_NAME}: bigfile (LLD)|<p>-</p>|`Calculated`|db.oracle.tablespace.bigfile[{#TABLESPACE_NAME}]<p>Update: 1h</p>|
-|Tablespace: {#TABLESPACE_NAME}: contents (LLD)|<p>-</p>|`Calculated`|db.oracle.tablespace.contents[{#TABLESPACE_NAME}]<p>Update: 4m</p>|
-|Tablespace: {#TABLESPACE_NAME}: max_size (LLD)|<p>-</p>|`Calculated`|db.oracle.tablespace.max_size[{#TABLESPACE_NAME}]<p>Update: 4m</p>|
-|Tablespace: {#TABLESPACE_NAME}: pct_used (LLD)|<p>-</p>|`Calculated`|db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}]<p>Update: 4m</p>|
-|Tablespace: {#TABLESPACE_NAME}: size (LLD)|<p>-</p>|`Calculated`|db.oracle.tablespace.size[{#TABLESPACE_NAME}]<p>Update: 4m</p>|
-|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} bind variables (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} bind variables,{$DSN}]<p>Update: 5m</p>|
-|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} CPU time (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} CPU time,{$DSN}]<p>Update: 2m</p>|
-|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} parsing schema (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} parsing schema,{$DSN}]<p>Update: 5m</p>|
-|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} physical read bytes (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} physical read bytes,{$DSN}]<p>Update: 5m</p>|
-|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} physical write bytes (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} physical write bytes,{$DSN}]<p>Update: 5m</p>|
-|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} plan (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} plan,{$DSN}]<p>Update: 5m</p>|
-|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} text (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} text,{$DSN}]<p>Update: 5m</p>|
-|Top SQL {#SQL_ID} total CPU time (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID} total CPU time,{$DSN}]<p>Update: 30m</p>|
-|Top SQL {#SQL_ID} total physical read bytes (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID} total physical read bytes,{$DSN}]<p>Update: 30m</p>|
-|Top SQL {#SQL_ID} total physical write bytes (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID} total physical write bytes,{$DSN}]<p>Update: 30m</p>|
-|Session {#SID} total wait time in seconds (LLD)|<p>-</p>|`Database monitor`|db.odbc.select[session {#SID} wait time,{$DSN}]<p>Update: 5m</p>|
+|Session {#SID} CPU used in seconds|<p>-</p>|`Database monitor`|db.odbc.select[session {#SID} CPU time,{$DSN}]<p>Update: 2m</p><p>LLD</p>|
+|Session {#SID} SQL ID|<p>-</p>|`Database monitor`|db.odbc.select[session {#SID} SQL ID,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|Session {#SID} username|<p>-</p>|`Database monitor`|db.odbc.select[session {#SID} username,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|Session {#SID} change in CPU time per sec|<p>-</p>|`Dependent item`|oracle.db.session.cpu_time_change[{#SID}]<p>Update: 0</p><p>LLD</p>|
+|Destination {#DEST_ID} status|<p>'VALID' 1 'INACTIVE' 2 'DEFERRED' 3 'ERROR' 4 'DISABLED' 5 'BAD PARAM' 6 'ALTERNATE' 7 'FULL' 8 else -1</p>|`Database monitor`|db.odbc.select[Dest {#DEST_ID} status. {#DSN}]<p>Update: 5m</p><p>LLD</p>|
+|ASM disk: {#DISK_NAME}: mode status|<p>when 'OFFLINE' then 0 when 'ONLINE' then 1</p>|`Calculated`|oracle.asm.disk.mode_status[{#DISK_NAME}]<p>Update: 5m</p><p>LLD</p>|
+|ASM disk: {#DISK_NAME}: mount status|<p>when 'MISSING' then -3 when 'CLOSED' then -2 when 'CLOSING' then -1 when 'IGNORED' then 0 when 'OPENED' then 1 when 'CACHED' then 2</p>|`Calculated`|oracle.asm.disk.mount_status[{#DISK_NAME}]<p>Update: 5m</p><p>LLD</p>|
+|ASM disk: {#DISK_NAME}: state|<p>when 'NORMAL' then 1 when 'UNKNOWN' then 0 when 'ADDING' then 2 when 'DROPPING' then 3 when 'HUNG' then -1 when 'FORCING' then -2</p>|`Calculated`|oracle.asm.disk.state[{#DISK_NAME}]<p>Update: 1m</p><p>LLD</p>|
+|ASM disk: {#DISK_NAME}: total space|<p>-</p>|`Calculated`|oracle.asm.disk.total_space[{#DISK_NAME}]<p>Update: 5m</p><p>LLD</p>|
+|ASM disk: {#DISK_NAME}: free space|<p>-</p>|`Calculated`|oracle.db.disk.free_space[{#DISK_NAME}]<p>Update: 5m</p><p>LLD</p>|
+|ASM disk: {#DISK_NAME}: pct free|<p>-</p>|`Calculated`|oracle.db.disk.pct_free[{#DISK_NAME}]<p>Update: 5m</p><p>LLD</p>|
+|Total wait time on Blocking session: {#SID}|<p>-</p>|`Database monitor`|db.odbc.select[waiting time -  {#SID},{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|FRA: {#NAME}: pct_used|<p>-</p>|`Calculated`|db.oracle.fra.pct_used[{#NAME}]<p>Update: 4m</p><p>LLD</p>|
+|FRA: {#NAME}: size|<p>-</p>|`Calculated`|db.oracle.fra.size[{#NAME}]<p>Update: 4m</p><p>LLD</p>|
+|FRA: {#NAME}: space_used|<p>-</p>|`Calculated`|db.oracle.fra.space_used[{#NAME}]<p>Update: 4m</p><p>LLD</p>|
+|Schema {#OWNER}: size|<p>SIze of the schema.</p>|`Database monitor`|db.odbc.select[Schema {#OWNER} size,{$DSN}]<p>Update: 1h</p><p>LLD</p>|
+|Tablespace: {#TABLESPACE_NAME}: bigfile|<p>-</p>|`Calculated`|db.oracle.tablespace.bigfile[{#TABLESPACE_NAME}]<p>Update: 1h</p><p>LLD</p>|
+|Tablespace: {#TABLESPACE_NAME}: contents|<p>-</p>|`Calculated`|db.oracle.tablespace.contents[{#TABLESPACE_NAME}]<p>Update: 4m</p><p>LLD</p>|
+|Tablespace: {#TABLESPACE_NAME}: max_size|<p>-</p>|`Calculated`|db.oracle.tablespace.max_size[{#TABLESPACE_NAME}]<p>Update: 4m</p><p>LLD</p>|
+|Tablespace: {#TABLESPACE_NAME}: pct_used|<p>-</p>|`Calculated`|db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}]<p>Update: 4m</p><p>LLD</p>|
+|Tablespace: {#TABLESPACE_NAME}: size|<p>-</p>|`Calculated`|db.oracle.tablespace.size[{#TABLESPACE_NAME}]<p>Update: 4m</p><p>LLD</p>|
+|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} bind variables|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} bind variables,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} CPU time|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} CPU time,{$DSN}]<p>Update: 2m</p><p>LLD</p>|
+|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} parsing schema|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} parsing schema,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} physical read bytes|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} physical read bytes,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} physical write bytes|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} physical write bytes,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} plan|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} plan,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|Top SQL {#SQL_ID}:{#CHILD_ADDRESS} text|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID}:{#CHILD_ADDRESS} text,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
+|Top SQL {#SQL_ID} total CPU time|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID} total CPU time,{$DSN}]<p>Update: 30m</p><p>LLD</p>|
+|Top SQL {#SQL_ID} total physical read bytes|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID} total physical read bytes,{$DSN}]<p>Update: 30m</p><p>LLD</p>|
+|Top SQL {#SQL_ID} total physical write bytes|<p>-</p>|`Database monitor`|db.odbc.select[Top SQL {#SQL_ID} total physical write bytes,{$DSN}]<p>Update: 30m</p><p>LLD</p>|
+|Session {#SID} total wait time in seconds|<p>-</p>|`Database monitor`|db.odbc.select[session {#SID} wait time,{$DSN}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

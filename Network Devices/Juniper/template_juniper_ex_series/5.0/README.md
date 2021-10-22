@@ -67,16 +67,16 @@ There are no template links in this template.
 |Red alarm|<p>-</p>|`SNMP agent`|RedAlarm<p>Update: 30</p>|
 |Uptime|<p>-</p>|`SNMP agent`|Uptime<p>Update: 60</p>|
 |Yellow alarm|<p>-</p>|`SNMP agent`|YellowAlarm<p>Update: 60</p>|
-|Switch {#SNMPVALUE} - 5 min load avarage (LLD)|<p>-</p>|`SNMP agent`|jnxOperating5MinLoadAvg.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Switch {#SNMPVALUE} - Memory usage (LLD)|<p>-</p>|`SNMP agent`|jnxOperatingBuffer.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Switch {#SNMPVALUE} - CPU usage (LLD)|<p>-</p>|`SNMP agent`|jnxOperatingCPU.[{#SNMPVALUE}]<p>Update: 30</p>|
-|Switch {#SNMPVALUE} - Routing engine temperature (LLD)|<p>-</p>|`SNMP agent`|jnxOperatingTemp.[{#SNMPVALUE}]<p>Update: 30</p>|
-|{#SNMPVALUE} - Inbound discarded packets (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.13.[{#SNMPINDEX}]<p>Update: 30</p>|
-|{#SNMPVALUE} - Inbound traffic (LLD)|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.10.[{#SNMPINDEX}]<p>Update: 30</p>|
-|{#SNMPVALUE} - Inbound errors (LLD)|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.14.[{#SNMPINDEX}]<p>Update: 30</p>|
-|{#SNMPVALUE} - Outbound traffic (LLD)|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.16.[{#SNMPINDEX}]<p>Update: 30</p>|
-|{#SNMPVALUE} - Outbound discarded packets (LLD)|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.19.[{#SNMPINDEX}]<p>Update: 30</p>|
-|{#SNMPVALUE} - Outbound errors (LLD)|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.20.[{#SNMPINDEX}]<p>Update: 30</p>|
+|Switch {#SNMPVALUE} - 5 min load avarage|<p>-</p>|`SNMP agent`|jnxOperating5MinLoadAvg.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Switch {#SNMPVALUE} - Memory usage|<p>-</p>|`SNMP agent`|jnxOperatingBuffer.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Switch {#SNMPVALUE} - CPU usage|<p>-</p>|`SNMP agent`|jnxOperatingCPU.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Switch {#SNMPVALUE} - Routing engine temperature|<p>-</p>|`SNMP agent`|jnxOperatingTemp.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} - Inbound discarded packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.13.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} - Inbound traffic|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.10.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} - Inbound errors|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.14.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} - Outbound traffic|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.16.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} - Outbound discarded packets|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.19.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPVALUE} - Outbound errors|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.20.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

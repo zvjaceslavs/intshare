@@ -47,8 +47,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Interface {#IFNAME}({#IFALIAS}): RX Power (LLD)|<p>-</p>|`SNMP agent`|enterprises.[RXenterprises.{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface {#IFNAME}({#IFALIAS}): TX Power (LLD)|<p>-</p>|`SNMP agent`|enterprises.[TXenterprises.{#SNMPINDEX}]<p>Update: 30s</p>|
+|Interface {#IFNAME}({#IFALIAS}): RX Power|<p>-</p>|`SNMP agent`|enterprises.[RXenterprises.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): TX Power|<p>-</p>|`SNMP agent`|enterprises.[TXenterprises.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

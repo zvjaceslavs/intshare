@@ -34,23 +34,23 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|AverageEnqueueTime for {#JMXVALUE} (LLD)|<p>Average time a message has been held this destination</p>|`JMX agent`|jmx["{#JMXOBJ}",AverageEnqueueTime]<p>Update: 300</p>|
-|ConsumerCount for {#JMXVALUE} (LLD)|<p>Number of consumers subscribed to this destination.</p>|`JMX agent`|jmx["{#JMXOBJ}",ConsumerCount]<p>Update: 60</p>|
-|DequeueCount per minute for {#JMXVALUE} (LLD)|<p>Number of messages per minute that have been acknowledged (and removed from) from the destination.</p>|`JMX agent`|jmx["{#JMXOBJ}",DequeueCount]<p>Update: 30</p>|
-|EnqueueCount per minute for {#JMXVALUE} (LLD)|<p>Number of messages per minute that have been sent to the destination.</p>|`JMX agent`|jmx["{#JMXOBJ}",EnqueueCount]<p>Update: 30</p>|
-|ExpiredCount per minute for {#JMXVALUE} (LLD)|<p>Number of messages per minute that have been expired.</p>|`JMX agent`|jmx["{#JMXOBJ}",ExpiredCount]<p>Update: 30</p>|
-|ProducerCount for {#JMXVALUE} (LLD)|<p>Number of producers publishing to this destination</p>|`JMX agent`|jmx["{#JMXOBJ}",ProducerCount]<p>Update: 60</p>|
-|QueueSize for {#JMXVALUE} (LLD)|<p>Number of messages in the destination which are yet to be consumed. Potentially dispatched but unacknowledged.</p>|`JMX agent`|jmx["{#JMXOBJ}",QueueSize]<p>Update: 60</p>|
-|MemoryLimit for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",MemoryLimit]<p>Update: 3600</p>|
-|MemoryPercentUsage for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",MemoryPercentUsage]<p>Update: 60</p>|
-|StoreLimit for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",StoreLimit]<p>Update: 3600</p>|
-|StorePercentUsage for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",StorePercentUsage]<p>Update: 60</p>|
-|TempLimit for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TempLimit]<p>Update: 3600</p>|
-|TempPercentUsage for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TempPercentUsage]<p>Update: 60</p>|
-|TotalConsumerCount for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TotalConsumerCount]<p>Update: 60</p>|
-|TotalDequeueCount per minute for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TotalDequeueCount]<p>Update: 30</p>|
-|TotalEnqueueCount per minute for {#JMXVALUE} (LLD)|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TotalEnqueueCount]<p>Update: 30</p>|
-|TotalMessageCount per minute for {#JMXVALUE} (LLD)|<p>Number of unacknowledged messages on the broker per minute</p>|`JMX agent`|jmx["{#JMXOBJ}",TotalMessageCount]<p>Update: 30</p>|
+|AverageEnqueueTime for {#JMXVALUE}|<p>Average time a message has been held this destination</p>|`JMX agent`|jmx["{#JMXOBJ}",AverageEnqueueTime]<p>Update: 300</p><p>LLD</p>|
+|ConsumerCount for {#JMXVALUE}|<p>Number of consumers subscribed to this destination.</p>|`JMX agent`|jmx["{#JMXOBJ}",ConsumerCount]<p>Update: 60</p><p>LLD</p>|
+|DequeueCount per minute for {#JMXVALUE}|<p>Number of messages per minute that have been acknowledged (and removed from) from the destination.</p>|`JMX agent`|jmx["{#JMXOBJ}",DequeueCount]<p>Update: 30</p><p>LLD</p>|
+|EnqueueCount per minute for {#JMXVALUE}|<p>Number of messages per minute that have been sent to the destination.</p>|`JMX agent`|jmx["{#JMXOBJ}",EnqueueCount]<p>Update: 30</p><p>LLD</p>|
+|ExpiredCount per minute for {#JMXVALUE}|<p>Number of messages per minute that have been expired.</p>|`JMX agent`|jmx["{#JMXOBJ}",ExpiredCount]<p>Update: 30</p><p>LLD</p>|
+|ProducerCount for {#JMXVALUE}|<p>Number of producers publishing to this destination</p>|`JMX agent`|jmx["{#JMXOBJ}",ProducerCount]<p>Update: 60</p><p>LLD</p>|
+|QueueSize for {#JMXVALUE}|<p>Number of messages in the destination which are yet to be consumed. Potentially dispatched but unacknowledged.</p>|`JMX agent`|jmx["{#JMXOBJ}",QueueSize]<p>Update: 60</p><p>LLD</p>|
+|MemoryLimit for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",MemoryLimit]<p>Update: 3600</p><p>LLD</p>|
+|MemoryPercentUsage for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",MemoryPercentUsage]<p>Update: 60</p><p>LLD</p>|
+|StoreLimit for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",StoreLimit]<p>Update: 3600</p><p>LLD</p>|
+|StorePercentUsage for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",StorePercentUsage]<p>Update: 60</p><p>LLD</p>|
+|TempLimit for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TempLimit]<p>Update: 3600</p><p>LLD</p>|
+|TempPercentUsage for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TempPercentUsage]<p>Update: 60</p><p>LLD</p>|
+|TotalConsumerCount for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TotalConsumerCount]<p>Update: 60</p><p>LLD</p>|
+|TotalDequeueCount per minute for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TotalDequeueCount]<p>Update: 30</p><p>LLD</p>|
+|TotalEnqueueCount per minute for {#JMXVALUE}|<p>-</p>|`JMX agent`|jmx["{#JMXOBJ}",TotalEnqueueCount]<p>Update: 30</p><p>LLD</p>|
+|TotalMessageCount per minute for {#JMXVALUE}|<p>Number of unacknowledged messages on the broker per minute</p>|`JMX agent`|jmx["{#JMXOBJ}",TotalMessageCount]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -52,36 +52,36 @@ There are no template links in this template.
 |Get Discovery|<p>-</p>|`External check`|hp_3par_get_state_wbem.py["--hp_ip={HOST.IP}", "--hp_port={$SMI_S_PORT}", "--hp_user={$HP_USER}", "--hp_password={$HP_PASSWORD}", "--storage_name={HOST.NAME}", "--discovery"]<p>Update: 1h</p>|
 |Get Overprovisioning CPG|<p>-</p>|`External check`|hp_3par_get_state_wbem.py["--hp_ip={HOST.IP}", "--hp_port={$SMI_S_PORT}", "--hp_user={$HP_USER}", "--hp_password={$HP_PASSWORD}", "--storage_name={HOST.NAME}", "--overprovisioning"]<p>Update: 15m</p>|
 |Get Status|<p>-</p>|`External check`|hp_3par_get_state_wbem.py["--hp_ip={HOST.IP}", "--hp_port={$SMI_S_PORT}", "--hp_user={$HP_USER}", "--hp_password={$HP_PASSWORD}", "--storage_name={HOST.NAME}", "--status"]<p>Update: 3m</p>|
-|Operational status of PhysicalMemory module "{#SERIAL_NUMBER}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.PhysicalMemory.[{#SERIAL_NUMBER}]<p>Update: 0</p>|
-|Health status of a FCPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.FCPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Operational status of a FCPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.FCPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Other operational status of a FCPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|other.oper.FCPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Health status of a DynamicStoragePool "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.DynamicStoragePool.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Operational status of a DynamicStoragePool "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.DynamicStoragePool.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Overprovisioning of a DynamicStoragePool "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|overprv.DynamicStoragePool.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Health status of Node "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.NodeSystem.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|LED status of Node "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|led.NodeSystem.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Operational status of Node "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.NodeSystem.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Health status of a Battery "{#DEVICE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.Battery.[{#DEVICE_ID}]<p>Update: 0</p>|
-|Operational status of a Battery "{#DEVICE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.Battery.[{#DEVICE_ID}]<p>Update: 0</p>|
-|Health status of a EthernetPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.EthernetPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Operational status of a EthernetPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.EthernetPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Other operational status of a EthernetPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|other.oper.EthernetPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Health status of SASPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.SASPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Operational status of SASPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.SASPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Other operational status of SASPort "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|other.oper.SASPort.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Health status of "{#NODE_NAME} - {#NUMBER_PSU}" (LLD)|<p>-</p>|`Zabbix trapper`|health.NodePowerSupply.[{#DEVICE_ID}]<p>Update: 0</p>|
-|Operational status of "{#NODE_NAME} - {#NUMBER_PSU}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.NodePowerSupply.[{#DEVICE_ID}]<p>Update: 0</p>|
-|Operational status of PCICard "{#MANUFACTURER}-{#TAG}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.PCICard.[{#TAG}]<p>Update: 0</p>|
-|Health status of a Fan "{#DEVICE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|health.Fan.[{#DEVICE_ID}]<p>Update: 0</p>|
-|Operational status of a Fan "{#DEVICE_ID}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.Fan.[{#DEVICE_ID}]<p>Update: 0</p>|
-|Health status of "{#CAGE_NAME} - {#NUMBER_PSU}" (LLD)|<p>-</p>|`Zabbix trapper`|health.CagePowerSupply.[{#DEVICE_ID}]<p>Update: 0</p>|
-|Operational status of "{#CAGE_NAME} - {#NUMBER_PSU}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.CagePowerSupply.[{#DEVICE_ID}]<p>Update: 0</p>|
-|Health status of a DiskDrive "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.DiskDrive.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Operational status of a DiskDrive "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.DiskDrive.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Health status of a DriveCage "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|health.DriveCage.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Operational status of a DriveCage "{#ELEMENT_NAME}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.DriveCage.[{#ELEMENT_NAME}]<p>Update: 0</p>|
-|Operational status of IDEDrive "{#TAG}" (LLD)|<p>-</p>|`Zabbix trapper`|oper.IDEDrive.[{#TAG}]<p>Update: 0</p>|
+|Operational status of PhysicalMemory module "{#SERIAL_NUMBER}"|<p>-</p>|`Zabbix trapper`|oper.PhysicalMemory.[{#SERIAL_NUMBER}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a FCPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|health.FCPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of a FCPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|oper.FCPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Other operational status of a FCPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|other.oper.FCPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a DynamicStoragePool "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|health.DynamicStoragePool.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of a DynamicStoragePool "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|oper.DynamicStoragePool.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Overprovisioning of a DynamicStoragePool "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|overprv.DynamicStoragePool.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of Node "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|health.NodeSystem.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|LED status of Node "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|led.NodeSystem.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of Node "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|oper.NodeSystem.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a Battery "{#DEVICE_ID}"|<p>-</p>|`Zabbix trapper`|health.Battery.[{#DEVICE_ID}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of a Battery "{#DEVICE_ID}"|<p>-</p>|`Zabbix trapper`|oper.Battery.[{#DEVICE_ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a EthernetPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|health.EthernetPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of a EthernetPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|oper.EthernetPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Other operational status of a EthernetPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|other.oper.EthernetPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of SASPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|health.SASPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of SASPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|oper.SASPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Other operational status of SASPort "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|other.oper.SASPort.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of "{#NODE_NAME} - {#NUMBER_PSU}"|<p>-</p>|`Zabbix trapper`|health.NodePowerSupply.[{#DEVICE_ID}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of "{#NODE_NAME} - {#NUMBER_PSU}"|<p>-</p>|`Zabbix trapper`|oper.NodePowerSupply.[{#DEVICE_ID}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of PCICard "{#MANUFACTURER}-{#TAG}"|<p>-</p>|`Zabbix trapper`|oper.PCICard.[{#TAG}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a Fan "{#DEVICE_ID}"|<p>-</p>|`Zabbix trapper`|health.Fan.[{#DEVICE_ID}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of a Fan "{#DEVICE_ID}"|<p>-</p>|`Zabbix trapper`|oper.Fan.[{#DEVICE_ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of "{#CAGE_NAME} - {#NUMBER_PSU}"|<p>-</p>|`Zabbix trapper`|health.CagePowerSupply.[{#DEVICE_ID}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of "{#CAGE_NAME} - {#NUMBER_PSU}"|<p>-</p>|`Zabbix trapper`|oper.CagePowerSupply.[{#DEVICE_ID}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a DiskDrive "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|health.DiskDrive.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of a DiskDrive "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|oper.DiskDrive.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Health status of a DriveCage "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|health.DriveCage.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of a DriveCage "{#ELEMENT_NAME}"|<p>-</p>|`Zabbix trapper`|oper.DriveCage.[{#ELEMENT_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Operational status of IDEDrive "{#TAG}"|<p>-</p>|`Zabbix trapper`|oper.IDEDrive.[{#TAG}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

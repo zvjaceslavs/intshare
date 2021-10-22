@@ -135,13 +135,13 @@ There are no template links in this template.
 |System Contact|<p>-</p>|`SNMP agent`|sysContact<p>Update: 30s</p>|
 |System Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 30s</p>|
 |System Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 30s</p>|
-|Unit $1 Hostname (LLD)|<p>-</p>|`SNMP agent`|fgStatsHostName.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Unit $1 Serial Number (LLD)|<p>-</p>|`SNMP agent`|fgStatsSerial.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|CPU $1 Usage (LLD)|<p>-</p>|`SNMP agent`|fgStatsCpuUsage.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Upload $1 (LLD)|<p>-</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 5</p>|
-|Speed $1 (LLD)|<p>-</p>|`SNMP agent`|ifHighSpeed[{#SNMPVALUE}]<p>Update: 300</p>|
-|Download $1 (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 5</p>|
-|Memory Usage $1 (LLD)|<p>-</p>|`SNMP agent`|fgStatsMemUsage.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|Unit $1 Hostname|<p>-</p>|`SNMP agent`|fgStatsHostName.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Unit $1 Serial Number|<p>-</p>|`SNMP agent`|fgStatsSerial.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|CPU $1 Usage|<p>-</p>|`SNMP agent`|fgStatsCpuUsage.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Upload $1|<p>-</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 5</p><p>LLD</p>|
+|Speed $1|<p>-</p>|`SNMP agent`|ifHighSpeed[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Download $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 5</p><p>LLD</p>|
+|Memory Usage $1|<p>-</p>|`SNMP agent`|fgStatsMemUsage.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

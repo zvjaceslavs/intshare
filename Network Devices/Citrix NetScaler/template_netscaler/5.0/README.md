@@ -53,34 +53,34 @@ There are no template links in this template.
 |Generic SNMP Trap|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
 |UpTime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 600</p>|
 |tcpActiveServerConn|<p>Connections to a server currently responding to requests.</p>|`SNMP agent`|tcpActiveServerConn<p>Update: 300</p>|
-|Vserver {#SNMPVALUE} Client Connections (LLD)|<p>-</p>|`SNMP agent`|vsvr.cl_conn.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} Health (LLD)|<p>-</p>|`SNMP agent`|vsvr.health.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} Server Connections (LLD)|<p>-</p>|`SNMP agent`|vsvr.sr_conn.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} State (LLD)|<p>-</p>|`SNMP agent`|vsvr.state.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} Total Clients (LLD)|<p>The total number of established client connections.</p>|`SNMP agent`|vsvr.TotalClients.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} Total Servers (LLD)|<p>The total number of established server connections.</p>|`SNMP agent`|vsvr.TotalServers.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} vsvrCurServicesDown (LLD)|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesDown.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} vsvrCurServicesOutOfSvc (LLD)|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesOutOfSvc.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} vsvrCurServicesTransToOutOfSvc (LLD)|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesTransToOutOfSvc.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} vsvrCurServicesUnKnown (LLD)|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesUnKnown.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} vsvrCurServicesUp (LLD)|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesUp.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} RxBytesRate (LLD)|<p>The total number of established client connections.</p>|`SNMP agent`|vsvr.vsvrRxBytesRate.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Vserver {#SNMPVALUE} TxBytesRate (LLD)|<p>This represents the response rate in bytes per second for this service/vserver.</p>|`SNMP agent`|vsvr.vsvrTxBytesRate.[{#SNMPVALUE}]<p>Update: 120</p>|
-|Interface {#SNMPVALUE} received bytes (LLD)|<p>-</p>|`SNMP agent`|r_bytes.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Interface {#SNMPVALUE} received packets (LLD)|<p>-</p>|`SNMP agent`|r_pks.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Interface {#SNMPVALUE} type (LLD)|<p>-</p>|`SNMP agent`|type.[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Interface {#SNMPVALUE} transmitted bytes (LLD)|<p>-</p>|`SNMP agent`|t_bytes.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Interface {#SNMPVALUE} transmitted packets (LLD)|<p>-</p>|`SNMP agent`|t_pks.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Service {#SNMPVALUE} Act conn (LLD)|<p>-</p>|`SNMP agent`|service.actconn.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Service {#SNMPVALUE} Est conn (LLD)|<p>-</p>|`SNMP agent`|service.estconn.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Service {#SNMPVALUE} IP (LLD)|<p>-</p>|`SNMP agent`|service.ip.[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Service {#SNMPVALUE} port (LLD)|<p>-</p>|`SNMP agent`|service.port.[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Service {#SNMPVALUE} Total req (LLD)|<p>-</p>|`SNMP agent`|service.totreq.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Service {#SNMPVALUE} Total req bytes (LLD)|<p>-</p>|`SNMP agent`|service.totreqb.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Service {#SNMPVALUE} Total resp (LLD)|<p>-</p>|`SNMP agent`|service.totresp.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Service {#SNMPVALUE} Total resp bytes (LLD)|<p>-</p>|`SNMP agent`|service.totrespb.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Service {#SNMPVALUE} Total recvd pkts (LLD)|<p>-</p>|`SNMP agent`|service.totresvdpkts.[{#SNMPVALUE}]<p>Update: 300</p>|
-|Service {#SNMPVALUE} Total sent pkts (LLD)|<p>-</p>|`SNMP agent`|service.totrsentpkts.[{#SNMPVALUE}]<p>Update: 300</p>|
+|Vserver {#SNMPVALUE} Client Connections|<p>-</p>|`SNMP agent`|vsvr.cl_conn.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} Health|<p>-</p>|`SNMP agent`|vsvr.health.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} Server Connections|<p>-</p>|`SNMP agent`|vsvr.sr_conn.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} State|<p>-</p>|`SNMP agent`|vsvr.state.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} Total Clients|<p>The total number of established client connections.</p>|`SNMP agent`|vsvr.TotalClients.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} Total Servers|<p>The total number of established server connections.</p>|`SNMP agent`|vsvr.TotalServers.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} vsvrCurServicesDown|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesDown.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} vsvrCurServicesOutOfSvc|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesOutOfSvc.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} vsvrCurServicesTransToOutOfSvc|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesTransToOutOfSvc.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} vsvrCurServicesUnKnown|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesUnKnown.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} vsvrCurServicesUp|<p>-</p>|`SNMP agent`|vsvr.vsvrCurServicesUp.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} RxBytesRate|<p>The total number of established client connections.</p>|`SNMP agent`|vsvr.vsvrRxBytesRate.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Vserver {#SNMPVALUE} TxBytesRate|<p>This represents the response rate in bytes per second for this service/vserver.</p>|`SNMP agent`|vsvr.vsvrTxBytesRate.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Interface {#SNMPVALUE} received bytes|<p>-</p>|`SNMP agent`|r_bytes.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#SNMPVALUE} received packets|<p>-</p>|`SNMP agent`|r_pks.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#SNMPVALUE} type|<p>-</p>|`SNMP agent`|type.[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Interface {#SNMPVALUE} transmitted bytes|<p>-</p>|`SNMP agent`|t_bytes.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#SNMPVALUE} transmitted packets|<p>-</p>|`SNMP agent`|t_pks.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Service {#SNMPVALUE} Act conn|<p>-</p>|`SNMP agent`|service.actconn.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Service {#SNMPVALUE} Est conn|<p>-</p>|`SNMP agent`|service.estconn.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Service {#SNMPVALUE} IP|<p>-</p>|`SNMP agent`|service.ip.[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Service {#SNMPVALUE} port|<p>-</p>|`SNMP agent`|service.port.[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Service {#SNMPVALUE} Total req|<p>-</p>|`SNMP agent`|service.totreq.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Service {#SNMPVALUE} Total req bytes|<p>-</p>|`SNMP agent`|service.totreqb.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Service {#SNMPVALUE} Total resp|<p>-</p>|`SNMP agent`|service.totresp.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Service {#SNMPVALUE} Total resp bytes|<p>-</p>|`SNMP agent`|service.totrespb.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Service {#SNMPVALUE} Total recvd pkts|<p>-</p>|`SNMP agent`|service.totresvdpkts.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Service {#SNMPVALUE} Total sent pkts|<p>-</p>|`SNMP agent`|service.totrsentpkts.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

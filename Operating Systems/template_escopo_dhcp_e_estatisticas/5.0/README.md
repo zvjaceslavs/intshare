@@ -41,8 +41,8 @@ There are no template links in this template.
 |parDhcpTotalNoOfNacks|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.311.1.3.1.7<p>Update: 60</p>|
 |parDhcpTotalNoOfDeclines|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.311.1.3.1.8<p>Update: 60</p>|
 |Status Serviço DHCP|<p>0 - em execução, 1 - pausado, 2 - iniciação pendente, 3 - pausa pendente, 4 - retorno pendente, 5 - finalização pendente, 6 - finalizado, 7 - desconhecido, 255 - serviço desconhecido</p>|`Zabbix agent`|service.info[DHCPServer]<p>Update: 60</p>|
-|Number of addresses that are free on scope {#IPSCOPE} (LLD)|<p>-</p>|`SNMP agent`|ipfree[{#IPSCOPE}]<p>Update: 60</p>|
-|Number of addresses that are use on scope {#IPSCOPE} (LLD)|<p>-</p>|`SNMP agent`|ipuse[{#IPSCOPE}]<p>Update: 60</p>|
+|Number of addresses that are free on scope {#IPSCOPE}|<p>-</p>|`SNMP agent`|ipfree[{#IPSCOPE}]<p>Update: 60</p><p>LLD</p>|
+|Number of addresses that are use on scope {#IPSCOPE}|<p>-</p>|`SNMP agent`|ipuse[{#IPSCOPE}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

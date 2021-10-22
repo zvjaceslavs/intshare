@@ -44,13 +44,13 @@ There are no template links in this template.
 |Состояние БП 4|<p>The status of the power supply up (1), down (2)</p>|`SNMP agent`|chSysPowerSupplyOperStatus_4<p>Update: 30</p>|
 |Состояние БП 5|<p>The status of the power supply up (1), down (2)</p>|`SNMP agent`|chSysPowerSupplyOperStatus_5<p>Update: 30</p>|
 |Состояние БП 6|<p>The status of the power supply up (1), down (2)</p>|`SNMP agent`|chSysPowerSupplyOperStatus_6<p>Update: 30</p>|
-|Runts_err.{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.6027.3.11.1.2.1.1.9.["{#SNMPINDEX}"]<p>Update: 30</p>|
-|Giants_err.{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.6027.3.11.1.2.1.1.10.["{#SNMPINDEX}"]<p>Update: 30</p>|
-|CRC_err.{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.6027.3.11.1.2.1.1.11.["{#SNMPINDEX}"]<p>Update: 30</p>|
-|ifInOctets.{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|IF-MIB_ifHCInOctets.["{#SNMPINDEX}"]<p>Update: 30</p>|
-|ifOutOctets.{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|IF-MIB_ifHCOutOctets.["{#SNMPINDEX}"]<p>Update: 30</p>|
-|Состояние порта.{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|IF-MIB_ifOperStatus.["{#SNMPINDEX}"]<p>Update: 30</p>|
-|ifAlias.{#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|str.IF-MIB_ifAlias.["{#SNMPINDEX}"]<p>Update: 30</p>|
+|Runts_err.{#SNMPVALUE}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.6027.3.11.1.2.1.1.9.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
+|Giants_err.{#SNMPVALUE}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.6027.3.11.1.2.1.1.10.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
+|CRC_err.{#SNMPVALUE}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.6027.3.11.1.2.1.1.11.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
+|ifInOctets.{#SNMPVALUE}|<p>-</p>|`SNMP agent`|IF-MIB_ifHCInOctets.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
+|ifOutOctets.{#SNMPVALUE}|<p>-</p>|`SNMP agent`|IF-MIB_ifHCOutOctets.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
+|Состояние порта.{#SNMPVALUE}|<p>-</p>|`SNMP agent`|IF-MIB_ifOperStatus.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
+|ifAlias.{#SNMPVALUE}|<p>-</p>|`SNMP agent`|str.IF-MIB_ifAlias.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

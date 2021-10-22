@@ -53,9 +53,9 @@ There are no template links in this template.
 |Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
 |Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
-|State of Fan Number {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|snChasFanOperStatus[{#SNMPINDEX}]<p>Update: 120</p>|
-|{#SNMPVALUE} Chassi: {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|snAgentTempValue[{#SNMPINDEX}]<p>Update: 240</p>|
-|Power Supply {#SNMPINDEX} Status (LLD)|<p>-</p>|`SNMP agent`|snChasPwrSupplyDescription[{#SNMPINDEX}]<p>Update: 120</p>|
+|State of Fan Number {#SNMPINDEX}|<p>-</p>|`SNMP agent`|snChasFanOperStatus[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
+|{#SNMPVALUE} Chassi: {#SNMPINDEX}|<p>-</p>|`SNMP agent`|snAgentTempValue[{#SNMPINDEX}]<p>Update: 240</p><p>LLD</p>|
+|Power Supply {#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|snChasPwrSupplyDescription[{#SNMPINDEX}]<p>Update: 120</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -106,11 +106,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Inbound errors on interface $1 (LLD)|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#IFDESCRCOP}]<p>Update: 60</p>|
-|Outbound errors on interface $1 (LLD)|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#IFDESCRCOP}]<p>Update: 60</p>|
-|Incoming traffic on interface $1 (LLD)|<p>The total number of packets transmitted out of the interface.</p>|`SNMP agent`|snSwIfStatsInFrames[{#IFDESCRCOP}]<p>Update: 60</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>The total number of packets received on the interface.</p>|`SNMP agent`|snSwIfStatsOutFrames[{#IFDESCRCOP}]<p>Update: 60</p>|
-|Status of interface $1 (LLD)|<p>The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.</p>|`SNMP agent`|snSwPortInfoLinkStatus[{#IFDESCRCOP}]<p>Update: 60</p>|
+|Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>The total number of packets transmitted out of the interface.</p>|`SNMP agent`|snSwIfStatsInFrames[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>The total number of packets received on the interface.</p>|`SNMP agent`|snSwIfStatsOutFrames[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+|Status of interface $1|<p>The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.</p>|`SNMP agent`|snSwPortInfoLinkStatus[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -155,11 +155,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Inbound errors on interface $1 (LLD)|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#IFDESCRFIB}]<p>Update: 60</p>|
-|Outbound errors on interface $1 (LLD)|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#IFDESCRFIB}]<p>Update: 60</p>|
-|Incoming traffic on interface $1 (LLD)|<p>The total number of packets transmitted out of the interface.</p>|`SNMP agent`|snSwIfStatsInFrames[{#IFDESCRFIB}]<p>Update: 60</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>The total number of packets received on the interface.</p>|`SNMP agent`|snSwIfStatsOutFrames[{#IFDESCRFIB}]<p>Update: 60</p>|
-|Status of interface $1 (LLD)|<p>The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.</p>|`SNMP agent`|snSwPortInfoLinkStatus[{#IFDESCRFIB}]<p>Update: 60</p>|
+|Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#IFDESCRFIB}]<p>Update: 60</p><p>LLD</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#IFDESCRFIB}]<p>Update: 60</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>The total number of packets transmitted out of the interface.</p>|`SNMP agent`|snSwIfStatsInFrames[{#IFDESCRFIB}]<p>Update: 60</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>The total number of packets received on the interface.</p>|`SNMP agent`|snSwIfStatsOutFrames[{#IFDESCRFIB}]<p>Update: 60</p><p>LLD</p>|
+|Status of interface $1|<p>The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.</p>|`SNMP agent`|snSwPortInfoLinkStatus[{#IFDESCRFIB}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

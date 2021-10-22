@@ -57,12 +57,12 @@ There are no template links in this template.
 |perCentQueueUtilization|<p>-- ***************************************************************** -- ASYNCOS-MAIL-MIB -- Copyright (c) 2005-2011 by Cisco Systems, Inc. -- All rights reserved. -- Cisco IronPort Email and Web Security Customer Service -- *****************************************************************</p>|`SNMP agent`|perCentQueueUtilization.0<p>Update: 30s</p>|
 |queueAvailabilityStatus|<p>-- ***************************************************************** -- ASYNCOS-MAIL-MIB -- Copyright (c) 2005-2011 by Cisco Systems, Inc. -- All rights reserved. -- Cisco IronPort Email and Web Security Customer Service -- *****************************************************************</p>|`SNMP agent`|queueAvailabilityStatus.0<p>Update: 180s</p>|
 |resourceConservationReason|<p>-- ***************************************************************** -- ASYNCOS-MAIL-MIB -- Copyright (c) 2005-2011 by Cisco Systems, Inc. -- All rights reserved. -- Cisco IronPort Email and Web Security Customer Service -- *****************************************************************</p>|`SNMP agent`|resourceConservationReason.0<p>Update: 180s</p>|
-|updateFailures $1 (LLD)|<p>-</p>|`SNMP agent`|updateFailures[{#SNMPVALUE}]<p>Update: 2h</p>|
-|updateServiceName $1 (LLD)|<p>-</p>|`SNMP agent`|updateServiceName[{#SNMPVALUE}]<p>Update: 2h</p>|
-|updates $1 (LLD)|<p>-</p>|`SNMP agent`|updates[{#SNMPVALUE}]<p>Update: 2h</p>|
-|keyDescription $1 (LLD)|<p>-</p>|`SNMP agent`|keyDescription[{#SNMPVALUE}]<p>Update: 3h</p>|
-|keyIsPerpetual $1 (LLD)|<p>-</p>|`SNMP agent`|keyIsPerpetual[{#SNMPVALUE}]<p>Update: 3h</p>|
-|keySecondsUntilExpire $1 (LLD)|<p>-</p>|`SNMP agent`|keySecondsUntilExpire[{#SNMPVALUE}]<p>Update: 3h</p>|
+|updateFailures $1|<p>-</p>|`SNMP agent`|updateFailures[{#SNMPVALUE}]<p>Update: 2h</p><p>LLD</p>|
+|updateServiceName $1|<p>-</p>|`SNMP agent`|updateServiceName[{#SNMPVALUE}]<p>Update: 2h</p><p>LLD</p>|
+|updates $1|<p>-</p>|`SNMP agent`|updates[{#SNMPVALUE}]<p>Update: 2h</p><p>LLD</p>|
+|keyDescription $1|<p>-</p>|`SNMP agent`|keyDescription[{#SNMPVALUE}]<p>Update: 3h</p><p>LLD</p>|
+|keyIsPerpetual $1|<p>-</p>|`SNMP agent`|keyIsPerpetual[{#SNMPVALUE}]<p>Update: 3h</p><p>LLD</p>|
+|keySecondsUntilExpire $1|<p>-</p>|`SNMP agent`|keySecondsUntilExpire[{#SNMPVALUE}]<p>Update: 3h</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -51,24 +51,24 @@ There are no template links in this template.
 |Display Name|<p>-</p>|`SNMP agent`|shadowIdDisplayName<p>Update: 86400</p>|
 |Status Global do Dispositivo|<p>-</p>|`SNMP agent`|shadowStatusGlobalStatus<p>Update: 60</p>|
 |Uptime|<p>-</p>|`SNMP agent`|shadowStatusTimeStamp.0<p>Update: 300</p>|
-|Drive $1 (LLD)|<p>-</p>|`SNMP agent`|driveEntryId[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Erro de leitura Hard $1 (LLD)|<p>Contagem de recuperação de erros Hard de leitura para o cartucho atual</p>|`SNMP agent`|driveHardReadErrors[{#SNMPVALUE}]<p>Update: 300</p>|
-|Erro de gravação Hard $1 (LLD)|<p>Contagem de recuperação de erros Soft de gravação para o cartucho atual</p>|`SNMP agent`|driveHardWrtErrors[{#SNMPVALUE}]<p>Update: 300</p>|
-|Cargas do cartucho  {#SNMPINDEX} (LLD)|<p>Cargas totais do cartucho para a unidade.</p>|`SNMP agent`|driveLoads[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Drive Product ID $1 (LLD)|<p>-</p>|`SNMP agent`|driveProductId[{#SNMPVALUE}]<p>Update: 86400</p>|
-|Drive SCSI ID $1 (LLD)|<p>-</p>|`SNMP agent`|driveScsiId[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Drive Product Serial Number $1 (LLD)|<p>-</p>|`SNMP agent`|driveSerNum[{#SNMPVALUE}]<p>Update: 86400</p>|
-|Erro de leitura Soft $1 (LLD)|<p>Contagem de recuperação de erros Soft de leitura para o cartucho atual</p>|`SNMP agent`|driveSoftReadErrors[{#SNMPVALUE}]<p>Update: 300</p>|
-|Erro de gravação Soft $1 (LLD)|<p>Contagem de recuperação de erros Soft de gravação para o cartucho atual</p>|`SNMP agent`|driveSoftWrtErrors[{#SNMPVALUE}]<p>Update: 300</p>|
-|Tempo de movimentação $1 (LLD)|<p>Total de horas de movimentação de unidade deste dispositivo.</p>|`SNMP agent`|driveTpHrs[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Library - Qtde de Drivers (LLD)|<p>Number of drives contained in this library.</p>|`SNMP agent`|libraryDrvCnt[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Library - Error Description (LLD)|<p>-</p>|`SNMP agent`|libraryFaultDescr[{#SNMPVALUE}]<p>Update: 60</p>|
-|Library - Código do Erro (LLD)|<p>The library Fault error code.</p>|`SNMP agent`|libraryFaultFSC[{#SNMPVALUE}]<p>Update: 60</p>|
-|Library - Severidade do Erro (LLD)|<p>The library Fault error code.</p>|`SNMP agent`|libraryFaultSev[{#SNMPVALUE}]<p>Update: 60</p>|
-|Library - Service TAG (LLD)|<p>-</p>|`SNMP agent`|libraryServiceTag[{#SNMPVALUE}]<p>Update: 86400</p>|
-|Library - Qtde de Slots (LLD)|<p>Number of cartridge slots contained in this library</p>|`SNMP agent`|librarySlotCnt[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Library - Status (LLD)|<p>-</p>|`SNMP agent`|libraryState[{#SNMPVALUE}]<p>Update: 60</p>|
-|Library - Uptime (LLD)|<p>-</p>|`SNMP agent`|libraryTimeStamp[{#SNMPVALUE}]<p>Update: 3600</p>|
+|Drive $1|<p>-</p>|`SNMP agent`|driveEntryId[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Erro de leitura Hard $1|<p>Contagem de recuperação de erros Hard de leitura para o cartucho atual</p>|`SNMP agent`|driveHardReadErrors[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Erro de gravação Hard $1|<p>Contagem de recuperação de erros Soft de gravação para o cartucho atual</p>|`SNMP agent`|driveHardWrtErrors[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Cargas do cartucho  {#SNMPINDEX}|<p>Cargas totais do cartucho para a unidade.</p>|`SNMP agent`|driveLoads[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Drive Product ID $1|<p>-</p>|`SNMP agent`|driveProductId[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
+|Drive SCSI ID $1|<p>-</p>|`SNMP agent`|driveScsiId[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Drive Product Serial Number $1|<p>-</p>|`SNMP agent`|driveSerNum[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
+|Erro de leitura Soft $1|<p>Contagem de recuperação de erros Soft de leitura para o cartucho atual</p>|`SNMP agent`|driveSoftReadErrors[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Erro de gravação Soft $1|<p>Contagem de recuperação de erros Soft de gravação para o cartucho atual</p>|`SNMP agent`|driveSoftWrtErrors[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Tempo de movimentação $1|<p>Total de horas de movimentação de unidade deste dispositivo.</p>|`SNMP agent`|driveTpHrs[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Library - Qtde de Drivers|<p>Number of drives contained in this library.</p>|`SNMP agent`|libraryDrvCnt[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Library - Error Description|<p>-</p>|`SNMP agent`|libraryFaultDescr[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Library - Código do Erro|<p>The library Fault error code.</p>|`SNMP agent`|libraryFaultFSC[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Library - Severidade do Erro|<p>The library Fault error code.</p>|`SNMP agent`|libraryFaultSev[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Library - Service TAG|<p>-</p>|`SNMP agent`|libraryServiceTag[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
+|Library - Qtde de Slots|<p>Number of cartridge slots contained in this library</p>|`SNMP agent`|librarySlotCnt[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Library - Status|<p>-</p>|`SNMP agent`|libraryState[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Library - Uptime|<p>-</p>|`SNMP agent`|libraryTimeStamp[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

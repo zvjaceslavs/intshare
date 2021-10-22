@@ -59,35 +59,35 @@ There are no template links in this template.
 |Raid Level Configured|<p>Raid Level configured on device.</p>|`SNMP agent`|raidLevel<p>Update: 3600</p>|
 |Raid Status|<p>-</p>|`SNMP agent`|raidStatus<p>Update: 600</p>|
 |System uptime|<p>The time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUptime<p>Update: 300</p>|
-|Rotation speed of $1 (LLD)|<p>-</p>|`SNMP agent`|fanValue[{#SNMPVALUE}]<p>Update: 300</p>|
-|Disk size of $1 (LLD)|<p>Capacity of disk</p>|`SNMP agent`|diskSize[{#SNMPVALUE}]<p>Update: 3600</p>|
-|Disk status of $1 (LLD)|<p>Status of Disk. There are four status: NORMAL FOREIGN FAULTED MISSING</p>|`SNMP agent`|diskStatus[{#SNMPVALUE}]<p>Update: 600</p>|
-|IO average queue length of $1 (LLD)|<p>Average queue length.</p>|`SNMP agent`|ioAvgQueue[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO average service time at disk of $1 (LLD)|<p>Average service time at disk.</p>|`SNMP agent`|ioAvgSvc[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO average disk utilization of $1 (LLD)|<p>Average disk utilization.</p>|`SNMP agent`|ioAvgUtil[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO average waiting time of $1 (LLD)|<p>Average waiting time (queue + service)</p>|`SNMP agent`|ioAvgWait[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO CPU time (%) of $1 (LLD)|<p>Percentage of CPU time during which I/O requests were issued to the device.</p>|`SNMP agent`|ioCpuTime[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO kilobytes read per second of $1 (LLD)|<p>Kilobytes read per second.</p>|`SNMP agent`|ioKbrs[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO kilobytes write per second of $1 (LLD)|<p>Kilobytes written per second.</p>|`SNMP agent`|ioKbws[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO read merges per second of $1 (LLD)|<p>Read merges per second.</p>|`SNMP agent`|ioMgrs[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO write merges per second of $1 (LLD)|<p>Write merges per second.</p>|`SNMP agent`|ioMgws[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO read requests per second of $1 (LLD)|<p>Read io requests per second.</p>|`SNMP agent`|ioReqrs[{#SNMPVALUE}]<p>Update: 300</p>|
-|IO write requests per second of $1 (LLD)|<p>Write io requests per second.</p>|`SNMP agent`|ioReqws[{#SNMPVALUE}]<p>Update: 300</p>|
-|Connected client count of protocol $1 (LLD)|<p>-</p>|`SNMP agent`|conCount[{#SNMPVALUE}]<p>Update: 600</p>|
-|Temperature of $1 (LLD)|<p>-</p>|`SNMP agent`|tempValue[{#SNMPVALUE}]<p>Update: 300</p>|
-|Description of interface $1 (LLD)|<p>A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software.</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 86400</p>|
-|Inbound errors on interface $1 (LLD)|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 120</p>|
-|Incoming traffic on interface $1 (LLD)|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 120</p>|
-|Operational status of interface $1 (LLD)|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 120</p>|
-|Outbound errors on interface $1 (LLD)|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 120</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 120</p>|
-|Physical Address of interface $1 (LLD)|<p>The interface's address at the protocol layer immediately `below' the network layer in the protocol stack. For interfaces which do not have such an address (e.g., a serial line), this object should contain an octet string of zero length.</p>|`SNMP agent`|ifPhysAddress[{#SNMPVALUE}]<p>Update: 86400</p>|
-|Voltage of $1 (LLD)|<p>The voltage in V</p>|`SNMP agent`|voltValue[{#SNMPVALUE}]<p>Update: 300</p>|
-|Allocations Units on $1 (LLD)|<p>The size, in bytes, of the data objects allocated from this pool. If this entry is monitoring sectors, blocks, buffers, or packets, for example, this number will commonly be greater than one. Otherwise this number will typically be one.</p>|`SNMP agent`|hrStorageAllocationUnits[{#SNMPVALUE}]<p>Update: 60</p>|
-|Storage total size in Bytes on $1 (LLD)|<p>The real size of the storage in Bytes. hrStorageSize * hrStorageAllocationUnits.</p>|`Calculated`|hrStorageSizeInBytes[{#SNMPVALUE}]<p>Update: 60</p>|
-|Storage total size on $1 (LLD)|<p>The size of the storage represented by this entry, in units of hrStorageAllocationUnits. This object is writable to allow remote configuration of the size of the storage area in those cases where such an operation makes sense and is possible on the underlying system. For example, the amount of main memory allocated to a buffer pool might be modified or the amount of disk space allocated to virtual memory might be modified.</p>|`SNMP agent`|hrStorageSize[{#SNMPVALUE}]<p>Update: 60</p>|
-|Storage used in Bytes on $1 (LLD)|<p>The storage used in Bytes. hrStorageUsed * hrStorageAllocationUnits.</p>|`Calculated`|hrStorageUsedInBytes[{#SNMPVALUE}]<p>Update: 60</p>|
-|Storage used on $1 (LLD)|<p>The amount of the storage represented by this entry that is allocated, in units of hrStorageAllocationUnits.</p>|`SNMP agent`|hrStorageUsed[{#SNMPVALUE}]<p>Update: 60</p>|
+|Rotation speed of $1|<p>-</p>|`SNMP agent`|fanValue[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Disk size of $1|<p>Capacity of disk</p>|`SNMP agent`|diskSize[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Disk status of $1|<p>Status of Disk. There are four status: NORMAL FOREIGN FAULTED MISSING</p>|`SNMP agent`|diskStatus[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
+|IO average queue length of $1|<p>Average queue length.</p>|`SNMP agent`|ioAvgQueue[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO average service time at disk of $1|<p>Average service time at disk.</p>|`SNMP agent`|ioAvgSvc[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO average disk utilization of $1|<p>Average disk utilization.</p>|`SNMP agent`|ioAvgUtil[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO average waiting time of $1|<p>Average waiting time (queue + service)</p>|`SNMP agent`|ioAvgWait[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO CPU time (%) of $1|<p>Percentage of CPU time during which I/O requests were issued to the device.</p>|`SNMP agent`|ioCpuTime[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO kilobytes read per second of $1|<p>Kilobytes read per second.</p>|`SNMP agent`|ioKbrs[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO kilobytes write per second of $1|<p>Kilobytes written per second.</p>|`SNMP agent`|ioKbws[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO read merges per second of $1|<p>Read merges per second.</p>|`SNMP agent`|ioMgrs[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO write merges per second of $1|<p>Write merges per second.</p>|`SNMP agent`|ioMgws[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO read requests per second of $1|<p>Read io requests per second.</p>|`SNMP agent`|ioReqrs[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|IO write requests per second of $1|<p>Write io requests per second.</p>|`SNMP agent`|ioReqws[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Connected client count of protocol $1|<p>-</p>|`SNMP agent`|conCount[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
+|Temperature of $1|<p>-</p>|`SNMP agent`|tempValue[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Description of interface $1|<p>A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software.</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
+|Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
+|Physical Address of interface $1|<p>The interface's address at the protocol layer immediately `below' the network layer in the protocol stack. For interfaces which do not have such an address (e.g., a serial line), this object should contain an octet string of zero length.</p>|`SNMP agent`|ifPhysAddress[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
+|Voltage of $1|<p>The voltage in V</p>|`SNMP agent`|voltValue[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Allocations Units on $1|<p>The size, in bytes, of the data objects allocated from this pool. If this entry is monitoring sectors, blocks, buffers, or packets, for example, this number will commonly be greater than one. Otherwise this number will typically be one.</p>|`SNMP agent`|hrStorageAllocationUnits[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Storage total size in Bytes on $1|<p>The real size of the storage in Bytes. hrStorageSize * hrStorageAllocationUnits.</p>|`Calculated`|hrStorageSizeInBytes[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Storage total size on $1|<p>The size of the storage represented by this entry, in units of hrStorageAllocationUnits. This object is writable to allow remote configuration of the size of the storage area in those cases where such an operation makes sense and is possible on the underlying system. For example, the amount of main memory allocated to a buffer pool might be modified or the amount of disk space allocated to virtual memory might be modified.</p>|`SNMP agent`|hrStorageSize[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Storage used in Bytes on $1|<p>The storage used in Bytes. hrStorageUsed * hrStorageAllocationUnits.</p>|`Calculated`|hrStorageUsedInBytes[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Storage used on $1|<p>The amount of the storage represented by this entry that is allocated, in units of hrStorageAllocationUnits.</p>|`SNMP agent`|hrStorageUsed[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

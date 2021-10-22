@@ -42,16 +42,16 @@ There are no template links in this template.
 |控制器内存利用率-slot1|<p>-</p>|`SNMP agent`|memory-1<p>Update: 60s</p>|
 |控制器内存利用率-slot2|<p>-</p>|`SNMP agent`|memory-2<p>Update: 60s</p>|
 |控制器主机名|<p>-</p>|`SNMP agent`|sysName<p>Update: 30s</p>|
-|当前在线客户端数量/AP - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|h3cDot11ApStationCurAssocSum[{#APNAME}]<p>Update: 30s</p>|
-|AP $1 - 射频1客户端数 (LLD)|<p>-</p>|`SNMP agent`|hos.radio1[{#APNAME}]<p>Update: 30s</p>|
-|AP $1 - 射频2客户端数 (LLD)|<p>-</p>|`SNMP agent`|hos.radio2[{#APNAME}]<p>Update: 30s</p>|
-|AP $1 - 射频3客户端数 (LLD)|<p>-</p>|`SNMP agent`|hos.radio3[{#APNAME}]<p>Update: 30s</p>|
-|SSID/客户端- {#SSIDNAME} (LLD)|<p>-</p>|`SNMP agent`|h3cDot11APConfigPortalStaNum[{#SSIDNAME}]<p>Update: 30s</p>|
-|$1 - 客户端信号强度 (LLD)|<p>-</p>|`SNMP agent`|hos.clising[{#CLIENTIP}]<p>Update: 5m</p>|
-|AP CPU实时利用率 - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|hos.apCPU.[{#APNAME}]<p>Update: 30s</p>|
-|AP 内存实时利用率 - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|hos.apMemory.[{#APNAME}]<p>Update: 30s</p>|
-|AP 在线时间 - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|hos.apUptime.[{#APNAME}]<p>Update: 20s</p>|
-|客户端关联失败数 - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|hos.AssocFailNum.[{#APNAME}]<p>Update: 20s</p>|
+|当前在线客户端数量/AP - {#APNAME}|<p>-</p>|`SNMP agent`|h3cDot11ApStationCurAssocSum[{#APNAME}]<p>Update: 30s</p><p>LLD</p>|
+|AP $1 - 射频1客户端数|<p>-</p>|`SNMP agent`|hos.radio1[{#APNAME}]<p>Update: 30s</p><p>LLD</p>|
+|AP $1 - 射频2客户端数|<p>-</p>|`SNMP agent`|hos.radio2[{#APNAME}]<p>Update: 30s</p><p>LLD</p>|
+|AP $1 - 射频3客户端数|<p>-</p>|`SNMP agent`|hos.radio3[{#APNAME}]<p>Update: 30s</p><p>LLD</p>|
+|SSID/客户端- {#SSIDNAME}|<p>-</p>|`SNMP agent`|h3cDot11APConfigPortalStaNum[{#SSIDNAME}]<p>Update: 30s</p><p>LLD</p>|
+|$1 - 客户端信号强度|<p>-</p>|`SNMP agent`|hos.clising[{#CLIENTIP}]<p>Update: 5m</p><p>LLD</p>|
+|AP CPU实时利用率 - {#APNAME}|<p>-</p>|`SNMP agent`|hos.apCPU.[{#APNAME}]<p>Update: 30s</p><p>LLD</p>|
+|AP 内存实时利用率 - {#APNAME}|<p>-</p>|`SNMP agent`|hos.apMemory.[{#APNAME}]<p>Update: 30s</p><p>LLD</p>|
+|AP 在线时间 - {#APNAME}|<p>-</p>|`SNMP agent`|hos.apUptime.[{#APNAME}]<p>Update: 20s</p><p>LLD</p>|
+|客户端关联失败数 - {#APNAME}|<p>-</p>|`SNMP agent`|hos.AssocFailNum.[{#APNAME}]<p>Update: 20s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

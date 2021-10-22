@@ -62,13 +62,13 @@ There are no template links in this template.
 |Total Rx Bytes|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsWLANTotalRxBytes<p>Update: 120</p>|
 |Total Tx Bytes|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsWLANTotalTxBytes<p>Update: 120</p>|
 |ZoneDirector System Version|<p>-</p>|`SNMP agent`|ruckusZDSystemVersion.0<p>Update: 3600</p>|
-|AP $1 : Name (LLD)|<p>-</p>|`SNMP agent`|APname[{#SNMPVALUE}]<p>Update: 300</p>|
-|AP $1 : Auth Clients (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPNumSta[{#SNMPVALUE}]<p>Update: 300</p>|
-|AP Status $1 (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANAPStatus[{#SNMPVALUE}]<p>Update: 360</p>|
-|ruckusZDWLANRxBytes $1 (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANRxBytes-[{#SNMPVALUE}]<p>Update: 1200</p>|
-|ruckusZDWLANTxBytes $1 (LLD)|<p>-</p>|`SNMP agent`|ruckusZDWLANTxBytes-[{#SNMPVALUE}]<p>Update: 1200</p>|
-|SSID $1 : Name (LLD)|<p>-</p>|`SNMP agent`|SSIDName-[{#SNMPVALUE}]<p>Update: 21600</p>|
-|Status $1 (LLD)|<p>-</p>|`SNMP agent`|ruckusZDEthStatus[{#SNMPVALUE}]<p>Update: 300</p>|
+|AP $1 : Name|<p>-</p>|`SNMP agent`|APname[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|AP $1 : Auth Clients|<p>-</p>|`SNMP agent`|ruckusZDWLANAPNumSta[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|AP Status $1|<p>-</p>|`SNMP agent`|ruckusZDWLANAPStatus[{#SNMPVALUE}]<p>Update: 360</p><p>LLD</p>|
+|ruckusZDWLANRxBytes $1|<p>-</p>|`SNMP agent`|ruckusZDWLANRxBytes-[{#SNMPVALUE}]<p>Update: 1200</p><p>LLD</p>|
+|ruckusZDWLANTxBytes $1|<p>-</p>|`SNMP agent`|ruckusZDWLANTxBytes-[{#SNMPVALUE}]<p>Update: 1200</p><p>LLD</p>|
+|SSID $1 : Name|<p>-</p>|`SNMP agent`|SSIDName-[{#SNMPVALUE}]<p>Update: 21600</p><p>LLD</p>|
+|Status $1|<p>-</p>|`SNMP agent`|ruckusZDEthStatus[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -61,7 +61,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Interface {#IFNAME}({#IFALIAS}): RxLaserPower (LLD)|<p>-</p>|`SNMP agent`|jnxDomCurrentRxLaserPower[ifDescr.{#SNMPINDEX}]<p>Update: 60s</p>|
+|Interface {#IFNAME}({#IFALIAS}): RxLaserPower|<p>-</p>|`SNMP agent`|jnxDomCurrentRxLaserPower[ifDescr.{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

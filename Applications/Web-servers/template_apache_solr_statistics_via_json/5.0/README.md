@@ -98,25 +98,25 @@ There are no template links in this template.
 |Solr: JVM Threads Runnable Count|<p>-</p>|`Dependent item`|solr.jvm.threads.runnable.count<p>Update: 0</p>|
 |Solr: JVM Threads Terminated Count|<p>-</p>|`Dependent item`|solr.jvm.threads.terminated.count<p>Update: 0</p>|
 |Solr: JVM Threads Waiting Count|<p>-</p>|`Dependent item`|solr.jvm.threads.waiting.count<p>Update: 0</p>|
-|Solr: Core "{#CORENAME}" metrics get status (LLD)|<p>-</p>|`HTTP agent`|solr.core.getStatus[{#CORENAME}]<p>Update: 5m</p>|
-|Solr: Core {#CORENAME} document cache - evictions (LLD)|<p>-</p>|`Dependent item`|solr.core.documentCache.evictions[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} searcher - numDocs (LLD)|<p>Document count</p>|`Dependent item`|solr.core.searcher.numDocs[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} select - requestTimes.median (LLD)|<p>-</p>|`Dependent item`|solr.core.select.requestTimes.median_ms[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} select - requestTimes.meanRate (LLD)|<p>-</p>|`Dependent item`|solr.core.select.requestTimes.meanRate[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} select - requestTimes/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.select.requestTimes.count[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} select - requestTimes.5minRate (LLD)|<p>-</p>|`Dependent item`|solr.core.select.requestTimes.5minRate[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} select - requests/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.select.requests[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} select - errors/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.select.errors.count[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} index - size (LLD)|<p>-</p>|`Dependent item`|solr.core.index.size[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} query result cache - hits/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.queryResultCache.hits[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} document cache - hitratio (LLD)|<p>-</p>|`Dependent item`|solr.core.documentCache.hitratio[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} filter cache - inserts/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.filterCache.inserts[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} filter cache - hits/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.filterCache.hits[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} filter cache - hitratio (LLD)|<p>-</p>|`Dependent item`|solr.core.filterCache.hitratio[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} filter cache - evictions (LLD)|<p>-</p>|`Dependent item`|solr.core.filterCache.evictions[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} document cache - inserts/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.documentCache.inserts[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} document cache - hits/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.documentCache.hits[{#CORENAME}]<p>Update: 0</p>|
-|Solr: Core {#CORENAME} select - timeouts/sec (LLD)|<p>-</p>|`Dependent item`|solr.core.select.timeouts.count[{#CORENAME}]<p>Update: 0</p>|
+|Solr: Core "{#CORENAME}" metrics get status|<p>-</p>|`HTTP agent`|solr.core.getStatus[{#CORENAME}]<p>Update: 5m</p><p>LLD</p>|
+|Solr: Core {#CORENAME} document cache - evictions|<p>-</p>|`Dependent item`|solr.core.documentCache.evictions[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} searcher - numDocs|<p>Document count</p>|`Dependent item`|solr.core.searcher.numDocs[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} select - requestTimes.median|<p>-</p>|`Dependent item`|solr.core.select.requestTimes.median_ms[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} select - requestTimes.meanRate|<p>-</p>|`Dependent item`|solr.core.select.requestTimes.meanRate[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} select - requestTimes/sec|<p>-</p>|`Dependent item`|solr.core.select.requestTimes.count[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} select - requestTimes.5minRate|<p>-</p>|`Dependent item`|solr.core.select.requestTimes.5minRate[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} select - requests/sec|<p>-</p>|`Dependent item`|solr.core.select.requests[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} select - errors/sec|<p>-</p>|`Dependent item`|solr.core.select.errors.count[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} index - size|<p>-</p>|`Dependent item`|solr.core.index.size[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} query result cache - hits/sec|<p>-</p>|`Dependent item`|solr.core.queryResultCache.hits[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} document cache - hitratio|<p>-</p>|`Dependent item`|solr.core.documentCache.hitratio[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} filter cache - inserts/sec|<p>-</p>|`Dependent item`|solr.core.filterCache.inserts[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} filter cache - hits/sec|<p>-</p>|`Dependent item`|solr.core.filterCache.hits[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} filter cache - hitratio|<p>-</p>|`Dependent item`|solr.core.filterCache.hitratio[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} filter cache - evictions|<p>-</p>|`Dependent item`|solr.core.filterCache.evictions[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} document cache - inserts/sec|<p>-</p>|`Dependent item`|solr.core.documentCache.inserts[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} document cache - hits/sec|<p>-</p>|`Dependent item`|solr.core.documentCache.hits[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
+|Solr: Core {#CORENAME} select - timeouts/sec|<p>-</p>|`Dependent item`|solr.core.select.timeouts.count[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

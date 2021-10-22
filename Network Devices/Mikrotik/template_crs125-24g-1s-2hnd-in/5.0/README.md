@@ -58,19 +58,19 @@ There are no template links in this template.
 |Device uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 1m</p>|
 |Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 30s</p>|
 |Voltage|<p>-</p>|`SNMP agent`|voltage<p>Update: 30s</p>|
-|Interface {#SNMPVALUE} status (LLD)|<p>1 — up 2 — down</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#SNMPVALUE} bps in (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.6.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface {#SNMPVALUE} packets in (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.7.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface {#SNMPVALUE} bps out (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.10.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface {#SNMPVALUE} packets out (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.11.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface {#SNMPVALUE} admin status (LLD)|<p>1 — administratively enabled 2 — administratively disabled</p>|`SNMP agent`|MIkAdminStatus[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Utilization of processor #$1 (LLD)|<p>-</p>|`SNMP agent`|hrProcessorLoad[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Allocation units for storage $1 (LLD)|<p>-</p>|`SNMP agent`|hrStorageAllocationUnits[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Description of storage $1 (LLD)|<p>-</p>|`SNMP agent`|hrStorageDescr[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Total space on $1 (LLD)|<p>-</p>|`Calculated`|hrStorageSizeInBytes[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Total space on $1 in units (LLD)|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Used space on $1 (LLD)|<p>-</p>|`Calculated`|hrStorageUsedInBytes[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Used space on $1 in units (LLD)|<p>-</p>|`SNMP agent`|hrStorageUsed[{#SNMPVALUE}]<p>Update: 1m</p>|
+|Interface {#SNMPVALUE} status|<p>1 — up 2 — down</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#SNMPVALUE} bps in|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.6.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface {#SNMPVALUE} packets in|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.7.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface {#SNMPVALUE} bps out|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.10.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface {#SNMPVALUE} packets out|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.11.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface {#SNMPVALUE} admin status|<p>1 — administratively enabled 2 — administratively disabled</p>|`SNMP agent`|MIkAdminStatus[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Utilization of processor #$1|<p>-</p>|`SNMP agent`|hrProcessorLoad[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Allocation units for storage $1|<p>-</p>|`SNMP agent`|hrStorageAllocationUnits[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Description of storage $1|<p>-</p>|`SNMP agent`|hrStorageDescr[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Total space on $1|<p>-</p>|`Calculated`|hrStorageSizeInBytes[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Total space on $1 in units|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Used space on $1|<p>-</p>|`Calculated`|hrStorageUsedInBytes[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Used space on $1 in units|<p>-</p>|`SNMP agent`|hrStorageUsed[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

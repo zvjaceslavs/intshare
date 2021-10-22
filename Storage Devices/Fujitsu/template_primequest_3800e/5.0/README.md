@@ -263,31 +263,31 @@ There are no template links in this template.
 |System Description|<p>-</p>|`SNMP agent`|sysDescr.0<p>Update: 1h</p>|
 |System Name|<p>-</p>|`SNMP agent`|sysName.0<p>Update: 1h</p>|
 |System Uptime|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 30s</p>|
-|{#SNMPVALUE} Status (LLD)|<p>-</p>|`SNMP agent`|fans.5.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#SNMPVALUE} Current Speed (LLD)|<p>-</p>|`SNMP agent`|fans.6.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|{#SNMPVALUE} Fail Reaction (LLD)|<p>-</p>|`SNMP agent`|fans.8.[{#SNMPINDEX}]<p>Update: 10h</p>|
-|{#SNMPVALUE} Status (LLD)|<p>Memory module status Status mapping. SEL level MIB Value Warning failed-disabled(4) Warning warning(7) Error error(5) Error configuration-error(9)</p>|`SNMP agent`|memoryModules.4.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#SNMPVALUE} Capacity (LLD)|<p>Memory module size (capacity in MBytes; -1 if unknown)</p>|`SNMP agent`|memoryModules.6.[{#SNMPINDEX}]<p>Update: 10h</p>|
-|{#SNMPVALUE} Voltage Status (LLD)|<p>Voltage status Status mapping. SEL level MIB Value Warning low-warning(7) Warning high-warning(8) Error too-low(4) Error too-high(5)</p>|`SNMP agent`|voltages.4.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#SNMPVALUE} Voltage Current Value (LLD)|<p>Voltage current value. This object returns 0;if the agent can not get the value.(1/100V)</p>|`SNMP agent`|voltages.5.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|{#SNMPVALUE} Voltage Minimum Level (LLD)|<p>Voltage minimum level (1/100V)</p>|`SNMP agent`|voltages.7.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|{#SNMPVALUE} Voltage Maximum Level (LLD)|<p>Voltage maximum level (1/100V)</p>|`SNMP agent`|voltages.8.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|{#SNMPVALUE} Status (LLD)|<p>CPU status Status mapping. SEL level MIB Value Warning disabled(4) Warning prefailed-warning(8) Error failed(6)</p>|`SNMP agent`|cpus.4.[{#SNMPINDEX}]<p>Update: 15s</p>|
-|{#SNMPVALUE} Model Name (LLD)|<p>CPU model name (e.g. Itanium2 Processor)</p>|`SNMP agent`|cpus.5.[{#SNMPINDEX}]<p>Update: 10h</p>|
-|{#SNMPVALUE} Step (LLD)|<p>CPU step / revision</p>|`SNMP agent`|cpus.7.[{#SNMPINDEX}]<p>Update: 10h</p>|
-|{#SNMPVALUE} Current Speed (LLD)|<p>CPU speed (frequency in MHz)</p>|`SNMP agent`|cpus.8.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|{#SNMPVALUE} Number of Cores (LLD)|<p>Number of (physically available) cores within one physical CPU (for multi-core CPUs;platform dependent)</p>|`SNMP agent`|cpus.13.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|{#SNMPVALUE} Number of Enabled Cores (LLD)|<p>Number of effectively enabled cores within one physical CPU (for multi-core CPUs;0 if unknown)</p>|`SNMP agent`|cpus.15.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|System Board ID#{#SNMPVALUE} Model Name (LLD)|<p>Model name (e.g. 'System Board')</p>|`SNMP agent`|systemBoard.2.[{#SNMPINDEX}]<p>Update: 10h</p>|
-|System Board ID#{#SNMPVALUE} Product Number (LLD)|<p>Product number (may be identical to ModelName)</p>|`SNMP agent`|systemBoard.3.[{#SNMPINDEX}]<p>Update: 10h</p>|
-|System Board ID#{#SNMPVALUE} Revision (LLD)|<p>Revision string (e.g. 'WGS1 GS3')</p>|`SNMP agent`|systemBoard.4.[{#SNMPINDEX}]<p>Update: 10h</p>|
-|System Board ID#{#SNMPVALUE} Serial Number (LLD)|<p>Serial number (not available for all boards)</p>|`SNMP agent`|systemBoard.5.[{#SNMPINDEX}]<p>Update: 10h</p>|
-|{#SNMPVALUE} Status (LLD)|<p>Power supply status Status mapping. SEL level MIB Value Warning ac-fail(5) Warning predictive-fail(9) Error failed(4) Error not-manageable(8)</p>|`SNMP agent`|powerSupply.5.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#SNMPVALUE} Status (LLD)|<p>-</p>|`SNMP agent`|temperatureSensors.5.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|{#SNMPVALUE} Current Temperature (LLD)|<p>-</p>|`SNMP agent`|temperatureSensors.6.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|{#SNMPVALUE} Temperature Warning Level (LLD)|<p>-</p>|`SNMP agent`|temperatureSensors.7.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|{#SNMPVALUE} Temperature Critical Level (LLD)|<p>-</p>|`SNMP agent`|temperatureSensors.8.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|{#SNMPVALUE} Critical Reaction (LLD)|<p>-</p>|`SNMP agent`|temperatureSensors.9.[{#SNMPINDEX}]<p>Update: 10h</p>|
+|{#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|fans.5.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} Current Speed|<p>-</p>|`SNMP agent`|fans.6.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|{#SNMPVALUE} Fail Reaction|<p>-</p>|`SNMP agent`|fans.8.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
+|{#SNMPVALUE} Status|<p>Memory module status Status mapping. SEL level MIB Value Warning failed-disabled(4) Warning warning(7) Error error(5) Error configuration-error(9)</p>|`SNMP agent`|memoryModules.4.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} Capacity|<p>Memory module size (capacity in MBytes; -1 if unknown)</p>|`SNMP agent`|memoryModules.6.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
+|{#SNMPVALUE} Voltage Status|<p>Voltage status Status mapping. SEL level MIB Value Warning low-warning(7) Warning high-warning(8) Error too-low(4) Error too-high(5)</p>|`SNMP agent`|voltages.4.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} Voltage Current Value|<p>Voltage current value. This object returns 0;if the agent can not get the value.(1/100V)</p>|`SNMP agent`|voltages.5.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|{#SNMPVALUE} Voltage Minimum Level|<p>Voltage minimum level (1/100V)</p>|`SNMP agent`|voltages.7.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE} Voltage Maximum Level|<p>Voltage maximum level (1/100V)</p>|`SNMP agent`|voltages.8.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE} Status|<p>CPU status Status mapping. SEL level MIB Value Warning disabled(4) Warning prefailed-warning(8) Error failed(6)</p>|`SNMP agent`|cpus.4.[{#SNMPINDEX}]<p>Update: 15s</p><p>LLD</p>|
+|{#SNMPVALUE} Model Name|<p>CPU model name (e.g. Itanium2 Processor)</p>|`SNMP agent`|cpus.5.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
+|{#SNMPVALUE} Step|<p>CPU step / revision</p>|`SNMP agent`|cpus.7.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
+|{#SNMPVALUE} Current Speed|<p>CPU speed (frequency in MHz)</p>|`SNMP agent`|cpus.8.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|{#SNMPVALUE} Number of Cores|<p>Number of (physically available) cores within one physical CPU (for multi-core CPUs;platform dependent)</p>|`SNMP agent`|cpus.13.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE} Number of Enabled Cores|<p>Number of effectively enabled cores within one physical CPU (for multi-core CPUs;0 if unknown)</p>|`SNMP agent`|cpus.15.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|System Board ID#{#SNMPVALUE} Model Name|<p>Model name (e.g. 'System Board')</p>|`SNMP agent`|systemBoard.2.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
+|System Board ID#{#SNMPVALUE} Product Number|<p>Product number (may be identical to ModelName)</p>|`SNMP agent`|systemBoard.3.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
+|System Board ID#{#SNMPVALUE} Revision|<p>Revision string (e.g. 'WGS1 GS3')</p>|`SNMP agent`|systemBoard.4.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
+|System Board ID#{#SNMPVALUE} Serial Number|<p>Serial number (not available for all boards)</p>|`SNMP agent`|systemBoard.5.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
+|{#SNMPVALUE} Status|<p>Power supply status Status mapping. SEL level MIB Value Warning ac-fail(5) Warning predictive-fail(9) Error failed(4) Error not-manageable(8)</p>|`SNMP agent`|powerSupply.5.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|temperatureSensors.5.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|{#SNMPVALUE} Current Temperature|<p>-</p>|`SNMP agent`|temperatureSensors.6.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature Warning Level|<p>-</p>|`SNMP agent`|temperatureSensors.7.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature Critical Level|<p>-</p>|`SNMP agent`|temperatureSensors.8.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE} Critical Reaction|<p>-</p>|`SNMP agent`|temperatureSensors.9.[{#SNMPINDEX}]<p>Update: 10h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

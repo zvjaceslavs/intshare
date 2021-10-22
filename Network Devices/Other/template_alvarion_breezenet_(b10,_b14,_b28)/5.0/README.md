@@ -34,9 +34,6 @@ There are no discovery rules in this template.
 |Access vlan|<p>-</p>|`SNMP agent`|access.vlan<p>Update: 1d</p>|
 |Received SNR BU|<p>-</p>|`SNMP agent`|bu.received.snr<p>Update: 60</p>|
 |Defined Frequency|<p>-</p>|`SNMP agent`|freq.def<p>Update: 1d</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |Radio :Inbound packets with errors (CRC)|<p>-</p>|`SNMP agent`|ifInErrors.1<p>Update: 60</p>|
 |FastEtehernet  :Inbound packets with errors|<p>-</p>|`SNMP agent`|ifInErrors.2<p>Update: 300</p>|
 |FastEthernet  :Bits received|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 180</p>|

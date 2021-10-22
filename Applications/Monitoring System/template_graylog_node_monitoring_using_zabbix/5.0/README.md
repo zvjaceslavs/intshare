@@ -66,14 +66,14 @@ There are no template links in this template.
 |GrayLog: Filter execution Time(Process Time) 5min|<p>A common problem that can hit performance or bring message processing to a halt completely is when someone configures a regular expression or other rule that is too CPU expensive or simply never finishes.</p>|`Zabbix agent`|graylog.proc.buffer[ProcessBufferProcessor.processTime,m5_rate]<p>Update: 3m</p>|
 |GrayLog: Service Status|<p>-</p>|`Zabbix agent`|net.tcp.port[{HOST.IP},9000]<p>Update: 3m</p>|
 |GrayLog: Processes|<p>-</p>|`Zabbix agent`|proc.num[graylog-server,,]<p>Update: 3m</p>|
-|Graylog: Node Processing (LLD)|<p>-</p>|`Zabbix agent`|graylog.cluster.status[{#NODEID},is_processing]<p>Update: 3m</p>|
-|Graylog: Node Status (LLD)|<p>-</p>|`Zabbix agent`|graylog.cluster.status[{#NODEID},lb_status]<p>Update: 3m</p>|
-|Graylog: Node Lifecycle (LLD)|<p>-</p>|`Zabbix agent`|graylog.cluster.status[{#NODEID},lifecycle]<p>Update: 30s</p>|
-|{#NODEID},GrayLog: Memory Used (%)(Total/Max) (LLD)|<p>-</p>|`Calculated`|graylog.men.free[{#NODEID}]<p>Update: 3m</p>|
-|GrayLog: Node Free Memory (LLD)|<p>-</p>|`Zabbix agent`|graylog.node.men[{#NODEID},free_memory]<p>Update: 3m</p>|
-|GrayLog: Node Max Memory (LLD)|<p>-</p>|`Zabbix agent`|graylog.node.men[{#NODEID},max_memory]<p>Update: 3m</p>|
-|GrayLog: Node Total Memory (LLD)|<p>-</p>|`Zabbix agent`|graylog.node.men[{#NODEID},total_memory]<p>Update: 3m</p>|
-|GrayLog: Node Used Memory (LLD)|<p>-</p>|`Zabbix agent`|graylog.node.men[{#NODEID},used_memory]<p>Update: 3m</p>|
+|Graylog: Node Processing|<p>-</p>|`Zabbix agent`|graylog.cluster.status[{#NODEID},is_processing]<p>Update: 3m</p><p>LLD</p>|
+|Graylog: Node Status|<p>-</p>|`Zabbix agent`|graylog.cluster.status[{#NODEID},lb_status]<p>Update: 3m</p><p>LLD</p>|
+|Graylog: Node Lifecycle|<p>-</p>|`Zabbix agent`|graylog.cluster.status[{#NODEID},lifecycle]<p>Update: 30s</p><p>LLD</p>|
+|{#NODEID},GrayLog: Memory Used (%)(Total/Max)|<p>-</p>|`Calculated`|graylog.men.free[{#NODEID}]<p>Update: 3m</p><p>LLD</p>|
+|GrayLog: Node Free Memory|<p>-</p>|`Zabbix agent`|graylog.node.men[{#NODEID},free_memory]<p>Update: 3m</p><p>LLD</p>|
+|GrayLog: Node Max Memory|<p>-</p>|`Zabbix agent`|graylog.node.men[{#NODEID},max_memory]<p>Update: 3m</p><p>LLD</p>|
+|GrayLog: Node Total Memory|<p>-</p>|`Zabbix agent`|graylog.node.men[{#NODEID},total_memory]<p>Update: 3m</p><p>LLD</p>|
+|GrayLog: Node Used Memory|<p>-</p>|`Zabbix agent`|graylog.node.men[{#NODEID},used_memory]<p>Update: 3m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

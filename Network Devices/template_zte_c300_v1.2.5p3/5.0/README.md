@@ -30,9 +30,6 @@ There are no macros links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1s</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1s</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1s</p>|
 |OLT Current #0|<p>-</p>|`SNMP agent`|olt[current0]<p>Update: 1m</p>|
 |OLT Current #1|<p>-</p>|`SNMP agent`|olt[current1]<p>Update: 1m</p>|
 |OLT Power #0|<p>-</p>|`SNMP agent`|olt[power0]<p>Update: 1m</p>|
@@ -59,15 +56,15 @@ There are no macros links in this template.
 |Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 1d</p>|
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 1d</p>|
 |Uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 10m</p>|
-|OLT CARD CPU LOAD {#SNMPVALUE} $1 (LLD)|<p>-</p>|`SNMP agent`|cardcpu[{#SNMPINDEX}]<p>Update: 60s</p>|
-|OLT CARD MEMORY {#SNMPVALUE} $1 (LLD)|<p>-</p>|`SNMP agent`|cardmem[{#SNMPINDEX}]<p>Update: 60s</p>|
-|OLT CARD OPERATIONAL STATUS {#SNMPVALUE} $1 (LLD)|<p>-</p>|`SNMP agent`|cardoperstat[{#SNMPINDEX}]<p>Update: 60s</p>|
-|OLT CARD STANDBY STATUS {#SNMPVALUE} $1 (LLD)|<p>-</p>|`SNMP agent`|cardstandby[{#SNMPINDEX}]<p>Update: 60s</p>|
-|Incoming traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10m</p>|
-|Operational status of interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 10m</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 10m</p>|
-|rx 1310nm {#ONUDESC} (LLD)|<p>-</p>|`SNMP agent`|rx1310[{#SNMPINDEX}]<p>Update: 1h</p>|
-|rx 1490nm {#ONUDESC} (LLD)|<p>-</p>|`SNMP agent`|rx1490[{#SNMPINDEX}]<p>Update: 1h</p>|
+|OLT CARD CPU LOAD {#SNMPVALUE} $1|<p>-</p>|`SNMP agent`|cardcpu[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
+|OLT CARD MEMORY {#SNMPVALUE} $1|<p>-</p>|`SNMP agent`|cardmem[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
+|OLT CARD OPERATIONAL STATUS {#SNMPVALUE} $1|<p>-</p>|`SNMP agent`|cardoperstat[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
+|OLT CARD STANDBY STATUS {#SNMPVALUE} $1|<p>-</p>|`SNMP agent`|cardstandby[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Operational status of interface $1|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|rx 1310nm {#ONUDESC}|<p>-</p>|`SNMP agent`|rx1310[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|rx 1490nm {#ONUDESC}|<p>-</p>|`SNMP agent`|rx1490[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -153,9 +150,6 @@ There are no macros links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |CPU Load|<p>-</p>|`SNMP agent`|cpu-la<p>Update: 10m</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1s</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1s</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1s</p>|
 |Memory|<p>-</p>|`Calculated`|memory<p>Update: 10m</p>|
 |Memory Total|<p>-</p>|`SNMP agent`|memory-total<p>Update: 1h</p>|
 |Memory Used|<p>-</p>|`SNMP agent`|memory-used<p>Update: 10m</p>|
@@ -165,10 +159,10 @@ There are no macros links in this template.
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 1d</p>|
 |Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 10m</p>|
 |Uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 10m</p>|
-|Incoming traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10m</p>|
-|Operational status of interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 10m</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 10m</p>|
-|ONU $1 DOWNSTREAM SIGNAL (LLD)|<p>-</p>|`SNMP agent`|onuDwRx[{#SNMPVALUE}]<p>Update: 600s</p>|
+|Incoming traffic on interface $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Operational status of interface $1|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|ONU $1 DOWNSTREAM SIGNAL|<p>-</p>|`SNMP agent`|onuDwRx[{#SNMPVALUE}]<p>Update: 600s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

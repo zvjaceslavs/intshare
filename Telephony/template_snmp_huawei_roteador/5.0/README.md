@@ -28,22 +28,16 @@ There are no macros links in this template.
 |Total IPv4 RIB Routes|<p>-</p>|`SNMP agent`|hwIPv4RibRoutes<p>Update: 300</p>|
 |Product Name|<p>-</p>|`SNMP agent`|hwProductName<p>Update: 7200</p>|
 |Product Version|<p>-</p>|`SNMP agent`|hwProductVersion<p>Update: 7200</p>|
-|Number of network interfaces|<p>The number of network interfaces (regardless of their current state) present on this system.</p>|`SNMP agent`|ifNumber<p>Update: 1h</p>|
-|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
-|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
-|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
-|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
-|Operational status of interface $1 (LLD)|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 60</p>|
-|Incoming traffic on interface $1 (LLD)|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifHCInOctets[{#SNMPVALUE}]<p>Update: 60</p>|
-|Outgoing traffic on interface $1 (LLD)|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 60</p>|
-|AS Name for IPv4 peer {#SNMPVALUE} (LLD)|<p>-</p>|`External check`|as.name["-p","{#SNMPVALUE}"]<p>Update: 300</p>|
-|Administrative status for peer $1 (LLD)|<p>-</p>|`SNMP agent`|BgpPeerAdminStatus[{#SNMPVALUE}]<p>Update: 300</p>|
-|Established time for peer $1 (LLD)|<p>-</p>|`SNMP agent`|BgpPeerFsmEstablishedTime[{#SNMPVALUE}]<p>Update: 300</p>|
-|Total IPv4 routes from peer $1 (LLD)|<p>-</p>|`SNMP agent`|BgpPeerIPv4Routes[{#SNMPVALUE}]<p>Update: 300</p>|
-|Remote AS for peer $1 (LLD)|<p>-</p>|`SNMP agent`|BgpPeerRemoteAs[{#SNMPVALUE}]<p>Update: 300</p>|
-|Operational status for peer $1 (LLD)|<p>-</p>|`SNMP agent`|BgpPeerState[{#SNMPVALUE}]<p>Update: 300</p>|
-|AS Name para o AS{#SNMPVALUE} (LLD)|<p>-</p>|`External check`|as_name["-p","{#SNMPVALUE}"]<p>Update: 300</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifHCInOctets[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|AS Name for IPv4 peer {#SNMPVALUE}|<p>-</p>|`External check`|as.name["-p","{#SNMPVALUE}"]<p>Update: 300</p><p>LLD</p>|
+|Administrative status for peer $1|<p>-</p>|`SNMP agent`|BgpPeerAdminStatus[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Established time for peer $1|<p>-</p>|`SNMP agent`|BgpPeerFsmEstablishedTime[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Total IPv4 routes from peer $1|<p>-</p>|`SNMP agent`|BgpPeerIPv4Routes[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Remote AS for peer $1|<p>-</p>|`SNMP agent`|BgpPeerRemoteAs[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Operational status for peer $1|<p>-</p>|`SNMP agent`|BgpPeerState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|AS Name para o AS{#SNMPVALUE}|<p>-</p>|`External check`|as_name["-p","{#SNMPVALUE}"]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

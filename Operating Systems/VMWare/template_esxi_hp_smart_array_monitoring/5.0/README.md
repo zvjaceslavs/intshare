@@ -81,12 +81,12 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Smart Array: Data Retrieval|<p>-</p>|`SSH agent`|ssh.run[hpraid.data.retrieval]<p>Update: 600</p>|
-|Physical drive {#PD} status (LLD)|<p>-</p>|`SSH agent`|ssh.run[hpraid.pd.status.{#PD}]<p>Update: 600</p>|
-|Physical drive {#PD} temperature (LLD)|<p>-</p>|`SSH agent`|ssh.run[hpraid.pd.temperature.{#PD}]<p>Update: 600</p>|
-|Logical volume $1 status (LLD)|<p>-</p>|`SSH agent`|ssh.run[hpraid.ld.status.{#LD}]<p>Update: 600</p>|
-|Smart Array: Battery status on slot {#CTRL_SLOT} (LLD)|<p>-</p>|`SSH agent`|ssh.run[hpraid.bbu.status.{#CTRL_SLOT}]<p>Update: 21600</p>|
-|Smart Array: Cache $2 status on slot {#CTRL_SLOT} (LLD)|<p>-</p>|`SSH agent`|ssh.run[hpraid.cache.status.{#CTRL_SLOT}]<p>Update: 21600</p>|
-|Smart Array: Controller status on slot {#CTRL_SLOT} (LLD)|<p>-</p>|`SSH agent`|ssh.run[hpraid.ctrl.status.{#CTRL_SLOT}]<p>Update: 21600</p>|
+|Physical drive {#PD} status|<p>-</p>|`SSH agent`|ssh.run[hpraid.pd.status.{#PD}]<p>Update: 600</p><p>LLD</p>|
+|Physical drive {#PD} temperature|<p>-</p>|`SSH agent`|ssh.run[hpraid.pd.temperature.{#PD}]<p>Update: 600</p><p>LLD</p>|
+|Logical volume $1 status|<p>-</p>|`SSH agent`|ssh.run[hpraid.ld.status.{#LD}]<p>Update: 600</p><p>LLD</p>|
+|Smart Array: Battery status on slot {#CTRL_SLOT}|<p>-</p>|`SSH agent`|ssh.run[hpraid.bbu.status.{#CTRL_SLOT}]<p>Update: 21600</p><p>LLD</p>|
+|Smart Array: Cache $2 status on slot {#CTRL_SLOT}|<p>-</p>|`SSH agent`|ssh.run[hpraid.cache.status.{#CTRL_SLOT}]<p>Update: 21600</p><p>LLD</p>|
+|Smart Array: Controller status on slot {#CTRL_SLOT}|<p>-</p>|`SSH agent`|ssh.run[hpraid.ctrl.status.{#CTRL_SLOT}]<p>Update: 21600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

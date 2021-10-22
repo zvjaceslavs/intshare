@@ -68,59 +68,47 @@ There are no macros links in this template.
 |Total Number of Users|<p>-</p>|`SNMP agent`|aos.sysTotalUsers<p>Update: 1m</p>|
 |System Uptime|<p>-</p>|`SNMP agent`|aos.sysUptime<p>Update: 1m</p>|
 |Platform User Usage Percentage|<p>-</p>|`Calculated`|aos.sysUserUsage<p>Update: 1m</p>|
-|Current connections|<p>-</p>|`SNMP agent`|fortinetCurrentConnections<p>Update: 60</p>|
-|Current CPU Util|<p>-</p>|`SNMP agent`|fortinetCurrentCPUUtil<p>Update: 60</p>|
-|Current RAM Usage|<p>-</p>|`SNMP agent`|fortinetCurrentRAMUtil<p>Update: 60</p>|
-|Serial Number|<p>-</p>|`SNMP agent`|fortinetSysSerial<p>Update: 3600</p>|
-|Total storage space|<p>-</p>|`SNMP agent`|fortinetTotalStorage<p>Update: 3600</p>|
-|Fortinet Uptime|<p>-</p>|`SNMP agent`|fortinetUpTime<p>Update: 30</p>|
-|Used storage space|<p>-</p>|`SNMP agent`|fortinetUsedStorage<p>Update: 60</p>|
-|Fortinet Used Storage %|<p>-</p>|`Calculated`|fortinetUsedStorage-percent<p>Update: 60</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |Controller Traps|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
-|Firmware Version|<p>-</p>|`SNMP agent`|SysmFirmwareVersion<p>Update: 3600</p>|
-|AP Active/Standby - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apAcStand.[{#APNAME}]<p>Update: 2m</p>|
-|AP Bootstraps - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apBootstraps.[{#APNAME}]<p>Update: 2m</p>|
-|Backup Switch IP Address - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apBSWIP.[{#APNAME}]<p>Update: 1h</p>|
-|AP Group - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apGroup.[{#APNAME}]<p>Update: 6h</p>|
-|IP Address - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apIP.[{#APNAME}]<p>Update: 6h</p>|
-|AP Reboots - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apReboots.[{#APNAME}]<p>Update: 2m</p>|
-|AP Serial - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apSerial.[{#APNAME}]<p>Update: 24h</p>|
-|AP Status - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apStatus.[{#APNAME}]<p>Update: 2m</p>|
-|Switch IP Address - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apSWIP.[{#APNAME}]<p>Update: 1h</p>|
-|AP Type - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apType.[{#APNAME}]<p>Update: 24h</p>|
-|AP Uptime - {#APNAME} (LLD)|<p>-</p>|`SNMP agent`|aos.apUptime.[{#APNAME}]<p>Update: 2m</p>|
-|Server Failed Auths $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authFailedAuths.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1m</p>|
-|Auth Server In Service $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authInService.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1m</p>|
-|Server Response Time $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authResponseTime.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 5m</p>|
-|Auth Server State $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authServerState.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 10m</p>|
-|Auth Server Type $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authServerType.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1d</p>|
-|Server Outstanding Requests $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authSrvOutstandReq.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1m</p>|
-|Server Timeouts $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authSrvTimeouts.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1m</p>|
-|Server Uptime $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authSrvUptime.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 5m</p>|
-|Server Success Auths $1 (LLD)|<p>-</p>|`SNMP agent`|aos.authSuccessAuths.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPU Utilization $1 (LLD)|<p>-</p>|`SNMP agent`|aos.cpuUtil.[{#SNMPVALUE}]<p>Update: 30s</p>|
-|Fan $1 Status (LLD)|<p>-</p>|`SNMP agent`|aos.fanStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|License $2 (LLD)|<p>-</p>|`SNMP agent`|aos.lic.[{#SNMPINDEX},{#SNMPVALUE}]<p>Update: 1d</p>|
-|License Expire $2 (LLD)|<p>-</p>|`SNMP agent`|aos.licExpire.[{#SNMPINDEX},{#SNMPVALUE}]<p>Update: 1d</p>|
-|License Flags $2 (LLD)|<p>-</p>|`SNMP agent`|aos.licFlags.[{#SNMPINDEX},{#SNMPVALUE}]<p>Update: 1d</p>|
-|License Installed Date $2 (LLD)|<p>-</p>|`SNMP agent`|aos.licsInstalled.[{#SNMPINDEX},{#SNMPVALUE}]<p>Update: 1d</p>|
-|PSU $1 Status (LLD)|<p>-</p>|`SNMP agent`|aos.psuStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Storage Size $1 (LLD)|<p>-</p>|`SNMP agent`|aos.storageSize.[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Storage Type $1 (LLD)|<p>-</p>|`SNMP agent`|aos.storageType.[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Storage Used $1 (LLD)|<p>-</p>|`SNMP agent`|aos.storageUsed.[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Storage Used Percentage $1 (LLD)|<p>-</p>|`Calculated`|aos.storageUsedPer.[{#SNMPVALUE}]<p>Update: 1h</p>|
-|Interface {#IFNAME}({#IFALIAS}): Inbound packets discarded (LLD)|<p>MIB: IF-MIB The number of inbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol. One possible reason for discarding such a packet could be to free up buffer space. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 300</p>|
-|Interface {#IFNAME}({#IFALIAS}): Inbound packets with errors (LLD)|<p>MIB: IF-MIB For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 300</p>|
-|Interface {#IFNAME}({#IFALIAS}): Recebidos (LLD)|<p>MIB: IF-MIB The total number of octets received on the interface,including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 180</p>|
-|Interface {#IFNAME}({#IFALIAS}): Outbound packets discarded (LLD)|<p>MIB: IF-MIB The number of outbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol. One possible reason for discarding such a packet could be to free up buffer space. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 300</p>|
-|Interface {#IFNAME}({#IFALIAS}): Outbound packets with errors (LLD)|<p>MIB: IF-MIB For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 300</p>|
-|Interface {#IFNAME}({#IFALIAS}): Enviados (LLD)|<p>MIB: IF-MIB The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 180</p>|
-|Interface {#IFNAME}({#IFALIAS}): Speed (LLD)|<p>MIB: IF-MIB An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 300</p>|
-|Interface {#IFNAME}({#IFALIAS}): Operational status (LLD)|<p>MIB: IF-MIB The current operational state of the interface. - The testing(3) state indicates that no operational packet scan be passed - If ifAdminStatus is down(2) then ifOperStatus should be down(2) - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection) - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 180</p>|
-|Interface {#IFNAME}({#IFALIAS}): Interface type (LLD)|<p>MIB: IF-MIB The type of interface. Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA), through updating the syntax of the IANAifType textual convention.</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 3600</p>|
+|AP Active/Standby - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apAcStand.[{#APNAME}]<p>Update: 2m</p><p>LLD</p>|
+|AP Bootstraps - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apBootstraps.[{#APNAME}]<p>Update: 2m</p><p>LLD</p>|
+|Backup Switch IP Address - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apBSWIP.[{#APNAME}]<p>Update: 1h</p><p>LLD</p>|
+|AP Group - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apGroup.[{#APNAME}]<p>Update: 6h</p><p>LLD</p>|
+|IP Address - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apIP.[{#APNAME}]<p>Update: 6h</p><p>LLD</p>|
+|AP Reboots - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apReboots.[{#APNAME}]<p>Update: 2m</p><p>LLD</p>|
+|AP Serial - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apSerial.[{#APNAME}]<p>Update: 24h</p><p>LLD</p>|
+|AP Status - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apStatus.[{#APNAME}]<p>Update: 2m</p><p>LLD</p>|
+|Switch IP Address - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apSWIP.[{#APNAME}]<p>Update: 1h</p><p>LLD</p>|
+|AP Type - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apType.[{#APNAME}]<p>Update: 24h</p><p>LLD</p>|
+|AP Uptime - {#APNAME}|<p>-</p>|`SNMP agent`|aos.apUptime.[{#APNAME}]<p>Update: 2m</p><p>LLD</p>|
+|Server Failed Auths $1|<p>-</p>|`SNMP agent`|aos.authFailedAuths.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Auth Server In Service $1|<p>-</p>|`SNMP agent`|aos.authInService.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Server Response Time $1|<p>-</p>|`SNMP agent`|aos.authResponseTime.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Auth Server State $1|<p>-</p>|`SNMP agent`|aos.authServerState.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Auth Server Type $1|<p>-</p>|`SNMP agent`|aos.authServerType.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Server Outstanding Requests $1|<p>-</p>|`SNMP agent`|aos.authSrvOutstandReq.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Server Timeouts $1|<p>-</p>|`SNMP agent`|aos.authSrvTimeouts.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Server Uptime $1|<p>-</p>|`SNMP agent`|aos.authSrvUptime.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Server Success Auths $1|<p>-</p>|`SNMP agent`|aos.authSuccessAuths.[{#SNMPVALUE},{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPU Utilization $1|<p>-</p>|`SNMP agent`|aos.cpuUtil.[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
+|Fan $1 Status|<p>-</p>|`SNMP agent`|aos.fanStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|License $2|<p>-</p>|`SNMP agent`|aos.lic.[{#SNMPINDEX},{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|License Expire $2|<p>-</p>|`SNMP agent`|aos.licExpire.[{#SNMPINDEX},{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|License Flags $2|<p>-</p>|`SNMP agent`|aos.licFlags.[{#SNMPINDEX},{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|License Installed Date $2|<p>-</p>|`SNMP agent`|aos.licsInstalled.[{#SNMPINDEX},{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
+|PSU $1 Status|<p>-</p>|`SNMP agent`|aos.psuStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Storage Size $1|<p>-</p>|`SNMP agent`|aos.storageSize.[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Storage Type $1|<p>-</p>|`SNMP agent`|aos.storageType.[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Storage Used $1|<p>-</p>|`SNMP agent`|aos.storageUsed.[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Storage Used Percentage $1|<p>-</p>|`Calculated`|aos.storageUsedPer.[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Inbound packets discarded|<p>MIB: IF-MIB The number of inbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol. One possible reason for discarding such a packet could be to free up buffer space. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Inbound packets with errors|<p>MIB: IF-MIB For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Recebidos|<p>MIB: IF-MIB The total number of octets received on the interface,including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 180</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Outbound packets discarded|<p>MIB: IF-MIB The number of outbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol. One possible reason for discarding such a packet could be to free up buffer space. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Outbound packets with errors|<p>MIB: IF-MIB For packet-oriented interfaces, the number of outbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of outbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Enviados|<p>MIB: IF-MIB The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 180</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Speed|<p>MIB: IF-MIB An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Operational status|<p>MIB: IF-MIB The current operational state of the interface. - The testing(3) state indicates that no operational packet scan be passed - If ifAdminStatus is down(2) then ifOperStatus should be down(2) - If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic - It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection) - It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state - It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 180</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Interface type|<p>MIB: IF-MIB The type of interface. Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA), through updating the syntax of the IANAifType textual convention.</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

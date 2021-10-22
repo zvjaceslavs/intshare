@@ -98,8 +98,8 @@ There are no template links in this template.
 |Yellow Developer Usage|<p>-</p>|`SNMP agent`|sharp.printer.toner.yellow.dev.usage<p>Update: 30</p>|
 |Yellow Photoconductive Drum Usage|<p>-</p>|`SNMP agent`|sharp.printer.toner.yellow.drum.usage<p>Update: 30</p>|
 |Yellow Toner Usage|<p>-</p>|`SNMP agent`|sharp.printer.toner.yellow.usage<p>Update: 30</p>|
-|Paper Trays $1 (LLD)|<p>-</p>|`SNMP agent`|sharp.prt.snmp.tray.["{#SNMPINDEX}"]<p>Update: 30</p>|
-|Paper Trays $1 Level (LLD)|<p>-</p>|`SNMP agent`|sharp.prt.snmp.tray.level.["{#SNMPINDEX}"]<p>Update: 30</p>|
+|Paper Trays $1|<p>-</p>|`SNMP agent`|sharp.prt.snmp.tray.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
+|Paper Trays $1 Level|<p>-</p>|`SNMP agent`|sharp.prt.snmp.tray.level.["{#SNMPINDEX}"]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

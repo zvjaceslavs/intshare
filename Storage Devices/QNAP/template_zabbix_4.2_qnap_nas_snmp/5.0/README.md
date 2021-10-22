@@ -56,19 +56,19 @@ There are no template links in this template.
 |System temperature|<p>System temperature in centigrade</p>|`SNMP agent`|SystemTemperatureEX<p>Update: 60</p>|
 |System total memory|<p>-</p>|`SNMP agent`|SystemTotalMemEX<p>Update: 10800</p>|
 |System uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 60s</p>|
-|Free size of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SysVolumeFreeSizeEX[{#SNMPINDEX}]<p>Update: 60</p>|
-|Free size of {#SNMPVALUE} (%) (LLD)|<p>-</p>|`Calculated`|SysVolumePFreeSizeEX[{#SNMPINDEX}]<p>Update: 60</p>|
-|Status of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SysVolumeStatusEX[{#SNMPINDEX}]<p>Update: 60</p>|
-|Total size of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SysVolumeTotalSizeEX[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Error $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|net.if.err[{#SNMPVALUE},bps]<p>Update: 60</p>|
-|Received $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|net.if.in[{#SNMPVALUE}, bps]<p>Update: 60</p>|
-|Sent $2 on $1 (LLD)|<p>-</p>|`SNMP agent`|net.if.out[{#SNMPVALUE}, bps]<p>Update: 60</p>|
-|Capacity of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|HdCapacityEX[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Model of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|HdModelEX[{#SNMPINDEX}]<p>Update: 3600</p>|
-|S.M.A.R.T. info of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|HdSmartInfoEX[{#SNMPINDEX}]<p>Update: 60</p>|
-|Status of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|HdStatusEX[{#SNMPINDEX}]<p>Update: 60</p>|
-|Temperature of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|HdTemperatureEX[{#SNMPINDEX}]<p>Update: 60</p>|
-|Speed of {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|SysFanSpeedEX[{#SNMPINDEX}]<p>Update: 60</p>|
+|Free size of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SysVolumeFreeSizeEX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Free size of {#SNMPVALUE} (%)|<p>-</p>|`Calculated`|SysVolumePFreeSizeEX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Status of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SysVolumeStatusEX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Total size of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SysVolumeTotalSizeEX[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Error $2 on $1|<p>-</p>|`SNMP agent`|net.if.err[{#SNMPVALUE},bps]<p>Update: 60</p><p>LLD</p>|
+|Received $2 on $1|<p>-</p>|`SNMP agent`|net.if.in[{#SNMPVALUE}, bps]<p>Update: 60</p><p>LLD</p>|
+|Sent $2 on $1|<p>-</p>|`SNMP agent`|net.if.out[{#SNMPVALUE}, bps]<p>Update: 60</p><p>LLD</p>|
+|Capacity of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|HdCapacityEX[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Model of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|HdModelEX[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|S.M.A.R.T. info of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|HdSmartInfoEX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Status of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|HdStatusEX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Temperature of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|HdTemperatureEX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Speed of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|SysFanSpeedEX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -60,60 +60,60 @@ There are no template links in this template.
 |Number of Disks|<p>-</p>|`SNMP agent`|diskTotalCount<p>Update: 30m</p>|
 |Number of verifying parity Disks|<p>-</p>|`SNMP agent`|diskVerifyingParityCount<p>Update: 1m</p>|
 |Product Version|<p>-</p>|`SNMP agent`|productVersio<p>Update: 30m</p>|
-|Aggregate Owners[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|aggrOwners[{#SNMPINDEX}]<p>Update: 30m</p>|
-|Aggregate Raidtype[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|aggrRaidType[{#SNMPINDEX}]<p>Update: 30m</p>|
-|Aggregate State[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|aggrState[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Aggregate Status[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|aggrStatus[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Aggregate Type[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|aggrType[{#SNMPINDEX}]<p>Update: 30m</p>|
-|Aggregate Size[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|df64TotalKBytes[{#SNMPINDEX}]<p>Update: 30m</p>|
-|Aggregate Used Size[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|df64UsedKBytes[{#SNMPINDEX}]<p>Update: 3m</p>|
-|Aggregate Size Free (%)[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|dfPerCentKBytesCapacity[{#SNMPINDEX}]<p>Update: 3m</p>|
-|Aggregate Filesystem Status[{#AGGRNAME}] (LLD)|<p>-</p>|`SNMP agent`|dfStatus[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Failed Electronic (LLD)|<p>-</p>|`SNMP agent`|enclElectronicsFailed[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Over Temperature warn (LLD)|<p>-</p>|`SNMP agent`|enclTempSensorsOverTempWarn[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Under Voltage fail (LLD)|<p>-</p>|`SNMP agent`|enclVoltSensorsUnderVoltFail[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Over Voltage warn (LLD)|<p>-</p>|`SNMP agent`|enclVoltSensorsOverVoltWarn[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Over Voltage fail (LLD)|<p>-</p>|`SNMP agent`|enclVoltSensorsOverVoltFail[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Current Voltage (LLD)|<p>-</p>|`SNMP agent`|enclVoltSensorsCurrentVolt[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Under Temperature warn (LLD)|<p>-</p>|`SNMP agent`|enclTempSensorsUnderTempWarn[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Under Temperature fail (LLD)|<p>-</p>|`SNMP agent`|enclTempSensorsUnderTempFail[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Over Temperature fail (LLD)|<p>-</p>|`SNMP agent`|enclTempSensorsOverTempFail[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Electronic (LLD)|<p>-</p>|`SNMP agent`|enclElectronicsPresent[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Current Temperature (LLD)|<p>-</p>|`SNMP agent`|enclTempSensorsCurrentTemp[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Product Model (LLD)|<p>-</p>|`SNMP agent`|enclProductModel[{#SNMPINDEX}]<p>Update: 12h</p>|
-|Enclosure[{#ENCLNUM}] Product ID (LLD)|<p>-</p>|`SNMP agent`|enclProductID[{#SNMPINDEX}]<p>Update: 12h</p>|
-|Enclosure[{#ENCLNUM}] Failed Power Supplies (LLD)|<p>-</p>|`SNMP agent`|enclPowerSuppliesFailed[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Fans Speed (LLD)|<p>-</p>|`SNMP agent`|enclFansSpeed[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Failed Fans (LLD)|<p>-</p>|`SNMP agent`|enclFansFailed[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Enclosure[{#ENCLNUM}] Under Voltage warn (LLD)|<p>-</p>|`SNMP agent`|enclVoltSensorsUnderVoltWarn[{#SNMPINDEX}]<p>Update: 1m</p>|
-|VIF[{#VIF}] is Home (LLD)|<p>-</p>|`SNMP agent`|logicalInterfaceIsHome[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Node[{#NODENAME}] cannot take over cause (LLD)|<p>-</p>|`SNMP agent`|haCannotTakeoverCause[{#NODENAME}]<p>Update: 1m</p>|
-|Node[{#NODENAME}] HA Interconnect Status (LLD)|<p>-</p>|`SNMP agent`|haInterconnectStatus[{#NODENAME}]<p>Update: 1m</p>|
-|Node[{#NODENAME}] HA Partner Name (LLD)|<p>-</p>|`SNMP agent`|haPartnerName[{#NODENAME}]<p>Update: 12h</p>|
-|Node[{#NODENAME}] HA Partner Status (LLD)|<p>-</p>|`SNMP agent`|haPartnerStatus[{#NODENAME}]<p>Update: 1m</p>|
-|Node[{#NODENAME}] HA Settings (LLD)|<p>-</p>|`SNMP agent`|haSettings[{#NODENAME}]<p>Update: 1m</p>|
-|Node[{#NODENAME}] HA State (LLD)|<p>-</p>|`SNMP agent`|haState[{#NODENAME}]<p>Update: 1m</p>|
-|SnapMirror [{#SNAPINDEX}] Destination Path (LLD)|<p>-</p>|`SNMP agent`|snapmirrorRelDestPath[{#SNMPINDEX}]<p>Update: 3h</p>|
-|SnapMirror [{#SNAPINDEX}] Healthy (LLD)|<p>-</p>|`SNMP agent`|snapmirrorRelHealthy[{#SNMPINDEX}]<p>Update: 1m</p>|
-|SnapMirror [{#SNAPINDEX}] Lag (LLD)|<p>-</p>|`SNMP agent`|snapmirrorRelLag[{#SNMPINDEX}]<p>Update: 300s</p>|
-|SnapMirror {#SNAPINDEX} Last Transfer Size (LLD)|<p>-</p>|`SNMP agent`|snapmirrorRelLastTransferSize[{#SNMPINDEX}]<p>Update: 300s</p>|
-|SnapMirror {#SNAPINDEX} Last Transfer Time (LLD)|<p>-</p>|`SNMP agent`|snapmirrorRelLastTransferTime[{#SNMPINDEX}]<p>Update: 300s</p>|
-|SnapMirror {#SNAPINDEX}  Source Path (LLD)|<p>-</p>|`SNMP agent`|snapmirrorRelSrcPath[{#SNMPINDEX}]<p>Update: 3h</p>|
-|SnapMirror {#SNAPINDEX} State (LLD)|<p>-</p>|`SNMP agent`|snapmirrorRelState[{#SNMPINDEX}]<p>Update: 1m</p>|
-|SnapMirror {#SNAPINDEX} Status (LLD)|<p>-</p>|`SNMP agent`|snapmirrorRelStatus[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume[{#VOLNAME}] Size (LLD)|<p>-</p>|`SNMP agent`|df64TotalKBytesVol[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume[{#VOLNAME}] Used (LLD)|<p>-</p>|`SNMP agent`|df64UsedKBytesVol[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume[{#VOLNAME}] Used (%) (LLD)|<p>-</p>|`SNMP agent`|dfPerCentKBytesCapacityVol[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume[{#VOLNAME}] Used Inode % (LLD)|<p>-</p>|`SNMP agent`|dfVolInodePercent[{#SNMPINDEX}]<p>Update: 10m</p>|
-|Volume[{#VOLNAME}] Aggregate (LLD)|<p>-</p>|`SNMP agent`|volAggrName[{#SNMPINDEX}]<p>Update: 3h</p>|
-|Volume[{#VOLNAME}] NV Failed State (LLD)|<p>Indicates whether the volume is in nvfailed state. This is only applicable to cluster-mode volumes.</p>|`SNMP agent`|volInNvfailedState[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume[{#VOLNAME}] Language (LLD)|<p>-</p>|`SNMP agent`|volLanguage[{#SNMPINDEX}]<p>Update: 3h</p>|
-|Volume[{#VOLNAME}] NV Failed enabled (LLD)|<p>Indicates whether nvfail option is enabled on this volume.</p>|`SNMP agent`|volNvfail[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume[{#VOLNAME}] Space Guarantee enabled (LLD)|<p>.</p>|`SNMP agent`|volSpaceGuaranteeEnabled[{#SNMPINDEX}]<p>Update: 3h</p>|
-|Volume[{#VOLNAME}] Space Guarantee (LLD)|<p>.</p>|`SNMP agent`|volSpaceGuarantee[{#SNMPINDEX}]<p>Update: 3h</p>|
-|Volume[{#VOLNAME}] State (LLD)|<p>-</p>|`SNMP agent`|volState[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume[{#VOLNAME}] Type (LLD)|<p>Type of this volume, older volumes are traditional while newer volumes contained in aggregates are flexible.</p>|`SNMP agent`|volType[{#SNMPINDEX}]<p>Update: 3h</p>|
-|Volume[{#VOLNAME}] Vserver (LLD)|<p>-</p>|`SNMP agent`|volVserver[{#SNMPINDEX}]<p>Update: 3h</p>|
+|Aggregate Owners[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|aggrOwners[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Aggregate Raidtype[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|aggrRaidType[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Aggregate State[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|aggrState[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Aggregate Status[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|aggrStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Aggregate Type[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|aggrType[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Aggregate Size[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|df64TotalKBytes[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|Aggregate Used Size[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|df64UsedKBytes[{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Aggregate Size Free (%)[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|dfPerCentKBytesCapacity[{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Aggregate Filesystem Status[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|dfStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Failed Electronic|<p>-</p>|`SNMP agent`|enclElectronicsFailed[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Over Temperature warn|<p>-</p>|`SNMP agent`|enclTempSensorsOverTempWarn[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Under Voltage fail|<p>-</p>|`SNMP agent`|enclVoltSensorsUnderVoltFail[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Over Voltage warn|<p>-</p>|`SNMP agent`|enclVoltSensorsOverVoltWarn[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Over Voltage fail|<p>-</p>|`SNMP agent`|enclVoltSensorsOverVoltFail[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Current Voltage|<p>-</p>|`SNMP agent`|enclVoltSensorsCurrentVolt[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Under Temperature warn|<p>-</p>|`SNMP agent`|enclTempSensorsUnderTempWarn[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Under Temperature fail|<p>-</p>|`SNMP agent`|enclTempSensorsUnderTempFail[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Over Temperature fail|<p>-</p>|`SNMP agent`|enclTempSensorsOverTempFail[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Electronic|<p>-</p>|`SNMP agent`|enclElectronicsPresent[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Current Temperature|<p>-</p>|`SNMP agent`|enclTempSensorsCurrentTemp[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Product Model|<p>-</p>|`SNMP agent`|enclProductModel[{#SNMPINDEX}]<p>Update: 12h</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Product ID|<p>-</p>|`SNMP agent`|enclProductID[{#SNMPINDEX}]<p>Update: 12h</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Failed Power Supplies|<p>-</p>|`SNMP agent`|enclPowerSuppliesFailed[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Fans Speed|<p>-</p>|`SNMP agent`|enclFansSpeed[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Failed Fans|<p>-</p>|`SNMP agent`|enclFansFailed[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Enclosure[{#ENCLNUM}] Under Voltage warn|<p>-</p>|`SNMP agent`|enclVoltSensorsUnderVoltWarn[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|VIF[{#VIF}] is Home|<p>-</p>|`SNMP agent`|logicalInterfaceIsHome[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Node[{#NODENAME}] cannot take over cause|<p>-</p>|`SNMP agent`|haCannotTakeoverCause[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
+|Node[{#NODENAME}] HA Interconnect Status|<p>-</p>|`SNMP agent`|haInterconnectStatus[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
+|Node[{#NODENAME}] HA Partner Name|<p>-</p>|`SNMP agent`|haPartnerName[{#NODENAME}]<p>Update: 12h</p><p>LLD</p>|
+|Node[{#NODENAME}] HA Partner Status|<p>-</p>|`SNMP agent`|haPartnerStatus[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
+|Node[{#NODENAME}] HA Settings|<p>-</p>|`SNMP agent`|haSettings[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
+|Node[{#NODENAME}] HA State|<p>-</p>|`SNMP agent`|haState[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
+|SnapMirror [{#SNAPINDEX}] Destination Path|<p>-</p>|`SNMP agent`|snapmirrorRelDestPath[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|SnapMirror [{#SNAPINDEX}] Healthy|<p>-</p>|`SNMP agent`|snapmirrorRelHealthy[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|SnapMirror [{#SNAPINDEX}] Lag|<p>-</p>|`SNMP agent`|snapmirrorRelLag[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX} Last Transfer Size|<p>-</p>|`SNMP agent`|snapmirrorRelLastTransferSize[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX} Last Transfer Time|<p>-</p>|`SNMP agent`|snapmirrorRelLastTransferTime[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX}  Source Path|<p>-</p>|`SNMP agent`|snapmirrorRelSrcPath[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX} State|<p>-</p>|`SNMP agent`|snapmirrorRelState[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX} Status|<p>-</p>|`SNMP agent`|snapmirrorRelStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Size|<p>-</p>|`SNMP agent`|df64TotalKBytesVol[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Used|<p>-</p>|`SNMP agent`|df64UsedKBytesVol[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Used (%)|<p>-</p>|`SNMP agent`|dfPerCentKBytesCapacityVol[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Used Inode %|<p>-</p>|`SNMP agent`|dfVolInodePercent[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Aggregate|<p>-</p>|`SNMP agent`|volAggrName[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|Volume[{#VOLNAME}] NV Failed State|<p>Indicates whether the volume is in nvfailed state. This is only applicable to cluster-mode volumes.</p>|`SNMP agent`|volInNvfailedState[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Language|<p>-</p>|`SNMP agent`|volLanguage[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|Volume[{#VOLNAME}] NV Failed enabled|<p>Indicates whether nvfail option is enabled on this volume.</p>|`SNMP agent`|volNvfail[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Space Guarantee enabled|<p>.</p>|`SNMP agent`|volSpaceGuaranteeEnabled[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Space Guarantee|<p>.</p>|`SNMP agent`|volSpaceGuarantee[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|Volume[{#VOLNAME}] State|<p>-</p>|`SNMP agent`|volState[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Type|<p>Type of this volume, older volumes are traditional while newer volumes contained in aggregates are flexible.</p>|`SNMP agent`|volType[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Vserver|<p>-</p>|`SNMP agent`|volVserver[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -56,18 +56,18 @@ There are no macros links in this template.
 |Uncommitted storage space|<p>Additional storage space, in bytes, potentially used by this virtual machine on all datastores.</p>|`Simple check`|vmware.vm.storage.uncommitted[{$URL},{HOST.HOST}]<p>Update: 1m</p>|
 |Unshared storage space|<p>Total storage space, in bytes, occupied by the virtual machine across all datastores, that is not shared with any other virtual machine.</p>|`Simple check`|vmware.vm.storage.unshared[{$URL},{HOST.HOST}]<p>Update: 1m</p>|
 |Uptime|<p>System uptime.</p>|`Simple check`|vmware.vm.uptime[{$URL},{HOST.HOST}]<p>Update: 1m</p>|
-|Number of bytes received on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{HOST.HOST},{#IFNAME},bps]<p>Update: 1m</p>|
-|Number of packets received on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{HOST.HOST},{#IFNAME},pps]<p>Update: 1m</p>|
-|Number of bytes transmitted on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{HOST.HOST},{#IFNAME},bps]<p>Update: 1m</p>|
-|Number of packets transmitted on interface {#IFDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{HOST.HOST},{#IFNAME},pps]<p>Update: 1m</p>|
-|Average number of bytes read from the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{HOST.HOST},{#DISKNAME},bps]<p>Update: 1m</p>|
-|Average number of reads from the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{HOST.HOST},{#DISKNAME},ops]<p>Update: 1m</p>|
-|Average number of bytes written to the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{HOST.HOST},{#DISKNAME},bps]<p>Update: 1m</p>|
-|Average number of writes to the disk {#DISKDESC} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{HOST.HOST},{#DISKNAME},ops]<p>Update: 1m</p>|
-|Free disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},free]<p>Update: 1m</p>|
-|Free disk space on {#FSNAME} (percentage) (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},pfree]<p>Update: 1m</p>|
-|Total disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},total]<p>Update: 1h</p>|
-|Used disk space on {#FSNAME} (LLD)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},used]<p>Update: 1m</p>|
+|Number of bytes received on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{HOST.HOST},{#IFNAME},bps]<p>Update: 1m</p><p>LLD</p>|
+|Number of packets received on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.in[{$URL},{HOST.HOST},{#IFNAME},pps]<p>Update: 1m</p><p>LLD</p>|
+|Number of bytes transmitted on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{HOST.HOST},{#IFNAME},bps]<p>Update: 1m</p><p>LLD</p>|
+|Number of packets transmitted on interface {#IFDESC}|<p>-</p>|`Simple check`|vmware.vm.net.if.out[{$URL},{HOST.HOST},{#IFNAME},pps]<p>Update: 1m</p><p>LLD</p>|
+|Average number of bytes read from the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{HOST.HOST},{#DISKNAME},bps]<p>Update: 1m</p><p>LLD</p>|
+|Average number of reads from the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.read[{$URL},{HOST.HOST},{#DISKNAME},ops]<p>Update: 1m</p><p>LLD</p>|
+|Average number of bytes written to the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{HOST.HOST},{#DISKNAME},bps]<p>Update: 1m</p><p>LLD</p>|
+|Average number of writes to the disk {#DISKDESC}|<p>-</p>|`Simple check`|vmware.vm.vfs.dev.write[{$URL},{HOST.HOST},{#DISKNAME},ops]<p>Update: 1m</p><p>LLD</p>|
+|Free disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},free]<p>Update: 1m</p><p>LLD</p>|
+|Free disk space on {#FSNAME} (percentage)|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},pfree]<p>Update: 1m</p><p>LLD</p>|
+|Total disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},total]<p>Update: 1h</p><p>LLD</p>|
+|Used disk space on {#FSNAME}|<p>-</p>|`Simple check`|vmware.vm.vfs.fs.size[{$URL},{HOST.HOST},{#FSNAME},used]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.
@@ -114,7 +114,7 @@ There are no macros links in this template.
 |Event log|<p>-</p>|`Simple check`|vmware.eventlog[{$URL}]<p>Update: 1m</p>|
 |Full name|<p>-</p>|`Simple check`|vmware.fullname[{$URL}]<p>Update: 1h</p>|
 |Version|<p>-</p>|`Simple check`|vmware.version[{$URL}]<p>Update: 1h</p>|
-|Status of "{#CLUSTER.NAME}" cluster (LLD)|<p>-</p>|`Simple check`|vmware.cluster.status[{$URL},{#CLUSTER.NAME}]<p>Update: 1m</p>|
+|Status of "{#CLUSTER.NAME}" cluster|<p>-</p>|`Simple check`|vmware.cluster.status[{$URL},{#CLUSTER.NAME}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.
@@ -180,10 +180,10 @@ There are no macros links in this template.
 |Uptime|<p>System uptime.</p>|`Simple check`|vmware.hv.uptime[{$URL},{HOST.HOST}]<p>Update: 1h</p>|
 |Version|<p>Dot-separated version string.</p>|`Simple check`|vmware.hv.version[{$URL},{HOST.HOST}]<p>Update: 1h</p>|
 |Number of guest VMs|<p>Number of guest virtual machines.</p>|`Simple check`|vmware.hv.vm.num[{$URL},{HOST.HOST}]<p>Update: 1h</p>|
-|Average read latency of the datastore {#DATASTORE} (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.read[{$URL},{HOST.HOST},{#DATASTORE},latency]<p>Update: 1m</p>|
-|Free space on datastore {#DATASTORE} (percentage) (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree]<p>Update: 1m</p>|
-|Total size of datastore {#DATASTORE} (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE}]<p>Update: 1m</p>|
-|Average write latency of the datastore {#DATASTORE} (LLD)|<p>-</p>|`Simple check`|vmware.hv.datastore.write[{$URL},{HOST.HOST},{#DATASTORE},latency]<p>Update: 1m</p>|
+|Average read latency of the datastore {#DATASTORE}|<p>-</p>|`Simple check`|vmware.hv.datastore.read[{$URL},{HOST.HOST},{#DATASTORE},latency]<p>Update: 1m</p><p>LLD</p>|
+|Free space on datastore {#DATASTORE} (percentage)|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree]<p>Update: 1m</p><p>LLD</p>|
+|Total size of datastore {#DATASTORE}|<p>-</p>|`Simple check`|vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE}]<p>Update: 1m</p><p>LLD</p>|
+|Average write latency of the datastore {#DATASTORE}|<p>-</p>|`Simple check`|vmware.hv.datastore.write[{$URL},{HOST.HOST},{#DATASTORE},latency]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

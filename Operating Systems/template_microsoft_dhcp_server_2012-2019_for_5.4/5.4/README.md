@@ -57,23 +57,23 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|DHCP Super Scope {#S.SCOPE.NAME} - All IP (except the excluded and reserved) (LLD)|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.allip[{#S.SCOPE.NAME}]<p>Update: 30m</p>|
-|DHCP Super Scope {#S.SCOPE.NAME} - Available IP (LLD)|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.available[{#S.SCOPE.NAME}]<p>Update: 30m</p>|
-|DHCP Super Scope {#S.SCOPE.NAME} - Use IP (LLD)|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.in.use[{#S.SCOPE.NAME}]<p>Update: 30m</p>|
-|DHCP Super Scope {#S.SCOPE.NAME} - SubScopes (LLD)|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.numscopes[{#S.SCOPE.NAME}]<p>Update: 30m</p>|
-|DHCP Super Scope {#S.SCOPE.NAME} - % Used IP (LLD)|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.p.inuse[{#S.SCOPE.NAME}]<p>Update: 30m</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - All Free IP (except the excluded and reserved) (LLD)|<p>-</p>|`Calculated`|DHCPv4ScopeStats.Allip[{#SCOPENETWORK}]<p>Update: 1m</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - json object (LLD)|<p>-</p>|`Zabbix agent`|DHCPv4ScopeStats[{#SCOPENETWORK}]<p>Update: 1m</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Addresses Free On Partner Server (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesFreeOnPartnerServer[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Addresses Free On This Server (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesFreeOnThisServer[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - AddressesFree (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesFree[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Addresses In Use On Partner Server (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesInUseOnPartnerServer[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Addresses In Use On This Server (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesInUseOnThisServer[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Free (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.Free[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - InUse (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.InUse[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Pending (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.Pending[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - PercentageInUse (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.PercentageInUse[{#SCOPENETWORK}]<p>Update: 0</p>|
-|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Reserved (LLD)|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.Reserved[{#SCOPENETWORK}]<p>Update: 0</p>|
+|DHCP Super Scope {#S.SCOPE.NAME} - All IP (except the excluded and reserved)|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.allip[{#S.SCOPE.NAME}]<p>Update: 30m</p><p>LLD</p>|
+|DHCP Super Scope {#S.SCOPE.NAME} - Available IP|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.available[{#S.SCOPE.NAME}]<p>Update: 30m</p><p>LLD</p>|
+|DHCP Super Scope {#S.SCOPE.NAME} - Use IP|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.in.use[{#S.SCOPE.NAME}]<p>Update: 30m</p><p>LLD</p>|
+|DHCP Super Scope {#S.SCOPE.NAME} - SubScopes|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.numscopes[{#S.SCOPE.NAME}]<p>Update: 30m</p><p>LLD</p>|
+|DHCP Super Scope {#S.SCOPE.NAME} - % Used IP|<p>-</p>|`Calculated`|DHCPv4SuperScopeStats.p.inuse[{#S.SCOPE.NAME}]<p>Update: 30m</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - All Free IP (except the excluded and reserved)|<p>-</p>|`Calculated`|DHCPv4ScopeStats.Allip[{#SCOPENETWORK}]<p>Update: 1m</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - json object|<p>-</p>|`Zabbix agent`|DHCPv4ScopeStats[{#SCOPENETWORK}]<p>Update: 1m</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Addresses Free On Partner Server|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesFreeOnPartnerServer[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Addresses Free On This Server|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesFreeOnThisServer[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - AddressesFree|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesFree[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Addresses In Use On Partner Server|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesInUseOnPartnerServer[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Addresses In Use On This Server|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.AddressesInUseOnThisServer[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Free|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.Free[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - InUse|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.InUse[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Pending|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.Pending[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - PercentageInUse|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.PercentageInUse[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
+|DHCP Scope {#SSCOPENAME} -> {#SCOPENAME} [{#SCOPENETWORK}] - Reserved|<p>-</p>|`Dependent item`|DHCPv4ScopeStats.Reserved[{#SCOPENETWORK}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

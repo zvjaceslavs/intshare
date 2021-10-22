@@ -59,11 +59,11 @@ There are no template links in this template.
 |Flex power|<p>Chassis total power being used, which displays the total power being consumed by all modules in the chassis. It also includes power consumed by the blowers (chassis cooling devices) for the chassis.</p>|`SNMP agent`|flex.power.w<p>Update: 2m</p>|
 |Flex serial number|<p>Machine serial number VPD information (from System BIOS).</p>|`SNMP agent`|flex.serial.number<p>Update: 1d</p>|
 |Flex temperature|<p>This is surrounding temperature where the system is installed. (C)</p>|`SNMP agent`|flex.temp<p>Update: 2m</p>|
-|Flex fan speed {#SNMPINDEX} (LLD)|<p>Chassis fan speed expressed in percent(%) of maximum RPM.</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.2.3.50.1.3.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|Flex fan status {#SNMPINDEX} (LLD)|<p>unknown(0) good(1) warning(2) bad(3)</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.2.3.50.1.4.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|Flex blade {#SNMPINDEX} (LLD)|<p>unknown(0) good(1) warning(2) critical(3) kernelMode(4) discovering(5) commError(6) noPower(7) flashing(8) initFailure(9) insufficientPower(10) powerDenied(11) maintMode(12) firehoseDump(13)</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.2.8.2.1.1.5.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|Flex power {#SNMPINDEX} (LLD)|<p>unknown(0) good(1) warning(2) notAvailable(3) critical(4)</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.2.4.1.1.3.[{#SNMPINDEX}]<p>Update: 2m</p>|
-|Flex switch {#SNMPINDEX} (LLD)|<p>Switchs: Ethernet, Fiber and etc. unknown(0) good(1) warning(2) bad(3)</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.22.3.1.1.1.15.[{#SNMPINDEX}]<p>Update: 2m</p>|
+|Flex fan speed {#SNMPINDEX}|<p>Chassis fan speed expressed in percent(%) of maximum RPM.</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.2.3.50.1.3.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|Flex fan status {#SNMPINDEX}|<p>unknown(0) good(1) warning(2) bad(3)</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.2.3.50.1.4.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|Flex blade {#SNMPINDEX}|<p>unknown(0) good(1) warning(2) critical(3) kernelMode(4) discovering(5) commError(6) noPower(7) flashing(8) initFailure(9) insufficientPower(10) powerDenied(11) maintMode(12) firehoseDump(13)</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.2.8.2.1.1.5.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|Flex power {#SNMPINDEX}|<p>unknown(0) good(1) warning(2) notAvailable(3) critical(4)</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.2.4.1.1.3.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
+|Flex switch {#SNMPINDEX}|<p>Switchs: Ethernet, Fiber and etc. unknown(0) good(1) warning(2) bad(3)</p>|`SNMP agent`|1.3.6.1.4.1.2.3.51.2.22.3.1.1.1.15.[{#SNMPINDEX}]<p>Update: 2m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -64,11 +64,11 @@ There are no template links in this template.
 |CPU1|<p>-</p>|`SNMP agent`|CPU1<p>Update: 60</p>|
 |CPU15|<p>-</p>|`SNMP agent`|CPU15<p>Update: 900</p>|
 |CPU5|<p>-</p>|`SNMP agent`|CPU5<p>Update: 300</p>|
-|{#SNMPVALUE} - Laser Power dBm (LLD)|<p>-</p>|`SNMP agent`|LaserPower.dBm[{#SNMPINDEX}]<p>Update: 60</p>|
-|{#SNMPVALUE} - State ID (LLD)|<p>-</p>|`SNMP agent`|StateID.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|{#SNMPVALUE} - State OLT ID (LLD)|<p>-</p>|`SNMP agent`|StateOLTID.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|{#SNMPVALUE} - State OLT Port (LLD)|<p>-</p>|`SNMP agent`|StateOLTPort.[{#SNMPINDEX}]<p>Update: 3600</p>|
-|{#SNMPVALUE} - Status (LLD)|<p>-</p>|`SNMP agent`|StateState.[{#SNMPINDEX}]<p>Update: 60</p>|
+|{#SNMPVALUE} - Laser Power dBm|<p>-</p>|`SNMP agent`|LaserPower.dBm[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|{#SNMPVALUE} - State ID|<p>-</p>|`SNMP agent`|StateID.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|{#SNMPVALUE} - State OLT ID|<p>-</p>|`SNMP agent`|StateOLTID.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|{#SNMPVALUE} - State OLT Port|<p>-</p>|`SNMP agent`|StateOLTPort.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|{#SNMPVALUE} - Status|<p>-</p>|`SNMP agent`|StateState.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

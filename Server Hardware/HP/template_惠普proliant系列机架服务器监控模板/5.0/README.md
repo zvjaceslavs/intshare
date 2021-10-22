@@ -46,12 +46,12 @@ There are no template links in this template.
 |ping时延|<p>-</p>|`Simple check`|icmppingsec[,10,,,,avg]<p>Update: 5m</p>|
 |系统信息|<p>-</p>|`SNMP agent`|SystemDescription<p>Update: 1h</p>|
 |运行时间|<p>-</p>|`SNMP agent`|SystemUpTime<p>Update: 1h</p>|
-|电源状态 [{#SNMPVALUE}] (LLD)|<p>-</p>|`SNMP agent`|PowerStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|CPU状态 [{#SNMPVALUE}] (LLD)|<p>-</p>|`SNMP agent`|CPUStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|风扇状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|硬盘状态 [{#SNMPVALUE}] (LLD)|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|Cache状态 [{#SNMPVALUE}] (LLD)|<p>-</p>|`SNMP agent`|CacheStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|内存状态 {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|MemoryStatus.[{#SNMPINDEX}]<p>Update: 1h</p>|
+|电源状态 [{#SNMPVALUE}]|<p>-</p>|`SNMP agent`|PowerStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|CPU状态 [{#SNMPVALUE}]|<p>-</p>|`SNMP agent`|CPUStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|风扇状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|硬盘状态 [{#SNMPVALUE}]|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Cache状态 [{#SNMPVALUE}]|<p>-</p>|`SNMP agent`|CacheStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|内存状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|MemoryStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

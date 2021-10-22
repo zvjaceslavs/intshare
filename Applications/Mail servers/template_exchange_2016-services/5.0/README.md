@@ -83,7 +83,7 @@ There are no template links in this template.
 |Service Status Microsoft Exchange Unified Messaging|<p>-</p>|`Zabbix agent`|service_state[MSExchangeUM]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange Unified Messaging Call Router|<p>-</p>|`Zabbix agent`|service_state[MSExchangeUMCR]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange Server Extension for Windows Server Backup|<p>-</p>|`Zabbix agent`|service_state[wsbexchange]<p>Update: 1m</p>|
-|State of service "{#SERVICE.NAME}" ({#SERVICE.DISPLAYNAME}) (LLD)|<p>-</p>|`Zabbix agent`|service_state[{#SERVICE.NAME},state]<p>Update: 1m</p>|
+|State of service "{#SERVICE.NAME}" ({#SERVICE.DISPLAYNAME})|<p>-</p>|`Zabbix agent`|service_state[{#SERVICE.NAME},state]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

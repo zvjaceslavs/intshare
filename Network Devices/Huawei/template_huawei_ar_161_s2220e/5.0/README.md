@@ -31,9 +31,9 @@ There are no template links in this template.
 |MIB-trap-SLA|<p>-</p>|`SNMP trap`|snmptrap["(CISCO.*MIB)((.|[[:space:]])*)(SLA)"]<p>Update: 0</p>|
 |Temperature|<p>-</p>|`SNMP agent`|tempofhuawei<p>Update: 300</p>|
 |uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 30</p>|
-|State of "$1" (LLD)|<p>-</p>|`SNMP agent`|ciscoEnvMonSupplyState[{#SNMPVALUE}]<p>Update: 300</p>|
-|Cisco P/N: "$1" (LLD)|<p>-</p>|`SNMP agent`|ceAssetOrderablePartNumber[{#SNMPVALUE}]<p>Update: 86400</p>|
-|State of "$1" (LLD)|<p>-</p>|`SNMP agent`|ciscoEnvMonFanState[{#SNMPVALUE}]<p>Update: 300</p>|
+|State of "$1"|<p>-</p>|`SNMP agent`|ciscoEnvMonSupplyState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Cisco P/N: "$1"|<p>-</p>|`SNMP agent`|ceAssetOrderablePartNumber[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
+|State of "$1"|<p>-</p>|`SNMP agent`|ciscoEnvMonFanState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

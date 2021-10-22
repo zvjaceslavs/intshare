@@ -148,17 +148,17 @@ There are no template links in this template.
 |Status X2|<p>-</p>|`SNMP agent`|ifOperStatus.3<p>Update: 60</p>|
 |X1 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 60</p>|
 |Status X8|<p>-</p>|`SNMP agent`|ifOperStatus.9<p>Update: 60</p>|
-|CanalRadio-5G $1 (LLD)|<p>-</p>|`SNMP agent`|sonicApRadio0Channel.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|CanalRadio-2.4G $1 (LLD)|<p>-</p>|`SNMP agent`|sonicApRadio1Channel.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Status-APs $1 (LLD)|<p>-</p>|`SNMP agent`|sonicApStatus.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Trafico Entrante en VPN $1 (LLD)|<p>-</p>|`SNMP agent`|sonicSAStatDecryptByteCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p>|
-|Trafico Saliente en VPN $1 (LLD)|<p>-</p>|`SNMP agent`|sonicSAStatEncryptByteCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p>|
-|PktsFrag Entrantes en VPN $1 (LLD)|<p>-</p>|`SNMP agent`|sonicSAStatInFragPktCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p>|
-|PktsFrag Salientes en VPN $1 (LLD)|<p>-</p>|`SNMP agent`|sonicSAStatOutFragPktCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p>|
-|Trafico entrante en Interfaz $1 (LLD)|<p>-</p>|`SNMP agent`|ifInOctets.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|Trafico saliente en interfaz $1 (LLD)|<p>-</p>|`SNMP agent`|ifOutOctets.[{#SNMPVALUE}]<p>Update: 1m</p>|
-|AP-IP $1 (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.8741.1.3.6.4.1.5.[{#SNMPVALUEMAC}]<p>Update: 1m</p>|
-|AP-IPsAsign $1 (LLD)|<p>-</p>|`SNMP agent`|sonicStaPhysAddress.[{#SNMPVALUEMAC}]<p>Update: 1m</p>|
+|CanalRadio-5G $1|<p>-</p>|`SNMP agent`|sonicApRadio0Channel.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|CanalRadio-2.4G $1|<p>-</p>|`SNMP agent`|sonicApRadio1Channel.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Status-APs $1|<p>-</p>|`SNMP agent`|sonicApStatus.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Trafico Entrante en VPN $1|<p>-</p>|`SNMP agent`|sonicSAStatDecryptByteCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p><p>LLD</p>|
+|Trafico Saliente en VPN $1|<p>-</p>|`SNMP agent`|sonicSAStatEncryptByteCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p><p>LLD</p>|
+|PktsFrag Entrantes en VPN $1|<p>-</p>|`SNMP agent`|sonicSAStatInFragPktCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p><p>LLD</p>|
+|PktsFrag Salientes en VPN $1|<p>-</p>|`SNMP agent`|sonicSAStatOutFragPktCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p><p>LLD</p>|
+|Trafico entrante en Interfaz $1|<p>-</p>|`SNMP agent`|ifInOctets.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Trafico saliente en interfaz $1|<p>-</p>|`SNMP agent`|ifOutOctets.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|AP-IP $1|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.8741.1.3.6.4.1.5.[{#SNMPVALUEMAC}]<p>Update: 1m</p><p>LLD</p>|
+|AP-IPsAsign $1|<p>-</p>|`SNMP agent`|sonicStaPhysAddress.[{#SNMPVALUEMAC}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

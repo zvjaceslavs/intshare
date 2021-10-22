@@ -33,9 +33,9 @@ There are no template links in this template.
 |----|-----------|----|----|
 |ICMP Devices Macros Content|<p>-</p>|`Zabbix agent (active)`|system.run["echo {$ICMP_DEVICES}"]<p>Update: 1h</p>|
 |Overall ICMP hosts status|<p>-</p>|`External check`|zbx_app_worst_trigger.php["{HOST.HOST}", "/ICMP/"]<p>Update: 1m</p>|
-|Response for ICMP agent ping {#ICMPDEVICENAME} (LLD)|<p>-</p>|`Zabbix agent (active)`|system.run["ping -n 4 {#ICMPDEVICEIP}"]<p>Update: 5m</p>|
-|{#ICMPDEVICENAME} ICMP availability (LLD)|<p>-</p>|`Zabbix agent (active)`|system.run["ping -n 4 {#ICMPDEVICEIP} | find /v /c \"\""]<p>Update: 1m</p>|
-|{#ICMPDEVICENAME} ICMP packet loss (LLD)|<p>-</p>|`Zabbix agent (active)`|system.run["ping -n 4 {#ICMPDEVICEIP} | findstr [0-9]"]<p>Update: 1m</p>|
+|Response for ICMP agent ping {#ICMPDEVICENAME}|<p>-</p>|`Zabbix agent (active)`|system.run["ping -n 4 {#ICMPDEVICEIP}"]<p>Update: 5m</p><p>LLD</p>|
+|{#ICMPDEVICENAME} ICMP availability|<p>-</p>|`Zabbix agent (active)`|system.run["ping -n 4 {#ICMPDEVICEIP} | find /v /c \"\""]<p>Update: 1m</p><p>LLD</p>|
+|{#ICMPDEVICENAME} ICMP packet loss|<p>-</p>|`Zabbix agent (active)`|system.run["ping -n 4 {#ICMPDEVICEIP} | findstr [0-9]"]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

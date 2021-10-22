@@ -86,32 +86,32 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Total amount of interfaces|<p>Shows the total amount of interfaces.</p>|`SNMP agent`|net.if.total<p>Update: 10m</p>|
-|Interface {#IFNAME}: Admin status (LLD)|<p>-</p>|`SNMP agent`|net.if.virt.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFNAME}: Alias (LLD)|<p>-</p>|`SNMP agent`|net.if.virt.status[ifAlias.{#SNMPINDEX}]<p>Update: 1h</p>|
-|Interface {#IFNAME}: Bits received (LLD)|<p>-</p>|`SNMP agent`|net.if.virt.status[ifInOctets.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME}: Operational status (LLD)|<p>-</p>|`SNMP agent`|net.if.virt.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFNAME}: Bits sent (LLD)|<p>-</p>|`SNMP agent`|net.if.virt.status[ifOutOctets.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME}: Admin status (LLD)|<p>Shows if interface is administrative disabled.</p>|`SNMP agent`|net.if.down.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME} (priority): Admin status (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface {#IFNAME} (priority): Alias (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifDescription.{#SNMPINDEX}]<p>Update: 1h</p>|
-|Interface {#IFNAME} (priority): Inbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifInDiscards.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME} (priority): Inbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifInErrors.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME} (priority): Bits received (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifInOctets.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME} (priority): Operational status (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 30s</p>|
-|Interface {#IFNAME} (priority): Outbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifOutDiscards.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME} (priority): Outbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifOutErrors.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME} (priority): Bits sent (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifOutOctets.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME} (priority): Speed (LLD)|<p>-</p>|`SNMP agent`|net.if.prio.status[ifSpeed.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME}: Admin status (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFNAME}: Alias (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifAlias.{#SNMPINDEX}]<p>Update: 1h</p>|
-|Interface {#IFNAME}: Inbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifInDiscards.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME}: Inbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifInErrors.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME}: Bits received (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifInOctets.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME}: Operational status (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFNAME}: Outbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOutDiscards.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME}: Outbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOutErrors.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME}: Bits sent (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOutOctets.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME}: Speed (LLD)|<p>Speed of the interface</p>|`SNMP agent`|net.if.status[ifSpeed.{#SNMPINDEX}]<p>Update: 5m</p>|
+|Interface {#IFNAME}: Admin status|<p>-</p>|`SNMP agent`|net.if.virt.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}: Alias|<p>-</p>|`SNMP agent`|net.if.virt.status[ifAlias.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Interface {#IFNAME}: Bits received|<p>-</p>|`SNMP agent`|net.if.virt.status[ifInOctets.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME}: Operational status|<p>-</p>|`SNMP agent`|net.if.virt.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}: Bits sent|<p>-</p>|`SNMP agent`|net.if.virt.status[ifOutOctets.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME}: Admin status|<p>Shows if interface is administrative disabled.</p>|`SNMP agent`|net.if.down.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Admin status|<p>-</p>|`SNMP agent`|net.if.prio.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Alias|<p>-</p>|`SNMP agent`|net.if.prio.status[ifDescription.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.prio.status[ifInDiscards.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.prio.status[ifInErrors.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Bits received|<p>-</p>|`SNMP agent`|net.if.prio.status[ifInOctets.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Operational status|<p>-</p>|`SNMP agent`|net.if.prio.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Outbound packets discarded|<p>-</p>|`SNMP agent`|net.if.prio.status[ifOutDiscards.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Outbound packets with errors|<p>-</p>|`SNMP agent`|net.if.prio.status[ifOutErrors.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Bits sent|<p>-</p>|`SNMP agent`|net.if.prio.status[ifOutOctets.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME} (priority): Speed|<p>-</p>|`SNMP agent`|net.if.prio.status[ifSpeed.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME}: Admin status|<p>-</p>|`SNMP agent`|net.if.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}: Alias|<p>-</p>|`SNMP agent`|net.if.status[ifAlias.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Interface {#IFNAME}: Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.status[ifInDiscards.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME}: Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.status[ifInErrors.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME}: Bits received|<p>-</p>|`SNMP agent`|net.if.status[ifInOctets.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME}: Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}: Outbound packets discarded|<p>-</p>|`SNMP agent`|net.if.status[ifOutDiscards.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME}: Outbound packets with errors|<p>-</p>|`SNMP agent`|net.if.status[ifOutErrors.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME}: Bits sent|<p>-</p>|`SNMP agent`|net.if.status[ifOutOctets.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME}: Speed|<p>Speed of the interface</p>|`SNMP agent`|net.if.status[ifSpeed.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

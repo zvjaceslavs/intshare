@@ -48,9 +48,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|OLT RX Signal - {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|zxoltrxsignal.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|OLT TX Signal - {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|zxolttxsignal.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|ONU Status {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|zxonustatus.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|OLT RX Signal - {#SNMPVALUE}|<p>-</p>|`SNMP agent`|zxoltrxsignal.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|OLT TX Signal - {#SNMPVALUE}|<p>-</p>|`SNMP agent`|zxolttxsignal.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|ONU Status {#SNMPVALUE}|<p>-</p>|`SNMP agent`|zxonustatus.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

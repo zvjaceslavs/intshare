@@ -47,27 +47,27 @@ There are no template links in this template.
 |Number of Warnings|<p>This is the number of warnings that currently exist at this node which may have one or more shelves.</p>|`SNMP agent`|ciena.warnings<p>Update: 5m</p>|
 |Software Version|<p>-</p>|`SNMP agent`|software.version<p>Update: 6h</p>|
 |Device Uptime|<p>The time (in seconds) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|system.uptime<p>Update: 5m</p>|
-|{#IFDESCR}: Admin Status (LLD)|<p>The administrative status of the port.</p>|`SNMP agent`|net.if.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Operational status (LLD)|<p>The operational status of the port.</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Optical Power Received (LLD)|<p>The optical power received at this port in dbm.</p>|`SNMP agent`|net.if.status[opr.och.nend.rcv.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Optical Power Transmitted (LLD)|<p>The optical power transmitted at this port in dbm.</p>|`SNMP agent`|net.if.status[opr.och.nend.trmt.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Post-FEC bit error rate (LLD)|<p>Post-FEC bit error rate estimate, optical channel transport unit</p>|`SNMP agent`|net.if.status[post.fec.ber.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Pre-FEC bit error rate (LLD)|<p>Pre-FEC bit error rate, optical channel transport unit</p>|`SNMP agent`|net.if.status[pre.fec.ber.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Uncorrected FEC block (LLD)|<p>Uncorrected FEC blocks, Optical Transport Unit.</p>|`SNMP agent`|net.if.status[uncorrected.fec.block.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Bits Received (LLD)|<p>The total number of bits per second received on the interface.</p>|`SNMP agent`|ciena6500.ethernet.if.bits.in[{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Bits Sent (LLD)|<p>The total number of bits per second sent on the interface.</p>|`SNMP agent`|ciena6500.ethernet.if.bits.out[{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Ethernet Errors (LLD)|<p>The average number of inbound packets per second that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ciena6500.ethernet.if.errors.in[{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Admin status (LLD)|<p>The administrative state of the interface.</p>|`SNMP agent`|ethernet.if.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#IFDESCR}: Operational status (LLD)|<p>The operational state of the interface.</p>|`SNMP agent`|ethernet.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Serial Number: "{#DESCRIPTION}" in {#CONTAINER} MODEL-{#MODEL} (LLD)|<p>The serial number for this module.</p>|`SNMP agent`|serial.number.[{#SNMPINDEX}]<p>Update: 1d</p>|
-|{#PORTNAME} "Optical Transmit Power" baseline (LLD)|<p>The baseline set on the shelf. This can be re-initialized when needed via site manager.</p>|`SNMP agent`|optical.tx.baseline[{#PORTNAME}.OPOUT]<p>Update: 5m</p>|
-|{#PORTNAME} "Optical Return Loss" baseline (LLD)|<p>The baseline set on the shelf. This can be re-initialized when needed via site manager.</p>|`SNMP agent`|optical.tx.baseline[{#PORTNAME}.ORL]<p>Update: 5m</p>|
-|{#PORTNAME} "Optical Transmit Power" (LLD)|<p>The optical transit power for this port in dbm.</p>|`SNMP agent`|optical.tx[{#PORTNAME}.OPOUT]<p>Update: 5m</p>|
-|{#PORTNAME} "Optical Return Loss" (LLD)|<p>Optical Return Loss (ORL) is similar to SNR. The higher the ORL, the better.</p>|`SNMP agent`|optical.tx[{#PORTNAME}.ORL]<p>Update: 5m</p>|
-|{#PORTNAME} "Optical Receive Power" baseline (LLD)|<p>The baseline set on the shelf. This can be re-initialized when needed via site manager.</p>|`SNMP agent`|optical.baseline[{#PORTNAME}.OPIN]<p>Update: 5m</p>|
-|{#PORTNAME} "Optical Receive Power" (LLD)|<p>-</p>|`SNMP agent`|optical.rx[{#PORTNAME}.OPIN]<p>Update: 5m</p>|
-|{#PORTNAME} "{#CHECKNAME}" (LLD)|<p>The OSC received light level in dbm.</p>|`SNMP agent`|optical.osc[{#PORTNAME}.{#CHECKNAME}]<p>Update: 1m</p>|
-|{#PORTNAME} "{#CHECKNAME}" (LLD)|<p>The span loss ont he receive fiber in db.</p>|`SNMP agent`|optical.osc.spanloss[{#PORTNAME}.{#CHECKNAME}]<p>Update: 1m</p>|
+|{#IFDESCR}: Admin Status|<p>The administrative status of the port.</p>|`SNMP agent`|net.if.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Operational status|<p>The operational status of the port.</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Optical Power Received|<p>The optical power received at this port in dbm.</p>|`SNMP agent`|net.if.status[opr.och.nend.rcv.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Optical Power Transmitted|<p>The optical power transmitted at this port in dbm.</p>|`SNMP agent`|net.if.status[opr.och.nend.trmt.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Post-FEC bit error rate|<p>Post-FEC bit error rate estimate, optical channel transport unit</p>|`SNMP agent`|net.if.status[post.fec.ber.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Pre-FEC bit error rate|<p>Pre-FEC bit error rate, optical channel transport unit</p>|`SNMP agent`|net.if.status[pre.fec.ber.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Uncorrected FEC block|<p>Uncorrected FEC blocks, Optical Transport Unit.</p>|`SNMP agent`|net.if.status[uncorrected.fec.block.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Bits Received|<p>The total number of bits per second received on the interface.</p>|`SNMP agent`|ciena6500.ethernet.if.bits.in[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Bits Sent|<p>The total number of bits per second sent on the interface.</p>|`SNMP agent`|ciena6500.ethernet.if.bits.out[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Ethernet Errors|<p>The average number of inbound packets per second that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ciena6500.ethernet.if.errors.in[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Admin status|<p>The administrative state of the interface.</p>|`SNMP agent`|ethernet.if.status[ifAdminStatus.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#IFDESCR}: Operational status|<p>The operational state of the interface.</p>|`SNMP agent`|ethernet.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Serial Number: "{#DESCRIPTION}" in {#CONTAINER} MODEL-{#MODEL}|<p>The serial number for this module.</p>|`SNMP agent`|serial.number.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|{#PORTNAME} "Optical Transmit Power" baseline|<p>The baseline set on the shelf. This can be re-initialized when needed via site manager.</p>|`SNMP agent`|optical.tx.baseline[{#PORTNAME}.OPOUT]<p>Update: 5m</p><p>LLD</p>|
+|{#PORTNAME} "Optical Return Loss" baseline|<p>The baseline set on the shelf. This can be re-initialized when needed via site manager.</p>|`SNMP agent`|optical.tx.baseline[{#PORTNAME}.ORL]<p>Update: 5m</p><p>LLD</p>|
+|{#PORTNAME} "Optical Transmit Power"|<p>The optical transit power for this port in dbm.</p>|`SNMP agent`|optical.tx[{#PORTNAME}.OPOUT]<p>Update: 5m</p><p>LLD</p>|
+|{#PORTNAME} "Optical Return Loss"|<p>Optical Return Loss (ORL) is similar to SNR. The higher the ORL, the better.</p>|`SNMP agent`|optical.tx[{#PORTNAME}.ORL]<p>Update: 5m</p><p>LLD</p>|
+|{#PORTNAME} "Optical Receive Power" baseline|<p>The baseline set on the shelf. This can be re-initialized when needed via site manager.</p>|`SNMP agent`|optical.baseline[{#PORTNAME}.OPIN]<p>Update: 5m</p><p>LLD</p>|
+|{#PORTNAME} "Optical Receive Power"|<p>-</p>|`SNMP agent`|optical.rx[{#PORTNAME}.OPIN]<p>Update: 5m</p><p>LLD</p>|
+|{#PORTNAME} "{#CHECKNAME}"|<p>The OSC received light level in dbm.</p>|`SNMP agent`|optical.osc[{#PORTNAME}.{#CHECKNAME}]<p>Update: 1m</p><p>LLD</p>|
+|{#PORTNAME} "{#CHECKNAME}"|<p>The span loss ont he receive fiber in db.</p>|`SNMP agent`|optical.osc.spanloss[{#PORTNAME}.{#CHECKNAME}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

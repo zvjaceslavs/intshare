@@ -47,17 +47,17 @@ There are no template links in this template.
 |Output source|<p>-</p>|`SNMP agent`|upsOutputSource<p>Update: 60s</p>|
 |Seconds on Battery|<p>-</p>|`SNMP agent`|upsSecondsOnBattery<p>Update: 60s</p>|
 |Agent availability|<p>The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 30s</p>|
-|Line {#SNMPVALUE} Output Current (LLD)|<p>-</p>|`SNMP agent`|upsOutputCurrent[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Load (LLD)|<p>-</p>|`SNMP agent`|upsOutputPercentLoad[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Output Power (LLD)|<p>-</p>|`SNMP agent`|upsOutputPower[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Output Voltage (LLD)|<p>-</p>|`SNMP agent`|upsOutputVoltage[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Input Current (LLD)|<p>-</p>|`SNMP agent`|upsInputCurrent[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Input Frequency (LLD)|<p>-</p>|`SNMP agent`|upsInputFrequency[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} True Power (LLD)|<p>-</p>|`SNMP agent`|upsInputTruePower[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Input Voltage (LLD)|<p>-</p>|`SNMP agent`|upsInputVoltage[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Bypass Current (LLD)|<p>-</p>|`SNMP agent`|upsBypassCurrent[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Bypass Power (LLD)|<p>-</p>|`SNMP agent`|upsBypassPower[{#SNMPVALUE}]<p>Update: 60s</p>|
-|Line {#SNMPVALUE} Bypass Voltage (LLD)|<p>-</p>|`SNMP agent`|upsBypassVoltage[{#SNMPVALUE}]<p>Update: 60s</p>|
+|Line {#SNMPVALUE} Output Current|<p>-</p>|`SNMP agent`|upsOutputCurrent[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Load|<p>-</p>|`SNMP agent`|upsOutputPercentLoad[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Output Power|<p>-</p>|`SNMP agent`|upsOutputPower[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Output Voltage|<p>-</p>|`SNMP agent`|upsOutputVoltage[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Input Current|<p>-</p>|`SNMP agent`|upsInputCurrent[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Input Frequency|<p>-</p>|`SNMP agent`|upsInputFrequency[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} True Power|<p>-</p>|`SNMP agent`|upsInputTruePower[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Input Voltage|<p>-</p>|`SNMP agent`|upsInputVoltage[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Bypass Current|<p>-</p>|`SNMP agent`|upsBypassCurrent[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Bypass Power|<p>-</p>|`SNMP agent`|upsBypassPower[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Bypass Voltage|<p>-</p>|`SNMP agent`|upsBypassVoltage[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

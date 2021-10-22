@@ -60,28 +60,28 @@ There are no template links in this template.
 |Temperature|<p>-</p>|`SNMP agent`|tempValue<p>Update: 1m</p>|
 |Voltage V1.1|<p>-</p>|`SNMP agent`|volt1.1<p>Update: 2m</p>|
 |Voltage V3.3|<p>-</p>|`SNMP agent`|volt3.3<p>Update: 2m</p>|
-|Interface {#IFNAME}: Inbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME}: Inbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME}: Download (LLD)|<p>-</p>|`SNMP agent`|net.if.in[ifInOctets.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFNAME}: MTU (LLD)|<p>-</p>|`SNMP agent`|net.if.Mtu.[ifMtu.{#SNMPINDEX}]<p>Update: 1h</p>|
-|Interface {#IFNAME}: Outbound packets discarded (LLD)|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 5m</p>|
-|Interface {#IFNAME}: Outbound packets with errors (LLD)|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Interface {#IFNAME}: Upload (LLD)|<p>-</p>|`SNMP agent`|net.if.out[ifOutOctets.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFNAME}: Speed (LLD)|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFNAME}: Operational status (LLD)|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Interface {#IFNAME}: Interface type (LLD)|<p>-</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 1h</p>|
-|Capacity of disk - $1 (LLD)|<p>-</p>|`SNMP agent`|diskSize[{#DISKID}]<p>Update: 1m</p>|
-|Status of Disk - $1 (LLD)|<p>-</p>|`SNMP agent`|diskStatus[{#DISKID}]<p>Update: 1m</p>|
-|Average queue length - $1 (LLD)|<p>-</p>|`SNMP agent`|ioAvgQueue[{#DISKNAME}]<p>Update: 2m</p>|
-|Average service time at disk - $1 (LLD)|<p>-</p>|`SNMP agent`|ioAvgSvc[{#DISKNAME}]<p>Update: 1m</p>|
-|Average waiting time (queue + service) - $1 (LLD)|<p>-</p>|`SNMP agent`|ioAvgWait[{#DISKNAME}]<p>Update: 1m</p>|
-|% of CPU time during I/O  requests  to device - $1 (LLD)|<p>-</p>|`SNMP agent`|ioCpuTime[{#DISKNAME}]<p>Update: 2m</p>|
-|Read per second - $1 (LLD)|<p>-</p>|`SNMP agent`|ioKbrs[{#DISKNAME}]<p>Update: 1m</p>|
-|Written per second - $1 (LLD)|<p>-</p>|`SNMP agent`|ioKbws[{#DISKNAME}]<p>Update: 1m</p>|
-|Read merges per second - $1 (LLD)|<p>-</p>|`SNMP agent`|ioMgrs[{#DISKNAME}]<p>Update: 1m</p>|
-|Write merges per second - $1 (LLD)|<p>-</p>|`SNMP agent`|ioMgws[{#DISKNAME}]<p>Update: 1m</p>|
-|Read io requests per second - $1 (LLD)|<p>-</p>|`SNMP agent`|ioReqrs[{#DISKNAME}]<p>Update: 1m</p>|
-|Write io requests per second - $1 (LLD)|<p>-</p>|`SNMP agent`|ioReqws[{#DISKNAME}]<p>Update: 1m</p>|
+|Interface {#IFNAME}: Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME}: Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME}: Download|<p>-</p>|`SNMP agent`|net.if.in[ifInOctets.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}: MTU|<p>-</p>|`SNMP agent`|net.if.Mtu.[ifMtu.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Interface {#IFNAME}: Outbound packets discarded|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Interface {#IFNAME}: Outbound packets with errors|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Interface {#IFNAME}: Upload|<p>-</p>|`SNMP agent`|net.if.out[ifOutOctets.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}: Speed|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}: Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}: Interface type|<p>-</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Capacity of disk - $1|<p>-</p>|`SNMP agent`|diskSize[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
+|Status of Disk - $1|<p>-</p>|`SNMP agent`|diskStatus[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
+|Average queue length - $1|<p>-</p>|`SNMP agent`|ioAvgQueue[{#DISKNAME}]<p>Update: 2m</p><p>LLD</p>|
+|Average service time at disk - $1|<p>-</p>|`SNMP agent`|ioAvgSvc[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Average waiting time (queue + service) - $1|<p>-</p>|`SNMP agent`|ioAvgWait[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
+|% of CPU time during I/O  requests  to device - $1|<p>-</p>|`SNMP agent`|ioCpuTime[{#DISKNAME}]<p>Update: 2m</p><p>LLD</p>|
+|Read per second - $1|<p>-</p>|`SNMP agent`|ioKbrs[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Written per second - $1|<p>-</p>|`SNMP agent`|ioKbws[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Read merges per second - $1|<p>-</p>|`SNMP agent`|ioMgrs[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Write merges per second - $1|<p>-</p>|`SNMP agent`|ioMgws[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Read io requests per second - $1|<p>-</p>|`SNMP agent`|ioReqrs[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Write io requests per second - $1|<p>-</p>|`SNMP agent`|ioReqws[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -51,12 +51,12 @@ There are no template links in this template.
 |Intel RST All Pds info|<p>-</p>|`Dependent item`|irst.pd<p>Update: 0</p>|
 |Intel RST All Pds LLD info|<p>JSON for lld of physical disks and for SMART template</p>|`Dependent item`|irst.SMART.lld<p>Update: 0</p>|
 |RST cli path|<p>Path to needed version of utility (depends on driver version)</p>|`Zabbix agent`|wmi.get[root\cimv2,select DriverVersion from Win32_PnPSignedDriver WHERE DriverProviderName like '%Intel%' and DeviceClass like 'SCSIADAPTER' and not DeviceName like '%Ethernet Virtual Storage%']<p>Update: {$INTERNAL_ITEMS_REQUEST_PERIOD}</p>|
-|Logical disk "{#LDNAME}" level (LLD)|<p>-</p>|`Dependent item`|irst.raid.level.[{#LDNAME}]<p>Update: 0</p>|
-|Logical disk "{#LDNAME}" disks count (LLD)|<p>-</p>|`Dependent item`|irst.raid.pdcount.[{#LDNAME}]<p>Update: 0</p>|
-|Logical disk "{#LDNAME}" state (LLD)|<p>-</p>|`Dependent item`|irst.raid.state.[{#LDNAME}]<p>Update: 0</p>|
-|Physical disk "{#SLOT}" serial number (LLD)|<p>-</p>|`Dependent item`|irst.pd.sn.["{#SLOT}"]<p>Update: 0</p>|
-|Physical disk "{#SLOT}" state (LLD)|<p>-</p>|`Dependent item`|irst.pd.state.["{#SLOT}"]<p>Update: 0</p>|
-|Physical disk "{#SLOT}" usage (LLD)|<p>-</p>|`Dependent item`|irst.pd.usage.["{#SLOT}"]<p>Update: 0</p>|
+|Logical disk "{#LDNAME}" level|<p>-</p>|`Dependent item`|irst.raid.level.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" disks count|<p>-</p>|`Dependent item`|irst.raid.pdcount.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" state|<p>-</p>|`Dependent item`|irst.raid.state.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#SLOT}" serial number|<p>-</p>|`Dependent item`|irst.pd.sn.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#SLOT}" state|<p>-</p>|`Dependent item`|irst.pd.state.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#SLOT}" usage|<p>-</p>|`Dependent item`|irst.pd.usage.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

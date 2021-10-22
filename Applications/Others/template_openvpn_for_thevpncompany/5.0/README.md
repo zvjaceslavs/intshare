@@ -57,7 +57,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Data for {#ID} (LLD)|<p>-</p>|`Zabbix agent`|thevpncompany.openvpn.client.if.size[{#ID}]<p>Update: 30s</p>|
+|Data for {#ID}|<p>-</p>|`Zabbix agent`|thevpncompany.openvpn.client.if.size[{#ID}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

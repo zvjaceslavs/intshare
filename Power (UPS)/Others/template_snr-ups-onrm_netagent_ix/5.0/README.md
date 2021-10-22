@@ -43,9 +43,6 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |UPS battery status|<p>-</p>|`SNMP agent`|netagent.battery.status<p>Update: 30m</p>|
 |Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 1m</p>|
 |UPS time on battery|<p>The elapsed time in seconds since the UPS has switched to battery power. Прошедшее время в секундах с момента переключения ИБП на батареи.</p>|`SNMP agent`|upsBaseBatteryTimeOnBattery<p>Update: 60s</p>|

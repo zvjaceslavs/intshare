@@ -89,19 +89,19 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Last received error ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.error.received[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 5m</p>|
-|Last sent error ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.error.sent[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 5m</p>|
-|IPv4 prefixes accepted ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv4.accepted[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p>|
-|IPv4 prefixes advertised ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv4.advertised[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p>|
-|IPv4 prefixes received ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv4.received[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p>|
-|IPv4 prefixes rejected ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv4.rejected[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p>|
-|IPv6 prefixes accepted ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv6.accepted[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p>|
-|IPv6 prefixes advertised ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv6.advertised[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p>|
-|IPv6 prefixes received ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv6.received[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p>|
-|IPv6 prefixes rejected ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv6.rejected[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p>|
-|Peer state ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.state[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 1m</p>|
-|Administrative status ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.status[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 5m</p>|
-|Established time ({#BGPPEERREMOTEADDRESS}) (LLD)|<p>-</p>|`SNMP agent`|net.bgp.peer.uptime[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 5m</p>|
+|Last received error ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.error.received[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 5m</p><p>LLD</p>|
+|Last sent error ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.error.sent[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 5m</p><p>LLD</p>|
+|IPv4 prefixes accepted ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv4.accepted[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p><p>LLD</p>|
+|IPv4 prefixes advertised ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv4.advertised[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p><p>LLD</p>|
+|IPv4 prefixes received ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv4.received[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p><p>LLD</p>|
+|IPv4 prefixes rejected ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv4.rejected[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p><p>LLD</p>|
+|IPv6 prefixes accepted ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv6.accepted[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p><p>LLD</p>|
+|IPv6 prefixes advertised ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv6.advertised[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p><p>LLD</p>|
+|IPv6 prefixes received ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv6.received[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p><p>LLD</p>|
+|IPv6 prefixes rejected ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.prefixes.ipv6.rejected[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 2m</p><p>LLD</p>|
+|Peer state ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.state[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 1m</p><p>LLD</p>|
+|Administrative status ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.status[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 5m</p><p>LLD</p>|
+|Established time ({#BGPPEERREMOTEADDRESS})|<p>-</p>|`SNMP agent`|net.bgp.peer.uptime[{#BGPEERREMOTEAS}, {#BGPPEERREMOTEADDRESS}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -27,8 +27,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Job[{#NAME}] State (LLD)|<p>-</p>|`External check`|nakivo.pl[{HOST.CONN},"--job-info", "{#ID}","2"]<p>Update: 5m</p>|
-|Job[{#NAME}] Last Result (LLD)|<p>-</p>|`External check`|nakivo.pl[{HOST.CONN},"--job-info", "{#ID}","3"]<p>Update: 5m</p>|
+|Job[{#NAME}] State|<p>-</p>|`External check`|nakivo.pl[{HOST.CONN},"--job-info", "{#ID}","2"]<p>Update: 5m</p><p>LLD</p>|
+|Job[{#NAME}] Last Result|<p>-</p>|`External check`|nakivo.pl[{HOST.CONN},"--job-info", "{#ID}","3"]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

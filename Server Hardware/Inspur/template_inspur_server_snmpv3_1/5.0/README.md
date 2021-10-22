@@ -49,21 +49,21 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|TEMPERATURE STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.temperature.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|TEMPERATURE VALUE: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.temperature.value.[{#SNMPVALUE}]<p>Update: 300</p>|
-|DISK STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.disk.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|FRU INFO: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.fru.info.[{#SNMPVALUE}]<p>Update: 300</p>|
-|WATCHDOG STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.watchdog.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|FAN SPEED VALUE: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.fan.speed.value.[{#SNMPVALUE}]<p>Update: 300</p>|
-|FAN STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.fan.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|POWER SUPPLY STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.power.supply.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|POWER SUPPLY VALUE: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.power.supply.value.[{#SNMPVALUE}]<p>Update: 300</p>|
-|MICROCONTROLLER STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.microcontroller.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|MEMORY STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.memory.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|VOLTAGE STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.voltage.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|VOLTAGE VALUE: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.voltage.value.[{#SNMPVALUE}]<p>Update: 300</p>|
-|MANAGEMENT SUBSYSTEM HEALTH STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.management.subsystem.health.status.[{#SNMPVALUE}]<p>Update: 300</p>|
-|PROCESSOR STATUS: {#SNMPVALUE} (LLD)|<p>-</p>|`SNMP agent`|inspur.server.processor.status.[{#SNMPVALUE}]<p>Update: 300</p>|
+|TEMPERATURE STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.temperature.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|TEMPERATURE VALUE: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.temperature.value.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|DISK STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.disk.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|FRU INFO: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.fru.info.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|WATCHDOG STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.watchdog.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|FAN SPEED VALUE: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.fan.speed.value.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|FAN STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.fan.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|POWER SUPPLY STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.power.supply.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|POWER SUPPLY VALUE: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.power.supply.value.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|MICROCONTROLLER STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.microcontroller.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|MEMORY STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.memory.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|VOLTAGE STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.voltage.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|VOLTAGE VALUE: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.voltage.value.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|MANAGEMENT SUBSYSTEM HEALTH STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.management.subsystem.health.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|PROCESSOR STATUS: {#SNMPVALUE}|<p>-</p>|`SNMP agent`|inspur.server.processor.status.[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

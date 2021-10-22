@@ -29,7 +29,7 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |OKTA AD Agent|<p>OKTA AD Agent status is service.info[Okta Active Directory Service]</p>|`Zabbix agent`|service.info[Okta Active Directory Service]<p>Update: 30s</p>|
-|service.info[{#SERVICE.NAME},state] (LLD)|<p>-</p>|`Zabbix agent`|service.info[service,<param>]<p>Update: 1m</p>|
+|service.info[{#SERVICE.NAME},state]|<p>-</p>|`Zabbix agent`|service.info[service,<param>]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

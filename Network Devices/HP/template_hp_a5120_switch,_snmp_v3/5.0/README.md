@@ -68,7 +68,7 @@ There are no template links in this template.
 |Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
 |SysUptime|<p>-</p>|`SNMP agent`|SysUptime<p>Update: 300</p>|
-|CRC errors on interface $1 (LLD)|<p>-</p>|`SNMP agent`|CRC.Errors[{#SNMPVALUE}]<p>Update: 120</p>|
+|CRC errors on interface $1|<p>-</p>|`SNMP agent`|CRC.Errors[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

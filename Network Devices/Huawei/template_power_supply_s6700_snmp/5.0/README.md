@@ -27,7 +27,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Status Power Supply (LLD)|<p>-</p>|`SNMP agent`|Status[hwPowerSupplyStatus.{#ENT_NAME}]<p>Update: 3m</p>|
+|Status Power Supply|<p>-</p>|`SNMP agent`|Status[hwPowerSupplyStatus.{#ENT_NAME}]<p>Update: 3m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -24,27 +24,27 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#SNMPVALUE} Alarm (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.alarm.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Time (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Value (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Time (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Short Term Decreasing Rate Value (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.descreasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Short Term Decreasing Rate Time (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.descreasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Min (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Max (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Low (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Value (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Long Term Decreasing Rate Value (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.descreasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - High (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Long Term Decreasing Rate Time (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.descreasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Hysteresis (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - High (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - Min (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - Max (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - Low (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - Hysteresis (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
+|{#SNMPVALUE} Alarm|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.alarm.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Short Term Decreasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.descreasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Short Term Decreasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.descreasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Max|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Long Term Decreasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.descreasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - High|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Long Term Decreasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.descreasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Hysteresis|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - High|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Max|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Hysteresis|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -94,44 +94,44 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#SNMPVALUE} Alarm - Enabled (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} RSSI: Threshold - Low (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.rssi.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Min (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Max (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Low (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - High (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} RSSI (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} RSSI: Threshold - Min (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humidity (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Battery: Threshold - Low (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.battery.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humidity: Threshold - Min (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humidity: Threshold - Max (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humidity: Threshold - Low (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humidity: Threshold - High (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Battery (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Battery: Threshold - Min (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Alarm (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.alarm.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Time (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Value (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Time (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Short Term Decreasing Rate Value (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.descreasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Short Term Decreasing Rate Time (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.descreasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Min (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Max (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Low (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Value (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Long Term Decreasing Rate Value (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.descreasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - High (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Long Term Decreasing Rate Time (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.descreasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - Hysteresis (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature: Threshold - High (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - Min (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - Max (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - Low (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Humitity: Threshold - Hysteresis (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p>|
-|{#SNMPVALUE} Temperature (LLD)|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"]<p>Update: 30s</p>|
+|{#SNMPVALUE} Alarm - Enabled|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} RSSI: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.rssi.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Max|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - High|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} RSSI|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} RSSI: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humidity|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Battery: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.battery.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humidity: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humidity: Threshold - Max|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humidity: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humidity: Threshold - High|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.humidity.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Battery|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Battery: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature|<p>-</p>|`SNMP agent`|apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Alarm|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.alarm.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Short Term Decreasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.descreasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Short Term Decreasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.descreasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Max|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Long Term Decreasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.descreasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - High|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Long Term Decreasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.descreasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - Hysteresis|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature: Threshold - High|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Max|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Hysteresis|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

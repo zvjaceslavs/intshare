@@ -27,7 +27,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|OSI {#KEY} (LLD)|<p>-</p>|`Zabbix agent`|vfs.file.regexp["/etc/os-release","^{#KEY}=(?P<quote>[\"']?)(?P<value>[\S\s]*?)(?P=quote)($|\s)",,,,\2]<p>Update: 1d</p>|
+|OSI {#KEY}|<p>-</p>|`Zabbix agent`|vfs.file.regexp["/etc/os-release","^{#KEY}=(?P<quote>[\"']?)(?P<value>[\S\s]*?)(?P=quote)($|\s)",,,,\2]<p>Update: 1d</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -62,9 +62,9 @@ There are no template links in this template.
 |System information|<p>The information as normally returned by 'uname -a'.</p>|`Zabbix agent`|system.uname<p>Update: 86400</p>|
 |System uptime|<p>-</p>|`Zabbix agent`|system.uptime<p>Update: 900</p>|
 |Number of logged in users|<p>Number of users who are currently logged in.</p>|`Zabbix agent`|system.users.num<p>Update: 600</p>|
-|Incoming network traffic on $1 (LLD)|<p>-</p>|`Zabbix agent`|net.if.in[{#IFNAME}]<p>Update: 120</p>|
-|Outgoing network traffic on $1 (LLD)|<p>-</p>|`Zabbix agent`|net.if.out[{#IFNAME}]<p>Update: 120</p>|
-|Total network traffic on $1 (LLD)|<p>-</p>|`Zabbix agent`|net.if.total[{#IFNAME}]<p>Update: 120</p>|
+|Incoming network traffic on $1|<p>-</p>|`Zabbix agent`|net.if.in[{#IFNAME}]<p>Update: 120</p><p>LLD</p>|
+|Outgoing network traffic on $1|<p>-</p>|`Zabbix agent`|net.if.out[{#IFNAME}]<p>Update: 120</p><p>LLD</p>|
+|Total network traffic on $1|<p>-</p>|`Zabbix agent`|net.if.total[{#IFNAME}]<p>Update: 120</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

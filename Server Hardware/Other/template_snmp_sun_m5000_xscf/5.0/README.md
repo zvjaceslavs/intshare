@@ -60,11 +60,11 @@ There are no template links in this template.
 |scfSystemSerialNumber|<p>-</p>|`SNMP agent`|scfSystemSerialNumber<p>Update: 86400</p>|
 |scfSystemState|<p>Overall system state normal(1), degraded(2), faulted(3), change(254), unknown(255)</p>|`SNMP agent`|scfSystemState<p>Update: 3600</p>|
 |scfSystemType|<p>-</p>|`SNMP agent`|scfSystemType<p>Update: 86400</p>|
-|Memory unit {#BOARDID} status (LLD)|<p>-</p>|`SNMP agent`|mem.statsu[{#BOARDID}]<p>Update: 60</p>|
-|Power Supply #{#BOARDID} status (LLD)|<p>-</p>|`SNMP agent`|psu.status[{#BOARDID}]<p>Update: 60</p>|
-|Memory Board #{#ID} status (LLD)|<p>-</p>|`SNMP agent`|memb.status[{#ID}]<p>Update: 60</p>|
-|CPU {#BOARDID}-{#MODULEID} status (LLD)|<p>-</p>|`SNMP agent`|cpu.status[{#BOARDID}-{#MODULEID}]<p>Update: 60</p>|
-|Fan #{#BOARDID} status (LLD)|<p>-</p>|`SNMP agent`|fan.status[{#BOARDID}]<p>Update: 60</p>|
+|Memory unit {#BOARDID} status|<p>-</p>|`SNMP agent`|mem.statsu[{#BOARDID}]<p>Update: 60</p><p>LLD</p>|
+|Power Supply #{#BOARDID} status|<p>-</p>|`SNMP agent`|psu.status[{#BOARDID}]<p>Update: 60</p><p>LLD</p>|
+|Memory Board #{#ID} status|<p>-</p>|`SNMP agent`|memb.status[{#ID}]<p>Update: 60</p><p>LLD</p>|
+|CPU {#BOARDID}-{#MODULEID} status|<p>-</p>|`SNMP agent`|cpu.status[{#BOARDID}-{#MODULEID}]<p>Update: 60</p><p>LLD</p>|
+|Fan #{#BOARDID} status|<p>-</p>|`SNMP agent`|fan.status[{#BOARDID}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -62,17 +62,17 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Endpoint IP address for peer {#PEER}... on {#INTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.endpoint.address[{#PEER}]<p>Update: 15m</p>|
-|Allowed IPs for peer {#PEER}... on {#INTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.endpoint.allowedips[{#PEER}]<p>Update: 30m</p>|
-|Last handshake for peer {#PEER}... on {#INTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.endpoint.handshake[{#PEER}]<p>Update: 10m</p>|
-|Keepalive enabled for peer {#PEER}... on {#INTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.endpoint.keepalive[{#PEER}]<p>Update: 30m</p>|
-|Endpoint port for peer {#PEER}... on {#INTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.endpoint.port[{#PEER}]<p>Update: 15m</p>|
-|Incoming traffic for peer {#PEER}... on {#INTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.endpoint.transferdown[{#PEER}]<p>Update: 5m</p>|
-|Outgoing traffic for peer {#PEER}... on {#INTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.endpoint.transferup[{#PEER}]<p>Update: 5m</p>|
-|Firewall mark enabled on {#WGINTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.fw.mark[{#WGINTERFACE}]<p>Update: 60m</p>|
-|Active peers on {#WGINTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.peers.connected[{#WGINTERFACE}]<p>Update: 15m</p>|
-|Total peers on {#WGINTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.peers.count[{#WGINTERFACE}]<p>Update: 30m</p>|
-|Port used on {#WGINTERFACE} (LLD)|<p>-</p>|`Zabbix agent`|wg.port.used[{#WGINTERFACE}]<p>Update: 60m</p>|
+|Endpoint IP address for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.address[{#PEER}]<p>Update: 15m</p><p>LLD</p>|
+|Allowed IPs for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.allowedips[{#PEER}]<p>Update: 30m</p><p>LLD</p>|
+|Last handshake for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.handshake[{#PEER}]<p>Update: 10m</p><p>LLD</p>|
+|Keepalive enabled for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.keepalive[{#PEER}]<p>Update: 30m</p><p>LLD</p>|
+|Endpoint port for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.port[{#PEER}]<p>Update: 15m</p><p>LLD</p>|
+|Incoming traffic for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.transferdown[{#PEER}]<p>Update: 5m</p><p>LLD</p>|
+|Outgoing traffic for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.transferup[{#PEER}]<p>Update: 5m</p><p>LLD</p>|
+|Firewall mark enabled on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.fw.mark[{#WGINTERFACE}]<p>Update: 60m</p><p>LLD</p>|
+|Active peers on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.peers.connected[{#WGINTERFACE}]<p>Update: 15m</p><p>LLD</p>|
+|Total peers on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.peers.count[{#WGINTERFACE}]<p>Update: 30m</p><p>LLD</p>|
+|Port used on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.port.used[{#WGINTERFACE}]<p>Update: 60m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -48,9 +48,6 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |Contact|<p>-</p>|`SNMP agent`|sysContact<p>Update: 60</p>|
 |Software version (full)|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 60</p>|
 |Device Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 60</p>|

@@ -28,12 +28,12 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Disponibilidad SNMP|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 60s</p>|
-|Left Audio Level - {#NAME} (LLD)|<p>-</p>|`SNMP agent`|AudioLeft[{#INDEX}]<p>Update: 30s</p>|
-|Rigth Audio Level - {#NAME} (LLD)|<p>-</p>|`SNMP agent`|AudioRigth[{#INDEX}]<p>Update: 30s</p>|
-|MPX Level - {#NAME} (LLD)|<p>-</p>|`SNMP agent`|mpx[{#INDEX}]<p>Update: 30s</p>|
-|Frecuencia Radio {#INDEX} (LLD)|<p>-</p>|`SNMP agent`|RadioF[{#INDEX}]<p>Update: 30s</p>|
-|Nombre Radio {#INDEX} (LLD)|<p>-</p>|`SNMP agent`|RadioN[{#INDEX}]<p>Update: 30s</p>|
-|RF Level - {#NAME} (LLD)|<p>-</p>|`SNMP agent`|RFLvl[{#INDEX}]<p>Update: 30s</p>|
+|Left Audio Level - {#NAME}|<p>-</p>|`SNMP agent`|AudioLeft[{#INDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Rigth Audio Level - {#NAME}|<p>-</p>|`SNMP agent`|AudioRigth[{#INDEX}]<p>Update: 30s</p><p>LLD</p>|
+|MPX Level - {#NAME}|<p>-</p>|`SNMP agent`|mpx[{#INDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Frecuencia Radio {#INDEX}|<p>-</p>|`SNMP agent`|RadioF[{#INDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Nombre Radio {#INDEX}|<p>-</p>|`SNMP agent`|RadioN[{#INDEX}]<p>Update: 30s</p><p>LLD</p>|
+|RF Level - {#NAME}|<p>-</p>|`SNMP agent`|RFLvl[{#INDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

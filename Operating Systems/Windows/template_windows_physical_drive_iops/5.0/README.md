@@ -62,16 +62,16 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Disk ({#DISKNUMLET}) - Average Disk Bytes Total (LLD)|<p>-</p>|`Calculated`|AvgDiskBytesTotal[({#DISKNUMLET})]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - % Disk saturation (LLD)|<p>-</p>|`Calculated`|DiskSaturation[({#DISKNUMLET})]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - Current Disk Queue Length (LLD)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\198"]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - Avg. Disk sec/Read (Latency) (LLD)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\208"]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - Avg. Disk sec/Write (Latency) (LLD)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\210"]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - Avg. Disk sec/Transfer (Latency) (LLD)|<p>Avg. Disk sec/Transfer (Avg. Disk sec/Read, Avg. Disk sec/Write) Displays the average time the disk transfers took to complete, in seconds. Although the scale is seconds, the counter has millisecond precision, meaning a value of 0.004 indicates the average time for disk transfers to complete was 4 milliseconds. This is the counter in Perfmon used to measure IO latency.</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\212"]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - Average Disk Bytes Read (LLD)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\226"]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - Average Disk Bytes Write (LLD)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\228"]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - Avg. Disk Queue Length (LLD)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\1400"]<p>Update: 15s</p>|
-|Disk ({#DISKNUMLET}) - % Idle Time (LLD)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\1482"]<p>Update: 15s</p>|
+|Disk ({#DISKNUMLET}) - Average Disk Bytes Total|<p>-</p>|`Calculated`|AvgDiskBytesTotal[({#DISKNUMLET})]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - % Disk saturation|<p>-</p>|`Calculated`|DiskSaturation[({#DISKNUMLET})]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - Current Disk Queue Length|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\198"]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - Avg. Disk sec/Read (Latency)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\208"]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - Avg. Disk sec/Write (Latency)|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\210"]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - Avg. Disk sec/Transfer (Latency)|<p>Avg. Disk sec/Transfer (Avg. Disk sec/Read, Avg. Disk sec/Write) Displays the average time the disk transfers took to complete, in seconds. Although the scale is seconds, the counter has millisecond precision, meaning a value of 0.004 indicates the average time for disk transfers to complete was 4 milliseconds. This is the counter in Perfmon used to measure IO latency.</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\212"]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - Average Disk Bytes Read|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\226"]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - Average Disk Bytes Write|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\228"]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - Avg. Disk Queue Length|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\1400"]<p>Update: 15s</p><p>LLD</p>|
+|Disk ({#DISKNUMLET}) - % Idle Time|<p>-</p>|`Zabbix agent (active)`|perf_counter["\234({#DISKNUMLET})\1482"]<p>Update: 15s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

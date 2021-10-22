@@ -32,9 +32,6 @@ There are no discovery rules in this template.
 |PowerCom: Battery Voltage|<p>-</p>|`SNMP agent`|BatteryVoltage<p>Update: 30s</p>|
 |PowerCom: Firmware Version UPS|<p>-</p>|`SNMP agent`|FirmwareUPS<p>Update: 40320s</p>|
 |PowerCom: Firmware Version Card|<p>-</p>|`SNMP agent`|FirmwareVersionCard<p>Update: 40320s</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |PowerCom: Input Frequency|<p>-</p>|`SNMP agent`|InputFrequency<p>Update: 30s</p>|
 |PowerCom: Input Voltage|<p>-</p>|`SNMP agent`|InputVoltage<p>Update: 30s</p>|
 |PowerCom: Model|<p>-</p>|`SNMP agent`|ModelUPS<p>Update: 40320s</p>|

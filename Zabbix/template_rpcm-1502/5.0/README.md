@@ -142,56 +142,56 @@ There are no template links in this template.
 |Services Field|<p>Services Field</p>|`SNMP agent`|services.0<p>Update: 1h</p>|
 |Temperature|<p>Temperature</p>|`SNMP agent`|temperature.0<p>Update: 30s</p>|
 |Uptime in Seconds|<p>Uptime in Seconds</p>|`SNMP agent`|uptime.0<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KVA/h (LLD)|<p>Output Accumulated KVA/h</p>|`SNMP agent`|outputAccumulatedKVAhFloat.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Alarm State (LLD)|<p>Output Overcurrent Alarm State (1 =OVERCURRENT ALARM FIRED, 0 =NO ALARM)</p>|`SNMP agent`|outputOvercurrentAlarmFiredState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Turn Off Priority On Input Overload (LLD)|<p>Output Turn Off Priority On Input Overload (Outputs with higher priority values will turn off first)</p>|`SNMP agent`|outputTurnOffPriorityOnInputOverload.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overvoltage Recovery interval, Seconds (LLD)|<p>Output Overvoltage Recovery interval, Seconds</p>|`SNMP agent`|outputRecoverAfterOvervoltageSeconds.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Indicator Flashing (LLD)|<p>Output Indicator Flashing for Physical Recognition/Indication (1 =enabled, 0 =disabled)</p>|`SNMP agent`|outputRecognitionState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overvoltage Turn Off Fired State (LLD)|<p>Output Overvoltage Turn Off Fired State (1 =OVERVOLTAGE TURN OFF FIRED, 0 =NO OVERVOLTAGE TURN OFF DETECTED)</p>|`SNMP agent`|outputOvervoltageTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overvoltage Turn Off Facts (LLD)|<p>Output Overvoltage Turn Off Facts</p>|`SNMP agent`|outputOvervoltageTurnOffFacts.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Turn Off Limit Seconds (LLD)|<p>Output Overcurrent Turn Off Limit Seconds</p>|`SNMP agent`|outputOvercurrentTurnOffLimitSeconds.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Turn Off Limit Reached Facts (LLD)|<p>Output Overcurrent Turn Off Limit Reached Facts</p>|`SNMP agent`|outputOvercurrentTurnOffLimitReachedFacts.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Turn Off Limit Milliamps (LLD)|<p>Output Overcurrent Turn Off Limit Milliamps</p>|`SNMP agent`|outputOvercurrentTurnOffLimitMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Turn Off State (LLD)|<p>Output Overcurrent Turn Off State (1 =OVERCURRENT TURN OFF FIRED, 0 =NO OVERCURRENT TURN OFF DETECTED)</p>|`SNMP agent`|outputOvercurrentTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Turn Off Fired Facts (LLD)|<p>Output Overcurrent Turn Off Fired Facts</p>|`SNMP agent`|outputOvercurrentTurnOffFiredFacts.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Alarm Limit Seconds (LLD)|<p>Output Overcurrent Alarm Limit Seconds</p>|`SNMP agent`|outputOvercurrentAlarmLimitSeconds.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Alarm Limit Reached Facts (LLD)|<p>Output Overcurrent Alarm Limit Reached Facts</p>|`SNMP agent`|outputOvercurrentAlarmLimitReachedFacts.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Alarm Limit Milliamps (LLD)|<p>Output Overcurrent Alarm Limit Milliamps</p>|`SNMP agent`|outputOvercurrentAlarmLimitMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Overcurrent Alarm Fired Facts (LLD)|<p>Output Overcurrent Alarm Fired Facts</p>|`SNMP agent`|outputOvercurrentAlarmFiredFacts.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KVA/h (LLD)|<p>Output Accumulated KVA/h</p>|`SNMP agent`|outputAccumulatedKVAhString.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Instant Watts Value (LLD)|<p>Output Instant Watts Value</p>|`SNMP agent`|outputInstantWatts.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Instant VAs Value (LLD)|<p>Output Instant VAs Value</p>|`SNMP agent`|outputInstantVAs.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Instant Vars Value (LLD)|<p>Output Instant Vars Value</p>|`SNMP agent`|outputInstantVars.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Instant Milliamps Value (LLD)|<p>Output Instant Milliamps Value</p>|`SNMP agent`|outputInstantMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Turn Off Due to Input Overcurrent State (LLD)|<p>Output Turn Off Due to Input Overcurrent State (1 =OVERCURRENT TURN OFF FIRED, 0 =NO OVERCURRENT TURN OFF DETECTED)</p>|`SNMP agent`|outputInputOvercurrentTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Description (LLD)|<p>Output Description</p>|`SNMP agent`|outputDescription.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|{#SNMPVALUE} Circuit Breaker Short Circuit Firing Facts (LLD)|<p>Output Circuit Breaker Short Circuit Firing Facts</p>|`SNMP agent`|outputCircuitBreakerFiringFacts.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Circuit Breaker State (LLD)|<p>Output Circuit Breaker State (1 =SHORT CIRCUIT DETECTED, 0 =NO SHORT CIRCUIT DETECTED)</p>|`SNMP agent`|outputCircuitBreakerFiredState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Administrative State (LLD)|<p>Output Administrative State (1 =on, 0 =off)</p>|`SNMP agent`|outputAdminState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Actual State (LLD)|<p>Output Actual State (1 =on, 0 =off)</p>|`SNMP agent`|outputActualState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KWatt/h (LLD)|<p>Output Accumulated KWatt/h</p>|`SNMP agent`|outputAccumulatedKWhString.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KWatt/h (LLD)|<p>Output Accumulated KWatt/h</p>|`SNMP agent`|outputAccumulatedKWhFloat.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KVar/h (LLD)|<p>Output Accumulated KVar/h</p>|`SNMP agent`|outputAccumulatedKVarhString.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KVar/h (LLD)|<p>Output Accumulated KVar/h</p>|`SNMP agent`|outputAccumulatedKVarhFloat.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Turn On Delay After RPCM Device Startup (LLD)|<p>Output Turn On Delay After RPCM Device Startup</p>|`SNMP agent`|outputTurnOnDelayOnStartup.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KVA/h (LLD)|<p>Input Accumulated KVA/h</p>|`SNMP agent`|inputAccumulatedKVAhFloat.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Minimum Allowed Frequency (LLD)|<p>Input Minimum Allowed Frequency Multiplied by 100</p>|`SNMP agent`|inputFrequencyAllowedMin.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Maximum Allowed Voltage (LLD)|<p>Input Maximum Allowed Voltage</p>|`SNMP agent`|inputVoltageAllowedMax.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Instant Voltage Value (LLD)|<p>Input Instant Voltage Value</p>|`SNMP agent`|inputVoltage.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Recognition State (LLD)|<p>Input Indicator Flashing for Physical Recognition/Indication (1 =enabled, 0 =disabled)</p>|`SNMP agent`|inputRecognitionState.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Instant Watts Value (LLD)|<p>Input Instant Watts Value</p>|`SNMP agent`|inputInstantWatts.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Instant Milliamps Value (LLD)|<p>Input Instant Milliamps Value</p>|`SNMP agent`|inputInstantMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Presence of Frequency (LLD)|<p>Presence of Frequency on Input (1 =present, 0 =absent)</p>|`SNMP agent`|inputFrequencyAvailable.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Maximum Allowed Frequency (LLD)|<p>Input Maximum Allowed Frequency Multiplied by 100</p>|`SNMP agent`|inputFrequencyAllowedMax.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KVA/h (LLD)|<p>Input Accumulated KVA/h</p>|`SNMP agent`|inputAccumulatedKVAhString.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Instant Frequency Value (LLD)|<p>Input Instant Frequency Value</p>|`SNMP agent`|inputFrequency.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Description (LLD)|<p>Input Description</p>|`SNMP agent`|inputDescription.[{#SNMPINDEX}]<p>Update: 1h</p>|
-|{#SNMPVALUE} Maximum Alloed Ampers (LLD)|<p>Input Maximum Alloed Ampers</p>|`SNMP agent`|inputAmpsAllowedMax.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KWatt/h (LLD)|<p>Input Accumulated KWatt/h</p>|`SNMP agent`|inputAccumulatedKWhString.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KWatt/h (LLD)|<p>Input Accumulated KWatt/h</p>|`SNMP agent`|inputAccumulatedKWhFloat.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KVar/h (LLD)|<p>Input Accumulated KVar/h</p>|`SNMP agent`|inputAccumulatedKVarhString.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Accumulated KVar/h (LLD)|<p>Input Accumulated KVar/h</p>|`SNMP agent`|inputAccumulatedKVarhFloat.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|{#SNMPVALUE} Minimum Allowed Voltage (LLD)|<p>Input Minimum Allowed Voltage</p>|`SNMP agent`|inputVoltageAllowedMin.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|{#SNMPVALUE} Accumulated KVA/h|<p>Output Accumulated KVA/h</p>|`SNMP agent`|outputAccumulatedKVAhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Alarm State|<p>Output Overcurrent Alarm State (1 =OVERCURRENT ALARM FIRED, 0 =NO ALARM)</p>|`SNMP agent`|outputOvercurrentAlarmFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Turn Off Priority On Input Overload|<p>Output Turn Off Priority On Input Overload (Outputs with higher priority values will turn off first)</p>|`SNMP agent`|outputTurnOffPriorityOnInputOverload.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overvoltage Recovery interval, Seconds|<p>Output Overvoltage Recovery interval, Seconds</p>|`SNMP agent`|outputRecoverAfterOvervoltageSeconds.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Indicator Flashing|<p>Output Indicator Flashing for Physical Recognition/Indication (1 =enabled, 0 =disabled)</p>|`SNMP agent`|outputRecognitionState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overvoltage Turn Off Fired State|<p>Output Overvoltage Turn Off Fired State (1 =OVERVOLTAGE TURN OFF FIRED, 0 =NO OVERVOLTAGE TURN OFF DETECTED)</p>|`SNMP agent`|outputOvervoltageTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overvoltage Turn Off Facts|<p>Output Overvoltage Turn Off Facts</p>|`SNMP agent`|outputOvervoltageTurnOffFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off Limit Seconds|<p>Output Overcurrent Turn Off Limit Seconds</p>|`SNMP agent`|outputOvercurrentTurnOffLimitSeconds.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off Limit Reached Facts|<p>Output Overcurrent Turn Off Limit Reached Facts</p>|`SNMP agent`|outputOvercurrentTurnOffLimitReachedFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off Limit Milliamps|<p>Output Overcurrent Turn Off Limit Milliamps</p>|`SNMP agent`|outputOvercurrentTurnOffLimitMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off State|<p>Output Overcurrent Turn Off State (1 =OVERCURRENT TURN OFF FIRED, 0 =NO OVERCURRENT TURN OFF DETECTED)</p>|`SNMP agent`|outputOvercurrentTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off Fired Facts|<p>Output Overcurrent Turn Off Fired Facts</p>|`SNMP agent`|outputOvercurrentTurnOffFiredFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Alarm Limit Seconds|<p>Output Overcurrent Alarm Limit Seconds</p>|`SNMP agent`|outputOvercurrentAlarmLimitSeconds.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Alarm Limit Reached Facts|<p>Output Overcurrent Alarm Limit Reached Facts</p>|`SNMP agent`|outputOvercurrentAlarmLimitReachedFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Alarm Limit Milliamps|<p>Output Overcurrent Alarm Limit Milliamps</p>|`SNMP agent`|outputOvercurrentAlarmLimitMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Alarm Fired Facts|<p>Output Overcurrent Alarm Fired Facts</p>|`SNMP agent`|outputOvercurrentAlarmFiredFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KVA/h|<p>Output Accumulated KVA/h</p>|`SNMP agent`|outputAccumulatedKVAhString.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Instant Watts Value|<p>Output Instant Watts Value</p>|`SNMP agent`|outputInstantWatts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Instant VAs Value|<p>Output Instant VAs Value</p>|`SNMP agent`|outputInstantVAs.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Instant Vars Value|<p>Output Instant Vars Value</p>|`SNMP agent`|outputInstantVars.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Instant Milliamps Value|<p>Output Instant Milliamps Value</p>|`SNMP agent`|outputInstantMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Turn Off Due to Input Overcurrent State|<p>Output Turn Off Due to Input Overcurrent State (1 =OVERCURRENT TURN OFF FIRED, 0 =NO OVERCURRENT TURN OFF DETECTED)</p>|`SNMP agent`|outputInputOvercurrentTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Description|<p>Output Description</p>|`SNMP agent`|outputDescription.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE} Circuit Breaker Short Circuit Firing Facts|<p>Output Circuit Breaker Short Circuit Firing Facts</p>|`SNMP agent`|outputCircuitBreakerFiringFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Circuit Breaker State|<p>Output Circuit Breaker State (1 =SHORT CIRCUIT DETECTED, 0 =NO SHORT CIRCUIT DETECTED)</p>|`SNMP agent`|outputCircuitBreakerFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Administrative State|<p>Output Administrative State (1 =on, 0 =off)</p>|`SNMP agent`|outputAdminState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Actual State|<p>Output Actual State (1 =on, 0 =off)</p>|`SNMP agent`|outputActualState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KWatt/h|<p>Output Accumulated KWatt/h</p>|`SNMP agent`|outputAccumulatedKWhString.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KWatt/h|<p>Output Accumulated KWatt/h</p>|`SNMP agent`|outputAccumulatedKWhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KVar/h|<p>Output Accumulated KVar/h</p>|`SNMP agent`|outputAccumulatedKVarhString.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KVar/h|<p>Output Accumulated KVar/h</p>|`SNMP agent`|outputAccumulatedKVarhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Turn On Delay After RPCM Device Startup|<p>Output Turn On Delay After RPCM Device Startup</p>|`SNMP agent`|outputTurnOnDelayOnStartup.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KVA/h|<p>Input Accumulated KVA/h</p>|`SNMP agent`|inputAccumulatedKVAhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Minimum Allowed Frequency|<p>Input Minimum Allowed Frequency Multiplied by 100</p>|`SNMP agent`|inputFrequencyAllowedMin.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Maximum Allowed Voltage|<p>Input Maximum Allowed Voltage</p>|`SNMP agent`|inputVoltageAllowedMax.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Instant Voltage Value|<p>Input Instant Voltage Value</p>|`SNMP agent`|inputVoltage.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Recognition State|<p>Input Indicator Flashing for Physical Recognition/Indication (1 =enabled, 0 =disabled)</p>|`SNMP agent`|inputRecognitionState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Instant Watts Value|<p>Input Instant Watts Value</p>|`SNMP agent`|inputInstantWatts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Instant Milliamps Value|<p>Input Instant Milliamps Value</p>|`SNMP agent`|inputInstantMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Presence of Frequency|<p>Presence of Frequency on Input (1 =present, 0 =absent)</p>|`SNMP agent`|inputFrequencyAvailable.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Maximum Allowed Frequency|<p>Input Maximum Allowed Frequency Multiplied by 100</p>|`SNMP agent`|inputFrequencyAllowedMax.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KVA/h|<p>Input Accumulated KVA/h</p>|`SNMP agent`|inputAccumulatedKVAhString.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Instant Frequency Value|<p>Input Instant Frequency Value</p>|`SNMP agent`|inputFrequency.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Description|<p>Input Description</p>|`SNMP agent`|inputDescription.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPVALUE} Maximum Alloed Ampers|<p>Input Maximum Alloed Ampers</p>|`SNMP agent`|inputAmpsAllowedMax.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KWatt/h|<p>Input Accumulated KWatt/h</p>|`SNMP agent`|inputAccumulatedKWhString.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KWatt/h|<p>Input Accumulated KWatt/h</p>|`SNMP agent`|inputAccumulatedKWhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KVar/h|<p>Input Accumulated KVar/h</p>|`SNMP agent`|inputAccumulatedKVarhString.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KVar/h|<p>Input Accumulated KVar/h</p>|`SNMP agent`|inputAccumulatedKVarhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Minimum Allowed Voltage|<p>Input Minimum Allowed Voltage</p>|`SNMP agent`|inputVoltageAllowedMin.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

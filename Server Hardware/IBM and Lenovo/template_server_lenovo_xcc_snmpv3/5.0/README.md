@@ -42,34 +42,23 @@ For correct use, you need to define the macro "{$SNMP\_SECNAME\_CONTEXT}", this 
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
 |currentSysPowerStatus|<p>-</p>|`SNMP agent`|IMMcurrentSysPowerStatus<p>Update: 300</p>|
 |PowerOnHours|<p>-</p>|`SNMP agent`|IMMpowerOnHours<p>Update: 3600</p>|
 |restartCount|<p>-</p>|`SNMP agent`|IMMrestartCount<p>Update: 3600</p>|
 |System Health Status|<p>-</p>|`SNMP agent`|IMMsystemHealthStat<p>Update: 120</p>|
 |systemState|<p>-</p>|`SNMP agent`|IMMsystemState<p>Update: 300</p>|
 |Total power in use|<p>-</p>|`SNMP agent`|power.inuse<p>Update: 120s</p>|
-|SNMP traps (fallback)|<p>Item is used to collect all SNMP traps unmatched by other snmptrap items</p>|`SNMP trap`|snmptrap.fallback<p>Update: 300</p>|
 |Trap|<p>-</p>|`SNMP trap`|snmptrap["General"]<p>Update: 0</p>|
-|Device contact details|<p>MIB: SNMPv2-MIB The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|system.contact<p>Update: 3600</p>|
-|Device description|<p>MIB: SNMPv2-MIB A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|system.descr<p>Update: 3600</p>|
-|Device location|<p>MIB: SNMPv2-MIB The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|system.location<p>Update: 3600</p>|
-|Device name|<p>MIB: SNMPv2-MIB An administratively-assigned name for this managed node.By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|system.name<p>Update: 3600</p>|
-|System object ID|<p>MIB: SNMPv2-MIB The vendor's authoritative identification of the network management subsystem contained in the entity. This value is allocated within the SMI enterprises subtree (1.3.6.1.4.1) and provides an easy and unambiguous means for determining`what kind of box' is being managed. For example, if vendor`Flintstones, Inc.' was assigned the subtree1.3.6.1.4.1.4242, it could assign the identifier 1.3.6.1.4.1.4242.1.1 to its `Fred Router'.</p>|`SNMP agent`|system.objectid<p>Update: 3600</p>|
-|Device uptime|<p>MIB: SNMPv2-MIB The time (in hundredths of a second) since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|system.uptime<p>Update: 120s</p>|
-|SNMP availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 60</p>|
-|CPU: Temperature (LLD)|<p>LENOVO-XCC-MIB The measured temperature CPU</p>|`SNMP agent`|sensor.temp.value[tempReading.CPU.{#SNMPINDEX}]<p>Update: 3m</p>|
-|{#FAN_DESCR}: Fan speed, % (LLD)|<p>LENOVO-XCC-MIB Fan speed expressed in percent(%) of maximum RPM. An octet string expressed as 'ddd% of maximum' where: d is a decimal digit or blank space for a leading zero. If the fan is determined not to be running or the fan speed cannot be determined, the string will indicate 'Offline'.</p>|`SNMP agent`|sensor.fan.speed.percentage[fanSpeed.{#SNMPINDEX}]<p>Update: 5m</p>|
-|{#FAN_DESCR}: Fan status (LLD)|<p>LENOVO-XCC-MIB A description of the fan measurement channel.</p>|`SNMP agent`|sensor.fan.status[fanHealthStatus.{#SNMPINDEX}]<p>Update: 3m</p>|
-|{#VOLTDESCR}: Status (LLD)|<p>LENOVO-XCC-MIB A description of the voltage component status.</p>|`SNMP agent`|voltage.status[{#SNMPINDEX}]<p>Update: 3m</p>|
-|{#VOLTDESCR}: Voltage (LLD)|<p>LENOVO-XCC-MIB The measured voltage.</p>|`SNMP agent`|voltage[{#SNMPINDEX}]<p>Update: 3m</p>|
-|{#PSU_DESCR}: Power supply status (LLD)|<p>LENOVO-XCC-MIB A description of the power module status.</p>|`SNMP agent`|sensor.psu.status[powerHealthStatus.{#SNMPINDEX}]<p>Update: 3m</p>|
-|Ambient: Temperature (LLD)|<p>LENOVO-XCC-MIB The measured temperature Ambient</p>|`SNMP agent`|sensor.temp.value[tempReading.Ambient.{#SNMPINDEX}]<p>Update: 3m</p>|
-|{#SNMPINDEX}: Physical disk part number (LLD)|<p>LENOVO-XCC-MIB disk module FRU name.</p>|`SNMP agent`|system.hw.physicaldisk.part_number[diskFruName.{#SNMPINDEX}]<p>Update: 1h</p>|
-|{#SNMPINDEX}: Physical disk status (LLD)|<p>LENOVO-XCC-MIB A description of the disk module status.</p>|`SNMP agent`|system.hw.physicaldisk.status[diskHealthStatus.{#SNMPINDEX}]<p>Update: 3m</p>|
-|{#SNMPVALUE}: Temperature (LLD)|<p>LENOVO-XCC-MIB The measured temperature.</p>|`SNMP agent`|sensor.temp.value[tempReading.{#SNMPINDEX}]<p>Update: 3m</p>|
+|CPU: Temperature|<p>LENOVO-XCC-MIB The measured temperature CPU</p>|`SNMP agent`|sensor.temp.value[tempReading.CPU.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|{#FAN_DESCR}: Fan speed, %|<p>LENOVO-XCC-MIB Fan speed expressed in percent(%) of maximum RPM. An octet string expressed as 'ddd% of maximum' where: d is a decimal digit or blank space for a leading zero. If the fan is determined not to be running or the fan speed cannot be determined, the string will indicate 'Offline'.</p>|`SNMP agent`|sensor.fan.speed.percentage[fanSpeed.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#FAN_DESCR}: Fan status|<p>LENOVO-XCC-MIB A description of the fan measurement channel.</p>|`SNMP agent`|sensor.fan.status[fanHealthStatus.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|{#VOLTDESCR}: Status|<p>LENOVO-XCC-MIB A description of the voltage component status.</p>|`SNMP agent`|voltage.status[{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|{#VOLTDESCR}: Voltage|<p>LENOVO-XCC-MIB The measured voltage.</p>|`SNMP agent`|voltage[{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|{#PSU_DESCR}: Power supply status|<p>LENOVO-XCC-MIB A description of the power module status.</p>|`SNMP agent`|sensor.psu.status[powerHealthStatus.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Ambient: Temperature|<p>LENOVO-XCC-MIB The measured temperature Ambient</p>|`SNMP agent`|sensor.temp.value[tempReading.Ambient.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|{#SNMPINDEX}: Physical disk part number|<p>LENOVO-XCC-MIB disk module FRU name.</p>|`SNMP agent`|system.hw.physicaldisk.part_number[diskFruName.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|{#SNMPINDEX}: Physical disk status|<p>LENOVO-XCC-MIB A description of the disk module status.</p>|`SNMP agent`|system.hw.physicaldisk.status[diskHealthStatus.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|{#SNMPVALUE}: Temperature|<p>LENOVO-XCC-MIB The measured temperature.</p>|`SNMP agent`|sensor.temp.value[tempReading.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

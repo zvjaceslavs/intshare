@@ -44,25 +44,25 @@ There are no template links in this template.
 |Nutcracker connections per second|<p>Number of new connections per second</p>|`Dependent item`|nutcracker[stats,total_connections]<p>Update: 0</p>|
 |Number of nutcracker processes|<p>-</p>|`Zabbix agent (active)`|proc.num[nutcracker]<p>Update: 1m</p>|
 |Nutcracker stats|<p>Nutcracker JSON stats</p>|`Zabbix agent (active)`|system.run[curl -s {$NUTCRACKER_URL}]<p>Update: 1m</p>|
-|Nutcracker server {#POOL}/{#SERVER} incoming queue requests (LLD)|<p>Current number of requests in incoming queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},in_queue]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} incoming queue bytes (LLD)|<p>Current number of bytes in incoming queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},in_queue_bytes]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} outgoing queue requests (LLD)|<p>Current number of requests in outgoing queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},out_queue]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} outgoing queue bytes (LLD)|<p>Current number of bytes in outgoing queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},out_queue_bytes]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} requests per second (LLD)|<p>Number of requests per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},requests]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} request bytes per second (LLD)|<p>Number of request bytes per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},request_bytes]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} responses per second (LLD)|<p>Number of responses per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},responses]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} response bytes per second (LLD)|<p>Number of response bytes per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},response_bytes]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} connections (LLD)|<p>Number of active server connections</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_connections]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} last ejection timestamp (LLD)|<p>Last time when server was ejected at</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_ejected_at]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} EOF per second (LLD)|<p>Number of eof on server connections per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_eof]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} errors per second (LLD)|<p>Number of errors on server connections per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_err]<p>Update: 0</p>|
-|Nutcracker server {#POOL}/{#SERVER} timeouts per second (LLD)|<p>Number of timeouts on server connections per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_timedout]<p>Update: 0</p>|
-|Nutcracker pool {#POOL} client connections (LLD)|<p>Number of active client connections</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},client_connections]<p>Update: 0</p>|
-|Nutcracker pool {#POOL} client EOF per second (LLD)|<p>Number of eof on client connections per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},client_eof]<p>Update: 0</p>|
-|Nutcracker pool {#POOL} client errors per second (LLD)|<p>Number of errors on client connections per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},client_err]<p>Update: 0</p>|
-|Nutcracker pool {#POOL} forward errors per second (LLD)|<p>Number of forwarding errors per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},forward_error]<p>Update: 0</p>|
-|Nutcracker pool {#POOL} fragments per second (LLD)|<p>Number of fragments created from a multi-vector request per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},fragments]<p>Update: 0</p>|
-|Nutcracker pool {#POOL} server ejects per second (LLD)|<p>Number of times backend server was ejected per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},server_ejects]<p>Update: 0</p>|
+|Nutcracker server {#POOL}/{#SERVER} incoming queue requests|<p>Current number of requests in incoming queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},in_queue]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} incoming queue bytes|<p>Current number of bytes in incoming queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},in_queue_bytes]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} outgoing queue requests|<p>Current number of requests in outgoing queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},out_queue]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} outgoing queue bytes|<p>Current number of bytes in outgoing queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},out_queue_bytes]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} requests per second|<p>Number of requests per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},requests]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} request bytes per second|<p>Number of request bytes per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},request_bytes]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} responses per second|<p>Number of responses per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},responses]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} response bytes per second|<p>Number of response bytes per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},response_bytes]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} connections|<p>Number of active server connections</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_connections]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} last ejection timestamp|<p>Last time when server was ejected at</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_ejected_at]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} EOF per second|<p>Number of eof on server connections per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_eof]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} errors per second|<p>Number of errors on server connections per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_err]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker server {#POOL}/{#SERVER} timeouts per second|<p>Number of timeouts on server connections per second</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},server_timedout]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker pool {#POOL} client connections|<p>Number of active client connections</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},client_connections]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker pool {#POOL} client EOF per second|<p>Number of eof on client connections per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},client_eof]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker pool {#POOL} client errors per second|<p>Number of errors on client connections per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},client_err]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker pool {#POOL} forward errors per second|<p>Number of forwarding errors per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},forward_error]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker pool {#POOL} fragments per second|<p>Number of fragments created from a multi-vector request per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},fragments]<p>Update: 0</p><p>LLD</p>|
+|Nutcracker pool {#POOL} server ejects per second|<p>Number of times backend server was ejected per second</p>|`Dependent item`|nutcracker[stats,pools,{#POOL},server_ejects]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -49,11 +49,11 @@ There are no template links in this template.
 |Gluster Storage Total Size|<p>-</p>|`Zabbix agent`|gluster_storage_info["usable_capacity"]<p>Update: 2m</p>|
 |Gluster Storage Used Size|<p>-</p>|`Zabbix agent`|gluster_storage_info["used_capacity"]<p>Update: 2m</p>|
 |Gluster Storage Volume Number|<p>-</p>|`Zabbix agent`|gluster_storage_info["volume_count"]<p>Update: 2m</p>|
-|Gluster Volume % Free Space {#VOLUME_NAME} (LLD)|<p>-</p>|`Calculated`|gluster_volume_free_space[{#VOLUME_NAME}]<p>Update: 30s</p>|
-|Gluster Volume snapshot_count on {#VOLUME_NAME} (LLD)|<p>-</p>|`Zabbix agent`|gluster_volume_info["snapshot_count",{#VOLUME_NAME}]<p>Update: 30s</p>|
-|Gluster Volume state on {#VOLUME_NAME} (LLD)|<p>-</p>|`Zabbix agent`|gluster_volume_info["state",{#VOLUME_NAME}]<p>Update: 30s</p>|
-|Gluster Volume Total Size on {#VOLUME_NAME} (LLD)|<p>-</p>|`Zabbix agent`|gluster_volume_info["usable_capacity",{#VOLUME_NAME}]<p>Update: 30s</p>|
-|Gluster Volume Used Size on {#VOLUME_NAME} (LLD)|<p>-</p>|`Zabbix agent`|gluster_volume_info["used_capacity",{#VOLUME_NAME}]<p>Update: 30s</p>|
+|Gluster Volume % Free Space {#VOLUME_NAME}|<p>-</p>|`Calculated`|gluster_volume_free_space[{#VOLUME_NAME}]<p>Update: 30s</p><p>LLD</p>|
+|Gluster Volume snapshot_count on {#VOLUME_NAME}|<p>-</p>|`Zabbix agent`|gluster_volume_info["snapshot_count",{#VOLUME_NAME}]<p>Update: 30s</p><p>LLD</p>|
+|Gluster Volume state on {#VOLUME_NAME}|<p>-</p>|`Zabbix agent`|gluster_volume_info["state",{#VOLUME_NAME}]<p>Update: 30s</p><p>LLD</p>|
+|Gluster Volume Total Size on {#VOLUME_NAME}|<p>-</p>|`Zabbix agent`|gluster_volume_info["usable_capacity",{#VOLUME_NAME}]<p>Update: 30s</p><p>LLD</p>|
+|Gluster Volume Used Size on {#VOLUME_NAME}|<p>-</p>|`Zabbix agent`|gluster_volume_info["used_capacity",{#VOLUME_NAME}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -33,9 +33,9 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Status file|<p>-</p>|`Zabbix agent`|vfs.file.contents[{$BACKUP_STATUS_FILE}]<p>Update: 1h</p>|
-|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} error (LLD)|<p>-</p>|`Dependent item`|backup.error[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p>|
-|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} success (LLD)|<p>-</p>|`Dependent item`|backup.success[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p>|
-|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} time (LLD)|<p>-</p>|`Dependent item`|backup.time[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p>|
+|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} error|<p>-</p>|`Dependent item`|backup.error[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p><p>LLD</p>|
+|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} success|<p>-</p>|`Dependent item`|backup.success[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p><p>LLD</p>|
+|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} time|<p>-</p>|`Dependent item`|backup.time[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -79,9 +79,9 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Status file|<p>-</p>|`Zabbix agent (active)`|vfs.file.contents[{$BACKUP_STATUS_FILE}]<p>Update: 1h</p>|
-|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} error (LLD)|<p>-</p>|`Dependent item`|backup.error[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p>|
-|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} success (LLD)|<p>-</p>|`Dependent item`|backup.success[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p>|
-|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} time (LLD)|<p>-</p>|`Dependent item`|backup.time[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p>|
+|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} error|<p>-</p>|`Dependent item`|backup.error[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p><p>LLD</p>|
+|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} success|<p>-</p>|`Dependent item`|backup.success[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p><p>LLD</p>|
+|Backup profile {#PROFILENAME} / {#PROFILECOMMAND} time|<p>-</p>|`Dependent item`|backup.time[{#PROFILENAME}, {#PROFILECOMMAND}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

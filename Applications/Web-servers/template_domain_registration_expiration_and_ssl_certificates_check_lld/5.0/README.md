@@ -30,10 +30,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Domain {#DOMAIN_NAME} expire in (LLD)|<p>-</p>|`External check`|whois_expire.sh[{#DOMAIN_NAME}]<p>Update: 1d</p>|
-|HTTPS Service on {#URL}:{#PORT} is running (LLD)|<p>-</p>|`Simple check`|net.tcp.service[https,{#URL},{#PORT}]<p>Update: 5m</p>|
-|SSL certificate validity {#URL}:{#PORT} (LLD)|<p>-</p>|`External check`|zext_ssl_cert.sh[-d,{#URL},{#PORT}]<p>Update: 1h</p>|
-|SSL certificate issuer {#URL}:{#PORT} (LLD)|<p>-</p>|`External check`|zext_ssl_cert.sh[-i,{#URL},{#PORT}]<p>Update: 1h</p>|
+|Domain {#DOMAIN_NAME} expire in|<p>-</p>|`External check`|whois_expire.sh[{#DOMAIN_NAME}]<p>Update: 1d</p><p>LLD</p>|
+|HTTPS Service on {#URL}:{#PORT} is running|<p>-</p>|`Simple check`|net.tcp.service[https,{#URL},{#PORT}]<p>Update: 5m</p><p>LLD</p>|
+|SSL certificate validity {#URL}:{#PORT}|<p>-</p>|`External check`|zext_ssl_cert.sh[-d,{#URL},{#PORT}]<p>Update: 1h</p><p>LLD</p>|
+|SSL certificate issuer {#URL}:{#PORT}|<p>-</p>|`External check`|zext_ssl_cert.sh[-i,{#URL},{#PORT}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

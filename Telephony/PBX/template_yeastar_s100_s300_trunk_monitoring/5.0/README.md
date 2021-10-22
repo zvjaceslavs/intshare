@@ -48,7 +48,7 @@ There are no template links in this template.
 |Wan IP address|<p>-</p>|`SNMP agent`|sWanIpaddress<p>Update: 30m</p>|
 |Wan Status|<p>-</p>|`SNMP agent`|sWanStatus<p>Update: 1m</p>|
 |Wan Subnet Mask|<p>-</p>|`SNMP agent`|sWanSubnetMask<p>Update: 30m</p>|
-|Trunk {#TRUNK_NAME} Status (LLD)|<p>-</p>|`SNMP agent`|sTrunksStatus[{#TRUNK_INDEX}]<p>Update: 1m</p>|
+|Trunk {#TRUNK_NAME} Status|<p>-</p>|`SNMP agent`|sTrunksStatus[{#TRUNK_INDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

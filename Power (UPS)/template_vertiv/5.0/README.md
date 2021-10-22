@@ -53,15 +53,15 @@ There are no template links in this template.
 |psSystemTotalDCEnergy|<p>-</p>|`SNMP agent`|psSystemTotalDCEnergy<p>Update: 1m</p>|
 |Total Load Current|<p>-</p>|`SNMP agent`|psTotalLoadCurrent<p>Update: 1m</p>|
 |Capacidade Usada dos Retificadores|<p>-</p>|`SNMP agent`|rectifiersUsedCapacity<p>Update: 1m</p>|
-|{#DESCR} (LLD)|<p>-</p>|`SNMP agent`|if[{#DESCR}]<p>Update: 1m</p>|
-|{#IFDESCR} - Capacidade da Corrente (LLD)|<p>-</p>|`SNMP agent`|ifCurrentCapacity[{#IFDESCR}]<p>Update: 1h</p>|
-|{#IFDESCR} - Falha no Retificador (LLD)|<p>-</p>|`SNMP agent`|ifFailRectifyer[{#IFDESCR}]<p>Update: 1h</p>|
-|Hardware Version {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|ifHardwareVersion[{#IFDESCR}]<p>Update: 1h</p>|
-|Product Model {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|ifProducModel[{#IFDESCR}]<p>Update: 1h</p>|
-|Software Revision {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|ifSoftwareRevision[{#IFDESCR}]<p>Update: 1h</p>|
-|{#IFDESCR} - Temperature (LLD)|<p>-</p>|`SNMP agent`|ifTemperatura[{#IFDESCR}]<p>Update: 1h</p>|
-|Serial {#IFDESCR} (LLD)|<p>-</p>|`SNMP agent`|serial[{#IFDESCR}]<p>Update: 1h</p>|
-|{#IFBATTERY} - Capacidade (LLD)|<p>Tipo de Bateria Utilizada</p>|`SNMP agent`|ifBatteryRating[{#IFBATTERY}]<p>Update: 1m</p>|
+|{#DESCR}|<p>-</p>|`SNMP agent`|if[{#DESCR}]<p>Update: 1m</p><p>LLD</p>|
+|{#IFDESCR} - Capacidade da Corrente|<p>-</p>|`SNMP agent`|ifCurrentCapacity[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
+|{#IFDESCR} - Falha no Retificador|<p>-</p>|`SNMP agent`|ifFailRectifyer[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
+|Hardware Version {#IFDESCR}|<p>-</p>|`SNMP agent`|ifHardwareVersion[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
+|Product Model {#IFDESCR}|<p>-</p>|`SNMP agent`|ifProducModel[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
+|Software Revision {#IFDESCR}|<p>-</p>|`SNMP agent`|ifSoftwareRevision[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
+|{#IFDESCR} - Temperature|<p>-</p>|`SNMP agent`|ifTemperatura[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
+|Serial {#IFDESCR}|<p>-</p>|`SNMP agent`|serial[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
+|{#IFBATTERY} - Capacidade|<p>Tipo de Bateria Utilizada</p>|`SNMP agent`|ifBatteryRating[{#IFBATTERY}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

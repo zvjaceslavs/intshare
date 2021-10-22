@@ -96,16 +96,16 @@ There are no template links in this template.
 |Device Uptime|<p>The name of the UPS manufacturer.</p>|`SNMP agent`|upsIdentUptime<p>Update: 1m</p>|
 |Input line bads|<p>A count of the number of times the input entered an out-of-tolerance condition as defined by the manufacturer. This count is incremented by one each time the input transitions from zero out-of-tolerance lines to one or more input lines out-of-tolerance. A big number show problems with the electricity power where your UPS is connected</p>|`SNMP agent`|upsInputLineBads<p>Update: 30</p>|
 |Seconds on battery|<p>If the unit is on battery power, the elapsed time since the UPS last switched to battery power, or the time since the network management subsystem was last restarted, whichever is less. Zero shall be returned if the unit is not on battery power.</p>|`SNMP agent`|upsSecondsOnBattery<p>Update: 30</p>|
-|Input current Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsInputCurrent.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Input Frequency phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsInputFrequency.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Input power Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsInputPower.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Input voltage Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsInputVoltage.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Output load in percent Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsOutputPercentLoad.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Output Power Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsOutputPower.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Output Voltage Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsOutputVoltage.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Bypass Current Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsBypassCurrent.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Bypass Power Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsBypassPower.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Bypass Voltage Phase {#SNMPINDEX} (LLD)|<p>-</p>|`SNMP agent`|upsBypassVoltage.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Input current Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsInputCurrent.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input Frequency phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsInputFrequency.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input power Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsInputPower.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input voltage Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsInputVoltage.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output load in percent Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsOutputPercentLoad.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output Power Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsOutputPower.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Output Voltage Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsOutputVoltage.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bypass Current Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsBypassCurrent.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bypass Power Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsBypassPower.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bypass Voltage Phase {#SNMPINDEX}|<p>-</p>|`SNMP agent`|upsBypassVoltage.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

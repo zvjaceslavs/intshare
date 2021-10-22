@@ -45,11 +45,11 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Outside Temperature|<p>-</p>|`External check`|tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","outside_temp"]<p>Update: 15m</p>|
-|Zone {#TADO_ZONE_NAME} Status (LLD)|<p>-</p>|`External check`|tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","zone_status","{#TADO_ZONE_ID}"]<p>Update: 5m</p>|
-|Zone {#TADO_ZONE_NAME} Heating Power (LLD)|<p>-</p>|`Dependent item`|tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]<p>Update: 0</p>|
-|Zone {#TADO_ZONE_NAME} Humidity (LLD)|<p>-</p>|`Dependent item`|tado.zone.humidity[{#TADO_ZONE_NAME}]<p>Update: 0</p>|
-|Zone {#TADO_ZONE_NAME} Target Temperature (LLD)|<p>-</p>|`Dependent item`|tado.zone.target_temp[{#TADO_ZONE_NAME}]<p>Update: 0</p>|
-|Zone {#TADO_ZONE_NAME} Temperature (LLD)|<p>-</p>|`Dependent item`|tado.zone.temp[{#TADO_ZONE_NAME}]<p>Update: 0</p>|
+|Zone {#TADO_ZONE_NAME} Status|<p>-</p>|`External check`|tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","zone_status","{#TADO_ZONE_ID}"]<p>Update: 5m</p><p>LLD</p>|
+|Zone {#TADO_ZONE_NAME} Heating Power|<p>-</p>|`Dependent item`|tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Zone {#TADO_ZONE_NAME} Humidity|<p>-</p>|`Dependent item`|tado.zone.humidity[{#TADO_ZONE_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Zone {#TADO_ZONE_NAME} Target Temperature|<p>-</p>|`Dependent item`|tado.zone.target_temp[{#TADO_ZONE_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Zone {#TADO_ZONE_NAME} Temperature|<p>-</p>|`Dependent item`|tado.zone.temp[{#TADO_ZONE_NAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

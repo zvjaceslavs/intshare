@@ -40,9 +40,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Status on {#PEPVPNNAME} (LLD)|<p>-</p>|`SNMP agent`|pepVpnStatusConnectionState[{#PEPVPNNAME}]<p>Update: 30s</p>|
-|Health Check on {#WANNAME} (LLD)|<p>-</p>|`SNMP agent`|wanHealthCheckState[{#WANNAME}]<p>Update: 30s</p>|
-|Status on {#WANNAME} (LLD)|<p>-</p>|`SNMP agent`|wanState[{#WANNAME}]<p>Update: 1m</p>|
+|Status on {#PEPVPNNAME}|<p>-</p>|`SNMP agent`|pepVpnStatusConnectionState[{#PEPVPNNAME}]<p>Update: 30s</p><p>LLD</p>|
+|Health Check on {#WANNAME}|<p>-</p>|`SNMP agent`|wanHealthCheckState[{#WANNAME}]<p>Update: 30s</p><p>LLD</p>|
+|Status on {#WANNAME}|<p>-</p>|`SNMP agent`|wanState[{#WANNAME}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

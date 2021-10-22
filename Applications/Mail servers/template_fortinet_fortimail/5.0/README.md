@@ -36,8 +36,8 @@ There are no template links in this template.
 |System Load|<p>-</p>|`SNMP agent`|fmlSysSysLoad<p>Update: 30s</p>|
 |Product Firmware Version|<p>-</p>|`SNMP agent`|fmlSysVersion<p>Update: 1h</p>|
 |Antivirus DB Version|<p>-</p>|`SNMP agent`|fmlSysVersionAV<p>Update: 1h</p>|
-|[{#FMLMAILQUEUENAME}] Mail Count (LLD)|<p>-</p>|`SNMP agent`|fmlMailQueueMailCount.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|[{#FMLMAILQUEUENAME}] Mail Size (LLD)|<p>-</p>|`SNMP agent`|fmlMailQueueMailSize.[{#SNMPINDEX}]<p>Update: 30s</p>|
+|[{#FMLMAILQUEUENAME}] Mail Count|<p>-</p>|`SNMP agent`|fmlMailQueueMailCount.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|[{#FMLMAILQUEUENAME}] Mail Size|<p>-</p>|`SNMP agent`|fmlMailQueueMailSize.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

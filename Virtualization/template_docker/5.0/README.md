@@ -38,11 +38,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Container: {#NAMES} (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| jq .Created]<p>Update: 30s</p>|
-|Container: {#NAMES} - Status (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| jq .State.Status]<p>Update: 30s</p>|
-|Container: {#NAMES} - Env.Branch (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_ENV_BRANCH}]<p>Update: 30s</p>|
-|Container: {#NAMES} - Mounts (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_MOUNTS}]<p>Update: 30s</p>|
-|Container: {#NAMES} - Volumes (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_VOLUMES}]<p>Update: 30s</p>|
+|Container: {#NAMES}|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| jq .Created]<p>Update: 30s</p><p>LLD</p>|
+|Container: {#NAMES} - Status|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| jq .State.Status]<p>Update: 30s</p><p>LLD</p>|
+|Container: {#NAMES} - Env.Branch|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_ENV_BRANCH}]<p>Update: 30s</p><p>LLD</p>|
+|Container: {#NAMES} - Mounts|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_MOUNTS}]<p>Update: 30s</p><p>LLD</p>|
+|Container: {#NAMES} - Volumes|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_VOLUMES}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.
@@ -85,11 +85,11 @@ Martin Schroeter
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Container: {#NAMES} (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| jq .Created]<p>Update: 30s</p>|
-|Container: {#NAMES} - Status (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| jq .State.Status]<p>Update: 30s</p>|
-|Container: {#NAMES} - Env.Branch (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_ENV_BRANCH}]<p>Update: 30s</p>|
-|Container: {#NAMES} - Mounts (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_MOUNTS}]<p>Update: 30s</p>|
-|Container: {#NAMES} - Volumes (LLD)|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_VOLUMES}]<p>Update: 30s</p>|
+|Container: {#NAMES}|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| jq .Created]<p>Update: 30s</p><p>LLD</p>|
+|Container: {#NAMES} - Status|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| jq .State.Status]<p>Update: 30s</p><p>LLD</p>|
+|Container: {#NAMES} - Env.Branch|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_ENV_BRANCH}]<p>Update: 30s</p><p>LLD</p>|
+|Container: {#NAMES} - Mounts|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_MOUNTS}]<p>Update: 30s</p><p>LLD</p>|
+|Container: {#NAMES} - Volumes|<p>-</p>|`Zabbix agent`|system.run[curl -s --unix-socket /var/run/docker.sock http:/containers{#NAMES}/json| {$JQ_DOCKER_VOLUMES}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

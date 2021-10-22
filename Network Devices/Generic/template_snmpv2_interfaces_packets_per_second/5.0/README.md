@@ -41,14 +41,14 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Interface {#IFNAME}({#IFALIAS}): Inbound broadcast rate (LLD)|<p>The number of received broadcast packets per second</p>|`SNMP agent`|ifHCInBroadcastPkts[{#IFNAME}]<p>Update: 1m</p>|
-|Interface {#IFNAME}({#IFALIAS}): Inbound multicast rate (LLD)|<p>The number of received multicast packets per second</p>|`SNMP agent`|ifHCInMulticastPkts[{#IFNAME}]<p>Update: 1m</p>|
-|Interface {#IFNAME}({#IFALIAS}): Inbound total rate (LLD)|<p>-</p>|`Calculated`|ifHCInTotalPkts[{#IFNAME}]<p>Update: 1m</p>|
-|Interface {#IFNAME}({#IFALIAS}): Inbound unicast rate (LLD)|<p>The number of received unicast packets per second</p>|`SNMP agent`|ifHCInUcastPkts[{#IFNAME}]<p>Update: 1m</p>|
-|Interface {#IFNAME}({#IFALIAS}): Outbound broadcast rate (LLD)|<p>The number of outgoing broadcast packets per second</p>|`SNMP agent`|ifHCOutBroadcastPkts[{#IFNAME}]<p>Update: 1m</p>|
-|Interface {#IFNAME}({#IFALIAS}): Outbound multicast rate (LLD)|<p>The number of outgoing multicast packets per second</p>|`SNMP agent`|ifHCOutMulticastPkts[{#IFNAME}]<p>Update: 1m</p>|
-|Interface {#IFNAME}({#IFALIAS}): Outbound total rate (LLD)|<p>-</p>|`Calculated`|ifHCOutTotalPkts[{#IFNAME}]<p>Update: 1m</p>|
-|Interface {#IFNAME}({#IFALIAS}): Outbound unicast rate (LLD)|<p>The number of outgoing unicast packets per second</p>|`SNMP agent`|ifHCOutUcastPkts[{#IFNAME}]<p>Update: 1m</p>|
+|Interface {#IFNAME}({#IFALIAS}): Inbound broadcast rate|<p>The number of received broadcast packets per second</p>|`SNMP agent`|ifHCInBroadcastPkts[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Inbound multicast rate|<p>The number of received multicast packets per second</p>|`SNMP agent`|ifHCInMulticastPkts[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Inbound total rate|<p>-</p>|`Calculated`|ifHCInTotalPkts[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Inbound unicast rate|<p>The number of received unicast packets per second</p>|`SNMP agent`|ifHCInUcastPkts[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Outbound broadcast rate|<p>The number of outgoing broadcast packets per second</p>|`SNMP agent`|ifHCOutBroadcastPkts[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Outbound multicast rate|<p>The number of outgoing multicast packets per second</p>|`SNMP agent`|ifHCOutMulticastPkts[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Outbound total rate|<p>-</p>|`Calculated`|ifHCOutTotalPkts[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Interface {#IFNAME}({#IFALIAS}): Outbound unicast rate|<p>The number of outgoing unicast packets per second</p>|`SNMP agent`|ifHCOutUcastPkts[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

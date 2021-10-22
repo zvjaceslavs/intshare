@@ -40,13 +40,13 @@ There are no template links in this template.
 |Tempo na bateria|<p>-</p>|`SNMP agent`|tempo.bateria<p>Update: 1h</p>|
 |Tempo estimado para carga|<p>-</p>|`SNMP agent`|tempo.carga<p>Update: 1h</p>|
 |Tensao da bateria|<p>-</p>|`SNMP agent`|tensao.bateria<p>Update: 1m</p>|
-|Frequencia de entrada da fase $1 (LLD)|<p>-</p>|`SNMP agent`|frequencia.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Percentual de carga na saída da fase $1 (LLD)|<p>-</p>|`SNMP agent`|percentual.s.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Potencia de saída da fase $1 (LLD)|<p>-</p>|`SNMP agent`|potencia.s.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Tensao de entrada da fase $1 (LLD)|<p>-</p>|`SNMP agent`|tensao.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Corrente de saida da fase $1 (LLD)|<p>-</p>|`SNMP agent`|corrente.s.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Corrente de entrada da fase $1 (LLD)|<p>-</p>|`SNMP agent`|corrente.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Tensão de saída da fase $1 (LLD)|<p>-</p>|`SNMP agent`|tensao.s.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Frequencia de entrada da fase $1|<p>-</p>|`SNMP agent`|frequencia.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Percentual de carga na saída da fase $1|<p>-</p>|`SNMP agent`|percentual.s.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Potencia de saída da fase $1|<p>-</p>|`SNMP agent`|potencia.s.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Tensao de entrada da fase $1|<p>-</p>|`SNMP agent`|tensao.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Corrente de saida da fase $1|<p>-</p>|`SNMP agent`|corrente.s.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Corrente de entrada da fase $1|<p>-</p>|`SNMP agent`|corrente.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Tensão de saída da fase $1|<p>-</p>|`SNMP agent`|tensao.s.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

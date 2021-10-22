@@ -61,70 +61,70 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268501248.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/1:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.1.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268503552.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/10:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.10.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268503808.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/11:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.11.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268504064.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/12:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.12.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268504320.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/13:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.13.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268504576.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/14:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.14.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268504832.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/15:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.15.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268505088.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/16:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.16.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268566784.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/1:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.1.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268567040.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/2:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.2.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268567296.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/3:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.3.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268501504.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/2:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.2.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268567552.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/4:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.4.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268567808.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/5:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.5.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268568064.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/6:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.6.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268568320.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/7:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.7.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268568576.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/8:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.8.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268568832.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/9:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.9.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268569088.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/10:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.10.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268569344.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/11:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.11.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268569600.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/12:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.12.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268569856.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/13:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.13.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268501760.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/3:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.3.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268570112.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/14:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.14.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268570368.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/15:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.15.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268570624.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/2/16:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.2.16.[{#SNMPINDEX}]<p>Update: 30</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268502016.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/4:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.4.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268502272.[{#SNMPINDEX}]<p>Update: 10</p>|
-|onu_1/1/5:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.5.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268502528.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/6:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.6.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268502784.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/7:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.7.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268503040.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/8:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.8.[{#SNMPINDEX}]<p>Update: 900</p>|
-|{#SNMPINDEX} Onu-rx (LLD)|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268503296.[{#SNMPINDEX}]<p>Update: 900</p>|
-|onu_1/1/9:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm) (LLD)|<p>-</p>|`Calculated`|pon.onu.1.1.9.[{#SNMPINDEX}]<p>Update: 900</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268501248.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/1:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.1.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268503552.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/10:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.10.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268503808.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/11:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.11.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268504064.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/12:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.12.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268504320.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/13:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.13.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268504576.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/14:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.14.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268504832.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/15:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.15.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268505088.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/16:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.16.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268566784.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/1:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.1.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268567040.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/2:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.2.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268567296.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/3:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.3.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268501504.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/2:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.2.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268567552.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/4:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.4.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268567808.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/5:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.5.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268568064.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/6:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.6.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268568320.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/7:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.7.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268568576.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/8:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.8.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268568832.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/9:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.9.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268569088.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/10:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.10.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268569344.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/11:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.11.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268569600.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/12:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.12.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268569856.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/13:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.13.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268501760.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/3:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.3.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268570112.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/14:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.14.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268570368.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/15:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.15.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268570624.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/2/16:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.2.16.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268502016.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/4:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.4.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268502272.[{#SNMPINDEX}]<p>Update: 10</p><p>LLD</p>|
+|onu_1/1/5:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.5.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268502528.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/6:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.6.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268502784.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/7:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.7.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268503040.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/8:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.8.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|{#SNMPINDEX} Onu-rx|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.3902.1012.3.50.12.1.1.10.268503296.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
+|onu_1/1/9:{#SNMPINDEX}  {#SNMPVALUE} onu signal (dbm)|<p>-</p>|`Calculated`|pon.onu.1.1.9.[{#SNMPINDEX}]<p>Update: 900</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

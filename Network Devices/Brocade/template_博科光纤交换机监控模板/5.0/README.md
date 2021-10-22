@@ -47,8 +47,8 @@ There are no template links in this template.
 |内存利用率|<p>MIB: SW-MIB Memory utilization in %</p>|`SNMP agent`|MemoryUsage<p>Update: 5m</p>|
 |系统信息|<p>-</p>|`SNMP agent`|SystemDescription<p>Update: 1h</p>|
 |运行时间|<p>-</p>|`SNMP agent`|SystemUpTime<p>Update: 1h</p>|
-|传感器状态  {#SNMPVALUE} (LLD)|<p>MIB: SW-MIB</p>|`SNMP agent`|SensorStatus.[{#SNMPINDEX}]<p>Update: 10m</p>|
-|端口:{#IFNAME}({#IFDESC},{#IFWWN})状态 (LLD)|<p>unknow即没插 (0)，online（1），offline（2），testing（3），fault故障（4）</p>|`SNMP agent`|BrocadeInterfaceOperationStatus.[{#SNMPINDEX},{#IFNAME}]<p>Update: 5m</p>|
+|传感器状态  {#SNMPVALUE}|<p>MIB: SW-MIB</p>|`SNMP agent`|SensorStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|端口:{#IFNAME}({#IFDESC},{#IFWWN})状态|<p>unknow即没插 (0)，online（1），offline（2），testing（3），fault故障（4）</p>|`SNMP agent`|BrocadeInterfaceOperationStatus.[{#SNMPINDEX},{#IFNAME}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

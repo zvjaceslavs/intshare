@@ -68,26 +68,26 @@ There are no template links in this template.
 |ZFS ARC total read|<p>-</p>|`Calculated`|zfs.arcstats_total_read<p>Update: 1m</p>|
 |ZFS parameter $1|<p>-</p>|`Zabbix agent (active)`|zfs.get.param[zfs_arc_dnode_limit_percent]<p>Update: 1h</p>|
 |ZFS parameter $1|<p>-</p>|`Zabbix agent (active)`|zfs.get.param[zfs_arc_meta_limit_percent]<p>Update: 1h</p>|
-|Zfs dataset $1 compressratio (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.compressratio[{#FILESETNAME}]<p>Update: 30m</p>|
-|Zfs dataset $1 $2 (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},available]<p>Update: 5m</p>|
-|Zfs dataset $1 $2 (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},referenced]<p>Update: 5m</p>|
-|Zfs dataset $1 $2 (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},usedbychildren]<p>Update: 5m</p>|
-|Zfs dataset $1 $2 (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},usedbydataset]<p>Update: 1h</p>|
-|Zfs dataset $1 $2 (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},usedbysnapshots]<p>Update: 5m</p>|
-|Zfs dataset $1 $2 (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},used]<p>Update: 5m</p>|
-|vdev {#VDEV}: CHECKSUM error counter (LLD)|<p>This device has experienced an unrecoverable error. Determine if the device needs to be replaced. If yes, use 'zpool replace' to replace the device. If not, clear the error with 'zpool clear'.</p>|`Zabbix agent (active)`|zfs.vdev.error_counter.cksum[{#VDEV}]<p>Update: 5m</p>|
-|vdev {#VDEV}: READ error counter (LLD)|<p>This device has experienced an unrecoverable error. Determine if the device needs to be replaced. If yes, use 'zpool replace' to replace the device. If not, clear the error with 'zpool clear'.</p>|`Zabbix agent (active)`|zfs.vdev.error_counter.read[{#VDEV}]<p>Update: 5m</p>|
-|vdev {#VDEV}: WRITE error counter (LLD)|<p>This device has experienced an unrecoverable error. Determine if the device needs to be replaced. If yes, use 'zpool replace' to replace the device. If not, clear the error with 'zpool clear'.</p>|`Zabbix agent (active)`|zfs.vdev.error_counter.write[{#VDEV}]<p>Update: 5m</p>|
-|vdev {#VDEV}: total number of errors (LLD)|<p>This device has experienced an unrecoverable error. Determine if the device needs to be replaced. If yes, use 'zpool replace' to replace the device. If not, clear the error with 'zpool clear'.</p>|`Calculated`|zfs.vdev.error_total[{#VDEV}]<p>Update: 5m</p>|
-|Zpool {#POOLNAME}: Get iostats (LLD)|<p>-</p>|`Zabbix agent (active)`|vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/io]<p>Update: 1m</p>|
-|Zpool {#POOLNAME} available (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#POOLNAME},available]<p>Update: 5m</p>|
-|Zpool {#POOLNAME} used (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#POOLNAME},used]<p>Update: 5m</p>|
-|Zpool {#POOLNAME} Health (LLD)|<p>-</p>|`Zabbix agent (active)`|zfs.zpool.health[{#POOLNAME}]<p>Update: 5m</p>|
-|Zpool {#POOLNAME} scrub status (LLD)|<p>Detect if the pool is currently scrubbing itself. This is not a bad thing itself, but it slows down the entire pool and should be terminated when on production server during business hours if it causes a noticeable slowdown.</p>|`Zabbix agent (active)`|zfs.zpool.scrub[{#POOLNAME}]<p>Update: 5m</p>|
-|Zpool {#POOLNAME} read throughput (LLD)|<p>-</p>|`Dependent item`|zfs.zpool.iostat.nread[{#POOLNAME}]<p>Update: 0</p>|
-|Zpool {#POOLNAME} write throughput (LLD)|<p>-</p>|`Dependent item`|zfs.zpool.iostat.nwritten[{#POOLNAME}]<p>Update: 0</p>|
-|Zpool {#POOLNAME} IOPS: reads (LLD)|<p>-</p>|`Dependent item`|zfs.zpool.iostat.reads[{#POOLNAME}]<p>Update: 0</p>|
-|Zpool {#POOLNAME} IOPS: writes (LLD)|<p>-</p>|`Dependent item`|zfs.zpool.iostat.writes[{#POOLNAME}]<p>Update: 0</p>|
+|Zfs dataset $1 compressratio|<p>-</p>|`Zabbix agent (active)`|zfs.get.compressratio[{#FILESETNAME}]<p>Update: 30m</p><p>LLD</p>|
+|Zfs dataset $1 $2|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},available]<p>Update: 5m</p><p>LLD</p>|
+|Zfs dataset $1 $2|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},referenced]<p>Update: 5m</p><p>LLD</p>|
+|Zfs dataset $1 $2|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},usedbychildren]<p>Update: 5m</p><p>LLD</p>|
+|Zfs dataset $1 $2|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},usedbydataset]<p>Update: 1h</p><p>LLD</p>|
+|Zfs dataset $1 $2|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},usedbysnapshots]<p>Update: 5m</p><p>LLD</p>|
+|Zfs dataset $1 $2|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},used]<p>Update: 5m</p><p>LLD</p>|
+|vdev {#VDEV}: CHECKSUM error counter|<p>This device has experienced an unrecoverable error. Determine if the device needs to be replaced. If yes, use 'zpool replace' to replace the device. If not, clear the error with 'zpool clear'.</p>|`Zabbix agent (active)`|zfs.vdev.error_counter.cksum[{#VDEV}]<p>Update: 5m</p><p>LLD</p>|
+|vdev {#VDEV}: READ error counter|<p>This device has experienced an unrecoverable error. Determine if the device needs to be replaced. If yes, use 'zpool replace' to replace the device. If not, clear the error with 'zpool clear'.</p>|`Zabbix agent (active)`|zfs.vdev.error_counter.read[{#VDEV}]<p>Update: 5m</p><p>LLD</p>|
+|vdev {#VDEV}: WRITE error counter|<p>This device has experienced an unrecoverable error. Determine if the device needs to be replaced. If yes, use 'zpool replace' to replace the device. If not, clear the error with 'zpool clear'.</p>|`Zabbix agent (active)`|zfs.vdev.error_counter.write[{#VDEV}]<p>Update: 5m</p><p>LLD</p>|
+|vdev {#VDEV}: total number of errors|<p>This device has experienced an unrecoverable error. Determine if the device needs to be replaced. If yes, use 'zpool replace' to replace the device. If not, clear the error with 'zpool clear'.</p>|`Calculated`|zfs.vdev.error_total[{#VDEV}]<p>Update: 5m</p><p>LLD</p>|
+|Zpool {#POOLNAME}: Get iostats|<p>-</p>|`Zabbix agent (active)`|vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/io]<p>Update: 1m</p><p>LLD</p>|
+|Zpool {#POOLNAME} available|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#POOLNAME},available]<p>Update: 5m</p><p>LLD</p>|
+|Zpool {#POOLNAME} used|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#POOLNAME},used]<p>Update: 5m</p><p>LLD</p>|
+|Zpool {#POOLNAME} Health|<p>-</p>|`Zabbix agent (active)`|zfs.zpool.health[{#POOLNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Zpool {#POOLNAME} scrub status|<p>Detect if the pool is currently scrubbing itself. This is not a bad thing itself, but it slows down the entire pool and should be terminated when on production server during business hours if it causes a noticeable slowdown.</p>|`Zabbix agent (active)`|zfs.zpool.scrub[{#POOLNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Zpool {#POOLNAME} read throughput|<p>-</p>|`Dependent item`|zfs.zpool.iostat.nread[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
+|Zpool {#POOLNAME} write throughput|<p>-</p>|`Dependent item`|zfs.zpool.iostat.nwritten[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
+|Zpool {#POOLNAME} IOPS: reads|<p>-</p>|`Dependent item`|zfs.zpool.iostat.reads[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
+|Zpool {#POOLNAME} IOPS: writes|<p>-</p>|`Dependent item`|zfs.zpool.iostat.writes[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

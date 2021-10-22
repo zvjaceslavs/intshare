@@ -58,14 +58,14 @@ There are no template links in this template.
 |Number of Input Lines|<p>-</p>|`SNMP agent`|upsInputNumLines<p>Update: 7200</p>|
 |Number of Output Lines|<p>-</p>|`SNMP agent`|upsOutputNumLines<p>Update: 7200</p>|
 |UPS Source Type|<p>other(1), none(2), normal(3), bypass(4), battery(5), booster(6), reducer(7)</p>|`SNMP agent`|upsOutputSource<p>Update: 30</p>|
-|UPS Line {#SNMPINDEX} Output Voltage (LLD)|<p>-</p>|`SNMP agent`|upsOutputCurrent.[{#SNMPVALUE}]<p>Update: 60</p>|
-|UPS Line {#SNMPINDEX} Output Percent Load (LLD)|<p>-</p>|`SNMP agent`|upsOutputPercentLoad.[{#SNMPVALUE}]<p>Update: 60</p>|
-|UPS Line {#SNMPINDEX} Output Power (LLD)|<p>-</p>|`SNMP agent`|upsOutputPower.[{#SNMPVALUE}]<p>Update: 60</p>|
-|UPS Line {#SNMPINDEX} Output Current (LLD)|<p>-</p>|`SNMP agent`|upsOutputVoltage.[{#SNMPVALUE}]<p>Update: 60</p>|
-|UPS Input {#SNMPINDEX} Current (LLD)|<p>-</p>|`SNMP agent`|upsInputCurrent.[{#SNMPVALUE}]<p>Update: 60</p>|
-|UPS Input {#SNMPINDEX} Frequency (LLD)|<p>-</p>|`SNMP agent`|upsInputFrequency.[{#SNMPVALUE}]<p>Update: 60</p>|
-|UPS Input {#SNMPINDEX} Voltage (LLD)|<p>-</p>|`SNMP agent`|upsInputVoltage.[{#SNMPVALUE}]<p>Update: 60</p>|
-|UPS Line {#SNMPINDEX} Bypass Voltage (LLD)|<p>-</p>|`SNMP agent`|upsBypassVoltage.[{#SNMPVALUE}]<p>Update: 60</p>|
+|UPS Line {#SNMPINDEX} Output Voltage|<p>-</p>|`SNMP agent`|upsOutputCurrent.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|UPS Line {#SNMPINDEX} Output Percent Load|<p>-</p>|`SNMP agent`|upsOutputPercentLoad.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|UPS Line {#SNMPINDEX} Output Power|<p>-</p>|`SNMP agent`|upsOutputPower.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|UPS Line {#SNMPINDEX} Output Current|<p>-</p>|`SNMP agent`|upsOutputVoltage.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|UPS Input {#SNMPINDEX} Current|<p>-</p>|`SNMP agent`|upsInputCurrent.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|UPS Input {#SNMPINDEX} Frequency|<p>-</p>|`SNMP agent`|upsInputFrequency.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|UPS Input {#SNMPINDEX} Voltage|<p>-</p>|`SNMP agent`|upsInputVoltage.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|UPS Line {#SNMPINDEX} Bypass Voltage|<p>-</p>|`SNMP agent`|upsBypassVoltage.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

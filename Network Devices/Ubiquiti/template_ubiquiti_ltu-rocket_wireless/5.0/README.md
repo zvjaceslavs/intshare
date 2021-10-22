@@ -67,30 +67,30 @@ There are no template links in this template.
 |Packet per second for tx|<p>-</p>|`SNMP agent`|afLTUTxPps.0<p>Update: 1m</p>|
 |Tx modulation|<p>-</p>|`SNMP agent`|afLTUTxRate.0<p>Update: 60m</p>|
 |Automatic Tx modulation selection|<p>-</p>|`SNMP agent`|afLTUTxRateAuto.0<p>Update: 60m</p>|
-|CPE {#REMOTEMAC} Distance (LLD)|<p>-</p>|`SNMP agent`|Distance[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxPowerLevel0 (cpe) (LLD)|<p>-</p>|`SNMP agent`|RemoteRxPowerLevel0[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} Tx Capacity (LLD)|<p>-</p>|`SNMP agent`|TxCapacity[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxRate (LLD)|<p>-</p>|`SNMP agent`|RxRate[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxPowerLevel1 (ap) (LLD)|<p>-</p>|`SNMP agent`|RxPowerLevel1[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxPowerLevel0 (ap) (LLD)|<p>-</p>|`SNMP agent`|RxPowerLevel0[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxPower1 (ap) (LLD)|<p>-</p>|`SNMP agent`|RxPower1[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxPower0 (ap) (LLD)|<p>-</p>|`SNMP agent`|RxPower0[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} Rx Capacity (LLD)|<p>-</p>|`SNMP agent`|RxCapacity[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} TxPower EIRP (cpe) (LLD)|<p>-</p>|`SNMP agent`|RemoteTxEIRP[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxPowerLevel1 (cpe) (LLD)|<p>-</p>|`SNMP agent`|RemoteRxPowerLevel1[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxPower1 (cpe) (LLD)|<p>-</p>|`SNMP agent`|RemoteRxPower1[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} IdealRxPower0 (ap) (LLD)|<p>-</p>|`SNMP agent`|IdealRxPower0[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxPower0 (cpe) (LLD)|<p>-</p>|`SNMP agent`|RemoteRxPower0[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxIdealPower1 (cpe) (LLD)|<p>-</p>|`SNMP agent`|RemoteIdealRxPower1[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} RxIdealPower0 (cpe) (LLD)|<p>-</p>|`SNMP agent`|RemoteIdealRxPower0[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} Firmware (LLD)|<p>-</p>|`SNMP agent`|RemoteFirmwareVersion[{#SNMPINDEX}]<p>Update: 60m</p>|
-|CPE {#REMOTEMAC} Device Name (LLD)|<p>-</p>|`SNMP agent`|RemoteDevName[{#SNMPINDEX}]<p>Update: 60m</p>|
-|CPE {#REMOTEMAC} Device Model (LLD)|<p>-</p>|`SNMP agent`|RemoteDevModel[{#SNMPINDEX}]<p>Update: 60m</p>|
-|CPE {#REMOTEMAC} Registration Attempts (LLD)|<p>-</p>|`SNMP agent`|RegistrationAttempts[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} Latency (LLD)|<p>-</p>|`SNMP agent`|Latency[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} Last IP address (LLD)|<p>-</p>|`SNMP agent`|LastIpAddress[{#SNMPINDEX}]<p>Update: 15m</p>|
-|CPE {#REMOTEMAC} IdealRxPower1 (ap) (LLD)|<p>-</p>|`SNMP agent`|IdealRxPower1[{#SNMPINDEX}]<p>Update: 5m</p>|
-|CPE {#REMOTEMAC} TxRate (LLD)|<p>-</p>|`SNMP agent`|TxRate[{#SNMPINDEX}]<p>Update: 5m</p>|
+|CPE {#REMOTEMAC} Distance|<p>-</p>|`SNMP agent`|Distance[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxPowerLevel0 (cpe)|<p>-</p>|`SNMP agent`|RemoteRxPowerLevel0[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} Tx Capacity|<p>-</p>|`SNMP agent`|TxCapacity[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxRate|<p>-</p>|`SNMP agent`|RxRate[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxPowerLevel1 (ap)|<p>-</p>|`SNMP agent`|RxPowerLevel1[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxPowerLevel0 (ap)|<p>-</p>|`SNMP agent`|RxPowerLevel0[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxPower1 (ap)|<p>-</p>|`SNMP agent`|RxPower1[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxPower0 (ap)|<p>-</p>|`SNMP agent`|RxPower0[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} Rx Capacity|<p>-</p>|`SNMP agent`|RxCapacity[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} TxPower EIRP (cpe)|<p>-</p>|`SNMP agent`|RemoteTxEIRP[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxPowerLevel1 (cpe)|<p>-</p>|`SNMP agent`|RemoteRxPowerLevel1[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxPower1 (cpe)|<p>-</p>|`SNMP agent`|RemoteRxPower1[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} IdealRxPower0 (ap)|<p>-</p>|`SNMP agent`|IdealRxPower0[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxPower0 (cpe)|<p>-</p>|`SNMP agent`|RemoteRxPower0[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxIdealPower1 (cpe)|<p>-</p>|`SNMP agent`|RemoteIdealRxPower1[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} RxIdealPower0 (cpe)|<p>-</p>|`SNMP agent`|RemoteIdealRxPower0[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} Firmware|<p>-</p>|`SNMP agent`|RemoteFirmwareVersion[{#SNMPINDEX}]<p>Update: 60m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} Device Name|<p>-</p>|`SNMP agent`|RemoteDevName[{#SNMPINDEX}]<p>Update: 60m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} Device Model|<p>-</p>|`SNMP agent`|RemoteDevModel[{#SNMPINDEX}]<p>Update: 60m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} Registration Attempts|<p>-</p>|`SNMP agent`|RegistrationAttempts[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} Latency|<p>-</p>|`SNMP agent`|Latency[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} Last IP address|<p>-</p>|`SNMP agent`|LastIpAddress[{#SNMPINDEX}]<p>Update: 15m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} IdealRxPower1 (ap)|<p>-</p>|`SNMP agent`|IdealRxPower1[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|CPE {#REMOTEMAC} TxRate|<p>-</p>|`SNMP agent`|TxRate[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

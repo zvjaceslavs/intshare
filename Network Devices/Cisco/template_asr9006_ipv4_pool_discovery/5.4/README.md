@@ -52,8 +52,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Pool {#POOLNAME} Free IP Address (LLD)|<p>-</p>|`SNMP agent`|pool.ip.free.[ipfree.{#SNMPINDEX}]<p>Update: 1m</p>|
-|Pool {#POOLNAME} Used IP Address (LLD)|<p>-</p>|`SNMP agent`|pool.ip.used.[used.{#SNMPINDEX}]<p>Update: 1m</p>|
+|Pool {#POOLNAME} Free IP Address|<p>-</p>|`SNMP agent`|pool.ip.free.[ipfree.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Pool {#POOLNAME} Used IP Address|<p>-</p>|`SNMP agent`|pool.ip.used.[used.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

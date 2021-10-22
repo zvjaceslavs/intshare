@@ -39,8 +39,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|VLAN {#SNMPINDEX} - {#NOMEVLAN} - Incoming Traffic (LLD)|<p>-</p>|`SNMP agent`|incoming.traffic[vlan.{#SNMPINDEX}]<p>Update: 5m</p>|
-|VLAN {#SNMPINDEX} - {#NOMEVLAN} - Outgoing Traffic (LLD)|<p>-</p>|`SNMP agent`|outgoing.traffic[vlan.{#SNMPINDEX}]<p>Update: 5m</p>|
+|VLAN {#SNMPINDEX} - {#NOMEVLAN} - Incoming Traffic|<p>-</p>|`SNMP agent`|incoming.traffic[vlan.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|VLAN {#SNMPINDEX} - {#NOMEVLAN} - Outgoing Traffic|<p>-</p>|`SNMP agent`|outgoing.traffic[vlan.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

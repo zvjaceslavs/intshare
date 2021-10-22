@@ -44,14 +44,14 @@ There are no template links in this template.
 |Disk pre-fail|<p>-</p>|`SNMP agent`|preFail<p>Update: 30s</p>|
 |Firmware|<p>-</p>|`SNMP agent`|productFirmwareVersion<p>Update: 60m</p>|
 |Uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 5m</p>|
-|Enclosure {#SNMPINDEX} power fail (LLD)|<p>-</p>|`SNMP agent`|ElecFail.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Enclosure {#SNMPINDEX}  fail (LLD)|<p>-</p>|`SNMP agent`|FanFail.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Enclosure {#SNMPINDEX} sensors fail (LLD)|<p>-</p>|`SNMP agent`|SensorFail.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Enclosure {#SNMPINDEX} temp over (LLD)|<p>-</p>|`SNMP agent`|TempOver.[{#SNMPINDEX}]<p>Update: 60</p>|
-|Enclosure {#SNMPINDEX} power fail (LLD)|<p>-</p>|`SNMP agent`|TempWarn.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Volume[{#VOLNAME}] TotalSize 64 bits (LLD)|<p>-</p>|`SNMP agent`|df64TotalKBytesVol[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Volume[{#VOLNAME}] Used 64 bits (LLD)|<p>-</p>|`SNMP agent`|df64UsedKBytesVol[{#SNMPINDEX}]<p>Update: 3600</p>|
-|Pourcentage [{#VOLNAME}]  vol used (LLD)|<p>-</p>|`Calculated`|Pvolused-[{#VOLNAME}]<p>Update: 3600</p>|
+|Enclosure {#SNMPINDEX} power fail|<p>-</p>|`SNMP agent`|ElecFail.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Enclosure {#SNMPINDEX}  fail|<p>-</p>|`SNMP agent`|FanFail.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Enclosure {#SNMPINDEX} sensors fail|<p>-</p>|`SNMP agent`|SensorFail.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Enclosure {#SNMPINDEX} temp over|<p>-</p>|`SNMP agent`|TempOver.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Enclosure {#SNMPINDEX} power fail|<p>-</p>|`SNMP agent`|TempWarn.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Volume[{#VOLNAME}] TotalSize 64 bits|<p>-</p>|`SNMP agent`|df64TotalKBytesVol[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Volume[{#VOLNAME}] Used 64 bits|<p>-</p>|`SNMP agent`|df64UsedKBytesVol[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|Pourcentage [{#VOLNAME}]  vol used|<p>-</p>|`Calculated`|Pvolused-[{#VOLNAME}]<p>Update: 3600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

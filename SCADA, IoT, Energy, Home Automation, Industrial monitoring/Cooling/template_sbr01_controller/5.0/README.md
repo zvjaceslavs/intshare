@@ -95,7 +95,7 @@ There are no template links in this template.
 |Activation threshold|<p>-</p>|`SNMP agent`|sbr01.system.setTemp<p>Update: 10m</p>|
 |Room temperature|<p>-</p>|`SNMP agent`|sbr01.system.tempRoom<p>Update: 2m</p>|
 |Error response time|<p>-</p>|`SNMP agent`|sbr01.system.timeError<p>Update: 10m</p>|
-|Conditioner number (LLD)|<p>-</p>|`SNMP agent`|sbr01.conditioners.conditioner[{#SNMPINDEX}]<p>Update: 30s</p>|
+|Conditioner number|<p>-</p>|`SNMP agent`|sbr01.conditioners.conditioner[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

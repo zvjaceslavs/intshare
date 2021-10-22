@@ -30,27 +30,27 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |State of the system|<p>Huawei 15-level HEALTH STATUS E (SHD)</p>|`SNMP agent`|status.0<p>Update: 30s</p>|
-|Condition Disk Domain: {#DISKDNAME} (LLD)|<p>-</p>|`SNMP agent`|hwInfoDiskDomainHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Running status Disk Domain: {#DISKDNAME} (LLD)|<p>-</p>|`SNMP agent`|hwInfoDiskDomainRunningStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Storage Pool: {#POOLNAME} Allocated Capacity at % (LLD)|<p>-</p>|`Calculated`|hwInfoStoragePoolCapacityProc.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Condition Storage Pool: {#POOLNAME} (LLD)|<p>-</p>|`SNMP agent`|hwInfoStoragePoolHealthStatus.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Storage Pool: {#POOLNAME} Capacity in bytes (LLD)|<p>-</p>|`SNMP agent`|hwInfoStoragePoolTotal.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|Storage Pool: {#POOLNAME} Allocated Capacity in bytes (LLD)|<p>-</p>|`SNMP agent`|hwInfoStoragePoolUsed.[{#SNMPINDEX}]<p>Update: 30s</p>|
-|LUN {#LUNNAME} Capacity in bytes (LLD)|<p>-</p>|`SNMP agent`|hwInfoLunCapacity.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|LUN {#LUNNAME} Allocated Capacity at % (LLD)|<p>-</p>|`Calculated`|hwInfoLunCapacityProc.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|LUN Status {#LUNNAME} (LLD)|<p>-</p>|`SNMP agent`|hwInfoLunHealthStatus.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {#LUNNAME} Allocated Capacity in bytes (LLD)|<p>-</p>|`SNMP agent`|hwInfoLunSubscribedCapacity.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Fan condition: {#FANLOCATION} (LLD)|<p>-</p>|`SNMP agent`|hwInfoFanHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|Port: {#PORTLOCATION} I/O latancy (LLD)|<p>-</p>|`SNMP agent`|hwPerfPortDelay.[{#SNMPINDEX}]<p>Update: 5m</p>|
-|LUN {$LUNID{#LUNPID}} Read IOPS (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunReadIOPS.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Read bandwidth MB/s (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunReadTraffic.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Total IOPS (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunTotalIOPS.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Total bandwidth MB/s (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunTotalTraffic.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Write IOPS (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunWriteIOPS.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|LUN {$LUNID{#LUNPID}} Write bandwidth MB/s (LLD)|<p>-</p>|`SNMP agent`|hwPerfLunWriteTraffic.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Using the CPU controller: {#CONLOCATION} at % (LLD)|<p>-</p>|`SNMP agent`|hwInfoControllerCPUUsage.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Controller status: {#CONLOCATION} (LLD)|<p>-</p>|`SNMP agent`|hwInfoControllerHealthStatus.[{#SNMPINDEX}]<p>Update: 1m</p>|
-|Using the Memory Controller: {#CONLOCATION} at % (LLD)|<p>-</p>|`SNMP agent`|hwInfoControllerMemoryUsage.[{#SNMPINDEX}]<p>Update: 1m</p>|
+|Condition Disk Domain: {#DISKDNAME}|<p>-</p>|`SNMP agent`|hwInfoDiskDomainHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Running status Disk Domain: {#DISKDNAME}|<p>-</p>|`SNMP agent`|hwInfoDiskDomainRunningStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Storage Pool: {#POOLNAME} Allocated Capacity at %|<p>-</p>|`Calculated`|hwInfoStoragePoolCapacityProc.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Condition Storage Pool: {#POOLNAME}|<p>-</p>|`SNMP agent`|hwInfoStoragePoolHealthStatus.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Storage Pool: {#POOLNAME} Capacity in bytes|<p>-</p>|`SNMP agent`|hwInfoStoragePoolTotal.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|Storage Pool: {#POOLNAME} Allocated Capacity in bytes|<p>-</p>|`SNMP agent`|hwInfoStoragePoolUsed.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|LUN {#LUNNAME} Capacity in bytes|<p>-</p>|`SNMP agent`|hwInfoLunCapacity.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|LUN {#LUNNAME} Allocated Capacity at %|<p>-</p>|`Calculated`|hwInfoLunCapacityProc.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|LUN Status {#LUNNAME}|<p>-</p>|`SNMP agent`|hwInfoLunHealthStatus.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {#LUNNAME} Allocated Capacity in bytes|<p>-</p>|`SNMP agent`|hwInfoLunSubscribedCapacity.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Fan condition: {#FANLOCATION}|<p>-</p>|`SNMP agent`|hwInfoFanHealthStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Port: {#PORTLOCATION} I/O latancy|<p>-</p>|`SNMP agent`|hwPerfPortDelay.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Read IOPS|<p>-</p>|`SNMP agent`|hwPerfLunReadIOPS.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Read bandwidth MB/s|<p>-</p>|`SNMP agent`|hwPerfLunReadTraffic.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Total IOPS|<p>-</p>|`SNMP agent`|hwPerfLunTotalIOPS.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Total bandwidth MB/s|<p>-</p>|`SNMP agent`|hwPerfLunTotalTraffic.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Write IOPS|<p>-</p>|`SNMP agent`|hwPerfLunWriteIOPS.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|LUN {$LUNID{#LUNPID}} Write bandwidth MB/s|<p>-</p>|`SNMP agent`|hwPerfLunWriteTraffic.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Using the CPU controller: {#CONLOCATION} at %|<p>-</p>|`SNMP agent`|hwInfoControllerCPUUsage.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Controller status: {#CONLOCATION}|<p>-</p>|`SNMP agent`|hwInfoControllerHealthStatus.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Using the Memory Controller: {#CONLOCATION} at %|<p>-</p>|`SNMP agent`|hwInfoControllerMemoryUsage.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
