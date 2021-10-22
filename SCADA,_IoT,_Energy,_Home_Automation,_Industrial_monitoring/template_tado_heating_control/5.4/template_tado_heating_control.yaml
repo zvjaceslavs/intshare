@@ -1,0 +1,188 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-10-22T10:10:43Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 03c1f3163ece4f68a6f332a0c29f0462
+      template: 'Tado Template'
+      name: 'Tado Template'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 0e4bcbed1d8547668e0d277686bb8554
+          name: 'Outside Temperature'
+          type: EXTERNAL
+          key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","outside_temp"]'
+          delay: 15m
+          value_type: FLOAT
+      discovery_rules:
+        -
+          uuid: ddc40004e4e2446ab4af20e6059fe3ce
+          name: 'Discovery Zones'
+          type: EXTERNAL
+          key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","list_zones"]'
+          delay: 1h
+          item_prototypes:
+            -
+              uuid: 2e92f7fc3ebf4aafbaa4003c2b4412e5
+              name: 'Zone {#TADO_ZONE_NAME} Heating Power'
+              type: DEPENDENT
+              key: 'tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]'
+              delay: '0'
+              value_type: FLOAT
+              units: '%'
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - $.heating_power_percentage
+              master_item:
+                key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","zone_status","{#TADO_ZONE_ID}"]'
+            -
+              uuid: 6896e037612f4278b05b463b6c288461
+              name: 'Zone {#TADO_ZONE_NAME} Humidity'
+              type: DEPENDENT
+              key: 'tado.zone.humidity[{#TADO_ZONE_NAME}]'
+              delay: '0'
+              value_type: FLOAT
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - $.humidity
+              master_item:
+                key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","zone_status","{#TADO_ZONE_ID}"]'
+            -
+              uuid: 51b2597f817640a4b8649bc8b65a3cc0
+              name: 'Zone {#TADO_ZONE_NAME} Target Temperature'
+              type: DEPENDENT
+              key: 'tado.zone.target_temp[{#TADO_ZONE_NAME}]'
+              delay: '0'
+              value_type: FLOAT
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - $.target_temp
+                -
+                  type: IN_RANGE
+                  parameters:
+                    - '1'
+                    - '99'
+                  error_handler: DISCARD_VALUE
+              master_item:
+                key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","zone_status","{#TADO_ZONE_ID}"]'
+            -
+              uuid: 6b9433b09ea7419fada0484b86b76773
+              name: 'Zone {#TADO_ZONE_NAME} Temperature'
+              type: DEPENDENT
+              key: 'tado.zone.temp[{#TADO_ZONE_NAME}]'
+              delay: '0'
+              value_type: FLOAT
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - $.temp
+              master_item:
+                key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","zone_status","{#TADO_ZONE_ID}"]'
+            -
+              uuid: 81b96e7b69ac43069cd17b5f06640863
+              name: 'Zone {#TADO_ZONE_NAME} Status'
+              type: EXTERNAL
+              key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","zone_status","{#TADO_ZONE_ID}"]'
+              delay: 5m
+              trends: '0'
+              value_type: TEXT
+          graph_prototypes:
+            -
+              uuid: f046b4b91d894b09a2c25eb0a678160c
+              name: 'Zone {#TADO_ZONE_NAME} All-in-One'
+              graph_items:
+                -
+                  sortorder: '1'
+                  drawtype: FILLED_REGION
+                  color: FFECB3
+                  yaxisside: RIGHT
+                  item:
+                    host: 'Tado Template'
+                    key: 'tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]'
+                -
+                  sortorder: '2'
+                  color: F63100
+                  item:
+                    host: 'Tado Template'
+                    key: 'tado.zone.temp[{#TADO_ZONE_NAME}]'
+                -
+                  sortorder: '3'
+                  color: 00FF00
+                  item:
+                    host: 'Tado Template'
+                    key: 'tado.zone.target_temp[{#TADO_ZONE_NAME}]'
+                -
+                  sortorder: '4'
+                  color: 0040FF
+                  yaxisside: RIGHT
+                  item:
+                    host: 'Tado Template'
+                    key: 'tado.zone.humidity[{#TADO_ZONE_NAME}]'
+            -
+              uuid: 81599d81c5f34d888c8facd7c9318fff
+              name: 'Zone {#TADO_ZONE_NAME} Heating Power'
+              graph_items:
+                -
+                  sortorder: '1'
+                  drawtype: FILLED_REGION
+                  color: FFECB3
+                  item:
+                    host: 'Tado Template'
+                    key: 'tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]'
+            -
+              uuid: f01f69c94bbb497886fc7b9f203886b0
+              name: 'Zone {#TADO_ZONE_NAME} Temp and Humidity'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: F63100
+                  item:
+                    host: 'Tado Template'
+                    key: 'tado.zone.temp[{#TADO_ZONE_NAME}]'
+                -
+                  sortorder: '2'
+                  color: 00FF00
+                  item:
+                    host: 'Tado Template'
+                    key: 'tado.zone.target_temp[{#TADO_ZONE_NAME}]'
+                -
+                  sortorder: '3'
+                  color: 0040FF
+                  yaxisside: RIGHT
+                  item:
+                    host: 'Tado Template'
+                    key: 'tado.zone.humidity[{#TADO_ZONE_NAME}]'
+      macros:
+        -
+          macro: '{$TADO_PASSWD}'
+          type: SECRET_TEXT
+          description: 'Password for Tado'
+        -
+          macro: '{$TADO_USER}'
+          value: this_is_dummy_password
+          description: 'Username for Tado'
+  graphs:
+    -
+      uuid: 81cefe08cdf14f91a6da4ddff3950086
+      name: 'Outside Temperature'
+      graph_items:
+        -
+          sortorder: '1'
+          color: FF0000
+          item:
+            host: 'Tado Template'
+            key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","outside_temp"]'

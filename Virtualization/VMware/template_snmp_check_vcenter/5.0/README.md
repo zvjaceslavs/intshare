@@ -68,6 +68,7 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Process vmware-syslog Perf CPU|<p>VMware Common Logging Service</p>|`SNMP agent`|SNMP-Process-vmware_syslog-Perf-CPU<p>Update: 60</p>|
+|Process vmware-psc-client Perf CPU|<p>VMware Platform Services Controller</p>|`SNMP agent`|SNMP-Process-vmware_psc_client-Perf-CPU<p>Update: 60</p>|
 |Process vmware-cm Status|<p>VMware Component Manager</p>|`SNMP agent`|SNMP-Process-vmware_cm-Status<p>Update: 60</p>|
 |Process vmware-vws Perf Memory|<p>VMware System and Hardware Health Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vws-Perf-Memory<p>Update: 60</p>|
 |Process vmcad Perf Memory|<p>VMware Certificate Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmcad-Perf-Memory<p>Update: 60</p>|
@@ -93,7 +94,6 @@ There are no template links in this template.
 |Process vmafdd Perf Memory|<p>VMware Authentication Framework Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmafdd-Perf-Memory<p>Update: 60</p>|
 |Process vmware-rbd-watchdog Status|<p>VMware vSphere Auto Deploy Waiter</p>|`SNMP agent`|SNMP-Process-vmware_rbd_watchdog-Status<p>Update: 60</p>|
 |Process vmware-syslog-health Status|<p>VMware Syslog Health Service</p>|`SNMP agent`|SNMP-Process-vmware_syslog_health-Status<p>Update: 60</p>|
-|Process vmware-syslog-health Perf Memory|<p>VMware Syslog Health Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_syslog_health-Perf-Memory<p>Update: 60</p>|
 |Process vmware-sts-idmd Perf Memory|<p>VMware Identity Management Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_sts_idmd-Perf-Memory<p>Update: 60</p>|
 |Process vmware-vdcs Perf CPU|<p>VMware Content Library Service</p>|`SNMP agent`|SNMP-Process-vmware_vdcs-Perf-CPU<p>Update: 60</p>|
 |Process vmware-vsm Perf Memory|<p>VMware vService Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vsm-Perf-Memory<p>Update: 60</p>|
@@ -101,6 +101,7 @@ There are no template links in this template.
 |Process vmware-rhttpproxy Perf Memory|<p>VMware HTTP Reverse Proxy Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_rhttpproxy-Perf-Memory<p>Update: 60</p>|
 |Process vmware-perfcharts Perf CPU|<p>VMware Performance Charts</p>|`SNMP agent`|SNMP-Process-vmware_perfcharts-Perf-CPU<p>Update: 60</p>|
 |Process vmware-vws Status|<p>VMware System and Hardware Health Manager</p>|`SNMP agent`|SNMP-Process-vmware_vws-Status<p>Update: 60</p>|
+|Process vmware-syslog-health Perf Memory|<p>VMware Syslog Health Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_syslog_health-Perf-Memory<p>Update: 60</p>|
 |Process vmware-syslog-health Perf CPU|<p>VMware Syslog Health Service</p>|`SNMP agent`|SNMP-Process-vmware_syslog_health-Perf-CPU<p>Update: 60</p>|
 |Process vmware-tools-vgauth Perf Memory|<p>VMware Tools Guest Authentication Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_tools_vgauth-Perf-Memory<p>Update: 60</p>|
 |Process vmware-syslog Status|<p>VMware Common Logging Service</p>|`SNMP agent`|SNMP-Process-vmware_syslog-Status<p>Update: 60</p>|
@@ -111,7 +112,6 @@ There are no template links in this template.
 |Process vmware-vws Perf CPU|<p>VMware System and Hardware Health Manager</p>|`SNMP agent`|SNMP-Process-vmware_vws-Perf-CPU<p>Update: 60</p>|
 |Process vmware-vsm Status|<p>VMware vService Manager</p>|`SNMP agent`|SNMP-Process-vmware_vsm-Status<p>Update: 60</p>|
 |Process vmware-vpx-workflow Perf CPU|<p>VMware vCenter Workflow Manager</p>|`SNMP agent`|SNMP-Process-vmware_vpx_workflow-Perf-CPU<p>Update: 60</p>|
-|Process vmware-vpxd Status|<p>Demon vCenter</p>|`SNMP agent`|SNMP-Process-vmware_vpxd-Status<p>Update: 60</p>|
 |Process vmware-sca Status|<p>VMware Service Control Agent</p>|`SNMP agent`|SNMP-Process-vmware_sca-Status<p>Update: 60</p>|
 |File System Allocation Erreur|<p>Espace alloue file system</p>|`SNMP agent`|SNMP-File-System-allocation-erreur<p>Update: 60</p>|
 |Process vmdird Perf CPU|<p>VMware Directory Service</p>|`SNMP agent`|SNMP-Process-vmdird-Perf-CPU<p>Update: 60</p>|
@@ -131,22 +131,21 @@ There are no template links in this template.
 |Process vmware-vapi-endpoint Status|<p>VMware vAPI Endpoint</p>|`SNMP agent`|SNMP-Process-vmware_vapi_endpoint-Status<p>Update: 60</p>|
 |Process vmware-tools-vgauth Perf CPU|<p>VMware Tools Guest Authentication</p>|`SNMP agent`|SNMP-Process-vmware_tools_vgauth-Perf-CPU<p>Update: 60</p>|
 |Process vmware-eam Perf CPU|<p>VMware ESX Agent Manager</p>|`SNMP agent`|SNMP-Process-vmware_eam-Perf-CPU<p>Update: 60</p>|
-|Process vmware-cm Perf Memory|<p>VMware Component Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_cm-Perf-Memory<p>Update: 60</p>|
 |Process vmdird Perf Memory|<p>VMware Directory Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmdird-Perf-Memory<p>Update: 60</p>|
 |Process vmware-eam Status|<p>VMware ESX Agent Manager</p>|`SNMP agent`|SNMP-Process-vmware_eam-Status<p>Update: 60</p>|
-|Process vmware-invsvc Perf CPU|<p>VMware Inventory Service</p>|`SNMP agent`|SNMP-Process-vmware_invsvc-Perf-CPU<p>Update: 60</p>|
-|Process vmware-netdumper Perf Memory|<p>VMware vSphere ESXi Dump Collector Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_netdumper-Perf-Memory<p>Update: 60</p>|
 |Process vmware-vpxd Perf Memory|<p>Demon vCenter Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vpxd-Perf-Memory<p>Update: 60</p>|
 |Process vmware-invsvc Status|<p>VMware Inventory Service</p>|`SNMP agent`|SNMP-Process-vmware_invsvc-Status<p>Update: 60</p>|
-|Process vmware-sts-idmd Status|<p>VMware Identity Management Service</p>|`SNMP agent`|SNMP-Process-vmware_sts_idmd-Status<p>Update: 60</p>|
-|Process vmware-sts-idmd Perf CPU|<p>VMware Identity Management Service</p>|`SNMP agent`|SNMP-Process-vmware_sts_idmd-Perf-CPU<p>Update: 60</p>|
-|Process vmware-stsd Status|<p>VMware Security Token Service</p>|`SNMP agent`|SNMP-Process-vmware_stsd-Status<p>Update: 60</p>|
-|Process vmware-vsm Perf CPU|<p>VMware vService Manager</p>|`SNMP agent`|SNMP-Process-vmware_vsm-Perf-CPU<p>Update: 60</p>|
 |Process vmware-vsan-health Perf CPU|<p>VMware vSAN Health Service</p>|`SNMP agent`|SNMP-Process-vmware_vsan_health-Perf-CPU<p>Update: 60</p>|
 |Process vmware-eam Perf Memory|<p>VMware ESX Agent Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_eam-Perf-Memory<p>Update: 60</p>|
 |Process vmware-sca Perf Memory|<p>VMware Service Control Agent Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_sca-Perf-Memory<p>Update: 60</p>|
 |Process vmware-sca Perf CPU|<p>VMware Service Control Agent</p>|`SNMP agent`|SNMP-Process-vmware_sca-Perf-CPU<p>Update: 60</p>|
 |Process vmware-rhttpproxy Status|<p>VMware HTTP Reverse Proxy</p>|`SNMP agent`|SNMP-Process-vmware_rhttpproxy-Status<p>Update: 60</p>|
+|Process vmware-sts-idmd Status|<p>VMware Identity Management Service</p>|`SNMP agent`|SNMP-Process-vmware_sts_idmd-Status<p>Update: 60</p>|
+|Process vmware-sts-idmd Perf CPU|<p>VMware Identity Management Service</p>|`SNMP agent`|SNMP-Process-vmware_sts_idmd-Perf-CPU<p>Update: 60</p>|
+|Process vmware-stsd Status|<p>VMware Security Token Service</p>|`SNMP agent`|SNMP-Process-vmware_stsd-Status<p>Update: 60</p>|
+|Process vmware-vsm Perf CPU|<p>VMware vService Manager</p>|`SNMP agent`|SNMP-Process-vmware_vsm-Perf-CPU<p>Update: 60</p>|
+|Process vmware-vpxd Status|<p>Demon vCenter</p>|`SNMP agent`|SNMP-Process-vmware_vpxd-Status<p>Update: 60</p>|
+|Process vmware-invsvc Perf CPU|<p>VMware Inventory Service</p>|`SNMP agent`|SNMP-Process-vmware_invsvc-Perf-CPU<p>Update: 60</p>|
 |Process vmware-tools-vgauth Status|<p>VMware Tools Guest Authentication</p>|`SNMP agent`|SNMP-Process-vmware_tools_vgauth-Status<p>Update: 60</p>|
 |Process vmware-vpx-workflow Perf Memory|<p>VMware vCenter Workflow Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vpx_workflow-Perf-Memory<p>Update: 60</p>|
 |Process vmware-vpostgres Status|<p>VMware Postgres</p>|`SNMP agent`|SNMP-Process-vmware_vpostgres-Status<p>Update: 60</p>|
@@ -158,8 +157,9 @@ There are no template links in this template.
 |Process vmafdd Perf CPU|<p>VMware Authentication Framework</p>|`SNMP agent`|SNMP-Process-vmafdd-Perf-CPU<p>Update: 60</p>|
 |Nombre de Processus|<p>-</p>|`SNMP agent`|SNMP-Nombre-Processus<p>Update: 60</p>|
 |Memory Allocation Error|<p>-</p>|`SNMP agent`|SNMP-Memory-Allocation-Error<p>Update: 60</p>|
+|Process vmware-cm Perf Memory|<p>VMware Component Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_cm-Perf-Memory<p>Update: 60</p>|
+|Process vmware-netdumper Perf Memory|<p>VMware vSphere ESXi Dump Collector Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_netdumper-Perf-Memory<p>Update: 60</p>|
 |Process vmcad Status|<p>VMware Certificate Service</p>|`SNMP agent`|SNMP-Process-vmcad-Status<p>Update: 60</p>|
-|Process vmware-psc-client Perf CPU|<p>VMware Platform Services Controller</p>|`SNMP agent`|SNMP-Process-vmware_psc_client-Perf-CPU<p>Update: 60</p>|
 |Process vmware-psc-client Status|<p>Platform Services Controller</p>|`SNMP agent`|SNMP-Process-vmware_psc_client-Status<p>Update: 60</p>|
 |CPU {#SNMPINDEX} Charge|<p>-</p>|`SNMP agent`|SNMP-Charge-CPU-.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |CPU {#SNMPINDEX} Name|<p>-</p>|`SNMP agent`|SNMP-Name-CPU-.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|

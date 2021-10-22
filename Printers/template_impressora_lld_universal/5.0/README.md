@@ -47,11 +47,11 @@ There are no template links in this template.
 |Descoberta LLD Descricao do Hardware|<p>-</p>|`SNMP agent`|hrDeviceDescr<p>Update: 3600</p>|
 |Descoberta LLD Nivel de Papel MP 1|<p>-</p>|`SNMP agent`|prtInputDescriptionMp1<p>Update: 3600</p>|
 |Descoberta LLD Nivel de Papel Tray 2|<p>-</p>|`SNMP agent`|prtInputDescriptionTray2<p>Update: 3600</p>|
-|Descoberta LLD Fusor|<p>-</p>|`SNMP agent`|prtMarkerFusorDescription<p>Update: 3600</p>|
 |Descoberta LLD Unit Toner|<p>-</p>|`SNMP agent`|prtMarkerSuppliesDescription<p>Update: 3600</p>|
 |Descoberta LLD Toner Black|<p>-</p>|`SNMP agent`|prtMarkerSuppliesDescriptionBlack<p>Update: 3600</p>|
 |Descoberta LLD Toner Cyan|<p>-</p>|`SNMP agent`|prtMarkerSuppliesDescriptionCyan<p>Update: 3600</p>|
 |Descoberta LLD Toner Magenta|<p>-</p>|`SNMP agent`|prtMarkerSuppliesDescriptionMagenta<p>Update: 3600</p>|
+|Descoberta LLD Fusor|<p>-</p>|`SNMP agent`|prtMarkerFusorDescription<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
@@ -108,11 +108,6 @@ There are no template links in this template.
 |Nivel de Papel da Bandeja $1|<p>-</p>|`SNMP agent`|prtInputCurrentLevelTray2[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Descricao da Bandeja 2|<p>-</p>|`SNMP agent`|prtInputDescriptionTray1[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Maxima Capacidade da Bandeja $1|<p>-</p>|`SNMP agent`|prtInputMaxCapacityTray2[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
-|Maxima Capacidade do Fusor $1|<p>-</p>|`SNMP agent`|prtMarkerFusorCapacity[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
-|Descricao do Fusor|<p>-</p>|`SNMP agent`|prtMarkerFusorDescription[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
-|Nivel de Capacidade do Fusor|<p>-</p>|`SNMP agent`|prtMarkerFusorLevel[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
-|Tempo de Vida do Fusor ( Impressoes)|<p>-</p>|`Calculated`|vidafusorImpressoes[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
-|Tempo de Vida Restante no Fusor|<p>-</p>|`Calculated`|vidafusor[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Tipo de Classe da Unidade $1|<p>-</p>|`SNMP agent`|prtMarkerSuppliesClassUnit[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Descricao da Unidade|<p>-</p>|`SNMP agent`|prtMarkerSuppliesDescription[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Nivel de Capacidade da Unidade $1|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevel[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
@@ -143,6 +138,11 @@ There are no template links in this template.
 |Maxima Capacidade de Suprimentos do $1|<p>-</p>|`SNMP agent`|prtMarkerSuppliesMaxCapacityMagenta[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Tipo de Suprimentos do $1|<p>-</p>|`SNMP agent`|prtMarkerSuppliesTypeMagenta[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Nivel do $1 ( Porcentagem)|<p>-</p>|`Calculated`|totaltonerMagenta[{#SNMPVALUE}]<p>Update: 900</p><p>LLD</p>|
+|Maxima Capacidade do Fusor $1|<p>-</p>|`SNMP agent`|prtMarkerFusorCapacity[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
+|Descricao do Fusor|<p>-</p>|`SNMP agent`|prtMarkerFusorDescription[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
+|Nivel de Capacidade do Fusor|<p>-</p>|`SNMP agent`|prtMarkerFusorLevel[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
+|Tempo de Vida do Fusor ( Impressoes)|<p>-</p>|`Calculated`|vidafusorImpressoes[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
+|Tempo de Vida Restante no Fusor|<p>-</p>|`Calculated`|vidafusor[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -203,7 +203,6 @@ There are no template links in this template.
 |Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  Na {HOSTNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:niveldepapelTray2[{#SNMPVALUE}].last()}=2</p><p>**Recovery expression**: </p>|warning|
 |Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  Na {HOSTNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:niveldepapelTray2[{#SNMPVALUE}].last()}=3</p><p>**Recovery expression**: </p>|information|
 |Nivel de Papel A4 Acabando Abaixo de {ITEM.VALUE}  Na {HOSTNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:niveldepapelTray2[{#SNMPVALUE}].last()}=4</p><p>**Recovery expression**: </p>|information|
-|Vida Util do Fusor em {ITEM.VALUE} Troca Necessaria na {HOSTNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:vidafusor[{#SNMPVALUE}].last()}<5</p><p>**Recovery expression**: </p>|information|
 |A Unidade {ITEM.VALUE} Foi alterado na Impressora {HOSTNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:prtMarkerSuppliesDescription[{#SNMPVALUE}].diff(0)}>0</p><p>**Recovery expression**: </p>|information|
 |Tempo de Vida {#SNMPVALUE} em {ITEM.VALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:TempodeVidautilUnit[{#SNMPVALUE}].last()}<5</p><p>**Recovery expression**: </p>|warning|
 |Nivel do {#SNMPVALUE} em {ITEM.VALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:totaltonerBlack[{#SNMPVALUE}].last()}<1</p><p>**Recovery expression**: </p>|high|
@@ -227,3 +226,4 @@ There are no template links in this template.
 |Nivel do Toner {#SNMPVALUE} em {ITEM.VALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:totaltonerMagenta[{#SNMPVALUE}].last()}=5</p><p>**Recovery expression**: </p>|information|
 |O Toner {ITEM.VALUE} Foi alterado na Impressora {HOSTNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:prtMarkerSuppliesDescriptionMagenta[{#SNMPVALUE}].diff(0)}>0</p><p>**Recovery expression**: </p>|information|
 |Troca Necessaria do {#SNMPVALUE} em {ITEM.VALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:totaltonerMagenta[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Vida Util do Fusor em {ITEM.VALUE} Troca Necessaria na {HOSTNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template_Snmp_Impressora_LLD_VERSAO-0.1:vidafusor[{#SNMPVALUE}].last()}<5</p><p>**Recovery expression**: </p>|information|

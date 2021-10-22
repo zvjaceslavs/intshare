@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-22T10:07:08Z</date>
+  <groups>
+    <group>
+      <name>AMD Mining Rigs</name>
+    </group>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Blank AMD</template>
+      <name>Blank AMD</name>
+      <description>This is a Blank AMD template</description>
+      <groups>
+        <group>
+          <name>AMD Mining Rigs</name>
+        </group>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>AMD</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>GPU 0 Fan</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Control"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>%</units>
+        </item>
+        <item>
+          <name>GPU 0 Load</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Load"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>%</units>
+          <triggers>
+            <trigger>
+              <expression>{last()}&lt;60</expression>
+              <name>GPU Load is Low</name>
+              <status>DISABLED</status>
+              <priority>DISASTER</priority>
+              <description>GPU Load is low!!!!!!!!!!!!!!!</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>GPU 0 Temp</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Temperature"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <value_type>FLOAT</value_type>
+          <units>C</units>
+          <triggers>
+            <trigger>
+              <expression>{last()}>80</expression>
+              <name>GPU0 Temperature is extremely high</name>
+              <priority>DISASTER</priority>
+              <description>A GPU's temperature is getting extremely high!</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}>73</expression>
+              <name>GPU0 Temperature is high</name>
+              <priority>WARNING</priority>
+              <description>A GPU's temperature is getting high!</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}>75</expression>
+              <name>GPU0 Temperature is very high</name>
+              <priority>HIGH</priority>
+              <description>A GPU's temperature is getting very high!</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>GPU 1 Fan</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Control"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>%</units>
+        </item>
+        <item>
+          <name>GPU 1 Load</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Load"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>%</units>
+        </item>
+        <item>
+          <name>GPU 1 Temp</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Temperature"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <value_type>FLOAT</value_type>
+          <units>C</units>
+          <triggers>
+            <trigger>
+              <expression>{last()}>80</expression>
+              <name>GPU1 Temperature is extremely high</name>
+              <priority>DISASTER</priority>
+              <description>A GPU's temperature is getting extremely high!</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}>73</expression>
+              <name>GPU1 Temperature is high</name>
+              <priority>WARNING</priority>
+              <description>A GPU's temperature is getting high!</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}>75</expression>
+              <name>GPU1 Temperature is very high</name>
+              <priority>HIGH</priority>
+              <description>A GPU's temperature is getting very high!</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>GPU 2 Fan</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Control"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>%</units>
+        </item>
+        <item>
+          <name>GPU 2 Load</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Load"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>%</units>
+        </item>
+        <item>
+          <name>GPU 2 Temp</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Temperature"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>C</units>
+          <triggers>
+            <trigger>
+              <expression>{last()}>80</expression>
+              <name>GPU2 Temperature is extremely high</name>
+              <priority>DISASTER</priority>
+              <description>A GPU's temperature is getting extremely high!</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}>73</expression>
+              <name>GPU2 Temperature is high</name>
+              <priority>WARNING</priority>
+              <description>A GPU's temperature is getting high!</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}>75</expression>
+              <name>GPU2 Temperature is very high</name>
+              <priority>HIGH</priority>
+              <description>A GPU's temperature is getting very high!</description>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>GPU 3 Fan</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Control"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>%</units>
+        </item>
+        <item>
+          <name>GPU 3 Load</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Load"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>%</units>
+        </item>
+        <item>
+          <name>GPU 3 Temp</name>
+          <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Temperature"]</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <value_type>FLOAT</value_type>
+          <units>C</units>
+          <triggers>
+            <trigger>
+              <expression>{last()}>80</expression>
+              <name>GPU3 Temperature is extremely high</name>
+              <priority>DISASTER</priority>
+              <description>A GPU's temperature is getting extremely high!</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}>73</expression>
+              <name>GPU3 Temperature is high</name>
+              <priority>WARNING</priority>
+              <description>A GPU's temperature is getting high!</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}>75</expression>
+              <name>GPU3 Temperature is very high</name>
+              <priority>HIGH</priority>
+              <description>A GPU's temperature is getting very high!</description>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+  <graphs>
+    <graph>
+      <name>GPU 0</name>
+      <graph_items>
+        <graph_item>
+          <color>F63100</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Temperature"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>2774A4</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Control"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>1A7C11</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Load"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>GPU 1</name>
+      <graph_items>
+        <graph_item>
+          <color>F63100</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Temperature"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>2774A4</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Control"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>1A7C11</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Load"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>GPU 2</name>
+      <graph_items>
+        <graph_item>
+          <color>F63100</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Temperature"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>2774A4</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Control"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>1A7C11</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Load"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+    <graph>
+      <name>GPU 3</name>
+      <graph_items>
+        <graph_item>
+          <color>F63100</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Temperature"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>1</sortorder>
+          <color>2774A4</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Control"]</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <sortorder>2</sortorder>
+          <color>1A7C11</color>
+          <item>
+            <host>Blank AMD</host>
+            <key>wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Load"]</key>
+          </item>
+        </graph_item>
+      </graph_items>
+    </graph>
+  </graphs>
+</zabbix_export>

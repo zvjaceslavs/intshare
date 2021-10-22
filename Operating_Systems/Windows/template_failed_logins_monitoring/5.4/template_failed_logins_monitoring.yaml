@@ -1,0 +1,171 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-10-22T10:11:51Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+    -
+      uuid: 57b7ae836ca64446ba2c296389c009b7
+      name: Templates/Modules
+  templates:
+    -
+      uuid: ac25d4f44f73472b93ab72dc8717efbe
+      template: 'Template Module Windows Failed Logins'
+      name: 'Template Module Windows Failed Logins'
+      groups:
+        -
+          name: Templates
+        -
+          name: Templates/Modules
+      items:
+        -
+          uuid: d24237c0ca5e44849a03496966e696ff
+          name: 'Failed logins'
+          type: ZABBIX_ACTIVE
+          key: 'eventlog[Security,,,,4625,,skip]'
+          trends: '0'
+          value_type: LOG
+          tags:
+            -
+              tag: 'Failed logins'
+          triggers:
+            -
+              uuid: 9f3127744c9b42409200f00cd533a004
+              expression: 'count(/Template Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.CRIT})>{$NUM.FAILS.CRIT}'
+              name: 'Over {$NUM.FAILS.CRIT} audit failures on {HOSTNAME} last {$TIME.FAILS.CRIT}'
+              priority: DISASTER
+              manual_close: 'YES'
+            -
+              uuid: 31d31f3f7800468497c892619a05fef2
+              expression: 'count(/Template Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.HIGH})>{$NUM.FAILS.HIGH}'
+              name: 'Over {$NUM.FAILS.HIGH} audit failures on {HOSTNAME} last {$TIME.FAILS.HIGH}'
+              priority: HIGH
+              manual_close: 'YES'
+            -
+              uuid: fb6b56228d91406899159eac84a97eed
+              expression: 'count(/Template Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.WARN})>{$NUM.FAILS.WARN}'
+              name: 'Over {$NUM.FAILS.WARN} audit failures on {HOSTNAME} last {$TIME.FAILS.WARN}'
+              priority: WARNING
+              manual_close: 'YES'
+        -
+          uuid: db699e390f9248eb8aa6c5ed4ddaeb62
+          name: 'Account Domain'
+          type: DEPENDENT
+          key: wfl.account.domain
+          delay: '0'
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            -
+              type: REGEX
+              parameters:
+                - '(?:Account Domain|Kontodomene):\t\t([^-\n]+)'
+                - \1
+          master_item:
+            key: 'eventlog[Security,,,,4625,,skip]'
+          tags:
+            -
+              tag: 'Failed logins'
+        -
+          uuid: 6ff58e0d96564e549e874d3149cf22b6
+          name: 'Account name'
+          type: DEPENDENT
+          key: wfl.account.name
+          delay: '0'
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            -
+              type: REGEX
+              parameters:
+                - '(?:Account Name|Kontonavn):\t\t([^-\n]+)'
+                - \1
+          master_item:
+            key: 'eventlog[Security,,,,4625,,skip]'
+          tags:
+            -
+              tag: 'Failed logins'
+        -
+          uuid: d64c5cc3fa5f42f8bb5113f8dee55156
+          name: 'Failed login'
+          type: DEPENDENT
+          key: wfl.failed.login
+          delay: '0'
+          trends: '0'
+          value_type: TEXT
+          description: 'A shorter summary containing user, domain, hostname and ip'
+          preprocessing:
+            -
+              type: REGEX
+              parameters:
+                - '(?sm)(?:Account Name|Kontonavn):\t\t([^-\n]+).+(?:Account Domain|Kontodomene):\t\t([^-\n]+).+(?:Workstation Name|Navn på arbeidsstasjon):\t([^\n]+).+(?:Source Network Address|Adresse til kildenettverk):\t([^\n]+)'
+                - 'User \2\\\1 failed to log on from \3 with IP-address \4'
+          master_item:
+            key: 'eventlog[Security,,,,4625,,skip]'
+          tags:
+            -
+              tag: 'Failed logins'
+        -
+          uuid: 2c4405ff474b4126be00cf3fe82e0b48
+          name: 'Source Network Address'
+          type: DEPENDENT
+          key: wfl.source.network.address
+          delay: '0'
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            -
+              type: REGEX
+              parameters:
+                - '(?:Source Network Address|Adresse til kildenettverk):\t(.+)'
+                - \1
+          master_item:
+            key: 'eventlog[Security,,,,4625,,skip]'
+          tags:
+            -
+              tag: 'Failed logins'
+        -
+          uuid: fc40b01ad059497e8f9424978b954171
+          name: 'Workstation name'
+          type: DEPENDENT
+          key: wfl.workstation.name
+          delay: '0'
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            -
+              type: REGEX
+              parameters:
+                - '(?:Workstation Name|Navn på arbeidsstasjon):\t(.+)'
+                - \1
+          master_item:
+            key: 'eventlog[Security,,,,4625,,skip]'
+          tags:
+            -
+              tag: 'Failed logins'
+      macros:
+        -
+          macro: '{$NUM.FAILS.CRIT}'
+          value: '500'
+          description: 'Number of fails'
+        -
+          macro: '{$NUM.FAILS.HIGH}'
+          value: '100'
+          description: 'Number of fails'
+        -
+          macro: '{$NUM.FAILS.WARN}'
+          value: '50'
+          description: 'Number of fails'
+        -
+          macro: '{$TIME.FAILS.CRIT}'
+          value: 12h
+          description: 'Time span of login failures'
+        -
+          macro: '{$TIME.FAILS.HIGH}'
+          value: 12h
+          description: 'Time span of login failures'
+        -
+          macro: '{$TIME.FAILS.WARN}'
+          value: 12h
+          description: 'Time span of login failures'

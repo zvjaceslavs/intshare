@@ -129,7 +129,6 @@ There are no discovery rules in this template.
 |Value Cache buffer, total|<p>Add a application in V1.1</p>|`Zabbix internal`|zabbix[vcache, buffer, total]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Value processed $3, per second|<p>-</p>|`Zabbix internal`|zabbix[wcache,values,text]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,unreachable poller,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": trapper"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"zabbix_server -c"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": timer"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": task manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
@@ -155,8 +154,6 @@ There are no discovery rules in this template.
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": ipmi manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": http poller"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": housekeeper"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": history syncer"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": escalator"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": self-monitoring",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Zabbix agentd log size ($1)|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_AGENT_LOG_PATH}]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": proxy poller",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
@@ -177,8 +174,12 @@ There are no discovery rules in this template.
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": escalator",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,configuration syncer,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |File - DB Table [trends_uint]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/trends_uint.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
-|File - DB Table [ib_logfile1]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}ib_logfile1]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": icmp pinger"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,self-monitoring,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
+|File - DB Table [ib_logfile1]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}ib_logfile1]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": trapper"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": history syncer"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": escalator"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": alerter"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,alerter,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |File - DB Table [history_uint]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_uint.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
@@ -228,10 +229,6 @@ There are no discovery rules in this template.
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,escalator,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |File - DB Table [trends]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/trends.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |File - DB Table [history_str]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_str.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
-|File - DB Table [history_log]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_log.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
-|File - DB Table [history]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
-|Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,preprocessing worker,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
-|Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,self-monitoring,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |File - DB Table [ib_logfile0]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}ib_logfile0]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Zabbix server log count ($1)|<p>-</p>|`Zabbix agent (active)`|log.count[{$ZABBIX_SERVER_LOG_PATH},,,,skip]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": preprocessing manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
@@ -241,6 +238,9 @@ There are no discovery rules in this template.
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"{$ZABBIX_PROCESSNAME_DB}"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": alerter",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |File - DB Table [ibdata1]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}ibdata1]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
+|File - DB Table [history_log]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_log.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
+|File - DB Table [history]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
+|Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,preprocessing worker,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 ## Triggers
 
 There are no triggers in this template.

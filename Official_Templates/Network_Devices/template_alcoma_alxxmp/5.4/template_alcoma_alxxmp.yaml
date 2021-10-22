@@ -1,0 +1,245 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-10-22T10:10:59Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 3bf5e546b8a140e2a4ef2c63f0332d68
+      template: 'Template Alcoma ALxxMP'
+      name: 'Template Alcoma ALxxMP'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 9e4b8dbc80c7496092049fb34cdc7a34
+          name: 'Alcoma Network Out'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.10.8.0
+          key: alcoma.network.in
+          history: 1w
+          units: bps
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+            -
+              type: MULTIPLIER
+              parameters:
+                - '8'
+          request_method: POST
+          tags:
+            -
+              tag: Application
+              value: 'Network speed'
+        -
+          uuid: 7a86e2e5bddc4663ad5f4e06b5dc6f82
+          name: 'Alcoma Network In'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.10.10.0
+          key: alcoma.network.out
+          history: 1w
+          units: bps
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+            -
+              type: MULTIPLIER
+              parameters:
+                - '8'
+          request_method: POST
+          tags:
+            -
+              tag: Application
+              value: 'Network speed'
+        -
+          uuid: 98dbda4f2eee4e54b36c70bb8834df2f
+          name: 'Radio RX frequency'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.3.2.0
+          key: alcoma.rx.freq
+          delay: 10m
+          history: 1w
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Radio
+        -
+          uuid: 080c2f402e96412a97787acfeae66f10
+          name: 'Radio RX Level'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.3.4.0
+          key: alcoma.rx.level
+          delay: 10m
+          history: 1w
+          units: dBa
+          tags:
+            -
+              tag: Application
+              value: Radio
+        -
+          uuid: ee3d9744d8b543958263d69715162e4a
+          name: 'Radio Signal Quality'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.4.1.0
+          key: alcoma.signal.quality
+          delay: 15m
+          history: 1w
+          tags:
+            -
+              tag: Application
+              value: Radio
+        -
+          uuid: eec5e7ef3b044c3c816331ccf0affc76
+          name: 'Radio Signal to Noise Ratio - SNR'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.4.2.0
+          key: alcoma.snr
+          delay: 10m
+          history: 1w
+          tags:
+            -
+              tag: Application
+              value: Radio
+        -
+          uuid: 15f25ae77bd74ecf8b0675ea40593745
+          name: 'Alcoma ODU temperature'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.3.9.0
+          key: alcoma.temp
+          delay: 20m
+          history: 1w
+          units: °C
+          request_method: POST
+          tags:
+            -
+              tag: Application
+              value: Temperature
+        -
+          uuid: 5fda44ac2ebb41fe9ba1279f5b50e79f
+          name: 'Radio TX frequency'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.3.1.0
+          key: alcoma.tx.freq
+          delay: 10m
+          history: 1w
+          trends: '0'
+          value_type: TEXT
+          request_method: POST
+          tags:
+            -
+              tag: Application
+              value: Radio
+        -
+          uuid: 9e9cf1460553478ca4146b76d6da6cec
+          name: 'Radio TX Power'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.3.3.0
+          key: alcoma.tx.power
+          delay: 60m
+          history: 1w
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Radio
+        -
+          uuid: 3be0dc3140914f5cbcf35c7031a5037c
+          name: 'Radio Type'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.2.9.0
+          key: alcoma.type
+          delay: 60m
+          history: 1w
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Radio
+        -
+          uuid: a408de751da147d495a53791f2cc9776
+          name: Uptime
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.3.0
+          key: alcoma.uptime
+          history: 1w
+          value_type: FLOAT
+          units: uptime
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          request_method: POST
+          tags:
+            -
+              tag: Application
+              value: Uptime
+        -
+          uuid: f0b08642ca434bc6973cf34ba47c4ac1
+          name: 'Radio Vendor'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12140.2.2.8.0
+          key: alcoma.vendor
+          delay: 60m
+          history: 1w
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: Radio
+  graphs:
+    -
+      uuid: 9196e4cdccd64166b62f80d9ac7121d7
+      name: 'ODU Temperature'
+      graph_items:
+        -
+          drawtype: GRADIENT_LINE
+          color: CC0000
+          item:
+            host: 'Template Alcoma ALxxMP'
+            key: alcoma.temp
+    -
+      uuid: 086310a3ee0049bba374b2a20af2c6f1
+      name: 'Radio Quality'
+      graph_items:
+        -
+          sortorder: '1'
+          color: 199C0D
+          item:
+            host: 'Template Alcoma ALxxMP'
+            key: alcoma.signal.quality
+        -
+          sortorder: '2'
+          color: F63100
+          item:
+            host: 'Template Alcoma ALxxMP'
+            key: alcoma.snr
+    -
+      uuid: 9eeed0ebe6c945409c0447e3ac0f3725
+      name: 'Traffic on interface'
+      graph_items:
+        -
+          drawtype: GRADIENT_LINE
+          color: 0000EE
+          item:
+            host: 'Template Alcoma ALxxMP'
+            key: alcoma.network.in
+        -
+          sortorder: '1'
+          drawtype: GRADIENT_LINE
+          color: EEEE00
+          item:
+            host: 'Template Alcoma ALxxMP'
+            key: alcoma.network.out

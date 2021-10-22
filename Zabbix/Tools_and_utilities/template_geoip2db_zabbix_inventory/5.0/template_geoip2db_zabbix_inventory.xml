@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-22T10:10:17Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>GeoIP2 Location Template</template>
+      <name>GeoIP2 Location Template</name>
+      <description>Template for executing https://github.com/mjtrangoni/geoip2_zabbix This populates the location to the Host Inventory</description>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <items>
+        <item>
+          <name>GeoIP2 City</name>
+          <type>DEPENDENT</type>
+          <key>geoip2.city.name</key>
+          <delay>0</delay>
+          <history>0</history>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <inventory_link>SITE_CITY</inventory_link>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.city.name</params>
+              <error_handler>DISCARD_VALUE</error_handler>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>geoip2.zabbix</key>
+          </master_item>
+        </item>
+        <item>
+          <name>GeoIP2 Country</name>
+          <type>DEPENDENT</type>
+          <key>geoip2.country.name</key>
+          <delay>0</delay>
+          <history>0</history>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <inventory_link>SITE_COUNTRY</inventory_link>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.country.name</params>
+              <error_handler>DISCARD_VALUE</error_handler>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>geoip2.zabbix</key>
+          </master_item>
+        </item>
+        <item>
+          <name>GeoIP2 Location latitude</name>
+          <type>DEPENDENT</type>
+          <key>geoip2.location.latitude</key>
+          <delay>0</delay>
+          <history>0</history>
+          <trends>0</trends>
+          <value_type>FLOAT</value_type>
+          <inventory_link>LOCATION_LAT</inventory_link>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.location.latitude</params>
+              <error_handler>DISCARD_VALUE</error_handler>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>geoip2.zabbix</key>
+          </master_item>
+        </item>
+        <item>
+          <name>GeoIP2 Location longitude</name>
+          <type>DEPENDENT</type>
+          <key>geoip2.location.longitude</key>
+          <delay>0</delay>
+          <history>0</history>
+          <trends>0</trends>
+          <value_type>FLOAT</value_type>
+          <inventory_link>LOCATION_LON</inventory_link>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.location.longitude</params>
+              <error_handler>DISCARD_VALUE</error_handler>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>geoip2.zabbix</key>
+          </master_item>
+        </item>
+        <item>
+          <name>GeoIP2 Postal Code</name>
+          <type>DEPENDENT</type>
+          <key>geoip2.postal.code</key>
+          <delay>0</delay>
+          <history>0</history>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <inventory_link>SITE_ZIP</inventory_link>
+          <preprocessing>
+            <step>
+              <type>JSONPATH</type>
+              <params>$.postal_code</params>
+              <error_handler>DISCARD_VALUE</error_handler>
+            </step>
+          </preprocessing>
+          <master_item>
+            <key>geoip2.zabbix</key>
+          </master_item>
+        </item>
+        <item>
+          <name>geoip2_zabbix output</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>geoip2.zabbix</key>
+          <delay>24h</delay>
+          <history>0</history>
+          <trends>0</trends>
+          <value_type>TEXT</value_type>
+        </item>
+      </items>
+    </template>
+  </templates>
+</zabbix_export>

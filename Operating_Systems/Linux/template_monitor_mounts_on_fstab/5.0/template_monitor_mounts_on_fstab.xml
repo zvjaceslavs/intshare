@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-22T10:07:09Z</date>
+  <groups>
+    <group>
+      <name>Templates PERTO</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template Check Mount Point</template>
+      <name>Template Check Mount Point</name>
+      <description>Monitora os pontos de montagem do Gluster</description>
+      <groups>
+        <group>
+          <name>Templates PERTO</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Filesystem Status</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Mount Point</name>
+          <key>vfs.fs.mounted[your_mount_point]</key>
+          <delay>10m</delay>
+          <history>1w</history>
+          <trends>1w</trends>
+          <description>0 = Yes 1 = No</description>
+          <applications>
+            <application>
+              <name>Filesystem Status</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>Unidades Montadas</name>
+          </valuemap>
+          <triggers>
+            <trigger>
+              <expression>{last()}=1</expression>
+              <name>Mount Point Setransp is not OK on server {HOST.NAME}</name>
+              <priority>DISASTER</priority>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+  <value_maps>
+    <value_map>
+      <name>Unidades Montadas</name>
+      <mappings>
+        <mapping>
+          <value>0</value>
+          <newvalue>OK</newvalue>
+        </mapping>
+        <mapping>
+          <value>1</value>
+          <newvalue>Não OK</newvalue>
+        </mapping>
+      </mappings>
+    </value_map>
+  </value_maps>
+</zabbix_export>

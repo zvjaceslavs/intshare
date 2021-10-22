@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-22T10:08:51Z</date>
+  <groups>
+    <group>
+      <name>Templates/Storages</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template Storage NBU 5240 SNMP Trap</template>
+      <name>Template Storage NBU 5240 SNMP Trap</name>
+      <groups>
+        <group>
+          <name>Templates/Storages</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Gerneral</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>风扇控制器状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.3"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>State is Warning the fan is running slower than the low threshold of 1715 rpm. State is Failed the fan is missing or has failed.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 控制器风扇故障</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>电源制器状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.4"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>Status is Power Supply AC lost the redundant power supply is not functional. State is Warning the power supply works abnormal</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 控制器电源故障</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>光纤连接状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.5"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>If you receive an alert, it means that one or more of the Fibre Channel links is not in an optimal state.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 光纤连接故障</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>控制器温度状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.6"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>State is Warning System temperature warning</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 控制器温度超出工作范围</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>CPU 状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.7"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>Status is NULL the firmware was unable to report the current status; State is Failed status of the CPU is unknown.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU CPU 故障</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>磁盘控制器状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.8"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>State is Warning the disk is in a foreign, unsupported state; State is Failed the disk is no longer functional.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 控制器磁盘错误</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>RIAD Group 状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.9"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>State is Warning The diskgroup has warning State is Failed the RAID group is failed</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU RIAD Group状态异常</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>存储柜风扇状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.10"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>State is Warning the fan is running slower than the low threshold of 2000 rpm. State is Failed the fan is missing or has failed.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 存储柜风扇故障</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>存储柜电源状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.11"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>If you receive an alert, it means that one of the power supplies has experienced an error.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 存储柜电源故障</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>存储柜工作温度异常状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.12"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>State is Warning the temperature is warning</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 存储柜工作温度异常</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>存储柜磁盘状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.13"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>State is Warning, and the Status is Unconfigured (Good) the disk is in a foreign, unsupported state. The disk may have been reinserted and caused an error； State is Failed, and the Status is Unconfigured (Bad) the disk is failed</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 存储柜磁盘故障</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>RAID 控制卡状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.14"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>Status is NOT OK the adapter has failed； BBU Status is NOT OK &amp; current Charge is NULL the firmware was unable to report the current charge.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU RAID Controller异常</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>PCI卡状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.16"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>If you receive an alert, it means that one or more of the PCIe cards are not installed in the correct slots, or a PCIe card is not functional.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU PCI卡异常</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>磁盘分区状态</name>
+          <type>SNMP_TRAP</type>
+          <key>snmptrap["1.3.6.1.4.1.393.3.9.1.21"]</key>
+          <delay>0</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <description>If you receive an alert, it means that partition has experienced an error.</description>
+          <applications>
+            <application>
+              <name>Gerneral</name>
+            </application>
+          </applications>
+          <logtimefmt>%Y/%m/%d %H:%M:%S</logtimefmt>
+          <triggers>
+            <trigger>
+              <expression>{nodata(43200)}=0</expression>
+              <name>NBU 磁盘分区异常</name>
+              <priority>WARNING</priority>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+</zabbix_export>

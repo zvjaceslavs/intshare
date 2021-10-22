@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-10-22T10:04:45Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Template SNMP Generic</template>
+      <name>Template SNMP Generic</name>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>General</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Device contact details</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>SNMPv2-MIB::sysContact.0</snmp_oid>
+          <key>sysContact</key>
+          <delay>3600</delay>
+          <history>7d</history>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <description>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</description>
+          <inventory_link>CONTACT</inventory_link>
+          <applications>
+            <application>
+              <name>General</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Device description</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>SNMPv2-MIB::sysDescr.0</snmp_oid>
+          <key>sysDescr</key>
+          <delay>3600</delay>
+          <history>7d</history>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <description>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</description>
+          <inventory_link>HARDWARE</inventory_link>
+          <applications>
+            <application>
+              <name>General</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Device location</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>SNMPv2-MIB::sysLocation.0</snmp_oid>
+          <key>sysLocation</key>
+          <delay>3600</delay>
+          <history>7d</history>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <description>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</description>
+          <inventory_link>LOCATION</inventory_link>
+          <applications>
+            <application>
+              <name>General</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Device name</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>SNMPv2-MIB::sysName.0</snmp_oid>
+          <key>sysName</key>
+          <delay>3600</delay>
+          <history>7d</history>
+          <trends>0</trends>
+          <value_type>CHAR</value_type>
+          <description>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</description>
+          <inventory_link>NAME</inventory_link>
+          <applications>
+            <application>
+              <name>General</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Device uptime</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>SNMPv2-MIB::sysUpTime.0</snmp_oid>
+          <key>sysUpTime</key>
+          <delay>60</delay>
+          <history>7d</history>
+          <units>uptime</units>
+          <description>The time since the network management portion of the system was last re-initialized.</description>
+          <applications>
+            <application>
+              <name>General</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>MULTIPLIER</type>
+              <params>0.01</params>
+            </step>
+          </preprocessing>
+        </item>
+      </items>
+    </template>
+  </templates>
+</zabbix_export>
