@@ -70,11 +70,11 @@ There are no discovery rules in this template.
 |Bytes Tx port 14|<p>-</p>|`SNMP agent`|ifOutOctets.14<p>Update: 120</p>|
 |Status port 13|<p>-</p>|`SNMP agent`|ifOperStatus.13<p>Update: 120</p>|
 |InErrorsFa0/8|<p>-</p>|`SNMP agent`|ifInErrors.8<p>Update: 120</p>|
-|Status port 8|<p>-</p>|`SNMP agent`|ifOperStatus.8<p>Update: 120</p>|
-|Status port 7|<p>-</p>|`SNMP agent`|ifOperStatus.7<p>Update: 120</p>|
 |OutErrorsFa0/16|<p>-</p>|`SNMP agent`|ifOutErrors.16<p>Update: 120</p>|
 |OutErrorsFa0/9|<p>-</p>|`SNMP agent`|ifOutErrors.9<p>Update: 120</p>|
 |OutErrorsFa0/8|<p>-</p>|`SNMP agent`|ifOutErrors.8<p>Update: 120</p>|
+|Status port 8|<p>-</p>|`SNMP agent`|ifOperStatus.8<p>Update: 120</p>|
+|Status port 7|<p>-</p>|`SNMP agent`|ifOperStatus.7<p>Update: 120</p>|
 |OutErrorsFa0/2|<p>-</p>|`SNMP agent`|ifOutErrors.2<p>Update: 120</p>|
 |OutErrorsFa0/1|<p>-</p>|`SNMP agent`|ifOutErrors.1<p>Update: 120</p>|
 |Status port 20|<p>-</p>|`SNMP agent`|ifOperStatus.20<p>Update: 120</p>|
@@ -123,7 +123,6 @@ There are no discovery rules in this template.
 |OutErrorsFa0/5|<p>-</p>|`SNMP agent`|ifOutErrors.5<p>Update: 120</p>|
 |Status port 18|<p>-</p>|`SNMP agent`|ifOperStatus.18<p>Update: 120</p>|
 |Status port 17|<p>-</p>|`SNMP agent`|ifOperStatus.17<p>Update: 120</p>|
-|Bytes Tx port 16|<p>-</p>|`SNMP agent`|ifOutOctets.16<p>Update: 120</p>|
 |Status port 19|<p>-</p>|`SNMP agent`|ifOperStatus.19<p>Update: 120</p>|
 |Status port 14|<p>-</p>|`SNMP agent`|ifOperStatus.14<p>Update: 120</p>|
 |Memory usage %|<p>Cpu usage in last 1 minute</p>|`SNMP agent`|MemUsagePerc<p>Update: 60</p>|
@@ -131,6 +130,7 @@ There are no discovery rules in this template.
 |Bytes Tx port 15|<p>-</p>|`SNMP agent`|ifOutOctets.15<p>Update: 120</p>|
 |Bytes Tx port 13|<p>-</p>|`SNMP agent`|ifOutOctets.13<p>Update: 120</p>|
 |Bytes Tx port 10|<p>-</p>|`SNMP agent`|ifOutOctets.10<p>Update: 120</p>|
+|Bytes Tx port 16|<p>-</p>|`SNMP agent`|ifOutOctets.16<p>Update: 120</p>|
 ## Triggers
 
 There are no triggers in this template.

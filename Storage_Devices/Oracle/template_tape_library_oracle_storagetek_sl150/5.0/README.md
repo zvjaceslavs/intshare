@@ -52,6 +52,7 @@ There are no template links in this template.
 |[Controller] Discovery of Field Replaceable Unit (FRU)|<p>The controller's Field Replaceable Unit (FRU) based serial number</p>|`SNMP agent`|slControllerFru<p>Update: 1h</p>|
 |[Temp] Discovery of Temperature Threshold for Shutdown|<p>Temp threshold for automated library activity shutdown</p>|`SNMP agent`|slTempSensorFailThreshold<p>Update: 1h</p>|
 |[Temp] Discovery of High Temperature Sensor|<p>Storage area peak temp since last machine boot</p>|`SNMP agent`|slTempSensorHighTemp<p>Update: 1h</p>|
+|[Robot] Discovery of Robot Physical Address|<p>Robot physical address string. NOTE: SL500 returns a logical SCSI Element ID</p>|`SNMP agent`|slRobotPhysicalAddressStr<p>Update: 1h</p>|
 |[Temp] Discovery of Current Temperature|<p>Current/Present temperature reading</p>|`SNMP agent`|slTempSensorCurrentTemp<p>Update: 1h</p>|
 |[Drive] Discovery of Drive Fibre Node Name|<p>Drive's fibre node name (node WWN)</p>|`SNMP agent`|slDriveFibreNodeName<p>Update: 1h</p>|
 |[Inventory] Discovery of Tape Physical Address|<p>Tape Cartridge physical address string</p>|`SNMP agent`|slTapePhysicalAddressStr<p>Update: 1h</p>|
@@ -99,7 +100,6 @@ There are no template links in this template.
 |[Drive] Discovery of Drive Fibre Port Count|<p>The number of active ports in the drive</p>|`SNMP agent`|slDriveFibrePortCount<p>Update: 1h</p>|
 |[Inventory] Discovery of Tape Host Accessible|<p>Indication of host accessible status true(1), false(2)</p>|`SNMP agent`|slTapeHostAccessible<p>Update: 1h</p>|
 |[LSM] Discovery of LSM Status|<p>The LSM operational state - reported as a string (online, offline, offlinePending). This is hardware-based state, derived from robot state</p>|`SNMP agent`|slLibLSMStatus<p>Update: 1h</p>|
-|[Robot] Discovery of Robot Physical Address|<p>Robot physical address string. NOTE: SL500 returns a logical SCSI Element ID</p>|`SNMP agent`|slRobotPhysicalAddressStr<p>Update: 1h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
@@ -172,6 +172,7 @@ There are no template links in this template.
 |Controller {#SNMPINDEX} Field Replaceable Unit (FRU)|<p>The controller's Field Replaceable Unit (FRU) based serial number</p>|`SNMP agent`|slControllerFru[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Temperature Threshold for Shutdown {#SNMPINDEX}|<p>Temp threshold for automated library activity shutdown</p>|`SNMP agent`|slTempSensorFailThreshold[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |High Temperature since last boot {#SNMPINDEX}|<p>Storage area peak temp since last machine boot</p>|`SNMP agent`|slTempSensorHighTemp[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Robot Physical Address {#SNMPINDEX}|<p>Robot physical address string. NOTE: SL500 returns a logical SCSI Element ID</p>|`SNMP agent`|slRobotPhysicalAddressStr[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Current temperature of {#SNMPINDEX}|<p>Current/Present temperature reading</p>|`SNMP agent`|slTempSensorCurrentTemp[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Drive {#SNMPINDEX} Fibre Node Name|<p>Drive's fibre node name (node WWN)</p>|`SNMP agent`|slDriveFibreNodeName[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Tape {#SNMPINDEX} Physical Address|<p>Tape Cartridge physical address string</p>|`SNMP agent`|slTapePhysicalAddressStr[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
@@ -219,7 +220,6 @@ There are no template links in this template.
 |Drive {#SNMPINDEX} Fibre Port Count|<p>The number of active ports in the drive single(1), dual(2)</p>|`SNMP agent`|slDriveFibrePortCount[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Tape {#SNMPINDEX} Host Accessible|<p>Indication of host accessible status</p>|`SNMP agent`|slTapeHostAccessible[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |LSM {#SNMPINDEX} Status|<p>The LSM operational state - reported as a string (online, offline, offlinePending). This is hardware-based state, derived from robot state</p>|`SNMP agent`|slLibLSMStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Robot Physical Address {#SNMPINDEX}|<p>Robot physical address string. NOTE: SL500 returns a logical SCSI Element ID</p>|`SNMP agent`|slRobotPhysicalAddressStr[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

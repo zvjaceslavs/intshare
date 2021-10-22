@@ -56,6 +56,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Contador de Paginas Impressas Por Dia|<p>Coleta agendada as 00:02hs todos os dias.</p>|`Calculated`|contador_impressoes_dia<p>Update: 0;h00m02</p>|
 |Paginas Impressas Total|<p>-</p>|`SNMP agent`|prtMarkerLifeCount.1.1<p>Update: 600</p>|
 |Contador de Paginas Impressas Por Semana|<p>Coleta agendada as 00:03hs toda segunda feira de cada semana, conta o total das páginas impressas desde a última coleta total da semana.</p>|`Calculated`|contador_impressoes_semana<p>Update: 0;wd1h00m03</p>|
 |Ping por Segundo|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
@@ -66,7 +67,6 @@ There are no template links in this template.
 |Paginas Impressas Por Mes|<p>Coleta o total de impressões no mês.</p>|`Calculated`|impressoes_mes<p>Update: 600</p>|
 |Tempo Ligado do Equipamento|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 3600</p>|
 |Ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|Contador de Paginas Impressas Por Dia|<p>Coleta agendada as 00:02hs todos os dias.</p>|`Calculated`|contador_impressoes_dia<p>Update: 0;h00m02</p>|
 |Status administrativo da Inteface $1|<p>-</p>|`SNMP agent`|ifAdminStatus[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Descricao da Placa de Rede $1|<p>-</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Trafego de Entrada Porta $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|

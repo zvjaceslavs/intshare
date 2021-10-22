@@ -89,11 +89,11 @@ There are no discovery rules in this template.
 |LAG 13 Traffic OUT|<p>-</p>|`SNMP agent`|lag13.traffic.out<p>Update: 30</p>|
 |LAG 19 Status|<p>-</p>|`SNMP agent`|lag19.status<p>Update: 30</p>|
 |LAG 24 Traffic IN|<p>-</p>|`SNMP agent`|lag24.traffic.in<p>Update: 30</p>|
-|LAG 24 Traffic OUT|<p>-</p>|`SNMP agent`|lag24.traffic.out<p>Update: 30</p>|
-|LAG25 Name|<p>-</p>|`SNMP agent`|lag.name.25<p>Update: 30</p>|
 |Port 01 Status|<p>-</p>|`SNMP agent`|ifOperStatus.1<p>Update: 60</p>|
 |LAG 20 Traffic OUT|<p>-</p>|`SNMP agent`|lag20.traffic.out<p>Update: 30</p>|
 |LAG 18 Traffic OUT|<p>-</p>|`SNMP agent`|lag18.traffic.out<p>Update: 30</p>|
+|LAG 24 Traffic OUT|<p>-</p>|`SNMP agent`|lag24.traffic.out<p>Update: 30</p>|
+|LAG25 Name|<p>-</p>|`SNMP agent`|lag.name.25<p>Update: 30</p>|
 |LAG 08 Traffic IN|<p>-</p>|`SNMP agent`|lag08.traffic.in<p>Update: 30</p>|
 |Port 06 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.6<p>Update: 60</p>|
 |LAG 03 Status|<p>-</p>|`SNMP agent`|lag03.status<p>Update: 30</p>|
@@ -172,7 +172,6 @@ There are no discovery rules in this template.
 |LAG 20 Status|<p>-</p>|`SNMP agent`|lag20.status<p>Update: 30</p>|
 |LAG 16 Status|<p>-</p>|`SNMP agent`|lag16.status<p>Update: 30</p>|
 |LAG 15 Traffic OUT|<p>-</p>|`SNMP agent`|lag15.traffic.out<p>Update: 30</p>|
-|LAG11 Name|<p>-</p>|`SNMP agent`|lag.name.11<p>Update: 30</p>|
 |LAG 11 Status|<p>-</p>|`SNMP agent`|lag11.status<p>Update: 30</p>|
 |LAG 11 Traffic OUT|<p>-</p>|`SNMP agent`|lag11.traffic.out<p>Update: 30</p>|
 |LAG12 Name|<p>-</p>|`SNMP agent`|lag.name.12<p>Update: 30</p>|
@@ -190,6 +189,7 @@ There are no discovery rules in this template.
 |Port 12 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.12<p>Update: 60</p>|
 |Port 13 Status|<p>-</p>|`SNMP agent`|ifOperStatus.13<p>Update: 60</p>|
 |Port 13 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.13<p>Update: 60</p>|
+|LAG11 Name|<p>-</p>|`SNMP agent`|lag.name.11<p>Update: 30</p>|
 |LAG 25 Status|<p>-</p>|`SNMP agent`|lag25.status<p>Update: 30</p>|
 |Port 13 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.13<p>Update: 60</p>|
 |System Name|<p>-</p>|`SNMP agent`|system.sysName.0<p>Update: 86400</p>|

@@ -23,17 +23,16 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Porta TCP 8080 Produção|<p>-</p>|`Zabbix agent`|net.tcp.listen[8080]<p>Update: 30s</p>|
-|Verificacao Backup Arquivo Backup Programas|<p>-</p>|`Zabbix agent`|system.run[ ls /oracle/disco1/backup/compactados/backup-programas_`date "+%Y%m%d"`.tgz 2> /dev/null | wc -l ]<p>Update: 30s</p>|
 |Tamanho Usado DATAFILE - F3I_INDEX 1|<p>-</p>|`Zabbix agent`|system.run[test `cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt 2>/dev/null | grep INDEX | awk -F ';' {'print $3'} | sed '1!d' | wc -w` -eq 1 && cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep INDEX | awk -F ';' {'print $3'} | sed '1!d' || echo 0]<p>Update: 30s</p>|
 |Servico Oracle - Base de Teste|<p>-</p>|`Zabbix agent`|proc.num[ora_pmon_f3ites,]<p>Update: 30s</p>|
 |IOSTAT - SDA|<p>-</p>|`Zabbix agent`|system.run[iostat -xd /dev/sda 1 2 | sed '7!d' | awk {'print $12'}]<p>Update: 30s</p>|
 |IO - F3I_DATA - Blocos Escritos|<p>-</p>|`Zabbix agent`|system.run[cat /etc/zabbix/oracle/VOLUME_IO_f3ipro.txt | grep -w f3idat.dbf| awk -F ';' {'print $3'}]<p>Update: 30s</p>|
 |Checksum FSTAB|<p>-</p>|`Zabbix agent`|vfs.file.cksum[/etc/fstab]<p>Update: 30s</p>|
 |Log Backup Linux|<p>-</p>|`Zabbix agent`|system.run[test `cat /oracle/disco1/backup/logs/backup-linux-nfs_$(date +%Y%m%d)* 2> /dev/null | wc -l` -gt 1 && cat /oracle/disco1/backup/logs/backup-linux-nfs_$(date +%Y%m%d)* || echo Arquivo nao Gerado]<p>Update: 30s</p>|
-|Tamanho Livre DATAFILE - F3I_INDEX 1|<p>-</p>|`Zabbix agent`|system.run[test `cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep F3I_INDEX | awk -F ';' {'print $4'} | sed '1!d' | wc -l` -eq 1 && cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep F3I_INDEX | awk -F ';' {'print $4'} | sed '1!d' || echo 0]<p>Update: 30s</p>|
 |Tempo do Backup do RMAN|<p>-</p>|`Zabbix agent`|system.run[ test -e /oracle/disco1/backup/logs/backup-rman_`date "+%Y%m%d"`.log && cat /oracle/disco1/backup/logs/backup-rman_`date "+%Y%m%d"`.log | sed -n '1p;$p' || echo "Arquivo nao gerado" ]<p>Update: 30s</p>|
 |bond0 - OUT|<p>-</p>|`Zabbix agent`|net.if.out[bond0,bytes]<p>Update: 30s</p>|
 |Tamanho Livre SYSAUX|<p>-</p>|`Zabbix agent`|system.run[cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep SYSAUX | awk -F ';' {'print $4'}]<p>Update: 30s</p>|
+|Tamanho Livre DATAFILE - F3I_INDEX 1|<p>-</p>|`Zabbix agent`|system.run[test `cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep F3I_INDEX | awk -F ';' {'print $4'} | sed '1!d' | wc -l` -eq 1 && cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep F3I_INDEX | awk -F ';' {'print $4'} | sed '1!d' || echo 0]<p>Update: 30s</p>|
 |Tamanho Usado - SYSAUX|<p>-</p>|`Zabbix agent`|system.run[cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep SYSAUX | awk -F ';' {'print $3'}]<p>Update: 30s</p>|
 |Percentual Ocupado F3I_DATA|<p>-</p>|`Zabbix agent`|system.run[cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep -w F3I_DATA | awk -F ';' {'print $5'}]<p>Update: 30s</p>|
 |Quantidade F3I_DATA Cliente|<p>-</p>|`Zabbix agent`|system.run[cat /etc/zabbix/oracle/DATAFILES_f3ipro.txt | grep F3I_DATA | wc -l]<p>Update: 30s</p>|
@@ -86,6 +85,7 @@ There are no discovery rules in this template.
 |Percentual Ocupado - Processos|<p>-</p>|`Zabbix agent`|system.run[cat /etc/zabbix/oracle/LIMITESBD_f3ipro.txt | grep processes | awk -F ';' {'print $5'}]<p>Update: 30s</p>|
 |Tamanho Total Shared|<p>-</p>|`Zabbix agent`|system.run[cat /etc/zabbix/oracle/COMPONENTES_SGA_f3ipro.txt | grep shared | awk -F ';' {'print $2'}]<p>Update: 30s</p>|
 |Tamanho Total Stream|<p>-</p>|`Zabbix agent`|system.run[ test `cat /etc/zabbix/oracle/COMPONENTES_SGA_f3ipro.txt | grep stream | awk -F ';' {'print $2'} | wc -w` -eq 1 && cat /etc/zabbix/oracle/COMPONENTES_SGA_f3ipro.txt | grep stream | awk -F ';' {'print $2'} || echo 0 ]<p>Update: 30s</p>|
+|Verificacao Backup Arquivo Backup Programas|<p>-</p>|`Zabbix agent`|system.run[ ls /oracle/disco1/backup/compactados/backup-programas_`date "+%Y%m%d"`.tgz 2> /dev/null | wc -l ]<p>Update: 30s</p>|
 |Tamanho Usado TEMP 1|<p>-</p>|`Zabbix agent`|system.run[test `cat /etc/zabbix/oracle/TEMP_f3ipro.txt | sed '1!d' | awk -F ';' {'print $4'} | wc -w` -eq 1 && cat /etc/zabbix/oracle/TEMP_f3ipro.txt | awk -F ';' {'print $4'} | sed '1!d' || echo 0]<p>Update: 30s</p>|
 |Percentual Ocupado TEMP 1|<p>-</p>|`Zabbix agent`|system.run[test `cat /etc/zabbix/oracle/TEMP_f3ipro.txt | sed '1!d' | awk -F ';' {'print $4'} | wc -w` -eq 1 && cat /etc/zabbix/oracle/TEMP_f3ipro.txt | awk -F ';' {'print $4'} | sed '1!d' || echo 0 ]<p>Update: 30s</p>|
 |p5p1 - OUT|<p>-</p>|`Zabbix agent`|net.if.out[p5p1,bytes]<p>Update: 30s</p>|

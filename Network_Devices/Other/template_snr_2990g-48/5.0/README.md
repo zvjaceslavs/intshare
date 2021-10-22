@@ -108,7 +108,6 @@ There are no discovery rules in this template.
 |Port18OUT|<p>-</p>|`SNMP agent`|ifOutOctets18<p>Update: 120</p>|
 |Port15OUT|<p>-</p>|`SNMP agent`|ifOutOctets15<p>Update: 120</p>|
 |Port14OUT|<p>-</p>|`SNMP agent`|ifOutOctets14<p>Update: 120</p>|
-|Port13OUT|<p>-</p>|`SNMP agent`|ifOutOctets13<p>Update: 120</p>|
 |Port12OUT|<p>-</p>|`SNMP agent`|ifOutOctets12<p>Update: 120</p>|
 |Port10OUT|<p>-</p>|`SNMP agent`|ifOutOctets10<p>Update: 120</p>|
 |Port2OUT|<p>-</p>|`SNMP agent`|ifOutOctets2<p>Update: 120</p>|
@@ -145,7 +144,6 @@ There are no discovery rules in this template.
 |HTTPS service is running|<p>-</p>|`Simple check`|net.tcp.service[https]<p>Update: 60</p>|
 |ifDescr4|<p>-</p>|`SNMP agent`|ifDescr4<p>Update: 120</p>|
 |ifDescr3|<p>-</p>|`SNMP agent`|ifDescr3<p>Update: 120</p>|
-|ifDescr16|<p>-</p>|`SNMP agent`|ifDescr16<p>Update: 120</p>|
 |ifOperations_Speed.16|<p>-</p>|`SNMP agent`|ifOperSpeed.16<p>Update: 120</p>|
 |ifOperations_Speed.33|<p>-</p>|`SNMP agent`|ifOperSpeed.33<p>Update: 120</p>|
 |ifOperations_Speed.46|<p>-</p>|`SNMP agent`|ifOperSpeed.46<p>Update: 120</p>|
@@ -190,6 +188,8 @@ There are no discovery rules in this template.
 |ifOperations_Speed.17|<p>-</p>|`SNMP agent`|ifOperSpeed.17<p>Update: 120</p>|
 |Port38IN|<p>-</p>|`SNMP agent`|ifInOctets.38<p>Update: 120</p>|
 |ifOperations_Speed.6|<p>-</p>|`SNMP agent`|ifOperSpeed.6<p>Update: 120</p>|
+|Port13OUT|<p>-</p>|`SNMP agent`|ifOutOctets13<p>Update: 120</p>|
+|ifDescr16|<p>-</p>|`SNMP agent`|ifDescr16<p>Update: 120</p>|
 |ifOperStatus.24|<p>-</p>|`SNMP agent`|ifOperStatus.24<p>Update: 120</p>|
 |Port31OUT|<p>-</p>|`SNMP agent`|ifOutOctets31<p>Update: 120</p>|
 |Port38OUT|<p>-</p>|`SNMP agent`|ifOutOctets38<p>Update: 120</p>|
@@ -317,11 +317,11 @@ There are no discovery rules in this template.
 |ifOperStatus.36|<p>-</p>|`SNMP agent`|ifOperStatus.36<p>Update: 120</p>|
 |ifOperations_Vlan.37|<p>-</p>|`SNMP agent`|ifOperVlan.37<p>Update: 120</p>|
 |ifOperations_Vlan.36|<p>-</p>|`SNMP agent`|ifOperVlan.36<p>Update: 120</p>|
-|ifOperations_Speed.45|<p>-</p>|`SNMP agent`|ifOperSpeed.45<p>Update: 120</p>|
-|ifOperations_Speed.42|<p>-</p>|`SNMP agent`|ifOperSpeed.42<p>Update: 120</p>|
 |ifOperations_Speed.15|<p>-</p>|`SNMP agent`|ifOperSpeed.15<p>Update: 120</p>|
 |Port27IN|<p>-</p>|`SNMP agent`|ifInOctets.27<p>Update: 120</p>|
 |ifOperations_Speed.5|<p>-</p>|`SNMP agent`|ifOperSpeed.5<p>Update: 120</p>|
+|ifOperations_Speed.45|<p>-</p>|`SNMP agent`|ifOperSpeed.45<p>Update: 120</p>|
+|ifOperations_Speed.42|<p>-</p>|`SNMP agent`|ifOperSpeed.42<p>Update: 120</p>|
 ## Triggers
 
 There are no triggers in this template.

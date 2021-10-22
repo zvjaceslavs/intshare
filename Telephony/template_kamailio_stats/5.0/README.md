@@ -64,7 +64,6 @@ There are no discovery rules in this template.
 |483 Replies|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,sl:483_replies]<p>Update: 1m</p>|
 |Sent Timeout|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:send_timeout]<p>Update: 1m</p>|
 |Connect Timeout|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:con_timeout]<p>Update: 1m</p>|
-|Rcv Replies 2XX Prack|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_2xx_prack]<p>Update: 1m</p>|
 |Rcv Replies 3XX Bye|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_3xx_bye]<p>Update: 1m</p>|
 |Rcv Replies 2XX Bye|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_2xx_bye]<p>Update: 1m</p>|
 |Rcv Replies 1XX Bye|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_1xx_bye]<p>Update: 1m</p>|
@@ -79,6 +78,7 @@ There are no discovery rules in this template.
 |Rpl Relayed|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tmx:rpl_relayed]<p>Update: 1m</p>|
 |Err Replies|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:err_replies]<p>Update: 1m</p>|
 |Err Requests|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:err_requests]<p>Update: 1m</p>|
+|Rcv Replies 2XX Prack|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_2xx_prack]<p>Update: 1m</p>|
 |Default Expire|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,registrar:default_expire]<p>Update: 1d</p>|
 |Current Opened Connections|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:current_opened_connections]<p>Update: 1m</p>|
 |Established|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:established]<p>Update: 1m</p>|
@@ -99,8 +99,6 @@ There are no discovery rules in this template.
 |Connect Failed|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:connect_failed]<p>Update: 1m</p>|
 |Connect Reset|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:con_reset]<p>Update: 1m</p>|
 |Current Write Queue Size|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:current_write_queue_size]<p>Update: 1m</p>|
-|Local Reject|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:local_reject]<p>Update: 1m</p>|
-|Rcv Replies 4XX Bye|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_4xx_bye]<p>Update: 1m</p>|
 |Max Used Size|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,shmem:max_used_size]<p>Update: 1m</p>|
 |Real Used Size|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,shmem:real_used_size]<p>Update: 1m</p>|
 |Rcv Replies 1XX Reg|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_1xx_reg]<p>Update: 1m</p>|
@@ -145,9 +143,11 @@ There are no discovery rules in this template.
 |Rcv Requests MESSAGE|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_requests_message]<p>Update: 1m</p>|
 |Rpl Received|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tmx:rpl_received]<p>Update: 1m</p>|
 |Rcv Requests|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_requests]<p>Update: 1m</p>|
+|Rcv Replies 4XX Cancel|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_4xx_cancel]<p>Update: 1m</p>|
+|Local Reject|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,tcp:local_reject]<p>Update: 1m</p>|
+|Rcv Replies 4XX Bye|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_4xx_bye]<p>Update: 1m</p>|
 |Rcv Requests CANCEL|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_requests_cancel]<p>Update: 1m</p>|
 |Rcv Replies 6XX Invite|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_6xx_invite]<p>Update: 1m</p>|
-|Rcv Replies 4XX Cancel|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_4xx_cancel]<p>Update: 1m</p>|
 |Rcv Replies 3XX Message|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_3xx_message]<p>Update: 1m</p>|
 |Rcv Replies 4XX Reg|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_4xx_reg]<p>Update: 1m</p>|
 |Rcv Replies 4XX Update|<p>-</p>|`Zabbix agent`|kamailio.rpc[stats,core:rcv_replies_4xx_update]<p>Update: 1m</p>|

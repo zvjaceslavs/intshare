@@ -83,7 +83,6 @@ There are no template links in this template.
 |Bytes Tx GE24|<p>-</p>|`SNMP agent`|ifOutOctets.4227809<p>Update: 30s</p>|
 |Bytes Tx GE09|<p>-</p>|`SNMP agent`|ifOutOctets.4227689<p>Update: 30s</p>|
 |Errors TX port GE17|<p>-</p>|`SNMP agent`|ifOutErrors.4227753<p>Update: 30s</p>|
-|Errors TX port GE26|<p>-</p>|`SNMP agent`|ifOutErrors.4227825<p>Update: 30s</p>|
 |Errors TX port GE19|<p>-</p>|`SNMP agent`|ifOutErrors.4227769<p>Update: 30s</p>|
 |Errors TX port GE20|<p>-</p>|`SNMP agent`|ifOutErrors.4227777<p>Update: 30s</p>|
 |Oper status port GE02|<p>-</p>|`SNMP agent`|ifOperStatus.4227633<p>Update: 30s</p>|
@@ -99,12 +98,13 @@ There are no template links in this template.
 |Admin Status port GE14|<p>-</p>|`SNMP agent`|ifAdminStatus.4227729<p>Update: 30s</p>|
 |Admin Status port GE15|<p>-</p>|`SNMP agent`|ifAdminStatus.4227737<p>Update: 30s</p>|
 |Admin Status port GE16|<p>-</p>|`SNMP agent`|ifAdminStatus.4227745<p>Update: 30s</p>|
-|Admin Status port GE17|<p>-</p>|`SNMP agent`|ifAdminStatus.4227753<p>Update: 30s</p>|
 |Bytes Rx GE18|<p>-</p>|`SNMP agent`|ifInOctets.4227761<p>Update: 30s</p>|
 |Bytes Rx GE10|<p>-</p>|`SNMP agent`|ifInOctets.4227697<p>Update: 30s</p>|
 |Bytes Rx GE11|<p>-</p>|`SNMP agent`|ifInOctets.4227705<p>Update: 30s</p>|
 |Bytes Rx GE12|<p>-</p>|`SNMP agent`|ifInOctets.4227713<p>Update: 30s</p>|
 |Bytes Rx GE13|<p>-</p>|`SNMP agent`|ifInOctets.4227721<p>Update: 30s</p>|
+|Errors TX port GE26|<p>-</p>|`SNMP agent`|ifOutErrors.4227825<p>Update: 30s</p>|
+|Admin Status port GE17|<p>-</p>|`SNMP agent`|ifAdminStatus.4227753<p>Update: 30s</p>|
 |Oper status port GE11|<p>-</p>|`SNMP agent`|ifOperStatus.4227705<p>Update: 30s</p>|
 |Oper status port GE05|<p>-</p>|`SNMP agent`|ifOperStatus.4227657<p>Update: 30s</p>|
 |Oper status port GE06|<p>-</p>|`SNMP agent`|ifOperStatus.4227665<p>Update: 30s</p>|
@@ -185,10 +185,6 @@ There are no template links in this template.
 |Bytes Tx GE28|<p>-</p>|`SNMP agent`|ifOutOctets.4227841<p>Update: 30s</p>|
 |Errors RX port GE06|<p>-</p>|`SNMP agent`|ifInErrors.4227665<p>Update: 30s</p>|
 |Errors RX port GE07|<p>-</p>|`SNMP agent`|ifInErrors.4227673<p>Update: 30s</p>|
-|Oper status port GE21|<p>-</p>|`SNMP agent`|ifOperStatus.4227785<p>Update: 30s</p>|
-|Oper status port GE14|<p>-</p>|`SNMP agent`|ifOperStatus.4227729<p>Update: 30s</p>|
-|Oper status port GE15|<p>-</p>|`SNMP agent`|ifOperStatus.4227737<p>Update: 30s</p>|
-|Oper status port GE19|<p>-</p>|`SNMP agent`|ifOperStatus.4227769<p>Update: 30s</p>|
 |Oper status port GE20|<p>-</p>|`SNMP agent`|ifOperStatus.4227777<p>Update: 30s</p>|
 |Errors TX port GE14|<p>-</p>|`SNMP agent`|ifOutErrors.4227729<p>Update: 30s</p>|
 |Errors TX port GE16|<p>-</p>|`SNMP agent`|ifOutErrors.4227745<p>Update: 30s</p>|
@@ -202,6 +198,10 @@ There are no template links in this template.
 |Bytes Rx GE02|<p>-</p>|`SNMP agent`|ifInOctets.4227633<p>Update: 30s</p>|
 |Bytes Rx GE03|<p>-</p>|`SNMP agent`|ifInOctets.4227641<p>Update: 30s</p>|
 |Bytes Rx GE04|<p>-</p>|`SNMP agent`|ifInOctets.4227649<p>Update: 30s</p>|
+|Oper status port GE21|<p>-</p>|`SNMP agent`|ifOperStatus.4227785<p>Update: 30s</p>|
+|Oper status port GE14|<p>-</p>|`SNMP agent`|ifOperStatus.4227729<p>Update: 30s</p>|
+|Oper status port GE15|<p>-</p>|`SNMP agent`|ifOperStatus.4227737<p>Update: 30s</p>|
+|Oper status port GE19|<p>-</p>|`SNMP agent`|ifOperStatus.4227769<p>Update: 30s</p>|
 |Bytes Tx GE25|<p>-</p>|`SNMP agent`|ifOutOctets.4227817<p>Update: 30s</p>|
 |Bytes Rx GE19|<p>-</p>|`SNMP agent`|ifInOctets.4227769<p>Update: 30s</p>|
 |Bytes Rx GE25|<p>-</p>|`SNMP agent`|ifInOctets.4227817<p>Update: 30s</p>|

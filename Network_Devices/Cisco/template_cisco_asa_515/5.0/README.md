@@ -34,6 +34,9 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |snmpInPkts - Pacotes Entrada|<p>-</p>|`SNMP agent`|snmpInPkts<p>Update: 300</p>|
+|Temperatura CPU|<p>-</p>|`SNMP agent`|alHardwareCpuTemp<p>Update: 10s</p>|
+|CPU Loading Total 1 Minutes|<p>-</p>|`SNMP agent`|cpmcpuTOTAL1min<p>Update: 60s</p>|
+|Administrative State Of LAN Status|<p>-</p>|`SNMP agent`|ifAdminStatus.5<p>Update: 10s</p>|
 |Carga CPU|<p>"The value of the CPU Utilization gauge which indicates percentage of CPU utilized."</p>|`SNMP agent`|alGeneralGaugeCpuUtil<p>Update: 10s</p>|
 |Port DMZ Interface|<p>-</p>|`SNMP agent`|ifDescr.4<p>Update: 10s</p>|
 |Interface LAN - Trafic In|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 10s</p>|
@@ -100,9 +103,6 @@ There are no template links in this template.
 |Active IKE Peers|<p>-</p>|`SNMP agent`|ciscoIKEPeers<p>Update: 60</p>|
 |CPU Utilization avg last 5 m|<p>-</p>|`SNMP agent`|avgBusy5<p>Update: 300s</p>|
 |CPU 1 avgBusy1|<p>-</p>|`SNMP agent`|avgBusy1<p>Update: 60s</p>|
-|Temperatura CPU|<p>-</p>|`SNMP agent`|alHardwareCpuTemp<p>Update: 10s</p>|
-|CPU Loading Total 1 Minutes|<p>-</p>|`SNMP agent`|cpmcpuTOTAL1min<p>Update: 60s</p>|
-|Administrative State Of LAN Status|<p>-</p>|`SNMP agent`|ifAdminStatus.5<p>Update: 10s</p>|
 |{#SNMPVALUE}: Temperature status|<p>MIB: CISCO-ENVMON-MIB The current state of the test point being instrumented.</p>|`SNMP agent`|sensor.temp.status[ciscoEnvMonTemperatureState.{#SNMPINDEX}]<p>Update: 180s</p><p>LLD</p>|
 |{#SNMPVALUE}: Temperature|<p>MIB: CISCO-ENVMON-MIB The current measurement of the test point being instrumented.</p>|`SNMP agent`|sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}]<p>Update: 180s</p><p>LLD</p>|
 |{#ENT_NAME}: Hardware serial number|<p>MIB: ENTITY-MIB</p>|`SNMP agent`|system.hw.serialnumber[entPhysicalSerialNum.{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|

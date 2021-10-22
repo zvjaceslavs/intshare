@@ -41,8 +41,6 @@ There are no discovery rules in this template.
 |Instance6-PGM2-outlm|<p>Instance 6 Program 2 loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst6-pgm2-outlm<p>Update: 15s</p>|
 |Instance6-PGM2-silence|<p>Instance 6 Program 2 silence.</p>|`SNMP agent`|aero.inst6-pgm2-silence<p>Update: 5s</p>|
 |Instance6-PGM2r-silence|<p>Instance 6 Program 2r silence.</p>|`SNMP agent`|aero.inst6-pgm2r-silence<p>Update: 5s</p>|
-|Instance7-PGM1-outlm|<p>Instance 7 Program 1 loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst7-pgm1-outlm<p>Update: 15s</p>|
-|Instance6-PGM1-silence|<p>Instance 6 Program 1 silence.</p>|`SNMP agent`|aero.inst6-pgm1-silence<p>Update: 5s</p>|
 |Instance6-PGM1-outlm|<p>Instance 6 Program 1 loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst6-pgm1-outlm<p>Update: 15s</p>|
 |Instance5-PGM1c-silence|<p>Instance 5 Program 1c silence.</p>|`SNMP agent`|aero.inst5-pgm1c-silence<p>Update: 5s</p>|
 |Instance5-PGM3-silence|<p>Instance 5 Program 3 silence.</p>|`SNMP agent`|aero.inst5-pgm3-silence<p>Update: 5s</p>|
@@ -69,11 +67,13 @@ There are no discovery rules in this template.
 |Instance6-PGM1c-outlm|<p>Instance 6 Program 1c loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst6-pgm1c-outlm<p>Update: 15s</p>|
 |Instance6-PGM1c-outlm-alarm|<p>Instance 6 Program 1c silence.</p>|`SNMP agent`|aero.inst6-pgm1c-outlm_alarm<p>Update: 15s</p>|
 |Instance7-PGM1-silence|<p>Instance 7 Program 1 silence.</p>|`SNMP agent`|aero.inst7-pgm1-silence<p>Update: 5s</p>|
-|Instance5-PGM1c-outlm|<p>Instance 5 Program 1c loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst5-pgm1c-outlm<p>Update: 15s</p>|
 |Instance3-PGM1-outlm|<p>Instance 3 Program 3 loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst3-pgm1-outlm<p>Update: 15s</p>|
 |Instance8-PGM1c-outlm-alarm|<p>Instance 8 Program 1c silence.</p>|`SNMP agent`|aero.inst8-pgm1c-outlm_alarm<p>Update: 15s</p>|
 |Model name|<p>Model Name</p>|`SNMP agent`|aero.model-name<p>Update: 1h</p>|
 |PSU-status|<p>Status of power supply redundancy.</p>|`SNMP agent`|aero.psu-status<p>Update: 1m</p>|
+|Instance7-PGM1-outlm|<p>Instance 7 Program 1 loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst7-pgm1-outlm<p>Update: 15s</p>|
+|Instance6-PGM1-silence|<p>Instance 6 Program 1 silence.</p>|`SNMP agent`|aero.inst6-pgm1-silence<p>Update: 5s</p>|
+|Instance5-PGM1c-outlm|<p>Instance 5 Program 1c loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst5-pgm1c-outlm<p>Update: 15s</p>|
 |Instance3-PGM3-outlm-alarm|<p>Instance 3 Program 3 loudness out of range.</p>|`SNMP agent`|aero.inst3-pgm3-outlm_alarm<p>Update: 15s</p>|
 |Instance3-PGM2r-outlm-alarm|<p>Instance 3 Program 2r loudness out of range.</p>|`SNMP agent`|aero.inst3-pgm2r-outlm_alarm<p>Update: 15s</p>|
 |Instance4-PGM1c-outlm-alarm|<p>Instance 4 Program 1c silence.</p>|`SNMP agent`|aero.inst4-pgm1c-outlm_alarm<p>Update: 15s</p>|
@@ -90,7 +90,6 @@ There are no discovery rules in this template.
 |Instance7-PGM2r-outlm|<p>Instance 7 Program 2r loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst7-pgm2r-outlm<p>Update: 15s</p>|
 |Instance7-PGM1b-silence|<p>Instance 7 Program 1b silence.</p>|`SNMP agent`|aero.inst7-pgm1b-silence<p>Update: 5s</p>|
 |Instance7-PGM1c-outlm|<p>Instance 7 Program 1c loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst7-pgm1c-outlm<p>Update: 15s</p>|
-|Instance7-PGM1c-outlm-alarm|<p>Instance 7 Program 1c silence.</p>|`SNMP agent`|aero.inst7-pgm1c-outlm_alarm<p>Update: 15s</p>|
 |Instance1-PGM2-outlm|<p>Instance 1 Program 2 loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst1-pgm2-outlm<p>Update: 15s</p>|
 |Instance1-PGM1c-outlm-alarm|<p>Instance 1 Program 1c silence.</p>|`SNMP agent`|aero.inst1-pgm1c-outlm_alarm<p>Update: 15s</p>|
 |Instance2-PGM2-outlm|<p>Instance 2 Program 2 loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst2-pgm2-outlm<p>Update: 15s</p>|
@@ -187,6 +186,7 @@ There are no discovery rules in this template.
 |Instance3-PGM2-outlm-alarm|<p>Instance 3 Program 2 loudness out of range.</p>|`SNMP agent`|aero.inst3-pgm2-outlm_alarm<p>Update: 15s</p>|
 |Video-Input-status|<p>Video input status.</p>|`SNMP agent`|aero.video-input-status<p>Update: 1m</p>|
 |Instance1-PGM2r-silence|<p>Instance 1 Program 2r silence.</p>|`SNMP agent`|aero.inst1-pgm2r-silence<p>Update: 5s</p>|
+|Instance7-PGM1c-outlm-alarm|<p>Instance 7 Program 1c silence.</p>|`SNMP agent`|aero.inst7-pgm1c-outlm_alarm<p>Update: 15s</p>|
 |Instance6-PGM1b-silence|<p>Instance 6 Program 1b silence.</p>|`SNMP agent`|aero.inst6-pgm1b-silence<p>Update: 5s</p>|
 |Instance5-PGM2-outlm|<p>Instance 5 Program 2 loudness dB LKFS / LUFS.</p>|`SNMP agent`|aero.inst5-pgm2-outlm<p>Update: 15s</p>|
 |Instance2-PGM1b-silence|<p>Instance 2 Program 1b silence.</p>|`SNMP agent`|aero.inst2-pgm1b-silence<p>Update: 5s</p>|

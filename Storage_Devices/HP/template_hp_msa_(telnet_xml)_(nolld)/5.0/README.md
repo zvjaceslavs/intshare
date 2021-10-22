@@ -116,10 +116,26 @@ There are no discovery rules in this template.
 |Физ. диск (1.4) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.4.vendor<p>Update: 0</p>|
 |Физ. диск (1.8) - объём|<p>-</p>|`Dependent item`|hp.msa.disks.1.8.size-numeric<p>Update: 0</p>|
 |Физ. диск (1.13) - тип|<p>-</p>|`Dependent item`|hp.msa.disks.1.13.type<p>Update: 0</p>|
+|Версии компонентов|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-versions,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
+|Физ. диск (2.6) - идентификатор полки|<p>-</p>|`Dependent item`|hp.msa.disks.2.6.enclosure-wwn<p>Update: 0</p>|
+|Физ. диск (2.10) - расположение|<p>-</p>|`Dependent item`|hp.msa.disks.2.10.location<p>Update: 0</p>|
+|Физ. диск (2.1) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.2.1.vendor<p>Update: 0</p>|
+|Тип оборудования|<p>-</p>|`Dependent item`|hp.msa.system-information.product-brand<p>Update: 0</p>|
+|Физ. диск (1.5) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.1.5.state<p>Update: 0</p>|
+|Физ. диск (1.3) - тип|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.type<p>Update: 0</p>|
+|Физ. диск (1.3) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.vendor<p>Update: 0</p>|
+|Физ. диск (1.4) - ср. время отклика|<p>-</p>|`Dependent item`|hp.msa.disks.1.4.avg-rsp-time<p>Update: 0</p>|
+|Физ. диск (1.4) - модель|<p>-</p>|`Dependent item`|hp.msa.disks.1.4.model<p>Update: 0</p>|
 |SNMP trap fallback|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
 |Физ. диск (1.13) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_13,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Порты|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-ports,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (2.7)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-2_7,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
+|Физ. диск (1.21) - идентификатор полки|<p>-</p>|`Dependent item`|hp.msa.disks.1.21.enclosure-wwn<p>Update: 0</p>|
+|Физ. диск (1.20) - модель|<p>-</p>|`Dependent item`|hp.msa.disks.1.20.model<p>Update: 0</p>|
+|Физ. диск (1.18) - объём|<p>-</p>|`Dependent item`|hp.msa.disks.1.18.size-numeric<p>Update: 0</p>|
+|Физ. диск (1.10) - объём|<p>-</p>|`Dependent item`|hp.msa.disks.1.10.size-numeric<p>Update: 0</p>|
+|Физ. диск (1.13) - номер вирт. диска|<p>-</p>|`Dependent item`|hp.msa.disks.1.13.virtual-disk-serial<p>Update: 0</p>|
+|Физ. диск (1.11) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.11.health-numeric<p>Update: 0</p>|
 |Порт (A1) - статус|<p>Порт 1 из 2 4</p>|`Dependent item`|hp.msa.ports.1.1.status-numeric<p>Update: 0</p>|
 |Порт (A1) - идентификатор|<p>Порт 1 из 2 4</p>|`Dependent item`|hp.msa.ports.1.1.target-id<p>Update: 0</p>|
 |Порт (B2) - тип подключения|<p>Порт 2 из 4</p>|`Dependent item`|hp.msa.ports.0.11.media<p>Update: 0</p>|
@@ -162,7 +178,6 @@ There are no discovery rules in this template.
 |Физ. диск (2.7) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.2.7.state<p>Update: 0</p>|
 |Физ. диск (2.4) - контроллер|<p>-</p>|`Dependent item`|hp.msa.disks.2.4.owner-numeric<p>Update: 0</p>|
 |Тип хранилища|<p>-</p>|`Dependent item`|hp.msa.system-information.system-information<p>Update: 0</p>|
-|БП (1.1) - расположение|<p>-</p>|`Dependent item`|hp.msa.power-supplies.1.1.position-numeric<p>Update: 0</p>|
 |Физ. диск (2.6) - номер вирт. диска|<p>-</p>|`Dependent item`|hp.msa.disks.2.6.virtual-disk-serial<p>Update: 0</p>|
 |Физ. диск (2.5) - объём|<p>-</p>|`Dependent item`|hp.msa.disks.2.5.size-numeric<p>Update: 0</p>|
 |Вирт. диск (2) - состояние|<p>-</p>|`Dependent item`|hp.msa.vdisks.2.health-numeric<p>Update: 0</p>|
@@ -171,13 +186,9 @@ There are no discovery rules in this template.
 |Физ. диск (2.10) - идентификатор полки|<p>-</p>|`Dependent item`|hp.msa.disks.2.10.enclosure-wwn<p>Update: 0</p>|
 |Физ. диск (2.10) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.2.10.health-numeric<p>Update: 0</p>|
 |Физ. диск (2.10) - индикатор|<p>-</p>|`Dependent item`|hp.msa.disks.2.10.led-status-numeric<p>Update: 0</p>|
-|Физ. диск (2.10) - расположение|<p>-</p>|`Dependent item`|hp.msa.disks.2.10.location<p>Update: 0</p>|
-|Физ. диск (1.21) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.21.vendor<p>Update: 0</p>|
 |Физ. диск (2.7) - тип|<p>-</p>|`Dependent item`|hp.msa.disks.2.7.type<p>Update: 0</p>|
-|Физ. диск (1.18) - объём|<p>-</p>|`Dependent item`|hp.msa.disks.1.18.size-numeric<p>Update: 0</p>|
 |Физ. диск (2.7) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.2.7.vendor<p>Update: 0</p>|
 |Физ. диск (2.7) - номер вирт. диска|<p>-</p>|`Dependent item`|hp.msa.disks.2.7.virtual-disk-serial<p>Update: 0</p>|
-|Физ. диск (1.20) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.20.health-numeric<p>Update: 0</p>|
 |Физ. диск (2.3) - расположение|<p>-</p>|`Dependent item`|hp.msa.disks.2.3.location<p>Update: 0</p>|
 |Вирт. диск (2) - физ. дисков подменных|<p>-</p>|`Dependent item`|hp.msa.vdisks.2.sparecount<p>Update: 0</p>|
 |Вирт. диск (2) - статус|<p>-</p>|`Dependent item`|hp.msa.vdisks.2.status<p>Update: 0</p>|
@@ -214,13 +225,10 @@ There are no discovery rules in this template.
 |Физ. диск (1.10) - производительность|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.10.iops<p>Update: 0</p>|
 |Физ. диск (1.19) - ср. время отклика|<p>-</p>|`Dependent item`|hp.msa.disks.1.19.avg-rsp-time<p>Update: 0</p>|
 |Физ. диск (1.10) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.10.health-numeric<p>Update: 0</p>|
-|Физ. диск (1.10) - индикатор|<p>-</p>|`Dependent item`|hp.msa.disks.1.10.led-status-numeric<p>Update: 0</p>|
 |Физ. диск (1.11) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.11.vendor<p>Update: 0</p>|
 |Физ. диск (1.11) - номер вирт. диска|<p>-</p>|`Dependent item`|hp.msa.disks.1.11.virtual-disk-serial<p>Update: 0</p>|
 |Хосты|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-hosts,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Блок питания (1.2)|<p>Исходные данные по БП 2 Полки 1</p>|`Telnet agent`|telnet.run[hp-msa-power-supplies-1_2,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
-|Виртуальные диски|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-vdisks,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
-|Версии компонентов|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-versions,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Полка (1) - физ. диски|<p>-</p>|`Dependent item`|hp.msa.enclosures.1.number-of-disks<p>Update: 0</p>|
 |Полка (1) - отсеки|<p>-</p>|`Dependent item`|hp.msa.enclosures.1.slots<p>Update: 0</p>|
 |Физ. диск (1.3) - ошибки|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.3.number-of-media-errors-1<p>Update: 0</p>|
@@ -231,9 +239,6 @@ There are no discovery rules in this template.
 |Физ. диск (1.19) - плохие сектора|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.19.number-of-bad-blocks-1<p>Update: 0</p>|
 |Физ. диск (1.8) - ошибки|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.8.number-of-media-errors-1<p>Update: 0</p>|
 |Физ. диск (1.17) - расположение|<p>-</p>|`Dependent item`|hp.msa.disks.1.17.location<p>Update: 0</p>|
-|Физ. диск (1.21) - номер вирт. диска|<p>-</p>|`Dependent item`|hp.msa.disks.1.21.virtual-disk-serial<p>Update: 0</p>|
-|Физ. диск (1.20) - модель|<p>-</p>|`Dependent item`|hp.msa.disks.1.20.model<p>Update: 0</p>|
-|Физ. диск (1.14) - тип|<p>-</p>|`Dependent item`|hp.msa.disks.1.14.type<p>Update: 0</p>|
 |Физ. диск (1.19) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_19,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (1.20) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_20,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (2.8)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-2_8,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
@@ -275,14 +280,21 @@ There are no discovery rules in this template.
 |Физ. диск (1.1) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.1.health-numeric<p>Update: 0</p>|
 |Физ. диск (1.22) - производительность|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.22.iops<p>Update: 0</p>|
 |Физ. диск (1.22) - ошибки|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.22.number-of-media-errors-1<p>Update: 0</p>|
+|Физ. диск (1.17) - ошибки|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.17.number-of-media-errors-1<p>Update: 0</p>|
+|Физ. диск (1.9) - производительность|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.9.iops<p>Update: 0</p>|
+|Контроллер (A)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-controllers-1,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
+|Виртуальные диски|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-vdisks,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
+|БП (1.1) - расположение|<p>-</p>|`Dependent item`|hp.msa.power-supplies.1.1.position-numeric<p>Update: 0</p>|
+|Физ. диск (1.2) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.2.vendor<p>Update: 0</p>|
 |Физ. диск (1.19) - SMART|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.19.smart-count-1<p>Update: 0</p>|
 |Контроллер (B) - статус|<p>-</p>|`Dependent item`|hp.msa.controllers.0.status-numeric<p>Update: 0</p>|
 |Контроллер (A) - инт. управления|<p>-</p>|`Dependent item`|hp.msa.controllers.1.ip-address<p>Update: 0</p>|
-|Физ. диск (1.17) - ошибки|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.17.number-of-media-errors-1<p>Update: 0</p>|
-|Физ. диск (1.9) - производительность|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.9.iops<p>Update: 0</p>|
+|Физ. диск (1.21) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.21.vendor<p>Update: 0</p>|
+|Физ. диск (1.21) - номер вирт. диска|<p>-</p>|`Dependent item`|hp.msa.disks.1.21.virtual-disk-serial<p>Update: 0</p>|
+|Физ. диск (1.20) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.20.health-numeric<p>Update: 0</p>|
 |Физ. диск (1.20) - индикатор|<p>-</p>|`Dependent item`|hp.msa.disks.1.20.led-status-numeric<p>Update: 0</p>|
-|Физ. диск (1.10) - объём|<p>-</p>|`Dependent item`|hp.msa.disks.1.10.size-numeric<p>Update: 0</p>|
-|Физ. диск (1.13) - номер вирт. диска|<p>-</p>|`Dependent item`|hp.msa.disks.1.13.virtual-disk-serial<p>Update: 0</p>|
+|Физ. диск (1.14) - тип|<p>-</p>|`Dependent item`|hp.msa.disks.1.14.type<p>Update: 0</p>|
+|Физ. диск (1.10) - индикатор|<p>-</p>|`Dependent item`|hp.msa.disks.1.10.led-status-numeric<p>Update: 0</p>|
 |Физ. диск (1.12) - индикатор|<p>-</p>|`Dependent item`|hp.msa.disks.1.12.led-status-numeric<p>Update: 0</p>|
 |Физ. диск (1.2) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_2,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (1.3) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_3,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
@@ -308,9 +320,6 @@ There are no discovery rules in this template.
 |Физ. диск (1.3) - модель|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.model<p>Update: 0</p>|
 |Физ. диск (1.3) - объём|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.size-numeric<p>Update: 0</p>|
 |Физ. диск (1.3) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.state<p>Update: 0</p>|
-|Физ. диск (1.3) - тип|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.type<p>Update: 0</p>|
-|Физ. диск (1.3) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.vendor<p>Update: 0</p>|
-|Физ. диск (1.4) - ср. время отклика|<p>-</p>|`Dependent item`|hp.msa.disks.1.4.avg-rsp-time<p>Update: 0</p>|
 |Физ. диск (1.5) - плохие сектора|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.5.number-of-bad-blocks-1<p>Update: 0</p>|
 |Физ. диск (1.5) - ошибки|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.5.number-of-media-errors-1<p>Update: 0</p>|
 |Физ. диск (1.5) - SMART|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.5.smart-count-1<p>Update: 0</p>|
@@ -427,7 +436,6 @@ There are no discovery rules in this template.
 |Физ. диск (1.20) - тип|<p>-</p>|`Dependent item`|hp.msa.disks.1.20.type<p>Update: 0</p>|
 |Физ. диск (1.20) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.20.vendor<p>Update: 0</p>|
 |Физ. диск (1.21) - ср. время отклика|<p>-</p>|`Dependent item`|hp.msa.disks.1.21.avg-rsp-time<p>Update: 0</p>|
-|Физ. диск (1.21) - идентификатор полки|<p>-</p>|`Dependent item`|hp.msa.disks.1.21.enclosure-wwn<p>Update: 0</p>|
 |Физ. диск (1.20) - контроллер|<p>-</p>|`Dependent item`|hp.msa.disks.1.20.owner-numeric<p>Update: 0</p>|
 |Физ. диск (1.22) - идентификатор полки|<p>-</p>|`Dependent item`|hp.msa.disks.1.22.enclosure-wwn<p>Update: 0</p>|
 |Физ. диск (1.18) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.18.vendor<p>Update: 0</p>|
@@ -619,10 +627,8 @@ There are no discovery rules in this template.
 |Физ. диск (1.12) - расположение|<p>-</p>|`Dependent item`|hp.msa.disks.1.12.location<p>Update: 0</p>|
 |Физ. диск (1.18) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_18,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (1.23) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_23,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
-|Физ. диск (2.6) - идентификатор полки|<p>-</p>|`Dependent item`|hp.msa.disks.2.6.enclosure-wwn<p>Update: 0</p>|
 |Физ. диск (1.6)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-1_6,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (1.9) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_9,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
-|Контроллер (A)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-controllers-1,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (2.7) - модель|<p>-</p>|`Dependent item`|hp.msa.disks.2.7.model<p>Update: 0</p>|
 |Физ. диск (2.9) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.2.9.health-numeric<p>Update: 0</p>|
 |Физ. диск (2.8) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.2.8.vendor<p>Update: 0</p>|
@@ -636,9 +642,6 @@ There are no discovery rules in this template.
 |БП (2.1) - вентилятор|<p>-</p>|`Dependent item`|hp.msa.power-supplies.2.1.fan.health-numeric<p>Update: 0</p>|
 |Вирт. диск (2) - свободно|<p>-</p>|`Dependent item`|hp.msa.vdisks.2.freespace-numeric<p>Update: 0</p>|
 |Физ. диск (2.11) - идентификатор полки|<p>-</p>|`Dependent item`|hp.msa.disks.2.11.enclosure-wwn<p>Update: 0</p>|
-|Физ. диск (1.2) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.2.vendor<p>Update: 0</p>|
-|Физ. диск (1.5) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.1.5.state<p>Update: 0</p>|
-|Физ. диск (1.4) - модель|<p>-</p>|`Dependent item`|hp.msa.disks.1.4.model<p>Update: 0</p>|
 |Физ. диск (1.4) - контроллер|<p>-</p>|`Dependent item`|hp.msa.disks.1.4.owner-numeric<p>Update: 0</p>|
 |Физ. диск (1.2) - плохие сектора|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.2.number-of-bad-blocks-1<p>Update: 0</p>|
 |Контроллер (A) - вирт. диски|<p>-</p>|`Dependent item`|hp.msa.controllers.1.virtual-disks<p>Update: 0</p>|
@@ -649,7 +652,6 @@ There are no discovery rules in this template.
 |Физ. диск (1.21) - расположение|<p>-</p>|`Dependent item`|hp.msa.disks.1.21.location<p>Update: 0</p>|
 |Физ. диск (1.9) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.9.health-numeric<p>Update: 0</p>|
 |Физ. диск (1.13) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.13.vendor<p>Update: 0</p>|
-|Физ. диск (1.11) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.11.health-numeric<p>Update: 0</p>|
 |Физ. диск (1.11) - индикатор|<p>-</p>|`Dependent item`|hp.msa.disks.1.11.led-status-numeric<p>Update: 0</p>|
 |Физ. диск (1.11) - модель|<p>-</p>|`Dependent item`|hp.msa.disks.1.11.model<p>Update: 0</p>|
 |Физ. диск (1.21) - статистика|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disk-statistics-1_21,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
@@ -695,14 +697,12 @@ There are no discovery rules in this template.
 |Физ. диск (2.4) - расположение|<p>-</p>|`Dependent item`|hp.msa.disks.2.4.location<p>Update: 0</p>|
 |Физ. диск (2.1) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.2.1.state<p>Update: 0</p>|
 |Физ. диск (2.1) - тип|<p>-</p>|`Dependent item`|hp.msa.disks.2.1.type<p>Update: 0</p>|
-|Физ. диск (2.1) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.2.1.vendor<p>Update: 0</p>|
 |Физ. диск (2.2) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.2.2.vendor<p>Update: 0</p>|
 |Физ. диск (2.10) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.2.10.state<p>Update: 0</p>|
 |Подключено полок|<p>-</p>|`Dependent item`|hp.msa.system-information.enclosure-count<p>Update: 0</p>|
 |БП (2.1) - расположение|<p>-</p>|`Dependent item`|hp.msa.power-supplies.2.1.position-numeric<p>Update: 0</p>|
 |Хранилище - состояние|<p>-</p>|`Dependent item`|hp.msa.system-information.health-numeric<p>Update: 0</p>|
 |Модель хранилища|<p>-</p>|`Dependent item`|hp.msa.system-information.model<p>Update: 0</p>|
-|Тип оборудования|<p>-</p>|`Dependent item`|hp.msa.system-information.product-brand<p>Update: 0</p>|
 |Порт (A3) - тип подключения|<p>Порт 3 из 4</p>|`Dependent item`|hp.msa.ports.1.5.media<p>Update: 0</p>|
 |Порт (A4) - состояние|<p>Порт 4 из 4</p>|`Dependent item`|hp.msa.ports.1.7.health-numeric<p>Update: 0</p>|
 |Порт (A4) - тип подключения|<p>Порт 4 из 4</p>|`Dependent item`|hp.msa.ports.1.7.media<p>Update: 0</p>|

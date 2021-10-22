@@ -135,10 +135,10 @@ There are no discovery rules in this template.
 |Status port 22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 120</p>|
 |Errors Rx port 22|<p>-</p>|`SNMP agent`|ifInErrors.22<p>Update: 120</p>|
 |Bytes Rx port 3|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 120</p>|
-|Bytes Tx port 6|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 120</p>|
-|Errors Rx port 3|<p>-</p>|`SNMP agent`|ifInErrors.3<p>Update: 120</p>|
 |Errors Rx port 6|<p>-</p>|`SNMP agent`|ifInErrors.6<p>Update: 120</p>|
 |Bytes Tx port 22|<p>-</p>|`SNMP agent`|ifOutOctets.22<p>Update: 120</p>|
+|Bytes Tx port 6|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 120</p>|
+|Errors Rx port 3|<p>-</p>|`SNMP agent`|ifInErrors.3<p>Update: 120</p>|
 |Bytes Rx port 1|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 120</p>|
 |Errors Tx port 7|<p>-</p>|`SNMP agent`|ifOutErrors.7<p>Update: 120</p>|
 |Errors Tx port 10|<p>-</p>|`SNMP agent`|ifOutErrors.10<p>Update: 120</p>|

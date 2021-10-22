@@ -40,7 +40,6 @@ There are no discovery rules in this template.
 |Port 10 Speed|<p>Port 10 Speed</p>|`SNMP agent`|ifspeed.1670<p>Update: 120</p>|
 |Port 11 Speed|<p>Port 11 Speed</p>|`SNMP agent`|ifspeed.1798<p>Update: 120</p>|
 |Port 12 Speed|<p>Port 12 Speed</p>|`SNMP agent`|ifspeed.1926<p>Update: 120</p>|
-|Port 15 Speed|<p>Port 15 Speed</p>|`SNMP agent`|ifspeed.2310<p>Update: 120</p>|
 |Port 19 Speed|<p>Port 19 Speed</p>|`SNMP agent`|ifspeed.2822<p>Update: 120</p>|
 |Port 25 Speed|<p>Port 25 Speed</p>|`SNMP agent`|ifspeed.3590<p>Update: 120</p>|
 |Port 06 Traffic IN|<p>Port 06 Traffic IN</p>|`SNMP agent`|ifInOctects.1158<p>Update: 120</p>|
@@ -58,7 +57,6 @@ There are no discovery rules in this template.
 |Port 24 Status|<p>Port 24 Status</p>|`SNMP agent`|ifOperStatus.3462<p>Update: 120</p>|
 |Port 22 Traffic IN|<p>Port 22 Traffic IN</p>|`SNMP agent`|ifInOctects.3206<p>Update: 120</p>|
 |Port 14 Status|<p>Port 14 Status</p>|`SNMP agent`|ifOperStatus.2182<p>Update: 120</p>|
-|Port 02 Status|<p>Port 02 Status</p>|`SNMP agent`|ifOperStatus.646<p>Update: 120</p>|
 |Port 10 Status|<p>Port 10 Status</p>|`SNMP agent`|ifOperStatus.1670<p>Update: 120</p>|
 |Port 11 Status|<p>Port 11 Status</p>|`SNMP agent`|ifOperStatus.1798<p>Update: 120</p>|
 |Port 02 Last Changed|<p>Port 02 Last Changed</p>|`SNMP agent`|ifLastChange.646<p>Update: 120</p>|
@@ -66,7 +64,6 @@ There are no discovery rules in this template.
 |Port 15 Traffic OUT Errors|<p>Port 15 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.2310<p>Update: 120</p>|
 |Port 16 Traffic OUT Errors|<p>Port 16 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.2438<p>Update: 120</p>|
 |Port SFP 25 Status|<p>Port 01 Status</p>|`SNMP agent`|ifOperStatus.3846<p>Update: 120</p>|
-|Port 18 Status|<p>Port 18 Status</p>|`SNMP agent`|ifOperStatus.2694<p>Update: 120</p>|
 |Port 26 Speed|<p>Port 26 Speed</p>|`SNMP agent`|ifspeed.3718<p>Update: 120</p>|
 |Port 07 Traffic IN|<p>Port 07 Traffic IN</p>|`SNMP agent`|ifInOctects.1286<p>Update: 120</p>|
 |Port 12 Traffic IN|<p>Port 12 Traffic IN</p>|`SNMP agent`|ifInOctects.1926<p>Update: 120</p>|
@@ -77,6 +74,8 @@ There are no discovery rules in this template.
 |Port 25 Last Changed|<p>Port 25 Last Changed</p>|`SNMP agent`|ifLastChange.3590<p>Update: 120</p>|
 |Port 19 Last Changed|<p>Port 19 Last Changed</p>|`SNMP agent`|ifLastChange.2822<p>Update: 120</p>|
 |Port 04 Last Changed|<p>Port 04 Last Changed</p>|`SNMP agent`|ifLastChange.902<p>Update: 120</p>|
+|Port 15 Speed|<p>Port 15 Speed</p>|`SNMP agent`|ifspeed.2310<p>Update: 120</p>|
+|Port 02 Status|<p>Port 02 Status</p>|`SNMP agent`|ifOperStatus.646<p>Update: 120</p>|
 |Port 16 Speed|<p>Port 16 Speed</p>|`SNMP agent`|ifspeed.2438<p>Update: 120</p>|
 |Port 06 Speed|<p>Port 06 Speed</p>|`SNMP agent`|ifspeed.1158<p>Update: 120</p>|
 |Port 23 Speed|<p>Port 23 Speed</p>|`SNMP agent`|ifspeed.3334<p>Update: 120</p>|
@@ -152,8 +151,6 @@ There are no discovery rules in this template.
 |Port 10 Last Changed|<p>Port 10 Last Changed</p>|`SNMP agent`|ifLastChange.1670<p>Update: 120</p>|
 |Port 25 Traffic OUT Errors|<p>Port 25 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.3590<p>Update: 120</p>|
 |Port 13 Traffic OUT Errors|<p>Port 13 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.2054<p>Update: 120</p>|
-|Port 26 Traffic OUT Errors|<p>Port 26 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.3718<p>Update: 120</p>|
-|Port SFP 25 Traffic OUT Errors|<p>Port 01 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.3846<p>Update: 120</p>|
 |Port 03 Traffic OUT|<p>Port 03 Traffic OUT</p>|`SNMP agent`|ifOutOctets.774<p>Update: 120</p>|
 |Port 19 Status|<p>Port 19 Status</p>|`SNMP agent`|ifOperStatus.2822<p>Update: 120</p>|
 |Port 20 Status|<p>Port 20 Status</p>|`SNMP agent`|ifOperStatus.2950<p>Update: 120</p>|
@@ -198,17 +195,20 @@ There are no discovery rules in this template.
 |Port 07 Traffic OUT Errors|<p>Port 07 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.1286<p>Update: 120</p>|
 |Port 08 Traffic OUT Errors|<p>Port 08 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.1414<p>Update: 120</p>|
 |Port 09 Traffic OUT Errors|<p>Port 09 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.1542<p>Update: 120</p>|
-|Port 09 Traffic OUT|<p>Port 09 Traffic OUT</p>|`SNMP agent`|ifOutOctets.1542<p>Update: 120</p>|
 |Port 24 Speed|<p>Port 24 Speed</p>|`SNMP agent`|ifspeed.3462<p>Update: 120</p>|
 |Port SFP 25 Speed|<p>Port 01 Speed</p>|`SNMP agent`|ifspeed.3846<p>Update: 120</p>|
 |Port 26 Traffic OUT|<p>Port 26 Traffic OUT</p>|`SNMP agent`|ifOutOctets.3718<p>Update: 120</p>|
-|Port 17 Traffic IN Errors|<p>Port 17 Traffic IN Errors</p>|`SNMP agent`|ifInErrors.2566<p>Update: 120</p>|
-|Port 18 Traffic IN Errors|<p>Port 18 Traffic IN Errors</p>|`SNMP agent`|ifInErrors.2694<p>Update: 120</p>|
-|Port 19 Traffic IN Errors|<p>Port 19 Traffic IN Errors</p>|`SNMP agent`|ifInErrors.2822<p>Update: 120</p>|
 |Port 23 Traffic IN|<p>Port 23 Traffic IN</p>|`SNMP agent`|ifInOctects.3334<p>Update: 120</p>|
 |Port 05 Last Changed|<p>Port 05 Last Changed</p>|`SNMP agent`|ifLastChange.1030<p>Update: 120</p>|
 |Port 14 Last Changed|<p>Port 14 Last Changed</p>|`SNMP agent`|ifLastChange.2182<p>Update: 120</p>|
 |Port 16 Last Changed|<p>Port 16 Last Changed</p>|`SNMP agent`|ifLastChange.2438<p>Update: 120</p>|
+|Port 26 Traffic OUT Errors|<p>Port 26 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.3718<p>Update: 120</p>|
+|Port SFP 25 Traffic OUT Errors|<p>Port 01 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.3846<p>Update: 120</p>|
+|Port 18 Status|<p>Port 18 Status</p>|`SNMP agent`|ifOperStatus.2694<p>Update: 120</p>|
+|Port 09 Traffic OUT|<p>Port 09 Traffic OUT</p>|`SNMP agent`|ifOutOctets.1542<p>Update: 120</p>|
+|Port 17 Traffic IN Errors|<p>Port 17 Traffic IN Errors</p>|`SNMP agent`|ifInErrors.2566<p>Update: 120</p>|
+|Port 18 Traffic IN Errors|<p>Port 18 Traffic IN Errors</p>|`SNMP agent`|ifInErrors.2694<p>Update: 120</p>|
+|Port 19 Traffic IN Errors|<p>Port 19 Traffic IN Errors</p>|`SNMP agent`|ifInErrors.2822<p>Update: 120</p>|
 |Port 18 Speed|<p>Port 18 Speed</p>|`SNMP agent`|ifspeed.2694<p>Update: 120</p>|
 |Port SFP 26 Traffic IN Errors|<p>Port 01 Traffic IN Errors</p>|`SNMP agent`|ifInErrors.3974<p>Update: 120</p>|
 |Port 01 Traffic IN|<p>Port 01 Traffic IN</p>|`SNMP agent`|ifInOctects.518<p>Update: 120</p>|

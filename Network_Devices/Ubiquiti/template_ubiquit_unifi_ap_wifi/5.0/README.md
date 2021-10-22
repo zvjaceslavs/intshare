@@ -29,10 +29,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Radio Tx Rate|<p>-</p>|`SNMP agent`|ubntWlStatTxRate<p>Update: 30s</p>|
-|Wireless outgoing drops on site|<p>-</p>|`Zabbix agent (active)`|unifi.site.state[ap,stat.tx_dropped, sum]<p>Update: 30s</p>|
 |{#ALIAS} '$2' state|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, isolated]<p>Update: 60s</p>|
 |Device description|<p>-</p>|`SNMP agent`|system.descr<p>Update: 1h</p>|
+|Radio Tx Rate|<p>-</p>|`SNMP agent`|ubntWlStatTxRate<p>Update: 30s</p>|
+|Wireless outgoing drops on site|<p>-</p>|`Zabbix agent (active)`|unifi.site.state[ap,stat.tx_dropped, sum]<p>Update: 30s</p>|
+|Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.5<p>Update: 600</p>|
 |Incoming Traffic 07|<p>-</p>|`SNMP agent`|ifInOctets.7<p>Update: 300</p>|
 |Incoming Traffic 05|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 300</p>|
 |Incoming Traffic 04|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 300</p>|
@@ -47,7 +48,6 @@ There are no template links in this template.
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.4<p>Update: 600</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.3<p>Update: 600</p>|
 |Device Contact Details|<p>-</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
-|SNMP traps (fallback)|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
 |Operation Status 06|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 60</p>|
 |Wireless power on {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, ng-tx_power]<p>Update: 120s</p>|
 |Wireless channel on {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, ng-channel]<p>Update: 120s</p>|
@@ -65,12 +65,13 @@ There are no template links in this template.
 |Operation Status 03|<p>-</p>|`SNMP agent`|ifOperStatus.3<p>Update: 60</p>|
 |AirMax Quality|<p>-</p>|`SNMP agent`|ubntAirMaxQuality<p>Update: 30s</p>|
 |Incoming Traffic No-Unicast 07|<p>-</p>|`SNMP agent`|ifInNoUcast.7<p>Update: 600</p>|
-|Incoming Traffic Unicast 07|<p>-</p>|`SNMP agent`|ifInUcast.7<p>Update: 600</p>|
-|Outgoing Traffic 03|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 300</p>|
 |Radio Frequency|<p>-</p>|`SNMP agent`|ubntRadioFreq<p>Update: 30s</p>|
 |Wireless outgoing drops on {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, stat.tx_dropped]<p>Update: 60s</p>|
 |Serial of {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID},  serial]<p>Update: 3600</p>|
 |Incoming Traffic No-Unicast 05|<p>-</p>|`SNMP agent`|ifInNoUcast.5<p>Update: 600</p>|
+|Incoming Traffic Unicast 07|<p>-</p>|`SNMP agent`|ifInUcast.7<p>Update: 600</p>|
+|SNMP traps (fallback)|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
+|Outgoing Traffic 03|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 300</p>|
 |Device name|<p>-</p>|`SNMP agent`|system.name<p>Update: 1h</p>|
 |{#ALIAS} '$2' state|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, adopted]<p>Update: 600s</p>|
 |Firmware of {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, version]<p>Update: 3600s</p>|
@@ -127,7 +128,6 @@ There are no template links in this template.
 |Incoming Traffic No-Unicast 01|<p>-</p>|`SNMP agent`|ifInNoUcast.1<p>Update: 600</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.7<p>Update: 600</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.6<p>Update: 600</p>|
-|Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.5<p>Update: 600</p>|
 |Incoming Traffic Unicast 06|<p>-</p>|`SNMP agent`|ifInUcast.6<p>Update: 600</p>|
 |Operation Status 01|<p>-</p>|`SNMP agent`|ifOperStatus.1<p>Update: 60</p>|
 |Device Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|

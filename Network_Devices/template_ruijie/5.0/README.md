@@ -18,8 +18,8 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|cpu multiple discovery|<p>-</p>|`Zabbix agent`|system.cpu.discovery<p>Update: 30s</p>|
 |UE Discovery|<p>-</p>|`Zabbix trapper`|ue.discovery<p>Update: 0</p>|
+|cpu multiple discovery|<p>-</p>|`Zabbix agent`|system.cpu.discovery<p>Update: 30s</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
@@ -82,13 +82,13 @@ There are no template links in this template.
 |系统僵尸进程|<p>-</p>|`Zabbix agent`|system.zombie.name<p>Update: 30s</p>|
 |testio.iotop|<p>-</p>|`Zabbix agent`|testio.iotop<p>Update: 10s</p>|
 |系统内存|<p>-</p>|`Zabbix agent`|vm.memory.size[used]<p>Update: 30s</p>|
-|CPU{#CPU.NUMBER}利用率|<p>-</p>|`Zabbix agent`|system.cpu.util[{#CPU.NUMBER},,]<p>Update: 10s</p><p>LLD</p>|
 |UE{#NUMBER} DL MCS|<p>-</p>|`Zabbix trapper`|ue.dl.mcs[{#NUMBER}]<p>Update: 0</p><p>LLD</p>|
 |UE{#NUMBER} DL RadioBearer|<p>-</p>|`Zabbix trapper`|ue.dl.rb[{#NUMBER}]<p>Update: 0</p><p>LLD</p>|
 |UE{#NUMBER} DL|<p>-</p>|`Zabbix trapper`|ue.dl[{#NUMBER}]<p>Update: 0</p><p>LLD</p>|
 |UE{#NUMBER} UL MCS|<p>-</p>|`Zabbix trapper`|ue.ul.mcs[{#NUMBER}]<p>Update: 0</p><p>LLD</p>|
 |UE{#NUMBER} UL SR_BSR|<p>-</p>|`Zabbix trapper`|ue.ul.sr_bsr[{#NUMBER}]<p>Update: 0</p><p>LLD</p>|
 |UE{#NUMBER} UL|<p>-</p>|`Zabbix trapper`|ue.ul[{#NUMBER}]<p>Update: 0</p><p>LLD</p>|
+|CPU{#CPU.NUMBER}利用率|<p>-</p>|`Zabbix agent`|system.cpu.util[{#CPU.NUMBER},,]<p>Update: 10s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

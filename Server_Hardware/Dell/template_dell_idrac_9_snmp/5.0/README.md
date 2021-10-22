@@ -39,15 +39,15 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Disk Enumeration|<p>-</p>|`SNMP agent`|DiskEnumeration<p>Update: 1d</p>|
 |Fan Enumeration|<p>-</p>|`SNMP agent`|FanEnumeration<p>Update: 1d</p>|
+|Disk Volume Enumeration|<p>-</p>|`SNMP agent`|VolumeEnum<p>Update: 1d</p>|
+|Disk Enumeration|<p>-</p>|`SNMP agent`|DiskEnumeration<p>Update: 1d</p>|
+|Temperature Enumeration|<p>-</p>|`SNMP agent`|TempEnum<p>Update: 1d</p>|
+|Processor Enumeration|<p>-</p>|`SNMP agent`|ProcEnum<p>Update: 1d</p>|
 |Memory Enumeration|<p>-</p>|`SNMP agent`|MemoryEnum<p>Update: 1d;50s/1-7,00:00-24:00</p>|
 |Network Enumeration|<p>-</p>|`SNMP agent`|NetworkEnum<p>Update: 1d</p>|
-|Power Supply Enumeration|<p>-</p>|`SNMP agent`|PowerSupplies<p>Update: 1d</p>|
-|Processor Enumeration|<p>-</p>|`SNMP agent`|ProcEnum<p>Update: 1d</p>|
-|Temperature Enumeration|<p>-</p>|`SNMP agent`|TempEnum<p>Update: 1d</p>|
 |Voltage Table Enumeration|<p>-</p>|`SNMP agent`|VoltageTable<p>Update: 1d</p>|
-|Disk Volume Enumeration|<p>-</p>|`SNMP agent`|VolumeEnum<p>Update: 1d</p>|
+|Power Supply Enumeration|<p>-</p>|`SNMP agent`|PowerSupplies<p>Update: 1d</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
@@ -73,6 +73,13 @@ There are no template links in this template.
 |System BIOS Status|<p>-</p>|`SNMP agent`|SystemBiosStatus<p>Update: 1h</p>|
 |System Power State|<p>4 server is on 3 server is on stand-by</p>|`SNMP agent`|SystemPowerState<p>Update: 5m</p>|
 |Voltage Status Combined|<p>-</p>|`SNMP agent`|VoltageStatusCombined<p>Update: 10m</p>|
+|Fan {#SNMPVALUE} Speed|<p>-</p>|`SNMP agent`|FanSpeed.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Fan {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : Virtual Disk State|<p>-</p>|`SNMP agent`|VolumeDiskState.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : Name|<p>-</p>|`SNMP agent`|VolumeName.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : Size|<p>-</p>|`SNMP agent`|VolumeSize.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : State|<p>-</p>|`SNMP agent`|VolumeState.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Volume {#SNMPINDEX} : Status|<p>-</p>|`SNMP agent`|VolumeStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Disk {#SNMPINDEX} : Manufacture Day|<p>-</p>|`SNMP agent`|DiskManufactureDay.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |Disk {#SNMPINDEX} : Manufacturer|<p>-</p>|`SNMP agent`|DiskManufacturer.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |Disk {#SNMPINDEX} : Manufacture Week|<p>-</p>|`SNMP agent`|DiskManufactureWeek.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
@@ -83,8 +90,13 @@ There are no template links in this template.
 |Disk {#SNMPINDEX} : Disk Size|<p>-</p>|`SNMP agent`|DiskSize.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |Disk {#SNMPINDEX} : Disk State|<p>-</p>|`SNMP agent`|DiskState.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Disk {#SNMPINDEX} : Disk Status|<p>-</p>|`SNMP agent`|DiskStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|Fan {#SNMPVALUE} Speed|<p>-</p>|`SNMP agent`|FanSpeed.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
-|Fan {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|FanStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Critical Low-Limit|<p>-</p>|`SNMP agent`|TempCritLowLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Critical Up-Limit|<p>-</p>|`SNMP agent`|TempCritUpLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|TempStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Value|<p>-</p>|`SNMP agent`|TempValue.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Warning Low-Limit|<p>-</p>|`SNMP agent`|TempWarnLowLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Temperature Sensor {#SNMPVALUE} Warning Up-Limit|<p>-</p>|`SNMP agent`|TempWarnUpLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
+|Processor {#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|ProcStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Memory Slot {#SNMPVALUE} Manufacturer|<p>-</p>|`SNMP agent`|MemManufacturer[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |Memory Slot {#SNMPVALUE} Part Number|<p>-</p>|`SNMP agent`|MemPartlNo.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |Memory Slot {#SNMPVALUE} Serial Number|<p>-</p>|`SNMP agent`|MemSerialNo.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
@@ -96,24 +108,12 @@ There are no template links in this template.
 |NIC {#SNMPINDEX} : Name|<p>-</p>|`SNMP agent`|NetName.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |NIC {#SNMPINDEX} : Slot|<p>-</p>|`SNMP agent`|NetSlot.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |NIC {#SNMPINDEX} : Status|<p>-</p>|`SNMP agent`|NetStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|Voltage : {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|VoltageStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 |Power Supply {#SNMPINDEX} Input Voltage|<p>-</p>|`SNMP agent`|PowerSupplyInputVoltage.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Power Supply {#SNMPINDEX} Maximum Power|<p>-</p>|`SNMP agent`|PowerSupplyMaxPower.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |Power Supply {#SNMPINDEX} Sensor State|<p>-</p>|`SNMP agent`|PowerSupplySensorState.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 |Power Supply {#SNMPINDEX} State Settings|<p>-</p>|`SNMP agent`|PowerSupplyStateSettings.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 |Power Supply {#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|PowerSupplyStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
-|Processor {#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|ProcStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
-|Temperature Sensor {#SNMPVALUE} Critical Low-Limit|<p>-</p>|`SNMP agent`|TempCritLowLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
-|Temperature Sensor {#SNMPVALUE} Critical Up-Limit|<p>-</p>|`SNMP agent`|TempCritUpLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
-|Temperature Sensor {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|TempStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
-|Temperature Sensor {#SNMPVALUE} Value|<p>-</p>|`SNMP agent`|TempValue.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
-|Temperature Sensor {#SNMPVALUE} Warning Low-Limit|<p>-</p>|`SNMP agent`|TempWarnLowLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
-|Temperature Sensor {#SNMPVALUE} Warning Up-Limit|<p>-</p>|`SNMP agent`|TempWarnUpLimit.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
-|Voltage : {#SNMPVALUE} Status|<p>-</p>|`SNMP agent`|VoltageStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
-|Volume {#SNMPINDEX} : Virtual Disk State|<p>-</p>|`SNMP agent`|VolumeDiskState.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|Volume {#SNMPINDEX} : Name|<p>-</p>|`SNMP agent`|VolumeName.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
-|Volume {#SNMPINDEX} : Size|<p>-</p>|`SNMP agent`|VolumeSize.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
-|Volume {#SNMPINDEX} : State|<p>-</p>|`SNMP agent`|VolumeState.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|Volume {#SNMPINDEX} : Status|<p>-</p>|`SNMP agent`|VolumeStatus.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -133,18 +133,18 @@ There are no template links in this template.
 |{HOST.NAME}: Error on Voltage Sensor {#SNMPVALUE}|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:VoltageStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|average|
 |{HOST.NAME}: Volume {#SNMPINDEX} Error|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:VolumeDiskState.[{#SNMPINDEX}].last(0)}<>2) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
 |{HOST.NAME}: Volume {#SNMPINDEX} Status Error|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:VolumeStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME}: Problem with Disk {#SNMPINDEX} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:DiskStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|disaster|
 |{HOST.NAME}: Problem with FAN {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:FanStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|average|
-|{HOST.NAME}: Problem with memory in slot {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:MemStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME}: Error on NIC {#SNMPINDEX} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:NetStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|disaster|
-|{HOST.NAME}: Error on PSU {#SNMPINDEX} State (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:PowerSupplySensorState.[{#SNMPINDEX}].last(0)}<>1) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME}: Problem with PSU {#SNMPINDEX} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:PowerSupplyStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME}: Error on Processor {#SNMPINDEX} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:ProcStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:ProcStatus.[{#SNMPINDEX}].last(0)}<>2) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|disaster|
+|{HOST.NAME}: Volume {#SNMPINDEX} Error (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:VolumeDiskState.[{#SNMPINDEX}].last(0)}<>2) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME}: Volume {#SNMPINDEX} Status Error (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:VolumeStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME}: Problem with Disk {#SNMPINDEX} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:DiskStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|disaster|
 |Problem with Temperature Sensor {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template-SNMP-iDRAC-9:TempStatus.[{#SNMPINDEX}].last(0)}<>3</p><p>**Recovery expression**: </p>|warning|
 |Temperature on {#SNMPVALUE} critically high (LLD)|<p>Temperature of the item is above Critical Level.</p>|<p>**Expression**: {Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} >= {Template-SNMP-iDRAC-9:TempCritUpLimit.[{#SNMPINDEX}].last()}</p><p>**Recovery expression**: </p>|high|
 |Temperature on {#SNMPVALUE} critically low (LLD)|<p>Temperature of the item is below Critical Level.</p>|<p>**Expression**: {Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} <= {Template-SNMP-iDRAC-9:TempCritLowLimit.[{#SNMPINDEX}].last()}</p><p>**Recovery expression**: </p>|high|
 |Temperature on {#SNMPVALUE} to high (LLD)|<p>Temperature of the item is above Warning Level.</p>|<p>**Expression**: {Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} > {Template-SNMP-iDRAC-9:TempWarnUpLimit.[{#SNMPINDEX}].last()} and {Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} < {Template-SNMP-iDRAC-9:TempCritUpLimit.[{#SNMPINDEX}].last()}</p><p>**Recovery expression**: </p>|warning|
 |Temperature on {#SNMPVALUE} to low (LLD)|<p>Temperature of the item is below Warning Level.</p>|<p>**Expression**: {Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} < {Template-SNMP-iDRAC-9:TempWarnLowLimit.[{#SNMPINDEX}].last()} and {Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} > {Template-SNMP-iDRAC-9:TempCritLowLimit.[{#SNMPINDEX}].last()}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.NAME}: Error on Processor {#SNMPINDEX} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:ProcStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:ProcStatus.[{#SNMPINDEX}].last(0)}<>2) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|disaster|
+|{HOST.NAME}: Problem with memory in slot {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:MemStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME}: Error on NIC {#SNMPINDEX} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:NetStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|disaster|
 |{HOST.NAME}: Error on Voltage Sensor {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:VoltageStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|average|
-|{HOST.NAME}: Volume {#SNMPINDEX} Error (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:VolumeDiskState.[{#SNMPINDEX}].last(0)}<>2) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME}: Volume {#SNMPINDEX} Status Error (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:VolumeStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME}: Error on PSU {#SNMPINDEX} State (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:PowerSupplySensorState.[{#SNMPINDEX}].last(0)}<>1) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME}: Problem with PSU {#SNMPINDEX} (LLD)|<p>-</p>|<p>**Expression**: ({Template-SNMP-iDRAC-9:PowerSupplyStatus.[{#SNMPINDEX}].last(0)}<>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</p><p>**Recovery expression**: </p>|high|

@@ -115,8 +115,8 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Memory discovery|<p>HOST-RESOURCES-MIB::hrStorage discovery with memory filter</p>|`SNMP agent`|vm.memory.discovery<p>Update: 1h</p>|
-|Network interfaces discovery|<p>Discovering interfaces from IF-MIB.</p>|`SNMP agent`|net.if.discovery<p>Update: 1h</p>|
 |Network ARP Entry|<p>-</p>|`SNMP agent`|TELTONIKA-MIB.netArpEntry<p>Update: 1h</p>|
+|Network interfaces discovery|<p>Discovering interfaces from IF-MIB.</p>|`SNMP agent`|net.if.discovery<p>Update: 1h</p>|
 |Network IP|<p>-</p>|`SNMP agent`|TELTONIKA-MIB.netIP<p>Update: 10m</p>|
 |hsSessionEntry Discovery|<p>An entry containing information of a particular hotspot session.</p>|`SNMP agent`|TELTONIKA-MIB.hsSessionEntry<p>Update: 1h</p>|
 |modemEntry Discovery|<p>An entry containing information of a particular interface.</p>|`SNMP agent`|TELTONIKA-MIB.modemEntry<p>Update: 1h</p>|
@@ -128,9 +128,6 @@ There are no template links in this template.
 |SNMP Trap: TELTONIKA-MIB::digitalOutputNotification|<p>Digital output trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.2\s"]<p>Update: 0</p>|
 |SNMP Trap: TELTONIKA-MIB::relay0Notification|<p>Relay trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.8\s"]<p>Update: 0</p>|
 |SNMP Trap: TELTONIKA-MIB::digitalInput2Notification|<p>Digital input2 trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.12\s"]<p>Update: 0</p>|
-|GPS:datetime|<p>GPS datetime</p>|`SNMP agent`|TELTONIKA-MIB.datetime<p>Update: 60m</p>|
-|din2State|<p>Digital input2 state</p>|`SNMP agent`|TELTONIKA-MIB.din2State<p>Update: 30m</p>|
-|dinState|<p>Digital input state</p>|`SNMP agent`|TELTONIKA-MIB.dinState<p>Update: 30m</p>|
 |iioState|<p>Isolated Input state</p>|`SNMP agent`|TELTONIKA-MIB.iioState<p>Update: 30m</p>|
 |SNMP Trap: TELTONIKA-MIB::connectionTypeNotification|<p>Connection type trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.1\.2\s"]<p>Update: 0</p>|
 |GPS:longtitude|<p>Longtitude coordinates</p>|`SNMP agent`|TELTONIKA-MIB.longtitude<p>Update: 60m</p>|
@@ -138,6 +135,9 @@ There are no template links in this template.
 |modemDescription|<p>Modem description</p>|`SNMP agent`|TELTONIKA-MIB.modemDescription<p>Update: 24h</p>|
 |modemNum|<p>The number of modems (regardless of their current state) present on this system.</p>|`SNMP agent`|TELTONIKA-MIB.modemNum<p>Update: 24h</p>|
 |SNMP Trap: TELTONIKA-MIB::signalChangeNotification|<p>Signal strength trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.1\.1\s"]<p>Update: 0</p>|
+|GPS:datetime|<p>GPS datetime</p>|`SNMP agent`|TELTONIKA-MIB.datetime<p>Update: 60m</p>|
+|din2State|<p>Digital input2 state</p>|`SNMP agent`|TELTONIKA-MIB.din2State<p>Update: 30m</p>|
+|dinState|<p>Digital input state</p>|`SNMP agent`|TELTONIKA-MIB.dinState<p>Update: 30m</p>|
 |connectionType|<p>Connection type</p>|`SNMP agent`|TELTONIKA-MIB.connectionType<p>Update: 24h</p>|
 |SNMP Trap: TELTONIKA-MIB::digitalInputNotification|<p>Digital input trap</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.48690\.4\.2\.1\s"]<p>Update: 0</p>|
 |serial|<p>Serial number</p>|`SNMP agent`|TELTONIKA-MIB.serial<p>Update: 24h</p>|
@@ -166,6 +166,7 @@ There are no template links in this template.
 |{#MEMNAME}: Total memory|<p>MIB: HOST-RESOURCES-MIB The size of the storage represented by this entry, in units of hrStorageAllocationUnits. This object is writable to allow remote configuration of the size of the storage area in those cases where such an operation makes sense and is possible on the underlying system. For example, the amount of main memory allocated to a buffer pool might be modified or the amount of disk space allocated to virtual memory might be modified.</p>|`SNMP agent`|vm.memory.total[hrStorageSize.{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |{#MEMNAME}: Used memory|<p>MIB: HOST-RESOURCES-MIB The amount of the storage represented by this entry that is allocated, in units of hrStorageAllocationUnits.</p>|`SNMP agent`|vm.memory.used[hrStorageUsed.{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 |{#MEMNAME}: Memory utilization|<p>Memory utilization in %</p>|`Calculated`|vm.memory.util[memoryUsedPercentage.{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|Network ARP entry {#IPPHYSADDRESS}|<p>-</p>|`SNMP agent`|NetArpEntry[{#IPPHYSADDRESS}]<p>Update: 30m</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Inbound packets discarded|<p>MIB: IF-MIB The number of inbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol. One possible reason for discarding such a packet could be to free up buffer space. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Inbound packets with errors|<p>MIB: IF-MIB For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Bits received|<p>MIB: IF-MIB The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
@@ -179,7 +180,6 @@ There are no template links in this template.
 |Interface {#IFNAME}({#IFALIAS}): Total monthly traffic|<p>Total traffic sent and received this month. Resets to 0 the first day every month.</p>|`Calculated`|net.if.total[monthly.{#SNMPINDEX}]<p>Update: 12m</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Total weekly traffic|<p>Total traffic sent and received this week. Resets to 0 every Monday.</p>|`Calculated`|net.if.total[weekly.{#SNMPINDEX}]<p>Update: 12m</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Interface type|<p>MIB: IF-MIB The type of interface. Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA), through updating the syntax of the IANAifType textual convention.</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|Network ARP entry {#IPPHYSADDRESS}|<p>-</p>|`SNMP agent`|NetArpEntry[{#IPPHYSADDRESS}]<p>Update: 30m</p><p>LLD</p>|
 |Network Interface #{#IFINDEX} IP|<p>-</p>|`SNMP agent`|netInterfaceIP[{#IFINDEX}]<p>Update: 10m</p><p>LLD</p>|
 |Network Interface #{#IFINDEX} Netmask|<p>-</p>|`SNMP agent`|netInterfaceNetmask[{#IFINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |hssDwBandwidth for {#SNMPINDEX}|<p>Max download bandwidth in b/s. Cannot be accessed using SNMPv1.</p>|`SNMP agent`|hssDwBandwidth[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|

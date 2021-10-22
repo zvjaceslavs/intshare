@@ -69,7 +69,6 @@ There are no template links in this template.
 |Admin Status port FE13|<p>-</p>|`SNMP agent`|ifAdminStatus.4227722<p>Update: 30s</p>|
 |Oper status port FE24|<p>-</p>|`SNMP agent`|ifOperStatus.4227810<p>Update: 30s</p>|
 |Oper status port FE22|<p>-</p>|`SNMP agent`|ifOperStatus.4227794<p>Update: 30s</p>|
-|Oper status port FE04|<p>-</p>|`SNMP agent`|ifOperStatus.4227650<p>Update: 30s</p>|
 |Admin Status port FE24|<p>-</p>|`SNMP agent`|ifAdminStatus.4227810<p>Update: 30s</p>|
 |Admin Status port FE03|<p>-</p>|`SNMP agent`|ifAdminStatus.4227642<p>Update: 30s</p>|
 |Admin Status port FE16|<p>-</p>|`SNMP agent`|ifAdminStatus.4227746<p>Update: 30s</p>|
@@ -77,25 +76,26 @@ There are no template links in this template.
 |Oper status port GE4|<p>-</p>|`SNMP agent`|ifOperStatus.4228065<p>Update: 30s</p>|
 |Errors TX port FE01|<p>-</p>|`SNMP agent`|ifOutErrors.4227626<p>Update: 30s</p>|
 |Errors TX port FE02|<p>-</p>|`SNMP agent`|ifOutErrors.4227634<p>Update: 30s</p>|
-|Errors TX port FE08|<p>-</p>|`SNMP agent`|ifOutErrors.4227682<p>Update: 30s</p>|
-|Errors TX port FE09|<p>-</p>|`SNMP agent`|ifOutErrors.4227690<p>Update: 30s</p>|
-|Errors TX port FE10|<p>-</p>|`SNMP agent`|ifOutErrors.4227698<p>Update: 30s</p>|
 |Oper status port FE01|<p>-</p>|`SNMP agent`|ifOperStatus.4227626<p>Update: 30s</p>|
 |Bytes Tx FE19|<p>-</p>|`SNMP agent`|ifOutOctets.4227770<p>Update: 30s</p>|
 |Bytes Tx FE08|<p>-</p>|`SNMP agent`|ifOutOctets.4227682<p>Update: 30s</p>|
-|Errors TX port GE4|<p>-</p>|`SNMP agent`|ifOutErrors.4228065<p>Update: 30s</p>|
-|Bytes Tx FE01|<p>-</p>|`SNMP agent`|ifOutOctets.4227626<p>Update: 30s</p>|
-|Bytes Tx FE02|<p>-</p>|`SNMP agent`|ifOutOctets.4227634<p>Update: 30s</p>|
 |Oper status port FE02|<p>-</p>|`SNMP agent`|ifOperStatus.4227634<p>Update: 30s</p>|
 |Number of interfaces|<p>-</p>|`SNMP agent`|ifNumber.0<p>Update: 3600s</p>|
-|Uptime|<p>Uptime of switch</p>|`SNMP agent`|hUptime<p>Update: 30s</p>|
-|Errors RX port FE02|<p>-</p>|`SNMP agent`|ifInErrors.4227634<p>Update: 30s</p>|
 |Admin Status port FE20|<p>-</p>|`SNMP agent`|ifAdminStatus.4227778<p>Update: 30s</p>|
 |Errors RX port FE13|<p>-</p>|`SNMP agent`|ifInErrors.4227722<p>Update: 30s</p>|
 |Admin Status port FE09|<p>-</p>|`SNMP agent`|ifAdminStatus.4227690<p>Update: 30s</p>|
 |Admin Status port FE01|<p>-</p>|`SNMP agent`|ifAdminStatus.4227626<p>Update: 30s</p>|
 |Admin Status port FE17|<p>-</p>|`SNMP agent`|ifAdminStatus.4227754<p>Update: 30s</p>|
 |Errors RX port FE12|<p>-</p>|`SNMP agent`|ifInErrors.4227714<p>Update: 30s</p>|
+|Errors TX port FE08|<p>-</p>|`SNMP agent`|ifOutErrors.4227682<p>Update: 30s</p>|
+|Errors TX port FE09|<p>-</p>|`SNMP agent`|ifOutErrors.4227690<p>Update: 30s</p>|
+|Errors TX port FE10|<p>-</p>|`SNMP agent`|ifOutErrors.4227698<p>Update: 30s</p>|
+|Oper status port FE04|<p>-</p>|`SNMP agent`|ifOperStatus.4227650<p>Update: 30s</p>|
+|Errors TX port GE4|<p>-</p>|`SNMP agent`|ifOutErrors.4228065<p>Update: 30s</p>|
+|Bytes Tx FE01|<p>-</p>|`SNMP agent`|ifOutOctets.4227626<p>Update: 30s</p>|
+|Bytes Tx FE02|<p>-</p>|`SNMP agent`|ifOutOctets.4227634<p>Update: 30s</p>|
+|Uptime|<p>Uptime of switch</p>|`SNMP agent`|hUptime<p>Update: 30s</p>|
+|Errors RX port FE02|<p>-</p>|`SNMP agent`|ifInErrors.4227634<p>Update: 30s</p>|
 |Oper status port FE11|<p>-</p>|`SNMP agent`|ifOperStatus.4227706<p>Update: 30s</p>|
 |Admin Status port FE23|<p>-</p>|`SNMP agent`|ifAdminStatus.4227802<p>Update: 30s</p>|
 |Admin Status port FE04|<p>-</p>|`SNMP agent`|ifAdminStatus.4227650<p>Update: 30s</p>|

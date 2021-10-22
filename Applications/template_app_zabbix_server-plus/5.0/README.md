@@ -119,6 +119,8 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": snmp trapper"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": preprocessing manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
+|Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": vmware collector",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Uptime|<p>-</p>|`Zabbix internal`|zabbix[uptime]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": unreachable poller"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": preprocessing manager",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
@@ -131,7 +133,6 @@ There are no discovery rules in this template.
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,unreachable poller,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"zabbix_server -c"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": timer"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": task manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": discoverer",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Value processed $3, per second|<p>-</p>|`Zabbix internal`|zabbix[wcache,values,not supported]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Zabbix history write cache, size|<p>Added in V1.1</p>|`Zabbix internal`|zabbix[wcache,history,total]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
@@ -143,6 +144,7 @@ There are no discovery rules in this template.
 |Value processed $3, per second|<p>-</p>|`Zabbix internal`|zabbix[wcache,values,float]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Zabbix trend write cache, size|<p>Added in V1.1</p>|`Zabbix internal`|zabbix[wcache,trend,total]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Zabbix history index cache, size|<p>Added in V1.1</p>|`Zabbix internal`|zabbix[wcache,index,total]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
+|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": task manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process Count[$2]|<p>-</p>|`Zabbix internal`|zabbix[process,proxy poller,count]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Number of items - unsupported|<p>-</p>|`Zabbix internal`|zabbix[items_unsupported]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Number of hosts (monitored)|<p>-</p>|`Zabbix internal`|zabbix[hosts]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
@@ -190,7 +192,6 @@ There are no discovery rules in this template.
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,"zabbix_server -c",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,"zabbix_server",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,"zabbix_agentd",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": vmware collector",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": timer",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": task manager",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - memory [$4]|<p>-</p>|`Zabbix agent`|proc.mem[,,sum,": configuration syncer",rss]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
@@ -231,7 +232,6 @@ There are no discovery rules in this template.
 |File - DB Table [history_str]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_str.ibd]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |File - DB Table [ib_logfile0]|<p>-</p>|`Zabbix agent`|vfs.file.size[{$ZABBIX_DB_DIR}ib_logfile0]<p>Update: {$ZABBIX_INTERVAL_LONG}</p>|
 |Zabbix server log count ($1)|<p>-</p>|`Zabbix agent (active)`|log.count[{$ZABBIX_SERVER_LOG_PATH},,,,skip]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
-|Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": preprocessing manager"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"zabbix_server"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,"zabbix_agentd"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|
 |Process - cpu [$4]|<p>-</p>|`Zabbix agent`|proc.cpu.util[,,,": vmware collector"]<p>Update: {$ZABBIX_INTERVAL_SHORT}</p>|

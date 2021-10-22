@@ -32,6 +32,8 @@ There are no template links in this template.
 |----|-----------|----|----|
 |cardMemUtil.19|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.19<p>Update: 300</p>|
 |cardMemUtil.18|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.18<p>Update: 300</p>|
+|cardCpuUtil.14|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.8.14<p>Update: 300</p>|
+|CheckFanOLT|<p>-</p>|`SNMP agent`|checkFanOLT.sh<p>Update: 30</p>|
 |oltPonOnlineStatus PON 3/2|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.101711872<p>Update: 300</p>|
 |cardMemUtil.6|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.6<p>Update: 300</p>|
 |cardCpuUtil.6|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.8.6<p>Update: 300</p>|
@@ -60,7 +62,6 @@ There are no template links in this template.
 |cardMemUtil.13|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.13<p>Update: 300</p>|
 |oltPonOnlineStatus PON 3/7|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.104333312<p>Update: 300</p>|
 |oltPonOnlineStatus PON 3/5|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.103284736<p>Update: 300</p>|
-|oltPonOnlineStatus PON 5/3|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.169345024<p>Update: 300</p>|
 |oltPonOnlineStatus PON 2/7|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.70778880<p>Update: 300</p>|
 |oltPonOnlineStatus PON 2/6|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.70254592<p>Update: 300</p>|
 |oltPonOnlineStatus PON 2/5|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.69730304<p>Update: 300</p>|
@@ -74,6 +75,7 @@ There are no template links in this template.
 |checkControladoraPorta5|<p>-</p>|`SNMP agent`|checkControladoraPorta5.sh<p>Update: 30</p>|
 |checkControladoraPorta2|<p>-</p>|`SNMP agent`|checkControladoraPorta2.sh<p>Update: 30</p>|
 |cardMemUtil.12|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.12<p>Update: 300</p>|
+|oltPonOnlineStatus PON 5/3|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.169345024<p>Update: 300</p>|
 |checkControladoraPorta4|<p>-</p>|`SNMP agent`|checkControladoraPorta4.sh<p>Update: 30</p>|
 |checkControladoraPorta3|<p>-</p>|`SNMP agent`|checkControladoraPorta3.sh<p>Update: 30</p>|
 |cardMemUtil.17|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.9.17<p>Update: 300</p>|
@@ -82,8 +84,6 @@ There are no template links in this template.
 |oltPonOnlineStatus PON 2/2|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.68157440<p>Update: 300</p>|
 |oltPonOnlineStatus PON 8/4|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.270532608<p>Update: 300</p>|
 |cardCpuUtil.16|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.8.16<p>Update: 300</p>|
-|cardCpuUtil.14|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.8.14<p>Update: 300</p>|
-|CheckFanOLT|<p>-</p>|`SNMP agent`|checkFanOLT.sh<p>Update: 30</p>|
 |oltPonOnlineStatus PON 6/4|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.203423744<p>Update: 300</p>|
 |cardCpuUtil.3|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.5875.800.3.9.2.1.1.8.3<p>Update: 300</p>|
 |oltPonOnlineStatus PON 4/1|<p>-</p>|`SNMP agent`|enterprises.5875.800.3.9.3.4.1.5.134742016<p>Update: 300</p>|

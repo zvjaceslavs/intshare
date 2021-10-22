@@ -27,11 +27,11 @@ There are no discovery rules in this template.
 |----|-----------|----|----|
 |SW 2 Interface 11 Status|<p>SW 2 Interface 11 Status</p>|`SNMP agent`|sw2.interface.11.status<p>Update: 30</p>|
 |SW 1 Interface 4 Status|<p>SW 1 Interface 4 Status</p>|`SNMP agent`|sw1.interface.4.status<p>Update: 30</p>|
+|SW 1 Interface 8 Speed|<p>SW 1 Interface 8 Speed</p>|`SNMP agent`|sw1.interface.8.speed<p>Update: 30</p>|
+|SW 1 Interface 8 Last change|<p>SW 1 Interface 8 Last change Timeticks</p>|`SNMP agent`|sw1.interface.8.lastChange<p>Update: 30</p>|
 |SW 1 Interface 9 Status|<p>SW 1 Interface 9 Status</p>|`SNMP agent`|sw1.interface.9.status<p>Update: 30</p>|
 |SW 1 Interface 10 Speed|<p>SW 1 Interface 10 Speed</p>|`SNMP agent`|sw1.interface.10.speed<p>Update: 30</p>|
 |SW 1 Interface 19 Speed|<p>SW 1 Interface 19 Speed</p>|`SNMP agent`|sw1.interface.19.speed<p>Update: 30</p>|
-|SW 1 Interface 8 Speed|<p>SW 1 Interface 8 Speed</p>|`SNMP agent`|sw1.interface.8.speed<p>Update: 30</p>|
-|SW 1 Interface 8 Last change|<p>SW 1 Interface 8 Last change Timeticks</p>|`SNMP agent`|sw1.interface.8.lastChange<p>Update: 30</p>|
 |SW 1 Interface 28 Speed|<p>SW 1 Interface 28 Speed</p>|`SNMP agent`|sw1.interface.28.speed<p>Update: 30</p>|
 |SW 1 Interface 28 Last change|<p>SW 1 Interface 28 Last change Timeticks</p>|`SNMP agent`|sw1.interface.28.lastChange<p>Update: 30</p>|
 |SW 1 Interface 27 Status|<p>SW 1 Interface 27 Status</p>|`SNMP agent`|sw1.interface.27.status<p>Update: 30</p>|
@@ -84,7 +84,6 @@ There are no discovery rules in this template.
 |SW 2 Interface 15 Status|<p>SW 2 Interface 15 Status</p>|`SNMP agent`|sw2.interface.15.status<p>Update: 30</p>|
 |SW 2 Interface 9 Status|<p>SW 1 Interface 9 Status</p>|`SNMP agent`|sw2.interface.9.status<p>Update: 30</p>|
 |SW 2 Interface 6 Status|<p>SW 1 Interface 6 Status</p>|`SNMP agent`|sw2.interface.6.status<p>Update: 30</p>|
-|SW 1 Interface 7 Speed|<p>SW 1 Interface 7 Speed</p>|`SNMP agent`|sw1.interface.7.speed<p>Update: 30</p>|
 |SW 1 Interface 16 Last change|<p>SW 1 Interface 16 Last change Timeticks</p>|`SNMP agent`|sw1.interface.16.lastChange<p>Update: 30</p>|
 |SW 1 Interface 15 Status|<p>SW 1 Interface 15 Status</p>|`SNMP agent`|sw1.interface.15.status<p>Update: 30</p>|
 |SW 1 Interface 15 Last change|<p>SW 1 Interface 15 Last change Timeticks</p>|`SNMP agent`|sw1.interface.15.lastChange<p>Update: 30</p>|
@@ -93,6 +92,7 @@ There are no discovery rules in this template.
 |SW 1 Interface 20 Status|<p>SW 1 Interface 20 Status</p>|`SNMP agent`|sw1.interface.20.status<p>Update: 30</p>|
 |SW 1 Interface 5 Status|<p>SW 1 Interface 5 Status</p>|`SNMP agent`|sw1.interface.5.status<p>Update: 30</p>|
 |SW 1 Interface 12 Last change|<p>SW 1 Interface 12 Last change Timeticks</p>|`SNMP agent`|sw1.interface.12.lastChange<p>Update: 30</p>|
+|SW 1 Interface 7 Speed|<p>SW 1 Interface 7 Speed</p>|`SNMP agent`|sw1.interface.7.speed<p>Update: 30</p>|
 |SW 1 Interface 14 Speed|<p>SW 1 Interface 14 Speed</p>|`SNMP agent`|sw1.interface.14.speed<p>Update: 30</p>|
 |SW 1 Interface 5 Last change|<p>SW 1 Interface 5 Last change Timeticks</p>|`SNMP agent`|sw1.interface.5.lastChange<p>Update: 30</p>|
 |SW 1 Interface 17 Status|<p>SW 1 Interface 17 Status</p>|`SNMP agent`|sw1.interface.17.status<p>Update: 30</p>|

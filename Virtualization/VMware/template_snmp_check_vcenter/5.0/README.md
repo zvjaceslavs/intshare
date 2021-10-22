@@ -142,7 +142,6 @@ There are no template links in this template.
 |Process vmware-rhttpproxy Status|<p>VMware HTTP Reverse Proxy</p>|`SNMP agent`|SNMP-Process-vmware_rhttpproxy-Status<p>Update: 60</p>|
 |Process vmware-sts-idmd Status|<p>VMware Identity Management Service</p>|`SNMP agent`|SNMP-Process-vmware_sts_idmd-Status<p>Update: 60</p>|
 |Process vmware-sts-idmd Perf CPU|<p>VMware Identity Management Service</p>|`SNMP agent`|SNMP-Process-vmware_sts_idmd-Perf-CPU<p>Update: 60</p>|
-|Process vmware-stsd Status|<p>VMware Security Token Service</p>|`SNMP agent`|SNMP-Process-vmware_stsd-Status<p>Update: 60</p>|
 |Process vmware-vsm Perf CPU|<p>VMware vService Manager</p>|`SNMP agent`|SNMP-Process-vmware_vsm-Perf-CPU<p>Update: 60</p>|
 |Process vmware-vpxd Status|<p>Demon vCenter</p>|`SNMP agent`|SNMP-Process-vmware_vpxd-Status<p>Update: 60</p>|
 |Process vmware-invsvc Perf CPU|<p>VMware Inventory Service</p>|`SNMP agent`|SNMP-Process-vmware_invsvc-Perf-CPU<p>Update: 60</p>|
@@ -155,12 +154,13 @@ There are no template links in this template.
 |Process vmware-vdcs Perf Memory|<p>VMware Content Library Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vdcs-Perf-Memory<p>Update: 60</p>|
 |Process vmafdd Status|<p>VMware Authentication Framework</p>|`SNMP agent`|SNMP-Process-vmafdd-Status<p>Update: 60</p>|
 |Process vmafdd Perf CPU|<p>VMware Authentication Framework</p>|`SNMP agent`|SNMP-Process-vmafdd-Perf-CPU<p>Update: 60</p>|
-|Nombre de Processus|<p>-</p>|`SNMP agent`|SNMP-Nombre-Processus<p>Update: 60</p>|
 |Memory Allocation Error|<p>-</p>|`SNMP agent`|SNMP-Memory-Allocation-Error<p>Update: 60</p>|
 |Process vmware-cm Perf Memory|<p>VMware Component Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_cm-Perf-Memory<p>Update: 60</p>|
 |Process vmware-netdumper Perf Memory|<p>VMware vSphere ESXi Dump Collector Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_netdumper-Perf-Memory<p>Update: 60</p>|
 |Process vmcad Status|<p>VMware Certificate Service</p>|`SNMP agent`|SNMP-Process-vmcad-Status<p>Update: 60</p>|
 |Process vmware-psc-client Status|<p>Platform Services Controller</p>|`SNMP agent`|SNMP-Process-vmware_psc_client-Status<p>Update: 60</p>|
+|Process vmware-stsd Status|<p>VMware Security Token Service</p>|`SNMP agent`|SNMP-Process-vmware_stsd-Status<p>Update: 60</p>|
+|Nombre de Processus|<p>-</p>|`SNMP agent`|SNMP-Nombre-Processus<p>Update: 60</p>|
 |CPU {#SNMPINDEX} Charge|<p>-</p>|`SNMP agent`|SNMP-Charge-CPU-.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |CPU {#SNMPINDEX} Name|<p>-</p>|`SNMP agent`|SNMP-Name-CPU-.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
 |File System {#SNMPVALUE} - Used Percentage|<p>-</p>|`Calculated`|File-System-Space-Used-Percentage.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|

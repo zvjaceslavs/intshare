@@ -28,18 +28,14 @@ There are no discovery rules in this template.
 |----|-----------|----|----|
 |statusPortaINTeu1|<p>-</p>|`SNMP agent`|statusPortaINTeu1<p>Update: 30s</p>|
 |statusPortaINTed11|<p>-</p>|`SNMP agent`|statusPortaINTed11<p>Update: 30s</p>|
-|statusPortaSTRed7|<p>-</p>|`SNMP agent`|statusPortaSTRed7<p>Update: 30s</p>|
-|statusPortaINTed1|<p>-</p>|`SNMP agent`|statusPortaINTed1<p>Update: 30s</p>|
 |statusPortaSTReu13|<p>-</p>|`SNMP agent`|statusPortaSTReu13<p>Update: 30s</p>|
 |statusPortaSTRed8|<p>-</p>|`SNMP agent`|statusPortaSTRed8<p>Update: 30s</p>|
 |statusPortaSTRed9|<p>-</p>|`SNMP agent`|statusPortaSTRed9<p>Update: 30s</p>|
 |statusPortaSTRed10|<p>-</p>|`SNMP agent`|statusPortaSTRed10<p>Update: 30s</p>|
 |statusPortaSTRed11|<p>-</p>|`SNMP agent`|statusPortaSTRed11<p>Update: 30s</p>|
 |statusPortaSTReu2|<p>-</p>|`SNMP agent`|statusPortaSTReu2<p>Update: 30s</p>|
-|statusPortaSTReu12|<p>-</p>|`SNMP agent`|statusPortaSTReu12<p>Update: 30s</p>|
 |funcaoPortaSTRsd8|<p>-</p>|`SNMP agent`|funcaoPortaSTRsd8<p>Update: 30s</p>|
 |funcaoPortaSTRsd9|<p>-</p>|`SNMP agent`|funcaoPortaSTRsd9<p>Update: 30s</p>|
-|funcaoPortaSTRsd10|<p>-</p>|`SNMP agent`|funcaoPortaSTRsd10<p>Update: 30s</p>|
 |funcaoPortaSTReu15|<p>-</p>|`SNMP agent`|funcaoPortaSTReu15<p>Update: 30s</p>|
 |funcaoPortaSTReu16|<p>-</p>|`SNMP agent`|funcaoPortaSTReu16<p>Update: 30s</p>|
 |funcaoPortaSTReu17|<p>-</p>|`SNMP agent`|funcaoPortaSTReu17<p>Update: 30s</p>|
@@ -64,6 +60,10 @@ There are no discovery rules in this template.
 |statusFuncaoPortaSTRed10|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTRed10<p>Update: 30s</p>|
 |statusFuncaoPortaSTReu1|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTReu1<p>Update: 30s</p>|
 |statusFuncaoPortaSTReu11|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTReu11<p>Update: 30s</p>|
+|statusPortaSTRed7|<p>-</p>|`SNMP agent`|statusPortaSTRed7<p>Update: 30s</p>|
+|statusPortaSTReu12|<p>-</p>|`SNMP agent`|statusPortaSTReu12<p>Update: 30s</p>|
+|statusPortaINTed1|<p>-</p>|`SNMP agent`|statusPortaINTed1<p>Update: 30s</p>|
+|funcaoPortaSTRsd10|<p>-</p>|`SNMP agent`|funcaoPortaSTRsd10<p>Update: 30s</p>|
 |statusPortaINTsd6|<p>-</p>|`SNMP agent`|statusPortaINTsd6<p>Update: 30s</p>|
 |statusPortaINTsd7|<p>-</p>|`SNMP agent`|statusPortaINTsd7<p>Update: 30s</p>|
 |statusPortaSTRed1|<p>-</p>|`SNMP agent`|statusPortaSTRed1<p>Update: 30s</p>|
@@ -78,9 +78,6 @@ There are no discovery rules in this template.
 |funcaoPortaSTRsd12|<p>-</p>|`SNMP agent`|funcaoPortaSTRsd12<p>Update: 30s</p>|
 |funcaoPortaSTReu2|<p>-</p>|`SNMP agent`|funcaoPortaSTReu2<p>Update: 30s</p>|
 |funcaoPortaSTReu3|<p>-</p>|`SNMP agent`|funcaoPortaSTReu3<p>Update: 30s</p>|
-|statusFuncaoPortaSTReu18|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTReu18<p>Update: 30s</p>|
-|statusFuncaoPortaSTRsd9|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTRsd9<p>Update: 30s</p>|
-|statusFuncaoPortaSTReu7|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTReu7<p>Update: 30s</p>|
 |statusPortaSTRsd11|<p>-</p>|`SNMP agent`|statusPortaSTRsd11<p>Update: 30s</p>|
 |statusPortaSTReu6|<p>-</p>|`SNMP agent`|statusPortaSTReu6<p>Update: 30s</p>|
 |statusPortaSTReu7|<p>-</p>|`SNMP agent`|statusPortaSTReu7<p>Update: 30s</p>|
@@ -145,6 +142,9 @@ There are no discovery rules in this template.
 |statusFuncaoPortaSTRed1|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTRed1<p>Update: 30s</p>|
 |statusFuncaoPortaSTRsd12|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTRsd12<p>Update: 30s</p>|
 |statusFuncaoPortaSTRsd11|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTRsd11<p>Update: 30s</p>|
+|statusFuncaoPortaSTReu18|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTReu18<p>Update: 30s</p>|
+|statusFuncaoPortaSTRsd9|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTRsd9<p>Update: 30s</p>|
+|statusFuncaoPortaSTReu7|<p>-</p>|`SNMP agent`|statusFuncaoPortaSTReu7<p>Update: 30s</p>|
 |statusPortaINTsd8|<p>-</p>|`SNMP agent`|statusPortaINTsd8<p>Update: 30s</p>|
 |statusPortaINTsd9|<p>-</p>|`SNMP agent`|statusPortaINTsd9<p>Update: 30s</p>|
 |statusPortaINTsd10|<p>-</p>|`SNMP agent`|statusPortaINTsd10<p>Update: 30s</p>|
