@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:50Z</date>
+  <date>2021-10-26T04:41:50Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,11 +9,11 @@
   </groups>
   <templates>
     <template>
-      <template>Template..Docker.OSLinux.ShortTermContainers</template>
-      <name>Template..Docker.OSLinux.ShortTermContainers</name>
+      <template>..Docker.OSLinux.ShortTermContainers</template>
+      <name>..Docker.OSLinux.ShortTermContainers</name>
       <templates>
         <template>
-          <name>Template.Docker.ContainerDetails</name>
+          <name>.Docker.ContainerDetails</name>
         </template>
       </templates>
       <groups>
@@ -45,8 +45,8 @@
       </macros>
     </template>
     <template>
-      <template>Template.Docker.ContainerDetails</template>
-      <name>Template.Docker.ContainerDetails</name>
+      <template>.Docker.ContainerDetails</template>
+      <name>.Docker.ContainerDetails</name>
       <description>Monitor Docker Container Details</description>
       <groups>
         <group>

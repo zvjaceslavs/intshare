@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:33Z</date>
+  <date>2021-10-26T04:41:32Z</date>
   <groups>
     <group>
       <name>Onx Solutions</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>template_graylog_nodes</template>
-      <name>Template Graylog: Nodes</name>
+      <template>graylog_nodes</template>
+      <name>Graylog: Nodes</name>
       <groups>
         <group>
           <name>Onx Solutions</name>

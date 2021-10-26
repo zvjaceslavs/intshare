@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:39Z</date>
+  <date>2021-10-26T04:41:38Z</date>
   <groups>
     <group>
       <name>My Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template AD DS Health and Performance</template>
-      <name>Template AD DS Health and Performance</name>
+      <template>AD DS Health and Performance</template>
+      <name>AD DS Health and Performance</name>
       <groups>
         <group>
           <name>My Templates</name>
@@ -538,7 +538,7 @@
               <style>0</style>
               <resource>
                 <name>AD DS DB and Log Size</name>
-                <host>Template AD DS Health and Performance</host>
+                <host>AD DS Health and Performance</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -560,7 +560,7 @@
               <style>0</style>
               <resource>
                 <name>LSASS Processor Time</name>
-                <host>Template AD DS Health and Performance</host>
+                <host>AD DS Health and Performance</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -582,7 +582,7 @@
               <style>0</style>
               <resource>
                 <name>AD DS Authentications</name>
-                <host>Template AD DS Health and Performance</host>
+                <host>AD DS Health and Performance</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -604,7 +604,7 @@
               <style>0</style>
               <resource>
                 <name>LDAP Statistics</name>
-                <host>Template AD DS Health and Performance</host>
+                <host>AD DS Health and Performance</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -626,7 +626,7 @@
               <style>0</style>
               <resource>
                 <name>Database ==> Instances Statistics</name>
-                <host>Template AD DS Health and Performance</host>
+                <host>AD DS Health and Performance</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -648,7 +648,7 @@
               <style>0</style>
               <resource>
                 <name>DRA Statistics</name>
-                <host>Template AD DS Health and Performance</host>
+                <host>AD DS Health and Performance</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -678,7 +678,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\1570\1574]</key>
           </item>
         </graph_item>
@@ -686,7 +686,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\1570\1572]</key>
           </item>
         </graph_item>
@@ -699,7 +699,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>vfs.file.size["{$ADDBPATH}"]</key>
           </item>
         </graph_item>
@@ -707,7 +707,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>vfs.file.size["{$ADLOGPATH}"]</key>
           </item>
         </graph_item>
@@ -721,7 +721,7 @@
           <color>1A7C11</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\3054(lsass/NTDSA)\3632]</key>
           </item>
         </graph_item>
@@ -729,7 +729,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\3054(lsass/NTDSA)\2664]</key>
           </item>
         </graph_item>
@@ -738,7 +738,7 @@
           <color>2774A4</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\3054(lsass/NTDSA)\3712]</key>
           </item>
         </graph_item>
@@ -746,7 +746,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\3054(lsass/NTDSA)\3714]</key>
           </item>
         </graph_item>
@@ -759,7 +759,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\6956\17268]</key>
           </item>
         </graph_item>
@@ -767,7 +767,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\6956\17266]</key>
           </item>
         </graph_item>
@@ -776,7 +776,7 @@
           <color>2774A4</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\6956\17444]</key>
           </item>
         </graph_item>
@@ -785,7 +785,7 @@
           <color>A54F10</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\6956\17452]</key>
           </item>
         </graph_item>
@@ -798,7 +798,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\6956\17274]</key>
           </item>
         </graph_item>
@@ -807,7 +807,7 @@
           <color>F63100</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\6956\17280]</key>
           </item>
         </graph_item>
@@ -816,7 +816,7 @@
           <color>2774A4</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\6956\17278]</key>
           </item>
         </graph_item>
@@ -834,7 +834,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template AD DS Health and Performance</host>
+            <host>AD DS Health and Performance</host>
             <key>perf_counter[\230(lsass)\4676]</key>
           </item>
         </graph_item>

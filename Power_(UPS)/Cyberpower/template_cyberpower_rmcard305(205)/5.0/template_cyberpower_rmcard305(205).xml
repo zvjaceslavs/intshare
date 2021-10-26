@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:05Z</date>
+  <date>2021-10-26T04:43:12Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module Cyberpower RMCARD305</template>
-      <name>Template Module Cyberpower RMCARD305</name>
+      <template>Module Cyberpower RMCARD305</template>
+      <name>Module Cyberpower RMCARD305</name>
       <description>SNMPv2 Template for Cyberpower's remote management card ver.305 (205) used in OR and PR-series UPSes. Tested on firmware version 1.3.0. Created by Taurus (https://github.com/RusTaurus) MIBs used: CPS-MIB (v2.9) https://www.cyberpowersystems.com/products/software/mib-files/</description>
       <groups>
         <group>
@@ -60,7 +60,7 @@
               <dependencies>
                 <dependency>
                   <name>UPS on battery</name>
-                  <expression>{Template Module Cyberpower RMCARD305:output.Status.last()}=3</expression>
+                  <expression>{Module Cyberpower RMCARD305:output.Status.last()}=3</expression>
                 </dependency>
               </dependencies>
             </trigger>

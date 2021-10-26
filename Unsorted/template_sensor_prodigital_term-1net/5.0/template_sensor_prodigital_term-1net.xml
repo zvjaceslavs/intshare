@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:22Z</date>
+  <date>2021-10-26T04:43:32Z</date>
   <groups>
     <group>
       <name>Templates/Personalizados/Sensores</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Sensor ProDigital Term-1Net</template>
-      <name>Template Sensor ProDigital Term-1Net</name>
+      <template>Sensor ProDigital Term-1Net</template>
+      <name>Sensor ProDigital Term-1Net</name>
       <description>Template para o sensor de umidade e temperatura ProDigital Term-1Net</description>
       <groups>
         <group>
@@ -85,7 +85,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template Sensor ProDigital Term-1Net</host>
+            <host>Sensor ProDigital Term-1Net</host>
             <key>temp.C</key>
           </item>
         </graph_item>
@@ -93,7 +93,7 @@
           <sortorder>1</sortorder>
           <color>42A5F5</color>
           <item>
-            <host>Template Sensor ProDigital Term-1Net</host>
+            <host>Sensor ProDigital Term-1Net</host>
             <key>umidade.percent</key>
           </item>
         </graph_item>

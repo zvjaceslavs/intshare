@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:21Z</date>
+  <date>2021-10-26T04:44:40Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Docker swarm</template>
-      <name>Template App Docker swarm</name>
+      <template>App Docker swarm</template>
+      <name>App Docker swarm</name>
       <groups>
         <group>
           <name>Templates/Applications</name>

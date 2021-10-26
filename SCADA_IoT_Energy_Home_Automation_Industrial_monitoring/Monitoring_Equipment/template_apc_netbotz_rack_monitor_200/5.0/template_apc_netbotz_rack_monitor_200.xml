@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:10Z</date>
+  <date>2021-10-26T04:38:53Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP APC NetBotz Rack Monitor 200</template>
-      <name>Template SNMP APC NetBotz Rack Monitor 200</name>
+      <template>SNMP APC NetBotz Rack Monitor 200</template>
+      <name>SNMP APC NetBotz Rack Monitor 200</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -49,7 +49,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > 60 RH%</name>
-                      <expression>{Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>=60</expression>
+                      <expression>{SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>=60</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -65,7 +65,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidty &lt; 40 RH%</name>
-                      <expression>{Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}&lt;=40</expression>
+                      <expression>{SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}&lt;=40</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -96,7 +96,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature &lt; 19°C</name>
-                      <expression>{Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}&lt;=19</expression>
+                      <expression>{SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}&lt;=19</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -112,7 +112,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 24°C</name>
-                      <expression>{Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=24</expression>
+                      <expression>{SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=24</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -123,7 +123,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 30°C</name>
-                      <expression>{Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=30</expression>
+                      <expression>{SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=30</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -142,7 +142,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP APC NetBotz Rack Monitor 200</host>
+                    <host>SNMP APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.int.hum.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -150,7 +150,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP APC NetBotz Rack Monitor 200</host>
+                    <host>SNMP APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.int.temp.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>

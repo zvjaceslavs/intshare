@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:10Z</date>
+  <date>2021-10-26T04:40:00Z</date>
   <groups>
     <group>
       <name>Templates/Printers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Snmp_Impressora_LLD_VERSAO-0.1</template>
-      <name>Template_Snmp_Impressora_LLD_VERSAO-0.1</name>
+      <template>Snmp_Impressora_LLD_VERSAO-0.1</template>
+      <name>Snmp_Impressora_LLD_VERSAO-0.1</name>
       <groups>
         <group>
           <name>Templates/Printers</name>
@@ -123,7 +123,7 @@
               <dependencies>
                 <dependency>
                   <name>A {HOST.NAME} nao Responde a Ping</name>
-                  <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                  <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -151,7 +151,7 @@
               <dependencies>
                 <dependency>
                   <name>A {HOST.NAME} nao Responde a Ping</name>
-                  <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                  <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -247,7 +247,7 @@
               <dependencies>
                 <dependency>
                   <name>A {HOST.NAME} nao Responde a Ping</name>
-                  <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                  <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -530,7 +530,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>FFFFFF</color>
                   <item>
-                    <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+                    <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
                     <key>niveldepapelMP[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -577,7 +577,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -588,7 +588,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -599,7 +599,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -610,7 +610,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -668,7 +668,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>FFFFFF</color>
                   <item>
-                    <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+                    <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
                     <key>niveldepapelTray1[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -715,7 +715,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -726,7 +726,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -737,7 +737,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -748,7 +748,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -803,7 +803,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>FFFFFF</color>
                   <item>
-                    <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+                    <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
                     <key>niveldepapelTray2[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -907,7 +907,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -922,7 +922,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+                    <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
                     <key>vidafusor[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -999,7 +999,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1070,7 +1070,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1162,7 +1162,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1232,7 +1232,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1243,7 +1243,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1254,7 +1254,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1265,7 +1265,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1276,7 +1276,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1287,7 +1287,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1302,7 +1302,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>000000</color>
                   <item>
-                    <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+                    <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
                     <key>totaltonerBlack[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1394,7 +1394,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1465,7 +1465,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1476,7 +1476,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1487,7 +1487,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1498,7 +1498,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1509,7 +1509,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1520,7 +1520,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1535,7 +1535,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>00FFFF</color>
                   <item>
-                    <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+                    <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
                     <key>totaltonerCyan[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1626,7 +1626,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1697,7 +1697,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1708,7 +1708,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1719,7 +1719,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1730,7 +1730,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1741,7 +1741,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1752,7 +1752,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1767,7 +1767,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>FF00FF</color>
                   <item>
-                    <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+                    <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
                     <key>totaltonerMagenta[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1869,7 +1869,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1961,7 +1961,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2032,7 +2032,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2043,7 +2043,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2054,7 +2054,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2065,7 +2065,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2076,7 +2076,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2087,7 +2087,7 @@
                   <dependencies>
                     <dependency>
                       <name>A {HOST.NAME} nao Responde a Ping</name>
-                      <expression>{Template_Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
+                      <expression>{Snmp_Impressora_LLD_VERSAO-0.1:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2102,7 +2102,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>FFFF00</color>
                   <item>
-                    <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+                    <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
                     <key>totaltonerYellow[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -2215,7 +2215,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+            <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
             <key>icmpping</key>
           </item>
         </graph_item>
@@ -2228,7 +2228,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+            <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
             <key>icmppingsec</key>
           </item>
         </graph_item>
@@ -2241,7 +2241,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+            <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
             <key>icmppingloss</key>
           </item>
         </graph_item>
@@ -2254,7 +2254,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+            <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
             <key>sysUpTimeInstance</key>
           </item>
         </graph_item>
@@ -2267,7 +2267,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+            <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
             <key>prtMarkerLifeCount.1.1</key>
           </item>
         </graph_item>
@@ -2280,7 +2280,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+            <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
             <key>impressoes_dia</key>
           </item>
         </graph_item>
@@ -2293,7 +2293,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+            <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
             <key>impressoes_semana</key>
           </item>
         </graph_item>
@@ -2306,7 +2306,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Snmp_Impressora_LLD_VERSAO-0.1</host>
+            <host>Snmp_Impressora_LLD_VERSAO-0.1</host>
             <key>impressoes_mes</key>
           </item>
         </graph_item>

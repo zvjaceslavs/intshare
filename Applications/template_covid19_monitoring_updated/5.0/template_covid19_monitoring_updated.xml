@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:49Z</date>
+  <date>2021-10-26T04:45:12Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,7 +9,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template - Covid19</template>
+      <template>Covid19</template>
       <name>Coronavirus - Covid19 Monitoring</name>
       <description>Getting cases from worldometers.info and plotting on Zabbix</description>
       <groups>
@@ -394,7 +394,7 @@
                   <sortorder>1</sortorder>
                   <color>F230E0</color>
                   <item>
-                    <host>Template - Covid19</host>
+                    <host>Covid19</host>
                     <key>covid19.data["{#COUNTRY_NAME}", ActiveCases]</key>
                   </item>
                 </graph_item>
@@ -402,7 +402,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template - Covid19</host>
+                    <host>Covid19</host>
                     <key>covid19.data[ "{#COUNTRY_NAME}", NewCases]</key>
                   </item>
                 </graph_item>
@@ -410,7 +410,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template - Covid19</host>
+                    <host>Covid19</host>
                     <key>covid19.data["{#COUNTRY_NAME}", NewDeaths]</key>
                   </item>
                 </graph_item>
@@ -430,7 +430,7 @@
               <style>0</style>
               <resource>
                 <name>Covid19 - Total Cases</name>
-                <host>Template - Covid19</host>
+                <host>Covid19</host>
               </resource>
               <width>900</width>
               <height>250</height>
@@ -460,7 +460,7 @@
           <sortorder>1</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template - Covid19</host>
+            <host>Covid19</host>
             <key>covid19.data[ActiveCases]</key>
           </item>
         </graph_item>
@@ -468,7 +468,7 @@
           <sortorder>2</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template - Covid19</host>
+            <host>Covid19</host>
             <key>covid19.data[TotalDeaths]</key>
           </item>
         </graph_item>
@@ -476,7 +476,7 @@
           <sortorder>3</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template - Covid19</host>
+            <host>Covid19</host>
             <key>covid19.data[Serious]</key>
           </item>
         </graph_item>
@@ -484,7 +484,7 @@
           <sortorder>4</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template - Covid19</host>
+            <host>Covid19</host>
             <key>covid19.data[TotalRecovered]</key>
           </item>
         </graph_item>

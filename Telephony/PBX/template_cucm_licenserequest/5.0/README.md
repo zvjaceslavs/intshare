@@ -51,11 +51,11 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |LicenseList|<p>-</p>|`HTTP agent`|uclicense<p>Update: 300s</p>|
+|Essential|<p>-</p>|`Dependent item`|uclicense_Essential<p>Update: 0</p>|
 |Basic|<p>-</p>|`Dependent item`|uclicense_basic<p>Update: 0</p>|
 |CUWL|<p>-</p>|`Dependent item`|uclicense_cuwl<p>Update: 0</p>|
 |Enhanced|<p>-</p>|`Dependent item`|uclicense_Enhanced<p>Update: 0</p>|
 |EnhancedPlus|<p>-</p>|`Dependent item`|uclicense_enhp<p>Update: 0</p>|
-|Essential|<p>-</p>|`Dependent item`|uclicense_Essential<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

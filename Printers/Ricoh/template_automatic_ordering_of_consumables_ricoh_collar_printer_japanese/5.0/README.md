@@ -1,4 +1,4 @@
-# Template Ricoh color printer
+# Ricoh color printer
 
 ## Overview
 
@@ -59,15 +59,15 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|all print|<p>-</p>|`SNMP agent`|allprint<p>Update: 600;3600/1-6,19:00-24:00;3600/1-6,00:00-08:00;3600/7,00:00-24:00</p>|
+|Save color|<p>-</p>|`SNMP agent`|saveprint<p>Update: 600;3600/1-6,19:00-24:00;3600/1-6,00:00-08:00;3600/7,00:00-24:00</p>|
+|黒インクの現在容量|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevelblack<p>Update: 180;3600/7,00:00-24:00</p>|
 |Full color|<p>-</p>|`SNMP agent`|fullcolor<p>Update: 600;3600/1-6,19:00-24:00;3600/1-6,00:00-08:00;3600/7,00:00-24:00</p>|
 |mono color|<p>-</p>|`SNMP agent`|monoprint<p>Update: 600;3600/1-6,19:00-24:00;3600/1-6,00:00-08:00;3600/7,00:00-24:00</p>|
-|黒インクの現在容量|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevelblack<p>Update: 180;3600/7,00:00-24:00</p>|
-|青インクの現在容量|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevelcyan<p>Update: 180;3600/7,00:00-24:00</p>|
-|廃インクボックス 空き容量|<p>インク洗浄時の廃インクを捨てる場所。 これが満杯になるとプリンターが印刷出来なくなるので、確実な交換をして下さい。</p>|`SNMP agent`|prtMarkerSuppliesLeveldustBOX<p>Update: 1800;3600/1-5,00:00-08:00;3600/6-7,00:00-24:00;3600/1-5,19:00-24:00</p>|
-|赤インクの現在容量|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevelmagen<p>Update: 180;3600/7,00:00-24:00</p>|
 |黄インクの現在容量|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevelyellow<p>Update: 180;3600/7,00:00-24:00</p>|
-|Save color|<p>-</p>|`SNMP agent`|saveprint<p>Update: 600;3600/1-6,19:00-24:00;3600/1-6,00:00-08:00;3600/7,00:00-24:00</p>|
+|赤インクの現在容量|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevelmagen<p>Update: 180;3600/7,00:00-24:00</p>|
+|青インクの現在容量|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevelcyan<p>Update: 180;3600/7,00:00-24:00</p>|
+|all print|<p>-</p>|`SNMP agent`|allprint<p>Update: 600;3600/1-6,19:00-24:00;3600/1-6,00:00-08:00;3600/7,00:00-24:00</p>|
+|廃インクボックス 空き容量|<p>インク洗浄時の廃インクを捨てる場所。 これが満杯になるとプリンターが印刷出来なくなるので、確実な交換をして下さい。</p>|`SNMP agent`|prtMarkerSuppliesLeveldustBOX<p>Update: 1800;3600/1-5,00:00-08:00;3600/6-7,00:00-24:00;3600/1-5,19:00-24:00</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:22Z</date>
+  <date>2021-10-26T04:42:25Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer Samsung M Series</template>
-      <name>Template Printer Samsung M Series</name>
+      <template>Printer Samsung M Series</template>
+      <name>Printer Samsung M Series</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -130,7 +130,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer Samsung M Series:sams.clr.black.perc.last(0)}&lt;3 and {Template Printer Samsung M Series:samsung.black.type.nodata(3d)}=0</expression>
+      <expression>{Printer Samsung M Series:sams.clr.black.perc.last(0)}&lt;3 and {Printer Samsung M Series:samsung.black.type.nodata(3d)}=0</expression>
       <name>Printer Information - Replace Tonner</name>
       <priority>INFO</priority>
     </trigger>
@@ -146,7 +146,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template Printer Samsung M Series</host>
+            <host>Printer Samsung M Series</host>
             <key>sams.clr.black.img</key>
           </item>
         </graph_item>
@@ -163,7 +163,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer Samsung M Series</host>
+            <host>Printer Samsung M Series</host>
             <key>sams.clr.black.perc</key>
           </item>
         </graph_item>
@@ -177,7 +177,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Printer Samsung M Series</host>
+            <host>Printer Samsung M Series</host>
             <key>sams.clr.counter</key>
           </item>
         </graph_item>

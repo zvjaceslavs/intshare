@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:38Z</date>
+  <date>2021-10-26T04:39:24Z</date>
   <groups>
     <group>
       <name>Network Appliance</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP HP v1920-16G</template>
-      <name>Template SNMP HP v1920-16G</name>
+      <template>SNMP HP v1920-16G</template>
+      <name>SNMP HP v1920-16G</name>
       <groups>
         <group>
           <name>Network Appliance</name>
@@ -2363,7 +2363,7 @@
         <graph_item>
           <color>005500</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>CpuUsagePerc</key>
           </item>
         </graph_item>
@@ -2373,7 +2373,7 @@
       <name>Memory usage</name>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template SNMP HP v1920-16G</host>
+        <host>SNMP HP v1920-16G</host>
         <key>MemTotal</key>
       </ymax_item_1>
       <graph_items>
@@ -2381,7 +2381,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>MemUsageByte</key>
           </item>
         </graph_item>
@@ -2394,7 +2394,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -2402,7 +2402,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.1</key>
           </item>
         </graph_item>
@@ -2415,7 +2415,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -2423,7 +2423,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.2</key>
           </item>
         </graph_item>
@@ -2436,7 +2436,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -2444,7 +2444,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.3</key>
           </item>
         </graph_item>
@@ -2457,7 +2457,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -2465,7 +2465,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.4</key>
           </item>
         </graph_item>
@@ -2478,7 +2478,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -2486,7 +2486,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.5</key>
           </item>
         </graph_item>
@@ -2499,7 +2499,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -2507,7 +2507,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.6</key>
           </item>
         </graph_item>
@@ -2520,7 +2520,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.7</key>
           </item>
         </graph_item>
@@ -2528,7 +2528,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.7</key>
           </item>
         </graph_item>
@@ -2541,7 +2541,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.8</key>
           </item>
         </graph_item>
@@ -2549,7 +2549,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.8</key>
           </item>
         </graph_item>
@@ -2562,7 +2562,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.9</key>
           </item>
         </graph_item>
@@ -2570,7 +2570,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.9</key>
           </item>
         </graph_item>
@@ -2583,7 +2583,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.10</key>
           </item>
         </graph_item>
@@ -2591,7 +2591,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.10</key>
           </item>
         </graph_item>
@@ -2604,7 +2604,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.11</key>
           </item>
         </graph_item>
@@ -2612,7 +2612,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.11</key>
           </item>
         </graph_item>
@@ -2625,7 +2625,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.12</key>
           </item>
         </graph_item>
@@ -2633,7 +2633,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.12</key>
           </item>
         </graph_item>
@@ -2646,7 +2646,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.13</key>
           </item>
         </graph_item>
@@ -2654,7 +2654,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.13</key>
           </item>
         </graph_item>
@@ -2667,7 +2667,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.14</key>
           </item>
         </graph_item>
@@ -2675,7 +2675,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.14</key>
           </item>
         </graph_item>
@@ -2688,7 +2688,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.15</key>
           </item>
         </graph_item>
@@ -2696,7 +2696,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.15</key>
           </item>
         </graph_item>
@@ -2709,7 +2709,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.16</key>
           </item>
         </graph_item>
@@ -2717,7 +2717,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.16</key>
           </item>
         </graph_item>
@@ -2730,7 +2730,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.17</key>
           </item>
         </graph_item>
@@ -2738,7 +2738,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.17</key>
           </item>
         </graph_item>
@@ -2751,7 +2751,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.18</key>
           </item>
         </graph_item>
@@ -2759,7 +2759,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.18</key>
           </item>
         </graph_item>
@@ -2772,7 +2772,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.19</key>
           </item>
         </graph_item>
@@ -2780,7 +2780,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.19</key>
           </item>
         </graph_item>
@@ -2793,7 +2793,7 @@
         <graph_item>
           <color>00DDDD</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifOutOctets.20</key>
           </item>
         </graph_item>
@@ -2801,7 +2801,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template SNMP HP v1920-16G</host>
+            <host>SNMP HP v1920-16G</host>
             <key>ifInOctets.20</key>
           </item>
         </graph_item>

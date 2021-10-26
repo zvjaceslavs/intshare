@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:34Z</date>
+  <date>2021-10-26T04:40:26Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_HP_Designjet_T770</template>
-      <name>Template_HP_Designjet_T770</name>
+      <template>HP_Designjet_T770</template>
+      <name>HP_Designjet_T770</name>
       <groups>
         <group>
           <name>Printers</name>
@@ -636,7 +636,7 @@
         <graph_item>
           <color>0000EE</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Ink_Cyan_Usage</key>
           </item>
         </graph_item>
@@ -644,7 +644,7 @@
           <sortorder>1</sortorder>
           <color>AAAAAA</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Ink_Gray_Usage</key>
           </item>
         </graph_item>
@@ -652,7 +652,7 @@
           <sortorder>2</sortorder>
           <color>BB0000</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Ink_Magenta_Usage</key>
           </item>
         </graph_item>
@@ -660,7 +660,7 @@
           <sortorder>3</sortorder>
           <color>444444</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Ink_MK_Usage</key>
           </item>
         </graph_item>
@@ -668,7 +668,7 @@
           <sortorder>4</sortorder>
           <color>000000</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Ink_PK_Usage</key>
           </item>
         </graph_item>
@@ -676,7 +676,7 @@
           <sortorder>5</sortorder>
           <color>DDDD00</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Ink_Yellow_Usage</key>
           </item>
         </graph_item>
@@ -691,7 +691,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00DDDD</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Amount_of_cyan_toner_remaining</key>
           </item>
         </graph_item>
@@ -700,7 +700,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Maximum_cyan_toner_level</key>
           </item>
         </graph_item>
@@ -715,7 +715,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>DDDDDD</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Amount_of_gray_toner_remaining</key>
           </item>
         </graph_item>
@@ -724,7 +724,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>008800</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Maximum_gray_toner_level</key>
           </item>
         </graph_item>
@@ -739,7 +739,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF3333</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Amount_of_magenta_toner_remaining</key>
           </item>
         </graph_item>
@@ -748,7 +748,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Maximum_magenta_toner_level</key>
           </item>
         </graph_item>
@@ -763,7 +763,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>AAAAAA</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Amount_of_MK_toner_remaining</key>
           </item>
         </graph_item>
@@ -772,7 +772,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Maximum_MK_toner_level</key>
           </item>
         </graph_item>
@@ -787,7 +787,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>444444</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Amount_of_PK_toner_remaining</key>
           </item>
         </graph_item>
@@ -796,7 +796,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Maximum_PK_toner_level</key>
           </item>
         </graph_item>
@@ -808,7 +808,7 @@
         <graph_item>
           <color>666666</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Printhead_gray-photo_black_used</key>
           </item>
         </graph_item>
@@ -816,7 +816,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Printhead_magenta-cyan_used</key>
           </item>
         </graph_item>
@@ -824,7 +824,7 @@
           <sortorder>2</sortorder>
           <color>CCCC00</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Printhead_matte_black-yellow_used</key>
           </item>
         </graph_item>
@@ -839,7 +839,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FFFF33</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Amount_of_yellow_toner_remaining</key>
           </item>
         </graph_item>
@@ -847,7 +847,7 @@
           <sortorder>1</sortorder>
           <color>009900</color>
           <item>
-            <host>Template_HP_Designjet_T770</host>
+            <host>HP_Designjet_T770</host>
             <key>Maximum_yellow_toner_level</key>
           </item>
         </graph_item>

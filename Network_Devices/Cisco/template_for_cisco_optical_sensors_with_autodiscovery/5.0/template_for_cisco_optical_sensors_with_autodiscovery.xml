@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:37Z</date>
+  <date>2021-10-26T04:39:24Z</date>
   <groups>
     <group>
       <name>Cisco</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Cisco_Sensors</template>
-      <name>Template_Cisco_Sensors</name>
+      <template>Cisco_Sensors</template>
+      <name>Cisco_Sensors</name>
       <groups>
         <group>
           <name>Cisco</name>
@@ -369,62 +369,62 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=20</expression>
+              <expression>{Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=20</expression>
               <name>Sensor {#SNMPVALUE} over threshold (alert)</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=20</expression>
+              <expression>{Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=20</expression>
               <name>Sensor {#SNMPVALUE} over threshold (alert)</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=20</expression>
+              <expression>{Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=20</expression>
               <name>Sensor {#SNMPVALUE} over threshold (alert)</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=20</expression>
+              <expression>{Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=20</expression>
               <name>Sensor {#SNMPVALUE} over threshold (alert)</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=30</expression>
+              <expression>{Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=30</expression>
               <name>Sensor {#SNMPVALUE} over threshold (critical)</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=30</expression>
+              <expression>{Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=30</expression>
               <name>Sensor {#SNMPVALUE} over threshold (critical)</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=30</expression>
+              <expression>{Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=30</expression>
               <name>Sensor {#SNMPVALUE} over threshold (critical)</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=30</expression>
+              <expression>{Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=30</expression>
               <name>Sensor {#SNMPVALUE} over threshold (critical)</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=10</expression>
+              <expression>{Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=10</expression>
               <name>Sensor {#SNMPVALUE} over threshold (warning)</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=10</expression>
+              <expression>{Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=10</expression>
               <name>Sensor {#SNMPVALUE} over threshold (warning)</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=10</expression>
+              <expression>{Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=10</expression>
               <name>Sensor {#SNMPVALUE} over threshold (warning)</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=10</expression>
+              <expression>{Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=10</expression>
               <name>Sensor {#SNMPVALUE} over threshold (warning)</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -436,7 +436,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template_Cisco_Sensors</host>
+                    <host>Cisco_Sensors</host>
                     <key>sensortv1[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -444,7 +444,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template_Cisco_Sensors</host>
+                    <host>Cisco_Sensors</host>
                     <key>sensortv2[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -452,7 +452,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template_Cisco_Sensors</host>
+                    <host>Cisco_Sensors</host>
                     <key>sensortv3[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -460,7 +460,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template_Cisco_Sensors</host>
+                    <host>Cisco_Sensors</host>
                     <key>sensortv4[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -469,7 +469,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>00CC00</color>
                   <item>
-                    <host>Template_Cisco_Sensors</host>
+                    <host>Cisco_Sensors</host>
                     <key>sensorvalue[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>

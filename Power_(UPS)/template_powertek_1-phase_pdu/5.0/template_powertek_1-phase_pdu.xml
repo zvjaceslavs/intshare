@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:30Z</date>
+  <date>2021-10-26T04:46:00Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Powertek 1 Phase PDU</template>
-      <name>Template Powertek 1 Phase PDU</name>
+      <template>Powertek 1 Phase PDU</template>
+      <name>Powertek 1 Phase PDU</name>
       <description>Created by Joakim Kingström at Sports Interactive.</description>
       <groups>
         <group>
@@ -318,7 +318,7 @@
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Active Power > 5.8 kW</name>
-                  <expression>{Template Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.1.last()}>5800</expression>
+                  <expression>{Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.1.last()}>5800</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -396,7 +396,7 @@
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Amps > 16A</name>
-                  <expression>{Template Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.1.last()}>16</expression>
+                  <expression>{Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.1.last()}>16</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -450,7 +450,7 @@
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Voltage > 250V</name>
-                  <expression>{Template Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.15.1.last()}>250</expression>
+                  <expression>{Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.15.1.last()}>250</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -498,7 +498,7 @@
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Power Factor &lt; 90%</name>
-                  <expression>{Template Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.18.1.last()}&lt;90</expression>
+                  <expression>{Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.18.1.last()}&lt;90</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -710,7 +710,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Active Power > 5.8 kW</name>
-                      <expression>{Template Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.[{#SNMPINDEX}].last()}>5.8</expression>
+                      <expression>{Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.[{#SNMPINDEX}].last()}>5.8</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -817,7 +817,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Amps > 16A</name>
-                      <expression>{Template Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.[{#SNMPINDEX}].last()}>16</expression>
+                      <expression>{Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.[{#SNMPINDEX}].last()}>16</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -905,7 +905,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Voltage > 250V</name>
-                      <expression>{Template Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.15.[{#SNMPINDEX}].last()}>250</expression>
+                      <expression>{Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.15.[{#SNMPINDEX}].last()}>250</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -961,7 +961,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Power Factor &lt; 90%</name>
-                      <expression>{Template Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.18.[{#SNMPINDEX}].last()}&lt;90</expression>
+                      <expression>{Powertek 1 Phase PDU:.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.18.[{#SNMPINDEX}].last()}&lt;90</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1222,7 +1222,7 @@
               <style>0</style>
               <resource>
                 <name>Amps</name>
-                <host>Template Powertek 1 Phase PDU</host>
+                <host>Powertek 1 Phase PDU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1244,7 +1244,7 @@
               <style>0</style>
               <resource>
                 <name>Current Power Usage</name>
-                <host>Template Powertek 1 Phase PDU</host>
+                <host>Powertek 1 Phase PDU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1266,7 +1266,7 @@
               <style>0</style>
               <resource>
                 <name>Power and Amps</name>
-                <host>Template Powertek 1 Phase PDU</host>
+                <host>Powertek 1 Phase PDU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1288,7 +1288,7 @@
               <style>0</style>
               <resource>
                 <name>Voltage</name>
-                <host>Template Powertek 1 Phase PDU</host>
+                <host>Powertek 1 Phase PDU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1321,7 +1321,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Powertek 1 Phase PDU</host>
+            <host>Powertek 1 Phase PDU</host>
             <key>.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.1</key>
           </item>
         </graph_item>
@@ -1337,7 +1337,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Powertek 1 Phase PDU</host>
+            <host>Powertek 1 Phase PDU</host>
             <key>.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.1</key>
           </item>
         </graph_item>
@@ -1351,7 +1351,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Powertek 1 Phase PDU</host>
+            <host>Powertek 1 Phase PDU</host>
             <key>.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.1</key>
           </item>
         </graph_item>
@@ -1361,7 +1361,7 @@
           <color>F63100</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template Powertek 1 Phase PDU</host>
+            <host>Powertek 1 Phase PDU</host>
             <key>.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.6.1</key>
           </item>
         </graph_item>
@@ -1378,7 +1378,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Powertek 1 Phase PDU</host>
+            <host>Powertek 1 Phase PDU</host>
             <key>.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.15.1</key>
           </item>
         </graph_item>

@@ -37,19 +37,19 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Trassir automation status|<p>Наличие ошибок при выполнении скриптов на данном сервере</p>|`Dependent item`|trassirautomation<p>Update: 0</p>|
-|Trassir channels online|<p>Количество камер, работающих без ошибок</p>|`Dependent item`|trassirchannelsonline<p>Update: 0</p>|
-|Trassir channels total|<p>Общее количество подключенных камер</p>|`Dependent item`|trassirchannelstotal<p>Update: 0</p>|
-|Trassir server cpu load|<p>Текущая загрузка центрального процессора сервера, в %</p>|`Dependent item`|trassircpuload<p>Update: 0</p>|
-|Trassir database status|<p>Наличие ошибок при подключении к базе данных сервера</p>|`Dependent item`|trassirdatabase<p>Update: 0</p>|
-|Trassir disks status|<p>Наличие ошибок при работе дисков сервера</p>|`Dependent item`|trassirdisks<p>Update: 0</p>|
-|Trassir archive main days depth|<p>Текущая глубина архива основного потока, в днях</p>|`Dependent item`|trassirdisksstatmaindays<p>Update: 0</p>|
-|Trassir archive privilege days depth|<p>Текущая глубина архива привилегированных каналов, в днях</p>|`Dependent item`|trassirdisksstatprivdays<p>Update: 0</p>|
-|Trassir archive sub days depth|<p>Текущая глубина архива дополнительного потока, в днях</p>|`Dependent item`|trassirdisksstatsubsdays<p>Update: 0</p>|
-|Trassir server health string|<p>-</p>|`HTTP agent`|trassirhealthjson<p>Update: 60</p>|
 |Trassir network status|<p>Наличие ошибок в сетевых подключениях к другим серверам</p>|`Dependent item`|trassirnetwork<p>Update: 0</p>|
-|Trassir SDK connection status|<p>Статус подключения к trassir SDK</p>|`Dependent item`|trassirsdkstatus<p>Update: 0</p>|
+|Trassir archive sub days depth|<p>Текущая глубина архива дополнительного потока, в днях</p>|`Dependent item`|trassirdisksstatsubsdays<p>Update: 0</p>|
+|Trassir channels total|<p>Общее количество подключенных камер</p>|`Dependent item`|trassirchannelstotal<p>Update: 0</p>|
+|Trassir channels online|<p>Количество камер, работающих без ошибок</p>|`Dependent item`|trassirchannelsonline<p>Update: 0</p>|
+|Trassir automation status|<p>Наличие ошибок при выполнении скриптов на данном сервере</p>|`Dependent item`|trassirautomation<p>Update: 0</p>|
+|Trassir server health string|<p>-</p>|`HTTP agent`|trassirhealthjson<p>Update: 60</p>|
+|Trassir server cpu load|<p>Текущая загрузка центрального процессора сервера, в %</p>|`Dependent item`|trassircpuload<p>Update: 0</p>|
+|Trassir disks status|<p>Наличие ошибок при работе дисков сервера</p>|`Dependent item`|trassirdisks<p>Update: 0</p>|
 |Trassir server uptime|<p>Время работы сервера, в сек</p>|`Dependent item`|trassiruptime<p>Update: 0</p>|
+|Trassir archive privilege days depth|<p>Текущая глубина архива привилегированных каналов, в днях</p>|`Dependent item`|trassirdisksstatprivdays<p>Update: 0</p>|
+|Trassir SDK connection status|<p>Статус подключения к trassir SDK</p>|`Dependent item`|trassirsdkstatus<p>Update: 0</p>|
+|Trassir database status|<p>Наличие ошибок при подключении к базе данных сервера</p>|`Dependent item`|trassirdatabase<p>Update: 0</p>|
+|Trassir archive main days depth|<p>Текущая глубина архива основного потока, в днях</p>|`Dependent item`|trassirdisksstatmaindays<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

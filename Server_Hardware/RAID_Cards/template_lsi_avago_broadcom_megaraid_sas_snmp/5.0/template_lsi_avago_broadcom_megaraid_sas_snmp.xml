@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:42Z</date>
+  <date>2021-10-26T04:39:29Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP MegaRAID SAS</template>
-      <name>Template SNMP MegaRAID SAS</name>
+      <template>SNMP MegaRAID SAS</template>
+      <name>SNMP MegaRAID SAS</name>
       <description>Zabbix Template for Avago Megaraid SAS (formerly LSI) RAID cards</description>
       <groups>
         <group>
@@ -1507,7 +1507,7 @@
                 <graph_item>
                   <color>0000FF</color>
                   <item>
-                    <host>Template SNMP MegaRAID SAS</host>
+                    <host>SNMP MegaRAID SAS</host>
                     <key>temperatureCtrl[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1515,7 +1515,7 @@
                   <sortorder>1</sortorder>
                   <color>FF00FF</color>
                   <item>
-                    <host>Template SNMP MegaRAID SAS</host>
+                    <host>SNMP MegaRAID SAS</host>
                     <key>temperatureROC[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1689,7 +1689,7 @@
                 <graph_item>
                   <color>0000CC</color>
                   <item>
-                    <host>Template SNMP MegaRAID SAS</host>
+                    <host>SNMP MegaRAID SAS</host>
                     <key>pdTemperature[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

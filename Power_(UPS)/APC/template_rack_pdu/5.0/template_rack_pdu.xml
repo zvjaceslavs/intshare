@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:50:56Z</date>
+  <date>2021-10-26T04:37:30Z</date>
   <groups>
     <group>
       <name>PDU:PZ:HQ</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_APC_Monitor_RackPDU</template>
-      <name>Template_APC_Monitor_RackPDU</name>
+      <template>APC_Monitor_RackPDU</template>
+      <name>APC_Monitor_RackPDU</name>
       <groups>
         <group>
           <name>PDU:PZ:HQ</name>
@@ -307,65 +307,65 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load1Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:NHigh1Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load1Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:NHigh1Load.rPDU.last()}</expression>
       <name>E: Phase1 Overload ({ITEM.LASTVALUE1}A)</name>
       <priority>HIGH</priority>
       <dependencies>
         <dependency>
           <name>F: Phase1 Overload ({ITEM.LASTVALUE1}A)</name>
-          <expression>{Template_APC_Monitor_RackPDU:Load1Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:High1Load.rPDU.last()}</expression>
+          <expression>{APC_Monitor_RackPDU:Load1Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:High1Load.rPDU.last()}</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load2Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:NHigh2Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load2Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:NHigh2Load.rPDU.last()}</expression>
       <name>E: Phase2 Overload ({ITEM.LASTVALUE1}A)</name>
       <priority>HIGH</priority>
       <dependencies>
         <dependency>
           <name>F: Phase2 Overload ({ITEM.LASTVALUE1}A)</name>
-          <expression>{Template_APC_Monitor_RackPDU:Load2Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:High2Load.rPDU.last()}</expression>
+          <expression>{APC_Monitor_RackPDU:Load2Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:High2Load.rPDU.last()}</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load3Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:NHigh3Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load3Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:NHigh3Load.rPDU.last()}</expression>
       <name>E: Phase3 Overload ({ITEM.LASTVALUE1}A)</name>
       <priority>HIGH</priority>
       <dependencies>
         <dependency>
           <name>F: Phase3 Overload ({ITEM.LASTVALUE1}A)</name>
-          <expression>{Template_APC_Monitor_RackPDU:Load3Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:High3Load.rPDU.last()}</expression>
+          <expression>{APC_Monitor_RackPDU:Load3Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:High3Load.rPDU.last()}</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load1Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:High1Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load1Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:High1Load.rPDU.last()}</expression>
       <name>F: Phase1 Overload ({ITEM.LASTVALUE1}A)</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load2Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:High2Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load2Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:High2Load.rPDU.last()}</expression>
       <name>F: Phase2 Overload ({ITEM.LASTVALUE1}A)</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load3Amps.rPDU.avg(#2)} > {Template_APC_Monitor_RackPDU:High3Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load3Amps.rPDU.avg(#2)} > {APC_Monitor_RackPDU:High3Load.rPDU.last()}</expression>
       <name>F: Phase3 Overload ({ITEM.LASTVALUE1}A)</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load1Amps.rPDU.avg(#2)} &lt; {Template_APC_Monitor_RackPDU:Low1Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load1Amps.rPDU.avg(#2)} &lt; {APC_Monitor_RackPDU:Low1Load.rPDU.last()}</expression>
       <name>I: No load: phase1 ({ITEM.LASTVALUE1}A)</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load2Amps.rPDU.avg(#2)} &lt; {Template_APC_Monitor_RackPDU:Low2Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load2Amps.rPDU.avg(#2)} &lt; {APC_Monitor_RackPDU:Low2Load.rPDU.last()}</expression>
       <name>I: No load: phase2 ({ITEM.LASTVALUE1}A)</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template_APC_Monitor_RackPDU:Load3Amps.rPDU.avg(#2)} &lt; {Template_APC_Monitor_RackPDU:Low3Load.rPDU.last()}</expression>
+      <expression>{APC_Monitor_RackPDU:Load3Amps.rPDU.avg(#2)} &lt; {APC_Monitor_RackPDU:Low3Load.rPDU.last()}</expression>
       <name>I: No load: phase3 ({ITEM.LASTVALUE1}A)</name>
       <priority>INFO</priority>
     </trigger>
@@ -380,7 +380,7 @@
         <graph_item>
           <color>3333FF</color>
           <item>
-            <host>Template_APC_Monitor_RackPDU</host>
+            <host>APC_Monitor_RackPDU</host>
             <key>Load3Amps.rPDU</key>
           </item>
         </graph_item>
@@ -388,7 +388,7 @@
           <sortorder>1</sortorder>
           <color>33FFFF</color>
           <item>
-            <host>Template_APC_Monitor_RackPDU</host>
+            <host>APC_Monitor_RackPDU</host>
             <key>Load2Amps.rPDU</key>
           </item>
         </graph_item>
@@ -396,7 +396,7 @@
           <sortorder>2</sortorder>
           <color>33FF33</color>
           <item>
-            <host>Template_APC_Monitor_RackPDU</host>
+            <host>APC_Monitor_RackPDU</host>
             <key>Load1Amps.rPDU</key>
           </item>
         </graph_item>

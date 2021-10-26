@@ -1,4 +1,4 @@
-# 16TemplateGammuSMS
+# 16 GammuSMS
 
 ## Overview
 

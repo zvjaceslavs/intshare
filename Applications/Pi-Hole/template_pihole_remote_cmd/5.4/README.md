@@ -44,11 +44,11 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Ads Blocked|<p>-</p>|`Dependent item`|pihole.ads.blocked<p>Update: 0</p>|
+|pihole-stats|<p>-</p>|`Zabbix agent (active)`|system.run[pihole chronometer -j]<p>Update: 5m</p>|
+|DNS Queries Today|<p>-</p>|`Dependent item`|pihole.dns.queries<p>Update: 0</p>|
 |Ads Percentage|<p>-</p>|`Dependent item`|pihole.ads.percentage<p>Update: 0</p>|
 |Domains Being Blocked|<p>-</p>|`Dependent item`|pihole.domains.blocked<p>Update: 0</p>|
-|Ads Blocked|<p>-</p>|`Dependent item`|pihole.ads.blocked<p>Update: 0</p>|
-|DNS Queries Today|<p>-</p>|`Dependent item`|pihole.dns.queries<p>Update: 0</p>|
-|pihole-stats|<p>-</p>|`Zabbix agent (active)`|system.run[pihole chronometer -j]<p>Update: 5m</p>|
 ## Triggers
 
 There are no triggers in this template.

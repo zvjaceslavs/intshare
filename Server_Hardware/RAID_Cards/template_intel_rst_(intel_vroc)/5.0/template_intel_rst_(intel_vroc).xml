@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:14Z</date>
+  <date>2021-10-26T04:44:32Z</date>
   <groups>
     <group>
       <name>Templates/storage controllers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Intel RST with js</template>
-      <name>Template Intel RST with js</name>
+      <template>Intel RST with js</template>
+      <name>Intel RST with js</name>
       <groups>
         <group>
           <name>Templates/storage controllers</name>
@@ -253,8 +253,8 @@
                   <dependencies>
                     <dependency>
                       <name>Intel RST: Logical disk "{#LDNAME}" is "{ITEM.VALUE}"</name>
-                      <expression>{Template Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_WARNING_SEVERITY_STATES},#1)}=1 and {Template Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_HIGH_SEVERITY_STATES},#3)}=0</expression>
-                      <recovery_expression>{Template Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_RECOVERY_STATES})}=1</recovery_expression>
+                      <expression>{Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_WARNING_SEVERITY_STATES},#1)}=1 and {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_HIGH_SEVERITY_STATES},#3)}=0</expression>
+                      <recovery_expression>{Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_RECOVERY_STATES})}=1</recovery_expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -304,9 +304,9 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_HIGH_SEVERITY_STATES})}=1 and {Template Intel RST with js:irst.raid.level.[{#LDNAME}].last()}>0 and {Template Intel RST with js:irst.raid.pdcount.[{#LDNAME}].last()}>0</expression>
+              <expression>{Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_HIGH_SEVERITY_STATES})}=1 and {Intel RST with js:irst.raid.level.[{#LDNAME}].last()}>0 and {Intel RST with js:irst.raid.pdcount.[{#LDNAME}].last()}>0</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_RECOVERY_STATES})}=1</recovery_expression>
+              <recovery_expression>{Intel RST with js:irst.raid.state.[{#LDNAME}].regexp({$LD_RECOVERY_STATES})}=1</recovery_expression>
               <name>Intel RST: Logical disk "{#LDNAME}" is "{ITEM.VALUE1}". LD level: {ITEM.VALUE2} Disks count: {ITEM.VALUE3}</name>
               <priority>HIGH</priority>
               <tags>
@@ -445,7 +445,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_INFORMATION_SEVERITY_STATES})}=1 and {Template Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</expression>
+              <expression>{Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_INFORMATION_SEVERITY_STATES})}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</expression>
               <recovery_mode>NONE</recovery_mode>
               <name>Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE1}". Disk SN is "{ITEM.VALUE2}"</name>
               <priority>INFO</priority>
@@ -458,16 +458,16 @@
               </tags>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_WARNING_SEVERITY_STATES})}=1 and {Template Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</expression>
+              <expression>{Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_WARNING_SEVERITY_STATES})}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_RECOVERY_STATES})}=1</recovery_expression>
+              <recovery_expression>{Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_RECOVERY_STATES})}=1</recovery_expression>
               <name>Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE1}". Disk SN is "{ITEM.VALUE2}"</name>
               <priority>WARNING</priority>
               <dependencies>
                 <dependency>
                   <name>Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE}". Disk SN is "{ITEM.VALUE2}"</name>
-                  <expression>{Template Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_HIGH_SEVERITY_STATES})}=1 and {Template Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</expression>
-                  <recovery_expression>{Template Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_RECOVERY_STATES})}=1</recovery_expression>
+                  <expression>{Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_HIGH_SEVERITY_STATES})}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</expression>
+                  <recovery_expression>{Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_RECOVERY_STATES})}=1</recovery_expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -478,9 +478,9 @@
               </tags>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_HIGH_SEVERITY_STATES})}=1 and {Template Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</expression>
+              <expression>{Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_HIGH_SEVERITY_STATES})}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_RECOVERY_STATES})}=1</recovery_expression>
+              <recovery_expression>{Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp({$PD_RECOVERY_STATES})}=1</recovery_expression>
               <name>Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE}". Disk SN is "{ITEM.VALUE2}"</name>
               <priority>HIGH</priority>
               <tags>

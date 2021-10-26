@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:23Z'
+  date: '2021-10-26T04:45:52Z'
   groups:
     -
       uuid: 020a9a869bf24a63a842729b67659088
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: dada158835de41b393fbbd3b4bda97eb
-      template: 'Template for ASR9006 IPv4 Pool discovery'
-      name: 'Template for ASR9006 IPv4 Pool discovery'
+      template: 'for ASR9006 IPv4 Pool discovery'
+      name: 'for ASR9006 IPv4 Pool discovery'
       description: |
         Discovering pool name and vrf name from ASR9006
         and represents Used & Free IP addresses
@@ -54,30 +54,30 @@ zabbix_export:
           trigger_prototypes:
             -
               uuid: 593045ade5c049a9a9ffe41e0e1ac60a
-              expression: 'last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}]) < (1/100) * last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
+              expression: 'last(/for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}]) < (1/100) * last(/for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
               recovery_mode: RECOVERY_EXPRESSION
-              recovery_expression: 'last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}])> (2/100) * last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
+              recovery_expression: 'last(/for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}])> (2/100) * last(/for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
               name: 'Pool {#POOLNAME} Free IP Address less than (1/100) * {Template for ASR9006 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}'
               priority: DISASTER
             -
               uuid: cc9c28d7138a4510ab5c4b15a53e4797
-              expression: 'last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}]) < (2/100) * last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
+              expression: 'last(/for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}]) < (2/100) * last(/for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
               recovery_mode: RECOVERY_EXPRESSION
-              recovery_expression: 'last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}])> (3/100) * last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
+              recovery_expression: 'last(/for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}])> (3/100) * last(/for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
               name: 'Pool {#POOLNAME} Free IP Address less than (2/100) * {Template for ASR9006 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}'
               priority: HIGH
             -
               uuid: d4fd2efbe6c243a4892be8c5020d0daa
-              expression: 'last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}]) < (3/100) * last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
+              expression: 'last(/for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}]) < (3/100) * last(/for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
               recovery_mode: RECOVERY_EXPRESSION
-              recovery_expression: 'last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}])> (4/100) * last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
+              recovery_expression: 'last(/for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}])> (4/100) * last(/for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
               name: 'Pool {#POOLNAME} Free IP Address less than (3/100) * {Template for ASR9006 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}'
               priority: AVERAGE
             -
               uuid: 4de0f85156144815be377c100d75e7a1
-              expression: 'last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}]) < (4/100) * last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
+              expression: 'last(/for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}]) < (4/100) * last(/for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
               recovery_mode: RECOVERY_EXPRESSION
-              recovery_expression: 'last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}])> (5/100) * last(/Template for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
+              recovery_expression: 'last(/for ASR9006 IPv4 Pool discovery/pool.ip.free.[ipfree.{#SNMPINDEX}])> (5/100) * last(/for ASR9006 IPv4 Pool discovery/pool.ip.used.[used.{#SNMPINDEX}])'
               name: 'Pool {#POOLNAME} Free IP Address less than (4/100) * {Template for ASR9006 Pool discovery:pool.ip.used.[used.{#SNMPINDEX}].last()}'
               priority: WARNING
           graph_prototypes:
@@ -91,7 +91,7 @@ zabbix_export:
                   drawtype: GRADIENT_LINE
                   color: 9C27B0
                   item:
-                    host: 'Template for ASR9006 IPv4 Pool discovery'
+                    host: 'for ASR9006 IPv4 Pool discovery'
                     key: 'pool.ip.free.[ipfree.{#SNMPINDEX}]'
             -
               uuid: 04e9e28fe7cf4381a441f51871d35d79
@@ -103,5 +103,5 @@ zabbix_export:
                   drawtype: GRADIENT_LINE
                   color: 1A7C11
                   item:
-                    host: 'Template for ASR9006 IPv4 Pool discovery'
+                    host: 'for ASR9006 IPv4 Pool discovery'
                     key: 'pool.ip.used.[used.{#SNMPINDEX}]'

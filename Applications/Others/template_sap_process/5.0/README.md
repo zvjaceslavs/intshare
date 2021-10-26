@@ -1,4 +1,4 @@
-# Template SAP Availability Linux
+# SAP Availability Linux
 
 ## Overview
 
@@ -53,17 +53,17 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{HOSTNAME} - Process CompileServer is not running|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbcompileserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process Daemon is not running|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbdaemon,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process Engine is not running|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbxsengine,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process IndexServer is not running|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbindexserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process NameServer is not running|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbnameserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process  PreProcessor is not running|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbpreprocessor,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process  Webdispatcher is not running|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbwebdispatcher,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process CompileServer is not running (LLD)|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbcompileserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process Daemon is not running (LLD)|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbdaemon,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process Engine is not running (LLD)|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbxsengine,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process IndexServer is not running (LLD)|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbindexserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process NameServer is not running (LLD)|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbnameserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process  PreProcessor is not running (LLD)|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbpreprocessor,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOSTNAME} - Process  Webdispatcher is not running (LLD)|<p>-</p>|<p>**Expression**: {Template SAP Availability Linux:sap.availability[hdbwebdispatcher,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process CompileServer is not running|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbcompileserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process Daemon is not running|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbdaemon,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process Engine is not running|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbxsengine,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process IndexServer is not running|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbindexserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process NameServer is not running|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbnameserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process  PreProcessor is not running|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbpreprocessor,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process  Webdispatcher is not running|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbwebdispatcher,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process CompileServer is not running (LLD)|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbcompileserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process Daemon is not running (LLD)|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbdaemon,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process Engine is not running (LLD)|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbxsengine,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process IndexServer is not running (LLD)|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbindexserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process NameServer is not running (LLD)|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbnameserver,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process  PreProcessor is not running (LLD)|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbpreprocessor,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOSTNAME} - Process  Webdispatcher is not running (LLD)|<p>-</p>|<p>**Expression**: {SAP Availability Linux:sap.availability[hdbwebdispatcher,{#COD_ID},{#NAME_ID}].last(2m)}=0</p><p>**Recovery expression**: </p>|disaster|

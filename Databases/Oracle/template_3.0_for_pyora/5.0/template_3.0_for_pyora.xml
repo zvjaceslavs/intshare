@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:48Z</date>
+  <date>2021-10-26T04:39:36Z</date>
   <groups>
     <group>
       <name>Pyora</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Pyora active send</template>
-      <name>Template Pyora active send</name>
+      <template>Pyora active send</template>
+      <name>Pyora active send</name>
       <groups>
         <group>
           <name>Pyora</name>
@@ -828,7 +828,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template Pyora active send:asm_volume_size[{#ASMVOLUME}].last()} - {Template Pyora active send:asm_volume_free[{#ASMVOLUME}].last()}) / {Template Pyora active send:asm_volume_size[{#ASMVOLUME}].last()} *100 > {$ASMHIGH}</expression>
+              <expression>({Pyora active send:asm_volume_size[{#ASMVOLUME}].last()} - {Pyora active send:asm_volume_free[{#ASMVOLUME}].last()}) / {Pyora active send:asm_volume_size[{#ASMVOLUME}].last()} *100 > {$ASMHIGH}</expression>
               <name>ASM Volume {#ASMVOLUME} used > {$ASMHIGH}% ({ITEM.LASTVALUE2} / {ITEM.LASTVALUE1})</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -971,7 +971,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Pyora active send:query_lock.last()}>0 and {Template Pyora active send:query_lock_list2.strlen()}>3</expression>
+      <expression>{Pyora active send:query_lock.last()}>0 and {Pyora active send:query_lock_list2.strlen()}>3</expression>
       <name>Query Lock on {$DATABASE} > 1</name>
       <priority>AVERAGE</priority>
     </trigger>

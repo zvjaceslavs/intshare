@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:12Z</date>
+  <date>2021-10-26T04:44:30Z</date>
   <groups>
     <group>
       <name>Templates/Conditioners</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SBR01</template>
-      <name>Template SBR01</name>
+      <template>SBR01</template>
+      <name>SBR01</name>
       <groups>
         <group>
           <name>Templates/Conditioners</name>
@@ -614,12 +614,12 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template SBR01:sbr01.conditioners.conditioner1.state.last()}=3 and {Template SBR01:sbr01.conditioners.conditioner2.state.last()}=3 and {Template SBR01:sbr01.conditioners.conditioner3.state.last()}=3</expression>
+      <expression>{SBR01:sbr01.conditioners.conditioner1.state.last()}=3 and {SBR01:sbr01.conditioners.conditioner2.state.last()}=3 and {SBR01:sbr01.conditioners.conditioner3.state.last()}=3</expression>
       <name>All the air conditioning's stopped</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>{Template SBR01:sbr01.system.tempRoom.last()}>{Template SBR01:sbr01.system.alarmTemp.last()}</expression>
+      <expression>{SBR01:sbr01.system.tempRoom.last()}>{SBR01:sbr01.system.alarmTemp.last()}</expression>
       <name>Temperature is above warning threshold in {HOST.NAME} room</name>
       <priority>HIGH</priority>
     </trigger>
@@ -632,7 +632,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>9999FF</color>
           <item>
-            <host>Template SBR01</host>
+            <host>SBR01</host>
             <key>sbr01.system.tempRoom</key>
           </item>
         </graph_item>
@@ -640,7 +640,7 @@
           <sortorder>1</sortorder>
           <color>FF3333</color>
           <item>
-            <host>Template SBR01</host>
+            <host>SBR01</host>
             <key>sbr01.conditioners.conditioner1.tempIn</key>
           </item>
         </graph_item>
@@ -648,7 +648,7 @@
           <sortorder>2</sortorder>
           <color>00DD00</color>
           <item>
-            <host>Template SBR01</host>
+            <host>SBR01</host>
             <key>sbr01.conditioners.conditioner1.tempOut</key>
           </item>
         </graph_item>
@@ -656,7 +656,7 @@
           <sortorder>3</sortorder>
           <color>EE0000</color>
           <item>
-            <host>Template SBR01</host>
+            <host>SBR01</host>
             <key>sbr01.conditioners.conditioner2.tempIn</key>
           </item>
         </graph_item>
@@ -664,7 +664,7 @@
           <sortorder>4</sortorder>
           <color>00DD00</color>
           <item>
-            <host>Template SBR01</host>
+            <host>SBR01</host>
             <key>sbr01.conditioners.conditioner2.tempOut</key>
           </item>
         </graph_item>
@@ -672,7 +672,7 @@
           <sortorder>5</sortorder>
           <color>FF3333</color>
           <item>
-            <host>Template SBR01</host>
+            <host>SBR01</host>
             <key>sbr01.conditioners.conditioner3.tempIn</key>
           </item>
         </graph_item>
@@ -680,7 +680,7 @@
           <sortorder>6</sortorder>
           <color>00DD00</color>
           <item>
-            <host>Template SBR01</host>
+            <host>SBR01</host>
             <key>sbr01.conditioners.conditioner3.tempOut</key>
           </item>
         </graph_item>

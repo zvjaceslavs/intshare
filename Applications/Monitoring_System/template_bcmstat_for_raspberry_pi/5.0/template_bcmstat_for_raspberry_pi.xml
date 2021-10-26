@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:49Z</date>
+  <date>2021-10-26T04:44:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App bcmstat</template>
-      <name>Template App bcmstat</name>
+      <template>App bcmstat</template>
+      <name>App bcmstat</name>
       <description>Monitoring bcmstat 0.5.4 or greater. https://github.com/MilhouseVH/bcmstat</description>
       <templates>
         <template>
@@ -62,7 +62,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} temperature is very hot</name>
-                  <expression>{Template App bcmstat:CoreTemp.last()}>=80</expression>
+                  <expression>{App bcmstat:CoreTemp.last()}>=80</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -73,7 +73,7 @@
               <dependencies>
                 <dependency>
                   <name>No Data From BCMStats</name>
-                  <expression>{Template App bcmstat:ssh.run[bcmstat_{HOST.NAME}].nodata(5m)}=0</expression>
+                  <expression>{App bcmstat:ssh.run[bcmstat_{HOST.NAME}].nodata(5m)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -84,7 +84,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} temperature is hot</name>
-                  <expression>{Template App bcmstat:CoreTemp.last()}>=70</expression>
+                  <expression>{App bcmstat:CoreTemp.last()}>=70</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -376,7 +376,7 @@
               <dependencies>
                 <dependency>
                   <name>SSH service is down on {HOST.NAME}</name>
-                  <expression>{Template App bcmstat:net.tcp.service[ssh].max(#3)}=0</expression>
+                  <expression>{App bcmstat:net.tcp.service[ssh].max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -415,7 +415,7 @@
               <style>0</style>
               <resource>
                 <name>Speed</name>
-                <host>Template App bcmstat</host>
+                <host>App bcmstat</host>
               </resource>
               <width>1000</width>
               <height>100</height>
@@ -437,7 +437,7 @@
               <style>0</style>
               <resource>
                 <key>CoreTemp</key>
-                <host>Template App bcmstat</host>
+                <host>App bcmstat</host>
               </resource>
               <width>1000</width>
               <height>100</height>
@@ -459,7 +459,7 @@
               <style>0</style>
               <resource>
                 <name>Network Transmissions</name>
-                <host>Template App bcmstat</host>
+                <host>App bcmstat</host>
               </resource>
               <width>1000</width>
               <height>100</height>
@@ -481,7 +481,7 @@
               <style>0</style>
               <resource>
                 <key>IRQs</key>
-                <host>Template App bcmstat</host>
+                <host>App bcmstat</host>
               </resource>
               <width>1000</width>
               <height>100</height>
@@ -548,7 +548,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>cpu0</key>
           </item>
         </graph_item>
@@ -556,7 +556,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>cpu1</key>
           </item>
         </graph_item>
@@ -564,7 +564,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>cpu2</key>
           </item>
         </graph_item>
@@ -572,7 +572,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>cpu3</key>
           </item>
         </graph_item>
@@ -584,7 +584,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>cpumem</key>
           </item>
         </graph_item>
@@ -592,7 +592,7 @@
           <sortorder>1</sortorder>
           <color>0040FF</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>gpumem</key>
           </item>
         </graph_item>
@@ -604,7 +604,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>rxbps</key>
           </item>
         </graph_item>
@@ -612,7 +612,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>txbps</key>
           </item>
         </graph_item>
@@ -624,7 +624,7 @@
         <graph_item>
           <color>4000FF</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>CPUMHz</key>
           </item>
         </graph_item>
@@ -632,7 +632,7 @@
           <sortorder>1</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>GPUMhz</key>
           </item>
         </graph_item>
@@ -640,7 +640,7 @@
           <sortorder>2</sortorder>
           <color>666699</color>
           <item>
-            <host>Template App bcmstat</host>
+            <host>App bcmstat</host>
             <key>H264Mhz</key>
           </item>
         </graph_item>

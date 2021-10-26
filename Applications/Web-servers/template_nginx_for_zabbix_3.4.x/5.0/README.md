@@ -1,4 +1,4 @@
-# Template App Nginx by Alex Gluck
+# App Nginx by Alex Gluck
 
 ## Overview
 
@@ -55,14 +55,14 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Nginx: connections accepted per sec|<p>-</p>|`Dependent item`|nginx.accepts<p>Update: 0</p>|
-|Nginx: connects active|<p>-</p>|`Dependent item`|nginx.active.connect<p>Update: 0</p>|
-|Nginx: connections handled per sec|<p>-</p>|`Dependent item`|nginx.handled<p>Update: 0</p>|
 |Nginx: connections reading|<p>-</p>|`Dependent item`|nginx.reading<p>Update: 0</p>|
-|Nginx: requests per sec|<p>-</p>|`Dependent item`|nginx.requests<p>Update: 0</p>|
 |Nginx: connections waiting|<p>-</p>|`Dependent item`|nginx.waiting<p>Update: 0</p>|
-|Nginx: connections writing|<p>-</p>|`Dependent item`|nginx.writing<p>Update: 0</p>|
-|Nginx: Number of processes $1|<p>-</p>|`Zabbix agent`|proc.num[nginx]<p>Update: 60s</p>|
 |Get Nginx stat page|<p>-</p>|`Zabbix agent`|web.page.get[{$NGINX_HOST},{$NGINX_STATS_URI},{$NGINX_PORT}]<p>Update: 60s</p>|
+|Nginx: connections writing|<p>-</p>|`Dependent item`|nginx.writing<p>Update: 0</p>|
+|Nginx: connects active|<p>-</p>|`Dependent item`|nginx.active.connect<p>Update: 0</p>|
+|Nginx: Number of processes $1|<p>-</p>|`Zabbix agent`|proc.num[nginx]<p>Update: 60s</p>|
+|Nginx: connections handled per sec|<p>-</p>|`Dependent item`|nginx.handled<p>Update: 0</p>|
+|Nginx: requests per sec|<p>-</p>|`Dependent item`|nginx.requests<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

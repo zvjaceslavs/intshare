@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:09Z</date>
+  <date>2021-10-26T04:43:16Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IBM-Storwize-3700 CLI v2</template>
-      <name>Template IBM-Storwize-3700 CLI v2</name>
+      <template>IBM-Storwize-3700 CLI v2</template>
+      <name>IBM-Storwize-3700 CLI v2</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -586,7 +586,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({TRIGGER.VALUE}=0 and {Template IBM-Storwize-3700 CLI v2:running.lsportsas.[{#PORT_ID}.{#NODE_NAME}].last()}&lt;>0 and {Template IBM-Storwize-3700 CLI v2:running.lsportsas.[{#PORT_ID}.{#NODE_NAME}].change()}=1) or ({TRIGGER.VALUE}=1 and {Template IBM-Storwize-3700 CLI v2:is_there_expansion_enclosure.last()}&lt;>0)</expression>
+              <expression>({TRIGGER.VALUE}=0 and {IBM-Storwize-3700 CLI v2:running.lsportsas.[{#PORT_ID}.{#NODE_NAME}].last()}&lt;>0 and {IBM-Storwize-3700 CLI v2:running.lsportsas.[{#PORT_ID}.{#NODE_NAME}].change()}=1) or ({TRIGGER.VALUE}=1 and {IBM-Storwize-3700 CLI v2:is_there_expansion_enclosure.last()}&lt;>0)</expression>
               <name>{HOST.NAME} -> PortSas ID - "{#PORT_ID}", node name - "{#NODE_NAME}" running status is {ITEM.VALUE}</name>
               <priority>HIGH</priority>
               <description>Indicates the status of the port (numeric string). The values can be: online - if the port is functioning offline - if the port is not functioning offline_unconfigured - if not functioning but not configured by the user degraded - if one or more ports are not functioning or have a lower speed than others excluded - if excluded by the user or system Если на сторвайзе нет полок-расширения, то SAS-порты на контроллере будут оффлайн</description>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:12Z</date>
+  <date>2021-10-26T04:45:38Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Mobotix Camera</template>
-      <name>Template Mobotix Camera</name>
+      <template>Mobotix Camera</template>
+      <name>Mobotix Camera</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -222,7 +222,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Mobotix Camera:camera.storage.usedspace.last(#2)}=-1 or {Template Mobotix Camera:camera.storage.remainingtime.last(#2)}=-1</expression>
+      <expression>{Mobotix Camera:camera.storage.usedspace.last(#2)}=-1 or {Mobotix Camera:camera.storage.remainingtime.last(#2)}=-1</expression>
       <name>Storage Failed</name>
       <priority>HIGH</priority>
     </trigger>
@@ -234,7 +234,7 @@
         <graph_item>
           <color>2E7D32</color>
           <item>
-            <host>Template Mobotix Camera</host>
+            <host>Mobotix Camera</host>
             <key>camera.storage.usedspace</key>
           </item>
         </graph_item>

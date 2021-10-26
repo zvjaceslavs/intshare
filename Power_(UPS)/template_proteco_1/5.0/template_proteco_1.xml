@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:36Z</date>
+  <date>2021-10-26T04:46:07Z</date>
   <groups>
     <group>
       <name>Retificadores</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Proteco</template>
-      <name>Template Proteco</name>
+      <template>Proteco</template>
+      <name>Proteco</name>
       <groups>
         <group>
           <name>Retificadores</name>

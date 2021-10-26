@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:30Z</date>
+  <date>2021-10-26T04:43:42Z</date>
   <groups>
     <group>
       <name>VPN Server</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template OpenVPN</template>
-      <name>Template OpenVPN</name>
+      <template>OpenVPN</template>
+      <name>OpenVPN</name>
       <description>Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au The VPN Company provides the source code to create an end-to-end VPN Company.</description>
       <groups>
         <group>
@@ -44,8 +44,8 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template VPN Server</template>
-      <name>Template VPN Server</name>
+      <template>VPN Server</template>
+      <name>VPN Server</name>
       <description>Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au The VPN Company provides the source code to create an end-to-end VPN Company.</description>
       <groups>
         <group>

@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:26Z'
+  date: '2021-10-26T04:45:55Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: fb43749c630b43d8bdbca88bada0d0da
-      template: 'Template App SSL ImmuniWeb Scan'
-      name: 'Template App SSL ImmuniWeb Scan'
+      template: 'App SSL ImmuniWeb Scan'
+      name: 'App SSL ImmuniWeb Scan'
       description: 'https://www.immuniweb.com/ssl/'
       groups:
         -
@@ -246,7 +246,7 @@ zabbix_export:
           triggers:
             -
               uuid: 69357fc2b79e417bb214a05ba90fef89
-              expression: 'max(/Template App SSL ImmuniWeb Scan/immuniweb.ssl.score,#2)<{$IMMUNIWEB_MIN_SCORE}'
+              expression: 'max(/App SSL ImmuniWeb Scan/immuniweb.ssl.score,#2)<{$IMMUNIWEB_MIN_SCORE}'
               name: '{HOST.NAME} SSL ImmuniWeb Score Low'
               priority: WARNING
               description: 'Last 2 scores below minimum score threshold'
@@ -264,7 +264,7 @@ zabbix_export:
   triggers:
     -
       uuid: 7cb49c6278454562a6700c282860b906
-      expression: 'nodata(/Template App SSL ImmuniWeb Scan/immuniweb.ssl.score,36h)=1 and (nodata(/Template App SSL ImmuniWeb Scan/immuniweb.scan.result,36h)=0 or nodata(/Template App SSL ImmuniWeb Scan/immuniweb.ssl.score,72h)=0)'
+      expression: 'nodata(/App SSL ImmuniWeb Scan/immuniweb.ssl.score,36h)=1 and (nodata(/App SSL ImmuniWeb Scan/immuniweb.scan.result,36h)=0 or nodata(/App SSL ImmuniWeb Scan/immuniweb.ssl.score,72h)=0)'
       name: '{HOST.NAME} SSL ImmuniWeb Scan Not Working'
       priority: WARNING
       description: 'No score received in last 36 hours, but there is result data or there were scores within the past 72 hours.'

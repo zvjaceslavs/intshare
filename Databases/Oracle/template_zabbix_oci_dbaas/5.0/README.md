@@ -1,4 +1,4 @@
-# Template_OCI_Dbaas
+# OCI_Dbaas
 
 ## Overview
 
@@ -108,26 +108,26 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|[Oracle] Database is active and open|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_active,1]<p>Update: 3600</p>|
-|[Oracle] ASM Data Area percentage used|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_asmdata,1]<p>Update: 600</p>|
-|[Oracle] ASM Recovery Area percentage used|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_asmreco,1]<p>Update: 600</p>|
-|[Oracle] Sessions blocks|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_block,1]<p>Update: 60</p>|
-|[Oracle] Connections available|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_connection,1]<p>Update: 300</p>|
-|[Oracle] Flash Recovery Area percentage used|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_fra,1]<p>Update: 600</p>|
-|[Oracle] Invalid objects|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_invalid,1]<p>Update: 3600</p>|
-|[Oracle] Locks count|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_lock,1]<p>Update: 60</p>|
 |[Oracle] Response Time Per Txn|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_metric,'Response Time Per Txn']<p>Update: 60</p>|
-|[Oracle] Redo Logs count|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_redo,1]<p>Update: 600</p>|
-|[Oracle] RMAN problems counter|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_rman,1]<p>Update: 86400</p>|
-|[Oracle] Database size|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_size,1]<p>Update: 86400</p>|
+|[Oracle] Connections available|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_connection,1]<p>Update: 300</p>|
 |[Oracle] Database uptime|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_uptime,1]<p>Update: 600</p>|
 |[Oracle] Database version|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_version,1]<p>Update: 86400</p>|
+|[Oracle] Redo Logs count|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_redo,1]<p>Update: 600</p>|
+|[Oracle] Invalid objects|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_invalid,1]<p>Update: 3600</p>|
+|[Oracle] Database is active and open|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_active,1]<p>Update: 3600</p>|
+|[Oracle] Flash Recovery Area percentage used|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_fra,1]<p>Update: 600</p>|
+|[Oracle] RMAN problems counter|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_rman,1]<p>Update: 86400</p>|
+|[Oracle] Sessions blocks|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_block,1]<p>Update: 60</p>|
+|[Oracle] ASM Data Area percentage used|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_asmdata,1]<p>Update: 600</p>|
+|[Oracle] Locks count|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_lock,1]<p>Update: 60</p>|
+|[Oracle] ASM Recovery Area percentage used|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_asmreco,1]<p>Update: 600</p>|
+|[Oracle] Database size|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},db_size,1]<p>Update: 86400</p>|
 |[Oracle] Tablespace $3 percentage used|<p>-</p>|`Zabbix agent`|zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}]<p>Update: 600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|[{$ORACLE_SID}] Tablespace: High used space on {#ORACLE_TBS}|<p>-</p>|<p>**Expression**: {Template_OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}>95</p><p>**Recovery expression**: </p>|high|
-|[{$ORACLE_SID}] Tablespace: Warning used space on {#ORACLE_TBS}|<p>-</p>|<p>**Expression**: {Template_OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}>90 and {Template_OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}<95</p><p>**Recovery expression**: </p>|warning|
-|[{$ORACLE_SID}] Tablespace: High used space on {#ORACLE_TBS} (LLD)|<p>-</p>|<p>**Expression**: {Template_OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}>95</p><p>**Recovery expression**: </p>|high|
-|[{$ORACLE_SID}] Tablespace: Warning used space on {#ORACLE_TBS} (LLD)|<p>-</p>|<p>**Expression**: {Template_OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}>90 and {Template_OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}<95</p><p>**Recovery expression**: </p>|warning|
+|[{$ORACLE_SID}] Tablespace: High used space on {#ORACLE_TBS}|<p>-</p>|<p>**Expression**: {OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}>95</p><p>**Recovery expression**: </p>|high|
+|[{$ORACLE_SID}] Tablespace: Warning used space on {#ORACLE_TBS}|<p>-</p>|<p>**Expression**: {OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}>90 and {OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}<95</p><p>**Recovery expression**: </p>|warning|
+|[{$ORACLE_SID}] Tablespace: High used space on {#ORACLE_TBS} (LLD)|<p>-</p>|<p>**Expression**: {OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}>95</p><p>**Recovery expression**: </p>|high|
+|[{$ORACLE_SID}] Tablespace: Warning used space on {#ORACLE_TBS} (LLD)|<p>-</p>|<p>**Expression**: {OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}>90 and {OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}].last()}<95</p><p>**Recovery expression**: </p>|warning|

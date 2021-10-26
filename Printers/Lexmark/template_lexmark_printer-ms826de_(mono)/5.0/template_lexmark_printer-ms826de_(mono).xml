@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:06Z</date>
+  <date>2021-10-26T04:42:07Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template - SNMP - Lexmark MS826de MONO</template>
-      <name>Template - SNMP - Lexmark MS826de MONO</name>
+      <template>SNMP - Lexmark MS826de MONO</template>
+      <name>SNMP - Lexmark MS826de MONO</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -329,7 +329,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template - SNMP - Lexmark MS826de MONO</host>
+            <host>SNMP - Lexmark MS826de MONO</host>
             <key>prtMarkerSuppliesLevel</key>
           </item>
         </graph_item>

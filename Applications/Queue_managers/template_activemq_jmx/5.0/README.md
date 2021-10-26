@@ -1,4 +1,4 @@
-# Template App ActiveMQ JMX
+# App ActiveMQ JMX
 
 ## Overview
 
@@ -33,41 +33,41 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|mem Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.committed]<p>Update: 1m</p>|
-|mem Heap Memory max|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.max]<p>Update: 1h</p>|
-|mem Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.used]<p>Update: 1m</p>|
-|mem Non-Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed]<p>Update: 1m</p>|
-|mem Non-Heap Memory max|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.max]<p>Update: 1h</p>|
-|mem Non-Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.used]<p>Update: 1m</p>|
-|mem Object Pending Finalization Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",ObjectPendingFinalizationCount]<p>Update: 1m</p>|
-|os Max File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]<p>Update: 1h</p>|
-|os Open File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]<p>Update: 1m</p>|
-|os Process CPU Load|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",ProcessCpuLoad]<p>Update: 1m</p>|
-|jvm Uptime|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",Uptime]<p>Update: 1m</p>|
-|jvm Name|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmName]<p>Update: 1h</p>|
-|jvm Version|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmVersion]<p>Update: 1h</p>|
-|th Daemon Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",DaemonThreadCount]<p>Update: 1m</p>|
-|th Peak Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",PeakThreadCount]<p>Update: 1m</p>|
-|th Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",ThreadCount]<p>Update: 1m</p>|
-|th Total Started Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",TotalStartedThreadCount]<p>Update: 1m</p>|
-|MemoryLimit for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",MemoryLimit]<p>Update: 3600</p>|
-|MemoryPercentUsage for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",MemoryPercentUsage]<p>Update: 60</p>|
-|Size of {$BRKNAME} Kaha DB|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME},service=PersistenceAdapter,instanceName=KahaDBPersistenceAdapter[/kahadb_Index_/kahadb]",Size]<p>Update: 60</p>|
-|StoreLimit for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",StoreLimit]<p>Update: 3600</p>|
-|StorePercentUsage for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",StorePercentUsage]<p>Update: 60</p>|
-|TempLimit for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TempLimit]<p>Update: 3600</p>|
-|TempPercentUsage for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TempPercentUsage]<p>Update: 60</p>|
-|TotalConsumerCount for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TotalConsumerCount]<p>Update: 60</p>|
-|TotalDequeueCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TotalDequeueCount]<p>Update: 30s</p>|
-|TotalEnqueueCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TotalEnqueueCount]<p>Update: 30s</p>|
-|TotalMessageCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TotalMessageCount]<p>Update: 30s</p>|
 |AverageEnqueueTime for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",AverageEnqueueTime]<p>Update: 300</p>|
-|ConsumerCount for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",ConsumerCount]<p>Update: 60</p>|
 |DequeueCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",DequeueCount]<p>Update: 30s</p>|
-|EnqueueCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",EnqueueCount]<p>Update: 30s</p>|
-|ExpiredCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",ExpiredCount]<p>Update: 30s</p>|
-|ProducerCount for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",ProducerCount]<p>Update: 60</p>|
+|TotalEnqueueCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TotalEnqueueCount]<p>Update: 30s</p>|
+|th Daemon Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",DaemonThreadCount]<p>Update: 1m</p>|
+|mem Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.committed]<p>Update: 1m</p>|
+|jvm Version|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmVersion]<p>Update: 1h</p>|
+|jvm Uptime|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",Uptime]<p>Update: 1m</p>|
+|mem Non-Heap Memory max|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.max]<p>Update: 1h</p>|
+|os Process CPU Load|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",ProcessCpuLoad]<p>Update: 1m</p>|
+|mem Non-Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed]<p>Update: 1m</p>|
+|StoreLimit for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",StoreLimit]<p>Update: 3600</p>|
 |QueueSize for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",QueueSize]<p>Update: 60</p>|
+|th Peak Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",PeakThreadCount]<p>Update: 1m</p>|
+|ExpiredCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",ExpiredCount]<p>Update: 30s</p>|
+|EnqueueCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",EnqueueCount]<p>Update: 30s</p>|
+|TotalDequeueCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TotalDequeueCount]<p>Update: 30s</p>|
+|mem Non-Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.used]<p>Update: 1m</p>|
+|os Max File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]<p>Update: 1h</p>|
+|MemoryLimit for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",MemoryLimit]<p>Update: 3600</p>|
+|mem Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.used]<p>Update: 1m</p>|
+|mem Object Pending Finalization Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",ObjectPendingFinalizationCount]<p>Update: 1m</p>|
+|th Total Started Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",TotalStartedThreadCount]<p>Update: 1m</p>|
+|StorePercentUsage for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",StorePercentUsage]<p>Update: 60</p>|
+|MemoryPercentUsage for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",MemoryPercentUsage]<p>Update: 60</p>|
+|TotalConsumerCount for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TotalConsumerCount]<p>Update: 60</p>|
+|os Open File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]<p>Update: 1m</p>|
+|ConsumerCount for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",ConsumerCount]<p>Update: 60</p>|
+|TotalMessageCount per minute for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TotalMessageCount]<p>Update: 30s</p>|
+|mem Heap Memory max|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.max]<p>Update: 1h</p>|
+|th Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",ThreadCount]<p>Update: 1m</p>|
+|jvm Name|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmName]<p>Update: 1h</p>|
+|TempPercentUsage for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TempPercentUsage]<p>Update: 60</p>|
+|ProducerCount for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Destination,brokerName={$BRKNAME}",ProducerCount]<p>Update: 60</p>|
+|TempLimit for {$BRKNAME}|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME}",TempLimit]<p>Update: 3600</p>|
+|Size of {$BRKNAME} Kaha DB|<p>-</p>|`JMX agent`|jmx["org.apache.activemq:type=Broker,brokerName={$BRKNAME},service=PersistenceAdapter,instanceName=KahaDBPersistenceAdapter[/kahadb_Index_/kahadb]",Size]<p>Update: 60</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:55Z</date>
+  <date>2021-10-26T04:44:10Z</date>
   <groups>
     <group>
       <name>FiberHome</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP OLT FiberHome</template>
-      <name>Template SNMP OLT FiberHome</name>
+      <template>SNMP OLT FiberHome</template>
+      <name>SNMP OLT FiberHome</name>
       <groups>
         <group>
           <name>FiberHome</name>
@@ -281,7 +281,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>cardMemUtil.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -290,7 +290,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>cardCpuUtil.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -371,7 +371,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>ifHCInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -380,7 +380,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>ifHCOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -484,7 +484,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>MgmtCardMemUtil.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -493,7 +493,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>MgmtCardCpuUtil.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -529,7 +529,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>oltPonAuthOnuNum[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -621,7 +621,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>onuPonTXOpticalPower.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -630,7 +630,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template SNMP OLT FiberHome</host>
+                    <host>SNMP OLT FiberHome</host>
                     <key>onuPonRXOpticalPower.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -651,7 +651,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>00FF00</color>
           <item>
-            <host>Template SNMP OLT FiberHome</host>
+            <host>SNMP OLT FiberHome</host>
             <key>clientes_OLT_FH.sh[{$SNMP_COMMUNITY}, {HOST.IP}]</key>
           </item>
         </graph_item>
@@ -663,7 +663,7 @@
         <graph_item>
           <color>FF0000</color>
           <item>
-            <host>Template SNMP OLT FiberHome</host>
+            <host>SNMP OLT FiberHome</host>
             <key>sysTemperature</key>
           </item>
         </graph_item>

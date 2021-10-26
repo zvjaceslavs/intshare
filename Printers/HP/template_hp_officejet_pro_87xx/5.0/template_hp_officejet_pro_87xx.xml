@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:59Z</date>
+  <date>2021-10-26T04:41:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer HP OfficeJet Pro 8xxx</template>
-      <name>Template Printer HP OfficeJet Pro 8xxx</name>
+      <template>Printer HP OfficeJet Pro 8xxx</template>
+      <name>Printer HP OfficeJet Pro 8xxx</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -325,66 +325,66 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer HP OfficeJet Pro 8xxx:black.last(0)}=0 and {Template Printer HP OfficeJet Pro 8xxx:black.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP OfficeJet Pro 8xxx:black.last(0)}=0 and {Printer HP OfficeJet Pro 8xxx:black.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
       <name>Empty Ink - Black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP OfficeJet Pro 8xxx:cyan.last(0)}=0 and {Template Printer HP OfficeJet Pro 8xxx:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP OfficeJet Pro 8xxx:cyan.last(0)}=0 and {Printer HP OfficeJet Pro 8xxx:cyan.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
       <name>Empty Ink - Cyan</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Template Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
       <name>Empty Ink - Magenta</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP OfficeJet Pro 8xxx:yellow.last(0)}=0 and {Template Printer HP OfficeJet Pro 8xxx:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP OfficeJet Pro 8xxx:yellow.last(0)}=0 and {Printer HP OfficeJet Pro 8xxx:yellow.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
       <name>Empty Ink - Yellow</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP OfficeJet Pro 8xxx:black.last(0)}&lt;3 and {Template Printer HP OfficeJet Pro 8xxx:black.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP OfficeJet Pro 8xxx:black.last(0)}&lt;3 and {Printer HP OfficeJet Pro 8xxx:black.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
       <name>Ink low - Black ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty Ink - Magenta</name>
-          <expression>{Template Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Template Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP OfficeJet Pro 8xxx:cyan.last(0)}&lt;3 and {Template Printer HP OfficeJet Pro 8xxx:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP OfficeJet Pro 8xxx:cyan.last(0)}&lt;3 and {Printer HP OfficeJet Pro 8xxx:cyan.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
       <name>Ink low - Cyan ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty Ink - Magenta</name>
-          <expression>{Template Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Template Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP OfficeJet Pro 8xxx:magenta.last(0)}&lt;3 and {Template Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP OfficeJet Pro 8xxx:magenta.last(0)}&lt;3 and {Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
       <name>Ink low - Magenta ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty Ink - Magenta</name>
-          <expression>{Template Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Template Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP OfficeJet Pro 8xxx:yellow.last(0)}&lt;3 and {Template Printer HP OfficeJet Pro 8xxx:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP OfficeJet Pro 8xxx:yellow.last(0)}&lt;3 and {Printer HP OfficeJet Pro 8xxx:yellow.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
       <name>Ink low - Yellow ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty Ink - Magenta</name>
-          <expression>{Template Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Template Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP OfficeJet Pro 8xxx:magenta.last(0)}=0 and {Printer HP OfficeJet Pro 8xxx:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP OfficeJet Pro 8xxx:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
@@ -401,7 +401,7 @@
           <color>000000</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer HP OfficeJet Pro 8xxx</host>
+            <host>Printer HP OfficeJet Pro 8xxx</host>
             <key>black</key>
           </item>
         </graph_item>
@@ -411,7 +411,7 @@
           <color>00CCCC</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer HP OfficeJet Pro 8xxx</host>
+            <host>Printer HP OfficeJet Pro 8xxx</host>
             <key>cyan</key>
           </item>
         </graph_item>
@@ -421,7 +421,7 @@
           <color>EEEE00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer HP OfficeJet Pro 8xxx</host>
+            <host>Printer HP OfficeJet Pro 8xxx</host>
             <key>yellow</key>
           </item>
         </graph_item>
@@ -431,7 +431,7 @@
           <color>EE00EE</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer HP OfficeJet Pro 8xxx</host>
+            <host>Printer HP OfficeJet Pro 8xxx</host>
             <key>magenta</key>
           </item>
         </graph_item>
@@ -448,7 +448,7 @@
           <color>000000</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer HP OfficeJet Pro 8xxx</host>
+            <host>Printer HP OfficeJet Pro 8xxx</host>
             <key>black</key>
           </item>
         </graph_item>
@@ -466,7 +466,7 @@
           <color>00DDDD</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer HP OfficeJet Pro 8xxx</host>
+            <host>Printer HP OfficeJet Pro 8xxx</host>
             <key>cyan</key>
           </item>
         </graph_item>
@@ -483,7 +483,7 @@
           <color>CC00CC</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer HP OfficeJet Pro 8xxx</host>
+            <host>Printer HP OfficeJet Pro 8xxx</host>
             <key>magenta</key>
           </item>
         </graph_item>
@@ -501,7 +501,7 @@
           <color>DDDD00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer HP OfficeJet Pro 8xxx</host>
+            <host>Printer HP OfficeJet Pro 8xxx</host>
             <key>yellow</key>
           </item>
         </graph_item>

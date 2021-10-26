@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:38Z</date>
+  <date>2021-10-26T04:40:32Z</date>
   <groups>
     <group>
       <name>Zabbix servers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Device BigIP F5</template>
-      <name>Template Device BigIP F5</name>
+      <template>Device BigIP F5</template>
+      <name>Device BigIP F5</name>
       <groups>
         <group>
           <name>Zabbix servers</name>
@@ -431,9 +431,9 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}&lt;>{Template Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</expression>
+              <expression>{Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}&lt;>{Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}={Template Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</recovery_expression>
+              <recovery_expression>{Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}={Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</recovery_expression>
               <name>Existem Nodes do Pool {#SNMPVALUE} desativados ou apresentando problemas - ({ITEM.LASTVALUE}/{ITEM.LASTVALUE2}) - Ativos / Total</name>
               <status>DISABLED</status>
               <priority>WARNING</priority>
@@ -452,13 +452,13 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Device BigIP F5:sysChassisFanStatus.1.last()}&lt;>1 or {Template Device BigIP F5:sysChassisFanStatus.2.last()}&lt;>1 or {Template Device BigIP F5:sysChassisFanStatus.3.last()}&lt;>1</expression>
+      <expression>{Device BigIP F5:sysChassisFanStatus.1.last()}&lt;>1 or {Device BigIP F5:sysChassisFanStatus.2.last()}&lt;>1 or {Device BigIP F5:sysChassisFanStatus.3.last()}&lt;>1</expression>
       <name>Mal Funcionamento das Fans</name>
       <status>DISABLED</status>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template Device BigIP F5:sysChassisPowerSupplyStatus.1.last()}&lt;>1 or {Template Device BigIP F5:sysChassisPowerSupplyStatus.2.last()}&lt;>1</expression>
+      <expression>{Device BigIP F5:sysChassisPowerSupplyStatus.1.last()}&lt;>1 or {Device BigIP F5:sysChassisPowerSupplyStatus.2.last()}&lt;>1</expression>
       <name>Mal Funcionamento das Fontes de Energia</name>
       <status>DISABLED</status>
       <priority>AVERAGE</priority>
@@ -471,7 +471,7 @@
       <graph_items>
         <graph_item>
           <item>
-            <host>Template Device BigIP F5</host>
+            <host>Device BigIP F5</host>
             <key>sysGlobalHostCpuUsageRatio1m</key>
           </item>
         </graph_item>
@@ -479,9 +479,10 @@
     </graph>
     <graph>
       <name>Memory usage (OS)</name>
+      <yaxismax>200</yaxismax>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template Device BigIP F5</host>
+        <host>Device BigIP F5</host>
         <key>sysHostMemoryTotal</key>
       </ymax_item_1>
       <graph_items>
@@ -489,7 +490,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>00DD00</color>
           <item>
-            <host>Template Device BigIP F5</host>
+            <host>Device BigIP F5</host>
             <key>sysHostMemoryTotal</key>
           </item>
         </graph_item>
@@ -498,7 +499,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>EE0000</color>
           <item>
-            <host>Template Device BigIP F5</host>
+            <host>Device BigIP F5</host>
             <key>sysHostMemoryUsed</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:04Z</date>
+  <date>2021-10-26T04:40:57Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Skype for business Mediation Role</template>
-      <name>Template App Skype for business Mediation Role</name>
+      <template>App Skype for business Mediation Role</template>
+      <name>App Skype for business Mediation Role</name>
       <description>This template assesses the status and overall health of services as well as the performance of the Mediation Microsoft Skype for Business Server 2015. Note: You need to set thresholds for these counters according to your environment. It is recommended to monitor these counters for some period of time to understand potential value ranges and then set the thresholds accordingly. This documentation is based on: https://technet.microsoft.com/en-us/library/gg398616.aspx.</description>
       <groups>
         <group>
@@ -232,7 +232,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Skype for business Mediation Role</host>
+            <host>App Skype for business Mediation Role</host>
             <key>perf_counter["\LS:MediationServer - Inbound Calls(_total)\- Active media bypass calls"]</key>
           </item>
         </graph_item>
@@ -240,7 +240,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Skype for business Mediation Role</host>
+            <host>App Skype for business Mediation Role</host>
             <key>perf_counter["\LS:MediationServer - Inbound Calls(_total)\- current"]</key>
           </item>
         </graph_item>
@@ -248,7 +248,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Skype for business Mediation Role</host>
+            <host>App Skype for business Mediation Role</host>
             <key>perf_counter["\LS:MediationServer - Outbound Calls(_total)\- Active media bypass calls"]</key>
           </item>
         </graph_item>
@@ -256,7 +256,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template App Skype for business Mediation Role</host>
+            <host>App Skype for business Mediation Role</host>
             <key>perf_counter["\LS:MediationServer - Outbound Calls(_total)\- current"]</key>
           </item>
         </graph_item>

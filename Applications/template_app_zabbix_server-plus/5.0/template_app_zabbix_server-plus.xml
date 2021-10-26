@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:46Z</date>
+  <date>2021-10-26T04:40:41Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,914 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Zabbix Server</template>
-      <name>Template App Zabbix Server</name>
-      <groups>
-        <group>
-          <name>Templates/Applications</name>
-        </group>
-      </groups>
-      <applications>
-        <application>
-          <name>Zabbix server</name>
-        </application>
-      </applications>
-      <items>
-        <item>
-          <name>Zabbix preprocessing queue</name>
-          <type>INTERNAL</type>
-          <key>zabbix[preprocessing_queue]</key>
-          <delay>10m</delay>
-          <history>1w</history>
-          <description>Count of values enqueued in the preprocessing queue.</description>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,alerter,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix alerter processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,alert manager,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix alert manager processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,configuration syncer,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix configuration syncer processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,discoverer,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix discoverer processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,escalator,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix escalator processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,history syncer,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix history syncer processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,housekeeper,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(30m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(30m)}&lt;65</recovery_expression>
-              <name>Zabbix housekeeper processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,http poller,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix http poller processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,icmp pinger,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix icmp pinger processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,ipmi manager,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix ipmi manager processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,ipmi poller,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix ipmi poller processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,java poller,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix java poller processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,poller,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix poller processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,preprocessing manager,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix preprocessing manager processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,preprocessing worker,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix preprocessing worker processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,proxy poller,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix proxy poller processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,self-monitoring,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{min(10m)}&lt;65</recovery_expression>
-              <name>Zabbix self-monitoring processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,snmp trapper,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix snmp trapper processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,task manager,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix task manager processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,timer,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix timer processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,trapper,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix trapper processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,unreachable poller,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix unreachable poller processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $4 $2 processes, in %</name>
-          <type>INTERNAL</type>
-          <key>zabbix[process,vmware collector,avg,busy]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(10m)}>75</expression>
-              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
-              <name>Zabbix vmware collector processes more than 75% busy</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix queue over $2</name>
-          <type>INTERNAL</type>
-          <key>zabbix[queue,10m]</key>
-          <delay>10m</delay>
-          <history>1w</history>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(10m)}>100</expression>
-              <name>More than 100 items having missing data for more than 10 minutes</name>
-              <priority>WARNING</priority>
-              <description>zabbix[queue,10m] item is collecting data about how many items are missing data for more than 10 minutes (next parameter)</description>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix queue</name>
-          <type>INTERNAL</type>
-          <key>zabbix[queue]</key>
-          <delay>10m</delay>
-          <history>1w</history>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-        </item>
-        <item>
-          <name>Zabbix configuration cache, % free</name>
-          <type>INTERNAL</type>
-          <key>zabbix[rcache,buffer,pfree]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(10m)}&lt;25</expression>
-              <name>Less than 25% free in the configuration cache</name>
-              <priority>AVERAGE</priority>
-              <description>Consider increasing CacheSize in the zabbix_server.conf configuration file</description>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix value cache, % free</name>
-          <type>INTERNAL</type>
-          <key>zabbix[vcache,buffer,pfree]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(10m)}&lt;5</expression>
-              <name>Less than 5% free in the value cache</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix value cache hits</name>
-          <type>INTERNAL</type>
-          <key>zabbix[vcache,cache,hits]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>vps</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <preprocessing>
-            <step>
-              <type>CHANGE_PER_SECOND</type>
-              <params></params>
-            </step>
-          </preprocessing>
-        </item>
-        <item>
-          <name>Zabbix value cache misses</name>
-          <type>INTERNAL</type>
-          <key>zabbix[vcache,cache,misses]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>vps</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <preprocessing>
-            <step>
-              <type>CHANGE_PER_SECOND</type>
-              <params></params>
-            </step>
-          </preprocessing>
-        </item>
-        <item>
-          <name>Zabbix value cache operating mode</name>
-          <type>INTERNAL</type>
-          <key>zabbix[vcache,cache,mode]</key>
-          <history>1w</history>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <valuemap>
-            <name>Value cache operating mode</name>
-          </valuemap>
-          <triggers>
-            <trigger>
-              <expression>{last()}=1</expression>
-              <name>Zabbix value cache working in low memory mode</name>
-              <priority>HIGH</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix vmware cache, % free</name>
-          <type>INTERNAL</type>
-          <key>zabbix[vmware,buffer,pfree]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(10m)}&lt;25</expression>
-              <name>Less than 25% free in the vmware cache</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $2 write cache, % free</name>
-          <type>INTERNAL</type>
-          <key>zabbix[wcache,history,pfree]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(10m)}&lt;25</expression>
-              <name>Less than 25% free in the history cache</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix history index cache, % free</name>
-          <type>INTERNAL</type>
-          <key>zabbix[wcache,index,pfree]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(10m)}&lt;25</expression>
-              <name>Less than 25% free in the history index cache</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Zabbix $2 write cache, % free</name>
-          <type>INTERNAL</type>
-          <key>zabbix[wcache,trend,pfree]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(10m)}&lt;25</expression>
-              <name>Less than 25% free in the trends cache</name>
-              <priority>AVERAGE</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>Values processed by Zabbix server per second</name>
-          <type>INTERNAL</type>
-          <key>zabbix[wcache,values]</key>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <applications>
-            <application>
-              <name>Zabbix server</name>
-            </application>
-          </applications>
-          <preprocessing>
-            <step>
-              <type>CHANGE_PER_SECOND</type>
-              <params></params>
-            </step>
-          </preprocessing>
-        </item>
-      </items>
-      <screens>
-        <screen>
-          <name>Zabbix server health</name>
-          <hsize>2</hsize>
-          <vsize>3</vsize>
-          <screen_items>
-            <screen_item>
-              <resourcetype>0</resourcetype>
-              <style>0</style>
-              <resource>
-                <name>Zabbix server performance</name>
-                <host>Template App Zabbix Server</host>
-              </resource>
-              <width>500</width>
-              <height>212</height>
-              <x>0</x>
-              <y>0</y>
-              <colspan>1</colspan>
-              <rowspan>1</rowspan>
-              <elements>0</elements>
-              <valign>1</valign>
-              <halign>0</halign>
-              <dynamic>0</dynamic>
-              <sort_triggers>0</sort_triggers>
-              <url></url>
-              <application></application>
-              <max_columns>3</max_columns>
-            </screen_item>
-            <screen_item>
-              <resourcetype>0</resourcetype>
-              <style>0</style>
-              <resource>
-                <name>Zabbix data gathering process busy %</name>
-                <host>Template App Zabbix Server</host>
-              </resource>
-              <width>500</width>
-              <height>100</height>
-              <x>1</x>
-              <y>0</y>
-              <colspan>1</colspan>
-              <rowspan>1</rowspan>
-              <elements>0</elements>
-              <valign>1</valign>
-              <halign>0</halign>
-              <dynamic>0</dynamic>
-              <sort_triggers>0</sort_triggers>
-              <url></url>
-              <application></application>
-              <max_columns>3</max_columns>
-            </screen_item>
-            <screen_item>
-              <resourcetype>0</resourcetype>
-              <style>0</style>
-              <resource>
-                <name>Zabbix internal process busy %</name>
-                <host>Template App Zabbix Server</host>
-              </resource>
-              <width>555</width>
-              <height>114</height>
-              <x>0</x>
-              <y>1</y>
-              <colspan>1</colspan>
-              <rowspan>1</rowspan>
-              <elements>0</elements>
-              <valign>1</valign>
-              <halign>0</halign>
-              <dynamic>0</dynamic>
-              <sort_triggers>0</sort_triggers>
-              <url></url>
-              <application></application>
-              <max_columns>3</max_columns>
-            </screen_item>
-            <screen_item>
-              <resourcetype>0</resourcetype>
-              <style>0</style>
-              <resource>
-                <name>Zabbix cache usage, % free</name>
-                <host>Template App Zabbix Server</host>
-              </resource>
-              <width>500</width>
-              <height>128</height>
-              <x>1</x>
-              <y>1</y>
-              <colspan>1</colspan>
-              <rowspan>1</rowspan>
-              <elements>0</elements>
-              <valign>1</valign>
-              <halign>0</halign>
-              <dynamic>0</dynamic>
-              <sort_triggers>0</sort_triggers>
-              <url></url>
-              <application></application>
-              <max_columns>3</max_columns>
-            </screen_item>
-            <screen_item>
-              <resourcetype>0</resourcetype>
-              <style>0</style>
-              <resource>
-                <name>Value cache effectiveness</name>
-                <host>Template App Zabbix Server</host>
-              </resource>
-              <width>500</width>
-              <height>160</height>
-              <x>0</x>
-              <y>2</y>
-              <colspan>1</colspan>
-              <rowspan>1</rowspan>
-              <elements>0</elements>
-              <valign>0</valign>
-              <halign>0</halign>
-              <dynamic>0</dynamic>
-              <sort_triggers>0</sort_triggers>
-              <url></url>
-              <application></application>
-              <max_columns>3</max_columns>
-            </screen_item>
-            <screen_item>
-              <resourcetype>0</resourcetype>
-              <style>0</style>
-              <resource>
-                <name>Zabbix preprocessing queue</name>
-                <host>Template App Zabbix Server</host>
-              </resource>
-              <width>500</width>
-              <height>160</height>
-              <x>1</x>
-              <y>2</y>
-              <colspan>1</colspan>
-              <rowspan>1</rowspan>
-              <elements>0</elements>
-              <valign>0</valign>
-              <halign>0</halign>
-              <dynamic>0</dynamic>
-              <sort_triggers>0</sort_triggers>
-              <url></url>
-              <application></application>
-              <max_columns>3</max_columns>
-            </screen_item>
-          </screen_items>
-        </screen>
-      </screens>
-    </template>
-    <template>
-      <template>Template App Zabbix Server - Plus</template>
-      <name>Template App Zabbix Server - Plus</name>
+      <template>App Zabbix Server - Plus</template>
+      <name>App Zabbix Server - Plus</name>
       <description>2018-02-25 Ver. 1.0 - First release. 2018-03-14 Ver. 1.1 - Add items for cache total and a graph of them.</description>
       <templates>
         <template>
@@ -2735,7 +1829,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix server performance required / actual</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2757,7 +1851,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix values processed - detail</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2779,7 +1873,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix queue</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2801,7 +1895,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix preprocessing queue</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2823,7 +1917,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix number of process - data gathering process</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2845,7 +1939,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix data gathering process busy %</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2867,7 +1961,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix process cpu usage - data gathering</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2889,7 +1983,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix process memory usage - data gathering</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2911,7 +2005,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix number of process - internal process</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2933,7 +2027,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix internal process busy %</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2955,7 +2049,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix process cpu usage - internal process</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2977,7 +2071,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix process memory usage - internal process</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -2999,7 +2093,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix data file size</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3021,7 +2115,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix housekeeping</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3043,7 +2137,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix process cpu - system</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3065,7 +2159,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix process memory - system</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3087,7 +2181,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix number of hosts</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3109,7 +2203,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix number of items</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3131,7 +2225,7 @@
               <style>0</style>
               <resource>
                 <key>zabbix[triggers]</key>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3153,7 +2247,7 @@
               <style>0</style>
               <resource>
                 <key>zabbix[uptime]</key>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3175,7 +2269,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix cache size</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3197,7 +2291,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix cache usage, % free</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3219,7 +2313,7 @@
               <style>0</style>
               <resource>
                 <name>Zabbix value cache size</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3241,7 +2335,7 @@
               <style>0</style>
               <resource>
                 <name>Value cache effectiveness</name>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3263,7 +2357,7 @@
               <style>0</style>
               <resource>
                 <key>log.count[{$ZABBIX_SERVER_LOG_PATH},,,,skip]</key>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3285,7 +2379,7 @@
               <style>0</style>
               <resource>
                 <key>vfs.file.size[{$ZABBIX_SERVER_LOG_PATH}]</key>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3307,7 +2401,7 @@
               <style>0</style>
               <resource>
                 <key>log.count[{$ZABBIX_AGENT_LOG_PATH},,,,skip]</key>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3329,7 +2423,7 @@
               <style>0</style>
               <resource>
                 <key>vfs.file.size[{$ZABBIX_AGENT_LOG_PATH}]</key>
-                <host>Template App Zabbix Server - Plus</host>
+                <host>App Zabbix Server - Plus</host>
               </resource>
               <width>300</width>
               <height>100</height>
@@ -3339,6 +2433,912 @@
               <rowspan>1</rowspan>
               <elements>0</elements>
               <valign>1</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+          </screen_items>
+        </screen>
+      </screens>
+    </template>
+    <template>
+      <template>Template App Zabbix Server</template>
+      <name>Template App Zabbix Server</name>
+      <groups>
+        <group>
+          <name>Templates/Applications</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Zabbix server</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Zabbix preprocessing queue</name>
+          <type>INTERNAL</type>
+          <key>zabbix[preprocessing_queue]</key>
+          <delay>10m</delay>
+          <history>1w</history>
+          <description>Count of values enqueued in the preprocessing queue.</description>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,alerter,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix alerter processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,alert manager,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix alert manager processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,configuration syncer,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix configuration syncer processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,discoverer,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix discoverer processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,escalator,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix escalator processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,history syncer,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix history syncer processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,housekeeper,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(30m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(30m)}&lt;65</recovery_expression>
+              <name>Zabbix housekeeper processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,http poller,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix http poller processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,icmp pinger,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix icmp pinger processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,ipmi manager,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix ipmi manager processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,ipmi poller,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix ipmi poller processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,java poller,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix java poller processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,poller,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix poller processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,preprocessing manager,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix preprocessing manager processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,preprocessing worker,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix preprocessing worker processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,proxy poller,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix proxy poller processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,self-monitoring,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{min(10m)}&lt;65</recovery_expression>
+              <name>Zabbix self-monitoring processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,snmp trapper,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix snmp trapper processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,task manager,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix task manager processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,timer,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix timer processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,trapper,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix trapper processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,unreachable poller,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix unreachable poller processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $4 $2 processes, in %</name>
+          <type>INTERNAL</type>
+          <key>zabbix[process,vmware collector,avg,busy]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(10m)}>75</expression>
+              <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+              <recovery_expression>{avg(10m)}&lt;65</recovery_expression>
+              <name>Zabbix vmware collector processes more than 75% busy</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix queue over $2</name>
+          <type>INTERNAL</type>
+          <key>zabbix[queue,10m]</key>
+          <delay>10m</delay>
+          <history>1w</history>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(10m)}>100</expression>
+              <name>More than 100 items having missing data for more than 10 minutes</name>
+              <priority>WARNING</priority>
+              <description>zabbix[queue,10m] item is collecting data about how many items are missing data for more than 10 minutes (next parameter)</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix queue</name>
+          <type>INTERNAL</type>
+          <key>zabbix[queue]</key>
+          <delay>10m</delay>
+          <history>1w</history>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+        </item>
+        <item>
+          <name>Zabbix configuration cache, % free</name>
+          <type>INTERNAL</type>
+          <key>zabbix[rcache,buffer,pfree]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(10m)}&lt;25</expression>
+              <name>Less than 25% free in the configuration cache</name>
+              <priority>AVERAGE</priority>
+              <description>Consider increasing CacheSize in the zabbix_server.conf configuration file</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix value cache, % free</name>
+          <type>INTERNAL</type>
+          <key>zabbix[vcache,buffer,pfree]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(10m)}&lt;5</expression>
+              <name>Less than 5% free in the value cache</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix value cache hits</name>
+          <type>INTERNAL</type>
+          <key>zabbix[vcache,cache,hits]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>vps</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>CHANGE_PER_SECOND</type>
+              <params></params>
+            </step>
+          </preprocessing>
+        </item>
+        <item>
+          <name>Zabbix value cache misses</name>
+          <type>INTERNAL</type>
+          <key>zabbix[vcache,cache,misses]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>vps</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>CHANGE_PER_SECOND</type>
+              <params></params>
+            </step>
+          </preprocessing>
+        </item>
+        <item>
+          <name>Zabbix value cache operating mode</name>
+          <type>INTERNAL</type>
+          <key>zabbix[vcache,cache,mode]</key>
+          <history>1w</history>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>Value cache operating mode</name>
+          </valuemap>
+          <triggers>
+            <trigger>
+              <expression>{last()}=1</expression>
+              <name>Zabbix value cache working in low memory mode</name>
+              <priority>HIGH</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix vmware cache, % free</name>
+          <type>INTERNAL</type>
+          <key>zabbix[vmware,buffer,pfree]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(10m)}&lt;25</expression>
+              <name>Less than 25% free in the vmware cache</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $2 write cache, % free</name>
+          <type>INTERNAL</type>
+          <key>zabbix[wcache,history,pfree]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(10m)}&lt;25</expression>
+              <name>Less than 25% free in the history cache</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix history index cache, % free</name>
+          <type>INTERNAL</type>
+          <key>zabbix[wcache,index,pfree]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(10m)}&lt;25</expression>
+              <name>Less than 25% free in the history index cache</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Zabbix $2 write cache, % free</name>
+          <type>INTERNAL</type>
+          <key>zabbix[wcache,trend,pfree]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(10m)}&lt;25</expression>
+              <name>Less than 25% free in the trends cache</name>
+              <priority>AVERAGE</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>Values processed by Zabbix server per second</name>
+          <type>INTERNAL</type>
+          <key>zabbix[wcache,values]</key>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <applications>
+            <application>
+              <name>Zabbix server</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>CHANGE_PER_SECOND</type>
+              <params></params>
+            </step>
+          </preprocessing>
+        </item>
+      </items>
+      <screens>
+        <screen>
+          <name>Zabbix server health</name>
+          <hsize>2</hsize>
+          <vsize>3</vsize>
+          <screen_items>
+            <screen_item>
+              <resourcetype>0</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Zabbix server performance</name>
+                <host>Template App Zabbix Server</host>
+              </resource>
+              <width>500</width>
+              <height>212</height>
+              <x>0</x>
+              <y>0</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>1</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>0</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Zabbix data gathering process busy %</name>
+                <host>Template App Zabbix Server</host>
+              </resource>
+              <width>500</width>
+              <height>100</height>
+              <x>1</x>
+              <y>0</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>1</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>0</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Zabbix internal process busy %</name>
+                <host>Template App Zabbix Server</host>
+              </resource>
+              <width>555</width>
+              <height>114</height>
+              <x>0</x>
+              <y>1</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>1</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>0</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Zabbix cache usage, % free</name>
+                <host>Template App Zabbix Server</host>
+              </resource>
+              <width>500</width>
+              <height>128</height>
+              <x>1</x>
+              <y>1</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>1</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>0</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Value cache effectiveness</name>
+                <host>Template App Zabbix Server</host>
+              </resource>
+              <width>500</width>
+              <height>160</height>
+              <x>0</x>
+              <y>2</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
+              <halign>0</halign>
+              <dynamic>0</dynamic>
+              <sort_triggers>0</sort_triggers>
+              <url></url>
+              <application></application>
+              <max_columns>3</max_columns>
+            </screen_item>
+            <screen_item>
+              <resourcetype>0</resourcetype>
+              <style>0</style>
+              <resource>
+                <name>Zabbix preprocessing queue</name>
+                <host>Template App Zabbix Server</host>
+              </resource>
+              <width>500</width>
+              <height>160</height>
+              <x>1</x>
+              <y>2</y>
+              <colspan>1</colspan>
+              <rowspan>1</rowspan>
+              <elements>0</elements>
+              <valign>0</valign>
               <halign>0</halign>
               <dynamic>0</dynamic>
               <sort_triggers>0</sort_triggers>
@@ -3379,7 +3379,7 @@
         <graph_item>
           <color>009900</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,trend,total]</key>
           </item>
         </graph_item>
@@ -3387,7 +3387,7 @@
           <sortorder>1</sortorder>
           <color>DD0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[rcache,buffer,total]</key>
           </item>
         </graph_item>
@@ -3395,7 +3395,7 @@
           <sortorder>2</sortorder>
           <color>00DDDD</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,index,total]</key>
           </item>
         </graph_item>
@@ -3403,7 +3403,7 @@
           <sortorder>3</sortorder>
           <color>3333FF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,history,total]</key>
           </item>
         </graph_item>
@@ -3411,7 +3411,7 @@
           <sortorder>4</sortorder>
           <color>999900</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[vcache, buffer, total]</key>
           </item>
         </graph_item>
@@ -3419,7 +3419,7 @@
           <sortorder>5</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[vmware,buffer,total]</key>
           </item>
         </graph_item>
@@ -3486,7 +3486,7 @@
         <graph_item>
           <color>00BB00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_uint.ibd]</key>
           </item>
         </graph_item>
@@ -3494,7 +3494,7 @@
           <sortorder>1</sortorder>
           <color>00AAAA</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history.ibd]</key>
           </item>
         </graph_item>
@@ -3502,7 +3502,7 @@
           <sortorder>2</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_text.ibd]</key>
           </item>
         </graph_item>
@@ -3510,7 +3510,7 @@
           <sortorder>3</sortorder>
           <color>777700</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_str.ibd]</key>
           </item>
         </graph_item>
@@ -3518,7 +3518,7 @@
           <sortorder>4</sortorder>
           <color>FF6666</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}zabbix/history_log.ibd]</key>
           </item>
         </graph_item>
@@ -3526,7 +3526,7 @@
           <sortorder>5</sortorder>
           <color>008800</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}zabbix/trends_uint.ibd]</key>
           </item>
         </graph_item>
@@ -3534,7 +3534,7 @@
           <sortorder>6</sortorder>
           <color>008888</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}zabbix/trends.ibd]</key>
           </item>
         </graph_item>
@@ -3542,7 +3542,7 @@
           <sortorder>7</sortorder>
           <color>EE0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}zabbix/events.ibd]</key>
           </item>
         </graph_item>
@@ -3551,7 +3551,7 @@
           <drawtype>DASHED_LINE</drawtype>
           <color>0000AA</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}ib_logfile0]</key>
           </item>
         </graph_item>
@@ -3560,7 +3560,7 @@
           <drawtype>DASHED_LINE</drawtype>
           <color>AAAA00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}ib_logfile1]</key>
           </item>
         </graph_item>
@@ -3569,7 +3569,7 @@
           <drawtype>DASHED_LINE</drawtype>
           <color>770077</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>vfs.file.size[{$ZABBIX_DB_DIR}ibdata1]</key>
           </item>
         </graph_item>
@@ -3674,7 +3674,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>log[{$ZABBIX_SERVER_LOG_PATH},"housekeeper.*deleted ([0-9]+)",,,skip,\1]</key>
           </item>
         </graph_item>
@@ -3788,7 +3788,7 @@
         <graph_item>
           <color>00CC00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[hosts]</key>
           </item>
         </graph_item>
@@ -3801,7 +3801,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix.items_supported</key>
           </item>
         </graph_item>
@@ -3809,7 +3809,7 @@
           <sortorder>1</sortorder>
           <color>DD0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[items_unsupported]</key>
           </item>
         </graph_item>
@@ -3821,7 +3821,7 @@
         <graph_item>
           <color>990099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,trapper,count]</key>
           </item>
         </graph_item>
@@ -3829,7 +3829,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,poller,count]</key>
           </item>
         </graph_item>
@@ -3837,7 +3837,7 @@
           <sortorder>2</sortorder>
           <color>0000EE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,ipmi poller,count]</key>
           </item>
         </graph_item>
@@ -3845,14 +3845,14 @@
           <sortorder>3</sortorder>
           <color>FF33FF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,discoverer,count]</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>4</sortorder>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,icmp pinger,count]</key>
           </item>
         </graph_item>
@@ -3860,7 +3860,7 @@
           <sortorder>5</sortorder>
           <color>003300</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,http poller,count]</key>
           </item>
         </graph_item>
@@ -3868,7 +3868,7 @@
           <sortorder>6</sortorder>
           <color>CCCC00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,proxy poller,count]</key>
           </item>
         </graph_item>
@@ -3876,7 +3876,7 @@
           <sortorder>7</sortorder>
           <color>33FFFF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,unreachable poller,count]</key>
           </item>
         </graph_item>
@@ -3884,7 +3884,7 @@
           <sortorder>8</sortorder>
           <color>DD0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,java poller,count]</key>
           </item>
         </graph_item>
@@ -3892,7 +3892,7 @@
           <sortorder>9</sortorder>
           <color>000099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,snmp trapper,count]</key>
           </item>
         </graph_item>
@@ -3900,7 +3900,7 @@
           <sortorder>10</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,vmware collector,count]</key>
           </item>
         </graph_item>
@@ -3912,7 +3912,7 @@
         <graph_item>
           <color>00EE00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,timer,count]</key>
           </item>
         </graph_item>
@@ -3920,7 +3920,7 @@
           <sortorder>1</sortorder>
           <color>0000EE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,escalator,count]</key>
           </item>
         </graph_item>
@@ -3928,7 +3928,7 @@
           <sortorder>2</sortorder>
           <color>FFAA00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,housekeeper,count]</key>
           </item>
         </graph_item>
@@ -3936,7 +3936,7 @@
           <sortorder>3</sortorder>
           <color>00EEEE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,alerter,count]</key>
           </item>
         </graph_item>
@@ -3944,7 +3944,7 @@
           <sortorder>4</sortorder>
           <color>990099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,configuration syncer,count]</key>
           </item>
         </graph_item>
@@ -3952,7 +3952,7 @@
           <sortorder>5</sortorder>
           <color>EE0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,history syncer,count]</key>
           </item>
         </graph_item>
@@ -3960,7 +3960,7 @@
           <sortorder>6</sortorder>
           <color>FF66FF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,self-monitoring,count]</key>
           </item>
         </graph_item>
@@ -3968,7 +3968,7 @@
           <sortorder>7</sortorder>
           <color>009999</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,task manager,count]</key>
           </item>
         </graph_item>
@@ -3976,7 +3976,7 @@
           <sortorder>8</sortorder>
           <color>BBBB00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,ipmi manager,count]</key>
           </item>
         </graph_item>
@@ -3984,7 +3984,7 @@
           <sortorder>9</sortorder>
           <color>AA0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,alert manager,count]</key>
           </item>
         </graph_item>
@@ -3992,7 +3992,7 @@
           <sortorder>10</sortorder>
           <color>990000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,preprocessing manager,count]</key>
           </item>
         </graph_item>
@@ -4000,7 +4000,7 @@
           <sortorder>11</sortorder>
           <color>008800</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[process,preprocessing worker,count]</key>
           </item>
         </graph_item>
@@ -4026,7 +4026,7 @@
         <graph_item>
           <color>BBBB00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,"zabbix_agentd"]</key>
           </item>
         </graph_item>
@@ -4034,7 +4034,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,"zabbix_server"]</key>
           </item>
         </graph_item>
@@ -4042,7 +4042,7 @@
           <sortorder>2</sortorder>
           <color>00AAAA</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,"{$ZABBIX_PROCESSNAME_DB}"]</key>
           </item>
         </graph_item>
@@ -4050,7 +4050,7 @@
           <sortorder>3</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,"{$ZABBIX_PROCESSNAME_HTTP}"]</key>
           </item>
         </graph_item>
@@ -4063,7 +4063,7 @@
         <graph_item>
           <color>00FF00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": vmware collector"]</key>
           </item>
         </graph_item>
@@ -4071,7 +4071,7 @@
           <sortorder>1</sortorder>
           <color>000099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": snmp trapper"]</key>
           </item>
         </graph_item>
@@ -4079,7 +4079,7 @@
           <sortorder>2</sortorder>
           <color>DD0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": java poller"]</key>
           </item>
         </graph_item>
@@ -4087,7 +4087,7 @@
           <sortorder>3</sortorder>
           <color>33FFFF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": unreachable poller"]</key>
           </item>
         </graph_item>
@@ -4095,7 +4095,7 @@
           <sortorder>4</sortorder>
           <color>CCCC00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": proxy poller"]</key>
           </item>
         </graph_item>
@@ -4103,14 +4103,14 @@
           <sortorder>5</sortorder>
           <color>003300</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": http poller"]</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>6</sortorder>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": icmp pinger"]</key>
           </item>
         </graph_item>
@@ -4118,7 +4118,7 @@
           <sortorder>7</sortorder>
           <color>FF33FF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": discoverer"]</key>
           </item>
         </graph_item>
@@ -4126,7 +4126,7 @@
           <sortorder>8</sortorder>
           <color>0000EE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": ipmi manager"]</key>
           </item>
         </graph_item>
@@ -4134,7 +4134,7 @@
           <sortorder>9</sortorder>
           <color>990000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": poller"]</key>
           </item>
         </graph_item>
@@ -4142,7 +4142,7 @@
           <sortorder>10</sortorder>
           <color>990099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": trapper"]</key>
           </item>
         </graph_item>
@@ -4155,7 +4155,7 @@
         <graph_item>
           <color>008800</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": preprocessing worker"]</key>
           </item>
         </graph_item>
@@ -4163,7 +4163,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": preprocessing manager"]</key>
           </item>
         </graph_item>
@@ -4171,7 +4171,7 @@
           <sortorder>2</sortorder>
           <color>AA0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": alert manager"]</key>
           </item>
         </graph_item>
@@ -4179,7 +4179,7 @@
           <sortorder>3</sortorder>
           <color>BBBB00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": ipmi manager"]</key>
           </item>
         </graph_item>
@@ -4187,7 +4187,7 @@
           <sortorder>4</sortorder>
           <color>009999</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": task manager"]</key>
           </item>
         </graph_item>
@@ -4195,7 +4195,7 @@
           <sortorder>5</sortorder>
           <color>FF66FF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": self-monitoring"]</key>
           </item>
         </graph_item>
@@ -4203,7 +4203,7 @@
           <sortorder>6</sortorder>
           <color>EE0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": history syncer"]</key>
           </item>
         </graph_item>
@@ -4211,7 +4211,7 @@
           <sortorder>7</sortorder>
           <color>990099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": configuration syncer"]</key>
           </item>
         </graph_item>
@@ -4219,7 +4219,7 @@
           <sortorder>8</sortorder>
           <color>00EEEE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": alerter"]</key>
           </item>
         </graph_item>
@@ -4227,7 +4227,7 @@
           <sortorder>9</sortorder>
           <color>FFAA00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": housekeeper"]</key>
           </item>
         </graph_item>
@@ -4235,7 +4235,7 @@
           <sortorder>10</sortorder>
           <color>0000EE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": escalator"]</key>
           </item>
         </graph_item>
@@ -4243,7 +4243,7 @@
           <sortorder>11</sortorder>
           <color>00EE00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.cpu.util[,,,": timer"]</key>
           </item>
         </graph_item>
@@ -4256,7 +4256,7 @@
         <graph_item>
           <color>BBBB00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,"zabbix_agentd",rss]</key>
           </item>
         </graph_item>
@@ -4264,7 +4264,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,"zabbix_server",rss]</key>
           </item>
         </graph_item>
@@ -4272,7 +4272,7 @@
           <sortorder>2</sortorder>
           <color>00AAAA</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,"{$ZABBIX_PROCESSNAME_DB}",rss]</key>
           </item>
         </graph_item>
@@ -4280,7 +4280,7 @@
           <sortorder>3</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,"{$ZABBIX_PROCESSNAME_HTTP}",rss]</key>
           </item>
         </graph_item>
@@ -4293,7 +4293,7 @@
         <graph_item>
           <color>00FF00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": vmware collector",rss]</key>
           </item>
         </graph_item>
@@ -4301,7 +4301,7 @@
           <sortorder>1</sortorder>
           <color>000099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": snmp trapper",rss]</key>
           </item>
         </graph_item>
@@ -4309,7 +4309,7 @@
           <sortorder>2</sortorder>
           <color>DD0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": java poller",rss]</key>
           </item>
         </graph_item>
@@ -4317,7 +4317,7 @@
           <sortorder>3</sortorder>
           <color>33FFFF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": unreachable poller",rss]</key>
           </item>
         </graph_item>
@@ -4325,7 +4325,7 @@
           <sortorder>4</sortorder>
           <color>CCCC00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": proxy poller",rss]</key>
           </item>
         </graph_item>
@@ -4333,14 +4333,14 @@
           <sortorder>5</sortorder>
           <color>003300</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": http poller",rss]</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>6</sortorder>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": icmp pinger",rss]</key>
           </item>
         </graph_item>
@@ -4348,7 +4348,7 @@
           <sortorder>7</sortorder>
           <color>FF33FF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": discoverer",rss]</key>
           </item>
         </graph_item>
@@ -4356,7 +4356,7 @@
           <sortorder>8</sortorder>
           <color>0000EE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": ipmi manager",rss]</key>
           </item>
         </graph_item>
@@ -4364,7 +4364,7 @@
           <sortorder>9</sortorder>
           <color>990000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": poller",rss]</key>
           </item>
         </graph_item>
@@ -4372,7 +4372,7 @@
           <sortorder>10</sortorder>
           <color>990099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": trapper",rss]</key>
           </item>
         </graph_item>
@@ -4385,7 +4385,7 @@
         <graph_item>
           <color>008800</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": preprocessing worker",rss]</key>
           </item>
         </graph_item>
@@ -4393,7 +4393,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": preprocessing manager",rss]</key>
           </item>
         </graph_item>
@@ -4401,7 +4401,7 @@
           <sortorder>2</sortorder>
           <color>AA0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": alert manager",rss]</key>
           </item>
         </graph_item>
@@ -4409,7 +4409,7 @@
           <sortorder>3</sortorder>
           <color>BBBB00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": ipmi manager",rss]</key>
           </item>
         </graph_item>
@@ -4417,7 +4417,7 @@
           <sortorder>4</sortorder>
           <color>009999</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": task manager",rss]</key>
           </item>
         </graph_item>
@@ -4425,7 +4425,7 @@
           <sortorder>5</sortorder>
           <color>FF66FF</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": self-monitoring",rss]</key>
           </item>
         </graph_item>
@@ -4433,7 +4433,7 @@
           <sortorder>6</sortorder>
           <color>EE0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": history syncer",rss]</key>
           </item>
         </graph_item>
@@ -4441,7 +4441,7 @@
           <sortorder>7</sortorder>
           <color>990099</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": configuration syncer",rss]</key>
           </item>
         </graph_item>
@@ -4449,7 +4449,7 @@
           <sortorder>8</sortorder>
           <color>00EEEE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": alerter",rss]</key>
           </item>
         </graph_item>
@@ -4457,7 +4457,7 @@
           <sortorder>9</sortorder>
           <color>FFAA00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": housekeeper",rss]</key>
           </item>
         </graph_item>
@@ -4465,7 +4465,7 @@
           <sortorder>10</sortorder>
           <color>0000EE</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": escalator",rss]</key>
           </item>
         </graph_item>
@@ -4473,7 +4473,7 @@
           <sortorder>11</sortorder>
           <color>00EE00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>proc.mem[,,sum,": timer",rss]</key>
           </item>
         </graph_item>
@@ -4486,7 +4486,7 @@
         <graph_item>
           <color>990000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[queue,10m]</key>
           </item>
         </graph_item>
@@ -4494,7 +4494,7 @@
           <sortorder>1</sortorder>
           <color>BBBB00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[queue,30s,599s]</key>
           </item>
         </graph_item>
@@ -4502,7 +4502,7 @@
           <sortorder>2</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[queue,1s,29s]</key>
           </item>
         </graph_item>
@@ -4538,7 +4538,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>00DD00</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,values]</key>
           </item>
         </graph_item>
@@ -4546,7 +4546,7 @@
           <sortorder>1</sortorder>
           <color>005500</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[requiredperformance]</key>
           </item>
         </graph_item>
@@ -4559,7 +4559,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[vcache, buffer, used]</key>
           </item>
         </graph_item>
@@ -4567,7 +4567,7 @@
           <sortorder>1</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[vcache, buffer, free]</key>
           </item>
         </graph_item>
@@ -4580,7 +4580,7 @@
         <graph_item>
           <color>009900</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,values,uint]</key>
           </item>
         </graph_item>
@@ -4588,7 +4588,7 @@
           <sortorder>1</sortorder>
           <color>00AAAA</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,values,float]</key>
           </item>
         </graph_item>
@@ -4596,7 +4596,7 @@
           <sortorder>2</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,values,text]</key>
           </item>
         </graph_item>
@@ -4604,7 +4604,7 @@
           <sortorder>3</sortorder>
           <color>777700</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,values,str]</key>
           </item>
         </graph_item>
@@ -4612,7 +4612,7 @@
           <sortorder>4</sortorder>
           <color>FF6666</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,values,log]</key>
           </item>
         </graph_item>
@@ -4620,7 +4620,7 @@
           <sortorder>5</sortorder>
           <color>EE0000</color>
           <item>
-            <host>Template App Zabbix Server - Plus</host>
+            <host>App Zabbix Server - Plus</host>
             <key>zabbix[wcache,values,not supported]</key>
           </item>
         </graph_item>

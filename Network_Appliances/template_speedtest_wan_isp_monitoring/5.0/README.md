@@ -1,4 +1,4 @@
-# Template App Speedtest WAN
+# App Speedtest WAN
 
 ## Overview
 
@@ -26,9 +26,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Speedtest Best server - Upload|<p>-</p>|`Zabbix agent`|speedtest.upload<p>Update: 1200s</p>|
 |Speedtest Best server - Download|<p>-</p>|`Zabbix agent`|speedtest.download<p>Update: 1200s</p>|
 |Speedtest Best server - Ping|<p>-</p>|`Zabbix agent`|speedtest.ping<p>Update: 1200s</p>|
-|Speedtest Best server - Upload|<p>-</p>|`Zabbix agent`|speedtest.upload<p>Update: 1200s</p>|
 |Speedtest {#SERVERNAME} - Download|<p>-</p>|`Zabbix agent`|speedtest.download.server[{#SERVERID}]<p>Update: 1200s</p><p>LLD</p>|
 |Speedtest {#SERVERNAME} - Ping|<p>-</p>|`Zabbix agent`|speedtest.ping.server[{#SERVERID}]<p>Update: 1200s</p><p>LLD</p>|
 |Speedtest {#SERVERNAME} - Upload|<p>-</p>|`Zabbix agent`|speedtest.upload.server[{#SERVERID}]<p>Update: 1200s</p><p>LLD</p>|
@@ -36,7 +36,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{HOST.HOST} Download {#SERVERNAME} speed < {#SERVER_TR_DL}Mb/s|<p>-</p>|<p>**Expression**: {Template App Speedtest WAN:speedtest.download.server[{#SERVERID}].avg(#3)}<{#SERVER_TR_DL}</p><p>**Recovery expression**: </p>|warning|
-|{HOST.HOST} Upload {#SERVERNAME} speed < {#SERVER_TR_UL}Mb/s|<p>-</p>|<p>**Expression**: {Template App Speedtest WAN:speedtest.upload.server[{#SERVERID}].avg(#3)}<{#SERVER_TR_UL}</p><p>**Recovery expression**: </p>|warning|
-|{HOST.HOST} Download {#SERVERNAME} speed < {#SERVER_TR_DL}Mb/s (LLD)|<p>-</p>|<p>**Expression**: {Template App Speedtest WAN:speedtest.download.server[{#SERVERID}].avg(#3)}<{#SERVER_TR_DL}</p><p>**Recovery expression**: </p>|warning|
-|{HOST.HOST} Upload {#SERVERNAME} speed < {#SERVER_TR_UL}Mb/s (LLD)|<p>-</p>|<p>**Expression**: {Template App Speedtest WAN:speedtest.upload.server[{#SERVERID}].avg(#3)}<{#SERVER_TR_UL}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.HOST} Download {#SERVERNAME} speed < {#SERVER_TR_DL}Mb/s|<p>-</p>|<p>**Expression**: {App Speedtest WAN:speedtest.download.server[{#SERVERID}].avg(#3)}<{#SERVER_TR_DL}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.HOST} Upload {#SERVERNAME} speed < {#SERVER_TR_UL}Mb/s|<p>-</p>|<p>**Expression**: {App Speedtest WAN:speedtest.upload.server[{#SERVERID}].avg(#3)}<{#SERVER_TR_UL}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.HOST} Download {#SERVERNAME} speed < {#SERVER_TR_DL}Mb/s (LLD)|<p>-</p>|<p>**Expression**: {App Speedtest WAN:speedtest.download.server[{#SERVERID}].avg(#3)}<{#SERVER_TR_DL}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.HOST} Upload {#SERVERNAME} speed < {#SERVER_TR_UL}Mb/s (LLD)|<p>-</p>|<p>**Expression**: {App Speedtest WAN:speedtest.upload.server[{#SERVERID}].avg(#3)}<{#SERVER_TR_UL}</p><p>**Recovery expression**: </p>|warning|

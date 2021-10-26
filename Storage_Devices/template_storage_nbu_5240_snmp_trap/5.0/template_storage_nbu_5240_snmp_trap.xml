@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:56Z</date>
+  <date>2021-10-26T04:43:02Z</date>
   <groups>
     <group>
       <name>Templates/Storages</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Storage NBU 5240 SNMP Trap</template>
-      <name>Template Storage NBU 5240 SNMP Trap</name>
+      <template>Storage NBU 5240 SNMP Trap</template>
+      <name>Storage NBU 5240 SNMP Trap</name>
       <groups>
         <group>
           <name>Templates/Storages</name>

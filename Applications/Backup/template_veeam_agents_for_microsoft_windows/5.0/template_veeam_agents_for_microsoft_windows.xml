@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:19Z</date>
+  <date>2021-10-26T04:41:15Z</date>
   <groups>
     <group>
       <name>A-OVR_TPLGPR</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template VEEAM-Agents</template>
-      <name>Template VEEAM-Agents</name>
+      <template>VEEAM-Agents</template>
+      <name>VEEAM-Agents</name>
       <groups>
         <group>
           <name>A-OVR_TPLGPR</name>
@@ -148,7 +148,7 @@
               <dependencies>
                 <dependency>
                   <name>VeeamAgent - No job result since 1 Week</name>
-                  <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].nodata(604800)}=1</expression>
+                  <expression>{VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].nodata(604800)}=1</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -168,9 +168,9 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,191,,skip].logeventid(191)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,191,,skip].logseverity()}=2</expression>
+      <expression>{VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,191,,skip].logeventid(191)}=1 and {VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,191,,skip].logseverity()}=2</expression>
       <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-      <recovery_expression>({Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=1) or ({Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=2 and {Template VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].iregexp(low on free disk space)}=1)</recovery_expression>
+      <recovery_expression>({VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=1) or ({VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logeventid(190)}=1 and {VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].logseverity()}=2 and {VEEAM-Agents:eventlog[Veeam Agent,,,Veeam Agent,190,,skip].iregexp(low on free disk space)}=1)</recovery_expression>
       <name>VeeamAgent Job Retry</name>
       <priority>WARNING</priority>
       <description>{ITEM.LASTVALUE1} {ITEM.LASTVALUE2} {ITEM.LASTVALUE3}</description>

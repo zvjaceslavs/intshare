@@ -1,4 +1,4 @@
-# Template Peplink
+# Peplink
 
 ## Overview
 
@@ -47,7 +47,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{HOST.NAME} Status SpeedFusion on {#PEPVPNNAME}|<p>-</p>|<p>**Expression**: {Template Peplink:pepVpnStatusConnectionState[{#PEPVPNNAME}].last()}<>4</p><p>**Recovery expression**: {Template Peplink:pepVpnStatusConnectionState[{#PEPVPNNAME}].last()}=4</p>|high|
-|{HOST.NAME} : {#WANNAME} Link down|<p>-</p>|<p>**Expression**: {Template Peplink:wanState[{#WANNAME}].last()}<>3 and {Template Peplink:wanState[{#WANNAME}].last()}<>1</p><p>**Recovery expression**: {Template Peplink:wanState[{#WANNAME}].last()}=3 or {Template Peplink:wanState[{#WANNAME}].last()}=1</p>|high|
-|{HOST.NAME} Status SpeedFusion on {#PEPVPNNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template Peplink:pepVpnStatusConnectionState[{#PEPVPNNAME}].last()}<>4</p><p>**Recovery expression**: {Template Peplink:pepVpnStatusConnectionState[{#PEPVPNNAME}].last()}=4</p>|high|
-|{HOST.NAME} : {#WANNAME} Link down (LLD)|<p>-</p>|<p>**Expression**: {Template Peplink:wanState[{#WANNAME}].last()}<>3 and {Template Peplink:wanState[{#WANNAME}].last()}<>1</p><p>**Recovery expression**: {Template Peplink:wanState[{#WANNAME}].last()}=3 or {Template Peplink:wanState[{#WANNAME}].last()}=1</p>|high|
+|{HOST.NAME} Status SpeedFusion on {#PEPVPNNAME}|<p>-</p>|<p>**Expression**: {Peplink:pepVpnStatusConnectionState[{#PEPVPNNAME}].last()}<>4</p><p>**Recovery expression**: {Peplink:pepVpnStatusConnectionState[{#PEPVPNNAME}].last()}=4</p>|high|
+|{HOST.NAME} : {#WANNAME} Link down|<p>-</p>|<p>**Expression**: {Peplink:wanState[{#WANNAME}].last()}<>3 and {Peplink:wanState[{#WANNAME}].last()}<>1</p><p>**Recovery expression**: {Peplink:wanState[{#WANNAME}].last()}=3 or {Peplink:wanState[{#WANNAME}].last()}=1</p>|high|
+|{HOST.NAME} Status SpeedFusion on {#PEPVPNNAME} (LLD)|<p>-</p>|<p>**Expression**: {Peplink:pepVpnStatusConnectionState[{#PEPVPNNAME}].last()}<>4</p><p>**Recovery expression**: {Peplink:pepVpnStatusConnectionState[{#PEPVPNNAME}].last()}=4</p>|high|
+|{HOST.NAME} : {#WANNAME} Link down (LLD)|<p>-</p>|<p>**Expression**: {Peplink:wanState[{#WANNAME}].last()}<>3 and {Peplink:wanState[{#WANNAME}].last()}<>1</p><p>**Recovery expression**: {Peplink:wanState[{#WANNAME}].last()}=3 or {Peplink:wanState[{#WANNAME}].last()}=1</p>|high|

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:42Z</date>
+  <date>2021-10-26T04:45:04Z</date>
   <groups>
     <group>
       <name>Templates/Development</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Windows ICMP Macro Discovery Active</template>
-      <name>Template Windows ICMP Macro Discovery Active</name>
+      <template>Windows ICMP Macro Discovery Active</template>
+      <name>Windows ICMP Macro Discovery Active</name>
       <groups>
         <group>
           <name>Templates/Development</name>

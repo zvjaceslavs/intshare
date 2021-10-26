@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:28Z</date>
+  <date>2021-10-26T04:43:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Stornext Quota</template>
-      <name>Template Stornext Quota</name>
+      <template>Stornext Quota</template>
+      <name>Stornext Quota</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -106,7 +106,7 @@
                   <dependencies>
                     <dependency>
                       <name>Free disk quota is less than 0% on fs {#SNQUOTAID}</name>
-                      <expression>{Template Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=100</expression>
+                      <expression>{Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=100</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -244,7 +244,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Stornext Quota</host>
+                    <host>Stornext Quota</host>
                     <key>snquotas.onfs.curSize.[{#SNQUOTAID}]</key>
                   </item>
                 </graph_item>
@@ -258,7 +258,7 @@
                   <color>1A7C11</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Stornext Quota</host>
+                    <host>Stornext Quota</host>
                     <key>snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}]</key>
                   </item>
                 </graph_item>

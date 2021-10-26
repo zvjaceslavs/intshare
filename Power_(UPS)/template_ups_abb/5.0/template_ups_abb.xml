@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:32Z</date>
+  <date>2021-10-26T04:46:03Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -123,8 +123,8 @@
       </macros>
     </template>
     <template>
-      <template>Template UPS - diogont</template>
-      <name>Template UPS - diogont</name>
+      <template>UPS - diogont</template>
+      <name>UPS - diogont</name>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>
@@ -1027,7 +1027,7 @@
               <style>0</style>
               <resource>
                 <name>UPS Input Voltage 1</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1049,7 +1049,7 @@
               <style>0</style>
               <resource>
                 <name>UPS Output Voltage 1</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1071,7 +1071,7 @@
               <style>0</style>
               <resource>
                 <name>UPS Output Current 1</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1093,7 +1093,7 @@
               <style>0</style>
               <resource>
                 <name>Battery Autonomy</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1115,7 +1115,7 @@
               <style>0</style>
               <resource>
                 <name>UPS Input Voltage 2</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1137,7 +1137,7 @@
               <style>0</style>
               <resource>
                 <name>UPS output voltage 2</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1159,7 +1159,7 @@
               <style>0</style>
               <resource>
                 <name>UPS Output Current 2</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1181,7 +1181,7 @@
               <style>0</style>
               <resource>
                 <name>Battery Capacity</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1203,7 +1203,7 @@
               <style>0</style>
               <resource>
                 <name>UPS Input Voltage 3</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1225,7 +1225,7 @@
               <style>0</style>
               <resource>
                 <name>UPS output voltage 3</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1247,7 +1247,7 @@
               <style>0</style>
               <resource>
                 <name>UPS Output Current 3</name>
-                <host>Template UPS - diogont</host>
+                <host>UPS - diogont</host>
               </resource>
               <width>250</width>
               <height>100</height>
@@ -1283,7 +1283,7 @@
           <calc_fnc>ALL</calc_fnc>
           <type>GRAPH_SUM</type>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvRunTimeRemaining</key>
           </item>
         </graph_item>
@@ -1301,7 +1301,7 @@
           <color>78909C</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvBatteryCapacity</key>
           </item>
         </graph_item>
@@ -1315,7 +1315,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsBasicBatteryStatus</key>
           </item>
         </graph_item>
@@ -1329,7 +1329,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputCurrent1</key>
           </item>
         </graph_item>
@@ -1338,7 +1338,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputCurrent1</key>
           </item>
         </graph_item>
@@ -1352,7 +1352,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF4000</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputFrequency</key>
           </item>
         </graph_item>
@@ -1371,7 +1371,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>43A047</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputVoltage1</key>
           </item>
         </graph_item>
@@ -1389,7 +1389,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>43A047</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputVoltage2</key>
           </item>
         </graph_item>
@@ -1408,7 +1408,7 @@
           <color>43A047</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputVoltage2</key>
           </item>
         </graph_item>
@@ -1423,7 +1423,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputLoad1</key>
           </item>
         </graph_item>
@@ -1441,7 +1441,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FFA726</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputCurrent1</key>
           </item>
         </graph_item>
@@ -1459,7 +1459,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FFA726</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputCurrent2</key>
           </item>
         </graph_item>
@@ -1476,7 +1476,7 @@
           <color>FFA726</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputCurrent3</key>
           </item>
         </graph_item>
@@ -1492,7 +1492,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputCurrent1</key>
           </item>
         </graph_item>
@@ -1500,7 +1500,7 @@
           <sortorder>2</sortorder>
           <color>FFA726</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputCurrent2</key>
           </item>
         </graph_item>
@@ -1508,7 +1508,7 @@
           <sortorder>3</sortorder>
           <color>FF9800</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputCurrent3</key>
           </item>
         </graph_item>
@@ -1524,7 +1524,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>2196F3</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputVoltage1</key>
           </item>
         </graph_item>
@@ -1532,7 +1532,7 @@
           <sortorder>2</sortorder>
           <color>1E88E5</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputVoltage2</key>
           </item>
         </graph_item>
@@ -1540,7 +1540,7 @@
           <sortorder>3</sortorder>
           <color>1565C0</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputVoltage3</key>
           </item>
         </graph_item>
@@ -1558,7 +1558,7 @@
           <color>2196F3</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputVoltage1</key>
           </item>
         </graph_item>
@@ -1575,7 +1575,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2196F3</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputVoltage2</key>
           </item>
         </graph_item>
@@ -1592,7 +1592,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2196F3</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputVoltage3</key>
           </item>
         </graph_item>
@@ -1606,7 +1606,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputPower1</key>
           </item>
         </graph_item>
@@ -1615,7 +1615,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputPower1</key>
           </item>
         </graph_item>
@@ -1629,7 +1629,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvBatteryTemperature</key>
           </item>
         </graph_item>

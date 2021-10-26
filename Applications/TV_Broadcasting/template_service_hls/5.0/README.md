@@ -1,4 +1,4 @@
-# Template Service HLS
+# Service HLS
 
 ## Overview
 
@@ -105,13 +105,13 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|HLS duration is different on target duration in {#PROFILE}|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.duration[{#PROFILE}].last()} < {Template Service HLS:hls.target_duration[{#PROFILE}].last()} or {Template Service HLS:hls.duration[{#PROFILE}].last()} > {Template Service HLS:hls.target_duration[{#PROFILE}].last()}</p><p>**Recovery expression**: </p>|not classified|
-|HLS duration is below 8 in {#PROFILE}|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.duration[{#PROFILE}].last()}<8</p><p>**Recovery expression**: </p>|warning|
-|HLS spended time is more 200ms in {#PROFILE}|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.spendedtime[{#PROFILE}].last()}>200</p><p>**Recovery expression**: </p>|information|
-|HLS there's unstable bitrate in {#PROFILE}|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.totallength[{#PROFILE}].last()} < ({Template Service HLS:hls.totallength[{#PROFILE}].avg(5m)} * 0.9)</p><p>**Recovery expression**: </p>|not classified|
-|HLS TS isn't present in {#PROFILE}|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.tsuri[{#PROFILE}].last()}=0</p><p>**Recovery expression**: </p>|high|
-|HLS duration is different on target duration in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.duration[{#PROFILE}].last()} < {Template Service HLS:hls.target_duration[{#PROFILE}].last()} or {Template Service HLS:hls.duration[{#PROFILE}].last()} > {Template Service HLS:hls.target_duration[{#PROFILE}].last()}</p><p>**Recovery expression**: </p>|not classified|
-|HLS duration is below 8 in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.duration[{#PROFILE}].last()}<8</p><p>**Recovery expression**: </p>|warning|
-|HLS spended time is more 200ms in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.spendedtime[{#PROFILE}].last()}>200</p><p>**Recovery expression**: </p>|information|
-|HLS there's unstable bitrate in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.totallength[{#PROFILE}].last()} < ({Template Service HLS:hls.totallength[{#PROFILE}].avg(5m)} * 0.9)</p><p>**Recovery expression**: </p>|not classified|
-|HLS TS isn't present in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Template Service HLS:hls.tsuri[{#PROFILE}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|HLS duration is different on target duration in {#PROFILE}|<p>-</p>|<p>**Expression**: {Service HLS:hls.duration[{#PROFILE}].last()} < {Service HLS:hls.target_duration[{#PROFILE}].last()} or {Service HLS:hls.duration[{#PROFILE}].last()} > {Service HLS:hls.target_duration[{#PROFILE}].last()}</p><p>**Recovery expression**: </p>|not classified|
+|HLS duration is below 8 in {#PROFILE}|<p>-</p>|<p>**Expression**: {Service HLS:hls.duration[{#PROFILE}].last()}<8</p><p>**Recovery expression**: </p>|warning|
+|HLS spended time is more 200ms in {#PROFILE}|<p>-</p>|<p>**Expression**: {Service HLS:hls.spendedtime[{#PROFILE}].last()}>200</p><p>**Recovery expression**: </p>|information|
+|HLS there's unstable bitrate in {#PROFILE}|<p>-</p>|<p>**Expression**: {Service HLS:hls.totallength[{#PROFILE}].last()} < ({Service HLS:hls.totallength[{#PROFILE}].avg(5m)} * 0.9)</p><p>**Recovery expression**: </p>|not classified|
+|HLS TS isn't present in {#PROFILE}|<p>-</p>|<p>**Expression**: {Service HLS:hls.tsuri[{#PROFILE}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|HLS duration is different on target duration in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Service HLS:hls.duration[{#PROFILE}].last()} < {Service HLS:hls.target_duration[{#PROFILE}].last()} or {Service HLS:hls.duration[{#PROFILE}].last()} > {Service HLS:hls.target_duration[{#PROFILE}].last()}</p><p>**Recovery expression**: </p>|not classified|
+|HLS duration is below 8 in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Service HLS:hls.duration[{#PROFILE}].last()}<8</p><p>**Recovery expression**: </p>|warning|
+|HLS spended time is more 200ms in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Service HLS:hls.spendedtime[{#PROFILE}].last()}>200</p><p>**Recovery expression**: </p>|information|
+|HLS there's unstable bitrate in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Service HLS:hls.totallength[{#PROFILE}].last()} < ({Service HLS:hls.totallength[{#PROFILE}].avg(5m)} * 0.9)</p><p>**Recovery expression**: </p>|not classified|
+|HLS TS isn't present in {#PROFILE} (LLD)|<p>-</p>|<p>**Expression**: {Service HLS:hls.tsuri[{#PROFILE}].last()}=0</p><p>**Recovery expression**: </p>|high|

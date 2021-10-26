@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:19Z</date>
+  <date>2021-10-26T04:45:47Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Solr</template>
-      <name>Template App Solr</name>
+      <template>App Solr</template>
+      <name>App Solr</name>
       <description>Template for monitoring Solr using json statistics. http://{USERNAME}@{PASSWORD}:{HOST.CONN}/solr/admin/metrics</description>
       <groups>
         <group>
@@ -1058,7 +1058,7 @@
                   <sortorder>1</sortorder>
                   <color>199C0D</color>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.documentCache.evictions[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1066,7 +1066,7 @@
                   <sortorder>2</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.documentCache.hitratio[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1076,7 +1076,7 @@
                   <color>2774A4</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.documentCache.hits[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1086,7 +1086,7 @@
                   <color>F7941D</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.documentCache.inserts[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1099,7 +1099,7 @@
                   <sortorder>1</sortorder>
                   <color>199C0D</color>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.filterCache.evictions[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1107,7 +1107,7 @@
                   <sortorder>2</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.filterCache.hitratio[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1117,7 +1117,7 @@
                   <color>2774A4</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.filterCache.hits[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1127,7 +1127,7 @@
                   <color>F7941D</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.filterCache.inserts[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1141,7 +1141,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>199C0D</color>
                   <item>
-                    <host>Template App Solr</host>
+                    <host>App Solr</host>
                     <key>solr.core.index.size[{#CORENAME}]</key>
                   </item>
                 </graph_item>
@@ -1212,7 +1212,7 @@
               <style>0</style>
               <resource>
                 <name>Solr: JVM memory total</name>
-                <host>Template App Solr</host>
+                <host>App Solr</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1234,7 +1234,7 @@
               <style>0</style>
               <resource>
                 <name>Solr: JVM memory heap</name>
-                <host>Template App Solr</host>
+                <host>App Solr</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1256,7 +1256,7 @@
               <style>0</style>
               <resource>
                 <name>Solr: JVM memory non-heap</name>
-                <host>Template App Solr</host>
+                <host>App Solr</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1278,7 +1278,7 @@
               <style>0</style>
               <resource>
                 <name>Solr: JVM threads</name>
-                <host>Template App Solr</host>
+                <host>App Solr</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1300,7 +1300,7 @@
               <style>0</style>
               <resource>
                 <name>Solr: JVM file descriptors</name>
-                <host>Template App Solr</host>
+                <host>App Solr</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1322,7 +1322,7 @@
               <style>0</style>
               <resource>
                 <name>Solr: Core {#CORENAME} document cache</name>
-                <host>Template App Solr</host>
+                <host>App Solr</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1344,7 +1344,7 @@
               <style>0</style>
               <resource>
                 <name>Solr: Core {#CORENAME} filter cache</name>
-                <host>Template App Solr</host>
+                <host>App Solr</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1366,7 +1366,7 @@
               <style>0</style>
               <resource>
                 <name>Solr: Core {#CORENAME} index size</name>
-                <host>Template App Solr</host>
+                <host>App Solr</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1393,7 +1393,7 @@
       <name>Solr: JVM file descriptors</name>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template App Solr</host>
+        <host>App Solr</host>
         <key>solr.jvm.os.maxFileDescriptorCount</key>
       </ymax_item_1>
       <graph_items>
@@ -1402,7 +1402,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>199C0D</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.os.maxFileDescriptorCount</key>
           </item>
         </graph_item>
@@ -1411,7 +1411,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.os.openFileDescriptorCount</key>
           </item>
         </graph_item>
@@ -1421,7 +1421,7 @@
       <name>Solr: JVM memory heap</name>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template App Solr</host>
+        <host>App Solr</host>
         <key>solr.jvm.memory.heap.max</key>
       </ymax_item_1>
       <graph_items>
@@ -1430,7 +1430,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>199C0D</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.heap.max</key>
           </item>
         </graph_item>
@@ -1439,7 +1439,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.heap.committed</key>
           </item>
         </graph_item>
@@ -1448,7 +1448,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.heap.used</key>
           </item>
         </graph_item>
@@ -1458,7 +1458,7 @@
       <name>Solr: JVM memory non-heap</name>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template App Solr</host>
+        <host>App Solr</host>
         <key>solr.jvm.memory.non-heap.max</key>
       </ymax_item_1>
       <graph_items>
@@ -1467,7 +1467,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>199C0D</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.non-heap.max</key>
           </item>
         </graph_item>
@@ -1476,7 +1476,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.non-heap.committed</key>
           </item>
         </graph_item>
@@ -1485,7 +1485,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.non-heap.used</key>
           </item>
         </graph_item>
@@ -1495,7 +1495,7 @@
       <name>Solr: JVM memory total</name>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template App Solr</host>
+        <host>App Solr</host>
         <key>solr.jvm.memory.total.max</key>
       </ymax_item_1>
       <graph_items>
@@ -1504,7 +1504,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>199C0D</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.total.max</key>
           </item>
         </graph_item>
@@ -1513,7 +1513,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.total.committed</key>
           </item>
         </graph_item>
@@ -1522,7 +1522,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.memory.total.used</key>
           </item>
         </graph_item>
@@ -1533,7 +1533,7 @@
       <type>STACKED</type>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template App Solr</host>
+        <host>App Solr</host>
         <key>solr.jvm.threads.count</key>
       </ymax_item_1>
       <graph_items>
@@ -1541,7 +1541,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.threads.blocked.count</key>
           </item>
         </graph_item>
@@ -1549,7 +1549,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.threads.daemon.count</key>
           </item>
         </graph_item>
@@ -1557,7 +1557,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.threads.deadlock.count</key>
           </item>
         </graph_item>
@@ -1565,7 +1565,7 @@
           <sortorder>4</sortorder>
           <color>199C0D</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.threads.runnable.count</key>
           </item>
         </graph_item>
@@ -1573,7 +1573,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.threads.terminated.count</key>
           </item>
         </graph_item>
@@ -1581,7 +1581,7 @@
           <sortorder>6</sortorder>
           <color>C7A72D</color>
           <item>
-            <host>Template App Solr</host>
+            <host>App Solr</host>
             <key>solr.jvm.threads.waiting.count</key>
           </item>
         </graph_item>

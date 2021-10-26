@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:53Z</date>
+  <date>2021-10-26T04:45:15Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Nobreak SMS Powerview by HTTP</template>
-      <name>Template Nobreak SMS Powerview by HTTP</name>
+      <template>Nobreak SMS Powerview by HTTP</template>
+      <name>Nobreak SMS Powerview by HTTP</name>
       <description>Version 1.0. Para utilização com o software SMS Power View, testado com o aplicativo versão Versão: V3.00.02.00. Meu Nobreak é Entrada/Saída 220V, portanto para 110V seriam necessários ajustes. Se tiver alguém utilizando eu posso utilizar parâmetros como Macro. Este template funciona realizando o parse do código da página http://localhost:8080/sms/s2/atualizaBlock.action que possui comentários com os dados do Nobreak.</description>
       <groups>
         <group>
@@ -343,7 +343,7 @@
               <style>0</style>
               <resource>
                 <name>Tensões Entrada x Saída</name>
-                <host>Template Nobreak SMS Powerview by HTTP</host>
+                <host>Nobreak SMS Powerview by HTTP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -365,7 +365,7 @@
               <style>0</style>
               <resource>
                 <name>Potência de Saída</name>
-                <host>Template Nobreak SMS Powerview by HTTP</host>
+                <host>Nobreak SMS Powerview by HTTP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -387,7 +387,7 @@
               <style>0</style>
               <resource>
                 <name>Carga da Bateria</name>
-                <host>Template Nobreak SMS Powerview by HTTP</host>
+                <host>Nobreak SMS Powerview by HTTP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -409,7 +409,7 @@
               <style>0</style>
               <resource>
                 <name>Temperatura</name>
-                <host>Template Nobreak SMS Powerview by HTTP</host>
+                <host>Nobreak SMS Powerview by HTTP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -442,7 +442,7 @@
           <sortorder>1</sortorder>
           <color>E91E63</color>
           <item>
-            <host>Template Nobreak SMS Powerview by HTTP</host>
+            <host>Nobreak SMS Powerview by HTTP</host>
             <key>nobreaksms.tensao.bateria</key>
           </item>
         </graph_item>
@@ -458,7 +458,7 @@
           <sortorder>1</sortorder>
           <color>33691E</color>
           <item>
-            <host>Template Nobreak SMS Powerview by HTTP</host>
+            <host>Nobreak SMS Powerview by HTTP</host>
             <key>nobreaksms.potencia.saida</key>
           </item>
         </graph_item>
@@ -472,7 +472,7 @@
           <sortorder>1</sortorder>
           <color>FFB74D</color>
           <item>
-            <host>Template Nobreak SMS Powerview by HTTP</host>
+            <host>Nobreak SMS Powerview by HTTP</host>
             <key>nobreaksms.temperatura</key>
           </item>
         </graph_item>
@@ -488,7 +488,7 @@
           <sortorder>1</sortorder>
           <color>0080FF</color>
           <item>
-            <host>Template Nobreak SMS Powerview by HTTP</host>
+            <host>Nobreak SMS Powerview by HTTP</host>
             <key>nobreaksms.tensao.entrada</key>
           </item>
         </graph_item>
@@ -496,7 +496,7 @@
           <sortorder>2</sortorder>
           <color>4000FF</color>
           <item>
-            <host>Template Nobreak SMS Powerview by HTTP</host>
+            <host>Nobreak SMS Powerview by HTTP</host>
             <key>nobreaksms.tensao.saida</key>
           </item>
         </graph_item>

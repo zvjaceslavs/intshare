@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:04Z</date>
+  <date>2021-10-26T04:45:27Z</date>
   <groups>
     <group>
       <name>Templates_Created</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Cisco ASR 9K Health SNMP</template>
-      <name>Template Cisco ASR 9K Health SNMP</name>
+      <template>Cisco ASR 9K Health SNMP</template>
+      <name>Cisco ASR 9K Health SNMP</name>
       <description>Template Cisco ASR 9k Health -CPU -Memory -Power Supply -Temperature ( RSP e LC ) -FAN ( FAN and FANTray ) -Power Consumption By: Flavio Gomes Figueira Camacho Junior Require: Firmware / Software .IOS XR 5.3.1 .IOS XR 5.3.4 ValueMap .CISCO-ENTITY-FRU-CONTROL-MIB::PowerOperType .ENTITY-SENSORS-MIB::EntitySensorStatus .CISCO-ENTITY-FRU-CONTROL-MIB::CefcFanTrayStatusEntry .CISCO-ENTITY-SENSOR-MIB::SensorStatus Base: CISCO-MEMORY-POOL-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-MEMORY-POOL-MIB.php CISCO-PROCESS-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-PROCESS-MIB.php ENTITY-MIB http://www.circitor.fr/Mibs/Html/E/ENTITY-MIB.php CISCO-ENTITY-FRU-CONTROL-MIB.mib https://circitor.fr/Mibs/Html/C/CISCO-ENTITY-FRU-CONTROL-MIB.php CISCO-ENTITY-SENSOR-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-ENTITY-SENSOR-MIB.php https://share.zabbix.com/network_devices/cisco/template-cisco-asr-9k External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates</description>
       <groups>
         <group>
@@ -167,7 +167,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>( {Template Cisco ASR 9K Health SNMP:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()} * 100 ) / {Template Cisco ASR 9K Health SNMP:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()} > {$MEMORY_HIGH_ALARM}</expression>
+              <expression>( {Cisco ASR 9K Health SNMP:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()} * 100 ) / {Cisco ASR 9K Health SNMP:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()} > {$MEMORY_HIGH_ALARM}</expression>
               <name>High memory utilizarion alarm on Pool "{#SNMPVALUE}"</name>
               <priority>HIGH</priority>
             </trigger_prototype>
@@ -180,7 +180,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>ciscoMemoryPoolUtilization5Min["{#SNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -193,7 +193,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>ciscoMemoryPoolTotal["{#SNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -202,7 +202,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>ciscoMemoryPoolUsed["{#SNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -278,7 +278,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>cpmCPUTotal1minRev["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -291,7 +291,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>cpmCPUTotal5minRev["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -369,7 +369,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>entSensorValue["{#SNMPVALUE}",FAN,{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -541,7 +541,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Cisco ASR 9K Health SNMP:entSensorValue["{#SNMPVALUE}","Temperature LC"].last()}>{Template Cisco ASR 9K Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Temperature LC","Alarm"].last()}</expression>
+              <expression>{Cisco ASR 9K Health SNMP:entSensorValue["{#SNMPVALUE}","Temperature LC"].last()}>{Cisco ASR 9K Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Temperature LC","Alarm"].last()}</expression>
               <name>High Temperature Alarm "{#SNMPVALUE}"</name>
               <priority>HIGH</priority>
             </trigger_prototype>
@@ -554,7 +554,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>entSensorValue["{#SNMPVALUE}","Temperature LC"]</key>
                   </item>
                 </graph_item>
@@ -563,7 +563,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>entSensorThresholdValue["{#SNMPVALUE}","Temperature LC","Alarm"]</key>
                   </item>
                 </graph_item>
@@ -717,7 +717,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FFFF00</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>entPhysicalContainedInCurrent["{#SNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -770,7 +770,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>entPhysicalContainedInVoltage["{#SNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -889,7 +889,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Cisco ASR 9K Health SNMP:entSensorValue["{#SNMPVALUE}","Temperature RSP"].last()}>{Template Cisco ASR 9K Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Temperature RSP","Alarm"].last()}</expression>
+              <expression>{Cisco ASR 9K Health SNMP:entSensorValue["{#SNMPVALUE}","Temperature RSP"].last()}>{Cisco ASR 9K Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Temperature RSP","Alarm"].last()}</expression>
               <name>High Temperature Alarm "{#SNMPVALUE}"</name>
               <priority>HIGH</priority>
             </trigger_prototype>
@@ -902,7 +902,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>entSensorValue["{#SNMPVALUE}","Temperature RSP"]</key>
                   </item>
                 </graph_item>
@@ -910,7 +910,7 @@
                   <sortorder>1</sortorder>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Cisco ASR 9K Health SNMP</host>
+                    <host>Cisco ASR 9K Health SNMP</host>
                     <key>entSensorThresholdValue["{#SNMPVALUE}","Temperature RSP","Alarm"]</key>
                   </item>
                 </graph_item>
@@ -952,7 +952,7 @@
               <style>0</style>
               <resource>
                 <name>CPU #"{#SNMPINDEX}" 1min Usage</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -974,7 +974,7 @@
               <style>0</style>
               <resource>
                 <name>CPU #"{#SNMPINDEX}" 5min Usage</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1003,7 +1003,7 @@
               <style>0</style>
               <resource>
                 <name>FAN speed "{#SNMPVALUE}"/{#SNMPINDEX}</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1032,7 +1032,7 @@
               <style>0</style>
               <resource>
                 <name>Memory {#SNMPVALUE}</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1054,7 +1054,7 @@
               <style>0</style>
               <resource>
                 <name>Memory Utilization Pool "{#SNMPVALUE}"</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1083,7 +1083,7 @@
               <style>0</style>
               <resource>
                 <name>Power Consumption</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1105,7 +1105,7 @@
               <style>0</style>
               <resource>
                 <name>Current "{#SNMPVALUE}"</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1127,7 +1127,7 @@
               <style>0</style>
               <resource>
                 <name>Voltage "{#SNMPVALUE}"</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1156,7 +1156,7 @@
               <style>0</style>
               <resource>
                 <name>Temperature RSP "{#SNMPVALUE}"</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1178,7 +1178,7 @@
               <style>0</style>
               <resource>
                 <name>Temperature LC "{#SNMPVALUE}"</name>
-                <host>Template Cisco ASR 9K Health SNMP</host>
+                <host>Cisco ASR 9K Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1208,7 +1208,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template Cisco ASR 9K Health SNMP</host>
+            <host>Cisco ASR 9K Health SNMP</host>
             <key>powerConsumption</key>
           </item>
         </graph_item>

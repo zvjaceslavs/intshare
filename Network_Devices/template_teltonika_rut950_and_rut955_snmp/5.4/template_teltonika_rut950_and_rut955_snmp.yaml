@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:48Z'
+  date: '2021-10-26T04:46:21Z'
   groups:
     -
       uuid: 4918b88734c54bd094cff7585b5d71fc
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 852716e2f1c845dfa8d1285a72be1852
-      template: 'Template Teltonika RUT950 and RUT955 SNMP'
-      name: 'Template Teltonika RUT950 and RUT955 SNMP'
+      template: 'Teltonika RUT950 and RUT955 SNMP'
+      name: 'Teltonika RUT950 and RUT955 SNMP'
       description: |
         Monitors all parameters of Teltonika RUT9xx LTE routers
         
@@ -35,7 +35,7 @@ zabbix_export:
           triggers:
             -
               uuid: efc49deb9f224bca8e15d71c5e1b9f36
-              expression: 'max(/Template Teltonika RUT950 and RUT955 SNMP/icmpping,#3)=0'
+              expression: 'max(/Teltonika RUT950 and RUT955 SNMP/icmpping,#3)=0'
               name: 'Unavailable by ICMP ping'
               priority: HIGH
               description: 'Last three attempts returned timeout.  Please check device connectivity.'
@@ -54,14 +54,14 @@ zabbix_export:
           triggers:
             -
               uuid: 09acff1382bf43aa8cf39f1d1a0aa63e
-              expression: 'min(/Template Teltonika RUT950 and RUT955 SNMP/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/Template Teltonika RUT950 and RUT955 SNMP/icmppingloss,5m)<100'
+              expression: 'min(/Teltonika RUT950 and RUT955 SNMP/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/Teltonika RUT950 and RUT955 SNMP/icmppingloss,5m)<100'
               name: 'High ICMP ping loss'
               opdata: 'Loss: {ITEM.LASTVALUE1}'
               priority: WARNING
               dependencies:
                 -
                   name: 'Unavailable by ICMP ping'
-                  expression: 'max(/Template Teltonika RUT950 and RUT955 SNMP/icmpping,#3)=0'
+                  expression: 'max(/Teltonika RUT950 and RUT955 SNMP/icmpping,#3)=0'
         -
           uuid: c6ea1ee0806548fdb98af699ea6f3410
           name: 'ICMP response time'
@@ -77,17 +77,17 @@ zabbix_export:
           triggers:
             -
               uuid: b493aad066a94646941dd0becd86aa29
-              expression: 'avg(/Template Teltonika RUT950 and RUT955 SNMP/icmppingsec,5m)>{$ICMP_RESPONSE_TIME_WARN}'
+              expression: 'avg(/Teltonika RUT950 and RUT955 SNMP/icmppingsec,5m)>{$ICMP_RESPONSE_TIME_WARN}'
               name: 'High ICMP ping response time'
               opdata: 'Value: {ITEM.LASTVALUE1}'
               priority: WARNING
               dependencies:
                 -
                   name: 'High ICMP ping loss'
-                  expression: 'min(/Template Teltonika RUT950 and RUT955 SNMP/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/Template Teltonika RUT950 and RUT955 SNMP/icmppingloss,5m)<100'
+                  expression: 'min(/Teltonika RUT950 and RUT955 SNMP/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/Teltonika RUT950 and RUT955 SNMP/icmppingloss,5m)<100'
                 -
                   name: 'Unavailable by ICMP ping'
-                  expression: 'max(/Template Teltonika RUT950 and RUT955 SNMP/icmpping,#3)=0'
+                  expression: 'max(/Teltonika RUT950 and RUT955 SNMP/icmpping,#3)=0'
         -
           uuid: bfee8910c0794a0687d2f31e33fd812a
           name: 'SNMP Trap: TELTONIKA-MIB::signalChangeNotification'
@@ -226,7 +226,7 @@ zabbix_export:
           triggers:
             -
               uuid: 15564011071e4434b1505009853b286d
-              expression: 'min(/Template Teltonika RUT950 and RUT955 SNMP/system.cpu.util,5m)>{$CPU.UTIL.CRIT}'
+              expression: 'min(/Teltonika RUT950 and RUT955 SNMP/system.cpu.util,5m)>{$CPU.UTIL.CRIT}'
               name: 'High CPU utilization (over {$CPU.UTIL.CRIT}% for 5m)'
               opdata: 'Current utilization: {ITEM.LASTVALUE1}'
               priority: WARNING
@@ -360,7 +360,7 @@ zabbix_export:
           triggers:
             -
               uuid: 507b6bc0b926484ba771033281c57416
-              expression: 'change(/Template Teltonika RUT950 and RUT955 SNMP/TELTONIKA-MIB.fwVersion)<>0'
+              expression: 'change(/Teltonika RUT950 and RUT955 SNMP/TELTONIKA-MIB.fwVersion)<>0'
               name: 'Firmware version changed to: {/Template Teltonika RUT950 and RUT955 SNMPv2/TELTONIKA-MIB.fwVersion}'
               manual_close: 'YES'
         -
@@ -607,7 +607,7 @@ zabbix_export:
           triggers:
             -
               uuid: 6dac338ea0454072a3ad145b30960e29
-              expression: 'change(/Template Teltonika RUT950 and RUT955 SNMP/TELTONIKA-MIB.snmpBadCommunity)>0'
+              expression: 'change(/Teltonika RUT950 and RUT955 SNMP/TELTONIKA-MIB.snmpBadCommunity)>0'
               recovery_mode: NONE
               name: 'SNMP Bad Community Names increased'
               priority: WARNING
@@ -871,9 +871,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 14159c76b82e4af3bf05d85a9f55db4e
-                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))'
+                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
                   name: 'Interface {#IFNAME}({#IFALIAS}): Link down'
                   opdata: 'Current state: {ITEM.LASTVALUE1}'
                   priority: AVERAGE
@@ -923,7 +923,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 47811bc3ea4d49c1939bff3b7f5bc136
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.total[daily.{#SNMPINDEX}])>{$IF.UTIL.DAILY}'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/net.if.total[daily.{#SNMPINDEX}])>{$IF.UTIL.DAILY}'
                   name: 'Interface {#IFNAME}({#IFALIAS}): High daily traffic usage (>{$IF.UTIL.DAILY:"{#IFNAME}"} )'
                   priority: INFO
                   manual_close: 'YES'
@@ -994,7 +994,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 4cd33aa2d1be414688514a6a712eb625
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.total[monthly.{#SNMPINDEX}])>{$IF.UTIL.MONTHLY}'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/net.if.total[monthly.{#SNMPINDEX}])>{$IF.UTIL.MONTHLY}'
                   name: 'Interface {#IFNAME}({#IFALIAS}): High monthly traffic usage (>{$IF.UTIL.MONTHLY:"{#IFNAME}"} )'
                   priority: INFO
                   manual_close: 'YES'
@@ -1032,7 +1032,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: cb620fe3f94046ebadc4e2a6d371e250
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.total[weekly.{#SNMPINDEX}])>{$IF.UTIL.WEEKLY}'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/net.if.total[weekly.{#SNMPINDEX}])>{$IF.UTIL.WEEKLY}'
                   name: 'Interface {#IFNAME}({#IFALIAS}): High weekly traffic usage (>{$IF.UTIL.WEEKLY:"{#IFNAME}"} )'
                   priority: INFO
                   manual_close: 'YES'
@@ -1065,21 +1065,21 @@ zabbix_export:
             -
               uuid: 8c0583fcdb7b46fbb0555679e6790c51
               expression: |
-                change(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])<0 and last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0
+                change(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])<0 and last(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0
                 and (
-                last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=6 or
-                last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=7 or
-                last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=11 or
-                last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=62 or
-                last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=69 or
-                last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=117
+                last(/Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=6 or
+                last(/Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=7 or
+                last(/Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=11 or
+                last(/Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=62 or
+                last(/Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=69 or
+                last(/Teltonika RUT950 and RUT955 SNMP/net.if.type[ifType.{#SNMPINDEX}])=117
                 )
                 and
-                (last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2)
+                (last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2)
               recovery_mode: RECOVERY_EXPRESSION
               recovery_expression: |
-                (change(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0 and last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}],#2)>0) or
-                (last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2)
+                (change(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0 and last(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}],#2)>0) or
+                (last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2)
               name: 'Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before'
               opdata: 'Current reported speed: {ITEM.LASTVALUE1}'
               priority: INFO
@@ -1088,18 +1088,18 @@ zabbix_export:
               dependencies:
                 -
                   name: 'Interface {#IFNAME}({#IFALIAS}): Link down'
-                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))'
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
+                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
             -
               uuid: 94b3588745c744e2a560880b6e6535fe
               expression: |
-                (avg(/Template Teltonika RUT950 and RUT955 SNMP/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) or
-                avg(/Template Teltonika RUT950 and RUT955 SNMP/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])) and
-                last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0
+                (avg(/Teltonika RUT950 and RUT955 SNMP/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*last(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) or
+                avg(/Teltonika RUT950 and RUT955 SNMP/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*last(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])) and
+                last(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0
               recovery_mode: RECOVERY_EXPRESSION
               recovery_expression: |
-                avg(/Template Teltonika RUT950 and RUT955 SNMP/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)<(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) and
-                avg(/Template Teltonika RUT950 and RUT955 SNMP/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)<(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])
+                avg(/Teltonika RUT950 and RUT955 SNMP/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)<(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*last(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) and
+                avg(/Teltonika RUT950 and RUT955 SNMP/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)<(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*last(/Teltonika RUT950 and RUT955 SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])
               name: 'Interface {#IFNAME}({#IFALIAS}): High bandwidth usage (>{$IF.UTIL.MAX:"{#IFNAME}"}% )'
               opdata: 'In: {ITEM.LASTVALUE1}, out: {ITEM.LASTVALUE3}, speed: {ITEM.LASTVALUE2}'
               priority: WARNING
@@ -1108,17 +1108,17 @@ zabbix_export:
               dependencies:
                 -
                   name: 'Interface {#IFNAME}({#IFALIAS}): Link down'
-                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))'
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
+                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
             -
               uuid: a90b699c8f554c869209407c680686a7
               expression: |
-                min(/Template Teltonika RUT950 and RUT955 SNMP/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)>{$IF.ERRORS.WARN:"{#IFNAME}"}
-                or min(/Template Teltonika RUT950 and RUT955 SNMP/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)>{$IF.ERRORS.WARN:"{#IFNAME}"}
+                min(/Teltonika RUT950 and RUT955 SNMP/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)>{$IF.ERRORS.WARN:"{#IFNAME}"}
+                or min(/Teltonika RUT950 and RUT955 SNMP/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)>{$IF.ERRORS.WARN:"{#IFNAME}"}
               recovery_mode: RECOVERY_EXPRESSION
               recovery_expression: |
-                max(/Template Teltonika RUT950 and RUT955 SNMP/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)<{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8
-                and max(/Template Teltonika RUT950 and RUT955 SNMP/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)<{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8
+                max(/Teltonika RUT950 and RUT955 SNMP/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)<{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8
+                and max(/Teltonika RUT950 and RUT955 SNMP/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)<{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8
               name: 'Interface {#IFNAME}({#IFALIAS}): High error rate (>{$IF.ERRORS.WARN:"{#IFNAME}"} for 5m)'
               opdata: 'errors in: {ITEM.LASTVALUE1}, errors out: {ITEM.LASTVALUE2}'
               priority: WARNING
@@ -1127,8 +1127,8 @@ zabbix_export:
               dependencies:
                 -
                   name: 'Interface {#IFNAME}({#IFALIAS}): Link down'
-                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))'
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
+                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
           graph_prototypes:
             -
               uuid: 0b3abdd721784d2e8fe255a7c4fb1b0f
@@ -1138,42 +1138,42 @@ zabbix_export:
                   drawtype: GRADIENT_LINE
                   color: 1A7C11
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'net.if.in[ifHCInOctets.{#SNMPINDEX}]'
                 -
                   sortorder: '1'
                   drawtype: BOLD_LINE
                   color: 2774A4
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'net.if.out[ifHCOutOctets.{#SNMPINDEX}]'
                 -
                   sortorder: '2'
                   color: F63100
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'net.if.out.errors[ifOutErrors.{#SNMPINDEX}]'
                 -
                   sortorder: '3'
                   color: A54F10
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'net.if.in.errors[ifInErrors.{#SNMPINDEX}]'
                 -
                   sortorder: '4'
                   color: FC6EA3
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]'
                 -
                   sortorder: '5'
                   color: 6C59DC
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'net.if.in.discards[ifInDiscards.{#SNMPINDEX}]'
             -
               uuid: e91a0f09ab5543d280da1f04e2e48450
@@ -1183,7 +1183,7 @@ zabbix_export:
                   sortorder: '1'
                   color: 199C0D
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'net.if.total[monthly.{#SNMPINDEX}]'
         -
           uuid: 38455a7132894b4dba0eb2703934276c
@@ -1484,9 +1484,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: d4b21238e00349da9e082e0cd20fa3d2
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mConnectionState[{#SNMPVALUE}])<>"Connected"'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mConnectionState[{#SNMPVALUE}])<>"Connected"'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mConnectionState[{#SNMPVALUE}])="Connected"'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mConnectionState[{#SNMPVALUE}])="Connected"'
                   name: 'Modem not Connected'
                   priority: WARNING
             -
@@ -1548,7 +1548,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 7fe8172277fb46c1b87658a9b3233a4e
-                  expression: 'change(/Template Teltonika RUT950 and RUT955 SNMP/mIMSI[{#SNMPVALUE}])=1'
+                  expression: 'change(/Teltonika RUT950 and RUT955 SNMP/mIMSI[{#SNMPVALUE}])=1'
                   name: 'IMSI changed'
                   priority: INFO
                   manual_close: 'YES'
@@ -1654,7 +1654,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: a42a17a9df844d5191ec4cbc7de3afec
-                  expression: 'change(/Template Teltonika RUT950 and RUT955 SNMP/mOperator[{#SNMPVALUE}])=1'
+                  expression: 'change(/Teltonika RUT950 and RUT955 SNMP/mOperator[{#SNMPVALUE}])=1'
                   name: 'Mobile operator changed'
                   priority: INFO
             -
@@ -1680,9 +1680,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 561a99951fb84a289749318c2d1e8110
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mPinState[{#SNMPVALUE}])<>"READY"'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mPinState[{#SNMPVALUE}])<>"READY"'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mPinState[{#SNMPVALUE}])="READY"'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mPinState[{#SNMPVALUE}])="READY"'
                   name: 'Simcard PIN not READY'
                   priority: WARNING
             -
@@ -1776,9 +1776,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: ff499f5656d9404babafdcf8518e4cad
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mRSRP[{#SNMPVALUE}])<-109'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mRSRP[{#SNMPVALUE}])<-109'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mRSRP[{#SNMPVALUE}])>-110'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mRSRP[{#SNMPVALUE}])>-110'
                   name: 'Low Signal RSRP'
                   priority: INFO
                   description: 'Signal Strength RSRP < -109.'
@@ -1904,14 +1904,14 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 433f8b2a3e054e1cb523cf0e768f1a55
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mSignal[{#SNMPVALUE}])<-82'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mSignal[{#SNMPVALUE}])<-82'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mSignal[{#SNMPVALUE}])>-80'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mSignal[{#SNMPVALUE}])>-80'
                   name: 'Low Signal RSSI'
                   priority: INFO
                 -
                   uuid: dd161e5a5491475f879c0249a74ea813
-                  expression: 'nodata(/Template Teltonika RUT950 and RUT955 SNMP/mSignal[{#SNMPVALUE}],600)=1'
+                  expression: 'nodata(/Teltonika RUT950 and RUT955 SNMP/mSignal[{#SNMPVALUE}],600)=1'
                   name: 'Router offline (SNMP timeout RSSI)'
                   priority: WARNING
                   description: 'No SNMP data was collected for 600 seconds'
@@ -1938,9 +1938,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 61e5f5f912974ae68f3de395c6829d25
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mSimState[{#SNMPVALUE}])<>"inserted"'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mSimState[{#SNMPVALUE}])<>"inserted"'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mSimState[{#SNMPVALUE}])="inserted"'
+                  recovery_expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mSimState[{#SNMPVALUE}])="inserted"'
                   name: 'Simcard not inserted'
                   priority: WARNING
             -
@@ -2018,7 +2018,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: e6861b134cf44171a58c136275940125
-                  expression: 'last(/Template Teltonika RUT950 and RUT955 SNMP/mTraffic[{#SNMPVALUE}-{#OPERATORNUMBER}])>{$IF.UTIL.MONTHLY}'
+                  expression: 'last(/Teltonika RUT950 and RUT955 SNMP/mTraffic[{#SNMPVALUE}-{#OPERATORNUMBER}])>{$IF.UTIL.MONTHLY}'
                   name: 'High monthly traffic usage for {#SNMPVALUE} operator {#OPERATOR} (>{$IF.UTIL.MONTHLY})'
                   opdata: 'mTraffic[{#SNMPVALUE}-{#OPERATORNUMBER}]'
                   priority: INFO
@@ -2032,14 +2032,14 @@ zabbix_export:
                   sortorder: '1'
                   color: FF4000
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'icmppingloss-[{#OPERATORNUMBER}]'
                 -
                   sortorder: '2'
                   color: 00FF00
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'icmppingsec-[{#OPERATORNUMBER}]'
             -
               uuid: 5684067275aa4bf5bdcd9bba5379d137
@@ -2049,7 +2049,7 @@ zabbix_export:
                   sortorder: '1'
                   color: 199C0D
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'mTraffic[{#SNMPVALUE}-{#OPERATORNUMBER}]'
             -
               uuid: 351c4d56df6641e8ac50e6763bbd5131
@@ -2059,19 +2059,19 @@ zabbix_export:
                   sortorder: '1'
                   color: 199C0D
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'mRSRP[{#SNMPVALUE}-{#OPERATORNUMBER}]'
                 -
                   sortorder: '2'
                   color: F7941D
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'icmppingloss-[{#OPERATORNUMBER}]'
                 -
                   sortorder: '3'
                   color: FC6EA3
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'icmppingsec-[{#OPERATORNUMBER}]'
             -
               uuid: ecf316d053c94fe7aa75c85973df58a7
@@ -2081,13 +2081,13 @@ zabbix_export:
                   sortorder: '1'
                   color: 199C0D
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'mRSRP[{#SNMPVALUE}-{#MCELLID}]'
                 -
                   sortorder: '2'
                   color: F63100
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'mSignal[{#SNMPVALUE}-{#MCELLID}]'
             -
               uuid: 17b0950bc19c4dd8aa7098bc625c0b71
@@ -2097,26 +2097,26 @@ zabbix_export:
                   sortorder: '1'
                   color: 199C0D
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'mRSRP[{#SNMPVALUE}]'
                 -
                   sortorder: '2'
                   color: F63100
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'mRSRQ[{#SNMPVALUE}]'
                 -
                   sortorder: '3'
                   color: 2774A4
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'mSignal[{#SNMPVALUE}]'
                 -
                   sortorder: '4'
                   color: F7941D
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'mSINR[{#SNMPVALUE}]'
         -
           uuid: 8de7e666c8de4f19a221a879fa058823
@@ -2162,7 +2162,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: ca068c898947414ebd3d978e5a9b0949
-                  expression: '(last(/Template Teltonika RUT950 and RUT955 SNMP/netInterfaceIP[{#IFINDEX}],#1)<>last(/Template Teltonika RUT950 and RUT955 SNMP/netInterfaceIP[{#IFINDEX}],#2))>0'
+                  expression: '(last(/Teltonika RUT950 and RUT955 SNMP/netInterfaceIP[{#IFINDEX}],#1)<>last(/Teltonika RUT950 and RUT955 SNMP/netInterfaceIP[{#IFINDEX}],#2))>0'
                   name: 'IP Changed on Interface {#IFINDEX}'
             -
               uuid: 84603e5e0efe48d4bd874215e45096ae
@@ -2271,8 +2271,8 @@ zabbix_export:
             -
               uuid: 02c138b6ce354d3ca9bd773b0eb82966
               expression: |
-                last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"} and
-                ((last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<5G or timeleft(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d) and {#FSNAME} <> "/rom"
+                last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"} and
+                ((last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<5G or timeleft(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d) and {#FSNAME} <> "/rom"
               name: 'Teltonika {#FSNAME}: Disk space is critically low (used > {$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"}%)'
               opdata: 'Space used: {ITEM.LASTVALUE3} of {ITEM.LASTVALUE2} ({ITEM.LASTVALUE1})'
               priority: AVERAGE
@@ -2285,8 +2285,8 @@ zabbix_export:
             -
               uuid: b3eb559ac2db47d4bf4a854b9c8ff5e6
               expression: |
-                last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.WARN:"{#FSNAME}"} and
-                ((last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<10G or timeleft(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d) and {#FSNAME} <> "/rom"
+                last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.WARN:"{#FSNAME}"} and
+                ((last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<10G or timeleft(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d) and {#FSNAME} <> "/rom"
               name: 'Teltonika {#FSNAME}: Disk space is low (used > {$VFS.FS.PUSED.MAX.WARN:"{#FSNAME}"}%)'
               opdata: 'Space used: {ITEM.LASTVALUE3} of {ITEM.LASTVALUE2} ({ITEM.LASTVALUE1})'
               priority: WARNING
@@ -2300,13 +2300,13 @@ zabbix_export:
                 -
                   name: 'Teltonika {#FSNAME}: Disk space is critically low (used > {$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"}%)'
                   expression: |
-                    last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"} and
-                    ((last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<5G or timeleft(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d) and {#FSNAME} <> "/rom"
+                    last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"} and
+                    ((last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<5G or timeleft(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d) and {#FSNAME} <> "/rom"
             -
               uuid: e27799e19e5d4d42ac9633019c785039
               expression: |
-                last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"} and
-                ((last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<5G or timeleft(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d)
+                last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"} and
+                ((last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<5G or timeleft(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d)
               name: '{#FSNAME}: Disk space is critically low (used > {$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"}%)'
               opdata: 'Space used: {ITEM.LASTVALUE3} of {ITEM.LASTVALUE2} ({ITEM.LASTVALUE1})'
               status: DISABLED
@@ -2321,8 +2321,8 @@ zabbix_export:
             -
               uuid: 882eeb3c676a4251b3367a303abd8336
               expression: |
-                last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.WARN:"{#FSNAME}"} and
-                ((last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<10G or timeleft(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d)
+                last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.WARN:"{#FSNAME}"} and
+                ((last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<10G or timeleft(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d)
               name: '{#FSNAME}: Disk space is low (used > {$VFS.FS.PUSED.MAX.WARN:"{#FSNAME}"}%)'
               opdata: 'Space used: {ITEM.LASTVALUE3} of {ITEM.LASTVALUE2} ({ITEM.LASTVALUE1})'
               status: DISABLED
@@ -2338,8 +2338,8 @@ zabbix_export:
                 -
                   name: '{#FSNAME}: Disk space is critically low (used > {$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"}%)'
                   expression: |
-                    last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"} and
-                    ((last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<5G or timeleft(/Template Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d)
+                    last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}])>{$VFS.FS.PUSED.MAX.CRIT:"{#FSNAME}"} and
+                    ((last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.total[hrStorageSize.{#SNMPINDEX}])-last(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]))<5G or timeleft(/Teltonika RUT950 and RUT955 SNMP/vfs.fs.pused[storageUsedPercentage.{#SNMPINDEX}],1h,100)<1d)
           graph_prototypes:
             -
               uuid: 8743aaebd5f34a81b2744217376772eb
@@ -2354,14 +2354,14 @@ zabbix_export:
                   calc_fnc: LAST
                   type: GRAPH_SUM
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'vfs.fs.total[hrStorageSize.{#SNMPINDEX}]'
                 -
                   sortorder: '1'
                   color: C80000
                   calc_fnc: LAST
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'vfs.fs.used[hrStorageUsed.{#SNMPINDEX}]'
         -
           uuid: 5f06d9015e4d4a83b0db9db3b5a8b8b8
@@ -2455,7 +2455,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: c99466e38e58477c8ec2c61a5314773a
-                  expression: 'min(/Template Teltonika RUT950 and RUT955 SNMP/vm.memory.util[memoryUsedPercentage.{#SNMPINDEX}],5m)>{$MEMORY.UTIL.MAX}'
+                  expression: 'min(/Teltonika RUT950 and RUT955 SNMP/vm.memory.util[memoryUsedPercentage.{#SNMPINDEX}],5m)>{$MEMORY.UTIL.MAX}'
                   name: '{#MEMNAME}: High memory utilization (>{$MEMORY.UTIL.MAX}% for 5m)'
                   priority: AVERAGE
                   description: 'The system is running out of free memory.'
@@ -2470,7 +2470,7 @@ zabbix_export:
                   drawtype: GRADIENT_LINE
                   color: 1A7C11
                   item:
-                    host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                    host: 'Teltonika RUT950 and RUT955 SNMP'
                     key: 'vm.memory.util[memoryUsedPercentage.{#SNMPINDEX}]'
       macros:
         -
@@ -2609,7 +2609,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'ICMP by operator {#SNMPVALUE} - {#OPERATOR}'
-                        host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                        host: 'Teltonika RUT950 and RUT955 SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '4'
@@ -2625,7 +2625,7 @@ zabbix_export:
                       name: itemid
                       value:
                         key: 'mSignal[{#SNMPVALUE}-{#OPERATORNUMBER}]'
-                        host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                        host: 'Teltonika RUT950 and RUT955 SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '8'
@@ -2637,7 +2637,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: '{#SNMPVALUE} - {#OPERATOR} - RSRP by operator'
-                        host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                        host: 'Teltonika RUT950 and RUT955 SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '13'
@@ -2653,7 +2653,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: '{#SNMPVALUE} Signal levels combined'
-                        host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                        host: 'Teltonika RUT950 and RUT955 SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '19'
@@ -2669,7 +2669,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: '{#SNMPVALUE} - {#OPERATOR} - {#MCELLID} Signal by cellID'
-                        host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                        host: 'Teltonika RUT950 and RUT955 SNMP'
         -
           uuid: f84c646ebf184d0c9bb856f01e7a6a9c
           name: Traffic
@@ -2691,7 +2691,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'Interface {#IFNAME}({#IFALIAS}): Network traffic total monthly usage'
-                        host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                        host: 'Teltonika RUT950 and RUT955 SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   name: 'Traffic by operator'
@@ -2707,7 +2707,7 @@ zabbix_export:
                       name: itemid
                       value:
                         key: 'mTraffic[{#SNMPVALUE}-{#OPERATORNUMBER}]'
-                        host: 'Template Teltonika RUT950 and RUT955 SNMP'
+                        host: 'Teltonika RUT950 and RUT955 SNMP'
       valuemaps:
         -
           uuid: 8907ad41a51149518ce51dd4b1f05db4
@@ -2790,5 +2790,5 @@ zabbix_export:
           drawtype: GRADIENT_LINE
           color: 1A7C11
           item:
-            host: 'Template Teltonika RUT950 and RUT955 SNMP'
+            host: 'Teltonika RUT950 and RUT955 SNMP'
             key: system.cpu.util

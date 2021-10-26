@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:34Z</date>
+  <date>2021-10-26T04:42:39Z</date>
   <groups>
     <group>
       <name>Linux servers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Nateks FG-ACE-CON-VF</template>
-      <name>Template Nateks FG-ACE-CON-VF</name>
+      <template>Nateks FG-ACE-CON-VF</template>
+      <name>Nateks FG-ACE-CON-VF</name>
       <groups>
         <group>
           <name>Linux servers</name>

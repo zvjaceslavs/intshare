@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:49Z</date>
+  <date>2021-10-26T04:42:56Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template-SNMP-HP-iLO5</template>
-      <name>Template-SNMP-HP-iLO5</name>
+      <template>SNMP-HP-iLO5</template>
+      <name>SNMP-HP-iLO5</name>
       <description>Created by Lucas Afonso Kremer &lt;lucasafonsokremer@gmail.com> https://www.linkedin.com/in/lucasafonsokremer</description>
       <groups>
         <group>
@@ -678,7 +678,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template-SNMP-HP-iLO5:cpqHeResMem2ModuleCondition[{#SNMPINDEX}].last()}>2 and {Template-SNMP-HP-iLO5:cpqHeResMem2ModuleNum[{#SNMPINDEX}].last()}&lt;>99 and {Template-SNMP-HP-iLO5:cpqHeResMem2CpuNum[{#SNMPINDEX}].last()}&lt;>99</expression>
+              <expression>{SNMP-HP-iLO5:cpqHeResMem2ModuleCondition[{#SNMPINDEX}].last()}>2 and {SNMP-HP-iLO5:cpqHeResMem2ModuleNum[{#SNMPINDEX}].last()}&lt;>99 and {SNMP-HP-iLO5:cpqHeResMem2CpuNum[{#SNMPINDEX}].last()}&lt;>99</expression>
               <name>{HOST.NAME}: Memory Module {#SNMPINDEX} is degraded</name>
               <priority>AVERAGE</priority>
               <description>The correctable error count for this memory module has been exceeded. It needs to be replaced. Suggested actions are to write a ticket to replace the module, then acknowledge the alert, writing the ticket number in the notes. HP System Management Homepage (may require starting service hpsmhd): https://{HOST.CONN}:2381</description>

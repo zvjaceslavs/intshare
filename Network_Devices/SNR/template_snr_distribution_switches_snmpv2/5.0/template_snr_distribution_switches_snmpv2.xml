@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:52Z</date>
+  <date>2021-10-26T04:44:07Z</date>
   <groups>
     <group>
       <name>SNR</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNR Broadcast-Multicast-Unicast</template>
-      <name>Template SNR Broadcast-Multicast-Unicast</name>
+      <template>SNR Broadcast-Multicast-Unicast</template>
+      <name>SNR Broadcast-Multicast-Unicast</name>
       <groups>
         <group>
           <name>SNR</name>
@@ -153,7 +153,7 @@
                   <color>FF0000</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Broadcast-Multicast-Unicast</host>
+                    <host>SNR Broadcast-Multicast-Unicast</host>
                     <key>ifHCOutBroadcastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -162,7 +162,7 @@
                   <color>FF8000</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Broadcast-Multicast-Unicast</host>
+                    <host>SNR Broadcast-Multicast-Unicast</host>
                     <key>ifHCOutMulticastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -171,7 +171,7 @@
                   <color>FDD835</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Broadcast-Multicast-Unicast</host>
+                    <host>SNR Broadcast-Multicast-Unicast</host>
                     <key>ifHCOutUcastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -180,7 +180,7 @@
                   <color>4CAF50</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Broadcast-Multicast-Unicast</host>
+                    <host>SNR Broadcast-Multicast-Unicast</host>
                     <key>ifHCInBroadcastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -189,7 +189,7 @@
                   <color>00BFFF</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Broadcast-Multicast-Unicast</host>
+                    <host>SNR Broadcast-Multicast-Unicast</host>
                     <key>ifHCInMulticastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -198,7 +198,7 @@
                   <color>4000FF</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Broadcast-Multicast-Unicast</host>
+                    <host>SNR Broadcast-Multicast-Unicast</host>
                     <key>ifHCInUcastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -209,8 +209,8 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template SNR CPU Usage</template>
-      <name>Template SNR CPU Usage</name>
+      <template>SNR CPU Usage</template>
+      <name>SNR CPU Usage</name>
       <groups>
         <group>
           <name>SNR</name>
@@ -239,8 +239,8 @@
       </items>
     </template>
     <template>
-      <template>Template SNR DDM Statistic</template>
-      <name>Template SNR DDM Statistic</name>
+      <template>SNR DDM Statistic</template>
+      <name>SNR DDM Statistic</name>
       <groups>
         <group>
           <name>SNR</name>
@@ -295,7 +295,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNR DDM Statistic</host>
+                    <host>SNR DDM Statistic</host>
                     <key>ddmstatrx[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -303,7 +303,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNR DDM Statistic</host>
+                    <host>SNR DDM Statistic</host>
                     <key>ddmstattx[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -314,8 +314,8 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template SNR Error and Discared Packets</template>
-      <name>Template SNR Error and Discared Packets</name>
+      <template>SNR Error and Discared Packets</template>
+      <name>SNR Error and Discared Packets</name>
       <groups>
         <group>
           <name>SNR</name>
@@ -417,9 +417,9 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>{$IF_ERRORS_WARN:"{#IFNAME}"} or {Template SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>{$IF_ERRORS_WARN:"{#IFNAME}"}</expression>
+              <expression>{SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>{$IF_ERRORS_WARN:"{#IFNAME}"} or {SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>{$IF_ERRORS_WARN:"{#IFNAME}"}</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}&lt;{$IF_ERRORS_WARN:"{#IFNAME}"}*0.8 and {Template SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}&lt;{$IF_ERRORS_WARN:"{#IFNAME}"}*0.8</recovery_expression>
+              <recovery_expression>{SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}&lt;{$IF_ERRORS_WARN:"{#IFNAME}"}*0.8 and {SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}&lt;{$IF_ERRORS_WARN:"{#IFNAME}"}*0.8</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): High error rate</name>
               <priority>WARNING</priority>
               <manual_close>YES</manual_close>
@@ -434,7 +434,7 @@
                   <yaxisside>RIGHT</yaxisside>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Error and Discared Packets</host>
+                    <host>SNR Error and Discared Packets</host>
                     <key>net.if.out.errors[ifOutErrors.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -444,7 +444,7 @@
                   <yaxisside>RIGHT</yaxisside>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Error and Discared Packets</host>
+                    <host>SNR Error and Discared Packets</host>
                     <key>net.if.in.errors[ifInErrors.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -454,7 +454,7 @@
                   <yaxisside>RIGHT</yaxisside>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Error and Discared Packets</host>
+                    <host>SNR Error and Discared Packets</host>
                     <key>net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -464,7 +464,7 @@
                   <yaxisside>RIGHT</yaxisside>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Error and Discared Packets</host>
+                    <host>SNR Error and Discared Packets</host>
                     <key>net.if.in.discards[ifInDiscards.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -481,8 +481,8 @@
       </macros>
     </template>
     <template>
-      <template>Template SNR Interfaces Statistic</template>
-      <name>Template SNR Interfaces Statistic</name>
+      <template>SNR Interfaces Statistic</template>
+      <name>SNR Interfaces Statistic</name>
       <groups>
         <group>
           <name>SNR</name>
@@ -611,32 +611,32 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}&lt;0 and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0 and ( {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2)</expression>
+              <expression>{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}&lt;0 and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0 and ( {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}>0 and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].prev()}>0) or ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</recovery_expression>
+              <recovery_expression>({SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}>0 and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].prev()}>0) or ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before</name>
               <priority>INFO</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>Interface {#IFNAME}({#IFALIAS}): Link down</name>
-                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
-                  <recovery_expression>{Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
+                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
+                  <recovery_expression>{SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}>({$IF_UTIL_MAX:"{#IFNAME}"}/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} or {Template SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}>({$IF_UTIL_MAX:"{#IFNAME}"}/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}) and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0</expression>
+              <expression>({SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}>({$IF_UTIL_MAX:"{#IFNAME}"}/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} or {SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}>({$IF_UTIL_MAX:"{#IFNAME}"}/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}) and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF_UTIL_MAX:"{#IFNAME}"}-3)/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} and {Template SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF_UTIL_MAX:"{#IFNAME}"}-3)/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}</recovery_expression>
+              <recovery_expression>{SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF_UTIL_MAX:"{#IFNAME}"}-3)/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} and {SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF_UTIL_MAX:"{#IFNAME}"}-3)/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): High bandwidth usage >{$IF_UTIL_MAX:"{#IFNAME}"}%</name>
               <priority>WARNING</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>Interface {#IFNAME}({#IFALIAS}): Link down</name>
-                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
-                  <recovery_expression>{Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
+                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
+                  <recovery_expression>{SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
@@ -650,7 +650,7 @@
                   <color>1A7C11</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Interfaces Statistic</host>
+                    <host>SNR Interfaces Statistic</host>
                     <key>net.if.in[ifHCInOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -660,7 +660,7 @@
                   <color>2774A4</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR Interfaces Statistic</host>
+                    <host>SNR Interfaces Statistic</host>
                     <key>net.if.out[ifHCOutOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -681,8 +681,8 @@
       </macros>
     </template>
     <template>
-      <template>Template SNR Memory Information</template>
-      <name>Template SNR Memory Information</name>
+      <template>SNR Memory Information</template>
+      <name>SNR Memory Information</name>
       <groups>
         <group>
           <name>SNR</name>
@@ -724,8 +724,8 @@
       </items>
     </template>
     <template>
-      <template>Template SNR POE Power</template>
-      <name>Template SNR POE Power</name>
+      <template>SNR POE Power</template>
+      <name>SNR POE Power</name>
       <groups>
         <group>
           <name>SNR</name>
@@ -811,7 +811,7 @@
                   <color>0080FF</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR POE Power</host>
+                    <host>SNR POE Power</host>
                     <key>poepower.current[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -820,7 +820,7 @@
                   <color>F63100</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template SNR POE Power</host>
+                    <host>SNR POE Power</host>
                     <key>poepowermax.onport[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -831,8 +831,8 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template SNR Switch Temperature</template>
-      <name>Template SNR Switch Temperature</name>
+      <template>SNR Switch Temperature</template>
+      <name>SNR Switch Temperature</name>
       <groups>
         <group>
           <name>SNR</name>
@@ -871,7 +871,7 @@
           <color>FF0000</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template SNR CPU Usage</host>
+            <host>SNR CPU Usage</host>
             <key>sys.cpuusage</key>
           </item>
         </graph_item>
@@ -885,7 +885,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>00FF00</color>
           <item>
-            <host>Template SNR Memory Information</host>
+            <host>SNR Memory Information</host>
             <key>sys.memoryusage</key>
           </item>
         </graph_item>
@@ -894,7 +894,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template SNR Memory Information</host>
+            <host>SNR Memory Information</host>
             <key>sys.memorybusy</key>
           </item>
         </graph_item>
@@ -909,7 +909,7 @@
           <color>FF0000</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template SNR Switch Temperature</host>
+            <host>SNR Switch Temperature</host>
             <key>sys.temperature</key>
           </item>
         </graph_item>

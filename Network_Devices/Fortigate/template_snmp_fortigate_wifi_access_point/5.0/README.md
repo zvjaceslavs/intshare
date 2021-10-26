@@ -1,4 +1,4 @@
-# Template SNMP Fortigate Wifi Access Points
+# SNMP Fortigate Wifi Access Points
 
 ## Description
 
@@ -83,5 +83,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|The WTP {#SNMPVALUE} Session Connection State is not OnLine|<p>-</p>|<p>**Expression**: {Template SNMP Fortigate Wifi Access Points:fgWcWtpSessionConnectionState[{#SNMPVALUE}].last(#3)}<>2</p><p>**Recovery expression**: </p>|high|
-|The WTP {#SNMPVALUE} Session Connection State is not OnLine (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Fortigate Wifi Access Points:fgWcWtpSessionConnectionState[{#SNMPVALUE}].last(#3)}<>2</p><p>**Recovery expression**: </p>|high|
+|The WTP {#SNMPVALUE} Session Connection State is not OnLine|<p>-</p>|<p>**Expression**: {SNMP Fortigate Wifi Access Points:fgWcWtpSessionConnectionState[{#SNMPVALUE}].last(#3)}<>2</p><p>**Recovery expression**: </p>|high|
+|The WTP {#SNMPVALUE} Session Connection State is not OnLine (LLD)|<p>-</p>|<p>**Expression**: {SNMP Fortigate Wifi Access Points:fgWcWtpSessionConnectionState[{#SNMPVALUE}].last(#3)}<>2</p><p>**Recovery expression**: </p>|high|

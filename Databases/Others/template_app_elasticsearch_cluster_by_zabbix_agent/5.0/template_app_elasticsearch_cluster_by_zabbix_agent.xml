@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:13Z</date>
+  <date>2021-10-26T04:44:31Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Elasticsearch Cluster by Zabbix agent</template>
-      <name>Template App Elasticsearch Cluster by Zabbix agent</name>
+      <template>App Elasticsearch Cluster by Zabbix agent</template>
+      <name>App Elasticsearch Cluster by Zabbix agent</name>
       <description>This is the "Zabbix agent" version of the Elasticsearch template which ships with Zabbix 5.0 - Evren Yurtesen The template to monitor Elasticsearch by Zabbix that work without any external scripts. It works with both standalone and cluster instances. The metrics are collected in one pass remotely using an HTTP agent. They are getting values from REST API _cluster/health, _cluster/stats, _nodes/stats requests. You can set {$ELASTICSEARCH.USERNAME} and {$ELASTICSEARCH.PASSWORD} macros in the template for using on the host level. If you use an atypical location ES API, don't forget to change the macros {$ELASTICSEARCH.SCHEME}, {$ELASTICSEARCH.HOST},{$ELASTICSEARCH.PORT}. You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/399473-discussion-thread-for-official-zabbix-template-for-elasticsearch Template tooling version used: 0.35</description>
       <groups>
         <group>
@@ -618,7 +618,7 @@
               <dependencies>
                 <dependency>
                   <name>ES: Service is down</name>
-                  <expression>{Template App Elasticsearch Cluster by Zabbix agent:net.tcp.service["{$ELASTICSEARCH.SCHEME}","{$ELASTICSEARCH.HOST}","{$ELASTICSEARCH.PORT}"].last()}=0</expression>
+                  <expression>{App Elasticsearch Cluster by Zabbix agent:net.tcp.service["{$ELASTICSEARCH.SCHEME}","{$ELASTICSEARCH.HOST}","{$ELASTICSEARCH.PORT}"].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1721,7 +1721,7 @@
                   <dependencies>
                     <dependency>
                       <name>ES {#ES.NODE}: Percent of JVM heap in use is critical (over {$ELASTICSEARCH.HEAP_USED.MAX.CRIT}% for 1h)</name>
-                      <expression>{Template App Elasticsearch Cluster by Zabbix agent:es.node.jvm.mem.heap_used_percent[{#ES.NODE}].min(1h)}>{$ELASTICSEARCH.HEAP_USED.MAX.CRIT}</expression>
+                      <expression>{App Elasticsearch Cluster by Zabbix agent:es.node.jvm.mem.heap_used_percent[{#ES.NODE}].min(1h)}>{$ELASTICSEARCH.HEAP_USED.MAX.CRIT}</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2132,7 +2132,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.indices.search.query_latency[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2140,7 +2140,7 @@
                   <sortorder>1</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.indices.indexing.index_latency[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2148,7 +2148,7 @@
                   <sortorder>2</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.indices.search.fetch_latency[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2156,7 +2156,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.indices.flush.latency[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2168,7 +2168,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.indices.search.fetch_current[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2176,7 +2176,7 @@
                   <sortorder>1</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.indices.search.query_current[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2188,7 +2188,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.refresh.active[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2196,7 +2196,7 @@
                   <sortorder>1</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.refresh.queue[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2204,7 +2204,7 @@
                   <sortorder>2</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.refresh.completed.rate[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2212,7 +2212,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.refresh.rejected.rate[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2224,7 +2224,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.search.active[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2232,7 +2232,7 @@
                   <sortorder>1</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.search.queue[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2240,7 +2240,7 @@
                   <sortorder>2</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.search.completed.rate[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2248,7 +2248,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.search.rejected.rate[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2260,7 +2260,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.write.active[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2268,7 +2268,7 @@
                   <sortorder>1</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.write.queue[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2276,7 +2276,7 @@
                   <sortorder>2</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.write.completed.rate[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2284,7 +2284,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+                    <host>App Elasticsearch Cluster by Zabbix agent</host>
                     <key>es.node.thread_pool.write.rejected.rate[{#ES.NODE}]</key>
                   </item>
                 </graph_item>
@@ -2373,7 +2373,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>({Template App Elasticsearch Cluster by Zabbix agent:es.nodes.fs.total_in_bytes.last()}-{Template App Elasticsearch Cluster by Zabbix agent:es.nodes.fs.available_in_bytes.last()})/({Template App Elasticsearch Cluster by Zabbix agent:es.cluster.number_of_data_nodes.last()}-1)>{Template App Elasticsearch Cluster by Zabbix agent:es.nodes.fs.available_in_bytes.last()}</expression>
+      <expression>({App Elasticsearch Cluster by Zabbix agent:es.nodes.fs.total_in_bytes.last()}-{App Elasticsearch Cluster by Zabbix agent:es.nodes.fs.available_in_bytes.last()})/({App Elasticsearch Cluster by Zabbix agent:es.cluster.number_of_data_nodes.last()}-1)>{App Elasticsearch Cluster by Zabbix agent:es.nodes.fs.available_in_bytes.last()}</expression>
       <name>ES: Cluster does not have enough space for resharding</name>
       <priority>HIGH</priority>
       <description>There is not enough disk space for index resharding.</description>
@@ -2386,7 +2386,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+            <host>App Elasticsearch Cluster by Zabbix agent</host>
             <key>es.cluster.inactive_shards_percent_as_number</key>
           </item>
         </graph_item>
@@ -2394,7 +2394,7 @@
           <sortorder>1</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+            <host>App Elasticsearch Cluster by Zabbix agent</host>
             <key>es.cluster.relocating_shards</key>
           </item>
         </graph_item>
@@ -2402,7 +2402,7 @@
           <sortorder>2</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+            <host>App Elasticsearch Cluster by Zabbix agent</host>
             <key>es.cluster.initializing_shards</key>
           </item>
         </graph_item>
@@ -2410,7 +2410,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+            <host>App Elasticsearch Cluster by Zabbix agent</host>
             <key>es.cluster.unassigned_shards</key>
           </item>
         </graph_item>
@@ -2418,7 +2418,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+            <host>App Elasticsearch Cluster by Zabbix agent</host>
             <key>es.cluster.delayed_unassigned_shards</key>
           </item>
         </graph_item>
@@ -2426,7 +2426,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+            <host>App Elasticsearch Cluster by Zabbix agent</host>
             <key>es.cluster.number_of_pending_tasks</key>
           </item>
         </graph_item>
@@ -2434,7 +2434,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template App Elasticsearch Cluster by Zabbix agent</host>
+            <host>App Elasticsearch Cluster by Zabbix agent</host>
             <key>es.cluster.task_max_waiting_in_queue</key>
           </item>
         </graph_item>

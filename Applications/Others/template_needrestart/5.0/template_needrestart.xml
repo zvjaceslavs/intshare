@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:52Z</date>
+  <date>2021-10-26T04:39:40Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Needrestart</template>
-      <name>Template App Needrestart</name>
+      <template>App Needrestart</template>
+      <name>App Needrestart</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -47,7 +47,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template App Needrestart:needrestart.kernel.last()}&lt;>1 or {Template App Needrestart:needrestart.libs.last()}>0</expression>
+      <expression>{App Needrestart:needrestart.kernel.last()}&lt;>1 or {App Needrestart:needrestart.libs.last()}>0</expression>
       <name>Server needs maintainance</name>
       <priority>INFO</priority>
     </trigger>

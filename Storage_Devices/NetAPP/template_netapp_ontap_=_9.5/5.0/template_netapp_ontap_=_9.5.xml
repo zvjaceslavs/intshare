@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:11Z</date>
+  <date>2021-10-26T04:45:37Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module Netapp OS</template>
-      <name>Template Module Netapp OS</name>
+      <template>Module Netapp OS</template>
+      <name>Module Netapp OS</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -396,7 +396,7 @@
                   <dependencies>
                     <dependency>
                       <name>Data Usage on {#AGGRNAME} more than {$NETAPP.AGG.FREE.ERR}%</name>
-                      <expression>{Template Module Netapp OS:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}>{$NETAPP.AGG.FREE.ERR}</expression>
+                      <expression>{Module Netapp OS:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}>{$NETAPP.AGG.FREE.ERR}</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -434,7 +434,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template Module Netapp OS</host>
+                    <host>Module Netapp OS</host>
                     <key>df64TotalKBytes[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -442,7 +442,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template Module Netapp OS</host>
+                    <host>Module Netapp OS</host>
                     <key>df64UsedKBytes[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1057,7 +1057,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template Module Netapp OS</host>
+                    <host>Module Netapp OS</host>
                     <key>snapmirrorRelLag[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1065,7 +1065,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template Module Netapp OS</host>
+                    <host>Module Netapp OS</host>
                     <key>snapmirrorRelLastTransferSize[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1073,7 +1073,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template Module Netapp OS</host>
+                    <host>Module Netapp OS</host>
                     <key>snapmirrorRelLastTransferTime[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1327,12 +1327,12 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Module Netapp OS:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>{$NETAPP.VOL.FREE.ERR} and {Template Module Netapp OS:volVserver[{#SNMPINDEX}].regexp(".*[^_.*dr]$")}=1</expression>
+              <expression>{Module Netapp OS:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>{$NETAPP.VOL.FREE.ERR} and {Module Netapp OS:volVserver[{#SNMPINDEX}].regexp(".*[^_.*dr]$")}=1</expression>
               <name>Data Usage on Volume[{#VOLNAME}] more than {$NETAPP.VOL.FREE.ERR}%</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Module Netapp OS:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>{$NETAPP.VOL.FREE.WARN} and {Template Module Netapp OS:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}&lt;{$NETAPP.VOL.FREE.ERR} and {Template Module Netapp OS:volVserver[{#SNMPINDEX}].regexp(".*[^_.*dr]$")}=1</expression>
+              <expression>{Module Netapp OS:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>{$NETAPP.VOL.FREE.WARN} and {Module Netapp OS:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}&lt;{$NETAPP.VOL.FREE.ERR} and {Module Netapp OS:volVserver[{#SNMPINDEX}].regexp(".*[^_.*dr]$")}=1</expression>
               <name>Data Usage on Volume[{#VOLNAME}] more than {$NETAPP.VOL.FREE.WARN}%</name>
               <priority>WARNING</priority>
             </trigger_prototype>
@@ -1376,7 +1376,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template Module Netapp OS</host>
+            <host>Module Netapp OS</host>
             <key>cpuBusyTimePerCent</key>
           </item>
         </graph_item>

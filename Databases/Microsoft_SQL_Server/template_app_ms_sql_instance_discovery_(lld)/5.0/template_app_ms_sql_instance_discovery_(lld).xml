@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:00Z</date>
+  <date>2021-10-26T04:37:35Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App MS SQL Instance Discovery</template>
-      <name>Template App MS SQL Instance Discovery</name>
+      <template>App MS SQL Instance Discovery</template>
+      <name>App MS SQL Instance Discovery</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -481,40 +481,40 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Access Methods\Forwarded Records/sec",300].last()}>0.1*{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300].last()}</expression>
+              <expression>{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Access Methods\Forwarded Records/sec",300].last()}>0.1*{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300].last()}</expression>
               <name>{#INSTANCES}:Access Methods Forwarded Records/sec</name>
               <url>https://msdn.microsoft.com/en-us/ms177426</url>
               <priority>WARNING</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Access Methods\Index Searches/sec",300].last()}/{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Access Methods\Full Scans/sec",300].last()}>1000</expression>
+              <expression>{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Access Methods\Index Searches/sec",300].last()}/{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Access Methods\Full Scans/sec",300].last()}>1000</expression>
               <name>{#INSTANCES}:Access Methods Full Scans/sec</name>
               <url>https://msdn.microsoft.com/en-us/ms177426</url>
               <priority>WARNING</priority>
               <description>This counter monitors the number of full scans on base tables or indexes. Values greater than 1 or 2 indicate that we are having table / Index page scans. If we see high CPU then we need to investigate this counter, otherwise if the full scans are on small tables we can ignore this counter. A few of the main causes of high Full Scans/sec are • Missing indexes • Too many rows requested Queries with missing indexes or too many rows requested will have a large number of logical reads and an increased CPU time.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Access Methods\Page Splits/sec",300].last()}>0.2*{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300].last()}</expression>
+              <expression>{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Access Methods\Page Splits/sec",300].last()}>0.2*{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300].last()}</expression>
               <name>{#INSTANCES}:Access Methods Page Splits/sec</name>
               <url>https://msdn.microsoft.com/en-us/ms177426</url>
               <priority>WARNING</priority>
               <description>Number of page splits per second that occur as the result of overflowing index pages. Interesting counter that can lead us to our table / index design. This value needs to be low as possible. If you find out that the number of page splits is high, consider increasing the fillfactor of your indexes. An increased fillfactor helps to reduce page splits because there is more room in data pages before it fills up and a page split has to occur. Note that this counter also includes the new page allocations as well and doesn’t necessarily pose a problem. The other place we can confirm the page splits that involve data or index rows moves are the fragmented indexes on page splits.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Latches\Total Latch Wait Time (ms)",300].last()}/{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Latches\Latch Waits/sec",300].last()}>10</expression>
+              <expression>{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Latches\Total Latch Wait Time (ms)",300].last()}/{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:Latches\Latch Waits/sec",300].last()}>10</expression>
               <name>{#INSTANCES}:Latches\Latch Waits/sec</name>
               <url>https://msdn.microsoft.com/en-us/ms177421</url>
               <priority>WARNING</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\SQL Compilations/sec",300].last()}>0.1*{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300].last()}</expression>
+              <expression>{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\SQL Compilations/sec",300].last()}>0.1*{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300].last()}</expression>
               <name>{#INSTANCES}:SQL Statistics SQL Compilations/sec</name>
               <url>https://msdn.microsoft.com/en-us/ms190911</url>
               <priority>WARNING</priority>
               <description>The number of times per second that SQL Server compilations have occurred. This value needs to be as low as possible. If you see a high value such as over 100, then it’s an indication that there are lots of adhoc queries that are running, might cause CPU usage, solution is to re-write these adhoc as stored procedure or use sp_executeSQL.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\SQL Re-Compilations/sec",300].last()}>0.1*{Template App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300].last()}</expression>
+              <expression>{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\SQL Re-Compilations/sec",300].last()}>0.1*{App MS SQL Instance Discovery:perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300].last()}</expression>
               <name>{#INSTANCES}:SQL Statistics SQL Re-Compilations/sec</name>
               <url>https://msdn.microsoft.com/en-us/ms190911</url>
               <priority>WARNING</priority>
@@ -528,7 +528,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Access Methods\Forwarded Records/sec",300]</key>
                   </item>
                 </graph_item>
@@ -536,7 +536,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Access Methods\Full Scans/sec",300]</key>
                   </item>
                 </graph_item>
@@ -544,7 +544,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Access Methods\Index Searches/sec",300]</key>
                   </item>
                 </graph_item>
@@ -552,7 +552,7 @@
                   <sortorder>3</sortorder>
                   <color>C800C8</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Access Methods\Page Splits/sec",300]</key>
                   </item>
                 </graph_item>
@@ -564,7 +564,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Buffer Manager\Buffer cache hit ratio",300]</key>
                   </item>
                 </graph_item>
@@ -572,7 +572,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Buffer Manager\Page Life Expectancy",300]</key>
                   </item>
                 </graph_item>
@@ -584,7 +584,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Buffer Manager\Free list stalls/sec",300]</key>
                   </item>
                 </graph_item>
@@ -592,7 +592,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Buffer Manager\Lazy Writes/sec",300]</key>
                   </item>
                 </graph_item>
@@ -600,7 +600,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Buffer Manager\Page lookups/sec",300]</key>
                   </item>
                 </graph_item>
@@ -608,7 +608,7 @@
                   <sortorder>3</sortorder>
                   <color>C800C8</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Buffer Manager\Page reads/sec",300]</key>
                   </item>
                 </graph_item>
@@ -616,7 +616,7 @@
                   <sortorder>4</sortorder>
                   <color>00C8C8</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Buffer Manager\Page writes/sec",300]</key>
                   </item>
                 </graph_item>
@@ -628,7 +628,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Databases(_Total)\Log Flushes/sec",300]</key>
                   </item>
                 </graph_item>
@@ -636,7 +636,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Databases(_Total)\Transactions/sec",300]</key>
                   </item>
                 </graph_item>
@@ -648,7 +648,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Latches\Latch Waits/sec",300]</key>
                   </item>
                 </graph_item>
@@ -656,7 +656,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Locks(_Total)\Lock Waits/sec",300]</key>
                   </item>
                 </graph_item>
@@ -664,7 +664,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:Locks(_Total)\Number of Deadlocks/sec",300]</key>
                   </item>
                 </graph_item>
@@ -676,7 +676,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:SQL Statistics\Batch Requests/sec",300]</key>
                   </item>
                 </graph_item>
@@ -684,7 +684,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:SQL Statistics\SQL Compilations/sec",300]</key>
                   </item>
                 </graph_item>
@@ -692,7 +692,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL Instance Discovery</host>
+                    <host>App MS SQL Instance Discovery</host>
                     <key>perf_counter["\{#INSTANCES}:SQL Statistics\SQL Re-Compilations/sec",300]</key>
                   </item>
                 </graph_item>

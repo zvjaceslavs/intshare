@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:46Z</date>
+  <date>2021-10-26T04:39:33Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Sonicwall 4600</template>
-      <name>Template SNMP Sonicwall 4600</name>
+      <template>SNMP Sonicwall 4600</template>
+      <name>SNMP Sonicwall 4600</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -197,7 +197,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP Sonicwall 4600</host>
+                    <host>SNMP Sonicwall 4600</host>
                     <key>ifInOctets.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -206,7 +206,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP Sonicwall 4600</host>
+                    <host>SNMP Sonicwall 4600</host>
                     <key>ifOutOctets.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -226,7 +226,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template SNMP Sonicwall 4600</host>
+            <host>SNMP Sonicwall 4600</host>
             <key>sonicwallCurrentCPUUtil</key>
           </item>
         </graph_item>
@@ -239,7 +239,7 @@
         <graph_item>
           <color>999900</color>
           <item>
-            <host>Template SNMP Sonicwall 4600</host>
+            <host>SNMP Sonicwall 4600</host>
             <key>sonicwallCurrentConnections</key>
           </item>
         </graph_item>
@@ -253,7 +253,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template SNMP Sonicwall 4600</host>
+            <host>SNMP Sonicwall 4600</host>
             <key>sonicwallCurrentRAMUtil</key>
           </item>
         </graph_item>

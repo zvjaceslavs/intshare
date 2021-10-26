@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:31Z</date>
+  <date>2021-10-26T04:40:24Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Printer_Konica</template>
-      <name>Template_Printer_Konica</name>
+      <template>Printer_Konica</template>
+      <name>Printer_Konica</name>
       <groups>
         <group>
           <name>Printers</name>
@@ -729,7 +729,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>AAAAAA</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_black_toner_remaining</key>
           </item>
         </graph_item>
@@ -738,7 +738,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_black_toner_level</key>
           </item>
         </graph_item>
@@ -753,7 +753,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00DDDD</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_cyan_toner_remaining</key>
           </item>
         </graph_item>
@@ -762,7 +762,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_cyan_toner_level</key>
           </item>
         </graph_item>
@@ -774,7 +774,7 @@
         <graph_item>
           <color>999999</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_black_developer_cartridge_remaining</key>
           </item>
         </graph_item>
@@ -782,7 +782,7 @@
           <sortorder>1</sortorder>
           <color>0000EE</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_cyan_developer_cartridge_remaining</key>
           </item>
         </graph_item>
@@ -790,7 +790,7 @@
           <sortorder>2</sortorder>
           <color>FF3333</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_magenta_developer_cartridge_remaining</key>
           </item>
         </graph_item>
@@ -798,7 +798,7 @@
           <sortorder>3</sortorder>
           <color>FFFF33</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_yellow_developer_cartridge_remaining</key>
           </item>
         </graph_item>
@@ -807,7 +807,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_black_developer_cartridge_level</key>
           </item>
         </graph_item>
@@ -816,7 +816,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>000033</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_cyan_developer_cartridge_level</key>
           </item>
         </graph_item>
@@ -825,7 +825,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>330000</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_magenta_developer_cartridge_level</key>
           </item>
         </graph_item>
@@ -834,7 +834,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>333300</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_yellow_developer_cartridge_level</key>
           </item>
         </graph_item>
@@ -846,7 +846,7 @@
         <graph_item>
           <color>CCCCCC</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_black_drum_remaining</key>
           </item>
         </graph_item>
@@ -854,7 +854,7 @@
           <sortorder>1</sortorder>
           <color>33FFFF</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_cyan_drum_remaining</key>
           </item>
         </graph_item>
@@ -862,7 +862,7 @@
           <sortorder>2</sortorder>
           <color>FF9999</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_magenta_drum_remaining</key>
           </item>
         </graph_item>
@@ -870,7 +870,7 @@
           <sortorder>3</sortorder>
           <color>FFFF66</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_yellow_drum_remaining</key>
           </item>
         </graph_item>
@@ -879,7 +879,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_black_drum_level</key>
           </item>
         </graph_item>
@@ -888,7 +888,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>003333</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_cyan_drum_level</key>
           </item>
         </graph_item>
@@ -897,7 +897,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>330000</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_magenta_drum_level</key>
           </item>
         </graph_item>
@@ -906,7 +906,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>333300</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_yellow_drum_level</key>
           </item>
         </graph_item>
@@ -921,7 +921,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF3333</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_magenta_toner_remaining</key>
           </item>
         </graph_item>
@@ -930,7 +930,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_magenta_toner_level</key>
           </item>
         </graph_item>
@@ -942,7 +942,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>TotalPrits</key>
           </item>
         </graph_item>
@@ -954,7 +954,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_fusing_unit_remaining</key>
           </item>
         </graph_item>
@@ -962,7 +962,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_image_transfer_belt_unit_remaining</key>
           </item>
         </graph_item>
@@ -970,7 +970,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_ozone_filter_remaining</key>
           </item>
         </graph_item>
@@ -978,7 +978,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_transfer_roller_unit_remaining</key>
           </item>
         </graph_item>
@@ -987,7 +987,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>FC6EA3</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_fusing_unit_level</key>
           </item>
         </graph_item>
@@ -996,7 +996,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>6C59DC</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_image_transfer_belt_unit_level</key>
           </item>
         </graph_item>
@@ -1005,7 +1005,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>AC8C14</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_ozone_filter_level</key>
           </item>
         </graph_item>
@@ -1014,7 +1014,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>611F27</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_transfer_roller_unit_level</key>
           </item>
         </graph_item>
@@ -1029,7 +1029,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FFFF33</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Amount_of_yellow_toner_remaining</key>
           </item>
         </graph_item>
@@ -1037,7 +1037,7 @@
           <sortorder>1</sortorder>
           <color>007700</color>
           <item>
-            <host>Template_Printer_Konica</host>
+            <host>Printer_Konica</host>
             <key>Maximum_yellow_toner_level</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:57Z</date>
+  <date>2021-10-26T04:38:38Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App TACACS Service</template>
-      <name>Template App TACACS Service</name>
+      <template>App TACACS Service</template>
+      <name>App TACACS Service</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -54,7 +54,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App TACACS Service</host>
+            <host>App TACACS Service</host>
             <key>net.tcp.service[tcp,,49]</key>
           </item>
         </graph_item>

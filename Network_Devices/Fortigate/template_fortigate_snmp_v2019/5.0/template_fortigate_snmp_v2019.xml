@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:31Z</date>
+  <date>2021-10-26T04:42:36Z</date>
   <groups>
     <group>
       <name>Fortigate</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Fortinet Devices v2019</template>
-      <name>Template SNMP Fortinet Devices v2019</name>
+      <template>SNMP Fortinet Devices v2019</template>
+      <name>SNMP Fortinet Devices v2019</name>
       <groups>
         <group>
           <name>Fortigate</name>
@@ -310,7 +310,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP Fortinet Devices v2019</host>
+                    <host>SNMP Fortinet Devices v2019</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -319,7 +319,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP Fortinet Devices v2019</host>
+                    <host>SNMP Fortinet Devices v2019</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -345,7 +345,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template SNMP Fortinet Devices v2019</host>
+            <host>SNMP Fortinet Devices v2019</host>
             <key>fortinetCurrentCPUUtil</key>
           </item>
         </graph_item>
@@ -358,7 +358,7 @@
         <graph_item>
           <color>999900</color>
           <item>
-            <host>Template SNMP Fortinet Devices v2019</host>
+            <host>SNMP Fortinet Devices v2019</host>
             <key>fortinetCurrentConnections</key>
           </item>
         </graph_item>
@@ -377,7 +377,7 @@
         <graph_item>
           <color>AA0000</color>
           <item>
-            <host>Template SNMP Fortinet Devices v2019</host>
+            <host>SNMP Fortinet Devices v2019</host>
             <key>fortinetUsedStorage</key>
           </item>
         </graph_item>
@@ -386,7 +386,7 @@
           <color>006600</color>
           <type>GRAPH_SUM</type>
           <item>
-            <host>Template SNMP Fortinet Devices v2019</host>
+            <host>SNMP Fortinet Devices v2019</host>
             <key>fortinetTotalStorage</key>
           </item>
         </graph_item>
@@ -400,7 +400,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template SNMP Fortinet Devices v2019</host>
+            <host>SNMP Fortinet Devices v2019</host>
             <key>fortinetCurrentRAMUtil</key>
           </item>
         </graph_item>

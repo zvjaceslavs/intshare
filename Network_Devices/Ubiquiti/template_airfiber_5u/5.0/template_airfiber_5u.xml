@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:27Z</date>
+  <date>2021-10-26T04:41:25Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template AirFiber_5U</template>
-      <name>Template AirFiber_5U</name>
+      <template>AirFiber_5U</template>
+      <name>AirFiber_5U</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -871,22 +871,22 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template AirFiber_5U:AirFiberTXDACTemp0.last()}>55 or {Template AirFiber_5U:AirFiberRXDACTemp1.last()}>55</expression>
+      <expression>{AirFiber_5U:AirFiberTXDACTemp0.last()}>55 or {AirFiber_5U:AirFiberRXDACTemp1.last()}>55</expression>
       <name>DAC Overheated!</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>({Template AirFiber_5U:AirFiberRXCapacity.avg(10m)}&lt;100000 or {Template AirFiber_5U:AirFiberTXCapacity.avg(10m)}&lt;100000) and {Template AirFiber_5U:AirFiberLinkState.last()}&lt;>0</expression>
+      <expression>({AirFiber_5U:AirFiberRXCapacity.avg(10m)}&lt;100000 or {AirFiber_5U:AirFiberTXCapacity.avg(10m)}&lt;100000) and {AirFiber_5U:AirFiberLinkState.last()}&lt;>0</expression>
       <name>Low Link Capacity</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template AirFiber_5U:AirFiberRemoteRXPoweChain0Overload.last()}=1 or {Template AirFiber_5U:AirFiberRemoteRXPoweChain1Overload.last()}=1</expression>
+      <expression>{AirFiber_5U:AirFiberRemoteRXPoweChain0Overload.last()}=1 or {AirFiber_5U:AirFiberRemoteRXPoweChain1Overload.last()}=1</expression>
       <name>Reciever Overload</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>{Template AirFiber_5U:AirFiberRemoteRXPowerChain1Valid.last()}=2 or {Template AirFiber_5U:AirFiberRemoteRXPoweChain0Valid.last()}=2</expression>
+      <expression>{AirFiber_5U:AirFiberRemoteRXPowerChain1Valid.last()}=2 or {AirFiber_5U:AirFiberRemoteRXPoweChain0Valid.last()}=2</expression>
       <name>RX Power Invalid</name>
       <priority>DISASTER</priority>
     </trigger>
@@ -898,7 +898,7 @@
         <graph_item>
           <color>0000EE</color>
           <item>
-            <host>Template AirFiber_5U</host>
+            <host>AirFiber_5U</host>
             <key>AirFiberRXCapacity</key>
           </item>
         </graph_item>
@@ -906,7 +906,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template AirFiber_5U</host>
+            <host>AirFiber_5U</host>
             <key>AirFiberTXCapacity</key>
           </item>
         </graph_item>

@@ -1,4 +1,4 @@
-# Template SNMP ReadyNAS
+# SNMP ReadyNAS
 
 ## Overview
 
@@ -41,22 +41,22 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|diskState.1|<p>-</p>|`SNMP agent`|diskState.1<p>Update: 30</p>|
-|diskState.2|<p>-</p>|`SNMP agent`|diskState.2<p>Update: 30</p>|
-|diskState.3|<p>-</p>|`SNMP agent`|diskState.3<p>Update: 30</p>|
-|diskState.4|<p>-</p>|`SNMP agent`|diskState.4<p>Update: 30</p>|
-|diskState.5|<p>-</p>|`SNMP agent`|diskState.5<p>Update: 30</p>|
-|diskState.6|<p>-</p>|`SNMP agent`|diskState.6<p>Update: 30</p>|
-|diskTemperature.1|<p>-</p>|`SNMP agent`|diskTemperature.1<p>Update: 60</p>|
 |diskTemperature.2|<p>-</p>|`SNMP agent`|diskTemperature.2<p>Update: 60</p>|
-|diskTemperature.3|<p>-</p>|`SNMP agent`|diskTemperature.3<p>Update: 60</p>|
-|diskTemperature.4|<p>-</p>|`SNMP agent`|diskTemperature.4<p>Update: 60</p>|
-|diskTemperature.5|<p>-</p>|`SNMP agent`|diskTemperature.5<p>Update: 60</p>|
 |diskTemperature.6|<p>-</p>|`SNMP agent`|diskTemperature.6<p>Update: 60</p>|
-|fanRPM|<p>-</p>|`SNMP agent`|fanRPM<p>Update: 60</p>|
-|fanStatus|<p>-</p>|`SNMP agent`|fanStatus<p>Update: 60</p>|
-|volumeFreeSpace|<p>-</p>|`SNMP agent`|volumeFreeSpace<p>Update: 60</p>|
+|diskState.5|<p>-</p>|`SNMP agent`|diskState.5<p>Update: 30</p>|
+|diskState.3|<p>-</p>|`SNMP agent`|diskState.3<p>Update: 30</p>|
+|diskTemperature.5|<p>-</p>|`SNMP agent`|diskTemperature.5<p>Update: 60</p>|
+|diskState.4|<p>-</p>|`SNMP agent`|diskState.4<p>Update: 30</p>|
+|diskState.6|<p>-</p>|`SNMP agent`|diskState.6<p>Update: 30</p>|
 |volumeSize|<p>-</p>|`SNMP agent`|volumeSize<p>Update: 60</p>|
+|diskState.2|<p>-</p>|`SNMP agent`|diskState.2<p>Update: 30</p>|
+|diskTemperature.4|<p>-</p>|`SNMP agent`|diskTemperature.4<p>Update: 60</p>|
+|fanRPM|<p>-</p>|`SNMP agent`|fanRPM<p>Update: 60</p>|
+|diskTemperature.3|<p>-</p>|`SNMP agent`|diskTemperature.3<p>Update: 60</p>|
+|volumeFreeSpace|<p>-</p>|`SNMP agent`|volumeFreeSpace<p>Update: 60</p>|
+|diskState.1|<p>-</p>|`SNMP agent`|diskState.1<p>Update: 30</p>|
+|fanStatus|<p>-</p>|`SNMP agent`|fanStatus<p>Update: 60</p>|
+|diskTemperature.1|<p>-</p>|`SNMP agent`|diskTemperature.1<p>Update: 60</p>|
 |volumeStatus|<p>-</p>|`SNMP agent`|volumeStatus<p>Update: 30</p>|
 ## Triggers
 

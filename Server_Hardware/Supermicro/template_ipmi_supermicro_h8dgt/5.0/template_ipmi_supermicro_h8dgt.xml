@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:48Z</date>
+  <date>2021-10-26T04:40:42Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Supermicro H8DGT</template>
-      <name>Template IPMI Supermicro H8DGT</name>
+      <template>IPMI Supermicro H8DGT</template>
+      <name>IPMI Supermicro H8DGT</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -502,7 +502,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.fan_1</key>
           </item>
         </graph_item>
@@ -510,7 +510,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.fan_2</key>
           </item>
         </graph_item>
@@ -522,7 +522,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.cpu1_temp</key>
           </item>
         </graph_item>
@@ -530,14 +530,14 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>impi.system.cpu2_temp</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>8</sortorder>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.temp</key>
           </item>
         </graph_item>
@@ -549,7 +549,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.3.3v</key>
           </item>
         </graph_item>
@@ -557,7 +557,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.3.3vsb</key>
           </item>
         </graph_item>
@@ -565,7 +565,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.5v</key>
           </item>
         </graph_item>
@@ -573,7 +573,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.12v</key>
           </item>
         </graph_item>
@@ -581,7 +581,7 @@
           <sortorder>5</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.ht_voltage</key>
           </item>
         </graph_item>
@@ -589,7 +589,7 @@
           <sortorder>6</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.cpu1_dimm</key>
           </item>
         </graph_item>
@@ -597,14 +597,14 @@
           <sortorder>7</sortorder>
           <color>960000</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.processor_vcc1</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>8</sortorder>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.cpu2_dimm</key>
           </item>
         </graph_item>
@@ -612,7 +612,7 @@
           <sortorder>9</sortorder>
           <color>000096</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.processor_vcc2</key>
           </item>
         </graph_item>
@@ -620,7 +620,7 @@
           <sortorder>10</sortorder>
           <color>960096</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.vbat</key>
           </item>
         </graph_item>
@@ -628,7 +628,7 @@
           <sortorder>11</sortorder>
           <color>009696</color>
           <item>
-            <host>Template IPMI Supermicro H8DGT</host>
+            <host>IPMI Supermicro H8DGT</host>
             <key>ipmi.system.ps_status</key>
           </item>
         </graph_item>

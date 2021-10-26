@@ -1,4 +1,4 @@
-# Tado Template
+# Tado
 
 ## Overview
 

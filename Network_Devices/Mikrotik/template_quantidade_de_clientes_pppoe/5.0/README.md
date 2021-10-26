@@ -1,4 +1,4 @@
-# 1 - Template Check Active Client PPPoE
+# 1 Check Active Client PPPoE
 
 ## Overview
 

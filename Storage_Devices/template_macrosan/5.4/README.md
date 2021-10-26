@@ -54,17 +54,17 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|totalIops|<p>-</p>|`SNMP agent`|totalIops<p>Update: 1m</p>|
-|可用容量|<p>-</p>|`SNMP agent`|freecap<p>Update: 1h</p>|
-|writeIops|<p>-</p>|`SNMP agent`|writeIops<p>Update: 1m</p>|
 |已用容量%|<p>-</p>|`Calculated`|usedcappercent<p>Update: 1h</p>|
+|totalKbps|<p>-</p>|`SNMP agent`|totalKbps<p>Update: 1m</p>|
+|可用容量|<p>-</p>|`SNMP agent`|freecap<p>Update: 1h</p>|
+|totalIops|<p>-</p>|`SNMP agent`|totalIops<p>Update: 1m</p>|
 |readKbps|<p>-</p>|`SNMP agent`|readKbps<p>Update: 1m</p>|
-|writeKbps|<p>-</p>|`SNMP agent`|writeKbps<p>Update: 1m</p>|
-|readIops|<p>-</p>|`SNMP agent`|readIops<p>Update: 1m</p>|
-|总容量|<p>-</p>|`SNMP agent`|totalcap<p>Update: 1h</p>|
 |总缓存命中率|<p>-</p>|`SNMP agent`|cacheHitsIos<p>Update: 1m</p>|
 |已用容量|<p>-</p>|`SNMP agent`|usedcap<p>Update: 1h</p>|
-|totalKbps|<p>-</p>|`SNMP agent`|totalKbps<p>Update: 1m</p>|
+|writeIops|<p>-</p>|`SNMP agent`|writeIops<p>Update: 1m</p>|
+|总容量|<p>-</p>|`SNMP agent`|totalcap<p>Update: 1h</p>|
+|readIops|<p>-</p>|`SNMP agent`|readIops<p>Update: 1m</p>|
+|writeKbps|<p>-</p>|`SNMP agent`|writeKbps<p>Update: 1m</p>|
 |{#SNMPVALUE}  缓存命中率|<p>-</p>|`SNMP agent`|luncachehitsIos[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |{#SNMPVALUE} lunReadAvrDelay|<p>-</p>|`SNMP agent`|lunReadAvrDelay[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |{#SNMPVALUE}  总吞吐|<p>-</p>|`SNMP agent`|lunreadiops[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|

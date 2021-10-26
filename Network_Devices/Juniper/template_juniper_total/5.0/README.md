@@ -80,31 +80,31 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Juniper Interface enumeration|<p>-</p>|`SNMP agent`|discovery.ifDescr<p>Update: 3600</p>|
 |Juniper OSPF Neighbor State Enumeration|<p>-</p>|`SNMP agent`|discovery.ospf.nbr<p>Update: 3600</p>|
+|Juniper Interface enumeration|<p>-</p>|`SNMP agent`|discovery.ifDescr<p>Update: 3600</p>|
+|Juniper IPSec Tunnel State Enumeration|<p>-</p>|`SNMP agent`|discovery.IPSec<p>Update: 3600</p>|
 |Juniper BGP Peer Enumeration|<p>-</p>|`SNMP agent`|discovery.bgp<p>Update: 3600</p>|
 |Juniper IKE Peer Enumeration|<p>-</p>|`SNMP agent`|discovery.ike<p>Update: 3600</p>|
-|Juniper IPSec Tunnel State Enumeration|<p>-</p>|`SNMP agent`|discovery.IPSec<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Simple ICMP Up Check|<p>-</p>|`Simple check`|icmpping[,,,,]<p>Update: 30</p>|
-|Simple ICMP Time|<p>-</p>|`Simple check`|icmppingsec[,,,,,]<p>Update: 30</p>|
-|Juniper Make/Model|<p>OID to query Unit Make and Model</p>|`SNMP agent`|juniper.make.model<p>Update: 3600</p>|
-|JunOS CPU % in use|<p>-</p>|`SNMP agent`|Junos.CPU<p>Update: 30</p>|
 |JunOS Memory % in use|<p>-</p>|`SNMP agent`|Junos.Mem<p>Update: 30</p>|
+|Simple ICMP Time|<p>-</p>|`Simple check`|icmppingsec[,,,,,]<p>Update: 30</p>|
+|JunOS CPU % in use|<p>-</p>|`SNMP agent`|Junos.CPU<p>Update: 30</p>|
+|Simple ICMP Up Check|<p>-</p>|`Simple check`|icmpping[,,,,]<p>Update: 30</p>|
+|Juniper Make/Model|<p>OID to query Unit Make and Model</p>|`SNMP agent`|juniper.make.model<p>Update: 3600</p>|
 |JunOS temperature|<p>-</p>|`SNMP agent`|Junos.Temp<p>Update: 30</p>|
+|ospfNbrState {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.14.10.1.6.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound traffic|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.10.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound discarded packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.13.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound error packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.14.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Outbound traffic|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.16.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Outbound discarded packets|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.19.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Outbound error packets|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.20.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|ospfNbrState {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.14.10.1.6.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|IPSec Tunnel State {#SNMPINDEX}|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.2636.3.39.1.5.1.2.1.1.4.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |bgpPeerState {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.2.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |ikePeerState {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.2636.3.52.1.1.2.1.6.1.4.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
-|IPSec Tunnel State {#SNMPINDEX}|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.2636.3.39.1.5.1.2.1.1.4.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

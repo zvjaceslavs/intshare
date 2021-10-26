@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:43Z</date>
+  <date>2021-10-26T04:39:31Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template JVM Generic</template>
-      <name>Template JVM Generic</name>
+      <template>JVM Generic</template>
+      <name>JVM Generic</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -1101,107 +1101,107 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}>({JVM Generic:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.7)</expression>
       <name>70% mem Heap Memory used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}>({JVM Generic:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.7)</expression>
       <name>70% mem Non-Heap Memory used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.used].last(0)}>({JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max].last(0)}*0.7)</expression>
       <name>70% mp CMS Old Gen used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.used].last(0)}>({JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max].last(0)}*0.7)</expression>
       <name>70% mp CMS Perm Gen used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used].last(0)}>({JVM Generic:jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max].last(0)}*0.7)</expression>
       <name>70% mp Code Cache used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.used].last(0)}>({JVM Generic:jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max].last(0)}*0.7)</expression>
       <name>70% mp Perm Gen used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.used].last(0)}>({JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max].last(0)}*0.7)</expression>
       <name>70% mp PS Old Gen used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.used].last(0)}>({JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max].last(0)}*0.7)</expression>
       <name>70% mp PS Perm Gen used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.used].last(0)}>({Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.used].last(0)}>({JVM Generic:jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max].last(0)}*0.7)</expression>
       <name>70% mp Tenured Gen used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}>({Template JVM Generic:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.7)</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}>({JVM Generic:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.7)</expression>
       <name>70% os Opened File Descriptor Count used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=GarbageCollector,name=ParNew",CollectionCount].last(0)}&lt;{Template JVM Generic:jmx["java.lang:type=GarbageCollector,name=ConcurrentMarkSweep",CollectionCount].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=GarbageCollector,name=ParNew",CollectionCount].last(0)}&lt;{JVM Generic:jmx["java.lang:type=GarbageCollector,name=ConcurrentMarkSweep",CollectionCount].last(0)}</expression>
       <name>gc Concurrent Mark Sweep in fire fighting mode on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=GarbageCollector,name=Copy",CollectionCount].last(0)}&lt;{Template JVM Generic:jmx["java.lang:type=GarbageCollector,name=MarkSweepCompact",CollectionCount].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=GarbageCollector,name=Copy",CollectionCount].last(0)}&lt;{JVM Generic:jmx["java.lang:type=GarbageCollector,name=MarkSweepCompact",CollectionCount].last(0)}</expression>
       <name>gc Mark Sweep Compact in fire fighting mode on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=Memory",HeapMemoryUsage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=Memory",HeapMemoryUsage.committed].last(0)}={JVM Generic:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}</expression>
       <name>mem Heap Memory fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed].last(0)}={JVM Generic:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}</expression>
       <name>mem Non-Heap Memory fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.committed].last(0)}={JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max].last(0)}</expression>
       <name>mp CMS Old Gen fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.committed].last(0)}={JVM Generic:jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max].last(0)}</expression>
       <name>mp CMS Perm Gen fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.committed].last(0)}={JVM Generic:jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max].last(0)}</expression>
       <name>mp Code Cache fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.committed].last(0)}={JVM Generic:jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max].last(0)}</expression>
       <name>mp Perm Gen fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.committed].last(0)}={JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max].last(0)}</expression>
       <name>mp PS Old Gen fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.committed].last(0)}={JVM Generic:jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max].last(0)}</expression>
       <name>mp PS Perm Gen fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.committed].last(0)}={Template JVM Generic:jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max].last(0)}</expression>
+      <expression>{JVM Generic:jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.committed].last(0)}={JVM Generic:jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max].last(0)}</expression>
       <name>mp Tenured Gen fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
@@ -1213,7 +1213,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=ClassLoading",TotalLoadedClassCount]</key>
           </item>
         </graph_item>
@@ -1221,7 +1221,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=ClassLoading",UnloadedClassCount]</key>
           </item>
         </graph_item>
@@ -1229,7 +1229,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=ClassLoading",LoadedClassCount]</key>
           </item>
         </graph_item>
@@ -1241,7 +1241,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]</key>
           </item>
         </graph_item>
@@ -1249,7 +1249,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]</key>
           </item>
         </graph_item>
@@ -1264,7 +1264,7 @@
           <color>FFCCCC</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=GarbageCollector,name=G1 Young Generation",CollectionCount]</key>
           </item>
         </graph_item>
@@ -1272,7 +1272,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=GarbageCollector,name=G1 Old Generation",CollectionTime]</key>
           </item>
         </graph_item>
@@ -1280,7 +1280,7 @@
           <sortorder>2</sortorder>
           <color>009900</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=GarbageCollector,name=G1 Young Generation",CollectionTime]</key>
           </item>
         </graph_item>
@@ -1295,7 +1295,7 @@
         <graph_item>
           <color>00BBBB</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=Memory",NonHeapMemoryUsage.used]</key>
           </item>
         </graph_item>
@@ -1303,7 +1303,7 @@
           <sortorder>1</sortorder>
           <color>CCCCFF</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=Memory",HeapMemoryUsage.used]</key>
           </item>
         </graph_item>
@@ -1316,7 +1316,7 @@
         <graph_item>
           <color>00CC00</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.committed]</key>
           </item>
         </graph_item>
@@ -1324,7 +1324,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used]</key>
           </item>
         </graph_item>
@@ -1332,7 +1332,7 @@
           <sortorder>2</sortorder>
           <color>000000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max]</key>
           </item>
         </graph_item>
@@ -1345,7 +1345,7 @@
         <graph_item>
           <color>00CC00</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Eden Space",Usage.committed]</key>
           </item>
         </graph_item>
@@ -1353,7 +1353,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Eden Space",Usage.used]</key>
           </item>
         </graph_item>
@@ -1366,7 +1366,7 @@
         <graph_item>
           <color>00CC00</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Old Gen",Usage.committed]</key>
           </item>
         </graph_item>
@@ -1374,7 +1374,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Old Gen",Usage.used]</key>
           </item>
         </graph_item>
@@ -1387,7 +1387,7 @@
         <graph_item>
           <color>00CC00</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Survivor Space",Usage.committed]</key>
           </item>
         </graph_item>
@@ -1395,7 +1395,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Survivor Space",Usage.used]</key>
           </item>
         </graph_item>
@@ -1410,7 +1410,7 @@
         <graph_item>
           <color>0000CC</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used]</key>
           </item>
         </graph_item>
@@ -1418,7 +1418,7 @@
           <sortorder>1</sortorder>
           <color>FF3333</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Survivor Space",Usage.used]</key>
           </item>
         </graph_item>
@@ -1426,7 +1426,7 @@
           <sortorder>2</sortorder>
           <color>00BB00</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Old Gen",Usage.used]</key>
           </item>
         </graph_item>
@@ -1434,7 +1434,7 @@
           <sortorder>3</sortorder>
           <color>CCCCFF</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=MemoryPool,name=G1 Eden Space",Usage.used]</key>
           </item>
         </graph_item>
@@ -1447,7 +1447,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=Threading",PeakThreadCount]</key>
           </item>
         </graph_item>
@@ -1455,7 +1455,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=Threading",DaemonThreadCount]</key>
           </item>
         </graph_item>
@@ -1463,7 +1463,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template JVM Generic</host>
+            <host>JVM Generic</host>
             <key>jmx["java.lang:type=Threading",ThreadCount]</key>
           </item>
         </graph_item>

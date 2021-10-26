@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:42Z</date>
+  <date>2021-10-26T04:43:56Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Axigen-Services</template>
-      <name>Template App Axigen-Services</name>
+      <template>App Axigen-Services</template>
+      <name>App Axigen-Services</name>
       <description>Axigen template</description>
       <groups>
         <group>
@@ -181,7 +181,7 @@
               <dependencies>
                 <dependency>
                   <name>Queue size 1000+ on {HOST.NAME}</name>
-                  <expression>{Template App Axigen-Services:QueueSize.count(#3,1000,"ge")}=3</expression>
+                  <expression>{App Axigen-Services:QueueSize.count(#3,1000,"ge")}=3</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -313,7 +313,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Axigen-Services</host>
+            <host>App Axigen-Services</host>
             <key>net.tcp.service.perf[imap]</key>
           </item>
         </graph_item>
@@ -321,7 +321,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App Axigen-Services</host>
+            <host>App Axigen-Services</host>
             <key>net.tcp.service.perf[pop]</key>
           </item>
         </graph_item>
@@ -329,7 +329,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template App Axigen-Services</host>
+            <host>App Axigen-Services</host>
             <key>net.tcp.service.perf[smtp]</key>
           </item>
         </graph_item>

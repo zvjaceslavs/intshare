@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:41Z</date>
+  <date>2021-10-26T04:40:34Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Zookeeper</template>
-      <name>Template App Zookeeper</name>
+      <template>App Zookeeper</template>
+      <name>App Zookeeper</name>
       <description>Zookeper Monitoring Need this userparameter in zabbix_agentd.conf: UserParameter=echo2nc[*],echo $1 | nc $2 $3</description>
       <groups>
         <group>
@@ -440,7 +440,7 @@
               <style>0</style>
               <resource>
                 <key>zookeeper[Server State]</key>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -462,7 +462,7 @@
               <style>0</style>
               <resource>
                 <key>zookeeper[Version]</key>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -484,7 +484,7 @@
               <style>0</style>
               <resource>
                 <name>Latency</name>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -506,7 +506,7 @@
               <style>0</style>
               <resource>
                 <name>Packets / second</name>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -528,7 +528,7 @@
               <style>0</style>
               <resource>
                 <name>Actives Watches</name>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -550,7 +550,7 @@
               <style>0</style>
               <resource>
                 <name>File Descriptor Count</name>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -572,7 +572,7 @@
               <style>0</style>
               <resource>
                 <name>Znodes</name>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -594,7 +594,7 @@
               <style>0</style>
               <resource>
                 <name>Alive Connections</name>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -616,7 +616,7 @@
               <style>0</style>
               <resource>
                 <name>Data Size</name>
-                <host>Template App Zookeeper</host>
+                <host>App Zookeeper</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -640,7 +640,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>({Template App Zookeeper:zookeeper[Open File Descriptor Count].last()}/{Template App Zookeeper:zookeeper[Max File Descriptor Count].last()})>0.8</expression>
+      <expression>({App Zookeeper:zookeeper[Open File Descriptor Count].last()}/{App Zookeeper:zookeeper[Max File Descriptor Count].last()})>0.8</expression>
       <name>zk - Open File Descriptor near the Max File Descriptor</name>
       <priority>AVERAGE</priority>
       <description>Open File Descriptor Count: {ITEM.VALUE1} Max File Descriptor Count: {ITEM.VALUE2}</description>
@@ -653,7 +653,7 @@
         <graph_item>
           <color>777777</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Watch Count]</key>
           </item>
         </graph_item>
@@ -667,7 +667,7 @@
           <color>6666FF</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Alive Connections]</key>
           </item>
         </graph_item>
@@ -680,7 +680,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Approximate Data Size]</key>
           </item>
         </graph_item>
@@ -690,7 +690,7 @@
       <name>File Descriptor Count</name>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template App Zookeeper</host>
+        <host>App Zookeeper</host>
         <key>zookeeper[Max File Descriptor Count]</key>
       </ymax_item_1>
       <graph_items>
@@ -698,7 +698,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Max File Descriptor Count]</key>
           </item>
         </graph_item>
@@ -707,7 +707,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Open File Descriptor Count]</key>
           </item>
         </graph_item>
@@ -719,7 +719,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Latency (avg)]</key>
           </item>
         </graph_item>
@@ -728,7 +728,7 @@
           <drawtype>DASHED_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Latency (max)]</key>
           </item>
         </graph_item>
@@ -737,7 +737,7 @@
           <drawtype>DASHED_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Latency (min)]</key>
           </item>
         </graph_item>
@@ -749,7 +749,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Packets Received / second]</key>
           </item>
         </graph_item>
@@ -757,7 +757,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Packets Sent / second]</key>
           </item>
         </graph_item>
@@ -769,7 +769,7 @@
         <graph_item>
           <color>DD00DD</color>
           <item>
-            <host>Template App Zookeeper</host>
+            <host>App Zookeeper</host>
             <key>zookeeper[Znode Count]</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:19Z</date>
+  <date>2021-10-26T04:44:37Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Draytek_130</template>
-      <name>Draytek Vigor 130 Template (v1.0)</name>
+      <template>Draytek_130</template>
+      <name>Draytek Vigor 130 (v1.0)</name>
       <description>Template for the Draytek Vigor 130 VDSL Modem.</description>
       <groups>
         <group>
@@ -274,7 +274,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>adslAturChanCurrTxRate.4</key>
           </item>
         </graph_item>
@@ -289,7 +289,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>ifOutOctects.1</key>
           </item>
         </graph_item>
@@ -298,7 +298,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>ifInOctects.1</key>
           </item>
         </graph_item>
@@ -312,7 +312,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>ifInOctects.4</key>
           </item>
         </graph_item>
@@ -322,7 +322,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>ifOutOctects.4</key>
           </item>
         </graph_item>
@@ -337,7 +337,7 @@
           <yaxisside>RIGHT</yaxisside>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>adslAtucChanCurrTxRate.4</key>
           </item>
         </graph_item>
@@ -347,7 +347,7 @@
           <yaxisside>RIGHT</yaxisside>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>adslAturCurrAttainableRate.4</key>
           </item>
         </graph_item>
@@ -360,7 +360,7 @@
           <color>990000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>adslAturCurrAtn.4</key>
           </item>
         </graph_item>
@@ -369,7 +369,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>adslAturCurrSnrMgn.4</key>
           </item>
         </graph_item>
@@ -378,7 +378,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Draytek_130</host>
+            <host>Draytek_130</host>
             <key>adslAturCurrOutputPwr.4</key>
           </item>
         </graph_item>

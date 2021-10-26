@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:45Z</date>
+  <date>2021-10-26T04:43:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template - MBTC Trading</template>
-      <name>Template - MBTC Trading</name>
+      <template>MBTC Trading</template>
+      <name>MBTC Trading</name>
       <description>Trading using MercadoBitcoin API. Build using MBTC api documentation (https://www.mercadobitcoin.com.br/api-doc/)</description>
       <groups>
         <group>

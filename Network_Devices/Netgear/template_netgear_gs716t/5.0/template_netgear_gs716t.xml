@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:23Z</date>
+  <date>2021-10-26T04:38:03Z</date>
   <groups>
     <group>
       <name>templates_switchs</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Netgear_GS716T</template>
-      <name>Template_Netgear_GS716T</name>
+      <template>Netgear_GS716T</template>
+      <name>Netgear_GS716T</name>
       <groups>
         <group>
           <name>templates_switchs</name>
@@ -2842,7 +2842,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.1</key>
           </item>
         </graph_item>
@@ -2852,7 +2852,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -2866,7 +2866,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.2</key>
           </item>
         </graph_item>
@@ -2875,7 +2875,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -2889,7 +2889,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.3</key>
           </item>
         </graph_item>
@@ -2898,7 +2898,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -2912,7 +2912,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.4</key>
           </item>
         </graph_item>
@@ -2921,7 +2921,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -2935,7 +2935,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.5</key>
           </item>
         </graph_item>
@@ -2944,7 +2944,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -2958,7 +2958,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.6</key>
           </item>
         </graph_item>
@@ -2967,7 +2967,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -2981,7 +2981,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.7</key>
           </item>
         </graph_item>
@@ -2990,7 +2990,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.7</key>
           </item>
         </graph_item>
@@ -3004,7 +3004,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.8</key>
           </item>
         </graph_item>
@@ -3013,7 +3013,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.8</key>
           </item>
         </graph_item>
@@ -3027,7 +3027,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.9</key>
           </item>
         </graph_item>
@@ -3036,7 +3036,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.9</key>
           </item>
         </graph_item>
@@ -3050,7 +3050,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.10</key>
           </item>
         </graph_item>
@@ -3059,7 +3059,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.10</key>
           </item>
         </graph_item>
@@ -3073,7 +3073,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.11</key>
           </item>
         </graph_item>
@@ -3082,7 +3082,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.11</key>
           </item>
         </graph_item>
@@ -3096,7 +3096,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.12</key>
           </item>
         </graph_item>
@@ -3105,7 +3105,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.12</key>
           </item>
         </graph_item>
@@ -3119,7 +3119,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.13</key>
           </item>
         </graph_item>
@@ -3128,7 +3128,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.13</key>
           </item>
         </graph_item>
@@ -3142,7 +3142,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.14</key>
           </item>
         </graph_item>
@@ -3151,7 +3151,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.14</key>
           </item>
         </graph_item>
@@ -3165,7 +3165,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.15</key>
           </item>
         </graph_item>
@@ -3174,7 +3174,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.15</key>
           </item>
         </graph_item>
@@ -3188,7 +3188,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifInOctects.16</key>
           </item>
         </graph_item>
@@ -3197,7 +3197,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS716T</host>
+            <host>Netgear_GS716T</host>
             <key>ifOutOctets.16</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:28Z</date>
+  <date>2021-10-26T04:39:13Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer Xerox WorkCentre 7855</template>
-      <name>Template Printer Xerox WorkCentre 7855</name>
+      <template>Printer Xerox WorkCentre 7855</template>
+      <name>Printer Xerox WorkCentre 7855</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -520,7 +520,7 @@
               <style>0</style>
               <resource>
                 <key>black.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7855</host>
+                <host>Printer Xerox WorkCentre 7855</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -542,7 +542,7 @@
               <style>0</style>
               <resource>
                 <key>cyan.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7855</host>
+                <host>Printer Xerox WorkCentre 7855</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -564,7 +564,7 @@
               <style>0</style>
               <resource>
                 <key>magenta.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7855</host>
+                <host>Printer Xerox WorkCentre 7855</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -586,7 +586,7 @@
               <style>0</style>
               <resource>
                 <key>yellow.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7855</host>
+                <host>Printer Xerox WorkCentre 7855</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -608,7 +608,7 @@
               <style>0</style>
               <resource>
                 <name>Toner Black</name>
-                <host>Template Printer Xerox WorkCentre 7855</host>
+                <host>Printer Xerox WorkCentre 7855</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -630,7 +630,7 @@
               <style>0</style>
               <resource>
                 <name>Toner Cyan</name>
-                <host>Template Printer Xerox WorkCentre 7855</host>
+                <host>Printer Xerox WorkCentre 7855</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -652,7 +652,7 @@
               <style>0</style>
               <resource>
                 <name>Toner Magenta</name>
-                <host>Template Printer Xerox WorkCentre 7855</host>
+                <host>Printer Xerox WorkCentre 7855</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -674,7 +674,7 @@
               <style>0</style>
               <resource>
                 <name>Toner Yellow</name>
-                <host>Template Printer Xerox WorkCentre 7855</host>
+                <host>Printer Xerox WorkCentre 7855</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -698,87 +698,87 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:drum.black.now.last(0)}&lt;3 and {Template Printer Xerox WorkCentre 7855:black.drum.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:drum.black.now.last(0)}&lt;3 and {Printer Xerox WorkCentre 7855:black.drum.type.nodata(3w)}=0</expression>
       <name>Drum Black (R1) Low ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:drum.cyan.now.last(0)}&lt;3 and {Template Printer Xerox WorkCentre 7855:cyan.drum.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:drum.cyan.now.last(0)}&lt;3 and {Printer Xerox WorkCentre 7855:cyan.drum.type.nodata(3w)}=0</expression>
       <name>Drum Cyan (R2) Low ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:drum.magenta.now.last(0)}&lt;3 and {Template Printer Xerox WorkCentre 7855:magenta.drum.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:drum.magenta.now.last(0)}&lt;3 and {Printer Xerox WorkCentre 7855:magenta.drum.type.nodata(3w)}=0</expression>
       <name>Drum Magenta (R3) Low ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:drum.yellow.now.last(0)}&lt;3 and {Template Printer Xerox WorkCentre 7855:yellow.drum.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:drum.yellow.now.last(0)}&lt;3 and {Printer Xerox WorkCentre 7855:yellow.drum.type.nodata(3w)}=0</expression>
       <name>Drum Yellow (R4) Low ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:drum.black.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:black.drum.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:drum.black.now.last(0)}=0 and {Printer Xerox WorkCentre 7855:black.drum.type.nodata(3w)}=0</expression>
       <name>Empty Drum Black (R1)</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:drum.cyan.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:cyan.drum.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:drum.cyan.now.last(0)}=0 and {Printer Xerox WorkCentre 7855:cyan.drum.type.nodata(3w)}=0</expression>
       <name>Empty Drum Cyan (R2)</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:drum.magenta.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:magenta.drum.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:drum.magenta.now.last(0)}=0 and {Printer Xerox WorkCentre 7855:magenta.drum.type.nodata(3w)}=0</expression>
       <name>Empty Drum Magenta (R3)</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:drum.yellow.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:yellow.drum.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:drum.yellow.now.last(0)}=0 and {Printer Xerox WorkCentre 7855:yellow.drum.type.nodata(3w)}=0</expression>
       <name>Empty Drum Yellow (R4)</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:black.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:black.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7855:black.cartridge.type.nodata(3w)}=0</expression>
       <name>Empty Toner - Black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:cyan.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7855:cyan.cartridge.type.nodata(3w)}=0</expression>
       <name>Empty Toner - Cyan</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:magenta.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:magenta.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:magenta.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7855:magenta.cartridge.type.nodata(3w)}=0</expression>
       <name>Empty Toner - Magenta</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:yellow.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:yellow.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:yellow.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7855:yellow.cartridge.type.nodata(3w)}=0</expression>
       <name>Empty Toner - Yellow</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:black.cartridge.toner.last(0)}&lt;3 and {Template Printer Xerox WorkCentre 7855:black.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:black.cartridge.toner.last(0)}&lt;3 and {Printer Xerox WorkCentre 7855:black.cartridge.type.nodata(3w)}=0</expression>
       <name>Toner Low - Black ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:cyan.cartridge.toner.last(0)}&lt;3 and {Template Printer Xerox WorkCentre 7855:cyan.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:cyan.cartridge.toner.last(0)}&lt;3 and {Printer Xerox WorkCentre 7855:cyan.cartridge.type.nodata(3w)}=0</expression>
       <name>Toner Low - Cyan ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:magenta.cartridge.toner.last(0)}&lt;3 and {Template Printer Xerox WorkCentre 7855:magenta.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:magenta.cartridge.toner.last(0)}&lt;3 and {Printer Xerox WorkCentre 7855:magenta.cartridge.type.nodata(3w)}=0</expression>
       <name>Toner Low - Magenta ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:yellow.cartridge.toner.last(0)}&lt;3 and {Template Printer Xerox WorkCentre 7855:yellow.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:yellow.cartridge.toner.last(0)}&lt;3 and {Printer Xerox WorkCentre 7855:yellow.cartridge.type.nodata(3w)}=0</expression>
       <name>Toner Low - Yellow ({ITEM.LASTVALUE})</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7855:waste.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7855:waste.toner.type.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7855:waste.toner.last(0)}=0 and {Printer Xerox WorkCentre 7855:waste.toner.type.nodata(3w)}=0</expression>
       <name>Toner waste container full</name>
       <priority>HIGH</priority>
     </trigger>
@@ -795,7 +795,7 @@
           <color>000000</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer Xerox WorkCentre 7855</host>
+            <host>Printer Xerox WorkCentre 7855</host>
             <key>black.cartridge.toner</key>
           </item>
         </graph_item>
@@ -812,7 +812,7 @@
           <color>00DDDD</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer Xerox WorkCentre 7855</host>
+            <host>Printer Xerox WorkCentre 7855</host>
             <key>cyan.cartridge.toner</key>
           </item>
         </graph_item>
@@ -829,7 +829,7 @@
           <color>00DDDD</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer Xerox WorkCentre 7855</host>
+            <host>Printer Xerox WorkCentre 7855</host>
             <key>cyan.cartridge.toner</key>
           </item>
         </graph_item>
@@ -839,7 +839,7 @@
           <color>DDDD00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer Xerox WorkCentre 7855</host>
+            <host>Printer Xerox WorkCentre 7855</host>
             <key>waste.toner</key>
           </item>
         </graph_item>
@@ -849,7 +849,7 @@
           <color>EE00EE</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer Xerox WorkCentre 7855</host>
+            <host>Printer Xerox WorkCentre 7855</host>
             <key>magenta.cartridge.toner</key>
           </item>
         </graph_item>
@@ -859,7 +859,7 @@
           <color>000000</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer Xerox WorkCentre 7855</host>
+            <host>Printer Xerox WorkCentre 7855</host>
             <key>black.cartridge.toner</key>
           </item>
         </graph_item>
@@ -876,7 +876,7 @@
           <color>DD00DD</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer Xerox WorkCentre 7855</host>
+            <host>Printer Xerox WorkCentre 7855</host>
             <key>magenta.cartridge.toner</key>
           </item>
         </graph_item>
@@ -893,7 +893,7 @@
           <color>DDDD00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Printer Xerox WorkCentre 7855</host>
+            <host>Printer Xerox WorkCentre 7855</host>
             <key>waste.toner</key>
           </item>
         </graph_item>

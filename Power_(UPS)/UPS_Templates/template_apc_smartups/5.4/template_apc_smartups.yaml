@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:44Z'
+  date: '2021-10-26T04:46:15Z'
   groups:
     -
       uuid: 0e60ac85bc3941e2a1d66a048ff164da
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 3e4548df497b4a54ad7ec25d71c8996c
-      template: 'Template Schneider UPS'
-      name: 'Template Schneider UPS'
+      template: 'Schneider UPS'
+      name: 'Schneider UPS'
       groups:
         -
           name: UPS
@@ -29,12 +29,12 @@ zabbix_export:
           triggers:
             -
               uuid: a6b53988342d4efb82b623f36f8a7826
-              expression: 'last(/Template Schneider UPS/get.battery.status)=4'
+              expression: 'last(/Schneider UPS/get.battery.status)=4'
               name: 'Battery status change to depleted'
               priority: HIGH
             -
               uuid: 0800c7317f6c4ee0b36c8edfc9182985
-              expression: 'last(/Template Schneider UPS/get.battery.status)=3'
+              expression: 'last(/Schneider UPS/get.battery.status)=3'
               name: 'Battery status change to low'
               priority: WARNING
         -
@@ -104,7 +104,7 @@ zabbix_export:
           triggers:
             -
               uuid: fb68573988ba4ab3b21cbcd54e290847
-              expression: 'last(/Template Schneider UPS/mib_battery_replace)=2'
+              expression: 'last(/Schneider UPS/mib_battery_replace)=2'
               name: 'The battery has to be replaced'
               priority: HIGH
         -
@@ -199,7 +199,7 @@ zabbix_export:
           triggers:
             -
               uuid: 43ee396688c542fc95dc89a850aeb458
-              expression: 'last(/Template Schneider UPS/mib_ups_uptime)=0'
+              expression: 'last(/Schneider UPS/mib_ups_uptime)=0'
               name: 'The management board has restarted'
               priority: WARNING
         -
@@ -357,7 +357,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: d2fe008fadb745f2ab0b9dd9ca60f1c2
-                  expression: 'last(/Template Schneider UPS/upsAlarmId[{#ALARM}])>0'
+                  expression: 'last(/Schneider UPS/upsAlarmId[{#ALARM}])>0'
                   name: 'An Alarm has been detected: ID {last(/Template Schneider UPS/upsAlarmId[{#ALARM}])}'
                   priority: WARNING
                   description: |
@@ -491,7 +491,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: fb0d2ea947f7449b88c61093e025f1a9
-                  expression: 'last(/Template Schneider UPS/upsInputVoltage[{#INDEX}])=0'
+                  expression: 'last(/Schneider UPS/upsInputVoltage[{#INDEX}])=0'
                   name: 'No power has been detected on input n°{#INDEX}'
                   priority: HIGH
           graph_prototypes:
@@ -505,13 +505,13 @@ zabbix_export:
                   color: 009FDB
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Schneider UPS'
+                    host: 'Schneider UPS'
                     key: 'upsInputFrequency[{#INDEX}]'
                 -
                   sortorder: '2'
                   color: E30613
                   item:
-                    host: 'Template Schneider UPS'
+                    host: 'Schneider UPS'
                     key: 'upsInputVoltage[{#INDEX}]'
         -
           uuid: 08f2918ab6e3481699b22480a0533149
@@ -588,13 +588,13 @@ zabbix_export:
                   sortorder: '1'
                   color: E30613
                   item:
-                    host: 'Template Schneider UPS'
+                    host: 'Schneider UPS'
                     key: 'upsOutputVoltage[{#INDEX}]'
                 -
                   sortorder: '2'
                   color: 009FDB
                   item:
-                    host: 'Template Schneider UPS'
+                    host: 'Schneider UPS'
                     key: 'upsOutputCurrent[{#INDEX}]'
       dashboards:
         -
@@ -617,7 +617,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'Input {#INDEX}'
-                        host: 'Template Schneider UPS'
+                        host: 'Schneider UPS'
                 -
                   type: GRAPH_PROTOTYPE
                   x: '7'
@@ -633,7 +633,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'Output {#INDEX}'
-                        host: 'Template Schneider UPS'
+                        host: 'Schneider UPS'
                 -
                   type: GRAPH_CLASSIC
                   'y': '5'
@@ -645,7 +645,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: Output
-                        host: 'Template Schneider UPS'
+                        host: 'Schneider UPS'
                 -
                   type: GRAPH_CLASSIC
                   x: '7'
@@ -662,7 +662,7 @@ zabbix_export:
                       name: itemid
                       value:
                         key: mib_time_on_battery
-                        host: 'Template Schneider UPS'
+                        host: 'Schneider UPS'
                 -
                   type: GRAPH_CLASSIC
                   x: '14'
@@ -679,7 +679,7 @@ zabbix_export:
                       name: itemid
                       value:
                         key: mib_battery_runtime_remain
-                        host: 'Template Schneider UPS'
+                        host: 'Schneider UPS'
                 -
                   type: CLOCK
                   x: '21'
@@ -696,7 +696,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: Battery
-                        host: 'Template Schneider UPS'
+                        host: 'Schneider UPS'
       valuemaps:
         -
           uuid: 7f423af5a8794693be8a7f6af871c1cb
@@ -768,13 +768,13 @@ zabbix_export:
           color: 199C0D
           yaxisside: RIGHT
           item:
-            host: 'Template Schneider UPS'
+            host: 'Schneider UPS'
             key: upsBatteryTemperature
         -
           sortorder: '2'
           color: F63100
           item:
-            host: 'Template Schneider UPS'
+            host: 'Schneider UPS'
             key: upsBatteryVoltage
     -
       uuid: e125ed5a4a904bd68ce67af4a5a06e2b
@@ -785,11 +785,11 @@ zabbix_export:
           color: 199C0D
           yaxisside: RIGHT
           item:
-            host: 'Template Schneider UPS'
+            host: 'Schneider UPS'
             key: upsHighPrecOutputEfficiency
         -
           sortorder: '2'
           color: 2774A4
           item:
-            host: 'Template Schneider UPS'
+            host: 'Schneider UPS'
             key: upsHighPrecOutputVoltage

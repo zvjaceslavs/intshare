@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:04Z</date>
+  <date>2021-10-26T04:44:21Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -120,8 +120,8 @@
       </macros>
     </template>
     <template>
-      <template>Template UPS Microtek MAX plus SERIES 2kVA</template>
-      <name>Template UPS Microtek MAX plus SERIES 2kVA</name>
+      <template>UPS Microtek MAX plus SERIES 2kVA</template>
+      <name>UPS Microtek MAX plus SERIES 2kVA</name>
       <description>Created 21 Apr 2020 by Charles for Aurinoco by full clone of Template UPS - diogont (thanks Diogo Teixeira) then: . Added macros: .. {$UPS_BATTERY_VOLTAGE_LOW} .. {$UPS_BATTERY_VOLTAGE_VERY_LOW} . Deleted unpopulated and incredible items: .. UPS battery capacity (%) .. UPS battery temperature .. UPS input current .. UPS input power .. UPS run time remaining .. UPS time on battery . Fixed item: UPS battery voltage . Added triggers for: .. UPS battery voltage low .. UPS battery voltage very low</description>
       <templates>
         <template>
@@ -305,7 +305,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP ping</name>
-                  <expression>{Template UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
+                  <expression>{UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -316,7 +316,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP ping</name>
-                  <expression>{Template UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
+                  <expression>{UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -375,7 +375,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP ping</name>
-                  <expression>{Template UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
+                  <expression>{UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -412,7 +412,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP ping</name>
-                  <expression>{Template UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
+                  <expression>{UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -425,7 +425,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP ping</name>
-                  <expression>{Template UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
+                  <expression>{UPS Microtek MAX plus SERIES 2kVA:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -455,7 +455,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template UPS Microtek MAX plus SERIES 2kVA</host>
+            <host>UPS Microtek MAX plus SERIES 2kVA</host>
             <key>upsBasicBatteryStatus</key>
           </item>
         </graph_item>
@@ -470,7 +470,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS Microtek MAX plus SERIES 2kVA</host>
+            <host>UPS Microtek MAX plus SERIES 2kVA</host>
             <key>upsAdvOutputCurrent</key>
           </item>
         </graph_item>
@@ -484,7 +484,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF4000</color>
           <item>
-            <host>Template UPS Microtek MAX plus SERIES 2kVA</host>
+            <host>UPS Microtek MAX plus SERIES 2kVA</host>
             <key>upsAdvOutputFrequency</key>
           </item>
         </graph_item>
@@ -499,7 +499,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS Microtek MAX plus SERIES 2kVA</host>
+            <host>UPS Microtek MAX plus SERIES 2kVA</host>
             <key>upsAdvOutputLoad</key>
           </item>
         </graph_item>
@@ -514,7 +514,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS Microtek MAX plus SERIES 2kVA</host>
+            <host>UPS Microtek MAX plus SERIES 2kVA</host>
             <key>upsAdvOutputPower</key>
           </item>
         </graph_item>
@@ -527,7 +527,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS Microtek MAX plus SERIES 2kVA</host>
+            <host>UPS Microtek MAX plus SERIES 2kVA</host>
             <key>upsAdvInputVoltage</key>
           </item>
         </graph_item>
@@ -536,7 +536,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS Microtek MAX plus SERIES 2kVA</host>
+            <host>UPS Microtek MAX plus SERIES 2kVA</host>
             <key>upsAdvOutputVoltage</key>
           </item>
         </graph_item>

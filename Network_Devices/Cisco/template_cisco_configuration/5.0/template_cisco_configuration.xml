@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:49Z</date>
+  <date>2021-10-26T04:41:49Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Cisco Configuration</template>
-      <name>Template SNMP Cisco Configuration</name>
+      <template>SNMP Cisco Configuration</template>
+      <name>SNMP Cisco Configuration</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -109,7 +109,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template SNMP Cisco Configuration:ccmHistoryRunningLastChanged.last()}>{Template SNMP Cisco Configuration:ccmHistoryRunningLastSaved.last()}</expression>
+      <expression>{SNMP Cisco Configuration:ccmHistoryRunningLastChanged.last()}>{SNMP Cisco Configuration:ccmHistoryRunningLastSaved.last()}</expression>
       <name>Configuration changes is not saved on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>

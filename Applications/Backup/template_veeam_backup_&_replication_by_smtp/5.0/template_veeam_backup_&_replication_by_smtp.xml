@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:25Z</date>
+  <date>2021-10-26T04:42:28Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template VEEAM SMTP trapper</template>
-      <name>Template VEEAM SMTP trapper</name>
+      <template>VEEAM SMTP trapper</template>
+      <name>VEEAM SMTP trapper</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -72,7 +72,7 @@
                   <dependencies>
                     <dependency>
                       <name>Job {#VEEAMJOB} did not occur last {$BACKUP_PERIODICITY:"{#VEEAMJOB}"}</name>
-                      <expression>{Template VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].nodata({$BACKUP_PERIODICITY:"{#VEEAMJOB}"})}=1</expression>
+                      <expression>{VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].nodata({$BACKUP_PERIODICITY:"{#VEEAMJOB}"})}=1</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>

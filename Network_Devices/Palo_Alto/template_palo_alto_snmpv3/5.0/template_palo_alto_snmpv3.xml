@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:59Z</date>
+  <date>2021-10-26T04:44:15Z</date>
   <groups>
     <group>
       <name>Templates/Network devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Palo Alto SNMPv3 Auth Priv</template>
-      <name>Template Palo Alto SNMPv3 Auth Priv</name>
+      <template>Palo Alto SNMPv3 Auth Priv</template>
+      <name>Palo Alto SNMPv3 Auth Priv</name>
       <groups>
         <group>
           <name>Templates/Network devices</name>
@@ -436,7 +436,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Palo Alto SNMPv3 Auth Priv</host>
+                    <host>Palo Alto SNMPv3 Auth Priv</host>
                     <key>hrStorageSize[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -444,7 +444,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template Palo Alto SNMPv3 Auth Priv</host>
+                    <host>Palo Alto SNMPv3 Auth Priv</host>
                     <key>hrStorageUsed[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -687,7 +687,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Palo Alto SNMPv3 Auth Priv</host>
+                    <host>Palo Alto SNMPv3 Auth Priv</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -695,7 +695,7 @@
                   <sortorder>1</sortorder>
                   <color>4000FF</color>
                   <item>
-                    <host>Template Palo Alto SNMPv3 Auth Priv</host>
+                    <host>Palo Alto SNMPv3 Auth Priv</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -703,7 +703,7 @@
                   <sortorder>2</sortorder>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Palo Alto SNMPv3 Auth Priv</host>
+                    <host>Palo Alto SNMPv3 Auth Priv</host>
                     <key>ifInErrors[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -711,7 +711,7 @@
                   <sortorder>3</sortorder>
                   <color>FFA726</color>
                   <item>
-                    <host>Template Palo Alto SNMPv3 Auth Priv</host>
+                    <host>Palo Alto SNMPv3 Auth Priv</host>
                     <key>ifOutErrors[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -719,7 +719,7 @@
                   <sortorder>4</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>Template Palo Alto SNMPv3 Auth Priv</host>
+                    <host>Palo Alto SNMPv3 Auth Priv</host>
                     <key>ifInDiscards[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -727,7 +727,7 @@
                   <sortorder>5</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>Template Palo Alto SNMPv3 Auth Priv</host>
+                    <host>Palo Alto SNMPv3 Auth Priv</host>
                     <key>ifOutDiscards[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

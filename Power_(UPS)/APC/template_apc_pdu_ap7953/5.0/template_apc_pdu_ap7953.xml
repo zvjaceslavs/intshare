@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:37Z</date>
+  <date>2021-10-26T04:39:23Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP APC PDU AP79XX</template>
-      <name>Template SNMP APC PDU AP79XX</name>
+      <template>SNMP APC PDU AP79XX</template>
+      <name>SNMP APC PDU AP79XX</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -173,7 +173,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template SNMP APC PDU AP79XX:rPDULoadStatusLoadState.1.last()}&lt;>1 or {Template SNMP APC PDU AP79XX:rPDULoadStatusLoadState.2.last()}&lt;>1 or {Template SNMP APC PDU AP79XX:rPDULoadStatusLoadState.3.last()}&lt;>1</expression>
+      <expression>{SNMP APC PDU AP79XX:rPDULoadStatusLoadState.1.last()}&lt;>1 or {SNMP APC PDU AP79XX:rPDULoadStatusLoadState.2.last()}&lt;>1 or {SNMP APC PDU AP79XX:rPDULoadStatusLoadState.3.last()}&lt;>1</expression>
       <name>APC PDU Status Load State</name>
       <priority>HIGH</priority>
     </trigger>
@@ -188,7 +188,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template SNMP APC PDU AP79XX</host>
+            <host>SNMP APC PDU AP79XX</host>
             <key>rPDULoadStatusLoad.1</key>
           </item>
         </graph_item>
@@ -196,7 +196,7 @@
           <sortorder>1</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP APC PDU AP79XX</host>
+            <host>SNMP APC PDU AP79XX</host>
             <key>rPDULoadStatusLoad.2</key>
           </item>
         </graph_item>
@@ -204,7 +204,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template SNMP APC PDU AP79XX</host>
+            <host>SNMP APC PDU AP79XX</host>
             <key>rPDULoadStatusLoad.3</key>
           </item>
         </graph_item>

@@ -1,4 +1,4 @@
-# Template OpenVPN
+# OpenVPN
 
 ## Description
 
@@ -62,7 +62,7 @@ There are no template links in this template.
 
 There are no triggers in this template.
 
-# Template VPN Server
+# VPN Server
 
 ## Description
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:05Z</date>
+  <date>2021-10-26T04:38:47Z</date>
   <groups>
     <group>
       <name>Templates new</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP ReadyNAS Tega</template>
-      <name>Template SNMP ReadyNAS Tega</name>
+      <template>SNMP ReadyNAS Tega</template>
+      <name>SNMP ReadyNAS Tega</name>
       <description>For Netgear Ready NAS http://www.downloads.netgear.com/files/ReadyNAS/READYNAS-MIB.txt Template is used for monitoring of the disks state, disks temperature, a status of volumes and general state device. Calculated value can be unavailable the some time</description>
       <groups>
         <group>
@@ -215,7 +215,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP ReadyNAS Tega</host>
+                    <host>SNMP ReadyNAS Tega</host>
                     <key>disktemperature_c[{#DISKNUMBER}]</key>
                   </item>
                 </graph_item>
@@ -381,7 +381,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP ReadyNAS Tega</host>
+                    <host>SNMP ReadyNAS Tega</host>
                     <key>volumefreepercent[{#VOLUMENUMBER}]</key>
                   </item>
                 </graph_item>
@@ -398,7 +398,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP ReadyNAS Tega</host>
+                    <host>SNMP ReadyNAS Tega</host>
                     <key>volumefreesize[{#VOLUMENUMBER}]</key>
                   </item>
                 </graph_item>
@@ -406,7 +406,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP ReadyNAS Tega</host>
+                    <host>SNMP ReadyNAS Tega</host>
                     <key>volumefreeusedsize[{#VOLUMENUMBER}]</key>
                   </item>
                 </graph_item>

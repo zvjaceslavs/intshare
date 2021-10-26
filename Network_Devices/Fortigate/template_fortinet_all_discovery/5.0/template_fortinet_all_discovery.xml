@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:10Z</date>
+  <date>2021-10-26T04:43:17Z</date>
   <groups>
     <group>
       <name>Fortigate</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module Interfaces SNMPv2</template>
-      <name>Template Module Interfaces SNMPv2</name>
+      <template>Module Interfaces SNMPv2</template>
+      <name>Module Interfaces SNMPv2</name>
       <description>Template Interfaces version: 0.14 MIBs used: IF-MIB</description>
       <groups>
         <group>
@@ -385,9 +385,9 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}&lt;0 and {Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0 and ( {Template Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {Template Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {Template Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {Template Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {Template Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {Template Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2)</expression>
+              <expression>{Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}&lt;0 and {Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0 and ( {Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {Module Interfaces SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}>0 and {Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].prev()}>0) or ({Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</recovery_expression>
+              <recovery_expression>({Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}>0 and {Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].prev()}>0) or ({Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before</name>
               <priority>INFO</priority>
               <description>Last value: {ITEM.LASTVALUE1}. This Ethernet connection has transitioned down from its known maximum speed. This might be a sign of autonegotiation issues. Ack to close.</description>
@@ -395,15 +395,15 @@
               <dependencies>
                 <dependency>
                   <name>Interface {#IFNAME}({#IFALIAS}): Link down</name>
-                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
-                  <recovery_expression>{Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
+                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
+                  <recovery_expression>{Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template Module Interfaces SNMPv2:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}>({$IF_UTIL_MAX:"{#IFNAME}"}/100)*{Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} or {Template Module Interfaces SNMPv2:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}>({$IF_UTIL_MAX:"{#IFNAME}"}/100)*{Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}) and {Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0</expression>
+              <expression>({Module Interfaces SNMPv2:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}>({$IF_UTIL_MAX:"{#IFNAME}"}/100)*{Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} or {Module Interfaces SNMPv2:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}>({$IF_UTIL_MAX:"{#IFNAME}"}/100)*{Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}) and {Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Module Interfaces SNMPv2:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF_UTIL_MAX:"{#IFNAME}"}-3)/100)*{Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} and {Template Module Interfaces SNMPv2:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF_UTIL_MAX:"{#IFNAME}"}-3)/100)*{Template Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}</recovery_expression>
+              <recovery_expression>{Module Interfaces SNMPv2:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF_UTIL_MAX:"{#IFNAME}"}-3)/100)*{Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} and {Module Interfaces SNMPv2:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF_UTIL_MAX:"{#IFNAME}"}-3)/100)*{Module Interfaces SNMPv2:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): High bandwidth usage >{$IF_UTIL_MAX:"{#IFNAME}"}%</name>
               <priority>WARNING</priority>
               <description>Last value: {ITEM.LASTVALUE1}.</description>
@@ -411,15 +411,15 @@
               <dependencies>
                 <dependency>
                   <name>Interface {#IFNAME}({#IFALIAS}): Link down</name>
-                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
-                  <recovery_expression>{Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
+                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
+                  <recovery_expression>{Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Module Interfaces SNMPv2:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>{$IF_ERRORS_WARN:"{#IFNAME}"} or {Template Module Interfaces SNMPv2:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>{$IF_ERRORS_WARN:"{#IFNAME}"}</expression>
+              <expression>{Module Interfaces SNMPv2:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>{$IF_ERRORS_WARN:"{#IFNAME}"} or {Module Interfaces SNMPv2:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>{$IF_ERRORS_WARN:"{#IFNAME}"}</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Module Interfaces SNMPv2:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}&lt;{$IF_ERRORS_WARN:"{#IFNAME}"}*0.8 and {Template Module Interfaces SNMPv2:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}&lt;{$IF_ERRORS_WARN:"{#IFNAME}"}*0.8</recovery_expression>
+              <recovery_expression>{Module Interfaces SNMPv2:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}&lt;{$IF_ERRORS_WARN:"{#IFNAME}"}*0.8 and {Module Interfaces SNMPv2:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}&lt;{$IF_ERRORS_WARN:"{#IFNAME}"}*0.8</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): High error rate</name>
               <priority>WARNING</priority>
               <description>Last value: {ITEM.LASTVALUE1}. Recovers when below 80% of {$IF_ERRORS_WARN:"{#IFNAME}"} threshold</description>
@@ -427,8 +427,8 @@
               <dependencies>
                 <dependency>
                   <name>Interface {#IFNAME}({#IFALIAS}): Link down</name>
-                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
-                  <recovery_expression>{Template Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
+                  <expression>{$IFCONTROL:"{#IFNAME}"}=1 and ({Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</expression>
+                  <recovery_expression>{Module Interfaces SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
@@ -441,7 +441,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>80FF00</color>
                   <item>
-                    <host>Template Module Interfaces SNMPv2</host>
+                    <host>Module Interfaces SNMPv2</host>
                     <key>net.if.in[ifHCInOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -450,7 +450,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>0040FF</color>
                   <item>
-                    <host>Template Module Interfaces SNMPv2</host>
+                    <host>Module Interfaces SNMPv2</host>
                     <key>net.if.out[ifHCOutOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -484,7 +484,7 @@
               <style>0</style>
               <resource>
                 <name>CPU %</name>
-                <host>Template Module Interfaces SNMPv2</host>
+                <host>Module Interfaces SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -506,7 +506,7 @@
               <style>0</style>
               <resource>
                 <name>Current Connections</name>
-                <host>Template Module Interfaces SNMPv2</host>
+                <host>Module Interfaces SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -528,7 +528,7 @@
               <style>0</style>
               <resource>
                 <name>Disk use</name>
-                <host>Template Module Interfaces SNMPv2</host>
+                <host>Module Interfaces SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -550,7 +550,7 @@
               <style>0</style>
               <resource>
                 <name>RAM %</name>
-                <host>Template Module Interfaces SNMPv2</host>
+                <host>Module Interfaces SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -572,7 +572,7 @@
               <style>0</style>
               <resource>
                 <name>UPTIME FORTIGATE</name>
-                <host>Template Module Interfaces SNMPv2</host>
+                <host>Module Interfaces SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -594,7 +594,7 @@
               <style>0</style>
               <resource>
                 <key>fortinetSysSerial</key>
-                <host>Template Module Interfaces SNMPv2</host>
+                <host>Module Interfaces SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -616,7 +616,7 @@
               <style>0</style>
               <resource>
                 <key>SysmFirmwareVersion</key>
-                <host>Template Module Interfaces SNMPv2</host>
+                <host>Module Interfaces SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -647,7 +647,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Module Interfaces SNMPv2</host>
+            <host>Module Interfaces SNMPv2</host>
             <key>fortinetCurrentCPUUtil</key>
           </item>
         </graph_item>
@@ -661,7 +661,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>999900</color>
           <item>
-            <host>Template Module Interfaces SNMPv2</host>
+            <host>Module Interfaces SNMPv2</host>
             <key>fortinetCurrentConnections</key>
           </item>
         </graph_item>
@@ -680,7 +680,7 @@
         <graph_item>
           <color>AA0000</color>
           <item>
-            <host>Template Module Interfaces SNMPv2</host>
+            <host>Module Interfaces SNMPv2</host>
             <key>fortinetUsedStorage</key>
           </item>
         </graph_item>
@@ -689,7 +689,7 @@
           <color>006600</color>
           <type>GRAPH_SUM</type>
           <item>
-            <host>Template Module Interfaces SNMPv2</host>
+            <host>Module Interfaces SNMPv2</host>
             <key>fortinetTotalStorage</key>
           </item>
         </graph_item>
@@ -702,7 +702,7 @@
         <graph_item>
           <color>FFB300</color>
           <item>
-            <host>Template Module Interfaces SNMPv2</host>
+            <host>Module Interfaces SNMPv2</host>
             <key>fortinetCurrentRAMUtil</key>
           </item>
         </graph_item>
@@ -715,7 +715,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Module Interfaces SNMPv2</host>
+            <host>Module Interfaces SNMPv2</host>
             <key>fortinetUpTime</key>
           </item>
         </graph_item>

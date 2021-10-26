@@ -1,4 +1,4 @@
-# Template SNMPv2 Interfaces packets per second
+# SNMPv2 Interfaces packets per second
 
 ## Description
 
@@ -53,5 +53,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Interface Interface {#IFNAME}({#IFALIAS}): high Inbound brodcast rate|<p>-</p>|<p>**Expression**: {Template SNMPv2 Interfaces packets per second:ifHCInBroadcastPkts[{#IFNAME}].avg(1)}>=10</p><p>**Recovery expression**: </p>|warning|
-|Interface Interface {#IFNAME}({#IFALIAS}): high Inbound brodcast rate (LLD)|<p>-</p>|<p>**Expression**: {Template SNMPv2 Interfaces packets per second:ifHCInBroadcastPkts[{#IFNAME}].avg(1)}>=10</p><p>**Recovery expression**: </p>|warning|
+|Interface Interface {#IFNAME}({#IFALIAS}): high Inbound brodcast rate|<p>-</p>|<p>**Expression**: {SNMPv2 Interfaces packets per second:ifHCInBroadcastPkts[{#IFNAME}].avg(1)}>=10</p><p>**Recovery expression**: </p>|warning|
+|Interface Interface {#IFNAME}({#IFALIAS}): high Inbound brodcast rate (LLD)|<p>-</p>|<p>**Expression**: {SNMPv2 Interfaces packets per second:ifHCInBroadcastPkts[{#IFNAME}].avg(1)}>=10</p><p>**Recovery expression**: </p>|warning|

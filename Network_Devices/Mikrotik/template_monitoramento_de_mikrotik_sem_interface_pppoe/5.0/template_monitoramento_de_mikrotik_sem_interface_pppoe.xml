@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:38Z</date>
+  <date>2021-10-26T04:44:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Mikrotik</template>
-      <name>Template Mikrotik</name>
+      <template>Mikrotik</template>
+      <name>Mikrotik</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -385,7 +385,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Mikrotik</host>
+                    <host>Mikrotik</host>
                     <key>net.if.in[ifHCInOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -394,7 +394,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>2774A4</color>
                   <item>
-                    <host>Template Mikrotik</host>
+                    <host>Mikrotik</host>
                     <key>net.if.out[ifHCOutOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -404,7 +404,7 @@
                   <color>F63100</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Mikrotik</host>
+                    <host>Mikrotik</host>
                     <key>net.if.out.errors[ifOutErrors.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -414,7 +414,7 @@
                   <color>A54F10</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Mikrotik</host>
+                    <host>Mikrotik</host>
                     <key>net.if.in.errors[ifInErrors.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -424,7 +424,7 @@
                   <color>FC6EA3</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Mikrotik</host>
+                    <host>Mikrotik</host>
                     <key>net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -434,7 +434,7 @@
                   <color>6C59DC</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Mikrotik</host>
+                    <host>Mikrotik</host>
                     <key>net.if.in.discards[ifInDiscards.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -519,7 +519,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Mikrotik:mtxrFirmwareUpgradeVersion.prev()}&lt;>{Template Mikrotik:mtxrFirmwareVersion.prev()}</expression>
+      <expression>{Mikrotik:mtxrFirmwareUpgradeVersion.prev()}&lt;>{Mikrotik:mtxrFirmwareVersion.prev()}</expression>
       <name>Firmware Aguardando Upgrade</name>
       <priority>INFO</priority>
     </trigger>
@@ -535,7 +535,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>CCCC00</color>
           <item>
-            <host>Template Mikrotik</host>
+            <host>Mikrotik</host>
             <key>mtxCPULoad</key>
           </item>
         </graph_item>
@@ -553,7 +553,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>880088</color>
           <item>
-            <host>Template Mikrotik</host>
+            <host>Mikrotik</host>
             <key>mtxrHlTemperature</key>
           </item>
         </graph_item>
@@ -571,7 +571,7 @@
           <color>00BB00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template Mikrotik</host>
+            <host>Mikrotik</host>
             <key>mikrotik.used.memory</key>
           </item>
         </graph_item>
@@ -582,7 +582,7 @@
           <calc_fnc>MAX</calc_fnc>
           <type>GRAPH_SUM</type>
           <item>
-            <host>Template Mikrotik</host>
+            <host>Mikrotik</host>
             <key>mikrotik.total.memory</key>
           </item>
         </graph_item>

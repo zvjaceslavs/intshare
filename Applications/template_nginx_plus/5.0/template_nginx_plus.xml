@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:52Z</date>
+  <date>2021-10-26T04:45:14Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Nginx Plus</template>
-      <name>Template App Nginx Plus</name>
+      <template>App Nginx Plus</template>
+      <name>App Nginx Plus</name>
       <groups>
         <group>
           <name>Templates/Applications</name>

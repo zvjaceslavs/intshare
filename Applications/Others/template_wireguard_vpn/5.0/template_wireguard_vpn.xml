@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:59Z</date>
+  <date>2021-10-26T04:42:00Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App WireGuard</template>
-      <name>Template App WireGuard</name>
+      <template>App WireGuard</template>
+      <name>App WireGuard</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -133,7 +133,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template App WireGuard</host>
+                    <host>App WireGuard</host>
                     <key>wg.peers.connected[{#WGINTERFACE}]</key>
                   </item>
                 </graph_item>
@@ -141,7 +141,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App WireGuard</host>
+                    <host>App WireGuard</host>
                     <key>wg.peers.count[{#WGINTERFACE}]</key>
                   </item>
                 </graph_item>
@@ -316,7 +316,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template App WireGuard</host>
+                    <host>App WireGuard</host>
                     <key>wg.endpoint.transferdown[{#PEER}]</key>
                   </item>
                 </graph_item>
@@ -324,7 +324,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App WireGuard</host>
+                    <host>App WireGuard</host>
                     <key>wg.endpoint.transferup[{#PEER}]</key>
                   </item>
                 </graph_item>

@@ -1,4 +1,4 @@
-# Template SNMP THECUS NAS
+# SNMP THECUS NAS
 
 ## Overview
 
@@ -39,19 +39,26 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Hard disks discovery|<p>-</p>|`SNMP agent`|nasDisk.discovery<p>Update: 1h</p>|
 |RAID discovery|<p>-</p>|`SNMP agent`|nasRaid.discovery<p>Update: 1h</p>|
+|Hard disks discovery|<p>-</p>|`SNMP agent`|nasDisk.discovery<p>Update: 1h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|System fan status|<p>-</p>|`SNMP agent`|systemFanStatus<p>Update: 60</p>|
-|System firmware|<p>-</p>|`SNMP agent`|systemFirmware<p>Update: 3h</p>|
+|System vendor|<p>-</p>|`SNMP agent`|systemVendor<p>Update: 3h</p>|
 |System Mini-UPS Status|<p>-</p>|`SNMP agent`|systemMiniUPSStatus<p>Update: 60</p>|
 |System model|<p>-</p>|`SNMP agent`|systemModel<p>Update: 3h</p>|
 |System status|<p>-</p>|`SNMP agent`|systemStatus<p>Update: 60</p>|
 |System temperature|<p>System temperature in centigrade</p>|`SNMP agent`|systemTemperature<p>Update: 60</p>|
-|System vendor|<p>-</p>|`SNMP agent`|systemVendor<p>Update: 3h</p>|
+|System fan status|<p>-</p>|`SNMP agent`|systemFanStatus<p>Update: 60</p>|
+|System firmware|<p>-</p>|`SNMP agent`|systemFirmware<p>Update: 3h</p>|
+|RAID ID of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidID[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID level of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidLevel[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID number of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidNum[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID size of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidSize[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|RAID status of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidStatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|RAID units of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidUnits[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|RAID used percent of {#SNMPVALUE} (%)|<p>-</p>|`SNMP agent`|raidUsedPercentage[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Disk Capacity {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskCapacity[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Disk ID {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskID[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
 |Model of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskModel[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
@@ -63,32 +70,25 @@ There are no template links in this template.
 |S.M.A.R.T. info of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskSMARTHealthCheck[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |Status of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskStatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |Disk Tray Number {#SNMPVALUE}|<p>-</p>|`SNMP agent`|diskTrayNum[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
-|RAID ID of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidID[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
-|RAID level of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidLevel[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
-|RAID number of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidNum[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
-|RAID size of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidSize[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|RAID status of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidStatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|RAID units of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidUnits[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
-|RAID used percent of {#SNMPVALUE} (%)|<p>-</p>|`SNMP agent`|raidUsedPercentage[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|State of {#SNMPVALUE} on {HOST.NAME} is "Current Pending Sector"|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr197[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
-|State of {#SNMPVALUE} on {HOST.NAME} is "End-to-End Error"|<p>State "noDisk"</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr184[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
-|State of {#SNMPVALUE} on {HOST.NAME} is "Reallocated_Sector_Ct"|<p>State "rwError"</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr5[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
-|State of {#SNMPVALUE} on {HOST.NAME} is not "Ready" ({ITEM.VALUE1})|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskStatus[{#SNMPINDEX}].last(0)}=3</p><p>**Recovery expression**: </p>|high|
-|Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_ALARM} for 2 min|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr194[{#SNMPINDEX}].min(2m)}>51</p><p>**Recovery expression**: </p>|high|
-|Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_WARNING} for 2min|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr194[{#SNMPINDEX}].min(2m)}>40</p><p>**Recovery expression**: </p>|information|
-|Free space is less than 5% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>95</p><p>**Recovery expression**: </p>|high|
-|Free space is less than 10% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>90</p><p>**Recovery expression**: </p>|warning|
-|Free space is less than 20% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>80</p><p>**Recovery expression**: </p>|information|
-|State of {#SNMPVALUE} on {HOST.NAME} is "Current Pending Sector" (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr197[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
-|State of {#SNMPVALUE} on {HOST.NAME} is "End-to-End Error" (LLD)|<p>State "noDisk"</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr184[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
-|State of {#SNMPVALUE} on {HOST.NAME} is "Reallocated_Sector_Ct" (LLD)|<p>State "rwError"</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr5[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
-|State of {#SNMPVALUE} on {HOST.NAME} is not "Ready" ({ITEM.VALUE1}) (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskStatus[{#SNMPINDEX}].last(0)}=3</p><p>**Recovery expression**: </p>|high|
-|Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_ALARM} for 2 min (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr194[{#SNMPINDEX}].min(2m)}>51</p><p>**Recovery expression**: </p>|high|
-|Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_WARNING} for 2min (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:diskSMARTAttr194[{#SNMPINDEX}].min(2m)}>40</p><p>**Recovery expression**: </p>|information|
-|Free space is less than 5% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>95</p><p>**Recovery expression**: </p>|high|
-|Free space is less than 10% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>90</p><p>**Recovery expression**: </p>|warning|
-|Free space is less than 20% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>80</p><p>**Recovery expression**: </p>|information|
+|State of {#SNMPVALUE} on {HOST.NAME} is "Current Pending Sector"|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr197[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
+|State of {#SNMPVALUE} on {HOST.NAME} is "End-to-End Error"|<p>State "noDisk"</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr184[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
+|State of {#SNMPVALUE} on {HOST.NAME} is "Reallocated_Sector_Ct"|<p>State "rwError"</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr5[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
+|State of {#SNMPVALUE} on {HOST.NAME} is not "Ready" ({ITEM.VALUE1})|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:diskStatus[{#SNMPINDEX}].last(0)}=3</p><p>**Recovery expression**: </p>|high|
+|Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_ALARM} for 2 min|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr194[{#SNMPINDEX}].min(2m)}>51</p><p>**Recovery expression**: </p>|high|
+|Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_WARNING} for 2min|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr194[{#SNMPINDEX}].min(2m)}>40</p><p>**Recovery expression**: </p>|information|
+|Free space is less than 5% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>95</p><p>**Recovery expression**: </p>|high|
+|Free space is less than 10% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>90</p><p>**Recovery expression**: </p>|warning|
+|Free space is less than 20% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>80</p><p>**Recovery expression**: </p>|information|
+|Free space is less than 5% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>95</p><p>**Recovery expression**: </p>|high|
+|Free space is less than 10% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>90</p><p>**Recovery expression**: </p>|warning|
+|Free space is less than 20% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:raidUsedPercentage[{#SNMPINDEX}].last(0)}>80</p><p>**Recovery expression**: </p>|information|
+|State of {#SNMPVALUE} on {HOST.NAME} is "Current Pending Sector" (LLD)|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr197[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
+|State of {#SNMPVALUE} on {HOST.NAME} is "End-to-End Error" (LLD)|<p>State "noDisk"</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr184[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
+|State of {#SNMPVALUE} on {HOST.NAME} is "Reallocated_Sector_Ct" (LLD)|<p>State "rwError"</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr5[{#SNMPINDEX}].last(0)}>0</p><p>**Recovery expression**: </p>|average|
+|State of {#SNMPVALUE} on {HOST.NAME} is not "Ready" ({ITEM.VALUE1}) (LLD)|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:diskStatus[{#SNMPINDEX}].last(0)}=3</p><p>**Recovery expression**: </p>|high|
+|Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_ALARM} for 2 min (LLD)|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr194[{#SNMPINDEX}].min(2m)}>51</p><p>**Recovery expression**: </p>|high|
+|Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_WARNING} for 2min (LLD)|<p>-</p>|<p>**Expression**: {SNMP THECUS NAS:diskSMARTAttr194[{#SNMPINDEX}].min(2m)}>40</p><p>**Recovery expression**: </p>|information|

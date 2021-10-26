@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:59Z</date>
+  <date>2021-10-26T04:43:05Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SAP Availability Linux</template>
-      <name>Template SAP Availability Linux</name>
+      <template>SAP Availability Linux</template>
+      <name>SAP Availability Linux</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -190,7 +190,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SAP Availability Linux</host>
+                    <host>SAP Availability Linux</host>
                     <key>sap.availability[hdbcompileserver,{#COD_ID},{#NAME_ID}]</key>
                   </item>
                 </graph_item>
@@ -199,7 +199,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template SAP Availability Linux</host>
+                    <host>SAP Availability Linux</host>
                     <key>sap.availability[hdbdaemon,{#COD_ID},{#NAME_ID}]</key>
                   </item>
                 </graph_item>
@@ -208,7 +208,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>2774A4</color>
                   <item>
-                    <host>Template SAP Availability Linux</host>
+                    <host>SAP Availability Linux</host>
                     <key>sap.availability[hdbxsengine,{#COD_ID},{#NAME_ID}]</key>
                   </item>
                 </graph_item>
@@ -217,7 +217,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>000099</color>
                   <item>
-                    <host>Template SAP Availability Linux</host>
+                    <host>SAP Availability Linux</host>
                     <key>sap.availability[hdbindexserver,{#COD_ID},{#NAME_ID}]</key>
                   </item>
                 </graph_item>
@@ -226,7 +226,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>FF6666</color>
                   <item>
-                    <host>Template SAP Availability Linux</host>
+                    <host>SAP Availability Linux</host>
                     <key>sap.availability[hdbnameserver,{#COD_ID},{#NAME_ID}]</key>
                   </item>
                 </graph_item>
@@ -235,7 +235,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>6C59DC</color>
                   <item>
-                    <host>Template SAP Availability Linux</host>
+                    <host>SAP Availability Linux</host>
                     <key>sap.availability[hdbpreprocessor,{#COD_ID},{#NAME_ID}]</key>
                   </item>
                 </graph_item>
@@ -244,7 +244,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>EEEE00</color>
                   <item>
-                    <host>Template SAP Availability Linux</host>
+                    <host>SAP Availability Linux</host>
                     <key>sap.availability[hdbwebdispatcher,{#COD_ID},{#NAME_ID}]</key>
                   </item>
                 </graph_item>

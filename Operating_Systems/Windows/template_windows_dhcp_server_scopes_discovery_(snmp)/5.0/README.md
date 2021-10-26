@@ -1,4 +1,4 @@
-# Template Discovery DHCP scopes
+# Discovery DHCP scopes
 
 ## Overview
 
@@ -41,5 +41,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|The number of addresses that are free on scope {#IPSCOPE} is low|<p>If the number of free adresses is less than 5, the trigger will be activated.</p>|<p>**Expression**: {Template Discovery DHCP scopes:ipfree[{#IPSCOPE}].last()}<5</p><p>**Recovery expression**: </p>|high|
-|The number of addresses that are free on scope {#IPSCOPE} is low (LLD)|<p>If the number of free adresses is less than 5, the trigger will be activated.</p>|<p>**Expression**: {Template Discovery DHCP scopes:ipfree[{#IPSCOPE}].last()}<5</p><p>**Recovery expression**: </p>|high|
+|The number of addresses that are free on scope {#IPSCOPE} is low|<p>If the number of free adresses is less than 5, the trigger will be activated.</p>|<p>**Expression**: {Discovery DHCP scopes:ipfree[{#IPSCOPE}].last()}<5</p><p>**Recovery expression**: </p>|high|
+|The number of addresses that are free on scope {#IPSCOPE} is low (LLD)|<p>If the number of free adresses is less than 5, the trigger will be activated.</p>|<p>**Expression**: {Discovery DHCP scopes:ipfree[{#IPSCOPE}].last()}<5</p><p>**Recovery expression**: </p>|high|

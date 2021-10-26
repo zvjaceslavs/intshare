@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:13Z</date>
+  <date>2021-10-26T04:40:03Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Logstash</template>
-      <name>Template App Logstash</name>
+      <template>App Logstash</template>
+      <name>App Logstash</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -192,7 +192,7 @@
               <dependencies>
                 <dependency>
                   <name>Logstash JVM Heap used percent is TOO HIGH</name>
-                  <expression>{Template App Logstash:logstash.jvm.mem.heap_used_percent.avg(30m)}>85</expression>
+                  <expression>{App Logstash:logstash.jvm.mem.heap_used_percent.avg(30m)}>85</expression>
                 </dependency>
               </dependencies>
             </trigger>

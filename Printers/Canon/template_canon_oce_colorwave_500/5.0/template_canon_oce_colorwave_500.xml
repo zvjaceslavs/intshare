@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:28Z</date>
+  <date>2021-10-26T04:42:32Z</date>
   <groups>
     <group>
       <name>Templates/Printers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template OCE ColorWave 500</template>
-      <name>Template OCE ColorWave 500</name>
+      <template>OCE ColorWave 500</template>
+      <name>OCE ColorWave 500</name>
       <groups>
         <group>
           <name>Templates/Printers</name>
@@ -371,7 +371,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>00BFFF</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>OCE500.Toner.Cyan.level.now</key>
           </item>
         </graph_item>
@@ -386,7 +386,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>FFFF00</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>OCE500.Toner.Yellow.level.now</key>
           </item>
         </graph_item>
@@ -401,7 +401,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>BF00FF</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>OCE500.Toner.Magenta.level.now</key>
           </item>
         </graph_item>
@@ -416,7 +416,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>3C3C3C</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>OCE500.Toner.Black.level.now</key>
           </item>
         </graph_item>
@@ -428,7 +428,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.2.0</key>
           </item>
         </graph_item>
@@ -436,7 +436,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.1.0</key>
           </item>
         </graph_item>
@@ -448,7 +448,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.8.0</key>
           </item>
         </graph_item>
@@ -460,7 +460,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.7.0</key>
           </item>
         </graph_item>
@@ -468,7 +468,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.13.0</key>
           </item>
         </graph_item>
@@ -476,7 +476,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.16.0</key>
           </item>
         </graph_item>
@@ -484,7 +484,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.15.0</key>
           </item>
         </graph_item>
@@ -492,7 +492,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.14.0</key>
           </item>
         </graph_item>
@@ -504,7 +504,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.10.0</key>
           </item>
         </graph_item>
@@ -512,7 +512,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.9.0</key>
           </item>
         </graph_item>
@@ -520,7 +520,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.3.0</key>
           </item>
         </graph_item>
@@ -528,7 +528,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.12.0</key>
           </item>
         </graph_item>
@@ -536,7 +536,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.5.0</key>
           </item>
         </graph_item>
@@ -544,7 +544,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.4.0</key>
           </item>
         </graph_item>
@@ -552,7 +552,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.11.0</key>
           </item>
         </graph_item>
@@ -560,7 +560,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template OCE ColorWave 500</host>
+            <host>OCE ColorWave 500</host>
             <key>.1.3.6.1.4.1.1552.21.3.1.1.5.6.0</key>
           </item>
         </graph_item>

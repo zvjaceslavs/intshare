@@ -1,4 +1,4 @@
-# Template App SSL ImmuniWeb Scan
+# App SSL ImmuniWeb Scan
 
 ## Description
 
@@ -48,13 +48,13 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|{$SSL_HOST} ImmuniWeb Scan Date|<p>-</p>|`Dependent item`|immuniweb.scan.date<p>Update: 0</p>|
+|{$SSL_HOST} ImmuniWeb SSL PCI Compliant|<p>-</p>|`Dependent item`|immuniweb.ssl.pci.compliant<p>Update: 0</p>|
+|{$SSL_HOST} ImmuniWeb SSL Score|<p>https://www.immuniweb.com/ssl/#scoring</p>|`Dependent item`|immuniweb.ssl.score<p>Update: 0</p>|
+|{$SSL_HOST} ImmuniWeb SSL HIPAA Compliant|<p>-</p>|`Dependent item`|immuniweb.ssl.hipaa.compliant<p>Update: 0</p>|
 |{$SSL_HOST} ImmuniWeb SSL Grade|<p>https://www.immuniweb.com/ssl/#scoring</p>|`Dependent item`|immuniweb.ssl.grade<p>Update: 0</p>|
 |{$SSL_HOST} ImmuniWeb Server Signature|<p>-</p>|`Dependent item`|immuniweb.server.signature<p>Update: 0</p>|
-|{$SSL_HOST} ImmuniWeb SSL Score|<p>https://www.immuniweb.com/ssl/#scoring</p>|`Dependent item`|immuniweb.ssl.score<p>Update: 0</p>|
-|{$SSL_HOST} ImmuniWeb SSL PCI Compliant|<p>-</p>|`Dependent item`|immuniweb.ssl.pci.compliant<p>Update: 0</p>|
-|{$SSL_HOST} ImmuniWeb SSL HIPAA Compliant|<p>-</p>|`Dependent item`|immuniweb.ssl.hipaa.compliant<p>Update: 0</p>|
 |{$SSL_HOST} ImmuniWeb SSL Scan|<p>-</p>|`Script`|immuniweb.scan.result<p>Update: 0;h/5m0,5,15</p>|
+|{$SSL_HOST} ImmuniWeb Scan Date|<p>-</p>|`Dependent item`|immuniweb.scan.date<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

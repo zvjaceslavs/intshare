@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:33Z</date>
+  <date>2021-10-26T04:39:19Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Delta UPS Template SNMP v1</template>
-      <name>Delta UPS Template SNMP v1</name>
+      <template>Delta UPS SNMP v1</template>
+      <name>Delta UPS SNMP v1</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -80,7 +80,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Delta UPS Template SNMP v1:icmpping.max(#3)}=0</expression>
+                  <expression>{Delta UPS SNMP v1:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -107,7 +107,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Delta UPS Template SNMP v1:icmpping.max(#3)}=0</expression>
+                  <expression>{Delta UPS SNMP v1:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -584,7 +584,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Delta UPS Template SNMP v1</host>
+                    <host>Delta UPS SNMP v1</host>
                     <key>upsOutputPercentLoad.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -623,7 +623,7 @@
               <style>0</style>
               <resource>
                 <name>Battery Charge Level in %</name>
-                <host>Delta UPS Template SNMP v1</host>
+                <host>Delta UPS SNMP v1</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -645,7 +645,7 @@
               <style>0</style>
               <resource>
                 <name>UPS Output Line {#SNMPINDEX} Load in %</name>
-                <host>Delta UPS Template SNMP v1</host>
+                <host>Delta UPS SNMP v1</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -667,7 +667,7 @@
               <style>0</style>
               <resource>
                 <key>upsOutputSource</key>
-                <host>Delta UPS Template SNMP v1</host>
+                <host>Delta UPS SNMP v1</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -696,7 +696,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Delta UPS Template SNMP v1</host>
+            <host>Delta UPS SNMP v1</host>
             <key>upsEstimatedChargeRemaining</key>
           </item>
         </graph_item>
@@ -708,7 +708,7 @@
         <graph_item>
           <color>000088</color>
           <item>
-            <host>Delta UPS Template SNMP v1</host>
+            <host>Delta UPS SNMP v1</host>
             <key>sysUpTime.2</key>
           </item>
         </graph_item>

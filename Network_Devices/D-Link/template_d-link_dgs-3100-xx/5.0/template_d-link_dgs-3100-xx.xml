@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:59Z</date>
+  <date>2021-10-26T04:38:40Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP D-link DGS-3100-xx</template>
-      <name>Template SNMP D-link DGS-3100-xx</name>
+      <template>SNMP D-link DGS-3100-xx</template>
+      <name>SNMP D-link DGS-3100-xx</name>
       <description>RlEnvMonState/ciscoEnvMonState{ normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6) }</description>
       <groups>
         <group>
@@ -266,7 +266,7 @@
                 <graph_item>
                   <color>EACC00</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3100-xx</host>
+                    <host>SNMP D-link DGS-3100-xx</host>
                     <key>agentDRAMutilizationUsedDRAM[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -278,7 +278,7 @@
                 <graph_item>
                   <color>EACC00</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3100-xx</host>
+                    <host>SNMP D-link DGS-3100-xx</host>
                     <key>agentDRAMutilization[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -422,7 +422,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3100-xx</host>
+                    <host>SNMP D-link DGS-3100-xx</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -430,7 +430,7 @@
                   <sortorder>1</sortorder>
                   <color>3333FF</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3100-xx</host>
+                    <host>SNMP D-link DGS-3100-xx</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -492,7 +492,7 @@
         <graph_item>
           <color>EACC00</color>
           <item>
-            <host>Template SNMP D-link DGS-3100-xx</host>
+            <host>SNMP D-link DGS-3100-xx</host>
             <key>rlCpuUtilDuringLast5Minutes</key>
           </item>
         </graph_item>

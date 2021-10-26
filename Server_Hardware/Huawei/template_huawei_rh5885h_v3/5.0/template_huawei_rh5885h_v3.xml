@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:11Z</date>
+  <date>2021-10-26T04:44:29Z</date>
   <groups>
     <group>
       <name>Templates/Server</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Huawei Server iBMC Template</template>
-      <name>Huawei Server iBMC Template</name>
+      <template>Huawei Server iBMC</template>
+      <name>Huawei Server iBMC</name>
       <groups>
         <group>
           <name>Templates/Server</name>
@@ -3319,7 +3319,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Huawei Server iBMC Template</host>
+                    <host>Huawei Server iBMC</host>
                     <key>huawei-server[temperatureReading.{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

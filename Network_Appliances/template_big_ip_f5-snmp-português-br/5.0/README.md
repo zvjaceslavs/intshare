@@ -1,4 +1,4 @@
-# Template Device BigIP F5
+# Device BigIP F5
 
 ## Overview
 
@@ -29,15 +29,15 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Status do Fan - 1|<p>-</p>|`SNMP agent`|sysChassisFanStatus.1<p>Update: 600</p>|
-|Status do Fan - 2|<p>-</p>|`SNMP agent`|sysChassisFanStatus.2<p>Update: 600</p>|
-|Status do Fan - 3|<p>-</p>|`SNMP agent`|sysChassisFanStatus.3<p>Update: 600</p>|
 |Status do Fan - 4|<p>-</p>|`SNMP agent`|sysChassisFanStatus.4<p>Update: 600</p>|
 |Status Fonte de Energia - 1|<p>-</p>|`SNMP agent`|sysChassisPowerSupplyStatus.1<p>Update: 600</p>|
+|Memória Total|<p>-</p>|`SNMP agent`|sysHostMemoryTotal<p>Update: 3600</p>|
+|Status do Fan - 3|<p>-</p>|`SNMP agent`|sysChassisFanStatus.3<p>Update: 600</p>|
+|Status do Fan - 1|<p>-</p>|`SNMP agent`|sysChassisFanStatus.1<p>Update: 600</p>|
+|Memória em Uso|<p>-</p>|`SNMP agent`|sysHostMemoryUsed<p>Update: 60</p>|
+|Status do Fan - 2|<p>-</p>|`SNMP agent`|sysChassisFanStatus.2<p>Update: 600</p>|
 |Status Fonte de Energia - 2|<p>-</p>|`SNMP agent`|sysChassisPowerSupplyStatus.2<p>Update: 600</p>|
 |Uso de CPU % por Minuto.|<p>-</p>|`SNMP agent`|sysGlobalHostCpuUsageRatio1m<p>Update: 60</p>|
-|Memória Total|<p>-</p>|`SNMP agent`|sysHostMemoryTotal<p>Update: 3600</p>|
-|Memória em Uso|<p>-</p>|`SNMP agent`|sysHostMemoryUsed<p>Update: 60</p>|
 |Conexões Ativas (Server-Side) em $1|<p>-</p>|`SNMP agent`|ltmNodeAddrStatServerCurConns.[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Disponibilidade do Node $1|<p>-</p>|`SNMP agent`|ltmNodeAddrStatusAvailState[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Status de disponibilidade do node $1|<p>-</p>|`SNMP agent`|ltmNodeAddrStatusDetailReason[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
@@ -54,7 +54,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Existem Nodes do Pool {#SNMPVALUE} desativados ou apresentando problemas - ({ITEM.LASTVALUE}/{ITEM.LASTVALUE2}) - Ativos / Total|<p>-</p>|<p>**Expression**: {Template Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}<>{Template Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</p><p>**Recovery expression**: {Template Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}={Template Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</p>|warning|
-|Pool {#SNMPVALUE} Indisponível. (Status Atual: {ITEM.VALUE1}).|<p>-</p>|<p>**Expression**: {Template Device BigIP F5:ltmPoolStatusAvailState.["{#SNMPVALUE}"].last(0)}<>1</p><p>**Recovery expression**: {Template Device BigIP F5:ltmPoolStatusAvailState.["{#SNMPVALUE}"].last(0)}=1</p>|disaster|
-|Existem Nodes do Pool {#SNMPVALUE} desativados ou apresentando problemas - ({ITEM.LASTVALUE}/{ITEM.LASTVALUE2}) - Ativos / Total (LLD)|<p>-</p>|<p>**Expression**: {Template Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}<>{Template Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</p><p>**Recovery expression**: {Template Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}={Template Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</p>|warning|
-|Pool {#SNMPVALUE} Indisponível. (Status Atual: {ITEM.VALUE1}). (LLD)|<p>-</p>|<p>**Expression**: {Template Device BigIP F5:ltmPoolStatusAvailState.["{#SNMPVALUE}"].last(0)}<>1</p><p>**Recovery expression**: {Template Device BigIP F5:ltmPoolStatusAvailState.["{#SNMPVALUE}"].last(0)}=1</p>|disaster|
+|Existem Nodes do Pool {#SNMPVALUE} desativados ou apresentando problemas - ({ITEM.LASTVALUE}/{ITEM.LASTVALUE2}) - Ativos / Total|<p>-</p>|<p>**Expression**: {Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}<>{Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</p><p>**Recovery expression**: {Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}={Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</p>|warning|
+|Pool {#SNMPVALUE} Indisponível. (Status Atual: {ITEM.VALUE1}).|<p>-</p>|<p>**Expression**: {Device BigIP F5:ltmPoolStatusAvailState.["{#SNMPVALUE}"].last(0)}<>1</p><p>**Recovery expression**: {Device BigIP F5:ltmPoolStatusAvailState.["{#SNMPVALUE}"].last(0)}=1</p>|disaster|
+|Existem Nodes do Pool {#SNMPVALUE} desativados ou apresentando problemas - ({ITEM.LASTVALUE}/{ITEM.LASTVALUE2}) - Ativos / Total (LLD)|<p>-</p>|<p>**Expression**: {Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}<>{Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</p><p>**Recovery expression**: {Device BigIP F5:ltmPoolActiveMemberCnt.["{#SNMPVALUE}"].last(0)}={Device BigIP F5:ltmPoolMemberCnt.["{#SNMPVALUE}"].last(0)}</p>|warning|
+|Pool {#SNMPVALUE} Indisponível. (Status Atual: {ITEM.VALUE1}). (LLD)|<p>-</p>|<p>**Expression**: {Device BigIP F5:ltmPoolStatusAvailState.["{#SNMPVALUE}"].last(0)}<>1</p><p>**Recovery expression**: {Device BigIP F5:ltmPoolStatusAvailState.["{#SNMPVALUE}"].last(0)}=1</p>|disaster|

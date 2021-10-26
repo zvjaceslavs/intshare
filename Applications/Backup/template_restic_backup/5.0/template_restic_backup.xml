@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:18Z</date>
+  <date>2021-10-26T04:45:45Z</date>
   <groups>
     <group>
       <name>Templates/Operating systems</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template restic backup by Zabbix agent</template>
-      <name>Template restic backup by Zabbix agent</name>
+      <template>restic backup by Zabbix agent</template>
+      <name>restic backup by Zabbix agent</name>
       <groups>
         <group>
           <name>Templates/Operating systems</name>
@@ -167,8 +167,8 @@
       </macros>
     </template>
     <template>
-      <template>Template restic backup by Zabbix agent active</template>
-      <name>Template restic backup by Zabbix agent active</name>
+      <template>restic backup by Zabbix agent active</template>
+      <name>restic backup by Zabbix agent active</name>
       <groups>
         <group>
           <name>Templates/Operating systems</name>

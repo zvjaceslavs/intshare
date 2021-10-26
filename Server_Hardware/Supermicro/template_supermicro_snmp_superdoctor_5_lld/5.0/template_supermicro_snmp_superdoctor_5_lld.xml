@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:22Z</date>
+  <date>2021-10-26T04:40:14Z</date>
   <groups>
     <group>
       <name>Supermicro servers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Supermicro SNMP Superdoctor 5 LLD</template>
-      <name>Template Supermicro SNMP Superdoctor 5 LLD</name>
+      <template>Supermicro SNMP Superdoctor 5 LLD</template>
+      <name>Supermicro SNMP Superdoctor 5 LLD</name>
       <groups>
         <group>
           <name>Supermicro servers</name>
@@ -254,7 +254,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Supermicro SNMP Superdoctor 5 LLD</host>
+                    <host>Supermicro SNMP Superdoctor 5 LLD</host>
                     <key>supermicro_acinp[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

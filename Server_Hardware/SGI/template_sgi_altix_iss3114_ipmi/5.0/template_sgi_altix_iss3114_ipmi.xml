@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:22Z</date>
+  <date>2021-10-26T04:39:06Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,7 +9,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template_UNISIM_IPMI_SGI_Altix_ISS3114</template>
+      <template>UNISIM_IPMI_SGI_Altix_ISS3114</template>
       <name>3-IPMI SGI Altix ISS3114</name>
       <groups>
         <group>
@@ -2374,32 +2374,32 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>({TRIGGER.VALUE}=0 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.3.last(0)}&lt;=1715) or ({TRIGGER.VALUE}=1 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=1960)</expression>
+      <expression>({TRIGGER.VALUE}=0 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.3.last(0)}&lt;=1715) or ({TRIGGER.VALUE}=1 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=1960)</expression>
       <name>System Fan 3 RPM lower critical on {HOSTNAME}</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>({TRIGGER.VALUE}=0 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.3.last(0)}&lt;=1960) or ({TRIGGER.VALUE}=1 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=2205)</expression>
+      <expression>({TRIGGER.VALUE}=0 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.3.last(0)}&lt;=1960) or ({TRIGGER.VALUE}=1 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=2205)</expression>
       <name>System Fan 3 RPM lower non-critical on {HOSTNAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>({TRIGGER.VALUE}=0 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.4.last(0)}&lt;=1715) or ({TRIGGER.VALUE}=1 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=1960)</expression>
+      <expression>({TRIGGER.VALUE}=0 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.4.last(0)}&lt;=1715) or ({TRIGGER.VALUE}=1 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=1960)</expression>
       <name>System Fan 4 RPM lower critical on {HOSTNAME}</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>({TRIGGER.VALUE}=0 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.4.last(0)}&lt;=1960) or ({TRIGGER.VALUE}=1 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=2205)</expression>
+      <expression>({TRIGGER.VALUE}=0 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.4.last(0)}&lt;=1960) or ({TRIGGER.VALUE}=1 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=2205)</expression>
       <name>System Fan 4 RPM lower non-critical on {HOSTNAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>({TRIGGER.VALUE}=0 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.5.last(0)}&lt;=1715) or ({TRIGGER.VALUE}=1 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=1960)</expression>
+      <expression>({TRIGGER.VALUE}=0 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.5.last(0)}&lt;=1715) or ({TRIGGER.VALUE}=1 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=1960)</expression>
       <name>System Fan 5 RPM lower critical on {HOSTNAME}</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>({TRIGGER.VALUE}=0 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.5.last(0)}&lt;=1960) or ({TRIGGER.VALUE}=1 and {Template_UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=2205)</expression>
+      <expression>({TRIGGER.VALUE}=0 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.5.last(0)}&lt;=1960) or ({TRIGGER.VALUE}=1 and {UNISIM_IPMI_SGI_Altix_ISS3114:ipmi.system.fan.2.last(0)}&lt;=2205)</expression>
       <name>System Fan 5 RPM lower non-critical on {HOSTNAME}</name>
       <priority>AVERAGE</priority>
     </trigger>

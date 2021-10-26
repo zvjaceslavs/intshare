@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:06Z</date>
+  <date>2021-10-26T04:38:49Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Cisco WS3750</template>
-      <name>Template SNMP Cisco WS3750</name>
+      <template>SNMP Cisco WS3750</template>
+      <name>SNMP Cisco WS3750</name>
       <description>ciscoEnvMonState{ normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6) }</description>
       <groups>
         <group>
@@ -410,7 +410,7 @@
                 <graph_item>
                   <color>EACC00</color>
                   <item>
-                    <host>Template SNMP Cisco WS3750</host>
+                    <host>SNMP Cisco WS3750</host>
                     <key>ciscoMemoryPoolFree[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -422,7 +422,7 @@
                 <graph_item>
                   <color>EACC00</color>
                   <item>
-                    <host>Template SNMP Cisco WS3750</host>
+                    <host>SNMP Cisco WS3750</host>
                     <key>ciscoMemoryPoolUsed[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -830,12 +830,12 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template SNMP Cisco WS3750:ifHCInOctets[{#SNMPVALUE}].avg(300s)})> ({Template SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</expression>
+              <expression>({SNMP Cisco WS3750:ifHCInOctets[{#SNMPVALUE}].avg(300s)})> ({SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</expression>
               <name>Incoming use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes</name>
               <priority>WARNING</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template SNMP Cisco WS3750:IfHCOutOctets[{#SNMPVALUE}].avg(300s)})> ({Template SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</expression>
+              <expression>({SNMP Cisco WS3750:IfHCOutOctets[{#SNMPVALUE}].avg(300s)})> ({SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</expression>
               <name>Outgoing use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes</name>
               <priority>WARNING</priority>
             </trigger_prototype>
@@ -847,7 +847,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP Cisco WS3750</host>
+                    <host>SNMP Cisco WS3750</host>
                     <key>ifHCInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -855,7 +855,7 @@
                   <sortorder>1</sortorder>
                   <color>3333FF</color>
                   <item>
-                    <host>Template SNMP Cisco WS3750</host>
+                    <host>SNMP Cisco WS3750</host>
                     <key>IfHCOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -874,7 +874,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>EACC00</color>
           <item>
-            <host>Template SNMP Cisco WS3750</host>
+            <host>SNMP Cisco WS3750</host>
             <key>ciscoCpmCPUTotal5minRev</key>
           </item>
         </graph_item>

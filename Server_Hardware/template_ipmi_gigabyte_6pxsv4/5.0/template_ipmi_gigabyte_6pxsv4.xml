@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:47Z</date>
+  <date>2021-10-26T04:41:46Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Gigabyte 6PXSV4</template>
-      <name>Template IPMI Gigabyte 6PXSV4</name>
+      <template>IPMI Gigabyte 6PXSV4</template>
+      <name>IPMI Gigabyte 6PXSV4</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -602,7 +602,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_dimm_a0</key>
           </item>
         </graph_item>
@@ -610,7 +610,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_dimm_a1</key>
           </item>
         </graph_item>
@@ -618,7 +618,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_dimm_b0</key>
           </item>
         </graph_item>
@@ -626,7 +626,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_dimm_b1</key>
           </item>
         </graph_item>
@@ -634,7 +634,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_dimm_c0</key>
           </item>
         </graph_item>
@@ -642,7 +642,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_dimm_c1</key>
           </item>
         </graph_item>
@@ -650,7 +650,7 @@
           <sortorder>6</sortorder>
           <color>C7A72D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_dimm_d0</key>
           </item>
         </graph_item>
@@ -658,7 +658,7 @@
           <sortorder>7</sortorder>
           <color>BA2A5D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_dimm_d1</key>
           </item>
         </graph_item>
@@ -670,7 +670,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_fan</key>
           </item>
         </graph_item>
@@ -678,7 +678,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.sys_fan_1</key>
           </item>
         </graph_item>
@@ -686,7 +686,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.sys_fan_2</key>
           </item>
         </graph_item>
@@ -694,7 +694,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.sys_fan_3</key>
           </item>
         </graph_item>
@@ -702,7 +702,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.sys_fan_4</key>
           </item>
         </graph_item>
@@ -714,7 +714,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_temp</key>
           </item>
         </graph_item>
@@ -722,7 +722,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.pch.temp</key>
           </item>
         </graph_item>
@@ -730,7 +730,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.sio.temp1</key>
           </item>
         </graph_item>
@@ -738,7 +738,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.sio.temp2</key>
           </item>
         </graph_item>
@@ -746,7 +746,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.sio.temp3</key>
           </item>
         </graph_item>
@@ -758,7 +758,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.3.3v</key>
           </item>
         </graph_item>
@@ -766,7 +766,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.5v</key>
           </item>
         </graph_item>
@@ -774,7 +774,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.5v.aux</key>
           </item>
         </graph_item>
@@ -782,7 +782,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.12v</key>
           </item>
         </graph_item>
@@ -790,7 +790,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.vbat</key>
           </item>
         </graph_item>
@@ -798,7 +798,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.cpu_vcore</key>
           </item>
         </graph_item>
@@ -806,7 +806,7 @@
           <sortorder>6</sortorder>
           <color>C7A72D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.dimm.group1</key>
           </item>
         </graph_item>
@@ -814,7 +814,7 @@
           <sortorder>7</sortorder>
           <color>BA2A5D</color>
           <item>
-            <host>Template IPMI Gigabyte 6PXSV4</host>
+            <host>IPMI Gigabyte 6PXSV4</host>
             <key>ipmi.system.dimm.group2</key>
           </item>
         </graph_item>

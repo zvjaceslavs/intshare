@@ -1,4 +1,4 @@
-# Template Meraki Dashboard
+# Meraki Dashboard
 
 ## Overview
 
@@ -28,14 +28,14 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Meraki.SSID|<p>Grabs SSID Names</p>|`SNMP agent`|MERAKI.SSID.KEY<p>Update: 4h</p>|
 |Meraki.AP|<p>Grabs AP name and Status. Creates an Item if Status is up.</p>|`SNMP agent`|MERAKI.AP.KEY<p>Update: 4h</p>|
+|Meraki.SSID|<p>Grabs SSID Names</p>|`SNMP agent`|MERAKI.SSID.KEY<p>Update: 4h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|SSID: {#SSIDNAME}|<p>-</p>|`SNMP agent`|MerakiDeviceIndex.SSID.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Access Point {#ITEM.NAME}: Clients Connected|<p>-</p>|`SNMP agent`|MerakiDeviceIndex.Clients.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|SSID: {#SSIDNAME}|<p>-</p>|`SNMP agent`|MerakiDeviceIndex.SSID.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

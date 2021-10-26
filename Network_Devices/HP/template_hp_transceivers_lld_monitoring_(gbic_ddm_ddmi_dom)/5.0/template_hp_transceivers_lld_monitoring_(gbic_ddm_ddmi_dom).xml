@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:07Z</date>
+  <date>2021-10-26T04:41:01Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template GM DDMI</template>
-      <name>Template GM DDMI</name>
+      <template>GM DDMI</template>
+      <name>GM DDMI</name>
       <description>Monitor HP transceivers</description>
       <groups>
         <group>
@@ -555,28 +555,28 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({Template GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( {Template GM DDMI:hh3cTransceiverCurRXPower.["{#SNMPINDEX}"].last()}> {Template GM DDMI:hh3cTransceiverMaxRXPower.["{#SNMPINDEX}"].last()} ) and {Template GM DDMI:hh3cTransceiverCurRXPower.["{#SNMPINDEX}"].last()}&lt;>21474836.47</expression>
+              <expression>({GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( {GM DDMI:hh3cTransceiverCurRXPower.["{#SNMPINDEX}"].last()}> {GM DDMI:hh3cTransceiverMaxRXPower.["{#SNMPINDEX}"].last()} ) and {GM DDMI:hh3cTransceiverCurRXPower.["{#SNMPINDEX}"].last()}&lt;>21474836.47</expression>
               <name>Current RX Power is higher than the maximum threshold on transceiver {ITEM.VALUE1} {ITEM.VALUE2}. Current RX Power is {ITEM.VALUE3}. Maximum RX power should be {ITEM.VALUE4}. Equipment {HOST.HOST}</name>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({Template GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( {Template GM DDMI:hh3cTransceiverCurRXPower.["{#SNMPINDEX}"].last()}&lt; {Template GM DDMI:hh3cTransceiverMinRXPower.["{#SNMPINDEX}"].last()} ) and {Template GM DDMI:hh3cTransceiverCurRXPower.["{#SNMPINDEX}"].last()}&lt;>21474836.47</expression>
+              <expression>({GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( {GM DDMI:hh3cTransceiverCurRXPower.["{#SNMPINDEX}"].last()}&lt; {GM DDMI:hh3cTransceiverMinRXPower.["{#SNMPINDEX}"].last()} ) and {GM DDMI:hh3cTransceiverCurRXPower.["{#SNMPINDEX}"].last()}&lt;>21474836.47</expression>
               <name>Current RX Power is lower than the minimum threshold on transceiver {ITEM.VALUE1} {ITEM.VALUE2}. Current RX Power is {ITEM.VALUE3}. Minimum RX power should be {ITEM.VALUE4}. Equipment {HOST.HOST}</name>
               <description>This happens when there is no fiber connected.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({Template GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( {Template GM DDMI:hh3cTransceiverCurTXPower.["{#SNMPINDEX}"].last()}> {Template GM DDMI:hh3cTransceiverMaxTXPower.["{#SNMPINDEX}"].last()} ) and {Template GM DDMI:hh3cTransceiverCurTXPower.["{#SNMPINDEX}"].last()}&lt;>21474836.47</expression>
+              <expression>({GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( {GM DDMI:hh3cTransceiverCurTXPower.["{#SNMPINDEX}"].last()}> {GM DDMI:hh3cTransceiverMaxTXPower.["{#SNMPINDEX}"].last()} ) and {GM DDMI:hh3cTransceiverCurTXPower.["{#SNMPINDEX}"].last()}&lt;>21474836.47</expression>
               <name>Current TX Power is higher than the maximum threshold on transceiver {ITEM.VALUE1} {ITEM.VALUE2}. Current TX Power is {ITEM.VALUE3}. Maximum TX power should be {ITEM.VALUE4}. Equipment {HOST.HOST}</name>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({Template GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( {Template GM DDMI:hh3cTransceiverCurTXPower.["{#SNMPINDEX}"].last()}&lt; {Template GM DDMI:hh3cTransceiverMinTXPower.["{#SNMPINDEX}"].last()} ) and {Template GM DDMI:hh3cTransceiverCurTXPower.["{#SNMPINDEX}"].last()}&lt;>21474836.47</expression>
+              <expression>({GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( {GM DDMI:hh3cTransceiverCurTXPower.["{#SNMPINDEX}"].last()}&lt; {GM DDMI:hh3cTransceiverMinTXPower.["{#SNMPINDEX}"].last()} ) and {GM DDMI:hh3cTransceiverCurTXPower.["{#SNMPINDEX}"].last()}&lt;>21474836.47</expression>
               <name>Current TX Power is lower than the minimum threshold on transceiver {ITEM.VALUE1} {ITEM.VALUE2}. Current TX Power is {ITEM.VALUE3}. Minimum TX power should be {ITEM.VALUE4}. Equipment {HOST.HOST}</name>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({Template GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( ( {Template GM DDMI:hh3cTransceiverTemperature.["{#SNMPINDEX}"].last()}>{Template GM DDMI:hh3cTransceiverTempHiAlarm.["{#SNMPINDEX}"].last()} ) and {Template GM DDMI:hh3cTransceiverTemperature.["{#SNMPINDEX}"].last()}&lt;> 2147483647 )</expression>
+              <expression>({GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( ( {GM DDMI:hh3cTransceiverTemperature.["{#SNMPINDEX}"].last()}>{GM DDMI:hh3cTransceiverTempHiAlarm.["{#SNMPINDEX}"].last()} ) and {GM DDMI:hh3cTransceiverTemperature.["{#SNMPINDEX}"].last()}&lt;> 2147483647 )</expression>
               <name>Temperature is too high on transceiver {ITEM.VALUE1} {ITEM.VALUE2}. Current temperature is {ITEM.VALUE3}. Maximum temperature should be {ITEM.VALUE4}. Equipment {HOST.HOST}</name>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({Template GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( ( {Template GM DDMI:hh3cTransceiverTemperature.["{#SNMPINDEX}"].last()}&lt;{Template GM DDMI:hh3cTransceiverTempLoAlarm.["{#SNMPINDEX}"].last()} ) and {Template GM DDMI:hh3cTransceiverTemperature.["{#SNMPINDEX}"].last()}&lt;> 2147483647 )</expression>
+              <expression>({GM DDMI:ifDescrAliasTransceiver[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ({GM DDMI:TransceiverAlias[{#SNMPINDEX}].regexp($blablablabla^)}=1) or ( ( {GM DDMI:hh3cTransceiverTemperature.["{#SNMPINDEX}"].last()}&lt;{GM DDMI:hh3cTransceiverTempLoAlarm.["{#SNMPINDEX}"].last()} ) and {GM DDMI:hh3cTransceiverTemperature.["{#SNMPINDEX}"].last()}&lt;> 2147483647 )</expression>
               <name>Temperature is too low on transceiver {ITEM.VALUE1} {ITEM.VALUE2}. Current temperature is {ITEM.VALUE3}. Lower temperature should be {ITEM.VALUE4}. Equipment {HOST.HOST}</name>
             </trigger_prototype>
           </trigger_prototypes>

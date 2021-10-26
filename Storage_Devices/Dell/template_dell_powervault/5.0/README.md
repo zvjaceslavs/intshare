@@ -1,4 +1,4 @@
-# Template DELL POWERVAULT TL2000
+# DELL POWERVAULT TL2000
 
 ## Overview
 
@@ -47,10 +47,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Description|<p>-</p>|`SNMP agent`|shadowIdDescription<p>Update: 86400</p>|
 |Display Name|<p>-</p>|`SNMP agent`|shadowIdDisplayName<p>Update: 86400</p>|
 |Status Global do Dispositivo|<p>-</p>|`SNMP agent`|shadowStatusGlobalStatus<p>Update: 60</p>|
 |Uptime|<p>-</p>|`SNMP agent`|shadowStatusTimeStamp.0<p>Update: 300</p>|
+|Description|<p>-</p>|`SNMP agent`|shadowIdDescription<p>Update: 86400</p>|
 |Drive $1|<p>-</p>|`SNMP agent`|driveEntryId[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Erro de leitura Hard $1|<p>Contagem de recuperação de erros Hard de leitura para o cartucho atual</p>|`SNMP agent`|driveHardReadErrors[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Erro de gravação Hard $1|<p>Contagem de recuperação de erros Soft de gravação para o cartucho atual</p>|`SNMP agent`|driveHardWrtErrors[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
@@ -73,13 +73,13 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Erro de gravação Hard em TL2000|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:driveHardWrtErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|average|
-|Erro de gravação Soft (leve) no TL2000|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:driveSoftWrtErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
-|Erro de leitura Hard no TL2000|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:driveHardReadErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|average|
-|Erro de leitura Soft (leve)  no TL2000|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:driveSoftReadErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
-|Erro em Dispositivo de Fita (TL2000)|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:libraryFaultSev[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
-|Erro de gravação Hard em TL2000 (LLD)|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:driveHardWrtErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|average|
-|Erro de gravação Soft (leve) no TL2000 (LLD)|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:driveSoftWrtErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
-|Erro de leitura Hard no TL2000 (LLD)|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:driveHardReadErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|average|
-|Erro de leitura Soft (leve)  no TL2000 (LLD)|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:driveSoftReadErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
-|Erro em Dispositivo de Fita (TL2000) (LLD)|<p>-</p>|<p>**Expression**: {Template DELL POWERVAULT TL2000:libraryFaultSev[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
+|Erro de gravação Hard em TL2000|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:driveHardWrtErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|average|
+|Erro de gravação Soft (leve) no TL2000|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:driveSoftWrtErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
+|Erro de leitura Hard no TL2000|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:driveHardReadErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|average|
+|Erro de leitura Soft (leve)  no TL2000|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:driveSoftReadErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
+|Erro em Dispositivo de Fita (TL2000)|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:libraryFaultSev[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
+|Erro de gravação Hard em TL2000 (LLD)|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:driveHardWrtErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|average|
+|Erro de gravação Soft (leve) no TL2000 (LLD)|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:driveSoftWrtErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
+|Erro de leitura Hard no TL2000 (LLD)|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:driveHardReadErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|average|
+|Erro de leitura Soft (leve)  no TL2000 (LLD)|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:driveSoftReadErrors[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
+|Erro em Dispositivo de Fita (TL2000) (LLD)|<p>-</p>|<p>**Expression**: {DELL POWERVAULT TL2000:libraryFaultSev[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|

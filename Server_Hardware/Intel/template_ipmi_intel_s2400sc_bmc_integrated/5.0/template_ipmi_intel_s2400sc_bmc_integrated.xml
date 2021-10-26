@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:17Z</date>
+  <date>2021-10-26T04:40:08Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Intel S2400SC</template>
-      <name>Template IPMI Intel S2400SC</name>
+      <template>IPMI Intel S2400SC</template>
+      <name>IPMI Intel S2400SC</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -588,7 +588,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.cpu1vr.temp</key>
           </item>
         </graph_item>
@@ -600,7 +600,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.bbnenvr.temp</key>
           </item>
         </graph_item>
@@ -612,7 +612,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.sysfan1</key>
           </item>
         </graph_item>
@@ -620,7 +620,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.sysfan2</key>
           </item>
         </graph_item>
@@ -628,7 +628,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.sysfan3</key>
           </item>
         </graph_item>
@@ -636,7 +636,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.sysfan4</key>
           </item>
         </graph_item>
@@ -644,7 +644,7 @@
           <sortorder>4</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.sysfan5</key>
           </item>
         </graph_item>
@@ -656,7 +656,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.bbbmc.temp</key>
           </item>
         </graph_item>
@@ -664,7 +664,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.bbedge.temp</key>
           </item>
         </graph_item>
@@ -672,7 +672,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.fp.temp</key>
           </item>
         </graph_item>
@@ -680,7 +680,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.hsbp1.temp</key>
           </item>
         </graph_item>
@@ -688,7 +688,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.PS1.temp</key>
           </item>
         </graph_item>
@@ -696,7 +696,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.PS2.temp</key>
           </item>
         </graph_item>
@@ -704,7 +704,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.ssb.temp</key>
           </item>
         </graph_item>
@@ -716,7 +716,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.1.05BBvccpp1</key>
           </item>
         </graph_item>
@@ -724,7 +724,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.1.05BBvccpp2</key>
           </item>
         </graph_item>
@@ -732,7 +732,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.1.1BBvstby</key>
           </item>
         </graph_item>
@@ -740,7 +740,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.BBP1MEM</key>
           </item>
         </graph_item>
@@ -748,7 +748,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.BBP2MEM</key>
           </item>
         </graph_item>
@@ -756,7 +756,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.1.1BBvaux</key>
           </item>
         </graph_item>
@@ -764,7 +764,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.BBP1LV</key>
           </item>
         </graph_item>
@@ -772,7 +772,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.BBP2LV</key>
           </item>
         </graph_item>
@@ -780,7 +780,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.BBVBAT</key>
           </item>
         </graph_item>
@@ -788,7 +788,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.3.3BBV</key>
           </item>
         </graph_item>
@@ -796,7 +796,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.3.3BBVAUX</key>
           </item>
         </graph_item>
@@ -804,7 +804,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.5BBV</key>
           </item>
         </graph_item>
@@ -812,7 +812,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.5BBVstby</key>
           </item>
         </graph_item>
@@ -820,7 +820,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.12BBV</key>
           </item>
         </graph_item>
@@ -828,7 +828,7 @@
           <sortorder>14</sortorder>
           <color>274482</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.M12BBV</key>
           </item>
         </graph_item>
@@ -840,7 +840,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.PS1.powerin</key>
           </item>
         </graph_item>
@@ -848,7 +848,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Intel S2400SC</host>
+            <host>IPMI Intel S2400SC</host>
             <key>ipmi.intel.s2400sc.PS2.powerin</key>
           </item>
         </graph_item>

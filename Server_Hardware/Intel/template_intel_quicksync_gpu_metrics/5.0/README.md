@@ -1,4 +1,4 @@
-# Template Intel QuickSync GPU metrics
+# Intel QuickSync GPU metrics
 
 ## Overview
 
@@ -105,10 +105,10 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |$1 usage|<p>GT Freq</p>|`Zabbix agent`|gpu.metrics["GT_Freq",100,500]<p>Update: 30s</p>|
-|$1 usage|<p>Render Engine (Execution units, media samplers, VME and their caches) Video Encode (ENC), OpenCL, Video Scaling, VPP Composition including frame rate conversion and image stabilization, VPP copy to CPU</p>|`Zabbix agent`|gpu.metrics["RENDER",100,500]<p>Update: 30s</p>|
-|$1 usage|<p>Multi-Format Codec Engine (also known as “MFX” or “VDBOX”) Video Encode (PAK) and Decode</p>|`Zabbix agent`|gpu.metrics["VIDEO ",100,500]<p>Update: 30s</p>|
 |$1 usage|<p>2nd instance of the MultiFormat Codec Engine, if available (Examples of supported processor include 5th generation of Intel® Core™ processors with Intel® HD Graphics 6000, Intel® Iris™ Graphics 6100, Intel® Iris™ Pro Graphics 6200, Intel® Iris™ Pro Graphics P6300) Video Encode (PAK) and Decode</p>|`Zabbix agent`|gpu.metrics["VIDEO2",100,500]<p>Update: 30s</p>|
+|$1 usage|<p>Multi-Format Codec Engine (also known as “MFX” or “VDBOX”) Video Encode (PAK) and Decode</p>|`Zabbix agent`|gpu.metrics["VIDEO ",100,500]<p>Update: 30s</p>|
 |$1 usage|<p>Video Quality Engine (also known as “VEBOX” or Video Quality enhancement pipeline) Deinterlace, Denoise</p>|`Zabbix agent`|gpu.metrics["VIDEO_E",100,500]<p>Update: 30s</p>|
+|$1 usage|<p>Render Engine (Execution units, media samplers, VME and their caches) Video Encode (ENC), OpenCL, Video Scaling, VPP Composition including frame rate conversion and image stabilization, VPP copy to CPU</p>|`Zabbix agent`|gpu.metrics["RENDER",100,500]<p>Update: 30s</p>|
 ## Triggers
 
 There are no triggers in this template.

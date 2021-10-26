@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:01Z</date>
+  <date>2021-10-26T04:43:08Z</date>
   <groups>
     <group>
       <name>Templates SNMP</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP NetApp cDot</template>
-      <name>Template SNMP NetApp cDot</name>
+      <template>SNMP NetApp cDot</template>
+      <name>SNMP NetApp cDot</name>
       <groups>
         <group>
           <name>Templates SNMP</name>
@@ -1033,7 +1033,7 @@
                 <graph_item>
                   <color>0040FF</color>
                   <item>
-                    <host>Template SNMP NetApp cDot</host>
+                    <host>SNMP NetApp cDot</host>
                     <key>snapmirrorRelLag[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1043,7 +1043,7 @@
                   <color>00FF00</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template SNMP NetApp cDot</host>
+                    <host>SNMP NetApp cDot</host>
                     <key>snapmirrorRelLastTransferSize[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1051,7 +1051,7 @@
                   <sortorder>2</sortorder>
                   <color>000000</color>
                   <item>
-                    <host>Template SNMP NetApp cDot</host>
+                    <host>SNMP NetApp cDot</host>
                     <key>snapmirrorRelLastTransferTime[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1319,7 +1319,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP NetApp cDot</host>
+                    <host>SNMP NetApp cDot</host>
                     <key>df64TotalKBytesVol[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1328,7 +1328,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>0000DD</color>
                   <item>
-                    <host>Template SNMP NetApp cDot</host>
+                    <host>SNMP NetApp cDot</host>
                     <key>df64UsedKBytesVol[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>

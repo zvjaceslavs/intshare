@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:12Z</date>
+  <date>2021-10-26T04:41:07Z</date>
   <groups>
     <group>
       <name>Zabbix servers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Zabbix DB Partitions</template>
-      <name>Template Zabbix DB Partitions</name>
+      <template>Zabbix DB Partitions</template>
+      <name>Zabbix DB Partitions</name>
       <groups>
         <group>
           <name>Zabbix servers</name>
@@ -107,7 +107,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Zabbix DB Partitions:ssh.run[dpc1,{HOST.HOST},22,].prev()}&lt;>7 or {Template Zabbix DB Partitions:ssh.run[dpc3,{HOST.HOST},22,].prev()}&lt;>7 or {Template Zabbix DB Partitions:ssh.run[dpc4,{HOST.HOST},22,].prev()}&lt;>7 or {Template Zabbix DB Partitions:ssh.run[dpc5,{HOST.HOST},22,].prev()}&lt;>7</expression>
+      <expression>{Zabbix DB Partitions:ssh.run[dpc1,{HOST.HOST},22,].prev()}&lt;>7 or {Zabbix DB Partitions:ssh.run[dpc3,{HOST.HOST},22,].prev()}&lt;>7 or {Zabbix DB Partitions:ssh.run[dpc4,{HOST.HOST},22,].prev()}&lt;>7 or {Zabbix DB Partitions:ssh.run[dpc5,{HOST.HOST},22,].prev()}&lt;>7</expression>
       <name>Future Partition missing</name>
       <priority>DISASTER</priority>
     </trigger>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:21Z</date>
+  <date>2021-10-26T04:42:24Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template APC NetBotz Rack Monitor 200</template>
-      <name>Template APC NetBotz Rack Monitor 200</name>
+      <template>APC NetBotz Rack Monitor 200</template>
+      <name>APC NetBotz Rack Monitor 200</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -327,93 +327,93 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"].last()})</expression>
+              <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"].last()}+{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+              <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"].last()}+{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity &lt; Low Threshold</name>
               <priority>INFO</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity &lt; Min Threshold</name>
-                  <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"].last()}+{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+                  <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"].last()}+{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+              <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"].last()}+{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+              <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"].last()}+{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity &lt; Min Threshold</name>
               <priority>INFO</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"].last()})</expression>
+              <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"].last()}-{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+              <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"].last()}-{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > High Threshold</name>
               <priority>WARNING</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > Max Threshold</name>
-                  <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"].last()}-{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+                  <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"].last()}-{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"].last()})</expression>
+              <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"].last()}-{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+              <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"].last()}-{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > Max Threshold</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"].last()})</expression>
+              <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"].last()}+{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+              <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"].last()}+{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature &lt; Low Threshold</name>
               <priority>INFO</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature &lt; Min Threshold</name>
-                  <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"].last()}+{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+                  <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"].last()}+{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+              <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"].last()}+{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+              <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"].last()}+{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature &lt; Min Threshold</name>
               <priority>INFO</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"].last()})</expression>
+              <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"].last()}-{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+              <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"].last()}-{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > High Threshold</name>
               <priority>AVERAGE</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > Max Threshold</name>
-                  <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()}-{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+                  <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()}-{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()})</expression>
+              <expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()}-{Template APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
+              <recovery_expression>({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()}-{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > Max Threshold</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
@@ -426,7 +426,7 @@
                 <graph_item>
                   <color>00FF00</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -434,7 +434,7 @@
                   <sortorder>1</sortorder>
                   <color>061708</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.humidity.threshold.high.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -442,7 +442,7 @@
                   <sortorder>2</sortorder>
                   <color>81C784</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -450,7 +450,7 @@
                   <sortorder>3</sortorder>
                   <color>061708</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -458,7 +458,7 @@
                   <sortorder>4</sortorder>
                   <color>C8E6C9</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -470,7 +470,7 @@
                 <graph_item>
                   <color>FF0000</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -479,7 +479,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>891515</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.temperature.threshold.high.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -488,7 +488,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>E57373</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.temperature.threshold.low.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -497,7 +497,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>2D0707</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -506,7 +506,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>FFCDD2</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 200</host>
+                    <host>APC NetBotz Rack Monitor 200</host>
                     <key>apc.enviro.sensor.module.temperature.threshold.min.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -518,11 +518,11 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template APC NetBotz Rack Monitor 250</template>
-      <name>Template APC NetBotz Rack Monitor 250</name>
+      <template>APC NetBotz Rack Monitor 250</template>
+      <name>APC NetBotz Rack Monitor 250</name>
       <templates>
         <template>
-          <name>Template APC NetBotz Rack Monitor 200</name>
+          <name>APC NetBotz Rack Monitor 200</name>
         </template>
       </templates>
       <groups>
@@ -924,139 +924,139 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.low.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.low.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.low.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.low.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Battery &lt; Low Threshold</name>
               <priority>WARNING</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Battery &lt; Min Threshold</name>
-                  <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+                  <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.battery.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Battery &lt; Min Threshold</name>
               <priority>HIGH</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.low.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.low.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.low.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.low.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity &lt; Low Threshold</name>
               <priority>INFO</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity &lt; Min Threshold</name>
-                  <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+                  <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity &lt; Min Threshold</name>
               <priority>WARNING</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.high.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.high.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.high.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.high.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > High Threshold</name>
               <priority>AVERAGE</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > Max Threshold</name>
-                  <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+                  <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"].last()}&lt;=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > Max Threshold</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.low.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.low.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.low.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.low.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: RSSI &lt; Low Threshold</name>
               <priority>AVERAGE</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: RSSI &lt; Min Threshold</name>
-                  <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+                  <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.rssi.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: RSSI &lt; Min Threshold</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.low.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.low.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.low.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.low.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature &lt; Low Threshold</name>
               <priority>INFO</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature &lt; Min Threshold</name>
-                  <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+                  <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}&lt;={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}&lt;={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature &lt; Min Threshold</name>
               <priority>WARNING</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.high.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.high.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.high.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.high.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > High Threshold</name>
               <priority>AVERAGE</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > Max Threshold</name>
-                  <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"].last()})</expression>
-                  <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+                  <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"].last()})</expression>
+                  <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>={Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"].last()})</expression>
+              <expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=1 and ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"].last()})</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({Template APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
+              <recovery_expression>{APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.alarm.value.["{#SNMPINDEX}"].last()}=0 or ({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"].last()}>=({APC NetBotz Rack Monitor 250:apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"].last()}+{$HYSTERESIS}))</recovery_expression>
               <name>{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > Max Threshold</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
@@ -1069,7 +1069,7 @@
                 <graph_item>
                   <color>00CC00</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.humidity.value.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1077,7 +1077,7 @@
                   <sortorder>1</sortorder>
                   <color>BB0000</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.temperature.value.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1085,7 +1085,7 @@
                   <sortorder>2</sortorder>
                   <color>005500</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.humidity.threshold.max.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1094,7 +1094,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>008800</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.humidity.threshold.high.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1103,7 +1103,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>66FF66</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.humidity.threshold.low.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1112,7 +1112,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>CCFFCC</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.humidity.threshold.min.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1121,7 +1121,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>FF6666</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.temperature.threshold.max.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1130,7 +1130,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>990000</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.temperature.threshold.high.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1139,7 +1139,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>FF6666</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.temperature.threshold.low.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -1148,7 +1148,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>FFCCCC</color>
                   <item>
-                    <host>Template APC NetBotz Rack Monitor 250</host>
+                    <host>APC NetBotz Rack Monitor 250</host>
                     <key>apc.enviro.sensor.wireless.temperature.threshold.min.["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>

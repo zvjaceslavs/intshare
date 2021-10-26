@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:40Z</date>
+  <date>2021-10-26T04:40:33Z</date>
   <groups>
     <group>
       <name>eltex</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Eltex MES SNMPv2</template>
-      <name>Template Eltex MES SNMPv2</name>
+      <template>Eltex MES SNMPv2</template>
+      <name>Eltex MES SNMPv2</name>
       <groups>
         <group>
           <name>eltex</name>
@@ -96,7 +96,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Eltex MES SNMPv2:icmpping.max(#3)}=0</expression>
+                  <expression>{Eltex MES SNMPv2:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -124,7 +124,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Eltex MES SNMPv2:icmpping.max(#3)}=0</expression>
+                  <expression>{Eltex MES SNMPv2:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -831,13 +831,13 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template Eltex MES SNMPv2:ifHCInOctets[{#SNMPVALUE}].avg(5m)}*0.000001)>({Template Eltex MES SNMPv2:speed_on_[{#SNMPVALUE}].last()}/2) or ({Template Eltex MES SNMPv2:ifHCOutOctets[{#SNMPVALUE}].avg(5m)}*0.000001)>({Template Eltex MES SNMPv2:speed_on_[{#SNMPVALUE}].last()}/2)</expression>
+              <expression>({Eltex MES SNMPv2:ifHCInOctets[{#SNMPVALUE}].avg(5m)}*0.000001)>({Eltex MES SNMPv2:speed_on_[{#SNMPVALUE}].last()}/2) or ({Eltex MES SNMPv2:ifHCOutOctets[{#SNMPVALUE}].avg(5m)}*0.000001)>({Eltex MES SNMPv2:speed_on_[{#SNMPVALUE}].last()}/2)</expression>
               <name>Utilization > 50% IN {HOST.NAME} interface {#SNMPVALUE} ({#IFNAME})</name>
               <priority>WARNING</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Eltex MES SNMPv2:rlPhyTestGetResult.InPow[{#SNMPVALUE}].avg(5m)}&lt;({Template Eltex MES SNMPv2:rlPhyTestGetResult.OutPow[{#SNMPVALUE}].avg(5m)}*2)</expression>
+              <expression>{Eltex MES SNMPv2:rlPhyTestGetResult.InPow[{#SNMPVALUE}].avg(5m)}&lt;({Eltex MES SNMPv2:rlPhyTestGetResult.OutPow[{#SNMPVALUE}].avg(5m)}*2)</expression>
               <name>Затухание на SFP порту {#SNMPVALUE}</name>
               <priority>AVERAGE</priority>
               <description>Потери мощности на оптической линии.</description>
@@ -845,7 +845,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Eltex MES SNMPv2:icmpping.max(#3)}=0</expression>
+                  <expression>{Eltex MES SNMPv2:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
@@ -858,7 +858,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>0000C8</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifHCInBroadcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -866,7 +866,7 @@
                   <sortorder>1</sortorder>
                   <color>C800C8</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifHCInMulticastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -874,7 +874,7 @@
                   <sortorder>2</sortorder>
                   <color>00C8C8</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifHCInUcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -883,7 +883,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>C8C800</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifHCOutBroadcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -891,7 +891,7 @@
                   <sortorder>4</sortorder>
                   <color>C8C8C8</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifHCOutMulticastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -899,7 +899,7 @@
                   <sortorder>5</sortorder>
                   <color>960000</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifHCOutUcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -912,7 +912,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>FC6EA3</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>rlPhyTestGetResult.InPow[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -920,7 +920,7 @@
                   <sortorder>1</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>rlPhyTestGetResult.OutPow[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -929,7 +929,7 @@
                   <drawtype>DASHED_LINE</drawtype>
                   <color>AC8C14</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>rlPhyTestGetResult.t[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -937,7 +937,7 @@
                   <sortorder>3</sortorder>
                   <color>611F27</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>rlPhyTestGetResult.v[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -945,7 +945,7 @@
                   <sortorder>4</sortorder>
                   <color>F230E0</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>rlPhyTestGetResult.mA[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -958,7 +958,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00AA00</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifHCInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -967,7 +967,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>0000CC</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifHCOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -975,7 +975,7 @@
                   <sortorder>2</sortorder>
                   <color>DDDD00</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifInErrors[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -983,7 +983,7 @@
                   <sortorder>3</sortorder>
                   <color>EE00EE</color>
                   <item>
-                    <host>Template Eltex MES SNMPv2</host>
+                    <host>Eltex MES SNMPv2</host>
                     <key>ifOutErrors[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1009,7 +1009,7 @@
               <style>0</style>
               <resource>
                 <name>CPU Utilization</name>
-                <host>Template Eltex MES SNMPv2</host>
+                <host>Eltex MES SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1031,7 +1031,7 @@
               <style>0</style>
               <resource>
                 <name>Traffic on int {#SNMPVALUE} ({#IFALIAS})</name>
-                <host>Template Eltex MES SNMPv2</host>
+                <host>Eltex MES SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1053,7 +1053,7 @@
               <style>0</style>
               <resource>
                 <name>B,M,U-cast on int {#SNMPVALUE} ({#IFALIAS})</name>
-                <host>Template Eltex MES SNMPv2</host>
+                <host>Eltex MES SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1075,7 +1075,7 @@
               <style>0</style>
               <resource>
                 <name>SFP on int {#SNMPVALUE} ({#IFALIAS})</name>
-                <host>Template Eltex MES SNMPv2</host>
+                <host>Eltex MES SNMPv2</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1105,7 +1105,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>0000EE</color>
           <item>
-            <host>Template Eltex MES SNMPv2</host>
+            <host>Eltex MES SNMPv2</host>
             <key>rlCpuUtilDuringLastSecond</key>
           </item>
         </graph_item>
@@ -1113,7 +1113,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template Eltex MES SNMPv2</host>
+            <host>Eltex MES SNMPv2</host>
             <key>rlCpuUtilDuringLast5Minutes</key>
           </item>
         </graph_item>
@@ -1121,7 +1121,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Eltex MES SNMPv2</host>
+            <host>Eltex MES SNMPv2</host>
             <key>rlCpuUtilDuringLastSecond</key>
           </item>
         </graph_item>
@@ -1129,7 +1129,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Eltex MES SNMPv2</host>
+            <host>Eltex MES SNMPv2</host>
             <key>eltexProcessMemoryFreePercent</key>
           </item>
         </graph_item>
@@ -1137,7 +1137,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Eltex MES SNMPv2</host>
+            <host>Eltex MES SNMPv2</host>
             <key>rlEnvFanDataTemp</key>
           </item>
         </graph_item>

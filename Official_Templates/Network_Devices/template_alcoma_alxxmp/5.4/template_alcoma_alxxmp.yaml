@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:05Z'
+  date: '2021-10-26T04:45:29Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 3bf5e546b8a140e2a4ef2c63f0332d68
-      template: 'Template Alcoma ALxxMP'
-      name: 'Template Alcoma ALxxMP'
+      template: 'Alcoma ALxxMP'
+      name: 'Alcoma ALxxMP'
       groups:
         -
           name: Templates
@@ -208,7 +208,7 @@ zabbix_export:
           drawtype: GRADIENT_LINE
           color: CC0000
           item:
-            host: 'Template Alcoma ALxxMP'
+            host: 'Alcoma ALxxMP'
             key: alcoma.temp
     -
       uuid: 086310a3ee0049bba374b2a20af2c6f1
@@ -218,13 +218,13 @@ zabbix_export:
           sortorder: '1'
           color: 199C0D
           item:
-            host: 'Template Alcoma ALxxMP'
+            host: 'Alcoma ALxxMP'
             key: alcoma.signal.quality
         -
           sortorder: '2'
           color: F63100
           item:
-            host: 'Template Alcoma ALxxMP'
+            host: 'Alcoma ALxxMP'
             key: alcoma.snr
     -
       uuid: 9eeed0ebe6c945409c0447e3ac0f3725
@@ -234,12 +234,12 @@ zabbix_export:
           drawtype: GRADIENT_LINE
           color: 0000EE
           item:
-            host: 'Template Alcoma ALxxMP'
+            host: 'Alcoma ALxxMP'
             key: alcoma.network.in
         -
           sortorder: '1'
           drawtype: GRADIENT_LINE
           color: EEEE00
           item:
-            host: 'Template Alcoma ALxxMP'
+            host: 'Alcoma ALxxMP'
             key: alcoma.network.out

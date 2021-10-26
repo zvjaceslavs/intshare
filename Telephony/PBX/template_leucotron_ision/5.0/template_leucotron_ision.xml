@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:51Z</date>
+  <date>2021-10-26T04:42:57Z</date>
   <groups>
     <group>
       <name>PABX</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template ISION</template>
-      <name>Template ISION</name>
+      <template>ISION</template>
+      <name>ISION</name>
       <description>Template do PABX da Leucotron, modelo ISION IP</description>
       <groups>
         <group>
@@ -849,7 +849,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.1.2</key>
           </item>
         </graph_item>
@@ -857,7 +857,7 @@
           <sortorder>1</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.1.1</key>
           </item>
         </graph_item>
@@ -869,7 +869,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.2.2</key>
           </item>
         </graph_item>
@@ -877,7 +877,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.2.3</key>
           </item>
         </graph_item>
@@ -885,7 +885,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.2.4</key>
           </item>
         </graph_item>
@@ -893,7 +893,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.2.5</key>
           </item>
         </graph_item>
@@ -901,7 +901,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.2.1</key>
           </item>
         </graph_item>
@@ -913,7 +913,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.2.8</key>
           </item>
         </graph_item>
@@ -921,7 +921,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.2.6</key>
           </item>
         </graph_item>
@@ -929,7 +929,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template ISION</host>
+            <host>ISION</host>
             <key>.1.3.6.1.4.1.17069.1.3.1.2.2.7</key>
           </item>
         </graph_item>

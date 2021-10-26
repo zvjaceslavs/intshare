@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:11Z</date>
+  <date>2021-10-26T04:37:49Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Cisco General</template>
-      <name>Template Cisco General</name>
+      <template>Cisco General</template>
+      <name>Cisco General</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>
@@ -152,14 +152,14 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template_Cisco_2960</template>
-      <name>Template_Cisco_2960</name>
+      <template>Cisco_2960</template>
+      <name>Cisco_2960</name>
       <templates>
         <template>
-          <name>Template Cisco General</name>
+          <name>Cisco General</name>
         </template>
         <template>
-          <name>Template_Cisco_Traps</name>
+          <name>Cisco_Traps</name>
         </template>
       </templates>
       <groups>
@@ -425,7 +425,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template_Cisco_2960:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()}>{Template_Cisco_2960:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()}*0.9</expression>
+              <expression>{Cisco_2960:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()}>{Cisco_2960:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()}*0.9</expression>
               <name>High utilization of Memory Pool "{#SNMPVALUE}"</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -498,7 +498,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template_Cisco_2960</host>
+                    <host>Cisco_2960</host>
                     <key>cpmCPUTotal1minRev[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -506,7 +506,7 @@
                   <sortorder>1</sortorder>
                   <color>C80000</color>
                   <item>
-                    <host>Template_Cisco_2960</host>
+                    <host>Cisco_2960</host>
                     <key>cpmCPUTotal5minRev[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -517,8 +517,8 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template_Cisco_Traps</template>
-      <name>Template_Cisco_Traps</name>
+      <template>Cisco_Traps</template>
+      <name>Cisco_Traps</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>

@@ -56,14 +56,14 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Active calls|<p>MiVO 250 Active calls</p>|`Dependent item`|mitel.mivo250.activecalls<p>Update: 0</p>|
-|Alarm status|<p>MiVO 250 Alarm status</p>|`Dependent item`|mitel.mivo250.alarm<p>Update: 0</p>|
-|Call Processing version|<p>MiVO 250 Call Processing version</p>|`Dependent item`|mitel.mivo250.cpver<p>Update: 0</p>|
-|Percent free on flash card|<p>MiVO 250 free space on flash in bytes</p>|`Dependent item`|mitel.mivo250.flashpercfree<p>Update: 0</p>|
-|Free space on flash card|<p>MiVO 250 free space on flash in bytes</p>|`Dependent item`|mitel.mivo250.flashspace<p>Update: 0</p>|
 |License status|<p>MiVO 250 License Status</p>|`Dependent item`|mitel.mivo250.licstat<p>Update: 0</p>|
-|Release version|<p>MiVO 250 Release version</p>|`Dependent item`|mitel.mivo250.relver<p>Update: 0</p>|
+|Free space on flash card|<p>MiVO 250 free space on flash in bytes</p>|`Dependent item`|mitel.mivo250.flashspace<p>Update: 0</p>|
+|Alarm status|<p>MiVO 250 Alarm status</p>|`Dependent item`|mitel.mivo250.alarm<p>Update: 0</p>|
+|Percent free on flash card|<p>MiVO 250 free space on flash in bytes</p>|`Dependent item`|mitel.mivo250.flashpercfree<p>Update: 0</p>|
 |MiVO 250 Status blob|<p>-</p>|`HTTP agent`|mitel.mivo250.status<p>Update: 180s</p>|
+|Active calls|<p>MiVO 250 Active calls</p>|`Dependent item`|mitel.mivo250.activecalls<p>Update: 0</p>|
+|Call Processing version|<p>MiVO 250 Call Processing version</p>|`Dependent item`|mitel.mivo250.cpver<p>Update: 0</p>|
+|Release version|<p>MiVO 250 Release version</p>|`Dependent item`|mitel.mivo250.relver<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

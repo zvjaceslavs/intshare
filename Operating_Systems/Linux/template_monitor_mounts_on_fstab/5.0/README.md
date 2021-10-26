@@ -1,4 +1,4 @@
-# Template Check Mount Point
+# Check Mount Point
 
 ## Description
 

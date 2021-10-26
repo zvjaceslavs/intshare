@@ -1,4 +1,4 @@
-# Template Eaton UPS
+# Eaton UPS
 
 ## Overview
 
@@ -66,45 +66,45 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Discovery Output|<p>-</p>|`SNMP agent`|get.output.nbrlines<p>Update: 1m</p>|
 |Discovery Input|<p>-</p>|`SNMP agent`|input.discovery<p>Update: 1m</p>|
-|Discovery Alarms|<p>The present number of active alarm conditions.</p>|`SNMP agent`|alarms.discovery<p>Update: 1m</p>|
+|Discovery Output|<p>-</p>|`SNMP agent`|get.output.nbrlines<p>Update: 1m</p>|
 |Discovery Bypass|<p>-</p>|`SNMP agent`|bypass.discovery<p>Update: 1m</p>|
+|Discovery Alarms|<p>The present number of active alarm conditions.</p>|`SNMP agent`|alarms.discovery<p>Update: 1m</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Manufacturer|<p>-</p>|`SNMP agent`|get.upsIdentManufacturer<p>Update: 1d</p>|
-|Estimated Minuted Remaining|<p>-</p>|`SNMP agent`|get.estimated.minutes<p>Update: 1m</p>|
-|Agent Software Version|<p>-</p>|`SNMP agent`|get.agentsoftwareversion<p>Update: 1d</p>|
-|Estimated Charge Remaining|<p>-</p>|`SNMP agent`|get.estimated.charge<p>Update: 1m</p>|
 |Model|<p>-</p>|`SNMP agent`|get.upsModel<p>Update: 1d</p>|
-|Battery Status|<p>-</p>|`SNMP agent`|get.battery.status<p>Update: 1m</p>|
-|Alarms Present|<p>-</p>|`SNMP agent`|get.alarms.present<p>Update: 1m</p>|
-|UPS Software Version|<p>-</p>|`SNMP agent`|get.upssoftversion<p>Update: 1d</p>|
+|Serial Number|<p>-</p>|`SNMP agent`|get.upserial<p>Update: 1d</p>|
 |Battery Voltage|<p>-</p>|`SNMP agent`|get.battery.voltage<p>Update: 1m</p>|
-|Output Source Status|<p>-</p>|`SNMP agent`|get.output.status<p>Update: 1m</p>|
+|Battery Status|<p>-</p>|`SNMP agent`|get.battery.status<p>Update: 1m</p>|
 |Output Frequency|<p>-</p>|`SNMP agent`|get.output.frequency<p>Update: 1m</p>|
 |Seconds on Battery|<p>-</p>|`SNMP agent`|get.battery.seconds<p>Update: 1m</p>|
-|Serial Number|<p>-</p>|`SNMP agent`|get.upserial<p>Update: 1d</p>|
+|Estimated Minuted Remaining|<p>-</p>|`SNMP agent`|get.estimated.minutes<p>Update: 1m</p>|
+|Estimated Charge Remaining|<p>-</p>|`SNMP agent`|get.estimated.charge<p>Update: 1m</p>|
+|Manufacturer|<p>-</p>|`SNMP agent`|get.upsIdentManufacturer<p>Update: 1d</p>|
+|Agent Software Version|<p>-</p>|`SNMP agent`|get.agentsoftwareversion<p>Update: 1d</p>|
+|UPS Software Version|<p>-</p>|`SNMP agent`|get.upssoftversion<p>Update: 1d</p>|
+|Output Source Status|<p>-</p>|`SNMP agent`|get.output.status<p>Update: 1m</p>|
+|Alarms Present|<p>-</p>|`SNMP agent`|get.alarms.present<p>Update: 1m</p>|
+|Input {#INDEX}: Frequency|<p>-</p>|`SNMP agent`|get.input.frequency[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Input {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.input.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Output {#INDEX}: Amps|<p>The present output current.</p>|`SNMP agent`|get.output.amps[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Output {#INDEX}: Percentage Load|<p>-</p>|`SNMP agent`|get.output.load[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Output {#INDEX}: Power|<p>The present output true power.</p>|`SNMP agent`|get.output.power[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Output {#INDEX}: Voltage|<p>The present output voltage.</p>|`SNMP agent`|get.output.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Input {#INDEX}: Frequency|<p>-</p>|`SNMP agent`|get.input.frequency[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Input {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.input.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bypass {#INDEX}:  Amps|<p>The present bypass current.</p>|`SNMP agent`|get.bypass.amps[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Bypass {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.bypass.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Alarms Description|<p>A reference to an alarm description object. The object referenced should not be accessible, but rather be used to provide a unique description of the alarm condition.</p>|`SNMP agent`|get.alarms.description[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
 |Alarms ID|<p>A reference to an alarm description object. The object referenced should not be accessible, but rather be used to provide a unique description of the alarm condition.</p>|`SNMP agent`|get.alarms.id[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
 |Alarms Time|<p>The value of sysUpTime when the alarm condition was detected. If the alarm condition was detected at the time of agent startup and presumably existed before agent startup, the value of upsAlarmTime shall equal 0.</p>|`SNMP agent`|get.alarms.time[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
-|Bypass {#INDEX}:  Amps|<p>The present bypass current.</p>|`SNMP agent`|get.bypass.amps[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Bypass {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.bypass.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|An Alarm has been detected: ID {last(/Template Eaton UPS/get.alarms.id[{#ALARM}])}|<p>{last(/Template Eaton UPS/get.alarms.description[{#ALARM}])} {last(/Template Eaton UPS/get.alarms.time[{#ALARM}])}</p>|<p>**Expression**: last(/Template Eaton UPS/get.alarms.id[{#ALARM}])>0</p><p>**Recovery expression**: </p>|warning|
-|Output {#INDEX} is overloaded|<p>-</p>|<p>**Expression**: last(/Template Eaton UPS/get.output.load[{#INDEX}])>=85</p><p>**Recovery expression**: </p>|average|
-|No power has been detected on input n°{#INDEX}|<p>-</p>|<p>**Expression**: last(/Template Eaton UPS/get.input.voltage[{#INDEX}])<=0</p><p>**Recovery expression**: </p>|average|
-|Output {#INDEX} is overloaded (LLD)|<p>-</p>|<p>**Expression**: last(/Template Eaton UPS/get.output.load[{#INDEX}])>=85</p><p>**Recovery expression**: </p>|average|
-|No power has been detected on input n°{#INDEX} (LLD)|<p>-</p>|<p>**Expression**: last(/Template Eaton UPS/get.input.voltage[{#INDEX}])<=0</p><p>**Recovery expression**: </p>|average|
-|An Alarm has been detected: ID {last(/Template Eaton UPS/get.alarms.id[{#ALARM}])} (LLD)|<p>{last(/Template Eaton UPS/get.alarms.description[{#ALARM}])} {last(/Template Eaton UPS/get.alarms.time[{#ALARM}])}</p>|<p>**Expression**: last(/Template Eaton UPS/get.alarms.id[{#ALARM}])>0</p><p>**Recovery expression**: </p>|warning|
+|An Alarm has been detected: ID {last(/Template Eaton UPS/get.alarms.id[{#ALARM}])}|<p>{last(/Template Eaton UPS/get.alarms.description[{#ALARM}])} {last(/Template Eaton UPS/get.alarms.time[{#ALARM}])}</p>|<p>**Expression**: last(/Eaton UPS/get.alarms.id[{#ALARM}])>0</p><p>**Recovery expression**: </p>|warning|
+|Output {#INDEX} is overloaded|<p>-</p>|<p>**Expression**: last(/Eaton UPS/get.output.load[{#INDEX}])>=85</p><p>**Recovery expression**: </p>|average|
+|No power has been detected on input n°{#INDEX}|<p>-</p>|<p>**Expression**: last(/Eaton UPS/get.input.voltage[{#INDEX}])<=0</p><p>**Recovery expression**: </p>|average|
+|No power has been detected on input n°{#INDEX} (LLD)|<p>-</p>|<p>**Expression**: last(/Eaton UPS/get.input.voltage[{#INDEX}])<=0</p><p>**Recovery expression**: </p>|average|
+|Output {#INDEX} is overloaded (LLD)|<p>-</p>|<p>**Expression**: last(/Eaton UPS/get.output.load[{#INDEX}])>=85</p><p>**Recovery expression**: </p>|average|
+|An Alarm has been detected: ID {last(/Template Eaton UPS/get.alarms.id[{#ALARM}])} (LLD)|<p>{last(/Template Eaton UPS/get.alarms.description[{#ALARM}])} {last(/Template Eaton UPS/get.alarms.time[{#ALARM}])}</p>|<p>**Expression**: last(/Eaton UPS/get.alarms.id[{#ALARM}])>0</p><p>**Recovery expression**: </p>|warning|

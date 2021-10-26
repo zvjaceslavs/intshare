@@ -1,4 +1,4 @@
-# Xanto S1500R Template
+# Xanto S1500R
 
 ## Overview
 
@@ -59,15 +59,15 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Battery Capacity|<p>-</p>|`SNMP agent`|Battery<p>Update: 30</p>|
-|MAC|<p>-</p>|`SNMP agent`|deviceMAC<p>Update: 86400</p>|
-|Load Current %|<p>current load in %</p>|`SNMP agent`|Load<p>Update: 30</p>|
-|system uptime|<p>-</p>|`SNMP agent`|system.up<p>Update: 86400</p>|
 |Temperature|<p>Temp</p>|`SNMP agent`|Temp<p>Update: 30</p>|
-|Runtime|<p>remaining runtime in min</p>|`SNMP agent`|Time<p>Update: 30</p>|
-|USV Model|<p>-</p>|`SNMP agent`|USVVersion<p>Update: 86400</p>|
-|Voltage Input|<p>-</p>|`SNMP agent`|VoltageIN<p>Update: 30</p>|
+|system uptime|<p>-</p>|`SNMP agent`|system.up<p>Update: 86400</p>|
 |Voltage Output|<p>-</p>|`SNMP agent`|VoltageOut<p>Update: 30</p>|
+|MAC|<p>-</p>|`SNMP agent`|deviceMAC<p>Update: 86400</p>|
+|Runtime|<p>remaining runtime in min</p>|`SNMP agent`|Time<p>Update: 30</p>|
+|Voltage Input|<p>-</p>|`SNMP agent`|VoltageIN<p>Update: 30</p>|
+|USV Model|<p>-</p>|`SNMP agent`|USVVersion<p>Update: 86400</p>|
+|Battery Capacity|<p>-</p>|`SNMP agent`|Battery<p>Update: 30</p>|
+|Load Current %|<p>current load in %</p>|`SNMP agent`|Load<p>Update: 30</p>|
 ## Triggers
 
 There are no triggers in this template.

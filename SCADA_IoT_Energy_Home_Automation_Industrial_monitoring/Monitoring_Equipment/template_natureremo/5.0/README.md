@@ -1,4 +1,4 @@
-# Template NatureRemo
+# NatureRemo
 
 ## Overview
 

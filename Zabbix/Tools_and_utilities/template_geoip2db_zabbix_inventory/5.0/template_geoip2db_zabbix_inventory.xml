@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:23Z</date>
+  <date>2021-10-26T04:44:42Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>GeoIP2 Location Template</template>
-      <name>GeoIP2 Location Template</name>
+      <template>GeoIP2 Location</template>
+      <name>GeoIP2 Location</name>
       <description>Template for executing https://github.com/mjtrangoni/geoip2_zabbix This populates the location to the Host Inventory</description>
       <groups>
         <group>

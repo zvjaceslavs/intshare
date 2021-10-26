@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:20Z</date>
+  <date>2021-10-26T04:40:11Z</date>
   <groups>
     <group>
       <name>HSC Hosts</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template HSC Discovery DHCP scopes - HSC</template>
-      <name>Template HSC Discovery DHCP scopes - HSC</name>
+      <template>HSC Discovery DHCP scopes - HSC</template>
+      <name>HSC Discovery DHCP scopes - HSC</name>
       <groups>
         <group>
           <name>HSC Hosts</name>

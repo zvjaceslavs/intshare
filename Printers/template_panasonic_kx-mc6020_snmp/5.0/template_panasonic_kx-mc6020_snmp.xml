@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:32Z</date>
+  <date>2021-10-26T04:40:25Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Printer_Panasonic_KX-MC6020RU</template>
-      <name>Template_Printer_Panasonic_KX-MC6020RU</name>
+      <template>Printer_Panasonic_KX-MC6020RU</template>
+      <name>Printer_Panasonic_KX-MC6020RU</name>
       <groups>
         <group>
           <name>Printers</name>
@@ -481,7 +481,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>ADF_Scan_Page</key>
           </item>
         </graph_item>
@@ -489,7 +489,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>Copy_Page</key>
           </item>
         </graph_item>
@@ -497,7 +497,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>Fax_Receive_Page</key>
           </item>
         </graph_item>
@@ -505,7 +505,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>Fax_Send_Page</key>
           </item>
         </graph_item>
@@ -513,7 +513,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>FB_Scan_Page</key>
           </item>
         </graph_item>
@@ -521,7 +521,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>OPC_Drum_Count</key>
           </item>
         </graph_item>
@@ -529,7 +529,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>PC_Print_Page</key>
           </item>
         </graph_item>
@@ -537,7 +537,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>PC_Scan_Page</key>
           </item>
         </graph_item>
@@ -545,7 +545,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>Total_Print_Page</key>
           </item>
         </graph_item>
@@ -557,7 +557,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_Printer_Panasonic_KX-MC6020RU</host>
+            <host>Printer_Panasonic_KX-MC6020RU</host>
             <key>Total_Print_Page</key>
           </item>
         </graph_item>

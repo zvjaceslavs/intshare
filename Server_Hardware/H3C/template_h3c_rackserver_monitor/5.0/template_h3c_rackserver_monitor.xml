@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:47Z</date>
+  <date>2021-10-26T04:46:19Z</date>
   <groups>
     <group>
       <name>Templates/Server hardware</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>H3C_RackServer_monitor_template</template>
-      <name>H3C RackServer Monitor Template</name>
+      <template>H3C_RackServer_monitor</template>
+      <name>H3C RackServer Monitor</name>
       <description>H3C_RackServer_monitor_template Known Issues: device : UIS-Cell-3030-G3,UniServer-R4900</description>
       <groups>
         <group>

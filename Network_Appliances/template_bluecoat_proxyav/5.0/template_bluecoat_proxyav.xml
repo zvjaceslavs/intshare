@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:55Z</date>
+  <date>2021-10-26T04:38:36Z</date>
   <groups>
     <group>
       <name>BlueCoat</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App BlueCoat AV</template>
-      <name>Template App BlueCoat AV</name>
+      <template>App BlueCoat AV</template>
+      <name>App BlueCoat AV</name>
       <groups>
         <group>
           <name>BlueCoat</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:56Z</date>
+  <date>2021-10-26T04:38:37Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP OS ESXi</template>
-      <name>Template SNMP OS ESXi</name>
+      <template>SNMP OS ESXi</template>
+      <name>SNMP OS ESXi</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -236,12 +236,12 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNMP OS ESXi:hrStorageUsedBlocks[{#SNMPINDEX}].last(0)} / {Template SNMP OS ESXi:hrStorageSizeBlocks[{#SNMPINDEX}].last(0)} > 0.9</expression>
+              <expression>{SNMP OS ESXi:hrStorageUsedBlocks[{#SNMPINDEX}].last(0)} / {SNMP OS ESXi:hrStorageSizeBlocks[{#SNMPINDEX}].last(0)} > 0.9</expression>
               <name>Free disk space is less than 10% on volume {#SNMPINDEX}</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template SNMP OS ESXi:hrStorageUsedBlocks[{#SNMPINDEX}].last(0)} / {Template SNMP OS ESXi:hrStorageSizeBlocks[{#SNMPINDEX}].last(0)} > 0.8</expression>
+              <expression>{SNMP OS ESXi:hrStorageUsedBlocks[{#SNMPINDEX}].last(0)} / {SNMP OS ESXi:hrStorageSizeBlocks[{#SNMPINDEX}].last(0)} > 0.8</expression>
               <name>Free disk space is less than 20% on volume {#SNMPINDEX}</name>
               <priority>WARNING</priority>
             </trigger_prototype>
@@ -254,7 +254,7 @@
                 <graph_item>
                   <color>C80000</color>
                   <item>
-                    <host>Template SNMP OS ESXi</host>
+                    <host>SNMP OS ESXi</host>
                     <key>vmfs.FreeSpacePer[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -346,7 +346,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNMP OS ESXi:hrMemoryUsed[{#SNMPINDEX}].last(0)} / {Template SNMP OS ESXi:hrMemoryTotal[{#SNMPINDEX}].last(0)} > 0.9</expression>
+              <expression>{SNMP OS ESXi:hrMemoryUsed[{#SNMPINDEX}].last(0)} / {SNMP OS ESXi:hrMemoryTotal[{#SNMPINDEX}].last(0)} > 0.9</expression>
               <name>Available Memory is less than 10% on $1</name>
               <priority>HIGH</priority>
             </trigger_prototype>

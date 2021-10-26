@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:12Z</date>
+  <date>2021-10-26T04:41:07Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template JMX Wildlfy</template>
-      <name>Template JMX Wildlfy</name>
+      <template>JMX Wildlfy</template>
+      <name>JMX Wildlfy</name>
       <description>Install and info: https://github.com/hermanekt/Zabbix_wildfly_eap_jboss_monitoring https://share.zabbix.com/official-templates/wildfly-eap-jboss-discovery Version 1.2</description>
       <groups>
         <group>
@@ -805,7 +805,7 @@
                   <dependencies>
                     <dependency>
                       <name>Server need to be restart for configuration change.</name>
-                      <expression>{Template JMX Wildlfy:jmx[{#JMXOBJ},runtimeConfigurationState].str(ok)}=0</expression>
+                      <expression>{JMX Wildlfy:jmx[{#JMXOBJ},runtimeConfigurationState].str(ok)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -921,7 +921,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},CollectionCount]</key>
                   </item>
                 </graph_item>
@@ -1001,7 +1001,7 @@
                 <graph_item>
                   <color>AC8C14</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},Usage.committed]</key>
                   </item>
                 </graph_item>
@@ -1009,7 +1009,7 @@
                   <sortorder>1</sortorder>
                   <color>611F27</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},Usage.max]</key>
                   </item>
                 </graph_item>
@@ -1017,7 +1017,7 @@
                   <sortorder>2</sortorder>
                   <color>F230E0</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},Usage.used]</key>
                   </item>
                 </graph_item>
@@ -1148,9 +1148,9 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheAccessCount].last(0)}&lt;({Template JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheHitCount].last(0)}*0.5)</expression>
+              <expression>{JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheAccessCount].last(0)}&lt;({JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheHitCount].last(0)}*0.5)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheAccessCount].last(0)}>({Template JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheHitCount].last(0)}*0.6)</recovery_expression>
+              <recovery_expression>{JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheAccessCount].last(0)}>({JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheHitCount].last(0)}*0.6)</recovery_expression>
               <name>Datasource {#JMXDATA_SOURCE} cache hit is too low!</name>
               <priority>WARNING</priority>
               <manual_close>YES</manual_close>
@@ -1163,7 +1163,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},PreparedStatementCacheAccessCount]</key>
                   </item>
                 </graph_item>
@@ -1171,7 +1171,7 @@
                   <sortorder>1</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},PreparedStatementCacheHitCount]</key>
                   </item>
                 </graph_item>
@@ -1179,7 +1179,7 @@
                   <sortorder>2</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},PreparedStatementCacheMissCount]</key>
                   </item>
                 </graph_item>
@@ -1187,7 +1187,7 @@
                   <sortorder>3</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},PreparedStatementCacheCurrentSize]</key>
                   </item>
                 </graph_item>
@@ -1195,7 +1195,7 @@
                   <sortorder>4</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},PreparedStatementCacheAddCount]</key>
                   </item>
                 </graph_item>
@@ -1203,7 +1203,7 @@
                   <sortorder>5</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},PreparedStatementCacheDeleteCount]</key>
                   </item>
                 </graph_item>
@@ -1265,7 +1265,7 @@
                   <dependencies>
                     <dependency>
                       <name>Datasource {#JMXDATA_SOURCE} monitoring statistic is not enabled!</name>
-                      <expression>{Template JMX Wildlfy:jmx[{#JMXOBJ},statisticsEnabled].str(true)}=0</expression>
+                      <expression>{JMX Wildlfy:jmx[{#JMXOBJ},statisticsEnabled].str(true)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -2164,9 +2164,9 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template JMX Wildlfy:jmx[{#JMXOBJ},InUseCount].last(0)}>({Template JMX Wildlfy:jmx[{#JMXOBJ},AvailableCount].last(0)}*0.9)</expression>
+              <expression>{JMX Wildlfy:jmx[{#JMXOBJ},InUseCount].last(0)}>({JMX Wildlfy:jmx[{#JMXOBJ},AvailableCount].last(0)}*0.9)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template JMX Wildlfy:jmx[{#JMXOBJ},InUseCount].last(0)}&lt;({Template JMX Wildlfy:jmx[{#JMXOBJ},AvailableCount].last(0)}*0.7)</recovery_expression>
+              <recovery_expression>{JMX Wildlfy:jmx[{#JMXOBJ},InUseCount].last(0)}&lt;({JMX Wildlfy:jmx[{#JMXOBJ},AvailableCount].last(0)}*0.7)</recovery_expression>
               <name>Datasource {#JMXDATA_SOURCE} 90% connection is in use {HOST.NAME}</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
@@ -2179,7 +2179,7 @@
                 <graph_item>
                   <color>6C59DC</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},InUseCount]</key>
                   </item>
                 </graph_item>
@@ -2187,7 +2187,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},AvailableCount]</key>
                   </item>
                 </graph_item>
@@ -2195,7 +2195,7 @@
                   <sortorder>2</sortorder>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},ActiveCount]</key>
                   </item>
                 </graph_item>
@@ -2203,7 +2203,7 @@
                   <sortorder>3</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},MaxUsedCount]</key>
                   </item>
                 </graph_item>
@@ -2211,7 +2211,7 @@
                   <sortorder>4</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},TimedOut]</key>
                   </item>
                 </graph_item>
@@ -2219,7 +2219,7 @@
                   <sortorder>5</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>Template JMX Wildlfy</host>
+                    <host>JMX Wildlfy</host>
                     <key>jmx[{#JMXOBJ},WaitCount]</key>
                   </item>
                 </graph_item>
@@ -2257,54 +2257,54 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}>({Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.7)</expression>
+      <expression>{JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}>({JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.7)</expression>
       <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-      <recovery_expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}&lt;({Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.6)</recovery_expression>
+      <recovery_expression>{JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}&lt;({JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.6)</recovery_expression>
       <name>70% Heap Memory used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}>({Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.7)</expression>
+      <expression>{JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}>({JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.7)</expression>
       <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-      <recovery_expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}&lt;({Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.6)</recovery_expression>
+      <recovery_expression>{JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}&lt;({JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.6)</recovery_expression>
       <name>70% Non-Heap Memory used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Wildlfy:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}>({Template JMX Wildlfy:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.7)</expression>
+      <expression>{JMX Wildlfy:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}>({JMX Wildlfy:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.7)</expression>
       <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-      <recovery_expression>{Template JMX Wildlfy:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}&lt;({Template JMX Wildlfy:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.6)</recovery_expression>
+      <recovery_expression>{JMX Wildlfy:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}&lt;({JMX Wildlfy:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.6)</recovery_expression>
       <name>70% Opened File Descriptor Count used on {HOST.NAME}</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}>({Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.9)</expression>
+      <expression>{JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}>({JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.9)</expression>
       <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-      <recovery_expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}&lt;({Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.6)</recovery_expression>
+      <recovery_expression>{JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.used].last(0)}&lt;({JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}*0.6)</recovery_expression>
       <name>90% Heap Memory used on {HOST.NAME}</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}>({Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.9)</expression>
+      <expression>{JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}>({JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.9)</expression>
       <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-      <recovery_expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}&lt;({Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.6)</recovery_expression>
+      <recovery_expression>{JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.used].last(0)}&lt;({JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}*0.6)</recovery_expression>
       <name>90% Non-Heap Memory used on {HOST.NAME}</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Wildlfy:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}>({Template JMX Wildlfy:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.9)</expression>
+      <expression>{JMX Wildlfy:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}>({JMX Wildlfy:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.9)</expression>
       <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-      <recovery_expression>{Template JMX Wildlfy:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}&lt;({Template JMX Wildlfy:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.6)</recovery_expression>
+      <recovery_expression>{JMX Wildlfy:jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount].last(0)}&lt;({JMX Wildlfy:jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount].last(0)}*0.6)</recovery_expression>
       <name>90% Opened File Descriptor Count used on {HOST.NAME}</name>
       <priority>DISASTER</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.committed].last(0)}={Template JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}</expression>
+      <expression>{JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.committed].last(0)}={JMX Wildlfy:jmx["java.lang:type=Memory",HeapMemoryUsage.max].last(0)}</expression>
       <name>Heap Memory fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed].last(0)}={Template JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}</expression>
+      <expression>{JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed].last(0)}={JMX Wildlfy:jmx["java.lang:type=Memory",NonHeapMemoryUsage.max].last(0)}</expression>
       <name>Non-Heap Memory fully committed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
@@ -2316,7 +2316,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=ClassLoading",TotalLoadedClassCount]</key>
           </item>
         </graph_item>
@@ -2324,7 +2324,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=ClassLoading",UnloadedClassCount]</key>
           </item>
         </graph_item>
@@ -2332,7 +2332,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=ClassLoading",LoadedClassCount]</key>
           </item>
         </graph_item>
@@ -2344,7 +2344,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]</key>
           </item>
         </graph_item>
@@ -2352,7 +2352,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]</key>
           </item>
         </graph_item>
@@ -2364,7 +2364,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Memory",HeapMemoryUsage.committed]</key>
           </item>
         </graph_item>
@@ -2372,7 +2372,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Memory",HeapMemoryUsage.max]</key>
           </item>
         </graph_item>
@@ -2380,7 +2380,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Memory",HeapMemoryUsage.used]</key>
           </item>
         </graph_item>
@@ -2392,7 +2392,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed]</key>
           </item>
         </graph_item>
@@ -2400,7 +2400,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Memory",NonHeapMemoryUsage.max]</key>
           </item>
         </graph_item>
@@ -2408,7 +2408,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Memory",NonHeapMemoryUsage.used]</key>
           </item>
         </graph_item>
@@ -2420,7 +2420,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Threading",PeakThreadCount]</key>
           </item>
         </graph_item>
@@ -2428,7 +2428,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Threading",DaemonThreadCount]</key>
           </item>
         </graph_item>
@@ -2436,7 +2436,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template JMX Wildlfy</host>
+            <host>JMX Wildlfy</host>
             <key>jmx["java.lang:type=Threading",ThreadCount]</key>
           </item>
         </graph_item>

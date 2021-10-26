@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:23Z</date>
+  <date>2021-10-26T04:42:26Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App IIS Service_RUS</template>
-      <name>Template App IIS Service_RUS</name>
+      <template>App IIS Service_RUS</template>
+      <name>App IIS Service_RUS</name>
       <groups>
         <group>
           <name>Templates/Modules</name>
@@ -291,7 +291,7 @@
               <style>0</style>
               <resource>
                 <name>IIS Кэш ставки и проценты</name>
-                <host>Template App IIS Service_RUS</host>
+                <host>App IIS Service_RUS</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -313,7 +313,7 @@
               <style>0</style>
               <resource>
                 <name>IIS Итого кэша</name>
-                <host>Template App IIS Service_RUS</host>
+                <host>App IIS Service_RUS</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -342,7 +342,7 @@
               <style>0</style>
               <resource>
                 <name>IIS Пропускная способность</name>
-                <host>Template App IIS Service_RUS</host>
+                <host>App IIS Service_RUS</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -364,7 +364,7 @@
               <style>0</style>
               <resource>
                 <name>IIS К-во текущих подключений</name>
-                <host>Template App IIS Service_RUS</host>
+                <host>App IIS Service_RUS</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -386,7 +386,7 @@
               <style>0</style>
               <resource>
                 <name>IIS Запросов в секунду</name>
-                <host>Template App IIS Service_RUS</host>
+                <host>App IIS Service_RUS</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -415,7 +415,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Веб-служба(*)\Количество запросов GET в секунду",300]</key>
           </item>
         </graph_item>
@@ -423,7 +423,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Веб-служба(*)\Количество запросов POST в секунду",300]</key>
           </item>
         </graph_item>
@@ -435,7 +435,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Кэш веб-службы\Количество попаданий в кэш файлов",300]</key>
           </item>
         </graph_item>
@@ -443,7 +443,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Кэш веб-службы\Текущее количество кэшированных метаданных",300]</key>
           </item>
         </graph_item>
@@ -451,7 +451,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Кэш веб-службы\Текущее количество кэшированных блоков URI",300]</key>
           </item>
         </graph_item>
@@ -463,7 +463,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Веб-служба(*)\Количество текущих подключений",300]</key>
           </item>
         </graph_item>
@@ -475,7 +475,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Кэш веб-службы\Процент попаданий в кэш файлов",300]</key>
           </item>
         </graph_item>
@@ -483,7 +483,7 @@
           <sortorder>1</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Кэш веб-службы\Количество попаданий в кэше метаданных",300]</key>
           </item>
         </graph_item>
@@ -491,7 +491,7 @@
           <sortorder>2</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Кэш веб-службы\Процент попаданий в кэше URI",300]</key>
           </item>
         </graph_item>
@@ -503,7 +503,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Веб-служба(*)\Количество полученных байтов в секунду",300]</key>
           </item>
         </graph_item>
@@ -511,7 +511,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Веб-служба(*)\Количество отправленных байтов в секунду",300]</key>
           </item>
         </graph_item>
@@ -519,7 +519,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App IIS Service_RUS</host>
+            <host>App IIS Service_RUS</host>
             <key>perf_counter["\Веб-служба(*)\Всего байтов в секунду",300]</key>
           </item>
         </graph_item>

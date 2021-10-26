@@ -1,4 +1,4 @@
-# Template APT Debian
+# APT Debian
 
 ## Overview
 

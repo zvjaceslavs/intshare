@@ -1,4 +1,4 @@
-# Template SNMP Cisco WS3750
+# SNMP Cisco WS3750
 
 ## Description
 
@@ -37,26 +37,31 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Network Interfaces|<p>-</p>|`SNMP agent`|ifName<p>Update: 3600</p>|
-|Environment Fans|<p>-</p>|`SNMP agent`|ciscoEnvMonFanStatusDescr<p>Update: 3600</p>|
-|Processes Memory|<p>-</p>|`SNMP agent`|ciscoMemoryPoolName<p>Update: 3600</p>|
 |Environment Temperature|<p>-</p>|`SNMP agent`|ciscoEnvMonTemperatureStatusDescr<p>Update: 3600</p>|
+|Processes Memory|<p>-</p>|`SNMP agent`|ciscoMemoryPoolName<p>Update: 3600</p>|
+|Environment Fans|<p>-</p>|`SNMP agent`|ciscoEnvMonFanStatusDescr<p>Update: 3600</p>|
+|Network Interfaces|<p>-</p>|`SNMP agent`|ifName<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Device CPU utilization|<p>The time scale is set at 5 minute intervals. The value will be between 0% (idle) and 100% (very busy).</p>|`SNMP agent`|ciscoCpmCPUTotal5minRev<p>Update: 300</p>|
-|Device manufacter mame|<p>-</p>|`External check`|echo.something["Cisco Systems"]<p>Update: 3600</p>|
+|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
+|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software. It is mandatory that this only contain printable ASCII characters.</p>|`SNMP agent`|entPhysicalModelName<p>Update: 3600</p>|
+|Device full description|<p>Full text IOS description</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
 |Device type|<p>-</p>|`SNMP agent`|entPhysicalDescr<p>Update: 3600</p>|
 |Device firmware version|<p>Version number of the Firmware.</p>|`SNMP agent`|entPhysicalFirmwareRev<p>Update: 3600</p>|
-|Device hardware version|<p>Version number of the Hardware.</p>|`SNMP agent`|entPhysicalHardwareRev<p>Update: 3600</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software. It is mandatory that this only contain printable ASCII characters.</p>|`SNMP agent`|entPhysicalModelName<p>Update: 3600</p>|
-|Device serial number|<p>-</p>|`SNMP agent`|entPhysicalSerialNum<p>Update: 3600</p>|
 |Device contact details|<p>-</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
-|Device full description|<p>Full text IOS description</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
-|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
-|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
+|Device serial number|<p>-</p>|`SNMP agent`|entPhysicalSerialNum<p>Update: 3600</p>|
 |Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
+|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
+|Device manufacter mame|<p>-</p>|`External check`|echo.something["Cisco Systems"]<p>Update: 3600</p>|
+|Device CPU utilization|<p>The time scale is set at 5 minute intervals. The value will be between 0% (idle) and 100% (very busy).</p>|`SNMP agent`|ciscoCpmCPUTotal5minRev<p>Update: 300</p>|
+|Device hardware version|<p>Version number of the Hardware.</p>|`SNMP agent`|entPhysicalHardwareRev<p>Update: 3600</p>|
+|Environment $1 temp. status|<p>CiscoEnvMonState (INTEGER) {normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6)} The current state of the testpoint being instrumented.</p>|`SNMP agent`|ciscoEnvMonTemperatureState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Device memory $1 free|<p>-</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Device memory $1 largest free|<p>-</p>|`SNMP agent`|ciscoMemoryPoolLargestFree[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Device memory $1 used|<p>-</p>|`SNMP agent`|ciscoMemoryPoolUsed[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Environment $1 status|<p>-</p>|`SNMP agent`|ciscoEnvMonFanState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Admin status of interface $1|<p>INTEGER {up(1), down(2), testing(3)} The desired state of the interface. The testing(3) state indicates that no operational packets can be passed. When a managed system initializes, all interfaces start with ifAdminStatus in the down(2) state. As a result of either explicit management action or per configuration information retained by the managed system, ifAdminStatus is then changed to either the up(1) or testing(3) states (or remains in the down(2) state).</p>|`SNMP agent`|ifAdminStatus[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Speed of interface {#SNMPVALUE}|<p>An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to `n+499,999'. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.</p>|`SNMP agent`|ifHighSpeed[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
@@ -75,30 +80,25 @@ There are no template links in this template.
 |Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Description of interface $1|<p>A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software.</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Uptime of interface $1|<p>The value of sysUpTime at the time the interface entered its current operational state. If the current state was entered prior to the last re-initialization of the local network management subsystem, then this object contains a zero value.</p>|`SNMP agent`|ifLastChange[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
-|Environment $1 status|<p>-</p>|`SNMP agent`|ciscoEnvMonFanState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|Device memory $1 free|<p>-</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|Device memory $1 largest free|<p>-</p>|`SNMP agent`|ciscoMemoryPoolLargestFree[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|Device memory $1 used|<p>-</p>|`SNMP agent`|ciscoMemoryPoolUsed[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|Environment $1 temp. status|<p>CiscoEnvMonState (INTEGER) {normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6)} The current state of the testpoint being instrumented.</p>|`SNMP agent`|ciscoEnvMonTemperatureState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{HOST.NAME} {#SNMPVALUE} fan critical|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=3</p><p>**Recovery expression**: </p>|average|
-|{HOST.NAME} {#SNMPVALUE} fan failed|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=6</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME} {#SNMPVALUE} fan warning|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=2</p><p>**Recovery expression**: </p>|warning|
-|{HOST.NAME} {#SNMPVALUE} temperature critical|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].last()}=6</p><p>**Recovery expression**: </p>|disaster|
-|{HOST.NAME} {#SNMPVALUE} temperature emergency|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].avg(#3)}=3</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME} {#SNMPVALUE} temperature warning|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].avg(#3)}=2</p><p>**Recovery expression**: </p>|warning|
-|Incoming use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes|<p>-</p>|<p>**Expression**: ({Template SNMP Cisco WS3750:ifHCInOctets[{#SNMPVALUE}].avg(300s)})> ({Template SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</p><p>**Recovery expression**: </p>|warning|
-|Outgoing use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes|<p>-</p>|<p>**Expression**: ({Template SNMP Cisco WS3750:IfHCOutOctets[{#SNMPVALUE}].avg(300s)})> ({Template SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</p><p>**Recovery expression**: </p>|warning|
-|{HOST.NAME} link changed on {#SNMPVALUE}: {ITEM.VALUE1}|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ifOperStatus[{#SNMPVALUE}].max(#1)}=0 and {Template SNMP Cisco WS3750:ifOperStatus[{#SNMPVALUE}].max(#2)}=0</p><p>**Recovery expression**: </p>|disaster|
-|Incoming use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes (LLD)|<p>-</p>|<p>**Expression**: ({Template SNMP Cisco WS3750:ifHCInOctets[{#SNMPVALUE}].avg(300s)})> ({Template SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</p><p>**Recovery expression**: </p>|warning|
-|Outgoing use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes (LLD)|<p>-</p>|<p>**Expression**: ({Template SNMP Cisco WS3750:IfHCOutOctets[{#SNMPVALUE}].avg(300s)})> ({Template SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</p><p>**Recovery expression**: </p>|warning|
-|{HOST.NAME} link changed on {#SNMPVALUE}: {ITEM.VALUE1} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ifOperStatus[{#SNMPVALUE}].max(#1)}=0 and {Template SNMP Cisco WS3750:ifOperStatus[{#SNMPVALUE}].max(#2)}=0</p><p>**Recovery expression**: </p>|disaster|
-|{HOST.NAME} {#SNMPVALUE} fan critical (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=3</p><p>**Recovery expression**: </p>|average|
-|{HOST.NAME} {#SNMPVALUE} fan failed (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=6</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME} {#SNMPVALUE} fan warning (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=2</p><p>**Recovery expression**: </p>|warning|
-|{HOST.NAME} {#SNMPVALUE} temperature critical (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].last()}=6</p><p>**Recovery expression**: </p>|disaster|
-|{HOST.NAME} {#SNMPVALUE} temperature emergency (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].avg(#3)}=3</p><p>**Recovery expression**: </p>|high|
-|{HOST.NAME} {#SNMPVALUE} temperature warning (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].avg(#3)}=2</p><p>**Recovery expression**: </p>|warning|
+|{HOST.NAME} {#SNMPVALUE} fan critical|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=3</p><p>**Recovery expression**: </p>|average|
+|{HOST.NAME} {#SNMPVALUE} fan failed|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=6</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME} {#SNMPVALUE} fan warning|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=2</p><p>**Recovery expression**: </p>|warning|
+|{HOST.NAME} {#SNMPVALUE} temperature critical|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].last()}=6</p><p>**Recovery expression**: </p>|disaster|
+|{HOST.NAME} {#SNMPVALUE} temperature emergency|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].avg(#3)}=3</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME} {#SNMPVALUE} temperature warning|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].avg(#3)}=2</p><p>**Recovery expression**: </p>|warning|
+|Incoming use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes|<p>-</p>|<p>**Expression**: ({SNMP Cisco WS3750:ifHCInOctets[{#SNMPVALUE}].avg(300s)})> ({SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</p><p>**Recovery expression**: </p>|warning|
+|Outgoing use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes|<p>-</p>|<p>**Expression**: ({SNMP Cisco WS3750:IfHCOutOctets[{#SNMPVALUE}].avg(300s)})> ({SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</p><p>**Recovery expression**: </p>|warning|
+|{HOST.NAME} link changed on {#SNMPVALUE}: {ITEM.VALUE1}|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ifOperStatus[{#SNMPVALUE}].max(#1)}=0 and {SNMP Cisco WS3750:ifOperStatus[{#SNMPVALUE}].max(#2)}=0</p><p>**Recovery expression**: </p>|disaster|
+|{HOST.NAME} {#SNMPVALUE} temperature critical (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].last()}=6</p><p>**Recovery expression**: </p>|disaster|
+|{HOST.NAME} {#SNMPVALUE} temperature emergency (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].avg(#3)}=3</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME} {#SNMPVALUE} temperature warning (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonTemperatureState[{#SNMPVALUE}].avg(#3)}=2</p><p>**Recovery expression**: </p>|warning|
+|{HOST.NAME} {#SNMPVALUE} fan critical (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=3</p><p>**Recovery expression**: </p>|average|
+|{HOST.NAME} {#SNMPVALUE} fan failed (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=6</p><p>**Recovery expression**: </p>|high|
+|{HOST.NAME} {#SNMPVALUE} fan warning (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ciscoEnvMonFanState[{#SNMPVALUE}].avg(#3)}=2</p><p>**Recovery expression**: </p>|warning|
+|Incoming use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes (LLD)|<p>-</p>|<p>**Expression**: ({SNMP Cisco WS3750:ifHCInOctets[{#SNMPVALUE}].avg(300s)})> ({SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</p><p>**Recovery expression**: </p>|warning|
+|Outgoing use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes (LLD)|<p>-</p>|<p>**Expression**: ({SNMP Cisco WS3750:IfHCOutOctets[{#SNMPVALUE}].avg(300s)})> ({SNMP Cisco WS3750:ifHighSpeed[{#SNMPVALUE}].last()}*0.8)</p><p>**Recovery expression**: </p>|warning|
+|{HOST.NAME} link changed on {#SNMPVALUE}: {ITEM.VALUE1} (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco WS3750:ifOperStatus[{#SNMPVALUE}].max(#1)}=0 and {SNMP Cisco WS3750:ifOperStatus[{#SNMPVALUE}].max(#2)}=0</p><p>**Recovery expression**: </p>|disaster|

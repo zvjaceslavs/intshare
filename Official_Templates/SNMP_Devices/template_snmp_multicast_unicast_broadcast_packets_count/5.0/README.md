@@ -1,4 +1,4 @@
-# Template SNMP Packets
+# SNMP Packets
 
 ## Overview
 

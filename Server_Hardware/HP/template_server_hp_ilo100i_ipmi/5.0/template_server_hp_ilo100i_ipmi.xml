@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:27Z</date>
+  <date>2021-10-26T04:42:30Z</date>
   <groups>
     <group>
       <name>Templates/Server hardware</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template HP iLO100i IPMI</template>
-      <name>Template HP iLO100i IPMI</name>
+      <template>HP iLO100i IPMI</template>
+      <name>HP iLO100i IPMI</name>
       <description>Template polling sensor data of a HP iLO100i</description>
       <groups>
         <group>
@@ -1010,7 +1010,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.cpu1</key>
           </item>
         </graph_item>
@@ -1018,7 +1018,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.cpu2</key>
           </item>
         </graph_item>
@@ -1026,7 +1026,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.fhfl.outlet</key>
           </item>
         </graph_item>
@@ -1034,7 +1034,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.fhfl.riser1</key>
           </item>
         </graph_item>
@@ -1042,7 +1042,7 @@
           <sortorder>4</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.fhfl.riser2</key>
           </item>
         </graph_item>
@@ -1050,7 +1050,7 @@
           <sortorder>5</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.front.dimm1</key>
           </item>
         </graph_item>
@@ -1058,7 +1058,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.front.dimm2</key>
           </item>
         </graph_item>
@@ -1066,7 +1066,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.front.dimm3</key>
           </item>
         </graph_item>
@@ -1074,7 +1074,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.frontpanel</key>
           </item>
         </graph_item>
@@ -1082,7 +1082,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.hhlp.outlet</key>
           </item>
         </graph_item>
@@ -1090,7 +1090,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.hhlp.riser</key>
           </item>
         </graph_item>
@@ -1098,7 +1098,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.ioh.inlet</key>
           </item>
         </graph_item>
@@ -1106,7 +1106,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.ioh.outlet</key>
           </item>
         </graph_item>
@@ -1114,7 +1114,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.ioh.temp</key>
           </item>
         </graph_item>
@@ -1122,7 +1122,7 @@
           <sortorder>14</sortorder>
           <color>274482</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.mlb.inlet1</key>
           </item>
         </graph_item>
@@ -1130,7 +1130,7 @@
           <sortorder>15</sortorder>
           <color>2B5429</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.mlb.inlet2</key>
           </item>
         </graph_item>
@@ -1138,7 +1138,7 @@
           <sortorder>16</sortorder>
           <color>8048B4</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.mlb.inlet3</key>
           </item>
         </graph_item>
@@ -1146,7 +1146,7 @@
           <sortorder>17</sortorder>
           <color>FD5434</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.mlb.inlet4</key>
           </item>
         </graph_item>
@@ -1154,7 +1154,7 @@
           <sortorder>18</sortorder>
           <color>790E1F</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc1.dimm1</key>
           </item>
         </graph_item>
@@ -1162,7 +1162,7 @@
           <sortorder>19</sortorder>
           <color>87AC4D</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc1.dimm2</key>
           </item>
         </graph_item>
@@ -1170,7 +1170,7 @@
           <sortorder>20</sortorder>
           <color>E89DF4</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc1.dimm3</key>
           </item>
         </graph_item>
@@ -1178,7 +1178,7 @@
           <sortorder>21</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc1.dimm4</key>
           </item>
         </graph_item>
@@ -1186,7 +1186,7 @@
           <sortorder>22</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc2.dimm1</key>
           </item>
         </graph_item>
@@ -1194,7 +1194,7 @@
           <sortorder>23</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc2.dimm2</key>
           </item>
         </graph_item>
@@ -1202,7 +1202,7 @@
           <sortorder>24</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc2.dimm3</key>
           </item>
         </graph_item>
@@ -1210,7 +1210,7 @@
           <sortorder>25</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc2.dimm4</key>
           </item>
         </graph_item>
@@ -1218,7 +1218,7 @@
           <sortorder>26</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc2.dimm6</key>
           </item>
         </graph_item>
@@ -1226,7 +1226,7 @@
           <sortorder>27</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.rear.dimm1</key>
           </item>
         </graph_item>
@@ -1234,7 +1234,7 @@
           <sortorder>28</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.rear.dimm2</key>
           </item>
         </graph_item>
@@ -1242,7 +1242,7 @@
           <sortorder>29</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.rear.dimm3</key>
           </item>
         </graph_item>
@@ -1250,7 +1250,7 @@
           <sortorder>30</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc1.dimm5</key>
           </item>
         </graph_item>
@@ -1258,7 +1258,7 @@
           <sortorder>31</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc1.dimm6</key>
           </item>
         </graph_item>
@@ -1266,7 +1266,7 @@
           <sortorder>32</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template HP iLO100i IPMI</host>
+            <host>HP iLO100i IPMI</host>
             <key>temp.proc2.dimm5</key>
           </item>
         </graph_item>

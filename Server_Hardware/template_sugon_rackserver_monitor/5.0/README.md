@@ -1,4 +1,4 @@
-# Sugon RackServer Monitor Template
+# Sugon RackServer Monitor
 
 ## Description
 
@@ -52,15 +52,15 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|CPU Health Status|<p>-</p>|`SNMP agent`|cpuHealthAllStatus<p>Update: 10m</p>|
-|Fan Health Status|<p>-</p>|`SNMP agent`|fanHealthAllStatus<p>Update: 10m</p>|
 |Disk Health Status|<p>-</p>|`SNMP agent`|hddHealthAllStatus<p>Update: 10m</p>|
-|BMC Health Status|<p>-</p>|`SNMP agent`|mBHealthStatus<p>Update: 10m</p>|
-|Memory Health Status|<p>-</p>|`SNMP agent`|memHealthAllStatus<p>Update: 10m</p>|
 |NIC Health Status|<p>-</p>|`SNMP agent`|nicHealthAllStatus<p>Update: 10m</p>|
-|PCIE Health Status|<p>-</p>|`SNMP agent`|pCIeHealthAllStatus<p>Update: 10m</p>|
+|Fan Health Status|<p>-</p>|`SNMP agent`|fanHealthAllStatus<p>Update: 10m</p>|
+|Memory Health Status|<p>-</p>|`SNMP agent`|memHealthAllStatus<p>Update: 10m</p>|
+|BMC Health Status|<p>-</p>|`SNMP agent`|mBHealthStatus<p>Update: 10m</p>|
+|CPU Health Status|<p>-</p>|`SNMP agent`|cpuHealthAllStatus<p>Update: 10m</p>|
 |Power Health Status|<p>-</p>|`SNMP agent`|psuHealthAllStatus<p>Update: 10m</p>|
 |System Health Status|<p>-</p>|`SNMP agent`|systemHealthStatus<p>Update: 10m</p>|
+|PCIE Health Status|<p>-</p>|`SNMP agent`|pCIeHealthAllStatus<p>Update: 10m</p>|
 ## Triggers
 
 There are no triggers in this template.

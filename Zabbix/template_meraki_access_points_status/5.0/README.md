@@ -1,4 +1,4 @@
-# Template Meraki Access Points
+# Meraki Access Points
 
 ## Overview
 
@@ -60,5 +60,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{#ITEM.NAME}.Status|<p>-</p>|<p>**Expression**: {Template Meraki Access Points:MerakiDeviceIndexStatus.[{#SNMPINDEX}].last()}=0</p><p>**Recovery expression**: </p>|high|
-|{#ITEM.NAME}.Status (LLD)|<p>-</p>|<p>**Expression**: {Template Meraki Access Points:MerakiDeviceIndexStatus.[{#SNMPINDEX}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|{#ITEM.NAME}.Status|<p>-</p>|<p>**Expression**: {Meraki Access Points:MerakiDeviceIndexStatus.[{#SNMPINDEX}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|{#ITEM.NAME}.Status (LLD)|<p>-</p>|<p>**Expression**: {Meraki Access Points:MerakiDeviceIndexStatus.[{#SNMPINDEX}].last()}=0</p><p>**Recovery expression**: </p>|high|

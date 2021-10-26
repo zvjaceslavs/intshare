@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:51Z</date>
+  <date>2021-10-26T04:46:25Z</date>
   <groups>
     <group>
       <name>Template/Kerio</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</template>
-      <name>Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</name>
+      <template>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</template>
+      <name>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</name>
       <groups>
         <group>
           <name>Template/Kerio</name>
@@ -67,7 +67,7 @@
               <dependencies>
                 <dependency>
                   <name>the firewall {HOST.NAME} does not respond to Ping</name>
-                  <expression>{Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
+                  <expression>{SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -96,7 +96,7 @@
               <dependencies>
                 <dependency>
                   <name>the firewall {HOST.NAME} does not respond to Ping</name>
-                  <expression>{Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
+                  <expression>{SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -125,7 +125,7 @@
               <dependencies>
                 <dependency>
                   <name>the firewall {HOST.NAME} does not respond to Ping</name>
-                  <expression>{Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
+                  <expression>{SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -163,7 +163,7 @@
                   <dependencies>
                     <dependency>
                       <name>the firewall {HOST.NAME} does not respond to Ping</name>
-                      <expression>{Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
+                      <expression>{SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -178,7 +178,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
+                    <host>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
                     <key>fgHaStatsCpuUsage.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -257,7 +257,7 @@
                   <dependencies>
                     <dependency>
                       <name>the firewall {HOST.NAME} does not respond to Ping</name>
-                      <expression>{Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
+                      <expression>{SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -377,7 +377,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
+                    <host>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
                     <key>fgHaStatsMemUsage.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -417,7 +417,7 @@
                   <dependencies>
                     <dependency>
                       <name>the firewall {HOST.NAME} does not respond to Ping</name>
-                      <expression>{Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
+                      <expression>{SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0:icmpping.max(#3)}=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -607,7 +607,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
+            <host>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
             <key>icmpping</key>
           </item>
         </graph_item>
@@ -620,7 +620,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
+            <host>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
             <key>icmppingsec</key>
           </item>
         </graph_item>
@@ -633,7 +633,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
+            <host>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
             <key>icmppingloss</key>
           </item>
         </graph_item>
@@ -646,7 +646,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
+            <host>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</host>
             <key>sysUpTimeInstance.0</key>
           </item>
         </graph_item>

@@ -1,4 +1,4 @@
-# Template App Citrix License Sever
+# App Citrix License Sever
 
 ## Overview
 
@@ -43,5 +43,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Citrix License {#CITRIX_LIC} is about to expire|<p>-</p>|<p>**Expression**: {Template App Citrix License Sever:wmi.get["ROOT CitrixLicensing","SELECT ExpirationDate FROM Citrix_GT_License WHERE SerialNumber = '{#CITRIX_LIC}'"].avg(#3)}<1209600</p><p>**Recovery expression**: </p>|warning|
-|Citrix License {#CITRIX_LIC} is about to expire (LLD)|<p>-</p>|<p>**Expression**: {Template App Citrix License Sever:wmi.get["ROOT CitrixLicensing","SELECT ExpirationDate FROM Citrix_GT_License WHERE SerialNumber = '{#CITRIX_LIC}'"].avg(#3)}<1209600</p><p>**Recovery expression**: </p>|warning|
+|Citrix License {#CITRIX_LIC} is about to expire|<p>-</p>|<p>**Expression**: {App Citrix License Sever:wmi.get["ROOT CitrixLicensing","SELECT ExpirationDate FROM Citrix_GT_License WHERE SerialNumber = '{#CITRIX_LIC}'"].avg(#3)}<1209600</p><p>**Recovery expression**: </p>|warning|
+|Citrix License {#CITRIX_LIC} is about to expire (LLD)|<p>-</p>|<p>**Expression**: {App Citrix License Sever:wmi.get["ROOT CitrixLicensing","SELECT ExpirationDate FROM Citrix_GT_License WHERE SerialNumber = '{#CITRIX_LIC}'"].avg(#3)}<1209600</p><p>**Recovery expression**: </p>|warning|

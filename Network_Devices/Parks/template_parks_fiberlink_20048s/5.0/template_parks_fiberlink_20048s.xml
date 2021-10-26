@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:36Z</date>
+  <date>2021-10-26T04:44:56Z</date>
   <groups>
     <group>
       <name>Gpon Parks</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Parks Fiberlink 20048S - V1.1</template>
-      <name>Template Parks Fiberlink 20048S - V1.1</name>
+      <template>Parks Fiberlink 20048S - V1.1</template>
+      <name>Parks Fiberlink 20048S - V1.1</name>
       <groups>
         <group>
           <name>Gpon Parks</name>
@@ -3228,7 +3228,7 @@
               <style>0</style>
               <resource>
                 <name>Cpu</name>
-                <host>Template Parks Fiberlink 20048S - V1.1</host>
+                <host>Parks Fiberlink 20048S - V1.1</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -3250,7 +3250,7 @@
               <style>0</style>
               <resource>
                 <name>Memory</name>
-                <host>Template Parks Fiberlink 20048S - V1.1</host>
+                <host>Parks Fiberlink 20048S - V1.1</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -3281,7 +3281,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>DD0000</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>CpuSystem</key>
           </item>
         </graph_item>
@@ -3290,7 +3290,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00FF00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>CpuIdle</key>
           </item>
         </graph_item>
@@ -3304,7 +3304,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>MemoryTotal</key>
           </item>
         </graph_item>
@@ -3313,7 +3313,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00EE00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>MemoryFree</key>
           </item>
         </graph_item>
@@ -3322,7 +3322,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>MemoryUsed</key>
           </item>
         </graph_item>
@@ -3334,7 +3334,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>pkSfpDiagTemperature_1</key>
           </item>
         </graph_item>
@@ -3342,7 +3342,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>pkSfpDiagTemperature_2</key>
           </item>
         </graph_item>
@@ -3350,7 +3350,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>pkSfpDiagTemperature_3</key>
           </item>
         </graph_item>
@@ -3358,7 +3358,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>pkSfpDiagTemperature_4</key>
           </item>
         </graph_item>
@@ -3366,7 +3366,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>pkSfpDiagTemperature_5</key>
           </item>
         </graph_item>
@@ -3374,7 +3374,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>pkSfpDiagTemperature_6</key>
           </item>
         </graph_item>
@@ -3382,7 +3382,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>pkSfpDiagTemperature_7</key>
           </item>
         </graph_item>
@@ -3390,7 +3390,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>pkSfpDiagTemperature_8</key>
           </item>
         </graph_item>
@@ -3403,7 +3403,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[10giga-ethernet0/0]</key>
           </item>
         </graph_item>
@@ -3412,7 +3412,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[10giga-ethernet0/0]</key>
           </item>
         </graph_item>
@@ -3425,7 +3425,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[10giga-ethernet0/1]</key>
           </item>
         </graph_item>
@@ -3434,7 +3434,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[10giga-ethernet0/1]</key>
           </item>
         </graph_item>
@@ -3447,7 +3447,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[10giga-ethernet1/0]</key>
           </item>
         </graph_item>
@@ -3456,7 +3456,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[10giga-ethernet1/0]</key>
           </item>
         </graph_item>
@@ -3469,7 +3469,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[10giga-ethernet1/1]</key>
           </item>
         </graph_item>
@@ -3478,7 +3478,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[10giga-ethernet1/1]</key>
           </item>
         </graph_item>
@@ -3491,7 +3491,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[giga-ethernet0/0]</key>
           </item>
         </graph_item>
@@ -3500,7 +3500,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[giga-ethernet0/0]</key>
           </item>
         </graph_item>
@@ -3512,7 +3512,7 @@
         <graph_item>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[giga-ethernet0/1]</key>
           </item>
         </graph_item>
@@ -3520,7 +3520,7 @@
           <sortorder>1</sortorder>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[giga-ethernet0/1]</key>
           </item>
         </graph_item>
@@ -3533,7 +3533,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[giga-ethernet0/2]</key>
           </item>
         </graph_item>
@@ -3542,7 +3542,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[giga-ethernet0/2]</key>
           </item>
         </graph_item>
@@ -3555,7 +3555,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[giga-ethernet0/3]</key>
           </item>
         </graph_item>
@@ -3564,7 +3564,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[giga-ethernet0/3]</key>
           </item>
         </graph_item>
@@ -3577,7 +3577,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[giga-ethernet0/4]</key>
           </item>
         </graph_item>
@@ -3586,7 +3586,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[giga-ethernet0/4]</key>
           </item>
         </graph_item>
@@ -3599,7 +3599,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[giga-ethernet0/5]</key>
           </item>
         </graph_item>
@@ -3608,7 +3608,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[giga-ethernet0/5]</key>
           </item>
         </graph_item>
@@ -3621,7 +3621,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[giga-ethernet0/6]</key>
           </item>
         </graph_item>
@@ -3630,7 +3630,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[giga-ethernet0/6]</key>
           </item>
         </graph_item>
@@ -3643,7 +3643,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[giga-ethernet0/7]</key>
           </item>
         </graph_item>
@@ -3652,7 +3652,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[giga-ethernet0/7]</key>
           </item>
         </graph_item>
@@ -3665,7 +3665,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[gpon1/1]</key>
           </item>
         </graph_item>
@@ -3674,7 +3674,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[gpon1/1]</key>
           </item>
         </graph_item>
@@ -3687,7 +3687,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[gpon1/2]</key>
           </item>
         </graph_item>
@@ -3696,7 +3696,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[gpon1/2]</key>
           </item>
         </graph_item>
@@ -3709,7 +3709,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[gpon1/3]</key>
           </item>
         </graph_item>
@@ -3718,7 +3718,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[gpon1/3]</key>
           </item>
         </graph_item>
@@ -3731,7 +3731,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[gpon1/4]</key>
           </item>
         </graph_item>
@@ -3740,7 +3740,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[gpon1/4]</key>
           </item>
         </graph_item>
@@ -3753,7 +3753,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[gpon2/1]</key>
           </item>
         </graph_item>
@@ -3762,7 +3762,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[gpon2/1]</key>
           </item>
         </graph_item>
@@ -3775,7 +3775,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[gpon2/1]</key>
           </item>
         </graph_item>
@@ -3784,7 +3784,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[gpon2/2]</key>
           </item>
         </graph_item>
@@ -3797,7 +3797,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[gpon2/3]</key>
           </item>
         </graph_item>
@@ -3806,7 +3806,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[gpon2/3]</key>
           </item>
         </graph_item>
@@ -3819,7 +3819,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifInOctets[gpon2/4]</key>
           </item>
         </graph_item>
@@ -3828,7 +3828,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Parks Fiberlink 20048S - V1.1</host>
+            <host>Parks Fiberlink 20048S - V1.1</host>
             <key>ifOutOctets[gpon2/4]</key>
           </item>
         </graph_item>

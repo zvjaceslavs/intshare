@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:29Z'
+  date: '2021-10-26T04:45:59Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -11,8 +11,8 @@ zabbix_export:
   templates:
     -
       uuid: 9d1c2d027cde4fb0a79364c4f5755eb7
-      template: 'Template SNMP Aruba Accesspoint'
-      name: 'Template SNMP Aruba Accesspoint'
+      template: 'SNMP Aruba Accesspoint'
+      name: 'SNMP Aruba Accesspoint'
       groups:
         -
           name: Templates
@@ -32,7 +32,7 @@ zabbix_export:
           triggers:
             -
               uuid: b5862ec1806e4e73a244e202afbb811d
-              expression: 'max(/Template SNMP Aruba Accesspoint/icmpping,{$PING_LOSS_CRIT})=0'
+              expression: 'max(/SNMP Aruba Accesspoint/icmpping,{$PING_LOSS_CRIT})=0'
               name: '{HOSTNAME} is unreachable'
               priority: AVERAGE
               description: 'Device is unreachable by ping'
@@ -50,7 +50,7 @@ zabbix_export:
           triggers:
             -
               uuid: 171aee109d6b4dcab50f03f9d60292e3
-              expression: 'min(/Template SNMP Aruba Accesspoint/icmppingloss,5m)>{$PING_LOSS_WARN} and min(/Template SNMP Aruba Accesspoint/icmppingloss,5m)<100'
+              expression: 'min(/SNMP Aruba Accesspoint/icmppingloss,5m)>{$PING_LOSS_WARN} and min(/SNMP Aruba Accesspoint/icmppingloss,5m)<100'
               name: 'High ping loss on {HOSTNAME}'
               priority: WARNING
         -
@@ -68,7 +68,7 @@ zabbix_export:
           triggers:
             -
               uuid: 86d91a3ea2d945fc99335f48c6f85024
-              expression: 'avg(/Template SNMP Aruba Accesspoint/icmppingsec,5m)>{$PING_RESPONSE_TIME_WARN}'
+              expression: 'avg(/SNMP Aruba Accesspoint/icmppingsec,5m)>{$PING_RESPONSE_TIME_WARN}'
               name: 'High ping response time on {HOSTNAME}'
               priority: WARNING
         -
@@ -88,7 +88,7 @@ zabbix_export:
           triggers:
             -
               uuid: f16fe98d4af84f17ad13d9773d49a9d7
-              expression: '(last(/Template SNMP Aruba Accesspoint/ifPhysAddress,#1)<>last(/Template SNMP Aruba Accesspoint/ifPhysAddress,#2))=1'
+              expression: '(last(/SNMP Aruba Accesspoint/ifPhysAddress,#1)<>last(/SNMP Aruba Accesspoint/ifPhysAddress,#2))=1'
               name: 'MAC Address changed on {HOSTNAME}'
               priority: WARNING
         -
@@ -121,7 +121,7 @@ zabbix_export:
           triggers:
             -
               uuid: 07a5600c99fd4fefaaa1bb09e2debbbb
-              expression: '(last(/Template SNMP Aruba Accesspoint/SysDescr,#1)<>last(/Template SNMP Aruba Accesspoint/SysDescr,#2))=1'
+              expression: '(last(/SNMP Aruba Accesspoint/SysDescr,#1)<>last(/SNMP Aruba Accesspoint/SysDescr,#2))=1'
               name: 'System description changed on {HOSTNAME}'
               priority: INFO
               manual_close: 'YES'
@@ -142,7 +142,7 @@ zabbix_export:
           triggers:
             -
               uuid: 980cec122de44529b42bc025ad70605d
-              expression: '(last(/Template SNMP Aruba Accesspoint/sysLocation,#1)<>last(/Template SNMP Aruba Accesspoint/sysLocation,#2))=1'
+              expression: '(last(/SNMP Aruba Accesspoint/sysLocation,#1)<>last(/SNMP Aruba Accesspoint/sysLocation,#2))=1'
               name: 'Location changed on {HOSTNAME}'
               priority: INFO
               manual_close: 'YES'
@@ -163,7 +163,7 @@ zabbix_export:
           triggers:
             -
               uuid: 59ea6f52e83e41c6aea8406b549e8f65
-              expression: '(last(/Template SNMP Aruba Accesspoint/SysName,#1)<>last(/Template SNMP Aruba Accesspoint/SysName,#2))=1'
+              expression: '(last(/SNMP Aruba Accesspoint/SysName,#1)<>last(/SNMP Aruba Accesspoint/SysName,#2))=1'
               name: 'System name changed on {HOSTNAME}'
               priority: INFO
               manual_close: 'YES'
@@ -233,7 +233,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 24b2d9d768244ea9b262119dadae5545
-                  expression: '(last(/Template SNMP Aruba Accesspoint/ifOperStatus[{#SNMPVALUE}],#1)<>last(/Template SNMP Aruba Accesspoint/ifOperStatus[{#SNMPVALUE}],#2))=1'
+                  expression: '(last(/SNMP Aruba Accesspoint/ifOperStatus[{#SNMPVALUE}],#1)<>last(/SNMP Aruba Accesspoint/ifOperStatus[{#SNMPVALUE}],#2))=1'
                   name: 'Operational status was changed on {HOSTNAME} interface {#SNMPVALUE}'
                   priority: AVERAGE
                   manual_close: 'YES'
@@ -268,13 +268,13 @@ zabbix_export:
                   sortorder: '1'
                   color: 199C0D
                   item:
-                    host: 'Template SNMP Aruba Accesspoint'
+                    host: 'SNMP Aruba Accesspoint'
                     key: 'ifInOctets[{#SNMPVALUE}]'
                 -
                   sortorder: '2'
                   color: F63100
                   item:
-                    host: 'Template SNMP Aruba Accesspoint'
+                    host: 'SNMP Aruba Accesspoint'
                     key: 'ifOutOctets[{#SNMPVALUE}]'
         -
           uuid: e0b7871817c54f14ad5b4018f6b2f24a
@@ -304,7 +304,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: b45cc440fef84c7db8520558d89967fe
-                  expression: '(last(/Template SNMP Aruba Accesspoint/wlanAPESSID[{#SNMPVALUE}],#1)<>last(/Template SNMP Aruba Accesspoint/wlanAPESSID[{#SNMPVALUE}],#2))=1'
+                  expression: '(last(/SNMP Aruba Accesspoint/wlanAPESSID[{#SNMPVALUE}],#1)<>last(/SNMP Aruba Accesspoint/wlanAPESSID[{#SNMPVALUE}],#2))=1'
                   name: 'SSID on {HOSTNAME} changed {#SNMPVALUE}'
                   priority: AVERAGE
                   manual_close: 'YES'

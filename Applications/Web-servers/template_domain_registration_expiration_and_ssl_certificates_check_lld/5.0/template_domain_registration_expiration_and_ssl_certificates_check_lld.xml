@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:35Z</date>
+  <date>2021-10-26T04:42:41Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SSL check LLD</template>
-      <name>Template SSL check LLD</name>
+      <template>SSL check LLD</template>
+      <name>SSL check LLD</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -60,7 +60,7 @@
                   <dependencies>
                     <dependency>
                       <name>Domain {#DOMAIN_NAME} expired</name>
-                      <expression>{Template SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}&lt;=0</expression>
+                      <expression>{SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}&lt;=0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -71,7 +71,7 @@
                   <dependencies>
                     <dependency>
                       <name>Domain {#DOMAIN_NAME} will expire in 14 days</name>
-                      <expression>{Template SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}&lt;14</expression>
+                      <expression>{SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}&lt;14</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -155,7 +155,7 @@
                   <dependencies>
                     <dependency>
                       <name>SSL certificate on {#URL}:{#PORT} expired</name>
-                      <expression>{Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}&lt;0</expression>
+                      <expression>{SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}&lt;0</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -167,7 +167,7 @@
                   <dependencies>
                     <dependency>
                       <name>SSL certificate on {#URL}:{#PORT} expires in less than 7 days</name>
-                      <expression>{Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}&lt;7</expression>
+                      <expression>{SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}&lt;7</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>

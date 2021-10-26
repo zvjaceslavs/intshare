@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:58Z</date>
+  <date>2021-10-26T04:40:53Z</date>
   <groups>
     <group>
       <name>Primetek</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Cisco ASA 515</template>
-      <name>Template Cisco ASA 515</name>
+      <template>Cisco ASA 515</template>
+      <name>Cisco ASA 515</name>
       <groups>
         <group>
           <name>Primetek</name>
@@ -272,7 +272,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Cisco ASA 515:icmpping.max(60)}=0</expression>
+                  <expression>{Cisco ASA 515:icmpping.max(60)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -494,7 +494,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Cisco ASA 515:icmpping.max(60)}=0</expression>
+                  <expression>{Cisco ASA 515:icmpping.max(60)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -522,7 +522,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Cisco ASA 515:icmpping.max(60)}=0</expression>
+                  <expression>{Cisco ASA 515:icmpping.max(60)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1416,7 +1416,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Cisco ASA 515:ifInErrors[{#SNMPVALUE}].last(0)}>100 or {Template Cisco ASA 515:ifOutErrors[{#SNMPVALUE}].last(0)}>100</expression>
+              <expression>{Cisco ASA 515:ifInErrors[{#SNMPVALUE}].last(0)}>100 or {Cisco ASA 515:ifOutErrors[{#SNMPVALUE}].last(0)}>100</expression>
               <name>Errors on {#SNMPVALUE}</name>
               <priority>WARNING</priority>
               <description>More than 100 in/out errors detected on {#SNMPVALUE}</description>
@@ -1434,7 +1434,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>009900</color>
                   <item>
-                    <host>Template Cisco ASA 515</host>
+                    <host>Cisco ASA 515</host>
                     <key>ifInUcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1443,7 +1443,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>AA00AA</color>
                   <item>
-                    <host>Template Cisco ASA 515</host>
+                    <host>Cisco ASA 515</host>
                     <key>ifInBroadcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1452,7 +1452,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>000000</color>
                   <item>
-                    <host>Template Cisco ASA 515</host>
+                    <host>Cisco ASA 515</host>
                     <key>ifInMulticastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1461,7 +1461,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>880000</color>
                   <item>
-                    <host>Template Cisco ASA 515</host>
+                    <host>Cisco ASA 515</host>
                     <key>ifOutBroadcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1470,7 +1470,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>888800</color>
                   <item>
-                    <host>Template Cisco ASA 515</host>
+                    <host>Cisco ASA 515</host>
                     <key>ifOutMulticastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1479,7 +1479,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>000099</color>
                   <item>
-                    <host>Template Cisco ASA 515</host>
+                    <host>Cisco ASA 515</host>
                     <key>ifOutUcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1494,7 +1494,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00AA00</color>
                   <item>
-                    <host>Template Cisco ASA 515</host>
+                    <host>Cisco ASA 515</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1503,7 +1503,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>3333FF</color>
                   <item>
-                    <host>Template Cisco ASA 515</host>
+                    <host>Cisco ASA 515</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1636,17 +1636,17 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Cisco ASA 515:sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}].avg(5m)}>{$TEMP_CRIT:""} or {Template Cisco ASA 515:sensor.temp.status[ciscoEnvMonTemperatureState.{#SNMPINDEX}].last(0)}={$TEMP_CRIT_STATUS} or {Template Cisco ASA 515:sensor.temp.status[ciscoEnvMonTemperatureState.{#SNMPINDEX}].last(0)}={$TEMP_DISASTER_STATUS}</expression>
+              <expression>{Cisco ASA 515:sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}].avg(5m)}>{$TEMP_CRIT:""} or {Cisco ASA 515:sensor.temp.status[ciscoEnvMonTemperatureState.{#SNMPINDEX}].last(0)}={$TEMP_CRIT_STATUS} or {Cisco ASA 515:sensor.temp.status[ciscoEnvMonTemperatureState.{#SNMPINDEX}].last(0)}={$TEMP_DISASTER_STATUS}</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Cisco ASA 515:sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}].max(5m)}&lt;{$TEMP_CRIT:""}-3</recovery_expression>
+              <recovery_expression>{Cisco ASA 515:sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}].max(5m)}&lt;{$TEMP_CRIT:""}-3</recovery_expression>
               <name>{#SNMPVALUE}: Temperature is above critical threshold: >{$TEMP_CRIT:""}</name>
               <priority>DISASTER</priority>
               <description>Last value: {ITEM.LASTVALUE1}. This trigger uses temperature sensor values as well as temperature sensor status if available</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Cisco ASA 515:sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}].avg(5m)}>{$TEMP_WARN:""} or {Template Cisco ASA 515:sensor.temp.status[ciscoEnvMonTemperatureState.{#SNMPINDEX}].last(0)}={$TEMP_WARN_STATUS}</expression>
+              <expression>{Cisco ASA 515:sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}].avg(5m)}>{$TEMP_WARN:""} or {Cisco ASA 515:sensor.temp.status[ciscoEnvMonTemperatureState.{#SNMPINDEX}].last(0)}={$TEMP_WARN_STATUS}</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Cisco ASA 515:sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}].max(5m)}&lt;{$TEMP_WARN:""}-3</recovery_expression>
+              <recovery_expression>{Cisco ASA 515:sensor.temp.value[ciscoEnvMonTemperatureValue.{#SNMPINDEX}].max(5m)}&lt;{$TEMP_WARN:""}-3</recovery_expression>
               <name>{#SNMPVALUE}: Temperature is above warning threshold: >{$TEMP_WARN:""}</name>
               <priority>WARNING</priority>
               <description>Last value: {ITEM.LASTVALUE1}. This trigger uses temperature sensor values as well as temperature sensor status if available</description>
@@ -1665,7 +1665,7 @@
               <style>0</style>
               <resource>
                 <name>Interface WAN - Inside Bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1687,7 +1687,7 @@
               <style>0</style>
               <resource>
                 <name>Interface DMZ - Outside bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1709,7 +1709,7 @@
               <style>0</style>
               <resource>
                 <name>Interface LAN bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1731,7 +1731,7 @@
               <style>0</style>
               <resource>
                 <name>System Performance</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1760,7 +1760,7 @@
               <style>0</style>
               <resource>
                 <name>Interface MGMT - Outside bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1782,7 +1782,7 @@
               <style>0</style>
               <resource>
                 <name>Interface DMZ2 - Outside bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1804,7 +1804,7 @@
               <style>0</style>
               <resource>
                 <name>Interface WAN - Inside Bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1826,7 +1826,7 @@
               <style>0</style>
               <resource>
                 <name>Interface DMZ - Outside bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1860,7 +1860,7 @@
               <style>0</style>
               <resource>
                 <name>Memory Usage</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>800</width>
               <height>600</height>
@@ -1889,7 +1889,7 @@
               <style>0</style>
               <resource>
                 <name>Interface WAN - Inside Bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>1500</width>
               <height>250</height>
@@ -1911,7 +1911,7 @@
               <style>0</style>
               <resource>
                 <name>Interface LAN bandwidth</name>
-                <host>Template Cisco ASA 515</host>
+                <host>Cisco ASA 515</host>
               </resource>
               <width>1500</width>
               <height>250</height>
@@ -1935,42 +1935,42 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>({Template Cisco ASA 515:ifOperStatus.4.last(0)}=2) and ({Template Cisco ASA 515:ifAdminStatus.4.last(0)}=2)</expression>
+      <expression>({Cisco ASA 515:ifOperStatus.4.last(0)}=2) and ({Cisco ASA 515:ifAdminStatus.4.last(0)}=2)</expression>
       <name>Link Down on Inside Interface - DMZ</name>
       <priority>DISASTER</priority>
       <description>Interface WAN</description>
     </trigger>
     <trigger>
-      <expression>({Template Cisco ASA 515:ifOperStatus.6.last(0)}=2) and ({Template Cisco ASA 515:ifAdminStatus.6.last(0)}=2)</expression>
+      <expression>({Cisco ASA 515:ifOperStatus.6.last(0)}=2) and ({Cisco ASA 515:ifAdminStatus.6.last(0)}=2)</expression>
       <name>Link Down on Inside Interface - DMZ2</name>
       <priority>DISASTER</priority>
       <description>Interface WAN</description>
     </trigger>
     <trigger>
-      <expression>({Template Cisco ASA 515:ifOperStatus.2.last(0)}=2) and ({Template Cisco ASA 515:ifAdminStatus.2.last(0)}=2)</expression>
+      <expression>({Cisco ASA 515:ifOperStatus.2.last(0)}=2) and ({Cisco ASA 515:ifAdminStatus.2.last(0)}=2)</expression>
       <name>Link Down on Inside Interface - MGMT</name>
       <priority>DISASTER</priority>
       <description>Interface de Gerenciamento</description>
     </trigger>
     <trigger>
-      <expression>({Template Cisco ASA 515:ifOperStatus.3.last(0)}=2) and ({Template Cisco ASA 515:ifAdminStatus.3.last(0)}=2)</expression>
+      <expression>({Cisco ASA 515:ifOperStatus.3.last(0)}=2) and ({Cisco ASA 515:ifAdminStatus.3.last(0)}=2)</expression>
       <name>Link Down on Inside Interface - WAN</name>
       <priority>DISASTER</priority>
       <description>Interface WAN</description>
     </trigger>
     <trigger>
-      <expression>({Template Cisco ASA 515:ifOperStatus.5.last(0)}=2) and ({Template Cisco ASA 515:ifAdminStatus.5.last(0)}=2)</expression>
+      <expression>({Cisco ASA 515:ifOperStatus.5.last(0)}=2) and ({Cisco ASA 515:ifAdminStatus.5.last(0)}=2)</expression>
       <name>Link Down on LAN Interface</name>
       <priority>DISASTER</priority>
       <description>Interface LAN</description>
     </trigger>
     <trigger>
-      <expression>({Template Cisco ASA 515:snmpInPkts.last(,0)}=2) and ({Template Cisco ASA 515:snmpOutPkts.last(,0)}=2)</expression>
+      <expression>({Cisco ASA 515:snmpInPkts.last(,0)}=2) and ({Cisco ASA 515:snmpOutPkts.last(,0)}=2)</expression>
       <name>Pacotes Entrada/Saida</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Cisco ASA 515:ciscoMemoryPoolFree.min(10)}/{Template Cisco ASA 515:ciscoMemoryTotal.last(0)}&lt; 0.05</expression>
+      <expression>{Cisco ASA 515:ciscoMemoryPoolFree.min(10)}/{Cisco ASA 515:ciscoMemoryTotal.last(0)}&lt; 0.05</expression>
       <name>{HOST.NAME} Memory Free &lt; 5 %</name>
       <priority>DISASTER</priority>
       <description>Memory Free &lt; 5 %</description>
@@ -1985,7 +1985,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>7EC25C</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>cpmCPUMonIntervalValue</key>
           </item>
         </graph_item>
@@ -1998,7 +1998,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifInOctets.4</key>
           </item>
         </graph_item>
@@ -2007,7 +2007,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -2020,7 +2020,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00BB00</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifInOctets.6</key>
           </item>
         </graph_item>
@@ -2029,7 +2029,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>AA0000</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -2042,7 +2042,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -2051,7 +2051,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifInOctets.5</key>
           </item>
         </graph_item>
@@ -2064,7 +2064,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifInOctets.2</key>
           </item>
         </graph_item>
@@ -2073,7 +2073,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>BB0000</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -2086,7 +2086,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifInOctets.3</key>
           </item>
         </graph_item>
@@ -2095,7 +2095,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -2108,7 +2108,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ciscoMemoryPoolFree</key>
           </item>
         </graph_item>
@@ -2117,7 +2117,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>BB00BB</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ciscoMemoryPoolLargestFree</key>
           </item>
         </graph_item>
@@ -2126,7 +2126,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ciscoMemUsage</key>
           </item>
         </graph_item>
@@ -2135,7 +2135,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>A54F10</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ciscoMemoryPoolUsed</key>
           </item>
         </graph_item>
@@ -2144,7 +2144,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FC6EA3</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ciscoMemoryTotal</key>
           </item>
         </graph_item>
@@ -2158,7 +2158,7 @@
       <ymin_type_1>FIXED</ymin_type_1>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template Cisco ASA 515</host>
+        <host>Cisco ASA 515</host>
         <key>ciscoMemoryTotal</key>
       </ymax_item_1>
       <graph_items>
@@ -2166,7 +2166,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ciscoMemoryPoolUsed</key>
           </item>
         </graph_item>
@@ -2181,7 +2181,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>vm.memory.pused[snAgGblDynMemUtil.0]</key>
           </item>
         </graph_item>
@@ -2194,7 +2194,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>snmpInPkts</key>
           </item>
         </graph_item>
@@ -2203,7 +2203,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>009999</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>snmpOutPkts</key>
           </item>
         </graph_item>
@@ -2215,7 +2215,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>cpmcpuTOTAL1min</key>
           </item>
         </graph_item>
@@ -2223,7 +2223,7 @@
           <sortorder>1</sortorder>
           <color>AA00AA</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>cpmcpuTOTAL5min</key>
           </item>
         </graph_item>
@@ -2231,7 +2231,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>ciscoMemoryPoolUsed</key>
           </item>
         </graph_item>
@@ -2244,7 +2244,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Cisco ASA 515</host>
+            <host>Cisco ASA 515</host>
             <key>sysUpTimeInstance</key>
           </item>
         </graph_item>

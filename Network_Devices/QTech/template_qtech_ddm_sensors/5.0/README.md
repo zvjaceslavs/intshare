@@ -1,4 +1,4 @@
-# Template_Qtech_Sensors
+# Qtech_Sensors
 
 ## Overview
 

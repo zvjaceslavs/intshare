@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:49Z</date>
+  <date>2021-10-26T04:42:55Z</date>
   <groups>
     <group>
       <name>DB: Oracle</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_OCI_Dbaas</template>
-      <name>Template_OCI_Dbaas</name>
+      <template>OCI_Dbaas</template>
+      <name>OCI_Dbaas</name>
       <groups>
         <group>
           <name>DB: Oracle</name>
@@ -143,7 +143,7 @@
               <dependencies>
                 <dependency>
                   <name>[{$ORACLE_SID}] FRA: High percentage used space</name>
-                  <expression>{Template_OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},db_fra,1].last()}>90</expression>
+                  <expression>{OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},db_fra,1].last()}>90</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -264,7 +264,7 @@
               <dependencies>
                 <dependency>
                   <name>[{$ORACLE_SID}] Oracle: The database is inactive or closed</name>
-                  <expression>{Template_OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},db_active,1].last(0)}=0</expression>
+                  <expression>{OCI_Dbaas:zabbix-oci-dbaas[{$ORACLE_SID},db_active,1].last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -329,7 +329,7 @@
                   <color>C80000</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_OCI_Dbaas</host>
+                    <host>OCI_Dbaas</host>
                     <key>zabbix-oci-dbaas[{$ORACLE_SID},tb_size,{#ORACLE_TBS}]</key>
                   </item>
                 </graph_item>

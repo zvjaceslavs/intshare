@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:29Z</date>
+  <date>2021-10-26T04:43:41Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template - App Elasticsearch Cluster new</template>
-      <name>Template - App Elasticsearch Cluster new</name>
+      <template>App Elasticsearch Cluster new</template>
+      <name>App Elasticsearch Cluster new</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -344,8 +344,8 @@
               <dependencies>
                 <dependency>
                   <name>[ {HOST.NAME} ] - Elasticsearch Cluster in {ITEM.LASTVALUE} state</name>
-                  <expression>{Template - App Elasticsearch Cluster new:elasticsearch.cluster[status].iregexp(green,5)}=0</expression>
-                  <recovery_expression>{Template - App Elasticsearch Cluster new:elasticsearch.cluster[status].iregexp(green,3)}=1</recovery_expression>
+                  <expression>{App Elasticsearch Cluster new:elasticsearch.cluster[status].iregexp(green,5)}=0</expression>
+                  <recovery_expression>{App Elasticsearch Cluster new:elasticsearch.cluster[status].iregexp(green,3)}=1</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -366,8 +366,8 @@
               <dependencies>
                 <dependency>
                   <name>[ {HOST.NAME} ] - Elasticsearch Port is unavailable</name>
-                  <expression>{Template - App Elasticsearch Cluster new:net.tcp.service[tcp,{$ELASTICSEARCH_HOST},{$ELASTICSEARCH_PORT}].sum(#3)}=0</expression>
-                  <recovery_expression>{Template - App Elasticsearch Cluster new:net.tcp.service[tcp,{$ELASTICSEARCH_HOST},{$ELASTICSEARCH_PORT}].avg(#3)}=1</recovery_expression>
+                  <expression>{App Elasticsearch Cluster new:net.tcp.service[tcp,{$ELASTICSEARCH_HOST},{$ELASTICSEARCH_PORT}].sum(#3)}=0</expression>
+                  <recovery_expression>{App Elasticsearch Cluster new:net.tcp.service[tcp,{$ELASTICSEARCH_HOST},{$ELASTICSEARCH_PORT}].avg(#3)}=1</recovery_expression>
                 </dependency>
               </dependencies>
             </trigger>

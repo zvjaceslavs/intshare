@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:17Z</date>
+  <date>2021-10-26T04:40:08Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Supermicro SYS-5018D</template>
-      <name>Template IPMI Supermicro SYS-5018D</name>
+      <template>IPMI Supermicro SYS-5018D</template>
+      <name>IPMI Supermicro SYS-5018D</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -469,7 +469,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.cpu.temp</key>
           </item>
         </graph_item>
@@ -481,7 +481,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.p1.dimma1.temp</key>
           </item>
         </graph_item>
@@ -489,7 +489,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.p1.dimma2.temp</key>
           </item>
         </graph_item>
@@ -497,7 +497,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.p1.dimmb1.temp</key>
           </item>
         </graph_item>
@@ -505,7 +505,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.p1.dimmb2.temp</key>
           </item>
         </graph_item>
@@ -517,7 +517,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.fan1</key>
           </item>
         </graph_item>
@@ -525,7 +525,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.fan2</key>
           </item>
         </graph_item>
@@ -533,7 +533,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.fan3</key>
           </item>
         </graph_item>
@@ -541,7 +541,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.fan4</key>
           </item>
         </graph_item>
@@ -549,7 +549,7 @@
           <sortorder>4</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.fana</key>
           </item>
         </graph_item>
@@ -561,7 +561,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.peripheral.temp</key>
           </item>
         </graph_item>
@@ -569,7 +569,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.system.temp</key>
           </item>
         </graph_item>
@@ -577,7 +577,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.pch.temp</key>
           </item>
         </graph_item>
@@ -589,7 +589,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.1.05VPCH</key>
           </item>
         </graph_item>
@@ -597,7 +597,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.1.2VBMC</key>
           </item>
         </graph_item>
@@ -605,7 +605,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.3.3VAUX</key>
           </item>
         </graph_item>
@@ -613,7 +613,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.3.3VCC</key>
           </item>
         </graph_item>
@@ -621,7 +621,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.5VCC</key>
           </item>
         </graph_item>
@@ -629,7 +629,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.5VDual</key>
           </item>
         </graph_item>
@@ -637,7 +637,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.12V</key>
           </item>
         </graph_item>
@@ -645,7 +645,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.VBAT</key>
           </item>
         </graph_item>
@@ -653,7 +653,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.Vcpu</key>
           </item>
         </graph_item>
@@ -661,7 +661,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5018D</host>
+            <host>IPMI Supermicro SYS-5018D</host>
             <key>ipmi.supermicro.sys-5018d-mtf.VDIMM</key>
           </item>
         </graph_item>

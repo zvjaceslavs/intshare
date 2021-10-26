@@ -1,4 +1,4 @@
-# Template_Cisco_Sensors
+# Cisco_Sensors
 
 ## Overview
 
@@ -73,31 +73,31 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Sensor {#SNMPVALUE} changed more than 0.1dB!|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorvalue[{#SNMPINDEX}].delta(#1)}>0.1</p><p>**Recovery expression**: </p>|warning|
-|Sensor {#SNMPVALUE} changed more than 1dB!|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorvalue[{#SNMPINDEX}].delta(#1)}>=1</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (alert)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (alert)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (alert)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (alert)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (critical)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
-|Sensor {#SNMPVALUE} over threshold (critical)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
-|Sensor {#SNMPVALUE} over threshold (critical)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
-|Sensor {#SNMPVALUE} over threshold (critical)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
-|Sensor {#SNMPVALUE} over threshold (warning)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
-|Sensor {#SNMPVALUE} over threshold (warning)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
-|Sensor {#SNMPVALUE} over threshold (warning)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
-|Sensor {#SNMPVALUE} over threshold (warning)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
-|Sensor {#SNMPVALUE} changed more than 0.1dB! (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorvalue[{#SNMPINDEX}].delta(#1)}>0.1</p><p>**Recovery expression**: </p>|warning|
-|Sensor {#SNMPVALUE} changed more than 1dB! (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorvalue[{#SNMPINDEX}].delta(#1)}>=1</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (alert) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (alert) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (alert) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (alert) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
-|Sensor {#SNMPVALUE} over threshold (critical) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
-|Sensor {#SNMPVALUE} over threshold (critical) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
-|Sensor {#SNMPVALUE} over threshold (critical) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
-|Sensor {#SNMPVALUE} over threshold (critical) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
-|Sensor {#SNMPVALUE} over threshold (warning) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
-|Sensor {#SNMPVALUE} over threshold (warning) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
-|Sensor {#SNMPVALUE} over threshold (warning) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
-|Sensor {#SNMPVALUE} over threshold (warning) (LLD)|<p>-</p>|<p>**Expression**: {Template_Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Template_Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
+|Sensor {#SNMPVALUE} changed more than 0.1dB!|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorvalue[{#SNMPINDEX}].delta(#1)}>0.1</p><p>**Recovery expression**: </p>|warning|
+|Sensor {#SNMPVALUE} changed more than 1dB!|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorvalue[{#SNMPINDEX}].delta(#1)}>=1</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (alert)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (alert)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (alert)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (alert)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (critical)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
+|Sensor {#SNMPVALUE} over threshold (critical)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
+|Sensor {#SNMPVALUE} over threshold (critical)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
+|Sensor {#SNMPVALUE} over threshold (critical)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
+|Sensor {#SNMPVALUE} over threshold (warning)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
+|Sensor {#SNMPVALUE} over threshold (warning)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
+|Sensor {#SNMPVALUE} over threshold (warning)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
+|Sensor {#SNMPVALUE} over threshold (warning)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
+|Sensor {#SNMPVALUE} changed more than 0.1dB! (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorvalue[{#SNMPINDEX}].delta(#1)}>0.1</p><p>**Recovery expression**: </p>|warning|
+|Sensor {#SNMPVALUE} changed more than 1dB! (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorvalue[{#SNMPINDEX}].delta(#1)}>=1</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (alert) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (alert) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (alert) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (alert) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=20</p><p>**Recovery expression**: </p>|high|
+|Sensor {#SNMPVALUE} over threshold (critical) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
+|Sensor {#SNMPVALUE} over threshold (critical) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
+|Sensor {#SNMPVALUE} over threshold (critical) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
+|Sensor {#SNMPVALUE} over threshold (critical) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=30</p><p>**Recovery expression**: </p>|disaster|
+|Sensor {#SNMPVALUE} over threshold (warning) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte1[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts1[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
+|Sensor {#SNMPVALUE} over threshold (warning) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte2[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts2[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
+|Sensor {#SNMPVALUE} over threshold (warning) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte3[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts3[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|
+|Sensor {#SNMPVALUE} over threshold (warning) (LLD)|<p>-</p>|<p>**Expression**: {Cisco_Sensors:sensorte4[{#SNMPINDEX}].last()}=1 and {Cisco_Sensors:sensorts4[{#SNMPINDEX}].last()}=10</p><p>**Recovery expression**: </p>|average|

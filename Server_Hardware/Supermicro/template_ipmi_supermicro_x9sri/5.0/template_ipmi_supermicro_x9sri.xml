@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:44Z</date>
+  <date>2021-10-26T04:41:43Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Supermicro X9SRI-F</template>
-      <name>Template IPMI Supermicro X9SRI-F</name>
+      <template>IPMI Supermicro X9SRI-F</template>
+      <name>IPMI Supermicro X9SRI-F</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -426,7 +426,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.fan_1</key>
           </item>
         </graph_item>
@@ -434,7 +434,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.fan_2</key>
           </item>
         </graph_item>
@@ -442,7 +442,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.fan_3</key>
           </item>
         </graph_item>
@@ -450,7 +450,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.fan_4</key>
           </item>
         </graph_item>
@@ -458,7 +458,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.fan_a</key>
           </item>
         </graph_item>
@@ -470,7 +470,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.cpu.temp</key>
           </item>
         </graph_item>
@@ -478,14 +478,14 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.pch.temp</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>2</sortorder>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.temp</key>
           </item>
         </graph_item>
@@ -493,7 +493,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.periph.temp</key>
           </item>
         </graph_item>
@@ -505,7 +505,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.3.3vcc</key>
           </item>
         </graph_item>
@@ -513,7 +513,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.vsb</key>
           </item>
         </graph_item>
@@ -521,7 +521,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.5vcc</key>
           </item>
         </graph_item>
@@ -529,7 +529,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.avcc</key>
           </item>
         </graph_item>
@@ -537,7 +537,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.12v</key>
           </item>
         </graph_item>
@@ -545,7 +545,7 @@
           <sortorder>6</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.vdimm</key>
           </item>
         </graph_item>
@@ -553,7 +553,7 @@
           <sortorder>7</sortorder>
           <color>960000</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.vcore</key>
           </item>
         </graph_item>
@@ -561,7 +561,7 @@
           <sortorder>10</sortorder>
           <color>960096</color>
           <item>
-            <host>Template IPMI Supermicro X9SRI-F</host>
+            <host>IPMI Supermicro X9SRI-F</host>
             <key>ipmi.system.vbat</key>
           </item>
         </graph_item>

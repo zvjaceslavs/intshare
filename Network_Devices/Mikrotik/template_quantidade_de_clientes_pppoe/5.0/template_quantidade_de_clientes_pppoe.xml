@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:55Z</date>
+  <date>2021-10-26T04:44:10Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>1 - Template Check Active Client PPPoE</template>
-      <name>1 - Template Check Active Client PPPoE</name>
+      <template>1 Check Active Client PPPoE</template>
+      <name>1 Check Active Client PPPoE</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -60,7 +60,7 @@
         <graph_item>
           <color>00DD00</color>
           <item>
-            <host>1 - Template Check Active Client PPPoE</host>
+            <host>1 Check Active Client PPPoE</host>
             <key>PPPoE</key>
           </item>
         </graph_item>

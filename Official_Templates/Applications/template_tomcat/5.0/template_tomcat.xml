@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:37Z</date>
+  <date>2021-10-26T04:38:17Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template JMX Tomcat</template>
-      <name>Template JMX Tomcat</name>
+      <template>JMX Tomcat</template>
+      <name>JMX Tomcat</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -597,17 +597,17 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template JMX Tomcat:jmx["Catalina:type=ThreadPool,name=http-8080",currentThreadsBusy].last(0)} > ({Template JMX Tomcat:jmx["Catalina:type=ThreadPool,name=http-8080",maxThreads].last(0)} * 0.7)</expression>
+      <expression>{JMX Tomcat:jmx["Catalina:type=ThreadPool,name=http-8080",currentThreadsBusy].last(0)} > ({JMX Tomcat:jmx["Catalina:type=ThreadPool,name=http-8080",maxThreads].last(0)} * 0.7)</expression>
       <name>70% http-8080 worker threads busy on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Tomcat:jmx["Catalina:type=ThreadPool,name=http-8443",currentThreadsBusy].last(0)} > ({Template JMX Tomcat:jmx["Catalina:type=ThreadPool,name=http-8443",maxThreads].last(0)} * 0.7)</expression>
+      <expression>{JMX Tomcat:jmx["Catalina:type=ThreadPool,name=http-8443",currentThreadsBusy].last(0)} > ({JMX Tomcat:jmx["Catalina:type=ThreadPool,name=http-8443",maxThreads].last(0)} * 0.7)</expression>
       <name>70% http-8443 worker threads busy on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template JMX Tomcat:jmx["Catalina:type=ThreadPool,name=jk-8009",currentThreadsBusy].last(0)} > ({Template JMX Tomcat:jmx["Catalina:type=ThreadPool,name=jk-8009",maxThreads].last(0)} *0.7)</expression>
+      <expression>{JMX Tomcat:jmx["Catalina:type=ThreadPool,name=jk-8009",currentThreadsBusy].last(0)} > ({JMX Tomcat:jmx["Catalina:type=ThreadPool,name=jk-8009",maxThreads].last(0)} *0.7)</expression>
       <name>70% jk-8009 worker threads busy on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
@@ -619,7 +619,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=http-8080",maxThreads]</key>
           </item>
         </graph_item>
@@ -627,7 +627,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=http-8080",currentThreadsBusy]</key>
           </item>
         </graph_item>
@@ -635,7 +635,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=http-8080",currentThreadCount]</key>
           </item>
         </graph_item>
@@ -647,7 +647,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=http-8443",maxThreads]</key>
           </item>
         </graph_item>
@@ -655,7 +655,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=http-8443",currentThreadsBusy]</key>
           </item>
         </graph_item>
@@ -663,7 +663,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=http-8443",currentThreadCount]</key>
           </item>
         </graph_item>
@@ -675,7 +675,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=jk-8009",maxThreads]</key>
           </item>
         </graph_item>
@@ -683,7 +683,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=jk-8009",currentThreadsBusy]</key>
           </item>
         </graph_item>
@@ -691,7 +691,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=ThreadPool,name=jk-8009",currentThreadCount]</key>
           </item>
         </graph_item>
@@ -703,7 +703,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=Manager,path=/,host=localhost",rejectedSessions]</key>
           </item>
         </graph_item>
@@ -711,7 +711,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=Manager,path=/,host=localhost",activeSessions]</key>
           </item>
         </graph_item>
@@ -719,7 +719,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template JMX Tomcat</host>
+            <host>JMX Tomcat</host>
             <key>jmx["Catalina:type=Manager,path=/,host=localhost",maxActiveSessions]</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:11Z</date>
+  <date>2021-10-26T04:41:06Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Bind queries</template>
-      <name>Template Bind queries</name>
+      <template>Bind queries</template>
+      <name>Bind queries</name>
       <description>/etc/zabbix/zabbix_agentd.d/userparameter_bind.conf: UserParameter=bind.tcpcl,/bin/cat /tmp/namedtcp.log UserParameter=bind.udpcl,/bin/cat /tmp/namedudp.log --------------- cron every 30 sec: /var/spool/cron/root: SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin 0-59 * * * * /etc/zabbix/custom/named.sh 0-59 * * * * ( sleep 30; /etc/zabbix/custom/named.sh ) /etc/zabbix/custom/named.sh: #!/bin/bash /usr/local/named/sbin/rndc status > /tmp/rndcstatus cat /tmp/rndcstatus | grep tcp | awk '{ print $3 }' | cut -d '/' -f 1 > /tmp/namedtcp.log cat /tmp/rndcstatus | grep recursive | awk '{ print $3 }' | cut -d '/' -f 1 > /tmp/namedudp.log ----------------------------- add key for rndc in config of named</description>
       <groups>
         <group>
@@ -50,7 +50,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Bind queries:bind.udpcl.prev()}>200 or {Template Bind queries:bind.tcpcl.prev()}>30</expression>
+      <expression>{Bind queries:bind.udpcl.prev()}>200 or {Bind queries:bind.tcpcl.prev()}>30</expression>
       <name>Too much recursive queries on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>
@@ -62,7 +62,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Bind queries</host>
+            <host>Bind queries</host>
             <key>bind.tcpcl</key>
           </item>
         </graph_item>
@@ -70,7 +70,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Bind queries</host>
+            <host>Bind queries</host>
             <key>bind.udpcl</key>
           </item>
         </graph_item>

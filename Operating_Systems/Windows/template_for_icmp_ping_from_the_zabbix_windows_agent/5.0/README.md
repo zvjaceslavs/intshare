@@ -1,4 +1,4 @@
-# Template Module ICMP ping from the Zabbix Windows agent
+# Module ICMP ping from the Zabbix Windows agent
 
 ## Description
 

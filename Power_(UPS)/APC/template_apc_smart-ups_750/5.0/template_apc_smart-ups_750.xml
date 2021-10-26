@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:27Z</date>
+  <date>2021-10-26T04:41:26Z</date>
   <groups>
     <group>
       <name>UPS</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template APC Smart-UPS</template>
-      <name>Template APC Smart-UPS</name>
+      <template>APC Smart-UPS</template>
+      <name>APC Smart-UPS</name>
       <groups>
         <group>
           <name>UPS</name>
@@ -453,7 +453,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template APC Smart-UPS</host>
+            <host>APC Smart-UPS</host>
             <key>apc_input.frequency</key>
           </item>
         </graph_item>
@@ -461,7 +461,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template APC Smart-UPS</host>
+            <host>APC Smart-UPS</host>
             <key>apc_output.frequency</key>
           </item>
         </graph_item>

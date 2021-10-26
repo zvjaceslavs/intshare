@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:34Z'
+  date: '2021-10-26T04:46:04Z'
   groups:
     -
       uuid: 51be25b0145a4beca811de24a62b5cb4
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: d2e2fcc6d7c0404c8825cc67e67c4ed9
-      template: 'Template Kafka Connector'
-      name: 'Template Kafka Connector'
+      template: 'Kafka Connector'
+      name: 'Kafka Connector'
       groups:
         -
           name: Kafka
@@ -38,11 +38,11 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: fb319aae909844da8783e9b346dd4ddd
-                  expression: 'find(/Template Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1'
+                  expression: 'find(/Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1'
                   name: 'Kafka Connector {#CONNECTOR} on {HOST.NAME} is FAILED'
                 -
                   uuid: ed932821ebec4cbf851523850c64f2a1
-                  expression: 'find(/Template Kafka Connector/state[{#CONNECTOR}],6h,"like","RUNNING")=0 and find(/Template Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1'
+                  expression: 'find(/Kafka Connector/state[{#CONNECTOR}],6h,"like","RUNNING")=0 and find(/Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1'
                   name: 'Kafka Connector {#CONNECTOR} on {HOST.NAME} is not RUNNING'
                   priority: WARNING
                   description: 'Update this issue to the OC Team'
@@ -63,7 +63,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: bfbb72aa14a94669a6771c54473d860c
-                  expression: 'find(/Template Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1'
+                  expression: 'find(/Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1'
                   name: 'Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is FAILED'
                   url: 'http://{#CONNECTOR_ID}'
                   description: |
@@ -77,7 +77,7 @@ zabbix_export:
                       value: 'RESTART TASK'
                 -
                   uuid: 70cbe231125748389f731f753d6bb715
-                  expression: 'find(/Template Kafka Connector/task[{#CONNECTOR_ID}],6h,"like","RUNNING")=0 and find(/Template Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1'
+                  expression: 'find(/Kafka Connector/task[{#CONNECTOR_ID}],6h,"like","RUNNING")=0 and find(/Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1'
                   name: 'Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is not RUNNING'
                   priority: WARNING
                   description: 'Update this issue to the OC Team'

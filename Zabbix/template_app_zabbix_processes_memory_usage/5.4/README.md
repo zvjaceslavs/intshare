@@ -1,4 +1,4 @@
-# Template App Zabbix processes memory usage
+# App Zabbix processes memory usage
 
 ## Description
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:14Z</date>
+  <date>2021-10-26T04:43:22Z</date>
   <groups>
     <group>
       <name>DEMO</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>rpcm_1502_template</template>
-      <name>rpcm_1502_template</name>
+      <template>rpcm_1502</template>
+      <name>rpcm_1502</name>
       <groups>
         <group>
           <name>DEMO</name>

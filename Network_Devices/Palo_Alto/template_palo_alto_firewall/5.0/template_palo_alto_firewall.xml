@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:09Z</date>
+  <date>2021-10-26T04:37:46Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Palo_Alto_Firewall</template>
-      <name>Template_Palo_Alto_Firewall</name>
+      <template>Palo_Alto_Firewall</template>
+      <name>Palo_Alto_Firewall</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>
@@ -279,7 +279,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template_Palo_Alto_Firewall:hrStorageUsed[memory,{#SNMPINDEX}].avg(5m)}>{Template_Palo_Alto_Firewall:hrStorageSize[memory,{#SNMPINDEX}].last()}*0.9</expression>
+              <expression>{Palo_Alto_Firewall:hrStorageUsed[memory,{#SNMPINDEX}].avg(5m)}>{Palo_Alto_Firewall:hrStorageSize[memory,{#SNMPINDEX}].last()}*0.9</expression>
               <name>#{#SNMPVALUE} usage is high [{ITEM.LASTVALUE1}]</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>

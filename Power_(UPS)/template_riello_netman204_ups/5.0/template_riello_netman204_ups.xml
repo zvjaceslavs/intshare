@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:27Z</date>
+  <date>2021-10-26T04:44:46Z</date>
   <groups>
     <group>
       <name>Templates/Printers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Riello NetMan204 UPS</template>
-      <name>Template SNMP Riello NetMan204 UPS</name>
+      <template>SNMP Riello NetMan204 UPS</template>
+      <name>SNMP Riello NetMan204 UPS</name>
       <groups>
         <group>
           <name>Templates/Printers</name>
@@ -718,7 +718,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP Riello NetMan204 UPS</host>
+            <host>SNMP Riello NetMan204 UPS</host>
             <key>rupsBatteryStatus.0</key>
           </item>
         </graph_item>
@@ -731,7 +731,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP Riello NetMan204 UPS</host>
+            <host>SNMP Riello NetMan204 UPS</host>
             <key>rupsBatteryTemperature.0</key>
           </item>
         </graph_item>

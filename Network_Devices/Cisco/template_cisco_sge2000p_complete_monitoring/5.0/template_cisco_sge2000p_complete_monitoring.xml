@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:23Z</date>
+  <date>2021-10-26T04:40:15Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template XSM SNMP Devices</template>
-      <name>Template XSM SNMP Devices</name>
+      <template>XSM SNMP Devices</template>
+      <name>XSM SNMP Devices</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -3785,7 +3785,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>rlEnvMonFanState.67109249</key>
           </item>
         </graph_item>
@@ -3794,7 +3794,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>2774A7</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>rlEnvMonFanState.67109250</key>
           </item>
         </graph_item>
@@ -3803,7 +3803,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>rlEnvMonFanState.67109251</key>
           </item>
         </graph_item>
@@ -3812,7 +3812,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C13</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>rlEnvMonFanState.67109252</key>
           </item>
         </graph_item>
@@ -3821,7 +3821,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C17</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>rlEnvMonFanState.67109253</key>
           </item>
         </graph_item>
@@ -3834,7 +3834,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>icmpping</key>
           </item>
         </graph_item>
@@ -3847,7 +3847,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>icmppingsec</key>
           </item>
         </graph_item>
@@ -3860,7 +3860,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.1</key>
           </item>
         </graph_item>
@@ -3868,7 +3868,7 @@
           <sortorder>2</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.2</key>
           </item>
         </graph_item>
@@ -3876,7 +3876,7 @@
           <sortorder>3</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.3</key>
           </item>
         </graph_item>
@@ -3884,7 +3884,7 @@
           <sortorder>4</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.4</key>
           </item>
         </graph_item>
@@ -3892,7 +3892,7 @@
           <sortorder>5</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.5</key>
           </item>
         </graph_item>
@@ -3900,7 +3900,7 @@
           <sortorder>6</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.6</key>
           </item>
         </graph_item>
@@ -3908,14 +3908,14 @@
           <sortorder>7</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.7</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>8</sortorder>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.8</key>
           </item>
         </graph_item>
@@ -3923,7 +3923,7 @@
           <sortorder>9</sortorder>
           <color>960000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.9</key>
           </item>
         </graph_item>
@@ -3931,7 +3931,7 @@
           <sortorder>10</sortorder>
           <color>000096</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.10</key>
           </item>
         </graph_item>
@@ -3939,7 +3939,7 @@
           <sortorder>11</sortorder>
           <color>960096</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.11</key>
           </item>
         </graph_item>
@@ -3947,7 +3947,7 @@
           <sortorder>12</sortorder>
           <color>009696</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.12</key>
           </item>
         </graph_item>
@@ -3955,7 +3955,7 @@
           <sortorder>13</sortorder>
           <color>969600</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.13</key>
           </item>
         </graph_item>
@@ -3963,7 +3963,7 @@
           <sortorder>14</sortorder>
           <color>969696</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.14</key>
           </item>
         </graph_item>
@@ -3971,7 +3971,7 @@
           <sortorder>15</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.15</key>
           </item>
         </graph_item>
@@ -3979,7 +3979,7 @@
           <sortorder>16</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.16</key>
           </item>
         </graph_item>
@@ -3987,7 +3987,7 @@
           <sortorder>17</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.17</key>
           </item>
         </graph_item>
@@ -3995,7 +3995,7 @@
           <sortorder>18</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.18</key>
           </item>
         </graph_item>
@@ -4003,7 +4003,7 @@
           <sortorder>19</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.19</key>
           </item>
         </graph_item>
@@ -4011,7 +4011,7 @@
           <sortorder>20</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.20</key>
           </item>
         </graph_item>
@@ -4019,7 +4019,7 @@
           <sortorder>21</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.21</key>
           </item>
         </graph_item>
@@ -4027,7 +4027,7 @@
           <sortorder>22</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.22</key>
           </item>
         </graph_item>
@@ -4035,7 +4035,7 @@
           <sortorder>23</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.23</key>
           </item>
         </graph_item>
@@ -4043,7 +4043,7 @@
           <sortorder>24</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInErrors.24</key>
           </item>
         </graph_item>
@@ -4056,7 +4056,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.1</key>
           </item>
         </graph_item>
@@ -4064,7 +4064,7 @@
           <sortorder>2</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.2</key>
           </item>
         </graph_item>
@@ -4072,7 +4072,7 @@
           <sortorder>3</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.3</key>
           </item>
         </graph_item>
@@ -4080,7 +4080,7 @@
           <sortorder>4</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.4</key>
           </item>
         </graph_item>
@@ -4088,7 +4088,7 @@
           <sortorder>5</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.5</key>
           </item>
         </graph_item>
@@ -4096,7 +4096,7 @@
           <sortorder>6</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.6</key>
           </item>
         </graph_item>
@@ -4104,14 +4104,14 @@
           <sortorder>7</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.7</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>8</sortorder>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.8</key>
           </item>
         </graph_item>
@@ -4119,7 +4119,7 @@
           <sortorder>9</sortorder>
           <color>960000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.9</key>
           </item>
         </graph_item>
@@ -4127,7 +4127,7 @@
           <sortorder>10</sortorder>
           <color>000096</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.10</key>
           </item>
         </graph_item>
@@ -4135,7 +4135,7 @@
           <sortorder>11</sortorder>
           <color>960096</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.11</key>
           </item>
         </graph_item>
@@ -4143,7 +4143,7 @@
           <sortorder>12</sortorder>
           <color>009696</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.12</key>
           </item>
         </graph_item>
@@ -4151,7 +4151,7 @@
           <sortorder>13</sortorder>
           <color>969600</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.13</key>
           </item>
         </graph_item>
@@ -4159,7 +4159,7 @@
           <sortorder>14</sortorder>
           <color>969696</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.14</key>
           </item>
         </graph_item>
@@ -4167,7 +4167,7 @@
           <sortorder>15</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.15</key>
           </item>
         </graph_item>
@@ -4175,7 +4175,7 @@
           <sortorder>16</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.16</key>
           </item>
         </graph_item>
@@ -4183,7 +4183,7 @@
           <sortorder>17</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.17</key>
           </item>
         </graph_item>
@@ -4191,7 +4191,7 @@
           <sortorder>18</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.18</key>
           </item>
         </graph_item>
@@ -4199,7 +4199,7 @@
           <sortorder>19</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.19</key>
           </item>
         </graph_item>
@@ -4207,7 +4207,7 @@
           <sortorder>20</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.20</key>
           </item>
         </graph_item>
@@ -4215,7 +4215,7 @@
           <sortorder>21</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.21</key>
           </item>
         </graph_item>
@@ -4223,7 +4223,7 @@
           <sortorder>22</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.22</key>
           </item>
         </graph_item>
@@ -4231,7 +4231,7 @@
           <sortorder>23</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.23</key>
           </item>
         </graph_item>
@@ -4239,7 +4239,7 @@
           <sortorder>24</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutErrors.24</key>
           </item>
         </graph_item>
@@ -4252,7 +4252,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>AA0000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>entPhySensorValue.68420481</key>
           </item>
         </graph_item>
@@ -4265,7 +4265,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.1</key>
           </item>
         </graph_item>
@@ -4273,7 +4273,7 @@
           <sortorder>2</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.2</key>
           </item>
         </graph_item>
@@ -4281,7 +4281,7 @@
           <sortorder>3</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.3</key>
           </item>
         </graph_item>
@@ -4289,7 +4289,7 @@
           <sortorder>4</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.4</key>
           </item>
         </graph_item>
@@ -4297,7 +4297,7 @@
           <sortorder>5</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.5</key>
           </item>
         </graph_item>
@@ -4305,7 +4305,7 @@
           <sortorder>6</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.6</key>
           </item>
         </graph_item>
@@ -4313,14 +4313,14 @@
           <sortorder>7</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.7</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>8</sortorder>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.8</key>
           </item>
         </graph_item>
@@ -4328,7 +4328,7 @@
           <sortorder>9</sortorder>
           <color>960000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.9</key>
           </item>
         </graph_item>
@@ -4336,7 +4336,7 @@
           <sortorder>10</sortorder>
           <color>000096</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.10</key>
           </item>
         </graph_item>
@@ -4344,7 +4344,7 @@
           <sortorder>11</sortorder>
           <color>960096</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.11</key>
           </item>
         </graph_item>
@@ -4352,7 +4352,7 @@
           <sortorder>12</sortorder>
           <color>009696</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.12</key>
           </item>
         </graph_item>
@@ -4360,7 +4360,7 @@
           <sortorder>13</sortorder>
           <color>969600</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.13</key>
           </item>
         </graph_item>
@@ -4368,7 +4368,7 @@
           <sortorder>14</sortorder>
           <color>969696</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.14</key>
           </item>
         </graph_item>
@@ -4376,7 +4376,7 @@
           <sortorder>15</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.15</key>
           </item>
         </graph_item>
@@ -4384,7 +4384,7 @@
           <sortorder>16</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.16</key>
           </item>
         </graph_item>
@@ -4392,7 +4392,7 @@
           <sortorder>17</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.17</key>
           </item>
         </graph_item>
@@ -4400,7 +4400,7 @@
           <sortorder>18</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.18</key>
           </item>
         </graph_item>
@@ -4408,7 +4408,7 @@
           <sortorder>19</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.19</key>
           </item>
         </graph_item>
@@ -4416,7 +4416,7 @@
           <sortorder>20</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.20</key>
           </item>
         </graph_item>
@@ -4424,7 +4424,7 @@
           <sortorder>21</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.21</key>
           </item>
         </graph_item>
@@ -4432,7 +4432,7 @@
           <sortorder>22</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.22</key>
           </item>
         </graph_item>
@@ -4440,7 +4440,7 @@
           <sortorder>23</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.23</key>
           </item>
         </graph_item>
@@ -4448,7 +4448,7 @@
           <sortorder>24</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifInOctets.24</key>
           </item>
         </graph_item>
@@ -4461,7 +4461,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -4469,7 +4469,7 @@
           <sortorder>2</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -4477,7 +4477,7 @@
           <sortorder>3</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -4485,7 +4485,7 @@
           <sortorder>4</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -4493,7 +4493,7 @@
           <sortorder>5</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -4501,7 +4501,7 @@
           <sortorder>6</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -4509,14 +4509,14 @@
           <sortorder>7</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.7</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>8</sortorder>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.8</key>
           </item>
         </graph_item>
@@ -4524,7 +4524,7 @@
           <sortorder>9</sortorder>
           <color>960000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.9</key>
           </item>
         </graph_item>
@@ -4532,7 +4532,7 @@
           <sortorder>10</sortorder>
           <color>000096</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.10</key>
           </item>
         </graph_item>
@@ -4540,7 +4540,7 @@
           <sortorder>11</sortorder>
           <color>960096</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.11</key>
           </item>
         </graph_item>
@@ -4548,7 +4548,7 @@
           <sortorder>12</sortorder>
           <color>009696</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.12</key>
           </item>
         </graph_item>
@@ -4556,7 +4556,7 @@
           <sortorder>13</sortorder>
           <color>969600</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.13</key>
           </item>
         </graph_item>
@@ -4564,7 +4564,7 @@
           <sortorder>14</sortorder>
           <color>969696</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.14</key>
           </item>
         </graph_item>
@@ -4572,7 +4572,7 @@
           <sortorder>15</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.15</key>
           </item>
         </graph_item>
@@ -4580,7 +4580,7 @@
           <sortorder>16</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.16</key>
           </item>
         </graph_item>
@@ -4588,7 +4588,7 @@
           <sortorder>17</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.17</key>
           </item>
         </graph_item>
@@ -4596,7 +4596,7 @@
           <sortorder>18</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.18</key>
           </item>
         </graph_item>
@@ -4604,7 +4604,7 @@
           <sortorder>19</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.19</key>
           </item>
         </graph_item>
@@ -4612,7 +4612,7 @@
           <sortorder>20</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.20</key>
           </item>
         </graph_item>
@@ -4620,7 +4620,7 @@
           <sortorder>21</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.21</key>
           </item>
         </graph_item>
@@ -4628,7 +4628,7 @@
           <sortorder>22</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.22</key>
           </item>
         </graph_item>
@@ -4636,7 +4636,7 @@
           <sortorder>23</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.23</key>
           </item>
         </graph_item>
@@ -4644,7 +4644,7 @@
           <sortorder>24</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifOutOctets.24</key>
           </item>
         </graph_item>
@@ -4657,7 +4657,7 @@
           <sortorder>1</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.1</key>
           </item>
         </graph_item>
@@ -4665,7 +4665,7 @@
           <sortorder>2</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.2</key>
           </item>
         </graph_item>
@@ -4673,7 +4673,7 @@
           <sortorder>3</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.3</key>
           </item>
         </graph_item>
@@ -4681,7 +4681,7 @@
           <sortorder>4</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.4</key>
           </item>
         </graph_item>
@@ -4689,7 +4689,7 @@
           <sortorder>5</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.5</key>
           </item>
         </graph_item>
@@ -4697,7 +4697,7 @@
           <sortorder>6</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.6</key>
           </item>
         </graph_item>
@@ -4705,7 +4705,7 @@
           <sortorder>7</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.7</key>
           </item>
         </graph_item>
@@ -4713,7 +4713,7 @@
           <sortorder>8</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.8</key>
           </item>
         </graph_item>
@@ -4721,7 +4721,7 @@
           <sortorder>9</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.9</key>
           </item>
         </graph_item>
@@ -4729,7 +4729,7 @@
           <sortorder>10</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.10</key>
           </item>
         </graph_item>
@@ -4737,7 +4737,7 @@
           <sortorder>11</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.11</key>
           </item>
         </graph_item>
@@ -4745,7 +4745,7 @@
           <sortorder>12</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.12</key>
           </item>
         </graph_item>
@@ -4753,7 +4753,7 @@
           <sortorder>13</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.13</key>
           </item>
         </graph_item>
@@ -4761,7 +4761,7 @@
           <sortorder>14</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.14</key>
           </item>
         </graph_item>
@@ -4769,7 +4769,7 @@
           <sortorder>15</sortorder>
           <color>274482</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.15</key>
           </item>
         </graph_item>
@@ -4777,7 +4777,7 @@
           <sortorder>16</sortorder>
           <color>2B5429</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.16</key>
           </item>
         </graph_item>
@@ -4785,7 +4785,7 @@
           <sortorder>17</sortorder>
           <color>8048B4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.17</key>
           </item>
         </graph_item>
@@ -4793,7 +4793,7 @@
           <sortorder>18</sortorder>
           <color>FD5434</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.18</key>
           </item>
         </graph_item>
@@ -4801,7 +4801,7 @@
           <sortorder>19</sortorder>
           <color>790E1F</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.19</key>
           </item>
         </graph_item>
@@ -4809,7 +4809,7 @@
           <sortorder>20</sortorder>
           <color>87AC4D</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.20</key>
           </item>
         </graph_item>
@@ -4817,7 +4817,7 @@
           <sortorder>21</sortorder>
           <color>E89DF4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.21</key>
           </item>
         </graph_item>
@@ -4825,7 +4825,7 @@
           <sortorder>22</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.22</key>
           </item>
         </graph_item>
@@ -4833,7 +4833,7 @@
           <sortorder>23</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.23</key>
           </item>
         </graph_item>
@@ -4841,7 +4841,7 @@
           <sortorder>24</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifMtu.24</key>
           </item>
         </graph_item>
@@ -4854,7 +4854,7 @@
           <sortorder>1</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.1</key>
           </item>
         </graph_item>
@@ -4862,7 +4862,7 @@
           <sortorder>2</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.2</key>
           </item>
         </graph_item>
@@ -4870,7 +4870,7 @@
           <sortorder>3</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.3</key>
           </item>
         </graph_item>
@@ -4878,7 +4878,7 @@
           <sortorder>4</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.4</key>
           </item>
         </graph_item>
@@ -4886,7 +4886,7 @@
           <sortorder>5</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.5</key>
           </item>
         </graph_item>
@@ -4894,7 +4894,7 @@
           <sortorder>6</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.6</key>
           </item>
         </graph_item>
@@ -4902,7 +4902,7 @@
           <sortorder>7</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.7</key>
           </item>
         </graph_item>
@@ -4910,7 +4910,7 @@
           <sortorder>8</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.8</key>
           </item>
         </graph_item>
@@ -4918,7 +4918,7 @@
           <sortorder>9</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.9</key>
           </item>
         </graph_item>
@@ -4926,7 +4926,7 @@
           <sortorder>10</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.10</key>
           </item>
         </graph_item>
@@ -4934,7 +4934,7 @@
           <sortorder>11</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.11</key>
           </item>
         </graph_item>
@@ -4942,7 +4942,7 @@
           <sortorder>12</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.12</key>
           </item>
         </graph_item>
@@ -4950,7 +4950,7 @@
           <sortorder>13</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.13</key>
           </item>
         </graph_item>
@@ -4958,7 +4958,7 @@
           <sortorder>14</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.14</key>
           </item>
         </graph_item>
@@ -4966,7 +4966,7 @@
           <sortorder>15</sortorder>
           <color>274482</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.15</key>
           </item>
         </graph_item>
@@ -4974,7 +4974,7 @@
           <sortorder>16</sortorder>
           <color>2B5429</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.16</key>
           </item>
         </graph_item>
@@ -4982,7 +4982,7 @@
           <sortorder>17</sortorder>
           <color>8048B4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.17</key>
           </item>
         </graph_item>
@@ -4990,7 +4990,7 @@
           <sortorder>18</sortorder>
           <color>FD5434</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.18</key>
           </item>
         </graph_item>
@@ -4998,7 +4998,7 @@
           <sortorder>19</sortorder>
           <color>790E1F</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.19</key>
           </item>
         </graph_item>
@@ -5006,7 +5006,7 @@
           <sortorder>20</sortorder>
           <color>87AC4D</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.20</key>
           </item>
         </graph_item>
@@ -5014,7 +5014,7 @@
           <sortorder>21</sortorder>
           <color>E89DF4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.21</key>
           </item>
         </graph_item>
@@ -5022,7 +5022,7 @@
           <sortorder>22</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.22</key>
           </item>
         </graph_item>
@@ -5030,7 +5030,7 @@
           <sortorder>23</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.23</key>
           </item>
         </graph_item>
@@ -5038,7 +5038,7 @@
           <sortorder>24</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template XSM SNMP Devices</host>
+            <host>XSM SNMP Devices</host>
             <key>ifSpeed.24</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:29Z</date>
+  <date>2021-10-26T04:40:21Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App MQTT Service</template>
-      <name>Template App MQTT Service</name>
+      <template>App MQTT Service</template>
+      <name>App MQTT Service</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -215,7 +215,7 @@
         <graph_item>
           <color>CCCC00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[clients/maximum]</key>
           </item>
         </graph_item>
@@ -223,7 +223,7 @@
           <sortorder>1</sortorder>
           <color>00CC00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[clients/total]</key>
           </item>
         </graph_item>
@@ -231,7 +231,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[clients/expired]</key>
           </item>
         </graph_item>
@@ -239,7 +239,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[clients/disconnected]</key>
           </item>
         </graph_item>
@@ -251,7 +251,7 @@
         <graph_item>
           <color>00CC00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[/messages/sent]</key>
           </item>
         </graph_item>
@@ -259,7 +259,7 @@
           <sortorder>1</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[messages/inflight]</key>
           </item>
         </graph_item>
@@ -267,7 +267,7 @@
           <sortorder>2</sortorder>
           <color>3333FF</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[messages/stored]</key>
           </item>
         </graph_item>
@@ -280,7 +280,7 @@
           <sortorder>1</sortorder>
           <color>CCCC00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[load/messages/received/5min]</key>
           </item>
         </graph_item>
@@ -288,7 +288,7 @@
           <sortorder>2</sortorder>
           <color>00CC00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[load/messages/sent/5min]</key>
           </item>
         </graph_item>
@@ -300,7 +300,7 @@
         <graph_item>
           <color>DD0000</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[load/publish//dropped/5min]</key>
           </item>
         </graph_item>
@@ -308,7 +308,7 @@
           <sortorder>1</sortorder>
           <color>EEEE00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[load/publish/received/5min]</key>
           </item>
         </graph_item>
@@ -316,7 +316,7 @@
           <sortorder>2</sortorder>
           <color>00DD00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[load/publish/sent/5min]</key>
           </item>
         </graph_item>
@@ -328,7 +328,7 @@
         <graph_item>
           <color>CCCC00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[load/bytes/received/5min]</key>
           </item>
         </graph_item>
@@ -336,7 +336,7 @@
           <sortorder>1</sortorder>
           <color>00CC00</color>
           <item>
-            <host>Template App MQTT Service</host>
+            <host>App MQTT Service</host>
             <key>mosquitto[load/bytes/sent/5min]</key>
           </item>
         </graph_item>

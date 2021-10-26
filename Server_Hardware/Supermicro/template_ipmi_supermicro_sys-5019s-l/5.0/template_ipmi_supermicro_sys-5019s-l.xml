@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:56Z</date>
+  <date>2021-10-26T04:39:45Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Supermicro SYS-5019S-L</template>
-      <name>Template IPMI Supermicro SYS-5019S-L</name>
+      <template>IPMI Supermicro SYS-5019S-L</template>
+      <name>IPMI Supermicro SYS-5019S-L</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -524,14 +524,14 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template IPMI Supermicro SYS-5019S-L</host>
+            <host>IPMI Supermicro SYS-5019S-L</host>
             <key>CPUTemp</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>8</sortorder>
           <item>
-            <host>Template IPMI Supermicro SYS-5019S-L</host>
+            <host>IPMI Supermicro SYS-5019S-L</host>
             <key>SystemTemp</key>
           </item>
         </graph_item>

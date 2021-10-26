@@ -1,4 +1,4 @@
-# Template Net BreezeNet SNMPv1
+# Net BreezeNet SNMPv1
 
 ## Overview
 
@@ -31,31 +31,31 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Access vlan|<p>-</p>|`SNMP agent`|access.vlan<p>Update: 1d</p>|
-|Received SNR BU|<p>-</p>|`SNMP agent`|bu.received.snr<p>Update: 60</p>|
-|Defined Frequency|<p>-</p>|`SNMP agent`|freq.def<p>Update: 1d</p>|
-|Radio :Inbound packets with errors (CRC)|<p>-</p>|`SNMP agent`|ifInErrors.1<p>Update: 60</p>|
-|FastEtehernet  :Inbound packets with errors|<p>-</p>|`SNMP agent`|ifInErrors.2<p>Update: 300</p>|
-|FastEthernet  :Bits received|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 180</p>|
-|FastEthernet :Bits sent|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 180</p>|
-|Modulation Level|<p>-</p>|`SNMP agent`|modulation.level<p>Update: 60s</p>|
-|FastEtherenet   :Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.2]<p>Update: 300</p>|
-|FastEtehernet : Outbound packets discarded|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.2]<p>Update: 300</p>|
-|FastEthernet :Outbound packets with errors|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.2]<p>Update: 300</p>|
-|FastEthernet  : Speed|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.2]<p>Update: 300</p>|
-|FastEthernet : Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.2]<p>Update: 180</p>|
-|Received RSSI|<p>-</p>|`SNMP agent`|received.rssi<p>Update: 60s</p>|
-|Received RSSI BU|<p>-</p>|`SNMP agent`|received.rssi.bu<p>Update: 60s</p>|
-|Received SNR|<p>-</p>|`SNMP agent`|received.snr<p>Update: 60s</p>|
-|Sub Band Select|<p>-</p>|`SNMP agent`|sub.band<p>Update: 1d</p>|
-|ESSID|<p>-</p>|`SNMP agent`|system.essid<p>Update: 1d</p>|
-|Hardware model|<p>-</p>|`SNMP agent`|system.hw.model<p>Update: 1d</p>|
-|Serial number|<p>-</p>|`SNMP agent`|system.hw.serial<p>Update: 1d</p>|
-|Device location|<p>-</p>|`SNMP agent`|system.location<p>Update: 1d</p>|
-|Device MAC|<p>-</p>|`SNMP agent`|system.mac<p>Update: 1d</p>|
-|Device name|<p>-</p>|`SNMP agent`|system.name<p>Update: 1d</p>|
-|Device uptime|<p>-</p>|`SNMP agent`|system.uptime<p>Update: 6h</p>|
 |Transmit Power|<p>-</p>|`SNMP agent`|transmit.power<p>Update: 1d</p>|
+|Modulation Level|<p>-</p>|`SNMP agent`|modulation.level<p>Update: 60s</p>|
+|Device MAC|<p>-</p>|`SNMP agent`|system.mac<p>Update: 1d</p>|
+|Received RSSI BU|<p>-</p>|`SNMP agent`|received.rssi.bu<p>Update: 60s</p>|
+|Access vlan|<p>-</p>|`SNMP agent`|access.vlan<p>Update: 1d</p>|
+|Hardware model|<p>-</p>|`SNMP agent`|system.hw.model<p>Update: 1d</p>|
+|Device name|<p>-</p>|`SNMP agent`|system.name<p>Update: 1d</p>|
+|Received SNR BU|<p>-</p>|`SNMP agent`|bu.received.snr<p>Update: 60</p>|
+|ESSID|<p>-</p>|`SNMP agent`|system.essid<p>Update: 1d</p>|
+|Defined Frequency|<p>-</p>|`SNMP agent`|freq.def<p>Update: 1d</p>|
+|FastEthernet  : Speed|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.2]<p>Update: 300</p>|
+|Received RSSI|<p>-</p>|`SNMP agent`|received.rssi<p>Update: 60s</p>|
+|FastEthernet :Outbound packets with errors|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.2]<p>Update: 300</p>|
+|FastEtherenet   :Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.2]<p>Update: 300</p>|
+|FastEthernet :Bits sent|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 180</p>|
+|FastEthernet  :Bits received|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 180</p>|
+|FastEtehernet : Outbound packets discarded|<p>-</p>|`SNMP agent`|net.if.out.discards[ifOutDiscards.2]<p>Update: 300</p>|
+|Device uptime|<p>-</p>|`SNMP agent`|system.uptime<p>Update: 6h</p>|
+|FastEtehernet  :Inbound packets with errors|<p>-</p>|`SNMP agent`|ifInErrors.2<p>Update: 300</p>|
+|FastEthernet : Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.2]<p>Update: 180</p>|
+|Received SNR|<p>-</p>|`SNMP agent`|received.snr<p>Update: 60s</p>|
+|Device location|<p>-</p>|`SNMP agent`|system.location<p>Update: 1d</p>|
+|Sub Band Select|<p>-</p>|`SNMP agent`|sub.band<p>Update: 1d</p>|
+|Radio :Inbound packets with errors (CRC)|<p>-</p>|`SNMP agent`|ifInErrors.1<p>Update: 60</p>|
+|Serial number|<p>-</p>|`SNMP agent`|system.hw.serial<p>Update: 1d</p>|
 |SNMP availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 180</p>|
 ## Triggers
 

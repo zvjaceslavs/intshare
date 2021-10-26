@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:23Z</date>
+  <date>2021-10-26T04:39:07Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,7 +9,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template Dell iDrac SNMPV2</template>
+      <template>Dell iDrac SNMPV2</template>
       <name>Dell idrac</name>
       <groups>
         <group>
@@ -539,7 +539,7 @@
                 <graph_item>
                   <color>C80000</color>
                   <item>
-                    <host>Template Dell iDrac SNMPV2</host>
+                    <host>Dell iDrac SNMPV2</host>
                     <key>FanSpeed.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -912,7 +912,7 @@
                   <color>C80000</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Dell iDrac SNMPV2</host>
+                    <host>Dell iDrac SNMPV2</host>
                     <key>TempValue.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>

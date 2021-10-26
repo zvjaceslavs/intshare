@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:40Z</date>
+  <date>2021-10-26T04:40:33Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App e2guardian - Active</template>
-      <name>Template App e2guardian - Active</name>
+      <template>App e2guardian - Active</template>
+      <name>App e2guardian - Active</name>
       <description>https://github.com/e2guardian/e2guardian/blob/master/notes/dstats_format USER.MACRO={$E2GUARDIAN_DSTATS} UserParameter=e2guardian[*],tail -1 $1 | cut -f $2</description>
       <groups>
         <group>
@@ -209,14 +209,14 @@
       <ymin_type_1>FIXED</ymin_type_1>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template App e2guardian - Active</host>
+        <host>App e2guardian - Active</host>
         <key>e2guardian[{$E2GUARDIAN_DSTATS},2]</key>
       </ymax_item_1>
       <graph_items>
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App e2guardian - Active</host>
+            <host>App e2guardian - Active</host>
             <key>e2guardian[{$E2GUARDIAN_DSTATS},3]</key>
           </item>
         </graph_item>

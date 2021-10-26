@@ -1,4 +1,4 @@
-# Template App Speedtest LAN
+# App Speedtest LAN
 
 ## Overview
 
@@ -33,7 +33,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{HOST.HOST} Download {#IPERFNAME} speed < {#IPERF_TR_DL}Mb/s|<p>-</p>|<p>**Expression**: {Template App Speedtest LAN:speedtest-lan.download.server[{#IPERFID}].avg(#3)}<{#IPERF_TR_DL}</p><p>**Recovery expression**: </p>|warning|
-|{HOST.HOST} Upload {#IPERFNAME} speed < {#IPERF_TR_UL}Mb/s|<p>-</p>|<p>**Expression**: {Template App Speedtest LAN:speedtest-lan.upload.server[{#IPERFID}].avg(#3)}<{#IPERF_TR_UL}</p><p>**Recovery expression**: </p>|warning|
-|{HOST.HOST} Download {#IPERFNAME} speed < {#IPERF_TR_DL}Mb/s (LLD)|<p>-</p>|<p>**Expression**: {Template App Speedtest LAN:speedtest-lan.download.server[{#IPERFID}].avg(#3)}<{#IPERF_TR_DL}</p><p>**Recovery expression**: </p>|warning|
-|{HOST.HOST} Upload {#IPERFNAME} speed < {#IPERF_TR_UL}Mb/s (LLD)|<p>-</p>|<p>**Expression**: {Template App Speedtest LAN:speedtest-lan.upload.server[{#IPERFID}].avg(#3)}<{#IPERF_TR_UL}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.HOST} Download {#IPERFNAME} speed < {#IPERF_TR_DL}Mb/s|<p>-</p>|<p>**Expression**: {App Speedtest LAN:speedtest-lan.download.server[{#IPERFID}].avg(#3)}<{#IPERF_TR_DL}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.HOST} Upload {#IPERFNAME} speed < {#IPERF_TR_UL}Mb/s|<p>-</p>|<p>**Expression**: {App Speedtest LAN:speedtest-lan.upload.server[{#IPERFID}].avg(#3)}<{#IPERF_TR_UL}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.HOST} Download {#IPERFNAME} speed < {#IPERF_TR_DL}Mb/s (LLD)|<p>-</p>|<p>**Expression**: {App Speedtest LAN:speedtest-lan.download.server[{#IPERFID}].avg(#3)}<{#IPERF_TR_DL}</p><p>**Recovery expression**: </p>|warning|
+|{HOST.HOST} Upload {#IPERFNAME} speed < {#IPERF_TR_UL}Mb/s (LLD)|<p>-</p>|<p>**Expression**: {App Speedtest LAN:speedtest-lan.upload.server[{#IPERFID}].avg(#3)}<{#IPERF_TR_UL}</p><p>**Recovery expression**: </p>|warning|

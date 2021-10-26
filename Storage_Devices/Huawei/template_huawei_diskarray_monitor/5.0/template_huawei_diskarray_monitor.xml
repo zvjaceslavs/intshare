@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:42Z</date>
+  <date>2021-10-26T04:46:14Z</date>
   <groups>
     <group>
       <name>Templates/DiskArray</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Huawei_DiskArray_monitor_template</template>
-      <name>Huawei DiskArray Monitor Template</name>
+      <template>Huawei_DiskArray_monitor</template>
+      <name>Huawei DiskArray Monitor</name>
       <description>Huawei_DiskArray_monitor_template Known Issues: device : OceanStor-2600, OceanStor-5300, OceanStor-5600, OceanStor-6800, OceanStor-Dorado6000</description>
       <groups>
         <group>

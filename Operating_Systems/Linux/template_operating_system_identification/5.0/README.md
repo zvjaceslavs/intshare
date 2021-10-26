@@ -1,4 +1,4 @@
-# Template Operating System Identification v2
+# Operating System Identification v2
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# Template AirOS8
+# AirOS8
 
 ## Overview
 
@@ -49,5 +49,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Connection {#SNMPVALUE} was restarted|<p>-</p>|<p>**Expression**: {Template AirOS8:ubntStaConnTime[{#SNMPVALUE}].change(0)}<0</p><p>**Recovery expression**: </p>|information|
-|Connection {#SNMPVALUE} was restarted (LLD)|<p>-</p>|<p>**Expression**: {Template AirOS8:ubntStaConnTime[{#SNMPVALUE}].change(0)}<0</p><p>**Recovery expression**: </p>|information|
+|Connection {#SNMPVALUE} was restarted|<p>-</p>|<p>**Expression**: {AirOS8:ubntStaConnTime[{#SNMPVALUE}].change(0)}<0</p><p>**Recovery expression**: </p>|information|
+|Connection {#SNMPVALUE} was restarted (LLD)|<p>-</p>|<p>**Expression**: {AirOS8:ubntStaConnTime[{#SNMPVALUE}].change(0)}<0</p><p>**Recovery expression**: </p>|information|

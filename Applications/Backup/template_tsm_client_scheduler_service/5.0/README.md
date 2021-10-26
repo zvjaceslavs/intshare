@@ -1,4 +1,4 @@
-# Template App TSM Client Scheduler
+# App TSM Client Scheduler
 
 ## Overview
 
@@ -39,8 +39,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Service State - TSM Client Schedule|<p>-</p>|`Zabbix agent`|service_state[TSM Client Schedule]<p>Update: 30</p>|
 |Service State - TSM Client Scheduler|<p>-</p>|`Zabbix agent`|service_state[TSM Client Scheduler]<p>Update: 30</p>|
+|Service State - TSM Client Schedule|<p>-</p>|`Zabbix agent`|service_state[TSM Client Schedule]<p>Update: 30</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -1,4 +1,4 @@
-# Template App MSSQL 2008-2016 WSFC
+# App MSSQL 2008-2016 WSFC
 
 ## Overview
 
@@ -29,17 +29,21 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Database Discovery|<p>-</p>|`Zabbix agent`|mssql.db.discovery<p>Update: 1h</p>|
 |SQL Error Log|<p>-</p>|`Zabbix agent`|mssql.errorlog<p>Update: 1h</p>|
-|Instance Discovery|<p>-</p>|`Zabbix agent`|mssql.instance.discovery<p>Update: 1h</p>|
 |Services Discovery|<p>-</p>|`Zabbix agent`|mssql.service.discovery<p>Update: 1h</p>|
+|Database Discovery|<p>-</p>|`Zabbix agent`|mssql.db.discovery<p>Update: 1h</p>|
+|Instance Discovery|<p>-</p>|`Zabbix agent`|mssql.instance.discovery<p>Update: 1h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Host name of SQL Node|<p>-</p>|`Zabbix agent`|agent.hostname<p>Update: 60s</p>|
 |SQL Server Default Service State - MSSQLSERVER|<p>-</p>|`Zabbix agent`|service_state[MSSQLSERVER]<p>Update: 30s</p>|
 |SQL Agent Default Instance: Service State - SQL Agent (MSSQLSERVER)|<p>-</p>|`Zabbix agent`|service_state[SQLServerAgent]<p>Update: 60s</p>|
+|Host name of SQL Node|<p>-</p>|`Zabbix agent`|agent.hostname<p>Update: 60s</p>|
+|SQL Server, Instance {#INST}: Error Log File (LOGCount)|<p>-</p>|`Zabbix agent (active)`|log.count[{#ERRORLOG},Error|Failed,"UTF-16"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Error Log File (LOG)|<p>-</p>|`Zabbix agent (active)`|log[{#ERRORLOG},Error|Failed,"UTF-16"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server {#INST} Service State - {#INST}|<p>-</p>|`Zabbix agent`|service_state[MSSQL${#INST}]<p>Update: 10s</p><p>LLD</p>|
+|SQL Agent {#INST} Service State - {#INST}|<p>-</p>|`Zabbix agent`|service_state[SQLAgent${#INST}]<p>Update: 10s</p><p>LLD</p>|
 |SQL Server, Instance {#INST}, DB {#DBNAME}: Active Transactions|<p>Number of active transactions for the database.</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Databases({#DBNAME})\Active Transactions"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}, DB {#DBNAME}: Data File Size|<p>Cumulative size (in kilobytes) of all the data files in the database including any automatic growth. Monitoring this counter is useful, for example, for determining the correct size of tempdb.</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Databases({#DBNAME})\Data File(s) Size (KB)"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}, DB {#DBNAME}: Log Bytes Flushed/sec|<p>Total number of log bytes flushed per second. Useful for determining trends and utilization of the transaction log.</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Databases({#DBNAME})\Log Bytes Flushed/sec"]<p>Update: 1m</p><p>LLD</p>|
@@ -53,8 +57,6 @@ There are no template links in this template.
 |SQL Server, Instance {#INST}, DB {#DBNAME}: Log Truncations|<p>The number of times the transaction log has been shrunk.</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Databases({#DBNAME})\Log Truncations"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}, DB {#DBNAME}: Percent Log Used|<p>Percentage of space in the log that is in use.</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Databases({#DBNAME})\Percent Log Used"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}, DB {#DBNAME}: Transactions per second|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Databases({#DBNAME})\Transactions/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Error Log File (LOGCount)|<p>-</p>|`Zabbix agent (active)`|log.count[{#ERRORLOG},Error|Failed,"UTF-16"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Error Log File (LOG)|<p>-</p>|`Zabbix agent (active)`|log[{#ERRORLOG},Error|Failed,"UTF-16"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Access Methods\Page Splits/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Access Methods\Page Splits/sec"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}:SQL Statistics\Batch Requests/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:SQL Statistics\Batch Requests/sec"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Redone Bytes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Redone Bytes/sec"]<p>Update: 1m</p><p>LLD</p>|
@@ -112,15 +114,13 @@ There are no template links in this template.
 |SQL Server, Instance {#INST}: Log remaining for undo|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log remaining for undo"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Log Send Queue|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Send Queue"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}:Page IO latch waits/Waits started per second|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Wait Statistics(Waits started per second)\Page IO latch waits"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server {#INST} Service State - {#INST}|<p>-</p>|`Zabbix agent`|service_state[MSSQL${#INST}]<p>Update: 10s</p><p>LLD</p>|
-|SQL Agent {#INST} Service State - {#INST}|<p>-</p>|`Zabbix agent`|service_state[SQLAgent${#INST}]<p>Update: 10s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Errors in {#INST} ERRORLOG|<p>-</p>|<p>**Expression**: {Template App MSSQL 2008-2016 WSFC:log.count[{#ERRORLOG},Error|Failed,"UTF-16"].sum(5m)}>0</p><p>**Recovery expression**: </p>|warning|
-|SQL Agent {#INST} Service state is not running|<p>-</p>|<p>**Expression**: {Template App MSSQL 2008-2016 WSFC:service_state[SQLAgent${#INST}].last(0)}>0 and {Template App MSSQL 2008-2016 WSFC:service_state[SQLAgent${#INST}].last(0)}<255</p><p>**Recovery expression**: </p>|high|
-|SQL Server {#INST} Service state is not running|<p>-</p>|<p>**Expression**: {Template App MSSQL 2008-2016 WSFC:service_state[MSSQL${#INST}].last(0)}>0 and {Template App MSSQL 2008-2016 WSFC:service_state[MSSQL${#INST}].last(0)}<255</p><p>**Recovery expression**: </p>|high|
-|Errors in {#INST} ERRORLOG (LLD)|<p>-</p>|<p>**Expression**: {Template App MSSQL 2008-2016 WSFC:log.count[{#ERRORLOG},Error|Failed,"UTF-16"].sum(5m)}>0</p><p>**Recovery expression**: </p>|warning|
-|SQL Agent {#INST} Service state is not running (LLD)|<p>-</p>|<p>**Expression**: {Template App MSSQL 2008-2016 WSFC:service_state[SQLAgent${#INST}].last(0)}>0 and {Template App MSSQL 2008-2016 WSFC:service_state[SQLAgent${#INST}].last(0)}<255</p><p>**Recovery expression**: </p>|high|
-|SQL Server {#INST} Service state is not running (LLD)|<p>-</p>|<p>**Expression**: {Template App MSSQL 2008-2016 WSFC:service_state[MSSQL${#INST}].last(0)}>0 and {Template App MSSQL 2008-2016 WSFC:service_state[MSSQL${#INST}].last(0)}<255</p><p>**Recovery expression**: </p>|high|
+|Errors in {#INST} ERRORLOG|<p>-</p>|<p>**Expression**: {App MSSQL 2008-2016 WSFC:log.count[{#ERRORLOG},Error|Failed,"UTF-16"].sum(5m)}>0</p><p>**Recovery expression**: </p>|warning|
+|SQL Agent {#INST} Service state is not running|<p>-</p>|<p>**Expression**: {App MSSQL 2008-2016 WSFC:service_state[SQLAgent${#INST}].last(0)}>0 and {App MSSQL 2008-2016 WSFC:service_state[SQLAgent${#INST}].last(0)}<255</p><p>**Recovery expression**: </p>|high|
+|SQL Server {#INST} Service state is not running|<p>-</p>|<p>**Expression**: {App MSSQL 2008-2016 WSFC:service_state[MSSQL${#INST}].last(0)}>0 and {App MSSQL 2008-2016 WSFC:service_state[MSSQL${#INST}].last(0)}<255</p><p>**Recovery expression**: </p>|high|
+|Errors in {#INST} ERRORLOG (LLD)|<p>-</p>|<p>**Expression**: {App MSSQL 2008-2016 WSFC:log.count[{#ERRORLOG},Error|Failed,"UTF-16"].sum(5m)}>0</p><p>**Recovery expression**: </p>|warning|
+|SQL Agent {#INST} Service state is not running (LLD)|<p>-</p>|<p>**Expression**: {App MSSQL 2008-2016 WSFC:service_state[SQLAgent${#INST}].last(0)}>0 and {App MSSQL 2008-2016 WSFC:service_state[SQLAgent${#INST}].last(0)}<255</p><p>**Recovery expression**: </p>|high|
+|SQL Server {#INST} Service state is not running (LLD)|<p>-</p>|<p>**Expression**: {App MSSQL 2008-2016 WSFC:service_state[MSSQL${#INST}].last(0)}>0 and {App MSSQL 2008-2016 WSFC:service_state[MSSQL${#INST}].last(0)}<255</p><p>**Recovery expression**: </p>|high|

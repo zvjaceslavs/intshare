@@ -41,9 +41,9 @@ klheuser
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|System Description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 1d</p>|
 |System Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 1d</p>|
 |System Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 1d</p>|
-|System Description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 1d</p>|
 |Uptime|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 1m</p>|
 |Interface {#IFNAME} Admin Status|<p>-</p>|`SNMP agent`|ifAdminStatus.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Interface {#IFNAME} speed|<p>-</p>|`SNMP agent`|ifSpeed.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|

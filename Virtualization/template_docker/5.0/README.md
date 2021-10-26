@@ -1,4 +1,4 @@
-# Template.Docker.ContainerDetails
+# .Docker.ContainerDetails
 
 ## Description
 
@@ -47,7 +47,7 @@ There are no template links in this template.
 
 There are no triggers in this template.
 
-# Template..Docker.OSLinux.ShortTermContainers
+# ..Docker.OSLinux.ShortTermContainers
 
 ## Overview
 
@@ -75,7 +75,7 @@ Martin Schroeter
 
 |Name|
 |----|
-|Template.Docker.ContainerDetails|
+|.Docker.ContainerDetails|
 ## Discovery rules
 
 |Name|Description|Type|Key and additional info|

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:34Z</date>
+  <date>2021-10-26T04:43:47Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Mitel MiVoice Business</template>
-      <name>Template Mitel MiVoice Business</name>
+      <template>Mitel MiVoice Business</template>
+      <name>Mitel MiVoice Business</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -171,7 +171,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Mitel MiVoice Business</host>
+            <host>Mitel MiVoice Business</host>
             <key>mitelResPerfDiskReads.1</key>
           </item>
         </graph_item>
@@ -179,7 +179,7 @@
           <sortorder>1</sortorder>
           <color>0000DD</color>
           <item>
-            <host>Template Mitel MiVoice Business</host>
+            <host>Mitel MiVoice Business</host>
             <key>mitelResPerfDiskWrites.1</key>
           </item>
         </graph_item>
@@ -188,7 +188,7 @@
           <color>A54F10</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template Mitel MiVoice Business</host>
+            <host>Mitel MiVoice Business</host>
             <key>mitelResSystemCallLoad.0</key>
           </item>
         </graph_item>

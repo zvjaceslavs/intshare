@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:10Z</date>
+  <date>2021-10-26T04:44:28Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Network Performance Conntrack</template>
-      <name>Template Network Performance Conntrack</name>
+      <template>Network Performance Conntrack</template>
+      <name>Network Performance Conntrack</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -609,33 +609,33 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Network Performance Conntrack:conntrack_stats[entries].last()} > {Template Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.7</expression>
+      <expression>{Network Performance Conntrack:conntrack_stats[entries].last()} > {Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.7</expression>
       <name>Conntrack table utilization over 70%</name>
       <priority>AVERAGE</priority>
       <dependencies>
         <dependency>
           <name>Conntrack table utilization over 80%</name>
-          <expression>{Template Network Performance Conntrack:conntrack_stats[entries].last()} > {Template Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.8</expression>
+          <expression>{Network Performance Conntrack:conntrack_stats[entries].last()} > {Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.8</expression>
         </dependency>
         <dependency>
           <name>Conntrack table utilization over 90%</name>
-          <expression>{Template Network Performance Conntrack:conntrack_stats[entries].last()} > {Template Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.9</expression>
+          <expression>{Network Performance Conntrack:conntrack_stats[entries].last()} > {Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.9</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Network Performance Conntrack:conntrack_stats[entries].last()} > {Template Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.8</expression>
+      <expression>{Network Performance Conntrack:conntrack_stats[entries].last()} > {Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.8</expression>
       <name>Conntrack table utilization over 80%</name>
       <priority>HIGH</priority>
       <dependencies>
         <dependency>
           <name>Conntrack table utilization over 90%</name>
-          <expression>{Template Network Performance Conntrack:conntrack_stats[entries].last()} > {Template Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.9</expression>
+          <expression>{Network Performance Conntrack:conntrack_stats[entries].last()} > {Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.9</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Network Performance Conntrack:conntrack_stats[entries].last()} > {Template Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.9</expression>
+      <expression>{Network Performance Conntrack:conntrack_stats[entries].last()} > {Network Performance Conntrack:system.run["/sbin/sysctl -n net.netfilter.nf_conntrack_max"].last()} * 0.9</expression>
       <name>Conntrack table utilization over 90%</name>
       <priority>DISASTER</priority>
     </trigger>

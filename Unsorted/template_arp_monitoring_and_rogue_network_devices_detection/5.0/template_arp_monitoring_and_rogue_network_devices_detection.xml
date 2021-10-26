@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:18Z</date>
+  <date>2021-10-26T04:45:46Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template ARP Monitoring</template>
-      <name>Template ARP Monitoring</name>
+      <template>ARP Monitoring</template>
+      <name>ARP Monitoring</name>
       <description>Rafael Gustavo Gassner 02/2021 This script activelly scans arp and sends to zabbix server using zabbix_sender. arp-scan should be installed and interfaces variable should be configured for your environment. You will want to run every 10 minutes or so, using crontab. First run(s) might not populate data, since LLD items are still beeing created in zabbix server. With the script and template, you will be able to: - Detect newly connected devices on the network. - Have a history of which macs were used by which ips and vice versa. - Detect if there are multiple ips associated to the same mac. - Detect if there are multiple macs associated to the same ip address. - Identify the active period on the network for each device. Since this is designed for a small environment, the trigger for new device has no recovery expression, and should be manually disabled. You can configure the "new device" trigger disabled for initial run. After that you could disable each trigger mannualy when you have recognized the new device as not beeing a rogue one. In the zabbix template, "Allowed hosts" variable should be configured for your environment in item prototypes and in discovery rule.</description>
       <groups>
         <group>
@@ -105,7 +105,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template ARP Monitoring:arp.macCount[{#IPADDRESS}].last(#1)}>1 and {Template ARP Monitoring:arp.ipMacs[{#IPADDRESS}].str(lala,#1)}=0</expression>
+              <expression>{ARP Monitoring:arp.macCount[{#IPADDRESS}].last(#1)}>1 and {ARP Monitoring:arp.ipMacs[{#IPADDRESS}].str(lala,#1)}=0</expression>
               <name>IP {#IPADDRESS} in use in more than one mac detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2}</name>
               <priority>INFO</priority>
               <tags>
@@ -116,7 +116,7 @@
               </tags>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}>1 and {Template ARP Monitoring:arp.macIps[{#HWADDRESS}].str(lala,#1)}=0</expression>
+              <expression>{ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}>1 and {ARP Monitoring:arp.macIps[{#HWADDRESS}].str(lala,#1)}=0</expression>
               <name>Mac {#HWADDRESS} in use in more than one IP detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2}</name>
               <priority>INFO</priority>
               <tags>

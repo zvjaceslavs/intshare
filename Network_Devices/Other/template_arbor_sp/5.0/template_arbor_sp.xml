@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:20Z</date>
+  <date>2021-10-26T04:37:59Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Arbor_SP</template>
-      <name>Template_Arbor_SP</name>
+      <template>Arbor_SP</template>
+      <name>Arbor_SP</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>
@@ -229,7 +229,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Arbor_SP</host>
+            <host>Arbor_SP</host>
             <key>devicePhysicalMemory</key>
           </item>
         </graph_item>
@@ -237,7 +237,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Arbor_SP</host>
+            <host>Arbor_SP</host>
             <key>devicePhysicalMemoryInUse</key>
           </item>
         </graph_item>
@@ -249,7 +249,7 @@
         <graph_item>
           <color>0000C8</color>
           <item>
-            <host>Template_Arbor_SP</host>
+            <host>Arbor_SP</host>
             <key>deviceSwapSpace</key>
           </item>
         </graph_item>
@@ -257,7 +257,7 @@
           <sortorder>1</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_Arbor_SP</host>
+            <host>Arbor_SP</host>
             <key>deviceSwapSpaceInUse</key>
           </item>
         </graph_item>

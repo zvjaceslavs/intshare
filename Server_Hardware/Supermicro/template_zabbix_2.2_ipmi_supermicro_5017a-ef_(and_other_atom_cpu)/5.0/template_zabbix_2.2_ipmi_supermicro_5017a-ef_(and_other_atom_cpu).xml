@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:04Z</date>
+  <date>2021-10-26T04:37:40Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI SuperMicro</template>
-      <name>Template IPMI SuperMicro</name>
+      <template>IPMI SuperMicro</template>
+      <name>IPMI SuperMicro</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -50,7 +50,7 @@
               <dependencies>
                 <dependency>
                   <name>Power</name>
-                  <expression>{Template IPMI SuperMicro:power.last(0)}=0</expression>
+                  <expression>{IPMI SuperMicro:power.last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -61,11 +61,11 @@
               <dependencies>
                 <dependency>
                   <name>+3.3VCC Critical [{ITEM.VALUE}]</name>
-                  <expression>{Template IPMI SuperMicro:impi.system.3v.last(0)}&lt;2.880 or {Template IPMI SuperMicro:impi.system.3v.last(0)}>3.648</expression>
+                  <expression>{IPMI SuperMicro:impi.system.3v.last(0)}&lt;2.880 or {IPMI SuperMicro:impi.system.3v.last(0)}>3.648</expression>
                 </dependency>
                 <dependency>
                   <name>Power</name>
-                  <expression>{Template IPMI SuperMicro:power.last(0)}=0</expression>
+                  <expression>{IPMI SuperMicro:power.last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -128,7 +128,7 @@
               <dependencies>
                 <dependency>
                   <name>+5V Critical [{ITEM.VALUE}]</name>
-                  <expression>{Template IPMI SuperMicro:ipmi.system.5.last(0)}&lt;4.320 or {Template IPMI SuperMicro:ipmi.system.5.last(0)}>5.600</expression>
+                  <expression>{IPMI SuperMicro:ipmi.system.5.last(0)}&lt;4.320 or {IPMI SuperMicro:ipmi.system.5.last(0)}>5.600</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -156,7 +156,7 @@
               <dependencies>
                 <dependency>
                   <name>Power</name>
-                  <expression>{Template IPMI SuperMicro:power.last(0)}=0</expression>
+                  <expression>{IPMI SuperMicro:power.last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -167,11 +167,11 @@
               <dependencies>
                 <dependency>
                   <name>+12V Critical [{ITEM.VALUE}]</name>
-                  <expression>{Template IPMI SuperMicro:ipmi.system.12.last(0)}&lt;10.600 or {Template IPMI SuperMicro:ipmi.system.12.last(0)}>13.197</expression>
+                  <expression>{IPMI SuperMicro:ipmi.system.12.last(0)}&lt;10.600 or {IPMI SuperMicro:ipmi.system.12.last(0)}>13.197</expression>
                 </dependency>
                 <dependency>
                   <name>Power</name>
-                  <expression>{Template IPMI SuperMicro:power.last(0)}=0</expression>
+                  <expression>{IPMI SuperMicro:power.last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -198,7 +198,7 @@
               <dependencies>
                 <dependency>
                   <name>Power</name>
-                  <expression>{Template IPMI SuperMicro:power.last(0)}=0</expression>
+                  <expression>{IPMI SuperMicro:power.last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -240,7 +240,7 @@
               <dependencies>
                 <dependency>
                   <name>Power</name>
-                  <expression>{Template IPMI SuperMicro:power.last(0)}=0</expression>
+                  <expression>{IPMI SuperMicro:power.last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -267,7 +267,7 @@
               <dependencies>
                 <dependency>
                   <name>Power</name>
-                  <expression>{Template IPMI SuperMicro:power.last(0)}=0</expression>
+                  <expression>{IPMI SuperMicro:power.last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -294,7 +294,7 @@
               <dependencies>
                 <dependency>
                   <name>Power</name>
-                  <expression>{Template IPMI SuperMicro:power.last(0)}=0</expression>
+                  <expression>{IPMI SuperMicro:power.last(0)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -332,7 +332,7 @@
         <graph_item>
           <color>BB0000</color>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>ipmi.system.temp_cpu</key>
           </item>
         </graph_item>
@@ -340,7 +340,7 @@
           <sortorder>1</sortorder>
           <color>0000CC</color>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>ipmi.system.temp</key>
           </item>
         </graph_item>
@@ -349,7 +349,7 @@
           <color>EEEE00</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>ipmi.system.cpu_fan</key>
           </item>
         </graph_item>
@@ -358,7 +358,7 @@
           <color>DD00DD</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>ipmi.system.sys_fan</key>
           </item>
         </graph_item>
@@ -371,7 +371,7 @@
         <graph_item>
           <color>FFFF33</color>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>ipmi.system.processor_vcc</key>
           </item>
         </graph_item>
@@ -379,7 +379,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>impi.system.3v</key>
           </item>
         </graph_item>
@@ -387,7 +387,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>ipmi.system.12</key>
           </item>
         </graph_item>
@@ -395,7 +395,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>ipmi.system.5</key>
           </item>
         </graph_item>
@@ -403,7 +403,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>impi.system.vdimm_vcc</key>
           </item>
         </graph_item>
@@ -411,7 +411,7 @@
           <sortorder>5</sortorder>
           <color>6666FF</color>
           <item>
-            <host>Template IPMI SuperMicro</host>
+            <host>IPMI SuperMicro</host>
             <key>impi.system.vbat</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:45Z</date>
+  <date>2021-10-26T04:38:24Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Disks</template>
-      <name>Template SNMP Disks</name>
+      <template>SNMP Disks</template>
+      <name>SNMP Disks</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -133,7 +133,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNMP Disks:hrStorageUsed[{#SNMPVALUE}].last(0)} / {Template SNMP Disks:hrStorageSize[{#SNMPVALUE}].last(0)} > 0.8</expression>
+              <expression>{SNMP Disks:hrStorageUsed[{#SNMPVALUE}].last(0)} / {SNMP Disks:hrStorageSize[{#SNMPVALUE}].last(0)} > 0.8</expression>
               <name>Free disk space is less than 20% on volume {#SNMPVALUE}</name>
               <priority>WARNING</priority>
             </trigger_prototype>
@@ -152,7 +152,7 @@
                   <color>00C800</color>
                   <type>GRAPH_SUM</type>
                   <item>
-                    <host>Template SNMP Disks</host>
+                    <host>SNMP Disks</host>
                     <key>hrStorageSizeInBytes[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -160,7 +160,7 @@
                   <sortorder>1</sortorder>
                   <color>C80000</color>
                   <item>
-                    <host>Template SNMP Disks</host>
+                    <host>SNMP Disks</host>
                     <key>hrStorageUsedInBytes[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

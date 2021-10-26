@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:50Z</date>
+  <date>2021-10-26T04:40:44Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template ITWatchDog 15</template>
-      <name>Template ITWatchDog 15</name>
+      <template>ITWatchDog 15</template>
+      <name>ITWatchDog 15</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -90,7 +90,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template ITWatchDog 15</host>
+            <host>ITWatchDog 15</host>
             <key>DewP.WatchDog</key>
           </item>
         </graph_item>
@@ -103,7 +103,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template ITWatchDog 15</host>
+            <host>ITWatchDog 15</host>
             <key>Humid.WatchDog</key>
           </item>
         </graph_item>
@@ -118,7 +118,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>00C800</color>
           <item>
-            <host>Template ITWatchDog 15</host>
+            <host>ITWatchDog 15</host>
             <key>Temp.WatchDog</key>
           </item>
         </graph_item>

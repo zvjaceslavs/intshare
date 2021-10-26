@@ -1,4 +1,4 @@
-# Template App WireGuard
+# App WireGuard
 
 ## Overview
 
@@ -56,12 +56,16 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|WireGuard Peers Discovery|<p>-</p>|`Zabbix agent`|wg.list.discovery[PEERS]<p>Update: 3600s</p>|
 |WireGuard Interfaces Discovery|<p>-</p>|`Zabbix agent`|wg.list.discovery[INTERFACES]<p>Update: 3600s</p>|
+|WireGuard Peers Discovery|<p>-</p>|`Zabbix agent`|wg.list.discovery[PEERS]<p>Update: 3600s</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Firewall mark enabled on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.fw.mark[{#WGINTERFACE}]<p>Update: 60m</p><p>LLD</p>|
+|Active peers on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.peers.connected[{#WGINTERFACE}]<p>Update: 15m</p><p>LLD</p>|
+|Total peers on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.peers.count[{#WGINTERFACE}]<p>Update: 30m</p><p>LLD</p>|
+|Port used on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.port.used[{#WGINTERFACE}]<p>Update: 60m</p><p>LLD</p>|
 |Endpoint IP address for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.address[{#PEER}]<p>Update: 15m</p><p>LLD</p>|
 |Allowed IPs for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.allowedips[{#PEER}]<p>Update: 30m</p><p>LLD</p>|
 |Last handshake for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.handshake[{#PEER}]<p>Update: 10m</p><p>LLD</p>|
@@ -69,37 +73,33 @@ There are no template links in this template.
 |Endpoint port for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.port[{#PEER}]<p>Update: 15m</p><p>LLD</p>|
 |Incoming traffic for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.transferdown[{#PEER}]<p>Update: 5m</p><p>LLD</p>|
 |Outgoing traffic for peer {#PEER}... on {#INTERFACE}|<p>-</p>|`Zabbix agent`|wg.endpoint.transferup[{#PEER}]<p>Update: 5m</p><p>LLD</p>|
-|Firewall mark enabled on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.fw.mark[{#WGINTERFACE}]<p>Update: 60m</p><p>LLD</p>|
-|Active peers on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.peers.connected[{#WGINTERFACE}]<p>Update: 15m</p><p>LLD</p>|
-|Total peers on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.peers.count[{#WGINTERFACE}]<p>Update: 30m</p><p>LLD</p>|
-|Port used on {#WGINTERFACE}|<p>-</p>|`Zabbix agent`|wg.port.used[{#WGINTERFACE}]<p>Update: 60m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Connection port changed on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.port.used[{#WGINTERFACE}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
-|Firewall mark changed on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.fw.mark[{#WGINTERFACE}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
-|Less clients connected on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.peers.connected[{#WGINTERFACE}].change()}<=-1</p><p>**Recovery expression**: </p>|information|
-|More clients connected on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.peers.connected[{#WGINTERFACE}].change()}>=1</p><p>**Recovery expression**: </p>|information|
-|Peers added on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.peers.count[{#WGINTERFACE}].change()}>=1</p><p>**Recovery expression**: </p>|information|
-|Peers removed on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.peers.count[{#WGINTERFACE}].change()}<=-1</p><p>**Recovery expression**: </p>|information|
-|Allowed IPs list altered for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.allowedips[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|high|
-|Connection port changed for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.port[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|information|
-|High incoming traffic for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.transferdown[{#PEER}].change()}>52428800</p><p>**Recovery expression**: </p>|average|
-|High outgoing traffic for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.transferup[{#PEER}].change()}>52428800</p><p>**Recovery expression**: </p>|average|
-|IP address changed for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.address[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|information|
-|Keepalived changed for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.keepalive[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
-|Unreachable {#PEER}... peer on {HOST.NAME} for 30 minutes|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.handshake[{#PEER}].fuzzytime(1800)}=0</p><p>**Recovery expression**: </p>|high|
-|Allowed IPs list altered for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.allowedips[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|high|
-|Connection port changed for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.port[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|information|
-|High incoming traffic for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.transferdown[{#PEER}].change()}>52428800</p><p>**Recovery expression**: </p>|average|
-|High outgoing traffic for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.transferup[{#PEER}].change()}>52428800</p><p>**Recovery expression**: </p>|average|
-|IP address changed for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.address[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|information|
-|Keepalived changed for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.keepalive[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
-|Unreachable {#PEER}... peer on {HOST.NAME} for 30 minutes (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.endpoint.handshake[{#PEER}].fuzzytime(1800)}=0</p><p>**Recovery expression**: </p>|high|
-|Connection port changed on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.port.used[{#WGINTERFACE}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
-|Firewall mark changed on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.fw.mark[{#WGINTERFACE}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
-|Less clients connected on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.peers.connected[{#WGINTERFACE}].change()}<=-1</p><p>**Recovery expression**: </p>|information|
-|More clients connected on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.peers.connected[{#WGINTERFACE}].change()}>=1</p><p>**Recovery expression**: </p>|information|
-|Peers added on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.peers.count[{#WGINTERFACE}].change()}>=1</p><p>**Recovery expression**: </p>|information|
-|Peers removed on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {Template App WireGuard:wg.peers.count[{#WGINTERFACE}].change()}<=-1</p><p>**Recovery expression**: </p>|information|
+|Connection port changed on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {App WireGuard:wg.port.used[{#WGINTERFACE}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
+|Firewall mark changed on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {App WireGuard:wg.fw.mark[{#WGINTERFACE}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
+|Less clients connected on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {App WireGuard:wg.peers.connected[{#WGINTERFACE}].change()}<=-1</p><p>**Recovery expression**: </p>|information|
+|More clients connected on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {App WireGuard:wg.peers.connected[{#WGINTERFACE}].change()}>=1</p><p>**Recovery expression**: </p>|information|
+|Peers added on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {App WireGuard:wg.peers.count[{#WGINTERFACE}].change()}>=1</p><p>**Recovery expression**: </p>|information|
+|Peers removed on {#WGINTERFACE} {HOST.NAME} VPN|<p>-</p>|<p>**Expression**: {App WireGuard:wg.peers.count[{#WGINTERFACE}].change()}<=-1</p><p>**Recovery expression**: </p>|information|
+|Allowed IPs list altered for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.allowedips[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|high|
+|Connection port changed for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.port[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|information|
+|High incoming traffic for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.transferdown[{#PEER}].change()}>52428800</p><p>**Recovery expression**: </p>|average|
+|High outgoing traffic for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.transferup[{#PEER}].change()}>52428800</p><p>**Recovery expression**: </p>|average|
+|IP address changed for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.address[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|information|
+|Keepalived changed for {#PEER}... peer on {HOST.NAME}|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.keepalive[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
+|Unreachable {#PEER}... peer on {HOST.NAME} for 30 minutes|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.handshake[{#PEER}].fuzzytime(1800)}=0</p><p>**Recovery expression**: </p>|high|
+|Connection port changed on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.port.used[{#WGINTERFACE}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
+|Firewall mark changed on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.fw.mark[{#WGINTERFACE}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
+|Less clients connected on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.peers.connected[{#WGINTERFACE}].change()}<=-1</p><p>**Recovery expression**: </p>|information|
+|More clients connected on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.peers.connected[{#WGINTERFACE}].change()}>=1</p><p>**Recovery expression**: </p>|information|
+|Peers added on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.peers.count[{#WGINTERFACE}].change()}>=1</p><p>**Recovery expression**: </p>|information|
+|Peers removed on {#WGINTERFACE} {HOST.NAME} VPN (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.peers.count[{#WGINTERFACE}].change()}<=-1</p><p>**Recovery expression**: </p>|information|
+|Allowed IPs list altered for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.allowedips[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|high|
+|Connection port changed for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.port[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|information|
+|High incoming traffic for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.transferdown[{#PEER}].change()}>52428800</p><p>**Recovery expression**: </p>|average|
+|High outgoing traffic for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.transferup[{#PEER}].change()}>52428800</p><p>**Recovery expression**: </p>|average|
+|IP address changed for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.address[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|information|
+|Keepalived changed for {#PEER}... peer on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.keepalive[{#PEER}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
+|Unreachable {#PEER}... peer on {HOST.NAME} for 30 minutes (LLD)|<p>-</p>|<p>**Expression**: {App WireGuard:wg.endpoint.handshake[{#PEER}].fuzzytime(1800)}=0</p><p>**Recovery expression**: </p>|high|

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:58Z</date>
+  <date>2021-10-26T04:43:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,116 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module ICMP Ping</template>
-      <name>Template Module ICMP Ping</name>
-      <description>Template Module ICMP Ping version: 0.12</description>
-      <groups>
-        <group>
-          <name>Templates/Modules</name>
-        </group>
-      </groups>
-      <applications>
-        <application>
-          <name>Status</name>
-        </application>
-      </applications>
-      <items>
-        <item>
-          <name>ICMP ping</name>
-          <type>SIMPLE</type>
-          <key>icmpping</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <valuemap>
-            <name>Service state</name>
-          </valuemap>
-          <triggers>
-            <trigger>
-              <expression>{max(#3)}=0</expression>
-              <name>Unavailable by ICMP ping</name>
-              <priority>HIGH</priority>
-              <description>Last value: {ITEM.LASTVALUE1}. Last three attempts returned timeout. Please check device connectivity.</description>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>ICMP loss</name>
-          <type>SIMPLE</type>
-          <key>icmppingloss</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(5m)}>{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
-              <name>High ICMP ping loss</name>
-              <priority>WARNING</priority>
-              <dependencies>
-                <dependency>
-                  <name>Unavailable by ICMP ping</name>
-                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
-                </dependency>
-              </dependencies>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>ICMP response time</name>
-          <type>SIMPLE</type>
-          <key>icmppingsec</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>s</units>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(5m)}>{$ICMP_RESPONSE_TIME_WARN}</expression>
-              <name>High ICMP ping response time</name>
-              <priority>WARNING</priority>
-              <dependencies>
-                <dependency>
-                  <name>High ICMP ping loss</name>
-                  <expression>{Template Module ICMP Ping:icmppingloss.min(5m)}>{$ICMP_LOSS_WARN} and {Template Module ICMP Ping:icmppingloss.min(5m)}&lt;100</expression>
-                </dependency>
-                <dependency>
-                  <name>Unavailable by ICMP ping</name>
-                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
-                </dependency>
-              </dependencies>
-            </trigger>
-          </triggers>
-        </item>
-      </items>
-      <macros>
-        <macro>
-          <macro>{$ICMP_LOSS_WARN}</macro>
-          <value>20</value>
-        </macro>
-        <macro>
-          <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
-          <value>0.15</value>
-        </macro>
-      </macros>
-    </template>
-    <template>
-      <template>Template SNMP Tripp Lite PDU 15</template>
-      <name>Template SNMP Tripp Lite PDU 15</name>
+      <template>SNMP Tripp Lite PDU 15</template>
+      <name>SNMP Tripp Lite PDU 15</name>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>
@@ -645,6 +537,114 @@
         </macro>
       </macros>
     </template>
+    <template>
+      <template>Template Module ICMP Ping</template>
+      <name>Template Module ICMP Ping</name>
+      <description>Template Module ICMP Ping version: 0.12</description>
+      <groups>
+        <group>
+          <name>Templates/Modules</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Status</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>ICMP ping</name>
+          <type>SIMPLE</type>
+          <key>icmpping</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>Service state</name>
+          </valuemap>
+          <triggers>
+            <trigger>
+              <expression>{max(#3)}=0</expression>
+              <name>Unavailable by ICMP ping</name>
+              <priority>HIGH</priority>
+              <description>Last value: {ITEM.LASTVALUE1}. Last three attempts returned timeout. Please check device connectivity.</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>ICMP loss</name>
+          <type>SIMPLE</type>
+          <key>icmppingloss</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(5m)}>{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
+              <name>High ICMP ping loss</name>
+              <priority>WARNING</priority>
+              <dependencies>
+                <dependency>
+                  <name>Unavailable by ICMP ping</name>
+                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>ICMP response time</name>
+          <type>SIMPLE</type>
+          <key>icmppingsec</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>s</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(5m)}>{$ICMP_RESPONSE_TIME_WARN}</expression>
+              <name>High ICMP ping response time</name>
+              <priority>WARNING</priority>
+              <dependencies>
+                <dependency>
+                  <name>High ICMP ping loss</name>
+                  <expression>{Template Module ICMP Ping:icmppingloss.min(5m)}>{$ICMP_LOSS_WARN} and {Template Module ICMP Ping:icmppingloss.min(5m)}&lt;100</expression>
+                </dependency>
+                <dependency>
+                  <name>Unavailable by ICMP ping</name>
+                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+      <macros>
+        <macro>
+          <macro>{$ICMP_LOSS_WARN}</macro>
+          <value>20</value>
+        </macro>
+        <macro>
+          <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
+          <value>0.15</value>
+        </macro>
+      </macros>
+    </template>
   </templates>
   <graphs>
     <graph>
@@ -656,7 +656,7 @@
         <graph_item>
           <color>F6C800</color>
           <item>
-            <host>Template SNMP Tripp Lite PDU 15</host>
+            <host>SNMP Tripp Lite PDU 15</host>
             <key>tlpAtsInputPhaseFrequency</key>
           </item>
         </graph_item>
@@ -671,7 +671,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template SNMP Tripp Lite PDU 15</host>
+            <host>SNMP Tripp Lite PDU 15</host>
             <key>tlpAtsInputPhaseVoltage</key>
           </item>
         </graph_item>
@@ -687,7 +687,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>FF3333</color>
           <item>
-            <host>Template SNMP Tripp Lite PDU 15</host>
+            <host>SNMP Tripp Lite PDU 15</host>
             <key>tlpAtsOutputCurrent</key>
           </item>
         </graph_item>

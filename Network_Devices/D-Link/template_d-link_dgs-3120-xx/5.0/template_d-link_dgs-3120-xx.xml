@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:58Z</date>
+  <date>2021-10-26T04:38:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP D-link DGS-3120-xx</template>
-      <name>Template SNMP D-link DGS-3120-xx</name>
+      <template>SNMP D-link DGS-3120-xx</template>
+      <name>SNMP D-link DGS-3120-xx</name>
       <description>D-link do something realy wierd with swTemperatureTable. So it's values not discovered but set manualy as items</description>
       <groups>
         <group>
@@ -332,7 +332,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3120-xx</host>
+                    <host>SNMP D-link DGS-3120-xx</host>
                     <key>swFanSpeed.1.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -344,7 +344,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3120-xx</host>
+                    <host>SNMP D-link DGS-3120-xx</host>
                     <key>swFanSpeed.2.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -356,7 +356,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3120-xx</host>
+                    <host>SNMP D-link DGS-3120-xx</host>
                     <key>agentDRAMutilizationUsedDRAM[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -368,7 +368,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3120-xx</host>
+                    <host>SNMP D-link DGS-3120-xx</host>
                     <key>agentDRAMutilization[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -512,7 +512,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3120-xx</host>
+                    <host>SNMP D-link DGS-3120-xx</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -520,7 +520,7 @@
                   <sortorder>1</sortorder>
                   <color>3333FF</color>
                   <item>
-                    <host>Template SNMP D-link DGS-3120-xx</host>
+                    <host>SNMP D-link DGS-3120-xx</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -538,7 +538,7 @@
         <graph_item>
           <color>EACC00</color>
           <item>
-            <host>Template SNMP D-link DGS-3120-xx</host>
+            <host>SNMP D-link DGS-3120-xx</host>
             <key>agentCPUutilizationIn5min</key>
           </item>
         </graph_item>

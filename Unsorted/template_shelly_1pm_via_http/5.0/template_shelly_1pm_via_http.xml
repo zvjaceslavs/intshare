@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:31Z</date>
+  <date>2021-10-26T04:46:01Z</date>
   <groups>
     <group>
       <name>Templates/IOT</name>
@@ -10,7 +10,7 @@
   <templates>
     <template>
       <template>Shelly-1PM</template>
-      <name>Template Shelly 1PM</name>
+      <name>Shelly 1PM</name>
       <groups>
         <group>
           <name>Templates/IOT</name>

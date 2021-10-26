@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:44Z</date>
+  <date>2021-10-26T04:46:17Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module Linux Active User Status by Zabbix Agent active</template>
-      <name>Template Module Linux Active User Status by Zabbix Agent active</name>
+      <template>Module Linux Active User Status by Zabbix Agent active</template>
+      <name>Module Linux Active User Status by Zabbix Agent active</name>
       <description>This template collects and monitors active users on target hosts.</description>
       <groups>
         <group>

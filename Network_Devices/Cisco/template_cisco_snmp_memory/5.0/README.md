@@ -1,4 +1,4 @@
-# Template SNMP Cisco Memory
+# SNMP Cisco Memory
 
 ## Macros used
 
@@ -25,5 +25,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Memory pool (#SNMPVALUE) utilization on {HOST.NAME} is too high|<p>-</p>|<p>**Expression**: {Template SNMP Cisco Memory:ciscoMemoryPoolUtilization[{#SNMPVALUE}].avg(5m)}>90</p><p>**Recovery expression**: </p>|high|
-|Memory pool (#SNMPVALUE) utilization on {HOST.NAME} is too high (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco Memory:ciscoMemoryPoolUtilization[{#SNMPVALUE}].avg(5m)}>90</p><p>**Recovery expression**: </p>|high|
+|Memory pool (#SNMPVALUE) utilization on {HOST.NAME} is too high|<p>-</p>|<p>**Expression**: {SNMP Cisco Memory:ciscoMemoryPoolUtilization[{#SNMPVALUE}].avg(5m)}>90</p><p>**Recovery expression**: </p>|high|
+|Memory pool (#SNMPVALUE) utilization on {HOST.NAME} is too high (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco Memory:ciscoMemoryPoolUtilization[{#SNMPVALUE}].avg(5m)}>90</p><p>**Recovery expression**: </p>|high|

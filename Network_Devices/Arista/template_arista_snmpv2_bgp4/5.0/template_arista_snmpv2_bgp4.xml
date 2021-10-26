@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:25Z</date>
+  <date>2021-10-26T04:44:44Z</date>
   <groups>
     <group>
       <name>cdnnow-sw</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Arista BGP4</template>
-      <name>Template SNMP Arista BGP4</name>
+      <template>SNMP Arista BGP4</template>
+      <name>SNMP Arista BGP4</name>
       <groups>
         <group>
           <name>cdnnow-sw</name>
@@ -95,7 +95,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNMP Arista BGP4:arista-bgp-operstatus[{#ASNUM}, {#PEERNAME}].last()}&lt;>6 and {Template SNMP Arista BGP4:arista-bgp-adminstatus[{#ASNUM}, {#PEERNAME}].last()}=2</expression>
+              <expression>{SNMP Arista BGP4:arista-bgp-operstatus[{#ASNUM}, {#PEERNAME}].last()}&lt;>6 and {SNMP Arista BGP4:arista-bgp-adminstatus[{#ASNUM}, {#PEERNAME}].last()}=2</expression>
               <name>BGP status not "Established" for {#ASNUM}, {#PEERNAME}</name>
               <priority>DISASTER</priority>
             </trigger_prototype>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:57Z</date>
+  <date>2021-10-26T04:44:13Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP FortiAnalyzer</template>
-      <name>Template SNMP FortiAnalyzer</name>
+      <template>SNMP FortiAnalyzer</template>
+      <name>SNMP FortiAnalyzer</name>
       <description>Version 1.0 Created by Samuel Martins Repo: https://github.com/slunart/Zabbix-Templates Plesase, install the Fortianalyzer MIB on Zabbix Server FORTINET-FORTIMANAGER-FORTIANALYZER-MIB</description>
       <groups>
         <group>

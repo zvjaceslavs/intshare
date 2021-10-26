@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:11Z</date>
+  <date>2021-10-26T04:41:06Z</date>
   <groups>
     <group>
       <name>Templates PERTO</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Check Mount Point</template>
-      <name>Template Check Mount Point</name>
+      <template>Check Mount Point</template>
+      <name>Check Mount Point</name>
       <description>Monitora os pontos de montagem do Gluster</description>
       <groups>
         <group>

@@ -197,8 +197,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|USO DE CPU OPENCMS|<p>-</p>|`Zabbix agent`|cpuopencms_1<p>Update: 60s</p>|
 |USO DE CPU TOMEE_INTRA_1|<p>-</p>|`Zabbix agent`|cputomee<p>Update: 60s</p>|
+|USO DE CPU OPENCMS|<p>-</p>|`Zabbix agent`|cpuopencms_1<p>Update: 60s</p>|
 ## Triggers
 
 There are no triggers in this template.

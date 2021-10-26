@@ -1,4 +1,4 @@
-# Template APC PDU
+# APC PDU
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# WD My Cloud EX4 Template
+# WD My Cloud EX4
 
 ## Overview
 
@@ -64,13 +64,13 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Agent Version|<p>-</p>|`SNMP agent`|agentVer<p>Update: 1h</p>|
-|Fan status|<p>-</p>|`SNMP agent`|fanStatus<p>Update: 1m</p>|
-|FTP status|<p>-</p>|`SNMP agent`|ftpServer<p>Update: 1h</p>|
-|Hostname|<p>-</p>|`SNMP agent`|hostName<p>Update: 1h</p>|
-|Net type|<p>-</p>|`SNMP agent`|netType<p>Update: 1h</p>|
 |Software version|<p>-</p>|`SNMP agent`|softwareVersion<p>Update: 1h</p>|
+|FTP status|<p>-</p>|`SNMP agent`|ftpServer<p>Update: 1h</p>|
+|Agent Version|<p>-</p>|`SNMP agent`|agentVer<p>Update: 1h</p>|
+|Hostname|<p>-</p>|`SNMP agent`|hostName<p>Update: 1h</p>|
 |Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 1m</p>|
+|Net type|<p>-</p>|`SNMP agent`|netType<p>Update: 1h</p>|
+|Fan status|<p>-</p>|`SNMP agent`|fanStatus<p>Update: 1m</p>|
 |UPS No{#SNMPINDEX} Battery Charge|<p>-</p>|`SNMP agent`|upsBattery[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |UPS No{#SNMPINDEX} Manufacturer|<p>-</p>|`SNMP agent`|upsManufacturer[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |UPS No{#SNMPINDEX} Mode|<p>-</p>|`SNMP agent`|upsMode[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
@@ -90,13 +90,13 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Logical Disk {#VOLUMENAME} free space less 25%|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:ld.pfree[{#VOLUMENAME}].last()}<25</p><p>**Recovery expression**: </p>|warning|
-|Physical disk {#SNMPINDEX} temperature|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:pd.temperature[{#SNMPINDEX}].avg(#5)}>55</p><p>**Recovery expression**: </p>|warning|
-|Battery Charge Critical|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:upsBattery[{#SNMPINDEX}].last()}<25</p><p>**Recovery expression**: </p>|high|
-|Battery Charge Low|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:upsBattery[{#SNMPINDEX}].last()}<50</p><p>**Recovery expression**: </p>|average|
-|Battery Status|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:upsStatus[{#SNMPINDEX}].regexp("On Line",#3)}=0</p><p>**Recovery expression**: </p>|warning|
-|Battery Charge Critical (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:upsBattery[{#SNMPINDEX}].last()}<25</p><p>**Recovery expression**: </p>|high|
-|Battery Charge Low (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:upsBattery[{#SNMPINDEX}].last()}<50</p><p>**Recovery expression**: </p>|average|
-|Battery Status (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:upsStatus[{#SNMPINDEX}].regexp("On Line",#3)}=0</p><p>**Recovery expression**: </p>|warning|
-|Physical disk {#SNMPINDEX} temperature (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:pd.temperature[{#SNMPINDEX}].avg(#5)}>55</p><p>**Recovery expression**: </p>|warning|
-|Logical Disk {#VOLUMENAME} free space less 25% (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4 Template:ld.pfree[{#VOLUMENAME}].last()}<25</p><p>**Recovery expression**: </p>|warning|
+|Logical Disk {#VOLUMENAME} free space less 25%|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:ld.pfree[{#VOLUMENAME}].last()}<25</p><p>**Recovery expression**: </p>|warning|
+|Physical disk {#SNMPINDEX} temperature|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:pd.temperature[{#SNMPINDEX}].avg(#5)}>55</p><p>**Recovery expression**: </p>|warning|
+|Battery Charge Critical|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:upsBattery[{#SNMPINDEX}].last()}<25</p><p>**Recovery expression**: </p>|high|
+|Battery Charge Low|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:upsBattery[{#SNMPINDEX}].last()}<50</p><p>**Recovery expression**: </p>|average|
+|Battery Status|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:upsStatus[{#SNMPINDEX}].regexp("On Line",#3)}=0</p><p>**Recovery expression**: </p>|warning|
+|Battery Charge Critical (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:upsBattery[{#SNMPINDEX}].last()}<25</p><p>**Recovery expression**: </p>|high|
+|Battery Charge Low (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:upsBattery[{#SNMPINDEX}].last()}<50</p><p>**Recovery expression**: </p>|average|
+|Battery Status (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:upsStatus[{#SNMPINDEX}].regexp("On Line",#3)}=0</p><p>**Recovery expression**: </p>|warning|
+|Physical disk {#SNMPINDEX} temperature (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:pd.temperature[{#SNMPINDEX}].avg(#5)}>55</p><p>**Recovery expression**: </p>|warning|
+|Logical Disk {#VOLUMENAME} free space less 25% (LLD)|<p>-</p>|<p>**Expression**: {WD My Cloud EX4:ld.pfree[{#VOLUMENAME}].last()}<25</p><p>**Recovery expression**: </p>|warning|

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:12Z</date>
+  <date>2021-10-26T04:44:30Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module Linux systemd by Zabbix agent 2</template>
-      <name>Template Module Linux systemd by Zabbix agent 2</name>
+      <template>Module Linux systemd by Zabbix agent 2</template>
+      <name>Module Linux systemd by Zabbix agent 2</name>
       <groups>
         <group>
           <name>Templates/Modules</name>

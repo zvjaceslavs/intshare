@@ -1,4 +1,4 @@
-# Template SNMP ORBAN8700-MIB - orban
+# SNMP ORBAN8700-MIB - orban
 
 ## Description
 
@@ -40,26 +40,26 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|aesInputError|<p>Digital Input error status.</p>|`SNMP agent`|ORBAN8700-MIB.aesInputError<p>Update: 60</p>|
-|aesInputSilent|<p>Digital Input silence status.</p>|`SNMP agent`|ORBAN8700-MIB.aesInputSilent<p>Update: 60</p>|
-|analogInputSilent|<p>Analog Input silence status.</p>|`SNMP agent`|ORBAN8700-MIB.analogInputSilent<p>Update: 60</p>|
-|diversityDelay|<p>Set or read the Diversity Delay value</p>|`SNMP agent`|ORBAN8700-MIB.diversityDelay<p>Update: 60</p>|
-|inputAnalog|<p>Analog Input active status.</p>|`SNMP agent`|ORBAN8700-MIB.inputAnalog<p>Update: 60</p>|
-|inputDigital|<p>Digital Input active status.</p>|`SNMP agent`|ORBAN8700-MIB.inputDigital<p>Update: 60</p>|
-|powerSupply1Status|<p>-</p>|`SNMP agent`|ORBAN8700-MIB.powerSupply1Status<p>Update: 60</p>|
-|powerSupply2Status|<p>-</p>|`SNMP agent`|ORBAN8700-MIB.powerSupply2Status<p>Update: 60</p>|
-|snmpPrimaryManagerIp|<p>Primary SNMP Manager IP address.</p>|`SNMP agent`|ORBAN8700-MIB.snmpPrimaryManagerIp<p>Update: 60</p>|
 |snmpPrimaryManagerPort|<p>Primary SNMP Manager port number.</p>|`SNMP agent`|ORBAN8700-MIB.snmpPrimaryManagerPort<p>Update: 60</p>|
-|snmpSecondaryManagerIp|<p>Secondary SNMP Manager IP address.</p>|`SNMP agent`|ORBAN8700-MIB.snmpSecondaryManagerIp<p>Update: 60</p>|
-|snmpSecondaryManagerPort|<p>Secondary SNMP Manager port number.</p>|`SNMP agent`|ORBAN8700-MIB.snmpSecondaryManagerPort<p>Update: 60</p>|
-|softwareVersion|<p>Firmware verison number.</p>|`SNMP agent`|ORBAN8700-MIB.softwareVersion<p>Update: 60</p>|
-|stationName|<p>Station name to uniquely identify this unit. Up to 8 characters.</p>|`SNMP agent`|ORBAN8700-MIB.stationName<p>Update: 60</p>|
-|SNMP Trap: ORBAN8700-MIB::alarmInputAnalog|<p>Send trap if input switches to analog. Varbinds: 0. inputAnalog (INTEGER) Analog Input active status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.1\s"]<p>Update: 0</p>|
-|SNMP Trap: ORBAN8700-MIB::alarmAesInputSilent|<p>Send trap if AES input is silent. Varbinds: 0. aesInputSilent (INTEGER) Digital Input silence status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.2\s"]<p>Update: 0</p>|
-|SNMP Trap: ORBAN8700-MIB::alarmAesInputError|<p>Send trap in AES input detects an error. Varbinds: 0. aesInputError (INTEGER) Digital Input error status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.3\s"]<p>Update: 0</p>|
-|SNMP Trap: ORBAN8700-MIB::alarmAnalogInputSilent|<p>Send trap if input analog input silent. Varbinds: 0. analogInputSilent (INTEGER) Analog Input silence status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.4\s"]<p>Update: 0</p>|
+|snmpPrimaryManagerIp|<p>Primary SNMP Manager IP address.</p>|`SNMP agent`|ORBAN8700-MIB.snmpPrimaryManagerIp<p>Update: 60</p>|
 |SNMP Trap: ORBAN8700-MIB::alarmInputDigital|<p>Send trap if input switches to digital. Varbinds: 0. inputDigital (INTEGER) Digital Input active status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.5\s"]<p>Update: 0</p>|
+|SNMP Trap: ORBAN8700-MIB::alarmInputAnalog|<p>Send trap if input switches to analog. Varbinds: 0. inputAnalog (INTEGER) Analog Input active status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.1\s"]<p>Update: 0</p>|
+|softwareVersion|<p>Firmware verison number.</p>|`SNMP agent`|ORBAN8700-MIB.softwareVersion<p>Update: 60</p>|
+|powerSupply2Status|<p>-</p>|`SNMP agent`|ORBAN8700-MIB.powerSupply2Status<p>Update: 60</p>|
+|SNMP Trap: ORBAN8700-MIB::alarmAnalogInputSilent|<p>Send trap if input analog input silent. Varbinds: 0. analogInputSilent (INTEGER) Analog Input silence status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.4\s"]<p>Update: 0</p>|
+|analogInputSilent|<p>Analog Input silence status.</p>|`SNMP agent`|ORBAN8700-MIB.analogInputSilent<p>Update: 60</p>|
+|aesInputSilent|<p>Digital Input silence status.</p>|`SNMP agent`|ORBAN8700-MIB.aesInputSilent<p>Update: 60</p>|
+|powerSupply1Status|<p>-</p>|`SNMP agent`|ORBAN8700-MIB.powerSupply1Status<p>Update: 60</p>|
 |SNMP Trap: ORBAN8700-MIB::alarmPowerSupply1|<p>Send Trap is Power Supply 1 is Inactive Varbinds: 0. powerSupply1Status (INTEGER) </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.6\s"]<p>Update: 0</p>|
+|aesInputError|<p>Digital Input error status.</p>|`SNMP agent`|ORBAN8700-MIB.aesInputError<p>Update: 60</p>|
+|snmpSecondaryManagerPort|<p>Secondary SNMP Manager port number.</p>|`SNMP agent`|ORBAN8700-MIB.snmpSecondaryManagerPort<p>Update: 60</p>|
+|SNMP Trap: ORBAN8700-MIB::alarmAesInputError|<p>Send trap in AES input detects an error. Varbinds: 0. aesInputError (INTEGER) Digital Input error status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.3\s"]<p>Update: 0</p>|
+|stationName|<p>Station name to uniquely identify this unit. Up to 8 characters.</p>|`SNMP agent`|ORBAN8700-MIB.stationName<p>Update: 60</p>|
+|inputDigital|<p>Digital Input active status.</p>|`SNMP agent`|ORBAN8700-MIB.inputDigital<p>Update: 60</p>|
+|SNMP Trap: ORBAN8700-MIB::alarmAesInputSilent|<p>Send trap if AES input is silent. Varbinds: 0. aesInputSilent (INTEGER) Digital Input silence status. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.2\s"]<p>Update: 0</p>|
+|diversityDelay|<p>Set or read the Diversity Delay value</p>|`SNMP agent`|ORBAN8700-MIB.diversityDelay<p>Update: 60</p>|
+|snmpSecondaryManagerIp|<p>Secondary SNMP Manager IP address.</p>|`SNMP agent`|ORBAN8700-MIB.snmpSecondaryManagerIp<p>Update: 60</p>|
+|inputAnalog|<p>Analog Input active status.</p>|`SNMP agent`|ORBAN8700-MIB.inputAnalog<p>Update: 60</p>|
 |SNMP Trap: ORBAN8700-MIB::alarmPowerSupply2|<p>Send Trap is Power Supply 2 is Inactive Varbinds: 0. powerSupply2Status (INTEGER) </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.41877\.5\.4\.7\s"]<p>Update: 0</p>|
 ## Triggers
 

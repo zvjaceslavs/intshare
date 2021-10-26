@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:19Z</date>
+  <date>2021-10-26T04:43:29Z</date>
   <groups>
     <group>
       <name>Templates Hardware</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP XSCF Sun M5000</template>
-      <name>Template SNMP XSCF Sun M5000</name>
+      <template>SNMP XSCF Sun M5000</template>
+      <name>SNMP XSCF Sun M5000</name>
       <description>please set {$SNMP_COMMUNITY} macros</description>
       <groups>
         <group>
@@ -357,7 +357,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP XSCF Sun M5000</host>
+            <host>SNMP XSCF Sun M5000</host>
             <key>scfSystemAmbientTemperatureValue</key>
           </item>
         </graph_item>

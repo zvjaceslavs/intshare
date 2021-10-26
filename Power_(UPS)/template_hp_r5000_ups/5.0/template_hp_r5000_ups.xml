@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:13Z</date>
+  <date>2021-10-26T04:42:15Z</date>
   <groups>
     <group>
       <name>UPS</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template HP R5000 SNMP</template>
-      <name>Template HP R5000 SNMP</name>
+      <template>HP R5000 SNMP</template>
+      <name>HP R5000 SNMP</name>
       <description>HP R5000 UPS SNMP Made bu Ennio</description>
       <groups>
         <group>
@@ -612,7 +612,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template HP R5000 SNMP:.1.3.6.1.2.1.33.1.5.3.1.3.1.last()}>0 or {Template HP R5000 SNMP:.1.3.6.1.2.1.33.1.5.3.1.4.1.last()}>0</expression>
+      <expression>{HP R5000 SNMP:.1.3.6.1.2.1.33.1.5.3.1.3.1.last()}>0 or {HP R5000 SNMP:.1.3.6.1.2.1.33.1.5.3.1.4.1.last()}>0</expression>
       <name>{HOST.NAME} Bypass is Activated I={ITEM.VALUE1}, P={ITEM.VALUE2}</name>
       <priority>HIGH</priority>
     </trigger>
@@ -625,7 +625,7 @@
           <sortorder>1</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template HP R5000 SNMP</host>
+            <host>HP R5000 SNMP</host>
             <key>.1.3.6.1.4.1.232.165.3.2.2.0</key>
           </item>
         </graph_item>
@@ -633,7 +633,7 @@
           <sortorder>2</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template HP R5000 SNMP</host>
+            <host>HP R5000 SNMP</host>
             <key>.1.3.6.1.4.1.232.165.3.4.4.1.2.1</key>
           </item>
         </graph_item>
@@ -641,7 +641,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template HP R5000 SNMP</host>
+            <host>HP R5000 SNMP</host>
             <key>.1.3.6.1.4.1.232.165.3.2.1.0</key>
           </item>
         </graph_item>
@@ -649,7 +649,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template HP R5000 SNMP</host>
+            <host>HP R5000 SNMP</host>
             <key>.1.3.6.1.2.1.33.1.2.2.0</key>
           </item>
         </graph_item>
@@ -657,7 +657,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template HP R5000 SNMP</host>
+            <host>HP R5000 SNMP</host>
             <key>.1.3.6.1.4.1.232.165.3.2.4.0</key>
           </item>
         </graph_item>
@@ -669,7 +669,7 @@
         <graph_item>
           <color>4000FF</color>
           <item>
-            <host>Template HP R5000 SNMP</host>
+            <host>HP R5000 SNMP</host>
             <key>.1.3.6.1.4.1.232.165.3.4.4.1.2.1</key>
           </item>
         </graph_item>
@@ -677,7 +677,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template HP R5000 SNMP</host>
+            <host>HP R5000 SNMP</host>
             <key>.1.3.6.1.4.1.232.165.3.2.2.0</key>
           </item>
         </graph_item>
@@ -685,7 +685,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template HP R5000 SNMP</host>
+            <host>HP R5000 SNMP</host>
             <key>.1.3.6.1.4.1.232.165.3.3.4.1.2.1</key>
           </item>
         </graph_item>

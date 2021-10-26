@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:07Z</date>
+  <date>2021-10-26T04:42:08Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template TeraStation SNMPV2</template>
-      <name>Template TeraStation SNMPV2</name>
+      <template>TeraStation SNMPV2</template>
+      <name>TeraStation SNMPV2</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -302,7 +302,7 @@
         <graph_item>
           <color>009900</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>laLoad.1</key>
           </item>
         </graph_item>
@@ -310,7 +310,7 @@
           <sortorder>1</sortorder>
           <color>000099</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>laLoad.2</key>
           </item>
         </graph_item>
@@ -318,7 +318,7 @@
           <sortorder>2</sortorder>
           <color>990000</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>laLoad.3</key>
           </item>
         </graph_item>
@@ -334,7 +334,7 @@
         <graph_item>
           <color>009900</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>ssCpuRawIdle.0</key>
           </item>
         </graph_item>
@@ -342,7 +342,7 @@
           <sortorder>1</sortorder>
           <color>990099</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>ssCpuRawNice.0</key>
           </item>
         </graph_item>
@@ -350,7 +350,7 @@
           <sortorder>2</sortorder>
           <color>990000</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>ssCpuRawSystem.0</key>
           </item>
         </graph_item>
@@ -358,7 +358,7 @@
           <sortorder>3</sortorder>
           <color>000099</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>ssCpuRawUser.0</key>
           </item>
         </graph_item>
@@ -370,14 +370,14 @@
       <ymin_type_1>FIXED</ymin_type_1>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template TeraStation SNMPV2</host>
+        <host>TeraStation SNMPV2</host>
         <key>memTotalReal.0</key>
       </ymax_item_1>
       <graph_items>
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>memAvailReal.0</key>
           </item>
         </graph_item>
@@ -385,7 +385,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>memTotalReal.0</key>
           </item>
         </graph_item>
@@ -398,7 +398,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>fInOctets.1</key>
           </item>
         </graph_item>
@@ -407,7 +407,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template TeraStation SNMPV2</host>
+            <host>TeraStation SNMPV2</host>
             <key>net.if.out[eth0]</key>
           </item>
         </graph_item>

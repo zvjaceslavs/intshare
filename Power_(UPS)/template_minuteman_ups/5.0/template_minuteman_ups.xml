@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:27Z</date>
+  <date>2021-10-26T04:42:31Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Minuteman UPS</template>
-      <name>Template SNMP Minuteman UPS</name>
+      <template>SNMP Minuteman UPS</template>
+      <name>SNMP Minuteman UPS</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -77,7 +77,7 @@
               <dependencies>
                 <dependency>
                   <name>Output Load Too High</name>
-                  <expression>{Template SNMP Minuteman UPS:upsAdvOutputLoad.last(0)}>90</expression>
+                  <expression>{SNMP Minuteman UPS:upsAdvOutputLoad.last(0)}>90</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -261,7 +261,7 @@
               <dependencies>
                 <dependency>
                   <name>Battery Charge &lt; 25%: {ITEM.LASTVALUE1}</name>
-                  <expression>{Template SNMP Minuteman UPS:upsBatteryCharge.last(0)}&lt;25</expression>
+                  <expression>{SNMP Minuteman UPS:upsBatteryCharge.last(0)}&lt;25</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -272,7 +272,7 @@
               <dependencies>
                 <dependency>
                   <name>Battery Charge &lt; 50 %: {ITEM.LASTVALUE1}</name>
-                  <expression>{Template SNMP Minuteman UPS:upsBatteryCharge.last(0)}&lt;50</expression>
+                  <expression>{SNMP Minuteman UPS:upsBatteryCharge.last(0)}&lt;50</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -350,7 +350,7 @@
               <dependencies>
                 <dependency>
                   <name>Runtime less than 1 Minutes</name>
-                  <expression>{Template SNMP Minuteman UPS:upsRuntimeRemaining.last()}&lt;1</expression>
+                  <expression>{SNMP Minuteman UPS:upsRuntimeRemaining.last()}&lt;1</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -361,7 +361,7 @@
               <dependencies>
                 <dependency>
                   <name>Runtime less than 5 Minutes</name>
-                  <expression>{Template SNMP Minuteman UPS:upsRuntimeRemaining.last()}&lt;5</expression>
+                  <expression>{SNMP Minuteman UPS:upsRuntimeRemaining.last()}&lt;5</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -377,7 +377,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template SNMP Minuteman UPS</host>
+            <host>SNMP Minuteman UPS</host>
             <key>upsInputFreq</key>
           </item>
         </graph_item>
@@ -385,7 +385,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template SNMP Minuteman UPS</host>
+            <host>SNMP Minuteman UPS</host>
             <key>upsInputVoltage</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:16Z</date>
+  <date>2021-10-26T04:40:06Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Supermicro SYS-6028R-TR</template>
-      <name>Template IPMI Supermicro SYS-6028R-TR</name>
+      <template>IPMI Supermicro SYS-6028R-TR</template>
+      <name>IPMI Supermicro SYS-6028R-TR</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -1015,7 +1015,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.cpu1.temp</key>
           </item>
         </graph_item>
@@ -1023,7 +1023,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.cpu2.temp</key>
           </item>
         </graph_item>
@@ -1035,7 +1035,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p1.dimma1.temp</key>
           </item>
         </graph_item>
@@ -1043,7 +1043,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p1.dimma2.temp</key>
           </item>
         </graph_item>
@@ -1051,7 +1051,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p1.dimmb1.temp</key>
           </item>
         </graph_item>
@@ -1059,7 +1059,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p1.dimmb2.temp</key>
           </item>
         </graph_item>
@@ -1067,7 +1067,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p1.dimmc1.temp</key>
           </item>
         </graph_item>
@@ -1075,7 +1075,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p1.dimmc2.temp</key>
           </item>
         </graph_item>
@@ -1083,7 +1083,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p1.dimmd1.temp</key>
           </item>
         </graph_item>
@@ -1091,7 +1091,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p1.dimmd2.temp</key>
           </item>
         </graph_item>
@@ -1099,7 +1099,7 @@
           <sortorder>8</sortorder>
           <color>000000</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p2.dimme1.temp</key>
           </item>
         </graph_item>
@@ -1107,7 +1107,7 @@
           <sortorder>9</sortorder>
           <color>DDDDDD</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p2.dimme2.temp</key>
           </item>
         </graph_item>
@@ -1115,7 +1115,7 @@
           <sortorder>10</sortorder>
           <color>CCCC00</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p2.dimmf1.temp</key>
           </item>
         </graph_item>
@@ -1123,7 +1123,7 @@
           <sortorder>11</sortorder>
           <color>333300</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p2.dimmf2.temp</key>
           </item>
         </graph_item>
@@ -1131,7 +1131,7 @@
           <sortorder>12</sortorder>
           <color>00AAAA</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p2.dimmg1.temp</key>
           </item>
         </graph_item>
@@ -1139,7 +1139,7 @@
           <sortorder>13</sortorder>
           <color>FF9999</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p2.dimmg2.temp</key>
           </item>
         </graph_item>
@@ -1147,7 +1147,7 @@
           <sortorder>14</sortorder>
           <color>003300</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p2.dimmh1.temp</key>
           </item>
         </graph_item>
@@ -1155,7 +1155,7 @@
           <sortorder>15</sortorder>
           <color>003333</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.p2.dimmh2.temp</key>
           </item>
         </graph_item>
@@ -1167,7 +1167,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.fan1</key>
           </item>
         </graph_item>
@@ -1175,7 +1175,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.fan2</key>
           </item>
         </graph_item>
@@ -1183,7 +1183,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.fan3</key>
           </item>
         </graph_item>
@@ -1191,7 +1191,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.fan4</key>
           </item>
         </graph_item>
@@ -1199,7 +1199,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.fan5</key>
           </item>
         </graph_item>
@@ -1207,7 +1207,7 @@
           <sortorder>5</sortorder>
           <color>000000</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.fan6</key>
           </item>
         </graph_item>
@@ -1215,7 +1215,7 @@
           <sortorder>6</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.fana</key>
           </item>
         </graph_item>
@@ -1223,7 +1223,7 @@
           <sortorder>7</sortorder>
           <color>6CDCDC</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.fanb</key>
           </item>
         </graph_item>
@@ -1235,7 +1235,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.peripheral.temp</key>
           </item>
         </graph_item>
@@ -1243,7 +1243,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.system.temp</key>
           </item>
         </graph_item>
@@ -1251,7 +1251,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.vcpu1vrm.temp</key>
           </item>
         </graph_item>
@@ -1259,7 +1259,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.Vcpu1VRM.temp</key>
           </item>
         </graph_item>
@@ -1267,7 +1267,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.vcpu2vrm.temp</key>
           </item>
         </graph_item>
@@ -1275,7 +1275,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.Vcpu2VRM.temp</key>
           </item>
         </graph_item>
@@ -1283,7 +1283,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VmemABVRM.temp</key>
           </item>
         </graph_item>
@@ -1291,7 +1291,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VmemCDVRM.temp</key>
           </item>
         </graph_item>
@@ -1299,7 +1299,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VmemEFVRM.temp</key>
           </item>
         </graph_item>
@@ -1307,7 +1307,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VmemGHVRM.temp</key>
           </item>
         </graph_item>
@@ -1319,7 +1319,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.1.05VPCH</key>
           </item>
         </graph_item>
@@ -1327,7 +1327,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.1.2VBMC</key>
           </item>
         </graph_item>
@@ -1335,7 +1335,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.1.5VPCH</key>
           </item>
         </graph_item>
@@ -1343,7 +1343,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.3.3VCC</key>
           </item>
         </graph_item>
@@ -1351,7 +1351,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.3.3VSB</key>
           </item>
         </graph_item>
@@ -1359,7 +1359,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.5VCC</key>
           </item>
         </graph_item>
@@ -1367,7 +1367,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.5VSB</key>
           </item>
         </graph_item>
@@ -1375,7 +1375,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.12V</key>
           </item>
         </graph_item>
@@ -1383,7 +1383,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VBAT</key>
           </item>
         </graph_item>
@@ -1391,7 +1391,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.Vcpu1</key>
           </item>
         </graph_item>
@@ -1399,7 +1399,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.Vcpu2</key>
           </item>
         </graph_item>
@@ -1407,7 +1407,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VDIMMAB</key>
           </item>
         </graph_item>
@@ -1415,7 +1415,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VDIMMCD</key>
           </item>
         </graph_item>
@@ -1423,7 +1423,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VDIMMEF</key>
           </item>
         </graph_item>
@@ -1431,7 +1431,7 @@
           <sortorder>14</sortorder>
           <color>274482</color>
           <item>
-            <host>Template IPMI Supermicro SYS-6028R-TR</host>
+            <host>IPMI Supermicro SYS-6028R-TR</host>
             <key>ipmi.supermicro.sys-6028r-tr.VDIMMGH</key>
           </item>
         </graph_item>

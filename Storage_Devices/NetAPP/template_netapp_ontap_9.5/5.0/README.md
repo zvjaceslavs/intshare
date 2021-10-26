@@ -1,4 +1,4 @@
-# Template SNMP NetApp cDot
+# SNMP NetApp cDot
 
 ## Overview
 
@@ -36,30 +36,38 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|SnapMirror|<p>-</p>|`SNMP agent`|snapmirror<p>Update: 300s</p>|
 |Aggregates|<p>-</p>|`SNMP agent`|aggr<p>Update: 12h</p>|
 |Enclosures|<p>-</p>|`SNMP agent`|encl<p>Update: 12h</p>|
-|LIFs|<p>-</p>|`SNMP agent`|lif<p>Update: 12h</p>|
 |Nodes|<p>-</p>|`SNMP agent`|node<p>Update: 12h</p>|
-|SnapMirror|<p>-</p>|`SNMP agent`|snapmirror<p>Update: 300s</p>|
+|LIFs|<p>-</p>|`SNMP agent`|lif<p>Update: 12h</p>|
 |Volumes|<p>-</p>|`SNMP agent`|volume<p>Update: 12h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Autosupport Failed Sends|<p>-</p>|`SNMP agent`|autosupportFailedSends<p>Update: 5m</p>|
-|Autosupport Status|<p>-</p>|`SNMP agent`|autosupportStatus<p>Update: 5m</p>|
-|Autosupport Status Message|<p>-</p>|`SNMP agent`|autosupportStatusMessage<p>Update: 5m</p>|
-|Autosupport Successful Sends|<p>-</p>|`SNMP agent`|autosupportSuccessfulSends<p>Update: 5m</p>|
 |CPU usage (%)|<p>-</p>|`SNMP agent`|cpuBusyTimePerCent<p>Update: 1m</p>|
 |CPU Count|<p>-</p>|`SNMP agent`|cpuCount<p>Update: 30m</p>|
-|Failed Disks Count|<p>-</p>|`SNMP agent`|diskFailedCount<p>Update: 1m</p>|
-|Disk Failed Message|<p>-</p>|`SNMP agent`|diskFailedMessage<p>Update: 1m</p>|
-|Prefailed Disks Count|<p>-</p>|`SNMP agent`|diskPrefailedCount<p>Update: 1m</p>|
-|Number of reconstructing parity Disks|<p>-</p>|`SNMP agent`|diskReconstructingParityCount<p>Update: 1m</p>|
-|Number of spare Disks|<p>-</p>|`SNMP agent`|diskSpareCount<p>Update: 30m</p>|
-|Number of Disks|<p>-</p>|`SNMP agent`|diskTotalCount<p>Update: 30m</p>|
-|Number of verifying parity Disks|<p>-</p>|`SNMP agent`|diskVerifyingParityCount<p>Update: 1m</p>|
+|Autosupport Status Message|<p>-</p>|`SNMP agent`|autosupportStatusMessage<p>Update: 5m</p>|
 |Product Version|<p>-</p>|`SNMP agent`|productVersio<p>Update: 30m</p>|
+|Number of Disks|<p>-</p>|`SNMP agent`|diskTotalCount<p>Update: 30m</p>|
+|Number of reconstructing parity Disks|<p>-</p>|`SNMP agent`|diskReconstructingParityCount<p>Update: 1m</p>|
+|Number of verifying parity Disks|<p>-</p>|`SNMP agent`|diskVerifyingParityCount<p>Update: 1m</p>|
+|Number of spare Disks|<p>-</p>|`SNMP agent`|diskSpareCount<p>Update: 30m</p>|
+|Disk Failed Message|<p>-</p>|`SNMP agent`|diskFailedMessage<p>Update: 1m</p>|
+|Failed Disks Count|<p>-</p>|`SNMP agent`|diskFailedCount<p>Update: 1m</p>|
+|Autosupport Successful Sends|<p>-</p>|`SNMP agent`|autosupportSuccessfulSends<p>Update: 5m</p>|
+|Autosupport Failed Sends|<p>-</p>|`SNMP agent`|autosupportFailedSends<p>Update: 5m</p>|
+|Autosupport Status|<p>-</p>|`SNMP agent`|autosupportStatus<p>Update: 5m</p>|
+|Prefailed Disks Count|<p>-</p>|`SNMP agent`|diskPrefailedCount<p>Update: 1m</p>|
+|SnapMirror [{#SNAPINDEX}] Destination Path|<p>-</p>|`SNMP agent`|snapmirrorRelDestPath[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|SnapMirror [{#SNAPINDEX}] Healthy|<p>-</p>|`SNMP agent`|snapmirrorRelHealthy[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|SnapMirror [{#SNAPINDEX}] Lag|<p>-</p>|`SNMP agent`|snapmirrorRelLag[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX} Last Transfer Size|<p>-</p>|`SNMP agent`|snapmirrorRelLastTransferSize[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX} Last Transfer Time|<p>-</p>|`SNMP agent`|snapmirrorRelLastTransferTime[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX}  Source Path|<p>-</p>|`SNMP agent`|snapmirrorRelSrcPath[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX} State|<p>-</p>|`SNMP agent`|snapmirrorRelState[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|SnapMirror {#SNAPINDEX} Status|<p>-</p>|`SNMP agent`|snapmirrorRelStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Aggregate Owners[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|aggrOwners[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Aggregate Raidtype[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|aggrRaidType[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Aggregate State[{#AGGRNAME}]|<p>-</p>|`SNMP agent`|aggrState[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
@@ -86,21 +94,13 @@ There are no template links in this template.
 |Enclosure[{#ENCLNUM}] Fans Speed|<p>-</p>|`SNMP agent`|enclFansSpeed[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Enclosure[{#ENCLNUM}] Failed Fans|<p>-</p>|`SNMP agent`|enclFansFailed[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Enclosure[{#ENCLNUM}] Under Voltage warn|<p>-</p>|`SNMP agent`|enclVoltSensorsUnderVoltWarn[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|VIF[{#VIF}] is Home|<p>-</p>|`SNMP agent`|logicalInterfaceIsHome[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Node[{#NODENAME}] cannot take over cause|<p>-</p>|`SNMP agent`|haCannotTakeoverCause[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
 |Node[{#NODENAME}] HA Interconnect Status|<p>-</p>|`SNMP agent`|haInterconnectStatus[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
 |Node[{#NODENAME}] HA Partner Name|<p>-</p>|`SNMP agent`|haPartnerName[{#NODENAME}]<p>Update: 12h</p><p>LLD</p>|
 |Node[{#NODENAME}] HA Partner Status|<p>-</p>|`SNMP agent`|haPartnerStatus[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
 |Node[{#NODENAME}] HA Settings|<p>-</p>|`SNMP agent`|haSettings[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
 |Node[{#NODENAME}] HA State|<p>-</p>|`SNMP agent`|haState[{#NODENAME}]<p>Update: 1m</p><p>LLD</p>|
-|SnapMirror [{#SNAPINDEX}] Destination Path|<p>-</p>|`SNMP agent`|snapmirrorRelDestPath[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
-|SnapMirror [{#SNAPINDEX}] Healthy|<p>-</p>|`SNMP agent`|snapmirrorRelHealthy[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|SnapMirror [{#SNAPINDEX}] Lag|<p>-</p>|`SNMP agent`|snapmirrorRelLag[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
-|SnapMirror {#SNAPINDEX} Last Transfer Size|<p>-</p>|`SNMP agent`|snapmirrorRelLastTransferSize[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
-|SnapMirror {#SNAPINDEX} Last Transfer Time|<p>-</p>|`SNMP agent`|snapmirrorRelLastTransferTime[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
-|SnapMirror {#SNAPINDEX}  Source Path|<p>-</p>|`SNMP agent`|snapmirrorRelSrcPath[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
-|SnapMirror {#SNAPINDEX} State|<p>-</p>|`SNMP agent`|snapmirrorRelState[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|SnapMirror {#SNAPINDEX} Status|<p>-</p>|`SNMP agent`|snapmirrorRelStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|VIF[{#VIF}] is Home|<p>-</p>|`SNMP agent`|logicalInterfaceIsHome[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Volume[{#VOLNAME}] Size|<p>-</p>|`SNMP agent`|df64TotalKBytesVol[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Volume[{#VOLNAME}] Used|<p>-</p>|`SNMP agent`|df64UsedKBytesVol[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Volume[{#VOLNAME}] Used (%)|<p>-</p>|`SNMP agent`|dfPerCentKBytesCapacityVol[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
@@ -118,45 +118,45 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Filesystem {#AGGRNAME} not mounted|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfStatus[{#SNMPINDEX}].last()}<>2</p><p>**Recovery expression**: </p>|average|
-|Free Size on {#AGGRNAME} less than 10%|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}<10</p><p>**Recovery expression**: </p>|high|
-|Free Size on {#AGGRNAME} less than 20%|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}<20</p><p>**Recovery expression**: </p>|average|
-|Failed electric: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}]|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:enclElectronicsFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
-|Failed fans: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}]|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:enclFansFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
-|Failed power supply: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}]|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:enclPowerSuppliesFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
-|LIF[{#VIF}] on {HOST.NAME} not at home port|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:logicalInterfaceIsHome[{#SNMPINDEX}].last()}>1</p><p>**Recovery expression**: </p>|average|
-|{HOST.HOST} can not takeover|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:haState[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|high|
-|{HOST.HOST} HA disabled|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:haSettings[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|high|
-|{HOST.HOST} Interconnect status not up|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:haInterconnectStatus[{#NODENAME}].last()}<>4</p><p>**Recovery expression**: </p>|average|
-|{HOST.HOST} Partner status not ok|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:haPartnerStatus[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|average|
-|SnapMirror [{#SNAPINDEX}] is not Healthy|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelHealthy[{#SNMPINDEX}].last()}<>1</p><p>**Recovery expression**: </p>|high|
-|SnapMirror [{#SNAPINDEX}] Lag is greater than 1 day|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>86400</p><p>**Recovery expression**: </p>|average|
-|SnapMirror [{#SNAPINDEX}] Lag is greater than 2 days|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>172800</p><p>**Recovery expression**: </p>|high|
-|SnapMirror [{#SNAPINDEX}] Lag is greater than 5 days|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>432000</p><p>**Recovery expression**: </p>|disaster|
-|SnapMirror {#SNAPINDEX} is having problems|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelStatus[{#SNMPINDEX}].last()}>=11</p><p>**Recovery expression**: </p>|high|
-|SnapMirror {#SNAPINDEX} is not idle|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelStatus[{#SNMPINDEX}].last()}<>0</p><p>**Recovery expression**: </p>|information|
-|Free Inode on Volume[{#VOLNAME}] less than 10%|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfVolInodePercent[{#SNMPINDEX}].last()}>89</p><p>**Recovery expression**: </p>|disaster|
-|Free Inode on Volume[{#VOLNAME}] less than 25%|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfVolInodePercent[{#SNMPINDEX}].last()}>84</p><p>**Recovery expression**: </p>|high|
-|Free Size on Volume[{#VOLNAME}] less than 10%|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>90</p><p>**Recovery expression**: </p>|high|
-|Free Size on Volume[{#VOLNAME}] less than 20%|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>80</p><p>**Recovery expression**: </p>|average|
-|Filesystem {#AGGRNAME} not mounted (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfStatus[{#SNMPINDEX}].last()}<>2</p><p>**Recovery expression**: </p>|average|
-|Free Size on {#AGGRNAME} less than 10% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}<10</p><p>**Recovery expression**: </p>|high|
-|Free Size on {#AGGRNAME} less than 20% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}<20</p><p>**Recovery expression**: </p>|average|
-|Failed electric: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}] (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:enclElectronicsFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
-|Failed fans: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}] (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:enclFansFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
-|Failed power supply: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}] (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:enclPowerSuppliesFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
-|LIF[{#VIF}] on {HOST.NAME} not at home port (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:logicalInterfaceIsHome[{#SNMPINDEX}].last()}>1</p><p>**Recovery expression**: </p>|average|
-|{HOST.HOST} can not takeover (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:haState[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|high|
-|{HOST.HOST} HA disabled (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:haSettings[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|high|
-|{HOST.HOST} Interconnect status not up (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:haInterconnectStatus[{#NODENAME}].last()}<>4</p><p>**Recovery expression**: </p>|average|
-|{HOST.HOST} Partner status not ok (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:haPartnerStatus[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|average|
-|SnapMirror [{#SNAPINDEX}] is not Healthy (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelHealthy[{#SNMPINDEX}].last()}<>1</p><p>**Recovery expression**: </p>|high|
-|SnapMirror [{#SNAPINDEX}] Lag is greater than 1 day (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>86400</p><p>**Recovery expression**: </p>|average|
-|SnapMirror [{#SNAPINDEX}] Lag is greater than 2 days (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>172800</p><p>**Recovery expression**: </p>|high|
-|SnapMirror [{#SNAPINDEX}] Lag is greater than 5 days (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>432000</p><p>**Recovery expression**: </p>|disaster|
-|SnapMirror {#SNAPINDEX} is having problems (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelStatus[{#SNMPINDEX}].last()}>=11</p><p>**Recovery expression**: </p>|high|
-|SnapMirror {#SNAPINDEX} is not idle (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:snapmirrorRelStatus[{#SNMPINDEX}].last()}<>0</p><p>**Recovery expression**: </p>|information|
-|Free Inode on Volume[{#VOLNAME}] less than 10% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfVolInodePercent[{#SNMPINDEX}].last()}>89</p><p>**Recovery expression**: </p>|disaster|
-|Free Inode on Volume[{#VOLNAME}] less than 25% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfVolInodePercent[{#SNMPINDEX}].last()}>84</p><p>**Recovery expression**: </p>|high|
-|Free Size on Volume[{#VOLNAME}] less than 10% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>90</p><p>**Recovery expression**: </p>|high|
-|Free Size on Volume[{#VOLNAME}] less than 20% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP NetApp cDot:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>80</p><p>**Recovery expression**: </p>|average|
+|Filesystem {#AGGRNAME} not mounted|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfStatus[{#SNMPINDEX}].last()}<>2</p><p>**Recovery expression**: </p>|average|
+|Free Size on {#AGGRNAME} less than 10%|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}<10</p><p>**Recovery expression**: </p>|high|
+|Free Size on {#AGGRNAME} less than 20%|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}<20</p><p>**Recovery expression**: </p>|average|
+|Failed electric: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}]|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:enclElectronicsFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
+|Failed fans: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}]|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:enclFansFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
+|Failed power supply: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}]|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:enclPowerSuppliesFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
+|LIF[{#VIF}] on {HOST.NAME} not at home port|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:logicalInterfaceIsHome[{#SNMPINDEX}].last()}>1</p><p>**Recovery expression**: </p>|average|
+|{HOST.HOST} can not takeover|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:haState[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|high|
+|{HOST.HOST} HA disabled|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:haSettings[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|high|
+|{HOST.HOST} Interconnect status not up|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:haInterconnectStatus[{#NODENAME}].last()}<>4</p><p>**Recovery expression**: </p>|average|
+|{HOST.HOST} Partner status not ok|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:haPartnerStatus[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|average|
+|SnapMirror [{#SNAPINDEX}] is not Healthy|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelHealthy[{#SNMPINDEX}].last()}<>1</p><p>**Recovery expression**: </p>|high|
+|SnapMirror [{#SNAPINDEX}] Lag is greater than 1 day|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>86400</p><p>**Recovery expression**: </p>|average|
+|SnapMirror [{#SNAPINDEX}] Lag is greater than 2 days|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>172800</p><p>**Recovery expression**: </p>|high|
+|SnapMirror [{#SNAPINDEX}] Lag is greater than 5 days|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>432000</p><p>**Recovery expression**: </p>|disaster|
+|SnapMirror {#SNAPINDEX} is having problems|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelStatus[{#SNMPINDEX}].last()}>=11</p><p>**Recovery expression**: </p>|high|
+|SnapMirror {#SNAPINDEX} is not idle|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelStatus[{#SNMPINDEX}].last()}<>0</p><p>**Recovery expression**: </p>|information|
+|Free Inode on Volume[{#VOLNAME}] less than 10%|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfVolInodePercent[{#SNMPINDEX}].last()}>89</p><p>**Recovery expression**: </p>|disaster|
+|Free Inode on Volume[{#VOLNAME}] less than 25%|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfVolInodePercent[{#SNMPINDEX}].last()}>84</p><p>**Recovery expression**: </p>|high|
+|Free Size on Volume[{#VOLNAME}] less than 10%|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>90</p><p>**Recovery expression**: </p>|high|
+|Free Size on Volume[{#VOLNAME}] less than 20%|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>80</p><p>**Recovery expression**: </p>|average|
+|SnapMirror [{#SNAPINDEX}] is not Healthy (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelHealthy[{#SNMPINDEX}].last()}<>1</p><p>**Recovery expression**: </p>|high|
+|SnapMirror [{#SNAPINDEX}] Lag is greater than 1 day (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>86400</p><p>**Recovery expression**: </p>|average|
+|SnapMirror [{#SNAPINDEX}] Lag is greater than 2 days (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>172800</p><p>**Recovery expression**: </p>|high|
+|SnapMirror [{#SNAPINDEX}] Lag is greater than 5 days (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelLag[{#SNMPINDEX}].last()}>432000</p><p>**Recovery expression**: </p>|disaster|
+|SnapMirror {#SNAPINDEX} is having problems (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelStatus[{#SNMPINDEX}].last()}>=11</p><p>**Recovery expression**: </p>|high|
+|SnapMirror {#SNAPINDEX} is not idle (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:snapmirrorRelStatus[{#SNMPINDEX}].last()}<>0</p><p>**Recovery expression**: </p>|information|
+|Filesystem {#AGGRNAME} not mounted (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfStatus[{#SNMPINDEX}].last()}<>2</p><p>**Recovery expression**: </p>|average|
+|Free Size on {#AGGRNAME} less than 10% (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}<10</p><p>**Recovery expression**: </p>|high|
+|Free Size on {#AGGRNAME} less than 20% (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfPerCentKBytesCapacity[{#SNMPINDEX}].last()}<20</p><p>**Recovery expression**: </p>|average|
+|Failed electric: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}] (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:enclElectronicsFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
+|Failed fans: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}] (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:enclFansFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
+|Failed power supply: {ITEM.LASTVALUE} on Enclosure[{#ENCLNUM}] (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:enclPowerSuppliesFailed[{#SNMPINDEX}].strlen()}>0</p><p>**Recovery expression**: </p>|high|
+|{HOST.HOST} can not takeover (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:haState[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|high|
+|{HOST.HOST} HA disabled (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:haSettings[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|high|
+|{HOST.HOST} Interconnect status not up (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:haInterconnectStatus[{#NODENAME}].last()}<>4</p><p>**Recovery expression**: </p>|average|
+|{HOST.HOST} Partner status not ok (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:haPartnerStatus[{#NODENAME}].last()}<>2</p><p>**Recovery expression**: </p>|average|
+|LIF[{#VIF}] on {HOST.NAME} not at home port (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:logicalInterfaceIsHome[{#SNMPINDEX}].last()}>1</p><p>**Recovery expression**: </p>|average|
+|Free Inode on Volume[{#VOLNAME}] less than 10% (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfVolInodePercent[{#SNMPINDEX}].last()}>89</p><p>**Recovery expression**: </p>|disaster|
+|Free Inode on Volume[{#VOLNAME}] less than 25% (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfVolInodePercent[{#SNMPINDEX}].last()}>84</p><p>**Recovery expression**: </p>|high|
+|Free Size on Volume[{#VOLNAME}] less than 10% (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>90</p><p>**Recovery expression**: </p>|high|
+|Free Size on Volume[{#VOLNAME}] less than 20% (LLD)|<p>-</p>|<p>**Expression**: {SNMP NetApp cDot:dfPerCentKBytesCapacityVol[{#SNMPINDEX}].last()}>80</p><p>**Recovery expression**: </p>|average|

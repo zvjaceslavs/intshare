@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:53Z</date>
+  <date>2021-10-26T04:41:52Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_NGINX_http_agent</template>
-      <name>Template_NGINX_http_agent</name>
+      <template>NGINX_http_agent</template>
+      <name>NGINX_http_agent</name>
       <groups>
         <group>
           <name>Templates/Applications</name>
@@ -232,21 +232,21 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_NGINX_http_agent</host>
+            <host>NGINX_http_agent</host>
             <key>nginx.connections.reading</key>
           </item>
         </graph_item>
         <graph_item>
           <color>FF33FF</color>
           <item>
-            <host>Template_NGINX_http_agent</host>
+            <host>NGINX_http_agent</host>
             <key>nginx.connections.waiting</key>
           </item>
         </graph_item>
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template_NGINX_http_agent</host>
+            <host>NGINX_http_agent</host>
             <key>nginx.connections.writing</key>
           </item>
         </graph_item>
@@ -254,7 +254,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_NGINX_http_agent</host>
+            <host>NGINX_http_agent</host>
             <key>nginx.connections.active</key>
           </item>
         </graph_item>
@@ -266,21 +266,21 @@
         <graph_item>
           <color>009900</color>
           <item>
-            <host>Template_NGINX_http_agent</host>
+            <host>NGINX_http_agent</host>
             <key>nginx.accepts</key>
           </item>
         </graph_item>
         <graph_item>
           <color>3333FF</color>
           <item>
-            <host>Template_NGINX_http_agent</host>
+            <host>NGINX_http_agent</host>
             <key>nginx.handled</key>
           </item>
         </graph_item>
         <graph_item>
           <color>FF0000</color>
           <item>
-            <host>Template_NGINX_http_agent</host>
+            <host>NGINX_http_agent</host>
             <key>nginx.requests</key>
           </item>
         </graph_item>

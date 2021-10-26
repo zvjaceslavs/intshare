@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:48Z</date>
+  <date>2021-10-26T04:38:28Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template ESXi HP Smart Array</template>
-      <name>Template ESXi HP Smart Array</name>
+      <template>ESXi HP Smart Array</template>
+      <name>ESXi HP Smart Array</name>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:18Z</date>
+  <date>2021-10-26T04:45:45Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Fortigate Wifi Access Points</template>
-      <name>Template SNMP Fortigate Wifi Access Points</name>
+      <template>SNMP Fortigate Wifi Access Points</template>
+      <name>SNMP Fortigate Wifi Access Points</name>
       <description>Created by Samuel Martins (02-17-2021) https://github.com/slunart https://www.linkedin.com/in/slmartins ----------------------------------------------------------- Forti AP is monitored through FortiGate, so you need to apply this template to the Fortigate device. Originally based on template: "Fortigate SNMP SSLVPN/FortiAP Manged by Fortigate WiFi Controller template" created by Vadim Portnoy. Source: https://share.zabbix.com/network_devices/fortigate/fortigate-snmp-sslvpn-fortiap-manged-by-fortigate-wifi-controller-template My improvements: - More items monitored. - Items' name shorted - Interval time of items modified - Trigged added - Graphics Prototype added</description>
       <groups>
         <group>
@@ -225,7 +225,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP Fortigate Wifi Access Points</host>
+                    <host>SNMP Fortigate Wifi Access Points</host>
                     <key>fgWcWtpSessionWtpCpuUsage[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -238,7 +238,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP Fortigate Wifi Access Points</host>
+                    <host>SNMP Fortigate Wifi Access Points</host>
                     <key>fgWcWtpSessionWtpMemoryUsage[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -251,7 +251,7 @@
                   <sortorder>1</sortorder>
                   <color>6A1B9A</color>
                   <item>
-                    <host>Template SNMP Fortigate Wifi Access Points</host>
+                    <host>SNMP Fortigate Wifi Access Points</host>
                     <key>fgWcWtpSessionWtpByteRxCount[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -259,7 +259,7 @@
                   <sortorder>2</sortorder>
                   <color>1E88E5</color>
                   <item>
-                    <host>Template SNMP Fortigate Wifi Access Points</host>
+                    <host>SNMP Fortigate Wifi Access Points</host>
                     <key>fgWcWtpSessionWtpByteTxCount[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -272,7 +272,7 @@
                   <sortorder>1</sortorder>
                   <color>199C0D</color>
                   <item>
-                    <host>Template SNMP Fortigate Wifi Access Points</host>
+                    <host>SNMP Fortigate Wifi Access Points</host>
                     <key>fgWcWtpSessionWtpStationCount[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

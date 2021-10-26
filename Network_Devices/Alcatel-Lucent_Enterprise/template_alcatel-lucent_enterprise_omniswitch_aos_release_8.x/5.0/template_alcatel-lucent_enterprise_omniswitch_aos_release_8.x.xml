@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:07Z</date>
+  <date>2021-10-26T04:41:01Z</date>
   <groups>
     <group>
       <name>Templates/Switches</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</template>
-      <name>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</name>
+      <template>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</template>
+      <name>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</name>
       <groups>
         <group>
           <name>Templates/Switches</name>
@@ -203,7 +203,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00AA00</color>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>inoctets.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -212,7 +212,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>3333FF</color>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>outoctets.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -321,7 +321,7 @@
                   <color>00AA00</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>freespace.slot.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -336,7 +336,7 @@
                   <color>1A7C11</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>temperature.slot.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -518,7 +518,7 @@
                   <color>1A7C11</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>cpu1minavg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -527,7 +527,7 @@
                   <color>00CCCC</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>cpu1hravg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -536,7 +536,7 @@
                   <color>00CC00</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>cpu1dayavg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -551,7 +551,7 @@
                   <color>1A7C11</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>memory1minavg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -560,7 +560,7 @@
                   <color>00CCCC</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>memory1hravg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -569,7 +569,7 @@
                   <color>00CC00</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>memory1dayavg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -584,7 +584,7 @@
                   <color>1A7C11</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>rxtx1minavg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -593,7 +593,7 @@
                   <color>00CCCC</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>rxtx1hravg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -602,7 +602,7 @@
                   <color>00CC00</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
+                    <host>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</host>
                     <key>rxtx1dayavg.slot.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

@@ -1,4 +1,4 @@
-# Template SNMP Disks
+# SNMP Disks
 
 ## Overview
 
@@ -37,5 +37,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Free disk space is less than 20% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP Disks:hrStorageUsed[{#SNMPVALUE}].last(0)} / {Template SNMP Disks:hrStorageSize[{#SNMPVALUE}].last(0)} > 0.8</p><p>**Recovery expression**: </p>|warning|
-|Free disk space is less than 20% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Disks:hrStorageUsed[{#SNMPVALUE}].last(0)} / {Template SNMP Disks:hrStorageSize[{#SNMPVALUE}].last(0)} > 0.8</p><p>**Recovery expression**: </p>|warning|
+|Free disk space is less than 20% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP Disks:hrStorageUsed[{#SNMPVALUE}].last(0)} / {SNMP Disks:hrStorageSize[{#SNMPVALUE}].last(0)} > 0.8</p><p>**Recovery expression**: </p>|warning|
+|Free disk space is less than 20% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP Disks:hrStorageUsed[{#SNMPVALUE}].last(0)} / {SNMP Disks:hrStorageSize[{#SNMPVALUE}].last(0)} > 0.8</p><p>**Recovery expression**: </p>|warning|

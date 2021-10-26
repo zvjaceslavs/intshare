@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:06Z</date>
+  <date>2021-10-26T04:37:43Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP D-Link DGS-3200</template>
-      <name>Template SNMP D-Link DGS-3200</name>
+      <template>SNMP D-Link DGS-3200</template>
+      <name>SNMP D-Link DGS-3200</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -2950,7 +2950,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -2958,7 +2958,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInErrors.1</key>
           </item>
         </graph_item>
@@ -2971,7 +2971,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -2979,7 +2979,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.2</key>
           </item>
         </graph_item>
@@ -2992,7 +2992,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -3000,7 +3000,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.3</key>
           </item>
         </graph_item>
@@ -3013,7 +3013,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -3021,7 +3021,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.4</key>
           </item>
         </graph_item>
@@ -3034,7 +3034,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -3042,7 +3042,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.5</key>
           </item>
         </graph_item>
@@ -3055,7 +3055,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -3063,7 +3063,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.6</key>
           </item>
         </graph_item>
@@ -3076,7 +3076,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.7</key>
           </item>
         </graph_item>
@@ -3084,7 +3084,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.7</key>
           </item>
         </graph_item>
@@ -3097,7 +3097,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.8</key>
           </item>
         </graph_item>
@@ -3105,7 +3105,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.8</key>
           </item>
         </graph_item>
@@ -3118,7 +3118,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.9</key>
           </item>
         </graph_item>
@@ -3126,7 +3126,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.9</key>
           </item>
         </graph_item>
@@ -3139,7 +3139,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.10</key>
           </item>
         </graph_item>
@@ -3147,7 +3147,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.10</key>
           </item>
         </graph_item>
@@ -3160,7 +3160,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.11</key>
           </item>
         </graph_item>
@@ -3168,7 +3168,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.11</key>
           </item>
         </graph_item>
@@ -3181,7 +3181,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.12</key>
           </item>
         </graph_item>
@@ -3189,7 +3189,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.12</key>
           </item>
         </graph_item>
@@ -3202,7 +3202,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.13</key>
           </item>
         </graph_item>
@@ -3210,7 +3210,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.13</key>
           </item>
         </graph_item>
@@ -3223,7 +3223,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.14</key>
           </item>
         </graph_item>
@@ -3231,7 +3231,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.14</key>
           </item>
         </graph_item>
@@ -3244,7 +3244,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.15</key>
           </item>
         </graph_item>
@@ -3252,7 +3252,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.15</key>
           </item>
         </graph_item>
@@ -3265,7 +3265,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.16</key>
           </item>
         </graph_item>
@@ -3273,7 +3273,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.16</key>
           </item>
         </graph_item>
@@ -3286,7 +3286,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.17</key>
           </item>
         </graph_item>
@@ -3294,7 +3294,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.17</key>
           </item>
         </graph_item>
@@ -3307,7 +3307,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.18</key>
           </item>
         </graph_item>
@@ -3315,7 +3315,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.18</key>
           </item>
         </graph_item>
@@ -3328,7 +3328,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.19</key>
           </item>
         </graph_item>
@@ -3336,7 +3336,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.19</key>
           </item>
         </graph_item>
@@ -3349,7 +3349,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.20</key>
           </item>
         </graph_item>
@@ -3357,7 +3357,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.20</key>
           </item>
         </graph_item>
@@ -3370,7 +3370,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.21</key>
           </item>
         </graph_item>
@@ -3378,7 +3378,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.21</key>
           </item>
         </graph_item>
@@ -3391,7 +3391,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.22</key>
           </item>
         </graph_item>
@@ -3399,7 +3399,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.22</key>
           </item>
         </graph_item>
@@ -3412,7 +3412,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.23</key>
           </item>
         </graph_item>
@@ -3420,7 +3420,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.23</key>
           </item>
         </graph_item>
@@ -3433,7 +3433,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.24</key>
           </item>
         </graph_item>
@@ -3441,7 +3441,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.24</key>
           </item>
         </graph_item>
@@ -3454,7 +3454,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.25</key>
           </item>
         </graph_item>
@@ -3462,7 +3462,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.25</key>
           </item>
         </graph_item>
@@ -3475,7 +3475,7 @@
         <graph_item>
           <color>000099</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifOutOctets.26</key>
           </item>
         </graph_item>
@@ -3483,7 +3483,7 @@
           <sortorder>1</sortorder>
           <color>990000</color>
           <item>
-            <host>Template SNMP D-Link DGS-3200</host>
+            <host>SNMP D-Link DGS-3200</host>
             <key>ifInOctets.26</key>
           </item>
         </graph_item>

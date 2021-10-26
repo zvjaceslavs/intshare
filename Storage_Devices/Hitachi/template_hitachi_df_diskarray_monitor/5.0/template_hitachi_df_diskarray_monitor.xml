@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:42Z</date>
+  <date>2021-10-26T04:46:13Z</date>
   <groups>
     <group>
       <name>Templates/DiskArray</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Hitachi_DF_DiskArray_monitor_template</template>
-      <name>Hitachi DF DiskArray Monitor Template</name>
+      <template>Hitachi_DF_DiskArray_monitor</template>
+      <name>Hitachi DF DiskArray Monitor</name>
       <description>Hitachi_DF_DiskArray_monitor_template Known Issues: device : AMS 2100，AMS 2300，HUS130，HUS150</description>
       <groups>
         <group>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:17Z</date>
+  <date>2021-10-26T04:42:20Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -120,8 +120,8 @@
       </macros>
     </template>
     <template>
-      <template>Template UPS - diogont</template>
-      <name>Template UPS - diogont</name>
+      <template>UPS - diogont</template>
+      <name>UPS - diogont</name>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>
@@ -492,7 +492,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsBasicBatteryStatus</key>
           </item>
         </graph_item>
@@ -506,7 +506,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputCurrent</key>
           </item>
         </graph_item>
@@ -515,7 +515,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputCurrent</key>
           </item>
         </graph_item>
@@ -529,7 +529,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF4000</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputFrequency</key>
           </item>
         </graph_item>
@@ -544,7 +544,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputLoad</key>
           </item>
         </graph_item>
@@ -558,7 +558,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputPower</key>
           </item>
         </graph_item>
@@ -567,7 +567,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputPower</key>
           </item>
         </graph_item>
@@ -581,7 +581,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvBatteryTemperature</key>
           </item>
         </graph_item>
@@ -594,7 +594,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvInputVoltage</key>
           </item>
         </graph_item>
@@ -603,7 +603,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS - diogont</host>
+            <host>UPS - diogont</host>
             <key>upsAdvOutputVoltage</key>
           </item>
         </graph_item>

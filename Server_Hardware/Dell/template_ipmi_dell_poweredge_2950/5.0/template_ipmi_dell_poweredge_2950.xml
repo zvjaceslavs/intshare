@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:30Z</date>
+  <date>2021-10-26T04:39:15Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Dell PowerEdge 2950</template>
-      <name>Template IPMI Dell PowerEdge 2950</name>
+      <template>IPMI Dell PowerEdge 2950</template>
+      <name>IPMI Dell PowerEdge 2950</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -224,7 +224,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template IPMI Dell PowerEdge 2950</host>
+            <host>IPMI Dell PowerEdge 2950</host>
             <key>ipmi.fan.1.rpm</key>
           </item>
         </graph_item>
@@ -232,7 +232,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template IPMI Dell PowerEdge 2950</host>
+            <host>IPMI Dell PowerEdge 2950</host>
             <key>ipmi.fan.2.rpm</key>
           </item>
         </graph_item>
@@ -241,7 +241,7 @@
           <color>0000C8</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template IPMI Dell PowerEdge 2950</host>
+            <host>IPMI Dell PowerEdge 2950</host>
             <key>ipmi.ambient.temp</key>
           </item>
         </graph_item>

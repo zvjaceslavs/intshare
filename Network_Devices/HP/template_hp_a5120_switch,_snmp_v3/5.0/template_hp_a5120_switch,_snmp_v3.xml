@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:06Z</date>
+  <date>2021-10-26T04:39:56Z</date>
   <groups>
     <group>
       <name>Template Switches</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template HP A5120</template>
-      <name>Template HP A5120</name>
+      <template>HP A5120</template>
+      <name>HP A5120</name>
       <groups>
         <group>
           <name>Template Switches</name>
@@ -296,7 +296,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template HP A5120</host>
+            <host>HP A5120</host>
             <key>switch.cpu</key>
           </item>
         </graph_item>
@@ -308,7 +308,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template HP A5120</host>
+            <host>HP A5120</host>
             <key>switch.memory</key>
           </item>
         </graph_item>

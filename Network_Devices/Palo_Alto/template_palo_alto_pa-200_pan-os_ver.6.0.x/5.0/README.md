@@ -1,4 +1,4 @@
-# Template_Palo_Alto_PA200
+# Palo_Alto_PA200
 
 ## Overview
 
@@ -74,19 +74,19 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|System Temperature|<p>-</p>|`SNMP agent`|entPhySensorValue.3<p>Update: 60</p>|
-|Core Temperature|<p>-</p>|`SNMP agent`|entPhySensorValue.4<p>Update: 60</p>|
 |CPU utilization on management plane|<p>CPU load average over last 60 seconds. This value will match the value shown on the GUI dashboard-> resource information-> % CPU in PAN-OS 3.x</p>|`SNMP agent`|hrProcessorLoad1<p>Update: 300</p>|
-|Utilization of CPUs on dataplane that are used for system functions|<p>CPU load average over last 60 seconds</p>|`SNMP agent`|hrProcessorLoad2<p>Update: 60</p>|
-|System uptime|<p>-</p>|`SNMP agent`|hrSystemUptime.0<p>Update: 900</p>|
-|Chassis Type|<p>-</p>|`SNMP agent`|panChassisType<p>Update: 86400</p>|
-|Total Active Sessions|<p>-</p>|`SNMP agent`|panSessionActive.0<p>Update: 60</p>|
-|Active TCP Sessions|<p>-</p>|`SNMP agent`|panSessionActiveTcp.0<p>Update: 60</p>|
-|Active UDP Sessions|<p>-</p>|`SNMP agent`|panSessionActiveUdp.0<p>Update: 60</p>|
-|Session Utilization|<p>PAN-COMMON-MIB::panSessionUtilization Session table utilization percentage.</p>|`SNMP agent`|panSessionUtilization<p>Update: 300</p>|
-|Hardware Version|<p>-</p>|`SNMP agent`|panSysHwVersion<p>Update: 3600</p>|
 |PAN-OS Version|<p>-</p>|`SNMP agent`|panSysSwVersion<p>Update: 3600</p>|
+|Hardware Version|<p>-</p>|`SNMP agent`|panSysHwVersion<p>Update: 3600</p>|
+|Session Utilization|<p>PAN-COMMON-MIB::panSessionUtilization Session table utilization percentage.</p>|`SNMP agent`|panSessionUtilization<p>Update: 300</p>|
+|Utilization of CPUs on dataplane that are used for system functions|<p>CPU load average over last 60 seconds</p>|`SNMP agent`|hrProcessorLoad2<p>Update: 60</p>|
+|Core Temperature|<p>-</p>|`SNMP agent`|entPhySensorValue.4<p>Update: 60</p>|
+|Total Active Sessions|<p>-</p>|`SNMP agent`|panSessionActive.0<p>Update: 60</p>|
+|Active UDP Sessions|<p>-</p>|`SNMP agent`|panSessionActiveUdp.0<p>Update: 60</p>|
+|System Temperature|<p>-</p>|`SNMP agent`|entPhySensorValue.3<p>Update: 60</p>|
+|Chassis Type|<p>-</p>|`SNMP agent`|panChassisType<p>Update: 86400</p>|
+|System uptime|<p>-</p>|`SNMP agent`|hrSystemUptime.0<p>Update: 900</p>|
 |System Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
+|Active TCP Sessions|<p>-</p>|`SNMP agent`|panSessionActiveTcp.0<p>Update: 60</p>|
 |{#SNMPVALUE} Size|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
 |{#SNMPVALUE} Used|<p>-</p>|`SNMP agent`|hrStorageUsed[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
 |Total broadcast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
@@ -119,13 +119,13 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|FAN #{#SNMPINDEX} is nonoperational|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:entPhySensorOperStatus[{#SNMPVALUE},FAN].last()}=3</p><p>**Recovery expression**: </p>|high|
-|FAN #{#SNMPINDEX} is unavailable|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:entPhySensorOperStatus[{#SNMPVALUE},FAN].last()}=2</p><p>**Recovery expression**: </p>|average|
-|#{#SNMPVALUE} usage is high [{ITEM.LASTVALUE1}]|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:hrStorageUsed[{#SNMPINDEX}].avg(5m)}>{Template_Palo_Alto_PA200:hrStorageSize[{#SNMPINDEX}].last()}*0.9</p><p>**Recovery expression**: </p>|average|
-|Interface {#SNMPVALUE} status on {HOSTNAME} is down|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:ifOperStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|information|
-|Operational status was changed on {HOSTNAME} interface {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:ifOperStatus[{#SNMPVALUE}].diff(0)}=1</p><p>**Recovery expression**: </p>|average|
-|#{#SNMPVALUE} usage is high [{ITEM.LASTVALUE1}] (LLD)|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:hrStorageUsed[{#SNMPINDEX}].avg(5m)}>{Template_Palo_Alto_PA200:hrStorageSize[{#SNMPINDEX}].last()}*0.9</p><p>**Recovery expression**: </p>|average|
-|FAN #{#SNMPINDEX} is nonoperational (LLD)|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:entPhySensorOperStatus[{#SNMPVALUE},FAN].last()}=3</p><p>**Recovery expression**: </p>|high|
-|FAN #{#SNMPINDEX} is unavailable (LLD)|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:entPhySensorOperStatus[{#SNMPVALUE},FAN].last()}=2</p><p>**Recovery expression**: </p>|average|
-|Interface {#SNMPVALUE} status on {HOSTNAME} is down (LLD)|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:ifOperStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|information|
-|Operational status was changed on {HOSTNAME} interface {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template_Palo_Alto_PA200:ifOperStatus[{#SNMPVALUE}].diff(0)}=1</p><p>**Recovery expression**: </p>|average|
+|FAN #{#SNMPINDEX} is nonoperational|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:entPhySensorOperStatus[{#SNMPVALUE},FAN].last()}=3</p><p>**Recovery expression**: </p>|high|
+|FAN #{#SNMPINDEX} is unavailable|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:entPhySensorOperStatus[{#SNMPVALUE},FAN].last()}=2</p><p>**Recovery expression**: </p>|average|
+|#{#SNMPVALUE} usage is high [{ITEM.LASTVALUE1}]|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:hrStorageUsed[{#SNMPINDEX}].avg(5m)}>{Palo_Alto_PA200:hrStorageSize[{#SNMPINDEX}].last()}*0.9</p><p>**Recovery expression**: </p>|average|
+|Interface {#SNMPVALUE} status on {HOSTNAME} is down|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:ifOperStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|information|
+|Operational status was changed on {HOSTNAME} interface {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:ifOperStatus[{#SNMPVALUE}].diff(0)}=1</p><p>**Recovery expression**: </p>|average|
+|#{#SNMPVALUE} usage is high [{ITEM.LASTVALUE1}] (LLD)|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:hrStorageUsed[{#SNMPINDEX}].avg(5m)}>{Palo_Alto_PA200:hrStorageSize[{#SNMPINDEX}].last()}*0.9</p><p>**Recovery expression**: </p>|average|
+|FAN #{#SNMPINDEX} is nonoperational (LLD)|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:entPhySensorOperStatus[{#SNMPVALUE},FAN].last()}=3</p><p>**Recovery expression**: </p>|high|
+|FAN #{#SNMPINDEX} is unavailable (LLD)|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:entPhySensorOperStatus[{#SNMPVALUE},FAN].last()}=2</p><p>**Recovery expression**: </p>|average|
+|Interface {#SNMPVALUE} status on {HOSTNAME} is down (LLD)|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:ifOperStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|information|
+|Operational status was changed on {HOSTNAME} interface {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Palo_Alto_PA200:ifOperStatus[{#SNMPVALUE}].diff(0)}=1</p><p>**Recovery expression**: </p>|average|

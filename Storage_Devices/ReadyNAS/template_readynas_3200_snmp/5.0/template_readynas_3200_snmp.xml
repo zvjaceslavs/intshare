@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:47Z</date>
+  <date>2021-10-26T04:39:35Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP ReadyNas 3200</template>
-      <name>Template SNMP ReadyNas 3200</name>
+      <template>SNMP ReadyNas 3200</template>
+      <name>SNMP ReadyNas 3200</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -242,7 +242,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP ReadyNas 3200</host>
+                    <host>SNMP ReadyNas 3200</host>
                     <key>DiskTemperature[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -332,7 +332,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template SNMP ReadyNas 3200:volumeFreeSpace[{#SNMPVALUE}].last()} / {Template SNMP ReadyNas 3200:volumeSize[{#SNMPVALUE}].last()} * 100) &lt; 10</expression>
+              <expression>({SNMP ReadyNas 3200:volumeFreeSpace[{#SNMPVALUE}].last()} / {SNMP ReadyNas 3200:volumeSize[{#SNMPVALUE}].last()} * 100) &lt; 10</expression>
               <name>Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME}</name>
               <priority>HIGH</priority>
             </trigger_prototype>
@@ -342,7 +342,7 @@
               <name>Volumen Size {#SNMPVALUE}</name>
               <ymax_type_1>ITEM</ymax_type_1>
               <ymax_item_1>
-                <host>Template SNMP ReadyNas 3200</host>
+                <host>SNMP ReadyNas 3200</host>
                 <key>volumeSize[{#SNMPVALUE}]</key>
               </ymax_item_1>
               <graph_items>
@@ -350,7 +350,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>EE0000</color>
                   <item>
-                    <host>Template SNMP ReadyNas 3200</host>
+                    <host>SNMP ReadyNas 3200</host>
                     <key>volumeFreeSpace[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -359,7 +359,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00DD00</color>
                   <item>
-                    <host>Template SNMP ReadyNas 3200</host>
+                    <host>SNMP ReadyNas 3200</host>
                     <key>volumeSize[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -372,7 +372,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>({Template SNMP ReadyNas 3200:sys1_fan_RPM.last()}&lt;2000) or ({Template SNMP ReadyNas 3200:sys2_fan_RPM.last()}&lt;2000) or ({Template SNMP ReadyNas 3200:sys3_fan_RPM.last()}&lt;2000) or ({Template SNMP ReadyNas 3200:cpu_fan_RPM.last()}&lt;2000)</expression>
+      <expression>({SNMP ReadyNas 3200:sys1_fan_RPM.last()}&lt;2000) or ({SNMP ReadyNas 3200:sys2_fan_RPM.last()}&lt;2000) or ({SNMP ReadyNas 3200:sys3_fan_RPM.last()}&lt;2000) or ({SNMP ReadyNas 3200:cpu_fan_RPM.last()}&lt;2000)</expression>
       <name>Fan is too slow on {HOST.NAME}</name>
       <priority>DISASTER</priority>
     </trigger>
@@ -385,7 +385,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00DD00</color>
           <item>
-            <host>Template SNMP ReadyNas 3200</host>
+            <host>SNMP ReadyNas 3200</host>
             <key>sys2_fan_RPM</key>
           </item>
         </graph_item>
@@ -398,7 +398,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00CC00</color>
           <item>
-            <host>Template SNMP ReadyNas 3200</host>
+            <host>SNMP ReadyNas 3200</host>
             <key>cputemp</key>
           </item>
         </graph_item>

@@ -1,4 +1,4 @@
-# Template Windows ICMP Macro Discovery Active
+# Windows ICMP Macro Discovery Active
 
 ## Overview
 
@@ -40,5 +40,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Недоступен узел {#ARPADDRESS} во внутренней сети|<p>-</p>|<p>**Expression**: {Template Windows ICMP Macro Discovery Active:system.run["ping -n 4 {#ICMPDEVICEIP} | find /v /c " ""].last()}=0</p><p>**Recovery expression**: </p>|information|
-|Недоступен узел {#ARPADDRESS} во внутренней сети (LLD)|<p>-</p>|<p>**Expression**: {Template Windows ICMP Macro Discovery Active:system.run["ping -n 4 {#ICMPDEVICEIP} | find /v /c " ""].last()}=0</p><p>**Recovery expression**: </p>|information|
+|Недоступен узел {#ARPADDRESS} во внутренней сети|<p>-</p>|<p>**Expression**: {Windows ICMP Macro Discovery Active:system.run["ping -n 4 {#ICMPDEVICEIP} | find /v /c " ""].last()}=0</p><p>**Recovery expression**: </p>|information|
+|Недоступен узел {#ARPADDRESS} во внутренней сети (LLD)|<p>-</p>|<p>**Expression**: {Windows ICMP Macro Discovery Active:system.run["ping -n 4 {#ICMPDEVICEIP} | find /v /c " ""].last()}=0</p><p>**Recovery expression**: </p>|information|

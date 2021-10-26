@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:20Z</date>
+  <date>2021-10-26T04:42:23Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Exchange 2016</template>
-      <name>Template Exchange 2016</name>
+      <template>Exchange 2016</template>
+      <name>Exchange 2016</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -1079,7 +1079,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Database (Information Store) Cache Size Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -1101,7 +1101,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Database (Information Store) Errors Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -1130,7 +1130,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Database Instances Counters Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>900</width>
               <height>150</height>
@@ -1152,7 +1152,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Database I/O Latency Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1181,7 +1181,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Processes Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1203,7 +1203,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Replication Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -1225,7 +1225,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Search Indices Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -1254,7 +1254,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange RPC Latency</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>900</width>
               <height>150</height>
@@ -1276,7 +1276,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange LDAP</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -1298,7 +1298,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Information Store Client JET Database Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>500</width>
               <height>150</height>
@@ -1327,7 +1327,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Information Store Mailbox Rates Performance Counters</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1356,7 +1356,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange RPC Operations</name>
-                <host>Template Exchange 2016</host>
+                <host>Exchange 2016</host>
               </resource>
               <width>900</width>
               <height>150</height>
@@ -1386,7 +1386,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange MapiHttp Emsmdb\Active User Count"]</key>
           </item>
         </graph_item>
@@ -1395,7 +1395,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange OWA\Current Users"]</key>
           </item>
         </graph_item>
@@ -1404,7 +1404,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>FF33FF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange ActiveSync\Current Requests"]</key>
           </item>
         </graph_item>
@@ -1413,7 +1413,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>6666FF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange RpcClientAccess\Active User Count"]</key>
           </item>
         </graph_item>
@@ -1421,7 +1421,7 @@
           <sortorder>4</sortorder>
           <color>33FF33</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\RPC/HTTP Proxy\Current Number of Unique Users"]</key>
           </item>
         </graph_item>
@@ -1429,7 +1429,7 @@
           <sortorder>5</sortorder>
           <color>00DDDD</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange RpcClientAccess\Connection Count"]</key>
           </item>
         </graph_item>
@@ -1441,7 +1441,7 @@
         <graph_item>
           <color>66FFFF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange ADAccess Domain Controllers(*)\LDAP Read Calls/sec"]</key>
           </item>
         </graph_item>
@@ -1450,7 +1450,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>005555</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange ADAccess Domain Controllers(*)\LDAP Read Time"]</key>
           </item>
         </graph_item>
@@ -1458,7 +1458,7 @@
           <sortorder>2</sortorder>
           <color>9999FF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange ADAccess Domain Controllers(*)\LDAP Search Time"]</key>
           </item>
         </graph_item>
@@ -1466,7 +1466,7 @@
           <sortorder>3</sortorder>
           <color>33FF33</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange ADAccess Processes(*)\LDAP Read Time"]</key>
           </item>
         </graph_item>
@@ -1475,7 +1475,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>005500</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange ADAccess Processes(*)\LDAP Search Time"]</key>
           </item>
         </graph_item>
@@ -1483,7 +1483,7 @@
           <sortorder>5</sortorder>
           <color>DD0000</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Client Type(*)\Directory Access: LDAP Searches/sec"]</key>
           </item>
         </graph_item>
@@ -1496,7 +1496,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\Process(MSExchangeMailboxAssistants)\% Processor Time"]</key>
           </item>
         </graph_item>
@@ -1508,7 +1508,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(Information Store)\Database Cache Size (MB)"]</key>
           </item>
         </graph_item>
@@ -1518,7 +1518,7 @@
           <color>33FF33</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(Information Store)\Database Cache % Hit"]</key>
           </item>
         </graph_item>
@@ -1530,7 +1530,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(Information Store)\Database Page Fault Stalls/sec"]</key>
           </item>
         </graph_item>
@@ -1542,7 +1542,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(*)\I/O Database Reads (Attached) Average Latency"]</key>
           </item>
         </graph_item>
@@ -1550,7 +1550,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(*)\I/O Database Reads (Recovery) Average Latency"]</key>
           </item>
         </graph_item>
@@ -1558,7 +1558,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(*)\I/O Database Writes (Attached) Average Latency"]</key>
           </item>
         </graph_item>
@@ -1566,7 +1566,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(*)\I/O Database Writes (Recovery) Average Latency"]</key>
           </item>
         </graph_item>
@@ -1574,7 +1574,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(*)\I/O Log Reads Average Latency"]</key>
           </item>
         </graph_item>
@@ -1582,7 +1582,7 @@
           <sortorder>5</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database(*)\I/O Log Writes Average Latency"]</key>
           </item>
         </graph_item>
@@ -1595,7 +1595,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Database ==> Instances(*)\Log Generation Checkpoint Depth"]</key>
           </item>
         </graph_item>
@@ -1607,7 +1607,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Client Type(*)\Jet Log Records/sec"]</key>
           </item>
         </graph_item>
@@ -1615,7 +1615,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Client Type(*)\Jet Pages Read/sec"]</key>
           </item>
         </graph_item>
@@ -1627,7 +1627,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Store(*)\Search/sec"]</key>
           </item>
         </graph_item>
@@ -1640,7 +1640,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\Process(MSExchangeMailboxAssistants)\% Processor Time"]</key>
           </item>
         </graph_item>
@@ -1653,7 +1653,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Replication(*)\CopyQueueLength"]</key>
           </item>
         </graph_item>
@@ -1661,7 +1661,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Replication(*)\ReplayQueueLength"]</key>
           </item>
         </graph_item>
@@ -1673,7 +1673,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Search Indexes(*)\Items Processed/sec"]</key>
           </item>
         </graph_item>
@@ -1681,7 +1681,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange RpcClientAccess\RPC Averaged Latency"]</key>
           </item>
         </graph_item>
@@ -1689,7 +1689,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Search Indexes(*)\Crawler: Mailboxes Remaining"]</key>
           </item>
         </graph_item>
@@ -1701,7 +1701,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Client Type(*)\RPC Average Latency"]</key>
           </item>
         </graph_item>
@@ -1709,7 +1709,7 @@
           <sortorder>1</sortorder>
           <color>00AA00</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Store(*)\RPC Average Latency"]</key>
           </item>
         </graph_item>
@@ -1717,7 +1717,7 @@
           <sortorder>2</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Store Interface(*)\RPC Requests Outstanding"]</key>
           </item>
         </graph_item>
@@ -1725,7 +1725,7 @@
           <sortorder>3</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Store Interface(*)\RPC Slow Requests latency average (msec)"]</key>
           </item>
         </graph_item>
@@ -1733,7 +1733,7 @@
           <sortorder>4</sortorder>
           <color>3333FF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange Store Interface(_Total)\RPC Requests outstanding"]</key>
           </item>
         </graph_item>
@@ -1741,7 +1741,7 @@
           <sortorder>5</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange RpcClientAccess\RPC Averaged Latency"]</key>
           </item>
         </graph_item>
@@ -1753,7 +1753,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Client Type(*)\RPC Requests"]</key>
           </item>
         </graph_item>
@@ -1761,7 +1761,7 @@
           <sortorder>1</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Client Type(*)\RPC Operations/sec"]</key>
           </item>
         </graph_item>
@@ -1769,7 +1769,7 @@
           <sortorder>2</sortorder>
           <color>00CC00</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeIS Store(*)\RPC Operations/sec"]</key>
           </item>
         </graph_item>
@@ -1777,7 +1777,7 @@
           <sortorder>3</sortorder>
           <color>CC00CC</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchange RpcClientAccess\RPC Requests"]</key>
           </item>
         </graph_item>
@@ -1790,7 +1790,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF33FF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport SmtpReceive(_total)\Messages Received/sec"]</key>
           </item>
         </graph_item>
@@ -1799,7 +1799,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>33FFFF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport SmtpSend(_total)\Messages Sent/sec"]</key>
           </item>
         </graph_item>
@@ -1811,7 +1811,7 @@
         <graph_item>
           <color>FFFF33</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport Queues(_total)\Submission Queue Length"]</key>
           </item>
         </graph_item>
@@ -1819,7 +1819,7 @@
           <sortorder>1</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport Queues(_total)\Active Mailbox Delivery Queue Length"]</key>
           </item>
         </graph_item>
@@ -1827,7 +1827,7 @@
           <sortorder>2</sortorder>
           <color>3333FF</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport Queues(_total)\External Active Remote Delivery Queue Length"]</key>
           </item>
         </graph_item>
@@ -1835,7 +1835,7 @@
           <sortorder>3</sortorder>
           <color>EE0000</color>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport Queues(_total)\Messages Queued For Delivery"]</key>
           </item>
         </graph_item>
@@ -1844,7 +1844,7 @@
           <color>CC00CC</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport Queues(_total)\Messages Submitted Per Second"]</key>
           </item>
         </graph_item>
@@ -1854,7 +1854,7 @@
           <color>999999</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport Queues(_total)\Messages Queued for Delivery Per Second"]</key>
           </item>
         </graph_item>
@@ -1863,7 +1863,7 @@
           <color>00DDDD</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template Exchange 2016</host>
+            <host>Exchange 2016</host>
             <key>perf_counter["\MSExchangeTransport Queues(_total)\Messages Completed Delivery Per Second"]</key>
           </item>
         </graph_item>

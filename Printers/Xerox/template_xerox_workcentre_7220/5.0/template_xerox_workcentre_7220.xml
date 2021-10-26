@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:37Z</date>
+  <date>2021-10-26T04:41:36Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer Xerox WorkCentre 7220</template>
-      <name>Template Printer Xerox WorkCentre 7220</name>
+      <template>Printer Xerox WorkCentre 7220</template>
+      <name>Printer Xerox WorkCentre 7220</name>
       <groups>
         <group>
           <name>Printers</name>
@@ -653,7 +653,7 @@
               <style>0</style>
               <resource>
                 <key>black.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7220</host>
+                <host>Printer Xerox WorkCentre 7220</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -675,7 +675,7 @@
               <style>0</style>
               <resource>
                 <key>cyan.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7220</host>
+                <host>Printer Xerox WorkCentre 7220</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -697,7 +697,7 @@
               <style>0</style>
               <resource>
                 <key>magenta.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7220</host>
+                <host>Printer Xerox WorkCentre 7220</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -719,7 +719,7 @@
               <style>0</style>
               <resource>
                 <key>yellow.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7220</host>
+                <host>Printer Xerox WorkCentre 7220</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -741,7 +741,7 @@
               <style>0</style>
               <resource>
                 <name>Black toner level</name>
-                <host>Template Printer Xerox WorkCentre 7220</host>
+                <host>Printer Xerox WorkCentre 7220</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -763,7 +763,7 @@
               <style>0</style>
               <resource>
                 <name>Cyan toner level</name>
-                <host>Template Printer Xerox WorkCentre 7220</host>
+                <host>Printer Xerox WorkCentre 7220</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -785,7 +785,7 @@
               <style>0</style>
               <resource>
                 <name>Magenta toner level</name>
-                <host>Template Printer Xerox WorkCentre 7220</host>
+                <host>Printer Xerox WorkCentre 7220</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -807,7 +807,7 @@
               <style>0</style>
               <resource>
                 <name>Yellow toner level</name>
-                <host>Template Printer Xerox WorkCentre 7220</host>
+                <host>Printer Xerox WorkCentre 7220</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -831,130 +831,130 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:black.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7220:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7220:cyan.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - cyan</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:magenta.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:magenta.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7220:magenta.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - magenta</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:yellow.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:yellow.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7220:yellow.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - yellow</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:drum.black.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:drum.black.now.last(0)}=0 and {Printer Xerox WorkCentre 7220:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Empty drum toner - black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:drum.cyan.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:cyan.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:drum.cyan.now.last(0)}=0 and {Printer Xerox WorkCentre 7220:cyan.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Empty drum toner - cyan</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:drum.magenta.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:magenta.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:drum.magenta.now.last(0)}=0 and {Printer Xerox WorkCentre 7220:magenta.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Empty drum toner - magenta</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:drum.yellow.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:yellow.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:drum.yellow.now.last(0)}=0 and {Printer Xerox WorkCentre 7220:yellow.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Empty drum toner - yellow</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:black.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7220:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:black.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7220:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - black</name>
-          <expression>{Template Printer Xerox WorkCentre 7220:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7220:black.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7220:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:cyan.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7220:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:cyan.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7220:cyan.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - cyan</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - cyan</name>
-          <expression>{Template Printer Xerox WorkCentre 7220:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7220:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7220:cyan.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:magenta.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7220:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:magenta.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7220:magenta.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - magenta</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - magenta</name>
-          <expression>{Template Printer Xerox WorkCentre 7220:magenta.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7220:magenta.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7220:magenta.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:yellow.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7220:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:yellow.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7220:yellow.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - yellow</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - yellow</name>
-          <expression>{Template Printer Xerox WorkCentre 7220:yellow.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7220:yellow.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7220:yellow.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:drum.black.now.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7220:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:drum.black.now.last(0)}&lt;20 and {Printer Xerox WorkCentre 7220:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Low drum toner - black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty drum toner - black</name>
-          <expression>{Template Printer Xerox WorkCentre 7220:drum.black.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7220:drum.black.now.last(0)}=0 and {Printer Xerox WorkCentre 7220:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:drum.cyan.now.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7220:cyan.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:drum.cyan.now.last(0)}&lt;20 and {Printer Xerox WorkCentre 7220:cyan.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Low drum toner - cyan</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty drum toner - cyan</name>
-          <expression>{Template Printer Xerox WorkCentre 7220:drum.cyan.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:cyan.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7220:drum.cyan.now.last(0)}=0 and {Printer Xerox WorkCentre 7220:cyan.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:drum.magenta.now.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7220:magenta.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:drum.magenta.now.last(0)}&lt;20 and {Printer Xerox WorkCentre 7220:magenta.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Low drum toner - magenta</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty drum toner - magenta</name>
-          <expression>{Template Printer Xerox WorkCentre 7220:drum.magenta.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:magenta.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7220:drum.magenta.now.last(0)}=0 and {Printer Xerox WorkCentre 7220:magenta.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7220:drum.yellow.now.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7220:yellow.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7220:drum.yellow.now.last(0)}&lt;20 and {Printer Xerox WorkCentre 7220:yellow.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
       <name>Low drum toner - yellow</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty drum toner - yellow</name>
-          <expression>{Template Printer Xerox WorkCentre 7220:drum.yellow.now.last(0)}=0 and {Template Printer Xerox WorkCentre 7220:yellow.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7220:drum.yellow.now.last(0)}=0 and {Printer Xerox WorkCentre 7220:yellow.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
@@ -970,7 +970,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 7220</host>
+            <host>Printer Xerox WorkCentre 7220</host>
             <key>black.cartridge.toner</key>
           </item>
         </graph_item>
@@ -986,7 +986,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00DDDD</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 7220</host>
+            <host>Printer Xerox WorkCentre 7220</host>
             <key>cyan.cartridge.toner</key>
           </item>
         </graph_item>
@@ -1002,7 +1002,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>DD00DD</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 7220</host>
+            <host>Printer Xerox WorkCentre 7220</host>
             <key>magenta.cartridge.toner</key>
           </item>
         </graph_item>
@@ -1018,7 +1018,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>DDDD00</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 7220</host>
+            <host>Printer Xerox WorkCentre 7220</host>
             <key>yellow.cartridge.toner</key>
           </item>
         </graph_item>

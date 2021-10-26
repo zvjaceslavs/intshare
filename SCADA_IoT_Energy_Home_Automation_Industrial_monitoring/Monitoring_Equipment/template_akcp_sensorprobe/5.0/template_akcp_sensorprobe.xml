@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:35Z</date>
+  <date>2021-10-26T04:39:21Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template AKCP</template>
-      <name>Template AKCP</name>
+      <template>AKCP</template>
+      <name>AKCP</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -115,7 +115,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>0000FF</color>
                   <item>
-                    <host>Template AKCP</host>
+                    <host>AKCP</host>
                     <key>HumiValue[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -178,7 +178,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template AKCP</host>
+                    <host>AKCP</host>
                     <key>TempValue[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

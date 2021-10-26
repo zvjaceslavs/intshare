@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:00Z</date>
+  <date>2021-10-26T04:45:23Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -11,6 +11,66 @@
     </group>
   </groups>
   <templates>
+    <template>
+      <template>Status</template>
+      <name>Status</name>
+      <description>Monitoria Status do Device -ICMP -SNMP test -Uptime By: Flavio Gomes Figueira Camacho Junior Dependency: Template Module ICMP Ping</description>
+      <templates>
+        <template>
+          <name>Template Module ICMP Ping</name>
+        </template>
+      </templates>
+      <groups>
+        <group>
+          <name>Templates_Created</name>
+        </group>
+      </groups>
+      <items>
+        <item>
+          <name>Device Uptime</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>1.3.6.1.2.1.1.3.0</snmp_oid>
+          <key>system.uptime[sysUpTime]</key>
+          <history>30d</history>
+          <trends>0</trends>
+          <units>uptime</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>MULTIPLIER</type>
+              <params>0.01</params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}&lt;86400</expression>
+              <name>Device Uptime lower then 1 day</name>
+              <priority>INFO</priority>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>SNMP Availability</name>
+          <type>INTERNAL</type>
+          <key>zabbix[host,snmp,available]</key>
+          <delay>30m</delay>
+          <history>7d</history>
+          <trends>0</trends>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>zabbix.host.available</name>
+          </valuemap>
+        </item>
+      </items>
+    </template>
     <template>
       <template>Template Module ICMP Ping</template>
       <name>Template Module ICMP Ping</name>
@@ -118,66 +178,6 @@
           <value>0.15</value>
         </macro>
       </macros>
-    </template>
-    <template>
-      <template>Template Status</template>
-      <name>Template Status</name>
-      <description>Monitoria Status do Device -ICMP -SNMP test -Uptime By: Flavio Gomes Figueira Camacho Junior Dependency: Template Module ICMP Ping</description>
-      <templates>
-        <template>
-          <name>Template Module ICMP Ping</name>
-        </template>
-      </templates>
-      <groups>
-        <group>
-          <name>Templates_Created</name>
-        </group>
-      </groups>
-      <items>
-        <item>
-          <name>Device Uptime</name>
-          <type>SNMP_AGENT</type>
-          <snmp_oid>1.3.6.1.2.1.1.3.0</snmp_oid>
-          <key>system.uptime[sysUpTime]</key>
-          <history>30d</history>
-          <trends>0</trends>
-          <units>uptime</units>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <preprocessing>
-            <step>
-              <type>MULTIPLIER</type>
-              <params>0.01</params>
-            </step>
-          </preprocessing>
-          <triggers>
-            <trigger>
-              <expression>{last()}&lt;86400</expression>
-              <name>Device Uptime lower then 1 day</name>
-              <priority>INFO</priority>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>SNMP Availability</name>
-          <type>INTERNAL</type>
-          <key>zabbix[host,snmp,available]</key>
-          <delay>30m</delay>
-          <history>7d</history>
-          <trends>0</trends>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <valuemap>
-            <name>zabbix.host.available</name>
-          </valuemap>
-        </item>
-      </items>
     </template>
   </templates>
   <value_maps>

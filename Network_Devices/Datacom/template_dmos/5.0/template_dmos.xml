@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:49Z</date>
+  <date>2021-10-26T04:39:38Z</date>
   <groups>
     <group>
       <name>DM - Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>DM Template - DmOS</template>
-      <name>DM Template - DmOS</name>
+      <template>DM DmOS</template>
+      <name>DM DmOS</name>
       <groups>
         <group>
           <name>DM - Templates</name>
@@ -571,25 +571,25 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{DM Template - DmOS:ifHCInOctets.[{#SNMPINDEX}].last(0)}>0.90/{DM Template - DmOS:ifHighSpeed.[{#SNMPINDEX}].last(0)}</expression>
+              <expression>{DM DmOS:ifHCInOctets.[{#SNMPINDEX}].last(0)}>0.90/{DM DmOS:ifHighSpeed.[{#SNMPINDEX}].last(0)}</expression>
               <name>HIGH - Host {HOST.NAME} - Interface ethernet {#SNMPVALUE} In overloaded</name>
               <status>DISABLED</status>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{DM Template - DmOS:ifHCOutOctets.[{#SNMPINDEX}].last(0)}>0.90/{DM Template - DmOS:ifHighSpeed.[{#SNMPINDEX}].last(0)}</expression>
+              <expression>{DM DmOS:ifHCOutOctets.[{#SNMPINDEX}].last(0)}>0.90/{DM DmOS:ifHighSpeed.[{#SNMPINDEX}].last(0)}</expression>
               <name>HIGH - Host {HOST.NAME} - Interface ethernet {#SNMPVALUE} Out overloaded</name>
               <status>DISABLED</status>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{DM Template - DmOS:ifHCInOctets.[{#SNMPINDEX}].last(0)}>0.60/{DM Template - DmOS:ifHighSpeed.[{#SNMPINDEX}].last(0)}</expression>
+              <expression>{DM DmOS:ifHCInOctets.[{#SNMPINDEX}].last(0)}>0.60/{DM DmOS:ifHighSpeed.[{#SNMPINDEX}].last(0)}</expression>
               <name>WARNING - Host {HOST.NAME} - Interface ethernet {#SNMPVALUE} In overloaded</name>
               <status>DISABLED</status>
               <priority>WARNING</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{DM Template - DmOS:ifHCOutOctets.[{#SNMPINDEX}].last(0)}>0.60/{DM Template - DmOS:ifHighSpeed.[{#SNMPINDEX}].last(0)}</expression>
+              <expression>{DM DmOS:ifHCOutOctets.[{#SNMPINDEX}].last(0)}>0.60/{DM DmOS:ifHighSpeed.[{#SNMPINDEX}].last(0)}</expression>
               <name>WARNING - Host {HOST.NAME} - Interface ethernet {#SNMPVALUE} Out overloaded</name>
               <status>DISABLED</status>
               <priority>WARNING</priority>
@@ -603,7 +603,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifInBroadcastPkts.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -611,7 +611,7 @@
                   <sortorder>1</sortorder>
                   <color>C80000</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifInMulticastPkts.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -619,7 +619,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifInUcastPkts.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -627,7 +627,7 @@
                   <sortorder>3</sortorder>
                   <color>C800C8</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifInErrors.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -635,7 +635,7 @@
                   <sortorder>4</sortorder>
                   <color>00C8C8</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifInDiscards.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -647,7 +647,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifInDiscards.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -655,7 +655,7 @@
                   <sortorder>1</sortorder>
                   <color>C80000</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifOutDiscards.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -669,7 +669,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>00EE00</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifHCInOctets.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -678,7 +678,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>0000EE</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>ifHCOutOctets.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1037,7 +1037,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreOneMinuteActive[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1045,7 +1045,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreOneMinuteIdle[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1053,7 +1053,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreOneMinuteInterrupt[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1061,7 +1061,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreOneMinuteNice[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1069,7 +1069,7 @@
                   <sortorder>4</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreOneMinuteSoftirq[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1077,7 +1077,7 @@
                   <sortorder>5</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreOneMinuteSystem[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1085,7 +1085,7 @@
                   <sortorder>6</sortorder>
                   <color>AC8C14</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreOneMinuteUser[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1093,7 +1093,7 @@
                   <sortorder>7</sortorder>
                   <color>611F27</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreOneMinuteWait[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1105,7 +1105,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveMinutesActive[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1113,7 +1113,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveMinutesIdle[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1121,7 +1121,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveMinutesInterrupt[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1129,7 +1129,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveMinutesNIce[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1137,7 +1137,7 @@
                   <sortorder>4</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveMinutesSoftirq[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1145,7 +1145,7 @@
                   <sortorder>5</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveMinutesSystem[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1153,7 +1153,7 @@
                   <sortorder>6</sortorder>
                   <color>AC8C14</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveMinutesUser[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1161,7 +1161,7 @@
                   <sortorder>7</sortorder>
                   <color>611F27</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveMinutesWait[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1173,7 +1173,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveSecondsActive[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1181,7 +1181,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveSecondsIdle[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1189,7 +1189,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveSecondsInterrupt[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1197,7 +1197,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveSecondsNice[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1205,7 +1205,7 @@
                   <sortorder>4</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveSecondsSoftirq[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1213,7 +1213,7 @@
                   <sortorder>5</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveSecondsSystem[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1221,7 +1221,7 @@
                   <sortorder>6</sortorder>
                   <color>AC8C14</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveSecondsUser[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1229,7 +1229,7 @@
                   <sortorder>7</sortorder>
                   <color>611F27</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuCoreFiveSecondsWait[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1336,7 +1336,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuLoadOneMinuteActive[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1344,7 +1344,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuLoadOneMinuteIdle[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1356,7 +1356,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuLoadFiveMinutesActive[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1364,7 +1364,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuLoadFiveMinutesIdle[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1376,7 +1376,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuLoadFiveSecondsActive[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1384,7 +1384,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>cpuLoadFiveSecondsIdle[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1476,7 +1476,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>fanControl[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1488,7 +1488,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>fanSpeed[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1616,7 +1616,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>memoryFiveSecondsAvailable[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1624,7 +1624,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>memoryFiveSecondsBuffered[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1632,7 +1632,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>memoryFiveSecondsCached[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1640,7 +1640,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>memoryFiveSecondsFree[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1648,7 +1648,7 @@
                   <sortorder>4</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>memoryFiveSecondsSlabRecl[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1656,7 +1656,7 @@
                   <sortorder>5</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>memoryFiveSecondsSlabUnrecl[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1664,7 +1664,7 @@
                   <sortorder>6</sortorder>
                   <color>AC8C14</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>memoryFiveSecondsTotal[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1672,7 +1672,7 @@
                   <sortorder>7</sortorder>
                   <color>611F27</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>memoryFiveSecondsUsed[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1807,7 +1807,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>temperatureSensorCurrentTemperature[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1815,7 +1815,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>temperatureSensorMaxTemperature[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1823,7 +1823,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>DM Template - DmOS</host>
+                    <host>DM DmOS</host>
                     <key>temperatureSensorMinTemperature[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1849,7 +1849,7 @@
               <style>0</style>
               <resource>
                 <name>Uptime</name>
-                <host>DM Template - DmOS</host>
+                <host>DM DmOS</host>
               </resource>
               <width>1000</width>
               <height>100</height>
@@ -1871,7 +1871,7 @@
               <style>0</style>
               <resource>
                 <name>Interface ethernet {#SNMPVALUE} - Traffic Total</name>
-                <host>DM Template - DmOS</host>
+                <host>DM DmOS</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1893,7 +1893,7 @@
               <style>0</style>
               <resource>
                 <name>Interface ethernet {#SNMPVALUE} - Discard</name>
-                <host>DM Template - DmOS</host>
+                <host>DM DmOS</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1915,7 +1915,7 @@
               <style>0</style>
               <resource>
                 <name>Interface ethernet {#SNMPVALUE} - By traffic type</name>
-                <host>DM Template - DmOS</host>
+                <host>DM DmOS</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1947,7 +1947,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF3333</color>
           <item>
-            <host>DM Template - DmOS</host>
+            <host>DM DmOS</host>
             <key>cpuLoadFiveSecondsActive</key>
           </item>
         </graph_item>
@@ -1956,7 +1956,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>00C800</color>
           <item>
-            <host>DM Template - DmOS</host>
+            <host>DM DmOS</host>
             <key>cpuCoreFiveSecondsActive</key>
           </item>
         </graph_item>
@@ -1965,7 +1965,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>0000C8</color>
           <item>
-            <host>DM Template - DmOS</host>
+            <host>DM DmOS</host>
             <key>cpuCoreOneMinuteActive</key>
           </item>
         </graph_item>
@@ -1978,7 +1978,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00C800</color>
           <item>
-            <host>DM Template - DmOS</host>
+            <host>DM DmOS</host>
             <key>memoryFiveSecondsAvailable</key>
           </item>
         </graph_item>
@@ -1987,7 +1987,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>0000C8</color>
           <item>
-            <host>DM Template - DmOS</host>
+            <host>DM DmOS</host>
             <key>memoryFiveSecondsFree</key>
           </item>
         </graph_item>
@@ -1996,7 +1996,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>EEEE00</color>
           <item>
-            <host>DM Template - DmOS</host>
+            <host>DM DmOS</host>
             <key>memoryFiveSecondsCached</key>
           </item>
         </graph_item>
@@ -2005,7 +2005,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>FF3333</color>
           <item>
-            <host>DM Template - DmOS</host>
+            <host>DM DmOS</host>
             <key>memoryFiveSecondsUsed</key>
           </item>
         </graph_item>
@@ -2019,7 +2019,7 @@
         <graph_item>
           <color>00BB00</color>
           <item>
-            <host>DM Template - DmOS</host>
+            <host>DM DmOS</host>
             <key>sysUpTime</key>
           </item>
         </graph_item>

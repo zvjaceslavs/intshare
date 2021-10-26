@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:33Z</date>
+  <date>2021-10-26T04:38:14Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Cisco_1900</template>
-      <name>Template_Cisco_1900</name>
+      <template>Cisco_1900</template>
+      <name>Cisco_1900</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -256,7 +256,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>icmpping</key>
           </item>
         </graph_item>
@@ -269,7 +269,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>icmppingsec</key>
           </item>
         </graph_item>
@@ -282,7 +282,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>sysUpTime</key>
           </item>
         </graph_item>
@@ -296,7 +296,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>ifInOctets.1</key>
           </item>
         </graph_item>
@@ -305,7 +305,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>0000EE</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>ifInOctets.2</key>
           </item>
         </graph_item>
@@ -318,7 +318,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -327,7 +327,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>0000EE</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -340,7 +340,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>ifSpeed.1</key>
           </item>
         </graph_item>
@@ -349,7 +349,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>0000EE</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>ifSpeed.2</key>
           </item>
         </graph_item>
@@ -362,7 +362,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>ifMtu.2</key>
           </item>
         </graph_item>
@@ -371,7 +371,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>0000CC</color>
           <item>
-            <host>Template_Cisco_1900</host>
+            <host>Cisco_1900</host>
             <key>ifMtu.1</key>
           </item>
         </graph_item>

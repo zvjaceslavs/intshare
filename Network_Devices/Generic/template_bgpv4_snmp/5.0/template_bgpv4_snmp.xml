@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:59Z</date>
+  <date>2021-10-26T04:45:21Z</date>
   <groups>
     <group>
       <name>Templates_Created</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template BGPv4 SNMP</template>
-      <name>Template BGPv4 SNMP</name>
+      <template>BGPv4 SNMP</template>
+      <name>BGPv4 SNMP</name>
       <description>Template BGPv4 Sessions -Admin Status -Established Time -Operation Status -AS Name -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as_name Base: BGP4-MIB.mib https://www.iana.org/assignments/bgp-parameters/bgp-parameters.xhtml</description>
       <groups>
         <group>
@@ -99,7 +99,7 @@
                   <dependencies>
                     <dependency>
                       <name>BGP peer {#SNMPVALUE} ASN {#SNMPASN} is DOWN</name>
-                      <expression>{Template BGPv4 SNMP:bgpPeerState[{#SNMPVALUE}].last(#3)}&lt;>6 and {Template BGPv4 SNMP:bgpPeerAdminStatus[{#SNMPVALUE}].last(0)}=2</expression>
+                      <expression>{BGPv4 SNMP:bgpPeerState[{#SNMPVALUE}].last(#3)}&lt;>6 and {BGPv4 SNMP:bgpPeerAdminStatus[{#SNMPVALUE}].last(0)}=2</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -174,7 +174,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template BGPv4 SNMP:bgpPeerState[{#SNMPVALUE}].last(#3)}&lt;>6 and {Template BGPv4 SNMP:bgpPeerAdminStatus[{#SNMPVALUE}].last(0)}=2</expression>
+              <expression>{BGPv4 SNMP:bgpPeerState[{#SNMPVALUE}].last(#3)}&lt;>6 and {BGPv4 SNMP:bgpPeerAdminStatus[{#SNMPVALUE}].last(0)}=2</expression>
               <name>BGP peer {#SNMPVALUE} ASN {#SNMPASN} is DOWN</name>
               <priority>HIGH</priority>
               <description>Trigger for peer that has a remote AS matching {$BGP_PEER_AS} macro.</description>

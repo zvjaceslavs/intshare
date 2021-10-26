@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:26Z</date>
+  <date>2021-10-26T04:38:06Z</date>
   <groups>
     <group>
       <name>templates_switchs</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Netgear_GS748T</template>
-      <name>Template_Netgear_GS748T</name>
+      <template>Netgear_GS748T</template>
+      <name>Netgear_GS748T</name>
       <groups>
         <group>
           <name>templates_switchs</name>
@@ -4635,7 +4635,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.overall</key>
           </item>
         </graph_item>
@@ -4643,7 +4643,7 @@
           <sortorder>1</sortorder>
           <color>0000DD</color>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.overall</key>
           </item>
         </graph_item>
@@ -4657,7 +4657,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.1</key>
           </item>
         </graph_item>
@@ -4667,7 +4667,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -4681,7 +4681,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.2</key>
           </item>
         </graph_item>
@@ -4690,7 +4690,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -4704,7 +4704,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.3</key>
           </item>
         </graph_item>
@@ -4713,7 +4713,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -4727,7 +4727,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.4</key>
           </item>
         </graph_item>
@@ -4736,7 +4736,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -4750,7 +4750,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.5</key>
           </item>
         </graph_item>
@@ -4759,7 +4759,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -4773,7 +4773,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.6</key>
           </item>
         </graph_item>
@@ -4782,7 +4782,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -4796,7 +4796,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.7</key>
           </item>
         </graph_item>
@@ -4805,7 +4805,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.7</key>
           </item>
         </graph_item>
@@ -4819,7 +4819,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.8</key>
           </item>
         </graph_item>
@@ -4828,7 +4828,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.8</key>
           </item>
         </graph_item>
@@ -4839,20 +4839,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.9</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.9</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.9</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4862,20 +4862,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.10</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.10</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.10</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4885,20 +4885,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.11</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.11</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.11</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4911,7 +4911,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.12</key>
           </item>
         </graph_item>
@@ -4920,7 +4920,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.12</key>
           </item>
         </graph_item>
@@ -4931,20 +4931,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.13</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.13</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.13</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4957,7 +4957,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.14</key>
           </item>
         </graph_item>
@@ -4966,7 +4966,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.14</key>
           </item>
         </graph_item>
@@ -4977,20 +4977,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.15</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.15</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.15</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5000,20 +5000,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.16</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.16</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.16</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5023,20 +5023,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.17</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.17</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.17</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5046,20 +5046,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.18</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.18</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.18</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5069,20 +5069,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.19</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.19</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.19</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5092,20 +5092,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.20</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.20</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.20</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5115,20 +5115,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.21</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.21</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.21</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5138,20 +5138,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.22</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.22</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.22</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5164,7 +5164,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.23</key>
           </item>
         </graph_item>
@@ -5174,7 +5174,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.23</key>
           </item>
         </graph_item>
@@ -5185,20 +5185,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.24</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.24</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.24</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5211,7 +5211,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.25</key>
           </item>
         </graph_item>
@@ -5220,7 +5220,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.25</key>
           </item>
         </graph_item>
@@ -5231,20 +5231,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.26</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.26</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.26</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5257,7 +5257,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.27</key>
           </item>
         </graph_item>
@@ -5266,7 +5266,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.27</key>
           </item>
         </graph_item>
@@ -5280,7 +5280,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.28</key>
           </item>
         </graph_item>
@@ -5289,7 +5289,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.28</key>
           </item>
         </graph_item>
@@ -5300,20 +5300,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.29</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.29</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.29</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5326,7 +5326,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.30</key>
           </item>
         </graph_item>
@@ -5335,7 +5335,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.30</key>
           </item>
         </graph_item>
@@ -5346,20 +5346,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.31</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.31</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.31</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5372,7 +5372,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.32</key>
           </item>
         </graph_item>
@@ -5381,7 +5381,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.32</key>
           </item>
         </graph_item>
@@ -5395,7 +5395,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.33</key>
           </item>
         </graph_item>
@@ -5404,7 +5404,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.33</key>
           </item>
         </graph_item>
@@ -5415,20 +5415,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.34</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.34</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.34</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5438,20 +5438,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.35</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.35</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.35</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5464,7 +5464,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.36</key>
           </item>
         </graph_item>
@@ -5473,7 +5473,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.36</key>
           </item>
         </graph_item>
@@ -5487,7 +5487,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.37</key>
           </item>
         </graph_item>
@@ -5496,7 +5496,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.37</key>
           </item>
         </graph_item>
@@ -5510,7 +5510,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.38</key>
           </item>
         </graph_item>
@@ -5519,7 +5519,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.38</key>
           </item>
         </graph_item>
@@ -5533,7 +5533,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.39</key>
           </item>
         </graph_item>
@@ -5542,7 +5542,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.39</key>
           </item>
         </graph_item>
@@ -5556,7 +5556,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.40</key>
           </item>
         </graph_item>
@@ -5565,7 +5565,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.40</key>
           </item>
         </graph_item>
@@ -5576,20 +5576,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.41</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.41</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.41</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5599,20 +5599,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.42</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.42</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.42</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5625,7 +5625,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.43</key>
           </item>
         </graph_item>
@@ -5634,7 +5634,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.43</key>
           </item>
         </graph_item>
@@ -5645,20 +5645,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.44</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.44</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.44</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5671,7 +5671,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifInOctects.45</key>
           </item>
         </graph_item>
@@ -5680,7 +5680,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.45</key>
           </item>
         </graph_item>
@@ -5691,20 +5691,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.46</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.46</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.46</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5714,20 +5714,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.47</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.47</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.47</key>
           </item>
         </graph_item>
       </graph_items>
@@ -5737,20 +5737,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS748T</host>
-            <key>ifInOctects.48</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS748T</host>
+            <host>Netgear_GS748T</host>
             <key>ifOutOctets.48</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS748T</host>
+            <key>ifInOctects.48</key>
           </item>
         </graph_item>
       </graph_items>

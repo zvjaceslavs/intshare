@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:44Z</date>
+  <date>2021-10-26T04:41:43Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP HP Server Health Template</template>
-      <name>Template SNMP HP Server Health Template</name>
+      <template>SNMP HP Server Health</template>
+      <name>SNMP HP Server Health</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -791,7 +791,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>CC0000</color>
                   <item>
-                    <host>Template SNMP HP Server Health Template</host>
+                    <host>SNMP HP Server Health</host>
                     <key>cpqHeFltTolPowerSupplyMainVoltage[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -806,7 +806,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00BB00</color>
                   <item>
-                    <host>Template SNMP HP Server Health Template</host>
+                    <host>SNMP HP Server Health</host>
                     <key>cpqHeFltTolPowerSupplyCapacityUsedPerc[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

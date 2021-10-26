@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:34Z</date>
+  <date>2021-10-26T04:38:15Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_SG500X_48P</template>
-      <name>Template_SG500X_48P</name>
+      <template>SG500X_48P</template>
+      <name>SG500X_48P</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -341,7 +341,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>rlEnvMonFanState.67109250</key>
           </item>
         </graph_item>
@@ -350,7 +350,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>rlEnvMonFanState.67109251</key>
           </item>
         </graph_item>
@@ -359,7 +359,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>rlEnvMonFanState.67109252</key>
           </item>
         </graph_item>
@@ -368,7 +368,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>A54F10</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>rlEnvMonFanState.67109253</key>
           </item>
         </graph_item>
@@ -377,7 +377,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>FC6EA3</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>rlEnvMonFanState.67109254</key>
           </item>
         </graph_item>
@@ -386,7 +386,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>6C59DC</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>rlEnvMonFanState.67109255</key>
           </item>
         </graph_item>
@@ -399,7 +399,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>A54F10</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>.1.3.6.1.4.1.9.9.109.1.1.1.1.5</key>
           </item>
         </graph_item>
@@ -412,7 +412,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>icmpping</key>
           </item>
         </graph_item>
@@ -425,7 +425,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>icmppingsec</key>
           </item>
         </graph_item>
@@ -437,7 +437,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifInErrors.49</key>
           </item>
         </graph_item>
@@ -445,7 +445,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifInErrors.107</key>
           </item>
         </graph_item>
@@ -457,7 +457,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifOutErrors.49</key>
           </item>
         </graph_item>
@@ -465,7 +465,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifOutErrors.107</key>
           </item>
         </graph_item>
@@ -478,7 +478,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>system.uptime</key>
           </item>
         </graph_item>
@@ -490,7 +490,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifInOctets.49</key>
           </item>
         </graph_item>
@@ -498,7 +498,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifInOctets.107</key>
           </item>
         </graph_item>
@@ -510,7 +510,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifOutOctets.49</key>
           </item>
         </graph_item>
@@ -518,7 +518,7 @@
           <sortorder>1</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifOutOctets.107</key>
           </item>
         </graph_item>
@@ -530,7 +530,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifSpeed.49</key>
           </item>
         </graph_item>
@@ -538,7 +538,7 @@
           <sortorder>1</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifSpeed.107</key>
           </item>
         </graph_item>
@@ -550,7 +550,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifMtu.49</key>
           </item>
         </graph_item>
@@ -558,7 +558,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SG500X_48P</host>
+            <host>SG500X_48P</host>
             <key>ifMtu.107</key>
           </item>
         </graph_item>

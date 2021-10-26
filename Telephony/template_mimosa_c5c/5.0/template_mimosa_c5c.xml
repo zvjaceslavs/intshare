@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:58Z</date>
+  <date>2021-10-26T04:46:34Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Mimosa C5c by Dzset</template>
-      <name>Template Mimosa C5c by Dzset</name>
+      <template>Mimosa C5c by Dzset</template>
+      <name>Mimosa C5c by Dzset</name>
       <description>Template para Rádio Mimosa C5c. By Dzset Tecnologia. www.dzset.com.br</description>
       <groups>
         <group>
@@ -840,7 +840,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Mimosa C5c by Dzset</host>
+            <host>Mimosa C5c by Dzset</host>
             <key>mimosaRxMacTotal.0</key>
           </item>
         </graph_item>
@@ -849,7 +849,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Mimosa C5c by Dzset</host>
+            <host>Mimosa C5c by Dzset</host>
             <key>mimosaTxMacTotal.0</key>
           </item>
         </graph_item>
@@ -862,7 +862,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Mimosa C5c by Dzset</host>
+            <host>Mimosa C5c by Dzset</host>
             <key>mimosaRxPhyTotal.0</key>
           </item>
         </graph_item>
@@ -871,7 +871,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Mimosa C5c by Dzset</host>
+            <host>Mimosa C5c by Dzset</host>
             <key>mimosaTxPhyTotal.0</key>
           </item>
         </graph_item>
@@ -884,7 +884,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Mimosa C5c by Dzset</host>
+            <host>Mimosa C5c by Dzset</host>
             <key>mimosaPhyRxRate.0</key>
           </item>
         </graph_item>
@@ -893,7 +893,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Mimosa C5c by Dzset</host>
+            <host>Mimosa C5c by Dzset</host>
             <key>mimosaPhyTxRate.0</key>
           </item>
         </graph_item>

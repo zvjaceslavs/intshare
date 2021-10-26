@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:09Z</date>
+  <date>2021-10-26T04:44:26Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module EtherLike-MIB SNMPv3</template>
-      <name>Template Module EtherLike-MIB SNMPv3</name>
+      <template>Module EtherLike-MIB SNMPv3</template>
+      <name>Module EtherLike-MIB SNMPv3</name>
       <description>Template Module EtherLike-MIB SNMPv3 Template used Template Module EtherLike-MIB SNMPv2 Ville Leinonen https://www.hacknetwork.org Version 1.1</description>
       <groups>
         <group>

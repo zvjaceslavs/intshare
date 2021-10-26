@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:07Z</date>
+  <date>2021-10-26T04:44:25Z</date>
   <groups>
     <group>
       <name>Access Points</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Meraki Dashboard</template>
-      <name>Template Meraki Dashboard</name>
+      <template>Meraki Dashboard</template>
+      <name>Meraki Dashboard</name>
       <groups>
         <group>
           <name>Access Points</name>

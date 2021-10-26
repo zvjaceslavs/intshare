@@ -1,4 +1,4 @@
-# Template_Cisco_1900
+# Cisco_1900
 
 ## Overview
 
@@ -42,17 +42,17 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Disponibilidade|<p>-</p>|`Simple check`|icmpping<p>Update: 30</p>|
-|Latencia|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
-|Tráfego de Entrada GigabitEthernet 0/0|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 60</p>|
-|Tráfego de Entrada GigabitEthernet 0/1|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/0 MTU|<p>-</p>|`SNMP agent`|ifMtu.1<p>Update: 30</p>|
-|Velocidade Porta GigaEthernet 0/1 MTU|<p>-</p>|`SNMP agent`|ifMtu.2<p>Update: 30</p>|
-|Tráfego de Saida GigabitEthernet 0/0|<p>-</p>|`SNMP agent`|ifOutOctets.1<p>Update: 60</p>|
-|Tráfego de Saida GigabitEthernet 0/1|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 60</p>|
-|Velocidade Porta GigaEthernet 0/0|<p>-</p>|`SNMP agent`|ifSpeed.1<p>Update: 30</p>|
-|Velocidade Porta GigaEthernet 0/1|<p>-</p>|`SNMP agent`|ifSpeed.2<p>Update: 30</p>|
 |Tempo Ligado|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
+|Tráfego de Saida GigabitEthernet 0/0|<p>-</p>|`SNMP agent`|ifOutOctets.1<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/0 MTU|<p>-</p>|`SNMP agent`|ifMtu.1<p>Update: 30</p>|
+|Tráfego de Entrada GigabitEthernet 0/1|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 60</p>|
+|Tráfego de Entrada GigabitEthernet 0/0|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/1 MTU|<p>-</p>|`SNMP agent`|ifMtu.2<p>Update: 30</p>|
+|Velocidade Porta GigaEthernet 0/0|<p>-</p>|`SNMP agent`|ifSpeed.1<p>Update: 30</p>|
+|Latencia|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
+|Disponibilidade|<p>-</p>|`Simple check`|icmpping<p>Update: 30</p>|
+|Tráfego de Saida GigabitEthernet 0/1|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 60</p>|
+|Velocidade Porta GigaEthernet 0/1|<p>-</p>|`SNMP agent`|ifSpeed.2<p>Update: 30</p>|
 ## Triggers
 
 There are no triggers in this template.

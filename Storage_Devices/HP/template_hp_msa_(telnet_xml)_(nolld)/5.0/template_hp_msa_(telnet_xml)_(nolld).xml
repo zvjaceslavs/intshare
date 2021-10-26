@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:52Z</date>
+  <date>2021-10-26T04:40:47Z</date>
   <groups>
     <group>
       <name>Шаблоны - рабочие</name>
@@ -9,7 +9,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template_TELNET_HP_StorageWorks</template>
+      <template>TELNET_HP_StorageWorks</template>
       <name>[Шаблон] TELNET - HP StorageWorks</name>
       <groups>
         <group>
@@ -18045,787 +18045,787 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.vdisks.1.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.vdisks.1.status.str(TEST)}=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.vdisks.1.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.vdisks.1.status.str(TEST)}=0</expression>
       <name>Вирт. диск (1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружен проблема с &lt;b>Виртуальным диском (1)&lt;/b>.</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.vdisks.1.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.vdisks.1.status.str(TEST)}=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.vdisks.1.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.vdisks.1.status.str(TEST)}=0</expression>
       <name>Вирт. диск (1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружен критическая проблема с &lt;b>Виртуальным диском (1)&lt;/b>!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.vdisks.1.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.vdisks.1.status.str(TEST)}=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.vdisks.1.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.vdisks.1.status.str(TEST)}=0</expression>
       <name>Вирт. диск (1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружен неизвестная проблема с &lt;b>Виртуальным диском (1)&lt;/b>: состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.vdisks.2.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.vdisks.2.status.str(TEST)}=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.vdisks.2.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.vdisks.2.status.str(TEST)}=0</expression>
       <name>Вирт. диск (2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружен проблема с &lt;b>Виртуальным диском (2)&lt;/b>.</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.vdisks.2.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.vdisks.2.status.str(TEST)}=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.vdisks.2.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.vdisks.2.status.str(TEST)}=0</expression>
       <name>Вирт. диск (2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружен критическая проблема с &lt;b>Виртуальным диском (2)&lt;/b>!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.vdisks.2.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.vdisks.2.status.str(TEST)}=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.vdisks.2.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.vdisks.2.status.str(TEST)}=0</expression>
       <name>Вирт. диск (2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружен неизвестная проблема с &lt;b>Виртуальным диском (2)&lt;/b>: состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.controllers.1.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.controllers.1.status-numeric.last()}>=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.controllers.1.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.controllers.1.status-numeric.last()}>=0</expression>
       <name>Контроллер (A) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Контроллером (A)&lt;/b>.</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.controllers.1.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.controllers.1.status-numeric.last()}>=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.controllers.1.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.controllers.1.status-numeric.last()}>=0</expression>
       <name>Контроллер (A) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Контроллером (A)&lt;/b>!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.controllers.0.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.controllers.0.status-numeric.last()}>=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.controllers.0.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.controllers.0.status-numeric.last()}>=0</expression>
       <name>Контроллер (B) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Контроллером (B)&lt;/b>.</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.controllers.0.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.controllers.0.status-numeric.last()}>=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.controllers.0.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.controllers.0.status-numeric.last()}>=0</expression>
       <name>Контроллер (B) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Контроллером (B)&lt;/b>!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.enclosures.1.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.enclosures.1.status-numeric.last()}>=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.enclosures.1.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.enclosures.1.status-numeric.last()}>=0</expression>
       <name>Полка (1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Полкой (1)&lt;/b>!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.enclosures.1.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.enclosures.1.status-numeric.last()}>=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.enclosures.1.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.enclosures.1.status-numeric.last()}>=0</expression>
       <name>Полка (1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Полкой (1)&lt;/b>!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.enclosures.2.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.enclosures.2.status-numeric.last()}>=0</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.enclosures.2.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.enclosures.2.status-numeric.last()}>=0</expression>
       <name>Полка (2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Полкой (2)&lt;/b>!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.1.1.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.1.1.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.1.1.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.1.1.status-numeric.diff(#2)}=1</expression>
       <name>Порт (A1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(A1)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.1.3.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.1.3.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.1.3.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.1.3.status-numeric.diff(#2)}=1</expression>
       <name>Порт (A2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(A2)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.1.5.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.1.5.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.1.5.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.1.5.status-numeric.diff(#2)}=1</expression>
       <name>Порт (A3) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(A3)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.1.7.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.1.7.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.1.7.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.1.7.status-numeric.diff(#2)}=1</expression>
       <name>Порт (A4) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(A4)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.0.5.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.0.5.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.0.5.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.0.5.status-numeric.diff(#2)}=1</expression>
       <name>Порт (B1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(B1)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.0.9.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.0.9.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.0.9.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.0.9.status-numeric.diff(#2)}=1</expression>
       <name>Порт (B1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(B1)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.0.7.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.0.7.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.0.7.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.0.7.status-numeric.diff(#2)}=1</expression>
       <name>Порт (B2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(B2)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.0.11.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.0.11.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.0.11.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.0.11.status-numeric.diff(#2)}=1</expression>
       <name>Порт (B2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(B2)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.0.13.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.0.13.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.0.13.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.0.13.status-numeric.diff(#2)}=1</expression>
       <name>Порт (B3) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(B3)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.ports.0.15.health-numeric.diff(#2)}=1 or {Template_TELNET_HP_StorageWorks:hp.msa.ports.0.15.status-numeric.diff(#2)}=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.ports.0.15.health-numeric.diff(#2)}=1 or {TELNET_HP_StorageWorks:hp.msa.ports.0.15.status-numeric.diff(#2)}=1</expression>
       <name>Порт (B4) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>У Порта &lt;b>(B4)&lt;/b> изменилось состояние!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.1.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.1.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.1.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.1.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (1)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.1.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.1.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.1.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.1.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (1)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.1.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.1.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.1.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.1.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (1)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.2.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.2.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.2.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.2.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (2)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.2.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.2.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.2.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.2.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (2)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.2.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.2.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.2.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.2.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (2)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.3.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.3.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.3.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.3.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.3) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (3)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.3.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.3.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.3.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.3.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.3) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (3)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.3.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.3.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.3.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.3.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.3) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (3)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.4.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.4.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.4.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.4.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.4) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (4)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.4.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.4.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.4.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.4.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.4) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (4)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.4.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.4.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.4.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.4.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.4) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (4)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.5.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.5.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.5.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.5.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.5) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (5)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.5.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.5.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.5.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.5.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.5) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (5)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.5.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.5.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.5.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.5.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.5) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (5)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.6.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.6.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.6.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.6.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.6) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (6)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.6.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.6.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.6.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.6.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.6) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (6)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.6.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.6.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.6.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.6.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.6) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (6)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.7.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.7.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.7.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.7.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.7) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (7)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.7.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.7.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.7.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.7.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.7) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (7)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.7.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.7.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.7.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.7.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.7) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (7)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.8.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.8.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.8.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.8.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.8) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (8)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.8.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.8.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.8.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.8.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.8) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (8)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.8.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.8.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.8.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.8.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.8) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (8)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.9.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.9.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.9.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.9.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.9) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (9)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.9.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.9.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.9.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.9.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.9) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (9)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.9.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.9.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.9.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.9.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.9) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (9)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.10.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.10.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.10.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.10.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.10) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (10)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.10.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.10.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.10.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.10.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.10) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (10)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.10.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.10.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.10.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.10.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.10) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (10)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.11.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.11.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.11.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.11.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.11) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (11)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.11.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.11.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.11.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.11.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.11) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (11)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.11.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.11.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.11.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.11.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.11) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (11)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.12.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.12.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.12.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.12.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.12) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (12)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.12.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.12.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.12.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.12.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.12) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (12)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.12.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.12.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.12.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.12.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.12) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (12)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.13.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.13.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.13.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.13.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.13) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (13)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.13.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.13.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.13.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.13.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.13) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (13)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.13.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.13.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.13.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.13.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.13) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (13)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.14.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.14.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.14.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.14.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.14) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (14)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.14.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.14.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.14.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.14.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.14) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (14)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.14.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.14.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.14.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.14.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.14) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (14)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.15.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.15.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.15.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.15.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.15) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (15)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.15.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.15.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.15.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.15.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.15) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (15)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.15.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.15.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.15.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.15.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.15) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (15)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.16.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.16.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.16.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.16.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.16) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (16)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.16.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.16.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.16.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.16.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.16) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (16)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.16.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.16.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.16.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.16.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.16) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (16)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.17.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.17.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.17.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.17.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.17) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (17)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.17.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.17.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.17.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.17.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.17) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (17)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.17.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.17.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.17.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.17.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.17) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (17)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.18.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.18.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.18.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.18.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.18) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (18)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.18.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.18.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.18.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.18.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.18) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (18)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.18.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.18.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.18.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.18.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.18) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (18)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.19.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.19.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.19.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.19.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.19) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (19)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.19.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.19.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.19.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.19.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.19) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (19)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.19.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.19.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.19.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.19.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.19) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (19)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.20.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.20.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.20.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.20.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.20) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (20)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.20.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.20.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.20.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.20.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.20) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (20)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.20.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.20.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.20.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.20.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.20) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (20)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.21.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.21.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.21.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.21.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.21) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (21)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.21.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.21.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.21.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.21.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.21) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (21)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.21.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.21.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.21.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.21.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.21) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (21)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.22.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.22.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.22.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.22.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.22) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (22)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.22.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.22.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.22.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.22.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.22) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (22)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.22.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.22.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.22.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.22.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.22) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (22)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.23.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.23.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.23.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.23.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.23) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (23)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.23.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.23.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.23.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.23.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.23) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (23)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.23.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.23.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.23.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.23.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.23) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (23)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.24.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.24.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.24.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.1.24.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.24) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (24)&lt;/b> в Полке (1).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.24.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.24.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.24.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.24.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.24) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (24)&lt;/b> в Полке (1)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.1.24.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.1.24.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.1.24.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.1.24.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (1.24) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (24)&lt;/b> в Полке (1): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.1.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.1.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.1.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.1.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (1)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.1.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.1.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.1.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.1.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (1)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.1.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.1.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.1.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.1.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.1) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (1)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.2.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.2.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.2.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.2.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (2)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.2.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.2.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.2.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.2.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (2)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.2.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.2.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.2.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.2.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.2) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (2)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.3.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.3.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.3.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.3.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.3) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (3)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.3.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.3.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.3.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.3.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.3) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (3)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.3.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.3.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.3.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.3.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.3) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (3)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.4.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.4.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.4.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.4.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.4) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (4)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.4.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.4.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.4.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.4.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.4) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (4)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.4.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.4.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.4.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.4.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.4) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (4)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.5.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.5.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.5.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.5.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.5) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (5)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.5.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.5.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.5.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.5.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.5) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (5)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.5.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.5.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.5.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.5.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.5) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (5)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.6.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.6.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.6.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.6.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.6) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (6)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.6.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.6.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.6.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.6.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.6) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (6)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.6.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.6.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.6.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.6.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.6) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (6)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.7.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.7.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.7.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.7.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.7) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (7)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.7.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.7.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.7.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.7.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.7) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (7)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.7.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.7.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.7.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.7.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.7) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (7)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.8.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.8.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.8.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.8.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.8) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (8)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.8.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.8.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.8.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.8.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.8) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (8)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.8.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.8.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.8.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.8.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.8) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (8)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.9.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.9.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.9.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.9.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.9) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (9)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.9.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.9.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.9.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.9.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.9) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (9)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.9.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.9.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.9.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.9.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.9) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (9)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.10.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.10.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.10.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.10.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.10) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (10)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.10.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.10.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.10.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.10.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.10) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (10)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.10.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.10.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.10.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.10.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.10) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (10)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.11.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.11.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.11.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.11.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.11) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (11)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.11.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.11.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.11.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.11.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.11) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (11)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.11.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.11.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.11.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.11.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.11) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (11)&lt;/b> в Полке (2): состояние диска не определено!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.12.health-numeric.last()}=1 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.12.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.12.health-numeric.last()}=1 and {TELNET_HP_StorageWorks:hp.msa.disks.2.12.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.12) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>AVERAGE</priority>
       <description>Обнаружена проблема с &lt;b>Физ. диском (12)&lt;/b> в Полке (2).</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.12.health-numeric.last()}=2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.12.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.12.health-numeric.last()}=2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.12.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.12) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>DISASTER</priority>
       <description>Обнаружена критическая проблема с &lt;b>Физ. диском (12)&lt;/b> в Полке (2)!</description>
     </trigger>
     <trigger>
-      <expression>{Template_TELNET_HP_StorageWorks:hp.msa.disks.2.12.health-numeric.last()}>2 and {Template_TELNET_HP_StorageWorks:hp.msa.disks.2.12.led-status-numeric.last()}>=1</expression>
+      <expression>{TELNET_HP_StorageWorks:hp.msa.disks.2.12.health-numeric.last()}>2 and {TELNET_HP_StorageWorks:hp.msa.disks.2.12.led-status-numeric.last()}>=1</expression>
       <name>Физ. диск (2.12) - состояние: {ITEM.LASTVALUE} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <description>Обнаружена неизвестная проблема с &lt;b>Физ. диском (12)&lt;/b> в Полке (2): состояние диска не определено!</description>

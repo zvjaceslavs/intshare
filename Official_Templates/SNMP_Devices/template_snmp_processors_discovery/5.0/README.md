@@ -1,4 +1,4 @@
-# Template SNMP Processors
+# SNMP Processors
 
 ## Overview
 

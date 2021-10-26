@@ -1,4 +1,4 @@
-# Template App TACACS Service
+# App TACACS Service
 
 ## Overview
 

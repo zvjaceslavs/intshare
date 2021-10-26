@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:51Z</date>
+  <date>2021-10-26T04:38:31Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template MD Soft RAID</template>
-      <name>Template MD Soft RAID</name>
+      <template>MD Soft RAID</template>
+      <name>MD Soft RAID</name>
       <description>Monitoring of MD Soft RAID</description>
       <groups>
         <group>
@@ -97,7 +97,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template MD Soft RAID</host>
+                    <host>MD Soft RAID</host>
                     <key>md.degraded[{#MDNAME}]</key>
                   </item>
                 </graph_item>

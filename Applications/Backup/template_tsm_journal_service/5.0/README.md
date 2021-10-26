@@ -1,4 +1,4 @@
-# Template App TSM Journal Service
+# App TSM Journal Service
 
 ## Overview
 

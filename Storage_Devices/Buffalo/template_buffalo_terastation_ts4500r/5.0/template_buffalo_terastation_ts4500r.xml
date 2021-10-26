@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:27Z</date>
+  <date>2021-10-26T04:39:12Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Buffalo TeraStation TS4500R</template>
-      <name>Template Buffalo TeraStation TS4500R</name>
+      <template>Buffalo TeraStation TS4500R</template>
+      <name>Buffalo TeraStation TS4500R</name>
       <groups>
         <group>
           <name>Templates</name>

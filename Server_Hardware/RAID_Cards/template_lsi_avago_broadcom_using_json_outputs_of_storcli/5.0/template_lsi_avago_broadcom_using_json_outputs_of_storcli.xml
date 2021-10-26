@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:31Z</date>
+  <date>2021-10-26T04:42:35Z</date>
   <groups>
     <group>
       <name>LSI</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template LSI JSON discovery</template>
-      <name>Template LSI JSON discovery</name>
+      <template>LSI JSON discovery</template>
+      <name>LSI JSON discovery</name>
       <groups>
         <group>
           <name>LSI</name>
@@ -842,8 +842,8 @@
                   <dependencies>
                     <dependency>
                       <name>LSI physical disk "{#PDID}" predictive failure count is "{ITEM.LASTVALUE}"</name>
-                      <expression>{Template LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}>0</expression>
-                      <recovery_expression>{Template LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}=0</recovery_expression>
+                      <expression>{LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}>0</expression>
+                      <recovery_expression>{LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}=0</recovery_expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>

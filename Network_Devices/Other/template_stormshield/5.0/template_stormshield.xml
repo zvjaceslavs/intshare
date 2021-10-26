@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:27Z</date>
+  <date>2021-10-26T04:38:07Z</date>
   <groups>
     <group>
       <name>templates_switchs</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Stormshield</template>
-      <name>Template_Stormshield</name>
+      <template>Stormshield</template>
+      <name>Stormshield</name>
       <description>Template Netasq</description>
       <groups>
         <group>
@@ -391,7 +391,7 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifInOctets.p01</key>
           </item>
         </graph_item>
@@ -400,7 +400,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifOutOctets.p01</key>
           </item>
         </graph_item>
@@ -413,7 +413,7 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifInOctets.p02</key>
           </item>
         </graph_item>
@@ -422,7 +422,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifOutOctets.p02</key>
           </item>
         </graph_item>
@@ -435,7 +435,7 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifInOctets.p03</key>
           </item>
         </graph_item>
@@ -444,7 +444,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifOutOctets.p03</key>
           </item>
         </graph_item>
@@ -457,7 +457,7 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifInOctets.p04</key>
           </item>
         </graph_item>
@@ -466,7 +466,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifOutOctets.p04</key>
           </item>
         </graph_item>
@@ -479,7 +479,7 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifInOctets.p05</key>
           </item>
         </graph_item>
@@ -487,7 +487,7 @@
           <sortorder>1</sortorder>
           <color>009900</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifOutOctets.p05</key>
           </item>
         </graph_item>
@@ -500,7 +500,7 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifInOctets.p06</key>
           </item>
         </graph_item>
@@ -508,7 +508,7 @@
           <sortorder>1</sortorder>
           <color>009900</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifOutOctets.p06</key>
           </item>
         </graph_item>
@@ -521,7 +521,7 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifInOctets.p07</key>
           </item>
         </graph_item>
@@ -529,7 +529,7 @@
           <sortorder>1</sortorder>
           <color>009900</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifOutOctets.p07</key>
           </item>
         </graph_item>
@@ -542,7 +542,7 @@
         <graph_item>
           <color>0000FF</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifInOctets.p08</key>
           </item>
         </graph_item>
@@ -550,7 +550,7 @@
           <sortorder>1</sortorder>
           <color>009900</color>
           <item>
-            <host>Template_Stormshield</host>
+            <host>Stormshield</host>
             <key>ifOutOctets.p08</key>
           </item>
         </graph_item>

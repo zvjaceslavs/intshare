@@ -54,21 +54,21 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Modo de Operação da Fonte|<p>-</p>|`SNMP agent`|mod.oper<p>Update: 300</p>|
-|Status do Carregador de Baterias|<p>-</p>|`SNMP agent`|status.bateria<p>Update: 300</p>|
-|Status do Cooler|<p>-</p>|`SNMP agent`|status.cooler<p>Update: 300</p>|
-|Status do Ramal 1|<p>-</p>|`SNMP agent`|status.ramal.1<p>Update: 300</p>|
-|Status do Ramal 2|<p>-</p>|`SNMP agent`|status.ramal.2<p>Update: 300</p>|
-|Status do Ramal 3|<p>-</p>|`SNMP agent`|status.ramal.3<p>Update: 300</p>|
-|Status do Ramal 4|<p>-</p>|`SNMP agent`|status.ramal.4<p>Update: 300</p>|
-|Temperatura Interna|<p>Temperatura Interna</p>|`SNMP agent`|temp.Interna<p>Update: 60</p>|
-|Voltagem do Banco de Baterias|<p>-</p>|`SNMP agent`|volt.bateria<p>Update: 60</p>|
-|Voltagem da entrada AC|<p>-</p>|`SNMP agent`|volt.ent.ac<p>Update: 60</p>|
-|Voltagem do Ramal 1|<p>-</p>|`SNMP agent`|volt.ramal.1<p>Update: 60</p>|
-|Voltagem do Ramal 2|<p>-</p>|`SNMP agent`|volt.ramal.2<p>Update: 60</p>|
-|Voltagem do Ramal 3|<p>-</p>|`SNMP agent`|volt.ramal.3<p>Update: 60</p>|
-|Voltagem do Ramal 4|<p>-</p>|`SNMP agent`|volt.ramal.4<p>Update: 60</p>|
 |Voltagem das Tomadas|<p>-</p>|`SNMP agent`|volt.tomada<p>Update: 60</p>|
+|Voltagem do Ramal 1|<p>-</p>|`SNMP agent`|volt.ramal.1<p>Update: 60</p>|
+|Status do Ramal 2|<p>-</p>|`SNMP agent`|status.ramal.2<p>Update: 300</p>|
+|Voltagem do Ramal 2|<p>-</p>|`SNMP agent`|volt.ramal.2<p>Update: 60</p>|
+|Status do Ramal 4|<p>-</p>|`SNMP agent`|status.ramal.4<p>Update: 300</p>|
+|Status do Cooler|<p>-</p>|`SNMP agent`|status.cooler<p>Update: 300</p>|
+|Voltagem do Ramal 3|<p>-</p>|`SNMP agent`|volt.ramal.3<p>Update: 60</p>|
+|Voltagem da entrada AC|<p>-</p>|`SNMP agent`|volt.ent.ac<p>Update: 60</p>|
+|Voltagem do Banco de Baterias|<p>-</p>|`SNMP agent`|volt.bateria<p>Update: 60</p>|
+|Status do Carregador de Baterias|<p>-</p>|`SNMP agent`|status.bateria<p>Update: 300</p>|
+|Status do Ramal 1|<p>-</p>|`SNMP agent`|status.ramal.1<p>Update: 300</p>|
+|Status do Ramal 3|<p>-</p>|`SNMP agent`|status.ramal.3<p>Update: 300</p>|
+|Modo de Operação da Fonte|<p>-</p>|`SNMP agent`|mod.oper<p>Update: 300</p>|
+|Temperatura Interna|<p>Temperatura Interna</p>|`SNMP agent`|temp.Interna<p>Update: 60</p>|
+|Voltagem do Ramal 4|<p>-</p>|`SNMP agent`|volt.ramal.4<p>Update: 60</p>|
 ## Triggers
 
 There are no triggers in this template.

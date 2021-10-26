@@ -1,4 +1,4 @@
-# Template SNMP Arista BGP4
+# SNMP Arista BGP4
 
 ## Overview
 
@@ -41,5 +41,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|BGP status not "Established" for {#ASNUM}, {#PEERNAME}|<p>-</p>|<p>**Expression**: {Template SNMP Arista BGP4:arista-bgp-operstatus[{#ASNUM}, {#PEERNAME}].last()}<>6 and {Template SNMP Arista BGP4:arista-bgp-adminstatus[{#ASNUM}, {#PEERNAME}].last()}=2</p><p>**Recovery expression**: </p>|disaster|
-|BGP status not "Established" for {#ASNUM}, {#PEERNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Arista BGP4:arista-bgp-operstatus[{#ASNUM}, {#PEERNAME}].last()}<>6 and {Template SNMP Arista BGP4:arista-bgp-adminstatus[{#ASNUM}, {#PEERNAME}].last()}=2</p><p>**Recovery expression**: </p>|disaster|
+|BGP status not "Established" for {#ASNUM}, {#PEERNAME}|<p>-</p>|<p>**Expression**: {SNMP Arista BGP4:arista-bgp-operstatus[{#ASNUM}, {#PEERNAME}].last()}<>6 and {SNMP Arista BGP4:arista-bgp-adminstatus[{#ASNUM}, {#PEERNAME}].last()}=2</p><p>**Recovery expression**: </p>|disaster|
+|BGP status not "Established" for {#ASNUM}, {#PEERNAME} (LLD)|<p>-</p>|<p>**Expression**: {SNMP Arista BGP4:arista-bgp-operstatus[{#ASNUM}, {#PEERNAME}].last()}<>6 and {SNMP Arista BGP4:arista-bgp-adminstatus[{#ASNUM}, {#PEERNAME}].last()}=2</p><p>**Recovery expression**: </p>|disaster|

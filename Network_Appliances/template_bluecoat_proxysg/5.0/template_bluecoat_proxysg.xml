@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:55Z</date>
+  <date>2021-10-26T04:38:35Z</date>
   <groups>
     <group>
       <name>BlueCoat</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App BlueCoat SG</template>
-      <name>Template App BlueCoat SG</name>
+      <template>App BlueCoat SG</template>
+      <name>App BlueCoat SG</name>
       <groups>
         <group>
           <name>BlueCoat</name>
@@ -1214,7 +1214,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template App BlueCoat SG:deviceDiskStatus1.last()}&lt;>1 or {Template App BlueCoat SG:deviceDiskStatus2.last()}&lt;>1</expression>
+      <expression>{App BlueCoat SG:deviceDiskStatus1.last()}&lt;>1 or {App BlueCoat SG:deviceDiskStatus2.last()}&lt;>1</expression>
       <name>The agent disk is not operational</name>
       <priority>HIGH</priority>
     </trigger>

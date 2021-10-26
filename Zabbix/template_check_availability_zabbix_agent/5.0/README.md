@@ -1,4 +1,4 @@
-# Template TCP Zabbix Agent
+# TCP Zabbix Agent
 
 ## Description
 

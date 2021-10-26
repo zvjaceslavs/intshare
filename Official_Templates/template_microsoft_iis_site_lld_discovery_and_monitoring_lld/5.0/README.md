@@ -1,4 +1,4 @@
-# Template App IIS LLD Sites Monitoring
+# App IIS LLD Sites Monitoring
 
 ## Overview
 
@@ -47,5 +47,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{#SITENAME} High CPU Usage|<p>-</p>|<p>**Expression**: {Template App IIS LLD Sites Monitoring:wmi.get[ROOT CIMV2,"SELECT PercentProcessorTime FROM win32_perfformatteddata_perfproc_process WHERE IDProcess = {#PROCESSID}"].min(5m)}>=40</p><p>**Recovery expression**: </p>|high|
-|{#SITENAME} High CPU Usage (LLD)|<p>-</p>|<p>**Expression**: {Template App IIS LLD Sites Monitoring:wmi.get[ROOT CIMV2,"SELECT PercentProcessorTime FROM win32_perfformatteddata_perfproc_process WHERE IDProcess = {#PROCESSID}"].min(5m)}>=40</p><p>**Recovery expression**: </p>|high|
+|{#SITENAME} High CPU Usage|<p>-</p>|<p>**Expression**: {App IIS LLD Sites Monitoring:wmi.get[ROOT CIMV2,"SELECT PercentProcessorTime FROM win32_perfformatteddata_perfproc_process WHERE IDProcess = {#PROCESSID}"].min(5m)}>=40</p><p>**Recovery expression**: </p>|high|
+|{#SITENAME} High CPU Usage (LLD)|<p>-</p>|<p>**Expression**: {App IIS LLD Sites Monitoring:wmi.get[ROOT CIMV2,"SELECT PercentProcessorTime FROM win32_perfformatteddata_perfproc_process WHERE IDProcess = {#PROCESSID}"].min(5m)}>=40</p><p>**Recovery expression**: </p>|high|

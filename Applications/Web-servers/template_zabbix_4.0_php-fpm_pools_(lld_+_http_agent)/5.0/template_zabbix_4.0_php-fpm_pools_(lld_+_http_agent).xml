@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:14Z</date>
+  <date>2021-10-26T04:42:17Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App PHP-FPM</template>
-      <name>Template App PHP-FPM</name>
+      <template>App PHP-FPM</template>
+      <name>App PHP-FPM</name>
       <groups>
         <group>
           <name>Templates/Applications</name>
@@ -427,7 +427,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App PHP-FPM</host>
+                    <host>App PHP-FPM</host>
                     <key>php-fpm.active_processes[{#POOLNAME}]</key>
                   </item>
                 </graph_item>
@@ -436,7 +436,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template App PHP-FPM</host>
+                    <host>App PHP-FPM</host>
                     <key>php-fpm.max_active_processes[{#POOLNAME}]</key>
                   </item>
                 </graph_item>
@@ -445,7 +445,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App PHP-FPM</host>
+                    <host>App PHP-FPM</host>
                     <key>php-fpm.total_processes[{#POOLNAME}]</key>
                   </item>
                 </graph_item>

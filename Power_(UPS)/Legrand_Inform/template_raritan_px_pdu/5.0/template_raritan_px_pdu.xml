@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:02Z</date>
+  <date>2021-10-26T04:43:08Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Raritan PDU</template>
-      <name>Template Raritan PDU</name>
+      <template>Raritan PDU</template>
+      <name>Raritan PDU</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -470,7 +470,7 @@
                 <graph_item>
                   <color>000000</color>
                   <item>
-                    <host>Template Raritan PDU</host>
+                    <host>Raritan PDU</host>
                     <key>measurementsExternalSensorUsableValue[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -596,7 +596,7 @@
                 <graph_item>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Raritan PDU</host>
+                    <host>Raritan PDU</host>
                     <key>measurementsOverCurrentProtectorSensorValuermsCurrent[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1032,7 +1032,7 @@
                 <graph_item>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Raritan PDU</host>
+                    <host>Raritan PDU</host>
                     <key>measurementsInletSensorUsableValuermsCurrent[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1041,7 +1041,7 @@
                   <color>FF8000</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Raritan PDU</host>
+                    <host>Raritan PDU</host>
                     <key>measurementsInletSensorValueFrequency[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1049,7 +1049,7 @@
                   <sortorder>2</sortorder>
                   <color>B4B4B4</color>
                   <item>
-                    <host>Template Raritan PDU</host>
+                    <host>Raritan PDU</host>
                     <key>measurementsInletSensorValuermspowerFactor[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1058,7 +1058,7 @@
                   <color>0040FF</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Raritan PDU</host>
+                    <host>Raritan PDU</host>
                     <key>measurementsInletSensorValuermsVoltage[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

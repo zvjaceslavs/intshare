@@ -1,4 +1,4 @@
-# Template UPS RFC 1628 SNMP
+# UPS RFC 1628 SNMP
 
 ## Overview
 
@@ -35,20 +35,20 @@ There are no macros links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|UPS battery current|<p>-</p>|`SNMP agent`|ups.battery.current<p>Update: 1m</p>|
-|UPS estimated charge remaining|<p>-</p>|`SNMP agent`|ups.battery.estimatedChargeRemaining<p>Update: 1m</p>|
-|UPS battery status|<p>-</p>|`SNMP agent`|ups.battery.status<p>Update: 1m</p>|
-|UPS battery temperature|<p>-</p>|`SNMP agent`|ups.battery.temperature<p>Update: 1m</p>|
-|UPS battery voltage|<p>-</p>|`SNMP agent`|ups.battery.voltage<p>Update: 1m</p>|
-|UPS bypass frequency|<p>-</p>|`SNMP agent`|ups.bypass.frequency<p>Update: 1m</p>|
 |UPS agent software version|<p>-</p>|`SNMP agent`|ups.ident.agentSoftwareVersion<p>Update: 1d</p>|
-|UPS attached devices|<p>-</p>|`SNMP agent`|ups.ident.attachedDevices<p>Update: 1d</p>|
-|UPS manufacturer|<p>-</p>|`SNMP agent`|ups.ident.manufacturer<p>Update: 1d</p>|
-|UPS model name|<p>-</p>|`SNMP agent`|ups.ident.model<p>Update: 1d</p>|
-|UPS name|<p>-</p>|`SNMP agent`|ups.ident.name<p>Update: 1d</p>|
-|UPS input line bads|<p>-</p>|`SNMP agent`|ups.line.input.Bads<p>Update: 1m</p>|
-|UPS output frequency|<p>-</p>|`SNMP agent`|ups.line.output.frequency<p>Update: 1m</p>|
+|UPS estimated charge remaining|<p>-</p>|`SNMP agent`|ups.battery.estimatedChargeRemaining<p>Update: 1m</p>|
 |UPS output source|<p>-</p>|`SNMP agent`|ups.line.output.source<p>Update: 1m</p>|
+|UPS battery temperature|<p>-</p>|`SNMP agent`|ups.battery.temperature<p>Update: 1m</p>|
+|UPS name|<p>-</p>|`SNMP agent`|ups.ident.name<p>Update: 1d</p>|
+|UPS model name|<p>-</p>|`SNMP agent`|ups.ident.model<p>Update: 1d</p>|
+|UPS input line bads|<p>-</p>|`SNMP agent`|ups.line.input.Bads<p>Update: 1m</p>|
+|UPS bypass frequency|<p>-</p>|`SNMP agent`|ups.bypass.frequency<p>Update: 1m</p>|
+|UPS battery voltage|<p>-</p>|`SNMP agent`|ups.battery.voltage<p>Update: 1m</p>|
+|UPS battery current|<p>-</p>|`SNMP agent`|ups.battery.current<p>Update: 1m</p>|
+|UPS attached devices|<p>-</p>|`SNMP agent`|ups.ident.attachedDevices<p>Update: 1d</p>|
+|UPS battery status|<p>-</p>|`SNMP agent`|ups.battery.status<p>Update: 1m</p>|
+|UPS output frequency|<p>-</p>|`SNMP agent`|ups.line.output.frequency<p>Update: 1m</p>|
+|UPS manufacturer|<p>-</p>|`SNMP agent`|ups.ident.manufacturer<p>Update: 1d</p>|
 |UPS output current {#SNMPINDEX}|<p>-</p>|`SNMP agent`|ups.line.output.current[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |UPS output percent load {#SNMPINDEX}|<p>-</p>|`SNMP agent`|ups.line.output.percentload[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |UPS output power {#SNMPINDEX}|<p>-</p>|`SNMP agent`|ups.line.output.power[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|

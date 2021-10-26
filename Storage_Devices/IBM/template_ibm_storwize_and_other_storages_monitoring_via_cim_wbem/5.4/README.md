@@ -44,48 +44,41 @@ Denis Pavlov
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Mdisks|<p>-</p>|`Zabbix trapper`|mdisks.discovery<p>Update: 0</p>|
+|Enclosures|<p>-</p>|`Zabbix trapper`|enclosures.discovery<p>Update: 0</p>|
 |Mdisk Groups|<p>-</p>|`Zabbix trapper`|mdiskgrps.discovery<p>Update: 0</p>|
 |Disk Drives|<p>-</p>|`Zabbix trapper`|diskdrives.discovery<p>Update: 0</p>|
-|Enclosures|<p>-</p>|`Zabbix trapper`|enclosures.discovery<p>Update: 0</p>|
-|Systems|<p>-</p>|`Zabbix trapper`|systems.discovery<p>Update: 0</p>|
 |VDisks|<p>-</p>|`Zabbix trapper`|vdisks.discovery<p>Update: 0</p>|
+|Mdisks|<p>-</p>|`Zabbix trapper`|mdisks.discovery<p>Update: 0</p>|
 |Arrays|<p>-</p>|`Zabbix trapper`|arrays.discovery<p>Update: 0</p>|
+|Systems|<p>-</p>|`Zabbix trapper`|systems.discovery<p>Update: 0</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Access of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Access[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ExtentStatus 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ExtentStatus.1[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|SlotLocation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SlotLocation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|RequestedState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|RequestedState[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Primordial of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Primordial[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Poolname of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Poolname[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|PoolID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|PoolID[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|PackageRedundancy of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|PackageRedundancy[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OperationalStatus 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.1[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OperationalStatus 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.0[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|NumberOfBlocks of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|NumberOfBlocks[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|NoSinglePointOfFailure of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|NoSinglePointOfFailure[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|NativeStatus of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|NativeStatus[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Mode of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Mode[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|IsBasedOnUnderlyingRedundancy of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|IsBasedOnUnderlyingRedundancy[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ExtentStatus 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ExtentStatus.0[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|AdditionalAvailability 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AdditionalAvailability.0[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EnabledState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnabledState[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EnabledDefault of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnabledDefault[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ElementName of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ElementName[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|DeviceID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DeviceID[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|DeltaReservation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DeltaReservation[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|DataRedundancy of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DataRedundancy[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|DataOrganization of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DataOrganization[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Counts 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Counts.1[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Counts 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Counts.0[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ConsumableBlocks of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConsumableBlocks[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Capacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Capacity[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Block Size of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|BlockSize[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|AdditionalAvailability 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AdditionalAvailability.1[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TransitioningToState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TransitioningToState[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ChassisPackageType of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ChassisPackageType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OperationalStatus 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.0[Enclosure.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TotalPSUs of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalPSUs[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TotalFanModules of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalFanModules[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TotalCanisters of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalCanisters[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Tag of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Tag[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|SerialNumber of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SerialNumber[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|RemovalConditions of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|RemovalConditions[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ProductMTM of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ProductMTM[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|PackageType of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|PackageType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OperationalStatus 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.1[Enclosure.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OnlinePSUs of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OnlinePSUs[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|DriveSlots of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DriveSlots[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OnlineFanModules of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OnlineFanModules[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OnlineCanisters of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OnlineCanisters[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Model of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Model[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Manufacturer of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Manufacturer[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Managed of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Managed[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|IOGroupName of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|IOGroupName[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|IOGroupID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|IOGroupID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|HealthState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|HealthState[Enclosure.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EnclosureStatus of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnclosureStatus[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ElementName of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ElementName[Enclosure.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Type of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Type[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |ChildCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ChildCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |ParentPoolID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ParentPoolID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |VirtualCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|VirtualCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
@@ -149,83 +142,6 @@ Denis Pavlov
 |MdiskID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|MdiskID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |Mdisk Name of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|MdiskName[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |Accumulated time for all write operations of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|WriteIOTimeCounter[DiskDrive.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ChassisPackageType of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ChassisPackageType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OperationalStatus 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.0[Enclosure.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TotalPSUs of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalPSUs[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TotalFanModules of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalFanModules[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TotalCanisters of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalCanisters[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Tag of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Tag[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|SerialNumber of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SerialNumber[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|RemovalConditions of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|RemovalConditions[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ProductMTM of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ProductMTM[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|PackageType of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|PackageType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OperationalStatus 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.1[Enclosure.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OnlinePSUs of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OnlinePSUs[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|DriveSlots of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DriveSlots[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OnlineFanModules of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OnlineFanModules[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OnlineCanisters of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OnlineCanisters[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Model of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Model[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Manufacturer of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Manufacturer[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Managed of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Managed[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|IOGroupName of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|IOGroupName[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|IOGroupID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|IOGroupID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|HealthState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|HealthState[Enclosure.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EnclosureStatus of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnclosureStatus[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ElementName of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ElementName[Enclosure.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Type of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Type[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|AllocatedCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AllocatedCapacity[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|SNMPCommunity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SNMPCommunity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|iSCSIAuthMethod 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|iSCSIAuthMethod.1[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Locale of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Locale[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|MaxNumberOfNodes of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|MaxNumberOfNodes[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Name of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Name[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OperationalStatus 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.0[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|OperationalStatus 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.1[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|PoolCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|PoolCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|RequestedState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|RequestedState[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|RequiredMemory of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|RequiredMemory[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ResetCapability of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ResetCapability[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|SNMPServerIP of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SNMPServerIP[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|SNMPSetting of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SNMPSetting[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|StatisticsFrequency of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|StatisticsFrequency[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|StatisticsStatus of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|StatisticsStatus[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TimeZone of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TimeZone[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|Topology of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Topology[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TotalOverallocation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalOverallocation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TotalUsedCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalUsedCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TotalVdiskCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalVdiskCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TotalVdiskCopyCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalVdiskCopyCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|TransitioningToState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TransitioningToState[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|VolumeProtectionTime of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|VolumeProtectionTime[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|iSCSIAuthMethod 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|iSCSIAuthMethod.0[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|GMLinkTolerance of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|GMLinkTolerance[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|AvailableCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AvailableCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailContactLocation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailContactLocation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|BackendStorageCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|BackendStorageCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ClusterState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ClusterState[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|CodeLevel of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|CodeLevel[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ConfiguredAddress of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConfiguredAddress[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ConnectionType of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConnectionType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ConsoleIP of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConsoleIP[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ConsolePort of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConsolePort[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|DiscoveryStatus of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DiscoveryStatus[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|ElementName of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ElementName[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailContactAlternate of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailContactAlternate[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailContactPrimary of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailContactPrimary[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|GMIntraClusterDelaySimulation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|GMIntraClusterDelaySimulation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailContact of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailContact[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailInterval of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailInterval[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailReply of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailReply[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailServer of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailServer[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EmailSetting of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EmailSetting[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailState[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EMailUserCount of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailUserCount[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EnabledDefault of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnabledDefault[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|EnabledState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnabledState[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|FcPortSpeed of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|FcPortSpeed[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|GMInterClusterDelaySimulation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|GMInterClusterDelaySimulation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
-|VolumeProtection of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|VolumeProtection[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |AccessGranted of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AccessGranted[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |Accumulated time for all read operations of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ReadIOTimeCounter[VDisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |NoSinglePointOfFailure of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|NoSinglePointOfFailure[VDisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
@@ -286,6 +202,37 @@ Denis Pavlov
 |Write rate of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|KBytesWritten[VDisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |LastAccessTime of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|LastAccessTime[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |Accumulated time for all write operations of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|WriteIOTimeCounter[VDisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Access of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Access[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ExtentStatus 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ExtentStatus.1[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|SlotLocation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SlotLocation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|RequestedState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|RequestedState[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Primordial of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Primordial[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Poolname of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Poolname[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|PoolID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|PoolID[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|PackageRedundancy of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|PackageRedundancy[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OperationalStatus 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.1[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OperationalStatus 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.0[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|NumberOfBlocks of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|NumberOfBlocks[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|NoSinglePointOfFailure of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|NoSinglePointOfFailure[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|NativeStatus of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|NativeStatus[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Mode of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Mode[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|IsBasedOnUnderlyingRedundancy of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|IsBasedOnUnderlyingRedundancy[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ExtentStatus 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ExtentStatus.0[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|AdditionalAvailability 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AdditionalAvailability.0[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EnabledState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnabledState[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EnabledDefault of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnabledDefault[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ElementName of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ElementName[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|DeviceID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DeviceID[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|DeltaReservation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DeltaReservation[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|DataRedundancy of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DataRedundancy[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|DataOrganization of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DataOrganization[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Counts 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Counts.1[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Counts 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Counts.0[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ConsumableBlocks of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConsumableBlocks[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Capacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Capacity[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Block Size of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|BlockSize[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|AdditionalAvailability 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AdditionalAvailability.1[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TransitioningToState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TransitioningToState[mdisk.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |Access of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Access[Array.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |Poolname of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Poolname[Array.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |NumberOfBlocks of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|NumberOfBlocks[Array.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
@@ -329,6 +276,59 @@ Denis Pavlov
 |ExtentStripeLength of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ExtentStripeLength[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |IsBasedOnUnderlyingRedundancy of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|IsBasedOnUnderlyingRedundancy[Array.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 |WriteProtected of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|WriteProtected[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|AllocatedCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AllocatedCapacity[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|SNMPCommunity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SNMPCommunity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|iSCSIAuthMethod 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|iSCSIAuthMethod.1[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Locale of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Locale[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|MaxNumberOfNodes of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|MaxNumberOfNodes[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Name of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Name[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OperationalStatus 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.0[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|OperationalStatus 1 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|OperationalStatus.1[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|PoolCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|PoolCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|RequestedState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|RequestedState[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|RequiredMemory of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|RequiredMemory[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ResetCapability of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ResetCapability[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|SNMPServerIP of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SNMPServerIP[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ID of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ID[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|SNMPSetting of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|SNMPSetting[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|StatisticsFrequency of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|StatisticsFrequency[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|StatisticsStatus of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|StatisticsStatus[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TimeZone of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TimeZone[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|Topology of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|Topology[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TotalOverallocation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalOverallocation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TotalUsedCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalUsedCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TotalVdiskCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalVdiskCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TotalVdiskCopyCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TotalVdiskCopyCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|TransitioningToState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|TransitioningToState[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|VolumeProtectionTime of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|VolumeProtectionTime[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|iSCSIAuthMethod 0 of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|iSCSIAuthMethod.0[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|GMLinkTolerance of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|GMLinkTolerance[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|AvailableCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|AvailableCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailContactLocation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailContactLocation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|BackendStorageCapacity of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|BackendStorageCapacity[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ClusterState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ClusterState[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|CodeLevel of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|CodeLevel[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ConfiguredAddress of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConfiguredAddress[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ConnectionType of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConnectionType[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ConsoleIP of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConsoleIP[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ConsolePort of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ConsolePort[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|DiscoveryStatus of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|DiscoveryStatus[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|ElementName of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|ElementName[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailContactAlternate of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailContactAlternate[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailContactPrimary of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailContactPrimary[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|GMIntraClusterDelaySimulation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|GMIntraClusterDelaySimulation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailContact of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailContact[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailInterval of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailInterval[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailReply of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailReply[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailServer of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailServer[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EmailSetting of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EmailSetting[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailState[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EMailUserCount of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EMailUserCount[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EnabledDefault of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnabledDefault[System.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|EnabledState of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|EnabledState[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|FcPortSpeed of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|FcPortSpeed[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|GMInterClusterDelaySimulation of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|GMInterClusterDelaySimulation[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
+|VolumeProtection of {#SO_TYPE}.{#SO_NAME}|<p>-</p>|`Zabbix trapper`|VolumeProtection[{#SO_TYPE}.{#SO_NAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -353,7 +353,7 @@ Denis Pavlov
 |Read rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_READ_RATE_MBS} MB/s for 5 minutes|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesRead[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
 |Transfer rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_TRANSFER_RATE_MBS} MB/s for 5 minutes|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesTransferred[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
 |Write rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_WRITE_RATE_MBS} MB/s for 5 minutes|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesWritten[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
-|No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[mdisk.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[mdisk.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
+|No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[Enclosure.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[Enclosure.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[mdiskgrp.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[mdiskgrp.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |Error {ITEM.VALUE} is occured on {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ErrorSequenceNumber[{#SO_TYPE}.{#SO_NAME}],5m)=0</p><p>**Recovery expression**: </p>|high|
 |Firmware Level of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/FirmwareLevel[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/FirmwareLevel[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|
@@ -365,11 +365,11 @@ Denis Pavlov
 |No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/Name[DiskDrive.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/Name[DiskDrive.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |ProductID of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/ProductID[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/ProductID[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|
 |SlotID of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/SlotID[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/SlotID[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|
-|No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[Enclosure.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[Enclosure.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
-|Code Level of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/CodeLevel[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/CodeLevel[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|
-|No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[System.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[System.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[VDisk.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[VDisk.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |Read rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_READ_RATE_MBS} MB/s for 5 minutes (LLD)|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesRead[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
 |Transfer rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_TRANSFER_RATE_MBS} MB/s for 5 minutes (LLD)|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesTransferred[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
 |Write rate of {#SO_TYPE}.{#SO_NAME} exceeds {$VDISK_MAX_WRITE_RATE_MBS} MB/s for 5 minutes (LLD)|<p>-</p>|<p>**Expression**: avg(/Storage Pystormon/KBytesWritten[VDisk.{#SO_NAME}],5m)>500*1048576</p><p>**Recovery expression**: </p>|warning|
+|No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[mdisk.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[mdisk.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
 |No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[Array.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[Array.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|
+|Code Level of {#SO_TYPE}.{#SO_NAME} has changed (LLD)|<p>-</p>|<p>**Expression**: (last(/Storage Pystormon/CodeLevel[{#SO_TYPE}.{#SO_NAME}],#1)<>last(/Storage Pystormon/CodeLevel[{#SO_TYPE}.{#SO_NAME}],#2))=1</p><p>**Recovery expression**: </p>|average|
+|No data for an hour from {#SO_TYPE}.{#SO_NAME} (LLD)|<p>-</p>|<p>**Expression**: nodata(/Storage Pystormon/ElementName[System.{#SO_NAME}],1d)=0 and nodata(/Storage Pystormon/ElementName[System.{#SO_NAME}],1h)=1</p><p>**Recovery expression**: </p>|warning|

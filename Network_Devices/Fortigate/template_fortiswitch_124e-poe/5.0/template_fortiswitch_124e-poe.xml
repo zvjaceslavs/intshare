@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:14Z</date>
+  <date>2021-10-26T04:45:41Z</date>
   <groups>
     <group>
       <name>Fortiswitch</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP FortiSwitch Devices</template>
-      <name>Template SNMP FortiSwitch Devices</name>
+      <template>SNMP FortiSwitch Devices</template>
+      <name>SNMP FortiSwitch Devices</name>
       <groups>
         <group>
           <name>Fortiswitch</name>
@@ -282,7 +282,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP FortiSwitch Devices</host>
+                    <host>SNMP FortiSwitch Devices</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -291,7 +291,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP FortiSwitch Devices</host>
+                    <host>SNMP FortiSwitch Devices</host>
                     <key>ifHCOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -311,7 +311,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template SNMP FortiSwitch Devices</host>
+            <host>SNMP FortiSwitch Devices</host>
             <key>fortinetCurrentCPUUtil</key>
           </item>
         </graph_item>
@@ -330,7 +330,7 @@
         <graph_item>
           <color>AA0000</color>
           <item>
-            <host>Template SNMP FortiSwitch Devices</host>
+            <host>SNMP FortiSwitch Devices</host>
             <key>fortinetUsedStorage</key>
           </item>
         </graph_item>
@@ -339,7 +339,7 @@
           <color>006600</color>
           <type>GRAPH_SUM</type>
           <item>
-            <host>Template SNMP FortiSwitch Devices</host>
+            <host>SNMP FortiSwitch Devices</host>
             <key>fortinetTotalStorage</key>
           </item>
         </graph_item>
@@ -353,7 +353,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template SNMP FortiSwitch Devices</host>
+            <host>SNMP FortiSwitch Devices</host>
             <key>fortinetUsedMemory-percent</key>
           </item>
         </graph_item>

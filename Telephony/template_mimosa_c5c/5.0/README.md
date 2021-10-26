@@ -1,4 +1,4 @@
-# Template Mimosa C5c by Dzset
+# Mimosa C5c by Dzset
 
 ## Description
 
@@ -36,48 +36,48 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Ethernet (RJ45) Status|<p>-</p>|`SNMP agent`|ifSpeed.1<p>Update: 3m</p>|
-|Ganho da Antena Wireless|<p>Displays wireless cantenna gain for device</p>|`SNMP agent`|mimosaAntennaGain.0<p>Update: 1h</p>|
-|Frequência do Canal Central Wireless|<p>Displays wireless center frequency 1 for device</p>|`SNMP agent`|mimosaCenterFreq.1<p>Update: 5m</p>|
-|Frequência do Canal Central Wireless|<p>Displays wireless channel center frequency 1 for device</p>|`SNMP agent`|mimosaChannelCenterFreq.1<p>Update: 5m</p>|
-|Potência TX Wireless|<p>Displays wireless channel power 1 for device</p>|`SNMP agent`|mimosaChannelTxPower.1<p>Update: 5m</p>|
-|Largura do Canal Wireless|<p>Displays wireless channel width 1 for device</p>|`SNMP agent`|mimosaChannelWidth.1<p>Update: 5m</p>|
-|Nome do Dispositivo|<p>Displays name for device</p>|`SNMP agent`|mimosaDeviceName.0<p>Update: 1h</p>|
-|Data de criação da firmware|<p>-</p>|`SNMP agent`|mimosaFirmwareBuildDate.0<p>Update: 1d</p>|
-|Versão de Firmware|<p>-</p>|`SNMP agent`|mimosaFirmwareVersion.0<p>Update: 1d</p>|
-|Temperatura Interna|<p>Displays internal temperature for device</p>|`SNMP agent`|mimosaInternalTemp.0<p>Update: 5m</p>|
 |Última reinicialização do dispositivo|<p>Displays last reboot time for device</p>|`SNMP agent`|mimosaLastRebootTime.0<p>Update: 5m</p>|
-|% Taxa de Erro RX em Pacotes Wireless|<p>-</p>|`SNMP agent`|mimosaPerRxRate.0<p>Update: 5</p>|
+|Potência Wireless Tx|<p>Displays wireless total Tx power for device</p>|`SNMP agent`|mimosaTotalTxPower.0<p>Update: 5m</p>|
+|Wireless Tx Power 1|<p>Displays wireless Tx Power 2 for device</p>|`SNMP agent`|mimosaTxPower.1<p>Update: 30</p>|
+|Wireless SSID|<p>-</p>|`SNMP agent`|mimosaWanSsid.0<p>Update: 1h</p>|
+|Tempo de Atividade Link Wireless|<p>Displays wireless link uptime for device</p>|`SNMP agent`|mimosaWanUpTime.0<p>Update: 5m</p>|
+|Temperatura Interna|<p>Displays internal temperature for device</p>|`SNMP agent`|mimosaInternalTemp.0<p>Update: 5m</p>|
+|Wireless TDMA Mode|<p>Displays wireless TDMA mode for device</p>|`SNMP agent`|mimosaTDMAMode.0<p>Update: 3600</p>|
 |% Taxa de Erro TX em Pacotes Wireless|<p>-</p>|`SNMP agent`|mimosaPerTxRate.0<p>Update: 5</p>|
 |Taxa de transmissão Wireless RX|<p>-</p>|`SNMP agent`|mimosaPhyRxRate.0<p>Update: 1m</p>|
 |Taxa de transmissão Wireless TX|<p>-</p>|`SNMP agent`|mimosaPhyTxRate.0<p>Update: 1m</p>|
-|País Selecionado|<p>Displays regulatory domain for device</p>|`SNMP agent`|mimosaRegulatoryDomain.0<p>Update: 1h</p>|
-|Velocidade Total Wireless MAC RX|<p>-</p>|`Calculated`|mimosaRxMacTotal.0<p>Update: 1m</p>|
-|Piso de Ruído Wireless RX 1|<p>-</p>|`SNMP agent`|mimosaRxNoise.1<p>Update: 3m</p>|
-|Piso de Ruído Wireless RX 2|<p>-</p>|`SNMP agent`|mimosaRxNoise.2<p>Update: 3m</p>|
-|Velocidade Física Wireless RX 1|<p>-</p>|`SNMP agent`|mimosaRxPhy.1<p>Update: 1m</p>|
-|Velocidade Física Wireless RX 2|<p>-</p>|`SNMP agent`|mimosaRxPhy.2<p>Update: 1m</p>|
-|Velocidade Física Wireless Total|<p>-</p>|`Calculated`|mimosaRxPhyTotal.0<p>Update: 10</p>|
-|Wireless Rx Power 1|<p>Displays wireless Rx Power 1 for device</p>|`SNMP agent`|mimosaRxPower.1<p>Update: 30</p>|
-|Wireless Rx Power 2|<p>Displays wireless Rx Power 2 for device</p>|`SNMP agent`|mimosaRxPower.2<p>Update: 30</p>|
-|Numero de Série|<p>-</p>|`SNMP agent`|mimosaSerialNumber.0<p>Update: 1d</p>|
-|Wireless SNR|<p>-</p>|`SNMP agent`|mimosaSNR.1<p>Update: 5m</p>|
-|Wireless TDMA Mode|<p>Displays wireless TDMA mode for device</p>|`SNMP agent`|mimosaTDMAMode.0<p>Update: 3600</p>|
-|Wireless TDMA Window|<p>Displays wireless TDMA window for device</p>|`SNMP agent`|mimosaTDMAWindow.0<p>Update: 3600</p>|
-|Sinal Wireless Rx|<p>-</p>|`SNMP agent`|mimosaTotalRxPower.0<p>Update: 5m</p>|
-|Potência Wireless Tx|<p>Displays wireless total Tx power for device</p>|`SNMP agent`|mimosaTotalTxPower.0<p>Update: 5m</p>|
-|Velocidade Total Wireless MAC TX|<p>-</p>|`Calculated`|mimosaTxMacTotal.0<p>Update: 1m</p>|
-|Velocidade Física Wireless TX 1|<p>Displays wireless Tx Speed 1 for device</p>|`SNMP agent`|mimosaTxPhy.1<p>Update: 1m</p>|
-|Velocidade Física Wireless TX 2|<p>Displays wireless Tx Speed 1 for device</p>|`SNMP agent`|mimosaTxPhy.2<p>Update: 1m</p>|
 |Velocidade Física Wireless Total|<p>-</p>|`Calculated`|mimosaTxPhyTotal.0<p>Update: 1m</p>|
-|Wireless Tx Power 1|<p>Displays wireless Tx Power 2 for device</p>|`SNMP agent`|mimosaTxPower.1<p>Update: 30</p>|
-|Código de desbloqueio|<p>-</p>|`SNMP agent`|mimosaUnlockCode.0<p>Update: 1d</p>|
-|Endereço MAC|<p>Displays wireless mac for device</p>|`SNMP agent`|mimosaWanMac.0<p>Update: 1d</p>|
-|Wireless SSID|<p>-</p>|`SNMP agent`|mimosaWanSsid.0<p>Update: 1h</p>|
-|Status do Link Wireless|<p>Displays wireless link status for device</p>|`SNMP agent`|mimosaWanStatus.0<p>Update: 1m</p>|
-|Tempo de Atividade Link Wireless|<p>Displays wireless link uptime for device</p>|`SNMP agent`|mimosaWanUpTime.0<p>Update: 5m</p>|
-|Wireless Mode|<p>Displays wireless mode for device</p>|`SNMP agent`|mimosaWirelessMode.0<p>Update: 3600</p>|
+|Data de criação da firmware|<p>-</p>|`SNMP agent`|mimosaFirmwareBuildDate.0<p>Update: 1d</p>|
+|Wireless Rx Power 1|<p>Displays wireless Rx Power 1 for device</p>|`SNMP agent`|mimosaRxPower.1<p>Update: 30</p>|
+|Velocidade Física Wireless Total|<p>-</p>|`Calculated`|mimosaRxPhyTotal.0<p>Update: 10</p>|
 |Tempo de Atividade|<p>Device Uptime</p>|`SNMP agent`|sysUpTimeInstance.0<p>Update: 1m</p>|
+|Wireless TDMA Window|<p>Displays wireless TDMA window for device</p>|`SNMP agent`|mimosaTDMAWindow.0<p>Update: 3600</p>|
+|Velocidade Física Wireless TX 2|<p>Displays wireless Tx Speed 1 for device</p>|`SNMP agent`|mimosaTxPhy.2<p>Update: 1m</p>|
+|Velocidade Física Wireless RX 1|<p>-</p>|`SNMP agent`|mimosaRxPhy.1<p>Update: 1m</p>|
+|Velocidade Total Wireless MAC TX|<p>-</p>|`Calculated`|mimosaTxMacTotal.0<p>Update: 1m</p>|
+|Sinal Wireless Rx|<p>-</p>|`SNMP agent`|mimosaTotalRxPower.0<p>Update: 5m</p>|
+|Frequência do Canal Central Wireless|<p>Displays wireless channel center frequency 1 for device</p>|`SNMP agent`|mimosaChannelCenterFreq.1<p>Update: 5m</p>|
+|Endereço MAC|<p>Displays wireless mac for device</p>|`SNMP agent`|mimosaWanMac.0<p>Update: 1d</p>|
+|Velocidade Física Wireless RX 2|<p>-</p>|`SNMP agent`|mimosaRxPhy.2<p>Update: 1m</p>|
+|% Taxa de Erro RX em Pacotes Wireless|<p>-</p>|`SNMP agent`|mimosaPerRxRate.0<p>Update: 5</p>|
+|Piso de Ruído Wireless RX 2|<p>-</p>|`SNMP agent`|mimosaRxNoise.2<p>Update: 3m</p>|
+|Potência TX Wireless|<p>Displays wireless channel power 1 for device</p>|`SNMP agent`|mimosaChannelTxPower.1<p>Update: 5m</p>|
+|Ethernet (RJ45) Status|<p>-</p>|`SNMP agent`|ifSpeed.1<p>Update: 3m</p>|
+|País Selecionado|<p>Displays regulatory domain for device</p>|`SNMP agent`|mimosaRegulatoryDomain.0<p>Update: 1h</p>|
+|Código de desbloqueio|<p>-</p>|`SNMP agent`|mimosaUnlockCode.0<p>Update: 1d</p>|
+|Wireless Rx Power 2|<p>Displays wireless Rx Power 2 for device</p>|`SNMP agent`|mimosaRxPower.2<p>Update: 30</p>|
+|Wireless SNR|<p>-</p>|`SNMP agent`|mimosaSNR.1<p>Update: 5m</p>|
+|Nome do Dispositivo|<p>Displays name for device</p>|`SNMP agent`|mimosaDeviceName.0<p>Update: 1h</p>|
+|Versão de Firmware|<p>-</p>|`SNMP agent`|mimosaFirmwareVersion.0<p>Update: 1d</p>|
+|Ganho da Antena Wireless|<p>Displays wireless cantenna gain for device</p>|`SNMP agent`|mimosaAntennaGain.0<p>Update: 1h</p>|
+|Largura do Canal Wireless|<p>Displays wireless channel width 1 for device</p>|`SNMP agent`|mimosaChannelWidth.1<p>Update: 5m</p>|
+|Velocidade Total Wireless MAC RX|<p>-</p>|`Calculated`|mimosaRxMacTotal.0<p>Update: 1m</p>|
+|Status do Link Wireless|<p>Displays wireless link status for device</p>|`SNMP agent`|mimosaWanStatus.0<p>Update: 1m</p>|
+|Velocidade Física Wireless TX 1|<p>Displays wireless Tx Speed 1 for device</p>|`SNMP agent`|mimosaTxPhy.1<p>Update: 1m</p>|
+|Piso de Ruído Wireless RX 1|<p>-</p>|`SNMP agent`|mimosaRxNoise.1<p>Update: 3m</p>|
+|Numero de Série|<p>-</p>|`SNMP agent`|mimosaSerialNumber.0<p>Update: 1d</p>|
+|Wireless Mode|<p>Displays wireless mode for device</p>|`SNMP agent`|mimosaWirelessMode.0<p>Update: 3600</p>|
+|Frequência do Canal Central Wireless|<p>Displays wireless center frequency 1 for device</p>|`SNMP agent`|mimosaCenterFreq.1<p>Update: 5m</p>|
 ## Triggers
 
 There are no triggers in this template.

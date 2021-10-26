@@ -1,4 +1,4 @@
-# Template Huawei 10K UPS
+# Huawei 10K UPS
 
 ## Overview
 
@@ -71,16 +71,16 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Number of active alarms|<p>Number of active alarms, ranging from 0 to 8000.</p>|`SNMP agent`|huawei-ups.hwUpsAlarmCurrActiveNum<p>Update: 5m</p>|
-|Alarm synchronization ID|<p>Alarm synchronization ID. The value ranges from 0 to 4294967295. This value is used by the NetEco to obtain the active alarm synchronization ID and synchronize alarms.</p>|`SNMP agent`|huawei-ups.hwUpsAlarmSynchronNum<p>Update: 10m</p>|
-|Ambient humidity|<p>Ambient humidity. An integer ranging from 0 to 100. The value is accurate to one decimal place on the NetEco. The unit is %.</p>|`SNMP agent`|huawei-ups.hwUpsEnvHumidity<p>Update: 1m</p>|
-|Ambient temperature.|<p>Ambient temperature. An integer ranging from -50 to 120. The value is accurate to one decimal place on the NetEco. The unit is °C.</p>|`SNMP agent`|huawei-ups.hwUpsEnvTemper<p>Update: 1m</p>|
 |Number of parallel systems|<p>Number of parallel systems. An integer ranging from 0 to 63.</p>|`SNMP agent`|huawei-ups.hwUpsParallelSysNum<p>Update: 1h</p>|
-|Site time UTC|<p>UTC time, ranging from 0 to 4294967295. The unit is seconds.</p>|`SNMP agent`|huawei-ups.hwUpsSiteTimeUTC<p>Update: 10m</p>|
-|Number of devices in the system|<p>Number of devices in the system. An integer ranging from 0 to 63.</p>|`SNMP agent`|huawei-ups.hwUpsSysDeviceNum<p>Update: 1h</p>|
-|System interface protocol version|<p>Version number of the system interface protocol between the NetEco and NEs. A string of characters.</p>|`SNMP agent`|huawei-ups.hwUpsSysInerProtVersion<p>Update: 6h</p>|
-|System main device ESN|<p>ESN of the master device used for setting up a NetEco model. A string of characters.</p>|`SNMP agent`|huawei-ups.hwUpsSystemMainDeviceESN<p>Update: 6h</p>|
+|Ambient humidity|<p>Ambient humidity. An integer ranging from 0 to 100. The value is accurate to one decimal place on the NetEco. The unit is %.</p>|`SNMP agent`|huawei-ups.hwUpsEnvHumidity<p>Update: 1m</p>|
 |System type|<p>Name of the UPS system. A string of characters. Configurable.</p>|`SNMP agent`|huawei-ups.hwUpsSystemType<p>Update: 6h</p>|
+|Alarm synchronization ID|<p>Alarm synchronization ID. The value ranges from 0 to 4294967295. This value is used by the NetEco to obtain the active alarm synchronization ID and synchronize alarms.</p>|`SNMP agent`|huawei-ups.hwUpsAlarmSynchronNum<p>Update: 10m</p>|
+|Ambient temperature.|<p>Ambient temperature. An integer ranging from -50 to 120. The value is accurate to one decimal place on the NetEco. The unit is °C.</p>|`SNMP agent`|huawei-ups.hwUpsEnvTemper<p>Update: 1m</p>|
+|System main device ESN|<p>ESN of the master device used for setting up a NetEco model. A string of characters.</p>|`SNMP agent`|huawei-ups.hwUpsSystemMainDeviceESN<p>Update: 6h</p>|
+|Site time UTC|<p>UTC time, ranging from 0 to 4294967295. The unit is seconds.</p>|`SNMP agent`|huawei-ups.hwUpsSiteTimeUTC<p>Update: 10m</p>|
+|Number of active alarms|<p>Number of active alarms, ranging from 0 to 8000.</p>|`SNMP agent`|huawei-ups.hwUpsAlarmCurrActiveNum<p>Update: 5m</p>|
+|System interface protocol version|<p>Version number of the system interface protocol between the NetEco and NEs. A string of characters.</p>|`SNMP agent`|huawei-ups.hwUpsSysInerProtVersion<p>Update: 6h</p>|
+|Number of devices in the system|<p>Number of devices in the system. An integer ranging from 0 to 63.</p>|`SNMP agent`|huawei-ups.hwUpsSysDeviceNum<p>Update: 1h</p>|
 |{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery auto test|<p>Scheduled shallow discharge test enabled or disabled. Enumeration value. The value 1 indicates that the test is disabled. The value 2 indicates that the test is enabled.</p>|`SNMP agent`|huawei-ups[hwUpsBattAutoTest.{#HWUPSDEVICEID}]<p>Update: 10m</p><p>LLD</p>|
 |{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} redundant number|<p>Redundant number of the parallel system. An integer ranging from 0 to 3.</p>|`SNMP agent`|huawei-ups[hwUpsDeviceRedundantNumber.{#HWUPSDEVICEID}]<p>Update: 1h</p><p>LLD</p>|
 |{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} input voltage phase A|<p>Input voltage phase A. The value ranges from 0 to 10000. The value is accurate to one decimal place on the NetEco. The unit is V.</p>|`SNMP agent`|huawei-ups[hwUpsInputVoltageA.{#HWUPSDEVICEID}]<p>Update: 5m</p><p>LLD</p>|
@@ -157,9 +157,9 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Battery backup time < {$BACKUP_TIME} on {HOST.NAME}|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].last()}<15m</p><p>**Recovery expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].last()}>{Template Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].prev()}</p>|high|
-|Battery charge < {$BATTERY_CHARGE}% on {HOST.NAME}|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].last()}<80</p><p>**Recovery expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].last()}>{Template Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].prev()}</p>|high|
-|Battery is discharging on {HOST.NAME}|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsDeviceBatteryState.{#HWUPSDEVICEID}].last()}=6</p><p>**Recovery expression**: </p>|high|
-|Battery backup time < {$BACKUP_TIME} on {HOST.NAME} (LLD)|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].last()}<15m</p><p>**Recovery expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].last()}>{Template Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].prev()}</p>|high|
-|Battery charge < {$BATTERY_CHARGE}% on {HOST.NAME} (LLD)|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].last()}<80</p><p>**Recovery expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].last()}>{Template Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].prev()}</p>|high|
-|Battery is discharging on {HOST.NAME} (LLD)|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Template Huawei 10K UPS:huawei-ups[hwUpsDeviceBatteryState.{#HWUPSDEVICEID}].last()}=6</p><p>**Recovery expression**: </p>|high|
+|Battery backup time < {$BACKUP_TIME} on {HOST.NAME}|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].last()}<15m</p><p>**Recovery expression**: {Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].last()}>{Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].prev()}</p>|high|
+|Battery charge < {$BATTERY_CHARGE}% on {HOST.NAME}|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].last()}<80</p><p>**Recovery expression**: {Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].last()}>{Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].prev()}</p>|high|
+|Battery is discharging on {HOST.NAME}|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Huawei 10K UPS:huawei-ups[hwUpsDeviceBatteryState.{#HWUPSDEVICEID}].last()}=6</p><p>**Recovery expression**: </p>|high|
+|Battery backup time < {$BACKUP_TIME} on {HOST.NAME} (LLD)|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].last()}<15m</p><p>**Recovery expression**: {Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].last()}>{Huawei 10K UPS:huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}].prev()}</p>|high|
+|Battery charge < {$BATTERY_CHARGE}% on {HOST.NAME} (LLD)|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].last()}<80</p><p>**Recovery expression**: {Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].last()}>{Huawei 10K UPS:huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}].prev()}</p>|high|
+|Battery is discharging on {HOST.NAME} (LLD)|<p>last value: {ITEM.LASTVALUE}</p>|<p>**Expression**: {Huawei 10K UPS:huawei-ups[hwUpsDeviceBatteryState.{#HWUPSDEVICEID}].last()}=6</p><p>**Recovery expression**: </p>|high|

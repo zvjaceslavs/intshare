@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:24Z</date>
+  <date>2021-10-26T04:38:04Z</date>
   <groups>
     <group>
       <name>templates_switchs</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Netgear_GS724T</template>
-      <name>Template_Netgear_GS724T</name>
+      <template>Netgear_GS724T</template>
+      <name>Netgear_GS724T</name>
       <groups>
         <group>
           <name>templates_switchs</name>
@@ -3337,7 +3337,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag01.traffic.in</key>
           </item>
         </graph_item>
@@ -3345,7 +3345,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag01.traffic.out</key>
           </item>
         </graph_item>
@@ -3357,7 +3357,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag02.traffic.in</key>
           </item>
         </graph_item>
@@ -3365,7 +3365,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag02.traffic.out</key>
           </item>
         </graph_item>
@@ -3378,7 +3378,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag03.traffic.in</key>
           </item>
         </graph_item>
@@ -3386,7 +3386,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag03.traffic.out</key>
           </item>
         </graph_item>
@@ -3399,7 +3399,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag04.traffic.in</key>
           </item>
         </graph_item>
@@ -3407,7 +3407,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag04.traffic.out</key>
           </item>
         </graph_item>
@@ -3420,7 +3420,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag05.traffic.in</key>
           </item>
         </graph_item>
@@ -3428,7 +3428,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag05.traffic.out</key>
           </item>
         </graph_item>
@@ -3441,7 +3441,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag06.traffic.in</key>
           </item>
         </graph_item>
@@ -3449,7 +3449,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag06.traffic.out</key>
           </item>
         </graph_item>
@@ -3462,7 +3462,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag07.traffic.in</key>
           </item>
         </graph_item>
@@ -3470,7 +3470,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag07.traffic.out</key>
           </item>
         </graph_item>
@@ -3483,7 +3483,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag08.traffic.in</key>
           </item>
         </graph_item>
@@ -3491,7 +3491,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag08.traffic.out</key>
           </item>
         </graph_item>
@@ -3504,7 +3504,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag09.traffic.in</key>
           </item>
         </graph_item>
@@ -3512,7 +3512,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag09.traffic.out</key>
           </item>
         </graph_item>
@@ -3525,7 +3525,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag10.traffic.in</key>
           </item>
         </graph_item>
@@ -3533,7 +3533,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag10.traffic.out</key>
           </item>
         </graph_item>
@@ -3546,7 +3546,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag11.traffic.in</key>
           </item>
         </graph_item>
@@ -3554,7 +3554,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag11.traffic.out</key>
           </item>
         </graph_item>
@@ -3567,7 +3567,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag12.traffic.in</key>
           </item>
         </graph_item>
@@ -3575,7 +3575,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag12.traffic.out</key>
           </item>
         </graph_item>
@@ -3588,7 +3588,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag13.traffic.in</key>
           </item>
         </graph_item>
@@ -3596,7 +3596,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag13.traffic.out</key>
           </item>
         </graph_item>
@@ -3609,7 +3609,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag14.traffic.in</key>
           </item>
         </graph_item>
@@ -3617,7 +3617,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag14.traffic.out</key>
           </item>
         </graph_item>
@@ -3630,7 +3630,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag15.traffic.in</key>
           </item>
         </graph_item>
@@ -3638,7 +3638,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag15.traffic.out</key>
           </item>
         </graph_item>
@@ -3651,7 +3651,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag16.traffic.in</key>
           </item>
         </graph_item>
@@ -3659,7 +3659,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag16.traffic.out</key>
           </item>
         </graph_item>
@@ -3672,7 +3672,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag17.traffic.in</key>
           </item>
         </graph_item>
@@ -3680,7 +3680,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag17.traffic.out</key>
           </item>
         </graph_item>
@@ -3693,7 +3693,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag18.traffic.in</key>
           </item>
         </graph_item>
@@ -3701,7 +3701,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag18.traffic.out</key>
           </item>
         </graph_item>
@@ -3714,7 +3714,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag19.traffic.in</key>
           </item>
         </graph_item>
@@ -3722,7 +3722,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag19.traffic.out</key>
           </item>
         </graph_item>
@@ -3735,7 +3735,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag20.traffic.in</key>
           </item>
         </graph_item>
@@ -3743,7 +3743,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag20.traffic.out</key>
           </item>
         </graph_item>
@@ -3756,7 +3756,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag21.traffic.in</key>
           </item>
         </graph_item>
@@ -3764,7 +3764,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag21.traffic.out</key>
           </item>
         </graph_item>
@@ -3777,7 +3777,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag22.traffic.in</key>
           </item>
         </graph_item>
@@ -3785,7 +3785,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag22.traffic.out</key>
           </item>
         </graph_item>
@@ -3798,7 +3798,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag23.traffic.in</key>
           </item>
         </graph_item>
@@ -3806,7 +3806,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag23.traffic.out</key>
           </item>
         </graph_item>
@@ -3819,7 +3819,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag24.traffic.in</key>
           </item>
         </graph_item>
@@ -3827,7 +3827,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag24.traffic.out</key>
           </item>
         </graph_item>
@@ -3840,7 +3840,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag25.traffic.in</key>
           </item>
         </graph_item>
@@ -3848,7 +3848,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag25.traffic.out</key>
           </item>
         </graph_item>
@@ -3861,7 +3861,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag26.traffic.in</key>
           </item>
         </graph_item>
@@ -3869,7 +3869,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>lag26.traffic.out</key>
           </item>
         </graph_item>
@@ -3882,7 +3882,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.overall</key>
           </item>
         </graph_item>
@@ -3890,7 +3890,7 @@
           <sortorder>1</sortorder>
           <color>0000DD</color>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.overall</key>
           </item>
         </graph_item>
@@ -3904,7 +3904,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.1</key>
           </item>
         </graph_item>
@@ -3914,7 +3914,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -3928,7 +3928,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.2</key>
           </item>
         </graph_item>
@@ -3937,7 +3937,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -3948,20 +3948,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.3</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.3</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.3</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3974,7 +3974,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.4</key>
           </item>
         </graph_item>
@@ -3983,7 +3983,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -3994,20 +3994,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.5</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.5</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.5</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4017,20 +4017,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.6</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.6</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.6</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4040,20 +4040,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.7</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.7</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.7</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4066,7 +4066,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.8</key>
           </item>
         </graph_item>
@@ -4075,7 +4075,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.8</key>
           </item>
         </graph_item>
@@ -4086,20 +4086,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.9</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.9</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.9</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4112,7 +4112,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.10</key>
           </item>
         </graph_item>
@@ -4121,7 +4121,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.10</key>
           </item>
         </graph_item>
@@ -4135,7 +4135,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.11</key>
           </item>
         </graph_item>
@@ -4144,7 +4144,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.11</key>
           </item>
         </graph_item>
@@ -4155,20 +4155,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.12</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.12</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.12</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4181,7 +4181,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.13</key>
           </item>
         </graph_item>
@@ -4190,7 +4190,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.13</key>
           </item>
         </graph_item>
@@ -4201,20 +4201,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.14</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.14</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.14</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4224,20 +4224,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.15</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.15</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.15</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4247,20 +4247,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.16</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.16</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.16</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4270,20 +4270,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.17</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.17</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.17</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4293,20 +4293,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.18</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.18</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.18</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4319,7 +4319,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.19</key>
           </item>
         </graph_item>
@@ -4328,7 +4328,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.19</key>
           </item>
         </graph_item>
@@ -4339,20 +4339,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.20</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.20</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.20</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4362,20 +4362,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.21</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.21</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.21</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4385,20 +4385,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Netgear_GS724T</host>
-            <key>ifInOctects.22</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.22</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Netgear_GS724T</host>
+            <key>ifInOctects.22</key>
           </item>
         </graph_item>
       </graph_items>
@@ -4411,7 +4411,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.23</key>
           </item>
         </graph_item>
@@ -4421,7 +4421,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.23</key>
           </item>
         </graph_item>
@@ -4435,7 +4435,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifInOctects.24</key>
           </item>
         </graph_item>
@@ -4444,7 +4444,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Netgear_GS724T</host>
+            <host>Netgear_GS724T</host>
             <key>ifOutOctets.24</key>
           </item>
         </graph_item>

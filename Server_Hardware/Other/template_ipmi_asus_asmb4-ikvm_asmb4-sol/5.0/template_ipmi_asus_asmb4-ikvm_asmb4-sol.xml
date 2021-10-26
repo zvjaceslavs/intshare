@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:52Z</date>
+  <date>2021-10-26T04:38:32Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI ASUS ASMB4</template>
-      <name>Template IPMI ASUS ASMB4</name>
+      <template>IPMI ASUS ASMB4</template>
+      <name>IPMI ASUS ASMB4</name>
       <description>ASUS ASMB4-iKVM/ASMB4-SOL PLUS Hardware Monitor / System Sensor related Autor template: m.beloglazov@gmail.com Version Zabbix: 3.0</description>
       <groups>
         <group>
@@ -347,7 +347,7 @@
               <style>0</style>
               <resource>
                 <name>CPU Temperature</name>
-                <host>Template IPMI ASUS ASMB4</host>
+                <host>IPMI ASUS ASMB4</host>
               </resource>
               <width>400</width>
               <height>200</height>
@@ -369,7 +369,7 @@
               <style>0</style>
               <resource>
                 <name>TR Temperature</name>
-                <host>Template IPMI ASUS ASMB4</host>
+                <host>IPMI ASUS ASMB4</host>
               </resource>
               <width>400</width>
               <height>200</height>
@@ -398,7 +398,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.cpu1_temperature</key>
           </item>
         </graph_item>
@@ -406,7 +406,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.cpu2_temperature</key>
           </item>
         </graph_item>
@@ -419,7 +419,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.frnt_fan1</key>
           </item>
         </graph_item>
@@ -427,7 +427,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.frnt_fan2</key>
           </item>
         </graph_item>
@@ -435,7 +435,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.frnt_fan3</key>
           </item>
         </graph_item>
@@ -443,7 +443,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.frnt_fan4</key>
           </item>
         </graph_item>
@@ -451,7 +451,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.frnt_fan5</key>
           </item>
         </graph_item>
@@ -459,7 +459,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.frnt_fan6</key>
           </item>
         </graph_item>
@@ -467,7 +467,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.frnt_fan7</key>
           </item>
         </graph_item>
@@ -479,7 +479,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.tr1_temperature</key>
           </item>
         </graph_item>
@@ -487,7 +487,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.tr2_temperature</key>
           </item>
         </graph_item>
@@ -500,7 +500,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.plus3.3v</key>
           </item>
         </graph_item>
@@ -508,7 +508,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.plus3.3vsb</key>
           </item>
         </graph_item>
@@ -516,7 +516,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.plus5v</key>
           </item>
         </graph_item>
@@ -524,7 +524,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.plus5vsb</key>
           </item>
         </graph_item>
@@ -532,7 +532,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.plus12v</key>
           </item>
         </graph_item>
@@ -540,7 +540,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.vbat</key>
           </item>
         </graph_item>
@@ -548,7 +548,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.vcore1</key>
           </item>
         </graph_item>
@@ -556,7 +556,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template IPMI ASUS ASMB4</host>
+            <host>IPMI ASUS ASMB4</host>
             <key>asmb4.vcore2</key>
           </item>
         </graph_item>

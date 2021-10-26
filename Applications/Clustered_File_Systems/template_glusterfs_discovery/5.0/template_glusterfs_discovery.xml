@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:31Z</date>
+  <date>2021-10-26T04:40:23Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,7 +9,7 @@
   </groups>
   <templates>
     <template>
-      <template>Gluster Storage Template</template>
+      <template>Gluster Storage</template>
       <name>Gluster Storage</name>
       <groups>
         <group>
@@ -147,7 +147,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Gluster Storage Template:gluster_storage_info["nodes_active"].last()} &lt; {Gluster Storage Template:gluster_storage_info["node_count"].last()}</expression>
+      <expression>{Gluster Storage:gluster_storage_info["nodes_active"].last()} &lt; {Gluster Storage:gluster_storage_info["node_count"].last()}</expression>
       <name>Gluster storage nodes is not online</name>
       <priority>INFO</priority>
     </trigger>

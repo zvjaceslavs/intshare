@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:44Z</date>
+  <date>2021-10-26T04:39:31Z</date>
   <groups>
     <group>
       <name>Templates - Comunidade</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Virt VMware Hypervisor ESXi - Andre Bello</template>
-      <name>Template Virt VMware Hypervisor ESXi - Andre Bello</name>
+      <template>Virt VMware Hypervisor ESXi - Andre Bello</template>
+      <name>Virt VMware Hypervisor ESXi - Andre Bello</name>
       <groups>
         <group>
           <name>Templates - Comunidade</name>
@@ -427,11 +427,11 @@
                   <dependencies>
                     <dependency>
                       <name>{#DATASTORE} is 90% Used</name>
-                      <expression>{Template Virt VMware Hypervisor ESXi - Andre Bello:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].last()}&lt;10</expression>
+                      <expression>{Virt VMware Hypervisor ESXi - Andre Bello:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].last()}&lt;10</expression>
                     </dependency>
                     <dependency>
                       <name>{#DATASTORE} is 95% Used</name>
-                      <expression>{Template Virt VMware Hypervisor ESXi - Andre Bello:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].last()}&lt;5</expression>
+                      <expression>{Virt VMware Hypervisor ESXi - Andre Bello:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].last()}&lt;5</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -442,7 +442,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#DATASTORE} is 95% Used</name>
-                      <expression>{Template Virt VMware Hypervisor ESXi - Andre Bello:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].last()}&lt;5</expression>
+                      <expression>{Virt VMware Hypervisor ESXi - Andre Bello:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].last()}&lt;5</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>

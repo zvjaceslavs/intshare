@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:33Z</date>
+  <date>2021-10-26T04:44:53Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Ciena 6500 2</template>
-      <name>Template Ciena 6500 2</name>
+      <template>Ciena 6500 2</template>
+      <name>Ciena 6500 2</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -341,7 +341,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Ciena 6500 2:ethernet.if.status[ifOperStatus.{#SNMPINDEX}].last(#1)}&lt;>1 and {Template Ciena 6500 2:ethernet.if.status[ifAdminStatus.{#SNMPINDEX}].last(#1,1)}=1</expression>
+              <expression>{Ciena 6500 2:ethernet.if.status[ifOperStatus.{#SNMPINDEX}].last(#1)}&lt;>1 and {Ciena 6500 2:ethernet.if.status[ifAdminStatus.{#SNMPINDEX}].last(#1,1)}=1</expression>
               <name>{#IFDESCR} DOWN</name>
               <priority>WARNING</priority>
               <description>The operational status of this Ethernet interface is DOWN.</description>
@@ -355,7 +355,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>4CAF50</color>
                   <item>
-                    <host>Template Ciena 6500 2</host>
+                    <host>Ciena 6500 2</host>
                     <key>ciena6500.ethernet.if.bits.in[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -364,7 +364,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>2774A4</color>
                   <item>
-                    <host>Template Ciena 6500 2</host>
+                    <host>Ciena 6500 2</host>
                     <key>ciena6500.ethernet.if.bits.out[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -373,7 +373,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template Ciena 6500 2</host>
+                    <host>Ciena 6500 2</host>
                     <key>ciena6500.ethernet.if.errors.in[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -516,7 +516,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>(({Template Ciena 6500 2:optical.rx[{#PORTNAME}.OPIN].last(#1)}&lt;{Template Ciena 6500 2:optical.baseline[{#PORTNAME}.OPIN].last(#1)}-{$OPTICAL_VARIANCE}) or ({Template Ciena 6500 2:optical.rx[{#PORTNAME}.OPIN].last(#1)}>{Template Ciena 6500 2:optical.baseline[{#PORTNAME}.OPIN].last(#1)}+{$OPTICAL_VARIANCE}))</expression>
+              <expression>(({Ciena 6500 2:optical.rx[{#PORTNAME}.OPIN].last(#1)}&lt;{Ciena 6500 2:optical.baseline[{#PORTNAME}.OPIN].last(#1)}-{$OPTICAL_VARIANCE}) or ({Ciena 6500 2:optical.rx[{#PORTNAME}.OPIN].last(#1)}>{Ciena 6500 2:optical.baseline[{#PORTNAME}.OPIN].last(#1)}+{$OPTICAL_VARIANCE}))</expression>
               <name>{#PORTNAME} Optical Rx Power crossed baseline thresholds</name>
               <priority>INFO</priority>
               <description>The optical power level it more than {$OPTICAL_VARIANCE}db from the baseline value. This could be due to a new fiber event or the baselines may need to be reset. First verify the optical path then decide weather to reset the baselines. The baseline value can be reset in the PMs on the Ciena shelf.</description>
@@ -659,7 +659,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Ciena 6500 2:net.if.status[ifOperStatus.{#SNMPINDEX}].last(#1)}&lt;>1 and {Template Ciena 6500 2:net.if.status[ifAdminStatus.{#SNMPINDEX}].last(#1,1)}=1</expression>
+              <expression>{Ciena 6500 2:net.if.status[ifOperStatus.{#SNMPINDEX}].last(#1)}&lt;>1 and {Ciena 6500 2:net.if.status[ifAdminStatus.{#SNMPINDEX}].last(#1,1)}=1</expression>
               <name>{#IFDESCR} DOWN</name>
               <priority>AVERAGE</priority>
               <description>The interface status is not UP for this DWDM transport interface. This indicates the DWDM wave is down and could be a result of a fiber cut.</description>
@@ -759,13 +759,13 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template Ciena 6500 2:optical.tx[{#PORTNAME}.ORL].last(#1)}&lt;{Template Ciena 6500 2:optical.tx.baseline[{#PORTNAME}.ORL].last(#1)}-{$OPTICAL_VARIANCE}) or ({Template Ciena 6500 2:optical.tx[{#PORTNAME}.ORL].last(#1)}>{Template Ciena 6500 2:optical.tx.baseline[{#PORTNAME}.ORL].last(#1)}+{$OPTICAL_VARIANCE})</expression>
+              <expression>({Ciena 6500 2:optical.tx[{#PORTNAME}.ORL].last(#1)}&lt;{Ciena 6500 2:optical.tx.baseline[{#PORTNAME}.ORL].last(#1)}-{$OPTICAL_VARIANCE}) or ({Ciena 6500 2:optical.tx[{#PORTNAME}.ORL].last(#1)}>{Ciena 6500 2:optical.tx.baseline[{#PORTNAME}.ORL].last(#1)}+{$OPTICAL_VARIANCE})</expression>
               <name>{#PORTNAME} Optical Return Loss crossed baseline thresholds</name>
               <priority>INFO</priority>
               <description>The optical return loss it more than {$OPTICAL_VARIANCE}db from the baseline value. This could be due to a new fiber event or the baselines may need to be reset. First verify the optical path then decide weather to reset the baselines. The baseline value can be reset in the PMs on the Ciena shelf.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template Ciena 6500 2:optical.tx[{#PORTNAME}.OPOUT].last(#1)}&lt;{Template Ciena 6500 2:optical.tx.baseline[{#PORTNAME}.OPOUT].last(#1)}-{$OPTICAL_VARIANCE}) or ({Template Ciena 6500 2:optical.tx[{#PORTNAME}.OPOUT].last(#1)}>{Template Ciena 6500 2:optical.tx.baseline[{#PORTNAME}.OPOUT].last(#1)}+{$OPTICAL_VARIANCE})</expression>
+              <expression>({Ciena 6500 2:optical.tx[{#PORTNAME}.OPOUT].last(#1)}&lt;{Ciena 6500 2:optical.tx.baseline[{#PORTNAME}.OPOUT].last(#1)}-{$OPTICAL_VARIANCE}) or ({Ciena 6500 2:optical.tx[{#PORTNAME}.OPOUT].last(#1)}>{Ciena 6500 2:optical.tx.baseline[{#PORTNAME}.OPOUT].last(#1)}+{$OPTICAL_VARIANCE})</expression>
               <name>{#PORTNAME} Optical Tx Power crossed baseline thresholds</name>
               <priority>INFO</priority>
               <description>The optical power level is more than {$OPTICAL_VARIANCE}db from the baseline value. This could be due to a new fiber event or the baselines may need to be reset. First verify the optical path then decide weather to reset the baselines. The baseline value can be reset in the PMs on the Ciena shelf.</description>

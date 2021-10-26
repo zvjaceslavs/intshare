@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:29Z</date>
+  <date>2021-10-26T04:45:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Fortinet - Antivirus and WebFilter</template>
-      <name>Template SNMP Fortinet - Antivirus and WebFilter</name>
+      <template>SNMP Fortinet - Antivirus and WebFilter</template>
+      <name>SNMP Fortinet - Antivirus and WebFilter</name>
       <description>Created by Samuel Martins (04-16-2021) https://github.com/slunart https://www.linkedin.com/in/slmartins ----------------------------------------------------------- Based on FORTINET-FORTIGATE-MIB OBJECTS { fgAvVirusDetected, fgAvVirusBlocked, fgAvHTTPVirusDetected, fgAvHTTPVirusBlocked, fgAvSMTPVirusDetected, fgAvSMTPVirusBlocked, fgAvPOP3VirusDetected, fgAvPOP3VirusBlocked, fgAvIMAPVirusDetected, fgAvIMAPVirusBlocked, fgAvFTPVirusDetected, fgAvFTPVirusBlocked, fgAvIMVirusDetected, fgAvIMVirusBlocked, fgAvNNTPVirusDetected, fgAvNNTPVirusBlocked, fgAvOversizedDetected, fgAvOversizedBlocked } FgWebfilterStatsEntry ::= SEQUENCE { fgWfHTTPBlocked Counter32, fgWfHTTPSBlocked Counter32, fgWfHTTPURLBlocked Counter32, fgWfHTTPSURLBlocked Counter32, fgWfActiveXBlocked Counter32, fgWfCookieBlocked Counter32, fgWfAppletBlocked Counter32 }</description>
       <groups>
         <group>

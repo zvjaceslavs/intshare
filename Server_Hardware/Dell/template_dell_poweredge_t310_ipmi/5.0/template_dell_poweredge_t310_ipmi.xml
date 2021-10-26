@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:29Z</date>
+  <date>2021-10-26T04:41:27Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,7 +12,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template_IPMI_Dell_PowerEdge_T310</template>
+      <template>IPMI_Dell_PowerEdge_T310</template>
       <name>IPMI Dell Power Edge T310</name>
       <groups>
         <group>
@@ -147,7 +147,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_IPMI_Dell_PowerEdge_T310</host>
+            <host>IPMI_Dell_PowerEdge_T310</host>
             <key>ipmi.fan1.rpm</key>
           </item>
         </graph_item>
@@ -156,7 +156,7 @@
           <color>990000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_IPMI_Dell_PowerEdge_T310</host>
+            <host>IPMI_Dell_PowerEdge_T310</host>
             <key>ipmi.ambient.temp</key>
           </item>
         </graph_item>
@@ -168,7 +168,7 @@
         <graph_item>
           <color>2774A4</color>
           <item>
-            <host>Template_IPMI_Dell_PowerEdge_T310</host>
+            <host>IPMI_Dell_PowerEdge_T310</host>
             <key>ipmi.power.consumption</key>
           </item>
         </graph_item>

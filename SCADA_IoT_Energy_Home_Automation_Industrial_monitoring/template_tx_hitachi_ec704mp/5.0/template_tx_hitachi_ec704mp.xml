@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:25Z</date>
+  <date>2021-10-26T04:45:54Z</date>
   <groups>
     <group>
       <name>MyGroup</name>
@@ -120,8 +120,8 @@
       </macros>
     </template>
     <template>
-      <template>Template tx Hitachi EC704MP</template>
-      <name>Template tx Hitachi EC704MP</name>
+      <template>tx Hitachi EC704MP</template>
+      <name>tx Hitachi EC704MP</name>
       <description>Template of transmissor Hitachi model EC704MP.</description>
       <templates>
         <template>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:20Z</date>
+  <date>2021-10-26T04:44:39Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Secure64 SNMP</template>
-      <name>Template App Secure64 SNMP</name>
+      <template>App Secure64 SNMP</template>
+      <name>App Secure64 SNMP</name>
       <description>By Ahrar Ahmad Khan</description>
       <groups>
         <group>
@@ -496,7 +496,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.28</key>
           </item>
         </graph_item>
@@ -504,7 +504,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.255</key>
           </item>
         </graph_item>
@@ -512,7 +512,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.1</key>
           </item>
         </graph_item>
@@ -520,7 +520,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.5</key>
           </item>
         </graph_item>
@@ -528,7 +528,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.43</key>
           </item>
         </graph_item>
@@ -536,7 +536,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.15</key>
           </item>
         </graph_item>
@@ -544,7 +544,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.2</key>
           </item>
         </graph_item>
@@ -552,7 +552,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.12</key>
           </item>
         </graph_item>
@@ -560,7 +560,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.6</key>
           </item>
         </graph_item>
@@ -568,7 +568,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.99</key>
           </item>
         </graph_item>
@@ -576,7 +576,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.33</key>
           </item>
         </graph_item>
@@ -584,7 +584,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.16</key>
           </item>
         </graph_item>
@@ -598,7 +598,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheAnswerCacheSize.0</key>
           </item>
         </graph_item>
@@ -607,7 +607,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheReferralCacheSize</key>
           </item>
         </graph_item>
@@ -616,7 +616,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumHits</key>
           </item>
         </graph_item>
@@ -625,7 +625,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>A54F10</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumMises</key>
           </item>
         </graph_item>
@@ -639,7 +639,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumAnswersNODATA</key>
           </item>
         </graph_item>
@@ -648,7 +648,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumAnswersNXDOMAIN.0</key>
           </item>
         </graph_item>
@@ -657,7 +657,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumAnswersSERVFAIL</key>
           </item>
         </graph_item>
@@ -666,7 +666,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>A54F10</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumFailedValidations</key>
           </item>
         </graph_item>
@@ -675,7 +675,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FC6EA3</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumNXDOMAINRedirects</key>
           </item>
         </graph_item>
@@ -684,7 +684,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>6C59DC</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumPrefetchQueries</key>
           </item>
         </graph_item>
@@ -698,7 +698,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheLatency64to127ms.0</key>
           </item>
         </graph_item>
@@ -707,7 +707,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheLatency128to255ms.0</key>
           </item>
         </graph_item>
@@ -716,7 +716,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheLatency256to511ms.0</key>
           </item>
         </graph_item>
@@ -725,7 +725,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>A54F10</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheLatency512to1023ms.0</key>
           </item>
         </graph_item>
@@ -734,7 +734,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FC6EA3</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheLatency1024to2047ms.0</key>
           </item>
         </graph_item>
@@ -743,7 +743,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>6C59DC</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheLatency2048to4095ms.0</key>
           </item>
         </graph_item>
@@ -752,7 +752,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>AC8C14</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheLatencyGT4095ms.0</key>
           </item>
         </graph_item>
@@ -761,7 +761,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>611F27</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheLatencyLT64ms</key>
           </item>
         </graph_item>
@@ -775,7 +775,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumQueriesRateLimitedByType</key>
           </item>
         </graph_item>
@@ -784,7 +784,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumNonValidatingLookups</key>
           </item>
         </graph_item>
@@ -793,7 +793,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheNumValidatingLookups</key>
           </item>
         </graph_item>
@@ -807,7 +807,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.28</key>
           </item>
         </graph_item>
@@ -816,7 +816,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.1</key>
           </item>
         </graph_item>
@@ -825,7 +825,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.15</key>
           </item>
         </graph_item>
@@ -834,7 +834,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>A54F10</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.12</key>
           </item>
         </graph_item>
@@ -843,7 +843,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FC6EA3</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheQPS</key>
           </item>
         </graph_item>
@@ -852,7 +852,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>6C59DC</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.5</key>
           </item>
         </graph_item>
@@ -861,7 +861,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>AC8C14</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.43</key>
           </item>
         </graph_item>
@@ -870,7 +870,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>611F27</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.2</key>
           </item>
         </graph_item>
@@ -879,7 +879,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F230E0</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.6</key>
           </item>
         </graph_item>
@@ -888,7 +888,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>5CCD18</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.33</key>
           </item>
         </graph_item>
@@ -897,7 +897,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>BB2A02</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.16</key>
           </item>
         </graph_item>
@@ -906,7 +906,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>5A2B57</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.255</key>
           </item>
         </graph_item>
@@ -915,7 +915,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>89ABF8</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>numRRInQueries.99</key>
           </item>
         </graph_item>
@@ -929,7 +929,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Secure64 SNMP</host>
+            <host>App Secure64 SNMP</host>
             <key>s64CacheRunning</key>
           </item>
         </graph_item>

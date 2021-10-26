@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:53Z</date>
+  <date>2021-10-26T04:44:08Z</date>
   <groups>
     <group>
       <name>CORONAVIRUS</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Module_HTTP_LLD_W_Corona_44</template>
-      <name>Template_Module_HTTP_LLD_W_Corona_44</name>
+      <template>Module_HTTP_LLD_W_Corona_44</template>
+      <name>Module_HTTP_LLD_W_Corona_44</name>
       <groups>
         <group>
           <name>CORONAVIRUS</name>

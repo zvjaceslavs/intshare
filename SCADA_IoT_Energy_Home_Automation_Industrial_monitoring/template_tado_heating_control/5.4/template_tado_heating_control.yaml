@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:57:49Z'
+  date: '2021-10-26T04:45:11Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 03c1f3163ece4f68a6f332a0c29f0462
-      template: 'Tado Template'
-      name: 'Tado Template'
+      template: Tado
+      name: Tado
       groups:
         -
           name: Templates
@@ -111,26 +111,26 @@ zabbix_export:
                   color: FFECB3
                   yaxisside: RIGHT
                   item:
-                    host: 'Tado Template'
+                    host: Tado
                     key: 'tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]'
                 -
                   sortorder: '2'
                   color: F63100
                   item:
-                    host: 'Tado Template'
+                    host: Tado
                     key: 'tado.zone.temp[{#TADO_ZONE_NAME}]'
                 -
                   sortorder: '3'
                   color: 00FF00
                   item:
-                    host: 'Tado Template'
+                    host: Tado
                     key: 'tado.zone.target_temp[{#TADO_ZONE_NAME}]'
                 -
                   sortorder: '4'
                   color: 0040FF
                   yaxisside: RIGHT
                   item:
-                    host: 'Tado Template'
+                    host: Tado
                     key: 'tado.zone.humidity[{#TADO_ZONE_NAME}]'
             -
               uuid: 81599d81c5f34d888c8facd7c9318fff
@@ -141,7 +141,7 @@ zabbix_export:
                   drawtype: FILLED_REGION
                   color: FFECB3
                   item:
-                    host: 'Tado Template'
+                    host: Tado
                     key: 'tado.zone.heating_power_percentage[{#TADO_ZONE_NAME}]'
             -
               uuid: f01f69c94bbb497886fc7b9f203886b0
@@ -151,20 +151,20 @@ zabbix_export:
                   sortorder: '1'
                   color: F63100
                   item:
-                    host: 'Tado Template'
+                    host: Tado
                     key: 'tado.zone.temp[{#TADO_ZONE_NAME}]'
                 -
                   sortorder: '2'
                   color: 00FF00
                   item:
-                    host: 'Tado Template'
+                    host: Tado
                     key: 'tado.zone.target_temp[{#TADO_ZONE_NAME}]'
                 -
                   sortorder: '3'
                   color: 0040FF
                   yaxisside: RIGHT
                   item:
-                    host: 'Tado Template'
+                    host: Tado
                     key: 'tado.zone.humidity[{#TADO_ZONE_NAME}]'
       macros:
         -
@@ -184,5 +184,5 @@ zabbix_export:
           sortorder: '1'
           color: FF0000
           item:
-            host: 'Tado Template'
+            host: Tado
             key: 'tado_client_for_zabbix["-u","{$TADO_USER}","-p","{$TADO_PASSWD}","outside_temp"]'

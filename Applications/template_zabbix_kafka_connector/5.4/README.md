@@ -1,4 +1,4 @@
-# Template Kafka Connector
+# Kafka Connector
 
 ## Overview
 
@@ -33,11 +33,11 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Kafka Connector {#CONNECTOR} on {HOST.NAME} is FAILED|<p>-</p>|<p>**Expression**: find(/Template Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|not classified|
-|Kafka Connector {#CONNECTOR} on {HOST.NAME} is not RUNNING|<p>Update this issue to the OC Team</p>|<p>**Expression**: find(/Template Kafka Connector/state[{#CONNECTOR}],6h,"like","RUNNING")=0 and find(/Template Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|warning|
-|Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is FAILED|<p>Needed for restart a connector task. NEVER EVER CHANGE URL ABOVE !! Used by remote action "Restart Kafka Connector Task" The conector task should get the state RUNNING.</p>|<p>**Expression**: find(/Template Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|not classified|
-|Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is not RUNNING|<p>Update this issue to the OC Team</p>|<p>**Expression**: find(/Template Kafka Connector/task[{#CONNECTOR_ID}],6h,"like","RUNNING")=0 and find(/Template Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|warning|
-|Kafka Connector {#CONNECTOR} on {HOST.NAME} is FAILED (LLD)|<p>-</p>|<p>**Expression**: find(/Template Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|not classified|
-|Kafka Connector {#CONNECTOR} on {HOST.NAME} is not RUNNING (LLD)|<p>Update this issue to the OC Team</p>|<p>**Expression**: find(/Template Kafka Connector/state[{#CONNECTOR}],6h,"like","RUNNING")=0 and find(/Template Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|warning|
-|Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is FAILED (LLD)|<p>Needed for restart a connector task. NEVER EVER CHANGE URL ABOVE !! Used by remote action "Restart Kafka Connector Task" The conector task should get the state RUNNING.</p>|<p>**Expression**: find(/Template Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|not classified|
-|Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is not RUNNING (LLD)|<p>Update this issue to the OC Team</p>|<p>**Expression**: find(/Template Kafka Connector/task[{#CONNECTOR_ID}],6h,"like","RUNNING")=0 and find(/Template Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|warning|
+|Kafka Connector {#CONNECTOR} on {HOST.NAME} is FAILED|<p>-</p>|<p>**Expression**: find(/Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|not classified|
+|Kafka Connector {#CONNECTOR} on {HOST.NAME} is not RUNNING|<p>Update this issue to the OC Team</p>|<p>**Expression**: find(/Kafka Connector/state[{#CONNECTOR}],6h,"like","RUNNING")=0 and find(/Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|warning|
+|Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is FAILED|<p>Needed for restart a connector task. NEVER EVER CHANGE URL ABOVE !! Used by remote action "Restart Kafka Connector Task" The conector task should get the state RUNNING.</p>|<p>**Expression**: find(/Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|not classified|
+|Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is not RUNNING|<p>Update this issue to the OC Team</p>|<p>**Expression**: find(/Kafka Connector/task[{#CONNECTOR_ID}],6h,"like","RUNNING")=0 and find(/Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|warning|
+|Kafka Connector {#CONNECTOR} on {HOST.NAME} is FAILED (LLD)|<p>-</p>|<p>**Expression**: find(/Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|not classified|
+|Kafka Connector {#CONNECTOR} on {HOST.NAME} is not RUNNING (LLD)|<p>Update this issue to the OC Team</p>|<p>**Expression**: find(/Kafka Connector/state[{#CONNECTOR}],6h,"like","RUNNING")=0 and find(/Kafka Connector/state[{#CONNECTOR}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|warning|
+|Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is FAILED (LLD)|<p>Needed for restart a connector task. NEVER EVER CHANGE URL ABOVE !! Used by remote action "Restart Kafka Connector Task" The conector task should get the state RUNNING.</p>|<p>**Expression**: find(/Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|not classified|
+|Kafka Connector task {#CONNECTOR_ID} on {HOST.NAME} is not RUNNING (LLD)|<p>Update this issue to the OC Team</p>|<p>**Expression**: find(/Kafka Connector/task[{#CONNECTOR_ID}],6h,"like","RUNNING")=0 and find(/Kafka Connector/task[{#CONNECTOR_ID}],,"like","FAILED")=1</p><p>**Recovery expression**: </p>|warning|

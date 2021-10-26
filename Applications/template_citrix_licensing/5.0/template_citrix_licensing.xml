@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:58Z</date>
+  <date>2021-10-26T04:46:34Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Citrix License Sever</template>
-      <name>Template App Citrix License Sever</name>
+      <template>App Citrix License Sever</template>
+      <name>App Citrix License Sever</name>
       <groups>
         <group>
           <name>Templates/Applications</name>
@@ -65,7 +65,7 @@
                   <color>2774A4</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template App Citrix License Sever</host>
+                    <host>App Citrix License Sever</host>
                     <key>wmi.get["ROOT\CitrixLicensing","SELECT ExpirationDate FROM Citrix_GT_License WHERE SerialNumber = '{#CITRIX_LIC}'"]</key>
                   </item>
                 </graph_item>

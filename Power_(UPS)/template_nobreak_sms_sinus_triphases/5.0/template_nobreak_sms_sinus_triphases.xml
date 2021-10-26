@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:54Z</date>
+  <date>2021-10-26T04:41:54Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Nobreak SMS Sinus Triphases</template>
-      <name>Template Nobreak SMS Sinus Triphases</name>
+      <template>Nobreak SMS Sinus Triphases</template>
+      <name>Nobreak SMS Sinus Triphases</name>
       <description>Para toda linha de nobreak sinus triphases</description>
       <groups>
         <group>
@@ -501,7 +501,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Nobreak SMS Sinus Triphases:icmpping.max(#3)}=0</expression>
+                  <expression>{Nobreak SMS Sinus Triphases:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -528,7 +528,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Nobreak SMS Sinus Triphases:icmpping.max(#3)}=0</expression>
+                  <expression>{Nobreak SMS Sinus Triphases:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1065,7 +1065,7 @@
               <style>0</style>
               <resource>
                 <name>Nível da Bateria</name>
-                <host>Template Nobreak SMS Sinus Triphases</host>
+                <host>Nobreak SMS Sinus Triphases</host>
               </resource>
               <width>400</width>
               <height>100</height>
@@ -1087,7 +1087,7 @@
               <style>0</style>
               <resource>
                 <name>Potência por FASE</name>
-                <host>Template Nobreak SMS Sinus Triphases</host>
+                <host>Nobreak SMS Sinus Triphases</host>
               </resource>
               <width>400</width>
               <height>100</height>
@@ -1109,7 +1109,7 @@
               <style>0</style>
               <resource>
                 <name>Potência Consumida (%)</name>
-                <host>Template Nobreak SMS Sinus Triphases</host>
+                <host>Nobreak SMS Sinus Triphases</host>
               </resource>
               <width>400</width>
               <height>100</height>
@@ -1131,7 +1131,7 @@
               <style>0</style>
               <resource>
                 <name>Tensão de Entrada</name>
-                <host>Template Nobreak SMS Sinus Triphases</host>
+                <host>Nobreak SMS Sinus Triphases</host>
               </resource>
               <width>400</width>
               <height>100</height>
@@ -1153,7 +1153,7 @@
               <style>0</style>
               <resource>
                 <name>Tensão de Saida</name>
-                <host>Template Nobreak SMS Sinus Triphases</host>
+                <host>Nobreak SMS Sinus Triphases</host>
               </resource>
               <width>400</width>
               <height>100</height>
@@ -1175,7 +1175,7 @@
               <style>0</style>
               <resource>
                 <name>Temperatura</name>
-                <host>Template Nobreak SMS Sinus Triphases</host>
+                <host>Nobreak SMS Sinus Triphases</host>
               </resource>
               <width>400</width>
               <height>100</height>
@@ -1199,20 +1199,20 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Nobreak SMS Sinus Triphases:TEntrada1.avg(#3)}&lt;180 and {Template Nobreak SMS Sinus Triphases:redeOuBateria.last()}=0</expression>
+      <expression>{Nobreak SMS Sinus Triphases:TEntrada1.avg(#3)}&lt;180 and {Nobreak SMS Sinus Triphases:redeOuBateria.last()}=0</expression>
       <name>Tensão Entrada abaixo de -180V no {HOSTNAME}</name>
       <priority>WARNING</priority>
       <description>Valor Tensao de entrada menor que o suportado pelo equipamento</description>
     </trigger>
     <trigger>
-      <expression>{Template Nobreak SMS Sinus Triphases:vin.avg(#3)}&lt;180 and {Template Nobreak SMS Sinus Triphases:redeOuBateria.last()}=0</expression>
+      <expression>{Nobreak SMS Sinus Triphases:vin.avg(#3)}&lt;180 and {Nobreak SMS Sinus Triphases:redeOuBateria.last()}=0</expression>
       <name>Tensão Entrada abaixo de -180V no {HOSTNAME}</name>
       <status>DISABLED</status>
       <priority>WARNING</priority>
       <description>Valor Tensao de entrada menor que o suportado pelo equipamento</description>
     </trigger>
     <trigger>
-      <expression>{Template Nobreak SMS Sinus Triphases:TSaida.avg(#3)}&lt;180 and {Template Nobreak SMS Sinus Triphases:redeOuBateria.last()}=0</expression>
+      <expression>{Nobreak SMS Sinus Triphases:TSaida.avg(#3)}&lt;180 and {Nobreak SMS Sinus Triphases:redeOuBateria.last()}=0</expression>
       <name>Tensão Saida abaixo de -180V no {HOSTNAME}</name>
       <priority>WARNING</priority>
       <description>Valor Tensao de saida menor que o suportado pelo equipamento</description>
@@ -1226,7 +1226,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>potout</key>
           </item>
         </graph_item>
@@ -1239,7 +1239,7 @@
           <color>2774A4</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>vin</key>
           </item>
         </graph_item>
@@ -1248,7 +1248,7 @@
           <color>A54F10</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>vout</key>
           </item>
         </graph_item>
@@ -1258,7 +1258,7 @@
           <yaxisside>RIGHT</yaxisside>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>fout</key>
           </item>
         </graph_item>
@@ -1273,7 +1273,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>perbateria</key>
           </item>
         </graph_item>
@@ -1285,7 +1285,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>ioutR</key>
           </item>
         </graph_item>
@@ -1293,7 +1293,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>ioutS</key>
           </item>
         </graph_item>
@@ -1301,7 +1301,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>ioutT</key>
           </item>
         </graph_item>
@@ -1315,7 +1315,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>wattRs</key>
           </item>
         </graph_item>
@@ -1325,7 +1325,7 @@
           <color>F63100</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>wattSs</key>
           </item>
         </graph_item>
@@ -1335,7 +1335,7 @@
           <color>2774A4</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>wattTs</key>
           </item>
         </graph_item>
@@ -1347,7 +1347,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>redeOuBateria</key>
           </item>
         </graph_item>
@@ -1355,7 +1355,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>inversorOuBypass</key>
           </item>
         </graph_item>
@@ -1363,7 +1363,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>icmpping</key>
           </item>
         </graph_item>
@@ -1376,7 +1376,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>redeOuBateria</key>
           </item>
         </graph_item>
@@ -1385,7 +1385,7 @@
           <color>F63100</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>inversorOuBypass</key>
           </item>
         </graph_item>
@@ -1394,7 +1394,7 @@
           <color>2774A4</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>statusUps</key>
           </item>
         </graph_item>
@@ -1406,7 +1406,7 @@
         <graph_item>
           <color>FF0000</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>temperatura</key>
           </item>
         </graph_item>
@@ -1418,7 +1418,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>vinR</key>
           </item>
         </graph_item>
@@ -1426,7 +1426,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>vinS</key>
           </item>
         </graph_item>
@@ -1434,7 +1434,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>vinT</key>
           </item>
         </graph_item>
@@ -1446,7 +1446,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>voutR</key>
           </item>
         </graph_item>
@@ -1454,7 +1454,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>voutS</key>
           </item>
         </graph_item>
@@ -1462,7 +1462,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Nobreak SMS Sinus Triphases</host>
+            <host>Nobreak SMS Sinus Triphases</host>
             <key>voutT</key>
           </item>
         </graph_item>

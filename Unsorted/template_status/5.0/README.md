@@ -1,4 +1,4 @@
-# Template Status
+# Status
 
 ## Description
 

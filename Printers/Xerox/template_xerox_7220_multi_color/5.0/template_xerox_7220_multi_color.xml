@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:08Z</date>
+  <date>2021-10-26T04:38:51Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer Xerox WorkCentre 3220</template>
-      <name>Template Printer Xerox WorkCentre 3220</name>
+      <template>Printer Xerox WorkCentre 3220</template>
+      <name>Printer Xerox WorkCentre 3220</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -264,7 +264,7 @@
               <style>0</style>
               <resource>
                 <name>Black toner level</name>
-                <host>Template Printer Xerox WorkCentre 3220</host>
+                <host>Printer Xerox WorkCentre 3220</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -288,66 +288,66 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 3220:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 3220:black.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - cyan</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 3220:magenta.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 3220:magenta.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - magenta</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 3220:yellow.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 3220:yellow.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - yellow</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 3220:black.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 3220:black.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - cyan</name>
-          <expression>{Template Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - cyan</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - cyan</name>
-          <expression>{Template Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 3220:magenta.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 3220:magenta.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - magenta</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - cyan</name>
-          <expression>{Template Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 3220:yellow.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 3220:yellow.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - yellow</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - cyan</name>
-          <expression>{Template Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 3220:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 3220:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:printer.location.nodata(3w)}=0 and {Printer Xerox WorkCentre 3220:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
@@ -363,7 +363,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 3220</host>
+            <host>Printer Xerox WorkCentre 3220</host>
             <key>black.cartridge.toner</key>
           </item>
         </graph_item>

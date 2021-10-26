@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:55Z</date>
+  <date>2021-10-26T04:45:17Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Optical Modules Huawei</template>
-      <name>Template Optical Modules Huawei</name>
+      <template>Optical Modules Huawei</template>
+      <name>Optical Modules Huawei</name>
       <groups>
         <group>
           <name>Templates/Modules</name>
@@ -479,23 +479,23 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>(({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;= ({Template Optical Modules Huawei:hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}].last()})) and (({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</expression>
+              <expression>(({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;= ({Optical Modules Huawei:hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}].last()})) and (({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>(({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) > ({Template Optical Modules Huawei:hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}].last()})) and (({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</recovery_expression>
+              <recovery_expression>(({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) > ({Optical Modules Huawei:hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}].last()})) and (({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</recovery_expression>
               <name>Low Rx Signal on Optical Module ML: {#ENTPHYSICALNAME}</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>(({Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;= ({Template Optical Modules Huawei:hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}].last()})) and (({Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</expression>
+              <expression>(({Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;= ({Optical Modules Huawei:hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}].last()})) and (({Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>(({Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) > ({Template Optical Modules Huawei:hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}].last()})) and (({Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</recovery_expression>
+              <recovery_expression>(({Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) > ({Optical Modules Huawei:hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}].last()})) and (({Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</recovery_expression>
               <name>Low Tx Signal on Optical Module ML: {#ENTPHYSICALNAME}</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>(({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].change()} &lt;= {$ATTENUATIONFACTOR}) or ({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].change()} &lt;= {$ATTENUATIONFACTOR}) or ({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].change()} &lt;= {$ATTENUATIONFACTOR}) or ({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].change()} &lt;= {$ATTENUATIONFACTOR})) and (({Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Template Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</expression>
+              <expression>(({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].change()} &lt;= {$ATTENUATIONFACTOR}) or ({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].change()} &lt;= {$ATTENUATIONFACTOR}) or ({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].change()} &lt;= {$ATTENUATIONFACTOR}) or ({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].change()} &lt;= {$ATTENUATIONFACTOR})) and (({Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}].last()} or {Optical Modules Huawei:hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}].last()}) &lt;> -40)</expression>
               <recovery_mode>NONE</recovery_mode>
               <name>Signal Atenuation on Optical Module ML: {#ENTPHYSICALNAME}</name>
               <priority>HIGH</priority>
@@ -510,7 +510,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>59DF00</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalRxHighThresholdML[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -518,7 +518,7 @@
                   <sortorder>1</sortorder>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -526,7 +526,7 @@
                   <sortorder>2</sortorder>
                   <color>0040FF</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -534,7 +534,7 @@
                   <sortorder>3</sortorder>
                   <color>FFFF00</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -542,7 +542,7 @@
                   <sortorder>4</sortorder>
                   <color>BF00FF</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -551,7 +551,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>CC6600</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalRxLowThresholdML[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -564,7 +564,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalTemperatureML[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -577,7 +577,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>59DF00</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalTxHighThresholdML[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -585,7 +585,7 @@
                   <sortorder>1</sortorder>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -593,7 +593,7 @@
                   <sortorder>2</sortorder>
                   <color>0040FF</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -601,7 +601,7 @@
                   <sortorder>3</sortorder>
                   <color>FFFF00</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -609,7 +609,7 @@
                   <sortorder>4</sortorder>
                   <color>BF00FF</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -618,7 +618,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>CC6600</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalTxLowThresholdML[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -926,17 +926,17 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template Optical Modules Huawei:hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}].last()} &lt;= ({Template Optical Modules Huawei:hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}].last()} * 0.90)) and ({Template Optical Modules Huawei:hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}].last()} &lt;> -40)</expression>
+              <expression>({Optical Modules Huawei:hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}].last()} &lt;= ({Optical Modules Huawei:hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}].last()} * 0.90)) and ({Optical Modules Huawei:hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}].last()} &lt;> -40)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template Optical Modules Huawei:hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}].last()} > ({Template Optical Modules Huawei:hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}].last()} * 0.90)) and ({Template Optical Modules Huawei:hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}].last()} &lt;> -40)</recovery_expression>
+              <recovery_expression>({Optical Modules Huawei:hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}].last()} > ({Optical Modules Huawei:hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}].last()} * 0.90)) and ({Optical Modules Huawei:hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}].last()} &lt;> -40)</recovery_expression>
               <name>Low Rx Signal on Optical Module SL: {#ENTPHYSICALNAME}</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template Optical Modules Huawei:hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}].last()} &lt;= ({Template Optical Modules Huawei:hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}].last()} * 0.90)) and ({Template Optical Modules Huawei:hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}].last()} &lt;> -40)</expression>
+              <expression>({Optical Modules Huawei:hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}].last()} &lt;= ({Optical Modules Huawei:hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}].last()} * 0.90)) and ({Optical Modules Huawei:hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}].last()} &lt;> -40)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template Optical Modules Huawei:hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}].last()} > ({Template Optical Modules Huawei:hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}].last()} * 0.90)) and ({Template Optical Modules Huawei:hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}].last()} &lt;> -40)</recovery_expression>
+              <recovery_expression>({Optical Modules Huawei:hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}].last()} > ({Optical Modules Huawei:hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}].last()} * 0.90)) and ({Optical Modules Huawei:hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}].last()} &lt;> -40)</recovery_expression>
               <name>Low Tx Signal on Optical Module SL: {#ENTPHYSICALNAME}</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
@@ -949,7 +949,7 @@
                 <graph_item>
                   <color>59DF00</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalRxHighThreshold[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -957,7 +957,7 @@
                   <sortorder>1</sortorder>
                   <color>0040FF</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -965,7 +965,7 @@
                   <sortorder>2</sortorder>
                   <color>CC6600</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -978,7 +978,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalTemperature[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -990,7 +990,7 @@
                 <graph_item>
                   <color>59DF00</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -998,7 +998,7 @@
                   <sortorder>1</sortorder>
                   <color>0040FF</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalTxHighThreshold[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>
@@ -1006,7 +1006,7 @@
                   <sortorder>2</sortorder>
                   <color>CC6600</color>
                   <item>
-                    <host>Template Optical Modules Huawei</host>
+                    <host>Optical Modules Huawei</host>
                     <key>hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}]</key>
                   </item>
                 </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:20Z</date>
+  <date>2021-10-26T04:39:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,7 +9,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</template>
+      <template>UNISIM_IPMI_SGI_Altix_H2106-G7</template>
       <name>3-IPMI SGI Altix H2106-G7</name>
       <groups>
         <group>
@@ -1279,7 +1279,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.fan1</key>
           </item>
         </graph_item>
@@ -1287,7 +1287,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.fan2</key>
           </item>
         </graph_item>
@@ -1296,7 +1296,7 @@
           <color>C800C8</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.cpu1.temp</key>
           </item>
         </graph_item>
@@ -1305,7 +1305,7 @@
           <color>00C8C8</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.cpu2.temp</key>
           </item>
         </graph_item>
@@ -1314,7 +1314,7 @@
           <color>C8C800</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.system.temp</key>
           </item>
         </graph_item>
@@ -1330,7 +1330,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.3.3v</key>
           </item>
         </graph_item>
@@ -1338,7 +1338,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.3.3vsb</key>
           </item>
         </graph_item>
@@ -1346,7 +1346,7 @@
           <sortorder>5</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.5v</key>
           </item>
         </graph_item>
@@ -1354,14 +1354,14 @@
           <sortorder>6</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.12v</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>7</sortorder>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.cpu1.dimm</key>
           </item>
         </graph_item>
@@ -1369,7 +1369,7 @@
           <sortorder>9</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.cpu1.vcore</key>
           </item>
         </graph_item>
@@ -1377,7 +1377,7 @@
           <sortorder>10</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.cpu2.dimm</key>
           </item>
         </graph_item>
@@ -1385,7 +1385,7 @@
           <sortorder>12</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_H2106-G7</host>
+            <host>UNISIM_IPMI_SGI_Altix_H2106-G7</host>
             <key>ipmi.cpu2.vcore</key>
           </item>
         </graph_item>

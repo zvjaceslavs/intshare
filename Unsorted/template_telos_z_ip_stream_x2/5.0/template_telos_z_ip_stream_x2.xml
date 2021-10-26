@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:10Z</date>
+  <date>2021-10-26T04:42:12Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Telos ZIPStream-X2</template>
-      <name>Template SNMP Telos ZIPStream-X2</name>
+      <template>SNMP Telos ZIPStream-X2</template>
+      <name>SNMP Telos ZIPStream-X2</name>
       <description>Telos Z/IPStream-X2 SNMP Template. Created by Roman Ermakov r.ermakov@emg.fm v1.0 - 2019-01-29 - Initial release Usage notes: 1. Install and configure SNMP Service on your Windows server; 2. Install and activate ZIPStream software; 3. Run: C:\Program Files (x86)\ZIPStream X2\snmpmgr.exe register 4. Restart SNMP Service If you need the MIB, get TLSCORP-ZIPSTREAM-X2-MIB.txt from installation folder.</description>
       <groups>
         <group>
@@ -507,7 +507,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP Telos ZIPStream-X2</host>
+            <host>SNMP Telos ZIPStream-X2</host>
             <key>TLSCORP-ZIPSTREAM-X2-MIB.audio-sources-count</key>
           </item>
         </graph_item>
@@ -516,7 +516,7 @@
           <color>F63100</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template SNMP Telos ZIPStream-X2</host>
+            <host>SNMP Telos ZIPStream-X2</host>
             <key>TLSCORP-ZIPSTREAM-X2-MIB.streams-count</key>
           </item>
         </graph_item>
@@ -529,7 +529,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>770000</color>
           <item>
-            <host>Template SNMP Telos ZIPStream-X2</host>
+            <host>SNMP Telos ZIPStream-X2</host>
             <key>TLSCORP-ZIPSTREAM-X2-MIB.audio-sources-errors</key>
           </item>
         </graph_item>
@@ -538,7 +538,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>FFFF99</color>
           <item>
-            <host>Template SNMP Telos ZIPStream-X2</host>
+            <host>SNMP Telos ZIPStream-X2</host>
             <key>TLSCORP-ZIPSTREAM-X2-MIB.streams-errors</key>
           </item>
         </graph_item>

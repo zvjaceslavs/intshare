@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:48Z</date>
+  <date>2021-10-26T04:45:10Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Arcserve UDP VM Backup Check</template>
-      <name>Template_Arcserve UDP VM Backup Check</name>
+      <template>Arcserve UDP VM Backup Check</template>
+      <name>Arcserve UDP VM Backup Check</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -134,7 +134,7 @@
               <dependencies>
                 <dependency>
                   <name>Arcserver UDP all VM Backup missed</name>
-                  <expression>{Template_Arcserve UDP VM Backup Check:custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobMissedCount",{$ARCSERVE_HOST}].last()}>0 and {Template_Arcserve UDP VM Backup Check:custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobSuccessCount",{$ARCSERVE_HOST}].last()}=0</expression>
+                  <expression>{Arcserve UDP VM Backup Check:custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobMissedCount",{$ARCSERVE_HOST}].last()}>0 and {Arcserve UDP VM Backup Check:custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobSuccessCount",{$ARCSERVE_HOST}].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -373,7 +373,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template_Arcserve UDP VM Backup Check:custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobMissedCount",{$ARCSERVE_HOST}].last()}>0 and {Template_Arcserve UDP VM Backup Check:custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobSuccessCount",{$ARCSERVE_HOST}].last()}=0</expression>
+      <expression>{Arcserve UDP VM Backup Check:custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobMissedCount",{$ARCSERVE_HOST}].last()}>0 and {Arcserve UDP VM Backup Check:custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobSuccessCount",{$ARCSERVE_HOST}].last()}=0</expression>
       <name>Arcserver UDP all VM Backup missed</name>
       <priority>HIGH</priority>
       <description>Arcserve UDP all VM Backup are MISSED count.</description>

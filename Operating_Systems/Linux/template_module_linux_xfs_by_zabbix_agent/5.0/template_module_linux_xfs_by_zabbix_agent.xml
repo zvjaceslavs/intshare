@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:15Z</date>
+  <date>2021-10-26T04:44:34Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module Linux XFS by Zabbix agent</template>
-      <name>Template Module Linux XFS by Zabbix agent</name>
+      <template>Module Linux XFS by Zabbix agent</template>
+      <name>Module Linux XFS by Zabbix agent</name>
       <groups>
         <group>
           <name>Templates/Modules</name>
@@ -98,7 +98,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()}>{$XFS.PROJECT.PUSED.MAX.CRIT:"{#XFSNAME}"} and (({Template Module Linux XFS by Zabbix agent:xfs.quota.project.total[{#XFSNAME}].last()}-{Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()})&lt;5G or {Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].timeleft(1h,,100)}&lt;1d)</expression>
+              <expression>{Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()}>{$XFS.PROJECT.PUSED.MAX.CRIT:"{#XFSNAME}"} and (({Module Linux XFS by Zabbix agent:xfs.quota.project.total[{#XFSNAME}].last()}-{Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()})&lt;5G or {Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].timeleft(1h,,100)}&lt;1d)</expression>
               <name>{#XFSNAME}: Disk space is critically low (used > {$XFS.PROJECT.PUSED.MAX.CRIT:"{#XFSNAME}"}%)</name>
               <opdata>Space used: {ITEM.LASTVALUE3} of {ITEM.LASTVALUE2} ({ITEM.LASTVALUE1})</opdata>
               <priority>AVERAGE</priority>
@@ -106,7 +106,7 @@
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()}>{$XFS.PROJECT.PUSED.MAX.WARN:"{#XFSNAME}"} and (({Template Module Linux XFS by Zabbix agent:xfs.quota.project.total[{#XFSNAME}].last()}-{Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()})&lt;10G or {Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].timeleft(1h,,100)}&lt;1d)</expression>
+              <expression>{Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()}>{$XFS.PROJECT.PUSED.MAX.WARN:"{#XFSNAME}"} and (({Module Linux XFS by Zabbix agent:xfs.quota.project.total[{#XFSNAME}].last()}-{Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()})&lt;10G or {Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].timeleft(1h,,100)}&lt;1d)</expression>
               <name>{#XFSNAME}: Disk space is low (used > {$XFS.PROJECT.PUSED.MAX.WARN:"{#XFSNAME}"}%)</name>
               <opdata>Space used: {ITEM.LASTVALUE3} of {ITEM.LASTVALUE2} ({ITEM.LASTVALUE1})</opdata>
               <priority>WARNING</priority>
@@ -115,7 +115,7 @@
               <dependencies>
                 <dependency>
                   <name>{#XFSNAME}: Disk space is critically low (used > {$XFS.PROJECT.PUSED.MAX.CRIT:"{#XFSNAME}"}%)</name>
-                  <expression>{Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()}>{$XFS.PROJECT.PUSED.MAX.CRIT:"{#XFSNAME}"} and (({Template Module Linux XFS by Zabbix agent:xfs.quota.project.total[{#XFSNAME}].last()}-{Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()})&lt;5G or {Template Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].timeleft(1h,,100)}&lt;1d)</expression>
+                  <expression>{Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()}>{$XFS.PROJECT.PUSED.MAX.CRIT:"{#XFSNAME}"} and (({Module Linux XFS by Zabbix agent:xfs.quota.project.total[{#XFSNAME}].last()}-{Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].last()})&lt;5G or {Module Linux XFS by Zabbix agent:xfs.quota.project.pused[{#XFSNAME}].timeleft(1h,,100)}&lt;1d)</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>

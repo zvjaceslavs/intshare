@@ -1,4 +1,4 @@
-# Template BGPv4 SNMP
+# BGPv4 SNMP
 
 ## Description
 
@@ -108,7 +108,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|BGP peer {#SNMPVALUE} ASN {#SNMPASN} is DOWN|<p>Trigger for peer that has a remote AS matching {$BGP_PEER_AS} macro.</p>|<p>**Expression**: {Template BGPv4 SNMP:bgpPeerState[{#SNMPVALUE}].last(#3)}<>6 and {Template BGPv4 SNMP:bgpPeerAdminStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
-|BGP peer up time low {#SNMPVALUE} ASN {#SNMPASN}|<p>-</p>|<p>**Expression**: {Template BGPv4 SNMP:bgpPeerFsmEstablishedTime[{#SNMPVALUE}].last()}<14400</p><p>**Recovery expression**: </p>|information|
-|BGP peer {#SNMPVALUE} ASN {#SNMPASN} is DOWN (LLD)|<p>Trigger for peer that has a remote AS matching {$BGP_PEER_AS} macro.</p>|<p>**Expression**: {Template BGPv4 SNMP:bgpPeerState[{#SNMPVALUE}].last(#3)}<>6 and {Template BGPv4 SNMP:bgpPeerAdminStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
-|BGP peer up time low {#SNMPVALUE} ASN {#SNMPASN} (LLD)|<p>-</p>|<p>**Expression**: {Template BGPv4 SNMP:bgpPeerFsmEstablishedTime[{#SNMPVALUE}].last()}<14400</p><p>**Recovery expression**: </p>|information|
+|BGP peer {#SNMPVALUE} ASN {#SNMPASN} is DOWN|<p>Trigger for peer that has a remote AS matching {$BGP_PEER_AS} macro.</p>|<p>**Expression**: {BGPv4 SNMP:bgpPeerState[{#SNMPVALUE}].last(#3)}<>6 and {BGPv4 SNMP:bgpPeerAdminStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
+|BGP peer up time low {#SNMPVALUE} ASN {#SNMPASN}|<p>-</p>|<p>**Expression**: {BGPv4 SNMP:bgpPeerFsmEstablishedTime[{#SNMPVALUE}].last()}<14400</p><p>**Recovery expression**: </p>|information|
+|BGP peer {#SNMPVALUE} ASN {#SNMPASN} is DOWN (LLD)|<p>Trigger for peer that has a remote AS matching {$BGP_PEER_AS} macro.</p>|<p>**Expression**: {BGPv4 SNMP:bgpPeerState[{#SNMPVALUE}].last(#3)}<>6 and {BGPv4 SNMP:bgpPeerAdminStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
+|BGP peer up time low {#SNMPVALUE} ASN {#SNMPASN} (LLD)|<p>-</p>|<p>**Expression**: {BGPv4 SNMP:bgpPeerFsmEstablishedTime[{#SNMPVALUE}].last()}<14400</p><p>**Recovery expression**: </p>|information|

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:34Z</date>
+  <date>2021-10-26T04:42:39Z</date>
   <groups>
     <group>
       <name>Templates Generic</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMPv3 Palo alto OS 8.1</template>
-      <name>Template SNMPv3 Palo alto OS 8.1</name>
+      <template>SNMPv3 Palo alto OS 8.1</template>
+      <name>SNMPv3 Palo alto OS 8.1</name>
       <groups>
         <group>
           <name>Templates Generic</name>
@@ -285,7 +285,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#PHY} temperature above 70 °C</name>
-                      <expression>{Template SNMPv3 Palo alto OS 8.1:entPhySensorValue.["{#PHY}"].last()}>70</expression>
+                      <expression>{SNMPv3 Palo alto OS 8.1:entPhySensorValue.["{#PHY}"].last()}>70</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -296,7 +296,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#PHY} temperature above 80 °C</name>
-                      <expression>{Template SNMPv3 Palo alto OS 8.1:entPhySensorValue.["{#PHY}"].last()}>80</expression>
+                      <expression>{SNMPv3 Palo alto OS 8.1:entPhySensorValue.["{#PHY}"].last()}>80</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -482,7 +482,7 @@
                   <dependencies>
                     <dependency>
                       <name>CPU load on {#CPU} more than 95%</name>
-                      <expression>{Template SNMPv3 Palo alto OS 8.1:hrProcessorLoad.["{#CPU}"].last()}>95</expression>
+                      <expression>{SNMPv3 Palo alto OS 8.1:hrProcessorLoad.["{#CPU}"].last()}>95</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -585,29 +585,29 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {Template SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 98</expression>
+              <expression>{SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 98</expression>
               <name>Free disk space is less than 2% on {#STOR}</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {Template SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 95</expression>
+              <expression>{SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 95</expression>
               <name>Free disk space is less than 5% on {#STOR}</name>
               <priority>HIGH</priority>
               <dependencies>
                 <dependency>
                   <name>Free disk space is less than 2% on {#STOR}</name>
-                  <expression>{Template SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {Template SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 98</expression>
+                  <expression>{SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 98</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {Template SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 90</expression>
+              <expression>{SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 90</expression>
               <name>Free disk space is less than 10% on {#STOR}</name>
               <priority>AVERAGE</priority>
               <dependencies>
                 <dependency>
                   <name>Free disk space is less than 5% on {#STOR}</name>
-                  <expression>{Template SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {Template SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 95</expression>
+                  <expression>{SNMPv3 Palo alto OS 8.1:hrStorageUsed.["{#STOR}"].last()} / {SNMPv3 Palo alto OS 8.1:hrStorageSize.["{#STOR}"].last()} * 100 > 95</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
@@ -719,7 +719,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNMPv3 Palo alto OS 8.1:ifAdminStatus.["{#IFNAME}"].last()}=1 and {Template SNMPv3 Palo alto OS 8.1:ifOperStatus.["{#IFNAME}"].last()}=2</expression>
+              <expression>{SNMPv3 Palo alto OS 8.1:ifAdminStatus.["{#IFNAME}"].last()}=1 and {SNMPv3 Palo alto OS 8.1:ifOperStatus.["{#IFNAME}"].last()}=2</expression>
               <name>{#IFNAME} interface down</name>
               <priority>HIGH</priority>
               <description>interface ifAdminStatus is up(1) and ifOperStatus is down(2)</description>

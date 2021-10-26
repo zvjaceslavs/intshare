@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:22Z</date>
+  <date>2021-10-26T04:40:13Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Storage Lenovo ix4-300d</template>
-      <name>Template Storage Lenovo ix4-300d</name>
+      <template>Storage Lenovo ix4-300d</template>
+      <name>Storage Lenovo ix4-300d</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -640,20 +640,20 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Storage Lenovo ix4-300d:hrStorageUsedInBytes[{#SNMPVALUE}].last(0)}/{Template Storage Lenovo ix4-300d:hrStorageSizeInBytes[{#SNMPVALUE}].last(0)} > 0.98</expression>
+              <expression>{Storage Lenovo ix4-300d:hrStorageUsedInBytes[{#SNMPVALUE}].last(0)}/{Storage Lenovo ix4-300d:hrStorageSizeInBytes[{#SNMPVALUE}].last(0)} > 0.98</expression>
               <name>Free disk space is less than 2% on volume {#SNMPVALUE}</name>
               <priority>HIGH</priority>
               <description>Used: {ITEM.LASTVALUE} Total: {ITEM.LASTVALUE2}</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Storage Lenovo ix4-300d:hrStorageUsedInBytes[{#SNMPVALUE}].last(0)}/{Template Storage Lenovo ix4-300d:hrStorageSizeInBytes[{#SNMPVALUE}].last(0)} > 0.9</expression>
+              <expression>{Storage Lenovo ix4-300d:hrStorageUsedInBytes[{#SNMPVALUE}].last(0)}/{Storage Lenovo ix4-300d:hrStorageSizeInBytes[{#SNMPVALUE}].last(0)} > 0.9</expression>
               <name>Free disk space is less than 10% on volume {#SNMPVALUE}</name>
               <priority>WARNING</priority>
               <description>Used: {ITEM.LASTVALUE} Total: {ITEM.LASTVALUE2}</description>
               <dependencies>
                 <dependency>
                   <name>Free disk space is less than 2% on volume {#SNMPVALUE}</name>
-                  <expression>{Template Storage Lenovo ix4-300d:hrStorageUsedInBytes[{#SNMPVALUE}].last(0)}/{Template Storage Lenovo ix4-300d:hrStorageSizeInBytes[{#SNMPVALUE}].last(0)} > 0.98</expression>
+                  <expression>{Storage Lenovo ix4-300d:hrStorageUsedInBytes[{#SNMPVALUE}].last(0)}/{Storage Lenovo ix4-300d:hrStorageSizeInBytes[{#SNMPVALUE}].last(0)} > 0.98</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
@@ -832,7 +832,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00AA00</color>
                   <item>
-                    <host>Template Storage Lenovo ix4-300d</host>
+                    <host>Storage Lenovo ix4-300d</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -841,7 +841,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>3333FF</color>
                   <item>
-                    <host>Template Storage Lenovo ix4-300d</host>
+                    <host>Storage Lenovo ix4-300d</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -878,7 +878,7 @@
                   <dependencies>
                     <dependency>
                       <name>Temperature of {#SNMPVALUE} is to very high: {ITEM.LASTVALUE}</name>
-                      <expression>{Template Storage Lenovo ix4-300d:tempValue[{#SNMPVALUE}].last()}>70</expression>
+                      <expression>{Storage Lenovo ix4-300d:tempValue[{#SNMPVALUE}].last()}>70</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>

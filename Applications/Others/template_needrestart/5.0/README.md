@@ -1,4 +1,4 @@
-# Template App Needrestart
+# App Needrestart
 
 ## Overview
 

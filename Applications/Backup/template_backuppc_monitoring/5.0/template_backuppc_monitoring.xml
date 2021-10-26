@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:50Z</date>
+  <date>2021-10-26T04:45:12Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App BackupPC by Zabbix agent</template>
-      <name>Template App BackupPC by Zabbix agent</name>
+      <template>App BackupPC by Zabbix agent</template>
+      <name>App BackupPC by Zabbix agent</name>
       <description>The template to monitor BackupPC metrics API by Zabbix agent without need for extra scripts on server. Template Version v0.0.1 - Evren Yurtesen Tested on Zabbix5 and BackupPC 4.4.1 (needs updated metrics)</description>
       <groups>
         <group>
@@ -693,21 +693,21 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template App BackupPC by Zabbix agent:backuppc.error.[{#HOST}].strlen()}&lt;>0 and {Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
+              <expression>{App BackupPC by Zabbix agent:backuppc.error.[{#HOST}].strlen()}&lt;>0 and {App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
               <name>{#HOST}: Backup error</name>
               <priority>INFO</priority>
               <description>{ITEM.LASTVALUE1}</description>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App BackupPC by Zabbix agent:backuppc.last_start_time.[{#HOST}].fuzzytime({$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"})}=0 and {Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
+              <expression>{App BackupPC by Zabbix agent:backuppc.last_start_time.[{#HOST}].fuzzytime({$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"})}=0 and {App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
               <name>{#HOST}: No new backups for {$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"}</name>
               <priority>AVERAGE</priority>
               <description>No backups were taken for {$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"} Critical period per backup server or per backup host can be adjusted.</description>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App BackupPC by Zabbix agent:backuppc.last_start_time.[{#HOST}].fuzzytime({$BACKUPPC.OLDBACKUP.WARN:"{#HOST}"})}=0 and {Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
+              <expression>{App BackupPC by Zabbix agent:backuppc.last_start_time.[{#HOST}].fuzzytime({$BACKUPPC.OLDBACKUP.WARN:"{#HOST}"})}=0 and {App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
               <name>{#HOST}: No new backups for {$BACKUPPC.OLDBACKUP.WARN:"{#HOST}"}</name>
               <priority>WARNING</priority>
               <description>No backups were taken for {$BACKUPPC.OLDBACKUP.WARN:"{#HOST}"} Warning period per backup server or per backup host can be adjusted.</description>
@@ -715,33 +715,33 @@
               <dependencies>
                 <dependency>
                   <name>{#HOST}: No new backups for {$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"}</name>
-                  <expression>{Template App BackupPC by Zabbix agent:backuppc.last_start_time.[{#HOST}].fuzzytime({$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"})}=0 and {Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
+                  <expression>{App BackupPC by Zabbix agent:backuppc.last_start_time.[{#HOST}].fuzzytime({$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"})}=0 and {App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template App BackupPC by Zabbix agent:backuppc.full_count.[{#HOST}].last()}&lt;{Template App BackupPC by Zabbix agent:backuppc.full_keep_count.[{#HOST}].last()}) and {Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
+              <expression>({App BackupPC by Zabbix agent:backuppc.full_count.[{#HOST}].last()}&lt;{App BackupPC by Zabbix agent:backuppc.full_keep_count.[{#HOST}].last()}) and {App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
               <name>{#HOST}: Not enough full backups</name>
               <priority>INFO</priority>
               <description>{ITEM.LASTVALUE1} full backup(s) exist which is less than configured {ITEM.LASTVALUE2} full backup(s) value for this host A newly added most may not have enough full backups</description>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template App BackupPC by Zabbix agent:backuppc.incr_count.[{#HOST}].last()}&lt;{Template App BackupPC by Zabbix agent:backuppc.incr_keep_count.[{#HOST}].last()}) and {Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
+              <expression>({App BackupPC by Zabbix agent:backuppc.incr_count.[{#HOST}].last()}&lt;{App BackupPC by Zabbix agent:backuppc.incr_keep_count.[{#HOST}].last()}) and {App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
               <name>{#HOST}: Not enough incr backups</name>
               <priority>INFO</priority>
               <description>{ITEM.LASTVALUE1} incr backup(s) exist which is less than configured {ITEM.LASTVALUE2} incr backup(s) value for this host A newly added most may not have enough incremental backups</description>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0 and ({Template App BackupPC by Zabbix agent:backuppc.last_size_new.[{#HOST}].last()}>{$BACKUPPC.SIZECHANGE.CRIT} or {Template App BackupPC by Zabbix agent:backuppc.last_size.[{#HOST}].abschange()}>{$BACKUPPC.SIZECHANGE.CRIT})</expression>
+              <expression>{App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0 and ({App BackupPC by Zabbix agent:backuppc.last_size_new.[{#HOST}].last()}>{$BACKUPPC.SIZECHANGE.CRIT} or {App BackupPC by Zabbix agent:backuppc.last_size.[{#HOST}].abschange()}>{$BACKUPPC.SIZECHANGE.CRIT})</expression>
               <name>{#HOST}: Size difference larger than {$BACKUPPC.SIZECHANGE.CRIT:"{#HOST}"}</name>
               <priority>AVERAGE</priority>
               <description>There are new files larger than or size difference larger than {$BACKUPPC.SIZECHANGE.CRIT:"{#HOST}"} between last backup and previus backup. Critical size per backup server or per backup host can be adjusted.</description>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0 and ({Template App BackupPC by Zabbix agent:backuppc.last_size_new.[{#HOST}].last()}>{$BACKUPPC.SIZECHANGE.WARN} or {Template App BackupPC by Zabbix agent:backuppc.last_size.[{#HOST}].abschange()}>{$BACKUPPC.SIZECHANGE.WARN})</expression>
+              <expression>{App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0 and ({App BackupPC by Zabbix agent:backuppc.last_size_new.[{#HOST}].last()}>{$BACKUPPC.SIZECHANGE.WARN} or {App BackupPC by Zabbix agent:backuppc.last_size.[{#HOST}].abschange()}>{$BACKUPPC.SIZECHANGE.WARN})</expression>
               <name>{#HOST}: Size difference larger than {$BACKUPPC.SIZECHANGE.WARN:"{#HOST}"}</name>
               <priority>WARNING</priority>
               <description>There are new files larger than or size difference larger than {$BACKUPPC.SIZECHANGE.WARN:"{#HOST}"} between last backup and previus backup. Warning size per backup server or per backup host can be adjusted.</description>
@@ -749,7 +749,7 @@
               <dependencies>
                 <dependency>
                   <name>{#HOST}: No new backups for {$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"}</name>
-                  <expression>{Template App BackupPC by Zabbix agent:backuppc.last_start_time.[{#HOST}].fuzzytime({$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"})}=0 and {Template App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
+                  <expression>{App BackupPC by Zabbix agent:backuppc.last_start_time.[{#HOST}].fuzzytime({$BACKUPPC.OLDBACKUP.CRIT:"{#HOST}"})}=0 and {App BackupPC by Zabbix agent:backuppc.disabled.[{#HOST}].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>

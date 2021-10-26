@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:03Z</date>
+  <date>2021-10-26T04:45:26Z</date>
   <groups>
     <group>
       <name>Templates_Created</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Cisco 7600 Health SNMP</template>
-      <name>Template Cisco 7600 Health SNMP</name>
+      <template>Cisco 7600 Health SNMP</template>
+      <name>Cisco 7600 Health SNMP</name>
       <description>Template Cisco 7600 Health -CPU -Memory -PowerSupply -PowerConsumption -Temperature -FAN -CEF By: Flavio Gomes Figueira Camacho Junior Require: Firmware / Software .IOS rp-ADVENTERPRISEK9-M 15.2(4)S4 ValueMaps .CISCO-ENVMON-MIB::CiscoEnvMonState .ENTITY-SENSORS-MIB::EntitySensorStatus .CISCO-CEF-TC-MIB::CefFailureReason Base: CISCO-ENVMON-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-ENVMON-MIB.php CISCO-MEMORY-POOL-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-MEMORY-POOL-MIB.php CISCO-PROCESS-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-PROCESS-MIB.php ENTITY-MIB.mib http://www.circitor.fr/Mibs/Html/E/ENTITY-MIB.php CISCO-ENTITY-SENSOR-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-ENTITY-SENSOR-MIB.php CISCO-ENTITY-FRU-CONTROL-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-ENTITY-FRU-CONTROL-MIB.php CISCO-CEF-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-CEF-MIB.php https://share.zabbix.com/network_devices/cisco/template-cisco-7600 External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates</description>
       <groups>
         <group>
@@ -116,7 +116,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>moduleComsumption["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -124,7 +124,7 @@
                   <sortorder>1</sortorder>
                   <color>FFFF00</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>cefcModulePowerConsumptionTable["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -132,7 +132,7 @@
                   <sortorder>2</sortorder>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>cefcConnectorRating["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -203,7 +203,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>cefResourceMemoryUsed["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -384,12 +384,12 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template Cisco 7600 Health SNMP:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()}*100 ) / {Template Cisco 7600 Health SNMP:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()} > {$MEMORY_HIGH_ALARM}</expression>
+              <expression>({Cisco 7600 Health SNMP:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()}*100 ) / {Cisco 7600 Health SNMP:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()} > {$MEMORY_HIGH_ALARM}</expression>
               <name>High memory utilizarion alarm on Pool "{#SNMPVALUE}"</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template Cisco 7600 Health SNMP:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()}*100 ) / {Template Cisco 7600 Health SNMP:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()} > {$MEMORY_HIGH_WARNING}</expression>
+              <expression>({Cisco 7600 Health SNMP:ciscoMemoryPoolUsed["{#SNMPVALUE}"].last()}*100 ) / {Cisco 7600 Health SNMP:ciscoMemoryPoolTotal["{#SNMPVALUE}"].last()} > {$MEMORY_HIGH_WARNING}</expression>
               <name>High memory utilizarion warning on Pool "{#SNMPVALUE}"</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -404,7 +404,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>ciscoMemoryPoolTotal["{#SNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -413,7 +413,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>ciscoMemoryPoolUsed["{#SNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -489,7 +489,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>cpmCPUTotal1minRev["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -502,7 +502,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>cpmCPUTotal5minRev["{#SNMPINDEX}"]</key>
                   </item>
                 </graph_item>
@@ -634,36 +634,36 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Cisco 7600 Health SNMP:entSensorValue["{#SNMPVALUE}"].last()}>{Template Cisco 7600 Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Alarm"].last()}</expression>
+              <expression>{Cisco 7600 Health SNMP:entSensorValue["{#SNMPVALUE}"].last()}>{Cisco 7600 Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Alarm"].last()}</expression>
               <name>High Temperature Alarm "{#SNMPVALUE}"</name>
               <priority>HIGH</priority>
               <dependencies>
                 <dependency>
                   <name>Temperature Sensor "{#SNMPVALUE}" is nonoperational</name>
-                  <expression>{Template Cisco 7600 Health SNMP:entSensorStatus["{#SNMPVALUE}"].last()}=3</expression>
+                  <expression>{Cisco 7600 Health SNMP:entSensorStatus["{#SNMPVALUE}"].last()}=3</expression>
                 </dependency>
                 <dependency>
                   <name>Temperature Sensor "{#SNMPVALUE}" is unavailable</name>
-                  <expression>{Template Cisco 7600 Health SNMP:entSensorStatus["{#SNMPVALUE}"].last()}=2</expression>
+                  <expression>{Cisco 7600 Health SNMP:entSensorStatus["{#SNMPVALUE}"].last()}=2</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Cisco 7600 Health SNMP:entSensorValue["{#SNMPVALUE}"].last()}>{Template Cisco 7600 Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Warning"].last()}</expression>
+              <expression>{Cisco 7600 Health SNMP:entSensorValue["{#SNMPVALUE}"].last()}>{Cisco 7600 Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Warning"].last()}</expression>
               <name>High Temperature Warning "{#SNMPVALUE}"</name>
               <priority>AVERAGE</priority>
               <dependencies>
                 <dependency>
                   <name>High Temperature Alarm "{#SNMPVALUE}"</name>
-                  <expression>{Template Cisco 7600 Health SNMP:entSensorValue["{#SNMPVALUE}"].last()}>{Template Cisco 7600 Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Alarm"].last()}</expression>
+                  <expression>{Cisco 7600 Health SNMP:entSensorValue["{#SNMPVALUE}"].last()}>{Cisco 7600 Health SNMP:entSensorThresholdValue["{#SNMPVALUE}","Alarm"].last()}</expression>
                 </dependency>
                 <dependency>
                   <name>Temperature Sensor "{#SNMPVALUE}" is nonoperational</name>
-                  <expression>{Template Cisco 7600 Health SNMP:entSensorStatus["{#SNMPVALUE}"].last()}=3</expression>
+                  <expression>{Cisco 7600 Health SNMP:entSensorStatus["{#SNMPVALUE}"].last()}=3</expression>
                 </dependency>
                 <dependency>
                   <name>Temperature Sensor "{#SNMPVALUE}" is unavailable</name>
-                  <expression>{Template Cisco 7600 Health SNMP:entSensorStatus["{#SNMPVALUE}"].last()}=2</expression>
+                  <expression>{Cisco 7600 Health SNMP:entSensorStatus["{#SNMPVALUE}"].last()}=2</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
@@ -676,7 +676,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>entSensorValue["{#SNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -685,7 +685,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>entSensorThresholdValue["{#SNMPVALUE}","Alarm"]</key>
                   </item>
                 </graph_item>
@@ -694,7 +694,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FFFF00</color>
                   <item>
-                    <host>Template Cisco 7600 Health SNMP</host>
+                    <host>Cisco 7600 Health SNMP</host>
                     <key>entSensorThresholdValue["{#SNMPVALUE}","Warning"]</key>
                   </item>
                 </graph_item>
@@ -741,7 +741,7 @@
               <style>0</style>
               <resource>
                 <name>Module {#SNMPINDEX} Power (W)</name>
-                <host>Template Cisco 7600 Health SNMP</host>
+                <host>Cisco 7600 Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -770,7 +770,7 @@
               <style>0</style>
               <resource>
                 <name>CPU #"{#SNMPINDEX}" 1min Usage</name>
-                <host>Template Cisco 7600 Health SNMP</host>
+                <host>Cisco 7600 Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -792,7 +792,7 @@
               <style>0</style>
               <resource>
                 <name>CPU #"{#SNMPINDEX}" 5min Usage</name>
-                <host>Template Cisco 7600 Health SNMP</host>
+                <host>Cisco 7600 Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -821,7 +821,7 @@
               <style>0</style>
               <resource>
                 <name>CEF Memory Used {#SNMPINDEX}</name>
-                <host>Template Cisco 7600 Health SNMP</host>
+                <host>Cisco 7600 Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -843,7 +843,7 @@
               <style>0</style>
               <resource>
                 <name>Memory {#SNMPVALUE}</name>
-                <host>Template Cisco 7600 Health SNMP</host>
+                <host>Cisco 7600 Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -872,7 +872,7 @@
               <style>0</style>
               <resource>
                 <name>Module {#SNMPINDEX} Power (W)</name>
-                <host>Template Cisco 7600 Health SNMP</host>
+                <host>Cisco 7600 Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -901,7 +901,7 @@
               <style>0</style>
               <resource>
                 <name>Temperature {#SNMPVALUE}</name>
-                <host>Template Cisco 7600 Health SNMP</host>
+                <host>Cisco 7600 Health SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:20Z</date>
+  <date>2021-10-26T04:39:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Intel RMM3</template>
-      <name>Template IPMI Intel RMM3</name>
+      <template>IPMI Intel RMM3</template>
+      <name>IPMI Intel RMM3</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -322,7 +322,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template IPMI Intel RMM3:rmm3.Sys_Fan_Tach_1A.last()}&lt;1000 or {Template IPMI Intel RMM3:rmm3.Sys_Fan_Tach_1B.last()}&lt;1000 or {Template IPMI Intel RMM3:rmm3.Sys_Fan_Tach_2A.last()}&lt;1000 or {Template IPMI Intel RMM3:rmm3.Sys_Fan_Tach_2B.last()}&lt;1000 or {Template IPMI Intel RMM3:rmm3.Sys_Fan_Tach_3A.last()}&lt;1000 or {Template IPMI Intel RMM3:rmm3.Sys_Fan_Tach_3B.last()}&lt;1000</expression>
+      <expression>{IPMI Intel RMM3:rmm3.Sys_Fan_Tach_1A.last()}&lt;1000 or {IPMI Intel RMM3:rmm3.Sys_Fan_Tach_1B.last()}&lt;1000 or {IPMI Intel RMM3:rmm3.Sys_Fan_Tach_2A.last()}&lt;1000 or {IPMI Intel RMM3:rmm3.Sys_Fan_Tach_2B.last()}&lt;1000 or {IPMI Intel RMM3:rmm3.Sys_Fan_Tach_3A.last()}&lt;1000 or {IPMI Intel RMM3:rmm3.Sys_Fan_Tach_3B.last()}&lt;1000</expression>
       <name>Low fan speed on {HOST.NAME}</name>
       <priority>WARNING</priority>
     </trigger>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:06Z</date>
+  <date>2021-10-26T04:40:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>aa Template SNMP Mikrotik CCR-1036</template>
-      <name>aa Template SNMP Mikrotik CCR-1036</name>
+      <template>aa SNMP Mikrotik CCR-1036</template>
+      <name>aa SNMP Mikrotik CCR-1036</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -380,7 +380,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>aa Template SNMP Mikrotik CCR-1036</host>
+                    <host>aa SNMP Mikrotik CCR-1036</host>
                     <key>net.if.in[ifHCInOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -389,7 +389,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>2774A4</color>
                   <item>
-                    <host>aa Template SNMP Mikrotik CCR-1036</host>
+                    <host>aa SNMP Mikrotik CCR-1036</host>
                     <key>net.if.out[ifHCOutOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -399,7 +399,7 @@
                   <color>F63100</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>aa Template SNMP Mikrotik CCR-1036</host>
+                    <host>aa SNMP Mikrotik CCR-1036</host>
                     <key>net.if.out.errors[ifOutErrors.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -409,7 +409,7 @@
                   <color>A54F10</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>aa Template SNMP Mikrotik CCR-1036</host>
+                    <host>aa SNMP Mikrotik CCR-1036</host>
                     <key>net.if.in.errors[ifInErrors.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -419,7 +419,7 @@
                   <color>FC6EA3</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>aa Template SNMP Mikrotik CCR-1036</host>
+                    <host>aa SNMP Mikrotik CCR-1036</host>
                     <key>net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -429,7 +429,7 @@
                   <color>6C59DC</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>aa Template SNMP Mikrotik CCR-1036</host>
+                    <host>aa SNMP Mikrotik CCR-1036</host>
                     <key>net.if.in.discards[ifInDiscards.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -448,7 +448,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{aa Template SNMP Mikrotik CCR-1036:mtxrFirmwareUpgradeVersion.prev()}&lt;>{aa Template SNMP Mikrotik CCR-1036:mtxrFirmwareVersion.prev()}</expression>
+      <expression>{aa SNMP Mikrotik CCR-1036:mtxrFirmwareUpgradeVersion.prev()}&lt;>{aa SNMP Mikrotik CCR-1036:mtxrFirmwareVersion.prev()}</expression>
       <name>Firmware Aguardando Upgrade</name>
       <priority>INFO</priority>
     </trigger>
@@ -464,7 +464,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>CCCC00</color>
           <item>
-            <host>aa Template SNMP Mikrotik CCR-1036</host>
+            <host>aa SNMP Mikrotik CCR-1036</host>
             <key>mtxCPULoad</key>
           </item>
         </graph_item>
@@ -482,7 +482,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>880088</color>
           <item>
-            <host>aa Template SNMP Mikrotik CCR-1036</host>
+            <host>aa SNMP Mikrotik CCR-1036</host>
             <key>mtxrHlTemperature</key>
           </item>
         </graph_item>
@@ -500,7 +500,7 @@
           <color>00BB00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>aa Template SNMP Mikrotik CCR-1036</host>
+            <host>aa SNMP Mikrotik CCR-1036</host>
             <key>mikrotik.used.memory</key>
           </item>
         </graph_item>
@@ -511,7 +511,7 @@
           <calc_fnc>MAX</calc_fnc>
           <type>GRAPH_SUM</type>
           <item>
-            <host>aa Template SNMP Mikrotik CCR-1036</host>
+            <host>aa SNMP Mikrotik CCR-1036</host>
             <key>mikrotik.total.memory</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:24Z</date>
+  <date>2021-10-26T04:39:08Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_TCP-state-count bulkget</template>
-      <name>Template_TCP-state-count bulkget</name>
+      <template>TCP-state-count bulkget</template>
+      <name>TCP-state-count bulkget</name>
       <description>The number of TCP sessions. Using "dependent item" net.tcp.count.master[&lt;source port>,&lt;dest port>] https://github.com/mutz0623/zabbix_TCP-state-count-module</description>
       <groups>
         <group>
@@ -3830,7 +3830,7 @@
               <style>0</style>
               <resource>
                 <key>net.tcp.count.depend[,,CountAll]</key>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>900</width>
               <height>100</height>
@@ -3852,7 +3852,7 @@
               <style>0</style>
               <resource>
                 <name>TCP sessions major ports (bulk)</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -3874,7 +3874,7 @@
               <style>0</style>
               <resource>
                 <name>TCP sessions state (bulk)</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -3896,7 +3896,7 @@
               <style>0</style>
               <resource>
                 <name>TCP local port 22</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -3918,7 +3918,7 @@
               <style>0</style>
               <resource>
                 <name>TCP remote port 22</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -3940,7 +3940,7 @@
               <style>0</style>
               <resource>
                 <name>TCP local port 80</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -3962,7 +3962,7 @@
               <style>0</style>
               <resource>
                 <name>TCP remote port 80</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -3984,7 +3984,7 @@
               <style>0</style>
               <resource>
                 <name>TCP local port 443</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4006,7 +4006,7 @@
               <style>0</style>
               <resource>
                 <name>TCP remote port 443</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4028,7 +4028,7 @@
               <style>0</style>
               <resource>
                 <name>TCP local port 445</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4050,7 +4050,7 @@
               <style>0</style>
               <resource>
                 <name>TCP remote port 445</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4072,7 +4072,7 @@
               <style>0</style>
               <resource>
                 <name>TCP local port 10050</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4094,7 +4094,7 @@
               <style>0</style>
               <resource>
                 <name>TCP remote port 10050</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4116,7 +4116,7 @@
               <style>0</style>
               <resource>
                 <name>TCP local port 10051</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4138,7 +4138,7 @@
               <style>0</style>
               <resource>
                 <name>TCP remote port 10051</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4160,7 +4160,7 @@
               <style>0</style>
               <resource>
                 <name>TCP local port 20772</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4182,7 +4182,7 @@
               <style>0</style>
               <resource>
                 <name>TCP remote port 20772</name>
-                <host>Template_TCP-state-count bulkget</host>
+                <host>TCP-state-count bulkget</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -4212,7 +4212,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,CLOSE]</key>
           </item>
         </graph_item>
@@ -4220,7 +4220,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4228,7 +4228,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,CLOSING]</key>
           </item>
         </graph_item>
@@ -4236,7 +4236,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4244,7 +4244,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4252,7 +4252,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -4260,7 +4260,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -4268,7 +4268,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,LISTEN]</key>
           </item>
         </graph_item>
@@ -4276,7 +4276,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -4284,7 +4284,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -4292,7 +4292,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -4305,7 +4305,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,CLOSE]</key>
           </item>
         </graph_item>
@@ -4313,7 +4313,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4321,7 +4321,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,CLOSING]</key>
           </item>
         </graph_item>
@@ -4329,7 +4329,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4337,7 +4337,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4345,7 +4345,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -4353,7 +4353,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -4361,7 +4361,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,LISTEN]</key>
           </item>
         </graph_item>
@@ -4369,7 +4369,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -4377,7 +4377,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -4385,7 +4385,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -4398,7 +4398,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,CLOSE]</key>
           </item>
         </graph_item>
@@ -4406,7 +4406,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4414,7 +4414,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,CLOSING]</key>
           </item>
         </graph_item>
@@ -4422,7 +4422,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4430,7 +4430,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4438,7 +4438,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -4446,7 +4446,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -4454,7 +4454,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,LISTEN]</key>
           </item>
         </graph_item>
@@ -4462,7 +4462,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -4470,7 +4470,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -4478,7 +4478,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -4491,7 +4491,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,CLOSE]</key>
           </item>
         </graph_item>
@@ -4499,7 +4499,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4507,7 +4507,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,CLOSING]</key>
           </item>
         </graph_item>
@@ -4515,7 +4515,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4523,7 +4523,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4531,7 +4531,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -4539,7 +4539,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -4547,7 +4547,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,LISTEN]</key>
           </item>
         </graph_item>
@@ -4555,7 +4555,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -4563,7 +4563,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -4571,7 +4571,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -4584,7 +4584,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,CLOSE]</key>
           </item>
         </graph_item>
@@ -4592,7 +4592,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4600,7 +4600,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,CLOSING]</key>
           </item>
         </graph_item>
@@ -4608,7 +4608,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4616,7 +4616,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4624,7 +4624,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -4632,7 +4632,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -4640,7 +4640,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,LISTEN]</key>
           </item>
         </graph_item>
@@ -4648,7 +4648,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -4656,7 +4656,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -4664,7 +4664,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -4677,7 +4677,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,CLOSE]</key>
           </item>
         </graph_item>
@@ -4685,7 +4685,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4693,7 +4693,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,CLOSING]</key>
           </item>
         </graph_item>
@@ -4701,7 +4701,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4709,7 +4709,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4717,7 +4717,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -4725,7 +4725,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -4733,7 +4733,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,LISTEN]</key>
           </item>
         </graph_item>
@@ -4741,7 +4741,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -4749,7 +4749,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -4757,7 +4757,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -4770,7 +4770,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,CLOSE]</key>
           </item>
         </graph_item>
@@ -4778,7 +4778,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4786,7 +4786,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,CLOSING]</key>
           </item>
         </graph_item>
@@ -4794,7 +4794,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4802,7 +4802,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4810,7 +4810,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -4818,7 +4818,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -4826,7 +4826,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,LISTEN]</key>
           </item>
         </graph_item>
@@ -4834,7 +4834,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -4842,7 +4842,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -4850,7 +4850,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -4863,7 +4863,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,CLOSE]</key>
           </item>
         </graph_item>
@@ -4871,7 +4871,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4879,7 +4879,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,CLOSING]</key>
           </item>
         </graph_item>
@@ -4887,7 +4887,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4895,7 +4895,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4903,7 +4903,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -4911,7 +4911,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -4919,7 +4919,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,LISTEN]</key>
           </item>
         </graph_item>
@@ -4927,7 +4927,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -4935,7 +4935,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -4943,7 +4943,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -4956,7 +4956,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,CLOSE]</key>
           </item>
         </graph_item>
@@ -4964,7 +4964,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -4972,7 +4972,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,CLOSING]</key>
           </item>
         </graph_item>
@@ -4980,7 +4980,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -4988,7 +4988,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -4996,7 +4996,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -5004,7 +5004,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -5012,7 +5012,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,LISTEN]</key>
           </item>
         </graph_item>
@@ -5020,7 +5020,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -5028,7 +5028,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -5036,7 +5036,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -5049,7 +5049,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,CLOSE]</key>
           </item>
         </graph_item>
@@ -5057,7 +5057,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -5065,7 +5065,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,CLOSING]</key>
           </item>
         </graph_item>
@@ -5073,7 +5073,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -5081,7 +5081,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -5089,7 +5089,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -5097,7 +5097,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -5105,7 +5105,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,LISTEN]</key>
           </item>
         </graph_item>
@@ -5113,7 +5113,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -5121,7 +5121,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -5129,7 +5129,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -5142,7 +5142,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,CLOSE]</key>
           </item>
         </graph_item>
@@ -5150,7 +5150,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -5158,7 +5158,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,CLOSING]</key>
           </item>
         </graph_item>
@@ -5166,7 +5166,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -5174,7 +5174,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -5182,7 +5182,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -5190,7 +5190,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -5198,7 +5198,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,LISTEN]</key>
           </item>
         </graph_item>
@@ -5206,7 +5206,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -5214,7 +5214,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -5222,7 +5222,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -5235,7 +5235,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,CLOSE]</key>
           </item>
         </graph_item>
@@ -5243,7 +5243,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -5251,7 +5251,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,CLOSING]</key>
           </item>
         </graph_item>
@@ -5259,7 +5259,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -5267,7 +5267,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -5275,7 +5275,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -5283,7 +5283,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -5291,7 +5291,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,LISTEN]</key>
           </item>
         </graph_item>
@@ -5299,7 +5299,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -5307,7 +5307,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -5315,7 +5315,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -5328,7 +5328,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,CLOSE]</key>
           </item>
         </graph_item>
@@ -5336,7 +5336,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -5344,7 +5344,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,CLOSING]</key>
           </item>
         </graph_item>
@@ -5352,7 +5352,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -5360,7 +5360,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -5368,7 +5368,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -5376,7 +5376,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -5384,7 +5384,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,LISTEN]</key>
           </item>
         </graph_item>
@@ -5392,7 +5392,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -5400,7 +5400,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -5408,7 +5408,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -5421,7 +5421,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,CLOSE]</key>
           </item>
         </graph_item>
@@ -5429,7 +5429,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -5437,7 +5437,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,CLOSING]</key>
           </item>
         </graph_item>
@@ -5445,7 +5445,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -5453,7 +5453,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -5461,7 +5461,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -5469,7 +5469,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -5477,7 +5477,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,LISTEN]</key>
           </item>
         </graph_item>
@@ -5485,7 +5485,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -5493,7 +5493,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -5501,7 +5501,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,TIME_WAIT]</key>
           </item>
         </graph_item>
@@ -5514,7 +5514,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[22,,CountAll]</key>
           </item>
         </graph_item>
@@ -5522,7 +5522,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[80,,CountAll]</key>
           </item>
         </graph_item>
@@ -5530,7 +5530,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[443,,CountAll]</key>
           </item>
         </graph_item>
@@ -5538,7 +5538,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[445,,CountAll]</key>
           </item>
         </graph_item>
@@ -5546,7 +5546,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10050,,CountAll]</key>
           </item>
         </graph_item>
@@ -5554,7 +5554,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[10051,,CountAll]</key>
           </item>
         </graph_item>
@@ -5562,7 +5562,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[20772,,CountAll]</key>
           </item>
         </graph_item>
@@ -5570,7 +5570,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,22,CountAll]</key>
           </item>
         </graph_item>
@@ -5578,7 +5578,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,80,CountAll]</key>
           </item>
         </graph_item>
@@ -5586,7 +5586,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,443,CountAll]</key>
           </item>
         </graph_item>
@@ -5594,7 +5594,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,445,CountAll]</key>
           </item>
         </graph_item>
@@ -5602,7 +5602,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10050,CountAll]</key>
           </item>
         </graph_item>
@@ -5610,7 +5610,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,10051,CountAll]</key>
           </item>
         </graph_item>
@@ -5618,7 +5618,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,20772,CountAll]</key>
           </item>
         </graph_item>
@@ -5631,7 +5631,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,CLOSE]</key>
           </item>
         </graph_item>
@@ -5639,7 +5639,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,CLOSE_WAIT]</key>
           </item>
         </graph_item>
@@ -5647,7 +5647,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,CLOSING]</key>
           </item>
         </graph_item>
@@ -5655,7 +5655,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,ESTABLISHED]</key>
           </item>
         </graph_item>
@@ -5663,7 +5663,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,FIN_WAIT1]</key>
           </item>
         </graph_item>
@@ -5671,7 +5671,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,FIN_WAIT2]</key>
           </item>
         </graph_item>
@@ -5679,7 +5679,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,LAST_ACK]</key>
           </item>
         </graph_item>
@@ -5687,7 +5687,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,LISTEN]</key>
           </item>
         </graph_item>
@@ -5695,7 +5695,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,SYN_RECV]</key>
           </item>
         </graph_item>
@@ -5703,7 +5703,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,SYN_SENT]</key>
           </item>
         </graph_item>
@@ -5711,7 +5711,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_TCP-state-count bulkget</host>
+            <host>TCP-state-count bulkget</host>
             <key>net.tcp.count.depend[,,TIME_WAIT]</key>
           </item>
         </graph_item>

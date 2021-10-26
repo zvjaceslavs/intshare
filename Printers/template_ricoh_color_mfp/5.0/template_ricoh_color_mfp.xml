@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:31Z</date>
+  <date>2021-10-26T04:38:12Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template MFP Ricoh</template>
-      <name>Template MFP Ricoh</name>
+      <template>MFP Ricoh</template>
+      <name>MFP Ricoh</name>
       <groups>
         <group>
           <name>Printers</name>
@@ -177,7 +177,7 @@
               <style>0</style>
               <resource>
                 <name>Prints Total</name>
-                <host>Template MFP Ricoh</host>
+                <host>MFP Ricoh</host>
               </resource>
               <width>700</width>
               <height>200</height>
@@ -199,7 +199,7 @@
               <style>0</style>
               <resource>
                 <name>BW Prints</name>
-                <host>Template MFP Ricoh</host>
+                <host>MFP Ricoh</host>
               </resource>
               <width>400</width>
               <height>200</height>
@@ -221,7 +221,7 @@
               <style>0</style>
               <resource>
                 <name>Color Prints</name>
-                <host>Template MFP Ricoh</host>
+                <host>MFP Ricoh</host>
               </resource>
               <width>400</width>
               <height>200</height>
@@ -243,7 +243,7 @@
               <style>0</style>
               <resource>
                 <name>BlackTonerLevel</name>
-                <host>Template MFP Ricoh</host>
+                <host>MFP Ricoh</host>
               </resource>
               <width>250</width>
               <height>400</height>
@@ -265,7 +265,7 @@
               <style>0</style>
               <resource>
                 <name>CyanTonerLevel</name>
-                <host>Template MFP Ricoh</host>
+                <host>MFP Ricoh</host>
               </resource>
               <width>250</width>
               <height>400</height>
@@ -287,7 +287,7 @@
               <style>0</style>
               <resource>
                 <name>MagentaTonerLevel</name>
-                <host>Template MFP Ricoh</host>
+                <host>MFP Ricoh</host>
               </resource>
               <width>250</width>
               <height>400</height>
@@ -309,7 +309,7 @@
               <style>0</style>
               <resource>
                 <name>YellowTonerLevel</name>
-                <host>Template MFP Ricoh</host>
+                <host>MFP Ricoh</host>
               </resource>
               <width>250</width>
               <height>400</height>
@@ -346,7 +346,7 @@
           <color>000000</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template MFP Ricoh</host>
+            <host>MFP Ricoh</host>
             <key>blackTonerLevel</key>
           </item>
         </graph_item>
@@ -365,7 +365,7 @@
           <color>000000</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template MFP Ricoh</host>
+            <host>MFP Ricoh</host>
             <key>BWPrints</key>
           </item>
         </graph_item>
@@ -383,7 +383,7 @@
           <color>AA00AA</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template MFP Ricoh</host>
+            <host>MFP Ricoh</host>
             <key>colorPrints</key>
           </item>
         </graph_item>
@@ -403,7 +403,7 @@
           <color>33FFFF</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template MFP Ricoh</host>
+            <host>MFP Ricoh</host>
             <key>cyanTonerLevel</key>
           </item>
         </graph_item>
@@ -423,7 +423,7 @@
           <color>FF33FF</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template MFP Ricoh</host>
+            <host>MFP Ricoh</host>
             <key>magentaTonerLevel</key>
           </item>
         </graph_item>
@@ -441,7 +441,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>CC0000</color>
           <item>
-            <host>Template MFP Ricoh</host>
+            <host>MFP Ricoh</host>
             <key>totalPrints</key>
           </item>
         </graph_item>
@@ -461,7 +461,7 @@
           <color>FFFF33</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template MFP Ricoh</host>
+            <host>MFP Ricoh</host>
             <key>yellowTonerLevel</key>
           </item>
         </graph_item>

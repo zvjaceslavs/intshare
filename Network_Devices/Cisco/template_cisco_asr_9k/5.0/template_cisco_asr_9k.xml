@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:18Z</date>
+  <date>2021-10-26T04:37:56Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Cisco General</template>
-      <name>Template Cisco General</name>
+      <template>Cisco General</template>
+      <name>Cisco General</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>
@@ -152,14 +152,14 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template_Cisco_ASR_9K</template>
-      <name>Template_Cisco_ASR_9K</name>
+      <template>Cisco_ASR_9K</template>
+      <name>Cisco_ASR_9K</name>
       <templates>
         <template>
-          <name>Template Cisco General</name>
+          <name>Cisco General</name>
         </template>
         <template>
-          <name>Template_Cisco_Traps</name>
+          <name>Cisco_Traps</name>
         </template>
       </templates>
       <groups>
@@ -300,7 +300,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template_Cisco_ASR_9K:ciscoMemoryPoolUtilization5Min["{#SNMPVALUE}"].last()}>95 and {Template_Cisco_ASR_9K:ciscoMemoryPoolName["{#SNMPVALUE}"].str(image)}=0</expression>
+              <expression>{Cisco_ASR_9K:ciscoMemoryPoolUtilization5Min["{#SNMPVALUE}"].last()}>95 and {Cisco_ASR_9K:ciscoMemoryPoolName["{#SNMPVALUE}"].str(image)}=0</expression>
               <name>High utilization of Memory Pool "{#SNMPVALUE}"</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -373,7 +373,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template_Cisco_ASR_9K</host>
+                    <host>Cisco_ASR_9K</host>
                     <key>cpmCPUTotal1minRev[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -381,7 +381,7 @@
                   <sortorder>1</sortorder>
                   <color>C80000</color>
                   <item>
-                    <host>Template_Cisco_ASR_9K</host>
+                    <host>Cisco_ASR_9K</host>
                     <key>cpmCPUTotal5minRev[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1019,8 +1019,8 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template_Cisco_Traps</template>
-      <name>Template_Cisco_Traps</name>
+      <template>Cisco_Traps</template>
+      <name>Cisco_Traps</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>

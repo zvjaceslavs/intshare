@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:47Z</date>
+  <date>2021-10-26T04:46:20Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>brother Printers templates</template>
-      <name>brother Printers templates</name>
+      <template>brother Printers s</template>
+      <name>brother Printers s</name>
       <groups>
         <group>
           <name>Printers</name>

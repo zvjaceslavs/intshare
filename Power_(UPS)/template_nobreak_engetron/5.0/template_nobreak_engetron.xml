@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:22Z</date>
+  <date>2021-10-26T04:41:19Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Nobreak Engetron</template>
-      <name>Template Nobreak Engetron</name>
+      <template>Nobreak Engetron</template>
+      <name>Nobreak Engetron</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -296,22 +296,22 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Nobreak Engetron:UpsInputCurrent.1.last()}=0 or {Template Nobreak Engetron:UpsInputCurrent.2.last()}=0 or {Template Nobreak Engetron:UpsInputCurrent.3.last()}=0</expression>
+      <expression>{Nobreak Engetron:UpsInputCurrent.1.last()}=0 or {Nobreak Engetron:UpsInputCurrent.2.last()}=0 or {Nobreak Engetron:UpsInputCurrent.3.last()}=0</expression>
       <name>{HOST.NAME} | SEM Corrente de Entrada</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Nobreak Engetron:UpsOutputCurrent.1.last()}&lt;30 or {Template Nobreak Engetron:UpsOutputCurrent.2.last()}&lt;30 or {Template Nobreak Engetron:UpsOutputCurrent.3.last()}&lt;30</expression>
+      <expression>{Nobreak Engetron:UpsOutputCurrent.1.last()}&lt;30 or {Nobreak Engetron:UpsOutputCurrent.2.last()}&lt;30 or {Nobreak Engetron:UpsOutputCurrent.3.last()}&lt;30</expression>
       <name>{HOST.NAME} | SEM Corrente de Saida</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Nobreak Engetron:UpsOutputVoltage.1.last()}=0 or {Template Nobreak Engetron:UpsOutputVoltage.2.last()}=0 or {Template Nobreak Engetron:UpsOutputVoltage.3.last()}=0</expression>
+      <expression>{Nobreak Engetron:UpsOutputVoltage.1.last()}=0 or {Nobreak Engetron:UpsOutputVoltage.2.last()}=0 or {Nobreak Engetron:UpsOutputVoltage.3.last()}=0</expression>
       <name>{HOST.NAME} | SEM Tensao de Saida</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Nobreak Engetron:UpsInputVoltage.1.last()}=0 or {Template Nobreak Engetron:UpsInputVoltage.2.last()}=0 or {Template Nobreak Engetron:UpsInputVoltage.3.last()}=0</expression>
+      <expression>{Nobreak Engetron:UpsInputVoltage.1.last()}=0 or {Nobreak Engetron:UpsInputVoltage.2.last()}=0 or {Nobreak Engetron:UpsInputVoltage.3.last()}=0</expression>
       <name>{HOST.NAME} | SEM Tensao Entrada</name>
       <priority>HIGH</priority>
     </trigger>
@@ -323,7 +323,7 @@
         <graph_item>
           <color>AC8C14</color>
           <item>
-            <host>Template Nobreak Engetron</host>
+            <host>Nobreak Engetron</host>
             <key>UpsBatteryTemperature.0</key>
           </item>
         </graph_item>
@@ -331,7 +331,7 @@
           <sortorder>1</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template Nobreak Engetron</host>
+            <host>Nobreak Engetron</host>
             <key>UpsInputVoltage.1</key>
           </item>
         </graph_item>
@@ -339,7 +339,7 @@
           <sortorder>2</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template Nobreak Engetron</host>
+            <host>Nobreak Engetron</host>
             <key>UpsInputVoltage.2</key>
           </item>
         </graph_item>
@@ -347,7 +347,7 @@
           <sortorder>3</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template Nobreak Engetron</host>
+            <host>Nobreak Engetron</host>
             <key>UpsInputVoltage.3</key>
           </item>
         </graph_item>
@@ -355,7 +355,7 @@
           <sortorder>4</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template Nobreak Engetron</host>
+            <host>Nobreak Engetron</host>
             <key>UpsOutputVoltage.1</key>
           </item>
         </graph_item>
@@ -363,7 +363,7 @@
           <sortorder>5</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template Nobreak Engetron</host>
+            <host>Nobreak Engetron</host>
             <key>UpsOutputVoltage.2</key>
           </item>
         </graph_item>
@@ -371,7 +371,7 @@
           <sortorder>6</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template Nobreak Engetron</host>
+            <host>Nobreak Engetron</host>
             <key>UpsOutputVoltage.3</key>
           </item>
         </graph_item>

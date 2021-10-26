@@ -1,4 +1,4 @@
-# Template App Nginx
+# App Nginx
 
 ## Overview
 
@@ -103,15 +103,15 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Nginx Accepted per second|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","accepted"]<p>Update: 60</p>|
-|Nginx Active Connections|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","active"]<p>Update: 60</p>|
 |Nginx Handled per second|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","handled"]<p>Update: 60</p>|
-|Nginx Reading state count|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","reading"]<p>Update: 60</p>|
 |Nginx Requests per second|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","requests"]<p>Update: 60</p>|
-|Nginx Waiting state count|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","waiting"]<p>Update: 60</p>|
 |Nginx Writting state count|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","writing"]<p>Update: 60</p>|
-|Nginx memory allocated|<p>-</p>|`Zabbix agent`|proc.mem[nginx,nginx]<p>Update: 60</p>|
 |Nginx process count|<p>-</p>|`Zabbix agent`|proc.num[nginx]<p>Update: 60</p>|
+|Nginx Accepted per second|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","accepted"]<p>Update: 60</p>|
+|Nginx Waiting state count|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","waiting"]<p>Update: 60</p>|
+|Nginx memory allocated|<p>-</p>|`Zabbix agent`|proc.mem[nginx,nginx]<p>Update: 60</p>|
+|Nginx Reading state count|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","reading"]<p>Update: 60</p>|
+|Nginx Active Connections|<p>-</p>|`External check`|nginx_stat_getter["-h","{HOST.CONN}","-p","4040","-s","active"]<p>Update: 60</p>|
 ## Triggers
 
 There are no triggers in this template.

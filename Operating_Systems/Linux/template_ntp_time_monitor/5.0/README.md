@@ -1,4 +1,4 @@
-# Template Time Drift OS Linux
+# Time Drift OS Linux
 
 ## Overview
 
@@ -44,7 +44,7 @@ There are no discovery rules in this template.
 
 There are no triggers in this template.
 
-# Template Time Offset OS Linux
+# Time Offset OS Linux
 
 ## Overview
 

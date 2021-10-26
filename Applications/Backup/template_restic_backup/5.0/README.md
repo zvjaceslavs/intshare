@@ -1,4 +1,4 @@
-# Template restic backup by Zabbix agent
+# restic backup by Zabbix agent
 
 ## Overview
 
@@ -40,11 +40,11 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Last {#PROFILENAME} / {#PROFILECOMMAND} failed|<p>-</p>|<p>**Expression**: {Template restic backup by Zabbix agent:backup.success[{#PROFILENAME}, {#PROFILECOMMAND}].last()}=0</p><p>**Recovery expression**: </p>|high|
-|Last {#PROFILENAME} / {#PROFILECOMMAND} did not run|<p>Last profile has not finished on time (or has not started): last run finished more than {$MAX_HOURS_BETWEEN} hour(s) ago</p>|<p>**Expression**: {Template restic backup by Zabbix agent:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].now()}-{Template restic backup by Zabbix agent:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].last()}>(26*3600)</p><p>**Recovery expression**: </p>|high|
-|Last {#PROFILENAME} / {#PROFILECOMMAND} failed (LLD)|<p>-</p>|<p>**Expression**: {Template restic backup by Zabbix agent:backup.success[{#PROFILENAME}, {#PROFILECOMMAND}].last()}=0</p><p>**Recovery expression**: </p>|high|
-|Last {#PROFILENAME} / {#PROFILECOMMAND} did not run (LLD)|<p>Last profile has not finished on time (or has not started): last run finished more than {$MAX_HOURS_BETWEEN} hour(s) ago</p>|<p>**Expression**: {Template restic backup by Zabbix agent:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].now()}-{Template restic backup by Zabbix agent:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].last()}>(26*3600)</p><p>**Recovery expression**: </p>|high|
-# Template restic backup by Zabbix agent active
+|Last {#PROFILENAME} / {#PROFILECOMMAND} failed|<p>-</p>|<p>**Expression**: {restic backup by Zabbix agent:backup.success[{#PROFILENAME}, {#PROFILECOMMAND}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Last {#PROFILENAME} / {#PROFILECOMMAND} did not run|<p>Last profile has not finished on time (or has not started): last run finished more than {$MAX_HOURS_BETWEEN} hour(s) ago</p>|<p>**Expression**: {restic backup by Zabbix agent:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].now()}-{restic backup by Zabbix agent:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].last()}>(26*3600)</p><p>**Recovery expression**: </p>|high|
+|Last {#PROFILENAME} / {#PROFILECOMMAND} failed (LLD)|<p>-</p>|<p>**Expression**: {restic backup by Zabbix agent:backup.success[{#PROFILENAME}, {#PROFILECOMMAND}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Last {#PROFILENAME} / {#PROFILECOMMAND} did not run (LLD)|<p>Last profile has not finished on time (or has not started): last run finished more than {$MAX_HOURS_BETWEEN} hour(s) ago</p>|<p>**Expression**: {restic backup by Zabbix agent:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].now()}-{restic backup by Zabbix agent:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].last()}>(26*3600)</p><p>**Recovery expression**: </p>|high|
+# restic backup by Zabbix agent active
 
 ## Overview
 
@@ -86,7 +86,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Last {#PROFILENAME} / {#PROFILECOMMAND} failed|<p>-</p>|<p>**Expression**: {Template restic backup by Zabbix agent active:backup.success[{#PROFILENAME}, {#PROFILECOMMAND}].last()}=0</p><p>**Recovery expression**: </p>|high|
-|Last {#PROFILENAME} / {#PROFILECOMMAND} did not run|<p>Last profile has not finished on time (or has not started): last run finished more than {$MAX_HOURS_BETWEEN} hour(s) ago</p>|<p>**Expression**: {Template restic backup by Zabbix agent active:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].now()}-{Template restic backup by Zabbix agent active:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].last()}>(26*3600)</p><p>**Recovery expression**: </p>|high|
-|Last {#PROFILENAME} / {#PROFILECOMMAND} failed (LLD)|<p>-</p>|<p>**Expression**: {Template restic backup by Zabbix agent active:backup.success[{#PROFILENAME}, {#PROFILECOMMAND}].last()}=0</p><p>**Recovery expression**: </p>|high|
-|Last {#PROFILENAME} / {#PROFILECOMMAND} did not run (LLD)|<p>Last profile has not finished on time (or has not started): last run finished more than {$MAX_HOURS_BETWEEN} hour(s) ago</p>|<p>**Expression**: {Template restic backup by Zabbix agent active:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].now()}-{Template restic backup by Zabbix agent active:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].last()}>(26*3600)</p><p>**Recovery expression**: </p>|high|
+|Last {#PROFILENAME} / {#PROFILECOMMAND} failed|<p>-</p>|<p>**Expression**: {restic backup by Zabbix agent active:backup.success[{#PROFILENAME}, {#PROFILECOMMAND}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Last {#PROFILENAME} / {#PROFILECOMMAND} did not run|<p>Last profile has not finished on time (or has not started): last run finished more than {$MAX_HOURS_BETWEEN} hour(s) ago</p>|<p>**Expression**: {restic backup by Zabbix agent active:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].now()}-{restic backup by Zabbix agent active:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].last()}>(26*3600)</p><p>**Recovery expression**: </p>|high|
+|Last {#PROFILENAME} / {#PROFILECOMMAND} failed (LLD)|<p>-</p>|<p>**Expression**: {restic backup by Zabbix agent active:backup.success[{#PROFILENAME}, {#PROFILECOMMAND}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Last {#PROFILENAME} / {#PROFILECOMMAND} did not run (LLD)|<p>Last profile has not finished on time (or has not started): last run finished more than {$MAX_HOURS_BETWEEN} hour(s) ago</p>|<p>**Expression**: {restic backup by Zabbix agent active:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].now()}-{restic backup by Zabbix agent active:backup.time[{#PROFILENAME}, {#PROFILECOMMAND}].last()}>(26*3600)</p><p>**Recovery expression**: </p>|high|

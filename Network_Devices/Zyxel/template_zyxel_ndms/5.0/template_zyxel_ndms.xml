@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:20Z</date>
+  <date>2021-10-26T04:41:16Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP ZyXEL NDMS</template>
-      <name>Template SNMP ZyXEL NDMS</name>
+      <template>SNMP ZyXEL NDMS</template>
+      <name>SNMP ZyXEL NDMS</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -177,7 +177,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP ZyXEL NDMS</host>
+                    <host>SNMP ZyXEL NDMS</host>
                     <key>ifInOctets[{#IFDESCR}]</key>
                   </item>
                 </graph_item>
@@ -185,7 +185,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP ZyXEL NDMS</host>
+                    <host>SNMP ZyXEL NDMS</host>
                     <key>ifOutOctets[{#IFDESCR}]</key>
                   </item>
                 </graph_item>

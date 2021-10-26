@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:00Z'
+  date: '2021-10-26T04:45:22Z'
   groups:
     -
       uuid: ee77f4e634cb439ba8f2fbedd4f61fc6
@@ -11,8 +11,8 @@ zabbix_export:
   templates:
     -
       uuid: 03d8719aaf4349b1bafe1c940c2d5eec
-      template: 'QNAP NAS Template SNMP'
-      name: 'QNAP NAS Template SNMP'
+      template: 'QNAP NAS SNMP'
+      name: 'QNAP NAS SNMP'
       groups:
         -
           name: 'QNAP NAS Systeme'
@@ -252,7 +252,7 @@ zabbix_export:
           triggers:
             -
               uuid: bfe58cc2014e4b638706bab3d2ecfdc7
-              expression: '(last(/QNAP NAS Template SNMP/PhysicalFirmwareRev,#1)<>last(/QNAP NAS Template SNMP/PhysicalFirmwareRev,#2))>0'
+              expression: '(last(/QNAP NAS SNMP/PhysicalFirmwareRev,#1)<>last(/QNAP NAS SNMP/PhysicalFirmwareRev,#2))>0'
               name: 'Firmware on {HOST.NAME} is changed'
               priority: INFO
         -
@@ -314,12 +314,12 @@ zabbix_export:
           triggers:
             -
               uuid: f509e3a651ae4f9daaac10586982ca4c
-              expression: 'min(/QNAP NAS Template SNMP/SystemCPU-UsageEX,15m)>80'
+              expression: 'min(/QNAP NAS SNMP/SystemCPU-UsageEX,15m)>80'
               name: 'CPU utilization on {HOST.NAME} is over 80% for 15 min'
               priority: WARNING
             -
               uuid: b17fd9c0037448cfa345b3a1a2c40cb4
-              expression: 'min(/QNAP NAS Template SNMP/SystemCPU-UsageEX,15m)>95'
+              expression: 'min(/QNAP NAS SNMP/SystemCPU-UsageEX,15m)>95'
               name: 'CPU utilization on {HOST.NAME} is over 95% for 15 min'
               priority: AVERAGE
         -
@@ -399,7 +399,7 @@ zabbix_export:
           triggers:
             -
               uuid: 9b81c6c10f9b4ef0bba2e01677c01d9b
-              expression: 'change(/QNAP NAS Template SNMP/sysUptime)<0'
+              expression: 'change(/QNAP NAS SNMP/sysUptime)<0'
               name: '{HOST.NAME} has just been restarted'
               priority: HIGH
         -
@@ -564,7 +564,7 @@ zabbix_export:
                   color: 00BB00
                   calc_fnc: MAX
                   item:
-                    host: 'QNAP NAS Template SNMP'
+                    host: 'QNAP NAS SNMP'
                     key: 'net.if.in[{#SNMPVALUE}, bps]'
                 -
                   sortorder: '1'
@@ -572,7 +572,7 @@ zabbix_export:
                   color: 0000BB
                   calc_fnc: MAX
                   item:
-                    host: 'QNAP NAS Template SNMP'
+                    host: 'QNAP NAS SNMP'
                     key: 'net.if.out[{#SNMPVALUE}, bps]'
                 -
                   sortorder: '2'
@@ -580,7 +580,7 @@ zabbix_export:
                   color: BB0000
                   calc_fnc: MAX
                   item:
-                    host: 'QNAP NAS Template SNMP'
+                    host: 'QNAP NAS SNMP'
                     key: 'net.if.err[{#SNMPVALUE},bps]'
         -
           uuid: c3e3bb6015ed4a89b6a2995ccbed866e
@@ -606,7 +606,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: ce2429bd53644aae857379852297ffb2
-                  expression: 'max(/QNAP NAS Template SNMP/SysFanSpeedEX[{#SNMPINDEX}],60s)=0'
+                  expression: 'max(/QNAP NAS SNMP/SysFanSpeedEX[{#SNMPINDEX}],60s)=0'
                   name: '{#SNMPVALUE} fan on {HOST.NAME} possibly is stopped'
                   priority: WARNING
         -
@@ -658,7 +658,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 1eb7f6a335d2403c98d18963cb3fdd54
-                  expression: 'find(/QNAP NAS Template SNMP/HdSmartInfoEX[{#SNMPINDEX}],,"iregexp","abnormal")=1'
+                  expression: 'find(/QNAP NAS SNMP/HdSmartInfoEX[{#SNMPINDEX}],,"iregexp","abnormal")=1'
                   name: 'SMART state of {#SNMPVALUE} on {HOST.NAME} is ABNORMAL'
                   priority: AVERAGE
                   description: |
@@ -669,7 +669,7 @@ zabbix_export:
                     QNAP Knowledgebase
                 -
                   uuid: 5f6635972f774deba1c4933611b54183
-                  expression: 'find(/QNAP NAS Template SNMP/HdSmartInfoEX[{#SNMPINDEX}],,"iregexp","normal")=1'
+                  expression: 'find(/QNAP NAS SNMP/HdSmartInfoEX[{#SNMPINDEX}],,"iregexp","normal")=1'
                   name: 'SMART state of {#SNMPVALUE} on {HOST.NAME} is not GOOD ({ITEM.VALUE1})'
                   priority: WARNING
                   description: |
@@ -694,26 +694,26 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: a7fea90c2da54552b131d025f46ab36a
-                  expression: 'last(/QNAP NAS Template SNMP/HdStatusEX[{#SNMPINDEX}])=-6'
+                  expression: 'last(/QNAP NAS SNMP/HdStatusEX[{#SNMPINDEX}])=-6'
                   name: 'State of {#SNMPVALUE} on {HOST.NAME} is "Invalid"'
                   priority: WARNING
                   description: 'State "Invalid"'
                 -
                   uuid: ed2ccb3717b740ae86c6021828685388
-                  expression: 'last(/QNAP NAS Template SNMP/HdStatusEX[{#SNMPINDEX}])=-5'
+                  expression: 'last(/QNAP NAS SNMP/HdStatusEX[{#SNMPINDEX}])=-5'
                   name: 'State of {#SNMPVALUE} on {HOST.NAME} is "noDisk"'
                   status: DISABLED
                   priority: INFO
                   description: 'State "noDisk"'
                 -
                   uuid: f3a6a7506e5f40b2b8bb31c65e3ab111
-                  expression: 'last(/QNAP NAS Template SNMP/HdStatusEX[{#SNMPINDEX}])=-9'
+                  expression: 'last(/QNAP NAS SNMP/HdStatusEX[{#SNMPINDEX}])=-9'
                   name: 'State of {#SNMPVALUE} on {HOST.NAME} is "rwError"'
                   priority: WARNING
                   description: 'State "rwError"'
                 -
                   uuid: f7e30fe30fe846b4b1f7747056dc5cb4
-                  expression: 'last(/QNAP NAS Template SNMP/HdStatusEX[{#SNMPINDEX}])<>0'
+                  expression: 'last(/QNAP NAS SNMP/HdStatusEX[{#SNMPINDEX}])<>0'
                   name: 'State of {#SNMPVALUE} on {HOST.NAME} is not "Ready" ({ITEM.VALUE1})'
                   priority: INFO
             -
@@ -732,12 +732,12 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: db5bcddb59b545b791984a3852139b8e
-                  expression: 'min(/QNAP NAS Template SNMP/HdTemperatureEX[{#SNMPINDEX}],2m)>{$HD_TEMPERATURE_ALARM}'
+                  expression: 'min(/QNAP NAS SNMP/HdTemperatureEX[{#SNMPINDEX}],2m)>{$HD_TEMPERATURE_ALARM}'
                   name: 'Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_ALARM} for 2 min'
                   priority: HIGH
                 -
                   uuid: 0b8d535e5e574231af9bbe3c8faac449
-                  expression: 'min(/QNAP NAS Template SNMP/HdTemperatureEX[{#SNMPINDEX}],2m)>{$HD_TEMPERATURE_WARNING}'
+                  expression: 'min(/QNAP NAS SNMP/HdTemperatureEX[{#SNMPINDEX}],2m)>{$HD_TEMPERATURE_WARNING}'
                   name: 'Temperature of {#SNMPVALUE} on {HOST.NAME} is over {$HD_TEMPERATURE_WARNING} for 2min'
                   priority: INFO
         -
@@ -781,7 +781,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 97c3537d74644c8b81d1eaf15f3baf50
-                  expression: 'last(/QNAP NAS Template SNMP/SysVolumePFreeSizeEX[{#SNMPINDEX}])<20'
+                  expression: 'last(/QNAP NAS SNMP/SysVolumePFreeSizeEX[{#SNMPINDEX}])<20'
                   name: 'Free space is less than 20% on volume {#SNMPVALUE}'
                   priority: WARNING
             -
@@ -825,7 +825,7 @@ zabbix_export:
                   color: 8888FF
                   calc_fnc: MAX
                   item:
-                    host: 'QNAP NAS Template SNMP'
+                    host: 'QNAP NAS SNMP'
                     key: 'SysVolumeTotalSizeEX[{#SNMPINDEX}]'
                 -
                   sortorder: '1'
@@ -833,7 +833,7 @@ zabbix_export:
                   color: '008800'
                   calc_fnc: MAX
                   item:
-                    host: 'QNAP NAS Template SNMP'
+                    host: 'QNAP NAS SNMP'
                     key: 'SysVolumeFreeSizeEX[{#SNMPINDEX}]'
       macros:
         -
@@ -851,7 +851,7 @@ zabbix_export:
         -
           color: 00BB00
           item:
-            host: 'QNAP NAS Template SNMP'
+            host: 'QNAP NAS SNMP'
             key: SystemCPU-UsageEX
     -
       uuid: 832b991a4a974a688d68588cc0f9c391
@@ -861,13 +861,13 @@ zabbix_export:
         -
           color: BB0000
           item:
-            host: 'QNAP NAS Template SNMP'
+            host: 'QNAP NAS SNMP'
             key: CPU-TemperatureEX
         -
           sortorder: '1'
           color: 0000BB
           item:
-            host: 'QNAP NAS Template SNMP'
+            host: 'QNAP NAS SNMP'
             key: SystemTemperatureEX
     -
       uuid: 3727a8ea848f4493a7f50eb63899b4ba
@@ -879,7 +879,7 @@ zabbix_export:
           color: 00BBBB
           calc_fnc: MAX
           item:
-            host: 'QNAP NAS Template SNMP'
+            host: 'QNAP NAS SNMP'
             key: systemTotalMemEX.0
         -
           sortorder: '1'
@@ -887,5 +887,5 @@ zabbix_export:
           color: '008800'
           calc_fnc: MAX
           item:
-            host: 'QNAP NAS Template SNMP'
+            host: 'QNAP NAS SNMP'
             key: SystemFreeMemEX

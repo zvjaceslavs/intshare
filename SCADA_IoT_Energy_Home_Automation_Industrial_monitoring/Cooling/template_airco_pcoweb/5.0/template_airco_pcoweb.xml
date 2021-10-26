@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:02Z</date>
+  <date>2021-10-26T04:43:09Z</date>
   <groups>
     <group>
       <name>Extra Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Airco pCOWeb</template>
-      <name>Template Airco pCOWeb</name>
+      <template>Airco pCOWeb</template>
+      <name>Airco pCOWeb</name>
       <groups>
         <group>
           <name>Extra Templates</name>
@@ -609,7 +609,7 @@
         <graph_item>
           <color>00CC00</color>
           <item>
-            <host>Template Airco pCOWeb</host>
+            <host>Airco pCOWeb</host>
             <key>airco.unitactive</key>
           </item>
         </graph_item>
@@ -618,7 +618,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template Airco pCOWeb</host>
+            <host>Airco pCOWeb</host>
             <key>airco.compressoractive</key>
           </item>
         </graph_item>
@@ -627,7 +627,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>DD0000</color>
           <item>
-            <host>Template Airco pCOWeb</host>
+            <host>Airco pCOWeb</host>
             <key>airco.CommonAlarm</key>
           </item>
         </graph_item>
@@ -640,7 +640,7 @@
         <graph_item>
           <color>FF5555</color>
           <item>
-            <host>Template Airco pCOWeb</host>
+            <host>Airco pCOWeb</host>
             <key>airco.roomtemp</key>
           </item>
         </graph_item>
@@ -649,7 +649,7 @@
           <drawtype>DASHED_LINE</drawtype>
           <color>9999FF</color>
           <item>
-            <host>Template Airco pCOWeb</host>
+            <host>Airco pCOWeb</host>
             <key>airco.supplytemp</key>
           </item>
         </graph_item>
@@ -658,7 +658,7 @@
           <drawtype>DOTTED_LINE</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template Airco pCOWeb</host>
+            <host>Airco pCOWeb</host>
             <key>airco.setpointcooling</key>
           </item>
         </graph_item>
@@ -667,7 +667,7 @@
           <drawtype>DOTTED_LINE</drawtype>
           <color>0000FF</color>
           <item>
-            <host>Template Airco pCOWeb</host>
+            <host>Airco pCOWeb</host>
             <key>airco.setpointheating</key>
           </item>
         </graph_item>

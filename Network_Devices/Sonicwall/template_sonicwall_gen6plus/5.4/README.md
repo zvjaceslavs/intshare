@@ -75,79 +75,83 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|SonicPoints-Nombres|<p>Descubrir Estado SonicPonts</p>|`SNMP agent`|sonicApName<p>Update: 1m</p>|
-|VPNs|<p>-</p>|`SNMP agent`|sonicwallsonicSAStatUserName<p>Update: 1m</p>|
 |Interfaces+Vlan|<p>Descubrir Interfaces y Vlans</p>|`SNMP agent`|sonicwallifDescr<p>Update: 1m</p>|
 |SonicPoints-Asociaciones|<p>Descubrir MAC Asociadas</p>|`SNMP agent`|sonicStaPhysAddress<p>Update: 1m</p>|
+|SonicPoints-Nombres|<p>Descubrir Estado SonicPonts</p>|`SNMP agent`|sonicApName<p>Update: 1m</p>|
+|VPNs|<p>-</p>|`SNMP agent`|sonicwallsonicSAStatUserName<p>Update: 1m</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Status X7|<p>-</p>|`SNMP agent`|ifOperStatus.8<p>Update: 60</p>|
-|X4 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 60</p>|
-|Status X6|<p>-</p>|`SNMP agent`|ifOperStatus.7<p>Update: 60</p>|
-|SystemLocation|<p>-</p>|`SNMP agent`|sonicsysLocation<p>Update: 86400</p>|
-|X10 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.11<p>Update: 60</p>|
 |X9 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.10<p>Update: 60</p>|
-|swFwTrapEnhWanFailover|<p>Alerta Trap WanFailover Evento</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhWanFailover]<p>Update: 0</p>|
-|Status X5|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 60</p>|
-|RAM|<p>Memória utilizada</p>|`SNMP agent`|sonicCurrentRAMUtil.0<p>Update: 60</p>|
-|X7 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.8<p>Update: 60</p>|
-|X5 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 60</p>|
-|X7 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.8<p>Update: 60</p>|
-|Status X9|<p>-</p>|`SNMP agent`|ifOperStatus.10<p>Update: 60</p>|
-|MAC-X1-WAN|<p>-</p>|`SNMP agent`|ifPhysAddress2<p>Update: 86400</p>|
 |swFwTrapEnhFwEvent|<p>-</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhFwEvent]<p>Update: 0</p>|
-|SystemObjetID|<p>-</p>|`SNMP agent`|sonicsysObjectID<p>Update: 86400</p>|
-|X9 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.10<p>Update: 60</p>|
-|Trapper-Resto|<p>Todos menos los ya filtrados</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
-|SystemContact|<p>-</p>|`SNMP agent`|sonicsysContact<p>Update: 86400</p>|
 |CPU Load DP|<p>CPU DataPlane</p>|`SNMP agent`|sonicCurrentFwdAndInspectCPUUtil.0<p>Update: 60</p>|
-|X6 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.7<p>Update: 60</p>|
-|CPU Load CP|<p>CPU ControlPlane</p>|`SNMP agent`|sonicCurrentManagementCPUUtil.0<p>Update: 60</p>|
-|swFwTrapEnhIntrusionDetection|<p>Eventos Intrusion Detection</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhIntrusionDetection]<p>Update: 0</p>|
-|Alcanzable|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
-|CPU Load|<p>CPU utilizada VMedio</p>|`SNMP agent`|sonicCurrentCPUUtil.0<p>Update: 60</p>|
-|X0 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.1<p>Update: 60</p>|
+|Status X7|<p>-</p>|`SNMP agent`|ifOperStatus.8<p>Update: 60</p>|
 |X1 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 60</p>|
-|Status X4|<p>-</p>|`SNMP agent`|ifOperStatus.5<p>Update: 60</p>|
-|X8 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.9<p>Update: 60</p>|
-|Reinicio Inminente|<p>Trap de reinicio por Software</p>|`SNMP trap`|snmptrap[SNMPv2-MIB::coldStart]<p>Update: 0</p>|
-|Laténcia|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
-|Nuevo-Dinamico-IP-SP-Clientes2|<p>-</p>|`SNMP agent`|sonicStaIpAddress2<p>Update: 1m</p>|
-|X5 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 60</p>|
-|X3 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 60</p>|
-|X2 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 60</p>|
-|X3 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.4<p>Update: 60</p>|
-|Sonicwall Up Time|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 60</p>|
-|MAC-X0-LAN|<p>-</p>|`SNMP agent`|ifPhysAddress1<p>Update: 86400</p>|
-|Status X1|<p>-</p>|`SNMP agent`|ifOperStatus.2<p>Update: 60</p>|
-|X6 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 60</p>|
-|swFwTrapEnhApplicationControl|<p>-</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhApplicationControl]<p>Update: 0</p>|
-|X0 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 60</p>|
-|swFwTrapEnhSecurityServices|<p>Security Services</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhSecurityServices]<p>Update: 0</p>|
-|swFwTrapEnhVpn|<p>Eventos Tunel</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhVpn]<p>Update: 0</p>|
-|Perdida de Paquetes|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|Firmware Version|<p>-</p>|`SNMP agent`|sonicFirmwareVersion<p>Update: 3600</p>|
-|X4 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 60</p>|
-|X8 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.9<p>Update: 60</p>|
-|SystemName|<p>-</p>|`SNMP agent`|sonicsysName<p>Update: 86400</p>|
-|Rom|<p>-</p>|`SNMP agent`|sonicROMVersion<p>Update: 86400</p>|
-|Status X0|<p>-</p>|`SNMP agent`|ifOperStatus.1<p>Update: 60</p>|
-|X2 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 60</p>|
-|Status X3|<p>-</p>|`SNMP agent`|ifOperStatus.4<p>Update: 60</p>|
-|Serial Number|<p>-</p>|`SNMP agent`|sonicSerialNumber<p>Update: 3600</p>|
-|Conexiones Concurrentes|<p>-</p>|`SNMP agent`|sonicCurrentConnCacheEntries.0<p>Update: 60</p>|
-|Status X10|<p>-</p>|`SNMP agent`|ifOperStatus.11<p>Update: 60</p>|
-|Modelo|<p>-</p>|`SNMP agent`|sonicModel<p>Update: 86400</p>|
-|X10 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.11<p>Update: 60</p>|
-|Descripcion|<p>-</p>|`SNMP agent`|sonicsysDescr<p>Update: 86400</p>|
-|swFwTrapEnhNetworkMonitor|<p>-</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhNetworkMonitor]<p>Update: 0</p>|
-|Nuevo-Dinamico-IP-SP-Clientes|<p>-</p>|`SNMP agent`|sonicStaIpAddress<p>Update: 1m</p>|
-|swFwTrapEnhAuthAccess|<p>Fallos en Autenticación</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhAuthAccess]<p>Update: 0</p>|
-|Status X2|<p>-</p>|`SNMP agent`|ifOperStatus.3<p>Update: 60</p>|
-|X1 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 60</p>|
 |Status X8|<p>-</p>|`SNMP agent`|ifOperStatus.9<p>Update: 60</p>|
+|Descripcion|<p>-</p>|`SNMP agent`|sonicsysDescr<p>Update: 86400</p>|
+|X4 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 60</p>|
+|MAC-X1-WAN|<p>-</p>|`SNMP agent`|ifPhysAddress2<p>Update: 86400</p>|
+|X7 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.8<p>Update: 60</p>|
+|CPU Load|<p>CPU utilizada VMedio</p>|`SNMP agent`|sonicCurrentCPUUtil.0<p>Update: 60</p>|
+|Reinicio Inminente|<p>Trap de reinicio por Software</p>|`SNMP trap`|snmptrap[SNMPv2-MIB::coldStart]<p>Update: 0</p>|
+|X6 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.7<p>Update: 60</p>|
+|X10 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.11<p>Update: 60</p>|
+|swFwTrapEnhSecurityServices|<p>Security Services</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhSecurityServices]<p>Update: 0</p>|
+|X0 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.1<p>Update: 60</p>|
+|X4 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 60</p>|
+|Sonicwall Up Time|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 60</p>|
+|X7 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.8<p>Update: 60</p>|
+|Status X0|<p>-</p>|`SNMP agent`|ifOperStatus.1<p>Update: 60</p>|
+|SystemName|<p>-</p>|`SNMP agent`|sonicsysName<p>Update: 86400</p>|
+|X8 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.9<p>Update: 60</p>|
+|X1 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 60</p>|
+|swFwTrapEnhNetworkMonitor|<p>-</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhNetworkMonitor]<p>Update: 0</p>|
+|X5 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 60</p>|
+|Nuevo-Dinamico-IP-SP-Clientes|<p>-</p>|`SNMP agent`|sonicStaIpAddress<p>Update: 1m</p>|
+|swFwTrapEnhIntrusionDetection|<p>Eventos Intrusion Detection</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhIntrusionDetection]<p>Update: 0</p>|
+|Status X10|<p>-</p>|`SNMP agent`|ifOperStatus.11<p>Update: 60</p>|
+|X2 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 60</p>|
+|swFwTrapEnhAuthAccess|<p>Fallos en Autenticación</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhAuthAccess]<p>Update: 0</p>|
+|MAC-X0-LAN|<p>-</p>|`SNMP agent`|ifPhysAddress1<p>Update: 86400</p>|
+|swFwTrapEnhVpn|<p>Eventos Tunel</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhVpn]<p>Update: 0</p>|
+|X0 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 60</p>|
+|Status X2|<p>-</p>|`SNMP agent`|ifOperStatus.3<p>Update: 60</p>|
+|X3 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 60</p>|
+|Status X4|<p>-</p>|`SNMP agent`|ifOperStatus.5<p>Update: 60</p>|
+|Status X1|<p>-</p>|`SNMP agent`|ifOperStatus.2<p>Update: 60</p>|
+|swFwTrapEnhWanFailover|<p>Alerta Trap WanFailover Evento</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhWanFailover]<p>Update: 0</p>|
+|Status X6|<p>-</p>|`SNMP agent`|ifOperStatus.7<p>Update: 60</p>|
+|Firmware Version|<p>-</p>|`SNMP agent`|sonicFirmwareVersion<p>Update: 3600</p>|
+|SystemLocation|<p>-</p>|`SNMP agent`|sonicsysLocation<p>Update: 86400</p>|
+|Trapper-Resto|<p>Todos menos los ya filtrados</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
+|X3 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.4<p>Update: 60</p>|
+|RAM|<p>Memória utilizada</p>|`SNMP agent`|sonicCurrentRAMUtil.0<p>Update: 60</p>|
+|Status X3|<p>-</p>|`SNMP agent`|ifOperStatus.4<p>Update: 60</p>|
+|X2 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 60</p>|
+|X8 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.9<p>Update: 60</p>|
+|Status X9|<p>-</p>|`SNMP agent`|ifOperStatus.10<p>Update: 60</p>|
+|Perdida de Paquetes|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
+|CPU Load CP|<p>CPU ControlPlane</p>|`SNMP agent`|sonicCurrentManagementCPUUtil.0<p>Update: 60</p>|
+|X5 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.6<p>Update: 60</p>|
+|X9 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.10<p>Update: 60</p>|
+|Serial Number|<p>-</p>|`SNMP agent`|sonicSerialNumber<p>Update: 3600</p>|
+|Rom|<p>-</p>|`SNMP agent`|sonicROMVersion<p>Update: 86400</p>|
+|swFwTrapEnhApplicationControl|<p>-</p>|`SNMP trap`|snmptrap[SONICWALL-FIREWALL-TRAP-MIB::swFwTrapEnhApplicationControl]<p>Update: 0</p>|
+|Conexiones Concurrentes|<p>-</p>|`SNMP agent`|sonicCurrentConnCacheEntries.0<p>Update: 60</p>|
+|Status X5|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 60</p>|
+|SystemContact|<p>-</p>|`SNMP agent`|sonicsysContact<p>Update: 86400</p>|
+|Alcanzable|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
+|SystemObjetID|<p>-</p>|`SNMP agent`|sonicsysObjectID<p>Update: 86400</p>|
+|Laténcia|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
+|X10 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.11<p>Update: 60</p>|
+|X6 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 60</p>|
+|Modelo|<p>-</p>|`SNMP agent`|sonicModel<p>Update: 86400</p>|
+|Nuevo-Dinamico-IP-SP-Clientes2|<p>-</p>|`SNMP agent`|sonicStaIpAddress2<p>Update: 1m</p>|
+|Trafico entrante en Interfaz $1|<p>-</p>|`SNMP agent`|ifInOctets.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Trafico saliente en interfaz $1|<p>-</p>|`SNMP agent`|ifOutOctets.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|AP-IP $1|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.8741.1.3.6.4.1.5.[{#SNMPVALUEMAC}]<p>Update: 1m</p><p>LLD</p>|
+|AP-IPsAsign $1|<p>-</p>|`SNMP agent`|sonicStaPhysAddress.[{#SNMPVALUEMAC}]<p>Update: 1m</p><p>LLD</p>|
 |CanalRadio-5G $1|<p>-</p>|`SNMP agent`|sonicApRadio0Channel.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |CanalRadio-2.4G $1|<p>-</p>|`SNMP agent`|sonicApRadio1Channel.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |Status-APs $1|<p>-</p>|`SNMP agent`|sonicApStatus.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
@@ -155,10 +159,6 @@ There are no template links in this template.
 |Trafico Saliente en VPN $1|<p>-</p>|`SNMP agent`|sonicSAStatEncryptByteCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p><p>LLD</p>|
 |PktsFrag Entrantes en VPN $1|<p>-</p>|`SNMP agent`|sonicSAStatInFragPktCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p><p>LLD</p>|
 |PktsFrag Salientes en VPN $1|<p>-</p>|`SNMP agent`|sonicSAStatOutFragPktCount.[{#SNMPVALUEVPN}]<p>Update: 1m</p><p>LLD</p>|
-|Trafico entrante en Interfaz $1|<p>-</p>|`SNMP agent`|ifInOctets.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
-|Trafico saliente en interfaz $1|<p>-</p>|`SNMP agent`|ifOutOctets.[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
-|AP-IP $1|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.8741.1.3.6.4.1.5.[{#SNMPVALUEMAC}]<p>Update: 1m</p><p>LLD</p>|
-|AP-IPsAsign $1|<p>-</p>|`SNMP agent`|sonicStaPhysAddress.[{#SNMPVALUEMAC}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

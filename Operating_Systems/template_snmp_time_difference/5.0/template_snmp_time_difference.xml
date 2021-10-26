@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:10Z</date>
+  <date>2021-10-26T04:45:36Z</date>
   <groups>
     <group>
       <name>Templates/Operating systems</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>_Template SNMP Time Diff</template>
-      <name>_Template SNMP Time Diff</name>
+      <template>SNMP Time Diff</template>
+      <name>SNMP Time Diff</name>
       <groups>
         <group>
           <name>Templates/Operating systems</name>
@@ -39,7 +39,7 @@
               <dependencies>
                 <dependency>
                   <name>Time Difference (+/- 60s)</name>
-                  <expression>{_Template SNMP Time Diff:hrSystemDate.last()}>60 or {_Template SNMP Time Diff:hrSystemDate.last()}&lt;-60</expression>
+                  <expression>{SNMP Time Diff:hrSystemDate.last()}>60 or {SNMP Time Diff:hrSystemDate.last()}&lt;-60</expression>
                 </dependency>
               </dependencies>
             </trigger>

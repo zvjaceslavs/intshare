@@ -1,4 +1,4 @@
-# Template SNMP Fortinet  - Antivirus and WebFilter
+# SNMP Fortinet  - Antivirus and WebFilter
 
 ## Description
 
@@ -52,12 +52,19 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Discovery of fgAntivirus|<p>-</p>|`SNMP agent`|fgAvStatsEntry<p>Update: 1h</p>|
 |Discovery of fgWebfilter|<p>A table of Web-filter statistics per virtual domain</p>|`SNMP agent`|fgWebfilterStatsEntry<p>Update: 1h</p>|
+|Discovery of fgAntivirus|<p>-</p>|`SNMP agent`|fgAvStatsEntry<p>Update: 1h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|ActiveX Downloads Blocked ID #{#SNMPINDEX}|<p>Number of ActiveX downloads blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfActiveXBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Applets Blocked ID #{#SNMPINDEX}|<p>Number of Applets blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfAppletBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Cookies Blocked ID #{#SNMPINDEX}|<p>Number of HTTP Cookies blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfCookieBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTP Sessions Blocked ID #{#SNMPINDEX}|<p>Number of HTTP sessions blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTPS Sessions Blocked ID #{#SNMPINDEX}|<p>Number of HTTPS sessions blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPSBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTPS URLS Blocked ID #{#SNMPINDEX}|<p>Number of HTTPS URLs blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPSURLBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|HTTP URLS Blocked ID #{#SNMPINDEX}|<p>Number of HTTP URLs blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPURLBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |FTP Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions over FTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvFTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Oversized Blocked ID #{#SNMPINDEX}|<p>Number of over-sized file transmissions blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvOversizedBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
@@ -76,13 +83,6 @@ There are no template links in this template.
 |HTTP Virus Detected  ID #{#SNMPINDEX}|<p>Number of virus transmissions over HTTP detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvHTTPVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |HTTP Virus Blocked ID #{#SNMPINDEX}|<p>Number of virus transmissions over HTTP blocked in the virtual domain since start-up</p>|`SNMP agent`|fgAvHTTPVirusBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Virus Detected ID #{#SNMPINDEX}|<p>Number of virus transmissions detected in the virtual domain since start-up</p>|`SNMP agent`|fgAvVirusDetected[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|ActiveX Downloads Blocked ID #{#SNMPINDEX}|<p>Number of ActiveX downloads blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfActiveXBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Applets Blocked ID #{#SNMPINDEX}|<p>Number of Applets blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfAppletBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Cookies Blocked ID #{#SNMPINDEX}|<p>Number of HTTP Cookies blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfCookieBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|HTTP Sessions Blocked ID #{#SNMPINDEX}|<p>Number of HTTP sessions blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|HTTPS Sessions Blocked ID #{#SNMPINDEX}|<p>Number of HTTPS sessions blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPSBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|HTTPS URLS Blocked ID #{#SNMPINDEX}|<p>Number of HTTPS URLs blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPSURLBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|HTTP URLS Blocked ID #{#SNMPINDEX}|<p>Number of HTTP URLs blocked by Web-filter since start-up</p>|`SNMP agent`|fgWfHTTPURLBlocked[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

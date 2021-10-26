@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:28Z</date>
+  <date>2021-10-26T04:43:39Z</date>
   <groups>
     <group>
       <name>Dvr</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Dvr</template>
-      <name>Template_Dvr</name>
+      <template>Dvr</template>
+      <name>Dvr</name>
       <description>template dvr</description>
       <groups>
         <group>
@@ -450,7 +450,7 @@
               <dependencies>
                 <dependency>
                   <name>A {HOST.NAME} nao Responde a Ping</name>
-                  <expression>{Template_Dvr:icmpping.max(#3)}=0</expression>
+                  <expression>{Dvr:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -473,7 +473,7 @@
               <dependencies>
                 <dependency>
                   <name>A {HOST.NAME} nao Responde a Ping</name>
-                  <expression>{Template_Dvr:icmpping.max(#3)}=0</expression>
+                  <expression>{Dvr:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -576,7 +576,7 @@
               <dependencies>
                 <dependency>
                   <name>A {HOST.NAME} nao Responde a Ping</name>
-                  <expression>{Template_Dvr:icmpping.max(#3)}=0</expression>
+                  <expression>{Dvr:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -601,7 +601,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_Dvr</host>
+            <host>Dvr</host>
             <key>net.if.in</key>
           </item>
         </graph_item>
@@ -609,7 +609,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_Dvr</host>
+            <host>Dvr</host>
             <key>net.if.out</key>
           </item>
         </graph_item>

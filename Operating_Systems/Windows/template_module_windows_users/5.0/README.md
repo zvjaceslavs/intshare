@@ -1,4 +1,4 @@
-# Template Module Windows users by Zabbix agent
+# Module Windows users by Zabbix agent
 
 ## Description
 
@@ -62,7 +62,7 @@ There are no discovery rules in this template.
 
 There are no triggers in this template.
 
-# Template Module Windows users by Zabbix agent active
+# Module Windows users by Zabbix agent active
 
 ## Description
 

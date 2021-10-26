@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:41Z</date>
+  <date>2021-10-26T04:38:21Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App MySQL</template>
-      <name>Template App MySQL</name>
+      <template>App MySQL</template>
+      <name>App MySQL</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -295,7 +295,7 @@
               <style>0</style>
               <resource>
                 <name>MySQL operations</name>
-                <host>Template App MySQL</host>
+                <host>App MySQL</host>
               </resource>
               <width>500</width>
               <height>200</height>
@@ -317,7 +317,7 @@
               <style>0</style>
               <resource>
                 <name>MySQL bandwidth</name>
-                <host>Template App MySQL</host>
+                <host>App MySQL</host>
               </resource>
               <width>500</width>
               <height>270</height>
@@ -347,7 +347,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Bytes_received]</key>
           </item>
         </graph_item>
@@ -356,7 +356,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Bytes_sent]</key>
           </item>
         </graph_item>
@@ -368,7 +368,7 @@
         <graph_item>
           <color>C8C800</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Com_begin]</key>
           </item>
         </graph_item>
@@ -376,7 +376,7 @@
           <sortorder>1</sortorder>
           <color>006400</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Com_commit]</key>
           </item>
         </graph_item>
@@ -384,7 +384,7 @@
           <sortorder>2</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Com_delete]</key>
           </item>
         </graph_item>
@@ -392,7 +392,7 @@
           <sortorder>3</sortorder>
           <color>0000EE</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Com_insert]</key>
           </item>
         </graph_item>
@@ -400,7 +400,7 @@
           <sortorder>4</sortorder>
           <color>640000</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Com_rollback]</key>
           </item>
         </graph_item>
@@ -408,7 +408,7 @@
           <sortorder>5</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Com_select]</key>
           </item>
         </graph_item>
@@ -416,7 +416,7 @@
           <sortorder>6</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template App MySQL</host>
+            <host>App MySQL</host>
             <key>mysql.status[Com_update]</key>
           </item>
         </graph_item>

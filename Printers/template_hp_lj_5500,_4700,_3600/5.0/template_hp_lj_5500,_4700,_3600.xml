@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:40Z</date>
+  <date>2021-10-26T04:39:27Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer HP LaserJet 5500</template>
-      <name>Template Printer HP LaserJet 5500</name>
+      <template>Printer HP LaserJet 5500</template>
+      <name>Printer HP LaserJet 5500</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -656,7 +656,7 @@
               <style>0</style>
               <resource>
                 <key>hp.5550.black.cartridge.type</key>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -678,7 +678,7 @@
               <style>0</style>
               <resource>
                 <key>hp.5550.cyan.cartridge.type</key>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -700,7 +700,7 @@
               <style>0</style>
               <resource>
                 <key>hp.5550.magenta.cartridge.type</key>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -722,7 +722,7 @@
               <style>0</style>
               <resource>
                 <key>hp.5550.yellow.cartridge.type</key>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -744,7 +744,7 @@
               <style>0</style>
               <resource>
                 <key>hp.5550.fuser.kit.type</key>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -766,7 +766,7 @@
               <style>0</style>
               <resource>
                 <key>hp.5550.transfer.kit.type</key>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -788,7 +788,7 @@
               <style>0</style>
               <resource>
                 <name>Black toner level</name>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -810,7 +810,7 @@
               <style>0</style>
               <resource>
                 <name>Cyan toner level</name>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -832,7 +832,7 @@
               <style>0</style>
               <resource>
                 <name>Magenta toner level</name>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -854,7 +854,7 @@
               <style>0</style>
               <resource>
                 <name>Yellow toner level</name>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -876,7 +876,7 @@
               <style>0</style>
               <resource>
                 <name>Fuser Kit level</name>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -898,7 +898,7 @@
               <style>0</style>
               <resource>
                 <name>Transfer Kit level</name>
-                <host>Template Printer HP LaserJet 5500</host>
+                <host>Printer HP LaserJet 5500</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -922,32 +922,32 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer HP LaserJet 5500:5550.black.perc.last(0)}&lt;3 and {Template Printer HP LaserJet 5500:hp.5550.black.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer HP LaserJet 5500:5550.black.perc.last(0)}&lt;3 and {Printer HP LaserJet 5500:hp.5550.black.cartridge.type.nodata(3w)}=0</expression>
       <name>{ITEM.LASTVALUE2} - {ITEM.LASTVALUE1}</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP LaserJet 5500:5550.cyan.perc.last(0)}&lt;3 and {Template Printer HP LaserJet 5500:hp.5550.cyan.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer HP LaserJet 5500:5550.cyan.perc.last(0)}&lt;3 and {Printer HP LaserJet 5500:hp.5550.cyan.cartridge.type.nodata(3w)}=0</expression>
       <name>{ITEM.LASTVALUE2} - {ITEM.LASTVALUE1}</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP LaserJet 5500:5550.img.fsr.perc.last(0)}&lt;3 and {Template Printer HP LaserJet 5500:hp.5550.fuser.kit.type.nodata(3w)}=0</expression>
+      <expression>{Printer HP LaserJet 5500:5550.img.fsr.perc.last(0)}&lt;3 and {Printer HP LaserJet 5500:hp.5550.fuser.kit.type.nodata(3w)}=0</expression>
       <name>{ITEM.LASTVALUE2} - {ITEM.LASTVALUE1}</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP LaserJet 5500:5550.img.trnsfr.perc.last(0)}&lt;3 and {Template Printer HP LaserJet 5500:hp.5550.transfer.kit.type.nodata(3w)}=0</expression>
+      <expression>{Printer HP LaserJet 5500:5550.img.trnsfr.perc.last(0)}&lt;3 and {Printer HP LaserJet 5500:hp.5550.transfer.kit.type.nodata(3w)}=0</expression>
       <name>{ITEM.LASTVALUE2} - {ITEM.LASTVALUE1}</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP LaserJet 5500:5550.magenta.perc.last(0)}&lt;3 and {Template Printer HP LaserJet 5500:hp.5550.magenta.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer HP LaserJet 5500:5550.magenta.perc.last(0)}&lt;3 and {Printer HP LaserJet 5500:hp.5550.magenta.cartridge.type.nodata(3w)}=0</expression>
       <name>{ITEM.LASTVALUE2} - {ITEM.LASTVALUE1}</name>
       <priority>INFO</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP LaserJet 5500:5550.yellow.perc.last(0)}&lt;3 and {Template Printer HP LaserJet 5500:hp.5550.yellow.cartridge.type.nodata(3w)}=0</expression>
+      <expression>{Printer HP LaserJet 5500:5550.yellow.perc.last(0)}&lt;3 and {Printer HP LaserJet 5500:hp.5550.yellow.cartridge.type.nodata(3w)}=0</expression>
       <name>{ITEM.LASTVALUE2} - {ITEM.LASTVALUE1}</name>
       <priority>INFO</priority>
     </trigger>
@@ -963,7 +963,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer HP LaserJet 5500</host>
+            <host>Printer HP LaserJet 5500</host>
             <key>5550.black.perc</key>
           </item>
         </graph_item>
@@ -979,7 +979,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00DDDD</color>
           <item>
-            <host>Template Printer HP LaserJet 5500</host>
+            <host>Printer HP LaserJet 5500</host>
             <key>5550.cyan.perc</key>
           </item>
         </graph_item>
@@ -995,7 +995,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer HP LaserJet 5500</host>
+            <host>Printer HP LaserJet 5500</host>
             <key>5550.img.fsr.perc</key>
           </item>
         </graph_item>
@@ -1011,7 +1011,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>DD00DD</color>
           <item>
-            <host>Template Printer HP LaserJet 5500</host>
+            <host>Printer HP LaserJet 5500</host>
             <key>5550.magenta.perc</key>
           </item>
         </graph_item>
@@ -1027,7 +1027,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer HP LaserJet 5500</host>
+            <host>Printer HP LaserJet 5500</host>
             <key>5550.img.trnsfr.perc</key>
           </item>
         </graph_item>
@@ -1043,7 +1043,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>DDDD00</color>
           <item>
-            <host>Template Printer HP LaserJet 5500</host>
+            <host>Printer HP LaserJet 5500</host>
             <key>5550.yellow.perc</key>
           </item>
         </graph_item>

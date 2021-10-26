@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:51Z</date>
+  <date>2021-10-26T04:39:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_MES3124</template>
-      <name>Template_MES3124</name>
+      <template>MES3124</template>
+      <name>MES3124</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -1219,7 +1219,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>cpu-5s</key>
           </item>
         </graph_item>
@@ -1231,7 +1231,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>rlPhyTestTableRxOpticalPower105</key>
           </item>
         </graph_item>
@@ -1239,7 +1239,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>rlPhyTestTableRxOpticalPower106</key>
           </item>
         </graph_item>
@@ -1251,7 +1251,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>ifHCInOctets105</key>
           </item>
         </graph_item>
@@ -1259,7 +1259,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>ifHCOutOctets105</key>
           </item>
         </graph_item>
@@ -1271,7 +1271,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>ifHCInOctets106</key>
           </item>
         </graph_item>
@@ -1279,7 +1279,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>ifHCOutOctets106</key>
           </item>
         </graph_item>
@@ -1291,7 +1291,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>ifHCInOctets107</key>
           </item>
         </graph_item>
@@ -1299,7 +1299,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>ifHCOutOctets107</key>
           </item>
         </graph_item>
@@ -1311,7 +1311,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>ifHCInOctets108</key>
           </item>
         </graph_item>
@@ -1319,7 +1319,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_MES3124</host>
+            <host>MES3124</host>
             <key>ifHCOutOctets108</key>
           </item>
         </graph_item>

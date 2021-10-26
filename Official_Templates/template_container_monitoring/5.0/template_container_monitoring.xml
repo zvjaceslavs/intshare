@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:23Z</date>
+  <date>2021-10-26T04:43:34Z</date>
   <groups>
     <group>
       <name>Templates/Prometheus</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Container Monitoring</template>
-      <name>Template Container Monitoring</name>
+      <template>Container Monitoring</template>
+      <name>Container Monitoring</name>
       <groups>
         <group>
           <name>Templates/Prometheus</name>
@@ -86,7 +86,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>cpu[{#METRIC},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -164,7 +164,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_cpu_system_seconds_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -242,7 +242,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_cpu_usage_seconds_total[{#CPU},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -324,7 +324,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_cpu_user_seconds_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -531,7 +531,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_io_current[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -613,7 +613,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_io_time_seconds_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -695,7 +695,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_io_time_weighted_seconds_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -778,7 +778,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_limit_bytes[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -861,7 +861,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_reads_bytes_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -942,7 +942,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_reads_merged_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1023,7 +1023,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_reads_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1105,7 +1105,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_read_seconds_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1186,7 +1186,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_sector_reads_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1267,7 +1267,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_sector_writes_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1350,7 +1350,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_usage_bytes[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1433,7 +1433,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_writes_bytes_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1514,7 +1514,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_writes_merged_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1595,7 +1595,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_writes_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1677,7 +1677,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_fs_write_seconds_total[{#DEVICE},{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1759,7 +1759,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_last_seen[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1837,7 +1837,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_memory_cache[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1914,7 +1914,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_memory_failcnt[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -1991,7 +1991,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_memory_failures_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2069,7 +2069,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_memory_rss[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2147,7 +2147,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_memory_swap[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2226,7 +2226,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_memory_usage_bytes[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2305,7 +2305,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_memory_working_set_bytes[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2384,7 +2384,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_receive_bytes_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2461,7 +2461,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_receive_errors_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2538,7 +2538,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_receive_packets_dropped_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2615,7 +2615,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_receive_packets_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2693,7 +2693,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_tcp_usage_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2772,7 +2772,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_transmit_bytes_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2849,7 +2849,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_transmit_errors_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -2926,7 +2926,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_transmit_packets_dropped_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -3003,7 +3003,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_transmit_packets_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -3081,7 +3081,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_network_udp_usage_total[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -3158,7 +3158,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>err[{#METRIC}]</key>
                   </item>
                 </graph_item>
@@ -3222,7 +3222,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_spec_cpu_period[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -3290,7 +3290,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_spec_cpu_shares[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -3360,7 +3360,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_spec_memory_limit_bytes[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -3430,7 +3430,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_spec_memory_swap_limit_bytes[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -3509,7 +3509,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_start_time_seconds[{#ID}]</key>
                   </item>
                 </graph_item>
@@ -3586,7 +3586,7 @@
                   <color>199C0D</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Container Monitoring</host>
+                    <host>Container Monitoring</host>
                     <key>container_tasks_state[{#ID},{#STATE}]</key>
                   </item>
                 </graph_item>

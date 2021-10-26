@@ -64,19 +64,19 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|demotions|<p>-</p>|`Dependent item`|lvmcache.demotions<p>Update: 0</p>|
-|dirty|<p>-</p>|`Dependent item`|lvmcache.dirty<p>Update: 0</p>|
-|LVM meta cache usage|<p>-</p>|`Calculated`|lvmcache.metausage<p>Update: 3m</p>|
-|promotions|<p>-</p>|`Dependent item`|lvmcache.promotions<p>Update: 0</p>|
-|lvm raw data|<p>-</p>|`Zabbix agent`|lvmcache.raw<p>Update: 3m</p>|
-|read_hits|<p>-</p>|`Dependent item`|lvmcache.read_hits<p>Update: 0</p>|
-|total_cache_blocks|<p>-</p>|`Dependent item`|lvmcache.total_cache_blocks<p>Update: 0</p>|
-|total_metadata_blocks|<p>-</p>|`Dependent item`|lvmcache.total_metadata_blocks<p>Update: 0</p>|
-|LVM data cache usage|<p>-</p>|`Calculated`|lvmcache.usage<p>Update: 3m</p>|
-|used_cache_blocks|<p>-</p>|`Dependent item`|lvmcache.used_cache_blocks<p>Update: 0</p>|
-|used_metadata_blocks|<p>-</p>|`Dependent item`|lvmcache.used_metadata_blocks<p>Update: 0</p>|
-|write_hits|<p>-</p>|`Dependent item`|lvmcache.write_hits<p>Update: 0</p>|
 |write_misses|<p>-</p>|`Dependent item`|lvmcache.write_misses<p>Update: 0</p>|
+|lvm raw data|<p>-</p>|`Zabbix agent`|lvmcache.raw<p>Update: 3m</p>|
+|LVM meta cache usage|<p>-</p>|`Calculated`|lvmcache.metausage<p>Update: 3m</p>|
+|used_metadata_blocks|<p>-</p>|`Dependent item`|lvmcache.used_metadata_blocks<p>Update: 0</p>|
+|dirty|<p>-</p>|`Dependent item`|lvmcache.dirty<p>Update: 0</p>|
+|total_cache_blocks|<p>-</p>|`Dependent item`|lvmcache.total_cache_blocks<p>Update: 0</p>|
+|used_cache_blocks|<p>-</p>|`Dependent item`|lvmcache.used_cache_blocks<p>Update: 0</p>|
+|total_metadata_blocks|<p>-</p>|`Dependent item`|lvmcache.total_metadata_blocks<p>Update: 0</p>|
+|read_hits|<p>-</p>|`Dependent item`|lvmcache.read_hits<p>Update: 0</p>|
+|demotions|<p>-</p>|`Dependent item`|lvmcache.demotions<p>Update: 0</p>|
+|write_hits|<p>-</p>|`Dependent item`|lvmcache.write_hits<p>Update: 0</p>|
+|promotions|<p>-</p>|`Dependent item`|lvmcache.promotions<p>Update: 0</p>|
+|LVM data cache usage|<p>-</p>|`Calculated`|lvmcache.usage<p>Update: 3m</p>|
 ## Triggers
 
 There are no triggers in this template.

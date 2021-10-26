@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:56Z'
+  date: '2021-10-26T04:46:31Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -11,8 +11,8 @@ zabbix_export:
   templates:
     -
       uuid: 882bf6447ac744afa52d925d4c468385
-      template: 'Template App Cortex XDR'
-      name: 'Template App Cortex XDR'
+      template: 'App Cortex XDR'
+      name: 'App Cortex XDR'
       groups:
         -
           name: Templates
@@ -28,7 +28,7 @@ zabbix_export:
           triggers:
             -
               uuid: d36f440e65c343d18e049d77c936785a
-              expression: 'last(/Template App Cortex XDR/service.info[cyserver,state])>0'
+              expression: 'last(/App Cortex XDR/service.info[cyserver,state])>0'
               name: 'Cortex XDR Service is not running on {HOSTNAME}'
               priority: HIGH
         -
@@ -47,7 +47,7 @@ zabbix_export:
           triggers:
             -
               uuid: 2ea4839f3d4448f2b5ee90bc9efa4238
-              expression: 'change(/Template App Cortex XDR/service.info[{$CORTEX.SERVICE},path])=1'
+              expression: 'change(/App Cortex XDR/service.info[{$CORTEX.SERVICE},path])=1'
               name: 'Cortex XDR service path changed on {HOSTNAME}'
               priority: INFO
               manual_close: 'YES'
@@ -61,7 +61,7 @@ zabbix_export:
           triggers:
             -
               uuid: fdf523996d1848468987dc80f070c5bb
-              expression: 'change(/Template App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path ''HKLM:\Software\Cyvera\Client\'' -Name ''Product Version''])=1'
+              expression: 'change(/App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path ''HKLM:\Software\Cyvera\Client\'' -Name ''Product Version''])=1'
               name: 'Cortex XDR version changed on {HOSTNAME}'
               status: DISABLED
               priority: INFO
@@ -86,13 +86,13 @@ zabbix_export:
           triggers:
             -
               uuid: 9caf092216554fe4ae424615f1e9ea59
-              expression: 'change(/Template App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path ''HKLM:\Software\Palo Alto Networks\Traps\'' -Name ''ProtectionStatus''])=1'
+              expression: 'change(/App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path ''HKLM:\Software\Palo Alto Networks\Traps\'' -Name ''ProtectionStatus''])=1'
               name: 'Cortex XDR Protection Status changed on {HOSTNAME}'
               priority: INFO
               manual_close: 'YES'
             -
               uuid: bca66f70357542d3bf530193fb04ef09
-              expression: 'last(/Template App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path ''HKLM:\Software\Palo Alto Networks\Traps\'' -Name ''ProtectionStatus''])=0'
+              expression: 'last(/App Cortex XDR/system.run[powershell.exe Get-ItemPropertyValue -Path ''HKLM:\Software\Palo Alto Networks\Traps\'' -Name ''ProtectionStatus''])=0'
               name: 'Cortex XDR Protection Status on {HOSTNAME} is disabled'
               priority: HIGH
       macros:

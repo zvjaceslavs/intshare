@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:06Z</date>
+  <date>2021-10-26T04:38:48Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Cisco WS2950</template>
-      <name>Template SNMP Cisco WS2950</name>
+      <template>SNMP Cisco WS2950</template>
+      <name>SNMP Cisco WS2950</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -397,7 +397,7 @@
                 <graph_item>
                   <color>EACC00</color>
                   <item>
-                    <host>Template SNMP Cisco WS2950</host>
+                    <host>SNMP Cisco WS2950</host>
                     <key>ciscoMemoryPoolFree[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -409,7 +409,7 @@
                 <graph_item>
                   <color>EACC00</color>
                   <item>
-                    <host>Template SNMP Cisco WS2950</host>
+                    <host>SNMP Cisco WS2950</host>
                     <key>ciscoMemoryPoolUsed[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -810,12 +810,12 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template SNMP Cisco WS2950:ifHCInOctets[{#SNMPVALUE}].avg(300s)})> ({Template SNMP Cisco WS2950:ifSpeed[{#SNMPVALUE}].last()}*0.8)</expression>
+              <expression>({SNMP Cisco WS2950:ifHCInOctets[{#SNMPVALUE}].avg(300s)})> ({SNMP Cisco WS2950:ifSpeed[{#SNMPVALUE}].last()}*0.8)</expression>
               <name>Incoming use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes</name>
               <priority>WARNING</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template SNMP Cisco WS2950:IfHCOutOctets[{#SNMPVALUE}].avg(300s)})> ({Template SNMP Cisco WS2950:ifSpeed[{#SNMPVALUE}].last()}*0.8)</expression>
+              <expression>({SNMP Cisco WS2950:IfHCOutOctets[{#SNMPVALUE}].avg(300s)})> ({SNMP Cisco WS2950:ifSpeed[{#SNMPVALUE}].last()}*0.8)</expression>
               <name>Outgoing use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes</name>
               <priority>WARNING</priority>
             </trigger_prototype>
@@ -827,7 +827,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP Cisco WS2950</host>
+                    <host>SNMP Cisco WS2950</host>
                     <key>ifHCInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -835,7 +835,7 @@
                   <sortorder>1</sortorder>
                   <color>3333FF</color>
                   <item>
-                    <host>Template SNMP Cisco WS2950</host>
+                    <host>SNMP Cisco WS2950</host>
                     <key>IfHCOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -854,7 +854,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>EACC00</color>
           <item>
-            <host>Template SNMP Cisco WS2950</host>
+            <host>SNMP Cisco WS2950</host>
             <key>ciscoCpmCPUTotal5minRev</key>
           </item>
         </graph_item>

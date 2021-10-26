@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:04Z</date>
+  <date>2021-10-26T04:45:28Z</date>
   <groups>
     <group>
       <name>Templates_Created</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Cisco BGP SNMP</template>
-      <name>Template Cisco BGP SNMP</name>
+      <template>Cisco BGP SNMP</template>
+      <name>Cisco BGP SNMP</name>
       <description>Template Cisco BGP Sessions -AdminStatus -Established Time -OperationStatus -AS Name -Maximum Prefix -Accepted Prefix -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as.name .oid_to_ipv6 Base: CISCO-BGP4-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-BGP4-MIB.php#cbgpPeer2RemoteAs External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates</description>
       <groups>
         <group>
@@ -102,7 +102,7 @@
                   <dependencies>
                     <dependency>
                       <name>BGPv6 peer {#SNMPVALUE} ASN {#SNMPASN} is DOWN</name>
-                      <expression>{Template Cisco BGP SNMP:cbgp6Peer2State["{#SNMPINDEX}","{#SNMPASN}"].last(#3)}&lt;>6 and {Template Cisco BGP SNMP:cbgp6Peer2AdminStatus["{#SNMPINDEX}","{#SNMPASN}"].last(0)}=2</expression>
+                      <expression>{Cisco BGP SNMP:cbgp6Peer2State["{#SNMPINDEX}","{#SNMPASN}"].last(#3)}&lt;>6 and {Cisco BGP SNMP:cbgp6Peer2AdminStatus["{#SNMPINDEX}","{#SNMPASN}"].last(0)}=2</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -196,7 +196,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Cisco BGP SNMP:cbgp6Peer2State["{#SNMPINDEX}","{#SNMPASN}"].last(#3)}&lt;>6 and {Template Cisco BGP SNMP:cbgp6Peer2AdminStatus["{#SNMPINDEX}","{#SNMPASN}"].last(0)}=2</expression>
+              <expression>{Cisco BGP SNMP:cbgp6Peer2State["{#SNMPINDEX}","{#SNMPASN}"].last(#3)}&lt;>6 and {Cisco BGP SNMP:cbgp6Peer2AdminStatus["{#SNMPINDEX}","{#SNMPASN}"].last(0)}=2</expression>
               <name>BGPv6 peer {#SNMPVALUE} ASN {#SNMPASN} is DOWN</name>
               <priority>HIGH</priority>
             </trigger_prototype>
@@ -278,7 +278,7 @@
                   <dependencies>
                     <dependency>
                       <name>BGPv4 peer {#SNMPINDEX} ASN {#SNMPASN} is DOWN</name>
-                      <expression>{Template Cisco BGP SNMP:cbgpPeer2State[{#SNMPINDEX}].last(#3)}&lt;>6 and {Template Cisco BGP SNMP:cbgpPeer2AdminStatus[{#SNMPINDEX}].last(0)}=2</expression>
+                      <expression>{Cisco BGP SNMP:cbgpPeer2State[{#SNMPINDEX}].last(#3)}&lt;>6 and {Cisco BGP SNMP:cbgpPeer2AdminStatus[{#SNMPINDEX}].last(0)}=2</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -385,12 +385,12 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Cisco BGP SNMP:cbgpPeer2State[{#SNMPINDEX}].last(#3)}&lt;>6 and {Template Cisco BGP SNMP:cbgpPeer2AdminStatus[{#SNMPINDEX}].last(0)}=2</expression>
+              <expression>{Cisco BGP SNMP:cbgpPeer2State[{#SNMPINDEX}].last(#3)}&lt;>6 and {Cisco BGP SNMP:cbgpPeer2AdminStatus[{#SNMPINDEX}].last(0)}=2</expression>
               <name>BGPv4 peer {#SNMPINDEX} ASN {#SNMPASN} is DOWN</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>( {Template Cisco BGP SNMP:cbgpPeerPrefixAccepted[{#SNMPINDEX}].last()} * 100 / {Template Cisco BGP SNMP:cbgpPeerPrefixLimit[{#SNMPINDEX}].last()} ) > {$MAXIMUM_PREFIX_ALARM}</expression>
+              <expression>( {Cisco BGP SNMP:cbgpPeerPrefixAccepted[{#SNMPINDEX}].last()} * 100 / {Cisco BGP SNMP:cbgpPeerPrefixLimit[{#SNMPINDEX}].last()} ) > {$MAXIMUM_PREFIX_ALARM}</expression>
               <name>BGPv4 Prefix Limit {#SNMPINDEX} ASN {#SNMPASN} near</name>
               <priority>WARNING</priority>
             </trigger_prototype>
@@ -404,7 +404,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>FF0000</color>
                   <item>
-                    <host>Template Cisco BGP SNMP</host>
+                    <host>Cisco BGP SNMP</host>
                     <key>cbgpPeerPrefixLimit[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -412,7 +412,7 @@
                   <sortorder>1</sortorder>
                   <color>00FF00</color>
                   <item>
-                    <host>Template Cisco BGP SNMP</host>
+                    <host>Cisco BGP SNMP</host>
                     <key>cbgpPeerPrefixAccepted[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -444,7 +444,7 @@
               <style>0</style>
               <resource>
                 <name>BGP Prefix Accepted {#SNMPINDEX}</name>
-                <host>Template Cisco BGP SNMP</host>
+                <host>Cisco BGP SNMP</host>
               </resource>
               <width>500</width>
               <height>100</height>

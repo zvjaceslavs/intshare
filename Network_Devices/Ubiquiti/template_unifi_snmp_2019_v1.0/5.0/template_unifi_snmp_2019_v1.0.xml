@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:58Z</date>
+  <date>2021-10-26T04:41:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template UNIFI SNMP 2019 V1.0</template>
-      <name>Template UNIFI SNMP 2019 V1.0</name>
+      <template>UNIFI SNMP 2019 V1.0</template>
+      <name>UNIFI SNMP 2019 V1.0</name>
       <description>This template retrieve SNMP data from Unifi AP devices. MIBS requiriments: FROGFOOT-RESOURCES-MIB IANAifType-MIB IF-MIB SNMP-FRAMEWORK-MIB SNMPv2-CONF SNMPv2-MIB SNMPv2-SMI SNMPv2-TC UBNT-MIB UBNT-UniFi-MIB Author: Alex Moura</description>
       <groups>
         <group>
@@ -303,7 +303,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template UNIFI SNMP 2019 V1.0</host>
+                    <host>UNIFI SNMP 2019 V1.0</host>
                     <key>unifiVapRxBytes[{#UNIFIVAPNAME}]</key>
                   </item>
                 </graph_item>
@@ -311,7 +311,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template UNIFI SNMP 2019 V1.0</host>
+                    <host>UNIFI SNMP 2019 V1.0</host>
                     <key>unifiVapTxBytes[{#UNIFIVAPNAME}]</key>
                   </item>
                 </graph_item>
@@ -324,7 +324,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template UNIFI SNMP 2019 V1.0</host>
+                    <host>UNIFI SNMP 2019 V1.0</host>
                     <key>unifiVapRxBytes[{#UNIFIVAPNAME}]</key>
                   </item>
                 </graph_item>
@@ -332,7 +332,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template UNIFI SNMP 2019 V1.0</host>
+                    <host>UNIFI SNMP 2019 V1.0</host>
                     <key>unifiVapTxBytes[{#UNIFIVAPNAME}]</key>
                   </item>
                 </graph_item>
@@ -344,7 +344,7 @@
                 <graph_item>
                   <color>3333FF</color>
                   <item>
-                    <host>Template UNIFI SNMP 2019 V1.0</host>
+                    <host>UNIFI SNMP 2019 V1.0</host>
                     <key>unifiVapNumStations[{#UNIFIVAPNAME}]</key>
                   </item>
                 </graph_item>
@@ -368,7 +368,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template UNIFI SNMP 2019 V1.0</host>
+            <host>UNIFI SNMP 2019 V1.0</host>
             <key>unifiIfRxBytes.1</key>
           </item>
         </graph_item>
@@ -376,7 +376,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template UNIFI SNMP 2019 V1.0</host>
+            <host>UNIFI SNMP 2019 V1.0</host>
             <key>unifiIfTxBytes.1</key>
           </item>
         </graph_item>

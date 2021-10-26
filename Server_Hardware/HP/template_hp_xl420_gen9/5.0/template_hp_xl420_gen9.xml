@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:26Z</date>
+  <date>2021-10-26T04:41:24Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI HP ProLiant XL420 Gen9</template>
-      <name>Template IPMI HP ProLiant XL420 Gen9</name>
+      <template>IPMI HP ProLiant XL420 Gen9</template>
+      <name>IPMI HP ProLiant XL420 Gen9</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -311,7 +311,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -347,7 +347,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -383,7 +383,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -419,7 +419,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -455,7 +455,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -491,7 +491,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -527,7 +527,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -563,7 +563,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -599,7 +599,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -635,7 +635,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -671,7 +671,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -707,7 +707,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P1I Bay 13</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P1IBay13.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -743,7 +743,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 1</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay1.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay1.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -779,7 +779,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 2</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay2.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay2.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -815,7 +815,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 3</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay3.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay3.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -851,7 +851,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 4</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay4.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay4.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -887,7 +887,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 5</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay5.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay5.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -923,7 +923,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 6</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay6.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay6.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -959,7 +959,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 7</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay7.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay7.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -995,7 +995,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 8</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay8.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay8.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1031,7 +1031,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 9</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay9.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay9.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1067,7 +1067,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 10</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay10.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay10.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1103,7 +1103,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 11</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay11.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay11.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1139,7 +1139,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C1 P2I Bay 12</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C1P2IBay12.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C1P2IBay12.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1175,7 +1175,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C2 P1I Bay 49</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C2P1IBay49.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C2P1IBay49.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1211,7 +1211,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C2 P1I Bay 50</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C2P1IBay50.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C2P1IBay50.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1247,7 +1247,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C2 P1I Bay 51</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C2P1IBay51.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C2P1IBay51.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1283,7 +1283,7 @@
               <dependencies>
                 <dependency>
                   <name>Error Drives C2 P1I Bay 52</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:C2P1IBay52.last()}=0</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:C2P1IBay52.last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1713,11 +1713,11 @@
               <dependencies>
                 <dependency>
                   <name>Error Power Supply 1</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:PowerSupply1.last()}&lt;>1</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:PowerSupply1.last()}&lt;>1</expression>
                 </dependency>
                 <dependency>
                   <name>Error Power Supply 2</name>
-                  <expression>{Template IPMI HP ProLiant XL420 Gen9:PowerSupply2.last()}&lt;>1</expression>
+                  <expression>{IPMI HP ProLiant XL420 Gen9:PowerSupply2.last()}&lt;>1</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1873,12 +1873,12 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template IPMI HP ProLiant XL420 Gen9:Fan1.last()}=0 or {Template IPMI HP ProLiant XL420 Gen9:Fan2.last()}=0 or {Template IPMI HP ProLiant XL420 Gen9:Fan3.last()}=0 or {Template IPMI HP ProLiant XL420 Gen9:Fan4.last()}=0 or {Template IPMI HP ProLiant XL420 Gen9:Fan5.last()}=0 or {Template IPMI HP ProLiant XL420 Gen9:Fan6.last()}=0 or {Template IPMI HP ProLiant XL420 Gen9:Fan7.last()}=0</expression>
+      <expression>{IPMI HP ProLiant XL420 Gen9:Fan1.last()}=0 or {IPMI HP ProLiant XL420 Gen9:Fan2.last()}=0 or {IPMI HP ProLiant XL420 Gen9:Fan3.last()}=0 or {IPMI HP ProLiant XL420 Gen9:Fan4.last()}=0 or {IPMI HP ProLiant XL420 Gen9:Fan5.last()}=0 or {IPMI HP ProLiant XL420 Gen9:Fan6.last()}=0 or {IPMI HP ProLiant XL420 Gen9:Fan7.last()}=0</expression>
       <name>Error FANS</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template IPMI HP ProLiant XL420 Gen9:02-CPU1.last()}>70 or {Template IPMI HP ProLiant XL420 Gen9:03-CPU2.last()}>70</expression>
+      <expression>{IPMI HP ProLiant XL420 Gen9:02-CPU1.last()}>70 or {IPMI HP ProLiant XL420 Gen9:03-CPU2.last()}>70</expression>
       <name>Error Temp CPU</name>
       <priority>HIGH</priority>
     </trigger>
@@ -1891,7 +1891,7 @@
         <graph_item>
           <color>0000EE</color>
           <item>
-            <host>Template IPMI HP ProLiant XL420 Gen9</host>
+            <host>IPMI HP ProLiant XL420 Gen9</host>
             <key>02-CPU1</key>
           </item>
         </graph_item>
@@ -1899,7 +1899,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template IPMI HP ProLiant XL420 Gen9</host>
+            <host>IPMI HP ProLiant XL420 Gen9</host>
             <key>03-CPU2</key>
           </item>
         </graph_item>

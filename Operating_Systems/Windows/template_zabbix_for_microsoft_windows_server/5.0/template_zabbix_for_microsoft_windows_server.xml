@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:47Z</date>
+  <date>2021-10-26T04:41:46Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template OS Windows Server Baseline</template>
-      <name>Template OS Windows Server Baseline</name>
+      <template>OS Windows Server Baseline</template>
+      <name>OS Windows Server Baseline</name>
       <description>Zabbix template for Microsoft Windows Server. Tested on Microsoft Windows Server 2012, 2012 R2 and 2016. It may work with earlier versions, but some items (with missing performance counters) may be unsupported. Tested on Zabbix 3.4.0. It may work with earlier versions, but some items (for example service.info[service,&lt;param>]) may be unsupported. Mantas Tumenas. mantas.tumenas@gmail.com</description>
       <groups>
         <group>
@@ -119,7 +119,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Memory Free System Page Table Entries avg value &lt; 5000 in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\Memory\Free System Page Table Entries",1].avg(300,0)}&lt;5000</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\Memory\Free System Page Table Entries",1].avg(300,0)}&lt;5000</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -149,7 +149,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Memory Pages/sec avg value > 2500 in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\Memory\Pages/sec",1].avg(300,0)}>2500</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\Memory\Pages/sec",1].avg(300,0)}>2500</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -163,7 +163,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Memory Pages/sec avg value > 5000 in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\Memory\Pages/sec",1].avg(300,0)}>5000</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\Memory\Pages/sec",1].avg(300,0)}>5000</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -276,7 +276,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: PhysicalDisk Read Latency avg value > 0.025 in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\PhysicalDisk(_Total)\Avg. Disk sec/Read",1].avg(300,0)}>0.025</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\PhysicalDisk(_Total)\Avg. Disk sec/Read",1].avg(300,0)}>0.025</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -290,7 +290,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: PhysicalDisk Read Latency avg value > 0.050 in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\PhysicalDisk(_Total)\Avg. Disk sec/Read",1].avg(300,0)}>0.050</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\PhysicalDisk(_Total)\Avg. Disk sec/Read",1].avg(300,0)}>0.050</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -327,7 +327,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: PhysicalDisk Write Latency avg value > 0.025 in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\PhysicalDisk(_Total)\Avg. Disk sec/Write",1].avg(300,0)}>0.025</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\PhysicalDisk(_Total)\Avg. Disk sec/Write",1].avg(300,0)}>0.025</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -341,7 +341,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: PhysicalDisk Write Latency avg value > 0.050 in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\PhysicalDisk(_Total)\Avg. Disk sec/Write",1].avg(300,0)}>0.050</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\PhysicalDisk(_Total)\Avg. Disk sec/Write",1].avg(300,0)}>0.050</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -493,7 +493,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Processor % Interrupt Time avg value > 50% in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\Processor Information(_Total)\% Interrupt Time",1].avg(300,0)}>50</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\Processor Information(_Total)\% Interrupt Time",1].avg(300,0)}>50</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -551,7 +551,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Processor % Processor Time avg value > 85% in the last 15 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\Processor Information(_Total)\% Processor Time",1].avg(900,0)}>85</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\Processor Information(_Total)\% Processor Time",1].avg(900,0)}>85</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -564,7 +564,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Processor % Processor Time avg value > 95% in the last 15 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\Processor Information(_Total)\% Processor Time",1].avg(900,0)}>95</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\Processor Information(_Total)\% Processor Time",1].avg(900,0)}>95</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -688,7 +688,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Processor Queue Length avg value > 20 in the last 5 min</name>
-                  <expression>{Template OS Windows Server Baseline:perf_counter["\System\Processor Queue Length",1].avg(300,0)}>20</expression>
+                  <expression>{OS Windows Server Baseline:perf_counter["\System\Processor Queue Length",1].avg(300,0)}>20</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1004,7 +1004,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Memory Available {ITEM.LASTVALUE}</name>
-                  <expression>{Template OS Windows Server Baseline:vm.memory.size[available].last(,0)}&lt;100</expression>
+                  <expression>{OS Windows Server Baseline:vm.memory.size[available].last(,0)}&lt;100</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1053,7 +1053,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: Memory Available percentage {ITEM.LASTVALUE}</name>
-                  <expression>{Template OS Windows Server Baseline:vm.memory.size[pavailable].last(,0)}&lt;3</expression>
+                  <expression>{OS Windows Server Baseline:vm.memory.size[pavailable].last(,0)}&lt;3</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1127,7 +1127,7 @@
                   <dependencies>
                     <dependency>
                       <name>Processor {#CPU.NUMBER} utilization avg value > 90% in the last 5 min</name>
-                      <expression>{Template OS Windows Server Baseline:system.cpu.util[{#CPU.NUMBER},system,avg5].avg(600,0)}>90</expression>
+                      <expression>{OS Windows Server Baseline:system.cpu.util[{#CPU.NUMBER},system,avg5].avg(600,0)}>90</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1156,7 +1156,7 @@
                   <dependencies>
                     <dependency>
                       <name>Processor {#CPU.NUMBER} utilization avg value > 90% in the last 15 min</name>
-                      <expression>{Template OS Windows Server Baseline:system.cpu.util[{#CPU.NUMBER},system,avg15].avg(600,0)}>90</expression>
+                      <expression>{OS Windows Server Baseline:system.cpu.util[{#CPU.NUMBER},system,avg15].avg(600,0)}>90</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1228,7 +1228,7 @@
                   <dependencies>
                     <dependency>
                       <name>{HOST.NAME}: LogicalDisk Read Latency avg value > 0.025 in the last 5 min</name>
-                      <expression>{Template OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Read",1].avg(300,0)}>0.025</expression>
+                      <expression>{OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Read",1].avg(300,0)}>0.025</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1241,7 +1241,7 @@
                   <dependencies>
                     <dependency>
                       <name>{HOST.NAME}: LogicalDisk Read Latency avg value > 0.050 in the last 5 min</name>
-                      <expression>{Template OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Read",1].avg(300,0)}>0.050</expression>
+                      <expression>{OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Read",1].avg(300,0)}>0.050</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1291,7 +1291,7 @@
                   <dependencies>
                     <dependency>
                       <name>{HOST.NAME}: LogicalDisk WriteLatency avg value > 0.025 in the last 5 min</name>
-                      <expression>{Template OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Write",1].avg(300,0)}>0.025</expression>
+                      <expression>{OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Write",1].avg(300,0)}>0.025</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1304,7 +1304,7 @@
                   <dependencies>
                     <dependency>
                       <name>{HOST.NAME}: LogicalDisk Write Latency avg value > 0.050 in the last 5 min</name>
-                      <expression>{Template OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Write",1].avg(300,0)}>0.050</expression>
+                      <expression>{OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Write",1].avg(300,0)}>0.050</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1374,7 +1374,7 @@
                   <dependencies>
                     <dependency>
                       <name>{HOST.NAME}: Free Disk {#FSNAME} Space {ITEM.LASTVALUE}</name>
-                      <expression>{Template OS Windows Server Baseline:vfs.fs.size[{#FSNAME},pfree].last(0)}&lt;3</expression>
+                      <expression>{OS Windows Server Baseline:vfs.fs.size[{#FSNAME},pfree].last(0)}&lt;3</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1387,7 +1387,7 @@
                   <dependencies>
                     <dependency>
                       <name>{HOST.NAME}: Free Disk {#FSNAME} Space {ITEM.LASTVALUE}</name>
-                      <expression>{Template OS Windows Server Baseline:vfs.fs.size[{#FSNAME},pfree].last(0)}&lt;5</expression>
+                      <expression>{OS Windows Server Baseline:vfs.fs.size[{#FSNAME},pfree].last(0)}&lt;5</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1436,14 +1436,14 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Disk Transfers/sec",1].avg(300,0)}&lt;80 and {Template OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Read",1].avg(300,0)}>0.025</expression>
+              <expression>{OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Disk Transfers/sec",1].avg(300,0)}&lt;80 and {OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Read",1].avg(300,0)}>0.025</expression>
               <name>{HOST.NAME}: LogicalDisk Transfer(Read) Latency avg value &lt; 80 in the last 5 min</name>
               <priority>INFO</priority>
               <description>Indicates the number of read and writes completed per second, regardless of how much data they involve. Measures disk utilization. Threshold: Less than 80 I/O’s per second on average when disk latency is longer than 25 ms. This may indicate too many virtual LUNs using the same physical disks on a SAN.</description>
               <manual_close>YES</manual_close>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Disk Transfers/sec",1].avg(300,0)}&lt;80 and {Template OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Write",1].avg(300,0)}>0.025</expression>
+              <expression>{OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Disk Transfers/sec",1].avg(300,0)}&lt;80 and {OS Windows Server Baseline:perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Write",1].avg(300,0)}>0.025</expression>
               <name>{HOST.NAME}: LogicalDisk Transfer(Write) Latency avg value &lt; 80 in the last 5 min</name>
               <priority>INFO</priority>
               <description>Indicates the number of read and writes completed per second, regardless of how much data they involve. Measures disk utilization. Threshold: Less than 80 I/O’s per second on average when disk latency is longer than 25 ms. This may indicate too many virtual LUNs using the same physical disks on a SAN.</description>
@@ -1457,7 +1457,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template OS Windows Server Baseline</host>
+                    <host>OS Windows Server Baseline</host>
                     <key>vfs.fs.size[{#FSNAME},free]</key>
                   </item>
                 </graph_item>
@@ -1465,7 +1465,7 @@
                   <sortorder>1</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template OS Windows Server Baseline</host>
+                    <host>OS Windows Server Baseline</host>
                     <key>vfs.fs.size[{#FSNAME},total]</key>
                   </item>
                 </graph_item>
@@ -1477,7 +1477,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template OS Windows Server Baseline</host>
+                    <host>OS Windows Server Baseline</host>
                     <key>perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Read",1]</key>
                   </item>
                 </graph_item>
@@ -1485,7 +1485,7 @@
                   <sortorder>1</sortorder>
                   <color>C80000</color>
                   <item>
-                    <host>Template OS Windows Server Baseline</host>
+                    <host>OS Windows Server Baseline</host>
                     <key>perf_counter["\LogicalDisk({#FSNAME})\Avg. Disk sec/Write",1]</key>
                   </item>
                 </graph_item>
@@ -1498,14 +1498,14 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template OS Windows Server Baseline:perf_counter["\System\Context Switches/sec",1].avg(300,0)}/{Template OS Windows Server Baseline:system.cpu.num[online].last()}>5000</expression>
+      <expression>{OS Windows Server Baseline:perf_counter["\System\Context Switches/sec",1].avg(300,0)}/{OS Windows Server Baseline:system.cpu.num[online].last()}>5000</expression>
       <name>{HOST.NAME}: Context Switches/sec {ITEM.LASTVALUE}</name>
       <priority>WARNING</priority>
       <description>Indicates that the kernel has switched the thread it is running on a processor. A context switch occurs each time a new thread runs, and each time one thread takes over from another. A large number of threads is likely to increase the number of context switches. Context switches allow multiple threads to share time slices on the processors, but they also interrupt the processor and might reduce overall system performance, especially on multiprocessor computers. You should also observe the patterns of context switches over time. Threshold: High context switches/sec – more than 5000 context switches per second.</description>
       <manual_close>YES</manual_close>
     </trigger>
     <trigger>
-      <expression>{Template OS Windows Server Baseline:perf_counter["\System\Context Switches/sec",1].avg(300,0)}/{Template OS Windows Server Baseline:system.cpu.num[online].last()}>10000</expression>
+      <expression>{OS Windows Server Baseline:perf_counter["\System\Context Switches/sec",1].avg(300,0)}/{OS Windows Server Baseline:system.cpu.num[online].last()}>10000</expression>
       <name>{HOST.NAME}: Context Switches/sec {ITEM.LASTVALUE}</name>
       <priority>AVERAGE</priority>
       <description>Indicates that the kernel has switched the thread it is running on a processor. A context switch occurs each time a new thread runs, and each time one thread takes over from another. A large number of threads is likely to increase the number of context switches. Context switches allow multiple threads to share time slices on the processors, but they also interrupt the processor and might reduce overall system performance, especially on multiprocessor computers. You should also observe the patterns of context switches over time. Threshold: Very high context switches/sec – more than 10,000 context switches per second.</description>
@@ -1519,7 +1519,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Memory\% Committed Bytes in Use",1]</key>
           </item>
         </graph_item>
@@ -1531,7 +1531,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Memory\Free System Page Table Entries",1]</key>
           </item>
         </graph_item>
@@ -1543,7 +1543,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Memory\Pages/sec",1]</key>
           </item>
         </graph_item>
@@ -1551,7 +1551,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Memory\Pages Input/sec",1]</key>
           </item>
         </graph_item>
@@ -1563,7 +1563,7 @@
         <graph_item>
           <color>0000C8</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>vm.memory.size[total]</key>
           </item>
         </graph_item>
@@ -1571,7 +1571,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>vm.memory.size[cached]</key>
           </item>
         </graph_item>
@@ -1579,7 +1579,7 @@
           <sortorder>2</sortorder>
           <color>00BB00</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>vm.memory.size[available]</key>
           </item>
         </graph_item>
@@ -1591,7 +1591,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\PhysicalDisk(_Total)\Avg. Disk Queue Length",1]</key>
           </item>
         </graph_item>
@@ -1603,7 +1603,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Process(_Total)\IO Data Operations/sec",1]</key>
           </item>
         </graph_item>
@@ -1611,7 +1611,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Process(_Total)\IO Other Operations/sec",1]</key>
           </item>
         </graph_item>
@@ -1619,7 +1619,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Process(_Total)\IO Read Operations/sec",1]</key>
           </item>
         </graph_item>
@@ -1627,7 +1627,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Process(_Total)\IO Write Operations/sec",1]</key>
           </item>
         </graph_item>
@@ -1639,7 +1639,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\System\Processor Queue Length",1]</key>
           </item>
         </graph_item>
@@ -1647,7 +1647,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\Server Work Queues(*)\Queue Length",1]</key>
           </item>
         </graph_item>
@@ -1659,7 +1659,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\System\% Registry Quota In Use",1]</key>
           </item>
         </graph_item>
@@ -1671,7 +1671,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template OS Windows Server Baseline</host>
+            <host>OS Windows Server Baseline</host>
             <key>perf_counter["\System\Context Switches/sec",1]</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:51Z</date>
+  <date>2021-10-26T04:39:39Z</date>
   <groups>
     <group>
       <name>All Clients</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Emerson ITA</template>
-      <name>Template Emerson ITA</name>
+      <template>Emerson ITA</template>
+      <name>Emerson ITA</name>
       <groups>
         <group>
           <name>All Clients</name>
@@ -1011,7 +1011,7 @@
           <sortorder>1</sortorder>
           <color>0000CC</color>
           <item>
-            <host>Template Emerson ITA</host>
+            <host>Emerson ITA</host>
             <key>OutputLoadfase1</key>
           </item>
         </graph_item>
@@ -1023,7 +1023,7 @@
         <graph_item>
           <color>0000CC</color>
           <item>
-            <host>Template Emerson ITA</host>
+            <host>Emerson ITA</host>
             <key>OutputVoltagefase1</key>
           </item>
         </graph_item>
@@ -1031,7 +1031,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template Emerson ITA</host>
+            <host>Emerson ITA</host>
             <key>Inputphasefase1</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:03Z</date>
+  <date>2021-10-26T04:42:04Z</date>
   <groups>
     <group>
       <name>eltex</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Eltex SMG SNMPv2</template>
-      <name>Template Eltex SMG SNMPv2</name>
+      <template>Eltex SMG SNMPv2</template>
+      <name>Eltex SMG SNMPv2</name>
       <groups>
         <group>
           <name>eltex</name>
@@ -102,7 +102,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Eltex SMG SNMPv2:icmpping.max(#3)}=0</expression>
+                  <expression>{Eltex SMG SNMPv2:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -130,7 +130,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Eltex SMG SNMPv2:icmpping.max(#3)}=0</expression>
+                  <expression>{Eltex SMG SNMPv2:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -425,7 +425,7 @@
                   <color>F63100</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template Eltex SMG SNMPv2</host>
+                    <host>Eltex SMG SNMPv2</host>
                     <key>fxsPort.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -449,7 +449,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgEOneStream0</key>
           </item>
         </graph_item>
@@ -457,7 +457,7 @@
           <sortorder>1</sortorder>
           <color>0040FF</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgEOneStream1</key>
           </item>
         </graph_item>
@@ -465,7 +465,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgEOneStream2</key>
           </item>
         </graph_item>
@@ -474,7 +474,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>activeCallCount</key>
           </item>
         </graph_item>
@@ -486,7 +486,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>pmPower1</key>
           </item>
         </graph_item>
@@ -494,7 +494,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>pmPower2</key>
           </item>
         </graph_item>
@@ -507,7 +507,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>Voip0busyChannels</key>
           </item>
         </graph_item>
@@ -515,7 +515,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>activeCallCount</key>
           </item>
         </graph_item>
@@ -523,7 +523,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>registrationCount</key>
           </item>
         </graph_item>
@@ -535,7 +535,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgFan0</key>
           </item>
         </graph_item>
@@ -543,7 +543,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgFan1</key>
           </item>
         </graph_item>
@@ -551,7 +551,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgFan2</key>
           </item>
         </graph_item>
@@ -559,7 +559,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgFan3</key>
           </item>
         </graph_item>
@@ -571,7 +571,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgTemperature1</key>
           </item>
         </graph_item>
@@ -579,7 +579,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>smgTemperature2</key>
           </item>
         </graph_item>
@@ -591,7 +591,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>sysUpTime</key>
           </item>
         </graph_item>
@@ -603,7 +603,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Eltex SMG SNMPv2</host>
+            <host>Eltex SMG SNMPv2</host>
             <key>Voip0busyChannels</key>
           </item>
         </graph_item>

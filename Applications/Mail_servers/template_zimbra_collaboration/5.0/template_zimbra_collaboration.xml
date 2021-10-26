@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:00Z</date>
+  <date>2021-10-26T04:44:17Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Zimbra</template>
-      <name>Template Zimbra</name>
+      <template>Zimbra</template>
+      <name>Zimbra</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -631,7 +631,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>system.run[awk '/reverse hostname/{print $7}' /tmp/report.txt]</key>
           </item>
         </graph_item>
@@ -639,7 +639,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>system.run[awk '/blocked using b.barracudacentral.org/{print $5}' /tmp/report.txt]</key>
           </item>
         </graph_item>
@@ -647,7 +647,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>system.run[awk '/blocked using bl.spamcop.net/{print $5}' /tmp/report.txt]</key>
           </item>
         </graph_item>
@@ -655,7 +655,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>system.run[awk '/blocked using zen.spamhaus.org/{print $5}' /tmp/report.txt]</key>
           </item>
         </graph_item>
@@ -663,7 +663,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>system.run[awk '/blocked using dbl.spamhaus.org/{print $5}' /tmp/report.txt]</key>
           </item>
         </graph_item>
@@ -671,7 +671,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>system.run[awk '/blocked using psbl.surriel.com/{print $5}' /tmp/report.txt]</key>
           </item>
         </graph_item>
@@ -679,7 +679,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>system.run[awk '/Helo command rejected: need fully-qualified hostname/{print $8}' /tmp/report.txt]</key>
           </item>
         </graph_item>
@@ -692,7 +692,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>zimbra.mailq.active</key>
           </item>
         </graph_item>
@@ -700,7 +700,7 @@
           <sortorder>1</sortorder>
           <color>000000</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>zimbra.mailq.corrupt</key>
           </item>
         </graph_item>
@@ -708,7 +708,7 @@
           <sortorder>2</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>zimbra.mailq.deferred</key>
           </item>
         </graph_item>
@@ -716,7 +716,7 @@
           <sortorder>3</sortorder>
           <color>26A69A</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>zimbra.mailq.hold</key>
           </item>
         </graph_item>
@@ -724,7 +724,7 @@
           <sortorder>4</sortorder>
           <color>0040FF</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>zimbra.mailq.incoming</key>
           </item>
         </graph_item>
@@ -736,7 +736,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Zimbra</host>
+            <host>Zimbra</host>
             <key>zimbra.mailq</key>
           </item>
         </graph_item>

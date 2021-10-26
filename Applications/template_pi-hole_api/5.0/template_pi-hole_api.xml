@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:24Z</date>
+  <date>2021-10-26T04:44:43Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Pi-Hole</template>
-      <name>Template App Pi-Hole</name>
+      <template>App Pi-Hole</template>
+      <name>App Pi-Hole</name>
       <description>Domains Blocked DNS Queries Today Ads Blocked Today Ads Blocked Percentage Today Clients Ever Seen Unique Clients Reply NODATA Reply NXDOMAIN Reply CNAME Reply IP</description>
       <groups>
         <group>
@@ -730,7 +730,7 @@
           <color>F63100</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.ads_percentage_today</key>
           </item>
         </graph_item>
@@ -738,7 +738,7 @@
           <sortorder>1</sortorder>
           <color>00BFFF</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.domains_being_blocked</key>
           </item>
         </graph_item>
@@ -751,7 +751,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.clients_ever_seen</key>
           </item>
         </graph_item>
@@ -759,7 +759,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.unique_clients</key>
           </item>
         </graph_item>
@@ -772,7 +772,7 @@
         <graph_item>
           <color>FFFFFF</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.dns_queries_today</key>
           </item>
         </graph_item>
@@ -780,7 +780,7 @@
           <sortorder>1</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.queries_cached</key>
           </item>
         </graph_item>
@@ -788,7 +788,7 @@
           <sortorder>2</sortorder>
           <color>9C27B0</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.queries_forwarded</key>
           </item>
         </graph_item>
@@ -796,7 +796,7 @@
           <sortorder>3</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.unique_domains</key>
           </item>
         </graph_item>
@@ -809,7 +809,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.reply_CNAME</key>
           </item>
         </graph_item>
@@ -817,7 +817,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.reply_IP</key>
           </item>
         </graph_item>
@@ -825,7 +825,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.reply_NODATA</key>
           </item>
         </graph_item>
@@ -833,7 +833,7 @@
           <sortorder>3</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.reply_NXDOMAIN</key>
           </item>
         </graph_item>
@@ -846,7 +846,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.a</key>
           </item>
         </graph_item>
@@ -854,7 +854,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.aaaa</key>
           </item>
         </graph_item>
@@ -862,7 +862,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.any</key>
           </item>
         </graph_item>
@@ -870,7 +870,7 @@
           <sortorder>3</sortorder>
           <color>C7A72D</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.srv</key>
           </item>
         </graph_item>
@@ -878,7 +878,7 @@
           <sortorder>4</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.soa</key>
           </item>
         </graph_item>
@@ -886,7 +886,7 @@
           <sortorder>5</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.ptr</key>
           </item>
         </graph_item>
@@ -894,7 +894,7 @@
           <sortorder>6</sortorder>
           <color>BA2A5D</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.txt</key>
           </item>
         </graph_item>
@@ -902,7 +902,7 @@
           <sortorder>7</sortorder>
           <color>F7941D</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.naptr</key>
           </item>
         </graph_item>
@@ -910,7 +910,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.mx</key>
           </item>
         </graph_item>
@@ -918,7 +918,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.ds</key>
           </item>
         </graph_item>
@@ -926,7 +926,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.rrsig</key>
           </item>
         </graph_item>
@@ -934,7 +934,7 @@
           <sortorder>11</sortorder>
           <color>AC41A5</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.dnskey</key>
           </item>
         </graph_item>
@@ -942,7 +942,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template App Pi-Hole</host>
+            <host>App Pi-Hole</host>
             <key>json.pihole.querytypes.other</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:53Z</date>
+  <date>2021-10-26T04:39:42Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Tyan S5532</template>
-      <name>Template IPMI Tyan S5532</name>
+      <template>IPMI Tyan S5532</template>
+      <name>IPMI Tyan S5532</name>
       <groups>
         <group>
           <name>Templates</name>

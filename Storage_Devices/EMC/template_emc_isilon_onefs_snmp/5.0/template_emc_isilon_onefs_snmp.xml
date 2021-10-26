@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:35Z</date>
+  <date>2021-10-26T04:39:20Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP EMC Isilon Cluster</template>
-      <name>Template SNMP EMC Isilon Cluster</name>
+      <template>SNMP EMC Isilon Cluster</template>
+      <name>SNMP EMC Isilon Cluster</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -298,8 +298,8 @@
       </items>
     </template>
     <template>
-      <template>Template SNMP EMC Isilon Node</template>
-      <name>Template SNMP EMC Isilon Node</name>
+      <template>SNMP EMC Isilon Node</template>
+      <name>SNMP EMC Isilon Node</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -1050,7 +1050,7 @@
         <graph_item>
           <color>6666FF</color>
           <item>
-            <host>Template SNMP EMC Isilon Cluster</host>
+            <host>SNMP EMC Isilon Cluster</host>
             <key>clusterIfsInBitsPerSecond.0</key>
           </item>
         </graph_item>
@@ -1058,7 +1058,7 @@
           <sortorder>1</sortorder>
           <color>FF66FF</color>
           <item>
-            <host>Template SNMP EMC Isilon Cluster</host>
+            <host>SNMP EMC Isilon Cluster</host>
             <key>clusterIfsOutBitsPerSecond.0</key>
           </item>
         </graph_item>
@@ -1072,7 +1072,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP EMC Isilon Cluster</host>
+            <host>SNMP EMC Isilon Cluster</host>
             <key>clusterNetworkInBitsPerSecond.0</key>
           </item>
         </graph_item>
@@ -1080,7 +1080,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template SNMP EMC Isilon Cluster</host>
+            <host>SNMP EMC Isilon Cluster</host>
             <key>clusterNetworkOutBitsPerSecond.0</key>
           </item>
         </graph_item>
@@ -1100,7 +1100,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>EEEE00</color>
           <item>
-            <host>Template SNMP EMC Isilon Cluster</host>
+            <host>SNMP EMC Isilon Cluster</host>
             <key>ifsUsedBytes.0</key>
           </item>
         </graph_item>
@@ -1108,7 +1108,7 @@
           <sortorder>1</sortorder>
           <color>00EE00</color>
           <item>
-            <host>Template SNMP EMC Isilon Cluster</host>
+            <host>SNMP EMC Isilon Cluster</host>
             <key>ifsAvailableBytes.0</key>
           </item>
         </graph_item>
@@ -1123,7 +1123,7 @@
       <type>STACKED</type>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template SNMP EMC Isilon Cluster</host>
+        <host>SNMP EMC Isilon Cluster</host>
         <key>ifsTotalBytes.0</key>
       </ymax_item_1>
       <graph_items>
@@ -1131,7 +1131,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>EEEE00</color>
           <item>
-            <host>Template SNMP EMC Isilon Cluster</host>
+            <host>SNMP EMC Isilon Cluster</host>
             <key>ifsUsedBytes.0</key>
           </item>
         </graph_item>
@@ -1139,7 +1139,7 @@
           <sortorder>1</sortorder>
           <color>00EE00</color>
           <item>
-            <host>Template SNMP EMC Isilon Cluster</host>
+            <host>SNMP EMC Isilon Cluster</host>
             <key>ifsAvailableBytes.0</key>
           </item>
         </graph_item>
@@ -1155,7 +1155,7 @@
           <color>005500</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template SNMP EMC Isilon Node</host>
+            <host>SNMP EMC Isilon Node</host>
             <key>nodeCPUIdle.0</key>
           </item>
         </graph_item>
@@ -1163,7 +1163,7 @@
           <sortorder>1</sortorder>
           <color>BB00BB</color>
           <item>
-            <host>Template SNMP EMC Isilon Node</host>
+            <host>SNMP EMC Isilon Node</host>
             <key>nodeCPUNice.0</key>
           </item>
         </graph_item>
@@ -1171,7 +1171,7 @@
           <sortorder>2</sortorder>
           <color>FFFF33</color>
           <item>
-            <host>Template SNMP EMC Isilon Node</host>
+            <host>SNMP EMC Isilon Node</host>
             <key>nodeCPUSystem.0</key>
           </item>
         </graph_item>
@@ -1179,7 +1179,7 @@
           <sortorder>3</sortorder>
           <color>DD0000</color>
           <item>
-            <host>Template SNMP EMC Isilon Node</host>
+            <host>SNMP EMC Isilon Node</host>
             <key>nodeCPUUser.0</key>
           </item>
         </graph_item>
@@ -1195,7 +1195,7 @@
         <graph_item>
           <color>66FF66</color>
           <item>
-            <host>Template SNMP EMC Isilon Node</host>
+            <host>SNMP EMC Isilon Node</host>
             <key>nodeNetworkInBitsPerSecond.0</key>
           </item>
         </graph_item>
@@ -1203,7 +1203,7 @@
           <sortorder>1</sortorder>
           <color>FF66FF</color>
           <item>
-            <host>Template SNMP EMC Isilon Node</host>
+            <host>SNMP EMC Isilon Node</host>
             <key>nodeNetworkOutBitsPerSecond.0</key>
           </item>
         </graph_item>

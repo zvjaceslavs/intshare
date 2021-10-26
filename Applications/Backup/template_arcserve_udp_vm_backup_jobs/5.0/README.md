@@ -1,4 +1,4 @@
-# Template_Arcserve UDP VM Backup Check
+# Arcserve UDP VM Backup Check
 
 ## Overview
 
@@ -49,23 +49,23 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Arcserve UDP JobCancelledCount|<p>Arcserve UDP JobCancelledCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobCancelledCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|Arcserve UDP JobFailedCount|<p>Arcserve UDP JobFailedCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobFailedCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|Arcserve UDP JobIdleCount|<p>Arcserve UDP JobIdleCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobIdleCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|Arcserve UDP JobIncompleteCount|<p>Arcserve UDP JobIncompleteCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobIncompleteCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|Arcserve UDP JobInProgressCount|<p>Arcserve UDP JobInProgressCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobInProgressCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|Arcserve UDP JobMissedCount|<p>Arcserve UDP JobMissedCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobMissedCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|Arcserve UDP JobOtherCount|<p>Arcserve UDP JobOtherCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobOtherCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|Arcserve UDP JobSuccessCount|<p>Arcserve UDP JobSuccessCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobSuccessCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|Arcserve UDP JobWaitingCount|<p>Arcserve UDP JobWaitingCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobWaitingCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
-|ArcserveBackup: Arcserve UDP-Identitätsdienst|<p>-</p>|`Zabbix agent`|service_state[ArcserveUDPIS]<p>Update: 2m</p>|
 |ArcserveBackup: Arcserve UDP-Verwaltungsport-Freigabedienst|<p>-</p>|`Zabbix agent`|service_state[ArcserveUDPPS]<p>Update: 2m</p>|
-|ArcserveBackup: Arcserve Event Log Watch|<p>-</p>|`Zabbix agent`|service_state[ASLogWatch]<p>Update: 2m</p>|
-|ArcserveBackup: Arcserve UDP-Verwaltungsdienst|<p>-</p>|`Zabbix agent`|service_state[CAARCAppSvc]<p>Update: 2m</p>|
-|ArcserveBackup: Arcserve UDP-Aktualisierungsdienst|<p>-</p>|`Zabbix agent`|service_state[CAARCUpdateSvc]<p>Update: 2m</p>|
-|ArcserveBackup: Arcserve UDP-Agent-Dienst|<p>-</p>|`Zabbix agent`|service_state[CASAD2DWebSvc]<p>Update: 2m</p>|
 |ArcserveBackup: Arcserve UDP-RPS-Port-Freigabedienst|<p>-</p>|`Zabbix agent`|service_state[CASARPSWebSvc]<p>Update: 2m</p>|
 |ArcserveBackup: Arcserve UDP-RPS-Datenspeicherdienst|<p>-</p>|`Zabbix agent`|service_state[CASDatastoreSvc]<p>Update: 2m</p>|
+|ArcserveBackup: Arcserve UDP-Agent-Dienst|<p>-</p>|`Zabbix agent`|service_state[CASAD2DWebSvc]<p>Update: 2m</p>|
+|Arcserve UDP JobFailedCount|<p>Arcserve UDP JobFailedCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobFailedCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
+|Arcserve UDP JobInProgressCount|<p>Arcserve UDP JobInProgressCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobInProgressCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
+|Arcserve UDP JobWaitingCount|<p>Arcserve UDP JobWaitingCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobWaitingCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
+|Arcserve UDP JobMissedCount|<p>Arcserve UDP JobMissedCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobMissedCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
+|Arcserve UDP JobCancelledCount|<p>Arcserve UDP JobCancelledCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobCancelledCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
+|ArcserveBackup: Arcserve UDP-Aktualisierungsdienst|<p>-</p>|`Zabbix agent`|service_state[CAARCUpdateSvc]<p>Update: 2m</p>|
+|Arcserve UDP JobIdleCount|<p>Arcserve UDP JobIdleCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobIdleCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
+|Arcserve UDP JobIncompleteCount|<p>Arcserve UDP JobIncompleteCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobIncompleteCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
+|ArcserveBackup: Arcserve Event Log Watch|<p>-</p>|`Zabbix agent`|service_state[ASLogWatch]<p>Update: 2m</p>|
+|ArcserveBackup: Arcserve UDP-Verwaltungsdienst|<p>-</p>|`Zabbix agent`|service_state[CAARCAppSvc]<p>Update: 2m</p>|
+|Arcserve UDP JobSuccessCount|<p>Arcserve UDP JobSuccessCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobSuccessCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
+|ArcserveBackup: Arcserve UDP-Identitätsdienst|<p>-</p>|`Zabbix agent`|service_state[ArcserveUDPIS]<p>Update: 2m</p>|
+|Arcserve UDP JobOtherCount|<p>Arcserve UDP JobOtherCount from VM Backups</p>|`Zabbix agent`|custom.arcserveudpvm[{$ARCSERVE_DOMAIN},{$ARCSERVE_USER},{$ARCSERVE_PASS},"JobOtherCount",{$ARCSERVE_HOST}]<p>Update: 5m</p>|
 ## Triggers
 
 There are no triggers in this template.

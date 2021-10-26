@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:06Z</date>
+  <date>2021-10-26T04:43:13Z</date>
   <groups>
     <group>
       <name>Network Appliance</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP OfficeConnect 19XX</template>
-      <name>Template SNMP OfficeConnect 19XX</name>
+      <template>SNMP OfficeConnect 19XX</template>
+      <name>SNMP OfficeConnect 19XX</name>
       <groups>
         <group>
           <name>Network Appliance</name>
@@ -387,7 +387,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP OfficeConnect 19XX</host>
+                    <host>SNMP OfficeConnect 19XX</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -395,7 +395,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP OfficeConnect 19XX</host>
+                    <host>SNMP OfficeConnect 19XX</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

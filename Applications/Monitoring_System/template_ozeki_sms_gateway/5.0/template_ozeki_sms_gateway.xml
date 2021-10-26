@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:19Z</date>
+  <date>2021-10-26T04:41:15Z</date>
   <groups>
     <group>
       <name>17HostGroupOzeki</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>8TemplateOzeki</template>
-      <name>8TemplateOzeki</name>
+      <template>8 Ozeki</template>
+      <name>8 Ozeki</name>
       <groups>
         <group>
           <name>17HostGroupOzeki</name>
@@ -200,7 +200,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{8TemplateOzeki:ozeki.DesiredConnectionStatus[{#OZEKICONNAME}].abschange()}&lt;>{8TemplateOzeki:ozeki.ConnectionStatus[{#OZEKICONNAME}].abschange()}</expression>
+              <expression>{8 Ozeki:ozeki.DesiredConnectionStatus[{#OZEKICONNAME}].abschange()}&lt;>{8 Ozeki:ozeki.ConnectionStatus[{#OZEKICONNAME}].abschange()}</expression>
               <name>RequiredConnectionNotConnected</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -306,7 +306,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>8TemplateOzeki</host>
+                    <host>8 Ozeki</host>
                     <key>ozeki.Deleted[{#OZEKIUSERNAME}]</key>
                   </item>
                 </graph_item>
@@ -314,7 +314,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>8TemplateOzeki</host>
+                    <host>8 Ozeki</host>
                     <key>ozeki.Inbox[{#OZEKIUSERNAME}]</key>
                   </item>
                 </graph_item>
@@ -322,7 +322,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>8TemplateOzeki</host>
+                    <host>8 Ozeki</host>
                     <key>ozeki.NotSent[{#OZEKIUSERNAME}]</key>
                   </item>
                 </graph_item>
@@ -330,7 +330,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>8TemplateOzeki</host>
+                    <host>8 Ozeki</host>
                     <key>ozeki.Outbox[{#OZEKIUSERNAME}]</key>
                   </item>
                 </graph_item>
@@ -338,7 +338,7 @@
                   <sortorder>4</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>8TemplateOzeki</host>
+                    <host>8 Ozeki</host>
                     <key>ozeki.Scheduled[{#OZEKIUSERNAME}]</key>
                   </item>
                 </graph_item>
@@ -346,7 +346,7 @@
                   <sortorder>5</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>8TemplateOzeki</host>
+                    <host>8 Ozeki</host>
                     <key>ozeki.Sent[{#OZEKIUSERNAME}]</key>
                   </item>
                 </graph_item>

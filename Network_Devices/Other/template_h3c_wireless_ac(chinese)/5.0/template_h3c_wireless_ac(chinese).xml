@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:11Z</date>
+  <date>2021-10-26T04:38:54Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,7 +12,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template Device H3C AC</template>
+      <template>Device H3C AC</template>
       <name>H3C AC</name>
       <groups>
         <group>
@@ -478,7 +478,7 @@
               <style>0</style>
               <resource>
                 <name>CPU 使用率</name>
-                <host>Template Device H3C AC</host>
+                <host>Device H3C AC</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -500,7 +500,7 @@
               <style>0</style>
               <resource>
                 <name>内存使用率</name>
-                <host>Template Device H3C AC</host>
+                <host>Device H3C AC</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -522,7 +522,7 @@
               <style>0</style>
               <resource>
                 <name>流量</name>
-                <host>Template Device H3C AC</host>
+                <host>Device H3C AC</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -544,7 +544,7 @@
               <style>0</style>
               <resource>
                 <name>在线AP数量</name>
-                <host>Template Device H3C AC</host>
+                <host>Device H3C AC</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -566,7 +566,7 @@
               <style>0</style>
               <resource>
                 <name>在线用户</name>
-                <host>Template Device H3C AC</host>
+                <host>Device H3C AC</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -588,7 +588,7 @@
               <style>0</style>
               <resource>
                 <name>每秒用户掉线</name>
-                <host>Template Device H3C AC</host>
+                <host>Device H3C AC</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -610,7 +610,7 @@
               <style>0</style>
               <resource>
                 <name>每秒DHCP请求</name>
-                <host>Template Device H3C AC</host>
+                <host>Device H3C AC</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -641,7 +641,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>cpu.usage</key>
           </item>
         </graph_item>
@@ -655,7 +655,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>cpu.mem_usage</key>
           </item>
         </graph_item>
@@ -667,7 +667,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>ap.count</key>
           </item>
         </graph_item>
@@ -679,7 +679,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>user.mac</key>
           </item>
         </graph_item>
@@ -687,7 +687,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>user.portal</key>
           </item>
         </graph_item>
@@ -695,7 +695,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>user.free</key>
           </item>
         </graph_item>
@@ -703,7 +703,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>user.asso</key>
           </item>
         </graph_item>
@@ -715,7 +715,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>dhcp.requests</key>
           </item>
         </graph_item>
@@ -727,7 +727,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>user.mac_lostcon</key>
           </item>
         </graph_item>
@@ -735,7 +735,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>user.portal_lostcon</key>
           </item>
         </graph_item>
@@ -743,7 +743,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>user.free_lostcon</key>
           </item>
         </graph_item>
@@ -751,7 +751,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>user.asso_lostcon</key>
           </item>
         </graph_item>
@@ -763,7 +763,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>Bps_in</key>
           </item>
         </graph_item>
@@ -771,7 +771,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Device H3C AC</host>
+            <host>Device H3C AC</host>
             <key>Bps_out</key>
           </item>
         </graph_item>

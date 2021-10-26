@@ -1,4 +1,4 @@
-# Template SNMP MegaRAID SAS
+# SNMP MegaRAID SAS
 
 ## Description
 
@@ -81,16 +81,29 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|MegaRAID SAS MIB SAS adapters|<p>A List of adapter Entries containing Information/Properties about the MegaRAID related adapters on host.</p>|`SNMP agent`|adapterID<p>Update: 900</p>|
 |MegaRAID SAS MIB SAS devices|<p>A List of device Entries containing Information/Properties about the MegaRAID related devices on host.</p>|`SNMP agent`|physDevID<p>Update: 60</p>|
+|MegaRAID SAS MIB SAS adapters|<p>A List of adapter Entries containing Information/Properties about the MegaRAID related adapters on host.</p>|`SNMP agent`|adapterID<p>Update: 900</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |MegaRAID SAS MIB Version|<p>-</p>|`SNMP agent`|mibVersion<p>Update: 60</p>|
-|MegaRAID SAS MIB Number of SAS adapters present|<p>-</p>|`SNMP agent`|adpNumber<p>Update: 60</p>|
-|MegaRAID SAS MIB Agent Module Name|<p>-</p>|`SNMP agent`|agentModuleName<p>Update: 60</p>|
 |MegaRAID SAS MIB Agent Module Version|<p>-</p>|`SNMP agent`|agentModuleVersion<p>Update: 60</p>|
+|MegaRAID SAS MIB Agent Module Name|<p>-</p>|`SNMP agent`|agentModuleName<p>Update: 60</p>|
+|MegaRAID SAS MIB Number of SAS adapters present|<p>-</p>|`SNMP agent`|adpNumber<p>Update: 60</p>|
+|MegaRAID SAS MIB Device $1 Adapter Port(s) to which it is connected|<p>Adapter port(s) to which the device is connected.</p>|`SNMP agent`|connectedAdapterPort[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Maximum Supported Speed for Device $1|<p>Maximum supported speed. Values:speed-unknown(0),speed-1p5G(1),speed-3G(2),speed-6G(3)</p>|`SNMP agent`|deviceSpeed[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Device $1 Ready for Removal|<p>If true, drive is ready for removal. Values:false(0),true(1)</p>|`SNMP agent`|disabledForRemoval[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Negotiated Link Speed for Device $1|<p>Negotiated link speed. Values:speed-unknown(0),speed-1p5G(1),speed-3G(2),speed-6G(3)</p>|`SNMP agent`|linkSpeed[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Media Error Count of Device $1|<p>Error count of the device</p>|`SNMP agent`|mediaErrCount[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Device $1 Certtified by OEM|<p>Is the drive certified by the OEM (OEM-specific checks). Values:notCertified(1), Certified(0)</p>|`SNMP agent`|oemCertified[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Device $1 Supported by OEM|<p>Is the drive supported by the OEM (OEM-specific checks). Values:notSupported(1), supported(0)</p>|`SNMP agent`|oemSupported[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Operation progress for Device $1|<p>Operation progress in %. e.g. Rebuild progress is 10%</p>|`SNMP agent`|operationProgress[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Other Error Count of Device $1|<p>Error count of the device</p>|`SNMP agent`|otherErrCount[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Firmware Interpretation of state of Device $1|<p>Firmware's interpretation of drive state. Values:unconfigured-good(0),unconfigured-bad(1),hot-spare(2),offline(16),failed(17),rebuild(20),online(24),copyback(32),system(64),UNCONFIGURED-SHIELDED(128),HOTSPARE-SHIELDED(130),CONFIGURED-SHIELDED(144)</p>|`SNMP agent`|pdState[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Device $1 Temperature|<p>Physical Drive temperature in Celsius</p>|`SNMP agent`|pdTemperature[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Predictive Fail Count of Device $1|<p>Predictive fail count of the device</p>|`SNMP agent`|predFailCount[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Type of Device $1|<p>Type of this Device. Values:disk(0),tape(1),printer(2),processor(3),cdrom(5),scanner(6),optical(7),enclosure(13),dvd(10),unknown(31)</p>|`SNMP agent`|scsiDevType[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Abort CC on detecting error support for adapter $1|<p>Abort CC on detecting error is supported on this adapter. Values:No(0),Yes(1)</p>|`SNMP agent`|abortCConErrorSupported[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Physical Devices in adapter $1|<p>Physical devices present in this adapter.</p>|`SNMP agent`|pdPresentCount[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB FW requires application to set up power state before conf change on adapter $1|<p>FW requires application to set power state before configuration changes. Required(1), Not Required(0)</p>|`SNMP agent`|setPowerStateForCfg[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
@@ -218,44 +231,31 @@ There are no template links in this template.
 |MegaRAID SAS MIB Logical Drive Power Saving disable time after 12:00AM on adapter $1|<p>LD power savings shall be disabled at xx minutes from 12:00am.</p>|`SNMP agent`|disableLdPSTime[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Interval for disabling power saving after power saving time on adapter $1|<p>LD power savings are disabled for yy hours beginning at disableLdPSTime.</p>|`SNMP agent`|disableLdPSInterval[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB SSC Support Write Caching IO's on adapter $1|<p>1=SSC support write caching IOs, 0=SSC not support write caching IOs</p>|`SNMP agent`|writeCacheCapable[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Device $1 Adapter Port(s) to which it is connected|<p>Adapter port(s) to which the device is connected.</p>|`SNMP agent`|connectedAdapterPort[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Maximum Supported Speed for Device $1|<p>Maximum supported speed. Values:speed-unknown(0),speed-1p5G(1),speed-3G(2),speed-6G(3)</p>|`SNMP agent`|deviceSpeed[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Device $1 Ready for Removal|<p>If true, drive is ready for removal. Values:false(0),true(1)</p>|`SNMP agent`|disabledForRemoval[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Negotiated Link Speed for Device $1|<p>Negotiated link speed. Values:speed-unknown(0),speed-1p5G(1),speed-3G(2),speed-6G(3)</p>|`SNMP agent`|linkSpeed[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Media Error Count of Device $1|<p>Error count of the device</p>|`SNMP agent`|mediaErrCount[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Device $1 Certtified by OEM|<p>Is the drive certified by the OEM (OEM-specific checks). Values:notCertified(1), Certified(0)</p>|`SNMP agent`|oemCertified[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Device $1 Supported by OEM|<p>Is the drive supported by the OEM (OEM-specific checks). Values:notSupported(1), supported(0)</p>|`SNMP agent`|oemSupported[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Operation progress for Device $1|<p>Operation progress in %. e.g. Rebuild progress is 10%</p>|`SNMP agent`|operationProgress[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Other Error Count of Device $1|<p>Error count of the device</p>|`SNMP agent`|otherErrCount[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Firmware Interpretation of state of Device $1|<p>Firmware's interpretation of drive state. Values:unconfigured-good(0),unconfigured-bad(1),hot-spare(2),offline(16),failed(17),rebuild(20),online(24),copyback(32),system(64),UNCONFIGURED-SHIELDED(128),HOTSPARE-SHIELDED(130),CONFIGURED-SHIELDED(144)</p>|`SNMP agent`|pdState[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Device $1 Temperature|<p>Physical Drive temperature in Celsius</p>|`SNMP agent`|pdTemperature[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Predictive Fail Count of Device $1|<p>Predictive fail count of the device</p>|`SNMP agent`|predFailCount[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Type of Device $1|<p>Type of this Device. Values:disk(0),tape(1),printer(2),processor(3),cdrom(5),scanner(6),optical(7),enclosure(13),dvd(10),unknown(31)</p>|`SNMP agent`|scsiDevType[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Critical temperature on Raid on Chip for adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}>115</p><p>**Recovery expression**: {Template SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}<105</p>|high|
-|Degraded Virtual devices on MegaRAID adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:vdDegradedCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|Disks with pre-fail state detected on MegaRAID adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdDiskPredFailureCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|Failed disks detected on MegaRAID adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdDiskFailedCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|High temperature on Raid on Chip for adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}>90</p><p>**Recovery expression**: {Template SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}<80</p>|average|
-|Offline Virtual devices on MegaRAID adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:vdOfflineCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|Failed state for MegaRAID Drive {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=17</p><p>**Recovery expression**: </p>|high|
-|MegaRAID Device {#SNMPVALUE} not certified by OEM|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:oemCertified[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|average|
-|MegaRAID Device {#SNMPVALUE} Temperature too high|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdTemperature[{#SNMPVALUE}].last()}>50</p><p>**Recovery expression**: {Template SNMP MegaRAID SAS:pdTemperature[{#SNMPVALUE}].last()}<47</p>|high|
-|Rebuilding state for MegaRAID Drive {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=20</p><p>**Recovery expression**: </p>|warning|
-|Unconfigured Bad state for MegaRAID Drive {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=1</p><p>**Recovery expression**: </p>|high|
-|Unknown Negotiated Link Speed for MegaRAID Drive {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:linkSpeed[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|high|
-|Critical temperature on Raid on Chip for adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}>115</p><p>**Recovery expression**: {Template SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}<105</p>|high|
-|Degraded Virtual devices on MegaRAID adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:vdDegradedCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|Disks with pre-fail state detected on MegaRAID adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdDiskPredFailureCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|Failed disks detected on MegaRAID adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdDiskFailedCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|High temperature on Raid on Chip for adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}>90</p><p>**Recovery expression**: {Template SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}<80</p>|average|
-|Offline Virtual devices on MegaRAID adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:vdOfflineCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|Failed state for MegaRAID Drive {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=17</p><p>**Recovery expression**: </p>|high|
-|MegaRAID Device {#SNMPVALUE} not certified by OEM (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:oemCertified[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|average|
-|MegaRAID Device {#SNMPVALUE} Temperature too high (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdTemperature[{#SNMPVALUE}].last()}>50</p><p>**Recovery expression**: {Template SNMP MegaRAID SAS:pdTemperature[{#SNMPVALUE}].last()}<47</p>|high|
-|Rebuilding state for MegaRAID Drive {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=20</p><p>**Recovery expression**: </p>|warning|
-|Unconfigured Bad state for MegaRAID Drive {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=1</p><p>**Recovery expression**: </p>|high|
-|Unknown Negotiated Link Speed for MegaRAID Drive {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP MegaRAID SAS:linkSpeed[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Critical temperature on Raid on Chip for adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}>115</p><p>**Recovery expression**: {SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}<105</p>|high|
+|Degraded Virtual devices on MegaRAID adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:vdDegradedCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|Disks with pre-fail state detected on MegaRAID adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdDiskPredFailureCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|Failed disks detected on MegaRAID adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdDiskFailedCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|High temperature on Raid on Chip for adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}>90</p><p>**Recovery expression**: {SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}<80</p>|average|
+|Offline Virtual devices on MegaRAID adapter {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:vdOfflineCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|Failed state for MegaRAID Drive {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=17</p><p>**Recovery expression**: </p>|high|
+|MegaRAID Device {#SNMPVALUE} not certified by OEM|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:oemCertified[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|average|
+|MegaRAID Device {#SNMPVALUE} Temperature too high|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdTemperature[{#SNMPVALUE}].last()}>50</p><p>**Recovery expression**: {SNMP MegaRAID SAS:pdTemperature[{#SNMPVALUE}].last()}<47</p>|high|
+|Rebuilding state for MegaRAID Drive {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=20</p><p>**Recovery expression**: </p>|warning|
+|Unconfigured Bad state for MegaRAID Drive {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=1</p><p>**Recovery expression**: </p>|high|
+|Unknown Negotiated Link Speed for MegaRAID Drive {#SNMPVALUE}|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:linkSpeed[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Failed state for MegaRAID Drive {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=17</p><p>**Recovery expression**: </p>|high|
+|MegaRAID Device {#SNMPVALUE} not certified by OEM (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:oemCertified[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|average|
+|MegaRAID Device {#SNMPVALUE} Temperature too high (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdTemperature[{#SNMPVALUE}].last()}>50</p><p>**Recovery expression**: {SNMP MegaRAID SAS:pdTemperature[{#SNMPVALUE}].last()}<47</p>|high|
+|Rebuilding state for MegaRAID Drive {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=20</p><p>**Recovery expression**: </p>|warning|
+|Unconfigured Bad state for MegaRAID Drive {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdState[{#SNMPVALUE}].last()}=1</p><p>**Recovery expression**: </p>|high|
+|Unknown Negotiated Link Speed for MegaRAID Drive {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:linkSpeed[{#SNMPVALUE}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Critical temperature on Raid on Chip for adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}>115</p><p>**Recovery expression**: {SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}<105</p>|high|
+|Degraded Virtual devices on MegaRAID adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:vdDegradedCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|Disks with pre-fail state detected on MegaRAID adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdDiskPredFailureCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|Failed disks detected on MegaRAID adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:pdDiskFailedCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|High temperature on Raid on Chip for adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}>90</p><p>**Recovery expression**: {SNMP MegaRAID SAS:temperatureROC[{#SNMPVALUE}].last()}<80</p>|average|
+|Offline Virtual devices on MegaRAID adapter {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP MegaRAID SAS:vdOfflineCount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|high|

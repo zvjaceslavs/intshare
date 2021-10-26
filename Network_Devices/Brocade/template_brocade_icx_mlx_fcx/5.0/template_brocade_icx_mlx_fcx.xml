@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:27Z</date>
+  <date>2021-10-26T04:39:12Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Brocade</template>
-      <name>Template SNMP Brocade</name>
+      <template>SNMP Brocade</template>
+      <name>SNMP Brocade</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -85,7 +85,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template SNMP Brocade:icmpping.max(#3)}=0</expression>
+                  <expression>{SNMP Brocade:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -113,7 +113,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template SNMP Brocade:icmpping.max(#3)}=0</expression>
+                  <expression>{SNMP Brocade:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -417,8 +417,8 @@
       </macros>
     </template>
     <template>
-      <template>Template SNMP Brocade-Copper</template>
-      <name>Template SNMP Brocade-Copper</name>
+      <template>SNMP Brocade-Copper</template>
+      <name>SNMP Brocade-Copper</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -577,7 +577,7 @@
                 <graph_item>
                   <color>FF3333</color>
                   <item>
-                    <host>Template SNMP Brocade-Copper</host>
+                    <host>SNMP Brocade-Copper</host>
                     <key>ifInErrors[{#IFDESCRCOP}]</key>
                   </item>
                 </graph_item>
@@ -585,7 +585,7 @@
                   <sortorder>1</sortorder>
                   <color>6666FF</color>
                   <item>
-                    <host>Template SNMP Brocade-Copper</host>
+                    <host>SNMP Brocade-Copper</host>
                     <key>snSwIfStatsInFrames[{#IFDESCRCOP}]</key>
                   </item>
                 </graph_item>
@@ -593,7 +593,7 @@
                   <sortorder>2</sortorder>
                   <color>444444</color>
                   <item>
-                    <host>Template SNMP Brocade-Copper</host>
+                    <host>SNMP Brocade-Copper</host>
                     <key>ifOutErrors[{#IFDESCRCOP}]</key>
                   </item>
                 </graph_item>
@@ -601,7 +601,7 @@
                   <sortorder>3</sortorder>
                   <color>66FF66</color>
                   <item>
-                    <host>Template SNMP Brocade-Copper</host>
+                    <host>SNMP Brocade-Copper</host>
                     <key>snSwIfStatsOutFrames[{#IFDESCRCOP}]</key>
                   </item>
                 </graph_item>
@@ -612,8 +612,8 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template SNMP Brocade-Fiber</template>
-      <name>Template SNMP Brocade-Fiber</name>
+      <template>SNMP Brocade-Fiber</template>
+      <name>SNMP Brocade-Fiber</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -766,7 +766,7 @@
                 <graph_item>
                   <color>FF3333</color>
                   <item>
-                    <host>Template SNMP Brocade-Fiber</host>
+                    <host>SNMP Brocade-Fiber</host>
                     <key>ifInErrors[{#IFDESCRFIB}]</key>
                   </item>
                 </graph_item>
@@ -774,7 +774,7 @@
                   <sortorder>1</sortorder>
                   <color>6666FF</color>
                   <item>
-                    <host>Template SNMP Brocade-Fiber</host>
+                    <host>SNMP Brocade-Fiber</host>
                     <key>snSwIfStatsInFrames[{#IFDESCRFIB}]</key>
                   </item>
                 </graph_item>
@@ -782,7 +782,7 @@
                   <sortorder>2</sortorder>
                   <color>444444</color>
                   <item>
-                    <host>Template SNMP Brocade-Fiber</host>
+                    <host>SNMP Brocade-Fiber</host>
                     <key>ifOutErrors[{#IFDESCRFIB}]</key>
                   </item>
                 </graph_item>
@@ -790,7 +790,7 @@
                   <sortorder>3</sortorder>
                   <color>66FF66</color>
                   <item>
-                    <host>Template SNMP Brocade-Fiber</host>
+                    <host>SNMP Brocade-Fiber</host>
                     <key>snSwIfStatsOutFrames[{#IFDESCRFIB}]</key>
                   </item>
                 </graph_item>

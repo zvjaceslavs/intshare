@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:18Z</date>
+  <date>2021-10-26T04:40:09Z</date>
   <groups>
     <group>
       <name>Template importati</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Speedtest WAN</template>
-      <name>Template App Speedtest WAN</name>
+      <template>App Speedtest WAN</template>
+      <name>App Speedtest WAN</name>
       <groups>
         <group>
           <name>Template importati</name>
@@ -140,7 +140,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Speedtest WAN</host>
+                    <host>App Speedtest WAN</host>
                     <key>speedtest.download.server[{#SERVERID}]</key>
                   </item>
                 </graph_item>
@@ -149,7 +149,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Speedtest WAN</host>
+                    <host>App Speedtest WAN</host>
                     <key>speedtest.upload.server[{#SERVERID}]</key>
                   </item>
                 </graph_item>
@@ -157,7 +157,7 @@
                   <sortorder>2</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Speedtest WAN</host>
+                    <host>App Speedtest WAN</host>
                     <key>speedtest.ping.server[{#SERVERID}]</key>
                   </item>
                 </graph_item>
@@ -171,7 +171,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Speedtest WAN</host>
+                    <host>App Speedtest WAN</host>
                     <key>speedtest.download.server[{#SERVERID}]</key>
                   </item>
                 </graph_item>
@@ -180,7 +180,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Speedtest WAN</host>
+                    <host>App Speedtest WAN</host>
                     <key>speedtest.upload.server[{#SERVERID}]</key>
                   </item>
                 </graph_item>
@@ -200,7 +200,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Speedtest WAN</host>
+            <host>App Speedtest WAN</host>
             <key>speedtest.download</key>
           </item>
         </graph_item>
@@ -209,7 +209,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template App Speedtest WAN</host>
+            <host>App Speedtest WAN</host>
             <key>speedtest.upload</key>
           </item>
         </graph_item>
@@ -217,7 +217,7 @@
           <sortorder>2</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Speedtest WAN</host>
+            <host>App Speedtest WAN</host>
             <key>speedtest.ping</key>
           </item>
         </graph_item>

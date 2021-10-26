@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:57Z</date>
+  <date>2021-10-26T04:43:03Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template OS Windows Server 2012-2016</template>
-      <name>Template OS Windows Server 2012-2016</name>
+      <template>OS Windows Server 2012-2016</template>
+      <name>OS Windows Server 2012-2016</name>
       <description>Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ</description>
       <groups>
         <group>
@@ -122,7 +122,7 @@
               <dependencies>
                 <dependency>
                   <name>Memory Available (Physical) > 96% (5 min)</name>
-                  <expression>{Template OS Windows Server 2012-2016:MemoryAvailablePhysicalProc.avg(5m)}&lt;4</expression>
+                  <expression>{OS Windows Server 2012-2016:MemoryAvailablePhysicalProc.avg(5m)}&lt;4</expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -166,7 +166,7 @@
               <dependencies>
                 <dependency>
                   <name>Processor Queue Length > 10 (3 min)</name>
-                  <expression>{Template OS Windows Server 2012-2016:perf_counter["\2\44",60].avg(3m)}>10</expression>
+                  <expression>{OS Windows Server 2012-2016:perf_counter["\2\44",60].avg(3m)}>10</expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -297,7 +297,7 @@
               <dependencies>
                 <dependency>
                   <name>Processor Time > 85% (15 min)</name>
-                  <expression>{Template OS Windows Server 2012-2016:perf_counter["\238(_Total)\6",60].avg(15m)}>85</expression>
+                  <expression>{OS Windows Server 2012-2016:perf_counter["\238(_Total)\6",60].avg(15m)}>85</expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -339,7 +339,7 @@
               <dependencies>
                 <dependency>
                   <name>Fuzzytime > 5s</name>
-                  <expression>{Template OS Windows Server 2012-2016:system.localtime[utc].fuzzytime(5)}=0</expression>
+                  <expression>{OS Windows Server 2012-2016:system.localtime[utc].fuzzytime(5)}=0</expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -560,7 +560,7 @@
                   <dependencies>
                     <dependency>
                       <name>Interface:{#IFNAME}, Utilization Received > 90%</name>
-                      <expression>{Template OS Windows Server 2012-2016:UtilizationReceived.[{#IFNAME}].last()}>90</expression>
+                      <expression>{OS Windows Server 2012-2016:UtilizationReceived.[{#IFNAME}].last()}>90</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -604,7 +604,7 @@
                   <dependencies>
                     <dependency>
                       <name>Interface:{#IFNAME}, Utilization Sent > 90%</name>
-                      <expression>{Template OS Windows Server 2012-2016:UtilizationSent.[{#IFNAME}].last()}>90</expression>
+                      <expression>{OS Windows Server 2012-2016:UtilizationSent.[{#IFNAME}].last()}>90</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -638,7 +638,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template OS Windows Server 2012-2016</host>
+                    <host>OS Windows Server 2012-2016</host>
                     <key>UtilizationReceived.[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -646,7 +646,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template OS Windows Server 2012-2016</host>
+                    <host>OS Windows Server 2012-2016</host>
                     <key>UtilizationSent.[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -794,7 +794,7 @@
                   <dependencies>
                     <dependency>
                       <name>LogicalDisk {#FSNAME} Free Space &lt; 4%</name>
-                      <expression>{Template OS Windows Server 2012-2016:perf_counter["\236({#FSNAME})\408",300].last()}&lt;4</expression>
+                      <expression>{OS Windows Server 2012-2016:perf_counter["\236({#FSNAME})\408",300].last()}&lt;4</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -826,7 +826,7 @@
                   <dependencies>
                     <dependency>
                       <name>LogicalDisk {#FSNAME} Avg. Disk Queue Length > 10 (3 min)</name>
-                      <expression>{Template OS Windows Server 2012-2016:perf_counter["\236({#FSNAME})\1400",60].avg(3m)}>10</expression>
+                      <expression>{OS Windows Server 2012-2016:perf_counter["\236({#FSNAME})\1400",60].avg(3m)}>10</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -855,7 +855,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template OS Windows Server 2012-2016:perf_counter["\230(_Total)\186",300].last()}>={Template OS Windows Server 2012-2016:perf_counter["\4\30",300].last()}</expression>
+      <expression>{OS Windows Server 2012-2016:perf_counter["\230(_Total)\186",300].last()}>={OS Windows Server 2012-2016:perf_counter["\4\30",300].last()}</expression>
       <name>Process Total Private Bytes > Memory Commit Limit</name>
       <priority>HIGH</priority>
       <description>Process\Private Bytes показывает объем выделенной памяти для процесса. Если сумма всех private bytes для всех процессов превысит предел памяти(Memory Commit Limit), это значит, что в системе образовалась нехватка памяти и приложения будут отказывать.</description>
@@ -866,7 +866,7 @@
       </tags>
     </trigger>
     <trigger>
-      <expression>({Template OS Windows Server 2012-2016:system.localtime[utc].now()}-{Template OS Windows Server 2012-2016:system.run["PowerShell.exe Get-Date -Date \"((get-wmiobject -class win32_quickfixengineering).installedon | sort -Descending)[0] -Uformat %s\""].last()})>7889229</expression>
+      <expression>({OS Windows Server 2012-2016:system.localtime[utc].now()}-{OS Windows Server 2012-2016:system.run["PowerShell.exe Get-Date -Date \"((get-wmiobject -class win32_quickfixengineering).installedon | sort -Descending)[0] -Uformat %s\""].last()})>7889229</expression>
       <name>Обновления Windows не устанавливались > 3м</name>
       <priority>INFO</priority>
       <description>Нужно согласовать установку обновлений на сервере. И провести установку обновлений. Обновления Windows не устанавливались более 3 месяцев</description>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:35Z</date>
+  <date>2021-10-26T04:41:35Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module Generic SNMPv3</template>
-      <name>Template Module Generic SNMPv3</name>
+      <template>Module Generic SNMPv3</template>
+      <name>Module Generic SNMPv3</name>
       <description>Template Module Generic version: 0.14 MIBs used: SNMPv2-MIB</description>
       <templates>
         <template>
@@ -159,7 +159,7 @@
               <dependencies>
                 <dependency>
                   <name>No SNMP data collection</name>
-                  <expression>{Template Module Generic SNMPv3:zabbix[host,snmp,available].max({$SNMP_TIMEOUT})}=0</expression>
+                  <expression>{Module Generic SNMPv3:zabbix[host,snmp,available].max({$SNMP_TIMEOUT})}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -189,7 +189,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP ping</name>
-                  <expression>{Template Module Generic SNMPv3:icmpping.max(#3)}=0</expression>
+                  <expression>{Module Generic SNMPv3:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:43Z</date>
+  <date>2021-10-26T04:40:38Z</date>
   <groups>
     <group>
       <name>Fortigate</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Fortigate 100D</template>
-      <name>Template Fortigate 100D</name>
+      <template>Fortigate 100D</template>
+      <name>Fortigate 100D</name>
       <groups>
         <group>
           <name>Fortigate</name>
@@ -158,7 +158,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Fortigate 100D</host>
+                    <host>Fortigate 100D</host>
                     <key>fgStatsCpuUsage.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -225,7 +225,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Fortigate 100D</host>
+                    <host>Fortigate 100D</host>
                     <key>fgStatsMemUsage.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -335,7 +335,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template Fortigate 100D</host>
+                    <host>Fortigate 100D</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -343,7 +343,7 @@
                   <sortorder>1</sortorder>
                   <color>C80000</color>
                   <item>
-                    <host>Template Fortigate 100D</host>
+                    <host>Fortigate 100D</host>
                     <key>ifHCOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

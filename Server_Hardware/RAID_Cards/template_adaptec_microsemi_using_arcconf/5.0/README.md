@@ -1,4 +1,4 @@
-# Template Adaptec PS
+# Adaptec PS
 
 ## Overview
 
@@ -36,13 +36,13 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Controller model|<p>-</p>|`Dependent item`|adaptec.ctl.model<p>Update: 0</p>|
-|Controller serial number|<p>-</p>|`Dependent item`|adaptec.ctl.sn<p>Update: 0</p>|
-|Controller state|<p>-</p>|`Dependent item`|adaptec.ctl.state<p>Update: 0</p>|
 |All Ctls info|<p>-</p>|`Zabbix agent`|adaptec.raid[info,ad]<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
-|All Lds info|<p>-</p>|`Zabbix agent`|adaptec.raid[info,ld]<p>Update: {$LD_REQUEST_PERIOD}</p>|
-|All Pds info|<p>-</p>|`Zabbix agent`|adaptec.raid[info,pd]<p>Update: {$PD_REQUEST_PERIOD}</p>|
 |Controller battery state|<p>-</p>|`Dependent item`|adaptec.zmm.state<p>Update: 0</p>|
+|Controller model|<p>-</p>|`Dependent item`|adaptec.ctl.model<p>Update: 0</p>|
+|Controller state|<p>-</p>|`Dependent item`|adaptec.ctl.state<p>Update: 0</p>|
+|All Pds info|<p>-</p>|`Zabbix agent`|adaptec.raid[info,pd]<p>Update: {$PD_REQUEST_PERIOD}</p>|
+|All Lds info|<p>-</p>|`Zabbix agent`|adaptec.raid[info,ld]<p>Update: {$LD_REQUEST_PERIOD}</p>|
+|Controller serial number|<p>-</p>|`Dependent item`|adaptec.ctl.sn<p>Update: 0</p>|
 |Logical disk "{#LDNAME}" level|<p>-</p>|`Dependent item`|adaptec.raid.level.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
 |Logical disk "{#LDNAME}" state|<p>-</p>|`Dependent item`|adaptec.raid.state.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
 |Physical disk "{#SLOT}" model|<p>-</p>|`Dependent item`|adaptec.pd.model.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
@@ -53,11 +53,11 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Adaptec logical disk "{#LDNAME}"  is {ITEM.LASTVALUE}|<p>-</p>|<p>**Expression**: {Template Adaptec PS:adaptec.raid.state.[{#LDNAME}].str(Optimal)}=0</p><p>**Recovery expression**: {Template Adaptec PS:adaptec.raid.state.[{#LDNAME}].str(Optimal)}=1</p>|high|
-|Adaptec physical disk "{#SLOT}" has {ITEM.LASTVALUE} smart warnings|<p>-</p>|<p>**Expression**: {Template Adaptec PS:adaptec.pd.smartwarn.["{#SLOT}"].last()}>0</p><p>**Recovery expression**: {Template Adaptec PS:adaptec.pd.smartwarn.["{#SLOT}"].last()}=0</p>|average|
-|Adaptec physical disk "{#SLOT}" state is {ITEM.LASTVALUE}|<p>-</p>|<p>**Expression**: {Template Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Online)}=0 and {Template Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Global Hot-Spare)}=0</p><p>**Recovery expression**: {Template Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Online)}=1 or {Template Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Global Hot-Spare)}=1</p>|average|
-|Adaptec physical disk "{#SLOT}" was replaced by: {ITEM.LASTVALUE}|<p>-</p>|<p>**Expression**: {Template Adaptec PS:adaptec.pd.sn.["{#SLOT}"].diff()}=1 and {Template Adaptec PS:adaptec.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: </p>|information|
-|Adaptec logical disk "{#LDNAME}"  is {ITEM.LASTVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template Adaptec PS:adaptec.raid.state.[{#LDNAME}].str(Optimal)}=0</p><p>**Recovery expression**: {Template Adaptec PS:adaptec.raid.state.[{#LDNAME}].str(Optimal)}=1</p>|high|
-|Adaptec physical disk "{#SLOT}" has {ITEM.LASTVALUE} smart warnings (LLD)|<p>-</p>|<p>**Expression**: {Template Adaptec PS:adaptec.pd.smartwarn.["{#SLOT}"].last()}>0</p><p>**Recovery expression**: {Template Adaptec PS:adaptec.pd.smartwarn.["{#SLOT}"].last()}=0</p>|average|
-|Adaptec physical disk "{#SLOT}" state is {ITEM.LASTVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Online)}=0 and {Template Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Global Hot-Spare)}=0</p><p>**Recovery expression**: {Template Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Online)}=1 or {Template Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Global Hot-Spare)}=1</p>|average|
-|Adaptec physical disk "{#SLOT}" was replaced by: {ITEM.LASTVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Template Adaptec PS:adaptec.pd.sn.["{#SLOT}"].diff()}=1 and {Template Adaptec PS:adaptec.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: </p>|information|
+|Adaptec logical disk "{#LDNAME}"  is {ITEM.LASTVALUE}|<p>-</p>|<p>**Expression**: {Adaptec PS:adaptec.raid.state.[{#LDNAME}].str(Optimal)}=0</p><p>**Recovery expression**: {Adaptec PS:adaptec.raid.state.[{#LDNAME}].str(Optimal)}=1</p>|high|
+|Adaptec physical disk "{#SLOT}" has {ITEM.LASTVALUE} smart warnings|<p>-</p>|<p>**Expression**: {Adaptec PS:adaptec.pd.smartwarn.["{#SLOT}"].last()}>0</p><p>**Recovery expression**: {Adaptec PS:adaptec.pd.smartwarn.["{#SLOT}"].last()}=0</p>|average|
+|Adaptec physical disk "{#SLOT}" state is {ITEM.LASTVALUE}|<p>-</p>|<p>**Expression**: {Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Online)}=0 and {Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Global Hot-Spare)}=0</p><p>**Recovery expression**: {Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Online)}=1 or {Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Global Hot-Spare)}=1</p>|average|
+|Adaptec physical disk "{#SLOT}" was replaced by: {ITEM.LASTVALUE}|<p>-</p>|<p>**Expression**: {Adaptec PS:adaptec.pd.sn.["{#SLOT}"].diff()}=1 and {Adaptec PS:adaptec.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: </p>|information|
+|Adaptec logical disk "{#LDNAME}"  is {ITEM.LASTVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Adaptec PS:adaptec.raid.state.[{#LDNAME}].str(Optimal)}=0</p><p>**Recovery expression**: {Adaptec PS:adaptec.raid.state.[{#LDNAME}].str(Optimal)}=1</p>|high|
+|Adaptec physical disk "{#SLOT}" has {ITEM.LASTVALUE} smart warnings (LLD)|<p>-</p>|<p>**Expression**: {Adaptec PS:adaptec.pd.smartwarn.["{#SLOT}"].last()}>0</p><p>**Recovery expression**: {Adaptec PS:adaptec.pd.smartwarn.["{#SLOT}"].last()}=0</p>|average|
+|Adaptec physical disk "{#SLOT}" state is {ITEM.LASTVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Online)}=0 and {Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Global Hot-Spare)}=0</p><p>**Recovery expression**: {Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Online)}=1 or {Adaptec PS:adaptec.pd.state.["{#SLOT}"].str(Global Hot-Spare)}=1</p>|average|
+|Adaptec physical disk "{#SLOT}" was replaced by: {ITEM.LASTVALUE} (LLD)|<p>-</p>|<p>**Expression**: {Adaptec PS:adaptec.pd.sn.["{#SLOT}"].diff()}=1 and {Adaptec PS:adaptec.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: </p>|information|

@@ -69,20 +69,20 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Fuser Unit|<p>-</p>|`SNMP agent`|fuserunit<p>Update: 1h</p>|
-|Imaging Unit (Black)|<p>-</p>|`SNMP agent`|imagingblack<p>Update: 30m</p>|
-|Imaging Unit (Cyan)|<p>-</p>|`SNMP agent`|imagingcyan<p>Update: 30m</p>|
 |Imaging Unit (Magenta)|<p>-</p>|`SNMP agent`|imagingmagenta<p>Update: 30m</p>|
+|Imaging Unit (Cyan)|<p>-</p>|`SNMP agent`|imagingcyan<p>Update: 30m</p>|
+|Serial|<p>-</p>|`SNMP agent`|printerserial<p>Update: 1h</p>|
+|Toner (Cyan)|<p>-</p>|`SNMP agent`|tonercyan<p>Update: 30m</p>|
 |Imaging Unit (Yellow)|<p>-</p>|`SNMP agent`|imagingyellow<p>Update: 30m</p>|
 |Model|<p>-</p>|`SNMP agent`|printermodel<p>Update: 1h</p>|
-|Serial|<p>-</p>|`SNMP agent`|printerserial<p>Update: 1h</p>|
-|Toner (Black)|<p>-</p>|`SNMP agent`|tonerblack<p>Update: 30m</p>|
-|Toner (Cyan)|<p>-</p>|`SNMP agent`|tonercyan<p>Update: 30m</p>|
-|Toner (Magenta)|<p>-</p>|`SNMP agent`|tonermagenta<p>Update: 30m</p>|
-|Toner (Yellow)|<p>-</p>|`SNMP agent`|toneryellow<p>Update: 30m</p>|
+|Fuser Unit|<p>-</p>|`SNMP agent`|fuserunit<p>Update: 1h</p>|
 |Transfer Belt|<p>-</p>|`SNMP agent`|transferbelt<p>Update: 1h</p>|
-|Transfer Unit|<p>-</p>|`SNMP agent`|transferunit<p>Update: 1h</p>|
+|Toner (Yellow)|<p>-</p>|`SNMP agent`|toneryellow<p>Update: 30m</p>|
 |Waste Toner Bottle|<p>-</p>|`SNMP agent`|wastetoner<p>Update: 10m</p>|
+|Toner (Black)|<p>-</p>|`SNMP agent`|tonerblack<p>Update: 30m</p>|
+|Transfer Unit|<p>-</p>|`SNMP agent`|transferunit<p>Update: 1h</p>|
+|Toner (Magenta)|<p>-</p>|`SNMP agent`|tonermagenta<p>Update: 30m</p>|
+|Imaging Unit (Black)|<p>-</p>|`SNMP agent`|imagingblack<p>Update: 30m</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:38Z</date>
+  <date>2021-10-26T04:40:32Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer Panasonic KX-MB2051RU</template>
-      <name>Template Printer Panasonic KX-MB2051RU</name>
+      <template>Printer Panasonic KX-MB2051RU</template>
+      <name>Printer Panasonic KX-MB2051RU</name>
       <groups>
         <group>
           <name>Printers</name>
@@ -150,7 +150,7 @@
               <style>0</style>
               <resource>
                 <name>Black level</name>
-                <host>Template Printer Panasonic KX-MB2051RU</host>
+                <host>Printer Panasonic KX-MB2051RU</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -174,34 +174,34 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer Panasonic KX-MB2051RU:black.cartridge.toner.last(0)}=0 and {Template Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
+      <expression>{Printer Panasonic KX-MB2051RU:black.cartridge.toner.last(0)}=0 and {Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Panasonic KX-MB2051RU:black.drum.last(0)}=0 and {Template Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
+      <expression>{Printer Panasonic KX-MB2051RU:black.drum.last(0)}=0 and {Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
       <name>Empty Drum unit - black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Panasonic KX-MB2051RU:black.cartridge.toner.last(0)}&lt;20 and {Template Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
+      <expression>{Printer Panasonic KX-MB2051RU:black.cartridge.toner.last(0)}&lt;20 and {Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - black</name>
-          <expression>{Template Printer Panasonic KX-MB2051RU:black.cartridge.toner.last(0)}=0 and {Template Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
+          <expression>{Printer Panasonic KX-MB2051RU:black.cartridge.toner.last(0)}=0 and {Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Panasonic KX-MB2051RU:black.drum.last(0)}&lt;20 and {Template Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
+      <expression>{Printer Panasonic KX-MB2051RU:black.drum.last(0)}&lt;20 and {Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
       <name>Low Drum unit - black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty Drum unit - black</name>
-          <expression>{Template Printer Panasonic KX-MB2051RU:black.drum.last(0)}=0 and {Template Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
+          <expression>{Printer Panasonic KX-MB2051RU:black.drum.last(0)}=0 and {Printer Panasonic KX-MB2051RU:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
@@ -217,7 +217,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer Panasonic KX-MB2051RU</host>
+            <host>Printer Panasonic KX-MB2051RU</host>
             <key>black.cartridge.toner</key>
           </item>
         </graph_item>
@@ -226,7 +226,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>666666</color>
           <item>
-            <host>Template Printer Panasonic KX-MB2051RU</host>
+            <host>Printer Panasonic KX-MB2051RU</host>
             <key>black.drum</key>
           </item>
         </graph_item>

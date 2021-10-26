@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:03Z</date>
+  <date>2021-10-26T04:42:03Z</date>
   <groups>
     <group>
       <name>eltex</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Eltex TAU SNMPv2</template>
-      <name>Template Eltex TAU SNMPv2</name>
+      <template>Eltex TAU SNMPv2</template>
+      <name>Eltex TAU SNMPv2</name>
       <groups>
         <group>
           <name>eltex</name>
@@ -213,7 +213,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Eltex TAU SNMPv2:icmpping.max(#3)}=0</expression>
+                  <expression>{Eltex TAU SNMPv2:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -241,7 +241,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Eltex TAU SNMPv2:icmpping.max(#3)}=0</expression>
+                  <expression>{Eltex TAU SNMPv2:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -449,7 +449,7 @@
                   <color>F63100</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template Eltex TAU SNMPv2</host>
+                    <host>Eltex TAU SNMPv2</host>
                     <key>fxsPort.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -457,7 +457,7 @@
                   <sortorder>1</sortorder>
                   <color>BF00FF</color>
                   <item>
-                    <host>Template Eltex TAU SNMPv2</host>
+                    <host>Eltex TAU SNMPv2</host>
                     <key>fxsMonitoringTemp1</key>
                   </item>
                 </graph_item>
@@ -465,7 +465,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template Eltex TAU SNMPv2</host>
+                    <host>Eltex TAU SNMPv2</host>
                     <key>fxsMonitoringTemp2</key>
                   </item>
                 </graph_item>
@@ -473,7 +473,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template Eltex TAU SNMPv2</host>
+                    <host>Eltex TAU SNMPv2</host>
                     <key>fxsMonitoringTemp3</key>
                   </item>
                 </graph_item>
@@ -481,7 +481,7 @@
                   <sortorder>4</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>Template Eltex TAU SNMPv2</host>
+                    <host>Eltex TAU SNMPv2</host>
                     <key>fxsMonitoringTemp4</key>
                   </item>
                 </graph_item>
@@ -505,7 +505,7 @@
         <graph_item>
           <color>CC0000</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>fxsCpuUsageLast1Minutes</key>
           </item>
         </graph_item>
@@ -517,7 +517,7 @@
         <graph_item>
           <color>FF0000</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>fxsFreeRam</key>
           </item>
         </graph_item>
@@ -530,7 +530,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>Voip0busyChannels</key>
           </item>
         </graph_item>
@@ -538,7 +538,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>activeCallCount</key>
           </item>
         </graph_item>
@@ -546,7 +546,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>registrationCount</key>
           </item>
         </graph_item>
@@ -558,7 +558,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>fxsMonitoringTemp1</key>
           </item>
         </graph_item>
@@ -566,7 +566,7 @@
           <sortorder>1</sortorder>
           <color>FF8000</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>fxsMonitoringTemp2</key>
           </item>
         </graph_item>
@@ -574,7 +574,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>fxsMonitoringTemp3</key>
           </item>
         </graph_item>
@@ -582,7 +582,7 @@
           <sortorder>3</sortorder>
           <color>BF00FF</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>fxsMonitoringTemp4</key>
           </item>
         </graph_item>
@@ -594,7 +594,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>sysUpTime</key>
           </item>
         </graph_item>
@@ -606,7 +606,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Eltex TAU SNMPv2</host>
+            <host>Eltex TAU SNMPv2</host>
             <key>Voip0busyChannels</key>
           </item>
         </graph_item>

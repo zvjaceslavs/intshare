@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:58Z</date>
+  <date>2021-10-26T04:44:13Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Lighttpd by Zabbix Agent</template>
-      <name>Template App Lighttpd by Zabbix Agent</name>
+      <template>App Lighttpd by Zabbix Agent</template>
+      <name>App Lighttpd by Zabbix Agent</name>
       <groups>
         <group>
           <name>Templates/Applications</name>
@@ -273,11 +273,11 @@
               <dependencies>
                 <dependency>
                   <name>Lighttpd: Process is not running</name>
-                  <expression>{Template App Lighttpd by Zabbix Agent:proc.num["{$LIGHTTPD.PROCESS_NAME}"].last()}=0</expression>
+                  <expression>{App Lighttpd by Zabbix Agent:proc.num["{$LIGHTTPD.PROCESS_NAME}"].last()}=0</expression>
                 </dependency>
                 <dependency>
                   <name>Lighttpd: Service is down</name>
-                  <expression>{Template App Lighttpd by Zabbix Agent:net.tcp.service[http,"{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PORT}"].last()}=0</expression>
+                  <expression>{App Lighttpd by Zabbix Agent:net.tcp.service[http,"{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PORT}"].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -307,7 +307,7 @@
               <dependencies>
                 <dependency>
                   <name>Lighttpd: Process is not running</name>
-                  <expression>{Template App Lighttpd by Zabbix Agent:proc.num["{$LIGHTTPD.PROCESS_NAME}"].last()}=0</expression>
+                  <expression>{App Lighttpd by Zabbix Agent:proc.num["{$LIGHTTPD.PROCESS_NAME}"].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -395,11 +395,11 @@
               <dependencies>
                 <dependency>
                   <name>Lighttpd: Process is not running</name>
-                  <expression>{Template App Lighttpd by Zabbix Agent:proc.num["{$LIGHTTPD.PROCESS_NAME}"].last()}=0</expression>
+                  <expression>{App Lighttpd by Zabbix Agent:proc.num["{$LIGHTTPD.PROCESS_NAME}"].last()}=0</expression>
                 </dependency>
                 <dependency>
                   <name>Lighttpd: Service is down</name>
-                  <expression>{Template App Lighttpd by Zabbix Agent:net.tcp.service[http,"{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PORT}"].last()}=0</expression>
+                  <expression>{App Lighttpd by Zabbix Agent:net.tcp.service[http,"{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PORT}"].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -442,7 +442,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Lighttpd by Zabbix Agent</host>
+            <host>App Lighttpd by Zabbix Agent</host>
             <key>proc.mem["{$LIGHTTPD.PROCESS_NAME}",,,,vsize]</key>
           </item>
         </graph_item>
@@ -450,7 +450,7 @@
           <sortorder>1</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Lighttpd by Zabbix Agent</host>
+            <host>App Lighttpd by Zabbix Agent</host>
             <key>proc.mem["{$LIGHTTPD.PROCESS_NAME}",,,,rss]</key>
           </item>
         </graph_item>
@@ -462,7 +462,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Lighttpd by Zabbix Agent</host>
+            <host>App Lighttpd by Zabbix Agent</host>
             <key>lighttpd.requests.rate</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:41Z</date>
+  <date>2021-10-26T04:46:13Z</date>
   <groups>
     <group>
       <name>Templates/DiskArray</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Hitachi_DiskArray_monitor_template</template>
-      <name>Hitachi DiskArray Monitor Template</name>
+      <template>Hitachi_DiskArray_monitor</template>
+      <name>Hitachi DiskArray Monitor</name>
       <description>Hitachi_DiskArray_monitor_template Known Issues: device : G200，G400，G800</description>
       <groups>
         <group>

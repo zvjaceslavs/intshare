@@ -1,4 +1,4 @@
-# Templates 3CX ODBC
+# s 3CX ODBC
 
 ## Overview
 
@@ -92,8 +92,8 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Number of Calls in the last 7 days|<p>-</p>|`Database monitor`|db.odbc.select[calls.7days,{$DSN3CX}]<p>Update: 5m</p>|
-|Number of Calls in this month|<p>-</p>|`Database monitor`|db.odbc.select[calls.month,{$DSN3CX}]<p>Update: 5m</p>|
 |Number of Calls Today|<p>-</p>|`Database monitor`|db.odbc.select[calls.total,{$DSN3CX}]<p>Update: 5m</p>|
+|Number of Calls in this month|<p>-</p>|`Database monitor`|db.odbc.select[calls.month,{$DSN3CX}]<p>Update: 5m</p>|
 |Gateway Host|<p>-</p>|`Database monitor`|db.odbc.select[gw.host-{#IDGATEWAY},{$DSN3CX}]<p>Update: 1h</p><p>LLD</p>|
 |Gateway Max Calls|<p>-</p>|`Database monitor`|db.odbc.select[gw.max-calls-{#IDGATEWAY},{$DSN3CX}]<p>Update: 1h</p><p>LLD</p>|
 |Number of associated routes|<p>-</p>|`Database monitor`|db.odbc.select[gw.number-routes-{#IDGATEWAY},{$DSN3CX}]<p>Update: 1h</p><p>LLD</p>|

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:22Z</date>
+  <date>2021-10-26T04:45:50Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032</template>
-      <name>Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032</name>
+      <template>SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032</template>
+      <name>SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032</name>
       <description>Created by Samuel Martins (https://www.linkedin.com/in/slmartins/) Last update: 2021-03-08 Based on Furukawa user's guide - NT-GPONREV00–Março2019 https://github.com/slunart Compatbile with: OLT G4S Firmware: 6.11 OLT G8S Firmware: 1.12 OLT G2500 Firmware: 6.12 OLT G1040 OLT LD3032 Firmware: 2.02</description>
       <groups>
         <group>

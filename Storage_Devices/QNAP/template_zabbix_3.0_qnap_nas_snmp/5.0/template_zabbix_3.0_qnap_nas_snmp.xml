@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:09Z</date>
+  <date>2021-10-26T04:38:52Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP QNAP NAS</template>
-      <name>Template SNMP QNAP NAS</name>
+      <template>SNMP QNAP NAS</template>
+      <name>SNMP QNAP NAS</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -335,7 +335,7 @@
                   <color>00BB00</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP QNAP NAS</host>
+                    <host>SNMP QNAP NAS</host>
                     <key>net.if.in[{#SNMPVALUE}, bps]</key>
                   </item>
                 </graph_item>
@@ -345,7 +345,7 @@
                   <color>0000BB</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP QNAP NAS</host>
+                    <host>SNMP QNAP NAS</host>
                     <key>net.if.out[{#SNMPVALUE}, bps]</key>
                   </item>
                 </graph_item>
@@ -355,7 +355,7 @@
                   <color>BB0000</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP QNAP NAS</host>
+                    <host>SNMP QNAP NAS</host>
                     <key>net.if.err[{#SNMPVALUE},bps]</key>
                   </item>
                 </graph_item>
@@ -613,7 +613,7 @@
                   <color>8888FF</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP QNAP NAS</host>
+                    <host>SNMP QNAP NAS</host>
                     <key>SysVolumeTotalSizeEX[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -623,7 +623,7 @@
                   <color>008800</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP QNAP NAS</host>
+                    <host>SNMP QNAP NAS</host>
                     <key>SysVolumeFreeSizeEX[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -652,7 +652,7 @@
         <graph_item>
           <color>00BB00</color>
           <item>
-            <host>Template SNMP QNAP NAS</host>
+            <host>SNMP QNAP NAS</host>
             <key>SystemCPU-UsageEX</key>
           </item>
         </graph_item>
@@ -665,7 +665,7 @@
         <graph_item>
           <color>BB0000</color>
           <item>
-            <host>Template SNMP QNAP NAS</host>
+            <host>SNMP QNAP NAS</host>
             <key>CPU-TemperatureEX</key>
           </item>
         </graph_item>
@@ -673,7 +673,7 @@
           <sortorder>1</sortorder>
           <color>0000BB</color>
           <item>
-            <host>Template SNMP QNAP NAS</host>
+            <host>SNMP QNAP NAS</host>
             <key>SystemTemperatureEX</key>
           </item>
         </graph_item>
@@ -688,7 +688,7 @@
           <color>00BBBB</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template SNMP QNAP NAS</host>
+            <host>SNMP QNAP NAS</host>
             <key>SystemTotalMemEX</key>
           </item>
         </graph_item>
@@ -698,7 +698,7 @@
           <color>008800</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template SNMP QNAP NAS</host>
+            <host>SNMP QNAP NAS</host>
             <key>SystemFreeMemEX</key>
           </item>
         </graph_item>

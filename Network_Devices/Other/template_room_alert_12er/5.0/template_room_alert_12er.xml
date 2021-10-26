@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:05Z</date>
+  <date>2021-10-26T04:40:58Z</date>
   <groups>
     <group>
       <name>Networking</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Room Alert 12er</template>
-      <name>Template Room Alert 12er</name>
+      <template>Room Alert 12er</template>
+      <name>Room Alert 12er</name>
       <groups>
         <group>
           <name>Networking</name>
@@ -142,7 +142,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Room Alert 12er</host>
+            <host>Room Alert 12er</host>
             <key>analogsensorvolts</key>
           </item>
         </graph_item>
@@ -154,7 +154,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Room Alert 12er</host>
+            <host>Room Alert 12er</host>
             <key>digitalsensorhum</key>
           </item>
         </graph_item>
@@ -166,7 +166,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Room Alert 12er</host>
+            <host>Room Alert 12er</host>
             <key>digitalsensortemp</key>
           </item>
         </graph_item>
@@ -178,7 +178,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Room Alert 12er</host>
+            <host>Room Alert 12er</host>
             <key>intsensortemp</key>
           </item>
         </graph_item>

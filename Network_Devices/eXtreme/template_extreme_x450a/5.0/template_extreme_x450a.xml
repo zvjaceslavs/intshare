@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:09Z</date>
+  <date>2021-10-26T04:37:47Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Extreme_X450a</template>
-      <name>Template_Extreme_X450a</name>
+      <template>Extreme_X450a</template>
+      <name>Extreme_X450a</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>
@@ -240,7 +240,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template_Extreme_X450a:extremeCpuMonitorSystemUtilization5mins[{#SNMPINDEX}].last()}>={Template_Extreme_X450a:extremeCpuMonitorThreshold.last()}</expression>
+              <expression>{Extreme_X450a:extremeCpuMonitorSystemUtilization5mins[{#SNMPINDEX}].last()}>={Extreme_X450a:extremeCpuMonitorThreshold.last()}</expression>
               <name>High CPU #{#SNMPVALUE} Usage</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -368,7 +368,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template_Extreme_X450a:extremeMemoryMonitorSystemFree[{#SNMPVALUE}].last()}&lt;={Template_Extreme_X450a:extremeMemoryMonitorSystemTotal[{#SNMPVALUE}].last()}*0.05</expression>
+              <expression>{Extreme_X450a:extremeMemoryMonitorSystemFree[{#SNMPVALUE}].last()}&lt;={Extreme_X450a:extremeMemoryMonitorSystemTotal[{#SNMPVALUE}].last()}*0.05</expression>
               <name>High Memory #{#SNMPVALUE} Usage</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -381,7 +381,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00C800</color>
                   <item>
-                    <host>Template_Extreme_X450a</host>
+                    <host>Extreme_X450a</host>
                     <key>extremeMemoryMonitorSystemFree[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -389,7 +389,7 @@
                   <sortorder>1</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template_Extreme_X450a</host>
+                    <host>Extreme_X450a</host>
                     <key>extremeMemoryMonitorSystemUsage[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -397,7 +397,7 @@
                   <sortorder>2</sortorder>
                   <color>C800C8</color>
                   <item>
-                    <host>Template_Extreme_X450a</host>
+                    <host>Extreme_X450a</host>
                     <key>extremeMemoryMonitorUserUsage[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -405,7 +405,7 @@
                   <sortorder>3</sortorder>
                   <color>C80000</color>
                   <item>
-                    <host>Template_Extreme_X450a</host>
+                    <host>Extreme_X450a</host>
                     <key>extremeMemoryMonitorSystemTotal[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

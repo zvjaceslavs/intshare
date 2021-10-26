@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:27Z</date>
+  <date>2021-10-26T04:42:31Z</date>
   <groups>
     <group>
       <name>Templates/Operating Systems</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template OS Windows Disk Space</template>
-      <name>Template OS Windows Disk Space</name>
+      <template>OS Windows Disk Space</template>
+      <name>OS Windows Disk Space</name>
       <description>includes used disk space Trigger goes below a certain level. the Default is 2GB but is configurable through macro.</description>
       <groups>
         <group>
@@ -64,7 +64,7 @@
                   <dependencies>
                     <dependency>
                       <name>Free disk space on {HOST.NAME} is less than {$DISK_UTIL_CRIT} on volume {#FSNAME}</name>
-                      <expression>{Template OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}&lt;{$DISK_UTIL_CRIT}</expression>
+                      <expression>{OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}&lt;{$DISK_UTIL_CRIT}</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -125,7 +125,7 @@
                   <color>C80000</color>
                   <type>GRAPH_SUM</type>
                   <item>
-                    <host>Template OS Windows Disk Space</host>
+                    <host>OS Windows Disk Space</host>
                     <key>vfs.fs.size[{#FSNAME},total]</key>
                   </item>
                 </graph_item>
@@ -133,7 +133,7 @@
                   <sortorder>1</sortorder>
                   <color>00C800</color>
                   <item>
-                    <host>Template OS Windows Disk Space</host>
+                    <host>OS Windows Disk Space</host>
                     <key>vfs.fs.size[{#FSNAME},free]</key>
                   </item>
                 </graph_item>
@@ -145,7 +145,7 @@
                 <graph_item>
                   <color>F63100</color>
                   <item>
-                    <host>Template OS Windows Disk Space</host>
+                    <host>OS Windows Disk Space</host>
                     <key>vfs.fs.size[{#FSNAME},total]</key>
                   </item>
                 </graph_item>
@@ -153,7 +153,7 @@
                   <sortorder>1</sortorder>
                   <color>199C0D</color>
                   <item>
-                    <host>Template OS Windows Disk Space</host>
+                    <host>OS Windows Disk Space</host>
                     <key>vfs.fs.size[{#FSNAME},free]</key>
                   </item>
                 </graph_item>

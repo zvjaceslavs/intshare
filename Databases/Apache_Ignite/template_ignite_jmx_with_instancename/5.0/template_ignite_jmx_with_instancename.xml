@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:16Z</date>
+  <date>2021-10-26T04:44:34Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Ignite JMX</template>
-      <name>Template App Ignite JMX</name>
+      <template>App Ignite JMX</template>
+      <name>App Ignite JMX</name>
       <groups>
         <group>
           <name>Templates/Applications</name>
@@ -207,24 +207,24 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",HeapEntriesCount].last()}={Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheSize].last()}</expression>
+              <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",HeapEntriesCount].last()}={App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheSize].last()}</expression>
               <name>{#JMXIGNITEINSTANCENAME} - {#JMXGROUP} - All entries are in heap</name>
               <priority>INFO</priority>
               <description>All entries are in heap. Possibly you use eager queries it may cause out of memory exceptions for big caches.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxCommits].last()}&lt;{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxRollbacks].last()}</expression>
+              <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxCommits].last()}&lt;{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxRollbacks].last()}</expression>
               <name>{#JMXIGNITEINSTANCENAME} - {#JMXGROUP} - There are more then 50% rollbacks</name>
               <priority>WARNING</priority>
               <dependencies>
                 <dependency>
                   <name>{#JMXIGNITEINSTANCENAME} - {#JMXGROUP} - There is no success transactions for cache</name>
-                  <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxCommits].last()}=0 and {Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxRollbacks].last()}>0</expression>
+                  <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxCommits].last()}=0 and {App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxRollbacks].last()}>0</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxCommits].last()}=0 and {Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxRollbacks].last()}>0</expression>
+              <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxCommits].last()}=0 and {App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group={#JMXGROUP},name=\"org.apache.ignite.internal.processors.cache.CacheLocalMetricsMXBeanImpl\"",CacheTxRollbacks].last()}>0</expression>
               <name>{#JMXIGNITEINSTANCENAME} - {#JMXGROUP} - There is no success transactions for cache</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -258,7 +258,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#JMXIGNITEINSTANCENAME} - {#JMXNAME} - Checkpoint buffer utilization > 80%</name>
-                      <expression>{Template App Ignite JMX:checkpointBufferUtilization[{#JMXIGNITEINSTANCENAME}_{#JMXNAME}].min(5)}>80</expression>
+                      <expression>{App Ignite JMX:checkpointBufferUtilization[{#JMXIGNITEINSTANCENAME}_{#JMXNAME}].min(5)}>80</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -305,7 +305,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#JMXIGNITEINSTANCENAME} - {#JMXNAME} - Data region utilization > 90%</name>
-                      <expression>{Template App Ignite JMX:dataRegion.util[{#JMXIGNITEINSTANCENAME}_{#JMXNAME}].last()}>90</expression>
+                      <expression>{App Ignite JMX:dataRegion.util[{#JMXIGNITEINSTANCENAME}_{#JMXNAME}].last()}>90</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -323,7 +323,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#JMXIGNITEINSTANCENAME} - {#JMXNAME} - Data region utilization > 95%</name>
-                      <expression>{Template App Ignite JMX:dataRegion.util[{#JMXIGNITEINSTANCENAME}_{#JMXNAME}].last()}>95</expression>
+                      <expression>{App Ignite JMX:dataRegion.util[{#JMXIGNITEINSTANCENAME}_{#JMXNAME}].last()}>95</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -604,7 +604,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#JMXIGNITEINSTANCENAME} - Too long pme</name>
-                      <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterLocalNodeMetricsMXBeanImpl",CurrentPmeDuration].last()}>10000</expression>
+                      <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterLocalNodeMetricsMXBeanImpl",CurrentPmeDuration].last()}>10000</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -615,7 +615,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#JMXIGNITEINSTANCENAME} - Looks like PME is hung</name>
-                      <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterLocalNodeMetricsMXBeanImpl",CurrentPmeDuration].last()}>60000</expression>
+                      <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterLocalNodeMetricsMXBeanImpl",CurrentPmeDuration].last()}>60000</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -654,7 +654,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#JMXIGNITEINSTANCENAME} - Looks like PME is hung</name>
-                      <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterLocalNodeMetricsMXBeanImpl",CurrentPmeDuration].last()}>60000</expression>
+                      <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterLocalNodeMetricsMXBeanImpl",CurrentPmeDuration].last()}>60000</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -1194,7 +1194,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterMetricsMXBeanImpl",TotalBaselineNodes].last()}&lt;{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterMetricsMXBeanImpl",TotalServerNodes].last()}</expression>
+              <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterMetricsMXBeanImpl",TotalBaselineNodes].last()}&lt;{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=Kernal,name=ClusterMetricsMXBeanImpl",TotalServerNodes].last()}</expression>
               <name>{#JMXIGNITEINSTANCENAME} - There are nodes is not in topology</name>
               <priority>INFO</priority>
             </trigger_prototype>
@@ -1329,7 +1329,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=\"Cache groups\",name={#JMXNAME}",Backups].last()}>={Template App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=\"Cache groups\",name={#JMXNAME}",MinimumNumberOfPartitionCopies].last()}</expression>
+              <expression>{App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=\"Cache groups\",name={#JMXNAME}",Backups].last()}>={App Ignite JMX:jmx["{#JMXDOMAIN}:igniteInstanceName={#JMXIGNITEINSTANCENAME},group=\"Cache groups\",name={#JMXNAME}",MinimumNumberOfPartitionCopies].last()}</expression>
               <name>{#JMXIGNITEINSTANCENAME} - {#JMXNAME} - One or more backups are unavailiable</name>
               <priority>WARNING</priority>
             </trigger_prototype>

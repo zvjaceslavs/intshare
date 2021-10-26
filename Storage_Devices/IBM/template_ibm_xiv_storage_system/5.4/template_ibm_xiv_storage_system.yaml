@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:26Z'
+  date: '2021-10-26T04:45:56Z'
   groups:
     -
       uuid: 57b7ae836ca64446ba2c296389c009b7
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: d44ad7ef350d4b44b7b3263dc9b380a0
-      template: 'Template IBM XIV Storage System'
-      name: 'Template IBM XIV Storage System'
+      template: 'IBM XIV Storage System'
+      name: 'IBM XIV Storage System'
       description: 'Template for monitoring IBM XIV servers with pyxcli'
       groups:
         -
@@ -32,7 +32,7 @@ zabbix_export:
           triggers:
             -
               uuid: 891b61a0a80742988f67797358ccf427
-              expression: 'last(/Template IBM XIV Storage System/pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}])=1'
+              expression: 'last(/IBM XIV Storage System/pyxcli_ibm_discovery.py[{$IBM_USER}, {$IBM_PASS}, {HOST.IP}])=1'
               name: '{HOST.NAME} -> От скрипта pyxcli_discovery нет данных более 10 мин'
               priority: AVERAGE
               tags:
@@ -77,7 +77,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 888994c7e1fb439fae209fbfcbd17b60
-                  expression: 'last(/Template IBM XIV Storage System/ats.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/ats.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: HIGH
             -
@@ -110,7 +110,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: d5d7ee6b636442df8ee4415a946021ab
-                  expression: 'last(/Template IBM XIV Storage System/ats.input.l1[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/ats.input.l1[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Input l1 to status problem'
                   priority: HIGH
             -
@@ -143,7 +143,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: c4c1412d9ded49cf834a577d6ca26467
-                  expression: 'last(/Template IBM XIV Storage System/ats.input.l2[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/ats.input.l2[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Input l2 to status problem'
                   priority: HIGH
             -
@@ -176,7 +176,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: d1b89ca9a8874523b7e7454dc69bee11
-                  expression: 'last(/Template IBM XIV Storage System/ats.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/ats.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: HIGH
           master_item:
@@ -227,7 +227,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 574fd518822d44f5a82e4d041903d02d
-                  expression: 'last(/Template IBM XIV Storage System/cna.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/cna.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: HIGH
             -
@@ -260,7 +260,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 89ea199c4d3349718e65a5a4f4c8cdc8
-                  expression: 'last(/Template IBM XIV Storage System/cna.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/cna.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: HIGH
           master_item:
@@ -311,7 +311,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 7af7881f48c64360a9f28b01d9388918
-                  expression: 'last(/Template IBM XIV Storage System/cpu.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/cpu.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: HIGH
             -
@@ -344,7 +344,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 4106450972354b898c94dc07bf0227e4
-                  expression: 'last(/Template IBM XIV Storage System/cpu.hardware.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/cpu.hardware.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Hardware status is BAD'
                   priority: HIGH
             -
@@ -377,7 +377,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 50ad8a011c8a4a4baf560d674bc092ad
-                  expression: 'last(/Template IBM XIV Storage System/cpu.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/cpu.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: HIGH
           master_item:
@@ -428,7 +428,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 0789b94e386f44d5bb182fa2d4d20a52
-                  expression: 'last(/Template IBM XIV Storage System/dimm.hardware.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/dimm.hardware.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Hardware status is BAD'
                   priority: HIGH
             -
@@ -461,7 +461,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: a12dc81dc4bd4b17b0f3d47fe4b01ce7
-                  expression: 'last(/Template IBM XIV Storage System/dimm.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/dimm.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: HIGH
           master_item:
@@ -512,7 +512,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 156ff7b3bb0a4fccb609e7a76dafe817
-                  expression: 'last(/Template IBM XIV Storage System/disk.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/disk.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: HIGH
             -
@@ -545,7 +545,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: f904aad29d81478cac327a040fa4e806
-                  expression: 'last(/Template IBM XIV Storage System/disk.power.is.on[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/disk.power.is.on[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Desc Power is off'
                   priority: HIGH
             -
@@ -578,7 +578,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: f7b916695ba1497f95103ad533168a57
-                  expression: 'last(/Template IBM XIV Storage System/disk.read.fail[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/disk.read.fail[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Desc Read fail'
                   priority: AVERAGE
             -
@@ -611,7 +611,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 9c8a34ee84fb4ab59d9e33f2a56d7a2d
-                  expression: 'last(/Template IBM XIV Storage System/disk.smart.fail[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/disk.smart.fail[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Desc Smart fail'
                   priority: AVERAGE
             -
@@ -644,7 +644,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: f274b8683d91493ab4c490c760434662
-                  expression: 'last(/Template IBM XIV Storage System/disk.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/disk.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: HIGH
             -
@@ -713,7 +713,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 1db4ee14ea94427b9485e12c4da5ec35
-                  expression: 'last(/Template IBM XIV Storage System/fan.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/fan.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: AVERAGE
             -
@@ -746,7 +746,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: c3b39e2a074d4c1093a3d7d1d7d605b8
-                  expression: 'last(/Template IBM XIV Storage System/fan.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/fan.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: AVERAGE
           master_item:
@@ -797,7 +797,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: c3184ebeda464958bb19f38fdb92d01c
-                  expression: 'last(/Template IBM XIV Storage System/fc_port.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/fc_port.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: AVERAGE
             -
@@ -820,7 +820,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: d5af42b6ae214cd88ee4a0c8f7c48c5f
-                  expression: 'last(/Template IBM XIV Storage System/fc_port.error.count[{#COMPONENT.ID}])>0'
+                  expression: 'last(/IBM XIV Storage System/fc_port.error.count[{#COMPONENT.ID}])>0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Error count = ({ITEM.VALUE})'
                   priority: WARNING
             -
@@ -880,7 +880,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 57ec672bc7f443408c38857aa64874b9
-                  expression: 'last(/Template IBM XIV Storage System/fc_port.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/fc_port.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: AVERAGE
           master_item:
@@ -931,7 +931,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: dbe75e1529524f4e9a002f71857d5946
-                  expression: 'last(/Template IBM XIV Storage System/mm.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/mm.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: AVERAGE
             -
@@ -991,7 +991,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 0fe12d1dff03414ea7e8a8e390fc0df7
-                  expression: 'last(/Template IBM XIV Storage System/mm.link_1[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/mm.link_1[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Link 1 is BAD'
                   priority: AVERAGE
             -
@@ -1024,7 +1024,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 93b971795da64bec901f0f83f281f1cc
-                  expression: 'last(/Template IBM XIV Storage System/mm.link_2[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/mm.link_2[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Link 2 is BAD'
                   priority: AVERAGE
             -
@@ -1057,7 +1057,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: ab8af5778dc54de799a57ce80c3a6e83
-                  expression: 'last(/Template IBM XIV Storage System/mm.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/mm.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: AVERAGE
             -
@@ -1144,7 +1144,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 62cb58fb7f2044e78b0936dfbd83b3e2
-                  expression: 'last(/Template IBM XIV Storage System/psu.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/psu.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: DISASTER
             -
@@ -1200,7 +1200,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 2b4f80c77a7542c1ada28be4524754be
-                  expression: 'last(/Template IBM XIV Storage System/psu.hardware.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/psu.hardware.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Hardware status is BAD'
                   priority: DISASTER
             -
@@ -1256,7 +1256,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 25e929a677414016af5473ec299504d4
-                  expression: 'last(/Template IBM XIV Storage System/psu.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/psu.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: DISASTER
             -
@@ -1397,7 +1397,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: f70dfb10976b49b3b9d6089449f19bdf
-                  expression: 'last(/Template IBM XIV Storage System/switch.fans.rpm[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/switch.fans.rpm[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Fan is not working'
                   priority: HIGH
             -
@@ -1457,7 +1457,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 8fe1f00433d74095b0295fbab6b6b8f4
-                  expression: 'last(/Template IBM XIV Storage System/switch.monitor.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/switch.monitor.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Monitor status is BAD'
                   priority: AVERAGE
             -
@@ -1517,7 +1517,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: c3c88257eaab4f2d94f6780ba6706562
-                  expression: 'last(/Template IBM XIV Storage System/switch.ps1[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/switch.ps1[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Ps1 is BAD'
                   priority: HIGH
             -
@@ -1550,7 +1550,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 6ca4ec3eee2e4c1f85168fb98a31f0db
-                  expression: 'last(/Template IBM XIV Storage System/switch.ps2[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/switch.ps2[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Ps2 is BAD'
                   priority: HIGH
             -
@@ -1583,7 +1583,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 54669fb7a3434a38a6ec42adcc8ac2ed
-                  expression: 'last(/Template IBM XIV Storage System/switch.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/switch.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: HIGH
             -
@@ -1671,7 +1671,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: eb1bbea3dfbc43ddb30ef0378cf2a58d
-                  expression: 'max(/Template IBM XIV Storage System/ups.apparent.load.power.percent[{#COMPONENT.ID}],10m)>60'
+                  expression: 'max(/IBM XIV Storage System/ups.apparent.load.power.percent[{#COMPONENT.ID}],10m)>60'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Apparent load power is high ({ITEM.VALUE})'
                   priority: AVERAGE
             -
@@ -1695,12 +1695,12 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 8778b47d00314438ad6c84edf259f7f7
-                  expression: 'last(/Template IBM XIV Storage System/ups.battery.charge.level[{#COMPONENT.ID}])<50'
+                  expression: 'last(/IBM XIV Storage System/ups.battery.charge.level[{#COMPONENT.ID}])<50'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Battery charge level < 50% ({ITEM.VALUE})'
                   priority: HIGH
                 -
                   uuid: fd63ac7711e34b39a74881a9a079f29a
-                  expression: 'last(/Template IBM XIV Storage System/ups.battery.charge.level[{#COMPONENT.ID}])<70'
+                  expression: 'last(/IBM XIV Storage System/ups.battery.charge.level[{#COMPONENT.ID}])<70'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Battery charge level < 70% ({ITEM.VALUE})'
                   priority: AVERAGE
             -
@@ -1733,7 +1733,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 2ccc398598da4432bac6a29b2c28941e
-                  expression: 'last(/Template IBM XIV Storage System/ups.currently.functioning[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/ups.currently.functioning[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Currently functioning is BAD'
                   priority: HIGH
             -
@@ -1766,7 +1766,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: dbdca079312043d09a3f303e28faba8c
-                  expression: 'last(/Template IBM XIV Storage System/ups.input.power.on[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/ups.input.power.on[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Input power off'
                   priority: HIGH
             -
@@ -1790,7 +1790,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: a9dc3331e5584f9db412681dff405c72
-                  expression: 'max(/Template IBM XIV Storage System/ups.internal.temperature[{#COMPONENT.ID}],30m)>35'
+                  expression: 'max(/IBM XIV Storage System/ups.internal.temperature[{#COMPONENT.ID}],30m)>35'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Internal temperature is high ({ITEM.VALUE})'
                   priority: AVERAGE
             -
@@ -1814,7 +1814,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 5928c0570e7e4173b1a9c02e3f5e61cb
-                  expression: 'max(/Template IBM XIV Storage System/ups.load.power.percent[{#COMPONENT.ID}],30m)>60'
+                  expression: 'max(/IBM XIV Storage System/ups.load.power.percent[{#COMPONENT.ID}],30m)>60'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Load power is high ({ITEM.VALUE})'
                   priority: AVERAGE
             -
@@ -1847,7 +1847,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 6696f9320aee49be898a1d9c671713fa
-                  expression: 'last(/Template IBM XIV Storage System/ups.power.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/ups.power.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Power status is BAD'
                   priority: HIGH
             -
@@ -1880,7 +1880,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 156914e9022349e0b66a6e1f426d687e
-                  expression: 'last(/Template IBM XIV Storage System/ups.status[{#COMPONENT.ID}])=0'
+                  expression: 'last(/IBM XIV Storage System/ups.status[{#COMPONENT.ID}])=0'
                   name: '{HOST.NAME} -> {#COMPONENT.ID} Status is BAD'
                   priority: HIGH
           master_item:

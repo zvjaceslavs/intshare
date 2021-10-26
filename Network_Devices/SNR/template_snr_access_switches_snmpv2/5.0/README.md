@@ -1,4 +1,4 @@
-# Template SNR Broadcast-Multicast-Unicast
+# SNR Broadcast-Multicast-Unicast
 
 ## Overview
 
@@ -38,7 +38,7 @@ There are no template links in this template.
 
 There are no triggers in this template.
 
-# Template SNR CPU Usage
+# SNR CPU Usage
 
 ## Overview
 
@@ -72,7 +72,7 @@ There are no discovery rules in this template.
 
 There are no triggers in this template.
 
-# Template SNR Error and Discared Packets
+# SNR Error and Discared Packets
 
 ## Overview
 
@@ -111,9 +111,9 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Interface {#IFNAME}({#IFALIAS}): High error rate|<p>-</p>|<p>**Expression**: {Template SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>2 or {Template SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>2</p><p>**Recovery expression**: {Template SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}<2*0.8 and {Template SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}<2*0.8</p>|warning|
-|Interface {#IFNAME}({#IFALIAS}): High error rate (LLD)|<p>-</p>|<p>**Expression**: {Template SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>2 or {Template SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>2</p><p>**Recovery expression**: {Template SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}<2*0.8 and {Template SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}<2*0.8</p>|warning|
-# Template SNR Interfaces Statistic
+|Interface {#IFNAME}({#IFALIAS}): High error rate|<p>-</p>|<p>**Expression**: {SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>2 or {SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>2</p><p>**Recovery expression**: {SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}<2*0.8 and {SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}<2*0.8</p>|warning|
+|Interface {#IFNAME}({#IFALIAS}): High error rate (LLD)|<p>-</p>|<p>**Expression**: {SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>2 or {SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>2</p><p>**Recovery expression**: {SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}<2*0.8 and {SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}<2*0.8</p>|warning|
+# SNR Interfaces Statistic
 
 ## Overview
 
@@ -154,13 +154,13 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before|<p>-</p>|<p>**Expression**: {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}<0 and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0 and ( {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2)</p><p>**Recovery expression**: ({Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}>0 and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].prev()}>0) or ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</p>|information|
-|Interface {#IFNAME}({#IFALIAS}): High bandwidth usage >{$IF_UTIL_MAX:"{#IFNAME}"}%|<p>-</p>|<p>**Expression**: ({Template SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}>(90/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} or {Template SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}>(90/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}) and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0</p><p>**Recovery expression**: {Template SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}<((90-3)/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} and {Template SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}<((90-3)/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}</p>|warning|
-|Interface {#IFNAME}({#IFALIAS}): Link down|<p>-</p>|<p>**Expression**: 1=1 and ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</p><p>**Recovery expression**: {Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2</p>|average|
-|Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before (LLD)|<p>-</p>|<p>**Expression**: {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}<0 and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0 and ( {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {Template SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2)</p><p>**Recovery expression**: ({Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}>0 and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].prev()}>0) or ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</p>|information|
-|Interface {#IFNAME}({#IFALIAS}): High bandwidth usage >{$IF_UTIL_MAX:"{#IFNAME}"}% (LLD)|<p>-</p>|<p>**Expression**: ({Template SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}>(90/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} or {Template SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}>(90/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}) and {Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0</p><p>**Recovery expression**: {Template SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}<((90-3)/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} and {Template SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}<((90-3)/100)*{Template SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}</p>|warning|
-|Interface {#IFNAME}({#IFALIAS}): Link down (LLD)|<p>-</p>|<p>**Expression**: 1=1 and ({Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</p><p>**Recovery expression**: {Template SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2</p>|average|
-# Template SNR Memory Information
+|Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before|<p>-</p>|<p>**Expression**: {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}<0 and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0 and ( {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2)</p><p>**Recovery expression**: ({SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}>0 and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].prev()}>0) or ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</p>|information|
+|Interface {#IFNAME}({#IFALIAS}): High bandwidth usage >{$IF_UTIL_MAX:"{#IFNAME}"}%|<p>-</p>|<p>**Expression**: ({SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}>(90/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} or {SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}>(90/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}) and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0</p><p>**Recovery expression**: {SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}<((90-3)/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} and {SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}<((90-3)/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}</p>|warning|
+|Interface {#IFNAME}({#IFALIAS}): Link down|<p>-</p>|<p>**Expression**: 1=1 and ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</p><p>**Recovery expression**: {SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2</p>|average|
+|Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before (LLD)|<p>-</p>|<p>**Expression**: {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}<0 and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0 and ( {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {SNR Interfaces Statistic:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2)</p><p>**Recovery expression**: ({SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].change()}>0 and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].prev()}>0) or ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</p>|information|
+|Interface {#IFNAME}({#IFALIAS}): High bandwidth usage >{$IF_UTIL_MAX:"{#IFNAME}"}% (LLD)|<p>-</p>|<p>**Expression**: ({SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}>(90/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} or {SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}>(90/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}) and {SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}>0</p><p>**Recovery expression**: {SNR Interfaces Statistic:net.if.in[ifHCInOctets.{#SNMPINDEX}].avg(15m)}<((90-3)/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()} and {SNR Interfaces Statistic:net.if.out[ifHCOutOctets.{#SNMPINDEX}].avg(15m)}<((90-3)/100)*{SNR Interfaces Statistic:net.if.speed[ifHighSpeed.{#SNMPINDEX}].last()}</p>|warning|
+|Interface {#IFNAME}({#IFALIAS}): Link down (LLD)|<p>-</p>|<p>**Expression**: 1=1 and ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</p><p>**Recovery expression**: {SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2</p>|average|
+# SNR Memory Information
 
 ## Overview
 
@@ -195,7 +195,7 @@ There are no discovery rules in this template.
 
 There are no triggers in this template.
 
-# Template SNR POE Power
+# SNR POE Power
 
 ## Overview
 

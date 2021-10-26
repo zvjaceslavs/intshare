@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:03Z</date>
+  <date>2021-10-26T04:38:45Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer Xerox WorkCentre 7346</template>
-      <name>Template Printer Xerox WorkCentre 7346</name>
+      <template>Printer Xerox WorkCentre 7346</template>
+      <name>Printer Xerox WorkCentre 7346</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -639,7 +639,7 @@
               <style>0</style>
               <resource>
                 <key>black.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7346</host>
+                <host>Printer Xerox WorkCentre 7346</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -661,7 +661,7 @@
               <style>0</style>
               <resource>
                 <key>cyan.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7346</host>
+                <host>Printer Xerox WorkCentre 7346</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -683,7 +683,7 @@
               <style>0</style>
               <resource>
                 <key>magenta.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7346</host>
+                <host>Printer Xerox WorkCentre 7346</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -705,7 +705,7 @@
               <style>0</style>
               <resource>
                 <key>yellow.cartridge.type</key>
-                <host>Template Printer Xerox WorkCentre 7346</host>
+                <host>Printer Xerox WorkCentre 7346</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -727,7 +727,7 @@
               <style>0</style>
               <resource>
                 <name>Уровень чёрного тонера</name>
-                <host>Template Printer Xerox WorkCentre 7346</host>
+                <host>Printer Xerox WorkCentre 7346</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -749,7 +749,7 @@
               <style>0</style>
               <resource>
                 <name>Уровень голубого тонера</name>
-                <host>Template Printer Xerox WorkCentre 7346</host>
+                <host>Printer Xerox WorkCentre 7346</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -771,7 +771,7 @@
               <style>0</style>
               <resource>
                 <name>Уровень пурпурного тонера</name>
-                <host>Template Printer Xerox WorkCentre 7346</host>
+                <host>Printer Xerox WorkCentre 7346</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -793,7 +793,7 @@
               <style>0</style>
               <resource>
                 <name>Уровень жёлтого тонера</name>
-                <host>Template Printer Xerox WorkCentre 7346</host>
+                <host>Printer Xerox WorkCentre 7346</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -817,182 +817,182 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:black.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - black</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:cyan.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - cyan</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:magenta.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:magenta.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:magenta.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - magenta</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:yellow.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:yellow.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:yellow.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - yellow</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:black.drum.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:black.drum.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty drum toner - black</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:cyan.drum.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:cyan.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:cyan.drum.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:cyan.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty drum toner - cyan</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:magenta.drum.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:magenta.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:magenta.drum.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:magenta.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty drum toner - magenta</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:yellow.drum.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:yellow.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:yellow.drum.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:yellow.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty drum toner - yellow</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:Feed.Roll.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:Feed.Roll.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:Feed.Roll.last(0)}=0 and {Printer Xerox WorkCentre 7346:Feed.Roll.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty Feed Roll</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.last(0)}=0 and {Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Empty Transfer Belt Cleaner</name>
       <priority>HIGH</priority>
       <description>room 312</description>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:black.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:black.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - black</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - black</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:black.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:cyan.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:cyan.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:cyan.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - cyan</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - cyan</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:cyan.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:cyan.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:cyan.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:magenta.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:magenta.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:magenta.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - magenta</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - magenta</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:magenta.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:magenta.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:magenta.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:yellow.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:yellow.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:yellow.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - yellow</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - yellow</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:yellow.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:yellow.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:yellow.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:black.drum.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:black.drum.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low drum toner - black</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty drum toner - black</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:black.drum.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:black.drum.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:cyan.drum.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:cyan.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:cyan.drum.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:cyan.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low drum toner - cyan</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty drum toner - cyan</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:cyan.drum.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:cyan.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:cyan.drum.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:cyan.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:magenta.drum.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:magenta.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:magenta.drum.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:magenta.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low drum toner - magenta</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty drum toner - magenta</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:magenta.drum.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:magenta.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:magenta.drum.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:magenta.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:yellow.drum.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:yellow.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:yellow.drum.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:yellow.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low drum toner - yellow</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty drum toner - yellow</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:yellow.drum.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:yellow.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:yellow.drum.toner.last(0)}=0 and {Printer Xerox WorkCentre 7346:yellow.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:Feed.Roll.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:Feed.Roll.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:Feed.Roll.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:Feed.Roll.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low Feed Roll</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty Feed Roll</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:Feed.Roll.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:Feed.Roll.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:Feed.Roll.last(0)}=0 and {Printer Xerox WorkCentre 7346:Feed.Roll.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.last(0)}&lt;20 and {Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
       <name>Low Transfer Belt Cleaner</name>
       <priority>INFO</priority>
       <description>room 312</description>
       <dependencies>
         <dependency>
           <name>Empty Transfer Belt Cleaner</name>
-          <expression>{Template Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.last(0)}=0 and {Template Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.last(0)}=0 and {Printer Xerox WorkCentre 7346:Transfer.Belt.Cleaner.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:Location.nodata(3w)}=0 and {Printer Xerox WorkCentre 7346:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
@@ -1008,7 +1008,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00DDDD</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 7346</host>
+            <host>Printer Xerox WorkCentre 7346</host>
             <key>cyan.cartridge.toner</key>
           </item>
         </graph_item>
@@ -1024,7 +1024,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>DDDD00</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 7346</host>
+            <host>Printer Xerox WorkCentre 7346</host>
             <key>yellow.cartridge.toner</key>
           </item>
         </graph_item>
@@ -1040,7 +1040,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>DD00DD</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 7346</host>
+            <host>Printer Xerox WorkCentre 7346</host>
             <key>magenta.cartridge.toner</key>
           </item>
         </graph_item>
@@ -1056,7 +1056,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 7346</host>
+            <host>Printer Xerox WorkCentre 7346</host>
             <key>black.cartridge.toner</key>
           </item>
         </graph_item>

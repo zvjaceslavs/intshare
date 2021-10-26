@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:39Z</date>
+  <date>2021-10-26T04:44:59Z</date>
   <groups>
     <group>
       <name>GPON</name>
@@ -15,8 +15,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template ICMP Ping GPON</template>
-      <name>Template ICMP Ping GPON</name>
+      <template>ICMP Ping GPON</template>
+      <name>ICMP Ping GPON</name>
       <groups>
         <group>
           <name>GPON</name>
@@ -87,7 +87,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP</name>
-                  <expression>{Template ICMP Ping GPON:icmpping.max(#3)}=0</expression>
+                  <expression>{ICMP Ping GPON:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -130,7 +130,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP</name>
-                  <expression>{Template ICMP Ping GPON:icmpping.max(#3)}=0</expression>
+                  <expression>{ICMP Ping GPON:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -145,11 +145,11 @@
       </items>
     </template>
     <template>
-      <template>Template SNMP Device GPON PARKS</template>
-      <name>Template SNMP Device GPON PARKS</name>
+      <template>SNMP Device GPON PARKS</template>
+      <name>SNMP Device GPON PARKS</name>
       <templates>
         <template>
-          <name>Template ICMP Ping GPON</name>
+          <name>ICMP Ping GPON</name>
         </template>
       </templates>
       <groups>
@@ -497,7 +497,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP Device GPON PARKS</host>
+                    <host>SNMP Device GPON PARKS</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -506,7 +506,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP Device GPON PARKS</host>
+                    <host>SNMP Device GPON PARKS</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -564,11 +564,11 @@
       </discovery_rules>
     </template>
     <template>
-      <template>Template SNMP Device GPON ZTE fw 1.2.5p3</template>
-      <name>Template SNMP Device GPON ZTE fw 1.2.5p3</name>
+      <template>SNMP Device GPON ZTE fw 1.2.5p3</template>
+      <name>SNMP Device GPON ZTE fw 1.2.5p3</name>
       <templates>
         <template>
-          <name>Template ICMP Ping GPON</name>
+          <name>ICMP Ping GPON</name>
         </template>
       </templates>
       <groups>
@@ -1271,7 +1271,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+                    <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
                     <key>cardcpu[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1283,7 +1283,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+                    <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
                     <key>cardmem[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1392,7 +1392,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+                    <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1401,7 +1401,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+                    <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -1484,7 +1484,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>({Template SNMP Device GPON PARKS:memory-used.last()}/{Template SNMP Device GPON PARKS:memory-total.last()})*100>85</expression>
+      <expression>({SNMP Device GPON PARKS:memory-used.last()}/{SNMP Device GPON PARKS:memory-total.last()})*100>85</expression>
       <name>Memory above 85%</name>
       <priority>HIGH</priority>
       <tags>
@@ -1502,7 +1502,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP Device GPON PARKS</host>
+            <host>SNMP Device GPON PARKS</host>
             <key>cpu-la</key>
           </item>
         </graph_item>
@@ -1514,7 +1514,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP Device GPON PARKS</host>
+            <host>SNMP Device GPON PARKS</host>
             <key>memory-total</key>
           </item>
         </graph_item>
@@ -1523,7 +1523,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template SNMP Device GPON PARKS</host>
+            <host>SNMP Device GPON PARKS</host>
             <key>memory-used</key>
           </item>
         </graph_item>
@@ -1535,7 +1535,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+            <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
             <key>olt[current0]</key>
           </item>
         </graph_item>
@@ -1543,7 +1543,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+            <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
             <key>olt[current1]</key>
           </item>
         </graph_item>
@@ -1555,7 +1555,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+            <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
             <key>olt[power0]</key>
           </item>
         </graph_item>
@@ -1563,7 +1563,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+            <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
             <key>olt[power1]</key>
           </item>
         </graph_item>
@@ -1575,7 +1575,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+            <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
             <key>olt[temperature]</key>
           </item>
         </graph_item>
@@ -1587,7 +1587,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+            <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
             <key>olt[voltage0]</key>
           </item>
         </graph_item>
@@ -1595,7 +1595,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template SNMP Device GPON ZTE fw 1.2.5p3</host>
+            <host>SNMP Device GPON ZTE fw 1.2.5p3</host>
             <key>olt[voltage1]</key>
           </item>
         </graph_item>

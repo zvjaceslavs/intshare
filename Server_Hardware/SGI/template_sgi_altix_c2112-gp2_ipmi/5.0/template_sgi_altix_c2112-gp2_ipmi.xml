@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:21Z</date>
+  <date>2021-10-26T04:39:05Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,7 +9,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template_UNISIM_IPMI_SGI_Altix_C2112-GP2</template>
+      <template>UNISIM_IPMI_SGI_Altix_C2112-GP2</template>
       <name>3-IPMI SGI Altix C2112-GP2</name>
       <groups>
         <group>
@@ -2225,7 +2225,7 @@
           <color>C800C8</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_C2112-GP2</host>
+            <host>UNISIM_IPMI_SGI_Altix_C2112-GP2</host>
             <key>ipmi.cpu1.temp</key>
           </item>
         </graph_item>
@@ -2234,7 +2234,7 @@
           <color>00C8C8</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_UNISIM_IPMI_SGI_Altix_C2112-GP2</host>
+            <host>UNISIM_IPMI_SGI_Altix_C2112-GP2</host>
             <key>ipmi.cpu2.temp</key>
           </item>
         </graph_item>

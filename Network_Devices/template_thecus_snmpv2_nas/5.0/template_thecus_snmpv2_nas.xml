@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:35Z</date>
+  <date>2021-10-26T04:42:40Z</date>
   <groups>
     <group>
       <name>Templates/Network devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP THECUS NAS</template>
-      <name>Template SNMP THECUS NAS</name>
+      <template>SNMP THECUS NAS</template>
+      <name>SNMP THECUS NAS</name>
       <groups>
         <group>
           <name>Templates/Network devices</name>
@@ -368,7 +368,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template SNMP THECUS NAS</host>
+                    <host>SNMP THECUS NAS</host>
                     <key>diskSMARTAttr194[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -540,7 +540,7 @@
                   <color>8888FF</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP THECUS NAS</host>
+                    <host>SNMP THECUS NAS</host>
                     <key>raidSize[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -573,7 +573,7 @@
         <graph_item>
           <color>0000BB</color>
           <item>
-            <host>Template SNMP THECUS NAS</host>
+            <host>SNMP THECUS NAS</host>
             <key>systemTemperature</key>
           </item>
         </graph_item>

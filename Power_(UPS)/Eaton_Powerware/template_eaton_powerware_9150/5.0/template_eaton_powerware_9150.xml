@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:49Z</date>
+  <date>2021-10-26T04:40:43Z</date>
   <groups>
     <group>
       <name>Infrastructure</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Eaton 9130 Template</template>
-      <name>Eaton 9130 Template</name>
+      <template>Eaton 9130</template>
+      <name>Eaton 9130</name>
       <groups>
         <group>
           <name>Infrastructure</name>

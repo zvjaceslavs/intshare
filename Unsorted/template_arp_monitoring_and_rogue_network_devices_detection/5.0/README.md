@@ -1,4 +1,4 @@
-# Template ARP Monitoring
+# ARP Monitoring
 
 ## Description
 
@@ -65,9 +65,9 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|IP  {#IPADDRESS} in use in more than one mac detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2}|<p>-</p>|<p>**Expression**: {Template ARP Monitoring:arp.macCount[{#IPADDRESS}].last(#1)}>1 and {Template ARP Monitoring:arp.ipMacs[{#IPADDRESS}].str(lala,#1)}=0</p><p>**Recovery expression**: </p>|information|
-|Mac  {#HWADDRESS} in use in more than one IP detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2}|<p>-</p>|<p>**Expression**: {Template ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}>1 and {Template ARP Monitoring:arp.macIps[{#HWADDRESS}].str(lala,#1)}=0</p><p>**Recovery expression**: </p>|information|
-|New device using mac {#HWADDRESS} and IP {#IPADDRESS} detected by {HOST.HOST} arp table.|<p>Identify new physical addresses in the same network as your host. Triggers should be disabled mannualy. Recommended to create triggers disabled on the first run.</p>|<p>**Expression**: {Template ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}<>0</p><p>**Recovery expression**: </p>|information|
-|IP  {#IPADDRESS} in use in more than one mac detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2} (LLD)|<p>-</p>|<p>**Expression**: {Template ARP Monitoring:arp.macCount[{#IPADDRESS}].last(#1)}>1 and {Template ARP Monitoring:arp.ipMacs[{#IPADDRESS}].str(lala,#1)}=0</p><p>**Recovery expression**: </p>|information|
-|Mac  {#HWADDRESS} in use in more than one IP detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2} (LLD)|<p>-</p>|<p>**Expression**: {Template ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}>1 and {Template ARP Monitoring:arp.macIps[{#HWADDRESS}].str(lala,#1)}=0</p><p>**Recovery expression**: </p>|information|
-|New device using mac {#HWADDRESS} and IP {#IPADDRESS} detected by {HOST.HOST} arp table. (LLD)|<p>Identify new physical addresses in the same network as your host. Triggers should be disabled mannualy. Recommended to create triggers disabled on the first run.</p>|<p>**Expression**: {Template ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}<>0</p><p>**Recovery expression**: </p>|information|
+|IP  {#IPADDRESS} in use in more than one mac detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2}|<p>-</p>|<p>**Expression**: {ARP Monitoring:arp.macCount[{#IPADDRESS}].last(#1)}>1 and {ARP Monitoring:arp.ipMacs[{#IPADDRESS}].str(lala,#1)}=0</p><p>**Recovery expression**: </p>|information|
+|Mac  {#HWADDRESS} in use in more than one IP detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2}|<p>-</p>|<p>**Expression**: {ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}>1 and {ARP Monitoring:arp.macIps[{#HWADDRESS}].str(lala,#1)}=0</p><p>**Recovery expression**: </p>|information|
+|New device using mac {#HWADDRESS} and IP {#IPADDRESS} detected by {HOST.HOST} arp table.|<p>Identify new physical addresses in the same network as your host. Triggers should be disabled mannualy. Recommended to create triggers disabled on the first run.</p>|<p>**Expression**: {ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}<>0</p><p>**Recovery expression**: </p>|information|
+|IP  {#IPADDRESS} in use in more than one mac detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2} (LLD)|<p>-</p>|<p>**Expression**: {ARP Monitoring:arp.macCount[{#IPADDRESS}].last(#1)}>1 and {ARP Monitoring:arp.ipMacs[{#IPADDRESS}].str(lala,#1)}=0</p><p>**Recovery expression**: </p>|information|
+|Mac  {#HWADDRESS} in use in more than one IP detected by {HOST.HOST} arp table. Adresses found {ITEM.LASTVALUE2} (LLD)|<p>-</p>|<p>**Expression**: {ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}>1 and {ARP Monitoring:arp.macIps[{#HWADDRESS}].str(lala,#1)}=0</p><p>**Recovery expression**: </p>|information|
+|New device using mac {#HWADDRESS} and IP {#IPADDRESS} detected by {HOST.HOST} arp table. (LLD)|<p>Identify new physical addresses in the same network as your host. Triggers should be disabled mannualy. Recommended to create triggers disabled on the first run.</p>|<p>**Expression**: {ARP Monitoring:arp.ipCount[{#HWADDRESS}].last(#1)}<>0</p><p>**Recovery expression**: </p>|information|

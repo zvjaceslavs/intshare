@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:03Z</date>
+  <date>2021-10-26T04:39:54Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template AirOS8</template>
-      <name>Template AirOS8</name>
+      <template>AirOS8</template>
+      <name>AirOS8</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -127,7 +127,7 @@
                   <color>000000</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template AirOS8</host>
+                    <host>AirOS8</host>
                     <key>ubntStaSignal[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -136,7 +136,7 @@
                   <color>444444</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template AirOS8</host>
+                    <host>AirOS8</host>
                     <key>ubntStaNoiseFloor[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -144,7 +144,7 @@
                   <sortorder>2</sortorder>
                   <color>BB0000</color>
                   <item>
-                    <host>Template AirOS8</host>
+                    <host>AirOS8</host>
                     <key>ubntStaRxCapacity[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -152,7 +152,7 @@
                   <sortorder>3</sortorder>
                   <color>00CC00</color>
                   <item>
-                    <host>Template AirOS8</host>
+                    <host>AirOS8</host>
                     <key>ubntStaTxCapacity[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -160,7 +160,7 @@
                   <sortorder>4</sortorder>
                   <color>00EEEE</color>
                   <item>
-                    <host>Template AirOS8</host>
+                    <host>AirOS8</host>
                     <key>ubntStaTxLatency[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

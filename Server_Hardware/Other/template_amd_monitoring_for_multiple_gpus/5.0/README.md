@@ -41,18 +41,18 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|GPU 0 Fan|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Control"]<p>Update: 60</p>|
 |GPU 0 Load|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Load"]<p>Update: 60</p>|
+|GPU 1 Temp|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Temperature"]<p>Update: 60</p>|
 |GPU 0 Temp|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Temperature"]<p>Update: 60</p>|
 |GPU 2 Fan|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Control"]<p>Update: 60</p>|
-|GPU 2 Load|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Load"]<p>Update: 60</p>|
-|GPU 2 Temp|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Temperature"]<p>Update: 60</p>|
-|GPU 3 Fan|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Control"]<p>Update: 60</p>|
 |GPU 3 Load|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Load"]<p>Update: 60</p>|
 |GPU 3 Temp|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Temperature"]<p>Update: 60</p>|
 |GPU 1 Fan|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Control"]<p>Update: 60</p>|
+|GPU 3 Fan|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/18" and SensorType="Control"]<p>Update: 60</p>|
+|GPU 2 Temp|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Temperature"]<p>Update: 60</p>|
+|GPU 2 Load|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/12" and SensorType="Load"]<p>Update: 60</p>|
+|GPU 0 Fan|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/0" and SensorType="Control"]<p>Update: 60</p>|
 |GPU 1 Load|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Load"]<p>Update: 60</p>|
-|GPU 1 Temp|<p>-</p>|`Zabbix agent`|wmi.get[root\openhardwaremonitor,SELECT Value FROM Sensor WHERE Parent="/atigpu/6" and SensorType="Temperature"]<p>Update: 60</p>|
 ## Triggers
 
 There are no triggers in this template.

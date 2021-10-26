@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:43Z</date>
+  <date>2021-10-26T04:45:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Templates 3CX ODBC</template>
-      <name>Templates 3CX ODBC</name>
+      <template>s 3CX ODBC</template>
+      <name>s 3CX ODBC</name>
       <groups>
         <group>
           <name>Templates</name>

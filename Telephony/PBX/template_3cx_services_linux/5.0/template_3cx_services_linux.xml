@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:09Z</date>
+  <date>2021-10-26T04:44:27Z</date>
   <groups>
     <group>
       <name>3CX Services</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template 3CX Services Linux</template>
-      <name>Template 3CX Services Linux</name>
+      <template>3CX Services Linux</template>
+      <name>3CX Services Linux</name>
       <groups>
         <group>
           <name>3CX Services</name>

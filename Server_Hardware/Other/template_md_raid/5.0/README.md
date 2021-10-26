@@ -1,4 +1,4 @@
-# Template MD Soft RAID
+# MD Soft RAID
 
 ## Description
 
@@ -126,9 +126,9 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|MD {#MDNAME} in recovery mode on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template MD Soft RAID:md.sync_action[{#MDNAME}].str(recover)}=1</p><p>**Recovery expression**: </p>|information|
-|MD {#MDNAME} is degraded on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template MD Soft RAID:md.degraded[{#MDNAME}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|MD {#MDNAME} number of disks changed on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template MD Soft RAID:md.raid_disks[{#MDNAME}].diff()}>0</p><p>**Recovery expression**: </p>|warning|
-|MD {#MDNAME} in recovery mode on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template MD Soft RAID:md.sync_action[{#MDNAME}].str(recover)}=1</p><p>**Recovery expression**: </p>|information|
-|MD {#MDNAME} is degraded on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template MD Soft RAID:md.degraded[{#MDNAME}].last()}>0</p><p>**Recovery expression**: </p>|high|
-|MD {#MDNAME} number of disks changed on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template MD Soft RAID:md.raid_disks[{#MDNAME}].diff()}>0</p><p>**Recovery expression**: </p>|warning|
+|MD {#MDNAME} in recovery mode on {HOST.NAME}|<p>-</p>|<p>**Expression**: {MD Soft RAID:md.sync_action[{#MDNAME}].str(recover)}=1</p><p>**Recovery expression**: </p>|information|
+|MD {#MDNAME} is degraded on {HOST.NAME}|<p>-</p>|<p>**Expression**: {MD Soft RAID:md.degraded[{#MDNAME}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|MD {#MDNAME} number of disks changed on {HOST.NAME}|<p>-</p>|<p>**Expression**: {MD Soft RAID:md.raid_disks[{#MDNAME}].diff()}>0</p><p>**Recovery expression**: </p>|warning|
+|MD {#MDNAME} in recovery mode on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {MD Soft RAID:md.sync_action[{#MDNAME}].str(recover)}=1</p><p>**Recovery expression**: </p>|information|
+|MD {#MDNAME} is degraded on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {MD Soft RAID:md.degraded[{#MDNAME}].last()}>0</p><p>**Recovery expression**: </p>|high|
+|MD {#MDNAME} number of disks changed on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {MD Soft RAID:md.raid_disks[{#MDNAME}].diff()}>0</p><p>**Recovery expression**: </p>|warning|

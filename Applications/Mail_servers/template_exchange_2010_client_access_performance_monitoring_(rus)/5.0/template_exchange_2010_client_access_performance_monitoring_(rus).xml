@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:51Z</date>
+  <date>2021-10-26T04:41:51Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Exchange Mailbox Servers_RU</template>
-      <name>Template Exchange Mailbox Servers_RU</name>
+      <template>Exchange Mailbox Servers_RU</template>
+      <name>Exchange Mailbox Servers_RU</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -848,7 +848,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Database ==> Instances Counters</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -870,7 +870,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Database Log and Page Fault Stalls</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -899,7 +899,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Database (Information Store) Counters</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -921,7 +921,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Database (Information Store) Errors</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -950,7 +950,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Mail Submission</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -972,7 +972,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Resource Booking</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1001,7 +1001,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Information Store Client RPC Rates</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1030,7 +1030,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Information Store Mailbox Counters</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1052,7 +1052,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Information Store Public</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1081,7 +1081,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Information Store RPC Counters</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1103,7 +1103,7 @@
               <style>0</style>
               <resource>
                 <name>Exchange Mailbox Store Interface RPC Latency</name>
-                <host>Template Exchange Mailbox Servers_RU</host>
+                <host>Exchange Mailbox Servers_RU</host>
               </resource>
               <width>900</width>
               <height>200</height>
@@ -1133,7 +1133,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Помощник по ведению календаря MSExchange\Ошибок запросов"]</key>
           </item>
         </graph_item>
@@ -1146,7 +1146,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\MSExchange Database(*)\Ожидающих потоков журнала"]</key>
           </item>
         </graph_item>
@@ -1159,7 +1159,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\MSExchange Database(*)\Ожиданий записи в журнал/с"]</key>
           </item>
         </graph_item>
@@ -1171,7 +1171,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\База данных MSExchange ==> Экземпляры(*)\Средняя задержка при чтении в процессе ввода-вывода для (прикрепленной) базы данных"]</key>
           </item>
         </graph_item>
@@ -1179,7 +1179,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\База данных MSExchange ==> Экземпляры(*)\Средняя задержка при записи в процессе ввода-вывода для (прикрепленной) базы данных"]</key>
           </item>
         </graph_item>
@@ -1191,7 +1191,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\MSExchange Database(*)\Записанных в журнал байтов/с"]</key>
           </item>
         </graph_item>
@@ -1203,7 +1203,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Почтовый ящик банка данных MSExchange(*)\Средняя задержка RPC (клиент)"]</key>
           </item>
         </graph_item>
@@ -1211,7 +1211,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Почтовый ящик банка данных MSExchange(_Total)\Средняя задержка RPC (клиент)"]</key>
           </item>
         </graph_item>
@@ -1224,7 +1224,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\MSExchangeIS\Клиент: неудачных RPC/с"]</key>
           </item>
         </graph_item>
@@ -1236,7 +1236,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Почтовый ящик банка данных MSExchange(*)\Сообщений в очереди отправки"]</key>
           </item>
         </graph_item>
@@ -1244,7 +1244,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Почтовый ящик банка данных MSExchange(*)\Средняя задержка RPC"]</key>
           </item>
         </graph_item>
@@ -1256,7 +1256,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\MSExchangeIS (общие папки)(*)\Сообщений в очереди отправки"]</key>
           </item>
         </graph_item>
@@ -1264,7 +1264,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\MSExchangeIS (общие папки)(*)\Размер очереди получения репликации"]</key>
           </item>
         </graph_item>
@@ -1276,7 +1276,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\MSExchangeIS\Средняя задержка RPC"]</key>
           </item>
         </graph_item>
@@ -1284,7 +1284,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\MSExchangeIS\Запросов RPC"]</key>
           </item>
         </graph_item>
@@ -1296,7 +1296,7 @@
         <graph_item>
           <color>FF3333</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Отправка почты MSExchange(*)\Неудачных отправок в секунду"]</key>
           </item>
         </graph_item>
@@ -1304,7 +1304,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Отправка почты MSExchange(*)\Серверов-концентраторов в состоянии повторной попытки"]</key>
           </item>
         </graph_item>
@@ -1312,7 +1312,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Отправка почты MSExchange(*)\Временных сбоев отправки/с"]</key>
           </item>
         </graph_item>
@@ -1325,7 +1325,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Помощник по занятости MSExchange\Количество событий, обработанных с ошибками"]</key>
           </item>
         </graph_item>
@@ -1338,7 +1338,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Интерфейс хранилища MSExchange(*)\Неудачных запросов RPC (%)"]</key>
           </item>
         </graph_item>
@@ -1346,7 +1346,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Интерфейс хранилища MSExchange(*)\Медленных запросов RPC (%)"]</key>
           </item>
         </graph_item>
@@ -1354,7 +1354,7 @@
           <sortorder>5</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template Exchange Mailbox Servers_RU</host>
+            <host>Exchange Mailbox Servers_RU</host>
             <key>perf_counter["\Интерфейс хранилища MSExchange(_Total)\Средняя задержка RPC (мс)"]</key>
           </item>
         </graph_item>

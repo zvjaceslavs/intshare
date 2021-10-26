@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:45Z</date>
+  <date>2021-10-26T04:39:32Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Xanto S1500R Template</template>
-      <name>Xanto S1500R Template</name>
+      <template>Xanto S1500R</template>
+      <name>Xanto S1500R</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -162,7 +162,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Xanto S1500R Template</host>
+            <host>Xanto S1500R</host>
             <key>Battery</key>
           </item>
         </graph_item>
@@ -170,7 +170,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Xanto S1500R Template</host>
+            <host>Xanto S1500R</host>
             <key>Load</key>
           </item>
         </graph_item>
@@ -178,7 +178,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Xanto S1500R Template</host>
+            <host>Xanto S1500R</host>
             <key>Time</key>
           </item>
         </graph_item>

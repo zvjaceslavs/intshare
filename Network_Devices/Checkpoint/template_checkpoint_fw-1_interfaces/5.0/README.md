@@ -1,4 +1,4 @@
-# Template CheckPoint FW-1 Interfaces
+# CheckPoint FW-1 Interfaces
 
 ## Overview
 

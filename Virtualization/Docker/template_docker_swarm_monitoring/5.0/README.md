@@ -1,4 +1,4 @@
-# Template App Docker swarm
+# App Docker swarm
 
 ## Overview
 
@@ -23,24 +23,22 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Docker swarm services discovery|<p>-</p>|`HTTP agent`|docker.swarm.services.lld<p>Update: 5m</p>|
 |Docker swarm nodes discovery|<p>-</p>|`HTTP agent`|docker.swarm.nodes.lld<p>Update: 1h</p>|
 |Docker swarm containers discovery|<p>-</p>|`HTTP agent`|docker.containers.lld<p>Update: 10m</p>|
+|Docker swarm services discovery|<p>-</p>|`HTTP agent`|docker.swarm.services.lld<p>Update: 5m</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Docker swarm raw info|<p>-</p>|`HTTP agent`|docker.swarm.info.raw<p>Update: 1m</p>|
-|Docker swarm leader node|<p>-</p>|`Dependent item`|docker.swarm.nodes.leader<p>Update: 0</p>|
-|Docker swarm managers nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.manager<p>Update: 0</p>|
-|Docker swarm nodes raw|<p>-</p>|`HTTP agent`|docker.swarm.nodes.raw<p>Update: 1m</p>|
-|Docker swarm ready nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.ready<p>Update: 0</p>|
-|Docker swarm nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.total<p>Update: 0</p>|
-|Docker swarm services raw|<p>-</p>|`HTTP agent`|docker.swarm.services.raw<p>Update: 5m</p>|
-|Docker swarm tasks raw info|<p>-</p>|`HTTP agent`|docker.swarm.tasks.raw.info<p>Update: 1m</p>|
 |Docker swarm updated at|<p>-</p>|`Dependent item`|docker.swarm.updated_at<p>Update: 0</p>|
-|Docker swarm uptime {#SERVICE}|<p>-</p>|`Dependent item`|docker.swarm.service.uptime[{#SERVICE}]<p>Update: 0</p><p>LLD</p>|
-|Docker swarm number running tasks for {#SERVICE}|<p>-</p>|`Dependent item`|docker.swarm.tasks.running[{#SERVICE}]<p>Update: 0</p><p>LLD</p>|
+|Docker swarm services raw|<p>-</p>|`HTTP agent`|docker.swarm.services.raw<p>Update: 5m</p>|
+|Docker swarm managers nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.manager<p>Update: 0</p>|
+|Docker swarm tasks raw info|<p>-</p>|`HTTP agent`|docker.swarm.tasks.raw.info<p>Update: 1m</p>|
+|Docker swarm nodes raw|<p>-</p>|`HTTP agent`|docker.swarm.nodes.raw<p>Update: 1m</p>|
+|Docker swarm leader node|<p>-</p>|`Dependent item`|docker.swarm.nodes.leader<p>Update: 0</p>|
+|Docker swarm nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.total<p>Update: 0</p>|
+|Docker swarm ready nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.ready<p>Update: 0</p>|
+|Docker swarm raw info|<p>-</p>|`HTTP agent`|docker.swarm.info.raw<p>Update: 1m</p>|
 |Raw data node {#NAME} at {#ADDR}|<p>-</p>|`HTTP agent`|docker.nodes[{#ID}]<p>Update: 5m</p><p>LLD</p>|
 |Node {#NAME} availability|<p>-</p>|`Dependent item`|docker.node.availability[{#ID}]<p>Update: 0</p><p>LLD</p>|
 |Node {#NAME} engine version|<p>-</p>|`Dependent item`|docker.node.engine_version[{#ID}]<p>Update: 0</p><p>LLD</p>|
@@ -56,13 +54,15 @@ There are no template links in this template.
 |{#NAME} CPU number|<p>-</p>|`Dependent item`|docker.container.cpu_num[{#ID}]<p>Update: 0</p><p>LLD</p>|
 |{#NAME} Mem usage|<p>-</p>|`Dependent item`|docker.container.mem[{#ID}]<p>Update: 0</p><p>LLD</p>|
 |{#NAME} CPU system usage|<p>-</p>|`Dependent item`|docker.container.system_cpu[{#ID}]<p>Update: 0</p><p>LLD</p>|
+|Docker swarm uptime {#SERVICE}|<p>-</p>|`Dependent item`|docker.swarm.service.uptime[{#SERVICE}]<p>Update: 0</p><p>LLD</p>|
+|Docker swarm number running tasks for {#SERVICE}|<p>-</p>|`Dependent item`|docker.swarm.tasks.running[{#SERVICE}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Docker swarm updated service {#SERVICE}|<p>-</p>|<p>**Expression**: {Template App Docker swarm:docker.swarm.service.uptime[{#SERVICE}].last()}<600</p><p>**Recovery expression**: </p>|warning|
-|Docker swarm no running tasks for {#SERVICE}|<p>-</p>|<p>**Expression**: {Template App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].last()}=0</p><p>**Recovery expression**: {Template App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].avg(30m)}<1</p>|average|
-|Docker swarm no running tasks for {#SERVICE} changed|<p>-</p>|<p>**Expression**: {Template App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].diff()}=1</p><p>**Recovery expression**: </p>|average|
-|Docker swarm updated service {#SERVICE} (LLD)|<p>-</p>|<p>**Expression**: {Template App Docker swarm:docker.swarm.service.uptime[{#SERVICE}].last()}<600</p><p>**Recovery expression**: </p>|warning|
-|Docker swarm no running tasks for {#SERVICE} (LLD)|<p>-</p>|<p>**Expression**: {Template App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].last()}=0</p><p>**Recovery expression**: {Template App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].avg(30m)}<1</p>|average|
-|Docker swarm no running tasks for {#SERVICE} changed (LLD)|<p>-</p>|<p>**Expression**: {Template App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].diff()}=1</p><p>**Recovery expression**: </p>|average|
+|Docker swarm updated service {#SERVICE}|<p>-</p>|<p>**Expression**: {App Docker swarm:docker.swarm.service.uptime[{#SERVICE}].last()}<600</p><p>**Recovery expression**: </p>|warning|
+|Docker swarm no running tasks for {#SERVICE}|<p>-</p>|<p>**Expression**: {App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].last()}=0</p><p>**Recovery expression**: {App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].avg(30m)}<1</p>|average|
+|Docker swarm no running tasks for {#SERVICE} changed|<p>-</p>|<p>**Expression**: {App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].diff()}=1</p><p>**Recovery expression**: </p>|average|
+|Docker swarm updated service {#SERVICE} (LLD)|<p>-</p>|<p>**Expression**: {App Docker swarm:docker.swarm.service.uptime[{#SERVICE}].last()}<600</p><p>**Recovery expression**: </p>|warning|
+|Docker swarm no running tasks for {#SERVICE} (LLD)|<p>-</p>|<p>**Expression**: {App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].last()}=0</p><p>**Recovery expression**: {App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].avg(30m)}<1</p>|average|
+|Docker swarm no running tasks for {#SERVICE} changed (LLD)|<p>-</p>|<p>**Expression**: {App Docker swarm:docker.swarm.tasks.running[{#SERVICE}].diff()}=1</p><p>**Recovery expression**: </p>|average|

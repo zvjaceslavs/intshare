@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:57:05Z'
+  date: '2021-10-26T04:44:23Z'
   groups:
     -
       uuid: 36bff6c29af64692839d077febfc7079
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 9f142fda089c477a828c50d4722e15d8
-      template: 'Template Net Fortinet FortiGate SNMP'
-      name: 'Template Net Fortinet FortiGate SNMP'
+      template: 'Net Fortinet FortiGate SNMP'
+      name: 'Net Fortinet FortiGate SNMP'
       description: |
         Zabbix Template for Fortinet FortiGate
         URL: https://github.com/mbdraks/fortinet-zabbix
@@ -356,7 +356,7 @@ zabbix_export:
           triggers:
             -
               uuid: 4ad3b3a1c38744078a08f58ae697a9b1
-              expression: 'min(/Template Net Fortinet FortiGate SNMP/fgSysCpuUsage,5m)>{$CPU.UTIL.CRIT}'
+              expression: 'min(/Net Fortinet FortiGate SNMP/fgSysCpuUsage,5m)>{$CPU.UTIL.CRIT}'
               name: 'High CPU usage (over {$CPU.UTIL.CRIT}% for 5m)'
               opdata: 'Current utilization: {ITEM.LASTVALUE1}'
               priority: WARNING
@@ -455,7 +455,7 @@ zabbix_export:
           triggers:
             -
               uuid: 90f2126254914f16b59fd2cf48fed021
-              expression: 'min(/Template Net Fortinet FortiGate SNMP/fgSysMemUsage,5m)>{$MEMORY.UTIL.MAX}'
+              expression: 'min(/Net Fortinet FortiGate SNMP/fgSysMemUsage,5m)>{$MEMORY.UTIL.MAX}'
               name: 'High memory usage ( >{$MEMORY.UTIL.MAX}% for 5m)'
               priority: WARNING
               description: 'The system is running out of free memory.'
@@ -786,7 +786,7 @@ zabbix_export:
           triggers:
             -
               uuid: 8dd50de36a604436b5993b5d74004e7f
-              expression: 'max(/Template Net Fortinet FortiGate SNMP/icmpping,#3)=0'
+              expression: 'max(/Net Fortinet FortiGate SNMP/icmpping,#3)=0'
               name: 'Unavailable by ICMP ping'
               priority: HIGH
               description: 'Last three attempts returned timeout.  Please check device connectivity.'
@@ -805,14 +805,14 @@ zabbix_export:
           triggers:
             -
               uuid: a28e46ed9bec4415a871881a57428fd1
-              expression: 'min(/Template Net Fortinet FortiGate SNMP/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/Template Net Fortinet FortiGate SNMP/icmppingloss,5m)<100'
+              expression: 'min(/Net Fortinet FortiGate SNMP/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/Net Fortinet FortiGate SNMP/icmppingloss,5m)<100'
               name: 'High ICMP ping loss'
               opdata: 'Loss: {ITEM.LASTVALUE1}'
               priority: WARNING
               dependencies:
                 -
                   name: 'Unavailable by ICMP ping'
-                  expression: 'max(/Template Net Fortinet FortiGate SNMP/icmpping,#3)=0'
+                  expression: 'max(/Net Fortinet FortiGate SNMP/icmpping,#3)=0'
         -
           uuid: e1c44286aa5c4b3aa76404fb14e6c3de
           name: 'ICMP response time'
@@ -828,17 +828,17 @@ zabbix_export:
           triggers:
             -
               uuid: 5e13f103ec26401db32d35e11dcd700e
-              expression: 'avg(/Template Net Fortinet FortiGate SNMP/icmppingsec,5m)>{$ICMP_RESPONSE_TIME_WARN}'
+              expression: 'avg(/Net Fortinet FortiGate SNMP/icmppingsec,5m)>{$ICMP_RESPONSE_TIME_WARN}'
               name: 'High ICMP ping response time'
               opdata: 'Value: {ITEM.LASTVALUE1}'
               priority: WARNING
               dependencies:
                 -
                   name: 'High ICMP ping loss'
-                  expression: 'min(/Template Net Fortinet FortiGate SNMP/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/Template Net Fortinet FortiGate SNMP/icmppingloss,5m)<100'
+                  expression: 'min(/Net Fortinet FortiGate SNMP/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/Net Fortinet FortiGate SNMP/icmppingloss,5m)<100'
                 -
                   name: 'Unavailable by ICMP ping'
-                  expression: 'max(/Template Net Fortinet FortiGate SNMP/icmpping,#3)=0'
+                  expression: 'max(/Net Fortinet FortiGate SNMP/icmpping,#3)=0'
         -
           uuid: c346124e94894811a1b98c9a49e9f456
           name: 'SNMP traps (fallback)'
@@ -949,7 +949,7 @@ zabbix_export:
           triggers:
             -
               uuid: 3df4a68f4cd84d61ba16facdb3a2b65c
-              expression: '(last(/Template Net Fortinet FortiGate SNMP/system.name,#1)<>last(/Template Net Fortinet FortiGate SNMP/system.name,#2))=1 and length(last(/Template Net Fortinet FortiGate SNMP/system.name))>0'
+              expression: '(last(/Net Fortinet FortiGate SNMP/system.name,#1)<>last(/Net Fortinet FortiGate SNMP/system.name,#2))=1 and length(last(/Net Fortinet FortiGate SNMP/system.name))>0'
               name: 'System name has changed (new name: {ITEM.VALUE})'
               priority: INFO
               description: 'System name has changed. Ack to close.'
@@ -1020,7 +1020,7 @@ zabbix_export:
           triggers:
             -
               uuid: d22bf6d03b8140c7bbcf29aadd5221ce
-              expression: 'last(/Template Net Fortinet FortiGate SNMP/system.uptime[sysUpTime.0])<10m'
+              expression: 'last(/Net Fortinet FortiGate SNMP/system.uptime[sysUpTime.0])<10m'
               name: '{HOST.NAME} has been restarted (uptime < 10m)'
               priority: WARNING
               description: 'Uptime is less than 10 minutes'
@@ -1028,7 +1028,7 @@ zabbix_export:
               dependencies:
                 -
                   name: 'No SNMP data collection'
-                  expression: 'max(/Template Net Fortinet FortiGate SNMP/zabbix[host,snmp,available],{$SNMP.TIMEOUT})=0'
+                  expression: 'max(/Net Fortinet FortiGate SNMP/zabbix[host,snmp,available],{$SNMP.TIMEOUT})=0'
         -
           uuid: 720e5e6778724cdabe23673a2a38b139
           name: 'SNMP agent availability'
@@ -1044,7 +1044,7 @@ zabbix_export:
           triggers:
             -
               uuid: 4442350a2f064999a1cf1b1b6785d2a0
-              expression: 'max(/Template Net Fortinet FortiGate SNMP/zabbix[host,snmp,available],{$SNMP.TIMEOUT})=0'
+              expression: 'max(/Net Fortinet FortiGate SNMP/zabbix[host,snmp,available],{$SNMP.TIMEOUT})=0'
               name: 'No SNMP data collection'
               opdata: 'Current state: {ITEM.LASTVALUE1}'
               priority: WARNING
@@ -1052,7 +1052,7 @@ zabbix_export:
               dependencies:
                 -
                   name: 'Unavailable by ICMP ping'
-                  expression: 'max(/Template Net Fortinet FortiGate SNMP/icmpping,#3)=0'
+                  expression: 'max(/Net Fortinet FortiGate SNMP/icmpping,#3)=0'
       discovery_rules:
         -
           uuid: bd596216a16a4b1bbe48a7d5e60b7def
@@ -1332,7 +1332,7 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgHaStatsSesCount.[{#HA_ID}]'
             -
               uuid: 72f6e358bf064ab583b58f9cd199f262
@@ -1343,7 +1343,7 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgHaStatsCpuUsage.[{#HA_ID}]'
             -
               uuid: 4e7edb0c0f5f44b1a2c42aa45df14553
@@ -1353,7 +1353,7 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgHaStatsMemUsage.[{#HA_ID}]'
             -
               uuid: 15355ef440f448b191abf0129e56522a
@@ -1363,7 +1363,7 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgHaStatsNetUsage.[{#HA_ID}]'
             -
               uuid: 126871543bd84d0cb7a89a091cb01a70
@@ -1373,13 +1373,13 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgHaStatsAvCount.rate.[{#HA_ID}]'
                 -
                   sortorder: '1'
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgHaStatsIdsCount.rate.[{#HA_ID}]'
         -
           uuid: 7ce9bd19f40842f19e7768c8ff48a09a
@@ -1569,37 +1569,37 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcAllocatedBandwidth.[{$IF_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '1'
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcBytes.rate.[{$IF_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '2'
                   color: 2774A4
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcCurrentBandwidth.[{$IF_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '3'
                   color: F7941D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcGuaranteedBandwidth.[{$IF_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '4'
                   color: FC6EA3
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcMaxBandwidth.[{$IF_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '5'
                   color: 6C59DC
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcDrops.[{$IF_ID1}.{#SNMPINDEX}]'
         -
           uuid: 9d450ac98c7b400e923e1795d1562809
@@ -1743,37 +1743,37 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcInAllocatedBandwidth.[{$IF_IN_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '1'
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcInBytes.rate.[{$IF_IN_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '2'
                   color: 2774A4
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcInCurrentBandwidth.[{$IF_IN_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '3'
                   color: F7941D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcInGuaranteedBandwidth.[{$IF_IN_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '4'
                   color: FC6EA3
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcInMaxBandwidth.[{$IF_IN_ID1}.{#SNMPINDEX}]'
                 -
                   sortorder: '5'
                   color: 6C59DC
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfBcInDrops.[{$IF_IN_ID1}.{#SNMPINDEX}]'
         -
           uuid: 21f19c60fe074c1fa0d903e06f094a81
@@ -1896,13 +1896,13 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgProcessorUsage.[{#CPU_ID}]'
                 -
                   sortorder: '1'
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgProcessorUsage5sec.[{#CPU_ID}]'
             -
               uuid: 9b68425339344f2d9c5d459e5dca0080
@@ -1912,13 +1912,13 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgProcessorSysUsage.[{#CPU_ID}]'
                 -
                   sortorder: '1'
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgProcessorUserUsage.[{#CPU_ID}]'
         -
           uuid: 5064b4422ab7405c80e14670f6df6581
@@ -2007,19 +2007,19 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgProcessorPktDroppedCount.[{#CPU_ID}]'
                 -
                   sortorder: '1'
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgProcessorPktRxCount.[{#CPU_ID}]'
                 -
                   sortorder: '2'
                   color: 2774A4
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgProcessorPktTxCount.[{#CPU_ID}]'
         -
           uuid: d24fbde260864cce95de9778f06c8a90
@@ -2311,9 +2311,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 8b3b903476ce4eaeb8d600fadacf6420
-                  expression: 'last(/Template Net Fortinet FortiGate SNMP/fgVWLHealthCheckLinkState[{#HC_ID}])=1 and (last(/Template Net Fortinet FortiGate SNMP/fgVWLHealthCheckLinkState[{#HC_ID}],#1)<>last(/Template Net Fortinet FortiGate SNMP/fgVWLHealthCheckLinkState[{#HC_ID}],#2))=1'
+                  expression: 'last(/Net Fortinet FortiGate SNMP/fgVWLHealthCheckLinkState[{#HC_ID}])=1 and (last(/Net Fortinet FortiGate SNMP/fgVWLHealthCheckLinkState[{#HC_ID}],#1)<>last(/Net Fortinet FortiGate SNMP/fgVWLHealthCheckLinkState[{#HC_ID}],#2))=1'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Net Fortinet FortiGate SNMP/fgVWLHealthCheckLinkState[{#HC_ID}])=0'
+                  recovery_expression: 'last(/Net Fortinet FortiGate SNMP/fgVWLHealthCheckLinkState[{#HC_ID}])=0'
                   name: 'Health Check State Failed to {#HC_NAME} on member {#MEMBER_SEQ}'
                   opdata: 'Status: {ITEM.LASTVALUE1}'
                   priority: HIGH
@@ -2344,20 +2344,20 @@ zabbix_export:
                 -
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgVWLHealthCheckLinkJitter[{#HC_NAME}.{#MEMBER_SEQ}]'
                 -
                   sortorder: '1'
                   color: 2774A4
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgVWLHealthCheckLinkLatency[{#HC_NAME}.{#MEMBER_SEQ}]'
                 -
                   sortorder: '2'
                   color: F7941D
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgVWLHealthCheckLinkPacketLoss[{#HC_NAME}.{#MEMBER_SEQ}]'
             -
               uuid: 9052cd41a5a14548b87a3bd072af141e
@@ -2367,13 +2367,13 @@ zabbix_export:
                 -
                   color: 199C0D
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgVWLHealthCheckLinkPacketRecv[{#HC_NAME}.{#MEMBER_SEQ}]'
                 -
                   sortorder: '1'
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgVWLHealthCheckLinkPacketSend[{#HC_NAME}.{#MEMBER_SEQ}]'
         -
           uuid: d3bef93227624434b459c0e133e57435
@@ -2653,27 +2653,27 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: b33d107f19c04c52a48c89e75d7aa367
-                  expression: 'last(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=1'
+                  expression: 'last(/Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=1'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=2'
+                  recovery_expression: 'last(/Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=2'
                   name: 'FortiAP {#SNMPVALUE} in {HOST.NAME} is DOWN'
                   opdata: 'Status: {ITEM.LASTVALUE1}'
                   priority: HIGH
                   manual_close: 'YES'
                 -
                   uuid: 34deebec43e84537a1b9f16c1556db0c
-                  expression: 'last(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=3'
+                  expression: 'last(/Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=3'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=2'
+                  recovery_expression: 'last(/Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=2'
                   name: 'FortiAP {#SNMPVALUE} is receiving firmware update from {HOST.NAME}'
                   opdata: 'Status: {ITEM.LASTVALUE1}'
                   priority: INFO
                   manual_close: 'YES'
                 -
                   uuid: fbef98f95146495290deac68e93637ba
-                  expression: 'last(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=4'
+                  expression: 'last(/Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=4'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=2'
+                  recovery_expression: 'last(/Net Fortinet FortiGate SNMP/fgWcWtpSessionConnectionState[{#SNMPVALUE}])=2'
                   name: '{HOST.NAME} is sending firmware to FortiAP {#SNMPVALUE}'
                   opdata: 'Status: {ITEM.LASTVALUE1}'
                   priority: INFO
@@ -2784,9 +2784,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 53c76ced81704e0283dc46e5153b8599
-                  expression: 'min(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpCpuUsage.[{#SNMPVALUE}],5m)>{$CPU.UTIL.CRIT}'
+                  expression: 'min(/Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpCpuUsage.[{#SNMPVALUE}],5m)>{$CPU.UTIL.CRIT}'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'max(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpCpuUsage.[{#SNMPVALUE}],5m)<{$CPU.UTIL.CRIT}'
+                  recovery_expression: 'max(/Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpCpuUsage.[{#SNMPVALUE}],5m)<{$CPU.UTIL.CRIT}'
                   name: 'High CPU usage (over {$CPU.UTIL.CRIT}% for 5m) - FortiAP {#SNMPVALUE}'
                   opdata: 'Current utilization: {ITEM.LASTVALUE1}'
                   priority: WARNING
@@ -2947,9 +2947,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 7dea92a044754903b4012bd4a1af25a6
-                  expression: 'min(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpMemoryUsage.[{#SNMPVALUE}],5m)>{$MEMORY.UTIL.MAX}'
+                  expression: 'min(/Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpMemoryUsage.[{#SNMPVALUE}],5m)>{$MEMORY.UTIL.MAX}'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'max(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpMemoryUsage.[{#SNMPVALUE}],5m)<{$MEMORY.UTIL.MAX}'
+                  recovery_expression: 'max(/Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpMemoryUsage.[{#SNMPVALUE}],5m)<{$MEMORY.UTIL.MAX}'
                   name: 'High memory usage (over {$MEMORY.UTIL.MAX}% for 5m) - FortiAP {#SNMPVALUE}'
                   opdata: 'Current utilization: {ITEM.LASTVALUE1}'
                   priority: WARNING
@@ -3030,7 +3030,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: e14045d426784c25ac0e70a5e933a3b9
-                  expression: 'change(/Template Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpSessionUpTime.[{#SNMPVALUE}])<0'
+                  expression: 'change(/Net Fortinet FortiGate SNMP/fgWcWtpSessionWtpSessionUpTime.[{#SNMPVALUE}])<0'
                   name: 'FortiAP {#SNMPVALUE} session with {HOST.NAME} has been restarted'
                   opdata: 'Status: {ITEM.LASTVALUE1}'
                   priority: WARNING
@@ -3099,13 +3099,13 @@ zabbix_export:
                 -
                   color: 2774A4
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgWcWtpSessionWtpByteRxCount.rate.[{#SNMPVALUE}]'
                 -
                   sortorder: '1'
                   color: A54F10
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgWcWtpSessionWtpByteTxCount.rate.[{#SNMPVALUE}]'
             -
               uuid: f95b8c722a724af994d274c916a635b4
@@ -3115,7 +3115,7 @@ zabbix_export:
                 -
                   color: 1A7C11
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgWcWtpSessionWtpStationCount.[{#SNMPVALUE}]'
             -
               uuid: 2159b366534c4e8e857ff22957bd4ab4
@@ -3126,13 +3126,13 @@ zabbix_export:
                 -
                   color: F63100
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgWcWtpSessionWtpCpuUsage.[{#SNMPVALUE}]'
                 -
                   sortorder: '1'
                   color: 2774A4
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgWcWtpSessionWtpMemoryUsage.[{#SNMPVALUE}]'
         -
           uuid: dbeeb22470fc486aa35e434d25566681
@@ -3301,7 +3301,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 28adcb324490487cadadeb627276265b
-                  expression: 'last(/Template Net Fortinet FortiGate SNMP/net.if.duplex[dot3StatsDuplexStatus.{#SNMPINDEX}])=2'
+                  expression: 'last(/Net Fortinet FortiGate SNMP/net.if.duplex[dot3StatsDuplexStatus.{#SNMPINDEX}])=2'
                   name: 'Interface {#IFNAME}({#IFALIAS}): In half-duplex mode'
                   priority: WARNING
                   description: 'Please check autonegotiation settings and cabling'
@@ -3496,9 +3496,9 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 3876d3d05d7e4df6819f9b6d259333f7
-                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)'
+                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)'
                   recovery_mode: RECOVERY_EXPRESSION
-                  recovery_expression: 'last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
+                  recovery_expression: 'last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
                   name: 'Interface {#IFNAME}({#IFALIAS}): Link down'
                   opdata: 'Current state: {ITEM.LASTVALUE1}'
                   priority: AVERAGE
@@ -3539,21 +3539,21 @@ zabbix_export:
             -
               uuid: 47200c5bc83d467aa4f13a8a0c9ed407
               expression: |
-                change(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])<0 and last(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0
+                change(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])<0 and last(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0
                 and (
-                last(/Template Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=6 or
-                last(/Template Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=7 or
-                last(/Template Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=11 or
-                last(/Template Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=62 or
-                last(/Template Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=69 or
-                last(/Template Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=117
+                last(/Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=6 or
+                last(/Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=7 or
+                last(/Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=11 or
+                last(/Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=62 or
+                last(/Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=69 or
+                last(/Net Fortinet FortiGate SNMP/net.if.type[ifType.{#SNMPINDEX}])=117
                 )
                 and
-                (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2)
+                (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2)
               recovery_mode: RECOVERY_EXPRESSION
               recovery_expression: |
-                (change(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0 and last(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}],#2)>0) or
-                (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2)
+                (change(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0 and last(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}],#2)>0) or
+                (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2)
               name: 'Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before'
               opdata: 'Current reported speed: {ITEM.LASTVALUE1}'
               priority: INFO
@@ -3562,18 +3562,18 @@ zabbix_export:
               dependencies:
                 -
                   name: 'Interface {#IFNAME}({#IFALIAS}): Link down'
-                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)'
-                  recovery_expression: 'last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
+                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)'
+                  recovery_expression: 'last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
             -
               uuid: 6d9dfb0008d0451aa4e8a82987b763cb
               expression: |
-                (avg(/Template Net Fortinet FortiGate SNMP/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*last(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) or
-                avg(/Template Net Fortinet FortiGate SNMP/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*last(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])) and
-                last(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0
+                (avg(/Net Fortinet FortiGate SNMP/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*last(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) or
+                avg(/Net Fortinet FortiGate SNMP/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*last(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])) and
+                last(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0
               recovery_mode: RECOVERY_EXPRESSION
               recovery_expression: |
-                avg(/Template Net Fortinet FortiGate SNMP/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)<(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*last(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) and
-                avg(/Template Net Fortinet FortiGate SNMP/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)<(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*last(/Template Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])
+                avg(/Net Fortinet FortiGate SNMP/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)<(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*last(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) and
+                avg(/Net Fortinet FortiGate SNMP/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)<(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*last(/Net Fortinet FortiGate SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}])
               name: 'Interface {#IFNAME}({#IFALIAS}): High bandwidth usage (>{$IF.UTIL.MAX:"{#IFNAME}"}% )'
               opdata: 'In: {ITEM.LASTVALUE1}, out: {ITEM.LASTVALUE3}, speed: {ITEM.LASTVALUE2}'
               priority: WARNING
@@ -3582,17 +3582,17 @@ zabbix_export:
               dependencies:
                 -
                   name: 'Interface {#IFNAME}({#IFALIAS}): Link down'
-                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)'
-                  recovery_expression: 'last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
+                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)'
+                  recovery_expression: 'last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
             -
               uuid: d8d12819d2f9472ab69ed2d9131fbc0d
               expression: |
-                min(/Template Net Fortinet FortiGate SNMP/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)>{$IF.ERRORS.WARN:"{#IFNAME}"}
-                or min(/Template Net Fortinet FortiGate SNMP/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)>{$IF.ERRORS.WARN:"{#IFNAME}"}
+                min(/Net Fortinet FortiGate SNMP/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)>{$IF.ERRORS.WARN:"{#IFNAME}"}
+                or min(/Net Fortinet FortiGate SNMP/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)>{$IF.ERRORS.WARN:"{#IFNAME}"}
               recovery_mode: RECOVERY_EXPRESSION
               recovery_expression: |
-                max(/Template Net Fortinet FortiGate SNMP/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)<{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8
-                and max(/Template Net Fortinet FortiGate SNMP/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)<{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8
+                max(/Net Fortinet FortiGate SNMP/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)<{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8
+                and max(/Net Fortinet FortiGate SNMP/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)<{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8
               name: 'Interface {#IFNAME}({#IFALIAS}): High error rate (>{$IF.ERRORS.WARN:"{#IFNAME}"} for 5m)'
               opdata: 'errors in: {ITEM.LASTVALUE1}, errors out: {ITEM.LASTVALUE2}'
               priority: WARNING
@@ -3601,8 +3601,8 @@ zabbix_export:
               dependencies:
                 -
                   name: 'Interface {#IFNAME}({#IFALIAS}): Link down'
-                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)'
-                  recovery_expression: 'last(/Template Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
+                  expression: '{$IFCONTROL:"{#IFNAME}"}=1 and (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)'
+                  recovery_expression: 'last(/Net Fortinet FortiGate SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:"{#IFNAME}"}=0'
           graph_prototypes:
             -
               uuid: b45ad043c0f24bef928b6c21e137b798
@@ -3613,54 +3613,54 @@ zabbix_export:
                   drawtype: GRADIENT_LINE
                   color: 1A7C11
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'net.if.in[ifHCInOctets.{#SNMPINDEX}]'
                 -
                   sortorder: '2'
                   drawtype: BOLD_LINE
                   color: 2774A4
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'net.if.out[ifHCOutOctets.{#SNMPINDEX}]'
                 -
                   sortorder: '3'
                   color: F63100
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'net.if.out.errors[ifOutErrors.{#SNMPINDEX}]'
                 -
                   sortorder: '4'
                   color: A54F10
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'net.if.in.errors[ifInErrors.{#SNMPINDEX}]'
                 -
                   sortorder: '5'
                   color: FC6EA3
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]'
                 -
                   sortorder: '6'
                   color: 6C59DC
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'net.if.in.discards[ifInDiscards.{#SNMPINDEX}]'
                 -
                   sortorder: '7'
                   color: AC8C14
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfEntEstDownBandwidth.[{#SNMPINDEX}]'
                 -
                   sortorder: '8'
                   color: 611F27
                   item:
-                    host: 'Template Net Fortinet FortiGate SNMP'
+                    host: 'Net Fortinet FortiGate SNMP'
                     key: 'fgIntfEntEstUpBandwidth.[{#SNMPINDEX}]'
       macros:
         -
@@ -3780,7 +3780,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - Concurrent Connections'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '5'
@@ -3804,7 +3804,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - CPU Usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '10'
@@ -3828,7 +3828,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - Memory Usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '15'
@@ -3852,7 +3852,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - Network Bandwidth Usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '20'
@@ -3876,7 +3876,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - Security Events Rate'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
         -
           uuid: c9f061071fc84a79847153eab6a74239
           name: 'High Availability'
@@ -3905,7 +3905,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - Concurrent Connections'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '5'
@@ -3929,7 +3929,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - CPU Usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '10'
@@ -3953,7 +3953,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - Memory Usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '15'
@@ -3977,7 +3977,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - Network Bandwidth Usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_PROTOTYPE
                   'y': '20'
@@ -4001,7 +4001,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'HA Cluster Member {#HA_ID} - Security Events Rate'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
         -
           uuid: 8ab0e6868243402bb894b6d71118d030
           name: 'SD-WAN Performance SLA'
@@ -4030,7 +4030,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'Performance SLA Metrics to {#HC_NAME} on SD-WAN member {#MEMBER_SEQ}'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
         -
           uuid: bd78810b6f914dfd839b70edc7e232de
           name: 'System Performance'
@@ -4051,7 +4051,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'CPU usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_CLASSIC
                   x: '12'
@@ -4067,7 +4067,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'Memory usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_CLASSIC
                   'y': '5'
@@ -4083,7 +4083,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'Hard Disk Usage'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
                 -
                   type: GRAPH_CLASSIC
                   x: '12'
@@ -4100,7 +4100,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'ICMP response time'
-                        host: 'Template Net Fortinet FortiGate SNMP'
+                        host: 'Net Fortinet FortiGate SNMP'
       valuemaps:
         -
           uuid: e94ea014e91a4db5a95647d10d5a3602
@@ -5182,13 +5182,13 @@ zabbix_export:
         -
           color: 199C0D
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgVpnTunnelUpCount
         -
           sortorder: '1'
           color: 0080FF
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgVpnSslStatsLoginUsers
     -
       uuid: 3deeeed3ab69450e94bfdd852ea358cb
@@ -5200,7 +5200,7 @@ zabbix_export:
           drawtype: GRADIENT_LINE
           color: 1A7C11
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgSysCpuUsage
     -
       uuid: 9a78870c7a6842e9bcda9e665ea52fe8
@@ -5213,13 +5213,13 @@ zabbix_export:
           color: F63100
           calc_fnc: MAX
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgSysDiskCapacity
         -
           sortorder: '2'
           color: FF8000
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgSysDiskUsage
     -
       uuid: b53931761beb4b7993b208f3d083bc3e
@@ -5229,7 +5229,7 @@ zabbix_export:
         -
           color: 2774A4
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: icmppingsec
     -
       uuid: 5bd946d29a9c4ef8bd43997f2e431953
@@ -5239,55 +5239,55 @@ zabbix_export:
         -
           color: F63100
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsIntrusionsDetected
         -
           sortorder: '1'
           color: 199C0D
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsIntrusionsBlocked
         -
           sortorder: '2'
           color: F7941D
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsCritSevDetections
         -
           sortorder: '3'
           color: FC6EA3
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsHighSevDetections
         -
           sortorder: '4'
           color: BA2A5D
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsMedSevDetections
         -
           sortorder: '5'
           color: C7A72D
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsLowSevDetections
         -
           sortorder: '6'
           color: 6C59DC
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsInfoSevDetections
         -
           sortorder: '7'
           color: 2774A4
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsAnomalyDetections
         -
           sortorder: '8'
           color: F230E0
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgIpsSignatureDetections
     -
       uuid: 12340a73faad4e679534f9f6de6b04ec
@@ -5297,7 +5297,7 @@ zabbix_export:
         -
           color: 199C0D
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgSysSesCount
     -
       uuid: 0456090bcfd84eb4bf647361b272f7c9
@@ -5308,5 +5308,5 @@ zabbix_export:
         -
           color: 1A7C11
           item:
-            host: 'Template Net Fortinet FortiGate SNMP'
+            host: 'Net Fortinet FortiGate SNMP'
             key: fgSysMemUsage

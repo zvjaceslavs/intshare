@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:43Z'
+  date: '2021-10-26T04:46:15Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 823900e671f64521aa0b4471cc3c8c0f
-      template: 'Template Eaton UPS'
-      name: 'Template Eaton UPS'
+      template: 'Eaton UPS'
+      name: 'Eaton UPS'
       groups:
         -
           name: Templates
@@ -227,7 +227,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 793fcfbac398444eaa06807b8b9de9e0
-                  expression: 'last(/Template Eaton UPS/get.alarms.id[{#ALARM}])>0'
+                  expression: 'last(/Eaton UPS/get.alarms.id[{#ALARM}])>0'
                   name: 'An Alarm has been detected: ID {last(/Template Eaton UPS/get.alarms.id[{#ALARM}])}'
                   priority: WARNING
                   description: |
@@ -294,7 +294,7 @@ zabbix_export:
                   sortorder: '1'
                   color: 009FDB
                   item:
-                    host: 'Template Eaton UPS'
+                    host: 'Eaton UPS'
                     key: 'get.bypass.voltage[{#INDEX}]'
         -
           uuid: 229b2ea54b534928a965e8862bb064ba
@@ -331,7 +331,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 953dbd1239fd4bde963efe823cb63fb1
-                  expression: 'last(/Template Eaton UPS/get.output.load[{#INDEX}])>=85'
+                  expression: 'last(/Eaton UPS/get.output.load[{#INDEX}])>=85'
                   name: 'Output {#INDEX} is overloaded'
                   priority: AVERAGE
             -
@@ -369,7 +369,7 @@ zabbix_export:
                   sortorder: '1'
                   color: E30613
                   item:
-                    host: 'Template Eaton UPS'
+                    host: 'Eaton UPS'
                     key: 'get.output.voltage[{#INDEX}]'
                 -
                   sortorder: '2'
@@ -377,7 +377,7 @@ zabbix_export:
                   color: 009FDB
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Eaton UPS'
+                    host: 'Eaton UPS'
                     key: 'get.output.amps[{#INDEX}]'
         -
           uuid: 7e7fdbf691284160b132339669e3d06d
@@ -417,7 +417,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: fde619f2dd674f9fb7acb5b8340cd0e7
-                  expression: 'last(/Template Eaton UPS/get.input.voltage[{#INDEX}])<=0'
+                  expression: 'last(/Eaton UPS/get.input.voltage[{#INDEX}])<=0'
                   name: 'No power has been detected on input n°{#INDEX}'
                   priority: AVERAGE
           graph_prototypes:
@@ -430,13 +430,13 @@ zabbix_export:
                   color: 009FDB
                   yaxisside: RIGHT
                   item:
-                    host: 'Template Eaton UPS'
+                    host: 'Eaton UPS'
                     key: 'get.input.frequency[{#INDEX}]'
                 -
                   sortorder: '2'
                   color: E30613
                   item:
-                    host: 'Template Eaton UPS'
+                    host: 'Eaton UPS'
                     key: 'get.input.voltage[{#INDEX}]'
       valuemaps:
         -

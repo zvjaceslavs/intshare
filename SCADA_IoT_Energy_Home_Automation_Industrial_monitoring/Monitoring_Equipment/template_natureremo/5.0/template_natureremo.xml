@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:18Z</date>
+  <date>2021-10-26T04:42:20Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template NatureRemo</template>
-      <name>Template NatureRemo</name>
+      <template>NatureRemo</template>
+      <name>NatureRemo</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -72,7 +72,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template NatureRemo</host>
+                    <host>NatureRemo</host>
                     <key>natureremo.humi[{#REMONAME}]</key>
                   </item>
                 </graph_item>
@@ -80,7 +80,7 @@
                   <sortorder>1</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template NatureRemo</host>
+                    <host>NatureRemo</host>
                     <key>natureremo.temp[{#REMONAME}]</key>
                   </item>
                 </graph_item>
@@ -90,7 +90,7 @@
                   <color>F63100</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template NatureRemo</host>
+                    <host>NatureRemo</host>
                     <key>natureremo.illumi[{#REMONAME}]</key>
                   </item>
                 </graph_item>

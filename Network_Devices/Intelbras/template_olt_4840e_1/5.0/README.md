@@ -1,3 +1,41 @@
+# Solustic-Modulo SNMP Generico v1.0.2
+
+## Description
+
+MIBs: - SNMPv2-MIB
+
+## Overview
+
+Template Básico para monitoramento OLT Intelbras 4840E.
+
+
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Localizacao (sysLocation)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysLocation.0<p>Update: 6h</p>|
+|ID do objeto (sysObjectID)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysObjectID.0<p>Update: 6h</p>|
+|Descricao do sistema (sysDescr)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysDescr.0<p>Update: 6h</p>|
+|Traps SNMP nao tratados|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
+|Nome (hostname)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysName.0<p>Update: 2h</p>|
+|Disponibilidade do SNMP|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 2m</p>|
+## Triggers
+
+There are no triggers in this template.
+
 # Solustic - OLT GCOM EL5610 (Intelbras 4840E) v1.0.0
 
 ## Description
@@ -51,41 +89,3 @@ Template Básico para monitoramento OLT Intelbras 4840E.
 |Potencia da ONU {#CARD}/{#PON}/{#ONU} {{#ONUID}.regsub("(\w+).(\w+).(\w+).(\w+).(\w+).(\w+)","\1:\2:\3:\4:\5:\6")} ({#ONUNAME}) abaixo do limite|<p>ultima leitura: {ITEM.LASTVALUE1} limite: {$OLT_EPON.POTENCIA_RX_ONU.CRITICO} dBm</p>|<p>**Expression**: {Solustic-GCOM_EL5610_Intelbras_4840E:EPON-ONU-CONFIG-MIB.eponOnuOpmRxPower.[{#SNMPINDEX}].last()} <= -29</p><p>**Recovery expression**: {Solustic-GCOM_EL5610_Intelbras_4840E:EPON-ONU-CONFIG-MIB.eponOnuOpmRxPower.[{#SNMPINDEX}].min(1h)} >= ( -29 + 2 )</p>|average|
 |ONU {#CARD}/{#PON}/{#ONU} {{#ONUID}.regsub("(\w+).(\w+).(\w+).(\w+).(\w+).(\w+)","\1:\2:\3:\4:\5:\6")} ({#ONUNAME}) está offline (LLD)|<p>-</p>|<p>**Expression**: {Solustic-GCOM_EL5610_Intelbras_4840E:EPON-ONU-CONFIG-MIB.eponOnuOperationStatus.[{#SNMPINDEX}].diff()} = 1 and {Solustic-GCOM_EL5610_Intelbras_4840E:EPON-ONU-CONFIG-MIB.eponOnuOperationStatus.[{#SNMPINDEX}].last()} = 0</p><p>**Recovery expression**: {Solustic-GCOM_EL5610_Intelbras_4840E:EPON-ONU-CONFIG-MIB.eponOnuOperationStatus.[{#SNMPINDEX}].last()} = 1</p>|average|
 |Potencia da ONU {#CARD}/{#PON}/{#ONU} {{#ONUID}.regsub("(\w+).(\w+).(\w+).(\w+).(\w+).(\w+)","\1:\2:\3:\4:\5:\6")} ({#ONUNAME}) abaixo do limite (LLD)|<p>ultima leitura: {ITEM.LASTVALUE1} limite: {$OLT_EPON.POTENCIA_RX_ONU.CRITICO} dBm</p>|<p>**Expression**: {Solustic-GCOM_EL5610_Intelbras_4840E:EPON-ONU-CONFIG-MIB.eponOnuOpmRxPower.[{#SNMPINDEX}].last()} <= -29</p><p>**Recovery expression**: {Solustic-GCOM_EL5610_Intelbras_4840E:EPON-ONU-CONFIG-MIB.eponOnuOpmRxPower.[{#SNMPINDEX}].min(1h)} >= ( -29 + 2 )</p>|average|
-# Solustic-Modulo SNMP Generico v1.0.2
-
-## Description
-
-MIBs: - SNMPv2-MIB
-
-## Overview
-
-Template Básico para monitoramento OLT Intelbras 4840E.
-
-
-
-## Macros used
-
-There are no macros links in this template.
-
-## Template links
-
-There are no template links in this template.
-
-## Discovery rules
-
-There are no discovery rules in this template.
-
-## Items collected
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Traps SNMP nao tratados|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
-|Descricao do sistema (sysDescr)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysDescr.0<p>Update: 6h</p>|
-|Localizacao (sysLocation)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysLocation.0<p>Update: 6h</p>|
-|Nome (hostname)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysName.0<p>Update: 2h</p>|
-|ID do objeto (sysObjectID)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysObjectID.0<p>Update: 6h</p>|
-|Disponibilidade do SNMP|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 2m</p>|
-## Triggers
-
-There are no triggers in this template.
-

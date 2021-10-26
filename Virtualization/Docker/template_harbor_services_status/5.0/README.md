@@ -64,36 +64,36 @@ There are no discovery rules in this template.
 |----|-----------|----|----|
 |System Status Information|<p>-</p>|`HTTP agent`|harbor.allstatus<p>Update: 30s</p>|
 |Statistics|<p>-</p>|`HTTP agent`|harbor.statistics<p>Update: 1m</p>|
-|Private Project Count|<p>-</p>|`Dependent item`|harbor.statistics.private_project_count<p>Update: 0</p>|
-|Private Repository Count|<p>-</p>|`Dependent item`|harbor.statistics.private_repo_count<p>Update: 0</p>|
-|Public Project Count|<p>-</p>|`Dependent item`|harbor.statistics.public_project_count<p>Update: 0</p>|
-|Public Repository Count|<p>-</p>|`Dependent item`|harbor.statistics.public_repo_count<p>Update: 0</p>|
-|Status|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status<p>Update: 0</p>|
-|Status of Core|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.core<p>Update: 0</p>|
-|Status of Database|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.database<p>Update: 0</p>|
-|Status of Jobservice|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.jobservice<p>Update: 0</p>|
-|Status of Notary|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.notary<p>Update: 0</p>|
 |Status of Portal|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.portal<p>Update: 0</p>|
+|Status of Database|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.database<p>Update: 0</p>|
+|With Notary|<p>-</p>|`Dependent item`|harbor.system.info.with_notary<p>Update: 0</p>|
 |Status of Redis|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.redis<p>Update: 0</p>|
-|Status of Registry|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.registry<p>Update: 0</p>|
-|Status of Registryctl|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.registryctl<p>Update: 0</p>|
-|System Information|<p>-</p>|`HTTP agent`|harbor.system.info<p>Update: 5m</p>|
-|Auth mode|<p>-</p>|`Dependent item`|harbor.system.info.auth_mode<p>Update: 0</p>|
-|External URL|<p>-</p>|`Dependent item`|harbor.system.info.external_url<p>Update: 0</p>|
-|Has CA Root|<p>-</p>|`Dependent item`|harbor.system.info.has_ca_root<p>Update: 0</p>|
-|Notification Enable|<p>-</p>|`Dependent item`|harbor.system.info.notification_enable<p>Update: 0</p>|
 |Project Creation Restriction|<p>-</p>|`Dependent item`|harbor.system.info.project_creation_restriction<p>Update: 0</p>|
-|Read Only|<p>-</p>|`Dependent item`|harbor.system.info.read_only<p>Update: 0</p>|
-|Registry Storage Provider Name|<p>-</p>|`Dependent item`|harbor.system.info.registry_storage_provider_name<p>Update: 0</p>|
+|Status of Core|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.core<p>Update: 0</p>|
+|Auth mode|<p>-</p>|`Dependent item`|harbor.system.info.auth_mode<p>Update: 0</p>|
+|Status|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status<p>Update: 0</p>|
+|Free volume storage size|<p>-</p>|`Dependent item`|harbor.system.info.volume.storage.free<p>Update: 0</p>|
+|Status of Notary|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.notary<p>Update: 0</p>|
 |Registry URL|<p>-</p>|`Dependent item`|harbor.system.info.registry_url<p>Update: 0</p>|
-|Self Restriction|<p>-</p>|`Dependent item`|harbor.system.info.self_registration<p>Update: 0</p>|
+|Status of Registry|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.registry<p>Update: 0</p>|
+|Private Project Count|<p>-</p>|`Dependent item`|harbor.statistics.private_project_count<p>Update: 0</p>|
 |Version|<p>-</p>|`Dependent item`|harbor.system.info.version<p>Update: 0</p>|
 |System Volume Information|<p>-</p>|`HTTP agent`|harbor.system.info.volume<p>Update: 30s</p>|
-|Free volume storage size|<p>-</p>|`Dependent item`|harbor.system.info.volume.storage.free<p>Update: 0</p>|
 |Free volume storage size (percent)|<p>-</p>|`Calculated`|harbor.system.info.volume.storage.free.percent<p>Update: 1m</p>|
-|Total volume storage size|<p>-</p>|`Dependent item`|harbor.system.info.volume.storage.total<p>Update: 0</p>|
+|System Information|<p>-</p>|`HTTP agent`|harbor.system.info<p>Update: 5m</p>|
+|Public Repository Count|<p>-</p>|`Dependent item`|harbor.statistics.public_repo_count<p>Update: 0</p>|
+|Read Only|<p>-</p>|`Dependent item`|harbor.system.info.read_only<p>Update: 0</p>|
+|Has CA Root|<p>-</p>|`Dependent item`|harbor.system.info.has_ca_root<p>Update: 0</p>|
+|Private Repository Count|<p>-</p>|`Dependent item`|harbor.statistics.private_repo_count<p>Update: 0</p>|
+|Registry Storage Provider Name|<p>-</p>|`Dependent item`|harbor.system.info.registry_storage_provider_name<p>Update: 0</p>|
+|Status of Jobservice|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.jobservice<p>Update: 0</p>|
+|Self Restriction|<p>-</p>|`Dependent item`|harbor.system.info.self_registration<p>Update: 0</p>|
 |With Chatmuseum|<p>-</p>|`Dependent item`|harbor.system.info.with_chartmuseum<p>Update: 0</p>|
-|With Notary|<p>-</p>|`Dependent item`|harbor.system.info.with_notary<p>Update: 0</p>|
+|Total volume storage size|<p>-</p>|`Dependent item`|harbor.system.info.volume.storage.total<p>Update: 0</p>|
+|Notification Enable|<p>-</p>|`Dependent item`|harbor.system.info.notification_enable<p>Update: 0</p>|
+|External URL|<p>-</p>|`Dependent item`|harbor.system.info.external_url<p>Update: 0</p>|
+|Public Project Count|<p>-</p>|`Dependent item`|harbor.statistics.public_project_count<p>Update: 0</p>|
+|Status of Registryctl|<p>1: healthy 0: unhealthy</p>|`Dependent item`|harbor.status.registryctl<p>Update: 0</p>|
 |Core log watch|<p>Core log monitoring</p>|`Zabbix agent (active)`|log[/var/log/harbor/core.log,"Handle notification with Handler 'AuditLog' on topic (.*)",,,,\1]<p>Update: 20s</p>|
 ## Triggers
 

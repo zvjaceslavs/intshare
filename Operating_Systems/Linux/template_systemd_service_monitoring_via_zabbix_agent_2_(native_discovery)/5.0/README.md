@@ -1,4 +1,4 @@
-# Template Module Linux systemd by Zabbix agent 2
+# Module Linux systemd by Zabbix agent 2
 
 ## Overview
 
@@ -35,5 +35,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Service {#UNIT.NAME} is not running!|<p>Description: {#UNIT.DESCRIPTION} Path: {#UNIT.PATH}</p>|<p>**Expression**: {Template Module Linux systemd by Zabbix agent 2:systemd.unit.info["{#UNIT.NAME}"].last()}<>1</p><p>**Recovery expression**: </p>|warning|
-|Service {#UNIT.NAME} is not running! (LLD)|<p>Description: {#UNIT.DESCRIPTION} Path: {#UNIT.PATH}</p>|<p>**Expression**: {Template Module Linux systemd by Zabbix agent 2:systemd.unit.info["{#UNIT.NAME}"].last()}<>1</p><p>**Recovery expression**: </p>|warning|
+|Service {#UNIT.NAME} is not running!|<p>Description: {#UNIT.DESCRIPTION} Path: {#UNIT.PATH}</p>|<p>**Expression**: {Module Linux systemd by Zabbix agent 2:systemd.unit.info["{#UNIT.NAME}"].last()}<>1</p><p>**Recovery expression**: </p>|warning|
+|Service {#UNIT.NAME} is not running! (LLD)|<p>Description: {#UNIT.DESCRIPTION} Path: {#UNIT.PATH}</p>|<p>**Expression**: {Module Linux systemd by Zabbix agent 2:systemd.unit.info["{#UNIT.NAME}"].last()}<>1</p><p>**Recovery expression**: </p>|warning|

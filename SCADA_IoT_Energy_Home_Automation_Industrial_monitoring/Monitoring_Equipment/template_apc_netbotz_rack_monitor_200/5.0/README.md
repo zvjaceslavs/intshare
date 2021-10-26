@@ -1,4 +1,4 @@
-# Template SNMP APC NetBotz Rack Monitor 200
+# SNMP APC NetBotz Rack Monitor 200
 
 ## Overview
 
@@ -41,21 +41,21 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > 55 RH%|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>55</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} {ITEM.LASTVALUE}  :: Humidity > 60 RH%|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>=60</p><p>**Recovery expression**: </p>|disaster|
-|{#SNMPVALUE} {ITEM.LASTVALUE}  :: Humidiy< 45 RH%|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}<45</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidty < 40 RH%|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}<=40</p><p>**Recovery expression**: </p>|disaster|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature < 15°C|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}<=15</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature < 19°C|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}<=19</p><p>**Recovery expression**: </p>|warning|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 22°C|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=22</p><p>**Recovery expression**: </p>|warning|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 24°C|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=24</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 30°C|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=30</p><p>**Recovery expression**: </p>|disaster|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > 55 RH% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>55</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} {ITEM.LASTVALUE}  :: Humidity > 60 RH% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>=60</p><p>**Recovery expression**: </p>|disaster|
-|{#SNMPVALUE} {ITEM.LASTVALUE}  :: Humidiy< 45 RH% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}<45</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidty < 40 RH% (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}<=40</p><p>**Recovery expression**: </p>|disaster|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature < 15°C (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}<=15</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature < 19°C (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}<=19</p><p>**Recovery expression**: </p>|warning|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 22°C (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=22</p><p>**Recovery expression**: </p>|warning|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 24°C (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=24</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 30°C (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=30</p><p>**Recovery expression**: </p>|disaster|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > 55 RH%|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>55</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} {ITEM.LASTVALUE}  :: Humidity > 60 RH%|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>=60</p><p>**Recovery expression**: </p>|disaster|
+|{#SNMPVALUE} {ITEM.LASTVALUE}  :: Humidiy< 45 RH%|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}<45</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidty < 40 RH%|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}<=40</p><p>**Recovery expression**: </p>|disaster|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature < 15°C|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}<=15</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature < 19°C|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}<=19</p><p>**Recovery expression**: </p>|warning|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 22°C|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=22</p><p>**Recovery expression**: </p>|warning|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 24°C|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=24</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 30°C|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=30</p><p>**Recovery expression**: </p>|disaster|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidity > 55 RH% (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>55</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} {ITEM.LASTVALUE}  :: Humidity > 60 RH% (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}>=60</p><p>**Recovery expression**: </p>|disaster|
+|{#SNMPVALUE} {ITEM.LASTVALUE}  :: Humidiy< 45 RH% (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}<45</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Humidty < 40 RH% (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.hum.["{#SNMPINDEX}"].last()}<=40</p><p>**Recovery expression**: </p>|disaster|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature < 15°C (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}<=15</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature < 19°C (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}<=19</p><p>**Recovery expression**: </p>|warning|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 22°C (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=22</p><p>**Recovery expression**: </p>|warning|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 24°C (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=24</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > 30°C (LLD)|<p>-</p>|<p>**Expression**: {SNMP APC NetBotz Rack Monitor 200:apc.enviro.sensor.int.temp.["{#SNMPINDEX}"].last()}>=30</p><p>**Recovery expression**: </p>|disaster|

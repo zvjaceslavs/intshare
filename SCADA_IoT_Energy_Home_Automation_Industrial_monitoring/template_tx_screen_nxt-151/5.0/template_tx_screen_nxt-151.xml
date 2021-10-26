@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:46Z</date>
+  <date>2021-10-26T04:44:00Z</date>
   <groups>
     <group>
       <name>Engenharia DF</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template-transmissor-screen-nxt-151-general</template>
-      <name>Template Nxt151 General</name>
+      <template>transmissor-screen-nxt-151-general</template>
+      <name>Nxt151 General</name>
       <groups>
         <group>
           <name>Engenharia DF</name>
@@ -1737,7 +1737,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>amplifier.alarm.power.high</key>
           </item>
         </graph_item>
@@ -1752,7 +1752,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu1.current</key>
           </item>
         </graph_item>
@@ -1762,7 +1762,7 @@
           <color>008888</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu2.current</key>
           </item>
         </graph_item>
@@ -1772,7 +1772,7 @@
           <color>AA0000</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu3.current</key>
           </item>
         </graph_item>
@@ -1789,7 +1789,7 @@
           <yaxisside>RIGHT</yaxisside>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.power</key>
           </item>
         </graph_item>
@@ -1806,7 +1806,7 @@
           <yaxisside>RIGHT</yaxisside>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.power.reflected</key>
           </item>
         </graph_item>
@@ -1823,7 +1823,7 @@
           <yaxisside>RIGHT</yaxisside>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.temperature1</key>
           </item>
         </graph_item>
@@ -1837,7 +1837,7 @@
           <color>3333FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.temperature2</key>
           </item>
         </graph_item>
@@ -1852,7 +1852,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu1.temperature</key>
           </item>
         </graph_item>
@@ -1862,7 +1862,7 @@
           <color>F63100</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu2.temperature</key>
           </item>
         </graph_item>
@@ -1872,7 +1872,7 @@
           <color>2774A4</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu3.temperature</key>
           </item>
         </graph_item>
@@ -1888,7 +1888,7 @@
           <color>A54F10</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu1.voltage</key>
           </item>
         </graph_item>
@@ -1898,7 +1898,7 @@
           <color>DDDD00</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu2.voltage</key>
           </item>
         </graph_item>
@@ -1908,7 +1908,7 @@
           <color>008800</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>extamplifier.status.psu3.voltage</key>
           </item>
         </graph_item>
@@ -1923,7 +1923,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template-transmissor-screen-nxt-151-general</host>
+            <host>transmissor-screen-nxt-151-general</host>
             <key>input.status.gbe1.bitrate</key>
           </item>
         </graph_item>

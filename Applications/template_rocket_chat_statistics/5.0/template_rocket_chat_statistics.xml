@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:32Z</date>
+  <date>2021-10-26T04:44:52Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Rocket Chat</template>
-      <name>Template App Rocket Chat</name>
+      <template>App Rocket Chat</template>
+      <name>App Rocket Chat</name>
       <groups>
         <group>
           <name>Templates/Applications</name>
@@ -641,7 +641,7 @@
               <style>1</style>
               <resource>
                 <key>rocketchat-stats[version]</key>
-                <host>Template App Rocket Chat</host>
+                <host>App Rocket Chat</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -663,7 +663,7 @@
               <style>0</style>
               <resource>
                 <key>calc.lastMessage.timeDiff</key>
-                <host>Template App Rocket Chat</host>
+                <host>App Rocket Chat</host>
               </resource>
               <width>900</width>
               <height>100</height>
@@ -685,7 +685,7 @@
               <style>0</style>
               <resource>
                 <name>Rocket Chat OS CPU Load</name>
-                <host>Template App Rocket Chat</host>
+                <host>App Rocket Chat</host>
               </resource>
               <width>900</width>
               <height>300</height>
@@ -707,7 +707,7 @@
               <style>0</style>
               <resource>
                 <name>Rocket Chat OS Memory</name>
-                <host>Template App Rocket Chat</host>
+                <host>App Rocket Chat</host>
               </resource>
               <width>900</width>
               <height>300</height>
@@ -729,7 +729,7 @@
               <style>0</style>
               <resource>
                 <name>Rocket Chat Messages</name>
-                <host>Template App Rocket Chat</host>
+                <host>App Rocket Chat</host>
               </resource>
               <width>900</width>
               <height>300</height>
@@ -751,7 +751,7 @@
               <style>0</style>
               <resource>
                 <name>Rocket Chat Exchanges</name>
-                <host>Template App Rocket Chat</host>
+                <host>App Rocket Chat</host>
               </resource>
               <width>900</width>
               <height>300</height>
@@ -773,7 +773,7 @@
               <style>0</style>
               <resource>
                 <name>Rocket Chat Total Messages</name>
-                <host>Template App Rocket Chat</host>
+                <host>App Rocket Chat</host>
               </resource>
               <width>900</width>
               <height>300</height>
@@ -795,7 +795,7 @@
               <style>0</style>
               <resource>
                 <name>Rocket Chat Users</name>
-                <host>Template App Rocket Chat</host>
+                <host>App Rocket Chat</host>
               </resource>
               <width>900</width>
               <height>300</height>
@@ -827,7 +827,7 @@
           <color>BBBB00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[totalPrivateGroups]</key>
           </item>
         </graph_item>
@@ -836,7 +836,7 @@
           <color>2774A4</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[totalLivechat]</key>
           </item>
         </graph_item>
@@ -845,7 +845,7 @@
           <color>F63100</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[totalChannels]</key>
           </item>
         </graph_item>
@@ -860,7 +860,7 @@
           <color>BBBB00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[totalPrivateGroupMessages]</key>
           </item>
         </graph_item>
@@ -869,7 +869,7 @@
           <color>2774A4</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[totalLivechatMessages]</key>
           </item>
         </graph_item>
@@ -878,7 +878,7 @@
           <color>F63100</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[totalDirectMessages]</key>
           </item>
         </graph_item>
@@ -890,7 +890,7 @@
         <graph_item>
           <color>199C0D</color>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[os.load.1min]</key>
           </item>
         </graph_item>
@@ -898,7 +898,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[os.load.5min]</key>
           </item>
         </graph_item>
@@ -906,7 +906,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[os.load.15min]</key>
           </item>
         </graph_item>
@@ -917,7 +917,7 @@
       <ymin_type_1>FIXED</ymin_type_1>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template App Rocket Chat</host>
+        <host>App Rocket Chat</host>
         <key>rocketchat-stats[os.totalmem]</key>
       </ymax_item_1>
       <graph_items>
@@ -925,7 +925,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>199C0D</color>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[os.freemem]</key>
           </item>
         </graph_item>
@@ -934,7 +934,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[os.totalmem]</key>
           </item>
         </graph_item>
@@ -949,7 +949,7 @@
           <color>1A7C11</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[totalMessages]</key>
           </item>
         </graph_item>
@@ -965,7 +965,7 @@
           <color>303F9F</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[offlineUsers]</key>
           </item>
         </graph_item>
@@ -974,7 +974,7 @@
           <color>FFD54F</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[awayUsers]</key>
           </item>
         </graph_item>
@@ -983,7 +983,7 @@
           <color>66BB6A</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App Rocket Chat</host>
+            <host>App Rocket Chat</host>
             <key>rocketchat-stats[onlineUsers]</key>
           </item>
         </graph_item>

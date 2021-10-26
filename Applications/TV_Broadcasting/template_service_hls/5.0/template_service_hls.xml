@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:41Z</date>
+  <date>2021-10-26T04:43:55Z</date>
   <groups>
     <group>
       <name>Templates Prod</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Service HLS</template>
-      <name>Template Service HLS</name>
+      <template>Service HLS</template>
+      <name>Service HLS</name>
       <groups>
         <group>
           <name>Templates Prod</name>
@@ -241,7 +241,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Service HLS:hls.duration[{#PROFILE}].last()} &lt; {Template Service HLS:hls.target_duration[{#PROFILE}].last()} or {Template Service HLS:hls.duration[{#PROFILE}].last()} > {Template Service HLS:hls.target_duration[{#PROFILE}].last()}</expression>
+              <expression>{Service HLS:hls.duration[{#PROFILE}].last()} &lt; {Service HLS:hls.target_duration[{#PROFILE}].last()} or {Service HLS:hls.duration[{#PROFILE}].last()} > {Service HLS:hls.target_duration[{#PROFILE}].last()}</expression>
               <name>HLS duration is different on target duration in {#PROFILE}</name>
               <status>DISABLED</status>
             </trigger_prototype>

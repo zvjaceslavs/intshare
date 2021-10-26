@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:08Z</date>
+  <date>2021-10-26T04:43:15Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Knot Resolver Statistics</template>
-      <name>Template Knot Resolver Statistics</name>
+      <template>Knot Resolver Statistics</template>
+      <name>Knot Resolver Statistics</name>
       <description>Collects statistic values from Knot Resolver</description>
       <groups>
         <group>
@@ -1606,7 +1606,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.cached]</key>
           </item>
         </graph_item>
@@ -1614,7 +1614,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.nodata]</key>
           </item>
         </graph_item>
@@ -1622,7 +1622,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.noerror]</key>
           </item>
         </graph_item>
@@ -1630,7 +1630,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.nxdomain]</key>
           </item>
         </graph_item>
@@ -1643,7 +1643,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.1ms]</key>
           </item>
         </graph_item>
@@ -1651,7 +1651,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.10ms]</key>
           </item>
         </graph_item>
@@ -1659,7 +1659,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.50ms]</key>
           </item>
         </graph_item>
@@ -1667,7 +1667,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.100ms]</key>
           </item>
         </graph_item>
@@ -1675,7 +1675,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.250ms]</key>
           </item>
         </graph_item>
@@ -1683,7 +1683,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.500ms]</key>
           </item>
         </graph_item>
@@ -1691,7 +1691,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.1000ms]</key>
           </item>
         </graph_item>
@@ -1699,7 +1699,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.1500ms]</key>
           </item>
         </graph_item>
@@ -1712,7 +1712,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.servfail]</key>
           </item>
         </graph_item>
@@ -1725,7 +1725,7 @@
         <graph_item>
           <color>AA0000</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[answer.total]</key>
           </item>
         </graph_item>
@@ -1738,7 +1738,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[predict.epoch]</key>
           </item>
         </graph_item>
@@ -1746,7 +1746,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[predict.learned]</key>
           </item>
         </graph_item>
@@ -1754,7 +1754,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[predict.queue]</key>
           </item>
         </graph_item>
@@ -1767,7 +1767,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[request.internal]</key>
           </item>
         </graph_item>
@@ -1775,7 +1775,7 @@
           <sortorder>1</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[request.udp]</key>
           </item>
         </graph_item>
@@ -1783,7 +1783,7 @@
           <sortorder>2</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[request.tcp]</key>
           </item>
         </graph_item>
@@ -1796,7 +1796,7 @@
         <graph_item>
           <color>388E3C</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[request.total]</key>
           </item>
         </graph_item>
@@ -1810,7 +1810,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[worker.systime]</key>
           </item>
         </graph_item>
@@ -1819,7 +1819,7 @@
           <color>2774A4</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[worker.usertime]</key>
           </item>
         </graph_item>
@@ -1832,7 +1832,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[worker.dropped]</key>
           </item>
         </graph_item>
@@ -1840,7 +1840,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[worker.pagefaults]</key>
           </item>
         </graph_item>
@@ -1848,7 +1848,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[worker.queries]</key>
           </item>
         </graph_item>
@@ -1856,7 +1856,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Knot Resolver Statistics</host>
+            <host>Knot Resolver Statistics</host>
             <key>kresd.stats[worker.timeout]</key>
           </item>
         </graph_item>

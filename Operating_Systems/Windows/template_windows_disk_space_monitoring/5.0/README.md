@@ -1,4 +1,4 @@
-# Template OS Windows Disk Space
+# OS Windows Disk Space
 
 ## Description
 
@@ -63,7 +63,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Free disk space on {HOST.NAME} is less than {$DISK_UTIL_CRIT} on volume {#FSNAME}|<p>-</p>|<p>**Expression**: {Template OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}<200M</p><p>**Recovery expression**: </p>|average|
-|Free disk space on {HOST.NAME} is less than {$DISK_UTIL_WARN} on volume {#FSNAME}|<p>-</p>|<p>**Expression**: {Template OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}<2G</p><p>**Recovery expression**: </p>|warning|
-|Free disk space on {HOST.NAME} is less than {$DISK_UTIL_CRIT} on volume {#FSNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}<200M</p><p>**Recovery expression**: </p>|average|
-|Free disk space on {HOST.NAME} is less than {$DISK_UTIL_WARN} on volume {#FSNAME} (LLD)|<p>-</p>|<p>**Expression**: {Template OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}<2G</p><p>**Recovery expression**: </p>|warning|
+|Free disk space on {HOST.NAME} is less than {$DISK_UTIL_CRIT} on volume {#FSNAME}|<p>-</p>|<p>**Expression**: {OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}<200M</p><p>**Recovery expression**: </p>|average|
+|Free disk space on {HOST.NAME} is less than {$DISK_UTIL_WARN} on volume {#FSNAME}|<p>-</p>|<p>**Expression**: {OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}<2G</p><p>**Recovery expression**: </p>|warning|
+|Free disk space on {HOST.NAME} is less than {$DISK_UTIL_CRIT} on volume {#FSNAME} (LLD)|<p>-</p>|<p>**Expression**: {OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}<200M</p><p>**Recovery expression**: </p>|average|
+|Free disk space on {HOST.NAME} is less than {$DISK_UTIL_WARN} on volume {#FSNAME} (LLD)|<p>-</p>|<p>**Expression**: {OS Windows Disk Space:vfs.fs.size[{#FSNAME},free].last(0)}<2G</p><p>**Recovery expression**: </p>|warning|

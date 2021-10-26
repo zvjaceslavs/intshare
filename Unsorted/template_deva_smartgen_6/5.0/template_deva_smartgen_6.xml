@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:21Z</date>
+  <date>2021-10-26T04:40:13Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template DEVA SmartGen 6</template>
-      <name>Template DEVA SmartGen 6</name>
+      <template>DEVA SmartGen 6</template>
+      <name>DEVA SmartGen 6</name>
       <description>Template for SNMP-enabled RDS coder DEVA SmartGen 6 http://www.devabroadcast.com v1.0: 2017-10-30 Roman Ermakov, r.ermakov@emg.fm</description>
       <groups>
         <group>
@@ -405,7 +405,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template DEVA SmartGen 6</host>
+            <host>DEVA SmartGen 6</host>
             <key>device.Temperature</key>
           </item>
         </graph_item>
@@ -418,7 +418,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FFA500</color>
           <item>
-            <host>Template DEVA SmartGen 6</host>
+            <host>DEVA SmartGen 6</host>
             <key>mntrRDS.RDS.Level</key>
           </item>
         </graph_item>

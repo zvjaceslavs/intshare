@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:00Z</date>
+  <date>2021-10-26T04:37:36Z</date>
   <groups>
     <group>
       <name>BHS PAPERCUT SERVER/PRINTERS</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Sharp Printers</template>
-      <name>Template Sharp Printers</name>
+      <template>Sharp Printers</template>
+      <name>Sharp Printers</name>
       <groups>
         <group>
           <name>BHS PAPERCUT SERVER/PRINTERS</name>
@@ -232,7 +232,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Sharp Printers:sharp.prt.snmp.tray.level.["{#SNMPINDEX}"].last()}=0 and {Template Sharp Printers:sharp.prt.snmp.tray.["{#SNMPINDEX}"].str(Bypass Tray)}=0</expression>
+              <expression>{Sharp Printers:sharp.prt.snmp.tray.level.["{#SNMPINDEX}"].last()}=0 and {Sharp Printers:sharp.prt.snmp.tray.["{#SNMPINDEX}"].str(Bypass Tray)}=0</expression>
               <name>Paper Tray :: {#SNMPVALUE} is Empty</name>
               <status>DISABLED</status>
               <priority>INFO</priority>
@@ -250,7 +250,7 @@
         <graph_item>
           <color>000000</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.black.dev.usage</key>
           </item>
         </graph_item>
@@ -258,7 +258,7 @@
           <sortorder>1</sortorder>
           <color>33FFFF</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.cyan.dev.usage</key>
           </item>
         </graph_item>
@@ -266,7 +266,7 @@
           <sortorder>2</sortorder>
           <color>FF33FF</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.magenta.dev.usage</key>
           </item>
         </graph_item>
@@ -274,7 +274,7 @@
           <sortorder>3</sortorder>
           <color>FFFF33</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.yellow.dev.usage</key>
           </item>
         </graph_item>
@@ -287,7 +287,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>00C800</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.fusing.unit.usage</key>
           </item>
         </graph_item>
@@ -300,7 +300,7 @@
         <graph_item>
           <color>000000</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.black.drum.usage</key>
           </item>
         </graph_item>
@@ -308,7 +308,7 @@
           <sortorder>1</sortorder>
           <color>33FFFF</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.cyan.drum.usage</key>
           </item>
         </graph_item>
@@ -316,7 +316,7 @@
           <sortorder>2</sortorder>
           <color>FF66FF</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.magenta.drum.usage</key>
           </item>
         </graph_item>
@@ -324,7 +324,7 @@
           <sortorder>3</sortorder>
           <color>FFFF66</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.yellow.drum.usage</key>
           </item>
         </graph_item>
@@ -339,7 +339,7 @@
         <graph_item>
           <color>000000</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.black.usage</key>
           </item>
         </graph_item>
@@ -347,7 +347,7 @@
           <sortorder>1</sortorder>
           <color>33FFFF</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.cyan.usage</key>
           </item>
         </graph_item>
@@ -355,7 +355,7 @@
           <sortorder>2</sortorder>
           <color>FF33FF</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.magenta.usage</key>
           </item>
         </graph_item>
@@ -363,7 +363,7 @@
           <sortorder>3</sortorder>
           <color>FFFF33</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.yellow.usage</key>
           </item>
         </graph_item>
@@ -378,7 +378,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>00C800</color>
           <item>
-            <host>Template Sharp Printers</host>
+            <host>Sharp Printers</host>
             <key>sharp.printer.toner.waste.usage</key>
           </item>
         </graph_item>

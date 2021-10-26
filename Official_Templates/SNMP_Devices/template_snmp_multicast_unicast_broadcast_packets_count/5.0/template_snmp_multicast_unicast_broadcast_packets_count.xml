@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:19Z</date>
+  <date>2021-10-26T04:40:11Z</date>
   <groups>
     <group>
       <name>Switches</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Packets</template>
-      <name>Template SNMP Packets</name>
+      <template>SNMP Packets</template>
+      <name>SNMP Packets</name>
       <groups>
         <group>
           <name>Switches</name>
@@ -161,7 +161,7 @@
                 <graph_item>
                   <color>FFFF66</color>
                   <item>
-                    <host>Template SNMP Packets</host>
+                    <host>SNMP Packets</host>
                     <key>ifHCInBroadcastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -169,7 +169,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template SNMP Packets</host>
+                    <host>SNMP Packets</host>
                     <key>ifHCInMulticastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -177,7 +177,7 @@
                   <sortorder>2</sortorder>
                   <color>66FF66</color>
                   <item>
-                    <host>Template SNMP Packets</host>
+                    <host>SNMP Packets</host>
                     <key>ifHCInUcastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -185,7 +185,7 @@
                   <sortorder>3</sortorder>
                   <color>EEEE00</color>
                   <item>
-                    <host>Template SNMP Packets</host>
+                    <host>SNMP Packets</host>
                     <key>ifHCOutBroadcastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -193,7 +193,7 @@
                   <sortorder>4</sortorder>
                   <color>EE0000</color>
                   <item>
-                    <host>Template SNMP Packets</host>
+                    <host>SNMP Packets</host>
                     <key>ifHCOutMulticastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -201,7 +201,7 @@
                   <sortorder>5</sortorder>
                   <color>00EE00</color>
                   <item>
-                    <host>Template SNMP Packets</host>
+                    <host>SNMP Packets</host>
                     <key>ifHCOutUcastPkts.[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:50:59Z</date>
+  <date>2021-10-26T04:37:34Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Cisco ASA Discovery</template>
-      <name>Template Cisco ASA Discovery</name>
+      <template>Cisco ASA Discovery</template>
+      <name>Cisco ASA Discovery</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -210,7 +210,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Cisco ASA Discovery:icmpping.max(180)}=0</expression>
+                  <expression>{Cisco ASA Discovery:icmpping.max(180)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -406,7 +406,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Cisco ASA Discovery:icmpping.max(180)}=0</expression>
+                  <expression>{Cisco ASA Discovery:icmpping.max(180)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -434,7 +434,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} is unavailable by ICMP</name>
-                  <expression>{Template Cisco ASA Discovery:icmpping.max(180)}=0</expression>
+                  <expression>{Cisco ASA Discovery:icmpping.max(180)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -795,7 +795,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Cisco ASA Discovery:ifInErrors[{#SNMPVALUE}].last(0)}>100 or {Template Cisco ASA Discovery:ifOutErrors[{#SNMPVALUE}].last(0)}>100</expression>
+              <expression>{Cisco ASA Discovery:ifInErrors[{#SNMPVALUE}].last(0)}>100 or {Cisco ASA Discovery:ifOutErrors[{#SNMPVALUE}].last(0)}>100</expression>
               <name>Errors on {#SNMPVALUE}</name>
               <priority>WARNING</priority>
               <description>More than 100 in/out errors detected on {#SNMPVALUE}</description>
@@ -812,7 +812,7 @@
                 <graph_item>
                   <color>009900</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifInUcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -820,7 +820,7 @@
                   <sortorder>1</sortorder>
                   <color>AA00AA</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifInBroadcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -828,7 +828,7 @@
                   <sortorder>2</sortorder>
                   <color>000000</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifInMulticastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -836,7 +836,7 @@
                   <sortorder>3</sortorder>
                   <color>880000</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifOutBroadcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -844,7 +844,7 @@
                   <sortorder>4</sortorder>
                   <color>888800</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifOutMulticastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -852,7 +852,7 @@
                   <sortorder>5</sortorder>
                   <color>000099</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifOutUcastPkts[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -867,7 +867,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00AA00</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -876,7 +876,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>3333FF</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -884,7 +884,7 @@
                   <sortorder>2</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifInErrors[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -892,7 +892,7 @@
                   <sortorder>3</sortorder>
                   <color>FFFF33</color>
                   <item>
-                    <host>Template Cisco ASA Discovery</host>
+                    <host>Cisco ASA Discovery</host>
                     <key>ifOutErrors[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -905,13 +905,13 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Cisco ASA Discovery:cfwConnectionStatValueCurrentInUse.last(0)}/{Template Cisco ASA Discovery:cfwConnectionStatValueHigh.last(0)}>0.80</expression>
+      <expression>{Cisco ASA Discovery:cfwConnectionStatValueCurrentInUse.last(0)}/{Cisco ASA Discovery:cfwConnectionStatValueHigh.last(0)}>0.80</expression>
       <name>{HOST.NAME} Connections In Use > 80 %</name>
       <priority>HIGH</priority>
       <description>Connections In Use > 80 %</description>
     </trigger>
     <trigger>
-      <expression>{Template Cisco ASA Discovery:ciscoMemoryPoolFree.min(10)}/{Template Cisco ASA Discovery:ciscoMemoryTotal.last(0)}&lt; 0.05</expression>
+      <expression>{Cisco ASA Discovery:ciscoMemoryPoolFree.min(10)}/{Cisco ASA Discovery:ciscoMemoryTotal.last(0)}&lt; 0.05</expression>
       <name>{HOST.NAME} Memory Free &lt; 5 %</name>
       <priority>AVERAGE</priority>
       <description>Memory Free &lt; 5 %</description>
@@ -927,7 +927,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00EE00</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>crasSVCNumSessions</key>
           </item>
         </graph_item>
@@ -936,7 +936,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>0000EE</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>crasL2LNumSessions</key>
           </item>
         </graph_item>
@@ -944,7 +944,7 @@
           <sortorder>2</sortorder>
           <color>EEEE00</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>crasIPSecNumSessions</key>
           </item>
         </graph_item>
@@ -957,7 +957,7 @@
       <ymin_type_1>FIXED</ymin_type_1>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template Cisco ASA Discovery</host>
+        <host>Cisco ASA Discovery</host>
         <key>cfwConnectionStatValueHigh</key>
       </ymax_item_1>
       <graph_items>
@@ -965,7 +965,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>cfwConnectionStatValueCurrentInUse</key>
           </item>
         </graph_item>
@@ -982,7 +982,7 @@
         <graph_item>
           <color>0000EE</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>cpmCPUTotal5minRev</key>
           </item>
         </graph_item>
@@ -990,7 +990,7 @@
           <sortorder>1</sortorder>
           <color>00EE00</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>cpmCPUTotal1minRev</key>
           </item>
         </graph_item>
@@ -999,7 +999,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>EE0000</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>cpmCPUTotal5secRev</key>
           </item>
         </graph_item>
@@ -1016,7 +1016,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>005500</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>icmppingsec</key>
           </item>
         </graph_item>
@@ -1030,7 +1030,7 @@
       <ymin_type_1>FIXED</ymin_type_1>
       <ymax_type_1>ITEM</ymax_type_1>
       <ymax_item_1>
-        <host>Template Cisco ASA Discovery</host>
+        <host>Cisco ASA Discovery</host>
         <key>ciscoMemoryTotal</key>
       </ymax_item_1>
       <graph_items>
@@ -1038,7 +1038,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>00AA00</color>
           <item>
-            <host>Template Cisco ASA Discovery</host>
+            <host>Cisco ASA Discovery</host>
             <key>ciscoMemoryPoolUsed</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:03Z</date>
+  <date>2021-10-26T04:45:27Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Router OSPF v2</template>
-      <name>Template SNMP Router OSPF v2</name>
+      <template>SNMP Router OSPF v2</template>
+      <name>SNMP Router OSPF v2</name>
       <description>https://share.zabbix.com/network_devices/snmp-router-ospf-v2-1</description>
       <groups>
         <group>
@@ -292,7 +292,7 @@
                   <color>4000FF</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP Router OSPF v2</host>
+                    <host>SNMP Router OSPF v2</host>
                     <key>ospfSpfRuns[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -537,7 +537,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNMP Router OSPF v2:ospfIfBackupDesignatedRouter[{#SNMPINDEX}].str(0.0.0.0)}=1 and {Template SNMP Router OSPF v2:ospfIfDesignatedRouter[{#SNMPINDEX}].str(0.0.0.0)}&lt;>1</expression>
+              <expression>{SNMP Router OSPF v2:ospfIfBackupDesignatedRouter[{#SNMPINDEX}].str(0.0.0.0)}=1 and {SNMP Router OSPF v2:ospfIfDesignatedRouter[{#SNMPINDEX}].str(0.0.0.0)}&lt;>1</expression>
               <name>OSPF interface {#SNMPINDEX} Backup Designated Router is down</name>
               <priority>AVERAGE</priority>
               <description>DR exists, but not BackupDR — misconfiguration or OSPF link is down</description>
@@ -558,7 +558,7 @@
                   <color>D84315</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP Router OSPF v2</host>
+                    <host>SNMP Router OSPF v2</host>
                     <key>ospfIfEvents[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -744,7 +744,7 @@
           <color>1A7C11</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template SNMP Router OSPF v2</host>
+            <host>SNMP Router OSPF v2</host>
             <key>ospfRxNewLsasPerSecond</key>
           </item>
         </graph_item>
@@ -754,7 +754,7 @@
           <color>0040FF</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template SNMP Router OSPF v2</host>
+            <host>SNMP Router OSPF v2</host>
             <key>ospfOriginateNewLsasPerSecond</key>
           </item>
         </graph_item>

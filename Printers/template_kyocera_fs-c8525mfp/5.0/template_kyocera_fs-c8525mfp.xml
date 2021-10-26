@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:28Z</date>
+  <date>2021-10-26T04:38:09Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Kyocera FS-C8525MFP</template>
-      <name>Template_Kyocera FS-C8525MFP</name>
+      <template>Kyocera FS-C8525MFP</template>
+      <name>Kyocera FS-C8525MFP</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -270,7 +270,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template_Kyocera FS-C8525MFP</host>
+            <host>Kyocera FS-C8525MFP</host>
             <key>black.level</key>
           </item>
         </graph_item>
@@ -279,7 +279,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template_Kyocera FS-C8525MFP</host>
+            <host>Kyocera FS-C8525MFP</host>
             <key>cyan.level</key>
           </item>
         </graph_item>
@@ -288,7 +288,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>C800C8</color>
           <item>
-            <host>Template_Kyocera FS-C8525MFP</host>
+            <host>Kyocera FS-C8525MFP</host>
             <key>magenta.level</key>
           </item>
         </graph_item>
@@ -297,7 +297,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>EEEE00</color>
           <item>
-            <host>Template_Kyocera FS-C8525MFP</host>
+            <host>Kyocera FS-C8525MFP</host>
             <key>yellow.level</key>
           </item>
         </graph_item>
@@ -312,7 +312,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template_Kyocera FS-C8525MFP</host>
+            <host>Kyocera FS-C8525MFP</host>
             <key>black.percentage</key>
           </item>
         </graph_item>
@@ -321,7 +321,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>3333FF</color>
           <item>
-            <host>Template_Kyocera FS-C8525MFP</host>
+            <host>Kyocera FS-C8525MFP</host>
             <key>cyan.percentage</key>
           </item>
         </graph_item>
@@ -330,7 +330,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>C800C8</color>
           <item>
-            <host>Template_Kyocera FS-C8525MFP</host>
+            <host>Kyocera FS-C8525MFP</host>
             <key>magenta.percentage</key>
           </item>
         </graph_item>
@@ -339,7 +339,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>EEEE00</color>
           <item>
-            <host>Template_Kyocera FS-C8525MFP</host>
+            <host>Kyocera FS-C8525MFP</host>
             <key>yellow.percentage</key>
           </item>
         </graph_item>

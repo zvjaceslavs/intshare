@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:00Z</date>
+  <date>2021-10-26T04:45:23Z</date>
   <groups>
     <group>
       <name>Templates/Custom</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Housekeeping Metrics</template>
-      <name>Template Housekeeping Metrics</name>
+      <template>Housekeeping Metrics</template>
+      <name>Housekeeping Metrics</name>
       <description>Language: English Autor: Bernardo Lankheet Blog: www.bernardolankheet.com.br Repositorio: https://github.com/bernardolankheet/Zabbix-Monitor-Housekeeper</description>
       <groups>
         <group>
@@ -264,7 +264,7 @@
           <yaxisside>RIGHT</yaxisside>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Housekeeping Metrics</host>
+            <host>Housekeeping Metrics</host>
             <key>dep.housekeeper.duration</key>
           </item>
         </graph_item>
@@ -279,7 +279,7 @@
           <color>F63100</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Housekeeping Metrics</host>
+            <host>Housekeeping Metrics</host>
             <key>dep.housekeeper.alarms</key>
           </item>
         </graph_item>
@@ -289,7 +289,7 @@
           <color>2774A4</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Housekeeping Metrics</host>
+            <host>Housekeeping Metrics</host>
             <key>dep.housekeeper.audit</key>
           </item>
         </graph_item>
@@ -299,7 +299,7 @@
           <color>A54F10</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Housekeeping Metrics</host>
+            <host>Housekeeping Metrics</host>
             <key>dep.housekeeper.events</key>
           </item>
         </graph_item>
@@ -309,7 +309,7 @@
           <color>5A5A5A</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Housekeeping Metrics</host>
+            <host>Housekeeping Metrics</host>
             <key>dep.housekeeper.histtrends</key>
           </item>
         </graph_item>
@@ -319,7 +319,7 @@
           <color>4DB6AC</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Housekeeping Metrics</host>
+            <host>Housekeeping Metrics</host>
             <key>dep.housekeeper.itemstriggers</key>
           </item>
         </graph_item>
@@ -329,7 +329,7 @@
           <color>AC8C14</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Housekeeping Metrics</host>
+            <host>Housekeeping Metrics</host>
             <key>dep.housekeeper.problems</key>
           </item>
         </graph_item>
@@ -339,7 +339,7 @@
           <color>611F27</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Housekeeping Metrics</host>
+            <host>Housekeeping Metrics</host>
             <key>dep.housekeeper.sessions</key>
           </item>
         </graph_item>

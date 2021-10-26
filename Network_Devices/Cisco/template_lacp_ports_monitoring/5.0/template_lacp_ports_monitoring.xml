@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:58:28Z</date>
+  <date>2021-10-26T04:45:58Z</date>
   <groups>
     <group>
       <name>Templates_Cisco</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Cisco_LAG</template>
-      <name>Template_Cisco_LAG</name>
+      <template>Cisco_LAG</template>
+      <name>Cisco_LAG</name>
       <groups>
         <group>
           <name>Templates_Cisco</name>
@@ -106,7 +106,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template_Cisco_LAG:if.in.errors.[{#SNMPINDEX}].change()}>1 or {Template_Cisco_LAG:if.out.errors.[{#SNMPINDEX}].change()}>1</expression>
+              <expression>{Cisco_LAG:if.in.errors.[{#SNMPINDEX}].change()}>1 or {Cisco_LAG:if.out.errors.[{#SNMPINDEX}].change()}>1</expression>
               <name>{HOST.NAME} {#IFNAME} Errors increased</name>
               <priority>WARNING</priority>
               <description>Pay attention on line quality</description>
@@ -121,7 +121,7 @@
                   <color>F63100</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_Cisco_LAG</host>
+                    <host>Cisco_LAG</host>
                     <key>if.in.errors.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -130,7 +130,7 @@
                   <color>6C59DC</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_Cisco_LAG</host>
+                    <host>Cisco_LAG</host>
                     <key>if.out.errors.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -199,7 +199,7 @@
                   <color>199C0D</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_Cisco_LAG</host>
+                    <host>Cisco_LAG</host>
                     <key>if.po[{#POINDEX}.in]</key>
                   </item>
                 </graph_item>
@@ -208,7 +208,7 @@
                   <color>4000FF</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_Cisco_LAG</host>
+                    <host>Cisco_LAG</host>
                     <key>if.po[{#POINDEX}.out]</key>
                   </item>
                 </graph_item>

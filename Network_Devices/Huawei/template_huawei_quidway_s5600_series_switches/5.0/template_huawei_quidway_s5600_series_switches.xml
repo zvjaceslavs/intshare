@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:16Z</date>
+  <date>2021-10-26T04:43:25Z</date>
   <groups>
     <group>
       <name>Network</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Huawei Quidway S5600 series switches</template>
-      <name>Template Huawei Quidway s5600 series switches</name>
+      <template>Huawei Quidway S5600 series switches</template>
+      <name>Huawei Quidway s5600 series switches</name>
       <groups>
         <group>
           <name>Network</name>
@@ -2790,7 +2790,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227625</key>
           </item>
         </graph_item>
@@ -2798,7 +2798,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227625</key>
           </item>
         </graph_item>
@@ -2811,7 +2811,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227633</key>
           </item>
         </graph_item>
@@ -2819,7 +2819,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227633</key>
           </item>
         </graph_item>
@@ -2832,7 +2832,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227641</key>
           </item>
         </graph_item>
@@ -2840,7 +2840,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227641</key>
           </item>
         </graph_item>
@@ -2853,7 +2853,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227649</key>
           </item>
         </graph_item>
@@ -2861,7 +2861,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227649</key>
           </item>
         </graph_item>
@@ -2874,7 +2874,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227657</key>
           </item>
         </graph_item>
@@ -2882,7 +2882,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227657</key>
           </item>
         </graph_item>
@@ -2895,7 +2895,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227665</key>
           </item>
         </graph_item>
@@ -2903,7 +2903,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227665</key>
           </item>
         </graph_item>
@@ -2916,7 +2916,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227673</key>
           </item>
         </graph_item>
@@ -2924,7 +2924,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227673</key>
           </item>
         </graph_item>
@@ -2937,7 +2937,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227681</key>
           </item>
         </graph_item>
@@ -2945,7 +2945,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227681</key>
           </item>
         </graph_item>
@@ -2958,7 +2958,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227689</key>
           </item>
         </graph_item>
@@ -2966,7 +2966,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227689</key>
           </item>
         </graph_item>
@@ -2979,7 +2979,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227697</key>
           </item>
         </graph_item>
@@ -2987,7 +2987,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227697</key>
           </item>
         </graph_item>
@@ -3000,7 +3000,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227705</key>
           </item>
         </graph_item>
@@ -3008,7 +3008,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227705</key>
           </item>
         </graph_item>
@@ -3021,7 +3021,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227713</key>
           </item>
         </graph_item>
@@ -3029,7 +3029,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227713</key>
           </item>
         </graph_item>
@@ -3042,7 +3042,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227721</key>
           </item>
         </graph_item>
@@ -3050,7 +3050,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227721</key>
           </item>
         </graph_item>
@@ -3063,7 +3063,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227729</key>
           </item>
         </graph_item>
@@ -3071,7 +3071,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227729</key>
           </item>
         </graph_item>
@@ -3084,7 +3084,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227737</key>
           </item>
         </graph_item>
@@ -3092,7 +3092,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227737</key>
           </item>
         </graph_item>
@@ -3105,7 +3105,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227745</key>
           </item>
         </graph_item>
@@ -3113,7 +3113,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227745</key>
           </item>
         </graph_item>
@@ -3126,7 +3126,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227753</key>
           </item>
         </graph_item>
@@ -3134,7 +3134,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227753</key>
           </item>
         </graph_item>
@@ -3147,7 +3147,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227761</key>
           </item>
         </graph_item>
@@ -3155,7 +3155,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227761</key>
           </item>
         </graph_item>
@@ -3168,7 +3168,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227769</key>
           </item>
         </graph_item>
@@ -3176,7 +3176,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227769</key>
           </item>
         </graph_item>
@@ -3189,7 +3189,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227769</key>
           </item>
         </graph_item>
@@ -3197,7 +3197,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227769</key>
           </item>
         </graph_item>
@@ -3210,7 +3210,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227787</key>
           </item>
         </graph_item>
@@ -3218,7 +3218,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227787</key>
           </item>
         </graph_item>
@@ -3231,7 +3231,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227793</key>
           </item>
         </graph_item>
@@ -3239,7 +3239,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227793</key>
           </item>
         </graph_item>
@@ -3252,7 +3252,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227801</key>
           </item>
         </graph_item>
@@ -3260,7 +3260,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227801</key>
           </item>
         </graph_item>
@@ -3273,7 +3273,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227809</key>
           </item>
         </graph_item>
@@ -3281,7 +3281,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227809</key>
           </item>
         </graph_item>
@@ -3294,7 +3294,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227817</key>
           </item>
         </graph_item>
@@ -3302,7 +3302,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227817</key>
           </item>
         </graph_item>
@@ -3315,7 +3315,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227825</key>
           </item>
         </graph_item>
@@ -3323,7 +3323,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227825</key>
           </item>
         </graph_item>
@@ -3336,7 +3336,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227825</key>
           </item>
         </graph_item>
@@ -3344,7 +3344,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227841</key>
           </item>
         </graph_item>
@@ -3357,7 +3357,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifOutOctets.4227841</key>
           </item>
         </graph_item>
@@ -3365,7 +3365,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Huawei Quidway S5600 series switches</host>
+            <host>Huawei Quidway S5600 series switches</host>
             <key>ifInOctets.4227841</key>
           </item>
         </graph_item>

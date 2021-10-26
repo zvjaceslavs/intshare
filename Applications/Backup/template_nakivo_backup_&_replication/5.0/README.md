@@ -1,4 +1,4 @@
-# Template Nakivo
+# Nakivo
 
 ## Overview
 
@@ -33,5 +33,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Job[{#NAME}] failed|<p>-</p>|<p>**Expression**: {Template Nakivo:nakivo.pl[*UNKNOWN*,"--job-info", "{#ID}","3"].iregexp(^successful$)}=0</p><p>**Recovery expression**: </p>|warning|
-|Job[{#NAME}] failed (LLD)|<p>-</p>|<p>**Expression**: {Template Nakivo:nakivo.pl[*UNKNOWN*,"--job-info", "{#ID}","3"].iregexp(^successful$)}=0</p><p>**Recovery expression**: </p>|warning|
+|Job[{#NAME}] failed|<p>-</p>|<p>**Expression**: {Nakivo:nakivo.pl[*UNKNOWN*,"--job-info", "{#ID}","3"].iregexp(^successful$)}=0</p><p>**Recovery expression**: </p>|warning|
+|Job[{#NAME}] failed (LLD)|<p>-</p>|<p>**Expression**: {Nakivo:nakivo.pl[*UNKNOWN*,"--job-info", "{#ID}","3"].iregexp(^successful$)}=0</p><p>**Recovery expression**: </p>|warning|

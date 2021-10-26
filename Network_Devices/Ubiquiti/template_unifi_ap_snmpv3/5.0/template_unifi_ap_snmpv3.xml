@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:01Z</date>
+  <date>2021-10-26T04:44:18Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template UBQT UNIFI SNMP V3 HN</template>
-      <name>Template UBQT UNIFI SNMP V3 HN</name>
+      <template>UBQT UNIFI SNMP V3 HN</template>
+      <name>UBQT UNIFI SNMP V3 HN</name>
       <description>This template retrieve SNMP data from Unifi AP devices. MIBS requiriments: FROGFOOT-RESOURCES-MIB IANAifType-MIB IF-MIB SNMP-FRAMEWORK-MIB SNMPv2-CONF SNMPv2-MIB SNMPv2-SMI SNMPv2-TC UBNT-MIB UBNT-UniFi-MIB Author: Helmut Leonhardt based on Alex Moura</description>
       <groups>
         <group>
@@ -572,7 +572,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template UBQT UNIFI SNMP V3 HN</host>
+                    <host>UBQT UNIFI SNMP V3 HN</host>
                     <key>unifiVapNumStations[{#UNIFIVAPESSID},{#UNIVAPRADIO}]</key>
                   </item>
                 </graph_item>
@@ -608,7 +608,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template UBQT UNIFI SNMP V3 HN</host>
+            <host>UBQT UNIFI SNMP V3 HN</host>
             <key>unifiRadioCuTotal.1</key>
           </item>
         </graph_item>
@@ -616,7 +616,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template UBQT UNIFI SNMP V3 HN</host>
+            <host>UBQT UNIFI SNMP V3 HN</host>
             <key>unifiRadioCuTotal.2</key>
           </item>
         </graph_item>
@@ -629,7 +629,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template UBQT UNIFI SNMP V3 HN</host>
+            <host>UBQT UNIFI SNMP V3 HN</host>
             <key>IaLoad.1</key>
           </item>
         </graph_item>
@@ -637,7 +637,7 @@
           <sortorder>1</sortorder>
           <color>000099</color>
           <item>
-            <host>Template UBQT UNIFI SNMP V3 HN</host>
+            <host>UBQT UNIFI SNMP V3 HN</host>
             <key>IaLoad.2</key>
           </item>
         </graph_item>
@@ -645,7 +645,7 @@
           <sortorder>2</sortorder>
           <color>990000</color>
           <item>
-            <host>Template UBQT UNIFI SNMP V3 HN</host>
+            <host>UBQT UNIFI SNMP V3 HN</host>
             <key>IaLoad.3</key>
           </item>
         </graph_item>
@@ -659,7 +659,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template UBQT UNIFI SNMP V3 HN</host>
+            <host>UBQT UNIFI SNMP V3 HN</host>
             <key>cpuLoad.0</key>
           </item>
         </graph_item>
@@ -674,7 +674,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template UBQT UNIFI SNMP V3 HN</host>
+            <host>UBQT UNIFI SNMP V3 HN</host>
             <key>unifiIfRxBytes.1</key>
           </item>
         </graph_item>
@@ -682,7 +682,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template UBQT UNIFI SNMP V3 HN</host>
+            <host>UBQT UNIFI SNMP V3 HN</host>
             <key>unifiIfTxBytes.1</key>
           </item>
         </graph_item>

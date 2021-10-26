@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:31Z</date>
+  <date>2021-10-26T04:44:51Z</date>
   <groups>
     <group>
       <name>Templates/Storage</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template HPE 3PAR SMI-S for shareZabbix</template>
-      <name>Template HPE 3PAR SMI-S for shareZabbix</name>
+      <template>HPE 3PAR SMI-S for shareZabbix</template>
+      <name>HPE 3PAR SMI-S for shareZabbix</name>
       <groups>
         <group>
           <name>Templates/Storage</name>
@@ -284,7 +284,7 @@
                   <dependencies>
                     <dependency>
                       <name>{HOST.NAME} -> DiskDrive "{#ELEMENT_NAME}" health status is "{ITEM.VALUE}"</name>
-                      <expression>{Template HPE 3PAR SMI-S for shareZabbix:health.DiskDrive.[{#ELEMENT_NAME}].count(#3,5,ne)}>2</expression>
+                      <expression>{HPE 3PAR SMI-S for shareZabbix:health.DiskDrive.[{#ELEMENT_NAME}].count(#3,5,ne)}>2</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>

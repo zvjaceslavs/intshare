@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:58Z</date>
+  <date>2021-10-26T04:44:14Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Varnish by Zabbix agent</template>
-      <name>Template App Varnish by Zabbix agent</name>
+      <template>App Varnish by Zabbix agent</template>
+      <name>App Varnish by Zabbix agent</name>
       <description>Simple template for the Varnish cache using results from the varnishstat command. Ensure that "EnableRemoteCommands=1" is set in the host's agent config file.</description>
       <groups>
         <group>
@@ -46,11 +46,11 @@
               <dependencies>
                 <dependency>
                   <name>Varnish: Process is not running</name>
-                  <expression>{Template App Varnish by Zabbix agent:proc.num["{$VARNISH.PROCESS_NAME}"].last()}=0</expression>
+                  <expression>{App Varnish by Zabbix agent:proc.num["{$VARNISH.PROCESS_NAME}"].last()}=0</expression>
                 </dependency>
                 <dependency>
                   <name>Varnish: Service is down</name>
-                  <expression>{Template App Varnish by Zabbix agent:net.tcp.service[http,"{$VARNISH.STATUS.HOST}","{$VARNISH.STATUS.PORT}"].last()}=0</expression>
+                  <expression>{App Varnish by Zabbix agent:net.tcp.service[http,"{$VARNISH.STATUS.HOST}","{$VARNISH.STATUS.PORT}"].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -74,7 +74,7 @@
               <dependencies>
                 <dependency>
                   <name>Varnish: Process is not running</name>
-                  <expression>{Template App Varnish by Zabbix agent:proc.num["{$VARNISH.PROCESS_NAME}"].last()}=0</expression>
+                  <expression>{App Varnish by Zabbix agent:proc.num["{$VARNISH.PROCESS_NAME}"].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -155,11 +155,11 @@
               <dependencies>
                 <dependency>
                   <name>Varnish: Process is not running</name>
-                  <expression>{Template App Varnish by Zabbix agent:proc.num["{$VARNISH.PROCESS_NAME}"].last()}=0</expression>
+                  <expression>{App Varnish by Zabbix agent:proc.num["{$VARNISH.PROCESS_NAME}"].last()}=0</expression>
                 </dependency>
                 <dependency>
                   <name>Varnish: Service is down</name>
-                  <expression>{Template App Varnish by Zabbix agent:net.tcp.service[http,"{$VARNISH.STATUS.HOST}","{$VARNISH.STATUS.PORT}"].last()}=0</expression>
+                  <expression>{App Varnish by Zabbix agent:net.tcp.service[http,"{$VARNISH.STATUS.HOST}","{$VARNISH.STATUS.PORT}"].last()}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -698,7 +698,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Varnish by Zabbix agent</host>
+            <host>App Varnish by Zabbix agent</host>
             <key>varnish.hitrate</key>
           </item>
         </graph_item>
@@ -706,7 +706,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Varnish by Zabbix agent</host>
+            <host>App Varnish by Zabbix agent</host>
             <key>varnish.hitrate5m</key>
           </item>
         </graph_item>
@@ -718,7 +718,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Varnish by Zabbix agent</host>
+            <host>App Varnish by Zabbix agent</host>
             <key>varnish.requests.rate</key>
           </item>
         </graph_item>

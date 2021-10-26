@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:02Z</date>
+  <date>2021-10-26T04:37:38Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Time Drift OS Linux</template>
-      <name>Template Time Drift OS Linux</name>
+      <template>Time Drift OS Linux</template>
+      <name>Time Drift OS Linux</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -63,8 +63,8 @@
       </macros>
     </template>
     <template>
-      <template>Template Time Offset OS Linux</template>
-      <name>Template Time Offset OS Linux</name>
+      <template>Time Offset OS Linux</template>
+      <name>Time Offset OS Linux</name>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:59Z</date>
+  <date>2021-10-26T04:44:15Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -12,116 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module ICMP Ping</template>
-      <name>Template Module ICMP Ping</name>
-      <description>Template Module ICMP Ping version: 0.12</description>
-      <groups>
-        <group>
-          <name>Templates/Modules</name>
-        </group>
-      </groups>
-      <applications>
-        <application>
-          <name>Status</name>
-        </application>
-      </applications>
-      <items>
-        <item>
-          <name>ICMP ping</name>
-          <type>SIMPLE</type>
-          <key>icmpping</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <valuemap>
-            <name>Service state</name>
-          </valuemap>
-          <triggers>
-            <trigger>
-              <expression>{max(#3)}=0</expression>
-              <name>Unavailable by ICMP ping</name>
-              <priority>HIGH</priority>
-              <description>Last value: {ITEM.LASTVALUE1}. Last three attempts returned timeout. Please check device connectivity.</description>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>ICMP loss</name>
-          <type>SIMPLE</type>
-          <key>icmppingloss</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(5m)}>{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
-              <name>High ICMP ping loss</name>
-              <priority>WARNING</priority>
-              <dependencies>
-                <dependency>
-                  <name>Unavailable by ICMP ping</name>
-                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
-                </dependency>
-              </dependencies>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>ICMP response time</name>
-          <type>SIMPLE</type>
-          <key>icmppingsec</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>s</units>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(5m)}>{$ICMP_RESPONSE_TIME_WARN}</expression>
-              <name>High ICMP ping response time</name>
-              <priority>WARNING</priority>
-              <dependencies>
-                <dependency>
-                  <name>High ICMP ping loss</name>
-                  <expression>{Template Module ICMP Ping:icmppingloss.min(5m)}>{$ICMP_LOSS_WARN} and {Template Module ICMP Ping:icmppingloss.min(5m)}&lt;100</expression>
-                </dependency>
-                <dependency>
-                  <name>Unavailable by ICMP ping</name>
-                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
-                </dependency>
-              </dependencies>
-            </trigger>
-          </triggers>
-        </item>
-      </items>
-      <macros>
-        <macro>
-          <macro>{$ICMP_LOSS_WARN}</macro>
-          <value>20</value>
-        </macro>
-        <macro>
-          <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
-          <value>0.15</value>
-        </macro>
-      </macros>
-    </template>
-    <template>
-      <template>Template Net Digisol DG-GS1526E SNMPv2</template>
-      <name>Template Net Digisol DG-GS1526E SNMPv2</name>
+      <template>Net Digisol DG-GS1526E SNMPv2</template>
+      <name>Net Digisol DG-GS1526E SNMPv2</name>
       <description>Template Net Digisol DG-GS1526E SNMPv2 Tested on Zabbix 4.4 with DG-GS1526E running 1.0.1.4 software Created by full clone of Template Net Digisol DG-GS4524 SNMPv2 then: . Templates .. Unlink and clear: Template Module Generic SNMPv2 .. Link: Template Module ICMP Ping . Macros: copied {$SNMP.TIMEOUT} from "Template Module Generic SNMPv2" . Applications: added "General" and "Status" . Items deleted .. Hardware version . Items added .. SNMP traps (fallback): copy from "Template Module Generic SNMPv2" .. System contact details: copy from "Template Module Generic SNMPv2" .. System description: copy from "Template Module Generic SNMPv2" .. System location: copy from "Template Module Generic SNMPv2" .. System name: copy from "Template Module Generic SNMPv2" .. System object ID: copy from "Template Module Generic SNMPv2" .. Uptime: copy from "Template Module Generic SNMPv2" .. System serial number: Delete</description>
       <templates>
         <template>
@@ -310,7 +202,7 @@
               <dependencies>
                 <dependency>
                   <name>No SNMP data collection</name>
-                  <expression>{Template Net Digisol DG-GS1526E SNMPv2:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
+                  <expression>{Net Digisol DG-GS1526E SNMPv2:zabbix[host,snmp,available].max({$SNMP.TIMEOUT})}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -339,7 +231,7 @@
               <dependencies>
                 <dependency>
                   <name>Unavailable by ICMP ping</name>
-                  <expression>{Template Net Digisol DG-GS1526E SNMPv2:icmpping.max(#3)}=0</expression>
+                  <expression>{Net Digisol DG-GS1526E SNMPv2:icmpping.max(#3)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -616,27 +508,27 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].change()}&lt;0 and {Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()}>0 and ( {Template Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {Template Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {Template Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {Template Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {Template Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {Template Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({Template Net Digisol DG-GS1526E SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2)</expression>
+              <expression>{Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].change()}&lt;0 and {Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()}>0 and ( {Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=6 or {Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=7 or {Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=11 or {Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=62 or {Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=69 or {Net Digisol DG-GS1526E SNMPv2:net.if.type[ifType.{#SNMPINDEX}].last()}=117 ) and ({Net Digisol DG-GS1526E SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}&lt;>2)</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>({Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].change()}>0 and {Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].prev()}>0) or ({Template Net Digisol DG-GS1526E SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</recovery_expression>
+              <recovery_expression>({Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].change()}>0 and {Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].prev()}>0) or ({Net Digisol DG-GS1526E SNMPv2:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2)</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before</name>
               <opdata>Current reported speed: {ITEM.LASTVALUE1}</opdata>
               <priority>INFO</priority>
               <description>This Ethernet connection has transitioned down from its known maximum speed. This might be a sign of autonegotiation issues. Ack to close.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template Net Digisol DG-GS1526E SNMPv2:net.if.in[ifInOctets.{#SNMPINDEX}].avg(15m)}>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*{Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()} or {Template Net Digisol DG-GS1526E SNMPv2:net.if.out[ifOutOctets.{#SNMPINDEX}].avg(15m)}>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*{Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()}) and {Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()}>0</expression>
+              <expression>({Net Digisol DG-GS1526E SNMPv2:net.if.in[ifInOctets.{#SNMPINDEX}].avg(15m)}>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*{Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()} or {Net Digisol DG-GS1526E SNMPv2:net.if.out[ifOutOctets.{#SNMPINDEX}].avg(15m)}>({$IF.UTIL.MAX:"{#IFNAME}"}/100)*{Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()}) and {Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()}>0</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Net Digisol DG-GS1526E SNMPv2:net.if.in[ifInOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*{Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()} and {Template Net Digisol DG-GS1526E SNMPv2:net.if.out[ifOutOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*{Template Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()}</recovery_expression>
+              <recovery_expression>{Net Digisol DG-GS1526E SNMPv2:net.if.in[ifInOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*{Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()} and {Net Digisol DG-GS1526E SNMPv2:net.if.out[ifOutOctets.{#SNMPINDEX}].avg(15m)}&lt;(({$IF.UTIL.MAX:"{#IFNAME}"}-3)/100)*{Net Digisol DG-GS1526E SNMPv2:net.if.speed[ifSpeed.{#SNMPINDEX}].last()}</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): High bandwidth usage ( > {$IF.UTIL.MAX:"{#IFNAME}"}% )</name>
               <opdata>In: {ITEM.LASTVALUE1}, out: {ITEM.LASTVALUE3}, speed: {ITEM.LASTVALUE2}</opdata>
               <priority>WARNING</priority>
               <description>The network interface utilization is close to its estimated maximum bandwidth.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Net Digisol DG-GS1526E SNMPv2:net.if.in.errors[ifInErrors.{#SNMPINDEX}].min(5m)}>{$IF.ERRORS.WARN:"{#IFNAME}"} or {Template Net Digisol DG-GS1526E SNMPv2:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].min(5m)}>{$IF.ERRORS.WARN:"{#IFNAME}"}</expression>
+              <expression>{Net Digisol DG-GS1526E SNMPv2:net.if.in.errors[ifInErrors.{#SNMPINDEX}].min(5m)}>{$IF.ERRORS.WARN:"{#IFNAME}"} or {Net Digisol DG-GS1526E SNMPv2:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].min(5m)}>{$IF.ERRORS.WARN:"{#IFNAME}"}</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Net Digisol DG-GS1526E SNMPv2:net.if.in.errors[ifInErrors.{#SNMPINDEX}].max(5m)}&lt;{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8 and {Template Net Digisol DG-GS1526E SNMPv2:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].max(5m)}&lt;{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8</recovery_expression>
+              <recovery_expression>{Net Digisol DG-GS1526E SNMPv2:net.if.in.errors[ifInErrors.{#SNMPINDEX}].max(5m)}&lt;{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8 and {Net Digisol DG-GS1526E SNMPv2:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].max(5m)}&lt;{$IF.ERRORS.WARN:"{#IFNAME}"}*0.8</recovery_expression>
               <name>Interface {#IFNAME}({#IFALIAS}): High error rate ( > {$IF.ERRORS.WARN:"{#IFNAME}"} for 5m)</name>
               <opdata>errors in: {ITEM.LASTVALUE1}, errors out: {ITEM.LASTVALUE2}</opdata>
               <priority>WARNING</priority>
@@ -651,7 +543,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Net Digisol DG-GS1526E SNMPv2</host>
+                    <host>Net Digisol DG-GS1526E SNMPv2</host>
                     <key>net.if.in[ifInOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -660,7 +552,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>2774A4</color>
                   <item>
-                    <host>Template Net Digisol DG-GS1526E SNMPv2</host>
+                    <host>Net Digisol DG-GS1526E SNMPv2</host>
                     <key>net.if.out[ifOutOctets.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -669,7 +561,7 @@
                   <color>F63100</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Net Digisol DG-GS1526E SNMPv2</host>
+                    <host>Net Digisol DG-GS1526E SNMPv2</host>
                     <key>net.if.out.errors[ifOutErrors.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -678,7 +570,7 @@
                   <color>A54F10</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Net Digisol DG-GS1526E SNMPv2</host>
+                    <host>Net Digisol DG-GS1526E SNMPv2</host>
                     <key>net.if.in.errors[ifInErrors.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -687,7 +579,7 @@
                   <color>FC6EA3</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Net Digisol DG-GS1526E SNMPv2</host>
+                    <host>Net Digisol DG-GS1526E SNMPv2</host>
                     <key>net.if.out.discards[ifOutDiscards.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -696,7 +588,7 @@
                   <color>6C59DC</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template Net Digisol DG-GS1526E SNMPv2</host>
+                    <host>Net Digisol DG-GS1526E SNMPv2</host>
                     <key>net.if.in.discards[ifInDiscards.{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -821,6 +713,114 @@
           <vsize>1</vsize>
         </screen>
       </screens>
+    </template>
+    <template>
+      <template>Template Module ICMP Ping</template>
+      <name>Template Module ICMP Ping</name>
+      <description>Template Module ICMP Ping version: 0.12</description>
+      <groups>
+        <group>
+          <name>Templates/Modules</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Status</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>ICMP ping</name>
+          <type>SIMPLE</type>
+          <key>icmpping</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>Service state</name>
+          </valuemap>
+          <triggers>
+            <trigger>
+              <expression>{max(#3)}=0</expression>
+              <name>Unavailable by ICMP ping</name>
+              <priority>HIGH</priority>
+              <description>Last value: {ITEM.LASTVALUE1}. Last three attempts returned timeout. Please check device connectivity.</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>ICMP loss</name>
+          <type>SIMPLE</type>
+          <key>icmppingloss</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(5m)}>{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
+              <name>High ICMP ping loss</name>
+              <priority>WARNING</priority>
+              <dependencies>
+                <dependency>
+                  <name>Unavailable by ICMP ping</name>
+                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>ICMP response time</name>
+          <type>SIMPLE</type>
+          <key>icmppingsec</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>s</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(5m)}>{$ICMP_RESPONSE_TIME_WARN}</expression>
+              <name>High ICMP ping response time</name>
+              <priority>WARNING</priority>
+              <dependencies>
+                <dependency>
+                  <name>High ICMP ping loss</name>
+                  <expression>{Template Module ICMP Ping:icmppingloss.min(5m)}>{$ICMP_LOSS_WARN} and {Template Module ICMP Ping:icmppingloss.min(5m)}&lt;100</expression>
+                </dependency>
+                <dependency>
+                  <name>Unavailable by ICMP ping</name>
+                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+      <macros>
+        <macro>
+          <macro>{$ICMP_LOSS_WARN}</macro>
+          <value>20</value>
+        </macro>
+        <macro>
+          <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
+          <value>0.15</value>
+        </macro>
+      </macros>
     </template>
   </templates>
   <value_maps>

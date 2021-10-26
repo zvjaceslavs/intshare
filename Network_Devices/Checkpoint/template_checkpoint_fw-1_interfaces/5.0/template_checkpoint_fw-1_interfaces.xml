@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:29Z</date>
+  <date>2021-10-26T04:38:10Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template CheckPoint FW-1 Interfaces</template>
-      <name>Template CheckPoint FW-1 Interfaces</name>
+      <template>CheckPoint FW-1 Interfaces</template>
+      <name>CheckPoint FW-1 Interfaces</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -190,7 +190,7 @@
                   <color>00AA00</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template CheckPoint FW-1 Interfaces</host>
+                    <host>CheckPoint FW-1 Interfaces</host>
                     <key>fwAcceptBytesIn["{#ADVSNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -200,7 +200,7 @@
                   <color>9999FF</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template CheckPoint FW-1 Interfaces</host>
+                    <host>CheckPoint FW-1 Interfaces</host>
                     <key>fwAcceptBytesOut["{#ADVSNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -209,7 +209,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>00AAAA</color>
                   <item>
-                    <host>Template CheckPoint FW-1 Interfaces</host>
+                    <host>CheckPoint FW-1 Interfaces</host>
                     <key>fwAcceptPcktsIn["{#ADVSNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -217,7 +217,7 @@
                   <sortorder>3</sortorder>
                   <color>C8C800</color>
                   <item>
-                    <host>Template CheckPoint FW-1 Interfaces</host>
+                    <host>CheckPoint FW-1 Interfaces</host>
                     <key>fwAcceptPcktsOut["{#ADVSNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -226,7 +226,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>CC0000</color>
                   <item>
-                    <host>Template CheckPoint FW-1 Interfaces</host>
+                    <host>CheckPoint FW-1 Interfaces</host>
                     <key>fwDropPcktsIn["{#ADVSNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -234,7 +234,7 @@
                   <sortorder>5</sortorder>
                   <color>C8C8C8</color>
                   <item>
-                    <host>Template CheckPoint FW-1 Interfaces</host>
+                    <host>CheckPoint FW-1 Interfaces</host>
                     <key>fwDropPcktsOut["{#ADVSNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -243,7 +243,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>666666</color>
                   <item>
-                    <host>Template CheckPoint FW-1 Interfaces</host>
+                    <host>CheckPoint FW-1 Interfaces</host>
                     <key>fwRejectPcktsIn["{#ADVSNMPVALUE}"]</key>
                   </item>
                 </graph_item>
@@ -251,7 +251,7 @@
                   <sortorder>7</sortorder>
                   <color>960000</color>
                   <item>
-                    <host>Template CheckPoint FW-1 Interfaces</host>
+                    <host>CheckPoint FW-1 Interfaces</host>
                     <key>fwRejectPcktsOut["{#ADVSNMPVALUE}"]</key>
                   </item>
                 </graph_item>

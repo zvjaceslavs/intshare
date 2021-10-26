@@ -1,4 +1,4 @@
-# Template Nateks FG-ACE-CON-VF
+# Nateks FG-ACE-CON-VF
 
 ## Overview
 
@@ -53,5 +53,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|RadioChannel [{#CHANNUM}] Status is not connected|<p>-</p>|<p>**Expression**: {Template Nateks FG-ACE-CON-VF:ChanStatus[{#CHANNUM}].last(#5)}<>4</p><p>**Recovery expression**: </p>|warning|
-|RadioChannel [{#CHANNUM}] Status is not connected (LLD)|<p>-</p>|<p>**Expression**: {Template Nateks FG-ACE-CON-VF:ChanStatus[{#CHANNUM}].last(#5)}<>4</p><p>**Recovery expression**: </p>|warning|
+|RadioChannel [{#CHANNUM}] Status is not connected|<p>-</p>|<p>**Expression**: {Nateks FG-ACE-CON-VF:ChanStatus[{#CHANNUM}].last(#5)}<>4</p><p>**Recovery expression**: </p>|warning|
+|RadioChannel [{#CHANNUM}] Status is not connected (LLD)|<p>-</p>|<p>**Expression**: {Nateks FG-ACE-CON-VF:ChanStatus[{#CHANNUM}].last(#5)}<>4</p><p>**Recovery expression**: </p>|warning|

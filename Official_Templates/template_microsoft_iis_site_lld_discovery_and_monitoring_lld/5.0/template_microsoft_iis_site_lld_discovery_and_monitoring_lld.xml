@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:42Z</date>
+  <date>2021-10-26T04:43:57Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App IIS LLD Sites Monitoring</template>
-      <name>Template App IIS LLD Sites Monitoring</name>
+      <template>App IIS LLD Sites Monitoring</template>
+      <name>App IIS LLD Sites Monitoring</name>
       <groups>
         <group>
           <name>Templates/Applications</name>

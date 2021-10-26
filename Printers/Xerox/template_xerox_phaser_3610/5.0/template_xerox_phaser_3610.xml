@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:35Z</date>
+  <date>2021-10-26T04:40:29Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer Xerox Phaser 3610</template>
-      <name>Template Printer Xerox Phaser 3610</name>
+      <template>Printer Xerox Phaser 3610</template>
+      <name>Printer Xerox Phaser 3610</name>
       <groups>
         <group>
           <name>Printers</name>
@@ -165,7 +165,7 @@
               <style>0</style>
               <resource>
                 <key>black.cartridge.type</key>
-                <host>Template Printer Xerox Phaser 3610</host>
+                <host>Printer Xerox Phaser 3610</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -187,7 +187,7 @@
               <style>0</style>
               <resource>
                 <name>Black toner level</name>
-                <host>Template Printer Xerox Phaser 3610</host>
+                <host>Printer Xerox Phaser 3610</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -211,18 +211,18 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer Xerox Phaser 3610:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox Phaser 3610:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:model.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:printer.location.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox Phaser 3610:black.cartridge.toner.last(0)}=0 and {Printer Xerox Phaser 3610:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox Phaser 3610:model.nodata(3w)}=0 and {Printer Xerox Phaser 3610:printer.location.nodata(3w)}=0 and {Printer Xerox Phaser 3610:serial.number.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox Phaser 3610:black.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox Phaser 3610:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:model.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:printer.location.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:serial.number.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox Phaser 3610:black.cartridge.toner.last(0)}&lt;20 and {Printer Xerox Phaser 3610:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox Phaser 3610:model.nodata(3w)}=0 and {Printer Xerox Phaser 3610:printer.location.nodata(3w)}=0 and {Printer Xerox Phaser 3610:serial.number.nodata(3w)}=0</expression>
       <name>Low cartridge toner - black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - black</name>
-          <expression>{Template Printer Xerox Phaser 3610:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox Phaser 3610:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:model.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:printer.location.nodata(3w)}=0 and {Template Printer Xerox Phaser 3610:serial.number.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox Phaser 3610:black.cartridge.toner.last(0)}=0 and {Printer Xerox Phaser 3610:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox Phaser 3610:model.nodata(3w)}=0 and {Printer Xerox Phaser 3610:printer.location.nodata(3w)}=0 and {Printer Xerox Phaser 3610:serial.number.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
@@ -238,7 +238,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer Xerox Phaser 3610</host>
+            <host>Printer Xerox Phaser 3610</host>
             <key>black.cartridge.toner</key>
           </item>
         </graph_item>

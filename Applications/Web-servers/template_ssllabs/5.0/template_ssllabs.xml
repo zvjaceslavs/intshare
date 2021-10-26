@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:01Z</date>
+  <date>2021-10-26T04:42:01Z</date>
   <groups>
     <group>
       <name>Templates/Upwork</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SSLLabs</template>
-      <name>Template SSLLabs</name>
+      <template>SSLLabs</template>
+      <name>SSLLabs</name>
       <description>SSL certificate monitoring via SSLLabs open API</description>
       <groups>
         <group>

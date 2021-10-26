@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:38Z</date>
+  <date>2021-10-26T04:41:38Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template-SNMP-iDRAC-9</template>
-      <name>Template-SNMP-iDRAC-9</name>
+      <template>SNMP-iDRAC-9</template>
+      <name>SNMP-iDRAC-9</name>
       <description>Lucas Afonso Kremer https://www.linkedin.com/in/lucasafonsokremer</description>
       <groups>
         <group>
@@ -198,7 +198,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME}: RAID Controller Error</name>
-                  <expression>({Template-SNMP-iDRAC-9:RAIDControllerStatus.last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+                  <expression>({SNMP-iDRAC-9:RAIDControllerStatus.last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -585,7 +585,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:DiskStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:DiskStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Problem with Disk {#SNMPINDEX}</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
@@ -633,7 +633,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:FanStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:FanStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Problem with FAN {#SNMPVALUE}</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -645,7 +645,7 @@
                 <graph_item>
                   <color>C80000</color>
                   <item>
-                    <host>Template-SNMP-iDRAC-9</host>
+                    <host>SNMP-iDRAC-9</host>
                     <key>FanSpeed.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -756,7 +756,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:MemStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:MemStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Problem with memory in slot {#SNMPVALUE}</name>
               <priority>HIGH</priority>
             </trigger_prototype>
@@ -848,7 +848,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:NetStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:NetStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Error on NIC {#SNMPINDEX}</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
@@ -953,12 +953,12 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:PowerSupplySensorState.[{#SNMPINDEX}].last(0)}&lt;>1) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:PowerSupplySensorState.[{#SNMPINDEX}].last(0)}&lt;>1) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Error on PSU {#SNMPINDEX} State</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:PowerSupplyStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:PowerSupplyStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Problem with PSU {#SNMPINDEX}</name>
               <priority>HIGH</priority>
             </trigger_prototype>
@@ -991,7 +991,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:ProcStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:ProcStatus.[{#SNMPINDEX}].last(0)}&lt;>2) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:ProcStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({SNMP-iDRAC-9:ProcStatus.[{#SNMPINDEX}].last(0)}&lt;>2) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Error on Processor {#SNMPINDEX}</name>
               <priority>DISASTER</priority>
               <manual_close>YES</manual_close>
@@ -1141,25 +1141,25 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} >= {Template-SNMP-iDRAC-9:TempCritUpLimit.[{#SNMPINDEX}].last()}</expression>
+              <expression>{SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} >= {SNMP-iDRAC-9:TempCritUpLimit.[{#SNMPINDEX}].last()}</expression>
               <name>Temperature on {#SNMPVALUE} critically high</name>
               <priority>HIGH</priority>
               <description>Temperature of the item is above Critical Level.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} &lt;= {Template-SNMP-iDRAC-9:TempCritLowLimit.[{#SNMPINDEX}].last()}</expression>
+              <expression>{SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} &lt;= {SNMP-iDRAC-9:TempCritLowLimit.[{#SNMPINDEX}].last()}</expression>
               <name>Temperature on {#SNMPVALUE} critically low</name>
               <priority>HIGH</priority>
               <description>Temperature of the item is below Critical Level.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} > {Template-SNMP-iDRAC-9:TempWarnUpLimit.[{#SNMPINDEX}].last()} and {Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} &lt; {Template-SNMP-iDRAC-9:TempCritUpLimit.[{#SNMPINDEX}].last()}</expression>
+              <expression>{SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} > {SNMP-iDRAC-9:TempWarnUpLimit.[{#SNMPINDEX}].last()} and {SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} &lt; {SNMP-iDRAC-9:TempCritUpLimit.[{#SNMPINDEX}].last()}</expression>
               <name>Temperature on {#SNMPVALUE} to high</name>
               <priority>WARNING</priority>
               <description>Temperature of the item is above Warning Level.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} &lt; {Template-SNMP-iDRAC-9:TempWarnLowLimit.[{#SNMPINDEX}].last()} and {Template-SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} > {Template-SNMP-iDRAC-9:TempCritLowLimit.[{#SNMPINDEX}].last()}</expression>
+              <expression>{SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} &lt; {SNMP-iDRAC-9:TempWarnLowLimit.[{#SNMPINDEX}].last()} and {SNMP-iDRAC-9:TempValue.[{#SNMPINDEX}].last()} > {SNMP-iDRAC-9:TempCritLowLimit.[{#SNMPINDEX}].last()}</expression>
               <name>Temperature on {#SNMPVALUE} to low</name>
               <priority>WARNING</priority>
               <description>Temperature of the item is below Warning Level.</description>
@@ -1173,7 +1173,7 @@
                   <color>C80000</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template-SNMP-iDRAC-9</host>
+                    <host>SNMP-iDRAC-9</host>
                     <key>TempValue.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1208,7 +1208,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:VoltageStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:VoltageStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Error on Voltage Sensor {#SNMPVALUE}</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -1306,12 +1306,12 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:VolumeDiskState.[{#SNMPINDEX}].last(0)}&lt;>2) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:VolumeDiskState.[{#SNMPINDEX}].last(0)}&lt;>2) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Volume {#SNMPINDEX} Error</name>
               <priority>HIGH</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>({Template-SNMP-iDRAC-9:VolumeStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+              <expression>({SNMP-iDRAC-9:VolumeStatus.[{#SNMPINDEX}].last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
               <name>{HOST.NAME}: Volume {#SNMPINDEX} Status Error</name>
               <priority>HIGH</priority>
             </trigger_prototype>
@@ -1322,19 +1322,19 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>({Template-SNMP-iDRAC-9:RAIDControllerStatus.last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+      <expression>({SNMP-iDRAC-9:RAIDControllerStatus.last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
       <name>{HOST.NAME}: RAID Controller Error</name>
       <priority>HIGH</priority>
       <manual_close>YES</manual_close>
     </trigger>
     <trigger>
-      <expression>({Template-SNMP-iDRAC-9:GlobalSystemStorageStatus.last(0)}>4) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+      <expression>({SNMP-iDRAC-9:GlobalSystemStorageStatus.last(0)}>4) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
       <name>{HOST.NAME}: Storage System Status Error</name>
       <priority>DISASTER</priority>
       <manual_close>YES</manual_close>
     </trigger>
     <trigger>
-      <expression>({Template-SNMP-iDRAC-9:VoltageStatusCombined.last(0)}&lt;>3) and ({Template-SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
+      <expression>({SNMP-iDRAC-9:VoltageStatusCombined.last(0)}&lt;>3) and ({SNMP-iDRAC-9:SystemPowerState.last(0)}=4)</expression>
       <name>{HOST.NAME}: Voltage Status Error</name>
       <priority>HIGH</priority>
       <manual_close>YES</manual_close>

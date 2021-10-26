@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:55Z</date>
+  <date>2021-10-26T04:43:01Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Oracle DB</template>
-      <name>Template Oracle DB</name>
+      <template>Oracle DB</template>
+      <name>Oracle DB</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -66,7 +66,7 @@
               <dependencies>
                 <dependency>
                   <name>DB - DG massive archive gap detected => {ITEM.VALUE1}</name>
-                  <expression>{Template Oracle DB:db.odbc.select[archive log gap,{$DSN}].last()}>=10</expression>
+                  <expression>{Oracle DB:db.odbc.select[archive log gap,{$DSN}].last()}>=10</expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -615,8 +615,8 @@
               <dependencies>
                 <dependency>
                   <name>Database Read Bps is high => {ITEM.VALUE1}</name>
-                  <expression>{Template Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(10m)} / ({Template Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_READ_BPS}) >=2</expression>
-                  <recovery_expression>{Template Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(#2)} / ({Template Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_READ_BPS}) &lt;2</recovery_expression>
+                  <expression>{Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(10m)} / ({Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_READ_BPS}) >=2</expression>
+                  <recovery_expression>{Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(#2)} / ({Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_READ_BPS}) &lt;2</recovery_expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -648,8 +648,8 @@
               <dependencies>
                 <dependency>
                   <name>Database Read Bps is very high => {ITEM.VALUE1}</name>
-                  <expression>{Template Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(5m)} / ({Template Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_READ_BPS}) >=2.25</expression>
-                  <recovery_expression>{Template Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].last()} / ({Template Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_READ_BPS}) &lt;2.25</recovery_expression>
+                  <expression>{Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(5m)} / ({Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_READ_BPS}) >=2.25</expression>
+                  <recovery_expression>{Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].last()} / ({Oracle DB:db.odbc.select[Physical Read Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_READ_BPS}) &lt;2.25</recovery_expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -798,8 +798,8 @@
               <dependencies>
                 <dependency>
                   <name>Database Write Bps is high => {ITEM.VALUE1}</name>
-                  <expression>{Template Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(10m)} / ({Template Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_WRITE_BPS}) >=2</expression>
-                  <recovery_expression>{Template Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(#2)} / ({Template Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_WRITE_BPS}) &lt;2</recovery_expression>
+                  <expression>{Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(10m)} / ({Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_WRITE_BPS}) >=2</expression>
+                  <recovery_expression>{Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(#2)} / ({Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_WRITE_BPS}) &lt;2</recovery_expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -831,8 +831,8 @@
               <dependencies>
                 <dependency>
                   <name>Database Write Bps is very high => {ITEM.VALUE1}</name>
-                  <expression>{Template Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(5m)} / ({Template Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_WRITE_BPS}) >=2.25</expression>
-                  <recovery_expression>{Template Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].last()} / ({Template Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_WRITE_BPS}) &lt;2.25</recovery_expression>
+                  <expression>{Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(5m)} / ({Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_WRITE_BPS}) >=2.25</expression>
+                  <recovery_expression>{Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].last()} / ({Oracle DB:db.odbc.select[Physical Write Bytes Per Sec,{$DSN}].avg(1w)} + {$MIN_WRITE_BPS}) &lt;2.25</recovery_expression>
                 </dependency>
               </dependencies>
               <tags>
@@ -1150,7 +1150,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Oracle DB:db.odbc.select[Host CPU Utilization,{$DSN}].last()}>=60 and {Template Oracle DB:db.odbc.select[session {#SID} CPU time,{$DSN}].last()}>=0.7</expression>
+              <expression>{Oracle DB:db.odbc.select[Host CPU Utilization,{$DSN}].last()}>=60 and {Oracle DB:db.odbc.select[session {#SID} CPU time,{$DSN}].last()}>=0.7</expression>
               <name>Session {#SID} is devouring CPU!</name>
               <priority>HIGH</priority>
               <tags>
@@ -1173,12 +1173,12 @@
               </tags>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Oracle DB:db.odbc.select[Host CPU Utilization,{$DSN}].last()}>=60 and {Template Oracle DB:db.odbc.select[session {#SID} CPU time,{$DSN}].last()}>=0.6</expression>
+              <expression>{Oracle DB:db.odbc.select[Host CPU Utilization,{$DSN}].last()}>=60 and {Oracle DB:db.odbc.select[session {#SID} CPU time,{$DSN}].last()}>=0.6</expression>
               <name>Session {#SID} is eating CPU!</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Oracle DB:db.odbc.select[Host CPU Utilization,{$DSN}].last()}>=50 and {Template Oracle DB:db.odbc.select[session {#SID} CPU time,{$DSN}].last()}>=0.5</expression>
+              <expression>{Oracle DB:db.odbc.select[Host CPU Utilization,{$DSN}].last()}>=50 and {Oracle DB:db.odbc.select[session {#SID} CPU time,{$DSN}].last()}>=0.5</expression>
               <name>Session {#SID} is hogging CPU!</name>
               <priority>WARNING</priority>
             </trigger_prototype>
@@ -1373,7 +1373,7 @@
                   <dependencies>
                     <dependency>
                       <name>ASM disk {#DISK_NAME} zero free space</name>
-                      <expression>{Template Oracle DB:oracle.db.disk.pct_free[{#DISK_NAME}].last()} &lt;=0.01</expression>
+                      <expression>{Oracle DB:oracle.db.disk.pct_free[{#DISK_NAME}].last()} &lt;=0.01</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -1406,7 +1406,7 @@
                   <dependencies>
                     <dependency>
                       <name>ASM disk {#DISK_NAME} very low free space => {ITEM.VALUE1}</name>
-                      <expression>{Template Oracle DB:oracle.db.disk.pct_free[{#DISK_NAME}].last()} * {$ASM_USAGE_THRESHOLD} &lt;=10</expression>
+                      <expression>{Oracle DB:oracle.db.disk.pct_free[{#DISK_NAME}].last()} * {$ASM_USAGE_THRESHOLD} &lt;=10</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -1439,7 +1439,7 @@
                   <dependencies>
                     <dependency>
                       <name>ASM disk {#DISK_NAME} extremely low free space => {ITEM.VALUE1}</name>
-                      <expression>{Template Oracle DB:oracle.db.disk.pct_free[{#DISK_NAME}].last()} * {$ASM_USAGE_THRESHOLD} &lt;=5</expression>
+                      <expression>{Oracle DB:oracle.db.disk.pct_free[{#DISK_NAME}].last()} * {$ASM_USAGE_THRESHOLD} &lt;=5</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -1568,7 +1568,7 @@
                   <dependencies>
                     <dependency>
                       <name>FRA is full => {ITEM.VALUE1}</name>
-                      <expression>{Template Oracle DB:db.oracle.fra.pct_used[{#NAME}].last()}=100</expression>
+                      <expression>{Oracle DB:db.oracle.fra.pct_used[{#NAME}].last()}=100</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -1620,7 +1620,7 @@
                   <dependencies>
                     <dependency>
                       <name>FRA space usage is very high => {ITEM.VALUE1}</name>
-                      <expression>{Template Oracle DB:db.oracle.fra.pct_used[{#NAME}].last()} * {$FRA_USAGE_THRESHOLD} >=90</expression>
+                      <expression>{Oracle DB:db.oracle.fra.pct_used[{#NAME}].last()} * {$FRA_USAGE_THRESHOLD} >=90</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -1649,7 +1649,7 @@
                   <dependencies>
                     <dependency>
                       <name>FRA is almost full => {ITEM.VALUE1}</name>
-                      <expression>{Template Oracle DB:db.oracle.fra.pct_used[{#NAME}].last()} * {$FRA_USAGE_THRESHOLD} >= 95</expression>
+                      <expression>{Oracle DB:db.oracle.fra.pct_used[{#NAME}].last()} * {$FRA_USAGE_THRESHOLD} >= 95</expression>
                     </dependency>
                   </dependencies>
                   <tags>
@@ -1869,40 +1869,40 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 95 * {$TB_USAGE_THRESHOLD} and {Template Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
+              <expression>{Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 95 * {$TB_USAGE_THRESHOLD} and {Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
               <name>Tablespace {#TABLESPACE_NAME} almost full => {ITEM.VALUE1}</name>
               <priority>HIGH</priority>
               <dependencies>
                 <dependency>
                   <name>Tablespace {#TABLESPACE_NAME} full => {ITEM.VALUE1}</name>
-                  <expression>{Template Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()}=100 and {Template Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
+                  <expression>{Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()}=100 and {Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()}=100 and {Template Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
+              <expression>{Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()}=100 and {Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
               <name>Tablespace {#TABLESPACE_NAME} full => {ITEM.VALUE1}</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 85 * {$TB_USAGE_THRESHOLD} and {Template Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
+              <expression>{Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 85 * {$TB_USAGE_THRESHOLD} and {Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
               <name>Tablespace {#TABLESPACE_NAME} space usage is high => {ITEM.VALUE1}</name>
               <priority>WARNING</priority>
               <dependencies>
                 <dependency>
                   <name>Tablespace {#TABLESPACE_NAME} space usage is very high => {ITEM.VALUE1}</name>
-                  <expression>{Template Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 90 * {$TB_USAGE_THRESHOLD} and {Template Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
+                  <expression>{Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 90 * {$TB_USAGE_THRESHOLD} and {Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 90 * {$TB_USAGE_THRESHOLD} and {Template Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
+              <expression>{Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 90 * {$TB_USAGE_THRESHOLD} and {Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
               <name>Tablespace {#TABLESPACE_NAME} space usage is very high => {ITEM.VALUE1}</name>
               <priority>AVERAGE</priority>
               <dependencies>
                 <dependency>
                   <name>Tablespace {#TABLESPACE_NAME} almost full => {ITEM.VALUE1}</name>
-                  <expression>{Template Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 95 * {$TB_USAGE_THRESHOLD} and {Template Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
+                  <expression>{Oracle DB:db.oracle.tablespace.pct_used[{#TABLESPACE_NAME}].last()} >= 95 * {$TB_USAGE_THRESHOLD} and {Oracle DB:db.oracle.tablespace.contents[{#TABLESPACE_NAME}].last()}=1</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
@@ -2236,7 +2236,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Template Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.95</expression>
+      <expression>{Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.95</expression>
       <name>Database extreme session count => {ITEM.VALUE1}</name>
       <priority>DISASTER</priority>
       <manual_close>YES</manual_close>
@@ -2260,14 +2260,14 @@
       </tags>
     </trigger>
     <trigger>
-      <expression>{Template Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Template Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.6</expression>
+      <expression>{Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.6</expression>
       <name>Database high session count</name>
       <priority>WARNING</priority>
       <manual_close>YES</manual_close>
       <dependencies>
         <dependency>
           <name>Database very high session count => {ITEM.VALUE1}</name>
-          <expression>{Template Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Template Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.8</expression>
+          <expression>{Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.8</expression>
         </dependency>
       </dependencies>
       <tags>
@@ -2290,14 +2290,14 @@
       </tags>
     </trigger>
     <trigger>
-      <expression>{Template Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Template Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.8</expression>
+      <expression>{Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.8</expression>
       <name>Database very high session count => {ITEM.VALUE1}</name>
       <priority>HIGH</priority>
       <manual_close>YES</manual_close>
       <dependencies>
         <dependency>
           <name>Database extreme session count => {ITEM.VALUE1}</name>
-          <expression>{Template Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Template Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.95</expression>
+          <expression>{Oracle DB:db.odbc.select[db session count,{$DSN}].last()}>={Oracle DB:db.odbc.select[max number of sessions,{$DSN}].last()} * 0.95</expression>
         </dependency>
       </dependencies>
       <tags>

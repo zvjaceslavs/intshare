@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:33Z</date>
+  <date>2021-10-26T04:42:38Z</date>
   <groups>
     <group>
       <name>Qtech</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Qtech_Sensors</template>
-      <name>Template_Qtech_Sensors</name>
+      <template>Qtech_Sensors</template>
+      <name>Qtech_Sensors</name>
       <groups>
         <group>
           <name>Qtech</name>
@@ -129,7 +129,7 @@
                 <graph_item>
                   <color>2196F3</color>
                   <item>
-                    <host>Template_Qtech_Sensors</host>
+                    <host>Qtech_Sensors</host>
                     <key>ddmsensorbias[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -137,7 +137,7 @@
                   <sortorder>1</sortorder>
                   <color>EF9A9A</color>
                   <item>
-                    <host>Template_Qtech_Sensors</host>
+                    <host>Qtech_Sensors</host>
                     <key>ddmsensorrxpower[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -145,7 +145,7 @@
                   <sortorder>2</sortorder>
                   <color>B71C1C</color>
                   <item>
-                    <host>Template_Qtech_Sensors</host>
+                    <host>Qtech_Sensors</host>
                     <key>ddmsensortemp[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -153,7 +153,7 @@
                   <sortorder>3</sortorder>
                   <color>90CAF9</color>
                   <item>
-                    <host>Template_Qtech_Sensors</host>
+                    <host>Qtech_Sensors</host>
                     <key>ddmsensortxpower[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -161,7 +161,7 @@
                   <sortorder>4</sortorder>
                   <color>00FF00</color>
                   <item>
-                    <host>Template_Qtech_Sensors</host>
+                    <host>Qtech_Sensors</host>
                     <key>ddmsensorvoltage[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>

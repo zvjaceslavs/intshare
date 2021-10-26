@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:57Z</date>
+  <date>2021-10-26T04:41:56Z</date>
   <groups>
     <group>
       <name>Templates/Databases</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Postgres ODBC</template>
-      <name>Template Postgres ODBC</name>
+      <template>Postgres ODBC</template>
+      <name>Postgres ODBC</name>
       <groups>
         <group>
           <name>Templates/Databases</name>

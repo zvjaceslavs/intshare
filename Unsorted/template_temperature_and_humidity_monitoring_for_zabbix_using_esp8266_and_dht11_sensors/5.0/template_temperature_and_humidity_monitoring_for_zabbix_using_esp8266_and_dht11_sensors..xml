@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:46Z</date>
+  <date>2021-10-26T04:45:08Z</date>
   <groups>
     <group>
       <name>Environment</name>
@@ -120,8 +120,8 @@
       </macros>
     </template>
     <template>
-      <template>Template_ZBX-ESP-ENV</template>
-      <name>Template_ZBX-ESP-ENV</name>
+      <template>ZBX-ESP-ENV</template>
+      <name>ZBX-ESP-ENV</name>
       <description>Temperature and humidity monitoring for Zabbix using ESP8266 and DHT11 sensors.</description>
       <templates>
         <template>
@@ -223,7 +223,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template_ZBX-ESP-ENV</host>
+                    <host>ZBX-ESP-ENV</host>
                     <key>sensor.humidity[{#INDEX}]</key>
                   </item>
                 </graph_item>
@@ -235,7 +235,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template_ZBX-ESP-ENV</host>
+                    <host>ZBX-ESP-ENV</host>
                     <key>sensor.temperature[{#INDEX}]</key>
                   </item>
                 </graph_item>

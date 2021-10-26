@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:29Z</date>
+  <date>2021-10-26T04:38:09Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template CheckPoint FW-1</template>
-      <name>Template CheckPoint FW-1</name>
+      <template>CheckPoint FW-1</template>
+      <name>CheckPoint FW-1</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -260,7 +260,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>CC0000</color>
                   <item>
-                    <host>Template CheckPoint FW-1</host>
+                    <host>CheckPoint FW-1</host>
                     <key>multiProcSystemTime[{#ADVSNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -269,7 +269,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>0000C8</color>
                   <item>
-                    <host>Template CheckPoint FW-1</host>
+                    <host>CheckPoint FW-1</host>
                     <key>multiProcUserTime[{#ADVSNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -278,7 +278,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>00C800</color>
                   <item>
-                    <host>Template CheckPoint FW-1</host>
+                    <host>CheckPoint FW-1</host>
                     <key>multiProcIdleTime[{#ADVSNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -291,12 +291,12 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template CheckPoint FW-1:haWorkMode.diff(0)}=1 or {Template CheckPoint FW-1:haState.diff(0)}=1</expression>
+      <expression>{CheckPoint FW-1:haWorkMode.diff(0)}=1 or {CheckPoint FW-1:haState.diff(0)}=1</expression>
       <name>{HOSTNAME} HA State Change</name>
       <priority>AVERAGE</priority>
     </trigger>
     <trigger>
-      <expression>{Template CheckPoint FW-1:memActiveReal.last(0)} / {Template CheckPoint FW-1:memTotalReal.last(0)} > 0.8</expression>
+      <expression>{CheckPoint FW-1:memActiveReal.last(0)} / {CheckPoint FW-1:memTotalReal.last(0)} > 0.8</expression>
       <name>{HOSTNAME} Low memory</name>
       <priority>HIGH</priority>
     </trigger>
@@ -309,7 +309,7 @@
         <graph_item>
           <color>00EE00</color>
           <item>
-            <host>Template CheckPoint FW-1</host>
+            <host>CheckPoint FW-1</host>
             <key>memFreeReal</key>
           </item>
         </graph_item>
@@ -317,7 +317,7 @@
           <sortorder>1</sortorder>
           <color>CC0000</color>
           <item>
-            <host>Template CheckPoint FW-1</host>
+            <host>CheckPoint FW-1</host>
             <key>memActiveReal</key>
           </item>
         </graph_item>
@@ -330,7 +330,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>0000CC</color>
           <item>
-            <host>Template CheckPoint FW-1</host>
+            <host>CheckPoint FW-1</host>
             <key>fwNumConn</key>
           </item>
         </graph_item>

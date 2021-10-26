@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:13Z</date>
+  <date>2021-10-26T04:41:08Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Reillo UPS</template>
-      <name>Template SNMP Reillo UPS</name>
+      <template>SNMP Reillo UPS</template>
+      <name>SNMP Reillo UPS</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -780,7 +780,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP Reillo UPS</host>
+            <host>SNMP Reillo UPS</host>
             <key>upsBatteryStatus</key>
           </item>
         </graph_item>
@@ -793,7 +793,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP Reillo UPS</host>
+            <host>SNMP Reillo UPS</host>
             <key>upsBatteryTemperature</key>
           </item>
         </graph_item>

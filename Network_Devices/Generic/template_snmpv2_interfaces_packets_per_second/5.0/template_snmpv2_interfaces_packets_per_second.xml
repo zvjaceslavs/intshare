@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:30Z</date>
+  <date>2021-10-26T04:43:42Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMPv2 Interfaces packets per second</template>
-      <name>Template SNMPv2 Interfaces packets per second</name>
+      <template>SNMPv2 Interfaces packets per second</template>
+      <name>SNMPv2 Interfaces packets per second</name>
       <description>Template adds items for measuring switchport unicast, broadcast and multicast packets per second.</description>
       <groups>
         <group>
@@ -211,7 +211,7 @@
                 <graph_item>
                   <color>199C0D</color>
                   <item>
-                    <host>Template SNMPv2 Interfaces packets per second</host>
+                    <host>SNMPv2 Interfaces packets per second</host>
                     <key>ifHCInUcastPkts[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -219,7 +219,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template SNMPv2 Interfaces packets per second</host>
+                    <host>SNMPv2 Interfaces packets per second</host>
                     <key>ifHCInMulticastPkts[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -227,7 +227,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template SNMPv2 Interfaces packets per second</host>
+                    <host>SNMPv2 Interfaces packets per second</host>
                     <key>ifHCInBroadcastPkts[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -242,7 +242,7 @@
                 <graph_item>
                   <color>F7941D</color>
                   <item>
-                    <host>Template SNMPv2 Interfaces packets per second</host>
+                    <host>SNMPv2 Interfaces packets per second</host>
                     <key>ifHCOutUcastPkts[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -250,7 +250,7 @@
                   <sortorder>1</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>Template SNMPv2 Interfaces packets per second</host>
+                    <host>SNMPv2 Interfaces packets per second</host>
                     <key>ifHCOutMulticastPkts[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -258,7 +258,7 @@
                   <sortorder>2</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>Template SNMPv2 Interfaces packets per second</host>
+                    <host>SNMPv2 Interfaces packets per second</host>
                     <key>ifHCOutBroadcastPkts[{#IFNAME}]</key>
                   </item>
                 </graph_item>

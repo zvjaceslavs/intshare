@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:02Z</date>
+  <date>2021-10-26T04:38:43Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer Xerox WorkCentre 5222</template>
-      <name>Template Printer Xerox WorkCentre 5222</name>
+      <template>Printer Xerox WorkCentre 5222</template>
+      <name>Printer Xerox WorkCentre 5222</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -234,34 +234,34 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 5222:black.cartridge.drum.last(0)}=0 and {Template Printer Xerox WorkCentre 5222:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 5222:black.cartridge.drum.last(0)}=0 and {Printer Xerox WorkCentre 5222:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
       <name>Empty cartridge drum - black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 5222:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 5222:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 5222:black.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 5222:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 5222:black.cartridge.drum.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 5222:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 5222:black.cartridge.drum.last(0)}&lt;20 and {Printer Xerox WorkCentre 5222:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
       <name>Low cartridge drum - black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge drum - black</name>
-          <expression>{Template Printer Xerox WorkCentre 5222:black.cartridge.drum.last(0)}=0 and {Template Printer Xerox WorkCentre 5222:black.drum.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 5222:black.cartridge.drum.last(0)}=0 and {Printer Xerox WorkCentre 5222:black.drum.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer Xerox WorkCentre 5222:black.cartridge.toner.last(0)}&lt;20 and {Template Printer Xerox WorkCentre 5222:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
+      <expression>{Printer Xerox WorkCentre 5222:black.cartridge.toner.last(0)}&lt;20 and {Printer Xerox WorkCentre 5222:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
       <name>Low cartridge toner - black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - black</name>
-          <expression>{Template Printer Xerox WorkCentre 5222:black.cartridge.toner.last(0)}=0 and {Template Printer Xerox WorkCentre 5222:black.cartridge.type.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Template Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
+          <expression>{Printer Xerox WorkCentre 5222:black.cartridge.toner.last(0)}=0 and {Printer Xerox WorkCentre 5222:black.cartridge.type.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:model.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:serial.number.nodata(3w)}=0 and {Printer Xerox WorkCentre 5222:printer.location.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
@@ -277,7 +277,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer Xerox WorkCentre 5222</host>
+            <host>Printer Xerox WorkCentre 5222</host>
             <key>black.cartridge.toner</key>
           </item>
         </graph_item>

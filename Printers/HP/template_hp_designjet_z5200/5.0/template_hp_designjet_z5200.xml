@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:05Z</date>
+  <date>2021-10-26T04:38:47Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Printer HP Designjet Z5200</template>
-      <name>Template Printer HP Designjet Z5200</name>
+      <template>Printer HP Designjet Z5200</template>
+      <name>Printer HP Designjet Z5200</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -496,7 +496,7 @@
               <style>0</style>
               <resource>
                 <key>magenta.cartridge.type</key>
-                <host>Template Printer HP Designjet Z5200</host>
+                <host>Printer HP Designjet Z5200</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -518,7 +518,7 @@
               <style>0</style>
               <resource>
                 <name>Black toner level</name>
-                <host>Template Printer HP Designjet Z5200</host>
+                <host>Printer HP Designjet Z5200</host>
               </resource>
               <width>200</width>
               <height>200</height>
@@ -542,130 +542,130 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:cyan.last(0)}=0 and {Template Printer HP Designjet Z5200:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:cyan.last(0)}=0 and {Printer HP Designjet Z5200:cyan.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - cyan</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:light.cyan.last(0)}=0 and {Template Printer HP Designjet Z5200:light.cyan.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:light.cyan.last(0)}=0 and {Printer HP Designjet Z5200:light.cyan.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - light cyan</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:light.gray.last(0)}=0 and {Template Printer HP Designjet Z5200:light.gray.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:light.gray.last(0)}=0 and {Printer HP Designjet Z5200:light.gray.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - light gray</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:light.magenta.last(0)}=0 and {Template Printer HP Designjet Z5200:light.magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:light.magenta.last(0)}=0 and {Printer HP Designjet Z5200:light.magenta.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - light magenta</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:magenta.last(0)}=0 and {Template Printer HP Designjet Z5200:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:magenta.last(0)}=0 and {Printer HP Designjet Z5200:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - magenta</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:matte.black.last(0)}=0 and {Template Printer HP Designjet Z5200:matte.black.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:matte.black.last(0)}=0 and {Printer HP Designjet Z5200:matte.black.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - matte.black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:photo.black.last(0)}=0 and {Template Printer HP Designjet Z5200:photo.black.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:photo.black.last(0)}=0 and {Printer HP Designjet Z5200:photo.black.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - photo black</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:yellow.last(0)}=0 and {Template Printer HP Designjet Z5200:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:yellow.last(0)}=0 and {Printer HP Designjet Z5200:yellow.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Empty cartridge toner - yellow</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:cyan.last(0)}&lt;20 and {Template Printer HP Designjet Z5200:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:cyan.last(0)}&lt;20 and {Printer HP Designjet Z5200:cyan.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - cyan</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - cyan</name>
-          <expression>{Template Printer HP Designjet Z5200:cyan.last(0)}=0 and {Template Printer HP Designjet Z5200:cyan.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP Designjet Z5200:cyan.last(0)}=0 and {Printer HP Designjet Z5200:cyan.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:light.cyan.last(0)}&lt;20 and {Template Printer HP Designjet Z5200:light.cyan.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:light.cyan.last(0)}&lt;20 and {Printer HP Designjet Z5200:light.cyan.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - light cyan</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - light cyan</name>
-          <expression>{Template Printer HP Designjet Z5200:light.cyan.last(0)}=0 and {Template Printer HP Designjet Z5200:light.cyan.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP Designjet Z5200:light.cyan.last(0)}=0 and {Printer HP Designjet Z5200:light.cyan.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:light.gray.last(0)}&lt;20 and {Template Printer HP Designjet Z5200:light.gray.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:light.gray.last(0)}&lt;20 and {Printer HP Designjet Z5200:light.gray.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - light gray</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - light gray</name>
-          <expression>{Template Printer HP Designjet Z5200:light.gray.last(0)}=0 and {Template Printer HP Designjet Z5200:light.gray.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP Designjet Z5200:light.gray.last(0)}=0 and {Printer HP Designjet Z5200:light.gray.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:light.magenta.last(0)}&lt;20 and {Template Printer HP Designjet Z5200:light.magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:light.magenta.last(0)}&lt;20 and {Printer HP Designjet Z5200:light.magenta.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - light magenta</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - light magenta</name>
-          <expression>{Template Printer HP Designjet Z5200:light.magenta.last(0)}=0 and {Template Printer HP Designjet Z5200:light.magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP Designjet Z5200:light.magenta.last(0)}=0 and {Printer HP Designjet Z5200:light.magenta.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:magenta.last(0)}&lt;20 and {Template Printer HP Designjet Z5200:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:magenta.last(0)}&lt;20 and {Printer HP Designjet Z5200:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - magenta</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - magenta</name>
-          <expression>{Template Printer HP Designjet Z5200:magenta.last(0)}=0 and {Template Printer HP Designjet Z5200:magenta.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP Designjet Z5200:magenta.last(0)}=0 and {Printer HP Designjet Z5200:magenta.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:matte.black.last(0)}&lt;20 and {Template Printer HP Designjet Z5200:matte.black.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:matte.black.last(0)}&lt;20 and {Printer HP Designjet Z5200:matte.black.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - matte.black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - matte.black</name>
-          <expression>{Template Printer HP Designjet Z5200:matte.black.last(0)}=0 and {Template Printer HP Designjet Z5200:matte.black.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP Designjet Z5200:matte.black.last(0)}=0 and {Printer HP Designjet Z5200:matte.black.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:photo.black.last(0)}&lt;20 and {Template Printer HP Designjet Z5200:photo.black.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:photo.black.last(0)}&lt;20 and {Printer HP Designjet Z5200:photo.black.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - photo black</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - photo black</name>
-          <expression>{Template Printer HP Designjet Z5200:photo.black.last(0)}=0 and {Template Printer HP Designjet Z5200:photo.black.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP Designjet Z5200:photo.black.last(0)}=0 and {Printer HP Designjet Z5200:photo.black.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
     <trigger>
-      <expression>{Template Printer HP Designjet Z5200:yellow.last(0)}&lt;20 and {Template Printer HP Designjet Z5200:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+      <expression>{Printer HP Designjet Z5200:yellow.last(0)}&lt;20 and {Printer HP Designjet Z5200:yellow.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
       <name>Low cartridge toner - yellow</name>
       <priority>INFO</priority>
       <dependencies>
         <dependency>
           <name>Empty cartridge toner - yellow</name>
-          <expression>{Template Printer HP Designjet Z5200:yellow.last(0)}=0 and {Template Printer HP Designjet Z5200:yellow.cartridge.type.nodata(3w)}=0 and {Template Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
+          <expression>{Printer HP Designjet Z5200:yellow.last(0)}=0 and {Printer HP Designjet Z5200:yellow.cartridge.type.nodata(3w)}=0 and {Printer HP Designjet Z5200:model.nodata(3w)}=0</expression>
         </dependency>
       </dependencies>
     </trigger>
@@ -681,7 +681,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>000000</color>
           <item>
-            <host>Template Printer HP Designjet Z5200</host>
+            <host>Printer HP Designjet Z5200</host>
             <key>cyan</key>
           </item>
         </graph_item>

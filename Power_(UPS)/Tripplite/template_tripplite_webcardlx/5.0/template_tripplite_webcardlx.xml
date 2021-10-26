@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:33Z</date>
+  <date>2021-10-26T04:41:32Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Tripplite WEBCARDLX</template>
-      <name>Template SNMP Tripplite WEBCARDLX</name>
+      <template>SNMP Tripplite WEBCARDLX</template>
+      <name>SNMP Tripplite WEBCARDLX</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -441,7 +441,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template SNMP Tripplite WEBCARDLX:upsBypassCurrent.1.last()}&lt;>0 or {Template SNMP Tripplite WEBCARDLX:upsBypassPower.1.last()}&lt;>0</expression>
+      <expression>{SNMP Tripplite WEBCARDLX:upsBypassCurrent.1.last()}&lt;>0 or {SNMP Tripplite WEBCARDLX:upsBypassPower.1.last()}&lt;>0</expression>
       <name>UPS Bypassed</name>
       <priority>INFO</priority>
     </trigger>
@@ -456,7 +456,7 @@
         <graph_item>
           <color>DD0000</color>
           <item>
-            <host>Template SNMP Tripplite WEBCARDLX</host>
+            <host>SNMP Tripplite WEBCARDLX</host>
             <key>upsBatteryTemperature</key>
           </item>
         </graph_item>
@@ -464,7 +464,7 @@
           <sortorder>1</sortorder>
           <color>008800</color>
           <item>
-            <host>Template SNMP Tripplite WEBCARDLX</host>
+            <host>SNMP Tripplite WEBCARDLX</host>
             <key>upsEstimatedChargeRemaining</key>
           </item>
         </graph_item>
@@ -472,7 +472,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template SNMP Tripplite WEBCARDLX</host>
+            <host>SNMP Tripplite WEBCARDLX</host>
             <key>upsEstimatedMinutesRemaining</key>
           </item>
         </graph_item>
@@ -484,7 +484,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP Tripplite WEBCARDLX</host>
+            <host>SNMP Tripplite WEBCARDLX</host>
             <key>upsBypassCurrent.1</key>
           </item>
         </graph_item>
@@ -492,7 +492,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template SNMP Tripplite WEBCARDLX</host>
+            <host>SNMP Tripplite WEBCARDLX</host>
             <key>upsOutputCurrent.1</key>
           </item>
         </graph_item>
@@ -504,7 +504,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template SNMP Tripplite WEBCARDLX</host>
+            <host>SNMP Tripplite WEBCARDLX</host>
             <key>upsInputVoltage.1</key>
           </item>
         </graph_item>
@@ -512,7 +512,7 @@
           <sortorder>1</sortorder>
           <color>00BB00</color>
           <item>
-            <host>Template SNMP Tripplite WEBCARDLX</host>
+            <host>SNMP Tripplite WEBCARDLX</host>
             <key>upsOutputVoltage.1</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:34Z</date>
+  <date>2021-10-26T04:39:20Z</date>
   <groups>
     <group>
       <name>Network</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Opengear_Console</template>
-      <name>Template_Opengear_Console</name>
+      <template>Opengear_Console</template>
+      <name>Opengear_Console</name>
       <groups>
         <group>
           <name>Network</name>
@@ -281,7 +281,7 @@
                 <graph_item>
                   <color>00EE00</color>
                   <item>
-                    <host>Template_Opengear_Console</host>
+                    <host>Opengear_Console</host>
                     <key>opengear.snmp.netif.in[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -289,7 +289,7 @@
                   <sortorder>1</sortorder>
                   <color>0000CC</color>
                   <item>
-                    <host>Template_Opengear_Console</host>
+                    <host>Opengear_Console</host>
                     <key>opengear.snmp.netif.out[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -298,7 +298,7 @@
                   <color>0000C8</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_Opengear_Console</host>
+                    <host>Opengear_Console</host>
                     <key>opengear.snmp.netif.inerr[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -307,7 +307,7 @@
                   <color>C8C800</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_Opengear_Console</host>
+                    <host>Opengear_Console</host>
                     <key>opengear.snmp.netif.outerr[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -316,7 +316,7 @@
                   <color>C800C8</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_Opengear_Console</host>
+                    <host>Opengear_Console</host>
                     <key>opengear.snmp.netif.indiscards[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -325,7 +325,7 @@
                   <color>00C8C8</color>
                   <yaxisside>RIGHT</yaxisside>
                   <item>
-                    <host>Template_Opengear_Console</host>
+                    <host>Opengear_Console</host>
                     <key>opengear.snmp.netif.outdiscards[{#IFNAME}]</key>
                   </item>
                 </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:02Z</date>
+  <date>2021-10-26T04:40:56Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Ubiquiti Unifi AP LR SNMPv1</template>
-      <name>Template Ubiquiti Unifi AP LR SNMPv1</name>
+      <template>Ubiquiti Unifi AP LR SNMPv1</template>
+      <name>Ubiquiti Unifi AP LR SNMPv1</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -1987,7 +1987,7 @@
               <style>0</style>
               <resource>
                 <name>Wirelss traffic on site</name>
-                <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+                <host>Ubiquiti Unifi AP LR SNMPv1</host>
               </resource>
               <width>700</width>
               <height>100</height>
@@ -2016,7 +2016,7 @@
               <style>0</style>
               <resource>
                 <name>Connected clients on site</name>
-                <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+                <host>Ubiquiti Unifi AP LR SNMPv1</host>
               </resource>
               <width>700</width>
               <height>100</height>
@@ -2040,27 +2040,27 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Ubiquiti Unifi AP LR SNMPv1:ubntChipsetVersion.regexp("XM")}=1 and {Template Ubiquiti Unifi AP LR SNMPv1:ubntWlStatNoiseFloor.last()}&lt;-101</expression>
+      <expression>{Ubiquiti Unifi AP LR SNMPv1:ubntChipsetVersion.regexp("XM")}=1 and {Ubiquiti Unifi AP LR SNMPv1:ubntWlStatNoiseFloor.last()}&lt;-101</expression>
       <name>High Noise Floor ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Ubiquiti Unifi AP LR SNMPv1:unifi.site.state[ap, adopted, count].max(1m)}&lt;{Template Ubiquiti Unifi AP LR SNMPv1:unifi.site.state[ap, items_num, count].max(1m)}</expression>
+      <expression>{Ubiquiti Unifi AP LR SNMPv1:unifi.site.state[ap, adopted, count].max(1m)}&lt;{Ubiquiti Unifi AP LR SNMPv1:unifi.site.state[ap, items_num, count].max(1m)}</expression>
       <name>Nonadopted APs exists on {HOST.HOST}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template Ubiquiti Unifi AP LR SNMPv1:ubntChipsetVersion.regexp("XM")}=1 and {Template Ubiquiti Unifi AP LR SNMPv1:ubntWlStatCcq.last()}&lt;90</expression>
+      <expression>{Ubiquiti Unifi AP LR SNMPv1:ubntChipsetVersion.regexp("XM")}=1 and {Ubiquiti Unifi AP LR SNMPv1:ubntWlStatCcq.last()}&lt;90</expression>
       <name>Poor CCQ ({ITEM.LASTVALUE}) on {HOST.NAME}</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Ubiquiti Unifi AP LR SNMPv1:ubntChipsetVersion.regexp("XM")}=1 and {Template Ubiquiti Unifi AP LR SNMPv1:ubntWlStatCcq.last()}&lt;95</expression>
+      <expression>{Ubiquiti Unifi AP LR SNMPv1:ubntChipsetVersion.regexp("XM")}=1 and {Ubiquiti Unifi AP LR SNMPv1:ubntWlStatCcq.last()}&lt;95</expression>
       <name>{$SNMP_COMMUNITY}</name>
       <priority>WARNING</priority>
     </trigger>
     <trigger>
-      <expression>{Template Ubiquiti Unifi AP LR SNMPv1:ubntChipsetVersion.regexp("XM")}=1 and {Template Ubiquiti Unifi AP LR SNMPv1:ubntWlStatNoiseFloor.last()}>-90</expression>
+      <expression>{Ubiquiti Unifi AP LR SNMPv1:ubntChipsetVersion.regexp("XM")}=1 and {Ubiquiti Unifi AP LR SNMPv1:ubntWlStatNoiseFloor.last()}>-90</expression>
       <name>{$SNMP_COMMUNITY}</name>
       <priority>WARNING</priority>
     </trigger>
@@ -2073,7 +2073,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>unifi.site.state[ap, items_num, count]</key>
           </item>
         </graph_item>
@@ -2081,7 +2081,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>unifi.site.state[ap, isolated, count]</key>
           </item>
         </graph_item>
@@ -2089,7 +2089,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>unifi.site.state[ap, locating, count]</key>
           </item>
         </graph_item>
@@ -2103,7 +2103,7 @@
         <graph_item>
           <color>00BBBB</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>unifi.site.state[ap, guest-num_sta, sum]</key>
           </item>
         </graph_item>
@@ -2111,7 +2111,7 @@
           <sortorder>1</sortorder>
           <color>BB00BB</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>unifi.site.state[ap, user-num_sta, sum]</key>
           </item>
         </graph_item>
@@ -2124,7 +2124,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>system.cpu.util[myCPUUtilization5Min.0]</key>
           </item>
         </graph_item>
@@ -2136,7 +2136,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.1</key>
           </item>
         </graph_item>
@@ -2144,7 +2144,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.2</key>
           </item>
         </graph_item>
@@ -2152,7 +2152,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.3</key>
           </item>
         </graph_item>
@@ -2160,7 +2160,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.4</key>
           </item>
         </graph_item>
@@ -2168,7 +2168,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.5</key>
           </item>
         </graph_item>
@@ -2176,7 +2176,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.6</key>
           </item>
         </graph_item>
@@ -2184,7 +2184,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.7</key>
           </item>
         </graph_item>
@@ -2192,7 +2192,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -2200,7 +2200,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -2208,7 +2208,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -2216,7 +2216,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -2224,7 +2224,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -2232,7 +2232,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -2240,7 +2240,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.7</key>
           </item>
         </graph_item>
@@ -2252,7 +2252,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>net.if.in[ifHCInOctets.{#SNMPINDEX}]</key>
           </item>
         </graph_item>
@@ -2260,7 +2260,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>net.if.out[ifHCOutOctets.{#SNMPINDEX}]</key>
           </item>
         </graph_item>
@@ -2268,7 +2268,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>net.if.speed[ifHighSpeed.{#SNMPINDEX}]</key>
           </item>
         </graph_item>
@@ -2280,7 +2280,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifSpeed.1</key>
           </item>
         </graph_item>
@@ -2288,7 +2288,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifSpeed.2</key>
           </item>
         </graph_item>
@@ -2296,7 +2296,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifSpeed.3</key>
           </item>
         </graph_item>
@@ -2304,7 +2304,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifSpeed.4</key>
           </item>
         </graph_item>
@@ -2312,7 +2312,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifSpeed.5</key>
           </item>
         </graph_item>
@@ -2320,7 +2320,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifSpeed.6</key>
           </item>
         </graph_item>
@@ -2328,7 +2328,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifSpeed.7</key>
           </item>
         </graph_item>
@@ -2341,7 +2341,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.1</key>
           </item>
         </graph_item>
@@ -2350,7 +2350,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.2</key>
           </item>
         </graph_item>
@@ -2359,7 +2359,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.3</key>
           </item>
         </graph_item>
@@ -2368,7 +2368,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>A54F10</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.4</key>
           </item>
         </graph_item>
@@ -2377,7 +2377,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FC6EA3</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.5</key>
           </item>
         </graph_item>
@@ -2386,7 +2386,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>6C59DC</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.6</key>
           </item>
         </graph_item>
@@ -2395,7 +2395,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>AC8C14</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInOctets.7</key>
           </item>
         </graph_item>
@@ -2404,7 +2404,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>611F27</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -2413,7 +2413,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F230E0</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -2422,7 +2422,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>5CCD18</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -2431,7 +2431,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>BB2A02</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -2440,7 +2440,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>5A2B57</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -2449,7 +2449,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>89ABF8</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -2458,7 +2458,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>7EC25C</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOutOctets.7</key>
           </item>
         </graph_item>
@@ -2470,7 +2470,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOperStatus.1</key>
           </item>
         </graph_item>
@@ -2478,7 +2478,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOperStatus.2</key>
           </item>
         </graph_item>
@@ -2486,7 +2486,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOperStatus.3</key>
           </item>
         </graph_item>
@@ -2494,7 +2494,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOperStatus.4</key>
           </item>
         </graph_item>
@@ -2502,7 +2502,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOperStatus.5</key>
           </item>
         </graph_item>
@@ -2510,7 +2510,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOperStatus.6</key>
           </item>
         </graph_item>
@@ -2518,7 +2518,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifOperStatus.7</key>
           </item>
         </graph_item>
@@ -2530,7 +2530,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntWlStatCcq</key>
           </item>
         </graph_item>
@@ -2538,7 +2538,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntRadioChainmask</key>
           </item>
         </graph_item>
@@ -2546,7 +2546,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntWlStatChanWidth</key>
           </item>
         </graph_item>
@@ -2554,7 +2554,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntWlStatStaCount</key>
           </item>
         </graph_item>
@@ -2562,7 +2562,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntRadioFreq</key>
           </item>
         </graph_item>
@@ -2570,7 +2570,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntRadioMode</key>
           </item>
         </graph_item>
@@ -2578,7 +2578,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntWlStatNoiseFloor</key>
           </item>
         </graph_item>
@@ -2586,7 +2586,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntWlStatRssi</key>
           </item>
         </graph_item>
@@ -2594,7 +2594,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntWlStatRxRate</key>
           </item>
         </graph_item>
@@ -2602,7 +2602,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntWlStatSignal</key>
           </item>
         </graph_item>
@@ -2610,7 +2610,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntRadioTxPower</key>
           </item>
         </graph_item>
@@ -2618,7 +2618,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ubntWlStatTxRate</key>
           </item>
         </graph_item>
@@ -2630,7 +2630,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInNoUcast.1</key>
           </item>
         </graph_item>
@@ -2638,7 +2638,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInNoUcast.2</key>
           </item>
         </graph_item>
@@ -2646,7 +2646,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInNoUcast.3</key>
           </item>
         </graph_item>
@@ -2654,7 +2654,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInNoUcast.4</key>
           </item>
         </graph_item>
@@ -2662,7 +2662,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInNoUcast.5</key>
           </item>
         </graph_item>
@@ -2670,7 +2670,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInNoUcast.6</key>
           </item>
         </graph_item>
@@ -2678,7 +2678,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInNoUcast.7</key>
           </item>
         </graph_item>
@@ -2686,7 +2686,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInUcast.1</key>
           </item>
         </graph_item>
@@ -2694,7 +2694,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInUcast.2</key>
           </item>
         </graph_item>
@@ -2702,7 +2702,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInUcast.3</key>
           </item>
         </graph_item>
@@ -2710,7 +2710,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInUcast.4</key>
           </item>
         </graph_item>
@@ -2718,7 +2718,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInUcast.5</key>
           </item>
         </graph_item>
@@ -2726,7 +2726,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInUcast.6</key>
           </item>
         </graph_item>
@@ -2734,7 +2734,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>ifInUcast.7</key>
           </item>
         </graph_item>
@@ -2746,7 +2746,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>unifi.site.state[ap, rx_bytes, sum]</key>
           </item>
         </graph_item>
@@ -2754,7 +2754,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>unifi.site.state[ap,stat.tx_dropped, sum]</key>
           </item>
         </graph_item>
@@ -2762,7 +2762,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Ubiquiti Unifi AP LR SNMPv1</host>
+            <host>Ubiquiti Unifi AP LR SNMPv1</host>
             <key>unifi.site.state[ap, tx_bytes, sum]</key>
           </item>
         </graph_item>

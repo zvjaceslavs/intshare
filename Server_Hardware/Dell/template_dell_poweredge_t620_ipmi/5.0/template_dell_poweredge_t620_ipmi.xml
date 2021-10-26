@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:18Z</date>
+  <date>2021-10-26T04:39:02Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,7 +9,7 @@
   </groups>
   <templates>
     <template>
-      <template>Template_UNISIM_IPMI_Dell_PowerEdge_T620</template>
+      <template>UNISIM_IPMI_Dell_PowerEdge_T620</template>
       <name>3-IPMI Dell Power Edge T620</name>
       <groups>
         <group>
@@ -280,7 +280,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_UNISIM_IPMI_Dell_PowerEdge_T620</host>
+            <host>UNISIM_IPMI_Dell_PowerEdge_T620</host>
             <key>ipmi.pwr.consumption</key>
           </item>
         </graph_item>
@@ -292,7 +292,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template_UNISIM_IPMI_Dell_PowerEdge_T620</host>
+            <host>UNISIM_IPMI_Dell_PowerEdge_T620</host>
             <key>ipmi.fan1.rpm</key>
           </item>
         </graph_item>
@@ -301,7 +301,7 @@
           <color>00C800</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_UNISIM_IPMI_Dell_PowerEdge_T620</host>
+            <host>UNISIM_IPMI_Dell_PowerEdge_T620</host>
             <key>ipmi.inlet.temp</key>
           </item>
         </graph_item>
@@ -313,7 +313,7 @@
         <graph_item>
           <color>0000C8</color>
           <item>
-            <host>Template_UNISIM_IPMI_Dell_PowerEdge_T620</host>
+            <host>UNISIM_IPMI_Dell_PowerEdge_T620</host>
             <key>ipmi.voltage.1</key>
           </item>
         </graph_item>
@@ -321,7 +321,7 @@
           <sortorder>1</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_UNISIM_IPMI_Dell_PowerEdge_T620</host>
+            <host>UNISIM_IPMI_Dell_PowerEdge_T620</host>
             <key>ipmi.voltage.2</key>
           </item>
         </graph_item>
@@ -330,7 +330,7 @@
           <color>00C800</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_UNISIM_IPMI_Dell_PowerEdge_T620</host>
+            <host>UNISIM_IPMI_Dell_PowerEdge_T620</host>
             <key>ipmi.current.1</key>
           </item>
         </graph_item>
@@ -339,7 +339,7 @@
           <color>C80000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_UNISIM_IPMI_Dell_PowerEdge_T620</host>
+            <host>UNISIM_IPMI_Dell_PowerEdge_T620</host>
             <key>ipmi.current.2</key>
           </item>
         </graph_item>

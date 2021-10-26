@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:43Z</date>
+  <date>2021-10-26T04:42:49Z</date>
   <groups>
     <group>
       <name>Templates/Server hardware</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Server Inspur BMC SNMPv3</template>
-      <name>Template Server Inspur BMC SNMPv3</name>
+      <template>Server Inspur BMC SNMPv3</template>
+      <name>Server Inspur BMC SNMPv3</name>
       <groups>
         <group>
           <name>Templates/Server hardware</name>

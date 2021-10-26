@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:04Z</date>
+  <date>2021-10-26T04:42:05Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template - SNMP - Lexmark CS820de COLOR</template>
-      <name>Template - SNMP - Lexmark CS820de COLOR</name>
+      <template>SNMP - Lexmark CS820de COLOR</template>
+      <name>SNMP - Lexmark CS820de COLOR</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -738,7 +738,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template - SNMP - Lexmark CS820de COLOR</host>
+            <host>SNMP - Lexmark CS820de COLOR</host>
             <key>prtCyanTonerLevel</key>
           </item>
         </graph_item>

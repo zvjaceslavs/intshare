@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:41Z</date>
+  <date>2021-10-26T04:41:40Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App MDaemon</template>
-      <name>Template App MDaemon</name>
+      <template>App MDaemon</template>
+      <name>App MDaemon</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -876,7 +876,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего принятых DNSBL"]</key>
           </item>
         </graph_item>
@@ -884,7 +884,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего отклонено сообщений DNSBL"]</key>
           </item>
         </graph_item>
@@ -892,7 +892,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего сообщений DomainPOP (вх)"]</key>
           </item>
         </graph_item>
@@ -900,7 +900,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего сеансов IMAP"]</key>
           </item>
         </graph_item>
@@ -908,7 +908,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего сообщений MultiPOP (вх)"]</key>
           </item>
         </graph_item>
@@ -916,7 +916,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего сеансов POP3"]</key>
           </item>
         </graph_item>
@@ -924,7 +924,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего сообщений RAW"]</key>
           </item>
         </graph_item>
@@ -932,7 +932,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего SMTP-сообщений (вх)"]</key>
           </item>
         </graph_item>
@@ -940,7 +940,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего SMTP-сообщений (исх)"]</key>
           </item>
         </graph_item>
@@ -948,7 +948,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\SMTP-сеансов (исх)/с"]</key>
           </item>
         </graph_item>
@@ -956,7 +956,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\SMTP sessions (out) total"]</key>
           </item>
         </graph_item>
@@ -964,7 +964,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего принято спам-сообщений"]</key>
           </item>
         </graph_item>
@@ -972,7 +972,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего отклонено спам-сообщений"]</key>
           </item>
         </graph_item>
@@ -980,7 +980,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего принято вирусных сообщений"]</key>
           </item>
         </graph_item>
@@ -988,7 +988,7 @@
           <sortorder>14</sortorder>
           <color>274482</color>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Всего отклонено вирусных сообщений"]</key>
           </item>
         </graph_item>
@@ -1001,7 +1001,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template App MDaemon</host>
+            <host>App MDaemon</host>
             <key>perf_counter["\MDaemon\Сообщения в локальной очереди"]</key>
           </item>
         </graph_item>

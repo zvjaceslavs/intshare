@@ -1,4 +1,4 @@
-# Template SNMP UCD Disk
+# SNMP UCD Disk
 
 ## Overview
 

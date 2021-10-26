@@ -1,4 +1,4 @@
-# Template SNMP ReadyNas 3200
+# SNMP ReadyNas 3200
 
 ## Overview
 
@@ -47,11 +47,11 @@ There are no template links in this template.
 |CPUFAN_RPM|<p>-</p>|`SNMP agent`|cpu_fan_RPM<p>Update: 30</p>|
 |CPU temp|<p>CPU temp</p>|`SNMP agent`|cputemp<p>Update: 30</p>|
 |Firmware version|<p>-</p>|`SNMP agent`|nasMgrSoftwareVersion<p>Update: 30</p>|
-|Sys1FAN_RPM|<p>-</p>|`SNMP agent`|sys1_fan_RPM<p>Update: 30</p>|
 |Sys2FAN_RPM|<p>-</p>|`SNMP agent`|sys2_fan_RPM<p>Update: 30</p>|
+|Sys1FAN_RPM|<p>-</p>|`SNMP agent`|sys1_fan_RPM<p>Update: 30</p>|
+|System uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 30</p>|
 |Sys3FAN_RPM|<p>-</p>|`SNMP agent`|sys3_fan_RPM<p>Update: 30</p>|
 |Sys temp|<p>CPU temp</p>|`SNMP agent`|systemp<p>Update: 30</p>|
-|System uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 30</p>|
 |[{#SNMPVALUE}]_VolumeFreeSpace|<p>-</p>|`SNMP agent`|volumeFreeSpace[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |[{#SNMPVALUE}]_VolumeName|<p>-</p>|`SNMP agent`|volumeName[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |[{#SNMPVALUE}]_volumeRAIDLevel|<p>-</p>|`SNMP agent`|volumeRAIDLevel[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
@@ -64,11 +64,11 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Disk [{#SNMPVALUE}] on {HOST.NAME} is not ok|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas 3200:DiskState[{#SNMPVALUE}].regexp("(ok)")}<>1</p><p>**Recovery expression**: </p>|disaster|
-|Temperature Disk [{#SNMPVALUE}] is High on {HOST.NAME}|<p>Disk temp is more than 50C</p>|<p>**Expression**: {Template SNMP ReadyNas 3200:DiskTemperature[{#SNMPVALUE}].last(0)}>122</p><p>**Recovery expression**: </p>|high|
-|Volume[{#SNMPVALUE}] on {HOST.NAME} is not ok|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas 3200:volumeStatus[{#SNMPVALUE}].regexp("(ok)")}<>1</p><p>**Recovery expression**: </p>|disaster|
-|Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME}|<p>-</p>|<p>**Expression**: ({Template SNMP ReadyNas 3200:volumeFreeSpace[{#SNMPVALUE}].last()} / {Template SNMP ReadyNas 3200:volumeSize[{#SNMPVALUE}].last()} * 100) < 10</p><p>**Recovery expression**: </p>|high|
-|Volume[{#SNMPVALUE}] on {HOST.NAME} is not ok (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas 3200:volumeStatus[{#SNMPVALUE}].regexp("(ok)")}<>1</p><p>**Recovery expression**: </p>|disaster|
-|Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: ({Template SNMP ReadyNas 3200:volumeFreeSpace[{#SNMPVALUE}].last()} / {Template SNMP ReadyNas 3200:volumeSize[{#SNMPVALUE}].last()} * 100) < 10</p><p>**Recovery expression**: </p>|high|
-|Disk [{#SNMPVALUE}] on {HOST.NAME} is not ok (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas 3200:DiskState[{#SNMPVALUE}].regexp("(ok)")}<>1</p><p>**Recovery expression**: </p>|disaster|
-|Temperature Disk [{#SNMPVALUE}] is High on {HOST.NAME} (LLD)|<p>Disk temp is more than 50C</p>|<p>**Expression**: {Template SNMP ReadyNas 3200:DiskTemperature[{#SNMPVALUE}].last(0)}>122</p><p>**Recovery expression**: </p>|high|
+|Disk [{#SNMPVALUE}] on {HOST.NAME} is not ok|<p>-</p>|<p>**Expression**: {SNMP ReadyNas 3200:DiskState[{#SNMPVALUE}].regexp("(ok)")}<>1</p><p>**Recovery expression**: </p>|disaster|
+|Temperature Disk [{#SNMPVALUE}] is High on {HOST.NAME}|<p>Disk temp is more than 50C</p>|<p>**Expression**: {SNMP ReadyNas 3200:DiskTemperature[{#SNMPVALUE}].last(0)}>122</p><p>**Recovery expression**: </p>|high|
+|Volume[{#SNMPVALUE}] on {HOST.NAME} is not ok|<p>-</p>|<p>**Expression**: {SNMP ReadyNas 3200:volumeStatus[{#SNMPVALUE}].regexp("(ok)")}<>1</p><p>**Recovery expression**: </p>|disaster|
+|Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME}|<p>-</p>|<p>**Expression**: ({SNMP ReadyNas 3200:volumeFreeSpace[{#SNMPVALUE}].last()} / {SNMP ReadyNas 3200:volumeSize[{#SNMPVALUE}].last()} * 100) < 10</p><p>**Recovery expression**: </p>|high|
+|Volume[{#SNMPVALUE}] on {HOST.NAME} is not ok (LLD)|<p>-</p>|<p>**Expression**: {SNMP ReadyNas 3200:volumeStatus[{#SNMPVALUE}].regexp("(ok)")}<>1</p><p>**Recovery expression**: </p>|disaster|
+|Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: ({SNMP ReadyNas 3200:volumeFreeSpace[{#SNMPVALUE}].last()} / {SNMP ReadyNas 3200:volumeSize[{#SNMPVALUE}].last()} * 100) < 10</p><p>**Recovery expression**: </p>|high|
+|Disk [{#SNMPVALUE}] on {HOST.NAME} is not ok (LLD)|<p>-</p>|<p>**Expression**: {SNMP ReadyNas 3200:DiskState[{#SNMPVALUE}].regexp("(ok)")}<>1</p><p>**Recovery expression**: </p>|disaster|
+|Temperature Disk [{#SNMPVALUE}] is High on {HOST.NAME} (LLD)|<p>Disk temp is more than 50C</p>|<p>**Expression**: {SNMP ReadyNas 3200:DiskTemperature[{#SNMPVALUE}].last(0)}>122</p><p>**Recovery expression**: </p>|high|

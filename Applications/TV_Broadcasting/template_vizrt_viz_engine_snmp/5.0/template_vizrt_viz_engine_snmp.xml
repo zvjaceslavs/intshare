@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:28Z</date>
+  <date>2021-10-26T04:41:26Z</date>
   <groups>
     <group>
       <name>Templates Prod</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Vizrt SNMP</template>
-      <name>Template Vizrt SNMP</name>
+      <template>Vizrt SNMP</template>
+      <name>Vizrt SNMP</name>
       <groups>
         <group>
           <name>Templates Prod</name>
@@ -514,7 +514,7 @@
               <dependencies>
                 <dependency>
                   <name>Vizrt Texture Memory used more 90%</name>
-                  <expression>{Template Vizrt SNMP:VizrtTextureMemoryUsed.last(0)}>90</expression>
+                  <expression>{Vizrt SNMP:VizrtTextureMemoryUsed.last(0)}>90</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -681,12 +681,12 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Vizrt SNMP:VizrtClip1Status.last(0)}>0 or {Template Vizrt SNMP:VizrtClip2Status.last(0)}>0 or {Template Vizrt SNMP:VizrtClip3Status.last(0)}>0 or {Template Vizrt SNMP:VizrtClip4Status.last(0)}>0 or {Template Vizrt SNMP:VizrtClip5Status.last(0)}>0 or {Template Vizrt SNMP:VizrtClip6Status.last(0)}>0 or {Template Vizrt SNMP:VizrtClip7Status.last(0)}>0 or {Template Vizrt SNMP:VizrtClip8Status.last(0)}>0</expression>
+      <expression>{Vizrt SNMP:VizrtClip1Status.last(0)}>0 or {Vizrt SNMP:VizrtClip2Status.last(0)}>0 or {Vizrt SNMP:VizrtClip3Status.last(0)}>0 or {Vizrt SNMP:VizrtClip4Status.last(0)}>0 or {Vizrt SNMP:VizrtClip5Status.last(0)}>0 or {Vizrt SNMP:VizrtClip6Status.last(0)}>0 or {Vizrt SNMP:VizrtClip7Status.last(0)}>0 or {Vizrt SNMP:VizrtClip8Status.last(0)}>0</expression>
       <name>Vizrt Clip Status is not ok val=1: {ITEM.VALUE1}, 2: {ITEM.VALUE2}, 3: {ITEM.VALUE3}, 4: {ITEM.VALUE4} , 5: {ITEM.VALUE5}, 6: {ITEM.VALUE6}, 7: {ITEM.VALUE7}, 8: {ITEM.VALUE8}</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template Vizrt SNMP:VizrtVideoIn1Status.last(0)}>0 or {Template Vizrt SNMP:VizrtVideoIn2Status.last(0)}>0 or {Template Vizrt SNMP:VizrtVideoIn3Status.last(0)}>0 or {Template Vizrt SNMP:VizrtVideoIn4Status.last(0)}>0 or {Template Vizrt SNMP:VizrtVideoIn5Status.last(0)}>0 or {Template Vizrt SNMP:VizrtVideoIn6Status.last(0)}>0 or {Template Vizrt SNMP:VizrtVideoIn7Status.last(0)}>0 or {Template Vizrt SNMP:VizrtVideoIn8Status.last(0)}>0</expression>
+      <expression>{Vizrt SNMP:VizrtVideoIn1Status.last(0)}>0 or {Vizrt SNMP:VizrtVideoIn2Status.last(0)}>0 or {Vizrt SNMP:VizrtVideoIn3Status.last(0)}>0 or {Vizrt SNMP:VizrtVideoIn4Status.last(0)}>0 or {Vizrt SNMP:VizrtVideoIn5Status.last(0)}>0 or {Vizrt SNMP:VizrtVideoIn6Status.last(0)}>0 or {Vizrt SNMP:VizrtVideoIn7Status.last(0)}>0 or {Vizrt SNMP:VizrtVideoIn8Status.last(0)}>0</expression>
       <name>Vizrt Video In Status is not ok val=1: {ITEM.VALUE1}, 2: {ITEM.VALUE2}, 3: {ITEM.VALUE3}, 4: {ITEM.VALUE4} , 5: {ITEM.VALUE5}, 6: {ITEM.VALUE6}, 7: {ITEM.VALUE7}, 8: {ITEM.VALUE8}</name>
       <priority>HIGH</priority>
     </trigger>

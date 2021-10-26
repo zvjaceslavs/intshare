@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:29Z</date>
+  <date>2021-10-26T04:40:22Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Interfaces Huawei</template>
-      <name>Template SNMP Interfaces Huawei</name>
+      <template>SNMP Interfaces Huawei</template>
+      <name>SNMP Interfaces Huawei</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -161,7 +161,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00AA00</color>
                   <item>
-                    <host>Template SNMP Interfaces Huawei</host>
+                    <host>SNMP Interfaces Huawei</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -170,7 +170,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>3333FF</color>
                   <item>
-                    <host>Template SNMP Interfaces Huawei</host>
+                    <host>SNMP Interfaces Huawei</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

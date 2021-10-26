@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:38Z</date>
+  <date>2021-10-26T04:39:25Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template - SNMP - Lexmark COLOR</template>
-      <name>Template - SNMP - Lexmark COLOR</name>
+      <template>SNMP - Lexmark COLOR</template>
+      <name>SNMP - Lexmark COLOR</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -411,7 +411,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template - SNMP - Lexmark COLOR</host>
+            <host>SNMP - Lexmark COLOR</host>
             <key>prtCyanTonerLevel</key>
           </item>
         </graph_item>

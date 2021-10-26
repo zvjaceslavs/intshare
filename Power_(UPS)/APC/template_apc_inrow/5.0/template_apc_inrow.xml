@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:42Z</date>
+  <date>2021-10-26T04:41:41Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP APC InRow</template>
-      <name>Template SNMP APC InRow</name>
+      <template>SNMP APC InRow</template>
+      <name>SNMP APC InRow</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -351,17 +351,17 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template SNMP APC InRow:AirirscunitStatusRackInletTemp.last()}>{Template SNMP APC InRow:AirirscunitThresholdsRackInletHighTempMetric.last()}</expression>
+      <expression>{SNMP APC InRow:AirirscunitStatusRackInletTemp.last()}>{SNMP APC InRow:AirirscunitThresholdsRackInletHighTempMetric.last()}</expression>
       <name>Rack Inlet temperature is too high on {HOST.NAME}</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template SNMP APC InRow:AirirscunitStatusReturnAirTempMetric.last()}>{Template SNMP APC InRow:AirirscunitThresholdsReturnAirHighTempMetric.last()}</expression>
+      <expression>{SNMP APC InRow:AirirscunitStatusReturnAirTempMetric.last()}>{SNMP APC InRow:AirirscunitThresholdsReturnAirHighTempMetric.last()}</expression>
       <name>Return Air temperature is too high on {HOST.NAME}</name>
       <priority>HIGH</priority>
     </trigger>
     <trigger>
-      <expression>{Template SNMP APC InRow:AirirscunitStatusSupplyAirTempMetric.last()}>{Template SNMP APC InRow:AirirscunitThresholdsSupplyAirHighTempMetric.last()}</expression>
+      <expression>{SNMP APC InRow:AirirscunitStatusSupplyAirTempMetric.last()}>{SNMP APC InRow:AirirscunitThresholdsSupplyAirHighTempMetric.last()}</expression>
       <name>Supply Air temperature is too high on {HOST.NAME}</name>
       <priority>HIGH</priority>
     </trigger>
@@ -373,7 +373,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP APC InRow</host>
+            <host>SNMP APC InRow</host>
             <key>AirirscunitStatusRackInletTemp</key>
           </item>
         </graph_item>
@@ -381,7 +381,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template SNMP APC InRow</host>
+            <host>SNMP APC InRow</host>
             <key>AirirscunitStatusReturnAirTempMetric</key>
           </item>
         </graph_item>
@@ -389,7 +389,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template SNMP APC InRow</host>
+            <host>SNMP APC InRow</host>
             <key>AirirscunitStatusSupplyAirTempMetric</key>
           </item>
         </graph_item>

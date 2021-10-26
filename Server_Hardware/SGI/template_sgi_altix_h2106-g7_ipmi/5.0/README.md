@@ -38,33 +38,33 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Power|<p>-</p>|`IPMI agent`|ipmi.power<p>Update: 300</p>|
+|Fan10|<p>-</p>|`IPMI agent`|ipmi.fan10<p>Update: 300</p>|
+|Fan6|<p>-</p>|`IPMI agent`|ipmi.fan6<p>Update: 300</p>|
+|CPU4 Vcore|<p>-</p>|`IPMI agent`|ipmi.cpu4.vcore<p>Update: 300</p>|
+|CPU1 Temp|<p>-</p>|`IPMI agent`|ipmi.cpu1.temp<p>Update: 300</p>|
+|Fan2|<p>-</p>|`IPMI agent`|ipmi.fan2<p>Update: 300</p>|
+|CPU4 Temp|<p>-</p>|`IPMI agent`|ipmi.cpu4.temp<p>Update: 300</p>|
+|CPU1 Vcore|<p>-</p>|`IPMI agent`|ipmi.cpu1.vcore<p>Update: 300</p>|
+|CPU2 Vcore|<p>-</p>|`IPMI agent`|ipmi.cpu2.vcore<p>Update: 300</p>|
+|CPU4 DIMM|<p>-</p>|`IPMI agent`|ipmi.cpu4.dimm<p>Update: 300</p>|
+|System Temp|<p>-</p>|`IPMI agent`|ipmi.system.temp<p>Update: 300</p>|
+|CPU3 Vcore|<p>-</p>|`IPMI agent`|ipmi.cpu3.vcore<p>Update: 300</p>|
+|CPU1 DIMM|<p>-</p>|`IPMI agent`|ipmi.cpu1.dimm<p>Update: 300</p>|
+|VBAT|<p>-</p>|`IPMI agent`|ipmi.vbat<p>Update: 300</p>|
+|Fan4|<p>-</p>|`IPMI agent`|ipmi.fan4<p>Update: 300</p>|
+|CPU2 DIMM|<p>-</p>|`IPMI agent`|ipmi.cpu2.dimm<p>Update: 300</p>|
 |+12V|<p>-</p>|`IPMI agent`|ipmi.12v<p>Update: 300</p>|
 |+3.3V|<p>-</p>|`IPMI agent`|ipmi.3.3v<p>Update: 300</p>|
 |+3.3VSB|<p>-</p>|`IPMI agent`|ipmi.3.3vsb<p>Update: 300</p>|
 |+5V|<p>-</p>|`IPMI agent`|ipmi.5v<p>Update: 300</p>|
-|CPU1 DIMM|<p>-</p>|`IPMI agent`|ipmi.cpu1.dimm<p>Update: 300</p>|
-|CPU1 Temp|<p>-</p>|`IPMI agent`|ipmi.cpu1.temp<p>Update: 300</p>|
-|CPU1 Vcore|<p>-</p>|`IPMI agent`|ipmi.cpu1.vcore<p>Update: 300</p>|
-|CPU2 DIMM|<p>-</p>|`IPMI agent`|ipmi.cpu2.dimm<p>Update: 300</p>|
-|CPU2 Temp|<p>-</p>|`IPMI agent`|ipmi.cpu2.temp<p>Update: 300</p>|
-|CPU2 Vcore|<p>-</p>|`IPMI agent`|ipmi.cpu2.vcore<p>Update: 300</p>|
-|CPU3 DIMM|<p>-</p>|`IPMI agent`|ipmi.cpu3.dimm<p>Update: 300</p>|
-|CPU3 Temp|<p>-</p>|`IPMI agent`|ipmi.cpu3.temp<p>Update: 300</p>|
-|CPU3 Vcore|<p>-</p>|`IPMI agent`|ipmi.cpu3.vcore<p>Update: 300</p>|
-|CPU4 DIMM|<p>-</p>|`IPMI agent`|ipmi.cpu4.dimm<p>Update: 300</p>|
-|CPU4 Temp|<p>-</p>|`IPMI agent`|ipmi.cpu4.temp<p>Update: 300</p>|
-|CPU4 Vcore|<p>-</p>|`IPMI agent`|ipmi.cpu4.vcore<p>Update: 300</p>|
-|Fan1|<p>-</p>|`IPMI agent`|ipmi.fan1<p>Update: 300</p>|
-|Fan10|<p>-</p>|`IPMI agent`|ipmi.fan10<p>Update: 300</p>|
 |Fan11|<p>-</p>|`IPMI agent`|ipmi.fan11<p>Update: 300</p>|
-|Fan2|<p>-</p>|`IPMI agent`|ipmi.fan2<p>Update: 300</p>|
 |Fan3|<p>-</p>|`IPMI agent`|ipmi.fan3<p>Update: 300</p>|
-|Fan4|<p>-</p>|`IPMI agent`|ipmi.fan4<p>Update: 300</p>|
+|CPU3 DIMM|<p>-</p>|`IPMI agent`|ipmi.cpu3.dimm<p>Update: 300</p>|
+|Fan1|<p>-</p>|`IPMI agent`|ipmi.fan1<p>Update: 300</p>|
+|CPU2 Temp|<p>-</p>|`IPMI agent`|ipmi.cpu2.temp<p>Update: 300</p>|
 |Fan5|<p>-</p>|`IPMI agent`|ipmi.fan5<p>Update: 300</p>|
-|Fan6|<p>-</p>|`IPMI agent`|ipmi.fan6<p>Update: 300</p>|
-|Power|<p>-</p>|`IPMI agent`|ipmi.power<p>Update: 300</p>|
-|System Temp|<p>-</p>|`IPMI agent`|ipmi.system.temp<p>Update: 300</p>|
-|VBAT|<p>-</p>|`IPMI agent`|ipmi.vbat<p>Update: 300</p>|
+|CPU3 Temp|<p>-</p>|`IPMI agent`|ipmi.cpu3.temp<p>Update: 300</p>|
 ## Triggers
 
 There are no triggers in this template.

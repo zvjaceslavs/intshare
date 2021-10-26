@@ -1,4 +1,4 @@
-# Hitachi DF DiskArray Monitor Template
+# Hitachi DF DiskArray Monitor
 
 ## Description
 
@@ -37,8 +37,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Preventive Maintenance Status|<p>-</p>|`SNMP agent`|PreventiveMaintenance<p>Update: 10m</p>|
 |Regression Status|<p>-</p>|`SNMP agent`|RegressionStatus<p>Update: 10m</p>|
+|Preventive Maintenance Status|<p>-</p>|`SNMP agent`|PreventiveMaintenance<p>Update: 10m</p>|
 ## Triggers
 
 There are no triggers in this template.

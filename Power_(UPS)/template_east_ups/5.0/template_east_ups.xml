@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:11Z</date>
+  <date>2021-10-26T04:42:12Z</date>
   <groups>
     <group>
       <name>Nobreak</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template East Nobreak</template>
-      <name>Template East Nobreak</name>
+      <template>East Nobreak</template>
+      <name>East Nobreak</name>
       <groups>
         <group>
           <name>Nobreak</name>
@@ -250,7 +250,7 @@
         <graph_item>
           <color>009900</color>
           <item>
-            <host>Template East Nobreak</host>
+            <host>East Nobreak</host>
             <key>temp</key>
           </item>
         </graph_item>
@@ -262,7 +262,7 @@
         <graph_item>
           <color>0000EE</color>
           <item>
-            <host>Template East Nobreak</host>
+            <host>East Nobreak</host>
             <key>ac-Voltage</key>
           </item>
         </graph_item>
@@ -274,7 +274,7 @@
         <graph_item>
           <color>F63100</color>
           <item>
-            <host>Template East Nobreak</host>
+            <host>East Nobreak</host>
             <key>load-Power</key>
           </item>
         </graph_item>

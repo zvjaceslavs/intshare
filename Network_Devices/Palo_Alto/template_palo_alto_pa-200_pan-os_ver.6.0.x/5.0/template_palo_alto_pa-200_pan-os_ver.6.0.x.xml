@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:33Z</date>
+  <date>2021-10-26T04:38:14Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Palo_Alto_PA200</template>
-      <name>Template_Palo_Alto_PA200</name>
+      <template>Palo_Alto_PA200</template>
+      <name>Palo_Alto_PA200</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>
@@ -380,7 +380,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template_Palo_Alto_PA200:hrStorageUsed[{#SNMPINDEX}].avg(5m)}>{Template_Palo_Alto_PA200:hrStorageSize[{#SNMPINDEX}].last()}*0.9</expression>
+              <expression>{Palo_Alto_PA200:hrStorageUsed[{#SNMPINDEX}].avg(5m)}>{Palo_Alto_PA200:hrStorageSize[{#SNMPINDEX}].last()}*0.9</expression>
               <name>#{#SNMPVALUE} usage is high [{ITEM.LASTVALUE1}]</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -643,7 +643,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template_Palo_Alto_PA200</host>
+                    <host>Palo_Alto_PA200</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -859,7 +859,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Palo_Alto_PA200</host>
+            <host>Palo_Alto_PA200</host>
             <key>panSessionActiveTcp.0</key>
           </item>
         </graph_item>
@@ -867,7 +867,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Palo_Alto_PA200</host>
+            <host>Palo_Alto_PA200</host>
             <key>panSessionActiveUdp.0</key>
           </item>
         </graph_item>
@@ -879,7 +879,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Palo_Alto_PA200</host>
+            <host>Palo_Alto_PA200</host>
             <key>hrProcessorLoad1</key>
           </item>
         </graph_item>
@@ -887,7 +887,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Palo_Alto_PA200</host>
+            <host>Palo_Alto_PA200</host>
             <key>hrProcessorLoad2</key>
           </item>
         </graph_item>
@@ -899,7 +899,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_Palo_Alto_PA200</host>
+            <host>Palo_Alto_PA200</host>
             <key>entPhySensorValue.4</key>
           </item>
         </graph_item>
@@ -907,7 +907,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_Palo_Alto_PA200</host>
+            <host>Palo_Alto_PA200</host>
             <key>entPhySensorValue.3</key>
           </item>
         </graph_item>

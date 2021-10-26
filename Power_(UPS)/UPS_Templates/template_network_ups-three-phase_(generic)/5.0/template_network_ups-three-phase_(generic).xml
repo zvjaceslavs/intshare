@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:26Z</date>
+  <date>2021-10-26T04:42:30Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -120,8 +120,8 @@
       </macros>
     </template>
     <template>
-      <template>Template UPS TRIPH - diogont</template>
-      <name>Template UPS TRIPH - diogont</name>
+      <template>UPS TRIPH - diogont</template>
+      <name>UPS TRIPH - diogont</name>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>
@@ -548,7 +548,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>C80000</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsBasicBatteryStatus</key>
           </item>
         </graph_item>
@@ -562,7 +562,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputCurrent1</key>
           </item>
         </graph_item>
@@ -571,7 +571,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>43A047</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputCurrent2</key>
           </item>
         </graph_item>
@@ -580,7 +580,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputCurrent3</key>
           </item>
         </graph_item>
@@ -593,7 +593,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvInputVoltage1</key>
           </item>
         </graph_item>
@@ -602,7 +602,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>43A047</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvInputVoltage2</key>
           </item>
         </graph_item>
@@ -611,7 +611,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvInputVoltage3</key>
           </item>
         </graph_item>
@@ -626,7 +626,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputLoad</key>
           </item>
         </graph_item>
@@ -640,7 +640,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputPower1</key>
           </item>
         </graph_item>
@@ -649,7 +649,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>43A047</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputPower2</key>
           </item>
         </graph_item>
@@ -658,7 +658,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputPower3</key>
           </item>
         </graph_item>
@@ -671,7 +671,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>B71C1C</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputVoltage1</key>
           </item>
         </graph_item>
@@ -680,7 +680,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>43A047</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputVoltage2</key>
           </item>
         </graph_item>
@@ -689,7 +689,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>4444FF</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvOutputVoltage3</key>
           </item>
         </graph_item>
@@ -703,7 +703,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <item>
-            <host>Template UPS TRIPH - diogont</host>
+            <host>UPS TRIPH - diogont</host>
             <key>upsAdvBatteryTemperature</key>
           </item>
         </graph_item>

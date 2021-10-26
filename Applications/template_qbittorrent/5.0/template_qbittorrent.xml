@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:40Z</date>
+  <date>2021-10-26T04:43:54Z</date>
   <groups>
     <group>
       <name>Templates Midgard</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template qBittorrent</template>
-      <name>Template qBittorrent</name>
+      <template>qBittorrent</template>
+      <name>qBittorrent</name>
       <description>Template de monitoramento da API do qBittorrent</description>
       <groups>
         <group>

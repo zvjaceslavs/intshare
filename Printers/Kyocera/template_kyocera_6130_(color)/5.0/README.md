@@ -70,26 +70,26 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Cartridge toner level % - black|<p>-</p>|`Calculated`|black.cartridge.toner<p>Update: 10m</p>|
-|Cartridge toner level % - cyan|<p>-</p>|`Calculated`|cyan.cartridge.toner<p>Update: 10m</p>|
-|Max cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.max<p>Update: 10m</p>|
-|Current cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.now<p>Update: 10m</p>|
-|Max cartridge toner level - cyan|<p>-</p>|`SNMP agent`|ink.cyan.max<p>Update: 10m</p>|
-|Current cartridge toner level - cyan|<p>-</p>|`SNMP agent`|ink.cyan.now<p>Update: 10m</p>|
-|Max cartridge toner level - magenta|<p>-</p>|`SNMP agent`|ink.magenta.max<p>Update: 10m</p>|
-|Current cartridge toner level - magenta|<p>-</p>|`SNMP agent`|ink.magenta.now<p>Update: 10m</p>|
-|Max cartridge toner level - yellow|<p>-</p>|`SNMP agent`|ink.yellow.max<p>Update: 10m</p>|
-|Current cartridge toner level - yellow|<p>-</p>|`SNMP agent`|ink.yellow.now<p>Update: 10m</p>|
+|Тип картриджа - yellow|<p>-</p>|`SNMP agent`|type.yellow<p>Update: 12h</p>|
 |Cartridge toner level % - magenta|<p>-</p>|`Calculated`|magenta.cartridge.toner<p>Update: 10m</p>|
+|Тип картриджа - black|<p>-</p>|`SNMP agent`|type.black<p>Update: 12h</p>|
+|Cartridge toner level % - cyan|<p>-</p>|`Calculated`|cyan.cartridge.toner<p>Update: 10m</p>|
+|Max cartridge toner level - yellow|<p>-</p>|`SNMP agent`|ink.yellow.max<p>Update: 10m</p>|
+|Current cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.now<p>Update: 10m</p>|
 |Printer model|<p>-</p>|`SNMP agent`|model<p>Update: 12h</p>|
+|Max cartridge toner level - magenta|<p>-</p>|`SNMP agent`|ink.magenta.max<p>Update: 10m</p>|
+|Cartridge toner level % - yellow|<p>-</p>|`Calculated`|yellow.cartridge.toner<p>Update: 10m</p>|
+|Тип картриджа - magenta|<p>-</p>|`SNMP agent`|type.magenta<p>Update: 12h</p>|
+|Тип картриджа - cyan|<p>-</p>|`SNMP agent`|type.cyan<p>Update: 12h</p>|
+|Current cartridge toner level - magenta|<p>-</p>|`SNMP agent`|ink.magenta.now<p>Update: 10m</p>|
+|Max cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.max<p>Update: 10m</p>|
+|Serial number|<p>-</p>|`SNMP agent`|serial.number<p>Update: 12h</p>|
+|Max cartridge toner level - cyan|<p>-</p>|`SNMP agent`|ink.cyan.max<p>Update: 10m</p>|
+|Cartridge toner level % - black|<p>-</p>|`Calculated`|black.cartridge.toner<p>Update: 10m</p>|
+|Current cartridge toner level - yellow|<p>-</p>|`SNMP agent`|ink.yellow.now<p>Update: 10m</p>|
+|Current cartridge toner level - cyan|<p>-</p>|`SNMP agent`|ink.cyan.now<p>Update: 10m</p>|
 |Pages printed - total|<p>-</p>|`SNMP agent`|pages.printed.total<p>Update: 10m</p>|
 |Printer location|<p>-</p>|`SNMP agent`|printer.location<p>Update: 1h</p>|
-|Serial number|<p>-</p>|`SNMP agent`|serial.number<p>Update: 12h</p>|
-|Тип картриджа - black|<p>-</p>|`SNMP agent`|type.black<p>Update: 12h</p>|
-|Тип картриджа - cyan|<p>-</p>|`SNMP agent`|type.cyan<p>Update: 12h</p>|
-|Тип картриджа - magenta|<p>-</p>|`SNMP agent`|type.magenta<p>Update: 12h</p>|
-|Тип картриджа - yellow|<p>-</p>|`SNMP agent`|type.yellow<p>Update: 12h</p>|
-|Cartridge toner level % - yellow|<p>-</p>|`Calculated`|yellow.cartridge.toner<p>Update: 10m</p>|
 ## Triggers
 
 There are no triggers in this template.

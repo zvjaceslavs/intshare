@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:28Z</date>
+  <date>2021-10-26T04:42:32Z</date>
   <groups>
     <group>
       <name>Templates/Printers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Canon C5540</template>
-      <name>Template Canon C5540</name>
+      <template>Canon C5540</template>
+      <name>Canon C5540</name>
       <groups>
         <group>
           <name>Templates/Printers</name>
@@ -100,7 +100,7 @@
         <graph_item>
           <color>000000</color>
           <item>
-            <host>Template Canon C5540</host>
+            <host>Canon C5540</host>
             <key>C5540.301</key>
           </item>
         </graph_item>
@@ -108,7 +108,7 @@
           <sortorder>1</sortorder>
           <color>787878</color>
           <item>
-            <host>Template Canon C5540</host>
+            <host>Canon C5540</host>
             <key>C5540.102</key>
           </item>
         </graph_item>
@@ -116,7 +116,7 @@
           <sortorder>2</sortorder>
           <color>80FF00</color>
           <item>
-            <host>Template Canon C5540</host>
+            <host>Canon C5540</host>
             <key>C5540.109</key>
           </item>
         </graph_item>
@@ -124,7 +124,7 @@
           <sortorder>3</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Canon C5540</host>
+            <host>Canon C5540</host>
             <key>C5540.112</key>
           </item>
         </graph_item>
@@ -132,7 +132,7 @@
           <sortorder>4</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Canon C5540</host>
+            <host>Canon C5540</host>
             <key>C5540.124</key>
           </item>
         </graph_item>

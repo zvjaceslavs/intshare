@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:51Z</date>
+  <date>2021-10-26T04:38:31Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP D-Link DES-1210-28</template>
-      <name>Template SNMP D-Link DES-1210-28</name>
+      <template>SNMP D-Link DES-1210-28</template>
+      <name>SNMP D-Link DES-1210-28</name>
       <description>Autor: m.beloglazov@gmail.com Template: Template D-link DES-1210-28 SNMP Version Zabbix: 3.0</description>
       <groups>
         <group>
@@ -260,7 +260,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template SNMP D-Link DES-1210-28:dlink.des1210.ifInErrors[{#SNMPINDEX}].avg(1800)}>1 or {Template SNMP D-Link DES-1210-28:dlink.des1210.ifOutErrors[{#SNMPINDEX}].avg(1800)}>1</expression>
+              <expression>{SNMP D-Link DES-1210-28:dlink.des1210.ifInErrors[{#SNMPINDEX}].avg(1800)}>1 or {SNMP D-Link DES-1210-28:dlink.des1210.ifOutErrors[{#SNMPINDEX}].avg(1800)}>1</expression>
               <name>{HOST.NAME} Errors on network interface {#SNMPINDEX}</name>
               <priority>AVERAGE</priority>
             </trigger_prototype>
@@ -272,7 +272,7 @@
                 <graph_item>
                   <color>00DD00</color>
                   <item>
-                    <host>Template SNMP D-Link DES-1210-28</host>
+                    <host>SNMP D-Link DES-1210-28</host>
                     <key>dlink.des1210.ifInOctets[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -280,7 +280,7 @@
                   <sortorder>1</sortorder>
                   <color>0000EE</color>
                   <item>
-                    <host>Template SNMP D-Link DES-1210-28</host>
+                    <host>SNMP D-Link DES-1210-28</host>
                     <key>dlink.des1210.ifOutOctets[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -292,7 +292,7 @@
                 <graph_item>
                   <color>00DD00</color>
                   <item>
-                    <host>Template SNMP D-Link DES-1210-28</host>
+                    <host>SNMP D-Link DES-1210-28</host>
                     <key>dlink.des1210.ifInOctets[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -300,7 +300,7 @@
                   <sortorder>1</sortorder>
                   <color>0000EE</color>
                   <item>
-                    <host>Template SNMP D-Link DES-1210-28</host>
+                    <host>SNMP D-Link DES-1210-28</host>
                     <key>dlink.des1210.ifOutOctets[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -310,7 +310,7 @@
                   <color>BB0000</color>
                   <calc_fnc>MAX</calc_fnc>
                   <item>
-                    <host>Template SNMP D-Link DES-1210-28</host>
+                    <host>SNMP D-Link DES-1210-28</host>
                     <key>dlink.des1210.ifSpeed[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -330,7 +330,7 @@
               <style>0</style>
               <resource>
                 <name>In / Out / Speed - Interface {#SNMPINDEX}</name>
-                <host>Template SNMP D-Link DES-1210-28</host>
+                <host>SNMP D-Link DES-1210-28</host>
               </resource>
               <width>400</width>
               <height>200</height>

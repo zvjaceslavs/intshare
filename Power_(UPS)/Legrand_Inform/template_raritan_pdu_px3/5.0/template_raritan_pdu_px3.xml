@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:56Z</date>
+  <date>2021-10-26T04:44:11Z</date>
   <groups>
     <group>
       <name>Templates/Server hardware</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Raritan PDU PX3</template>
-      <name>Template Raritan PDU PX3</name>
+      <template>Raritan PDU PX3</template>
+      <name>Raritan PDU PX3</name>
       <description>Zabbix monitoring template for Raritan PDU PX3-5466R This template was tested only on Zabbix 4.4 and PX3-5466R devices but may work on other models too. The sensor discovery is simplistic and many assumptions were made, which might require little changes to make it work on other models. The discovery rules are set to 1 minute interval and the discovered items are also set to 1 minute interval in order to allow quick tests. For real deployments you should create your own template, link this template to your own template and override the discovery intervals with values that make sense for you. For example, we use 1 day interval for the discovery rules because our power topology is pretty static and once the first discovery is done there is no need to keep discovery rules running often. The triggers are defined based on the sensor states in order to respect the thresholds defined in each PDU, and for that reason the actual PDU thresholds don't show in the graphs.</description>
       <groups>
         <group>
@@ -303,35 +303,35 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=6 or {Template Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=6 or {Template Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=6 or {Template Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=6 or {Template Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=6 or {Template Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=6</expression>
+              <expression>{Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=6 or {Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=6 or {Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=6 or {Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=6 or {Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=6 or {Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=6</expression>
               <name>High Critical State on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
               <opdata>Check individual inlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>HIGH</priority>
               <description>High Critical state detected from at least one sensor of the PDU inlet with the following details: ID: {#PDU_INTLET_ID} Name: {#PDU_INLET_NAME} Rated Voltage: {#PDU_INLET_RATED_VOLTAGE} Rated Current: {#PDU_INLET_RATED_CURRENT} Socket: {#PDU_INLET_SOCKET} Check individual inlet sensor state to find which sensor is reporting a problem.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=5 or {Template Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=5 or {Template Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=5 or {Template Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=5 or {Template Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=5 or {Template Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=5</expression>
+              <expression>{Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=5 or {Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=5 or {Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=5 or {Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=5 or {Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=5 or {Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=5</expression>
               <name>High Warning State on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
               <opdata>Check individual inlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>WARNING</priority>
               <description>High Warning state detected from at least one sensor of the PDU inlet with the following details: ID: {#PDU_INTLET_ID} Name: {#PDU_INLET_NAME} Rated Voltage: {#PDU_INLET_RATED_VOLTAGE} Rated Current: {#PDU_INLET_RATED_CURRENT} Socket: {#PDU_INLET_SOCKET} Check individual inlet sensor state to find which sensor is reporting a problem.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=2 or {Template Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=2 or {Template Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=2 or {Template Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=2 or {Template Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=2 or {Template Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=2</expression>
+              <expression>{Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=2 or {Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=2 or {Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=2 or {Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=2 or {Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=2 or {Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=2</expression>
               <name>Low Critical State on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
               <opdata>Check individual inlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>HIGH</priority>
               <description>Low Critical state detected from at least one sensor of the PDU inlet with the following details: ID: {#PDU_INTLET_ID} Name: {#PDU_INLET_NAME} Rated Voltage: {#PDU_INLET_RATED_VOLTAGE} Rated Current: {#PDU_INLET_RATED_CURRENT} Socket: {#PDU_INLET_SOCKET} Check individual inlet sensor state to find which sensor is reporting a problem.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=3 or {Template Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=3 or {Template Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=3 or {Template Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=3 or {Template Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=3 or {Template Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=3</expression>
+              <expression>{Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=3 or {Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=3 or {Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=3 or {Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=3 or {Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=3 or {Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=3</expression>
               <name>Low Warning State on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
               <opdata>Check individual inlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>WARNING</priority>
               <description>Low Warning state detected from at least one sensor of the PDU inlet with the following details: ID: {#PDU_INTLET_ID} Name: {#PDU_INLET_NAME} Rated Voltage: {#PDU_INLET_RATED_VOLTAGE} Rated Current: {#PDU_INLET_RATED_CURRENT} Socket: {#PDU_INLET_SOCKET} Check individual inlet sensor state to find which sensor is reporting a problem.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=-1 or {Template Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=-1 or {Template Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=-1 or {Template Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=-1 or {Template Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=-1 or {Template Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=-1</expression>
+              <expression>{Raritan PDU PX3:pdu.inlet.active_power_state[{#SNMPINDEX}].last()}=-1 or {Raritan PDU PX3:pdu.inlet.apparent_power_state[{#SNMPINDEX}].last()}=-1 or {Raritan PDU PX3:pdu.inlet.frequency_state[{#SNMPINDEX}].last()}=-1 or {Raritan PDU PX3:pdu.inlet.power_factor_state[{#SNMPINDEX}].last()}=-1 or {Raritan PDU PX3:pdu.inlet.rms_current_state[{#SNMPINDEX}].last()}=-1 or {Raritan PDU PX3:pdu.inlet.rms_voltage_state[{#SNMPINDEX}].last()}=-1</expression>
               <name>Unavailable State on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
               <opdata>Check individual inlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>INFO</priority>
@@ -345,7 +345,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.inlet.frequency[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -357,7 +357,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.inlet.power_factor[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -369,7 +369,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.inlet.active_power[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -377,7 +377,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.inlet.apparent_power[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -389,7 +389,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.inlet.rms_current[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -401,7 +401,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.inlet.rms_voltage[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -610,35 +610,35 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=6 or {Template Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=6 or {Template Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=6 or {Template Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=6 or {Template Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=6 or {Template Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=6</expression>
+              <expression>{Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=6 or {Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=6 or {Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=6 or {Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=6 or {Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=6 or {Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=6</expression>
               <name>High Critical State on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
               <opdata>Check individual outlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>HIGH</priority>
               <description>High Critical state detected from at least one sensor of the PDU outlet with the following details: ID: {#PDU_OUTLET_ID} Name: {#PDU_OUTLET_NAME} Rated Voltage: {#PDU_OUTLET_RATED_VOLTAGE} Rated Current: {#PDU_OUTLET_RATED_CURRENT} Socket: {#PDU_OUTLET_SOCKET} Check individual outlet sensor state to find which sensor is reporting a problem.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=5 or {Template Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=5 or {Template Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=5 or {Template Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=5 or {Template Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=5 or {Template Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=5</expression>
+              <expression>{Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=5 or {Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=5 or {Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=5 or {Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=5 or {Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=5 or {Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=5</expression>
               <name>High Warning State on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
               <opdata>Check individual outlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>WARNING</priority>
               <description>High Warning state detected from at least one sensor of the PDU outlet with the following details: ID: {#PDU_OUTLET_ID} Name: {#PDU_OUTLET_NAME} Rated Voltage: {#PDU_OUTLET_RATED_VOLTAGE} Rated Current: {#PDU_OUTLET_RATED_CURRENT} Socket: {#PDU_OUTLET_SOCKET} Check individual outlet sensor state to find which sensor is reporting a problem.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=2 or {Template Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=2 or {Template Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=2 or {Template Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=2 or {Template Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=2 or {Template Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=2</expression>
+              <expression>{Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=2 or {Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=2 or {Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=2 or {Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=2 or {Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=2 or {Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=2</expression>
               <name>Low Critical State on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
               <opdata>Check individual outlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>HIGH</priority>
               <description>Low Critical state detected from at least one sensor of the PDU outlet with the following details: ID: {#PDU_OUTLET_ID} Name: {#PDU_OUTLET_NAME} Rated Voltage: {#PDU_OUTLET_RATED_VOLTAGE} Rated Current: {#PDU_OUTLET_RATED_CURRENT} Socket: {#PDU_OUTLET_SOCKET} Check individual outlet sensor state to find which sensor is reporting a problem.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=3 or {Template Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=3 or {Template Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=3 or {Template Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=3 or {Template Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=3 or {Template Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=3</expression>
+              <expression>{Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=3 or {Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=3 or {Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=3 or {Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=3 or {Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=3 or {Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=3</expression>
               <name>Low Warning State on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
               <opdata>Check individual outlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>WARNING</priority>
               <description>Low Warning state detected from at least one sensor of the PDU outlet with the following details: ID: {#PDU_OUTLET_ID} Name: {#PDU_OUTLET_NAME} Rated Voltage: {#PDU_OUTLET_RATED_VOLTAGE} Rated Current: {#PDU_OUTLET_RATED_CURRENT} Socket: {#PDU_OUTLET_SOCKET} Check individual outlet sensor state to find which sensor is reporting a problem.</description>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=-1 or {Template Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=-1 or {Template Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=-1 or {Template Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=-1 or {Template Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=-1 or {Template Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=-1</expression>
+              <expression>{Raritan PDU PX3:pdu.outlet.active_power_state[{#PDU_OUTLET_ID}].last()}=-1 or {Raritan PDU PX3:pdu.outlet.apparent_power_state[{#PDU_OUTLET_ID}].last()}=-1 or {Raritan PDU PX3:pdu.outlet.frequency_state[{#PDU_OUTLET_ID}].last()}=-1 or {Raritan PDU PX3:pdu.outlet.power_factor_state[{#PDU_OUTLET_ID}].last()}=-1 or {Raritan PDU PX3:pdu.outlet.rms_current_state[{#PDU_OUTLET_ID}].last()}=-1 or {Raritan PDU PX3:pdu.outlet.rms_voltage_state[{#PDU_OUTLET_ID}].last()}=-1</expression>
               <name>Unavailable State on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
               <opdata>Check individual outlet sensor state to find which sensor is reporting a problem.</opdata>
               <priority>INFO</priority>
@@ -652,7 +652,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.outlet.frequency[{#PDU_OUTLET_ID}]</key>
                   </item>
                 </graph_item>
@@ -664,7 +664,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.outlet.power_factor[{#PDU_OUTLET_ID}]</key>
                   </item>
                 </graph_item>
@@ -676,7 +676,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.outlet.active_power[{#PDU_OUTLET_ID}]</key>
                   </item>
                 </graph_item>
@@ -684,7 +684,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.outlet.apparent_power[{#PDU_OUTLET_ID}]</key>
                   </item>
                 </graph_item>
@@ -696,7 +696,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.outlet.rms_current[{#PDU_OUTLET_ID}]</key>
                   </item>
                 </graph_item>
@@ -708,7 +708,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.outlet.rms_voltage[{#PDU_OUTLET_ID}]</key>
                   </item>
                 </graph_item>
@@ -826,7 +826,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Raritan PDU PX3:pdu.protector.trip[{#SNMPINDEX}].last()}&lt;>0 or {Template Raritan PDU PX3:pdu.protector.trip_state[{#SNMPINDEX}].last()}&lt;>1</expression>
+              <expression>{Raritan PDU PX3:pdu.protector.trip[{#SNMPINDEX}].last()}&lt;>0 or {Raritan PDU PX3:pdu.protector.trip_state[{#SNMPINDEX}].last()}&lt;>1</expression>
               <name>Trip on Over Current Protector {#PDU_PROTECTOR_LABEL} - {#PDU_PROTECTOR_NAME}</name>
               <opdata>This Over Current Protector tripped or the sensor is broken,</opdata>
               <priority>DISASTER</priority>
@@ -840,7 +840,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.protector.current[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -932,7 +932,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.sensor.humidity.sensor[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1031,7 +1031,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Raritan PDU PX3</host>
+                    <host>Raritan PDU PX3</host>
                     <key>pdu.sensor.temperature.sensor[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1084,7 +1084,7 @@
               <style>0</style>
               <resource>
                 <name>Temperature ({#PDU_SENSOR_NAME})</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1106,7 +1106,7 @@
               <style>0</style>
               <resource>
                 <name>Humidity ({#PDU_SENSOR_NAME})</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>500</width>
               <height>100</height>
@@ -1135,7 +1135,7 @@
               <style>0</style>
               <resource>
                 <name>Power on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1157,7 +1157,7 @@
               <style>0</style>
               <resource>
                 <name>Power Factor on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1179,7 +1179,7 @@
               <style>0</style>
               <resource>
                 <name>RMS Current on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1201,7 +1201,7 @@
               <style>0</style>
               <resource>
                 <name>RMS Voltage on INlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1223,7 +1223,7 @@
               <style>0</style>
               <resource>
                 <name>Frequency on Inlet {#PDU_INLET_ID} - {#PDU_INLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1252,7 +1252,7 @@
               <style>0</style>
               <resource>
                 <name>Power on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1274,7 +1274,7 @@
               <style>0</style>
               <resource>
                 <name>Power Factor on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1296,7 +1296,7 @@
               <style>0</style>
               <resource>
                 <name>RMS Current on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1318,7 +1318,7 @@
               <style>0</style>
               <resource>
                 <name>RMS Voltage on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1340,7 +1340,7 @@
               <style>0</style>
               <resource>
                 <name>Frequency on Outlet {#PDU_OUTLET_ID} - {#PDU_OUTLET_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>200</width>
               <height>100</height>
@@ -1369,7 +1369,7 @@
               <style>0</style>
               <resource>
                 <name>RMS Current State on Over Current Protector {#PDU_PROTECTOR_LABEL} - {#PDU_PROTECTOR_NAME}</name>
-                <host>Template Raritan PDU PX3</host>
+                <host>Raritan PDU PX3</host>
               </resource>
               <width>500</width>
               <height>100</height>

@@ -1,4 +1,4 @@
-# Template SNMP Cisco IP SLA
+# SNMP Cisco IP SLA
 
 ## Overview
 
@@ -35,5 +35,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|IP SLA {#SNMPINDEX} on {HOST.NAME} is not OK|<p>-</p>|<p>**Expression**: {Template SNMP Cisco IP SLA:rttMonCtrlAdminSense[{#SNMPINDEX}].last()}<>1</p><p>**Recovery expression**: </p>|high|
-|IP SLA {#SNMPINDEX} on {HOST.NAME} is not OK (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Cisco IP SLA:rttMonCtrlAdminSense[{#SNMPINDEX}].last()}<>1</p><p>**Recovery expression**: </p>|high|
+|IP SLA {#SNMPINDEX} on {HOST.NAME} is not OK|<p>-</p>|<p>**Expression**: {SNMP Cisco IP SLA:rttMonCtrlAdminSense[{#SNMPINDEX}].last()}<>1</p><p>**Recovery expression**: </p>|high|
+|IP SLA {#SNMPINDEX} on {HOST.NAME} is not OK (LLD)|<p>-</p>|<p>**Expression**: {SNMP Cisco IP SLA:rttMonCtrlAdminSense[{#SNMPINDEX}].last()}<>1</p><p>**Recovery expression**: </p>|high|

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:56Z</date>
+  <date>2021-10-26T04:39:45Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Virt VMware Hypervisor</template>
-      <name>Template Virt VMware Hypervisor</name>
+      <template>Virt VMware Hypervisor</template>
+      <name>Virt VMware Hypervisor</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -207,7 +207,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} - CPU Usage (5 min avg) is {ITEM.LASTVALUE}</name>
-                  <expression>{Template Virt VMware Hypervisor:vmware.hv.hw.cpu.total.percent[{$URL},{HOST.HOST}].avg(5m)}>=95</expression>
+                  <expression>{Virt VMware Hypervisor:vmware.hv.hw.cpu.total.percent[{$URL},{HOST.HOST}].avg(5m)}>=95</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -599,21 +599,21 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].min(5m)}&lt;=90 and {Template Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},free].min(5m)}&lt;=0</expression>
+              <expression>{Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].min(5m)}&lt;=90 and {Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},free].min(5m)}&lt;=0</expression>
               <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-              <recovery_expression>{Template Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].min(5m)}>=88</recovery_expression>
+              <recovery_expression>{Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].min(5m)}>=88</recovery_expression>
               <name>{HOST.NAME} - Free space on datastore {#DATASTORE} is {ITEM.LASTVALUE1} - {ITEM.LASTVALUE2} remaining</name>
               <priority>AVERAGE</priority>
               <manual_close>YES</manual_close>
               <dependencies>
                 <dependency>
                   <name>{HOST.NAME} - Free space on datastore {#DATASTORE} is {ITEM.LASTVALUE1} - {ITEM.LASTVALUE2} remaining</name>
-                  <expression>{Template Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].min(5m)}&lt;=95 and {Template Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},free].min(5m)}&lt;=0</expression>
+                  <expression>{Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].min(5m)}&lt;=95 and {Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},free].min(5m)}&lt;=0</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].min(5m)}&lt;=95 and {Template Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},free].min(5m)}&lt;=0</expression>
+              <expression>{Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},pfree].min(5m)}&lt;=95 and {Virt VMware Hypervisor:vmware.hv.datastore.size[{$URL},{HOST.HOST},{#DATASTORE},free].min(5m)}&lt;=0</expression>
               <name>{HOST.NAME} - Free space on datastore {#DATASTORE} is {ITEM.LASTVALUE1} - {ITEM.LASTVALUE2} remaining</name>
               <priority>HIGH</priority>
               <manual_close>YES</manual_close>
@@ -625,22 +625,22 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{Template Virt VMware Hypervisor:vmware.hv.hw.memory.total.percent[{$URL},{HOST.HOST}].avg(5m)}>=95 and {Template Virt VMware Hypervisor:vmware.hv.memory.available[{$URL},{HOST.HOST}].last()}>=0</expression>
+      <expression>{Virt VMware Hypervisor:vmware.hv.hw.memory.total.percent[{$URL},{HOST.HOST}].avg(5m)}>=95 and {Virt VMware Hypervisor:vmware.hv.memory.available[{$URL},{HOST.HOST}].last()}>=0</expression>
       <name>{HOST.NAME} - Memory usage (5 min avg) is {ITEM.LASTVALUE1} ({ITEM.LASTVALUE1})</name>
       <priority>AVERAGE</priority>
       <manual_close>YES</manual_close>
     </trigger>
     <trigger>
-      <expression>{Template Virt VMware Hypervisor:vmware.hv.hw.memory.total.percent[{$URL},{HOST.HOST}].avg(5m)}>=90 and {Template Virt VMware Hypervisor:vmware.hv.memory.available[{$URL},{HOST.HOST}].last()}>=0</expression>
+      <expression>{Virt VMware Hypervisor:vmware.hv.hw.memory.total.percent[{$URL},{HOST.HOST}].avg(5m)}>=90 and {Virt VMware Hypervisor:vmware.hv.memory.available[{$URL},{HOST.HOST}].last()}>=0</expression>
       <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-      <recovery_expression>{Template Virt VMware Hypervisor:vmware.hv.hw.memory.total.percent[{$URL},{HOST.HOST}].avg(5m)}&lt;=85</recovery_expression>
+      <recovery_expression>{Virt VMware Hypervisor:vmware.hv.hw.memory.total.percent[{$URL},{HOST.HOST}].avg(5m)}&lt;=85</recovery_expression>
       <name>{HOST.NAME} - Memory usage (5 min avg) is {ITEM.LASTVALUE1} ({ITEM.LASTVALUE2})</name>
       <priority>WARNING</priority>
       <manual_close>YES</manual_close>
       <dependencies>
         <dependency>
           <name>{HOST.NAME} - Memory usage (5 min avg) is {ITEM.LASTVALUE1} ({ITEM.LASTVALUE1})</name>
-          <expression>{Template Virt VMware Hypervisor:vmware.hv.hw.memory.total.percent[{$URL},{HOST.HOST}].avg(5m)}>=95 and {Template Virt VMware Hypervisor:vmware.hv.memory.available[{$URL},{HOST.HOST}].last()}>=0</expression>
+          <expression>{Virt VMware Hypervisor:vmware.hv.hw.memory.total.percent[{$URL},{HOST.HOST}].avg(5m)}>=95 and {Virt VMware Hypervisor:vmware.hv.memory.available[{$URL},{HOST.HOST}].last()}>=0</expression>
         </dependency>
       </dependencies>
     </trigger>

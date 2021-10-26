@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:50Z</date>
+  <date>2021-10-26T04:38:29Z</date>
   <groups>
     <group>
       <name>Router Mikroitk</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Mikrotik RB750-RB1100</template>
-      <name>Template Mikrotik RB750-RB1100</name>
+      <template>Mikrotik RB750-RB1100</template>
+      <name>Mikrotik RB750-RB1100</name>
       <description>Autor: Danilo Barros de Medeiros Template: Mikrotik RB750/RB1100 Versão Zabbix: 3.0 Versão Template: 1.1</description>
       <groups>
         <group>
@@ -64,7 +64,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOSTNAME} fora de alcance (5min)</name>
-                  <expression>{Template Mikrotik RB750-RB1100:icmpping.sum(280)}=0</expression>
+                  <expression>{Mikrotik RB750-RB1100:icmpping.sum(280)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -97,7 +97,7 @@
               <dependencies>
                 <dependency>
                   <name>{HOSTNAME} fora de alcance (5min)</name>
-                  <expression>{Template Mikrotik RB750-RB1100:icmpping.sum(280)}=0</expression>
+                  <expression>{Mikrotik RB750-RB1100:icmpping.sum(280)}=0</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -471,7 +471,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>EEEE00</color>
                   <item>
-                    <host>Template Mikrotik RB750-RB1100</host>
+                    <host>Mikrotik RB750-RB1100</host>
                     <key>ifInErrors[{#IFDESCR}]</key>
                   </item>
                 </graph_item>
@@ -480,7 +480,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00DD00</color>
                   <item>
-                    <host>Template Mikrotik RB750-RB1100</host>
+                    <host>Mikrotik RB750-RB1100</host>
                     <key>ifInOctets[{#IFDESCR}]</key>
                   </item>
                 </graph_item>
@@ -489,7 +489,7 @@
                   <drawtype>BOLD_LINE</drawtype>
                   <color>CC0000</color>
                   <item>
-                    <host>Template Mikrotik RB750-RB1100</host>
+                    <host>Mikrotik RB750-RB1100</host>
                     <key>ifOutErrors[{#IFDESCR}]</key>
                   </item>
                 </graph_item>
@@ -498,7 +498,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>0000EE</color>
                   <item>
-                    <host>Template Mikrotik RB750-RB1100</host>
+                    <host>Mikrotik RB750-RB1100</host>
                     <key>ifOutOctets[{#IFDESCR}]</key>
                   </item>
                 </graph_item>

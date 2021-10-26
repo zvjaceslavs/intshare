@@ -1,4 +1,4 @@
-# Template SSLLabs
+# SSLLabs
 
 ## Description
 

@@ -38,14 +38,14 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Capacité toner|<p>-</p>|`SNMP agent`|capacite.toner<p>Update: 10</p>|
-|Compteur toner|<p>-</p>|`SNMP agent`|compteur.toner<p>Update: 10</p>|
-|Emplacement imprimante|<p>-</p>|`SNMP agent`|emplacement.imprimante<p>Update: 43200</p>|
-|Impressions|<p>-</p>|`SNMP agent`|impressions<p>Update: 10</p>|
-|MAC Address|<p>-</p>|`SNMP agent`|mac.address<p>Update: 43200</p>|
-|Nombre impressions total|<p>-</p>|`SNMP agent`|nbr.impressions.total<p>Update: 10</p>|
 |Numéro série|<p>-</p>|`SNMP agent`|num.serie<p>Update: 43200</p>|
+|Capacité toner|<p>-</p>|`SNMP agent`|capacite.toner<p>Update: 10</p>|
+|Impressions|<p>-</p>|`SNMP agent`|impressions<p>Update: 10</p>|
+|Compteur toner|<p>-</p>|`SNMP agent`|compteur.toner<p>Update: 10</p>|
 |Pourcentage toner|<p>-</p>|`Calculated`|pourcentage.toner<p>Update: 10</p>|
+|Emplacement imprimante|<p>-</p>|`SNMP agent`|emplacement.imprimante<p>Update: 43200</p>|
+|Nombre impressions total|<p>-</p>|`SNMP agent`|nbr.impressions.total<p>Update: 10</p>|
+|MAC Address|<p>-</p>|`SNMP agent`|mac.address<p>Update: 43200</p>|
 ## Triggers
 
 There are no triggers in this template.

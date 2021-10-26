@@ -1,4 +1,4 @@
-# Template SSL check LLD
+# SSL check LLD
 
 ## Overview
 
@@ -38,19 +38,19 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Domain {#DOMAIN_NAME} expired|<p>-</p>|<p>**Expression**: {Template SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<=0</p><p>**Recovery expression**: </p>|disaster|
-|Domain {#DOMAIN_NAME} will expire in 14 days|<p>-</p>|<p>**Expression**: {Template SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<14</p><p>**Recovery expression**: </p>|high|
-|Domain {#DOMAIN_NAME} will expire in 30 days|<p>-</p>|<p>**Expression**: {Template SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<30</p><p>**Recovery expression**: </p>|warning|
-|HTTPS service is down on {#URL}:{#PORT}|<p>Last value: {ITEM.LASTVALUE1}. HTTPS service is down on {#URL}:{#PORT}</p>|<p>**Expression**: {Template SSL check LLD:net.tcp.service[https,{#URL},{#PORT}].max(#3)}=0</p><p>**Recovery expression**: </p>|average|
-|Falied to establish SSL connectoin on {#URL}:{#PORT} in last 3 hour|<p>-</p>|<p>**Expression**: {Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].nodata(210m)}=1</p><p>**Recovery expression**: </p>|high|
-|SSL certificate on {#URL}:{#PORT} expired|<p>-</p>|<p>**Expression**: {Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<0</p><p>**Recovery expression**: </p>|disaster|
-|SSL certificate on {#URL}:{#PORT} expires in less than 7 days|<p>Last value: {ITEM.LASTVALUE1}. SSL certificate on {#URL}:{#PORT} expires in less than week</p>|<p>**Expression**: {Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<7</p><p>**Recovery expression**: </p>|high|
-|SSL certificate on {#URL}:{#PORT} expires in less than 21 days|<p>Last value: {ITEM.LASTVALUE1}. SSL certificate on {#URL}:{#PORT} expires in less than 3 week</p>|<p>**Expression**: {Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<21</p><p>**Recovery expression**: </p>|warning|
-|Domain {#DOMAIN_NAME} expired (LLD)|<p>-</p>|<p>**Expression**: {Template SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<=0</p><p>**Recovery expression**: </p>|disaster|
-|Domain {#DOMAIN_NAME} will expire in 14 days (LLD)|<p>-</p>|<p>**Expression**: {Template SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<14</p><p>**Recovery expression**: </p>|high|
-|Domain {#DOMAIN_NAME} will expire in 30 days (LLD)|<p>-</p>|<p>**Expression**: {Template SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<30</p><p>**Recovery expression**: </p>|warning|
-|HTTPS service is down on {#URL}:{#PORT} (LLD)|<p>Last value: {ITEM.LASTVALUE1}. HTTPS service is down on {#URL}:{#PORT}</p>|<p>**Expression**: {Template SSL check LLD:net.tcp.service[https,{#URL},{#PORT}].max(#3)}=0</p><p>**Recovery expression**: </p>|average|
-|Falied to establish SSL connectoin on {#URL}:{#PORT} in last 3 hour (LLD)|<p>-</p>|<p>**Expression**: {Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].nodata(210m)}=1</p><p>**Recovery expression**: </p>|high|
-|SSL certificate on {#URL}:{#PORT} expired (LLD)|<p>-</p>|<p>**Expression**: {Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<0</p><p>**Recovery expression**: </p>|disaster|
-|SSL certificate on {#URL}:{#PORT} expires in less than 7 days (LLD)|<p>Last value: {ITEM.LASTVALUE1}. SSL certificate on {#URL}:{#PORT} expires in less than week</p>|<p>**Expression**: {Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<7</p><p>**Recovery expression**: </p>|high|
-|SSL certificate on {#URL}:{#PORT} expires in less than 21 days (LLD)|<p>Last value: {ITEM.LASTVALUE1}. SSL certificate on {#URL}:{#PORT} expires in less than 3 week</p>|<p>**Expression**: {Template SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<21</p><p>**Recovery expression**: </p>|warning|
+|Domain {#DOMAIN_NAME} expired|<p>-</p>|<p>**Expression**: {SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<=0</p><p>**Recovery expression**: </p>|disaster|
+|Domain {#DOMAIN_NAME} will expire in 14 days|<p>-</p>|<p>**Expression**: {SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<14</p><p>**Recovery expression**: </p>|high|
+|Domain {#DOMAIN_NAME} will expire in 30 days|<p>-</p>|<p>**Expression**: {SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<30</p><p>**Recovery expression**: </p>|warning|
+|HTTPS service is down on {#URL}:{#PORT}|<p>Last value: {ITEM.LASTVALUE1}. HTTPS service is down on {#URL}:{#PORT}</p>|<p>**Expression**: {SSL check LLD:net.tcp.service[https,{#URL},{#PORT}].max(#3)}=0</p><p>**Recovery expression**: </p>|average|
+|Falied to establish SSL connectoin on {#URL}:{#PORT} in last 3 hour|<p>-</p>|<p>**Expression**: {SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].nodata(210m)}=1</p><p>**Recovery expression**: </p>|high|
+|SSL certificate on {#URL}:{#PORT} expired|<p>-</p>|<p>**Expression**: {SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<0</p><p>**Recovery expression**: </p>|disaster|
+|SSL certificate on {#URL}:{#PORT} expires in less than 7 days|<p>Last value: {ITEM.LASTVALUE1}. SSL certificate on {#URL}:{#PORT} expires in less than week</p>|<p>**Expression**: {SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<7</p><p>**Recovery expression**: </p>|high|
+|SSL certificate on {#URL}:{#PORT} expires in less than 21 days|<p>Last value: {ITEM.LASTVALUE1}. SSL certificate on {#URL}:{#PORT} expires in less than 3 week</p>|<p>**Expression**: {SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<21</p><p>**Recovery expression**: </p>|warning|
+|Domain {#DOMAIN_NAME} expired (LLD)|<p>-</p>|<p>**Expression**: {SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<=0</p><p>**Recovery expression**: </p>|disaster|
+|Domain {#DOMAIN_NAME} will expire in 14 days (LLD)|<p>-</p>|<p>**Expression**: {SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<14</p><p>**Recovery expression**: </p>|high|
+|Domain {#DOMAIN_NAME} will expire in 30 days (LLD)|<p>-</p>|<p>**Expression**: {SSL check LLD:whois_expire.sh[{#DOMAIN_NAME}].last()}<30</p><p>**Recovery expression**: </p>|warning|
+|HTTPS service is down on {#URL}:{#PORT} (LLD)|<p>Last value: {ITEM.LASTVALUE1}. HTTPS service is down on {#URL}:{#PORT}</p>|<p>**Expression**: {SSL check LLD:net.tcp.service[https,{#URL},{#PORT}].max(#3)}=0</p><p>**Recovery expression**: </p>|average|
+|Falied to establish SSL connectoin on {#URL}:{#PORT} in last 3 hour (LLD)|<p>-</p>|<p>**Expression**: {SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].nodata(210m)}=1</p><p>**Recovery expression**: </p>|high|
+|SSL certificate on {#URL}:{#PORT} expired (LLD)|<p>-</p>|<p>**Expression**: {SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<0</p><p>**Recovery expression**: </p>|disaster|
+|SSL certificate on {#URL}:{#PORT} expires in less than 7 days (LLD)|<p>Last value: {ITEM.LASTVALUE1}. SSL certificate on {#URL}:{#PORT} expires in less than week</p>|<p>**Expression**: {SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<7</p><p>**Recovery expression**: </p>|high|
+|SSL certificate on {#URL}:{#PORT} expires in less than 21 days (LLD)|<p>Last value: {ITEM.LASTVALUE1}. SSL certificate on {#URL}:{#PORT} expires in less than 3 week</p>|<p>**Expression**: {SSL check LLD:zext_ssl_cert.sh[-d,{#URL},{#PORT}].last()}<21</p><p>**Recovery expression**: </p>|warning|

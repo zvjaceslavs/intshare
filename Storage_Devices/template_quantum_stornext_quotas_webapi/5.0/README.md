@@ -1,4 +1,4 @@
-# Template Stornext Quota
+# Stornext Quota
 
 ## Overview
 
@@ -94,7 +94,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Free disk quota is less than 0% on fs {#SNQUOTAID}|<p>-</p>|<p>**Expression**: {Template Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=100</p><p>**Recovery expression**: </p>|average|
-|Free disk quota is less than 5% on fs {#SNQUOTAID}|<p>-</p>|<p>**Expression**: {Template Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=95</p><p>**Recovery expression**: </p>|warning|
-|Free disk quota is less than 0% on fs {#SNQUOTAID} (LLD)|<p>-</p>|<p>**Expression**: {Template Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=100</p><p>**Recovery expression**: </p>|average|
-|Free disk quota is less than 5% on fs {#SNQUOTAID} (LLD)|<p>-</p>|<p>**Expression**: {Template Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=95</p><p>**Recovery expression**: </p>|warning|
+|Free disk quota is less than 0% on fs {#SNQUOTAID}|<p>-</p>|<p>**Expression**: {Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=100</p><p>**Recovery expression**: </p>|average|
+|Free disk quota is less than 5% on fs {#SNQUOTAID}|<p>-</p>|<p>**Expression**: {Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=95</p><p>**Recovery expression**: </p>|warning|
+|Free disk quota is less than 0% on fs {#SNQUOTAID} (LLD)|<p>-</p>|<p>**Expression**: {Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=100</p><p>**Recovery expression**: </p>|average|
+|Free disk quota is less than 5% on fs {#SNQUOTAID} (LLD)|<p>-</p>|<p>**Expression**: {Stornext Quota:snquotas.onfs.curSize.percent.[calc,{#SNQUOTAID}].last()}>=95</p><p>**Recovery expression**: </p>|warning|

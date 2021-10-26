@@ -1,4 +1,4 @@
-# Template Ativacao do Windows
+# Ativacao do Windows
 
 ## Overview
 

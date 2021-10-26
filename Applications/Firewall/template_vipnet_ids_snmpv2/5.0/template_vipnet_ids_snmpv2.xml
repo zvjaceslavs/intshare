@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:28Z</date>
+  <date>2021-10-26T04:44:47Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>ViPNet IDS SNMPv2 template</template>
-      <name>ViPNet IDS SNMPv2 template</name>
+      <template>ViPNet IDS SNMPv2</template>
+      <name>ViPNet IDS SNMPv2</name>
       <description>ViPNet IDS SNMPv2 template</description>
       <groups>
         <group>
@@ -843,7 +843,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>{ViPNet IDS SNMPv2 template:software.build.diff()}=1 or {ViPNet IDS SNMPv2 template:software.hotfix.diff()}=1 or {ViPNet IDS SNMPv2 template:software.major.diff()}=1 or {ViPNet IDS SNMPv2 template:software.minor.diff()}=1</expression>
+      <expression>{ViPNet IDS SNMPv2:software.build.diff()}=1 or {ViPNet IDS SNMPv2:software.hotfix.diff()}=1 or {ViPNet IDS SNMPv2:software.major.diff()}=1 or {ViPNet IDS SNMPv2:software.minor.diff()}=1</expression>
       <name>{HOST.NAME} software version changed</name>
       <priority>INFO</priority>
       <manual_close>YES</manual_close>
@@ -859,7 +859,7 @@
           <color>00FF00</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>CPU.load</key>
           </item>
         </graph_item>
@@ -878,7 +878,7 @@
           <color>F63100</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.high.day</key>
           </item>
         </graph_item>
@@ -887,7 +887,7 @@
           <color>FF8000</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.medium.day</key>
           </item>
         </graph_item>
@@ -896,7 +896,7 @@
           <color>80FF00</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.low.day</key>
           </item>
         </graph_item>
@@ -905,7 +905,7 @@
           <color>2774A4</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.information.day</key>
           </item>
         </graph_item>
@@ -924,7 +924,7 @@
           <color>FF4000</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.high.month</key>
           </item>
         </graph_item>
@@ -933,7 +933,7 @@
           <color>F7941D</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.medium.month</key>
           </item>
         </graph_item>
@@ -942,7 +942,7 @@
           <color>80FF00</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.low.month</key>
           </item>
         </graph_item>
@@ -951,7 +951,7 @@
           <color>00BFFF</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.information.month</key>
           </item>
         </graph_item>
@@ -969,7 +969,7 @@
         <graph_item>
           <color>FF0000</color>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.high.year</key>
           </item>
         </graph_item>
@@ -977,7 +977,7 @@
           <sortorder>1</sortorder>
           <color>FF8000</color>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.medium.year</key>
           </item>
         </graph_item>
@@ -985,7 +985,7 @@
           <sortorder>2</sortorder>
           <color>80FF00</color>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.low.year</key>
           </item>
         </graph_item>
@@ -993,7 +993,7 @@
           <sortorder>3</sortorder>
           <color>00BFFF</color>
           <item>
-            <host>ViPNet IDS SNMPv2 template</host>
+            <host>ViPNet IDS SNMPv2</host>
             <key>attacks.information.year</key>
           </item>
         </graph_item>

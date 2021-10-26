@@ -1,4 +1,4 @@
-# Hitachi DiskArray Monitor Template
+# Hitachi DiskArray Monitor
 
 ## Description
 
@@ -54,27 +54,27 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|DKC Battery Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCBatteryCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Cache Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCCacheCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Environment Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCEnvironmentCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Fan Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCFanCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Internal Bus Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCInternalBusCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Power Supply Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCPowerSupplyCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Processor Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCProcessorCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Shared Memory Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCSharedMemoryCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKU Drive Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKUDriveCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKU Environment Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKUEnvironmentCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKU Fan Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKUFanCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKU Power Supply Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKUPowerSupplyCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Battery Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCBatteryCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Cache Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCCacheCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Environment Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCEnvironmentCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Fan Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCFanCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Internal Bus Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCInternalBusCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Power Supply Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCPowerSupplyCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Processor Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCProcessorCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKC Shared Memory Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKCSharedMemoryCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKU Drive Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKUDriveCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKU Environment Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKUEnvironmentCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKU Fan Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKUFanCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
-|DKU Power Supply Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor_template:DKUPowerSupplyCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Battery Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCBatteryCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Cache Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCCacheCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Environment Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCEnvironmentCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Fan Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCFanCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Internal Bus Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCInternalBusCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Power Supply Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCPowerSupplyCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Processor Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCProcessorCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Shared Memory Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCSharedMemoryCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKU Drive Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKUDriveCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKU Environment Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKUEnvironmentCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKU Fan Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKUFanCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKU Power Supply Abnormal|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKUPowerSupplyCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Battery Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCBatteryCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Cache Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCCacheCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Environment Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCEnvironmentCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Fan Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCFanCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Internal Bus Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCInternalBusCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Power Supply Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCPowerSupplyCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Processor Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCProcessorCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKC Shared Memory Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKCSharedMemoryCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKU Drive Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKUDriveCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKU Environment Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKUEnvironmentCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKU Fan Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKUFanCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|
+|DKU Power Supply Abnormal (LLD)|<p>-</p>|<p>**Expression**: {Hitachi_DiskArray_monitor:DKUPowerSupplyCondition.[{#SNMPINDEX}].last(#1)}<>1</p><p>**Recovery expression**: </p>|high|

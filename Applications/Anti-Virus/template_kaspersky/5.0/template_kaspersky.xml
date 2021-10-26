@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:23Z</date>
+  <date>2021-10-26T04:41:20Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Kaspersky</template>
-      <name>Template App Kaspersky</name>
+      <template>App Kaspersky</template>
+      <name>App Kaspersky</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -207,7 +207,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template App Kaspersky</host>
+            <host>App Kaspersky</host>
             <key>criticalEventsCount.0</key>
           </item>
         </graph_item>

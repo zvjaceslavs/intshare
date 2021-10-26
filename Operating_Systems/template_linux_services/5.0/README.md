@@ -1,4 +1,4 @@
-# Template Linux Services
+# Linux Services
 
 ## Overview
 
@@ -64,5 +64,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Service {#SERVICE} is not running|<p>-</p>|<p>**Expression**: {Template_Linux_Services:proc.num[{#SERVICE}].last()}=0</p><p>**Recovery expression**: </p>|high|
-|Service {#SERVICE} is not running (LLD)|<p>-</p>|<p>**Expression**: {Template_Linux_Services:proc.num[{#SERVICE}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Service {#SERVICE} is not running|<p>-</p>|<p>**Expression**: {Linux_Services:proc.num[{#SERVICE}].last()}=0</p><p>**Recovery expression**: </p>|high|
+|Service {#SERVICE} is not running (LLD)|<p>-</p>|<p>**Expression**: {Linux_Services:proc.num[{#SERVICE}].last()}=0</p><p>**Recovery expression**: </p>|high|

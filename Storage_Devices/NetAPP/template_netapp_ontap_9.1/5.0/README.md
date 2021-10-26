@@ -37,13 +37,13 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Auto-support status|<p>-</p>|`SNMP agent`|autosupportStatus<p>Update: 3600</p>|
-|CPU %|<p>-</p>|`SNMP agent`|cpuTimePerCent<p>Update: 1m</p>|
-|Disk fail|<p>-</p>|`SNMP agent`|failDisk<p>Update: 30s</p>|
-|Total disk number|<p>-</p>|`SNMP agent`|nbTotalDisk<p>Update: 3600</p>|
-|Disk pre-fail|<p>-</p>|`SNMP agent`|preFail<p>Update: 30s</p>|
 |Firmware|<p>-</p>|`SNMP agent`|productFirmwareVersion<p>Update: 60m</p>|
+|CPU %|<p>-</p>|`SNMP agent`|cpuTimePerCent<p>Update: 1m</p>|
 |Uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 5m</p>|
+|Disk pre-fail|<p>-</p>|`SNMP agent`|preFail<p>Update: 30s</p>|
+|Auto-support status|<p>-</p>|`SNMP agent`|autosupportStatus<p>Update: 3600</p>|
+|Total disk number|<p>-</p>|`SNMP agent`|nbTotalDisk<p>Update: 3600</p>|
+|Disk fail|<p>-</p>|`SNMP agent`|failDisk<p>Update: 30s</p>|
 |Enclosure {#SNMPINDEX} power fail|<p>-</p>|`SNMP agent`|ElecFail.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |Enclosure {#SNMPINDEX}  fail|<p>-</p>|`SNMP agent`|FanFail.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |Enclosure {#SNMPINDEX} sensors fail|<p>-</p>|`SNMP agent`|SensorFail.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|

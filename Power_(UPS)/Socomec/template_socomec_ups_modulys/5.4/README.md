@@ -72,35 +72,35 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Alarms|<p>-</p>|`SNMP agent`|alarms.discovery<p>Update: 1m</p>|
 |Output|<p>-</p>|`SNMP agent`|output.discovery<p>Update: 1m</p>|
+|Alarms|<p>-</p>|`SNMP agent`|alarms.discovery<p>Update: 1m</p>|
 |Bypass|<p>-</p>|`SNMP agent`|bypass.discovery<p>Update: 1m</p>|
 |Input|<p>-</p>|`SNMP agent`|input.discovery<p>Update: 1m</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Model|<p>-</p>|`SNMP agent`|get.ident.model<p>Update: 1h</p>|
-|UPS Alive|<p>-</p>|`Simple check`|icmpping[]<p>Update: 30s</p>|
+|Seconds on Battery|<p>-</p>|`SNMP agent`|upsSecondsOnBattery<p>Update: 1m</p>|
+|Input Num Lines|<p>-</p>|`SNMP agent`|upsInputNumLines<p>Update: 30m</p>|
+|Output Frequency|<p>-</p>|`SNMP agent`|get.output.frequency<p>Update: 1m</p>|
+|Battery Temperature|<p>-</p>|`SNMP agent`|upsBatteryTemperature<p>Update: 30m</p>|
+|Output Number Lines|<p>-</p>|`SNMP agent`|get.output.lines[]<p>Update: 30m</p>|
 |Alarms Present|<p>-</p>|`SNMP agent`|get.alarms.status<p>Update: 1m</p>|
 |Output Source Status|<p>-</p>|`SNMP agent`|upsOutputSource<p>Update: 30m</p>|
-|Input Frequency|<p>Hz * 10</p>|`SNMP agent`|upsInputFrequency<p>Update: 30m</p>|
-|Bypass Number of Lines|<p>-</p>|`SNMP agent`|get.bypass.nbrlines<p>Update: 30m</p>|
-|Battery Temperature|<p>-</p>|`SNMP agent`|upsBatteryTemperature<p>Update: 30m</p>|
-|Estimated  Minutes Remaining|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 30m</p>|
 |Bypass Frequency|<p>-</p>|`SNMP agent`|get.bypass.frequency<p>Update: 30m</p>|
-|Input Num Lines|<p>-</p>|`SNMP agent`|upsInputNumLines<p>Update: 30m</p>|
-|Serial Number|<p>-</p>|`SNMP agent`|get.ident.serial<p>Update: 1d</p>|
-|Output Frequency|<p>-</p>|`SNMP agent`|get.output.frequency<p>Update: 1m</p>|
-|Seconds on Battery|<p>-</p>|`SNMP agent`|upsSecondsOnBattery<p>Update: 1m</p>|
+|Estimated  Minutes Remaining|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 30m</p>|
+|Bypass Number of Lines|<p>-</p>|`SNMP agent`|get.bypass.nbrlines<p>Update: 30m</p>|
+|Input Frequency|<p>Hz * 10</p>|`SNMP agent`|upsInputFrequency<p>Update: 30m</p>|
+|UPS Alive|<p>-</p>|`Simple check`|icmpping[]<p>Update: 30s</p>|
 |Estimated Charge Remaining|<p>-</p>|`SNMP agent`|upsEstimatedChargeRemaining<p>Update: 30m</p>|
-|Output Number Lines|<p>-</p>|`SNMP agent`|get.output.lines[]<p>Update: 30m</p>|
-|Alarms Description|<p>-</p>|`SNMP agent`|get.alarms.description[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
-|Alarms ID|<p>-</p>|`SNMP agent`|get.alarms.id[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Serial Number|<p>-</p>|`SNMP agent`|get.ident.serial<p>Update: 1d</p>|
+|Model|<p>-</p>|`SNMP agent`|get.ident.model<p>Update: 1h</p>|
 |Output {#INDEX}: A|<p>-</p>|`SNMP agent`|get.output.current[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Output {#INDEX}: kVA|<p>-</p>|`SNMP agent`|get.output.kva[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Output {#INDEX}: Percentage Load|<p>-</p>|`SNMP agent`|get.output.percload[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Output {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.output.voltage[{#INDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Alarms Description|<p>-</p>|`SNMP agent`|get.alarms.description[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
+|Alarms ID|<p>-</p>|`SNMP agent`|get.alarms.id[{#ALARM}]<p>Update: 1m</p><p>LLD</p>|
 |Bypass {#INDEX}: A|<p>-</p>|`SNMP agent`|get.bypass.amps[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Bypass {#INDEX}: Voltage|<p>-</p>|`SNMP agent`|get.bypass.voltage[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|
 |Input {#INDEX}: A|<p>-</p>|`SNMP agent`|get.input.current[{#INDEX}]<p>Update: 30m</p><p>LLD</p>|

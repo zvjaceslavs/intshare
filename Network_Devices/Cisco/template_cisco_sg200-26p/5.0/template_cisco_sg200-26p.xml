@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:54:40Z</date>
+  <date>2021-10-26T04:41:40Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Cisco_SG200-26P</template>
-      <name>Template_Cisco_SG200-26P</name>
+      <template>Cisco_SG200-26P</template>
+      <name>Cisco_SG200-26P</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -1766,7 +1766,7 @@
           <color>00AA00</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifHCInOctets.49</key>
           </item>
         </graph_item>
@@ -1775,7 +1775,7 @@
           <color>0000BB</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifHCOutOctets.49</key>
           </item>
         </graph_item>
@@ -1787,7 +1787,7 @@
         <graph_item>
           <color>C80000</color>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifHCInOctets.49</key>
           </item>
         </graph_item>
@@ -1795,7 +1795,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifHCOutOctets.49</key>
           </item>
         </graph_item>
@@ -1803,7 +1803,7 @@
           <sortorder>2</sortorder>
           <color>FF9999</color>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifHCInOctets.50</key>
           </item>
         </graph_item>
@@ -1811,7 +1811,7 @@
           <sortorder>3</sortorder>
           <color>CCFFCC</color>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifHCOutOctets.50</key>
           </item>
         </graph_item>
@@ -1826,7 +1826,7 @@
           <color>00AA00</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifHCInOctets.50</key>
           </item>
         </graph_item>
@@ -1835,7 +1835,7 @@
           <color>0000BB</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifHCOutOctets.50</key>
           </item>
         </graph_item>
@@ -1849,7 +1849,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.51</key>
           </item>
         </graph_item>
@@ -1859,7 +1859,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.51</key>
           </item>
         </graph_item>
@@ -1870,20 +1870,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Cisco_SG200-26P</host>
+            <key>ifInOctects.52</key>
+          </item>
+        </graph_item>
+        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.52</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Cisco_SG200-26P</host>
-            <key>ifInOctects.52</key>
           </item>
         </graph_item>
       </graph_items>
@@ -1897,7 +1897,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.53</key>
           </item>
         </graph_item>
@@ -1905,7 +1905,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.53</key>
           </item>
         </graph_item>
@@ -1916,20 +1916,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Cisco_SG200-26P</host>
+            <key>ifInOctects.54</key>
+          </item>
+        </graph_item>
+        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.54</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Cisco_SG200-26P</host>
-            <key>ifInOctects.54</key>
           </item>
         </graph_item>
       </graph_items>
@@ -1943,7 +1943,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.55</key>
           </item>
         </graph_item>
@@ -1951,7 +1951,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.55</key>
           </item>
         </graph_item>
@@ -1966,7 +1966,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.56</key>
           </item>
         </graph_item>
@@ -1974,7 +1974,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.56</key>
           </item>
         </graph_item>
@@ -1988,7 +1988,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.57</key>
           </item>
         </graph_item>
@@ -1997,7 +1997,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.57</key>
           </item>
         </graph_item>
@@ -2008,20 +2008,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Cisco_SG200-26P</host>
-            <key>ifInOctects.58</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.58</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Cisco_SG200-26P</host>
+            <key>ifInOctects.58</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2031,20 +2031,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Cisco_SG200-26P</host>
+            <key>ifInOctects.59</key>
+          </item>
+        </graph_item>
+        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.59</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Cisco_SG200-26P</host>
-            <key>ifInOctects.59</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2054,20 +2054,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Cisco_SG200-26P</host>
-            <key>ifInOctects.60</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.60</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Cisco_SG200-26P</host>
+            <key>ifInOctects.60</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2081,7 +2081,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.61</key>
           </item>
         </graph_item>
@@ -2089,7 +2089,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.61</key>
           </item>
         </graph_item>
@@ -2104,7 +2104,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.62</key>
           </item>
         </graph_item>
@@ -2112,7 +2112,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.62</key>
           </item>
         </graph_item>
@@ -2126,7 +2126,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.63</key>
           </item>
         </graph_item>
@@ -2135,7 +2135,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.63</key>
           </item>
         </graph_item>
@@ -2149,7 +2149,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.64</key>
           </item>
         </graph_item>
@@ -2158,7 +2158,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.64</key>
           </item>
         </graph_item>
@@ -2169,20 +2169,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Cisco_SG200-26P</host>
+            <key>ifInOctects.65</key>
+          </item>
+        </graph_item>
+        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.65</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Cisco_SG200-26P</host>
-            <key>ifInOctects.65</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2196,7 +2196,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.66</key>
           </item>
         </graph_item>
@@ -2204,7 +2204,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.66</key>
           </item>
         </graph_item>
@@ -2218,7 +2218,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.67</key>
           </item>
         </graph_item>
@@ -2227,7 +2227,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.67</key>
           </item>
         </graph_item>
@@ -2242,7 +2242,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.68</key>
           </item>
         </graph_item>
@@ -2250,7 +2250,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.68</key>
           </item>
         </graph_item>
@@ -2264,7 +2264,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.69</key>
           </item>
         </graph_item>
@@ -2273,7 +2273,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.69</key>
           </item>
         </graph_item>
@@ -2288,7 +2288,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.70</key>
           </item>
         </graph_item>
@@ -2296,7 +2296,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.70</key>
           </item>
         </graph_item>
@@ -2307,20 +2307,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Cisco_SG200-26P</host>
-            <key>ifInOctects.71</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.71</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Cisco_SG200-26P</host>
+            <key>ifInOctects.71</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2330,20 +2330,20 @@
       <percent_right>95</percent_right>
       <graph_items>
         <graph_item>
+          <color>0000FF</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>Cisco_SG200-26P</host>
+            <key>ifInOctects.72</key>
+          </item>
+        </graph_item>
+        <graph_item>
           <drawtype>FILLED_REGION</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.72</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <color>0000FF</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>Template_Cisco_SG200-26P</host>
-            <key>ifInOctects.72</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2356,7 +2356,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.73</key>
           </item>
         </graph_item>
@@ -2366,7 +2366,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.73</key>
           </item>
         </graph_item>
@@ -2380,7 +2380,7 @@
           <color>0000FF</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifInOctects.74</key>
           </item>
         </graph_item>
@@ -2389,7 +2389,7 @@
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
-            <host>Template_Cisco_SG200-26P</host>
+            <host>Cisco_SG200-26P</host>
             <key>ifOutOctets.74</key>
           </item>
         </graph_item>

@@ -1,4 +1,4 @@
-# Template Fail2ban
+# Fail2ban
 
 ## Overview
 

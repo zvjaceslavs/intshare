@@ -1,4 +1,4 @@
-# Template Module Linux Active User Status by Zabbix Agent active
+# Module Linux Active User Status by Zabbix Agent active
 
 ## Description
 
@@ -58,10 +58,10 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Logged in users|<p>Use linux command `last` to get those users with status "still logged in".</p>|`Zabbix agent (active)`|system.run["TZ=UTC last -FRw | grep \"still logged\" | sed 's/still logged in//g' | awk '{$2=\"\";print $0;}'  | sed 's/  /,/g'"]<p>Update: 1h</p>|
+|Num of overstay users on the {HOST.NAME} > {$OVERSTAY_THRESHOLD} day(s)|<p>-</p>|`Dependent item`|system.users.overstay.num<p>Update: 0</p>|
 |Num of Active(logged in) users|<p>Same purpose as the Zabbix built-in metric `system.users.num`.</p>|`Dependent item`|system.users.loggedin.num<p>Update: 0</p>|
 |Overstay users on the {HOST.NAME} > {$OVERSTAY_THRESHOLD} day(s)|<p>-</p>|`Dependent item`|system.users.overstay.list<p>Update: 0</p>|
-|Num of overstay users on the {HOST.NAME} > {$OVERSTAY_THRESHOLD} day(s)|<p>-</p>|`Dependent item`|system.users.overstay.num<p>Update: 0</p>|
+|Logged in users|<p>Use linux command `last` to get those users with status "still logged in".</p>|`Zabbix agent (active)`|system.run["TZ=UTC last -FRw | grep \"still logged\" | sed 's/still logged in//g' | awk '{$2=\"\";print $0;}'  | sed 's/  /,/g'"]<p>Update: 1h</p>|
 ## Triggers
 
 There are no triggers in this template.

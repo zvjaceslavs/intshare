@@ -1,4 +1,4 @@
-# Template App PHP-FPM
+# App PHP-FPM
 
 ## Overview
 

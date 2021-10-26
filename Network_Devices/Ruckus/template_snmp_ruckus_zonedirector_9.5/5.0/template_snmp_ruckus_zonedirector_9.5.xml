@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:13Z</date>
+  <date>2021-10-26T04:40:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Ruckus Zonedirector 9.5</template>
-      <name>Template SNMP Ruckus Zonedirector 9.5</name>
+      <template>SNMP Ruckus Zonedirector 9.5</template>
+      <name>SNMP Ruckus Zonedirector 9.5</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -248,7 +248,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template SNMP Ruckus Zonedirector 9.5:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}&lt;>1)or({Template SNMP Ruckus Zonedirector 9.5:APname[{#SNMPVALUE}].regexp(^blablablabla$)}=1)</expression>
+              <expression>({SNMP Ruckus Zonedirector 9.5:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}&lt;>1)or({SNMP Ruckus Zonedirector 9.5:APname[{#SNMPVALUE}].regexp(^blablablabla$)}=1)</expression>
               <name>Acces Point Wifi {ITEM.VALUE2} is not available. Address: {#SNMPVALUE}</name>
               <status>DISABLED</status>
               <priority>WARNING</priority>
@@ -368,7 +368,7 @@
         <graph_item>
           <color>EE0000</color>
           <item>
-            <host>Template SNMP Ruckus Zonedirector 9.5</host>
+            <host>SNMP Ruckus Zonedirector 9.5</host>
             <key>ruckusZDSystemStatsAllNumSta</key>
           </item>
         </graph_item>
@@ -376,7 +376,7 @@
           <sortorder>1</sortorder>
           <color>3333FF</color>
           <item>
-            <host>Template SNMP Ruckus Zonedirector 9.5</host>
+            <host>SNMP Ruckus Zonedirector 9.5</host>
             <key>ruckusZDSystemStatsNumSta.0</key>
           </item>
         </graph_item>
@@ -390,7 +390,7 @@
           <color>00CC00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template SNMP Ruckus Zonedirector 9.5</host>
+            <host>SNMP Ruckus Zonedirector 9.5</host>
             <key>ruckusZDSystemStatsWLANTotalRxBytes</key>
           </item>
         </graph_item>
@@ -399,7 +399,7 @@
           <color>0000CC</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template SNMP Ruckus Zonedirector 9.5</host>
+            <host>SNMP Ruckus Zonedirector 9.5</host>
             <key>ruckusZDSystemStatsWLANTotalTxBytes</key>
           </item>
         </graph_item>
@@ -411,7 +411,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template SNMP Ruckus Zonedirector 9.5</host>
+            <host>SNMP Ruckus Zonedirector 9.5</host>
             <key>ruckusZDSystemCPUUTIL.0</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:40Z</date>
+  <date>2021-10-26T04:43:54Z</date>
   <groups>
     <group>
       <name>Templates Prod</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Intel QuickSync GPU metrics</template>
-      <name>Template Intel QuickSync GPU metrics</name>
+      <template>Intel QuickSync GPU metrics</template>
+      <name>Intel QuickSync GPU metrics</name>
       <groups>
         <group>
           <name>Templates Prod</name>
@@ -112,7 +112,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template Intel QuickSync GPU metrics</host>
+            <host>Intel QuickSync GPU metrics</host>
             <key>gpu.metrics["RENDER",100,500]</key>
           </item>
         </graph_item>
@@ -120,7 +120,7 @@
           <sortorder>1</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template Intel QuickSync GPU metrics</host>
+            <host>Intel QuickSync GPU metrics</host>
             <key>gpu.metrics["VIDEO ",100,500]</key>
           </item>
         </graph_item>
@@ -128,7 +128,7 @@
           <sortorder>2</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template Intel QuickSync GPU metrics</host>
+            <host>Intel QuickSync GPU metrics</host>
             <key>gpu.metrics["VIDEO2",100,500]</key>
           </item>
         </graph_item>
@@ -136,7 +136,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template Intel QuickSync GPU metrics</host>
+            <host>Intel QuickSync GPU metrics</host>
             <key>gpu.metrics["VIDEO_E",100,500]</key>
           </item>
         </graph_item>

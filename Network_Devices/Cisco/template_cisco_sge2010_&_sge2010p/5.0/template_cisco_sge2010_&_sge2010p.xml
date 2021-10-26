@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:31Z</date>
+  <date>2021-10-26T04:38:12Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_SGE2010_48P</template>
-      <name>Template_SGE2010_48P</name>
+      <template>SGE2010_48P</template>
+      <name>SGE2010_48P</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -7630,7 +7630,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>rlEnvMonFanState.67109250</key>
           </item>
         </graph_item>
@@ -7639,7 +7639,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>rlEnvMonFanState.67109251</key>
           </item>
         </graph_item>
@@ -7648,7 +7648,7 @@
           <drawtype>BOLD_LINE</drawtype>
           <color>2774A4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>rlEnvMonFanState.67109252</key>
           </item>
         </graph_item>
@@ -7661,7 +7661,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>icmpping</key>
           </item>
         </graph_item>
@@ -7674,7 +7674,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>icmppingsec</key>
           </item>
         </graph_item>
@@ -7686,7 +7686,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.1</key>
           </item>
         </graph_item>
@@ -7694,7 +7694,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.2</key>
           </item>
         </graph_item>
@@ -7702,7 +7702,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.3</key>
           </item>
         </graph_item>
@@ -7710,7 +7710,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.4</key>
           </item>
         </graph_item>
@@ -7718,7 +7718,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.5</key>
           </item>
         </graph_item>
@@ -7726,7 +7726,7 @@
           <sortorder>5</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.6</key>
           </item>
         </graph_item>
@@ -7734,14 +7734,14 @@
           <sortorder>6</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.7</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>7</sortorder>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.8</key>
           </item>
         </graph_item>
@@ -7749,7 +7749,7 @@
           <sortorder>8</sortorder>
           <color>960000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.9</key>
           </item>
         </graph_item>
@@ -7757,7 +7757,7 @@
           <sortorder>9</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.10</key>
           </item>
         </graph_item>
@@ -7765,7 +7765,7 @@
           <sortorder>10</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.11</key>
           </item>
         </graph_item>
@@ -7773,7 +7773,7 @@
           <sortorder>11</sortorder>
           <color>009696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.12</key>
           </item>
         </graph_item>
@@ -7781,7 +7781,7 @@
           <sortorder>12</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.13</key>
           </item>
         </graph_item>
@@ -7789,7 +7789,7 @@
           <sortorder>13</sortorder>
           <color>969696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.14</key>
           </item>
         </graph_item>
@@ -7797,7 +7797,7 @@
           <sortorder>14</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.15</key>
           </item>
         </graph_item>
@@ -7805,7 +7805,7 @@
           <sortorder>15</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.16</key>
           </item>
         </graph_item>
@@ -7813,7 +7813,7 @@
           <sortorder>16</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.17</key>
           </item>
         </graph_item>
@@ -7821,7 +7821,7 @@
           <sortorder>17</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.18</key>
           </item>
         </graph_item>
@@ -7829,7 +7829,7 @@
           <sortorder>18</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.19</key>
           </item>
         </graph_item>
@@ -7837,7 +7837,7 @@
           <sortorder>19</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.20</key>
           </item>
         </graph_item>
@@ -7845,7 +7845,7 @@
           <sortorder>20</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.21</key>
           </item>
         </graph_item>
@@ -7853,7 +7853,7 @@
           <sortorder>21</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.22</key>
           </item>
         </graph_item>
@@ -7861,7 +7861,7 @@
           <sortorder>22</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.23</key>
           </item>
         </graph_item>
@@ -7869,7 +7869,7 @@
           <sortorder>23</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.24</key>
           </item>
         </graph_item>
@@ -7877,7 +7877,7 @@
           <sortorder>24</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.25</key>
           </item>
         </graph_item>
@@ -7885,7 +7885,7 @@
           <sortorder>25</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.26</key>
           </item>
         </graph_item>
@@ -7893,7 +7893,7 @@
           <sortorder>26</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.27</key>
           </item>
         </graph_item>
@@ -7901,14 +7901,14 @@
           <sortorder>27</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.28</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>28</sortorder>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.29</key>
           </item>
         </graph_item>
@@ -7916,7 +7916,7 @@
           <sortorder>29</sortorder>
           <color>960000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.30</key>
           </item>
         </graph_item>
@@ -7924,7 +7924,7 @@
           <sortorder>30</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.31</key>
           </item>
         </graph_item>
@@ -7932,7 +7932,7 @@
           <sortorder>31</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.32</key>
           </item>
         </graph_item>
@@ -7940,7 +7940,7 @@
           <sortorder>32</sortorder>
           <color>009696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.33</key>
           </item>
         </graph_item>
@@ -7948,7 +7948,7 @@
           <sortorder>33</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.34</key>
           </item>
         </graph_item>
@@ -7956,7 +7956,7 @@
           <sortorder>34</sortorder>
           <color>969696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.35</key>
           </item>
         </graph_item>
@@ -7964,7 +7964,7 @@
           <sortorder>35</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.36</key>
           </item>
         </graph_item>
@@ -7972,7 +7972,7 @@
           <sortorder>36</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.37</key>
           </item>
         </graph_item>
@@ -7980,7 +7980,7 @@
           <sortorder>37</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.38</key>
           </item>
         </graph_item>
@@ -7988,7 +7988,7 @@
           <sortorder>38</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.39</key>
           </item>
         </graph_item>
@@ -7996,7 +7996,7 @@
           <sortorder>39</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.40</key>
           </item>
         </graph_item>
@@ -8004,7 +8004,7 @@
           <sortorder>40</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.41</key>
           </item>
         </graph_item>
@@ -8012,7 +8012,7 @@
           <sortorder>41</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.42</key>
           </item>
         </graph_item>
@@ -8020,7 +8020,7 @@
           <sortorder>42</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.43</key>
           </item>
         </graph_item>
@@ -8028,7 +8028,7 @@
           <sortorder>43</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.44</key>
           </item>
         </graph_item>
@@ -8036,7 +8036,7 @@
           <sortorder>44</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.45</key>
           </item>
         </graph_item>
@@ -8044,7 +8044,7 @@
           <sortorder>45</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.46</key>
           </item>
         </graph_item>
@@ -8052,7 +8052,7 @@
           <sortorder>46</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.47</key>
           </item>
         </graph_item>
@@ -8060,7 +8060,7 @@
           <sortorder>47</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInErrors.48</key>
           </item>
         </graph_item>
@@ -8072,7 +8072,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.1</key>
           </item>
         </graph_item>
@@ -8080,7 +8080,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.2</key>
           </item>
         </graph_item>
@@ -8088,7 +8088,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.3</key>
           </item>
         </graph_item>
@@ -8096,7 +8096,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.4</key>
           </item>
         </graph_item>
@@ -8104,7 +8104,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.5</key>
           </item>
         </graph_item>
@@ -8112,7 +8112,7 @@
           <sortorder>5</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.6</key>
           </item>
         </graph_item>
@@ -8120,14 +8120,14 @@
           <sortorder>6</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.7</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>7</sortorder>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.8</key>
           </item>
         </graph_item>
@@ -8135,7 +8135,7 @@
           <sortorder>8</sortorder>
           <color>960000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.9</key>
           </item>
         </graph_item>
@@ -8143,7 +8143,7 @@
           <sortorder>9</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.10</key>
           </item>
         </graph_item>
@@ -8151,7 +8151,7 @@
           <sortorder>10</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.11</key>
           </item>
         </graph_item>
@@ -8159,7 +8159,7 @@
           <sortorder>11</sortorder>
           <color>009696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.12</key>
           </item>
         </graph_item>
@@ -8167,7 +8167,7 @@
           <sortorder>12</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.13</key>
           </item>
         </graph_item>
@@ -8175,7 +8175,7 @@
           <sortorder>13</sortorder>
           <color>969696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.14</key>
           </item>
         </graph_item>
@@ -8183,7 +8183,7 @@
           <sortorder>14</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.15</key>
           </item>
         </graph_item>
@@ -8191,7 +8191,7 @@
           <sortorder>15</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.16</key>
           </item>
         </graph_item>
@@ -8199,7 +8199,7 @@
           <sortorder>16</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.17</key>
           </item>
         </graph_item>
@@ -8207,7 +8207,7 @@
           <sortorder>17</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.18</key>
           </item>
         </graph_item>
@@ -8215,7 +8215,7 @@
           <sortorder>18</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.19</key>
           </item>
         </graph_item>
@@ -8223,7 +8223,7 @@
           <sortorder>19</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.20</key>
           </item>
         </graph_item>
@@ -8231,7 +8231,7 @@
           <sortorder>20</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.21</key>
           </item>
         </graph_item>
@@ -8239,7 +8239,7 @@
           <sortorder>21</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.22</key>
           </item>
         </graph_item>
@@ -8247,7 +8247,7 @@
           <sortorder>22</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.23</key>
           </item>
         </graph_item>
@@ -8255,7 +8255,7 @@
           <sortorder>23</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.24</key>
           </item>
         </graph_item>
@@ -8263,7 +8263,7 @@
           <sortorder>24</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.25</key>
           </item>
         </graph_item>
@@ -8271,7 +8271,7 @@
           <sortorder>25</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.26</key>
           </item>
         </graph_item>
@@ -8279,7 +8279,7 @@
           <sortorder>26</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.27</key>
           </item>
         </graph_item>
@@ -8287,14 +8287,14 @@
           <sortorder>27</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.28</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>28</sortorder>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.29</key>
           </item>
         </graph_item>
@@ -8302,7 +8302,7 @@
           <sortorder>29</sortorder>
           <color>960000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.30</key>
           </item>
         </graph_item>
@@ -8310,7 +8310,7 @@
           <sortorder>30</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.31</key>
           </item>
         </graph_item>
@@ -8318,7 +8318,7 @@
           <sortorder>31</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.32</key>
           </item>
         </graph_item>
@@ -8326,7 +8326,7 @@
           <sortorder>32</sortorder>
           <color>009696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.33</key>
           </item>
         </graph_item>
@@ -8334,7 +8334,7 @@
           <sortorder>33</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.34</key>
           </item>
         </graph_item>
@@ -8342,7 +8342,7 @@
           <sortorder>34</sortorder>
           <color>969696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.35</key>
           </item>
         </graph_item>
@@ -8350,7 +8350,7 @@
           <sortorder>35</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.36</key>
           </item>
         </graph_item>
@@ -8358,7 +8358,7 @@
           <sortorder>36</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.37</key>
           </item>
         </graph_item>
@@ -8366,7 +8366,7 @@
           <sortorder>37</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.38</key>
           </item>
         </graph_item>
@@ -8374,7 +8374,7 @@
           <sortorder>38</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.39</key>
           </item>
         </graph_item>
@@ -8382,7 +8382,7 @@
           <sortorder>39</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.40</key>
           </item>
         </graph_item>
@@ -8390,7 +8390,7 @@
           <sortorder>40</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.41</key>
           </item>
         </graph_item>
@@ -8398,7 +8398,7 @@
           <sortorder>41</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.42</key>
           </item>
         </graph_item>
@@ -8406,7 +8406,7 @@
           <sortorder>42</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.43</key>
           </item>
         </graph_item>
@@ -8414,7 +8414,7 @@
           <sortorder>43</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.44</key>
           </item>
         </graph_item>
@@ -8422,7 +8422,7 @@
           <sortorder>44</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.45</key>
           </item>
         </graph_item>
@@ -8430,7 +8430,7 @@
           <sortorder>45</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.46</key>
           </item>
         </graph_item>
@@ -8438,7 +8438,7 @@
           <sortorder>46</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.47</key>
           </item>
         </graph_item>
@@ -8446,7 +8446,7 @@
           <sortorder>47</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutErrors.48</key>
           </item>
         </graph_item>
@@ -8459,7 +8459,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>AA0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>entPhySensorValue.68420481</key>
           </item>
         </graph_item>
@@ -8471,7 +8471,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.1</key>
           </item>
         </graph_item>
@@ -8479,7 +8479,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.2</key>
           </item>
         </graph_item>
@@ -8487,7 +8487,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.3</key>
           </item>
         </graph_item>
@@ -8495,7 +8495,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.4</key>
           </item>
         </graph_item>
@@ -8503,7 +8503,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.5</key>
           </item>
         </graph_item>
@@ -8511,7 +8511,7 @@
           <sortorder>5</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.6</key>
           </item>
         </graph_item>
@@ -8519,14 +8519,14 @@
           <sortorder>6</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.7</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>7</sortorder>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.8</key>
           </item>
         </graph_item>
@@ -8534,7 +8534,7 @@
           <sortorder>8</sortorder>
           <color>960000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.9</key>
           </item>
         </graph_item>
@@ -8542,7 +8542,7 @@
           <sortorder>9</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.10</key>
           </item>
         </graph_item>
@@ -8550,7 +8550,7 @@
           <sortorder>10</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.11</key>
           </item>
         </graph_item>
@@ -8558,7 +8558,7 @@
           <sortorder>11</sortorder>
           <color>009696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.12</key>
           </item>
         </graph_item>
@@ -8566,7 +8566,7 @@
           <sortorder>12</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.13</key>
           </item>
         </graph_item>
@@ -8574,7 +8574,7 @@
           <sortorder>13</sortorder>
           <color>969696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.14</key>
           </item>
         </graph_item>
@@ -8582,7 +8582,7 @@
           <sortorder>14</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.15</key>
           </item>
         </graph_item>
@@ -8590,7 +8590,7 @@
           <sortorder>15</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.16</key>
           </item>
         </graph_item>
@@ -8598,7 +8598,7 @@
           <sortorder>16</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.17</key>
           </item>
         </graph_item>
@@ -8606,7 +8606,7 @@
           <sortorder>17</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.18</key>
           </item>
         </graph_item>
@@ -8614,7 +8614,7 @@
           <sortorder>18</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.19</key>
           </item>
         </graph_item>
@@ -8622,7 +8622,7 @@
           <sortorder>19</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.20</key>
           </item>
         </graph_item>
@@ -8630,7 +8630,7 @@
           <sortorder>20</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.21</key>
           </item>
         </graph_item>
@@ -8638,7 +8638,7 @@
           <sortorder>21</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.22</key>
           </item>
         </graph_item>
@@ -8646,7 +8646,7 @@
           <sortorder>22</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.23</key>
           </item>
         </graph_item>
@@ -8654,7 +8654,7 @@
           <sortorder>23</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.24</key>
           </item>
         </graph_item>
@@ -8662,7 +8662,7 @@
           <sortorder>24</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.25</key>
           </item>
         </graph_item>
@@ -8670,7 +8670,7 @@
           <sortorder>25</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.26</key>
           </item>
         </graph_item>
@@ -8678,7 +8678,7 @@
           <sortorder>26</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.27</key>
           </item>
         </graph_item>
@@ -8686,14 +8686,14 @@
           <sortorder>27</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.28</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>28</sortorder>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.29</key>
           </item>
         </graph_item>
@@ -8701,7 +8701,7 @@
           <sortorder>29</sortorder>
           <color>960000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.30</key>
           </item>
         </graph_item>
@@ -8709,7 +8709,7 @@
           <sortorder>30</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.31</key>
           </item>
         </graph_item>
@@ -8717,7 +8717,7 @@
           <sortorder>31</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.32</key>
           </item>
         </graph_item>
@@ -8725,7 +8725,7 @@
           <sortorder>32</sortorder>
           <color>009696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.33</key>
           </item>
         </graph_item>
@@ -8733,7 +8733,7 @@
           <sortorder>33</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.34</key>
           </item>
         </graph_item>
@@ -8741,7 +8741,7 @@
           <sortorder>34</sortorder>
           <color>969696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.35</key>
           </item>
         </graph_item>
@@ -8749,7 +8749,7 @@
           <sortorder>35</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.36</key>
           </item>
         </graph_item>
@@ -8757,7 +8757,7 @@
           <sortorder>36</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.37</key>
           </item>
         </graph_item>
@@ -8765,7 +8765,7 @@
           <sortorder>37</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.38</key>
           </item>
         </graph_item>
@@ -8773,7 +8773,7 @@
           <sortorder>38</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.39</key>
           </item>
         </graph_item>
@@ -8781,7 +8781,7 @@
           <sortorder>39</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.40</key>
           </item>
         </graph_item>
@@ -8789,7 +8789,7 @@
           <sortorder>40</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.41</key>
           </item>
         </graph_item>
@@ -8797,7 +8797,7 @@
           <sortorder>41</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.42</key>
           </item>
         </graph_item>
@@ -8805,7 +8805,7 @@
           <sortorder>42</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.43</key>
           </item>
         </graph_item>
@@ -8813,7 +8813,7 @@
           <sortorder>43</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.44</key>
           </item>
         </graph_item>
@@ -8821,7 +8821,7 @@
           <sortorder>44</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.45</key>
           </item>
         </graph_item>
@@ -8829,7 +8829,7 @@
           <sortorder>45</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.46</key>
           </item>
         </graph_item>
@@ -8837,7 +8837,7 @@
           <sortorder>46</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.47</key>
           </item>
         </graph_item>
@@ -8845,7 +8845,7 @@
           <sortorder>47</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifInOctets.48</key>
           </item>
         </graph_item>
@@ -8857,7 +8857,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.1</key>
           </item>
         </graph_item>
@@ -8865,7 +8865,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.2</key>
           </item>
         </graph_item>
@@ -8873,7 +8873,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.3</key>
           </item>
         </graph_item>
@@ -8881,7 +8881,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.4</key>
           </item>
         </graph_item>
@@ -8889,7 +8889,7 @@
           <sortorder>4</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.5</key>
           </item>
         </graph_item>
@@ -8897,7 +8897,7 @@
           <sortorder>5</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.6</key>
           </item>
         </graph_item>
@@ -8905,14 +8905,14 @@
           <sortorder>6</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.7</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>7</sortorder>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.8</key>
           </item>
         </graph_item>
@@ -8920,7 +8920,7 @@
           <sortorder>8</sortorder>
           <color>960000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.9</key>
           </item>
         </graph_item>
@@ -8928,7 +8928,7 @@
           <sortorder>9</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.10</key>
           </item>
         </graph_item>
@@ -8936,7 +8936,7 @@
           <sortorder>10</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.11</key>
           </item>
         </graph_item>
@@ -8944,7 +8944,7 @@
           <sortorder>11</sortorder>
           <color>009696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.12</key>
           </item>
         </graph_item>
@@ -8952,7 +8952,7 @@
           <sortorder>12</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.13</key>
           </item>
         </graph_item>
@@ -8960,7 +8960,7 @@
           <sortorder>13</sortorder>
           <color>969696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.14</key>
           </item>
         </graph_item>
@@ -8968,7 +8968,7 @@
           <sortorder>14</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.15</key>
           </item>
         </graph_item>
@@ -8976,7 +8976,7 @@
           <sortorder>15</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.16</key>
           </item>
         </graph_item>
@@ -8984,7 +8984,7 @@
           <sortorder>16</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.17</key>
           </item>
         </graph_item>
@@ -8992,7 +8992,7 @@
           <sortorder>17</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.18</key>
           </item>
         </graph_item>
@@ -9000,7 +9000,7 @@
           <sortorder>18</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.19</key>
           </item>
         </graph_item>
@@ -9008,7 +9008,7 @@
           <sortorder>19</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.20</key>
           </item>
         </graph_item>
@@ -9016,7 +9016,7 @@
           <sortorder>20</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.21</key>
           </item>
         </graph_item>
@@ -9024,7 +9024,7 @@
           <sortorder>21</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.22</key>
           </item>
         </graph_item>
@@ -9032,7 +9032,7 @@
           <sortorder>22</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.23</key>
           </item>
         </graph_item>
@@ -9040,7 +9040,7 @@
           <sortorder>23</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.24</key>
           </item>
         </graph_item>
@@ -9048,7 +9048,7 @@
           <sortorder>24</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.25</key>
           </item>
         </graph_item>
@@ -9056,7 +9056,7 @@
           <sortorder>25</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.26</key>
           </item>
         </graph_item>
@@ -9064,7 +9064,7 @@
           <sortorder>26</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.27</key>
           </item>
         </graph_item>
@@ -9072,14 +9072,14 @@
           <sortorder>27</sortorder>
           <color>C8C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.28</key>
           </item>
         </graph_item>
         <graph_item>
           <sortorder>28</sortorder>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.29</key>
           </item>
         </graph_item>
@@ -9087,7 +9087,7 @@
           <sortorder>29</sortorder>
           <color>960000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.30</key>
           </item>
         </graph_item>
@@ -9095,7 +9095,7 @@
           <sortorder>30</sortorder>
           <color>000096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.31</key>
           </item>
         </graph_item>
@@ -9103,7 +9103,7 @@
           <sortorder>31</sortorder>
           <color>960096</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.32</key>
           </item>
         </graph_item>
@@ -9111,7 +9111,7 @@
           <sortorder>32</sortorder>
           <color>009696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.33</key>
           </item>
         </graph_item>
@@ -9119,7 +9119,7 @@
           <sortorder>33</sortorder>
           <color>969600</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.34</key>
           </item>
         </graph_item>
@@ -9127,7 +9127,7 @@
           <sortorder>34</sortorder>
           <color>969696</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.35</key>
           </item>
         </graph_item>
@@ -9135,7 +9135,7 @@
           <sortorder>35</sortorder>
           <color>00FF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.36</key>
           </item>
         </graph_item>
@@ -9143,7 +9143,7 @@
           <sortorder>36</sortorder>
           <color>FF0000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.37</key>
           </item>
         </graph_item>
@@ -9151,7 +9151,7 @@
           <sortorder>37</sortorder>
           <color>0000FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.38</key>
           </item>
         </graph_item>
@@ -9159,7 +9159,7 @@
           <sortorder>38</sortorder>
           <color>FF00FF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.39</key>
           </item>
         </graph_item>
@@ -9167,7 +9167,7 @@
           <sortorder>39</sortorder>
           <color>00FFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.40</key>
           </item>
         </graph_item>
@@ -9175,7 +9175,7 @@
           <sortorder>40</sortorder>
           <color>FFFF00</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.41</key>
           </item>
         </graph_item>
@@ -9183,7 +9183,7 @@
           <sortorder>41</sortorder>
           <color>FFFFFF</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.42</key>
           </item>
         </graph_item>
@@ -9191,7 +9191,7 @@
           <sortorder>42</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.43</key>
           </item>
         </graph_item>
@@ -9199,7 +9199,7 @@
           <sortorder>43</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.44</key>
           </item>
         </graph_item>
@@ -9207,7 +9207,7 @@
           <sortorder>44</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.45</key>
           </item>
         </graph_item>
@@ -9215,7 +9215,7 @@
           <sortorder>45</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.46</key>
           </item>
         </graph_item>
@@ -9223,7 +9223,7 @@
           <sortorder>46</sortorder>
           <color>00C8C8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.47</key>
           </item>
         </graph_item>
@@ -9231,7 +9231,7 @@
           <sortorder>47</sortorder>
           <color>C8C800</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifOutOctets.48</key>
           </item>
         </graph_item>
@@ -9243,7 +9243,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.1</key>
           </item>
         </graph_item>
@@ -9251,7 +9251,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.1</key>
           </item>
         </graph_item>
@@ -9259,7 +9259,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.2</key>
           </item>
         </graph_item>
@@ -9267,7 +9267,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.3</key>
           </item>
         </graph_item>
@@ -9275,7 +9275,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.4</key>
           </item>
         </graph_item>
@@ -9283,7 +9283,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.6</key>
           </item>
         </graph_item>
@@ -9291,7 +9291,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.7</key>
           </item>
         </graph_item>
@@ -9299,7 +9299,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.8</key>
           </item>
         </graph_item>
@@ -9307,7 +9307,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.9</key>
           </item>
         </graph_item>
@@ -9315,7 +9315,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.10</key>
           </item>
         </graph_item>
@@ -9323,7 +9323,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.11</key>
           </item>
         </graph_item>
@@ -9331,7 +9331,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.11</key>
           </item>
         </graph_item>
@@ -9339,7 +9339,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.12</key>
           </item>
         </graph_item>
@@ -9347,7 +9347,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.13</key>
           </item>
         </graph_item>
@@ -9355,7 +9355,7 @@
           <sortorder>14</sortorder>
           <color>274482</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.14</key>
           </item>
         </graph_item>
@@ -9363,7 +9363,7 @@
           <sortorder>15</sortorder>
           <color>2B5429</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.15</key>
           </item>
         </graph_item>
@@ -9371,7 +9371,7 @@
           <sortorder>16</sortorder>
           <color>8048B4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.16</key>
           </item>
         </graph_item>
@@ -9379,7 +9379,7 @@
           <sortorder>17</sortorder>
           <color>FD5434</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.17</key>
           </item>
         </graph_item>
@@ -9387,7 +9387,7 @@
           <sortorder>18</sortorder>
           <color>790E1F</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.18</key>
           </item>
         </graph_item>
@@ -9395,7 +9395,7 @@
           <sortorder>19</sortorder>
           <color>87AC4D</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.19</key>
           </item>
         </graph_item>
@@ -9403,7 +9403,7 @@
           <sortorder>20</sortorder>
           <color>E89DF4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.20</key>
           </item>
         </graph_item>
@@ -9411,7 +9411,7 @@
           <sortorder>21</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.21</key>
           </item>
         </graph_item>
@@ -9419,7 +9419,7 @@
           <sortorder>22</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.22</key>
           </item>
         </graph_item>
@@ -9427,7 +9427,7 @@
           <sortorder>23</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.23</key>
           </item>
         </graph_item>
@@ -9435,7 +9435,7 @@
           <sortorder>24</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.24</key>
           </item>
         </graph_item>
@@ -9443,7 +9443,7 @@
           <sortorder>25</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.25</key>
           </item>
         </graph_item>
@@ -9451,7 +9451,7 @@
           <sortorder>26</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.26</key>
           </item>
         </graph_item>
@@ -9459,7 +9459,7 @@
           <sortorder>27</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.27</key>
           </item>
         </graph_item>
@@ -9467,7 +9467,7 @@
           <sortorder>28</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.28</key>
           </item>
         </graph_item>
@@ -9475,7 +9475,7 @@
           <sortorder>29</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.29</key>
           </item>
         </graph_item>
@@ -9483,7 +9483,7 @@
           <sortorder>30</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.30</key>
           </item>
         </graph_item>
@@ -9491,7 +9491,7 @@
           <sortorder>31</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.31</key>
           </item>
         </graph_item>
@@ -9499,7 +9499,7 @@
           <sortorder>32</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.32</key>
           </item>
         </graph_item>
@@ -9507,7 +9507,7 @@
           <sortorder>33</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.33</key>
           </item>
         </graph_item>
@@ -9515,7 +9515,7 @@
           <sortorder>34</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.34</key>
           </item>
         </graph_item>
@@ -9523,7 +9523,7 @@
           <sortorder>35</sortorder>
           <color>274482</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.35</key>
           </item>
         </graph_item>
@@ -9531,7 +9531,7 @@
           <sortorder>36</sortorder>
           <color>2B5429</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.36</key>
           </item>
         </graph_item>
@@ -9539,7 +9539,7 @@
           <sortorder>37</sortorder>
           <color>8048B4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.37</key>
           </item>
         </graph_item>
@@ -9547,7 +9547,7 @@
           <sortorder>38</sortorder>
           <color>FD5434</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.38</key>
           </item>
         </graph_item>
@@ -9555,7 +9555,7 @@
           <sortorder>39</sortorder>
           <color>790E1F</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.39</key>
           </item>
         </graph_item>
@@ -9563,7 +9563,7 @@
           <sortorder>40</sortorder>
           <color>87AC4D</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.40</key>
           </item>
         </graph_item>
@@ -9571,7 +9571,7 @@
           <sortorder>41</sortorder>
           <color>E89DF4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.41</key>
           </item>
         </graph_item>
@@ -9579,7 +9579,7 @@
           <sortorder>42</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.42</key>
           </item>
         </graph_item>
@@ -9587,7 +9587,7 @@
           <sortorder>43</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.43</key>
           </item>
         </graph_item>
@@ -9595,7 +9595,7 @@
           <sortorder>44</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.44</key>
           </item>
         </graph_item>
@@ -9603,7 +9603,7 @@
           <sortorder>45</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.45</key>
           </item>
         </graph_item>
@@ -9611,7 +9611,7 @@
           <sortorder>46</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.46</key>
           </item>
         </graph_item>
@@ -9619,7 +9619,7 @@
           <sortorder>47</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.47</key>
           </item>
         </graph_item>
@@ -9627,7 +9627,7 @@
           <sortorder>48</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifMtu.48</key>
           </item>
         </graph_item>
@@ -9639,7 +9639,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.1</key>
           </item>
         </graph_item>
@@ -9647,7 +9647,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.2</key>
           </item>
         </graph_item>
@@ -9655,7 +9655,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.3</key>
           </item>
         </graph_item>
@@ -9663,7 +9663,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.4</key>
           </item>
         </graph_item>
@@ -9671,7 +9671,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.5</key>
           </item>
         </graph_item>
@@ -9679,7 +9679,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.6</key>
           </item>
         </graph_item>
@@ -9687,7 +9687,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.5</key>
           </item>
         </graph_item>
@@ -9695,7 +9695,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.6</key>
           </item>
         </graph_item>
@@ -9703,7 +9703,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.7</key>
           </item>
         </graph_item>
@@ -9711,7 +9711,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.8</key>
           </item>
         </graph_item>
@@ -9719,7 +9719,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.9</key>
           </item>
         </graph_item>
@@ -9727,7 +9727,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.10</key>
           </item>
         </graph_item>
@@ -9735,7 +9735,7 @@
           <sortorder>12</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.11</key>
           </item>
         </graph_item>
@@ -9743,7 +9743,7 @@
           <sortorder>13</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.12</key>
           </item>
         </graph_item>
@@ -9751,7 +9751,7 @@
           <sortorder>14</sortorder>
           <color>274482</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.13</key>
           </item>
         </graph_item>
@@ -9759,7 +9759,7 @@
           <sortorder>15</sortorder>
           <color>2B5429</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.14</key>
           </item>
         </graph_item>
@@ -9767,7 +9767,7 @@
           <sortorder>16</sortorder>
           <color>8048B4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.16</key>
           </item>
         </graph_item>
@@ -9775,7 +9775,7 @@
           <sortorder>17</sortorder>
           <color>FD5434</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.17</key>
           </item>
         </graph_item>
@@ -9783,7 +9783,7 @@
           <sortorder>18</sortorder>
           <color>790E1F</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.18</key>
           </item>
         </graph_item>
@@ -9791,7 +9791,7 @@
           <sortorder>19</sortorder>
           <color>87AC4D</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.19</key>
           </item>
         </graph_item>
@@ -9799,7 +9799,7 @@
           <sortorder>20</sortorder>
           <color>E89DF4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.20</key>
           </item>
         </graph_item>
@@ -9807,7 +9807,7 @@
           <sortorder>21</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.21</key>
           </item>
         </graph_item>
@@ -9815,7 +9815,7 @@
           <sortorder>22</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.22</key>
           </item>
         </graph_item>
@@ -9823,7 +9823,7 @@
           <sortorder>23</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.23</key>
           </item>
         </graph_item>
@@ -9831,7 +9831,7 @@
           <sortorder>24</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.24</key>
           </item>
         </graph_item>
@@ -9839,7 +9839,7 @@
           <sortorder>25</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.25</key>
           </item>
         </graph_item>
@@ -9847,7 +9847,7 @@
           <sortorder>26</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.25</key>
           </item>
         </graph_item>
@@ -9855,7 +9855,7 @@
           <sortorder>27</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.26</key>
           </item>
         </graph_item>
@@ -9863,7 +9863,7 @@
           <sortorder>28</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.27</key>
           </item>
         </graph_item>
@@ -9871,7 +9871,7 @@
           <sortorder>29</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.28</key>
           </item>
         </graph_item>
@@ -9879,7 +9879,7 @@
           <sortorder>30</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.29</key>
           </item>
         </graph_item>
@@ -9887,7 +9887,7 @@
           <sortorder>31</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.30</key>
           </item>
         </graph_item>
@@ -9895,7 +9895,7 @@
           <sortorder>32</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.31</key>
           </item>
         </graph_item>
@@ -9903,7 +9903,7 @@
           <sortorder>33</sortorder>
           <color>89ABF8</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.32</key>
           </item>
         </graph_item>
@@ -9911,7 +9911,7 @@
           <sortorder>34</sortorder>
           <color>7EC25C</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.33</key>
           </item>
         </graph_item>
@@ -9919,7 +9919,7 @@
           <sortorder>35</sortorder>
           <color>274482</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.34</key>
           </item>
         </graph_item>
@@ -9927,7 +9927,7 @@
           <sortorder>36</sortorder>
           <color>2B5429</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.35</key>
           </item>
         </graph_item>
@@ -9935,7 +9935,7 @@
           <sortorder>37</sortorder>
           <color>8048B4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.36</key>
           </item>
         </graph_item>
@@ -9943,7 +9943,7 @@
           <sortorder>38</sortorder>
           <color>FD5434</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.37</key>
           </item>
         </graph_item>
@@ -9951,7 +9951,7 @@
           <sortorder>39</sortorder>
           <color>790E1F</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.38</key>
           </item>
         </graph_item>
@@ -9959,7 +9959,7 @@
           <sortorder>40</sortorder>
           <color>87AC4D</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.39</key>
           </item>
         </graph_item>
@@ -9967,7 +9967,7 @@
           <sortorder>41</sortorder>
           <color>E89DF4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.40</key>
           </item>
         </graph_item>
@@ -9975,7 +9975,7 @@
           <sortorder>42</sortorder>
           <color>1A7C11</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.41</key>
           </item>
         </graph_item>
@@ -9983,7 +9983,7 @@
           <sortorder>43</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.42</key>
           </item>
         </graph_item>
@@ -9991,7 +9991,7 @@
           <sortorder>44</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.43</key>
           </item>
         </graph_item>
@@ -9999,7 +9999,7 @@
           <sortorder>45</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.44</key>
           </item>
         </graph_item>
@@ -10007,7 +10007,7 @@
           <sortorder>46</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.45</key>
           </item>
         </graph_item>
@@ -10015,7 +10015,7 @@
           <sortorder>47</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.46</key>
           </item>
         </graph_item>
@@ -10023,7 +10023,7 @@
           <sortorder>48</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.47</key>
           </item>
         </graph_item>
@@ -10031,7 +10031,7 @@
           <sortorder>49</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template_SGE2010_48P</host>
+            <host>SGE2010_48P</host>
             <key>ifSpeed.48</key>
           </item>
         </graph_item>

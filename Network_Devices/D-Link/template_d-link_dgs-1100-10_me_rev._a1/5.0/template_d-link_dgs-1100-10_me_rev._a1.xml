@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:04Z</date>
+  <date>2021-10-26T04:38:46Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP D-link DGS-1100-10ME revA1</template>
-      <name>Template SNMP D-link DGS-1100-10/ME revA1</name>
+      <template>SNMP D-link DGS-1100-10ME revA1</template>
+      <name>SNMP D-link DGS-1100-10/ME revA1</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -342,7 +342,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template SNMP D-link DGS-1100-10ME revA1</host>
+                    <host>SNMP D-link DGS-1100-10ME revA1</host>
                     <key>ifInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -350,7 +350,7 @@
                   <sortorder>1</sortorder>
                   <color>3333FF</color>
                   <item>
-                    <host>Template SNMP D-link DGS-1100-10ME revA1</host>
+                    <host>SNMP D-link DGS-1100-10ME revA1</host>
                     <key>ifOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

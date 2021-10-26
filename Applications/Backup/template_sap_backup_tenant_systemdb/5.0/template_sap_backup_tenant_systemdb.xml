@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:58Z</date>
+  <date>2021-10-26T04:43:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SAP Backup</template>
-      <name>Template SAP Backup</name>
+      <template>SAP Backup</template>
+      <name>SAP Backup</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -155,7 +155,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>1A7C11</color>
           <item>
-            <host>Template SAP Backup</host>
+            <host>SAP Backup</host>
             <key>check_backup[{$ID},{$PASS},{$BCO},backup,indexserver]</key>
           </item>
         </graph_item>
@@ -164,7 +164,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>F63100</color>
           <item>
-            <host>Template SAP Backup</host>
+            <host>SAP Backup</host>
             <key>check_backup[{$ID},{$PASS},{$BCO},backup,xsengine]</key>
           </item>
         </graph_item>
@@ -173,7 +173,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>0000BB</color>
           <item>
-            <host>Template SAP Backup</host>
+            <host>SAP Backup</host>
             <key>check_backup[{$ID},{$PASS},{$BCO},backup,nameserver]</key>
           </item>
         </graph_item>

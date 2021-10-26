@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:09Z</date>
+  <date>2021-10-26T04:42:10Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Backup Exec Server</template>
-      <name>Template Backup Exec Server</name>
+      <template>Backup Exec Server</template>
+      <name>Backup Exec Server</name>
       <description>Veritas/Simantec Backup Exec Server template All checks executes with T-SQL, so you must configure Zabbix to use FreeTDS for MS SQL Server. Backup Jobs ODBC LLD rules: - Backup Exec Windows Service - Backup Exec Jobs (FULL) - Backup Exec Jobs (INCREMENTAL) Two rules needs for creating triggers with different severity levels for Full job types and Incremental job types. Macroses {$BE.USER} and {$BE.PASSWORD} must be set on template or host level before usage. These are username and password to connect to BEDB database. LLD returns {#JOB.TYPE} macros, containig 'FULL' or 'INCR' string to determine backup job type. On database level it's: 16777216 - INCR 16973824 - FULL Documentation will be available soon on my GitHub page (https://github.com/asand3r).</description>
       <groups>
         <group>
@@ -114,7 +114,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Backup Exec Server</host>
+                    <host>Backup Exec Server</host>
                     <key>db.odbc.select[be.job.full.{#JOB.NAME}.totalbytes,{HOST.HOST}]</key>
                   </item>
                 </graph_item>
@@ -212,7 +212,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template Backup Exec Server</host>
+                    <host>Backup Exec Server</host>
                     <key>db.odbc.select[be.job.incr.{#JOB.NAME}.totalbytes,{HOST.HOST}]</key>
                   </item>
                 </graph_item>

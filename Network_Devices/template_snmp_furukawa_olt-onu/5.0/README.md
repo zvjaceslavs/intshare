@@ -1,4 +1,4 @@
-# Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032
+# SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032
 
 ## Description
 
@@ -80,7 +80,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|ONU  [{#SNMPINDEX}] Rx Optical Power Outside Recommended Standards|<p>Valores limitesde -8,0 a -28,0dBm sendo recomendada a definição de thresholds de monitoração de -11,0 e -25,0dBm</p>|<p>**Expression**: {Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuRxPower[{#SNMPINDEX}].last()}>-11 or {Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuRxPower[{#SNMPINDEX}].last()}<-25</p><p>**Recovery expression**: </p>|average|
-|ONU [OltId.OnuId]: [{#SNMPINDEX}] is Inactive|<p>-</p>|<p>**Expression**: {Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuStatus[{#SNMPINDEX}].last(#3)}=1</p><p>**Recovery expression**: </p>|high|
-|ONU  [{#SNMPINDEX}] Rx Optical Power Outside Recommended Standards (LLD)|<p>Valores limitesde -8,0 a -28,0dBm sendo recomendada a definição de thresholds de monitoração de -11,0 e -25,0dBm</p>|<p>**Expression**: {Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuRxPower[{#SNMPINDEX}].last()}>-11 or {Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuRxPower[{#SNMPINDEX}].last()}<-25</p><p>**Recovery expression**: </p>|average|
-|ONU [OltId.OnuId]: [{#SNMPINDEX}] is Inactive (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuStatus[{#SNMPINDEX}].last(#3)}=1</p><p>**Recovery expression**: </p>|high|
+|ONU  [{#SNMPINDEX}] Rx Optical Power Outside Recommended Standards|<p>Valores limitesde -8,0 a -28,0dBm sendo recomendada a definição de thresholds de monitoração de -11,0 e -25,0dBm</p>|<p>**Expression**: {SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuRxPower[{#SNMPINDEX}].last()}>-11 or {SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuRxPower[{#SNMPINDEX}].last()}<-25</p><p>**Recovery expression**: </p>|average|
+|ONU [OltId.OnuId]: [{#SNMPINDEX}] is Inactive|<p>-</p>|<p>**Expression**: {SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuStatus[{#SNMPINDEX}].last(#3)}=1</p><p>**Recovery expression**: </p>|high|
+|ONU  [{#SNMPINDEX}] Rx Optical Power Outside Recommended Standards (LLD)|<p>Valores limitesde -8,0 a -28,0dBm sendo recomendada a definição de thresholds de monitoração de -11,0 e -25,0dBm</p>|<p>**Expression**: {SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuRxPower[{#SNMPINDEX}].last()}>-11 or {SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuRxPower[{#SNMPINDEX}].last()}<-25</p><p>**Recovery expression**: </p>|average|
+|ONU [OltId.OnuId]: [{#SNMPINDEX}] is Inactive (LLD)|<p>-</p>|<p>**Expression**: {SNMP Furukawa OLT-ONU G4S - G8S - G2500 - G1040 - LD3032:fkGponOnuStatus[{#SNMPINDEX}].last(#3)}=1</p><p>**Recovery expression**: </p>|high|

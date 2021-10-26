@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:18Z</date>
+  <date>2021-10-26T04:40:10Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP ADSL Stats</template>
-      <name>Template SNMP ADSL Stats</name>
+      <template>SNMP ADSL Stats</template>
+      <name>SNMP ADSL Stats</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -363,7 +363,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template SNMP ADSL Stats</host>
+            <host>SNMP ADSL Stats</host>
             <key>DSL-DS-BRC</key>
           </item>
         </graph_item>
@@ -371,7 +371,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template SNMP ADSL Stats</host>
+            <host>SNMP ADSL Stats</host>
             <key>DSL-DS-BRM</key>
           </item>
         </graph_item>
@@ -379,7 +379,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template SNMP ADSL Stats</host>
+            <host>SNMP ADSL Stats</host>
             <key>DSL-US-BRC</key>
           </item>
         </graph_item>
@@ -387,7 +387,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template SNMP ADSL Stats</host>
+            <host>SNMP ADSL Stats</host>
             <key>DSL-US-BRM</key>
           </item>
         </graph_item>
@@ -400,7 +400,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template SNMP ADSL Stats</host>
+            <host>SNMP ADSL Stats</host>
             <key>DSL-DS-BRC</key>
           </item>
         </graph_item>
@@ -408,7 +408,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template SNMP ADSL Stats</host>
+            <host>SNMP ADSL Stats</host>
             <key>DSL-DS-BRM</key>
           </item>
         </graph_item>
@@ -421,7 +421,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template SNMP ADSL Stats</host>
+            <host>SNMP ADSL Stats</host>
             <key>DSL-US-BRC</key>
           </item>
         </graph_item>
@@ -429,7 +429,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template SNMP ADSL Stats</host>
+            <host>SNMP ADSL Stats</host>
             <key>DSL-US-BRM</key>
           </item>
         </graph_item>

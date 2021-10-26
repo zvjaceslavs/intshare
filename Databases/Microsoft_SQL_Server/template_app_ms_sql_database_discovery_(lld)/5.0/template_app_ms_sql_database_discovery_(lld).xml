@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:50:59Z</date>
+  <date>2021-10-26T04:37:35Z</date>
   <groups>
     <group>
       <name>Windows Servers</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App MS SQL DB Discovery</template>
-      <name>Template App MS SQL DB Discovery</name>
+      <template>App MS SQL DB Discovery</template>
+      <name>App MS SQL DB Discovery</name>
       <groups>
         <group>
           <name>Windows Servers</name>
@@ -453,7 +453,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Bulk Copy Rows/sec",300]</key>
                   </item>
                 </graph_item>
@@ -461,7 +461,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Bulk Copy Throughput/sec",300]</key>
                   </item>
                 </graph_item>
@@ -473,7 +473,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Data File(s) Size (KB)",300]</key>
                   </item>
                 </graph_item>
@@ -481,7 +481,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log File(s) Size (KB)",300]</key>
                   </item>
                 </graph_item>
@@ -489,7 +489,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log File(s) Used Size (KB)",300]</key>
                   </item>
                 </graph_item>
@@ -501,7 +501,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Pool Cache Misses/sec",300]</key>
                   </item>
                 </graph_item>
@@ -509,7 +509,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Pool Disk Reads/sec",300]</key>
                   </item>
                 </graph_item>
@@ -517,7 +517,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Pool Requests/sec",300]</key>
                   </item>
                 </graph_item>
@@ -529,7 +529,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Bytes Flushed/sec",300]</key>
                   </item>
                 </graph_item>
@@ -537,7 +537,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Cache Reads/sec",300]</key>
                   </item>
                 </graph_item>
@@ -545,7 +545,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Flushes/sec",300]</key>
                   </item>
                 </graph_item>
@@ -553,7 +553,7 @@
                   <sortorder>3</sortorder>
                   <color>C800C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Flush Waits/sec",300]</key>
                   </item>
                 </graph_item>
@@ -565,7 +565,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Growths",300]</key>
                   </item>
                 </graph_item>
@@ -573,7 +573,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Shrinks",300]</key>
                   </item>
                 </graph_item>
@@ -581,7 +581,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Truncations",300]</key>
                   </item>
                 </graph_item>
@@ -589,7 +589,7 @@
                   <sortorder>3</sortorder>
                   <color>C800C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Percent Log Used",300]</key>
                   </item>
                 </graph_item>
@@ -601,7 +601,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Cache Hit Ratio",300]</key>
                   </item>
                 </graph_item>
@@ -609,7 +609,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Flush Wait Time",300]</key>
                   </item>
                 </graph_item>
@@ -617,7 +617,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Log Flush Write Time (ms)",300]</key>
                   </item>
                 </graph_item>
@@ -629,7 +629,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Repl. Pending Xacts",300]</key>
                   </item>
                 </graph_item>
@@ -637,7 +637,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Repl. Trans. Rate",300]</key>
                   </item>
                 </graph_item>
@@ -649,7 +649,7 @@
                 <graph_item>
                   <color>00C800</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Active Transactions",300]</key>
                   </item>
                 </graph_item>
@@ -657,7 +657,7 @@
                   <sortorder>1</sortorder>
                   <color>FF3333</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Tracked transactions/sec",300]</key>
                   </item>
                 </graph_item>
@@ -665,7 +665,7 @@
                   <sortorder>2</sortorder>
                   <color>0000C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Transactions/sec",300]</key>
                   </item>
                 </graph_item>
@@ -673,7 +673,7 @@
                   <sortorder>3</sortorder>
                   <color>C800C8</color>
                   <item>
-                    <host>Template App MS SQL DB Discovery</host>
+                    <host>App MS SQL DB Discovery</host>
                     <key>perf_counter["\{$INSTANCE01}:Databases({#DBS})\Write Transactions/sec",300]</key>
                   </item>
                 </graph_item>

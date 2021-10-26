@@ -1,4 +1,4 @@
-# Template SNMP Ruckus Zonedirector 9.5
+# SNMP Ruckus Zonedirector 9.5
 
 ## Overview
 
@@ -54,14 +54,14 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |ZoneDirector CPU Utilization|<p>-</p>|`SNMP agent`|ruckusZDSystemCPUUTIL.0<p>Update: 300</p>|
-|ZoneDirector MAC Adress|<p>-</p>|`SNMP agent`|ruckusZDSystemMacAddr.0<p>Update: 3600</p>|
-|ZoneDirector System Model|<p>-</p>|`SNMP agent`|ruckusZDSystemModel.0<p>Update: 3600</p>|
 |ZoneDirector Serial Number|<p>-</p>|`SNMP agent`|ruckusZDSystemSerialNumber.0<p>Update: 3600</p>|
-|ZoneDirector Total Users|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsAllNumSta<p>Update: 300</p>|
-|ZoneDirector Total Auth Clients|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsNumSta.0<p>Update: 300</p>|
-|Total Rx Bytes|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsWLANTotalRxBytes<p>Update: 120</p>|
-|Total Tx Bytes|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsWLANTotalTxBytes<p>Update: 120</p>|
 |ZoneDirector System Version|<p>-</p>|`SNMP agent`|ruckusZDSystemVersion.0<p>Update: 3600</p>|
+|ZoneDirector System Model|<p>-</p>|`SNMP agent`|ruckusZDSystemModel.0<p>Update: 3600</p>|
+|ZoneDirector Total Users|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsAllNumSta<p>Update: 300</p>|
+|Total Tx Bytes|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsWLANTotalTxBytes<p>Update: 120</p>|
+|ZoneDirector Total Auth Clients|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsNumSta.0<p>Update: 300</p>|
+|ZoneDirector MAC Adress|<p>-</p>|`SNMP agent`|ruckusZDSystemMacAddr.0<p>Update: 3600</p>|
+|Total Rx Bytes|<p>-</p>|`SNMP agent`|ruckusZDSystemStatsWLANTotalRxBytes<p>Update: 120</p>|
 |AP $1 : Name|<p>-</p>|`SNMP agent`|APname[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |AP $1 : Auth Clients|<p>-</p>|`SNMP agent`|ruckusZDWLANAPNumSta[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |AP Status $1|<p>-</p>|`SNMP agent`|ruckusZDWLANAPStatus[{#SNMPVALUE}]<p>Update: 360</p><p>LLD</p>|
@@ -73,7 +73,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Acces Point Wifi  {ITEM.VALUE2} is not available. Address: {#SNMPVALUE}|<p>-</p>|<p>**Expression**: ({Template SNMP Ruckus Zonedirector 9.5:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}<>1)or({Template SNMP Ruckus Zonedirector 9.5:APname[{#SNMPVALUE}].regexp(^blablablabla$)}=1)</p><p>**Recovery expression**: </p>|warning|
-|Port {#SNMPVALUE} is Down|<p>-</p>|<p>**Expression**: {Template SNMP Ruckus Zonedirector 9.5:ruckusZDEthStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
-|Acces Point Wifi  {ITEM.VALUE2} is not available. Address: {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: ({Template SNMP Ruckus Zonedirector 9.5:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}<>1)or({Template SNMP Ruckus Zonedirector 9.5:APname[{#SNMPVALUE}].regexp(^blablablabla$)}=1)</p><p>**Recovery expression**: </p>|warning|
-|Port {#SNMPVALUE} is Down (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP Ruckus Zonedirector 9.5:ruckusZDEthStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
+|Acces Point Wifi  {ITEM.VALUE2} is not available. Address: {#SNMPVALUE}|<p>-</p>|<p>**Expression**: ({SNMP Ruckus Zonedirector 9.5:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}<>1)or({SNMP Ruckus Zonedirector 9.5:APname[{#SNMPVALUE}].regexp(^blablablabla$)}=1)</p><p>**Recovery expression**: </p>|warning|
+|Port {#SNMPVALUE} is Down|<p>-</p>|<p>**Expression**: {SNMP Ruckus Zonedirector 9.5:ruckusZDEthStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|
+|Acces Point Wifi  {ITEM.VALUE2} is not available. Address: {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: ({SNMP Ruckus Zonedirector 9.5:ruckusZDWLANAPStatus[{#SNMPVALUE}].last(0)}<>1)or({SNMP Ruckus Zonedirector 9.5:APname[{#SNMPVALUE}].regexp(^blablablabla$)}=1)</p><p>**Recovery expression**: </p>|warning|
+|Port {#SNMPVALUE} is Down (LLD)|<p>-</p>|<p>**Expression**: {SNMP Ruckus Zonedirector 9.5:ruckusZDEthStatus[{#SNMPVALUE}].last(0)}=2</p><p>**Recovery expression**: </p>|high|

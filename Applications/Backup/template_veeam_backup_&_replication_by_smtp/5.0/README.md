@@ -1,4 +1,4 @@
-# Template VEEAM SMTP trapper
+# VEEAM SMTP trapper
 
 ## Overview
 
@@ -70,9 +70,9 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Failure of job {#VEEAMJOB}|<p>-</p>|<p>**Expression**: {Template VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].str(Failed)}=1</p><p>**Recovery expression**: </p>|high|
-|Job {#VEEAMJOB} did not occur last {$BACKUP_PERIODICITY:"{#VEEAMJOB}"}|<p>-</p>|<p>**Expression**: {Template VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].nodata(52h)}=1</p><p>**Recovery expression**: </p>|high|
-|Warning on job {#VEEAMJOB}|<p>-</p>|<p>**Expression**: {Template VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].str(Warning)}=1</p><p>**Recovery expression**: </p>|warning|
-|Failure of job {#VEEAMJOB} (LLD)|<p>-</p>|<p>**Expression**: {Template VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].str(Failed)}=1</p><p>**Recovery expression**: </p>|high|
-|Job {#VEEAMJOB} did not occur last {$BACKUP_PERIODICITY:"{#VEEAMJOB}"} (LLD)|<p>-</p>|<p>**Expression**: {Template VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].nodata(52h)}=1</p><p>**Recovery expression**: </p>|high|
-|Warning on job {#VEEAMJOB} (LLD)|<p>-</p>|<p>**Expression**: {Template VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].str(Warning)}=1</p><p>**Recovery expression**: </p>|warning|
+|Failure of job {#VEEAMJOB}|<p>-</p>|<p>**Expression**: {VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].str(Failed)}=1</p><p>**Recovery expression**: </p>|high|
+|Job {#VEEAMJOB} did not occur last {$BACKUP_PERIODICITY:"{#VEEAMJOB}"}|<p>-</p>|<p>**Expression**: {VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].nodata(52h)}=1</p><p>**Recovery expression**: </p>|high|
+|Warning on job {#VEEAMJOB}|<p>-</p>|<p>**Expression**: {VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].str(Warning)}=1</p><p>**Recovery expression**: </p>|warning|
+|Failure of job {#VEEAMJOB} (LLD)|<p>-</p>|<p>**Expression**: {VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].str(Failed)}=1</p><p>**Recovery expression**: </p>|high|
+|Job {#VEEAMJOB} did not occur last {$BACKUP_PERIODICITY:"{#VEEAMJOB}"} (LLD)|<p>-</p>|<p>**Expression**: {VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].nodata(52h)}=1</p><p>**Recovery expression**: </p>|high|
+|Warning on job {#VEEAMJOB} (LLD)|<p>-</p>|<p>**Expression**: {VEEAM SMTP trapper:smtp.trap.subject.match[veeamjob,{#VEEAMJOB},status].str(Warning)}=1</p><p>**Recovery expression**: </p>|warning|

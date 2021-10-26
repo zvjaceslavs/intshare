@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:14Z</date>
+  <date>2021-10-26T04:40:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template macOS Content Cache</template>
-      <name>Template macOS Content Cache</name>
+      <template>macOS Content Cache</template>
+      <name>macOS Content Cache</name>
       <description>Runtime stats and storage monitoring for macOS High Sierra Caching Service.</description>
       <groups>
         <group>
@@ -565,7 +565,7 @@
         <graph_item>
           <color>000000</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.cachelimit</key>
           </item>
         </graph_item>
@@ -574,7 +574,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>009999</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.cacheused</key>
           </item>
         </graph_item>
@@ -586,7 +586,7 @@
         <graph_item>
           <color>00BB00</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.total.hitrate</key>
           </item>
         </graph_item>
@@ -599,7 +599,7 @@
         <graph_item>
           <color>4B4A67</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.details.books</key>
           </item>
         </graph_item>
@@ -607,7 +607,7 @@
           <sortorder>1</sortorder>
           <color>DDD1C7</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.details.icloud</key>
           </item>
         </graph_item>
@@ -615,7 +615,7 @@
           <sortorder>2</sortorder>
           <color>C2CFB2</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.details.ios</key>
           </item>
         </graph_item>
@@ -623,7 +623,7 @@
           <sortorder>3</sortorder>
           <color>8DB580</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.details.macos</key>
           </item>
         </graph_item>
@@ -631,7 +631,7 @@
           <sortorder>4</sortorder>
           <color>7E8987</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.details.other</key>
           </item>
         </graph_item>
@@ -644,7 +644,7 @@
         <graph_item>
           <color>009900</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.bytes.returnedtoclients</key>
           </item>
         </graph_item>
@@ -653,7 +653,7 @@
           <drawtype>FILLED_REGION</drawtype>
           <color>888888</color>
           <item>
-            <host>Template macOS Content Cache</host>
+            <host>macOS Content Cache</host>
             <key>contentcache.bytes.storedfromorigin</key>
           </item>
         </graph_item>

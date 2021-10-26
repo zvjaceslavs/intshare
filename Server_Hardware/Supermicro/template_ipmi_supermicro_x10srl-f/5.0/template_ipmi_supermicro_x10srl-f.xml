@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:16Z</date>
+  <date>2021-10-26T04:40:07Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template IPMI Supermicro X10SRL-F</template>
-      <name>Template IPMI Supermicro X10SRL-F</name>
+      <template>IPMI Supermicro X10SRL-F</template>
+      <name>IPMI Supermicro X10SRL-F</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -653,7 +653,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.cpu.temp</key>
           </item>
         </graph_item>
@@ -665,7 +665,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.p1.dimma1.temp</key>
           </item>
         </graph_item>
@@ -673,7 +673,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.p1.dimma2.temp</key>
           </item>
         </graph_item>
@@ -681,7 +681,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.p1.dimmb1.temp</key>
           </item>
         </graph_item>
@@ -689,7 +689,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.p1.dimmb2.temp</key>
           </item>
         </graph_item>
@@ -697,7 +697,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.p1.dimmc1.temp</key>
           </item>
         </graph_item>
@@ -705,7 +705,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.p1.dimmc2.temp</key>
           </item>
         </graph_item>
@@ -713,7 +713,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.p1.dimmd1.temp</key>
           </item>
         </graph_item>
@@ -721,7 +721,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.p1.dimmd2.temp</key>
           </item>
         </graph_item>
@@ -733,7 +733,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.fan1</key>
           </item>
         </graph_item>
@@ -741,7 +741,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.fan2</key>
           </item>
         </graph_item>
@@ -749,7 +749,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.fan3</key>
           </item>
         </graph_item>
@@ -757,7 +757,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.fan4</key>
           </item>
         </graph_item>
@@ -765,7 +765,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.fana</key>
           </item>
         </graph_item>
@@ -773,7 +773,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.fan5</key>
           </item>
         </graph_item>
@@ -785,7 +785,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.peripheral.temp</key>
           </item>
         </graph_item>
@@ -793,7 +793,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.system.temp</key>
           </item>
         </graph_item>
@@ -801,7 +801,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.VcpuVRM.temp</key>
           </item>
         </graph_item>
@@ -809,7 +809,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.VmemABVRM.temp</key>
           </item>
         </graph_item>
@@ -817,7 +817,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.VmemCDVRM.temp</key>
           </item>
         </graph_item>
@@ -829,7 +829,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.1.05VPCH</key>
           </item>
         </graph_item>
@@ -837,7 +837,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.1.2VBMC</key>
           </item>
         </graph_item>
@@ -845,7 +845,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.1.5VPCH</key>
           </item>
         </graph_item>
@@ -853,7 +853,7 @@
           <sortorder>3</sortorder>
           <color>A54F10</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.3.3VCC</key>
           </item>
         </graph_item>
@@ -861,7 +861,7 @@
           <sortorder>4</sortorder>
           <color>FC6EA3</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.3.3VSB</key>
           </item>
         </graph_item>
@@ -869,7 +869,7 @@
           <sortorder>5</sortorder>
           <color>6C59DC</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.5VCC</key>
           </item>
         </graph_item>
@@ -877,7 +877,7 @@
           <sortorder>6</sortorder>
           <color>AC8C14</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.5VSB</key>
           </item>
         </graph_item>
@@ -885,7 +885,7 @@
           <sortorder>7</sortorder>
           <color>611F27</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.12V</key>
           </item>
         </graph_item>
@@ -893,7 +893,7 @@
           <sortorder>8</sortorder>
           <color>F230E0</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.VBAT</key>
           </item>
         </graph_item>
@@ -901,7 +901,7 @@
           <sortorder>9</sortorder>
           <color>5CCD18</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.Vcpu</key>
           </item>
         </graph_item>
@@ -909,7 +909,7 @@
           <sortorder>10</sortorder>
           <color>BB2A02</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.VDIMMAB</key>
           </item>
         </graph_item>
@@ -917,7 +917,7 @@
           <sortorder>11</sortorder>
           <color>5A2B57</color>
           <item>
-            <host>Template IPMI Supermicro X10SRL-F</host>
+            <host>IPMI Supermicro X10SRL-F</host>
             <key>ipmi.supermicro.x10srl-f.VDIMMCD</key>
           </item>
         </graph_item>

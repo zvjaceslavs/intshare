@@ -1,4 +1,4 @@
-# Template IPMI Dell PowerEdge M610
+# IPMI Dell PowerEdge M610
 
 ## Overview
 

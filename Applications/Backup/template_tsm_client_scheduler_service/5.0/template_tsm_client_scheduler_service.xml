@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:52:59Z</date>
+  <date>2021-10-26T04:39:48Z</date>
   <groups>
     <group>
       <name>Discovered hosts</name>
@@ -12,8 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App TSM Client Scheduler</template>
-      <name>Template App TSM Client Scheduler</name>
+      <template>App TSM Client Scheduler</template>
+      <name>App TSM Client Scheduler</name>
       <groups>
         <group>
           <name>Discovered hosts</name>
@@ -68,7 +68,7 @@
           <color>00C800</color>
           <calc_fnc>MIN</calc_fnc>
           <item>
-            <host>Template App TSM Client Scheduler</host>
+            <host>App TSM Client Scheduler</host>
             <key>service_state[TSM Client Scheduler]</key>
           </item>
         </graph_item>
@@ -78,7 +78,7 @@
           <color>C80000</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template App TSM Client Scheduler</host>
+            <host>App TSM Client Scheduler</host>
             <key>service_state[TSM Client Scheduler]</key>
           </item>
         </graph_item>

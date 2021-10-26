@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:50Z</date>
+  <date>2021-10-26T04:45:13Z</date>
   <groups>
     <group>
       <name>Template</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Storage XSKY XMS by HTTP</template>
-      <name>Template Storage XSKY XMS by HTTP</name>
+      <template>Storage XSKY XMS by HTTP</template>
+      <name>Storage XSKY XMS by HTTP</name>
       <description>Template for XMS API</description>
       <groups>
         <group>

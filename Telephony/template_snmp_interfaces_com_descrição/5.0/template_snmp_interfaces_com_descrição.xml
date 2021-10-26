@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:33Z</date>
+  <date>2021-10-26T04:43:45Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Interfaces</template>
-      <name>Template SNMP Interfaces</name>
+      <template>SNMP Interfaces</template>
+      <name>SNMP Interfaces</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -130,7 +130,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>FF6600</color>
                   <item>
-                    <host>Template SNMP Interfaces</host>
+                    <host>SNMP Interfaces</host>
                     <key>ifHCInOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>
@@ -139,7 +139,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>002B60</color>
                   <item>
-                    <host>Template SNMP Interfaces</host>
+                    <host>SNMP Interfaces</host>
                     <key>ifHCOutOctets[{#SNMPVALUE}]</key>
                   </item>
                 </graph_item>

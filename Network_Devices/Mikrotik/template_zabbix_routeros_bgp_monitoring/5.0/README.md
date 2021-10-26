@@ -1,4 +1,4 @@
-# Template RouterOS BGP
+# RouterOS BGP
 
 ## Overview
 
@@ -38,5 +38,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|BGP peer {#BGP_PEER_NAME} state is not established|<p>-</p>|<p>**Expression**: {Template RouterOS BGP:bgp_peer_field.sh["*UNKNOWN*", "zabbix", "zabbix_discovery", {#BGP_PEER_NAME}, "state"].last(#5)}<4 and {Template RouterOS BGP:bgp_peer_field.sh["*UNKNOWN*", "zabbix", "zabbix_discovery", {#BGP_PEER_NAME}, "state"].last(#5)}>0</p><p>**Recovery expression**: </p>|warning|
-|BGP peer {#BGP_PEER_NAME} state is not established (LLD)|<p>-</p>|<p>**Expression**: {Template RouterOS BGP:bgp_peer_field.sh["*UNKNOWN*", "zabbix", "zabbix_discovery", {#BGP_PEER_NAME}, "state"].last(#5)}<4 and {Template RouterOS BGP:bgp_peer_field.sh["*UNKNOWN*", "zabbix", "zabbix_discovery", {#BGP_PEER_NAME}, "state"].last(#5)}>0</p><p>**Recovery expression**: </p>|warning|
+|BGP peer {#BGP_PEER_NAME} state is not established|<p>-</p>|<p>**Expression**: {RouterOS BGP:bgp_peer_field.sh["*UNKNOWN*", "zabbix", "zabbix_discovery", {#BGP_PEER_NAME}, "state"].last(#5)}<4 and {RouterOS BGP:bgp_peer_field.sh["*UNKNOWN*", "zabbix", "zabbix_discovery", {#BGP_PEER_NAME}, "state"].last(#5)}>0</p><p>**Recovery expression**: </p>|warning|
+|BGP peer {#BGP_PEER_NAME} state is not established (LLD)|<p>-</p>|<p>**Expression**: {RouterOS BGP:bgp_peer_field.sh["*UNKNOWN*", "zabbix", "zabbix_discovery", {#BGP_PEER_NAME}, "state"].last(#5)}<4 and {RouterOS BGP:bgp_peer_field.sh["*UNKNOWN*", "zabbix", "zabbix_discovery", {#BGP_PEER_NAME}, "state"].last(#5)}>0</p><p>**Recovery expression**: </p>|warning|

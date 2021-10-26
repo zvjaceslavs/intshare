@@ -1,4 +1,4 @@
-# Template App Rocket Chat
+# App Rocket Chat
 
 ## Overview
 
@@ -68,30 +68,30 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Rocket Chat Last Message Time ago|<p>Time difference between update time and last message time.</p>|`Calculated`|calc.lastMessage.timeDiff<p>Update: 2m</p>|
-|Rocket Chat Get Stats|<p>-</p>|`HTTP agent`|rocketchat-stats<p>Update: 2m</p>|
-|Rocket Chat Users - Away|<p>-</p>|`Dependent item`|rocketchat-stats[awayUsers]<p>Update: 0</p>|
-|Rocket Chat Last Message Time|<p>-</p>|`Dependent item`|rocketchat-stats[lastMessageSentAt]<p>Update: 0</p>|
-|Rocket Chat Users - Offline|<p>-</p>|`Dependent item`|rocketchat-stats[offlineUsers]<p>Update: 0</p>|
-|Rocket Chat Users - Online|<p>-</p>|`Dependent item`|rocketchat-stats[onlineUsers]<p>Update: 0</p>|
-|Rocket Chat OS Memory Free|<p>-</p>|`Dependent item`|rocketchat-stats[os.freemem]<p>Update: 0</p>|
-|Rocket Chat OS CPU Load 15 min|<p>-</p>|`Dependent item`|rocketchat-stats[os.load.15min]<p>Update: 0</p>|
-|Rocket Chat OS CPU Load 1 min|<p>-</p>|`Dependent item`|rocketchat-stats[os.load.1min]<p>Update: 0</p>|
-|Rocket Chat OS CPU Load 5 min|<p>-</p>|`Dependent item`|rocketchat-stats[os.load.5min]<p>Update: 0</p>|
-|Rocket Chat OS Memory Total|<p>-</p>|`Dependent item`|rocketchat-stats[os.totalmem]<p>Update: 0</p>|
-|Rocket Chat OS Uptime|<p>-</p>|`Dependent item`|rocketchat-stats[os.uptime]<p>Update: 0</p>|
-|Rocket Chat Channel - Messages|<p>-</p>|`Dependent item`|rocketchat-stats[totalChannelMessages]<p>Update: 0</p>|
-|Rocket Chat Channel - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalChannels]<p>Update: 0</p>|
-|Rocket Chat Direct - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalDirect]<p>Update: 0</p>|
 |Rocket Chat Direct - Messages|<p>-</p>|`Dependent item`|rocketchat-stats[totalDirectMessages]<p>Update: 0</p>|
-|Rocket Chat Livechats - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalLivechat]<p>Update: 0</p>|
 |Rocket Chat Livechat - Messages|<p>-</p>|`Dependent item`|rocketchat-stats[totalLivechatMessages]<p>Update: 0</p>|
+|Rocket Chat OS CPU Load 5 min|<p>-</p>|`Dependent item`|rocketchat-stats[os.load.5min]<p>Update: 0</p>|
 |Rocket Total Messages|<p>-</p>|`Dependent item`|rocketchat-stats[totalMessages]<p>Update: 0</p>|
-|Rocket Chat Private Group - Messages|<p>-</p>|`Dependent item`|rocketchat-stats[totalPrivateGroupMessages]<p>Update: 0</p>|
-|Rocket Chat Private Group - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalPrivateGroups]<p>Update: 0</p>|
-|Rocket Chat Users - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalUsers]<p>Update: 0</p>|
+|Rocket Chat OS CPU Load 15 min|<p>-</p>|`Dependent item`|rocketchat-stats[os.load.15min]<p>Update: 0</p>|
+|Rocket Chat Last Message Time|<p>-</p>|`Dependent item`|rocketchat-stats[lastMessageSentAt]<p>Update: 0</p>|
+|Rocket Chat OS Memory Total|<p>-</p>|`Dependent item`|rocketchat-stats[os.totalmem]<p>Update: 0</p>|
+|Rocket Chat Channel - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalChannels]<p>Update: 0</p>|
 |Rocket Chat Last Update|<p>-</p>|`Dependent item`|rocketchat-stats[updatedAt]<p>Update: 0</p>|
+|Rocket Chat Users - Away|<p>-</p>|`Dependent item`|rocketchat-stats[awayUsers]<p>Update: 0</p>|
+|Rocket Chat OS Memory Free|<p>-</p>|`Dependent item`|rocketchat-stats[os.freemem]<p>Update: 0</p>|
+|Rocket Chat Livechats - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalLivechat]<p>Update: 0</p>|
+|Rocket Chat Users - Online|<p>-</p>|`Dependent item`|rocketchat-stats[onlineUsers]<p>Update: 0</p>|
+|Rocket Chat Users - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalUsers]<p>Update: 0</p>|
 |Rocket Chat Version|<p>-</p>|`Dependent item`|rocketchat-stats[version]<p>Update: 0</p>|
+|Rocket Chat Channel - Messages|<p>-</p>|`Dependent item`|rocketchat-stats[totalChannelMessages]<p>Update: 0</p>|
+|Rocket Chat Private Group - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalPrivateGroups]<p>Update: 0</p>|
+|Rocket Chat OS CPU Load 1 min|<p>-</p>|`Dependent item`|rocketchat-stats[os.load.1min]<p>Update: 0</p>|
+|Rocket Chat Users - Offline|<p>-</p>|`Dependent item`|rocketchat-stats[offlineUsers]<p>Update: 0</p>|
+|Rocket Chat Get Stats|<p>-</p>|`HTTP agent`|rocketchat-stats<p>Update: 2m</p>|
+|Rocket Chat Private Group - Messages|<p>-</p>|`Dependent item`|rocketchat-stats[totalPrivateGroupMessages]<p>Update: 0</p>|
+|Rocket Chat Last Message Time ago|<p>Time difference between update time and last message time.</p>|`Calculated`|calc.lastMessage.timeDiff<p>Update: 2m</p>|
+|Rocket Chat Direct - Total|<p>-</p>|`Dependent item`|rocketchat-stats[totalDirect]<p>Update: 0</p>|
+|Rocket Chat OS Uptime|<p>-</p>|`Dependent item`|rocketchat-stats[os.uptime]<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

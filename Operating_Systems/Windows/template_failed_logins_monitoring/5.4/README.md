@@ -1,4 +1,4 @@
-# Template Module Windows Failed Logins
+# Module Windows Failed Logins
 
 ## Overview
 
@@ -46,12 +46,12 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Failed login|<p>A shorter summary containing user, domain, hostname and ip</p>|`Dependent item`|wfl.failed.login<p>Update: 0</p>|
 |Account Domain|<p>-</p>|`Dependent item`|wfl.account.domain<p>Update: 0</p>|
-|Workstation name|<p>-</p>|`Dependent item`|wfl.workstation.name<p>Update: 0</p>|
-|Account name|<p>-</p>|`Dependent item`|wfl.account.name<p>Update: 0</p>|
 |Failed logins|<p>-</p>|`Zabbix agent (active)`|eventlog[Security,,,,4625,,skip]<p>Update: 1m</p>|
 |Source Network Address|<p>-</p>|`Dependent item`|wfl.source.network.address<p>Update: 0</p>|
+|Failed login|<p>A shorter summary containing user, domain, hostname and ip</p>|`Dependent item`|wfl.failed.login<p>Update: 0</p>|
+|Account name|<p>-</p>|`Dependent item`|wfl.account.name<p>Update: 0</p>|
+|Workstation name|<p>-</p>|`Dependent item`|wfl.workstation.name<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

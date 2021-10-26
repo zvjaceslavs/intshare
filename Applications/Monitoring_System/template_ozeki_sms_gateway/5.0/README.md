@@ -1,4 +1,4 @@
-# 8TemplateOzeki
+# 8 Ozeki
 
 ## Overview
 
@@ -30,20 +30,20 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|CompanyName|<p>-</p>|`SNMP agent`|ozeki.CompanyName<p>Update: 30s</p>|
-|Engine|<p>-</p>|`SNMP agent`|ozeki.Engine<p>Update: 30s</p>|
 |InstallationDate|<p>-</p>|`SNMP agent`|ozeki.InstallationDate<p>Update: 30s</p>|
-|LegalCopyright|<p>-</p>|`SNMP agent`|ozeki.LegalCopyright<p>Update: 30s</p>|
-|Manifest|<p>-</p>|`SNMP agent`|ozeki.Manifest<p>Update: 30s</p>|
-|OSVersion|<p>-</p>|`SNMP agent`|ozeki.OSVersion<p>Update: 30s</p>|
-|OzekiNGSMSGateway|<p>-</p>|`SNMP agent`|ozeki.OzekiNGSMSGateway<p>Update: 30s</p>|
-|OzekiSoftwareProduct|<p>-</p>|`SNMP agent`|ozeki.OzekiSoftwareProduct<p>Update: 30s</p>|
-|ProductEmail|<p>-</p>|`SNMP agent`|ozeki.ProductEmail<p>Update: 30s</p>|
-|ProductName|<p>-</p>|`SNMP agent`|ozeki.ProductName<p>Update: 30s</p>|
-|ProductURL|<p>-</p>|`SNMP agent`|ozeki.ProductURL<p>Update: 30s</p>|
 |ServiceProviderConnections|<p>-</p>|`SNMP agent`|ozeki.ServiceProviderConnections<p>Update: 30s</p>|
+|OzekiSoftwareProduct|<p>-</p>|`SNMP agent`|ozeki.OzekiSoftwareProduct<p>Update: 30s</p>|
+|OSVersion|<p>-</p>|`SNMP agent`|ozeki.OSVersion<p>Update: 30s</p>|
+|ProductURL|<p>-</p>|`SNMP agent`|ozeki.ProductURL<p>Update: 30s</p>|
+|ProductName|<p>-</p>|`SNMP agent`|ozeki.ProductName<p>Update: 30s</p>|
 |ProductUptime|<p>-</p>|`SNMP agent`|ozeki.Uptime<p>Update: 30s</p>|
+|CompanyName|<p>-</p>|`SNMP agent`|ozeki.CompanyName<p>Update: 30s</p>|
+|LegalCopyright|<p>-</p>|`SNMP agent`|ozeki.LegalCopyright<p>Update: 30s</p>|
 |Users|<p>-</p>|`SNMP agent`|ozeki.Users<p>Update: 30s</p>|
+|OzekiNGSMSGateway|<p>-</p>|`SNMP agent`|ozeki.OzekiNGSMSGateway<p>Update: 30s</p>|
+|ProductEmail|<p>-</p>|`SNMP agent`|ozeki.ProductEmail<p>Update: 30s</p>|
+|Engine|<p>-</p>|`SNMP agent`|ozeki.Engine<p>Update: 30s</p>|
+|Manifest|<p>-</p>|`SNMP agent`|ozeki.Manifest<p>Update: 30s</p>|
 |Deleted $1|<p>-</p>|`SNMP agent`|ozeki.Deleted[{#OZEKIUSERNAME}]<p>Update: 30s</p><p>LLD</p>|
 |Inbox $1|<p>-</p>|`SNMP agent`|ozeki.Inbox[{#OZEKIUSERNAME}]<p>Update: 30s</p><p>LLD</p>|
 |NotSent $1|<p>-</p>|`SNMP agent`|ozeki.NotSent[{#OZEKIUSERNAME}]<p>Update: 30s</p><p>LLD</p>|
@@ -63,7 +63,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|RequiredConnectionNotConnected|<p>-</p>|<p>**Expression**: {8TemplateOzeki:ozeki.DesiredConnectionStatus[{#OZEKICONNAME}].abschange()}<>{8TemplateOzeki:ozeki.ConnectionStatus[{#OZEKICONNAME}].abschange()}</p><p>**Recovery expression**: </p>|average|
-|OzekiSendQueuOverflow|<p>-</p>|<p>**Expression**: {8TemplateOzeki:ozeki.NotSent[{#OZEKIUSERNAME}].abschange()}>5</p><p>**Recovery expression**: </p>|average|
-|OzekiSendQueuOverflow (LLD)|<p>-</p>|<p>**Expression**: {8TemplateOzeki:ozeki.NotSent[{#OZEKIUSERNAME}].abschange()}>5</p><p>**Recovery expression**: </p>|average|
-|RequiredConnectionNotConnected (LLD)|<p>-</p>|<p>**Expression**: {8TemplateOzeki:ozeki.DesiredConnectionStatus[{#OZEKICONNAME}].abschange()}<>{8TemplateOzeki:ozeki.ConnectionStatus[{#OZEKICONNAME}].abschange()}</p><p>**Recovery expression**: </p>|average|
+|RequiredConnectionNotConnected|<p>-</p>|<p>**Expression**: {8 Ozeki:ozeki.DesiredConnectionStatus[{#OZEKICONNAME}].abschange()}<>{8 Ozeki:ozeki.ConnectionStatus[{#OZEKICONNAME}].abschange()}</p><p>**Recovery expression**: </p>|average|
+|OzekiSendQueuOverflow|<p>-</p>|<p>**Expression**: {8 Ozeki:ozeki.NotSent[{#OZEKIUSERNAME}].abschange()}>5</p><p>**Recovery expression**: </p>|average|
+|OzekiSendQueuOverflow (LLD)|<p>-</p>|<p>**Expression**: {8 Ozeki:ozeki.NotSent[{#OZEKIUSERNAME}].abschange()}>5</p><p>**Recovery expression**: </p>|average|
+|RequiredConnectionNotConnected (LLD)|<p>-</p>|<p>**Expression**: {8 Ozeki:ozeki.DesiredConnectionStatus[{#OZEKICONNAME}].abschange()}<>{8 Ozeki:ozeki.ConnectionStatus[{#OZEKICONNAME}].abschange()}</p><p>**Recovery expression**: </p>|average|

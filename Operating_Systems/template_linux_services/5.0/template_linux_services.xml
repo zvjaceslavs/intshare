@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:29Z</date>
+  <date>2021-10-26T04:40:21Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Linux_Services</template>
-      <name>Template Linux Services</name>
+      <template>Linux_Services</template>
+      <name>Linux Services</name>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:55:26Z</date>
+  <date>2021-10-26T04:42:29Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template App Kafka</template>
-      <name>Template App Kafka</name>
+      <template>App Kafka</template>
+      <name>App Kafka</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -189,7 +189,7 @@
               <dependencies>
                 <dependency>
                   <name>Log flush latency (95th percentile) > 20ms</name>
-                  <expression>{Template App Kafka:jmx["kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs","95thPercentile"].last()}>20</expression>
+                  <expression>{App Kafka:jmx["kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs","95thPercentile"].last()}>20</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -921,7 +921,7 @@
               <dependencies>
                 <dependency>
                   <name>Max lag in messages btw follower and leader replicas > 3000</name>
-                  <expression>{Template App Kafka:jmx["kafka.server:type=ReplicaFetcherManager,name=MaxLag,clientId=Replica","Value"].last()}>=3000</expression>
+                  <expression>{App Kafka:jmx["kafka.server:type=ReplicaFetcherManager,name=MaxLag,clientId=Replica","Value"].last()}>=3000</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -932,7 +932,7 @@
               <dependencies>
                 <dependency>
                   <name>Max lag in messages btw follower and leader replicas > 4000</name>
-                  <expression>{Template App Kafka:jmx["kafka.server:type=ReplicaFetcherManager,name=MaxLag,clientId=Replica","Value"].last()}>=4000</expression>
+                  <expression>{App Kafka:jmx["kafka.server:type=ReplicaFetcherManager,name=MaxLag,clientId=Replica","Value"].last()}>=4000</expression>
                 </dependency>
               </dependencies>
             </trigger>
@@ -1434,7 +1434,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1442,7 +1442,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1450,7 +1450,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","MeanRate"]</key>
                   </item>
                 </graph_item>
@@ -1458,7 +1458,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec,topic={#JMXTOPIC}","OneMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1466,7 +1466,7 @@
                   <sortorder>4</sortorder>
                   <color>FC6EA3</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1474,7 +1474,7 @@
                   <sortorder>5</sortorder>
                   <color>6C59DC</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1482,7 +1482,7 @@
                   <sortorder>6</sortorder>
                   <color>AC8C14</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","MeanRate"]</key>
                   </item>
                 </graph_item>
@@ -1490,7 +1490,7 @@
                   <sortorder>7</sortorder>
                   <color>611F27</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec,topic={#JMXTOPIC}","OneMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1502,7 +1502,7 @@
                 <graph_item>
                   <color>1A7C11</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","FifteenMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1510,7 +1510,7 @@
                   <sortorder>1</sortorder>
                   <color>F63100</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","FiveMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1518,7 +1518,7 @@
                   <sortorder>2</sortorder>
                   <color>2774A4</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","MeanRate"]</key>
                   </item>
                 </graph_item>
@@ -1526,7 +1526,7 @@
                   <sortorder>3</sortorder>
                   <color>A54F10</color>
                   <item>
-                    <host>Template App Kafka</host>
+                    <host>App Kafka</host>
                     <key>jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec,topic={#JMXTOPIC}","OneMinuteRate"]</key>
                   </item>
                 </graph_item>
@@ -1578,7 +1578,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>0000DD</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec","FifteenMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1586,7 +1586,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec","FifteenMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1601,7 +1601,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>0000DD</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec","FiveMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1609,7 +1609,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec","FiveMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1624,7 +1624,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>0000DD</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec","MeanRate"]</key>
           </item>
         </graph_item>
@@ -1632,7 +1632,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec","MeanRate"]</key>
           </item>
         </graph_item>
@@ -1647,7 +1647,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>0000DD</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec","OneMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1655,7 +1655,7 @@
           <sortorder>1</sortorder>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec","OneMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1667,7 +1667,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["java.lang:type=GarbageCollector,name=G1 Old Generation","CollectionCount"]</key>
           </item>
         </graph_item>
@@ -1675,7 +1675,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["java.lang:type=GarbageCollector,name=G1 Young Generation","CollectionCount"]</key>
           </item>
         </graph_item>
@@ -1688,7 +1688,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx[java.lang:type=Memory,HeapMemoryUsage.used]</key>
           </item>
         </graph_item>
@@ -1696,7 +1696,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx[java.lang:type=Memory,NonHeapMemoryUsage.used]</key>
           </item>
         </graph_item>
@@ -1708,7 +1708,7 @@
         <graph_item>
           <color>1A7C11</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs","50thPercentile"]</key>
           </item>
         </graph_item>
@@ -1716,7 +1716,7 @@
           <sortorder>1</sortorder>
           <color>F63100</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs","75thPercentile"]</key>
           </item>
         </graph_item>
@@ -1724,7 +1724,7 @@
           <sortorder>2</sortorder>
           <color>2774A4</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs","95thPercentile"]</key>
           </item>
         </graph_item>
@@ -1737,7 +1737,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec","OneMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1745,7 +1745,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec","FifteenMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1753,7 +1753,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec","FiveMinuteRate"]</key>
           </item>
         </graph_item>
@@ -1761,7 +1761,7 @@
           <sortorder>3</sortorder>
           <color>C800C8</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec","MeanRate"]</key>
           </item>
         </graph_item>
@@ -1774,7 +1774,7 @@
           <drawtype>GRADIENT_LINE</drawtype>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx[java.lang:type=OperatingSystem,OpenFileDescriptorCount]</key>
           </item>
         </graph_item>
@@ -1786,7 +1786,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=TotalTimeMs,request=FetchConsumer","Count"]</key>
           </item>
         </graph_item>
@@ -1794,7 +1794,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=TotalTimeMs,request=FetchFollower","Count"]</key>
           </item>
         </graph_item>
@@ -1802,7 +1802,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=TotalTimeMs,request=Produce","Count"]</key>
           </item>
         </graph_item>
@@ -1814,7 +1814,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx[java.lang:type=Threading,ThreadCount]</key>
           </item>
         </graph_item>
@@ -1822,7 +1822,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx[java.lang:type=Threading,PeakThreadCount]</key>
           </item>
         </graph_item>
@@ -1830,7 +1830,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx[java.lang:type=Threading,DaemonThreadCount]</key>
           </item>
         </graph_item>
@@ -1842,7 +1842,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=LocalTimeMs,request=FetchConsumer","Count"]</key>
           </item>
         </graph_item>
@@ -1850,7 +1850,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=LocalTimeMs,request=FetchFollower","Count"]</key>
           </item>
         </graph_item>
@@ -1858,7 +1858,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=LocalTimeMs,request=Produce","Count"]</key>
           </item>
         </graph_item>
@@ -1870,7 +1870,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=RequestQueueTimeMs,request=FetchConsumer","Count"]</key>
           </item>
         </graph_item>
@@ -1878,7 +1878,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=RequestQueueTimeMs,request=FetchFollower","Count"]</key>
           </item>
         </graph_item>
@@ -1886,7 +1886,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=RequestQueueTimeMs,request=Produce","Count"]</key>
           </item>
         </graph_item>
@@ -1898,7 +1898,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=RemoteTimeMs,request=FetchConsumer","Count"]</key>
           </item>
         </graph_item>
@@ -1906,7 +1906,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=RemoteTimeMs,request=FetchFollower","Count"]</key>
           </item>
         </graph_item>
@@ -1914,7 +1914,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=RemoteTimeMs,request=Produce","Count"]</key>
           </item>
         </graph_item>
@@ -1926,7 +1926,7 @@
         <graph_item>
           <color>00C800</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=ResponseSendTimeMs,request=FetchConsumer","Count"]</key>
           </item>
         </graph_item>
@@ -1934,7 +1934,7 @@
           <sortorder>1</sortorder>
           <color>C80000</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=ResponseSendTimeMs,request=FetchFollower","Count"]</key>
           </item>
         </graph_item>
@@ -1942,7 +1942,7 @@
           <sortorder>2</sortorder>
           <color>0000C8</color>
           <item>
-            <host>Template App Kafka</host>
+            <host>App Kafka</host>
             <key>jmx["kafka.network:type=RequestMetrics,name=ResponseSendTimeMs,request=Produce","Count"]</key>
           </item>
         </graph_item>

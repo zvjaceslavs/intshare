@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:57:42Z'
+  date: '2021-10-26T04:45:03Z'
   groups:
     -
       uuid: a571c0d144b14fd4a87a9d9b2aa9fcd6
@@ -8,8 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 7e4cc380e742438e85224663c8f5c3fb
-      template: 'Template App Zabbix processes memory usage'
-      name: 'Template App Zabbix processes memory usage'
+      template: 'App Zabbix processes memory usage'
+      name: 'App Zabbix processes memory usage'
       description: |
         Template requires the following utilities to be available on the Agent host:
         
@@ -67,7 +67,7 @@ zabbix_export:
                   color: 1A7C11
                   calc_fnc: ALL
                   item:
-                    host: 'Template App Zabbix processes memory usage'
+                    host: 'App Zabbix processes memory usage'
                     key: 'proc.mem.total[{#COMPONENT},{#PROCESS}]'
       macros:
         -

@@ -26,13 +26,13 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|service heartbeat count|<p>-</p>|`Zabbix agent`|proc.num[heartbeat,root,,master]<p>Update: 60</p>|
-|service httpd count|<p>-</p>|`Zabbix agent`|proc.num[httpd,root,," "]<p>Update: 60</p>|
-|service nma count|<p>-</p>|`Zabbix agent`|proc.num[httpd,root,,nma]<p>Update: 60</p>|
-|service opennms count|<p>-</p>|`Zabbix agent`|proc.num[java,opennms]<p>Update: 60</p>|
 |service mysql count|<p>-</p>|`Zabbix agent`|proc.num[mysqld,mysql]<p>Update: 60</p>|
-|service jmp-watchdog count|<p>-</p>|`Zabbix agent`|proc.num[perl,root,,jmp-watchdog]<p>Update: 60</p>|
+|service opennms count|<p>-</p>|`Zabbix agent`|proc.num[java,opennms]<p>Update: 60</p>|
 |service postgreSQL count|<p>-</p>|`Zabbix agent`|proc.num[postmaster,postgres,,pgsql]<p>Update: 60</p>|
+|service nma count|<p>-</p>|`Zabbix agent`|proc.num[httpd,root,,nma]<p>Update: 60</p>|
+|service httpd count|<p>-</p>|`Zabbix agent`|proc.num[httpd,root,," "]<p>Update: 60</p>|
+|service jmp-watchdog count|<p>-</p>|`Zabbix agent`|proc.num[perl,root,,jmp-watchdog]<p>Update: 60</p>|
+|service heartbeat count|<p>-</p>|`Zabbix agent`|proc.num[heartbeat,root,,master]<p>Update: 60</p>|
 |service jboss count|<p>-</p>|`Zabbix agent`|proc.num[sh,jboss,,--host-config=host.xml.master]<p>Update: 60</p>|
 ## Triggers
 

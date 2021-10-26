@@ -39,25 +39,31 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Disk partitions|<p>-</p>|`SNMP agent`|hrStorageDescr<p>Update: 5m</p>|
 |Interfaces|<p>-</p>|`SNMP agent`|MikInterfaces<p>Update: 5m</p>|
 |Processors|<p>-</p>|`SNMP agent`|hrProcessorLoad<p>Update: 5m</p>|
-|Disk partitions|<p>-</p>|`SNMP agent`|hrStorageDescr<p>Update: 5m</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 30s</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 30s</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 30s</p>|
-|DHCP Leases|<p>-</p>|`SNMP agent`|mtxrDHCPLeaseCount<p>Update: 30s</p>|
-|Wireless Clients|<p>-</p>|`SNMP agent`|mtxrWlApClientCount<p>Update: 30s</p>|
-|Device contact details|<p>-</p>|`SNMP agent`|sysContact<p>Update: 5m</p>|
-|Device description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 5m</p>|
-|Device location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 5m</p>|
-|Device name|<p>-</p>|`SNMP agent`|sysName<p>Update: 5m</p>|
 |Device uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 1m</p>|
+|Device contact details|<p>-</p>|`SNMP agent`|sysContact<p>Update: 5m</p>|
+|Device location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 5m</p>|
+|Device description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 5m</p>|
 |Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 30s</p>|
+|DHCP Leases|<p>-</p>|`SNMP agent`|mtxrDHCPLeaseCount<p>Update: 30s</p>|
+|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 30s</p>|
+|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 30s</p>|
+|Device name|<p>-</p>|`SNMP agent`|sysName<p>Update: 5m</p>|
+|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 30s</p>|
 |Voltage|<p>-</p>|`SNMP agent`|voltage<p>Update: 30s</p>|
+|Wireless Clients|<p>-</p>|`SNMP agent`|mtxrWlApClientCount<p>Update: 30s</p>|
+|Allocation units for storage $1|<p>-</p>|`SNMP agent`|hrStorageAllocationUnits[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Description of storage $1|<p>-</p>|`SNMP agent`|hrStorageDescr[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Total space on $1|<p>-</p>|`Calculated`|hrStorageSizeInBytes[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Total space on $1 in units|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
+|Used space on $1|<p>-</p>|`Calculated`|hrStorageUsedInBytes[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
+|Used space on $1 in units|<p>-</p>|`SNMP agent`|hrStorageUsed[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |Interface {#SNMPVALUE} status|<p>1 — up 2 — down</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Interface {#SNMPVALUE} bps in|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.6.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |Interface {#SNMPVALUE} packets in|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.7.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
@@ -65,12 +71,6 @@ There are no template links in this template.
 |Interface {#SNMPVALUE} packets out|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.31.1.1.1.11.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |Interface {#SNMPVALUE} admin status|<p>1 — administratively enabled 2 — administratively disabled</p>|`SNMP agent`|MIkAdminStatus[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Utilization of processor #$1|<p>-</p>|`SNMP agent`|hrProcessorLoad[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|Allocation units for storage $1|<p>-</p>|`SNMP agent`|hrStorageAllocationUnits[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
-|Description of storage $1|<p>-</p>|`SNMP agent`|hrStorageDescr[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
-|Total space on $1|<p>-</p>|`Calculated`|hrStorageSizeInBytes[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
-|Total space on $1 in units|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPVALUE}]<p>Update: 1h</p><p>LLD</p>|
-|Used space on $1|<p>-</p>|`Calculated`|hrStorageUsedInBytes[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
-|Used space on $1 in units|<p>-</p>|`SNMP agent`|hrStorageUsed[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

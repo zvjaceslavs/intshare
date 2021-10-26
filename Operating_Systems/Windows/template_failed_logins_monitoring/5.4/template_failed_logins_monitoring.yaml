@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-22T10:58:55Z'
+  date: '2021-10-26T04:46:30Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -11,8 +11,8 @@ zabbix_export:
   templates:
     -
       uuid: ac25d4f44f73472b93ab72dc8717efbe
-      template: 'Template Module Windows Failed Logins'
-      name: 'Template Module Windows Failed Logins'
+      template: 'Module Windows Failed Logins'
+      name: 'Module Windows Failed Logins'
       groups:
         -
           name: Templates
@@ -32,19 +32,19 @@ zabbix_export:
           triggers:
             -
               uuid: 9f3127744c9b42409200f00cd533a004
-              expression: 'count(/Template Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.CRIT})>{$NUM.FAILS.CRIT}'
+              expression: 'count(/Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.CRIT})>{$NUM.FAILS.CRIT}'
               name: 'Over {$NUM.FAILS.CRIT} audit failures on {HOSTNAME} last {$TIME.FAILS.CRIT}'
               priority: DISASTER
               manual_close: 'YES'
             -
               uuid: 31d31f3f7800468497c892619a05fef2
-              expression: 'count(/Template Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.HIGH})>{$NUM.FAILS.HIGH}'
+              expression: 'count(/Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.HIGH})>{$NUM.FAILS.HIGH}'
               name: 'Over {$NUM.FAILS.HIGH} audit failures on {HOSTNAME} last {$TIME.FAILS.HIGH}'
               priority: HIGH
               manual_close: 'YES'
             -
               uuid: fb6b56228d91406899159eac84a97eed
-              expression: 'count(/Template Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.WARN})>{$NUM.FAILS.WARN}'
+              expression: 'count(/Module Windows Failed Logins/eventlog[Security,,,,4625,,skip],{$TIME.FAILS.WARN})>{$NUM.FAILS.WARN}'
               name: 'Over {$NUM.FAILS.WARN} audit failures on {HOSTNAME} last {$TIME.FAILS.WARN}'
               priority: WARNING
               manual_close: 'YES'

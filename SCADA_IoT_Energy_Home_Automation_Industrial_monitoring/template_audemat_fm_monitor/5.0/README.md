@@ -1,4 +1,4 @@
-# Template Discovery Audemat
+# Discovery Audemat
 
 ## Overview
 
@@ -38,7 +38,7 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|{#NAME} {HOST.NAME}: Modulacion (MPX) Baja|<p>-</p>|<p>**Expression**: {Template Discovery Audemat:mpx[{#INDEX}].last()}<40</p><p>**Recovery expression**: </p>|average|
-|{#NAME} {HOST.NAME}: Modulacion (MPX) Demasiado Baja|<p>-</p>|<p>**Expression**: {Template Discovery Audemat:mpx[{#INDEX}].last()}<15 and {Template Discovery Audemat:mpx[{#INDEX}].last(2)}<15 and {Template Discovery Audemat:mpx[{#INDEX}].last(3)}<15 or {Template Discovery Audemat:mpx[{#INDEX}].last()}<5</p><p>**Recovery expression**: </p>|high|
-|{#NAME} {HOST.NAME}: Modulacion (MPX) Baja (LLD)|<p>-</p>|<p>**Expression**: {Template Discovery Audemat:mpx[{#INDEX}].last()}<40</p><p>**Recovery expression**: </p>|average|
-|{#NAME} {HOST.NAME}: Modulacion (MPX) Demasiado Baja (LLD)|<p>-</p>|<p>**Expression**: {Template Discovery Audemat:mpx[{#INDEX}].last()}<15 and {Template Discovery Audemat:mpx[{#INDEX}].last(2)}<15 and {Template Discovery Audemat:mpx[{#INDEX}].last(3)}<15 or {Template Discovery Audemat:mpx[{#INDEX}].last()}<5</p><p>**Recovery expression**: </p>|high|
+|{#NAME} {HOST.NAME}: Modulacion (MPX) Baja|<p>-</p>|<p>**Expression**: {Discovery Audemat:mpx[{#INDEX}].last()}<40</p><p>**Recovery expression**: </p>|average|
+|{#NAME} {HOST.NAME}: Modulacion (MPX) Demasiado Baja|<p>-</p>|<p>**Expression**: {Discovery Audemat:mpx[{#INDEX}].last()}<15 and {Discovery Audemat:mpx[{#INDEX}].last(2)}<15 and {Discovery Audemat:mpx[{#INDEX}].last(3)}<15 or {Discovery Audemat:mpx[{#INDEX}].last()}<5</p><p>**Recovery expression**: </p>|high|
+|{#NAME} {HOST.NAME}: Modulacion (MPX) Baja (LLD)|<p>-</p>|<p>**Expression**: {Discovery Audemat:mpx[{#INDEX}].last()}<40</p><p>**Recovery expression**: </p>|average|
+|{#NAME} {HOST.NAME}: Modulacion (MPX) Demasiado Baja (LLD)|<p>-</p>|<p>**Expression**: {Discovery Audemat:mpx[{#INDEX}].last()}<15 and {Discovery Audemat:mpx[{#INDEX}].last(2)}<15 and {Discovery Audemat:mpx[{#INDEX}].last(3)}<15 or {Discovery Audemat:mpx[{#INDEX}].last()}<5</p><p>**Recovery expression**: </p>|high|

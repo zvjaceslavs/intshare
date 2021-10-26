@@ -1,4 +1,4 @@
-# Template App Cortex XDR
+# App Cortex XDR
 
 ## Overview
 
@@ -30,10 +30,10 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Cortex XDR Service|<p>Service state of Cortex XDR</p>|`Zabbix agent`|service.info[cyserver,state]<p>Update: 5m</p>|
 |Cortex Service Path|<p>Path of Cortex XDR service. Depends on service name in macro</p>|`Zabbix agent`|service.info[{$CORTEX.SERVICE},path]<p>Update: 1h</p>|
-|Cortex Version|<p>-</p>|`Zabbix agent`|system.run[powershell.exe Get-ItemPropertyValue -Path 'HKLM:\Software\Cyvera\Client\' -Name 'Product Version']<p>Update: 1h</p>|
+|Cortex XDR Service|<p>Service state of Cortex XDR</p>|`Zabbix agent`|service.info[cyserver,state]<p>Update: 5m</p>|
 |Cortex Protection Status|<p>Protection Status of Cortex XDR Value Anti-Exploit Protection Anti-Malware Protection 3 Enabled Enabled 2 Disabled Enabled 1 Enabled Disabled 0 Disabled Disabled</p>|`Zabbix agent`|system.run[powershell.exe Get-ItemPropertyValue -Path 'HKLM:\Software\Palo Alto Networks\Traps\' -Name 'ProtectionStatus']<p>Update: 5m</p>|
+|Cortex Version|<p>-</p>|`Zabbix agent`|system.run[powershell.exe Get-ItemPropertyValue -Path 'HKLM:\Software\Cyvera\Client\' -Name 'Product Version']<p>Update: 1h</p>|
 ## Triggers
 
 There are no triggers in this template.

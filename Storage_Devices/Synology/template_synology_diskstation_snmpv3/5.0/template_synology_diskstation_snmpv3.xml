@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:01Z</date>
+  <date>2021-10-26T04:44:17Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -12,116 +12,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Module ICMP Ping</template>
-      <name>Template Module ICMP Ping</name>
-      <description>Template Module ICMP Ping version: 0.12</description>
-      <groups>
-        <group>
-          <name>Templates/Modules</name>
-        </group>
-      </groups>
-      <applications>
-        <application>
-          <name>Status</name>
-        </application>
-      </applications>
-      <items>
-        <item>
-          <name>ICMP ping</name>
-          <type>SIMPLE</type>
-          <key>icmpping</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <valuemap>
-            <name>Service state</name>
-          </valuemap>
-          <triggers>
-            <trigger>
-              <expression>{max(#3)}=0</expression>
-              <name>Unavailable by ICMP ping</name>
-              <priority>HIGH</priority>
-              <description>Last value: {ITEM.LASTVALUE1}. Last three attempts returned timeout. Please check device connectivity.</description>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>ICMP loss</name>
-          <type>SIMPLE</type>
-          <key>icmppingloss</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>%</units>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{min(5m)}>{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
-              <name>High ICMP ping loss</name>
-              <priority>WARNING</priority>
-              <dependencies>
-                <dependency>
-                  <name>Unavailable by ICMP ping</name>
-                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
-                </dependency>
-              </dependencies>
-            </trigger>
-          </triggers>
-        </item>
-        <item>
-          <name>ICMP response time</name>
-          <type>SIMPLE</type>
-          <key>icmppingsec</key>
-          <delay>60</delay>
-          <history>1w</history>
-          <value_type>FLOAT</value_type>
-          <units>s</units>
-          <applications>
-            <application>
-              <name>Status</name>
-            </application>
-          </applications>
-          <triggers>
-            <trigger>
-              <expression>{avg(5m)}>{$ICMP_RESPONSE_TIME_WARN}</expression>
-              <name>High ICMP ping response time</name>
-              <priority>WARNING</priority>
-              <dependencies>
-                <dependency>
-                  <name>High ICMP ping loss</name>
-                  <expression>{Template Module ICMP Ping:icmppingloss.min(5m)}>{$ICMP_LOSS_WARN} and {Template Module ICMP Ping:icmppingloss.min(5m)}&lt;100</expression>
-                </dependency>
-                <dependency>
-                  <name>Unavailable by ICMP ping</name>
-                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
-                </dependency>
-              </dependencies>
-            </trigger>
-          </triggers>
-        </item>
-      </items>
-      <macros>
-        <macro>
-          <macro>{$ICMP_LOSS_WARN}</macro>
-          <value>20</value>
-        </macro>
-        <macro>
-          <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
-          <value>0.15</value>
-        </macro>
-      </macros>
-    </template>
-    <template>
-      <template>Template Synology DiskStation</template>
-      <name>Template Synology DiskStation SNMPv3</name>
+      <template>Synology DiskStation</template>
+      <name>Synology DiskStation SNMPv3</name>
       <description>Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values and set macros in Zabbix</description>
       <templates>
         <template>
@@ -811,7 +703,7 @@
                   <color>000000</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>host.hrStorage.hrStorageTable.hrStorageEntry.hrStorageSize[{#IFINDEX}]</key>
                   </item>
                 </graph_item>
@@ -820,7 +712,7 @@
                   <drawtype>FILLED_REGION</drawtype>
                   <color>0000EE</color>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>host.hrStorage.hrStorageTable.hrStorageEntry.hrStorageUsed[{#IFINDEX}]</key>
                   </item>
                 </graph_item>
@@ -841,7 +733,7 @@
                   <calc_fnc>LAST</calc_fnc>
                   <type>GRAPH_SUM</type>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>host.hrStorage.hrStorageTable.hrStorageEntry.hrStorageSize[{#IFINDEX}]</key>
                   </item>
                 </graph_item>
@@ -850,7 +742,7 @@
                   <color>AEEE00</color>
                   <calc_fnc>LAST</calc_fnc>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>host.hrStorage.hrStorageTable.hrStorageEntry.hrStorageUsed[{#IFINDEX}]</key>
                   </item>
                 </graph_item>
@@ -933,7 +825,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>00AA00</color>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>ifMIB.ifMIBObjects.ifXTable.ifXEntry.ifHCInOctets.[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -942,7 +834,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>3333FF</color>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>ifMIB.ifMIBObjects.ifXTable.ifXEntry.ifHCOutOctets.[{#IFNAME}]</key>
                   </item>
                 </graph_item>
@@ -1049,7 +941,7 @@
                 <graph_item>
                   <color>EE00EE</color>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>spaceIO.spaceIOTable.spaceIOEntry.spaceIOLA.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1156,12 +1048,12 @@
               <show_triggers>NO</show_triggers>
               <ymin_type_1>ITEM</ymin_type_1>
               <ymin_item_1>
-                <host>Template Synology DiskStation</host>
+                <host>Synology DiskStation</host>
                 <key>storageIO.storageIOTable.storageIOEntry.storageIOLA.[{#SNMPINDEX}]</key>
               </ymin_item_1>
               <ymax_type_1>ITEM</ymax_type_1>
               <ymax_item_1>
-                <host>Template Synology DiskStation</host>
+                <host>Synology DiskStation</host>
                 <key>storageIO.storageIOTable.storageIOEntry.storageIOLA.[{#SNMPINDEX}]</key>
               </ymax_item_1>
               <graph_items>
@@ -1171,7 +1063,7 @@
                   <calc_fnc>ALL</calc_fnc>
                   <type>GRAPH_SUM</type>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>storageIO.storageIOTable.storageIOEntry.storageIOLA.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1284,7 +1176,7 @@
                   <color>2774A4</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>synoDisk.diskTable.diskEntry.diskTemperature.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1292,7 +1184,7 @@
                   <sortorder>1</sortorder>
                   <color>3333FF</color>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>synoSystem.temperature</key>
                   </item>
                 </graph_item>
@@ -1523,12 +1415,12 @@
               <show_triggers>NO</show_triggers>
               <ymin_type_1>ITEM</ymin_type_1>
               <ymin_item_1>
-                <host>Template Synology DiskStation</host>
+                <host>Synology DiskStation</host>
                 <key>synologyService.serviceTable.serviceEntry.serviceUsers.[{#SNMPINDEX}]</key>
               </ymin_item_1>
               <ymax_type_1>ITEM</ymax_type_1>
               <ymax_item_1>
-                <host>Template Synology DiskStation</host>
+                <host>Synology DiskStation</host>
                 <key>synologyService.serviceTable.serviceEntry.serviceUsers.[{#SNMPINDEX}]</key>
               </ymax_item_1>
               <graph_items>
@@ -1536,7 +1428,7 @@
                   <color>0000EE</color>
                   <calc_fnc>ALL</calc_fnc>
                   <item>
-                    <host>Template Synology DiskStation</host>
+                    <host>Synology DiskStation</host>
                     <key>synologyService.serviceTable.serviceEntry.serviceUsers.[{#SNMPINDEX}]</key>
                   </item>
                 </graph_item>
@@ -1629,6 +1521,114 @@
         </macro>
       </macros>
     </template>
+    <template>
+      <template>Template Module ICMP Ping</template>
+      <name>Template Module ICMP Ping</name>
+      <description>Template Module ICMP Ping version: 0.12</description>
+      <groups>
+        <group>
+          <name>Templates/Modules</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Status</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>ICMP ping</name>
+          <type>SIMPLE</type>
+          <key>icmpping</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <valuemap>
+            <name>Service state</name>
+          </valuemap>
+          <triggers>
+            <trigger>
+              <expression>{max(#3)}=0</expression>
+              <name>Unavailable by ICMP ping</name>
+              <priority>HIGH</priority>
+              <description>Last value: {ITEM.LASTVALUE1}. Last three attempts returned timeout. Please check device connectivity.</description>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>ICMP loss</name>
+          <type>SIMPLE</type>
+          <key>icmppingloss</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>%</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{min(5m)}>{$ICMP_LOSS_WARN} and {min(5m)}&lt;100</expression>
+              <name>High ICMP ping loss</name>
+              <priority>WARNING</priority>
+              <dependencies>
+                <dependency>
+                  <name>Unavailable by ICMP ping</name>
+                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+        <item>
+          <name>ICMP response time</name>
+          <type>SIMPLE</type>
+          <key>icmppingsec</key>
+          <delay>60</delay>
+          <history>1w</history>
+          <value_type>FLOAT</value_type>
+          <units>s</units>
+          <applications>
+            <application>
+              <name>Status</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{avg(5m)}>{$ICMP_RESPONSE_TIME_WARN}</expression>
+              <name>High ICMP ping response time</name>
+              <priority>WARNING</priority>
+              <dependencies>
+                <dependency>
+                  <name>High ICMP ping loss</name>
+                  <expression>{Template Module ICMP Ping:icmppingloss.min(5m)}>{$ICMP_LOSS_WARN} and {Template Module ICMP Ping:icmppingloss.min(5m)}&lt;100</expression>
+                </dependency>
+                <dependency>
+                  <name>Unavailable by ICMP ping</name>
+                  <expression>{Template Module ICMP Ping:icmpping.max(#3)}=0</expression>
+                </dependency>
+              </dependencies>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+      <macros>
+        <macro>
+          <macro>{$ICMP_LOSS_WARN}</macro>
+          <value>20</value>
+        </macro>
+        <macro>
+          <macro>{$ICMP_RESPONSE_TIME_WARN}</macro>
+          <value>0.15</value>
+        </macro>
+      </macros>
+    </template>
   </templates>
   <graphs>
     <graph>
@@ -1640,7 +1640,7 @@
           <color>1A7C11</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Synology DiskStation</host>
+            <host>Synology DiskStation</host>
             <key>synoSystem.ssCpuIdle</key>
           </item>
         </graph_item>
@@ -1649,7 +1649,7 @@
           <color>F63100</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Synology DiskStation</host>
+            <host>Synology DiskStation</host>
             <key>synoSystem.ssCpuSystem</key>
           </item>
         </graph_item>
@@ -1658,7 +1658,7 @@
           <color>2774A4</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Synology DiskStation</host>
+            <host>Synology DiskStation</host>
             <key>synoSystem.ssCpuUser</key>
           </item>
         </graph_item>
@@ -1679,7 +1679,7 @@
           <calc_fnc>LAST</calc_fnc>
           <type>GRAPH_SUM</type>
           <item>
-            <host>Template Synology DiskStation</host>
+            <host>Synology DiskStation</host>
             <key>ucdavis.memory.memTotalReal</key>
           </item>
         </graph_item>
@@ -1688,7 +1688,7 @@
           <color>EEEE00</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>Template Synology DiskStation</host>
+            <host>Synology DiskStation</host>
             <key>ucdavis.memory.memAvailReal</key>
           </item>
         </graph_item>
@@ -1709,7 +1709,7 @@
           <calc_fnc>LAST</calc_fnc>
           <type>GRAPH_SUM</type>
           <item>
-            <host>Template Synology DiskStation</host>
+            <host>Synology DiskStation</host>
             <key>ucdavis.memory.memTotalSwap</key>
           </item>
         </graph_item>
@@ -1718,7 +1718,7 @@
           <color>2774A4</color>
           <calc_fnc>LAST</calc_fnc>
           <item>
-            <host>Template Synology DiskStation</host>
+            <host>Synology DiskStation</host>
             <key>ucdavis.memory.memAvailSwap</key>
           </item>
         </graph_item>
@@ -1732,7 +1732,7 @@
           <color>2774A4</color>
           <calc_fnc>ALL</calc_fnc>
           <item>
-            <host>Template Synology DiskStation</host>
+            <host>Synology DiskStation</host>
             <key>synoSystem.temperature</key>
           </item>
         </graph_item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:56:06Z</date>
+  <date>2021-10-26T04:43:13Z</date>
   <groups>
     <group>
       <name>Templates Generic</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template Palo Alto SNMPv2 64-bit counters</template>
-      <name>Template Palo Alto SNMPv2 64-bit counters</name>
+      <template>Palo Alto SNMPv2 64-bit counters</template>
+      <name>Palo Alto SNMPv2 64-bit counters</name>
       <groups>
         <group>
           <name>Templates Generic</name>
@@ -285,7 +285,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#PHY} temperature above 70 °C</name>
-                      <expression>{Template Palo Alto SNMPv2 64-bit counters:entPhySensorValue.["{#PHY}"].last()}>70</expression>
+                      <expression>{Palo Alto SNMPv2 64-bit counters:entPhySensorValue.["{#PHY}"].last()}>70</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -296,7 +296,7 @@
                   <dependencies>
                     <dependency>
                       <name>{#PHY} temperature above 80 °C</name>
-                      <expression>{Template Palo Alto SNMPv2 64-bit counters:entPhySensorValue.["{#PHY}"].last()}>80</expression>
+                      <expression>{Palo Alto SNMPv2 64-bit counters:entPhySensorValue.["{#PHY}"].last()}>80</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -482,7 +482,7 @@
                   <dependencies>
                     <dependency>
                       <name>CPU load on {#CPU} more than 95%</name>
-                      <expression>{Template Palo Alto SNMPv2 64-bit counters:hrProcessorLoad.["{#CPU}"].last()}>95</expression>
+                      <expression>{Palo Alto SNMPv2 64-bit counters:hrProcessorLoad.["{#CPU}"].last()}>95</expression>
                     </dependency>
                   </dependencies>
                 </trigger_prototype>
@@ -585,29 +585,29 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Template Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 98</expression>
+              <expression>{Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 98</expression>
               <name>Free disk space is less than 2% on {#STOR}</name>
               <priority>DISASTER</priority>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Template Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 95</expression>
+              <expression>{Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 95</expression>
               <name>Free disk space is less than 5% on {#STOR}</name>
               <priority>HIGH</priority>
               <dependencies>
                 <dependency>
                   <name>Free disk space is less than 2% on {#STOR}</name>
-                  <expression>{Template Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Template Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 98</expression>
+                  <expression>{Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 98</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
             <trigger_prototype>
-              <expression>{Template Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Template Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 90</expression>
+              <expression>{Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 90</expression>
               <name>Free disk space is less than 10% on {#STOR}</name>
               <priority>AVERAGE</priority>
               <dependencies>
                 <dependency>
                   <name>Free disk space is less than 5% on {#STOR}</name>
-                  <expression>{Template Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Template Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 95</expression>
+                  <expression>{Palo Alto SNMPv2 64-bit counters:hrStorageUsed.["{#STOR}"].last()} / {Palo Alto SNMPv2 64-bit counters:hrStorageSize.["{#STOR}"].last()} * 100 > 95</expression>
                 </dependency>
               </dependencies>
             </trigger_prototype>
@@ -719,7 +719,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>{Template Palo Alto SNMPv2 64-bit counters:ifAdminStatus.["{#IFNAME}"].last()}=1 and {Template Palo Alto SNMPv2 64-bit counters:ifOperStatus.["{#IFNAME}"].last()}=2</expression>
+              <expression>{Palo Alto SNMPv2 64-bit counters:ifAdminStatus.["{#IFNAME}"].last()}=1 and {Palo Alto SNMPv2 64-bit counters:ifOperStatus.["{#IFNAME}"].last()}=2</expression>
               <name>{#IFNAME} interface down</name>
               <priority>HIGH</priority>
               <description>interface ifAdminStatus is up(1) and ifOperStatus is down(2)</description>
@@ -736,7 +736,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>199C0D</color>
                   <item>
-                    <host>Template Palo Alto SNMPv2 64-bit counters</host>
+                    <host>Palo Alto SNMPv2 64-bit counters</host>
                     <key>ifHCInOctets.["{#IFNAME}"]</key>
                   </item>
                 </graph_item>
@@ -745,7 +745,7 @@
                   <drawtype>GRADIENT_LINE</drawtype>
                   <color>0040FF</color>
                   <item>
-                    <host>Template Palo Alto SNMPv2 64-bit counters</host>
+                    <host>Palo Alto SNMPv2 64-bit counters</host>
                     <key>ifHCOutOctets.["{#IFNAME}"]</key>
                   </item>
                 </graph_item>

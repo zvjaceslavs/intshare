@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:53:09Z</date>
+  <date>2021-10-26T04:39:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP Ruckus Zonedirector</template>
-      <name>Template SNMP Ruckus Zonedirector</name>
+      <template>SNMP Ruckus Zonedirector</template>
+      <name>SNMP Ruckus Zonedirector</name>
       <groups>
         <group>
           <name>Templates</name>
@@ -371,7 +371,7 @@
           </item_prototypes>
           <trigger_prototypes>
             <trigger_prototype>
-              <expression>({Template SNMP Ruckus Zonedirector:ruckusZDWLANAPStatus[{#SNMPVALUE}].regexp(^Connect$)}=0)or({Template SNMP Ruckus Zonedirector:ruckusZDWLANAPName[{#SNMPVALUE}].regexp($blablablabla^)}=1) or ({Template SNMP Ruckus Zonedirector:ruckusZDWLANAPGroup[{#SNMPVALUE}].regexp($blablablabla^)}=1)</expression>
+              <expression>({SNMP Ruckus Zonedirector:ruckusZDWLANAPStatus[{#SNMPVALUE}].regexp(^Connect$)}=0)or({SNMP Ruckus Zonedirector:ruckusZDWLANAPName[{#SNMPVALUE}].regexp($blablablabla^)}=1) or ({SNMP Ruckus Zonedirector:ruckusZDWLANAPGroup[{#SNMPVALUE}].regexp($blablablabla^)}=1)</expression>
               <name>Wifi {ITEM.VALUE2} indisponível. Endereço físico {#SNMPVALUE}. Grupo {ITEM.VALUE3}</name>
               <priority>WARNING</priority>
             </trigger_prototype>
@@ -498,7 +498,7 @@
           <color>00CC00</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template SNMP Ruckus Zonedirector</host>
+            <host>SNMP Ruckus Zonedirector</host>
             <key>ruckusSZSystemStatsWLANTotalRxBytes</key>
           </item>
         </graph_item>
@@ -507,7 +507,7 @@
           <color>0000CC</color>
           <calc_fnc>MAX</calc_fnc>
           <item>
-            <host>Template SNMP Ruckus Zonedirector</host>
+            <host>SNMP Ruckus Zonedirector</host>
             <key>ruckusSZSystemStatsWLANTotalTxBytes</key>
           </item>
         </graph_item>

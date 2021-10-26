@@ -1,4 +1,4 @@
-# _Template SNMP Time Diff
+# SNMP Time Diff
 
 ## Overview
 

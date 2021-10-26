@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:01Z</date>
+  <date>2021-10-26T04:37:37Z</date>
   <groups>
     <group>
       <name>ReadyNAS</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template SNMP ReadyNAS</template>
-      <name>Template SNMP ReadyNAS</name>
+      <template>SNMP ReadyNAS</template>
+      <name>SNMP ReadyNAS</name>
       <groups>
         <group>
           <name>ReadyNAS</name>
@@ -443,7 +443,7 @@
   </templates>
   <triggers>
     <trigger>
-      <expression>100 - ({Template SNMP ReadyNAS:volumeFreeSpace.last()} / {Template SNMP ReadyNAS:volumeSize.last()} * 100) &lt; 10</expression>
+      <expression>100 - ({SNMP ReadyNAS:volumeFreeSpace.last()} / {SNMP ReadyNAS:volumeSize.last()} * 100) &lt; 10</expression>
       <name>ReadyNAS: FreeSpace is less than 10% on {HOST.NAME}</name>
       <priority>INFO</priority>
       <description>Trigger is only 10% is free.</description>

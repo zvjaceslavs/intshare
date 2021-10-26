@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:51:20Z</date>
+  <date>2021-10-26T04:37:59Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Template_Arbor_TMS</template>
-      <name>Template_Arbor_TMS</name>
+      <template>Arbor_TMS</template>
+      <name>Arbor_TMS</name>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>

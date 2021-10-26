@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-22T10:57:56Z</date>
+  <date>2021-10-26T04:45:19Z</date>
   <groups>
     <group>
       <name>Printer group</name>
@@ -9,8 +9,8 @@
   </groups>
   <templates>
     <template>
-      <template>Canon Color MF printers Template</template>
-      <name>Canon Color MF printers Template</name>
+      <template>Canon Color MF printers</template>
+      <name>Canon Color MF printers</name>
       <description>Template for color Canon Multi Functional printer.</description>
       <groups>
         <group>
