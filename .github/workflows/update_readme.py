@@ -36,6 +36,7 @@ def parse_dir(directory):
                 parse_dir(next_dir)
 
 def parse_template(directory):
+    print(directory)
     next_dir_50 = os.path.join(directory,'5.0')
     if os.path.isdir(next_dir_50):
         for file in os.listdir(next_dir_50):
