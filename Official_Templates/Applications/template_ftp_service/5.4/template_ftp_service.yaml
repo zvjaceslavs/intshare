@@ -1,0 +1,46 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:33:39Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 3324b78f737e42fb8e6e05005c581b39
+      template: 'Template App FTP Service'
+      name: 'Template App FTP Service'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 057eaf069912400994e28af132ad5db8
+          name: 'FTP service is running'
+          type: SIMPLE
+          key: 'net.tcp.service[ftp]'
+          delay: '60'
+          history: 7d
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: 'FTP service'
+          triggers:
+            -
+              uuid: b299d73cebcd430c8bfc54cf9b84e853
+              expression: 'max(/Template App FTP Service/net.tcp.service[ftp],#3)=0'
+              name: 'FTP service is down on {HOST.NAME}'
+              priority: AVERAGE
+      valuemaps:
+        -
+          uuid: c363fc0046f4493eb7ba6379c41d3e58
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up

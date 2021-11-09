@@ -1,0 +1,1088 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:12:00Z'
+  groups:
+    -
+      uuid: e82e316e83dc48ed9a71ace0d3e32243
+      name: 'Clickhouse servers'
+  templates:
+    -
+      uuid: 864d69721b724e49ba90b754be1f9abe
+      template: Clickhouse
+      name: Clickhouse
+      description: |
+        ## Overview
+        
+        Clickhouse Template + monitoring script which covered the following aspects of monitoring:
+        
+        
+        * Memory Tracking
+        * Select speed
+        * Insert / Merge speed
+        * How many parts in partitions
+        * Replication
+        * Zookeeper communications
+        * Distributed tables server-server connection
+        * DNS Cache
+        
+        
+        Contains **33 items, 15 triggers, 10 graphs, and 1 host screen**  
+        Require **clickhouse-client** and **zbx\_clickhouse\_monitor.sh** installed on zabbix-agent host
+        
+        
+        ![Clickhouse Zabbix Template](https://github.com/Altinity/clickhouse-zabbix-template/raw/master/img/dashboard.png)
+        
+        
+        
+        
+      groups:
+        -
+          name: 'Clickhouse servers'
+      items:
+        -
+          uuid: 6f1b2fd3bce84c30b55b786890e1a1f7
+          name: 'delayed insert queries'
+          key: 'ch_params[DelayedInserts]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: b47a2b4584464b9683202ab9f392c20e
+              expression: 'last(/Clickhouse/ch_params[DelayedInserts]) > 0'
+              name: '{HOST.HOST} have INSERT queries that are throttled due to high number of active data parts for partition in a MergeTree, please decrease INSERT frequency'
+              url: 'https://clickhouse.tech/docs/en/development/architecture/#merge-tree'
+              priority: DISASTER
+              description: 'INSERT queries that are throttled due to high number of active data parts for partition in a MergeTree table.'
+        -
+          uuid: dd37a6cc73a04fee9db2fd64875139e3
+          name: 'data directory size'
+          key: 'ch_params[DiskUsage]'
+          delay: 30s
+          units: B
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: c386a670a81741e08a74cb5686c58155
+          name: 'distributed connection fail after all retries finished'
+          key: 'ch_params[DistributedConnectionFailAtAll]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: c76b2aa04e7c4e01a40ef69b11b80619
+          name: 'distributed connection fail with retry'
+          key: 'ch_params[DistributedConnectionFailTry]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 185b9965ceb442e0bb845546fa3721d4
+          name: 'distributed pending files'
+          key: 'ch_params[DistributedFilesToInsert]'
+          delay: 30s
+          description: 'Number of pending files to process for asynchronous insertion into Distributed tables. Number of files for every shard is summed.'
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 63477073b6f9400d8a3f0a1efec1d71e
+          name: 'distributed connections'
+          key: 'ch_params[DistributedSend]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: edbb00fe1d3748a6b5b27c0d14370418
+          name: 'current HTTP connections'
+          key: 'ch_params[HTTPConnection]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 762f5b544c7f437a94e9e89dfaf16235
+              expression: 'last(/Clickhouse/ch_params[HTTPConnection]) >= {$MAX_HTTP_CONNECTIONS}'
+              name: '{HOST.HOST} HTTP connections >= {$MAX_HTTP_CONNECTIONS}'
+              url: 'https://clickhouse.tech/docs/en/operations/server_settings/settings/#max-concurrent-queries'
+              priority: WARNING
+              description: 'The clickhouse is adapted to run not a very large number of parallel requests, not every HTTP connection means a running sql request, but a large number of open tcp connections can cause a spike in sudden sql requests, resulting in performance degradation.'
+        -
+          uuid: 3234be51013b4812a45ae2fa533a7079
+          name: 'inserted bytes per second'
+          key: 'ch_params[InsertedBytes]'
+          delay: 30s
+          units: B
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 9500234d468f475db6964f125f63a4dd
+          name: 'inserted rows per second'
+          key: 'ch_params[InsertedRows]'
+          delay: 30s
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 9ca8ff4082fb4896a94cdddd26bde1e1
+          name: 'processed INSERT queries'
+          key: 'ch_params[InsertQuery]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: d32b800ea61e4e1b914c5ec2c1cbe377
+          name: 'the longest currently running query time'
+          key: 'ch_params[LongestRunningQuery]'
+          delay: 30s
+          value_type: FLOAT
+          units: s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 3b3513369a5843e2a5c09000fa447e4f
+              expression: 'last(/Clickhouse/ch_params[LongestRunningQuery]) >= {$MAX_QUERY_TIME}'
+              name: '{HOST.HOST} have queries which running more than {$MAX_QUERY_TIME} sec'
+              priority: WARNING
+              manual_close: 'YES'
+        -
+          uuid: 71bdbc08db5e4ac197ae224768569f50
+          name: 'max count of parts per partition across all tables'
+          key: 'ch_params[MaxPartCountForPartition]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 6f01b1a2051a44caab917efc61ae1b5b
+              expression: 'last(/Clickhouse/ch_params[MaxPartCountForPartition]) >= {$MAX_PARTS_PER_PARTITION} * 0.9'
+              name: '{HOST.HOST} MergeTree parts 90% of {$MAX_PARTS_PER_PARTITION}, please descease INSERT queries frequency'
+              priority: HIGH
+              description: 'Clickhouse MergeTree table engine split each INSERT query to partitions (PARTITION BY expression) and add one or more PARTS per INSERT inside each partition, after that background merge process run, and when you have too much unmerged parts inside partition, SELECT queries performance can significate degrade, so clickhouse try delay insert, or abort it'
+        -
+          uuid: 578e2c57c5b04eb59c750cdc9d338aaa
+          name: 'memory for background merges'
+          key: 'ch_params[MemoryTrackingForMerges]'
+          delay: 30s
+          units: B
+          description: 'Total amount of memory (bytes) allocated for background merges. Included in MemoryTrackingInBackgroundProcessingPool. Note that this value may include a drift when the memory was allocated in a context of background processing pool and freed in other context or vice-versa. This happens naturally due to caches for tables indexes and doesn''t indicate memory leaks.'
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 9b193e1dbd7547be9dabc6f2cba7d2a0
+          name: 'memory for backround moves'
+          key: 'ch_params[MemoryTrackingInBackgroundMoveProcessingPool]'
+          delay: 30s
+          units: B
+          description: 'Total amount of memory (bytes) allocated in background processing pool (that is dedicated for backround moves). Note that this value may include a drift when the memory was allocated in a context of background processing pool and freed in other context or vice-versa. This happens naturally due to caches for tables indexes and doesn''t indicate memory leaks.'
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 513641a3fc7342b8b864861463df5e8c
+          name: 'memory for background merges, mutations and fetches.'
+          key: 'ch_params[MemoryTrackingInBackgroundProcessingPool]'
+          delay: 30s
+          units: B
+          description: 'Total amount of memory (bytes) allocated in background processing pool (that is dedicated for backround merges, mutations and fetches). Note that this value may include a drift when the memory was allocated in a context of background processing pool and freed in other context or vice-versa. This happens naturally due to caches for tables indexes and doesn''t indicate memory leaks.'
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 98278b52798b4610a39b3aadd4ca09e1
+          name: 'memory for bookkeeping tasks of Replicated tables.'
+          key: 'ch_params[MemoryTrackingInBackgroundSchedulePool]'
+          delay: 30s
+          units: B
+          description: 'Total amount of memory (bytes) allocated in background schedule pool (that is dedicated for bookkeeping tasks of Replicated tables).'
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 9d455a73b787451698635498d35978e0
+          name: 'memory used by queries'
+          key: 'ch_params[MemoryTracking]'
+          delay: 30s
+          units: B
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: f459a1e50be74548b4512e6178cb7a10
+          name: 'merged rows per second'
+          key: 'ch_params[MergedRows]'
+          delay: 30s
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: adf9040f24e547cb8cdfc94f94a9a792
+          name: 'merged uncompressed bytes per second'
+          key: 'ch_params[MergedUncompressedBytes]'
+          delay: 30s
+          units: B
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 2d1c5b371ca343869e576f8588e04b5d
+          name: 'current MySQL connections'
+          key: 'ch_params[MySQLConnection]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 2e24542c79924e369502857d6fa7e276
+              expression: 'last(/Clickhouse/ch_params[MySQLConnection]) >= {$MAX_MYSQL_CONNECTIONS}'
+              name: '{HOST.HOST} MySQL connections >= {$MAX_MYSQL_CONNECTIONS}'
+              url: 'https://clickhouse.tech/docs/en/operations/server_settings/settings/#max-concurrent-queries'
+              priority: WARNING
+              description: 'The clickhouse is adapted to run not a very large number of parallel requests, not every MySQL connection means a running sql request, but a large number of open tcp connections can cause a spike in sudden sql requests, resulting in performance degradation.'
+        -
+          uuid: f21d84e95dd04e298ad74ba2f1fe0602
+          name: 'network errors, i.e. DNS resolve'
+          key: 'ch_params[NetworkErrors]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 2a05fa886e6e4c18a65e64fd892afb38
+              expression: 'last(/Clickhouse/ch_params[NetworkErrors]) > 0'
+              name: '{HOST.HOST} clickhouse DNS errors occured'
+              priority: WARNING
+              description: |
+                Please check DNS settings and remote_servers part of /etc/clickhouse-server/
+                
+                https://clickhouse.tech/docs/en/operations/server_settings/settings/#server_settings_remote_servers
+                
+                https://clickhouse.tech/docs/en/operations/server_settings/settings/#server-settings-disable_internal_dns_cache
+                
+                https://clickhouse.tech/docs/en/query_language/system/#query_language-system-drop-dns-cache
+              manual_close: 'YES'
+        -
+          uuid: 955081fad8d549919eb07321b350e23d
+          name: 'current running queries'
+          key: 'ch_params[Query]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 4736d593186e4070bf6695d1591af054
+              expression: 'last(/Clickhouse/ch_params[Query]) >= 0.9 * {$MAX_CONCURRENT_QUERIES}'
+              name: '{HOST.HOST} running queries 90% of {$MAX_CONCURRENT_QUERIES}'
+              url: 'https://clickhouse.tech/docs/en/operations/server_settings/settings/#max-concurrent-queries'
+              priority: HIGH
+              description: |
+                Each concurrent SELECT query use memory in JOINs use CPU for running aggregation function and can read lot of data from disk when scan parts in partitions and utilize disk IO.
+                
+                Each concurrent INSERT query, allocate around 1MB per each column in an inserted table and can utilize disk IO.
+                
+                Look at following documentation parts 
+                https://clickhouse.tech/docs/en/operations/settings/query_complexity/
+                https://clickhouse.tech/docs/en/operations/quotas/
+              manual_close: 'YES'
+        -
+          uuid: 7d7fe01ef8cc4b888ebc135399e4d601
+          name: 'read bytes per second'
+          key: 'ch_params[ReadCompressedBytes]'
+          delay: 30s
+          units: B
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 14985907d3c7441da7e3fd2aeb5c7b01
+          name: 'Read-Only Replicas'
+          key: 'ch_params[ReadonlyReplica]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 0e19fa117ef04eed9b5112f1a8c67964
+              expression: 'last(/Clickhouse/ch_params[ReadonlyReplica]) > 0'
+              name: '{HOST.HOST} have read-only replicated tables, check Zookeeper state'
+              url: 'https://clickhouse.tech/docs/en/operations/table_engines/replication/#recovery-after-failures'
+              priority: DISASTER
+              description: 'Number of Replicated tables that are currently in readonly state due to re-initialization after ZooKeeper session loss or due to startup without ZooKeeper configured.'
+        -
+          uuid: e38473e76cf247a9bc1c5162e20056f1
+          name: 'read, pread, io_getevents, etc. syscalls in fly'
+          key: 'ch_params[Read]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 944f65501fa842c38c7b1cb3629ee737
+          name: 'replica partial shutdown'
+          key: 'ch_params[ReplicaPartialShutdown]'
+          delay: 30s
+          description: 'how many times ReplicatedMergreTree table yield in state when Zookeeper session is expired'
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 872ba6e2948a4daa96777f3e0c0b1c61
+          name: 'replication lag across all tables'
+          key: 'ch_params[ReplicasMaxAbsoluteDelay]'
+          delay: 30s
+          units: s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 15bf9286c31f4bde8e9cccd078910b3d
+              expression: 'last(/Clickhouse/ch_params[ReplicasMaxAbsoluteDelay]) >= {$MAX_REPLICA_DELAY_DISTIBUTED_QUERIES}'
+              name: '{HOST.HOST} have replication lag more {$MAX_REPLICA_DELAY_DISTIBUTED_QUERIES} sec'
+              url: 'https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries'
+              priority: HIGH
+              description: |
+                When replica have too much lag, it can be skipped from Distributed SELECT Queries without errors and you will have wrong query results
+                
+                Check disks and networks on monitoring servers
+              manual_close: 'YES'
+        -
+          uuid: a5c0ccb64c8e4abdb5b54607691df3b3
+          name: 'replication tasks in queue'
+          key: 'ch_params[ReplicasSumQueueSize]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 8dcd7411e6e148e2b653a76b6e7390df
+          name: revision
+          key: 'ch_params[Revision]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 33715c139e6f46c4b10a3c95ff72d737
+              expression: 'change(/Clickhouse/ch_params[Revision])=1'
+              name: '{HOST.HOST} clickhouse version changed'
+              priority: WARNING
+        -
+          uuid: 820694557b754bd2baeab547015a97fd
+          name: 'parts read from disk per second'
+          key: 'ch_params[SelectedParts]'
+          delay: 30s
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 171b29affcc4414cbb5d6ff7bc4a6d2c
+          name: 'processed SELECT queries'
+          key: 'ch_params[SelectQuery]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 3ae551a16c744061bab2a5b9bcf9d34b
+          name: 'current TCP connections'
+          key: 'ch_params[TCPConnection]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: 01bb3b7e760a4d538e06260aa88c413b
+              expression: 'last(/Clickhouse/ch_params[TCPConnection]) >= {$MAX_TCP_CONNECTIONS}'
+              name: '{HOST.HOST} TCP connections >= {$MAX_TCP_CONNECTIONS}'
+              url: 'https://clickhouse.tech/docs/en/operations/server_settings/settings/#max-connections'
+              priority: WARNING
+              description: 'The clickhouse is adapted to run not a very large number of parallel requests, not every tcp connection means a running sql request, but a large number of open tcp connections can cause a spike in sudden sql requests, resulting in performance degradation.'
+        -
+          uuid: 9d808a53af914d8da0bfeb4678ed828a
+          name: 'clickhouse-server uptime'
+          key: 'ch_params[Uptime]'
+          delay: 30s
+          units: s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+          triggers:
+            -
+              uuid: f61782877efa4eeb9404bed0e2dea6b5
+              expression: 'nodata(/Clickhouse/ch_params[Uptime],3m)'
+              name: '{HOST.HOST} clickhouse-server monitoring have no data, possible clickhouse-server is down, check `systemd status clickhouse-server` and check zbx_clickhouse_monitor.sh and `systemd status zabbix-agent`'
+              priority: HIGH
+              manual_close: 'YES'
+            -
+              uuid: f1e46d925f7e439392d64ca9839b7268
+              expression: 'last(/Clickhouse/ch_params[Uptime]) <= 600'
+              name: '{HOST.HOST} clickhouse-server recently restated'
+              priority: WARNING
+              manual_close: 'YES'
+        -
+          uuid: b8a244f998274a34ba2f8f0df746832c
+          name: 'write, pwrite, io_getevents, etc. syscalls in fly'
+          key: 'ch_params[Write]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 7607bced9de5496e95efbc798610a3c7
+          name: 'Hardware exceptions in communication with ZooKeeper server'
+          key: 'ch_params[ZooKeeperHardwareExceptions]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 143e8405eb65444482c17c2f85074c2c
+          name: 'Other exceptions in communication with ZooKeeper server'
+          key: 'ch_params[ZooKeeperOtherExceptions]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: b024f59fe6b64664bfda005b0de597ab
+          name: 'User exceptions in communication with ZooKeeper server'
+          key: 'ch_params[ZooKeeperUserExceptions]'
+          delay: 30s
+          preprocessing:
+            -
+              type: SIMPLE_CHANGE
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+        -
+          uuid: 4865f957049b40c8afe7dc8d2e036b1a
+          name: 'number of watches in zookeeper'
+          key: 'ch_params[ZooKeeperWatch]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: Clickhouse
+      macros:
+        -
+          macro: '{$MAX_CONCURENT_QUERIES}'
+          value: '100'
+        -
+          macro: '{$MAX_DELAYED_FILES_TO_DISTRIBUTED_INSERT}'
+          value: '50'
+        -
+          macro: '{$MAX_HTTP_CONNECTIONS}'
+          value: '100'
+        -
+          macro: '{$MAX_MYSQL_CONNECTIONS}'
+          value: '100'
+        -
+          macro: '{$MAX_PARTS_PER_PARTITION}'
+          value: '300'
+        -
+          macro: '{$MAX_QUERY_TIME}'
+          value: '600'
+        -
+          macro: '{$MAX_REPLICA_DELAY_DISTIBUTED_QUERIES}'
+          value: '300'
+        -
+          macro: '{$MAX_TCP_CONNECTIONS}'
+          value: '1024'
+        -
+          macro: '{$MIN_INSERTED_ROWS_PER_QUERY}'
+          value: '1000'
+      dashboards:
+        -
+          uuid: 4002368c795541e5b2023fcabe35e38f
+          name: 'Clickhouse metrics'
+          pages:
+            -
+              widgets:
+                -
+                  type: GRAPH_CLASSIC
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Concurrent running queries'
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  x: '12'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Write / Merge bytes/sec'
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  'y': '5'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Finished Queries'
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  x: '12'
+                  'y': '5'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Insert / Merge rows/sec'
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  'y': '10'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Memory Usage'
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  x: '12'
+                  'y': '10'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'Database size'
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  'y': '15'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: Connections
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  x: '12'
+                  'y': '15'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: Distributed
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  'y': '20'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: Replication
+                        host: Clickhouse
+                -
+                  type: GRAPH_CLASSIC
+                  x: '12'
+                  'y': '20'
+                  width: '12'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: Zookeeper
+                        host: Clickhouse
+  triggers:
+    -
+      uuid: ca05d04a6f4b4d8281de35f71c7d00cb
+      expression: |
+        last(/Clickhouse/ch_params[DistributedConnectionFailAtAll])>=0 
+        or
+        last(/Clickhouse/ch_params[DistributedConnectionFailTry])>=0 
+        or
+        last(/Clickhouse/ch_params[DistributedFilesToInsert])>={$MAX_DELAYED_FILES_TO_DISTRIBUTED_INSERT}
+      name: '{HOST.HOST} distributed connection exceptions occured'
+      url: 'https://clickhouse.tech/docs/en/operations/table_engines/distributed/'
+      priority: AVERAGE
+      description: |
+        please check communications between Clickhouse servers and <remote_servers> in config.xml 
+        
+        
+        https://clickhouse.tech/docs/en/operations/table_engines/distributed/
+        
+        https://clickhouse.tech/docs/en/query_language/system/#query_language-system-distributed
+        
+        https://clickhouse.tech/docs/en/operations/server_settings/settings/#server_settings_remote_servers
+        
+        
+        When you insert data to distributed table.
+        Data is written to target *MergreTree tables asynchronously. When inserted in the table, the data block is just written to the local file system. The data is sent to the remote servers in the background as soon as possible. The period for sending data is managed by the distributed_directory_monitor_sleep_time_ms and distributed_directory_monitor_max_sleep_time_ms settings. The Distributed engine sends each file with inserted data separately, but you can enable batch sending of files with the distributed_directory_monitor_batch_inserts setting.
+    -
+      uuid: 7d8f57cacc82441d8ce3ec93e9bde444
+      expression: |
+        last(/Clickhouse/ch_params[InsertQuery])>0
+        and
+        ( last(/Clickhouse/ch_params[InsertedRows]) / last(/Clickhouse/ch_params[InsertQuery]) ) <= {$MIN_INSERTED_ROWS_PER_QUERY}
+      name: '{HOST.HOST} please increase inserted rows per INSERT query'
+      url: 'https://clickhouse.tech/docs/en/introduction/performance/#performance-when-inserting-data'
+      priority: HIGH
+      description: |
+        Clickhouse team recommends inserting data in packets of at least 1000 rows or no more than a single request per second.
+        
+        Please use Buffer table
+        https://clickhouse.tech/docs/en/operations/table_engines/buffer/
+        or 
+        https://github.com/nikepan/clickhouse-bulk
+  graphs:
+    -
+      uuid: 2bd6a4b234924387acae68d49c191fa5
+      name: 'Concurrent running queries'
+      width: '600'
+      show_work_period: 'NO'
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: DDDD00
+          calc_fnc: MAX
+          item:
+            host: Clickhouse
+            key: 'ch_params[Write]'
+        -
+          sortorder: '1'
+          color: 00BB00
+          calc_fnc: MAX
+          item:
+            host: Clickhouse
+            key: 'ch_params[Read]'
+        -
+          sortorder: '2'
+          color: BB0000
+          calc_fnc: MAX
+          item:
+            host: Clickhouse
+            key: 'ch_params[Query]'
+        -
+          sortorder: '3'
+          color: A54F10
+          yaxisside: RIGHT
+          item:
+            host: Clickhouse
+            key: 'ch_params[LongestRunningQuery]'
+    -
+      uuid: 618bb4d144cd4cbaa98d83a746f47e00
+      name: Connections
+      width: '600'
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: 1A7C11
+          item:
+            host: Clickhouse
+            key: 'ch_params[TCPConnection]'
+        -
+          sortorder: '1'
+          color: F63100
+          item:
+            host: Clickhouse
+            key: 'ch_params[HTTPConnection]'
+        -
+          sortorder: '2'
+          color: CCCC00
+          item:
+            host: Clickhouse
+            key: 'ch_params[MySQLConnection]'
+        -
+          sortorder: '3'
+          color: A54F10
+          item:
+            host: Clickhouse
+            key: 'ch_params[DistributedSend]'
+    -
+      uuid: 0ed03d3ebf084f54a651381ea9348b14
+      name: 'Database size'
+      width: '600'
+      show_work_period: 'NO'
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: AA0000
+          item:
+            host: Clickhouse
+            key: 'ch_params[DiskUsage]'
+    -
+      uuid: 33c7bd46f3544892913747ee56bd8042
+      name: Distributed
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: CC0000
+          item:
+            host: Clickhouse
+            key: 'ch_params[DistributedConnectionFailAtAll]'
+        -
+          sortorder: '1'
+          color: CCCC00
+          item:
+            host: Clickhouse
+            key: 'ch_params[DistributedConnectionFailTry]'
+        -
+          sortorder: '2'
+          color: 00BB00
+          yaxisside: RIGHT
+          item:
+            host: Clickhouse
+            key: 'ch_params[DistributedFilesToInsert]'
+    -
+      uuid: b4a291fe3c89431e9f891788fe16bdd8
+      name: 'Finished Queries'
+      width: '600'
+      show_work_period: 'NO'
+      type: STACKED
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: 4CAF50
+          item:
+            host: Clickhouse
+            key: 'ch_params[SelectQuery]'
+        -
+          sortorder: '1'
+          color: DDDD00
+          item:
+            host: Clickhouse
+            key: 'ch_params[InsertQuery]'
+    -
+      uuid: f7c07eed03214fe8bd99273881712feb
+      name: 'Insert / Merge rows/sec'
+      width: '600'
+      show_work_period: 'NO'
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: DDDD00
+          item:
+            host: Clickhouse
+            key: 'ch_params[InsertedRows]'
+        -
+          sortorder: '1'
+          color: CC0000
+          item:
+            host: Clickhouse
+            key: 'ch_params[MergedRows]'
+    -
+      uuid: e1dfc78db3f3479b9204686fcb2567e0
+      name: 'Memory Usage'
+      width: '600'
+      show_work_period: 'NO'
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: F63100
+          item:
+            host: Clickhouse
+            key: 'ch_params[MemoryTracking]'
+        -
+          sortorder: '1'
+          color: FFFF33
+          item:
+            host: Clickhouse
+            key: 'ch_params[MemoryTrackingForMerges]'
+        -
+          sortorder: '2'
+          color: AAAA00
+          item:
+            host: Clickhouse
+            key: 'ch_params[MemoryTrackingInBackgroundProcessingPool]'
+        -
+          sortorder: '3'
+          color: '000099'
+          item:
+            host: Clickhouse
+            key: 'ch_params[MemoryTrackingInBackgroundMoveProcessingPool]'
+        -
+          sortorder: '4'
+          color: 00DDDD
+          item:
+            host: Clickhouse
+            key: 'ch_params[MemoryTrackingInBackgroundSchedulePool]'
+    -
+      uuid: 3855e48c0ac04d63ac743a13bec198db
+      name: Replication
+      width: '600'
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: EE0000
+          item:
+            host: Clickhouse
+            key: 'ch_params[ReadonlyReplica]'
+        -
+          sortorder: '1'
+          color: DDDD00
+          item:
+            host: Clickhouse
+            key: 'ch_params[ReplicaPartialShutdown]'
+        -
+          sortorder: '2'
+          color: 2774A4
+          yaxisside: RIGHT
+          item:
+            host: Clickhouse
+            key: 'ch_params[ReplicasMaxAbsoluteDelay]'
+        -
+          sortorder: '3'
+          color: A54F10
+          item:
+            host: Clickhouse
+            key: 'ch_params[ReplicasSumQueueSize]'
+    -
+      uuid: eee6cc276c794b1d99d94f2b755beb78
+      name: 'Write / Merge bytes/sec'
+      width: '600'
+      show_work_period: 'NO'
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: CCCC00
+          item:
+            host: Clickhouse
+            key: 'ch_params[InsertedBytes]'
+        -
+          sortorder: '1'
+          color: BB0000
+          item:
+            host: Clickhouse
+            key: 'ch_params[MergedUncompressedBytes]'
+    -
+      uuid: 1d6c0f86eac346349b420bdc0c556586
+      name: Zookeeper
+      width: '600'
+      show_work_period: 'NO'
+      ymin_type_1: FIXED
+      graph_items:
+        -
+          color: FF3333
+          item:
+            host: Clickhouse
+            key: 'ch_params[ZooKeeperHardwareExceptions]'
+        -
+          sortorder: '1'
+          color: 2774A4
+          yaxisside: RIGHT
+          item:
+            host: Clickhouse
+            key: 'ch_params[ZooKeeperWatch]'
+        -
+          sortorder: '2'
+          color: CC0000
+          item:
+            host: Clickhouse
+            key: 'ch_params[ZooKeeperOtherExceptions]'
+        -
+          sortorder: '3'
+          color: CC0000
+          item:
+            host: Clickhouse
+            key: 'ch_params[ZooKeeperUserExceptions]'

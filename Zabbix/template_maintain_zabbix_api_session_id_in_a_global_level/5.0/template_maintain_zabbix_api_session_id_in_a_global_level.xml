@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-11-09T05:10:50Z</date>
+  <groups>
+    <group>
+      <name>Templates/Modules</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Check if Zabbix session key is valid via API</template>
+      <name>Check if Zabbix session key is valid via API</name>
+      <description>## Description To use template create new user 'api' and set user type 'Zabbix Super Admin'. Setup global macros: {$Z_API_USER} {$Z_API_PASSWORD} {$Z_API_PHP} {$Z_API_SESSIONID} for example: {$Z_API_USER} = 'api' {$Z_API_PASSWORD} = 'jp5Jda5ABveGVEbSyJgZ' {$Z_API_PHP} = 'http://127.0.0.1/api_jsonrpc.php' Obtain new session id instantly curl -sk http://127.0.0.1/api_jsonrpc.php -X POST -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d '{"jsonrpc":"2.0","method":"user.login","params":{"user":"api","password":"jp5Jda5ABveGVEbSyJgZ"},"id":1}' | grep -E -o "([0-9a-f]{32,32})" Install session: {$Z_API_SESSIONID} = '2fdcdb96409fb134f82a2029342ce933' ## Overview A lot of solutions out there are using Zabbix API to accomplish a specific task. In a lot of times, the session is not closed with API 'user.logout' procedure. In the long term, this will always result in slowness inside the frontend. I offer to not use a repeated authorization at all but use a static session-id (a Zabbix macro) instead for all the API calls/scripts. Here is the template to maintain the session id (macro). &lt;https://youtu.be/MjQJ0g0AaYI></description>
+      <groups>
+        <group>
+          <name>Templates/Modules</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Session</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Validate session key</name>
+          <type>HTTP_AGENT</type>
+          <key>check.session.key</key>
+          <delay>15s</delay>
+          <trends>0</trends>
+          <value_type>TEXT</value_type>
+          <description>Validate session key by listing proxies</description>
+          <applications>
+            <application>
+              <name>Session</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>REGEX</type>
+              <params>(html|error|result) \1;result=0;error=1;html=2</params>
+            </step>
+            <step>
+              <type>REGEX</type>
+              <params>(html|error|result)(?=.*;\1=(\d)) \2</params>
+            </step>
+          </preprocessing>
+          <url>{$Z_API_PHP}</url>
+          <posts>{ "jsonrpc": "2.0", "method": "proxy.get", "params": { "output": ["name"] }, "auth": "{$Z_API_SESSIONID}", "id": 1 }</posts>
+          <follow_redirects>NO</follow_redirects>
+          <post_type>JSON</post_type>
+          <request_method>POST</request_method>
+          <output_format>JSON</output_format>
+          <triggers>
+            <trigger>
+              <expression>{last()}=2</expression>
+              <name>Invalid URL configureded for Zabbix API</name>
+              <priority>DISASTER</priority>
+              <description>Please install the right value for { $Z_API_PHP} under: Administration -> General -> Macros Currently, the value is installed as {$Z_API_PHP} and it is not working. Then reload the configuration cache: zabbix_server -R config_cache_reload</description>
+            </trigger>
+            <trigger>
+              <expression>{last()}=1</expression>
+              <name>Session key is not valid. HTTP works fine</name>
+              <priority>DISASTER</priority>
+              <description>You may need to obtain a new session key: curl -sk {$Z_API_PHP} -X POST -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d '{"jsonrpc":"2.0","method":"user.login","params":{"user":"{$Z_API_USER}","password":"{$Z_API_PASSWORD}"},"id":1}' | grep -E -o "([0-9a-f]{32,32})"</description>
+              <manual_close>YES</manual_close>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+</zabbix_export>

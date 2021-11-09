@@ -1,0 +1,2141 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:00:27Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: dd0973b3052241fe938d022880cd0e83
+      template: 'Microsoft Exchange Server 2019'
+      name: 'Microsoft Exchange Server 2019'
+      description: |
+        ## Overview
+        
+        Exchange 2019 template - Work in progress  
+        ,Updated on 10-April-2019 added perfmon monitoring, first batch  
+          
+        Generated with: [https://xh-compiler.com](https://xh-compiler.com/)
+        
+        
+        
+        ## Author
+        
+        eXtremeHosting  (https://xh-compiler.com/)
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 2bc57f002dce4e13b8cf7e858cfce9e0
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: cd5a12752b7c47c78911d972ff7a8b60
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: fbe9146b6f1c4bb792643f2eda8cf70b
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: ea45ce710a674d3fb3052592f621bb4e
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 013a239d8cea4f0d94401f1bb17f111c
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 63575e229c7341dcba2cc39bc65b4398
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: c621f1a5a2744968a53e5415c48db605
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: f97a4ad6d24e41d3a06bdbcb0ba65f68
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 4385a298cc4b4a39b151f03741282bbb
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 863d9f07ac464bf0b65a862c8a56c3e6
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 1103acc25a794d8da55e93cfc30be7b1
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: fb5ad7c8847e403486dbd933557292a7
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 72cf24ac948649e5888ab5cad67597c6
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: ef121da87b67464c8b687f1941218116
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 03cf1605833f45cab48e353c35d426b2
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 56e3fb38de864d22b8743d6b23b3df7c
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 193acdac38694dd2816bfdd8ac322c6e
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 19dffe637ca04037992bdef0a5209c5e
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: a8b663193377484590a3449a0da65202
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: e0c20b67cecb4c4abb9c5b3849305a8c
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 52a829906651409a9b7a0d9963455485
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 8b60fdd982f347ad9a8f9cbe8662ebf3
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 3ab7e49babaa406fb4582272018bdbee
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: a54deb4c97eb4a8c8c16e4d6fbd2f7da
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 1e458d4464734cb49a3c6ce56cff4533
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 2db47b4e2c9b47f7bcd2625c29cc4a1e
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: f8d138329c8147b5ba23a2413c6e1e2d
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: bab6c5afc1b84e9286065e509cc46f33
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 8daae6cac040470ea3275077fbde21eb
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: b543703926b84dbeab567dbb5c87b71f
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 420edfb04c1146199b7ec060706bdb98
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 7aa561bf0c14470aa8376d82874a8696
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 7a99591ee30249ab8621212d7cfc6d12
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 284c3d01508b4d009145265ea0850d96
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: a95d9259bd2444a592f4d7784b7ccaad
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: fb133de79fee4d3b86721113aba57884
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: c3fcf2d2932e4a02aebeff67790ca369
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: b41b7a4d6def4f70ad2d50eb151332f0
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 0805397224d340bab2fa8b86211245c4
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: feac4b5df927423ca85a285be2abd954
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 484eaae4b6e14e3da63f94e71afad8d5
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 8e15e28b9cda43ee876fa454e88274cd
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 1b20074939994883848ad8209d138aea
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 2b17cffd1c244eef9df892cc7a36efc7
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 7e78dcaeba334a5582af71ea36882463
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 183b2f11668443ec91c8a5cb7cbdce8b
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: a58d3cf7dcdf4ade924ccec9c259fb33
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: c7308f61788842799be81874430a0a7d
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 452c5ec13f5a4d10a38e4017caf13e5f
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 22777d252a514cc290d26afcece4efe3
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 4857ed944cef41988ea20fd333c74f03
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 579037fd24eb4c218519db43c422bf97
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: a7cb3910c5fd4e29a1d4579464288907
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 0208e9e6c5cb42e1880993227ed6d1cd
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 90ecc9858592476caff64328376444e8
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: a4e0ad387b0d4e14a5442ecf07bef2f5
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: b29d9af6a8524735a1c0d4b85665119d
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 5a8e94a59e7f43e5bfa11b0f1c443056
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: d774c6fc612b44128578b75a6b767dda
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: fefb157388f048d895f181eba533da3c
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 71df8fdac32842d5a74a343988eb457e
+          name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections'
+          key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: da8748033ea04beaa91cd01d2c6fa592
+          name: |
+            MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections
+            
+          key: |
+            perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections
+            "]
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 6a5aefa725494209a75e699cfa9fa877
+          name: 'Queues Items Queued for Delivery Per Second'
+          key: 'perf_counter["\MSExchangeTransport Queues(normal priority)\Items Queued for Delivery Per Second"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 88da1179891e4542abc5f91aab3498f1
+          name: 'Queues Messages Completed Delivery Total'
+          key: 'perf_counter["\MSExchangeTransport Queues(normal priority)\Messages Completed Delivery Total"]'
+          delay: 190s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: eba55d6a4db642c197afa95c304c4eef
+          name: 'Queues(_total) Items Completed Delivery Per Second"'
+          key: 'perf_counter["\MSExchangeTransport Queues(_total)\Items Completed Delivery Per Second"]'
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 1e39c74b138e467da91ea791fb78706a
+          name: 'Queues(_total) Messages Submitted Per Second'
+          key: 'perf_counter["\MSExchangeTransport Queues(_total)\Messages Submitted Per Second"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: c68b060908a94b10941d18045b990ef6
+          name: 'SmtpErrors TLS errors last hour (outbound proxy)'
+          key: 'perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (outbound proxy)"]'
+          delay: 60s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 55029df779e94b37be7a25672ec56145
+          name: 'SmtpErrors TLS errors last hour (receive)'
+          key: 'perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (receive)"]'
+          delay: 60s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 2aee8711bf6d4dc5b2fa9a13a077342f
+          name: 'SmtpErrors TLS errors last hour (send)'
+          key: 'perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (send)"]'
+          delay: 60s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 1f29626aef3b4664b269416de9df4fdc
+          name: 'SMTP Receive Connections Total'
+          key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Connections Total"]'
+          delay: 120s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: ec9d1fffe98e4725a1a8b613201e4efb
+          name: 'SMTP  Message Bytes Received/sec'
+          key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Message Bytes Received/sec"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 6d6f2646ffda4af99d1be8f16b1137f9
+          name: 'SMTPReceive Message Bytes Received Total'
+          key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Message Bytes Received Total"]'
+          delay: 190s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 33357a00f3cb43cc8e8a57e403746661
+          name: 'SMTP Messages Received/sec'
+          key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Messages Received/sec"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: a3e16374184b4c6cabfd56b97d35fbe5
+          name: 'SMTP Messages Received Total'
+          key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Messages Received Total"]'
+          delay: 120s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 8e61da95dede405cac6ba85880482184
+          name: 'SMTP Send Connections Total'
+          key: 'perf_counter["\MSExchangeTransport SmtpSend(_total)\Connections Total"]'
+          delay: 190s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: 1138ac580c2040c3911b6b349a205d74
+          name: 'SMTP Messages Send /sec'
+          key: 'perf_counter["\MSExchangeTransport SmtpSend(_total)\Messages Sent/sec"]'
+          delay: 1s
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Perfmonitor'
+        -
+          uuid: f11c9d61dcb34d339c05a4a3cfebfa87
+          name: 'Service Status Microsoft Exchange Search Host Controller'
+          key: 'service_state[HostControllerService]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: c62c5d11759940a0bd06baced6467a98
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[HostControllerService])<>0'
+              name: 'Microsoft Exchange Search Host Controller Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 02a463f7a64f4a8eb9200c4bddab66ac
+          name: 'Service Status Microsoft Exchange Active Directory Topology'
+          key: 'service_state[MSExchangeADTopology]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: e087a88c60244bc5b3c5ea2eb48bf9e9
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeADTopology])<>0'
+              name: 'Microsoft Exchange Active Directory Topology Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 0cc6493168b34c28998e1faf4179ac91
+          name: 'Service Status Microsoft Exchange Anti-spam update'
+          key: 'service_state[MSExchangeAntispamUpdate]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: ae1442066a454097be44fbdd66e78a03
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeAntispamUpdate])<>0'
+              name: 'Microsoft Exchange Anti-spam Update Service Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 5705565990f44ca9a9971d7c6b6a1426
+          name: 'Service Status Microsoft Exchange Compliance Service'
+          key: 'service_state[MSExchangeCompliance]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 981311b2ad6846148324a5fd132f0085
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeCompliance])<>0'
+              name: 'Microsoft Exchange Compliance Service Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 575b6054743148c2a7b67f1a9caf96db
+          name: 'Service Status Microsoft Exchange DAG Management'
+          key: 'service_state[MSExchangeDagMgmt]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: f5034801375c4f82b46b7bff878b4d3f
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeDagMgmt])<>0'
+              name: 'Microsoft Exchange DAG Management Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 34dac005f8304f91ad30f612063aa250
+          name: 'Service Status Microsoft Exchange Transport Delivery'
+          key: 'service_state[MSExchangeDelivery]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: a57aea0014524097a1f09fa6a8898058
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeDelivery])<>0'
+              name: 'Microsoft Exchange Transport Delivery Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: e1dfc24fc32444d780dcc9f9c7b2f084
+          name: 'Service Status Microsoft Exchange Diagnostics'
+          key: 'service_state[MSExchangeDiagnostics]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 667e169348204f7289698e65dd801a11
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeDiagnostics])<>0'
+              name: 'Microsoft Exchange Diagnostics Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: a36cea6d0ace47df9d98c92a186c8602
+          name: 'Service Status Microsoft Exchange EdgeSync'
+          key: 'service_state[MSExchangeEdgeSync]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 136f2bbf33f748a797ddfa4622658966
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeEdgeSync])<>0'
+              name: 'Microsoft Exchange Edge Sync Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 1b2c5c5aeac94b87bf67c58264f0e49c
+          name: 'Service Status Microsoft Exchange Search Indexer'
+          key: 'service_state[MSExchangeFastSearch]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 433fd6b9bddb4f5db5ffa12861b9dff8
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeFastSearch])<>0'
+              name: 'Microsoft Exchange Search Indexer Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 574e72130461460585055dae519e77c2
+          name: 'Service Status Microsoft Exchange Frontend Transport'
+          key: 'service_state[MSExchangeFrontEndTransport]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+          triggers:
+            -
+              uuid: f1589721cb054ba5abfb0d7ef095cf35
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeFrontEndTransport])<>0'
+              name: 'Microsoft Exchange FrontEnd Transport Delivery Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: f43345db8f9848649859fc663490ea4d
+          name: 'Service Status Microsoft Exchange Health Manager Recovery'
+          key: 'service_state[MSExchangeHMRecovery]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: a2c9e65a3db64a46a55ec84a85c72310
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeHMRecovery])<>0'
+              name: 'Microsoft Exchange Health Manager Recovery Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: af4cc1feb0574f4e83164a70af6822a4
+          name: 'Service Status Microsoft Exchange Health Manager'
+          key: 'service_state[MSExchangeHM]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 79343672ce5d4f4b988d1802b490f2ff
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeHM])<>0'
+              name: 'Microsoft Exchange Health Manager Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 93b35d874699424bb64b3b0bc91afff4
+          name: 'Service Status Microsoft Exchange IMAP4'
+          key: 'service_state[MSExchangeImap4]'
+          delay: '30'
+          status: DISABLED
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+          triggers:
+            -
+              uuid: adc233242bc0407092c6bf450bd527b8
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeImap4])<>0'
+              name: 'Microsoft Exchange IMAP4 Service Stopped'
+              status: DISABLED
+              priority: AVERAGE
+        -
+          uuid: e5fdfdbd9b7d45baa65ed91ffdbe272d
+          name: 'Service Status Microsoft Exchange Information Store'
+          key: 'service_state[MSExchangeIS]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: e6367010303b40c9a06e2d9faa6e5e78
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeIS])<>0'
+              name: 'Microsoft Exchange Information Store Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: d9b295e329be4ea982aa03f512777635
+          name: 'Service Status Microsoft Exchange Mailbox Assistants'
+          key: 'service_state[MSExchangeMailboxAssistants]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: d56d6ef0ff02405fa7d3a78654093f1c
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeMailboxAssistants])<>0'
+              name: 'Microsoft Exchange Mailbox Assistants Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 03543b07907342578d11f94c6f3c896f
+          name: 'Service Status Microsoft Exchange Mailbox Replication'
+          key: 'service_state[MSExchangeMailboxReplication]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+          triggers:
+            -
+              uuid: 8d600a3e8ecb45e49772ace03b5a0aae
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeMailboxReplication])<>0'
+              name: 'Microsoft Exchange Mailbox Replication Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 4d8d69ae24a6441f8d8942270546acbd
+          name: 'Service Status Microsoft Exchange Notifications Broker'
+          key: 'service_state[MSExchangeNotificationsBroker]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 166eb9c40803434397303a869f0f144a
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeNotificationsBroker])<>0'
+              name: 'Microsoft Exchange Notifications Broker Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: c4791ddafbfd41faa013d8c2053bafdb
+          name: 'Service Status Microsoft Exchange POP3'
+          key: 'service_state[MSExchangePop3]'
+          delay: '30'
+          status: DISABLED
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+          triggers:
+            -
+              uuid: 223cfb2976be4ac69c14dd9ca3346ed1
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangePop3])<>0'
+              name: 'Microsoft Exchange POP3 Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 6fceec16645946f48b195cadf330c0c3
+          name: 'Service Status Microsoft Exchange Replication'
+          key: 'service_state[MSExchangeRepl]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 47d278eeb3184b5391137bee203c5ed3
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeRepl])<>0'
+              name: 'Microsoft Exchange Replication Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 61db8e532c0642ec9f18b7e041d43bd8
+          name: 'Service Status Microsoft Exchange RPC Client Access'
+          key: 'service_state[MSExchangeRPC]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 9989ee91037546ad84c1122d70dc4807
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeRPC])<>0'
+              name: 'Microsoft Exchange RPC Client Access Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 3545b5f287ab4bf198a091541346b873
+          name: 'Service Status Microsoft Exchange Service Host'
+          key: 'service_state[MSExchangeServiceHost]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: f1dcfbcbe9c74c3fbac5a0dbb8c066fb
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeServiceHost])<>0'
+              name: 'Microsoft Exchange Service Host Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: c565f4ad697e4faca0e9e4169520ab9c
+          name: 'Service Status Microsoft Exchange Transport Submission'
+          key: 'service_state[MSExchangeSubmission]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 7c7e9d6a65d64d21835b301b2823958d
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeSubmission])<>0'
+              name: 'Microsoft Exchange Transport Submission Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 071e2b1ce2984836a15ba6ddb17d83fb
+          name: 'Service Status Microsoft Exchange Throttling'
+          key: 'service_state[MSExchangeThrottling]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 91360e8fe0c1410abb09b3d22d65f1ec
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeThrottling])<>0'
+              name: 'Microsoft Exchange Throttling Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 78ea2be5ac364ff4b8dcefa79ad29963
+          name: 'Service Status Microsoft Exchange Transport Log Search'
+          key: 'service_state[MSExchangeTransportLogSearch]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: b448522b0fe742459bc782e7c5c196b0
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeTransportLogSearch])<>0'
+              name: 'Microsoft Exchange Transport Log Search Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: 09ca530eef784c0c9372be8548d8b911
+          name: 'Service Status Microsoft Exchange Transport'
+          key: 'service_state[MSExchangeTransport]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: c598043ef584437eb5c2c39d8258ca5f
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeTransport])<>0'
+              name: 'Microsoft Exchange Transport Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: a3b565535a3e448998c2fc09e99d388a
+          name: 'Service Status Microsoft Exchange Unified Messaging Call Router'
+          key: 'service_state[MSExchangeUMCR]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Client Access'
+          triggers:
+            -
+              uuid: 7630155ffc424fe6ad1bf88920fa609b
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeUMCR])<>0'
+              name: 'Microsoft Exchange Unified Messaging Call Router Service Stopped'
+              priority: AVERAGE
+        -
+          uuid: bc284d74de3545688f12944d3949b0a5
+          name: 'Service Status Microsoft Exchange Unified Messaging'
+          key: 'service_state[MSExchangeUM]'
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: 'Exchange 2019 Mailbox'
+          triggers:
+            -
+              uuid: 4aadff0359a64e308687dbbcb2236c1a
+              expression: 'last(/Microsoft Exchange Server 2019/service_state[MSExchangeUM])<>0'
+              name: 'Microsoft Exchange Unified Messaging Service Stopped'
+              status: DISABLED
+              priority: AVERAGE
+  graphs:
+    -
+      uuid: 724daf0fdf7e4be59e171d31774ca855
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection"]'
+    -
+      uuid: 89b3073e289e4d058865e4ddde8bfccf
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/connection
+              "]
+    -
+      uuid: 4082a4339da043dea6d2ae85d7afb37d
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message"]'
+    -
+      uuid: bd724d28bdad419f9609fd32306f7d1c
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average bytes/inbound message
+              "]
+    -
+      uuid: e268edfb36c64a93aec0f4c60fa1b36a
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection"]'
+    -
+      uuid: 9e9c020252e74650bda94dce2c77b3af
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average inbound messages/connection
+              "]
+    -
+      uuid: 929efa46fd7f425591bfb5c686a9b88e
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message"]'
+    -
+      uuid: fc7f03e3c0bc462281c8fd5d7a195ac0
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average recipients/inbound message
+              "]
+    -
+      uuid: 00faaa3e389242b7ad940a461477cc6b
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes"]'
+    -
+      uuid: 7690e5230c6646f58e68b0ccacf2f4e4
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Average SMTP receive session duration (sec)\ over last 10 minutes
+              "]
+    -
+      uuid: ed8814bfdb224b2ab9f0cf5ad97462e8
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec"]'
+    -
+      uuid: c765f3851aba4fdd9554bda9c0df7b34
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received/sec
+              "]
+    -
+      uuid: a7197def87494633a4c045b30b57ada8
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total"]'
+    -
+      uuid: 6551d43728de4dc3a8f6dd1fba96afe5
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Bytes Received Total
+              "]
+    -
+      uuid: 59bdfe829e0f4803b9087f1c547369dd
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour"]'
+    -
+      uuid: d5369be8eaa14648b4e69a2210d0c1d5
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failure responses sent in the last hour
+              "]
+    -
+      uuid: 58e8243836884d3db52b4be410dbef5d
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour"]'
+    -
+      uuid: 04fc65bb153143c18f687c7edd25a777
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Client certificate validation failures in the last hour
+              "]
+    -
+      uuid: 9488a673b8704ac7a53ac55830cb0ae6
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec"]'
+    -
+      uuid: 2465dd9694e2487d9b3d0fe0e98f7188
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec
+              "]
+    -
+      uuid: 2a95aae101e44111bbefc1ff1dd9e767
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages"]'
+    -
+      uuid: f20b870a8e114d599bc5746a60d62120
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Created/sec for inbound proxy messages
+              "]
+    -
+      uuid: 1c9750003f9d4a9aaae2e74c665e572b
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current"]'
+    -
+      uuid: a76da6b42c4c4aab8f8e18168b938b54
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Current
+              "]
+    -
+      uuid: 9d792d206c0b492a9ba2f22aa58949b9
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total"]'
+    -
+      uuid: 0dfcbcb44130437f956075a90ec67e9d
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Connections Total
+              "]
+    -
+      uuid: 28177a07d3d7430ca830c68eb2552dc9
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec"]'
+    -
+      uuid: 51ba19cb8bd9414e8f8652a5eb1cc238
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received/sec
+              "]
+    -
+      uuid: 4041e5ba3f9a43d18172069ffbee3662
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total"]'
+    -
+      uuid: c597b288b81b4b2d909bac091708bf9b
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Consumer Messages Received Total
+              "]
+    -
+      uuid: 766f1432654a4634808a44e142cdfab4
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents"]'
+    -
+      uuid: b764b7f8873b42d19e6226568d8ca355
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections By Agents
+              "]
+    -
+      uuid: e407051eed1d43eaa5748c50f2eb7848
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second"]'
+    -
+      uuid: 9c8fc6e37a894d599f34ef116d676aba
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Disconnections by Agents/second
+              "]
+    -
+      uuid: d63b966577374630bedf19c25d9ac6ef
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour"]'
+    -
+      uuid: 552fed82aa054fd4bb6d91c81d340d6d
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH LOGIN AD lookups last hour
+              "]
+    -
+      uuid: 6211b7b90f27447baff75394532bf863
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour"]'
+    -
+      uuid: b6958452f689457893167e28874e6940
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH OLCCS AD lookups last hour
+              "]
+    -
+      uuid: 97c3dd915e9d41ccb2af41ecb01bd74c
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour"]'
+    -
+      uuid: 5ac7a1399a5f4df985e56f0dba27022c
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Failed Authenticated Sender SMTP AUTH XOAUTH2 AD lookups last hour
+              "]
+    -
+      uuid: 911305463e204c6ea9a0f588bccd66e6
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec"]'
+    -
+      uuid: 0e261a03d8ff4934a0097332c53f97df
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received/sec
+              "]
+    -
+      uuid: 81b7ddfc5dc04bd78dd5905ac5fca8af
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total"]'
+    -
+      uuid: 24bf762929704b4aba5f0f71ad63272f
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Bytes Received Total
+              "]
+    -
+      uuid: 3f6eb0672fa444af815d072c9abc2bd2
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current"]'
+    -
+      uuid: dde20bd83eca40c985f3ee3407367954
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Current
+              "]
+    -
+      uuid: 8ddf11f979204ede8d633ae14b4b3c25
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total"]'
+    -
+      uuid: cf33835adcb84a368c0cc5b9f759283d
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Message Connections Total
+              "]
+    -
+      uuid: 136fdafb7ce44595baa19423e55e43ca
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec"]'
+    -
+      uuid: 99dd78041ea5471a9c8a8da829166226
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received/sec
+              "]
+    -
+      uuid: 90d783e4008a49d39d283b001c06241b
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total"]'
+    -
+      uuid: 38c0c4036ad741d193a987eec2f9c70d
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Inbound Messages Received Total
+              "]
+    -
+      uuid: 2a8e22b15b25447889099f58771fbf29
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size"]'
+    -
+      uuid: 7ad0b9efc3cd4a5f811e49fd239d2c44
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundMessages Refused for Size
+              "]
+    -
+      uuid: 88d5a734c9a54835996ed4fbed5825d5
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total"]'
+    -
+      uuid: 0e1e2ba58f1645adbcd1ea793d873667
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\InboundRecipients accepted Total
+              "]
+    -
+      uuid: 4db23b3241184389a07b192a2d818eba
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections"]'
+    -
+      uuid: f3a1378715104b5cbe0e508111663607
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for external connections
+              "]
+    -
+      uuid: 8247e09cc71f462bb6fdadd28f09d796
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections"]'
+    -
+      uuid: 751d83d7785349de927366a79657806e
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of idle timeouts in the last hour for internal connections
+              "]
+    -
+      uuid: 12360d1eb0bd4080a72f7b670a3b28ef
+      name: 'MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections"]'
+    -
+      uuid: 2edd76ffa00345c3bf81c94197147bf2
+      name: |
+        MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections
+        
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: |
+              perf_counter["\MSExchangeFrontEndTransport SmtpReceive(_total)\Number of timeouts in the last hour for external connections
+              "]
+    -
+      uuid: d35d8db2dd554d7faaad1517a4062fb1
+      name: 'Queues(_total) Items Completed Delivery Per Second'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport Queues(_total)\Items Completed Delivery Per Second"]'
+    -
+      uuid: 4a54abb62f424df191be9b08a2b19928
+      name: 'Queues(_total) Messages Submitted Per Second'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport Queues(_total)\Messages Submitted Per Second"]'
+    -
+      uuid: dd473745b517403ea677ed9f051c1fa9
+      name: 'Queues Items Queued for Delivery Per Second'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport Queues(normal priority)\Items Queued for Delivery Per Second"]'
+    -
+      uuid: c2b7820fa78c4a8581de4391e5658ef6
+      name: 'Queues Messages Completed Delivery Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport Queues(normal priority)\Messages Completed Delivery Total"]'
+    -
+      uuid: e409b8f171584b71b18308a106005226
+      name: 'SmtpErrors TLS errors last hour (outbound proxy)'
+      graph_items:
+        -
+          color: 199C0D
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (outbound proxy)"]'
+    -
+      uuid: 63cf6ab6b1f7435aaba3556e0a396457
+      name: 'SmtpErrors TLS errors last hour (receive)'
+      graph_items:
+        -
+          color: 199C0D
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (receive)"]'
+    -
+      uuid: 5f8ec4340ceb435faa928c6df6f80852
+      name: 'SmtpErrors TLS errors last hour (send)'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SmtpErrors(_total)\TLS errors last hour (send)"]'
+    -
+      uuid: 346ab72c69db468385ab30a0b658ab3b
+      name: 'SMTP Message Bytes Received/sec'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Message Bytes Received/sec"]'
+    -
+      uuid: ff30dcf2c06c4530b99a3caa14494dd5
+      name: 'SMTP Messages Received/sec'
+      graph_items:
+        -
+          color: 199C0D
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Messages Received/sec"]'
+    -
+      uuid: 3d5a566603054d669a9a80f6b9538099
+      name: 'SMTP Messages Received Total'
+      graph_items:
+        -
+          color: 199C0D
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Messages Received Total"]'
+    -
+      uuid: d5d4d1ef62234aa786ee6a346041f0dc
+      name: 'SMTP Receive Connections Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Connections Total"]'
+    -
+      uuid: becc11a6dda049d6b3a30c4842b20764
+      name: 'SMTP Receive Message Bytes Received Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SMTPReceive(_total)\Message Bytes Received Total"]'
+    -
+      uuid: ed4aa2197eab4001ba6f12c72f540f2d
+      name: 'SMTP Send Connections /sec'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SmtpSend(_total)\Messages Sent/sec"]'
+    -
+      uuid: 218f07e78aa34ddeae0d7b61a63845f5
+      name: 'SMTP Send Connections Total'
+      graph_items:
+        -
+          color: 199C0D
+          calc_fnc: MAX
+          item:
+            host: 'Microsoft Exchange Server 2019'
+            key: 'perf_counter["\MSExchangeTransport SmtpSend(_total)\Connections Total"]'

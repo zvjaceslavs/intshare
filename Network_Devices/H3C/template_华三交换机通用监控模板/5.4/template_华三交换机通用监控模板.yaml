@@ -1,0 +1,747 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:24:50Z'
+  groups:
+    -
+      uuid: 36bff6c29af64692839d077febfc7079
+      name: 'Templates/Network devices'
+  templates:
+    -
+      uuid: c432a5f92b6f404b8328209febefda9c
+      template: 'H3C_Switch Monitor'
+      name: 华三交换机监控模板
+      description: |
+        ## Overview
+        
+        华三交换机通用监控模板。
+        
+        
+        适用于当前主流（使用New Style mib库）交换机，包括端口状态、端口流量、实体（电源、风扇）、板卡CPU内存等监控项，已在12500、6900等多种型号上调试成功。
+        
+        
+        华三交换机的官方模板已经十分齐全，变动基本为汉化、过滤器、监控项优化。
+        
+        
+        可能遇到无法导入问题，供参考。
+        
+        
+        将宏{$CLOUD\_SNMP\_COMMUNITY}替换为实际团体字。
+        
+        
+        
+        ## Author
+        
+        zhangzhefeng
+        
+        
+      groups:
+        -
+          name: 'Templates/Network devices'
+      items:
+        -
+          uuid: 1080d0dcd6a04ae787e553ea15f39ef8
+          name: ping丢包率
+          type: SIMPLE
+          key: 'icmppingloss[,10,,,]'
+          delay: 3m
+          history: 7d
+          trends: 0d
+          value_type: FLOAT
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: 5df3b3c56e724dd6b57482434d99eb1f
+              expression: 'avg(/H3C_Switch Monitor/icmppingloss[,10,,,],10m)>{$ICMP_LOSS_WARN}'
+              name: 'ICMP ping 丢包'
+              priority: HIGH
+              description: 'Last value: {ITEM.LASTVALUE1}.'
+              type: MULTIPLE
+              manual_close: 'YES'
+              dependencies:
+                -
+                  name: 'ICMP ping不可达'
+                  expression: 'last(/H3C_Switch Monitor/icmpping[,5,,,],#1)=0 and last(/H3C_Switch Monitor/icmpping[,5,,,],#2)=1'
+        -
+          uuid: 42936cb8aaa641479d36f99065d860f3
+          name: ping时延
+          type: SIMPLE
+          key: 'icmppingsec[,10,,,,avg]'
+          delay: 3m
+          history: 7d
+          trends: 0d
+          value_type: FLOAT
+          units: s
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: d7927b4a97304e01b2b92cc5ac483c86
+              expression: 'min(/H3C_Switch Monitor/icmppingsec[,10,,,,avg],10m)>{$ICMP_RESPONSE_TIME_WARN}'
+              name: 'ICMP ping 时延高'
+              priority: HIGH
+              description: 'Last value: {ITEM.LASTVALUE1}.'
+              type: MULTIPLE
+              manual_close: 'YES'
+              dependencies:
+                -
+                  name: 'ICMP ping不可达'
+                  expression: 'last(/H3C_Switch Monitor/icmpping[,5,,,],#1)=0 and last(/H3C_Switch Monitor/icmpping[,5,,,],#2)=1'
+        -
+          uuid: df1536bb49814f32800974a05b5e0f13
+          name: 'ICMP ping'
+          type: SIMPLE
+          key: 'icmpping[,5,,,]'
+          history: 7d
+          trends: 0d
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: a8539993793640a797e0544ab5c1a166
+              expression: 'last(/H3C_Switch Monitor/icmpping[,5,,,],#1)=0 and last(/H3C_Switch Monitor/icmpping[,5,,,],#2)=1'
+              name: 'ICMP ping不可达'
+              priority: HIGH
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: fcfcae5b424b4e1f9bfe6b02033b2e4b
+              expression: 'last(/H3C_Switch Monitor/icmpping[,5,,,],#1)=0'
+              name: ping不通
+              priority: INFO
+              manual_close: 'YES'
+        -
+          uuid: d80774cb58ef40378beb4b151776aad6
+          name: trap消息
+          type: SNMP_TRAP
+          key: 'snmptrap[""]'
+          delay: '0'
+          history: 7d
+          trends: '0'
+          value_type: LOG
+          tags:
+            -
+              tag: Application
+              value: trap消息
+          triggers:
+            -
+              uuid: 9dcd3cddc801458c9960c8505c995ad8
+              expression: 'find(/H3C_Switch Monitor/snmptrap[""],,"iregexp","coldStart")=1'
+              name: 冷重启告警
+              priority: HIGH
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: a2f5c716d089407ab54465b2928a12e3
+              expression: 'find(/H3C_Switch Monitor/snmptrap[""],,"iregexp","hh3cEntityExt")=1'
+              name: 实体告警
+              priority: AVERAGE
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: 95d03857dea64d05a69aaf3dc1e0ff15
+              expression: 'find(/H3C_Switch Monitor/snmptrap[""],,"iregexp","board")=1'
+              name: 板卡告警
+              priority: AVERAGE
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: 1a8baf1c298640cb809a8c0c05627967
+              expression: 'find(/H3C_Switch Monitor/snmptrap[""],,"iregexp","warmStart")=1'
+              name: 热重启告警
+              priority: HIGH
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: b073079e1087414db1269218a797e8c4
+              expression: 'find(/H3C_Switch Monitor/snmptrap[""],,"iregexp","power")=1'
+              name: 电源告警
+              priority: AVERAGE
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: d94beacc1cf34d17883b0aec268358d5
+              expression: 'find(/H3C_Switch Monitor/snmptrap[""],,"iregexp","linkDown")=1'
+              name: 端口down
+              priority: HIGH
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: 2b77b4d1afd84f8c94c66b99fa256beb
+              expression: 'find(/H3C_Switch Monitor/snmptrap[""],,"iregexp","fan")=1'
+              name: 风扇告警
+              priority: AVERAGE
+              type: MULTIPLE
+              manual_close: 'YES'
+        -
+          uuid: 98be6dad470c4766bed28ef9d04351ae
+          name: 系统信息
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.1.0
+          key: SystemDescription
+          delay: 1h
+          history: 3d
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: 系统信息
+          triggers:
+            -
+              uuid: 2394ddab14614846bf594f5515a67a3b
+              expression: 'nodata(/H3C_Switch Monitor/SystemDescription,12h)=1'
+              name: snmp不通
+              priority: INFO
+              manual_close: 'YES'
+        -
+          uuid: 8db417e542c243eca6a2a4459f4ab650
+          name: 运行时间
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.3.0
+          key: SystemUpTime
+          delay: 1h
+          history: 3d
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: 系统信息
+      discovery_rules:
+        -
+          uuid: 588c75dbe179425a8f0a3af052d8062a
+          name: 板卡发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#ENTITYDESCR},1.3.6.1.2.1.47.1.1.1.1.7,{#ENTITYTYPE},1.3.6.1.2.1.47.1.1.1.1.5]'
+          key: BoardDiscovery
+          delay: 12h
+          filter:
+            evaltype: AND
+            conditions:
+              -
+                macro: '{#ENTITYTYPE}'
+                value: '9'
+                formulaid: D
+              -
+                macro: '{#ENTITYDESCR}'
+                value: '.*virtue.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: B
+              -
+                macro: '{#ENTITYDESCR}'
+                value: '.*Unknown.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+              -
+                macro: '{#ENTITYDESCR}'
+                value: '.*virtual.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: C
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 31e1906f996b4ce68be3babb9ee6f456
+              name: 'CPU利用率 {#ENTITYDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.25506.2.6.1.1.1.1.6.{#SNMPINDEX}'
+              key: 'MONITOR_CPUUsage.[{#SNMPINDEX},{#ENTITYDESCR}]'
+              delay: 5m
+              history: 3d
+              trends: 0d
+              units: '%'
+              tags:
+                -
+                  tag: Application
+                  value: CPU情况
+              trigger_prototypes:
+                -
+                  uuid: 3e9a3e0b994040b3bc42d2d27ffc0eb5
+                  expression: 'min(/H3C_Switch Monitor/MONITOR_CPUUsage.[{#SNMPINDEX},{#ENTITYDESCR}],#2)>{$CPU_USAGE_THRESHOLD}'
+                  name: CPU利用率高
+                  priority: HIGH
+                  description: '2个周期CPU利用率均大于宏{$CPU_USAGE_THRESHOLD}'
+                  type: MULTIPLE
+                  manual_close: 'YES'
+            -
+              uuid: 4c037a21a2a64a63b7bc016b864bf0a3
+              name: '内存利用率 {#ENTITYDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.25506.2.6.1.1.1.1.8.{#SNMPINDEX}'
+              key: 'MONITOR_MemoryUsage.[{#SNMPINDEX},{#ENTITYDESCR}]'
+              delay: 5m
+              history: 3d
+              trends: 0d
+              units: '%'
+              tags:
+                -
+                  tag: Application
+                  value: 内存情况
+              trigger_prototypes:
+                -
+                  uuid: 9c1104059c0d47998fa957b626ed095e
+                  expression: 'min(/H3C_Switch Monitor/MONITOR_MemoryUsage.[{#SNMPINDEX},{#ENTITYDESCR}],#2)>{$MEMORY_USAGE_THRESHOLD}'
+                  name: 内存利用率高
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+        -
+          uuid: 95fab02ae29a4cd6971a0cacd8f14d08
+          name: 实体发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#ENTITYDESCR},1.3.6.1.2.1.47.1.1.1.1.7,{#ENTITYTYPE},1.3.6.1.2.1.47.1.1.1.1.5]'
+          key: EntityDiscovery
+          delay: 12h
+          filter:
+            evaltype: AND
+            conditions:
+              -
+                macro: '{#ENTITYTYPE}'
+                value: 6|7|9
+                formulaid: D
+              -
+                macro: '{#ENTITYDESCR}'
+                value: '.*virtue.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: B
+              -
+                macro: '{#ENTITYDESCR}'
+                value: '.*Unknown.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+              -
+                macro: '{#ENTITYDESCR}'
+                value: '.*virtual.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: C
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 332bf61a960a4278bb53432a05738b2f
+              name: '实体运行状态 {#ENTITYDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.25506.2.6.1.1.1.1.3.{#SNMPINDEX}'
+              key: 'EntityOperationStatus.[{#SNMPINDEX}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              valuemap:
+                name: Hh3cOperState
+              tags:
+                -
+                  tag: Application
+                  value: 实体运行情况
+              trigger_prototypes:
+                -
+                  uuid: 099de29cde1a4b68aa1abdf9a7e81942
+                  expression: 'last(/H3C_Switch Monitor/EntityOperationStatus.[{#SNMPINDEX}],#1)=2'
+                  name: '{#ENTITYDESCR} 实体失效'
+                  priority: HIGH
+                  manual_close: 'YES'
+                -
+                  uuid: 58b2f7a415ce440d9b025980dde8758d
+                  expression: 'last(/H3C_Switch Monitor/EntityOperationStatus.[{#SNMPINDEX}],#1)=4'
+                  name: '{#ENTITYDESCR} 实体故障'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+        -
+          uuid: 052cb8239f634780be92325a80035d9c
+          name: 端口发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFDESCR},IF-MIB::ifDescr,{#IFALIAS},IF-MIB::ifAlias]'
+          key: InterfaceDiscovery_status
+          delay: 12h
+          filter:
+            conditions:
+              -
+                macro: '{#IFDESCR}'
+                value: '.*Vlan.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 522b7d9d9544427ebb80e7e39aa3296d
+              name: '端口:{#IFDESCR}({#IFALIAS})状态'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifOperStatus.{#SNMPINDEX}'
+              key: 'InterfaceOperationStatus.[{#SNMPINDEX}]'
+              delay: 5m
+              history: 3d
+              trends: 0d
+              description: 'The current operational state of the interface.'
+              tags:
+                -
+                  tag: Application
+                  value: 端口状态
+              trigger_prototypes:
+                -
+                  uuid: 821ff226102a4422af4eb14b52687723
+                  expression: 'last(/H3C_Switch Monitor/InterfaceOperationStatus.[{#SNMPINDEX}],#2)=1 and  last(/H3C_Switch Monitor/InterfaceOperationStatus.[{#SNMPINDEX}],#1)=2'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/H3C_Switch Monitor/InterfaceOperationStatus.[{#SNMPINDEX}],#1)=1'
+                  name: '端口:{#IFDESCR} down'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                  dependencies:
+                    -
+                      name: 'ICMP ping不可达'
+                      expression: 'last(/H3C_Switch Monitor/icmpping[,5,,,],#1)=0 and last(/H3C_Switch Monitor/icmpping[,5,,,],#2)=1'
+        -
+          uuid: c16f19f166a9416089d2d75e5d52f029
+          name: 端口发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFDESCR},IF-MIB::ifDescr,{#IFSTATUS},IF-MIB::ifOperStatus,{#IFALIAS},IF-MIB::ifAlias]'
+          key: InterfaceDiscovery_traffic
+          delay: 12h
+          filter:
+            evaltype: AND
+            conditions:
+              -
+                macro: '{#IFSTATUS}'
+                value: '1'
+                formulaid: D
+              -
+                macro: '{#IFDESCR}'
+                value: '.*Vlan.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: B
+              -
+                macro: '{#IFDESCR}'
+                value: '.*Loop.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+              -
+                macro: '{#IFDESCR}'
+                value: '.*VLAN.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: C
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: ee6a1b8334254e47bf470a354c321ea8
+              name: '端口带宽 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.15.{#SNMPINDEX}'
+              key: 'InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 12h
+              history: 7d
+              trends: 0d
+              units: Mbps
+              tags:
+                -
+                  tag: Application
+                  value: 端口带宽
+            -
+              uuid: 8c96cf4c22534b38a9849df211934871
+              name: '入方向带宽利用率 {#IFDESCR}({#IFALIAS})'
+              type: CALCULATED
+              key: 'InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              value_type: FLOAT
+              units: '%'
+              params: 'last(//InterfaceInTraffic.[{#SNMPINDEX},{#IFDESCR}])/last(//InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}])/10000'
+              tags:
+                -
+                  tag: Application
+                  value: 入方向带宽利用率
+              trigger_prototypes:
+                -
+                  uuid: 27896e5102a5483c908388e23b03daf2
+                  expression: 'last(/H3C_Switch Monitor/InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}])>{$BANDWIDTH_USAGE_IN_THRESHOLD}'
+                  name: '{#IFDESCR} 入方向带宽利用率高'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+            -
+              uuid: e17a380b4ddb4ec8b491ea447ae12b39
+              name: '入方向广播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.9.{#SNMPINDEX}'
+              key: 'InterfaceInBroadcastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向广播包流量
+            -
+              uuid: e701743064f945b0b885bfa3260b7312
+              name: '入方向组播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.9.{#SNMPINDEX}'
+              key: 'InterfaceInMulticastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向组播报文速率
+            -
+              uuid: f74517706e434aaa83e1acaa1cb699a2
+              name: '入方向错包 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.14.{#SNMPINDEX}'
+              key: 'InterfaceInPacketError.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向错包
+              trigger_prototypes:
+                -
+                  uuid: c3b2ae0792034693bb4ea1f0e8522836
+                  expression: 'last(/H3C_Switch Monitor/InterfaceInPacketError.[{#SNMPINDEX},{#IFDESCR}])>{$ERROR_PACKETS_IN_THRESHOLD}'
+                  name: '{#IFDESCR} 入方向错包率高'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+            -
+              uuid: 9fd0c45000f54484b1254d11694bba45
+              name: '入方向流量 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.6.{#SNMPINDEX}'
+              key: 'InterfaceInTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: bps
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向流量
+            -
+              uuid: 50bf307b8db94a96bf0e74230aef1bc1
+              name: '入方向单播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.7.{#SNMPINDEX}'
+              key: 'InterfaceInUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向单播报文速率
+            -
+              uuid: 25e8a3bcac2a4c5985f64afa6391a235
+              name: '出方向带宽利用率 {#IFDESCR}({#IFALIAS})'
+              type: CALCULATED
+              key: 'InterfaceOutBandwidthUsage[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              value_type: FLOAT
+              units: '%'
+              params: 'last(//InterfaceOutTraffic.[{#SNMPINDEX},{#IFDESCR}])/last(//InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}])/10000'
+              tags:
+                -
+                  tag: Application
+                  value: 出方向带宽利用率
+              trigger_prototypes:
+                -
+                  uuid: f56fce0f5e694d1ba06018aa383677f2
+                  expression: 'last(/H3C_Switch Monitor/InterfaceOutBandwidthUsage[{#SNMPINDEX},{#IFDESCR}])>{$BANDWIDTH_USAGE_OUT_THRESHOLD}'
+                  name: '{#IFDESCR} 出方向带宽利用率高'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+            -
+              uuid: f326c1c083014ea3947432fb83195b15
+              name: '出方向广播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.13.{#SNMPINDEX}'
+              key: 'InterfaceOutBroadcastPacketTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向广播报文速率
+            -
+              uuid: 72087f56a5534af6a3e6900e0fa20422
+              name: '出方向组播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.12.{#SNMPINDEX}'
+              key: 'InterfaceOutMulticastPackestTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向组播报文速率
+            -
+              uuid: 6416a7e8f01b495f82a88cab62271176
+              name: '出方向错包 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.20.{#SNMPINDEX}'
+              key: 'InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向错包
+              trigger_prototypes:
+                -
+                  uuid: a02c592b9c274f49b0ca4c0281b932c5
+                  expression: 'last(/H3C_Switch Monitor/InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}])>{$ERROR_PACKETS_OUT_THRESHOLD}'
+                  name: '{#IFDESCR} 出方向错包率高'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+            -
+              uuid: ca3cd2c681ff4ef9b8e9d17526e6cf1e
+              name: '出方向流量 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.10.{#SNMPINDEX}'
+              key: 'InterfaceOutTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: bps
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向流量
+            -
+              uuid: c0566ac7fb6847ddadbe4b5b85e58aa4
+              name: '出方向单播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.11.{#SNMPINDEX}'
+              key: 'InterfaceOutUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向单播报文速率
+      macros:
+        -
+          macro: '{$BANDWIDTH_USAGE_IN_THRESHOLD}'
+          value: '95'
+        -
+          macro: '{$BANDWIDTH_USAGE_OUT_THRESHOLD}'
+          value: '95'
+        -
+          macro: '{$CLOUD_SNMP_COMMUNITY}'
+          value: public
+        -
+          macro: '{$CPU_USAGE_THRESHOLD}'
+          value: '80'
+        -
+          macro: '{$ERROR_PACKETS_IN_THRESHOLD}'
+          value: '50'
+        -
+          macro: '{$ERROR_PACKETS_OUT_THRESHOLD}'
+          value: '50'
+        -
+          macro: '{$ICMP_LOSS_WARN}'
+          value: '20'
+        -
+          macro: '{$ICMP_RESPONSE_TIME_WARN}'
+          value: '0.5'
+        -
+          macro: '{$MEMORY_USAGE_THRESHOLD}'
+          value: '80'
+      valuemaps:
+        -
+          uuid: 90a7d9be852f49fcaa2933a3f192793a
+          name: Hh3cOperState
+          mappings:
+            -
+              value: '1'
+              newvalue: notSupported
+            -
+              value: '2'
+              newvalue: disabled
+            -
+              value: '3'
+              newvalue: enabled
+            -
+              value: '4'
+              newvalue: dangerous

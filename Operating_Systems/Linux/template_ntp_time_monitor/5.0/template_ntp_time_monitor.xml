@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-11-09T04:28:56Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+    <group>
+      <name>Time</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Time Drift OS Linux</template>
+      <name>Time Drift OS Linux</name>
+      <description>## Overview Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4 Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf UserParameter=time.drift[*],cat /var/lib/ntp/drift UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?&lt;=offset ).*?(?= sec)' ## Author Jeffrey H. Simonson</description>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+        <group>
+          <name>Time</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Time</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Time-Drift</name>
+          <key>time.drift</key>
+          <delay>60</delay>
+          <value_type>FLOAT</value_type>
+          <units>sec/day</units>
+          <description>Units in the file /var/lib/ntp/drift are PPM. So, multiply PPM by 0.0864 to get seconds per day.</description>
+          <applications>
+            <application>
+              <name>Time</name>
+            </application>
+          </applications>
+          <preprocessing>
+            <step>
+              <type>MULTIPLIER</type>
+              <params>0.0864</params>
+            </step>
+          </preprocessing>
+          <triggers>
+            <trigger>
+              <expression>{last()}>{$MAXTIMEDRIFT} or {last()}&lt;-{$MAXTIMEDRIFT}</expression>
+              <name>Time: Drift over {$MAXTIMEDRIFT} sec/day on {HOST.NAME}</name>
+              <priority>WARNING</priority>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+      <macros>
+        <macro>
+          <macro>{$MAXTIMEDRIFT}</macro>
+          <value>20</value>
+        </macro>
+      </macros>
+    </template>
+    <template>
+      <template>Time Offset OS Linux</template>
+      <name>Time Offset OS Linux</name>
+      <description>## Overview Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4 Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf UserParameter=time.drift[*],cat /var/lib/ntp/drift UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?&lt;=offset ).*?(?= sec)' ## Author Jeffrey H. Simonson ## Overview Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4 Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf UserParameter=time.drift[*],cat /var/lib/ntp/drift UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?&lt;=offset ).*?(?= sec)' ## Author Jeffrey H. Simonson</description>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+        <group>
+          <name>Time</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Time</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>Time-Offset</name>
+          <key>time.offset</key>
+          <delay>60</delay>
+          <value_type>FLOAT</value_type>
+          <units>sec</units>
+          <description>server 199.165.76.11, stratum 1, offset 0.018816, delay 0.02599 31 Aug 12:23:53 ntpdate[16741]: adjust time server 199.165.76.11 offset 0.018816 sec</description>
+          <applications>
+            <application>
+              <name>Time</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{last()}>{$MAXTIMEOFFSET} or {last()}&lt;-{$MAXTIMEOFFSET}</expression>
+              <name>Time: Offset over {$MAXTIMEOFFSET} second on {HOST.NAME}</name>
+              <priority>WARNING</priority>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+      <macros>
+        <macro>
+          <macro>{$MAXTIMEOFFSET}</macro>
+          <value>1</value>
+        </macro>
+      </macros>
+    </template>
+  </templates>
+</zabbix_export>

@@ -1,0 +1,96 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:56:19Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: ee70a2e8f44f41489fe673bd775f9f7d
+      template: 'TCP Zabbix Agent'
+      name: 'TCP Zabbix Agent'
+      description: |
+        ## Description
+        
+        Simple template to check the Zabbix Agent Service on server This template uses "Simple Check" of Zabbix (ping and tcp control). by Federico Coppola
+        
+        ## Overview
+        
+        This is a simple template to check the availability of Zabbix Agent.  
+        It uses Zabbix Simple Check (ping and tcp).
+        
+        
+        I have personally tested on Zabbix 3.4
+        
+        
+        You have just only import this template and associate it to an host. This template do not need the community.  
+        I have create it becouse I need another control about Zabbix Agent and I use it with other template to collect other information.
+        
+        
+        Thanks
+        
+        
+        Federico Coppola
+        
+        
+        
+        ## Author
+        
+        Federico Coppola
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: b7d4632baed44a26a0783b37a5249f37
+          name: PING-CONTROL
+          type: SIMPLE
+          key: icmpping
+          history: 5d
+          description: 'Simple check about ping'
+        -
+          uuid: 1ee906ef3cd54ed09abf2abe331b3e2d
+          name: TCP-CONTROL
+          type: SIMPLE
+          key: 'net.tcp.service[tcp,,10050]'
+          history: 7d
+          description: 'Item about check tcp service on port 10050 (Zabbix Agent)'
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: TCP-CHECK-10050
+      valuemaps:
+        -
+          uuid: d38a5e8aa7c84775896f8f5128f459fb
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up
+  triggers:
+    -
+      uuid: c43af44147204098a1b55f7fea2859fa
+      expression: |
+        max(/TCP Zabbix Agent/icmpping,#5)=0
+        and
+        max(/TCP Zabbix Agent/net.tcp.service[tcp,,10050],#5)=0
+      recovery_mode: RECOVERY_EXPRESSION
+      recovery_expression: |
+        max(/TCP Zabbix Agent/icmpping,#5)>=1
+        and
+        max(/TCP Zabbix Agent/net.tcp.service[tcp,,10050],#5)>=1
+      name: '{HOST.NAME} is not available'
+      priority: HIGH
+      description: |
+        Double control to check a machine that using Zabbix Agent is available
+        by
+        Federico Coppola
+      manual_close: 'YES'

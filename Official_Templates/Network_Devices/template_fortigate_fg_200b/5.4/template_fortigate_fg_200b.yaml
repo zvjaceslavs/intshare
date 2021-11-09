@@ -1,0 +1,252 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:11:11Z'
+  groups:
+    -
+      uuid: e5e24234980a4eb6ba5945412cc8ba27
+      name: Fortigate
+  templates:
+    -
+      uuid: e0345eb39ead41729d86b0e2d16a0fdd
+      template: 'Fortigate FG_200B'
+      name: FG_200B
+      description: |
+        ## Overview
+        
+         Template for Fortigate 200B
+        
+        
+         
+        
+        
+        Still - WIP!
+        
+        
+        Use at your own risk
+        
+        
+         
+        
+        
+        Items:
+        
+        
+        * Memory
+        * CPU
+        * SN
+        * FW
+        * Up time
+        * Sessions
+        
+        
+        Items Prototypes
+        
+        
+        * Download
+        * Upload
+        * Status
+        * Description
+        
+        
+        Trigger Prototypes
+        
+        
+        * Interface Up & Down
+        
+        
+         
+        
+        
+        Any suggestion will be Welcomed :)
+        
+        
+         
+        
+        
+         
+        
+        
+         
+        
+        
+         
+        
+        
+        
+        ## Author
+        
+        JonatanRek
+        
+        
+      groups:
+        -
+          name: Fortigate
+      items:
+        -
+          uuid: c92e1ab517fd46638c4525103acfd4e0
+          name: Connections
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12356.101.4.1.8.0
+          key: fortinetCurrentConnections
+          delay: '60'
+          units: KC
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: 9bb6b97331b84d6bb7372cb0c4c4aebc
+          name: Uptime
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12356.101.4.1.20.0
+          key: fortinetUpTime
+          delay: '30'
+          units: uptime
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: 82989f2961bf42d4a3d7f25f7152b4da
+          name: CPU
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12356.101.4.1.3.0
+          key: sysCpu
+          units: percent
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: 019707213ffb4aee94c0f2730f08fa8d
+          name: 'Memory Usage'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12356.101.4.1.4.0
+          key: sysMemUsage
+          units: percent
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: c8a4f71e67324f92a8cb8179c59c4a7e
+          name: 'Firmware Version'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12356.101.4.1.1.0
+          key: SysmFirmwareVersion
+          delay: '3600'
+          trends: '0'
+          value_type: CHAR
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: e08b810825d5428384d9eea51fc31c9a
+          name: 'Serial Number'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12356.100.1.1.1.0
+          key: SysmSerialNumber
+          delay: '3600'
+          trends: '0'
+          value_type: CHAR
+          inventory_link: SERIALNO_A
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: c46795f2fb7e4eae98e361076446cc53
+          name: 'System Sessions'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.12356.1.10.0
+          key: sysSessions
+          delay: 30s
+          tags:
+            -
+              tag: Application
+              value: General
+      discovery_rules:
+        -
+          uuid: b7e53ba4f16349cc86de76aca6940d51
+          name: Interfaces
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},.1.3.6.1.2.1.31.1.1.1.1]'
+          key: ifname
+          delay: 30s
+          item_prototypes:
+            -
+              uuid: 1360499163d5487d88cfa90a1348cd12
+              name: 'Status {#SNMPVALUE}'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}'
+              key: '.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}]'
+              delay: 30s
+              valuemap:
+                name: FG_200B
+              tags:
+                -
+                  tag: Application
+                  value: 'Interface Status'
+                -
+                  tag: Application
+                  value: 'Network Traffic'
+              trigger_prototypes:
+                -
+                  uuid: f1c78e99764f4686bd3649bd01da2e0d
+                  expression: 'last(/Fortigate FG_200B/.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}])=0'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Fortigate FG_200B/.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}])=1'
+                  name: 'Interface {#SNMPVALUE} Down'
+                  priority: DISASTER
+            -
+              uuid: 7bccc685492240269c520c8c0b411d99
+              name: 'Interface Description {#SNMPVALUE}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.2.{#SNMPINDEX}'
+              key: 'ifDescr[{#SNMPVALUE}]'
+              delay: 30s
+              trends: '0'
+              value_type: TEXT
+              tags:
+                -
+                  tag: Application
+                  value: 'Interface Status'
+            -
+              uuid: a53ccd71e3244a4dacb0dafcccfb2fae
+              name: 'Download {#SNMPVALUE}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}'
+              key: 'ifInOctets[{#SNMPVALUE}]'
+              delay: 30s
+              units: bps
+              tags:
+                -
+                  tag: Application
+                  value: 'Network Traffic'
+            -
+              uuid: 9fb2d0c236b540f594d5704de855b29a
+              name: 'Upload $1'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}'
+              key: 'ifOutOctets[{#SNMPVALUE}]'
+              delay: 30s
+              units: bps
+              tags:
+                -
+                  tag: Application
+                  value: 'Network Traffic'
+      valuemaps:
+        -
+          uuid: 693742f03eb74990a99803e6cd1b0945
+          name: FG_200B
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up
+            -
+              value: '2'
+              newvalue: Inactive

@@ -1,0 +1,46 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:33:09Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 7fc69c6afd334bcab0a133174983939f
+      template: 'Template App Telnet Service'
+      name: 'Template App Telnet Service'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 55990514600a4a998dbc4bdd94edbcb2
+          name: 'Telnet service is running'
+          type: SIMPLE
+          key: 'net.tcp.service[telnet]'
+          delay: '60'
+          history: 7d
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: 'Telnet service'
+          triggers:
+            -
+              uuid: 7135280c598548e6bf17fd1909d4281a
+              expression: 'max(/Template App Telnet Service/net.tcp.service[telnet],#3)=0'
+              name: 'Telnet service is down on {HOST.NAME}'
+              priority: AVERAGE
+      valuemaps:
+        -
+          uuid: 1d4d40a040d84b0eae345be144dee1b7
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up

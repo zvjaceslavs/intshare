@@ -1,0 +1,158 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:28:59Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+    -
+      uuid: a76d4ef5f3f64672bbfab2865563e530
+      name: Time
+  templates:
+    -
+      uuid: 19d59e3b38d445e982fdb1d699874c57
+      template: 'Time Drift OS Linux'
+      name: 'Time Drift OS Linux'
+      description: |
+        ## Overview
+        
+        Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
+        
+        
+        Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
+          
+        UserParameter=time.drift[*],cat /var/lib/ntp/drift  
+        UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
+        
+        
+         
+        
+        
+         
+        
+        
+        
+        ## Author
+        
+        Jeffrey H. Simonson
+        
+        
+      groups:
+        -
+          name: Templates
+        -
+          name: Time
+      items:
+        -
+          uuid: 140313db19c8437fa6f907a332462538
+          name: Time-Drift
+          key: time.drift
+          delay: '60'
+          value_type: FLOAT
+          units: sec/day
+          description: 'Units in the file /var/lib/ntp/drift are PPM.  So, multiply PPM by 0.0864 to get seconds per day.'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.0864'
+          tags:
+            -
+              tag: Application
+              value: Time
+          triggers:
+            -
+              uuid: 325b7173eea04adf9ba209661f33d6a2
+              expression: |
+                last(/Time Drift OS Linux/time.drift)>{$MAXTIMEDRIFT}
+                or
+                last(/Time Drift OS Linux/time.drift)<-{$MAXTIMEDRIFT}
+              name: 'Time: Drift  over  {$MAXTIMEDRIFT} sec/day on {HOST.NAME}'
+              priority: WARNING
+      macros:
+        -
+          macro: '{$MAXTIMEDRIFT}'
+          value: '20'
+    -
+      uuid: 62d4921d869e4794b61a45555247d745
+      template: 'Time Offset OS Linux'
+      name: 'Time Offset OS Linux'
+      description: |
+        ## Overview
+        
+        Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
+        
+        
+        Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
+          
+        UserParameter=time.drift[*],cat /var/lib/ntp/drift  
+        UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
+        
+        
+         
+        
+        
+         
+        
+        
+        
+        ## Author
+        
+        Jeffrey H. Simonson
+        
+        ## Overview
+        
+        Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
+        
+        
+        Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
+          
+        UserParameter=time.drift[*],cat /var/lib/ntp/drift  
+        UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
+        
+        
+         
+        
+        
+         
+        
+        
+        
+        ## Author
+        
+        Jeffrey H. Simonson
+        
+        
+      groups:
+        -
+          name: Templates
+        -
+          name: Time
+      items:
+        -
+          uuid: 3450bd7932424be2aebc26bffb20082d
+          name: Time-Offset
+          key: time.offset
+          delay: '60'
+          value_type: FLOAT
+          units: sec
+          description: |
+            server 199.165.76.11, stratum 1, offset 0.018816, delay 0.02599
+            31 Aug 12:23:53 ntpdate[16741]: adjust time server 199.165.76.11 offset 0.018816 sec
+          tags:
+            -
+              tag: Application
+              value: Time
+          triggers:
+            -
+              uuid: 5b4f2670d3a0433e94ee9a0432944feb
+              expression: |
+                last(/Time Offset OS Linux/time.offset)>{$MAXTIMEOFFSET}
+                or
+                last(/Time Offset OS Linux/time.offset)<-{$MAXTIMEOFFSET}
+              name: 'Time: Offset over {$MAXTIMEOFFSET} second on {HOST.NAME}'
+              priority: WARNING
+      macros:
+        -
+          macro: '{$MAXTIMEOFFSET}'
+          value: '1'

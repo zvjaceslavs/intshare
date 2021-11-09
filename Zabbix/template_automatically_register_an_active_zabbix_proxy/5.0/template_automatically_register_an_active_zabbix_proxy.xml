@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-11-09T05:10:53Z</date>
+  <groups>
+    <group>
+      <name>Templates/Modules</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>Auto register an active Zabbix proxy</template>
+      <name>Auto register an active Zabbix proxy</name>
+      <description>## Description prxid=$(/usr/bin/curl -sk {$Z_API_PHP} -X POST -H "Content-Type: application/json" -d ' { "jsonrpc": "2.0", "method": "proxy.create", "params": { "host": "{EVENT.TAGS}", "status": "5" }, "auth": "{$Z_API_SESSIONID}", "id": 1 } ' | grep -o -E "[0-9]+{3,}") &amp;&amp; /usr/bin/curl -sk {$Z_API_PHP} -X POST -H "Content-Type: application/json" -d " { "jsonrpc ": "2.0 ", "method ": "host.create ", "params ": { "host ": "{EVENT.TAGS} ", "interfaces ": [ { "type ": 1, "main ": 1, "useip ": 1, "ip ": "127.0.0.1 ", "dns ": " ", "port ": "10050 " } ], "groups ": [ { "groupid ": "4 " } ], "templates ": [ { "templateid ": "10048 " } ], "proxy_hostid ": "$prxid " }, "auth ": "{$Z_API_SESSIONID} ", "id ": 1 } " &amp;&amp; /usr/sbin/zabbix_server -R config_cache_reload &amp;&amp; /usr/bin/sleep 20 &amp;&amp; /usr/bin/curl -sk {$Z_API_PHP} -X POST -H "Content-Type: application/json" -d ' { "jsonrpc": "2.0", "method": "event.acknowledge", "params": { "eventids": "{EVENT.ID}", "action": 1, "message": "Problem resolved." }, "auth": "{$Z_API_SESSIONID}", "id": 1 } ' ## Overview The solution is based on log file monitoring and the functionality of the Zabbix API. &lt;https://youtu.be/XET-138UvpY> In order to use this template, it's required to run and maintain an active session-id at a global level: [https://share.zabbix.com/zabbix-tools-and-utilities/maintain-zabbix-api-session-id-in-a-global-level](zabbix-tools-and-utilities/maintain-zabbix-api-session-id-in-a-global-level) &lt;https://youtu.be/MjQJ0g0AaYI></description>
+      <groups>
+        <group>
+          <name>Templates/Modules</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Log</name>
+        </application>
+      </applications>
+      <items>
+        <item>
+          <name>zabbix_server.log proxy not found</name>
+          <type>ZABBIX_ACTIVE</type>
+          <key>log[/var/log/zabbix/zabbix_server.log,"cannot parse proxy data from active proxy at.*proxy.*not found",,,skip,,]</key>
+          <delay>1s</delay>
+          <trends>0</trends>
+          <value_type>LOG</value_type>
+          <applications>
+            <application>
+              <name>Log</name>
+            </application>
+          </applications>
+          <triggers>
+            <trigger>
+              <expression>{regexp(proxy.*not found)}=1</expression>
+              <name>{{ITEM.VALUE}.regsub("(proxy \".*\" not found)",\1)}</name>
+              <priority>AVERAGE</priority>
+              <manual_close>YES</manual_close>
+              <tags>
+                <tag>
+                  <tag>{{ITEM.VALUE}.regsub("proxy \"(.*)\" not found",\1)}</tag>
+                </tag>
+              </tags>
+            </trigger>
+          </triggers>
+        </item>
+      </items>
+    </template>
+  </templates>
+</zabbix_export>

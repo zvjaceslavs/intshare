@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+  <version>5.0</version>
+  <date>2021-11-09T04:33:47Z</date>
+  <groups>
+    <group>
+      <name>Templates</name>
+    </group>
+  </groups>
+  <templates>
+    <template>
+      <template>SNMP Disks</template>
+      <name>SNMP Disks</name>
+      <description>## Overview Official template from Zabbix distribution to discover disk devices by SNMP ## Author Zabbix SIA</description>
+      <groups>
+        <group>
+          <name>Templates</name>
+        </group>
+      </groups>
+      <applications>
+        <application>
+          <name>Disk partitions</name>
+        </application>
+      </applications>
+      <discovery_rules>
+        <discovery_rule>
+          <name>Disk partitions</name>
+          <type>SNMP_AGENT</type>
+          <snmp_oid>discovery[{#SNMPVALUE},HOST-RESOURCES-MIB::hrStorageDescr]</snmp_oid>
+          <key>hrStorageDescr</key>
+          <delay>3600</delay>
+          <filter>
+            <conditions>
+              <condition>
+                <macro>{#SNMPVALUE}</macro>
+                <value>@Storage devices for SNMP discovery</value>
+                <formulaid>A</formulaid>
+              </condition>
+            </conditions>
+          </filter>
+          <description>The rule will discover all disk partitions matching the global regexp "Storage devices for SNMP discovery". {$SNMP_COMMUNITY} is a global macro.</description>
+          <item_prototypes>
+            <item_prototype>
+              <name>Allocation units for storage $1</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>HOST-RESOURCES-MIB::hrStorageAllocationUnits.{#SNMPINDEX}</snmp_oid>
+              <key>hrStorageAllocationUnits[{#SNMPVALUE}]</key>
+              <delay>3600</delay>
+              <history>7d</history>
+              <units>B</units>
+              <description>The size, in bytes, of the data objects allocated from this pool. If this entry is monitoring sectors, blocks, buffers, or packets, for example, this number will commonly be greater than one. Otherwise this number will typically be one.</description>
+              <applications>
+                <application>
+                  <name>Disk partitions</name>
+                </application>
+              </applications>
+            </item_prototype>
+            <item_prototype>
+              <name>Description of storage $1</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>HOST-RESOURCES-MIB::hrStorageDescr.{#SNMPINDEX}</snmp_oid>
+              <key>hrStorageDescr[{#SNMPVALUE}]</key>
+              <delay>3600</delay>
+              <history>7d</history>
+              <trends>0</trends>
+              <value_type>CHAR</value_type>
+              <description>A description of the type and instance of the storage described by this entry.</description>
+              <applications>
+                <application>
+                  <name>Disk partitions</name>
+                </application>
+              </applications>
+            </item_prototype>
+            <item_prototype>
+              <name>Total disk space on $1</name>
+              <type>CALCULATED</type>
+              <key>hrStorageSizeInBytes[{#SNMPVALUE}]</key>
+              <delay>3600</delay>
+              <history>7d</history>
+              <units>B</units>
+              <params>last("hrStorageSize[{#SNMPVALUE}]") * last("hrStorageAllocationUnits[{#SNMPVALUE}]")</params>
+              <description>This is a calculated item, we need it to get total disk space in bytes.</description>
+              <applications>
+                <application>
+                  <name>Disk partitions</name>
+                </application>
+              </applications>
+            </item_prototype>
+            <item_prototype>
+              <name>Total disk space on $1 in units</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>HOST-RESOURCES-MIB::hrStorageSize.{#SNMPINDEX}</snmp_oid>
+              <key>hrStorageSize[{#SNMPVALUE}]</key>
+              <delay>3600</delay>
+              <history>7d</history>
+              <units>units</units>
+              <description>The size of the storage represented by this entry, in units of hrStorageAllocationUnits. This object is writable to allow remote configuration of the size of the storage area in those cases where such an operation makes sense and is possible on the underlying system. For example, the amount of main memory allocated to a buffer pool might be modified or the amount of disk space allocated to virtual memory might be modified.</description>
+              <applications>
+                <application>
+                  <name>Disk partitions</name>
+                </application>
+              </applications>
+            </item_prototype>
+            <item_prototype>
+              <name>Used disk space on $1</name>
+              <type>CALCULATED</type>
+              <key>hrStorageUsedInBytes[{#SNMPVALUE}]</key>
+              <delay>60</delay>
+              <history>7d</history>
+              <units>B</units>
+              <params>last("hrStorageUsed[{#SNMPVALUE}]") * last("hrStorageAllocationUnits[{#SNMPVALUE}]")</params>
+              <description>This is a calculated item, we need it to get used disk space in bytes.</description>
+              <applications>
+                <application>
+                  <name>Disk partitions</name>
+                </application>
+              </applications>
+            </item_prototype>
+            <item_prototype>
+              <name>Used disk space on $1 in units</name>
+              <type>SNMP_AGENT</type>
+              <snmp_oid>HOST-RESOURCES-MIB::hrStorageUsed.{#SNMPINDEX}</snmp_oid>
+              <key>hrStorageUsed[{#SNMPVALUE}]</key>
+              <delay>60</delay>
+              <history>7d</history>
+              <units>units</units>
+              <description>The amount of the storage represented by this entry that is allocated, in units of hrStorageAllocationUnits.</description>
+              <applications>
+                <application>
+                  <name>Disk partitions</name>
+                </application>
+              </applications>
+            </item_prototype>
+          </item_prototypes>
+          <trigger_prototypes>
+            <trigger_prototype>
+              <expression>{SNMP Disks:hrStorageUsed[{#SNMPVALUE}].last(0)} / {SNMP Disks:hrStorageSize[{#SNMPVALUE}].last(0)} > 0.8</expression>
+              <name>Free disk space is less than 20% on volume {#SNMPVALUE}</name>
+              <priority>WARNING</priority>
+            </trigger_prototype>
+          </trigger_prototypes>
+          <graph_prototypes>
+            <graph_prototype>
+              <name>Disk space usage {#SNMPVALUE}</name>
+              <width>600</width>
+              <height>340</height>
+              <show_work_period>NO</show_work_period>
+              <show_triggers>NO</show_triggers>
+              <type>PIE</type>
+              <show_3d>YES</show_3d>
+              <graph_items>
+                <graph_item>
+                  <color>00C800</color>
+                  <type>GRAPH_SUM</type>
+                  <item>
+                    <host>SNMP Disks</host>
+                    <key>hrStorageSizeInBytes[{#SNMPVALUE}]</key>
+                  </item>
+                </graph_item>
+                <graph_item>
+                  <sortorder>1</sortorder>
+                  <color>C80000</color>
+                  <item>
+                    <host>SNMP Disks</host>
+                    <key>hrStorageUsedInBytes[{#SNMPVALUE}]</key>
+                  </item>
+                </graph_item>
+              </graph_items>
+            </graph_prototype>
+          </graph_prototypes>
+        </discovery_rule>
+      </discovery_rules>
+    </template>
+  </templates>
+</zabbix_export>
