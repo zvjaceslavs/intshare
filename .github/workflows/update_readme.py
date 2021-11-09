@@ -73,6 +73,7 @@ def parse_template(directory):
                     global_readme_obj.append(path)
 
 def main():
+    print(os.getcwd())
     parse_dir(os.chdir('../../'))
 
     out_global_readme = '# Zabbix public templates\n\n'
