@@ -1,5 +1,9 @@
 # SNMP THECUS NAS
 
+## Description
+
+## Overview Делал под Thecus N8900 Чтобы нормально получать данные через SNMP ставьте последние прошивки на устройства. В принципе моя модель - это linux NAS. Через linux SNMPv2 практически все выдается, но в самой морде есть mib-файл, на его основе и сделал данный шаблон. Вопросы на 2135850@211.ru ## Author S.V.Sidenko 
+
 ## Overview
 
 Делал под Thecus N8900  
@@ -45,13 +49,13 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|System vendor|<p>-</p>|`SNMP agent`|systemVendor<p>Update: 3h</p>|
-|System Mini-UPS Status|<p>-</p>|`SNMP agent`|systemMiniUPSStatus<p>Update: 60</p>|
 |System model|<p>-</p>|`SNMP agent`|systemModel<p>Update: 3h</p>|
-|System status|<p>-</p>|`SNMP agent`|systemStatus<p>Update: 60</p>|
 |System temperature|<p>System temperature in centigrade</p>|`SNMP agent`|systemTemperature<p>Update: 60</p>|
+|System Mini-UPS Status|<p>-</p>|`SNMP agent`|systemMiniUPSStatus<p>Update: 60</p>|
+|System vendor|<p>-</p>|`SNMP agent`|systemVendor<p>Update: 3h</p>|
 |System fan status|<p>-</p>|`SNMP agent`|systemFanStatus<p>Update: 60</p>|
 |System firmware|<p>-</p>|`SNMP agent`|systemFirmware<p>Update: 3h</p>|
+|System status|<p>-</p>|`SNMP agent`|systemStatus<p>Update: 60</p>|
 |RAID ID of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidID[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
 |RAID level of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidLevel[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|
 |RAID number of {#SNMPVALUE}|<p>-</p>|`SNMP agent`|raidNum[{#SNMPINDEX}]<p>Update: 3h</p><p>LLD</p>|

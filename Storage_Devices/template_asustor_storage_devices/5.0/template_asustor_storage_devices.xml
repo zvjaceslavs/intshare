@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:50Z</date>
+  <date>2021-11-09T05:10:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>MIB Asustor</template>
       <name>MIB Asustor</name>
+      <description>## Overview SNMP Template for Asustor Storages. On the device, download the MIB on the device page, enable SNMP support. Import template on Zabbix and set host and {$SNMP\_COMMUNITY} Macro. Tested on Zabbix 4.0.17 and with Asustor AS6104T. ## Author Jonatan Gobbato</description>
       <groups>
         <group>
           <name>Templates</name>

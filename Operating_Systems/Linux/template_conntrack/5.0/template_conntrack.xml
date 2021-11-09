@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:28Z</date>
+  <date>2021-11-09T05:14:50Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Network Performance Conntrack</template>
       <name>Network Performance Conntrack</name>
+      <description>## Overview Template for collecting Linux conntrack metrics. Usefull for monitoring systems doing NAT, for example - Docker/Kubernetes nodes, Linux-based gateways. Uses system.run but may be altered with userparameter if remote commands are forbidden. Ubuntu Xenial&lt; and Debian Stretch&lt; tested, but may also work on other distro. Some of the features: * Single request. * Minimum host dependencies - lnstat (part of iproute2 package) used. * No host scripts, only system.run and dependent items. ## Author Oleg Morozov aka zigmund</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:28Z</date>
+  <date>2021-11-09T05:21:08Z</date>
   <groups>
     <group>
       <name>Templates_Created</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Cisco BGP SNMP</template>
       <name>Cisco BGP SNMP</name>
-      <description>Template Cisco BGP Sessions -AdminStatus -Established Time -OperationStatus -AS Name -Maximum Prefix -Accepted Prefix -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as.name .oid_to_ipv6 Base: CISCO-BGP4-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-BGP4-MIB.php#cbgpPeer2RemoteAs External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates</description>
+      <description>## Description Template Cisco BGP Sessions -AdminStatus -Established Time -OperationStatus -AS Name -Maximum Prefix -Accepted Prefix -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as.name .oid_to_ipv6 Base: CISCO-BGP4-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-BGP4-MIB.php#cbgpPeer2RemoteAs External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates ## Overview Template Cisco BGP Sessions -AdminStatus -Established Time -OperationStatus -AS Name -Maximum Prefix -Accepted Prefix -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as.name .oid\_to\_ipv6 Base: CISCO-BGP4-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-BGP4-MIB.php#cbgpPeer2RemoteAs External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates</description>
       <groups>
         <group>
           <name>Templates_Created</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:02Z</date>
+  <date>2021-11-09T04:50:54Z</date>
   <groups>
     <group>
       <name>Halley template</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Halley Linux Disk_iostat</template>
       <name>Halley Linux Disk_iostat</name>
+      <description>## Overview Template for monitoring Linux Disk with iostat with explanations and advices. Use LLD discovery: discover only [hsv]d[a-z] The idea is from &lt;https://wiki.enchtex.info/howto/zabbix/zabbix_iostat_monitoring> I edited the script and add explanations and advises to the template Script write data in a cache file to not make a lot of requests To install: follow instructions from &lt;https://cloud.mail.ru/public/6LpD/qkVgL4E8z> Any recommends are welcome ## Author Tudor Ticau</description>
       <groups>
         <group>
           <name>Halley template</name>

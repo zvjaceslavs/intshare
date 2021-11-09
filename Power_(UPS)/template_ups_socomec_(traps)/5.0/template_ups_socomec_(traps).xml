@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:51Z</date>
+  <date>2021-11-09T05:03:40Z</date>
   <groups>
     <group>
       <name>UPS</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Monitoring UPS</template>
       <name>Monitoring UPS</name>
+      <description>## Overview Hi Here is a template for Socomec UPS. It is made mostly with traps. Triggers are included. Do not hesitate to ask me questions if you have some. Thanks. ## Author Vincent MATIAS</description>
       <groups>
         <group>
           <name>UPS</name>

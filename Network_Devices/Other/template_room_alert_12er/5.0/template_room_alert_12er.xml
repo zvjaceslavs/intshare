@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:58Z</date>
+  <date>2021-11-09T04:50:27Z</date>
   <groups>
     <group>
       <name>Networking</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Room Alert 12er</template>
       <name>Room Alert 12er</name>
+      <description>## Overview Created this template for Avtech Room Alert 12ER , i am monitoring one Internal Sensor , one External sensor (Digital Active Power) and 1 switch sensor (mini UPS). This themplate is unfinished and requires more time to add the restant sensors.When i have more sensors i will update the template. If u have any questions contact me via email at : tsantos.dssi@gmail.com ## Author Tiago Santos</description>
       <groups>
         <group>
           <name>Networking</name>

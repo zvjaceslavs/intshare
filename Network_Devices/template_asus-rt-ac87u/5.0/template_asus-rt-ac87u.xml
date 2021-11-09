@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:16Z</date>
+  <date>2021-11-09T05:20:18Z</date>
   <groups>
     <group>
       <name>自宅ラックテンプレート</name>
@@ -11,7 +11,7 @@
     <template>
       <template>ASUS-Router</template>
       <name>ASUS-ルーター（RT-AC87U）</name>
-      <description>ASUSルーター</description>
+      <description>## Description ASUSルーター ## Overview SSHエージェントによりASUS-RT-AC87UのCPU使用率を取得するテンプレートです。 依存アイテムを利用する事により少ない負荷でCPU使用率を可視化します。 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/102020/e9df31db-0a99-79b5-3540-683dd017bc66.png) ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/102020/7088100c-ea7d-774c-0e59-f4d6a7713971.png)</description>
       <groups>
         <group>
           <name>自宅ラックテンプレート</name>

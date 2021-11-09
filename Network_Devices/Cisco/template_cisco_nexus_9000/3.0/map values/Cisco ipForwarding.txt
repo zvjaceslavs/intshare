@@ -1,2 +1,0 @@
-1 : forwarding
-2 : notForwarding

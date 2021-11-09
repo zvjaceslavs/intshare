@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:38Z</date>
+  <date>2021-11-09T05:02:12Z</date>
   <groups>
     <group>
       <name>Adaptec RAID</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Adaptec PS</template>
       <name>Adaptec PS</name>
+      <description>## Overview Description ----------- This template is for discovering and monitoring adaptec storage controllers by using outputs of arcconf cli tool. Useful only if you have one adaptec adapter in server (i don't have servers with more fore testing). Now it works only with zabbix 4.2 Main features ------------- * Discovery of controllers, logical discs, physical discs, batteries * Monitoring controllers, logical, physical discs, batteries * Comfortable changing of time intervals by macroses.</description>
       <groups>
         <group>
           <name>Adaptec RAID</name>

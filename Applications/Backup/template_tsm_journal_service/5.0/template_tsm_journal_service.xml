@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:55Z</date>
+  <date>2021-11-09T04:43:49Z</date>
   <groups>
     <group>
       <name>Discovered hosts</name>
@@ -14,6 +14,7 @@
     <template>
       <template>App TSM Journal Service</template>
       <name>App TSM Journal Service</name>
+      <description>## Overview Template for check if "TSM Journal Service" is running. IBM Spectrum Protect (Tivoli Storage Manager) Note that trigger service name is: "TSM Journal Service" You can also create (manual) action auto-start service in case service is down: Go to Configuration → Actions **Conditions:** * Maintenance status not in maintenance * Trigger value = PROBLEM * Trigger name like TSM Journal Service Stopped * * **Operations:** * **Operation type:** Remote command * **Commands:** NET START "TSM Journal Service" *- Haim Cohen 2017 -* ## Author Haim Cohen</description>
       <groups>
         <group>
           <name>Discovered hosts</name>

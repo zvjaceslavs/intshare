@@ -1,1 +1,0 @@
-zabbix  ALL = (ALL) NOPASSWD: /sbin/zpool list *, /sbin/zfs list *, /sbin/zfs get *, /usr/local/bin/zfs-stats

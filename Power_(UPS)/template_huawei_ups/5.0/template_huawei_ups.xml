@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:14Z</date>
+  <date>2021-11-09T04:46:00Z</date>
   <groups>
     <group>
       <name>UPS</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Huawei UPS</template>
       <name>Huawei UPS</name>
+      <description>## Overview **Шаблон на русском для ИБП Huawei 6000KVA** **Элементы данных:** | Ток батарей | | Статус питания | | Статус батарей | | Статус ИБП | | Оставшаяся емкость аккумуляторов | | &lt;td style="height: 15.0pt; border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; fo</description>
       <groups>
         <group>
           <name>UPS</name>

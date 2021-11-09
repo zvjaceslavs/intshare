@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:03Z</date>
+  <date>2021-11-09T05:05:09Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,7 +14,7 @@
     <template>
       <template>OS Windows Server 2012-2016</template>
       <name>OS Windows Server 2012-2016</name>
-      <description>Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ</description>
+      <description>## Description Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ ## Overview The same as [this](operating-systems/windows/template-os-windows-server), but with numerical designations for perf\_counter All thanks to the [author](https://vk.com/simplezabbix) Видео про шаблон:&lt;https://youtu.be/FWqFyRu8hmQ> ## Author https://vk.com/simplezabbix</description>
       <groups>
         <group>
           <name>Templates</name>

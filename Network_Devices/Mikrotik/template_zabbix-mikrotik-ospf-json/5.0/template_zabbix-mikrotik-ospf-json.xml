@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:53Z</date>
+  <date>2021-11-09T05:03:55Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Mikrotik - OSPF LLD</template>
       <name>Mikrotik - OSPF LLD</name>
+      <description>## Overview The Zabbix Mikrotik OSPF template for 4.0, which uses LLD, JSON, SSH for connection to Mikrotik router wihout externel scripts. Discovers OSPF neighbors and monitors STATE and changes. Uses one ssh connection to the Mikrotik for getting data. This template needs changing macroses: {$MIKROTIK\_SSH\_PASS} {$MIKROTIK\_SSH\_PORT} {$MIKROTIK\_SSH\_USER} ## Author AlKosmos</description>
       <groups>
         <group>
           <name>Templates</name>

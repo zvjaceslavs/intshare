@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:14Z</date>
+  <date>2021-11-09T05:06:31Z</date>
   <groups>
     <group>
       <name>Templates/VoIP</name>
@@ -11,6 +11,7 @@
     <template>
       <template>VoIP IPSLA Discovery</template>
       <name>VoIP IPSLA Discovery</name>
+      <description>## Overview command IPSLA on router: ip sla 1111 udp-jitter 1.1.1.1 49333 source-ip 2.2.2.2 codec g729a tag Region ip sla schedule 1111 life forever start-time now template will get all information like "sh ip sla statistics", don't forget use tag. ## Author Andrey</description>
       <groups>
         <group>
           <name>Templates/VoIP</name>

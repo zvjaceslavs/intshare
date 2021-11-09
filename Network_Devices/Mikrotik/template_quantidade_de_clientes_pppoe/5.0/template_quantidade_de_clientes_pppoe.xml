@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:10Z</date>
+  <date>2021-11-09T05:12:57Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>1 Check Active Client PPPoE</template>
       <name>1 Check Active Client PPPoE</name>
+      <description>## Overview Nesse modelo, você irá verificar quantidade de clientes conectado no seu mikrotik, com uma trigger já criada para mais informações E-Mail: [rsg.sp.gov@gmail.com](mailto:rsg.sp.gov@gmail.com) WhatsApp: (81) 98267-0619 ## Author Renato Severino</description>
       <groups>
         <group>
           <name>Templates</name>

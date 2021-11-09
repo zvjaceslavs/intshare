@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:56Z</date>
+  <date>2021-11-09T05:18:06Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Ativacao do Windows</template>
       <name>Ativacao do Windows</name>
+      <description>## Overview Este template verifica a ativação do windows, e caso esteja com algum problema irá emitir o alerta. Testado somente no 5.0 Para funcionar é necessário adicionar ao zabbix agent do servidor monitorado as informações: UnsafeUserParameters=1 AllowKey=system.run[c:\Windows\System32\cscript.exe /nologo c:\Windows\System32\slmgr.vbs /xpr] ## Author Carlos Eduardo</description>
       <groups>
         <group>
           <name>Templates</name>

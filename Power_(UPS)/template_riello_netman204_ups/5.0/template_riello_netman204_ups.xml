@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:46Z</date>
+  <date>2021-11-09T05:17:00Z</date>
   <groups>
     <group>
       <name>Templates/Printers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Riello NetMan204 UPS</template>
       <name>SNMP Riello NetMan204 UPS</name>
+      <description>## Overview Riello NetMan204 SNMP Template This template is for the monitoring of Riello NetMan204 UPS hardware via SNMP. Monitors the following items: * Battery Current * Battery Status * Battery Temperature * Battery Voltage * Bypass Freq * Input Line Bads * Output Freq * Alarms Present * Estimated Charge Remaining * Estimated Charge Remaining &lt;li style="line-height: 20px; margin: 0px; padding: 0px; border: 0 ## Author balmag</description>
       <groups>
         <group>
           <name>Templates/Printers</name>

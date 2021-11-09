@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:13Z</date>
+  <date>2021-11-09T05:13:25Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Lighttpd by Zabbix Agent</template>
       <name>App Lighttpd by Zabbix Agent</name>
+      <description>## Overview A very simple Zabbix Agent template for monitoring Lighttpd using the ModStatus module. ## Author Dave Humphrey (dave@uesp.net)</description>
       <groups>
         <group>
           <name>Templates/Applications</name>

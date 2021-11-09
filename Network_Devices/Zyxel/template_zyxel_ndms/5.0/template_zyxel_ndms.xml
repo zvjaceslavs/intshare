@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:16Z</date>
+  <date>2021-11-09T04:52:25Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP ZyXEL NDMS</template>
       <name>SNMP ZyXEL NDMS</name>
+      <description>## Overview A simple template for monitoring Zyxel with NDMS firmware for monitoring network activity. Tested for Keenetic Omni II. ## Author Ymnuk</description>
       <groups>
         <group>
           <name>Templates</name>

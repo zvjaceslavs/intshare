@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:05Z</date>
+  <date>2021-11-09T04:51:11Z</date>
   <groups>
     <group>
       <name>AMD Mining Rigs</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Blank AMD</template>
       <name>Blank AMD</name>
-      <description>This is a Blank AMD template</description>
+      <description>## Description This is a Blank AMD template ## Overview A Zabbix template that monitors AMD GPUs by doing WMI.get calls to open hardware monitor running on the mining rig. This has the wmi.get calls for Temperature, Load and Fan. Has triggers for Temperature and Load. Has Graphs for individual GPUs show Temperature, Load and Fan Speed. Intended for mining monitoring. Tested on Zabbix-server 3.4 on a Ubuntu 16.04.3 LTS. Agents were tested on Windows 10 ## Author derpaherk</description>
       <groups>
         <group>
           <name>AMD Mining Rigs</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:35Z</date>
+  <date>2021-11-09T04:41:30Z</date>
   <groups>
     <group>
       <name>Windows Event Log</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Event User Log</template>
       <name>Event User Log</name>
+      <description>## Overview Check windows event log: 1. Create user account 2. User account on 3. User account off 4. User account password reset 5. Delete user account 6. Unlocked user account + changed domain policy and cleaned security log ## Author Andrew Herasym</description>
       <groups>
         <group>
           <name>Windows Event Log</name>

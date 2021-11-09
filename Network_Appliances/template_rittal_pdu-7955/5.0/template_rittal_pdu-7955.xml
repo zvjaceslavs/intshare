@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:45Z</date>
+  <date>2021-11-09T05:16:56Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Rittal_PDU 1Phase EN</template>
       <name>Rittal_PDU 1Phase EN</name>
-      <description>IT Infrastructure Monitoring.</description>
+      <description>## Description IT Infrastructure Monitoring. ## Overview Template for Rittal PDU 7955 1-phase (4.4) and 3-pases (5.0) with sensors (temperature, humidity, input, etc.) ## Author RPW</description>
       <templates>
         <template>
           <name>Template Module Generic SNMP</name>

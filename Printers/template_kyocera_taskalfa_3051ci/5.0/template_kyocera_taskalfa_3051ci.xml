@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:08Z</date>
+  <date>2021-11-09T04:31:54Z</date>
   <groups>
     <group>
       <name>Imprimantes</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Kyocera TASKalfa 3051ci</template>
       <name>Kyocera TASKalfa 3051ci</name>
+      <description>## Overview Template for Kyocera TASKalfa 3051ci network printer, in french. Works with Zabbix 2.4.7 Contains : - Copier : amount of printed pages in B/W and in color - Printer : amount of printed pages in B/W and in color - Informations : location, MAC Address, Name, S/N ## Author Nicolas C.</description>
       <groups>
         <group>
           <name>Imprimantes</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:16Z</date>
+  <date>2021-11-09T04:46:06Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>NetScaler</template>
       <name>NetScaler</name>
-      <description>Same as v2.0 with valuemap and application prototype added.</description>
+      <description>## Description Same as v2.0 with valuemap and application prototype added. ## Overview Adapted for Zabbix 3 version by [dav3860](owner/tatapoum). Valuemaps included.</description>
       <groups>
         <group>
           <name>Templates</name>

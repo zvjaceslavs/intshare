@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:54Z</date>
+  <date>2021-11-09T05:23:11Z</date>
   <groups>
     <group>
       <name>MyGroup</name>
@@ -122,7 +122,7 @@
     <template>
       <template>tx Hitachi EC704MP</template>
       <name>tx Hitachi EC704MP</name>
-      <description>Template of transmissor Hitachi model EC704MP.</description>
+      <description>## Description Template of transmissor Hitachi model EC704MP. ## Overview Template of transmissor Hitachi model **EC704MP.** This template contains: * 8 applications * 61 itens * 4 triggers Our applications have itens of the component below: * Driver Measurements * General * Power Amplifiers * Power Setup * Power Supply * SFN * Template module ICMP Ping:status * System ## Author Marcos Sousa</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:27Z</date>
+  <date>2021-11-09T04:40:33Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Printer HP LaserJet 5500</template>
       <name>Printer HP LaserJet 5500</name>
+      <description>## Overview Zabbix template wher added some parametrs like this: 1. Printer door open 2. Printer Jam present 3. Cartridge supply percent 4. Cartridge supply remaining print page 5. Shows Printer web page 6. Shows printer model 7.Shows printer supply model and name. 8. Printer status I hope this template will helpfull for You. ## Author aikucits</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:14Z</date>
+  <date>2021-11-09T05:24:43Z</date>
   <groups>
     <group>
       <name>Templates/DiskArray</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Huawei_DiskArray_monitor</template>
       <name>Huawei DiskArray Monitor</name>
-      <description>Huawei_DiskArray_monitor_template Known Issues: device : OceanStor-2600, OceanStor-5300, OceanStor-5600, OceanStor-6800, OceanStor-Dorado6000</description>
+      <description>## Description Huawei_DiskArray_monitor_template Known Issues: device : OceanStor-2600, OceanStor-5300, OceanStor-5600, OceanStor-6800, OceanStor-Dorado6000 ## Overview Monitor Template of Huawei OceanStor DiskArray. Suitable for OceanStor-2600, OceanStor-5300, OceanStor-5600, OceanStor-6800, OceanStor-Dorado6000. Include health status of controller, disk, fan and power. Repalce macro {$CLOUD\_SNMP\_COMMUNITY} with your snmp community ## Author zhangzhefeng</description>
       <groups>
         <group>
           <name>Templates/DiskArray</name>

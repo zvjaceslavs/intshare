@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:19Z</date>
+  <date>2021-11-09T04:39:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Delta UPS SNMP v1</template>
       <name>Delta UPS SNMP v1</name>
+      <description>## Overview Simple **SNMPv1** template for Delta UPS with LLD for lines. Tested on Zabbix 3.0 but should works on older versions. Required extra configuration: Macro for {$SNMP\_COMMUNITY} UPS-MIB ## Author sim</description>
       <groups>
         <group>
           <name>Templates</name>

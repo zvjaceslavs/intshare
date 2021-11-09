@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:27Z</date>
+  <date>2021-11-09T05:21:02Z</date>
   <groups>
     <group>
       <name>Templates_Created</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Cisco ASR 9K Health SNMP</template>
       <name>Cisco ASR 9K Health SNMP</name>
-      <description>Template Cisco ASR 9k Health -CPU -Memory -Power Supply -Temperature ( RSP e LC ) -FAN ( FAN and FANTray ) -Power Consumption By: Flavio Gomes Figueira Camacho Junior Require: Firmware / Software .IOS XR 5.3.1 .IOS XR 5.3.4 ValueMap .CISCO-ENTITY-FRU-CONTROL-MIB::PowerOperType .ENTITY-SENSORS-MIB::EntitySensorStatus .CISCO-ENTITY-FRU-CONTROL-MIB::CefcFanTrayStatusEntry .CISCO-ENTITY-SENSOR-MIB::SensorStatus Base: CISCO-MEMORY-POOL-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-MEMORY-POOL-MIB.php CISCO-PROCESS-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-PROCESS-MIB.php ENTITY-MIB http://www.circitor.fr/Mibs/Html/E/ENTITY-MIB.php CISCO-ENTITY-FRU-CONTROL-MIB.mib https://circitor.fr/Mibs/Html/C/CISCO-ENTITY-FRU-CONTROL-MIB.php CISCO-ENTITY-SENSOR-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-ENTITY-SENSOR-MIB.php https://share.zabbix.com/network_devices/cisco/template-cisco-asr-9k External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates</description>
+      <description>## Description Template Cisco ASR 9k Health -CPU -Memory -Power Supply -Temperature ( RSP e LC ) -FAN ( FAN and FANTray ) -Power Consumption By: Flavio Gomes Figueira Camacho Junior Require: Firmware / Software .IOS XR 5.3.1 .IOS XR 5.3.4 ValueMap .CISCO-ENTITY-FRU-CONTROL-MIB::PowerOperType .ENTITY-SENSORS-MIB::EntitySensorStatus .CISCO-ENTITY-FRU-CONTROL-MIB::CefcFanTrayStatusEntry .CISCO-ENTITY-SENSOR-MIB::SensorStatus Base: CISCO-MEMORY-POOL-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-MEMORY-POOL-MIB.php CISCO-PROCESS-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-PROCESS-MIB.php ENTITY-MIB http://www.circitor.fr/Mibs/Html/E/ENTITY-MIB.php CISCO-ENTITY-FRU-CONTROL-MIB.mib https://circitor.fr/Mibs/Html/C/CISCO-ENTITY-FRU-CONTROL-MIB.php CISCO-ENTITY-SENSOR-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-ENTITY-SENSOR-MIB.php https://share.zabbix.com/network_devices/cisco/template-cisco-asr-9k External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates ## Overview Template Cisco ASR 9k Health -CPU -Memory -Power Supply -Temperature ( RSP e LC ) -FAN ( FAN and FANTray ) -Power Consumption By: Flavio Gomes Figueira Camacho Junior Require: Firmware / Software .IOS XR 5.3.1 .IOS XR 5.3.4 ValueMap .CISCO-ENTITY-FRU-CONTROL-MIB::PowerOperType .CISCO-ENTITY-FRU-CONTROL-MIB::CefcFanTrayStatusEntry .CISCO-ENTITY-SENSOR-MIB::SensorStatus .ENTITY-SENSORS-MIB::EntitySensorStatus Base: CISCO-MEMORY-POOL-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-MEMORY-POOL-MIB.php CISCO-PROCESS-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-PROCESS-MIB.php ENTITY-MIB http://www.circitor.fr/Mibs/Html/E/ENTITY-MIB.php CISCO-ENTITY-FRU-CONTROL-MIB.mib https://circitor.fr/Mibs/Html/C/CISCO-ENTITY-FRU-CONTROL-MIB.php CISCO-ENTITY-SENSOR-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-ENTITY-SENSOR-MIB.php https://share.zabbix.com/network\_devices/cisco/template-cisco-asr-9k External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates ## Author Flavio Camacho Junior</description>
       <groups>
         <group>
           <name>Templates_Created</name>

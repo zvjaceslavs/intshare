@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:27Z</date>
+  <date>2021-11-09T05:20:58Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP Router OSPF v2</template>
       <name>SNMP Router OSPF v2</name>
-      <description>https://share.zabbix.com/network_devices/snmp-router-ospf-v2-1</description>
+      <description>## Description https://share.zabbix.com/network_devices/snmp-router-ospf-v2-1 ## Overview Generic monitoring of OSPF-MIB compatible devices, including software routers. Inspired by [SNMP Router OSPF - V2 + fix](network_devices/generic/snmp-router-ospf-v2-fix "SNMP Router OSPF - V2 + fix") and [Cisco OSPF Neighbors](network_devices/cisco/cisco-ospf-neighbors "Cisco OSPF Neighbors") templates. Changes: * Neighbor down detect by non-null DR and null BDR * LSA and interface event rate monitoring * Application prototypes ## Author Ilia Slepnev</description>
       <groups>
         <group>
           <name>Templates</name>

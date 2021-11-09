@@ -1,0 +1,386 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:33:25Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 62a004b959464b97941afa471dcca73a
+      template: 'App MySQL'
+      name: 'App MySQL'
+      description: |
+        ## Overview
+        
+        Official MySQL Template from Zabbix distribution
+        
+        
+        
+        ## Author
+        
+        Zabbix SIA
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: b0f6a731080a4913bf7109dca0b377ce
+          name: 'MySQL status'
+          key: mysql.ping
+          delay: '60'
+          history: 7d
+          description: |
+            It requires user parameter mysql.ping, which is defined in userparameter_mysql.conf.
+            
+            0 - MySQL server is down
+            1 - MySQL server is up
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: MySQL
+          triggers:
+            -
+              uuid: 7eb7d70b990f438b81343353d4355f73
+              expression: 'last(/App MySQL/mysql.ping)=0'
+              name: 'MySQL is down'
+              priority: WARNING
+        -
+          uuid: 1fa03e6dd5bf42959d9fa47d1425f346
+          name: 'MySQL bytes received per second'
+          key: 'mysql.status[Bytes_received]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: Bps
+          description: |
+            The number of bytes received from all clients. 
+            
+            It requires user parameter mysql.status[*], which is defined in 
+            userparameter_mysql.conf.
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: ca13e6ff1386499c9f3f5e7393787a67
+          name: 'MySQL bytes sent per second'
+          key: 'mysql.status[Bytes_sent]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: Bps
+          description: |
+            The number of bytes sent to all clients.
+            
+            It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 5a366450f4074fd4ad319333e1f2de05
+          name: 'MySQL begin operations per second'
+          key: 'mysql.status[Com_begin]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: qps
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: de60cccb159a45039781b34b2153a468
+          name: 'MySQL commit operations per second'
+          key: 'mysql.status[Com_commit]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: qps
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 5f486ed1fb124ddca4f9ef870768ff7e
+          name: 'MySQL delete operations per second'
+          key: 'mysql.status[Com_delete]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: qps
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 2b1044d5a44048caa9b223313fd7b26b
+          name: 'MySQL insert operations per second'
+          key: 'mysql.status[Com_insert]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: qps
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 41c85caa10d04ec89165da5d443d00d3
+          name: 'MySQL rollback operations per second'
+          key: 'mysql.status[Com_rollback]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: qps
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 46a83f82929c45eb88c66d7eda795e7f
+          name: 'MySQL select operations per second'
+          key: 'mysql.status[Com_select]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: qps
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 81de12d7885d4c9aabf1e5ea5e1ef08a
+          name: 'MySQL update operations per second'
+          key: 'mysql.status[Com_update]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: qps
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: ea07bc5a01fe4613aa29fc515c4c3874
+          name: 'MySQL queries per second'
+          key: 'mysql.status[Questions]'
+          delay: '60'
+          history: 7d
+          value_type: FLOAT
+          units: qps
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 2644bdb36f29484fa20fe70b4b7dd5de
+          name: 'MySQL slow queries'
+          key: 'mysql.status[Slow_queries]'
+          delay: '60'
+          history: 7d
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 91dfed878dba434587f221598932745e
+          name: 'MySQL uptime'
+          key: 'mysql.status[Uptime]'
+          delay: '60'
+          history: 7d
+          units: uptime
+          description: 'It requires user parameter mysql.status[*], which is defined in userparameter_mysql.conf.'
+          tags:
+            -
+              tag: Application
+              value: MySQL
+        -
+          uuid: 86d6737ff0c44f7581b66281dfae8ba4
+          name: 'MySQL version'
+          key: mysql.version
+          delay: '3600'
+          history: 7d
+          trends: '0'
+          value_type: CHAR
+          description: 'It requires user parameter mysql.version, which is defined in userparameter_mysql.conf.'
+          tags:
+            -
+              tag: Application
+              value: MySQL
+      dashboards:
+        -
+          uuid: 223bd24a4d5e4da6a4464973b17b378f
+          name: 'MySQL performance'
+          pages:
+            -
+              widgets:
+                -
+                  type: GRAPH_CLASSIC
+                  width: '12'
+                  height: '7'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'MySQL operations'
+                        host: 'App MySQL'
+                -
+                  type: GRAPH_CLASSIC
+                  x: '12'
+                  width: '12'
+                  height: '7'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '0'
+                    -
+                      type: GRAPH
+                      name: graphid
+                      value:
+                        name: 'MySQL bandwidth'
+                        host: 'App MySQL'
+      valuemaps:
+        -
+          uuid: a759a7b8ca2b4e42a0656df0b79dd64b
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up
+  graphs:
+    -
+      uuid: daa7d3c4cb7a4032ad6faf388a56cd6b
+      name: 'MySQL bandwidth'
+      graph_items:
+        -
+          drawtype: GRADIENT_LINE
+          color: 00AA00
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Bytes_received]'
+        -
+          sortorder: '1'
+          drawtype: GRADIENT_LINE
+          color: 3333FF
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Bytes_sent]'
+    -
+      uuid: 7353b0c1f3554f3e8d3404efac2e3719
+      name: 'MySQL operations'
+      graph_items:
+        -
+          color: C8C800
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Com_begin]'
+        -
+          sortorder: '1'
+          color: '006400'
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Com_commit]'
+        -
+          sortorder: '2'
+          color: C80000
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Com_delete]'
+        -
+          sortorder: '3'
+          color: 0000EE
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Com_insert]'
+        -
+          sortorder: '4'
+          color: '640000'
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Com_rollback]'
+        -
+          sortorder: '5'
+          color: 00C800
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Com_select]'
+        -
+          sortorder: '6'
+          color: C800C8
+          item:
+            host: 'App MySQL'
+            key: 'mysql.status[Com_update]'

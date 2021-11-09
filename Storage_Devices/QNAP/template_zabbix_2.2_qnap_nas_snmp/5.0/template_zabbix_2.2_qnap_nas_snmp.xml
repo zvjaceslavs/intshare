@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:39Z</date>
+  <date>2021-11-09T04:29:05Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP QNAP NAS</template>
       <name>SNMP QNAP NAS</name>
+      <description>## Overview NEED in Macros HOST {$SNMP\_COMMUNITY} {$SNMP\_PORT} ## Author AlteraSidus</description>
       <groups>
         <group>
           <name>Templates</name>

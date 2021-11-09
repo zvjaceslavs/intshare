@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:03Z</date>
+  <date>2021-11-09T04:44:40Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Logstash</template>
       <name>App Logstash</name>
+      <description>## Overview This method uses python protobix library, and check metrics from logstash JSON file. More informations and download script on: https://github.com/fredprod/logstash-zabbix ## Author fredprod</description>
       <groups>
         <group>
           <name>Templates</name>

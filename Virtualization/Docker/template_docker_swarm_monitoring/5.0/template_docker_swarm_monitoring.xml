@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:40Z</date>
+  <date>2021-11-09T05:16:19Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Docker swarm</template>
       <name>App Docker swarm</name>
+      <description>## Overview Monitoring with Docker API, no external scripts need. Use {HOST.DNS} for connect to Docker API. I'm use SSL client certificate to connect to Docker API (here &lt;https://dker.ru/docs/component-projects/docker-swarm/configure-docker-swarm-for-tls/> you can found HOWTO). You must specify filename of the client's certificate in {$CERT\_FNAME} macro and filename of the client's key in {$KEY\_FNAME}. Certificate and key must be in location for SSL client certificate (see SSLCertLocation in zabbix\_server.conf)</description>
       <groups>
         <group>
           <name>Templates/Applications</name>

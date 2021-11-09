@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:58Z</date>
+  <date>2021-11-09T05:11:38Z</date>
   <groups>
     <group>
       <name>Hosts Datacenter Telegram</name>
@@ -11,6 +11,7 @@
     <template>
       <template>DCM SW-8</template>
       <name>DCM SW-8</name>
+      <description>## Overview Template para o equipamento SW-8 para consultas através de SNMP. Monitor de temperatura. Alertas de temperatura para 30°C e 40°C. Gráfico para temperatura. Dúvidas: rodolfo@dcmtech.com.br Site fabricante: [dcmtech.com.br](https://dcmtech.com.br/) ## Author Rodolfo Luis Overbeck</description>
       <groups>
         <group>
           <name>Hosts Datacenter Telegram</name>

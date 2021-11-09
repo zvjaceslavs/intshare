@@ -1,6 +1,0 @@
-User parameter in zabbix_agentd.conf: 
-
-
-UserParameter=RDPUsers,"C:\Program Files\Zabbix Agent 2\RDPUsers.cmd"
-UserParameter=RDPUsersUnlogged,"C:\Program Files\Zabbix Agent 2\RDPUnloggedUsers.cmd"
-UserParameter=RDPCountUsers,"C:\Program Files\Zabbix Agent 2\RDPCountUsers.cmd"

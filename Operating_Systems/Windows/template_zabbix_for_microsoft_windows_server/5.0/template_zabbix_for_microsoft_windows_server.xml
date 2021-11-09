@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:46Z</date>
+  <date>2021-11-09T04:56:06Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>OS Windows Server Baseline</template>
       <name>OS Windows Server Baseline</name>
-      <description>Zabbix template for Microsoft Windows Server. Tested on Microsoft Windows Server 2012, 2012 R2 and 2016. It may work with earlier versions, but some items (with missing performance counters) may be unsupported. Tested on Zabbix 3.4.0. It may work with earlier versions, but some items (for example service.info[service,&lt;param>]) may be unsupported. Mantas Tumenas. mantas.tumenas@gmail.com</description>
+      <description>## Description Zabbix template for Microsoft Windows Server. Tested on Microsoft Windows Server 2012, 2012 R2 and 2016. It may work with earlier versions, but some items (with missing performance counters) may be unsupported. Tested on Zabbix 3.4.0. It may work with earlier versions, but some items (for example service.info[service,&lt;param>]) may be unsupported. Mantas Tumenas. mantas.tumenas@gmail.com ## Overview Zabbix template for Microsoft Windows Server. Features: * Performance counters. * CPU Low Level Discovery. * Mounted file system Low Level Discovery. Difference from default Windows OS template: * CPU's discovery and triggers per CPU's. * Mounted file system discovery and triggers per logical disk. * More items and triggers prototypes for Mounted file system discovery. * Triggers are oriented for Microsoft Windows Server running Microsoft SQL Server. Missing: * Network interface items. Supported versions: Tested on Microsoft Windows Server 2012, 2012 R2 and 2016. It may work with earlier versions, but some items (with missing performance counters) may be unsupported. Tested on Zabbix 3.4.0. It may work with earlier versions, but some items (for example service.info[service,]) may be unsupported. My other templates are [here](owner/MantasT). ## Author Mantas Tumenas</description>
       <groups>
         <group>
           <name>Templates</name>

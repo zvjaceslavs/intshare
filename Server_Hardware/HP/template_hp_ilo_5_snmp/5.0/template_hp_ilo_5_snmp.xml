@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:56Z</date>
+  <date>2021-11-09T05:04:17Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP-HP-iLO5</template>
       <name>SNMP-HP-iLO5</name>
-      <description>Created by Lucas Afonso Kremer &lt;lucasafonsokremer@gmail.com> https://www.linkedin.com/in/lucasafonsokremer</description>
+      <description>## Description Created by Lucas Afonso Kremer &lt;lucasafonsokremer@gmail.com> https://www.linkedin.com/in/lucasafonsokremer ## Overview **Template for HP servers with iLO 5 controller.** * #### Tested on ProLiant DL360 Gen10 with firmware version = 1.40 Feb 05 2019 * #### You must add one macro on the server or on the template with the name: {$SNMP\_COMMUNITY} with the community to be used * #### All the items was created with "SNMPv2 agent" * #### Make sure your iLO is reachable from the zabbix server/proxy, test with: snmpstatus -v 2c -c public 192.168.0.1 Based on @Wisenetman iLO 4 template ## Author Lucas Afonso Kremer</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:10Z</date>
+  <date>2021-11-09T04:51:47Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Pivot3</template>
       <name>SNMP Pivot3</name>
+      <description>## Overview Created this template to help monitor our physical drives, temperature, and system for Pivot3 vSTAC Watch. - Drive status - Temperature - Fans - Power supply - Nodes You'll need to enable SNMP via the vSTAC Manager Suite, for this to work. Created and used on Zabbix 3.4.10 but I'm positive this can be used in older version as well. ## Author ScriptByScript</description>
       <groups>
         <group>
           <name>Templates</name>

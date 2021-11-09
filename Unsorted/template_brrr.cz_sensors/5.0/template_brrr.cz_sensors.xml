@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:48Z</date>
+  <date>2021-11-09T05:10:26Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Humidity and temperature sensor brrr.cz</template>
       <name>Humidity and temperature sensor brrr.cz</name>
+      <description>## Overview This template allows to monitor sensors from brrr.cz Temperature and himidity is supported now. ## Author Lukas Macura</description>
       <groups>
         <group>
           <name>Templates</name>
@@ -122,6 +123,7 @@
     <template>
       <template>Temperature sensor brrr.cz</template>
       <name>Temperature sensor brrr.cz</name>
+      <description>## Overview This template allows to monitor sensors from brrr.cz Temperature and himidity is supported now. ## Author Lukas Macura ## Overview This template allows to monitor sensors from brrr.cz Temperature and himidity is supported now. ## Author Lukas Macura</description>
       <groups>
         <group>
           <name>Templates</name>

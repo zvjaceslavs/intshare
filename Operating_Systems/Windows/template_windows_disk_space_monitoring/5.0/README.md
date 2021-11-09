@@ -2,7 +2,7 @@
 
 ## Description
 
-includes used disk space Trigger goes below a certain level. the Default is 2GB but is configurable through macro.
+## Description includes used disk space Trigger goes below a certain level. the Default is 2GB but is configurable through macro. ## Overview **Features** ------------ a modified version of the disk space monitoring part of the official Operating System Windows template. instead of using a percentage based trigger for disk space monitoring this template use a configurable fixed disk space to trigger on. modify the macro in the template to change the default or modify the macro on a host to have it use different values. ## Author Stefan Sonneveld 
 
 ## Overview
 

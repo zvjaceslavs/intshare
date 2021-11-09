@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:44Z</date>
+  <date>2021-11-09T05:16:46Z</date>
   <groups>
     <group>
       <name>IBM</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IBM SW 7k</template>
       <name>IBM SW 7k</name>
+      <description>## Overview MDisk, Volumes, IPOS, Mb\s Open github, read instruction. If you have any question, contact me with telegram **@jegeren** Eng/Rus IMPORTANT this is very very alpha release, watch out for github, send your suggestions and modifications ## Author homesicker</description>
       <groups>
         <group>
           <name>IBM</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:04Z</date>
+  <date>2021-11-09T04:38:01Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI Intel RMM3</template>
       <name>IPMI Intel RMM3</name>
+      <description>## Overview Intel® Remote Management Module 3 Sensors: * 1 | BB +1.05V PCH | Voltage * 2 | BB +1.1V P1 Vccp | Voltage * 3 | BB +1.5V P1 DDR3 | Voltage * 4 | BB +3.3V | Voltage * 5 | BB +3.3V STBY | Voltage * 6 | BB +5.0V | Voltage * 7 | Baseboard Temp1 | Temperature * 8 | Baseboard Temp2 | Temperature * 9 | Front Panel Temp | Temperature * 11 | Sys Fan Tach 1A | Fan * 12 | Sys Fan Tach 1B | Fan * 13 | Sys Fan Tach 2A | Fan * 14 | Sys Fan Tach 2B | Fan * 15 | Sys Fan Tach 3A | Fan * 16 | Sys Fan Tach 3B | Fan * 17 | PS Power In | Other Units Based Sensor 4 Triggers note: Authentication algorithm - md5</description>
       <groups>
         <group>
           <name>Templates</name>

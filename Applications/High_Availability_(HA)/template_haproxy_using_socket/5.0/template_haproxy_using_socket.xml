@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:09Z</date>
+  <date>2021-11-09T05:12:51Z</date>
   <groups>
     <group>
       <name>Halley template</name>
@@ -11,6 +11,7 @@
     <template>
       <template>HAProxy</template>
       <name>HAProxy</name>
+      <description>## Overview How to install: 1. Add in HAProxy (or make sure that you have) next rules to enable statistics on socket vi /etc/haproxy/haproxy.cfg stats socket /var/lib/haproxy/stats mode 666 level admin stats timeout 30s 2. Install socat and nc: yum install nc socat -yum 3. Make sure that HAProxy user can read from socket :sudo -uhaproxy echo "show info;show stat" | socat stdio unix-connect:/var/lib/haproxy/stats 4. Copy files: a) `userparameter\_haproxy.conf` in `/etc/zabbix/zabbix\_agentd.d/` b) haproxy\_discovery.sh in /etc/zabbix/scripts/ c) haproxy\_stats.sh in /etc/zabbix/scripts/ Make b and c scripts executable with chmod +x script\_name Note: Make sure that /etc/zabbix/scripts/ exist, if not, create it: mkdir -p /etc/zabbix/scripts/ 5. Add host for HAProxy in Zabbix, add template, wait some time for get data (You can change LLD discovery time to get data more faster, but after change to initial) This template is based on: a) Solution by Anastas Dancha - https://github.com/anapsix/zabbix-haproxy b) Official template from Zabbix for Zabbix > 4.4 - https://www.zabbix.com/integrations/haproxy The reason why I create this template was to have official zabbix template logic in Zabbix under 4.4 Files are there a) https://cloud.mail.ru/public/D2M5%2F7ZEamjnVF b) https://drive.google.com/open?id=16xoJyWut9R\_EudcRyAf2Ui8WuPyTxw6D Write to tudorticau@mail.ru if something is not clear Have a nice day ## Author Tudor Ticau</description>
       <groups>
         <group>
           <name>Halley template</name>

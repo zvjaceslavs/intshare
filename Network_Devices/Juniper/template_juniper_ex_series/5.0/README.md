@@ -1,5 +1,9 @@
 # Juniper EX
 
+## Description
+
+## Overview This template is for the monitoring of Juniper EX series switching hardware via SNMP. It requires no additional files or components - just add the template and you're done. Monitors the following items: * Device availability (ping check) * Alarm status (red / yellow) * 5 minute load average * CPU use * Memory use * Routing engine temperature * Interfaces + Inbound discarded packets + Inbound errors + Inbound traffic + Outbound discarded packets + Outbound errors + Outbound traffic Discovery will detect your ports and VLANs, and this will work in virtual chassis configurations. Tested with the following hardware: * EX4600 * EX3300 * EX2200 All suggestions, edits and ideas are welcome! ## Author Jonathan Halewood 
+
 ## Overview
 
 This template is for the monitoring of Juniper EX series switching hardware via SNMP.
@@ -63,9 +67,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Ping check|<p>-</p>|`Simple check`|icmpping<p>Update: 30</p>|
-|Yellow alarm|<p>-</p>|`SNMP agent`|YellowAlarm<p>Update: 60</p>|
 |Red alarm|<p>-</p>|`SNMP agent`|RedAlarm<p>Update: 30</p>|
+|Yellow alarm|<p>-</p>|`SNMP agent`|YellowAlarm<p>Update: 60</p>|
+|Ping check|<p>-</p>|`Simple check`|icmpping<p>Update: 30</p>|
 |Uptime|<p>-</p>|`SNMP agent`|Uptime<p>Update: 60</p>|
 |{#SNMPVALUE} - Inbound discarded packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.13.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound traffic|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.10.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|

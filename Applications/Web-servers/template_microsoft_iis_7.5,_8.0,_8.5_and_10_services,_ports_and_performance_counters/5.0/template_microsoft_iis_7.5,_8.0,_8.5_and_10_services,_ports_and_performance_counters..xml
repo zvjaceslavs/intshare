@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:58Z</date>
+  <date>2021-11-09T04:50:24Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App IIS Service</template>
       <name>App IIS Service</name>
+      <description>## Overview 16 Items, 4 Triggers 5 Graphs and 2 Screens built for IIS 7.5, 8.0, 8.5 and 10 Services, Ports and Performance Counters. Developed through "Template Windows 2008 R2 IIS Server" template. ([https://share.zabbix.com/cat-app/web-servers/template-windows-2008-r2-iis-server](cat-app/web-servers/template-windows-2008-r2-iis-server))</description>
       <groups>
         <group>
           <name>Templates/Modules</name>

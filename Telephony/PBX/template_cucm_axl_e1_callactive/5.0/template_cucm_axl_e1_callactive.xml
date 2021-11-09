@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:12Z</date>
+  <date>2021-11-09T05:06:18Z</date>
   <groups>
     <group>
       <name>Templates/VoIP</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco AXL MGCP monitoring</template>
       <name>Cisco AXL MGCP monitoring</name>
+      <description>## Overview Information from PerfMon API for MGCP E1 ports. needs application user with permission access to PerfMon macro for username: {$ZABBIX\_APIUSER\_UC} macro for password: {$ZABBIX\_APIPASS\_UC} ## Author Andrey</description>
       <groups>
         <group>
           <name>Templates/VoIP</name>

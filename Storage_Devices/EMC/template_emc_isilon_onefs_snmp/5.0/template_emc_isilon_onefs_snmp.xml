@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:20Z</date>
+  <date>2021-11-09T04:39:48Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP EMC Isilon Cluster</template>
       <name>SNMP EMC Isilon Cluster</name>
+      <description>## Overview This EMC Isilon OneFS template was built from scratch by myself from the latest Isilon MIB's. !NOTE! SOME ISILONS DO NOT DO WELL WITH BULK SNMP REQUESTS!!!! If you notice flapping supported items, make sure bulk requests is off on your hosts. It contains several additional features beyond basics, including drive, sensor, and license discovery. 2 different templates (One for your CLUSTER VIP, The other to monitor individual NODES). It monitors basic network, drive, IFS usage, bandwidth, cluster / node / drive status, etc. UPDATE v4: Fixed Temp discovery syntax problem UPDATE v3: Fixed unixtime unit in licensing expiration item. UPDATE v2: Fixed discovery item for disk size OID incorrect. This is version 1.1 so it may have some inconsistencies, but I'm pretty good at uploading any fixes as I find them. You can see this from my other templates on this site which are popular.</description>
       <groups>
         <group>
           <name>Templates</name>
@@ -300,6 +301,7 @@
     <template>
       <template>SNMP EMC Isilon Node</template>
       <name>SNMP EMC Isilon Node</name>
+      <description>## Overview This EMC Isilon OneFS template was built from scratch by myself from the latest Isilon MIB's. !NOTE! SOME ISILONS DO NOT DO WELL WITH BULK SNMP REQUESTS!!!! If you notice flapping supported items, make sure bulk requests is off on your hosts. It contains several additional features beyond basics, including drive, sensor, and license discovery. 2 different templates (One for your CLUSTER VIP, The other to monitor individual NODES). It monitors basic network, drive, IFS usage, bandwidth, cluster / node / drive status, etc. UPDATE v4: Fixed Temp discovery syntax problem UPDATE v3: Fixed unixtime unit in licensing expiration item. UPDATE v2: Fixed discovery item for disk size OID incorrect. This is version 1.1 so it may have some inconsistencies, but I'm pretty good at uploading any fixes as I find them. You can see this from my other templates on this site which are popular. ## Overview This EMC Isilon OneFS template was built from scratch by myself from the latest Isilon MIB's. !NOTE! SOME ISILONS DO NOT DO WELL WITH BULK SNMP REQUESTS!!!! If you notice flapping supported items, make sure bulk requests is off on your hosts. It contains several additional features beyond basics, including drive, sensor, and license discovery. 2 different templates (One for your CLUSTER VIP, The other to monitor individual NODES). It monitors basic network, drive, IFS usage, bandwidth, cluster / node / drive status, etc. UPDATE v4: Fixed Temp discovery syntax problem UPDATE v3: Fixed unixtime unit in licensing expiration item. UPDATE v2: Fixed discovery item for disk size OID incorrect. This is version 1.1 so it may have some inconsistencies, but I'm pretty good at uploading any fixes as I find them. You can see this from my other templates on this site which are popular.</description>
       <groups>
         <group>
           <name>Templates</name>

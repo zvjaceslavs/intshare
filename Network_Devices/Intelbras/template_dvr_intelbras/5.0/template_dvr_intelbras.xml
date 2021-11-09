@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:39Z</date>
+  <date>2021-11-09T05:09:20Z</date>
   <groups>
     <group>
       <name>Dvr</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Dvr</template>
       <name>Dvr</name>
-      <description>template dvr</description>
+      <description>## Description template dvr ## Overview Monitorar Trafico de Rede Status do Canal Perca de Pacote Tempo Ligado Equipamento ## Author Favero</description>
       <groups>
         <group>
           <name>Dvr</name>

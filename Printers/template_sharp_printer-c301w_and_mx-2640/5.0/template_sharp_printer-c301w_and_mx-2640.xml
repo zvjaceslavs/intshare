@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:36Z</date>
+  <date>2021-11-09T04:28:45Z</date>
   <groups>
     <group>
       <name>BHS PAPERCUT SERVER/PRINTERS</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Sharp Printers</template>
       <name>Sharp Printers</name>
+      <description>## Overview This is a template for Sharp Printers MX-C301w and MX-2640. **Items** **Waste Toner Usage** **Cyan Toner Usage** **Black Photoconductive Drum Usage** **Yellow Photoconductive Drum Usage** **Cyan Photoconductive Drum Usage** **Magenta Photoconductive Drum Usage** **Magenta Toner Usage** **Yellow Toner Usage** **Magenta Developer Usage** **Black Developer Usage** **Cyan Developer Usage** **Yellow Developer Usage** **Black Toner Usage** **Fusing Unit Usage** **Paper Tray Levels** **LLD** **Paper Trays** ## Author James Lodge</description>
       <groups>
         <group>
           <name>BHS PAPERCUT SERVER/PRINTERS</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:07Z</date>
+  <date>2021-11-09T04:38:17Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Ricoh Aficio 3500SF e 3510SF</template>
       <name>Ricoh Aficio 3500SF e 3510SF</name>
+      <description>## Overview Template is tested with Ricoh Aficio 3500SF and 3510SF. Displays toner levels, Total Pages and Triggers on low toner level. ## Author Renan R. Santos</description>
       <groups>
         <group>
           <name>Printers</name>

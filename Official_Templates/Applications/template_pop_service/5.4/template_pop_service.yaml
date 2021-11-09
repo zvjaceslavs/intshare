@@ -1,0 +1,46 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:33:17Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: e042c0e455f74e7eb2384c203edcb26e
+      template: 'Template App POP Service'
+      name: 'Template App POP Service'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: ef6870d87700429a92c3dc496342457a
+          name: 'POP service is running'
+          type: SIMPLE
+          key: 'net.tcp.service[pop]'
+          delay: '60'
+          history: 7d
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: 'POP service'
+          triggers:
+            -
+              uuid: 72ad7fa260144095bdc41eddf09bbb08
+              expression: 'max(/Template App POP Service/net.tcp.service[pop],#3)=0'
+              name: 'POP service is down on {HOST.NAME}'
+              priority: AVERAGE
+      valuemaps:
+        -
+          uuid: 603906e741e94b349db9e5116aa2c81b
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up

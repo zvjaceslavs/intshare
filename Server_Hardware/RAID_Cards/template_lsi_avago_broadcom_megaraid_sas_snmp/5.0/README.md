@@ -2,7 +2,7 @@
 
 ## Description
 
-Zabbix Template for Avago Megaraid SAS (formerly LSI) RAID cards
+## Description Zabbix Template for Avago Megaraid SAS (formerly LSI) RAID cards ## Overview This is initial template for Monitoring LSI/Avago/Broadcom (or branded like Intel, IBM, Supermicro etc) MegaRAID based hardware RAID cards. According to vendor docs it should also support non-RAID adapters, enclosures and some other devices. It took me one night to complete major/required parts, so far template supports most of the options and all the critical components to keep you warned in case some RAID-related problems will occur. Supported so far: * Full LLD Support * Informational part for agent/driver/module * Complete Adapter-Related OID list with graphs and triggers * Part of Device-Related OID's with graphs * All triggers that are crucial * Comments for all OID's with value mappings from MegaRAID MIB Planned: * Value Mappings * Completing list of device OID's and related graphs * virtualDevice OID's and related graphs * enclosureInfo OID's and related graphs * Trap setting OID's * Traps for trapper * Check for updated version Not tested yet: * M$ Windows Support * Values and units are done as per MIB doc with 1-1 match, cannot guarantee that they are correct if vendor has provided wrong info (apparently, there is at least one minor issue) Installation and Requirements: * Ensure, that LSI-MegaRAID-SAS-MIB files downloaded from vendor site are installed and added to snmp.conf (after that you can restart both agent and server) * Ensure, that appropriate package (snmp sas or snmp sas _ir) with MegaRAID snmp agent wrapper is installed and running, snmpd.conf for OID's are set as per doc for wrapper * Ensure, that Zabbix is allowed to gather information from snmpd * Ensure, that required device drivers are installed on the hosts * Import Template, assign to hosts * Wait for LLD to check all OID's and start gathering data * Have a good night's sleep Bugs? -> Please Report @GitHub or at giomac gmail com When will you finish this? -> Nah, all critical issues are included, will do, definitely, but not asap ## Author George Machitidze 
 
 ## Overview
 
@@ -87,10 +87,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|MegaRAID SAS MIB Version|<p>-</p>|`SNMP agent`|mibVersion<p>Update: 60</p>|
 |MegaRAID SAS MIB Agent Module Version|<p>-</p>|`SNMP agent`|agentModuleVersion<p>Update: 60</p>|
 |MegaRAID SAS MIB Agent Module Name|<p>-</p>|`SNMP agent`|agentModuleName<p>Update: 60</p>|
 |MegaRAID SAS MIB Number of SAS adapters present|<p>-</p>|`SNMP agent`|adpNumber<p>Update: 60</p>|
+|MegaRAID SAS MIB Version|<p>-</p>|`SNMP agent`|mibVersion<p>Update: 60</p>|
 |MegaRAID SAS MIB Device $1 Adapter Port(s) to which it is connected|<p>Adapter port(s) to which the device is connected.</p>|`SNMP agent`|connectedAdapterPort[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Maximum Supported Speed for Device $1|<p>Maximum supported speed. Values:speed-unknown(0),speed-1p5G(1),speed-3G(2),speed-6G(3)</p>|`SNMP agent`|deviceSpeed[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Device $1 Ready for Removal|<p>If true, drive is ready for removal. Values:false(0),true(1)</p>|`SNMP agent`|disabledForRemoval[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|

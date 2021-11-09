@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:35Z</date>
+  <date>2021-11-09T05:15:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>OS Linux diskstats</template>
       <name>OS Linux diskstats</name>
-      <description>Self-contained template for monitoring disk statistics on Linux systems. Source: https://github.com/frei-style/zabbix-linux-diskstats-template</description>
+      <description>## Description Self-contained template for monitoring disk statistics on Linux systems. Source: https://github.com/frei-style/zabbix-linux-diskstats-template ## Overview This is a self-contained monitoring template to get I/O statistics of block devices on Linux systems. ## Author Manuel Frei</description>
       <groups>
         <group>
           <name>Templates</name>

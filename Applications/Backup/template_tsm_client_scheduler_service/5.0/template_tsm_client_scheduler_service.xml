@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:48Z</date>
+  <date>2021-11-09T04:43:02Z</date>
   <groups>
     <group>
       <name>Discovered hosts</name>
@@ -14,6 +14,7 @@
     <template>
       <template>App TSM Client Scheduler</template>
       <name>App TSM Client Scheduler</name>
+      <description>## Overview *** Template App TSM Client Scheduler *** ----------------------------------------- A basic template for monitoring IBM TSM Client Scheduler. IBM Spectrum Protect (Tivoli Storage Manager) - Haim Cohen 2017 ## Author Haim Cohen</description>
       <groups>
         <group>
           <name>Discovered hosts</name>

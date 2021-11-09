@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:30Z</date>
+  <date>2021-11-09T05:01:19Z</date>
   <groups>
     <group>
       <name>Templates/Server hardware</name>
@@ -11,7 +11,7 @@
     <template>
       <template>HP iLO100i IPMI</template>
       <name>HP iLO100i IPMI</name>
-      <description>Template polling sensor data of a HP iLO100i</description>
+      <description>## Description Template polling sensor data of a HP iLO100i ## Overview This templates monitors the HP iLO100i integrated lights-out system for available sensors. Tested only on Zabbix 4.2.x with a iLO100i, possibly working on other iLOs aswell. You need to configure the **IPMI-Tab** on any monitored host with a **Username** and **Password**. These can be set in the User Administration of the iLO-Card and only need "User" rights. **There are no triggers configured, alerts should be handled specifically for your own setup!** ## Author RegularAlicorn</description>
       <groups>
         <group>
           <name>Templates/Server hardware</name>

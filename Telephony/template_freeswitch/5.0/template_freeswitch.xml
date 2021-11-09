@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:12Z</date>
+  <date>2021-11-09T05:13:15Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Freeswitch</template>
       <name>Freeswitch</name>
+      <description>## Overview Monitors: service uptime, session rate, active calls, active sessions, peak sessions, peak calls and number of Freeswitch processes. Trigger on too many active calls [ie when you're running out of channels]. Requires the mod\_snmp SNMP subagent to be enabled in Freeswitch+net-snmp.</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:16Z</date>
+  <date>2021-11-09T05:06:43Z</date>
   <groups>
     <group>
       <name>Templates/Network devices</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Witek Switch</template>
       <name>Witek Switch</name>
-      <description>Test template</description>
+      <description>## Description Test template ## Overview This if template for Wi-Tek switch 8GE and 2SFP ports If you want to use this template for switch with another count of interfaces please change formula items(Total Traffic). ## Author Bori$</description>
       <groups>
         <group>
           <name>Templates/Network devices</name>

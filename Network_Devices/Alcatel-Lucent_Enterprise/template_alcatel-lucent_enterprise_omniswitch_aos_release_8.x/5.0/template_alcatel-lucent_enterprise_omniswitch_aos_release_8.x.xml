@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:01Z</date>
+  <date>2021-11-09T04:50:46Z</date>
   <groups>
     <group>
       <name>Templates/Switches</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</template>
       <name>Alcatel-Lucent Enterprise OmniSwitch AOS 8.x</name>
+      <description>## Overview **Alcatel-Lucent Enterprise OmniSwitch AOS Release 8.x** ======================================================== This template allows to monitor Alcatel-Lucent Enterprise OmniSwitch running AOS Release 8.x via SNMPv3. It is possible that the template also works for SNMPv1/v2c, but I'll not put any efforts in testing this (as there is no good reason not to use SNMPv3). Features -------- * Automatic Discovery of all Virtual Chassis (VC) elements * CPU (1 Min avg, 1 Hr avg, 1 Day avg => Graph + Trigger for all VC elements) * Memory (1 Min avg, 1 Hr avg, 1 Day avg => Graph + Trigger for all VC elements) * RX/TX Load (1 Min avg, 1 Hr avg, 1 Day avg => Graph + Trigger for all VC elements) * Switch Temperature (Last reading => Graph + Trigger for all VC elements) * System + Device Contact + Device Description + Device Location + Device Name + Device Uptime + Device type/model for all VC elements + Device serial number for all VC elements + Device Flash Freespace => Graph + Trigger for all VC elements * Discovery + All Ethernet Ports (regardless of state up/down) + All IP Interfaces + Associated In/OutOctets + Graphs based on Ethernet Port (ifDescription / IP-Interface name) SNMPv3 configuration on ALE OmniSwitch AOS Release 8.x ------------------------------------------------------ ``` -> user snmpv3 password snmpv3password sha+aes read-only all ``` Template configuration ---------------------- * Open "Configuration -> Templates -> Template Alcatel-Lucent Enterprise OmniSwitch AOS 8.x -> Macros" and set the three entries (see screenshot for reference) Feedback / Things to note ------------------------- * Feedback is welcome, but please note that this is/was an effort during my free time * Reach out to me via Twitter @BennyE\_HH or via GitHub (with the associated account to this article) * As per my knowledge it is not yet possible to generate a graph via LLD that will contain several sub-elements (e.g. all slots CPU/Memory etc) => see ZBXNEXT-927 for details * As of 15.04. this template has been tested on a VC of 2x OS6860 Changelog --------- * 15.04.2018 - Initial release ## Author Benny Eggerstedt</description>
       <groups>
         <group>
           <name>Templates/Switches</name>

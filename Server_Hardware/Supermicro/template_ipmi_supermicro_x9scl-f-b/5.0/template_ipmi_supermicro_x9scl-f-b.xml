@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:01Z</date>
+  <date>2021-11-09T04:31:28Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI Supermicro X9DRL-7F-BO</template>
       <name>IPMI Supermicro X9DRL-7F-BO</name>
+      <description>## Overview IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage] Items 17, Triggers 17, Graphs 3 ## Author Vadzim Smazheuski</description>
       <groups>
         <group>
           <name>Templates</name>

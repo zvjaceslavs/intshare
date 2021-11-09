@@ -2,7 +2,7 @@
 
 ## Description
 
-Get Windows servers mount points to folders
+## Description Get Windows servers mount points to folders ## Overview Template Discovery Windows Mountpoints on Folders ================================================= The current Zabbix Agent does not support the functionality of discovering mounted fileSystems on folders for Windows OS This is still opened a feature request <https://support.zabbix.com/browse/ZBXNEXT-1595> Installation ------------ ### Host Installation <ul style="box-sizing: border-box; margin-bottom: 16px; margin-top: 0px; padding-left: 2em; color: #24292e; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple C ## Author Douglas Lopez 
 
 ## Overview
 

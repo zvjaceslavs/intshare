@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:27Z</date>
+  <date>2021-11-09T04:40:36Z</date>
   <groups>
     <group>
       <name>Templates_Custom</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App PHP-FPM</template>
       <name>App PHP-FPM</name>
+      <description>## Overview English description - &lt;https://github.com/tonymadbrain/fcgi_stat_getter/blob/master/README.md> Скрипт для получения статистики из PHP-FPM, который можно использовать в Zabbix. Реализация на Go вот этого скрипта - &lt;http://doam.ru/fcgi_monitoring_with_zabbix/.> go version go1.7.4 darwin/amd64 Настройка PHP-FPM ----------------- В конфиге PHP-FPM пула нужно включить статус и пинг: ``` pm.status\_path = /status ``` ``` ping.path = /ping ``` И сделать restart сервера. Настройка Zabbix ---------------- Нужно скомпилировать бинарник под ту платформу, на которой запущен Zabbix сервер, для этого нужно использовать команду: ``` env GOOS={OS} GOARCH={ARCH} go build -v github.com/username/fcgi\_stat\_getter ``` {OS} - тип операционной системы, может быть: * Mac os - darwin * Windows - windows * Linux - linux * FreeBSD - freebsd {ARCH} - архитектура, может быть: * x86\_64 - amd64 * x86 - 386 * ARM - arm (linux only) Example: ``` $ env GOOS=linux GOARCH=amd64 go build -v github.com/tonymadbrain/fcgi\_stat\_getter ``` Закинуть бинарник на сервер Zabbix в каталог /usr/lib/zabbix/externalscripts, сделать его исполняемым: ``` chmod +x fcgi\_stat\_getter ``` сделать владельцем файла Zabbix: ``` chown zabbix:zabbix fcgi\_stat\_getter ``` Затем нужно импортировать шаблон *zbx\_fcgi\_template.xml* в Zabbix фронтенде и прикрепить его к нужному серверу. Ждать данных. ## Author Antony Ryabov</description>
       <groups>
         <group>
           <name>Templates_Custom</name>

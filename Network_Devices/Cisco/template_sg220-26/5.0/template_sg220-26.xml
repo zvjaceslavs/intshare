@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:42Z</date>
+  <date>2021-11-09T04:55:34Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco_SG220-26P.xml</template>
       <name>Cisco_SG220-26P.xml</name>
+      <description>## Overview Simple template for: Cisco SG220-26 Port Status, Port Traffic In, Port Traffic Out, and System Uptime. Hardware webpage: goo.gl/7zdRSN ## Author ArcticNerd</description>
       <groups>
         <group>
           <name>Templates</name>

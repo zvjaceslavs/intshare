@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:20Z</date>
+  <date>2021-11-09T05:00:12Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>NatureRemo</template>
       <name>NatureRemo</name>
+      <description>## Overview Automatically detects Nature Remo with LLD and generates temperature / humidity / illuminance items. Please put the access token obtained at https://home.nature.global in the host macro {$REMO\_BEARER}. You can download userparameter\_natureremo.conf and remo-json.sh from the links below. &lt;https://github.com/nakaring/Zabbix-NatureRemo/blob/master/remo-json.sh> &lt;https://github.com/nakaring/Zabbix-NatureRemo/blob/master/userparameter_natureremo.conf> In remo-json.sh, place it in /usr/local/bin (or rewrite the path in userparameter) with permission to execute the zabbix-agent execution user. ZabbixのLLDでNatureRemoを検出して、温湿度と照度を取得します。 ---------------------------------------- userparameterで/usr/local/bin/remo-json.shを参照してるので、そのパスに置くか書き換えること。 ------------------------------------------------------------------ remo-json.shはZabbix-agent実行ユーザーに実行権限を付けること。 ------------------------------------------- ## Author nakaring</description>
       <groups>
         <group>
           <name>Templates</name>

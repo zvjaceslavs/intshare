@@ -1,5 +1,9 @@
 # SNMP  AsGa OLT2500
 
+## Description
+
+## Overview - Discovery ONUs - 15 Items - 3 Triggers by Onu - Disconvery PON Interfaces - 8 Items - Discovery SFP Interfaces - 12 Items - 1 Trigger by Interface - Discovery XFP Interfaces - 12 Items - 1 Trigger by Interface I will update in some days, I wait your Suggestions. Thanks!! ## Author Reginaldo F Lopes 
+
 ## Overview
 
 - Discovery ONUs - 15 Items - 3 Triggers by Onu
@@ -41,26 +45,26 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Discovery ONUs|<p>-</p>|`SNMP agent`|onuDiscoveryONUsQTD<p>Update: 3600</p>|
+|Discovery PON Interfaces|<p>-</p>|`SNMP agent`|oltPonInvDiscoveryInterfaces<p>Update: 3600</p>|
 |Discovery XFP Interfaces|<p>-</p>|`SNMP agent`|oltXFPInvDiscoveryInterfaces<p>Update: 3600</p>|
 |Discovery SFP Interfaces|<p>-</p>|`SNMP agent`|oltSFPInvDiscoveryInterfaces<p>Update: 3600</p>|
-|Discovery PON Interfaces|<p>-</p>|`SNMP agent`|oltPonInvDiscoveryInterfaces<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|System Uptime|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 60</p>|
 |System Version|<p>-</p>|`SNMP agent`|oltInvSystemVersion<p>Update: 60</p>|
-|Main Power Supply State|<p>-</p>|`SNMP agent`|oltGenInfoMainPowerSupplyState<p>Update: 60</p>|
-|Hostname|<p>-</p>|`SNMP agent`|oltGenInfoHostname<p>Update: 3600</p>|
-|Hardware Version|<p>-</p>|`SNMP agent`|oltInvHardwareVersion<p>Update: 3600</p>|
-|Backup Power Supply State|<p>-</p>|`SNMP agent`|oltGenInfoBackupPowerSupplyState<p>Update: 60</p>|
 |System Location|<p>-</p>|`SNMP agent`|sysLocation.0<p>Update: 3600</p>|
 |Shipping Date|<p>-</p>|`SNMP agent`|oltInvShippingDate<p>Update: 3600</p>|
-|Discovery ONU Number|<p>-</p>|`SNMP agent`|onuDiscoveryONUsNumber<p>Update: 3600</p>|
-|System Contact|<p>-</p>|`SNMP agent`|sysContact.0<p>Update: 3600</p>|
-|CPU temperature|<p>-</p>|`SNMP agent`|oltGenInfoCPUTemperatureValue<p>Update: 60</p>|
 |Serial Number|<p>-</p>|`SNMP agent`|oltInvSerialNumber<p>Update: 3600</p>|
-|System Uptime|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 60</p>|
+|Hardware Version|<p>-</p>|`SNMP agent`|oltInvHardwareVersion<p>Update: 3600</p>|
+|Hostname|<p>-</p>|`SNMP agent`|oltGenInfoHostname<p>Update: 3600</p>|
+|CPU temperature|<p>-</p>|`SNMP agent`|oltGenInfoCPUTemperatureValue<p>Update: 60</p>|
+|Backup Power Supply State|<p>-</p>|`SNMP agent`|oltGenInfoBackupPowerSupplyState<p>Update: 60</p>|
+|System Contact|<p>-</p>|`SNMP agent`|sysContact.0<p>Update: 3600</p>|
 |MAC Address|<p>-</p>|`SNMP agent`|oltInvMACAddress<p>Update: 3600</p>|
+|Main Power Supply State|<p>-</p>|`SNMP agent`|oltGenInfoMainPowerSupplyState<p>Update: 60</p>|
+|Discovery ONU Number|<p>-</p>|`SNMP agent`|onuDiscoveryONUsNumber<p>Update: 3600</p>|
 |Status ONU  $1|<p>-</p>|`SNMP agent`|onuGenActivationState[{#SNMPVALUE}]<p>Update: 10</p><p>LLD</p>|
 |Distance ONU $1|<p>-</p>|`SNMP agent`|onuGenDistance[{#SNMPVALUE}]<p>Update: 10</p><p>LLD</p>|
 |Last Alarm Date ONU  $1|<p>-</p>|`SNMP agent`|onuGenLastAlarmDateTime[{#SNMPVALUE}]<p>Update: 10</p><p>LLD</p>|
@@ -76,6 +80,14 @@ There are no template links in this template.
 |Profile Name ONU  $1|<p>-</p>|`SNMP agent`|onuMngProfileName[{#SNMPVALUE}]<p>Update: 10</p><p>LLD</p>|
 |Profile Reason ONU  $1|<p>-</p>|`SNMP agent`|onuMngProfileReason[{#SNMPVALUE}]<p>Update: 10</p><p>LLD</p>|
 |Profile Status ONU  $1|<p>-</p>|`SNMP agent`|onuMngProfileStatus[{#SNMPVALUE}]<p>Update: 10</p><p>LLD</p>|
+|PON Internal Temperature  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvInternalTemperature[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|PON Laser Wave Lenght  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvLaserWaveLength[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|PON PartNumber  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvPartNumber[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|PON Revision Level  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvRevisionLevel[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|PON RX Power Interface $1|<p>-</p>|`SNMP agent`|oltPONInvRxOutputPowerValue[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|PON Serial Number  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvSerialNumber[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|PON TX Power Interface $1|<p>-</p>|`SNMP agent`|oltPONInvTxOutputPowerValue[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|PON Vendor Name  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvVendorName[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |Admin status of interface $1|<p>-</p>|`SNMP agent`|ifAdminStatusXFP[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Download {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifInOctetsXFP[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Operational status of interface $1|<p>-</p>|`SNMP agent`|ifOperStatusXFP[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
@@ -100,14 +112,6 @@ There are no template links in this template.
 |SFP Serial Number Interface $1|<p>-</p>|`SNMP agent`|oltEthInvSerialNumber[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |SFP TX Power Interface $1|<p>-</p>|`SNMP agent`|oltEthInvTxPowerValue[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |SFP Vendor Name Interface $1|<p>-</p>|`SNMP agent`|oltEthInvVendorName[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|PON Internal Temperature  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvInternalTemperature[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|PON Laser Wave Lenght  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvLaserWaveLength[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|PON PartNumber  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvPartNumber[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|PON Revision Level  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvRevisionLevel[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|PON RX Power Interface $1|<p>-</p>|`SNMP agent`|oltPONInvRxOutputPowerValue[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|PON Serial Number  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvSerialNumber[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|PON TX Power Interface $1|<p>-</p>|`SNMP agent`|oltPONInvTxOutputPowerValue[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|PON Vendor Name  Interface $1|<p>-</p>|`SNMP agent`|oltPONInvVendorName[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

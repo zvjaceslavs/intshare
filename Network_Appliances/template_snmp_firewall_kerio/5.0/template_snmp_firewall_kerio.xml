@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:25Z</date>
+  <date>2021-11-09T05:25:42Z</date>
   <groups>
     <group>
       <name>Template/Kerio</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</template>
       <name>SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0</name>
+      <description>## Overview alimoradimllm99@gmail.com</description>
       <groups>
         <group>
           <name>Template/Kerio</name>

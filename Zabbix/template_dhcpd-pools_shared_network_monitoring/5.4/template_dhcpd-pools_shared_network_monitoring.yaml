@@ -1,0 +1,306 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:17:22Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: ad564c6529fd4c0399fbfefede260d5c
+      template: 'DHCPD Pools data'
+      name: 'DHCPD Pools data'
+      description: |
+        ## Description
+        
+        Template that use dhcpd-pools ( package avail on EPEL or http://dhcpd-pools.sourceforge.net ) to monitor DHCPD Pools Status
+        
+        ## Overview
+        
+        
+        ```
+        Zabbix 5 template to use dhcpd-pools V3.x+ for JSON support ( [http://dhcpd-pools.sourceforge.net](http://dhcpd-pools.sourceforge.net/) ) to monitor ISC DHCPD shared network status.
+        
+        It will create items ( Already Used IP, Defined IP, Free IP, Percent IP already use at least for 1 lease, Percent IP used, Status, Touched IP, Used IP ) for each Shared Network 
+        
+        Create a trigger on " Percent IP used " based on a macro ( {$PERCENT\_IP\_USED} with default a 90% ) at severity " Average " and a second trigger on " Free IP " with a macro ( {$MIN\_FREE\_IP} default at 10 ) at severity " High " for each Shared Network.
+        
+        Also creates a graph for each Shared Network that is shown on a screen
+        
+        You will need to put EnableRemoteCommands=1 on zabbix\_agentd.conf of the host that runs DHCPD
+        ```
+        
+        
+        ## Author
+        
+        Mathieu Morier
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: c7c47ba9bd5b4670abbc5097b3c2efdf
+          name: DHCPD-POOLS-JSON-DATA
+          key: 'system.run[dhcpd-pools -fj -L 12]'
+          delay: 5m
+          history: 30d
+          trends: '0'
+          value_type: TEXT
+          description: 'RAW JSON DATA from dhcpd-pools'
+          preprocessing:
+            -
+              type: STR_REPLACE
+              parameters:
+                - shared-networks
+                - data
+          tags:
+            -
+              tag: Application
+              value: DHCPD
+      discovery_rules:
+        -
+          uuid: 56e721660f604bcbbc4fc83ef23a6efa
+          name: 'DHCPD-Pools Discovery'
+          type: DEPENDENT
+          key: dhcpd-pools.discovery
+          delay: '0'
+          lifetime: 90d
+          item_prototypes:
+            -
+              uuid: 509a20705bdc4210a056662ed8e87fa9
+              name: '{#LOCATION} : Defined IP'
+              type: CALCULATED
+              key: 'DHCPD-POOLS[{#LOCATION},DEFINED]'
+              delay: 5m
+              params: '{#DEFINED}'
+              description: 'Total number of IP’s in the POOL'
+              tags:
+                -
+                  tag: Application
+                  value: DHCPD
+                -
+                  tag: Application
+                  value: 'DHCPD-POOLS : {#LOCATION}'
+            -
+              uuid: 401340dceeab4c299ccb5cad1a15c71a
+              name: '{#LOCATION} : Free IP'
+              type: CALCULATED
+              key: 'DHCPD-POOLS[{#LOCATION},FREE]'
+              delay: 5m
+              params: '{#FREE}'
+              description: 'Number of IP’s currently available in the pool'
+              tags:
+                -
+                  tag: Application
+                  value: DHCPD
+                -
+                  tag: Application
+                  value: 'DHCPD-POOLS : {#LOCATION}'
+              trigger_prototypes:
+                -
+                  uuid: ec61d7219bf543a6b518f1831b307c5c
+                  expression: 'last(/DHCPD Pools data/DHCPD-POOLS[{#LOCATION},FREE])<{$MIN_FREE_IP}'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/DHCPD Pools data/DHCPD-POOLS[{#LOCATION},FREE])>{$MIN_FREE_IP}+10'
+                  name: 'Less than {$MIN_FREE_IP} leases available in {#LOCATION}'
+                  priority: HIGH
+            -
+              uuid: 717660fbd6e44d92aab38bb48f14ad9f
+              name: '{#LOCATION} : Percent IP used'
+              type: CALCULATED
+              key: 'DHCPD-POOLS[{#LOCATION},PERCENT]'
+              delay: 5m
+              units: '%'
+              params: '{#PERCENT}'
+              description: 'Percentage of IP’s used in the pool'
+              tags:
+                -
+                  tag: Application
+                  value: DHCPD
+                -
+                  tag: Application
+                  value: 'DHCPD-POOLS : {#LOCATION}'
+              trigger_prototypes:
+                -
+                  uuid: 8e17e836fa664434a912642b8ad6abbf
+                  expression: 'last(/DHCPD Pools data/DHCPD-POOLS[{#LOCATION},PERCENT])>{$PERCENT_IP_USED}'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/DHCPD Pools data/DHCPD-POOLS[{#LOCATION},PERCENT])<{$PERCENT_IP_USED}-5'
+                  name: 'More than {$PERCENT_IP_USED}% IP used in {#LOCATION}'
+                  priority: AVERAGE
+            -
+              uuid: 8ddeb9d0389a47689033b3a0eac6654b
+              name: '{#LOCATION} : Status'
+              type: CALCULATED
+              key: 'DHCPD-POOLS[{#LOCATION},STATUS]'
+              delay: 5m
+              params: '{#STATUS}'
+              description: |
+                Status of the Pool ( by default / see http://dhcpd-pools.sourceforge.net/man.html for −−critical and −−warning )
+                0 = Good
+                1 = percent used over 80%
+                2 = percent used over 90%
+              tags:
+                -
+                  tag: Application
+                  value: DHCPD
+                -
+                  tag: Application
+                  value: 'DHCPD-POOLS : {#LOCATION}'
+            -
+              uuid: 9e3fbab051a5495a875e6d17c44676f7
+              name: '{#LOCATION} : Touched IP'
+              type: CALCULATED
+              key: 'DHCPD-POOLS[{#LOCATION},TOUCHED]'
+              delay: 5m
+              params: '{#TOUCHED}'
+              description: 'Number of IP’s which appear in the lease file, but who’s leases have expired. A touched IP is either expired or abandoned.'
+              tags:
+                -
+                  tag: Application
+                  value: DHCPD
+                -
+                  tag: Application
+                  value: 'DHCPD-POOLS : {#LOCATION}'
+            -
+              uuid: ff6b2e042aa2498b99615909b69121bf
+              name: '{#LOCATION} : Already Used IP'
+              type: CALCULATED
+              key: 'DHCPD-POOLS[{#LOCATION},TOUCH_COUNT]'
+              delay: 5m
+              params: '{#TOUCH_COUNT}'
+              description: 'Number of IP’s that was already used at least once in the pool'
+              tags:
+                -
+                  tag: Application
+                  value: DHCPD
+                -
+                  tag: Application
+                  value: 'DHCPD-POOLS : {#LOCATION}'
+            -
+              uuid: 2b1ec06c8447483d91bed8b961ec6234
+              name: '{#LOCATION} : Percent IP already use at least for 1 lease'
+              type: CALCULATED
+              key: 'DHCPD-POOLS[{#LOCATION},TOUCH_PERCENT]'
+              delay: 5m
+              units: '%'
+              params: '{#TOUCH_PERCENT}'
+              description: 'Percentage of IP’s that was already in used at least one time in the pool'
+              tags:
+                -
+                  tag: Application
+                  value: DHCPD
+                -
+                  tag: Application
+                  value: 'DHCPD-POOLS : {#LOCATION}'
+            -
+              uuid: e12b357e12bb4d1cbc0f84b0efc60c68
+              name: '{#LOCATION} : Used IP'
+              type: CALCULATED
+              key: 'DHCPD-POOLS[{#LOCATION},USED]'
+              delay: 5m
+              params: '{#USED}'
+              description: 'Number of IP’s currently used in the pool'
+              tags:
+                -
+                  tag: Application
+                  value: DHCPD
+                -
+                  tag: Application
+                  value: 'DHCPD-POOLS : {#LOCATION}'
+          graph_prototypes:
+            -
+              uuid: 69bd898144454d40808a66e108df5c75
+              name: '{#LOCATION}'
+              graph_items:
+                -
+                  drawtype: FILLED_REGION
+                  color: 1A7C11
+                  item:
+                    host: 'DHCPD Pools data'
+                    key: 'DHCPD-POOLS[{#LOCATION},DEFINED]'
+                -
+                  sortorder: '1'
+                  drawtype: FILLED_REGION
+                  color: 0040FF
+                  item:
+                    host: 'DHCPD Pools data'
+                    key: 'DHCPD-POOLS[{#LOCATION},USED]'
+                -
+                  sortorder: '2'
+                  drawtype: BOLD_LINE
+                  color: 00FFFF
+                  item:
+                    host: 'DHCPD Pools data'
+                    key: 'DHCPD-POOLS[{#LOCATION},TOUCH_COUNT]'
+          master_item:
+            key: 'system.run[dhcpd-pools -fj -L 12]'
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEFINED}'
+              path: $.defined
+            -
+              lld_macro: '{#FREE}'
+              path: $.free
+            -
+              lld_macro: '{#LOCATION}'
+              path: $.location
+            -
+              lld_macro: '{#PERCENT}'
+              path: $.percent
+            -
+              lld_macro: '{#STATUS}'
+              path: $.status
+            -
+              lld_macro: '{#TOUCHED}'
+              path: $.touched
+            -
+              lld_macro: '{#USED}'
+              path: $.used
+            -
+              lld_macro: '{#TOUCH_COUNT}'
+              path: $.touch_count
+            -
+              lld_macro: '{#TOUCH_PERCENT}'
+              path: $.touch_percent
+      macros:
+        -
+          macro: '{$MIN_FREE_IP}'
+          value: '10'
+          description: 'Minimum Free IP'
+        -
+          macro: '{$PERCENT_IP_USED}'
+          value: '90'
+          description: 'Max pourcentage of IP used  for trigger'
+      dashboards:
+        -
+          uuid: c5425ca19d1f48e58a0496605f4e7e27
+          name: DHCPD-POOLS
+          pages:
+            -
+              widgets:
+                -
+                  type: GRAPH_PROTOTYPE
+                  width: '24'
+                  height: '5'
+                  fields:
+                    -
+                      type: INTEGER
+                      name: source_type
+                      value: '2'
+                    -
+                      type: INTEGER
+                      name: columns
+                      value: '1'
+                    -
+                      type: INTEGER
+                      name: rows
+                      value: '1'
+                    -
+                      type: GRAPH_PROTOTYPE
+                      name: graphid
+                      value:
+                        name: '{#LOCATION}'
+                        host: 'DHCPD Pools data'

@@ -1,5 +1,9 @@
 # App Lighttpd by Zabbix Agent
 
+## Description
+
+## Overview A very simple Zabbix Agent template for monitoring Lighttpd using the ModStatus module. ## Author Dave Humphrey (dave@uesp.net) 
+
 ## Overview
 
 A very simple Zabbix Agent template for monitoring Lighttpd using the ModStatus module.
@@ -31,22 +35,22 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Lighttpd: CPU utilization|<p>Process CPU utilization percentage.</p>|`Zabbix agent`|proc.cpu.util["{$LIGHTTPD.PROCESS_NAME}"]<p>Update: 1m</p>|
-|Lighttpd: Service ping|<p>-</p>|`Zabbix agent`|net.tcp.service[http,"{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PORT}"]<p>Update: 1m</p>|
-|Lighttpd: Requets per second|<p>Calculated as change rate for 'RequestsTotal' stat.</p>|`Dependent item`|lighttpd.requests.rate<p>Update: 0</p>|
-|Lighttpd: Service response time|<p>-</p>|`Zabbix agent`|net.tcp.service.perf[http,"{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PORT}"]<p>Update: 1m</p>|
-|Lighttpd: Memory usage (rss)|<p>Resident set size memory used by process in bytes.</p>|`Zabbix agent`|proc.mem["{$LIGHTTPD.PROCESS_NAME}",,,,rss]<p>Update: 1m</p>|
-|Lighttpd: Number of processes running|<p>-</p>|`Zabbix agent`|proc.num["{$LIGHTTPD.PROCESS_NAME}"]<p>Update: 1m</p>|
-|Lighttpd: Bytes per second|<p>Calculated as change rate for 'TrafficTotal' stat.</p>|`Dependent item`|lighttpd.bytes.rate<p>Update: 0</p>|
-|Lighttpd: Total Requests|<p>Total requests since server started</p>|`Dependent item`|lighttpd.requests.total<p>Update: 0</p>|
-|Lighttpd: Get status|<p>Getting data from a machine-readable version of the Lighttpd status page. https://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModStatus</p>|`Zabbix agent`|web.page.get["{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PATH}","{$LIGHTTPD.STATUS.PORT}"]<p>Update: 1m</p>|
-|Lighttpd: Total bytes|<p>Total bytes served since restart</p>|`Dependent item`|lighttpd.bytes<p>Update: 0</p>|
-|Lighttpd: Request Rate 5 sec|<p>Average request rate in the last 5 sec as recorded by Lighttpd.</p>|`Dependent item`|lighttpd.requests.average5s<p>Update: 0</p>|
-|Lighttpd: Uptime|<p>Service uptime in seconds</p>|`Dependent item`|lighttpd.uptime<p>Update: 0</p>|
 |Lighttpd: Memory usage (vsize)|<p>Virtual memory size used by process in bytes.</p>|`Zabbix agent`|proc.mem["{$LIGHTTPD.PROCESS_NAME}",,,,vsize]<p>Update: 1m</p>|
+|Lighttpd: Idle Servers|<p>Current number of Lighttpd threads that are idle and waiting for a request</p>|`Dependent item`|lighttpd.servers.idle<p>Update: 0</p>|
+|Lighttpd: Service ping|<p>-</p>|`Zabbix agent`|net.tcp.service[http,"{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PORT}"]<p>Update: 1m</p>|
+|Lighttpd: Service response time|<p>-</p>|`Zabbix agent`|net.tcp.service.perf[http,"{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PORT}"]<p>Update: 1m</p>|
+|Lighttpd: Total bytes|<p>Total bytes served since restart</p>|`Dependent item`|lighttpd.bytes<p>Update: 0</p>|
+|Lighttpd: Requets per second|<p>Calculated as change rate for 'RequestsTotal' stat.</p>|`Dependent item`|lighttpd.requests.rate<p>Update: 0</p>|
+|Lighttpd: Number of processes running|<p>-</p>|`Zabbix agent`|proc.num["{$LIGHTTPD.PROCESS_NAME}"]<p>Update: 1m</p>|
+|Lighttpd: CPU utilization|<p>Process CPU utilization percentage.</p>|`Zabbix agent`|proc.cpu.util["{$LIGHTTPD.PROCESS_NAME}"]<p>Update: 1m</p>|
+|Lighttpd: Uptime|<p>Service uptime in seconds</p>|`Dependent item`|lighttpd.uptime<p>Update: 0</p>|
+|Lighttpd: Memory usage (rss)|<p>Resident set size memory used by process in bytes.</p>|`Zabbix agent`|proc.mem["{$LIGHTTPD.PROCESS_NAME}",,,,rss]<p>Update: 1m</p>|
 |Lighttpd: Busy servers|<p>Number of Lighttpd threads currently serving requests.</p>|`Dependent item`|lighttpd.servers.busy<p>Update: 0</p>|
 |Lighttpd: Traffic Average 5 sec|<p>Average traffic rate in the last 5 sec as recorded by Lighttpd.</p>|`Dependent item`|lighttpd.traffic.average5s<p>Update: 0</p>|
-|Lighttpd: Idle Servers|<p>Current number of Lighttpd threads that are idle and waiting for a request</p>|`Dependent item`|lighttpd.servers.idle<p>Update: 0</p>|
+|Lighttpd: Total Requests|<p>Total requests since server started</p>|`Dependent item`|lighttpd.requests.total<p>Update: 0</p>|
+|Lighttpd: Get status|<p>Getting data from a machine-readable version of the Lighttpd status page. https://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModStatus</p>|`Zabbix agent`|web.page.get["{$LIGHTTPD.STATUS.HOST}","{$LIGHTTPD.STATUS.PATH}","{$LIGHTTPD.STATUS.PORT}"]<p>Update: 1m</p>|
+|Lighttpd: Request Rate 5 sec|<p>Average request rate in the last 5 sec as recorded by Lighttpd.</p>|`Dependent item`|lighttpd.requests.average5s<p>Update: 0</p>|
+|Lighttpd: Bytes per second|<p>Calculated as change rate for 'TrafficTotal' stat.</p>|`Dependent item`|lighttpd.bytes.rate<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

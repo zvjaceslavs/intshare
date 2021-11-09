@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:47Z</date>
+  <date>2021-11-09T05:10:14Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Mitel MiVoice Business</template>
       <name>Mitel MiVoice Business</name>
+      <description>## Overview Template for Mitel MiVoice Business, formerly known as Mitel Communications Director and Mitel 3300. Uses SNMP to fetch various Mitel OIDs, most importantly the Alarm State. Tested with a range of firmware releases from 10.x to 14.x. Fetches: * Alarm state * Number of categories in alarm state * User licenses purchased * User licenses used * Disk reads * Disk writes * 1min CPU average * Hardware platform * Software version Triggers: * Alarm state</description>
       <groups>
         <group>
           <name>Templates</name>

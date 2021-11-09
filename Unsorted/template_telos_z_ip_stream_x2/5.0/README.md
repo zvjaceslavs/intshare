@@ -2,7 +2,7 @@
 
 ## Description
 
-Telos Z/IPStream-X2 SNMP Template. Created by Roman Ermakov r.ermakov@emg.fm v1.0 - 2019-01-29 - Initial release Usage notes: 1. Install and configure SNMP Service on your Windows server; 2. Install and activate ZIPStream software; 3. Run: C: Program Files (x86) ZIPStream X2 snmpmgr.exe register 4. Restart SNMP Service If you need the MIB, get TLSCORP-ZIPSTREAM-X2-MIB.txt from installation folder.
+## Description Telos Z/IPStream-X2 SNMP Template. Created by Roman Ermakov r.ermakov@emg.fm v1.0 - 2019-01-29 - Initial release Usage notes: 1. Install and configure SNMP Service on your Windows server; 2. Install and activate ZIPStream software; 3. Run: C: Program Files (x86) ZIPStream X2 snmpmgr.exe register 4. Restart SNMP Service If you need the MIB, get TLSCORP-ZIPSTREAM-X2-MIB.txt from installation folder. ## Overview Template for **Telos Z/IP Stream X2** software with SNMP management. <https://www.telosalliance.com/Telos/ZIPStream-X2> **Items features:** * Count of Audio sources * Count of Audio sources with errors * Count of Audio sources with silence * Count of Live Streams * Count of Live Streams with errors * Product name * Product version **Triggers features:** * Last two checks - streams have errors; audio sources have silence **Discovery features:** * Items: Livewire sources and destinations Enabled/Disabled, Address, Name, Gain etc. * Triggers: Gain changed, Source Address changed, Port disabled **Usage notes:** 1. Install and configure SNMP Service on your Windows server; 2. Install and activate ZIPStream software; 3. Run: *C: Program Files (x86) ZIPStream X2 snmpmgr.exe register* 4. Restart SNMP Service If you need the MIB get TLSCORP-ZIPSTREAM-X2-MIB.txt from installation folder. ## Author Roman Ermakov 
 
 ## Overview
 
@@ -79,13 +79,13 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|streams-errors|<p>Count of live streams which have errors</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.streams-errors<p>Update: 30s</p>|
-|product-name|<p>Product Name</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.product-name<p>Update: 6h</p>|
-|product-version|<p>Product Version</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.product-version<p>Update: 6h</p>|
 |audio-sources-count|<p>Count of active audio sources</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.audio-sources-count<p>Update: 20m</p>|
+|product-version|<p>Product Version</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.product-version<p>Update: 6h</p>|
+|product-name|<p>Product Name</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.product-name<p>Update: 6h</p>|
 |audio-sources-errors|<p>Count of audio sources which have errors</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.audio-sources-errors<p>Update: 30s</p>|
-|streams-count|<p>Count of active live streams</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.streams-count<p>Update: 30s</p>|
 |audio-sources-silence|<p>Count of audio sources which have silence detected</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.audio-sources-silence<p>Update: 30s</p>|
+|streams-errors|<p>Count of live streams which have errors</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.streams-errors<p>Update: 30s</p>|
+|streams-count|<p>Count of active live streams</p>|`SNMP agent`|TLSCORP-ZIPSTREAM-X2-MIB.streams-count<p>Update: 30s</p>|
 |srcAudioGain for {#SNMPINDEX}|<p>Audio gain/attenuation trim [dB].</p>|`SNMP agent`|srcAudioGain[{#SNMPINDEX}]<p>Update: 6h</p><p>LLD</p>|
 |srcEnable for {#SNMPINDEX}|<p>This object has a value of false(2) if this port is disabled. This object has a value of true(1) when the source port is enabled. Source port needs to be enabled in order to transmit multicast stream or accept unicast connections.</p>|`SNMP agent`|srcEnable[{#SNMPINDEX}]<p>Update: 6h</p><p>LLD</p>|
 |srcIndex for {#SNMPINDEX}|<p>A unique value, greater than zero, for each destination. It is recommended that values are assigned contiguously starting from 1. The value for each port sub-layer must remain constant at least from one re-initialization of the entity's network management system to the next re- initialization.</p>|`SNMP agent`|srcIndex[{#SNMPINDEX}]<p>Update: 6h</p><p>LLD</p>|

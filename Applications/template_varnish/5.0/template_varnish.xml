@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:14Z</date>
+  <date>2021-11-09T05:13:28Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,7 +11,7 @@
     <template>
       <template>App Varnish by Zabbix agent</template>
       <name>App Varnish by Zabbix agent</name>
-      <description>Simple template for the Varnish cache using results from the varnishstat command. Ensure that "EnableRemoteCommands=1" is set in the host's agent config file.</description>
+      <description>## Description Simple template for the Varnish cache using results from the varnishstat command. Ensure that "EnableRemoteCommands=1" is set in the host's agent config file. ## Overview Simple template for the Varnish cache using results from the varnishstat command. Ensure that "EnableRemoteCommands=1" is set in the host's agent config file. ## Author Dave Humphrey (dave@uesp.net)</description>
       <groups>
         <group>
           <name>Templates/Applications</name>

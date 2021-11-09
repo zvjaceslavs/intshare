@@ -1,1 +1,0 @@
-UserParameter=netinfo[*],PowerShell.exe -ExecutionPolicy UnRestricted -File C:\zabbix\scripts\Netframeworkinfo.ps1 $1 $2

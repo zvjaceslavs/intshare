@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:32Z</date>
+  <date>2021-11-09T04:41:11Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Xanto S1500R</template>
       <name>Xanto S1500R</name>
+      <description>## Overview Template for Online USV - XANTO S1500R tested with xabbix 3.2 via SNMP Monitoring and triggers for - Current Battery load in % - Battery capacity - remaining runtime in min - temperature - Voltage Input / Output - MAC, USV Model, system runtime.... including triggers and graphs ## Author stschu</description>
       <groups>
         <group>
           <name>Templates</name>

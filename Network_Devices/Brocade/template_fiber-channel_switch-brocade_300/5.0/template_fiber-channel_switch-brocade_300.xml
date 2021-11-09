@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:35Z</date>
+  <date>2021-11-09T04:48:18Z</date>
   <groups>
     <group>
       <name>Terphane/Switches</name>
@@ -11,6 +11,7 @@
     <template>
       <template>BROCADE FIBER CHANNEL SWITCH</template>
       <name>BROCADE FIBER CHANNEL SWITCH</name>
+      <description>## Overview Unnoficial template created and used by me. This template allows you to monitor your Brocade 300's fans, power supply, status of temperature, temperature on sensors and the system's uptime. This template does NOT monitor any interfaces. If you want to do so, and don't know how, please feel free to contact me by email, and I will be glad to help you. marcelo1302a@gmail.com ## Author Marcelo F. Salvatori</description>
       <groups>
         <group>
           <name>Terphane/Switches</name>

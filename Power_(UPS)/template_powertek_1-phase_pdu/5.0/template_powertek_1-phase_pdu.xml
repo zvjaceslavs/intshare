@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:00Z</date>
+  <date>2021-11-09T05:23:30Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Powertek 1 Phase PDU</template>
       <name>Powertek 1 Phase PDU</name>
-      <description>Created by Joakim Kingström at Sports Interactive.</description>
+      <description>## Description Created by Joakim Kingström at Sports Interactive. ## Overview This template is for Powertek 1-phase PDU's. It consists of 25 Items, nine triggers, and four graphs. It also has four discovery rules, with one of them having nine trigger prototypes. The discovery rules are disabled by default since they only created noise for me, but might be useful for other people. ## Author Joakim Kingström</description>
       <groups>
         <group>
           <name>Templates</name>

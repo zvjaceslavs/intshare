@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:56Z</date>
+  <date>2021-11-09T04:50:13Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Color printers Kyocera</template>
       <name>Color printers Kyocera</name>
+      <description>## Overview Шаблон для мониторинга цветного принтера Kyocera 6130 Переменные: Cartridge toner level % - cyan Current cartridge toner level - black Max cartridge toner level - cyan Current cartridge toner level - cyan Max cartridge toner level - magenta Current cartridge toner level - magenta Max cartridge toner level - yellow Current cartridge toner level - yellow Max cartridge toner level - black Cartridge toner level % - magenta Printer model Cartridge toner level % - yellow Pages printed - total Printer location Serial number</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:05Z</date>
+  <date>2021-11-09T04:51:15Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Mikrotik - BGP LLD</template>
       <name>Mikrotik - BGP LLD</name>
+      <description>## Overview MikroTik BGP LLD usando SSH Ajustes os intervalos de atualizações de acordo com sua necessidade. Declare macros do template de acordo com configuração do seu RouterOS. {$MIKROTIK\_SSH\_PASS} {$MIKROTIK\_SSH\_PORT} {$MIKROTIK\_SSH\_USER} Altere o timeout do zabbix-server "zabbix\_server.conf" Timeout=30 OBS: O template não vai monitora peers desabilitados. O template monitora os seguintes itens {#PEERNAME} ({#REMOTEAS}) - Prefix {#PEERNAME} ({#REMOTEAS}) - Status E gera alarme caso o status do peer vier diferente de "established" Qualquer duvida, segue email para contato. Email: [jorge.iwano@gmail.com](mailto:jorge.iwano@gmail.com) ## Author Jorge Iwano</description>
       <groups>
         <group>
           <name>Templates</name>

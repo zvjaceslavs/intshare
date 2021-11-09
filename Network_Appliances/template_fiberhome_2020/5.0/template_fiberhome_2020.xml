@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:10Z</date>
+  <date>2021-11-09T05:13:01Z</date>
   <groups>
     <group>
       <name>FiberHome</name>
@@ -14,6 +14,7 @@
     <template>
       <template>SNMP OLT FiberHome</template>
       <name>SNMP OLT FiberHome</name>
+      <description>## Overview Template para fiberhome ## Author Jhakson Redfield</description>
       <groups>
         <group>
           <name>FiberHome</name>

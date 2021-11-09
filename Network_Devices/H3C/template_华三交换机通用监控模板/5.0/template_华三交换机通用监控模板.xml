@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:14Z</date>
+  <date>2021-11-09T05:24:48Z</date>
   <groups>
     <group>
       <name>Templates/Network devices</name>
@@ -11,6 +11,7 @@
     <template>
       <template>H3C_Switch Monitor</template>
       <name>华三交换机监控模板</name>
+      <description>## Overview 华三交换机通用监控模板。 适用于当前主流（使用New Style mib库）交换机，包括端口状态、端口流量、实体（电源、风扇）、板卡CPU内存等监控项，已在12500、6900等多种型号上调试成功。 华三交换机的官方模板已经十分齐全，变动基本为汉化、过滤器、监控项优化。 可能遇到无法导入问题，供参考。 将宏{$CLOUD\_SNMP\_COMMUNITY}替换为实际团体字。 ## Author zhangzhefeng</description>
       <groups>
         <group>
           <name>Templates/Network devices</name>

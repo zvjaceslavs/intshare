@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:02Z</date>
+  <date>2021-11-09T05:05:06Z</date>
   <groups>
     <group>
       <name>Templates/Storages</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Storage NBU 5240 SNMP Trap</template>
       <name>Storage NBU 5240 SNMP Trap</name>
+      <description>## Overview Storage NBU 5240 SNMP Trap Template in Chinese. 1. State of the fan(风扇控制器状态). 2. Power Supply AC Status(电源制器状态) . 3. The Fibre Channel links state(光纤连接状态). 4. State of the System temperature(控制器温度状态). ... ## Author ZhangQi</description>
       <groups>
         <group>
           <name>Templates/Storages</name>

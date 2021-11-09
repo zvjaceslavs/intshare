@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:05Z</date>
+  <date>2021-11-09T05:19:05Z</date>
   <groups>
     <group>
       <name>Templates/Services</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Emby</template>
       <name>Emby</name>
+      <description>## Overview For this template, you only need to change the {$ EMBY\_URL} and {$ EMBY\_TOKEN} macros To generate the token API, follow the instructions: &lt;https://github.com/MediaBrowser/Emby/wiki> Note: if possible use the Emby URL in http, there may be problems using https</description>
       <groups>
         <group>
           <name>Templates/Services</name>

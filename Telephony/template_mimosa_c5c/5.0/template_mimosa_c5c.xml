@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:34Z</date>
+  <date>2021-11-09T05:26:42Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Mimosa C5c by Dzset</template>
       <name>Mimosa C5c by Dzset</name>
-      <description>Template para Rádio Mimosa C5c. By Dzset Tecnologia. www.dzset.com.br</description>
+      <description>## Description Template para Rádio Mimosa C5c. By Dzset Tecnologia. www.dzset.com.br ## Overview **Template para Rádio Mimosa C5c.** ## Author Luís Henrique Nascimento</description>
       <groups>
         <group>
           <name>Templates</name>

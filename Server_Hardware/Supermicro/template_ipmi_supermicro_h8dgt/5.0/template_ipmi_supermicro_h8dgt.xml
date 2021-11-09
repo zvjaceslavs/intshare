@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:42Z</date>
+  <date>2021-11-09T04:49:00Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI Supermicro H8DGT</template>
       <name>IPMI Supermicro H8DGT</name>
+      <description>## Overview IPMI HW status [Fan, Temperature, Voltage, PS], Triggers [Fan, Temperature, Voltage, PS] ## Author Daniel Pogac</description>
       <groups>
         <group>
           <name>Templates</name>

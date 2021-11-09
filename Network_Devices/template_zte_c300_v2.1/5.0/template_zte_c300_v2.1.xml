@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:00Z</date>
+  <date>2021-11-09T05:18:38Z</date>
   <groups>
     <group>
       <name>GPON</name>
@@ -17,6 +17,7 @@
     <template>
       <template>ICMP Ping GPON</template>
       <name>ICMP Ping GPON</name>
+      <description>## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza</description>
       <groups>
         <group>
           <name>GPON</name>
@@ -147,6 +148,7 @@
     <template>
       <template>SNMP Device GPON PARKS</template>
       <name>SNMP Device GPON PARKS</name>
+      <description>## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza</description>
       <templates>
         <template>
           <name>ICMP Ping GPON</name>
@@ -566,6 +568,7 @@
     <template>
       <template>SNMP Device GPON ZTE fw 2.1</template>
       <name>SNMP Device GPON ZTE fw 2.1</name>
+      <description>## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza</description>
       <templates>
         <template>
           <name>ICMP Ping GPON</name>

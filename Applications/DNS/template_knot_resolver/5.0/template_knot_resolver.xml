@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:15Z</date>
+  <date>2021-11-09T05:06:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Knot Resolver Statistics</template>
       <name>Knot Resolver Statistics</name>
-      <description>Collects statistic values from Knot Resolver</description>
+      <description>## Description Collects statistic values from Knot Resolver ## Overview Knot Resolver statistics Requirements ------------ * None Installation ------------ * Import the template * If needed, modify *{$KRESD\_STATS\_URL}* macro on the Host (under Inherited and host macros) to the URL of your Knot Resolver statistics service, usually *https://localhost:8453/stats* or *http://localhost:8053/stats* Tested on Zabbix 4.0.11 Based on template from https://github.com/heximcz/kresd-stats-zabbix ## Author Václav Nováček</description>
       <groups>
         <group>
           <name>Templates</name>

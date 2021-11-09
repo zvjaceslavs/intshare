@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:44Z</date>
+  <date>2021-11-09T04:49:18Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>ITWatchDog 15</template>
       <name>ITWatchDog 15</name>
+      <description>## Overview This template is forked from the IT\_Watchdog\_100 for use with the IT Watchdog 15. This template includes graphing for the Dew Point, Humidity, and Temperate and notifications on temperatures above 83 and 85 degrees (these can easily be changed to suit your environment). No special configuration or mibs needed. Just import the template, assign the template to the watchdog already loaded into Zabbix, and assign the community string to the host macro in Zabbix. I have only tested this in 3.0 and above. Changes might need to be made to be compatible with earlier versions of Zabbix. ## Author Justin Pulling</description>
       <groups>
         <group>
           <name>Templates</name>

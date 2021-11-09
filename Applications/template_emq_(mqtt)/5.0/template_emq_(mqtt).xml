@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:41Z</date>
+  <date>2021-11-09T04:48:56Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App EMQTT Service</template>
       <name>App EMQTT Service</name>
+      <description>## Overview See &lt;https://github.com/viniciusbo/zabbix-emqtt> for instructions. ## Author Vinícius Borriello</description>
       <groups>
         <group>
           <name>Templates</name>

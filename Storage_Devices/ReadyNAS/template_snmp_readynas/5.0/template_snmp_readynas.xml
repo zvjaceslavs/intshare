@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:37Z</date>
+  <date>2021-11-09T04:28:53Z</date>
   <groups>
     <group>
       <name>DataStore</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP ReadyNas</template>
       <name>SNMP ReadyNas</name>
-      <description>NetGear ReadyNAS 102</description>
+      <description>## Description NetGear ReadyNAS 102 ## Overview 1. Discovery Disk a. Capacity b. Model c. Serial d. State e. Temperature 2. Discovery Volume a. Freespace b. RaidLevel c. Name d. Size e. Status 3. fanRPM 4. fanStatus 5. S/N 6. Firmware 7. Temperature CPU NEED in Macros HOST {$SNMP\_COMMUNITY} {$SNMP\_PORT} {$FAN\_MINIMUM\_RPM} Tested ReadyNas 102 Version 6.2.5 Zabbix 2.4.6 ## Author Bonardi</description>
       <groups>
         <group>
           <name>DataStore</name>

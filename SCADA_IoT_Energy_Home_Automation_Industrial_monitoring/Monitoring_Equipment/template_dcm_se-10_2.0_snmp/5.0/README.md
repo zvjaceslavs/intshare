@@ -1,5 +1,9 @@
 # DCM SE-10
 
+## Description
+
+## Overview Template para o equipamento SE-10 2.0 2021 para consultas através de SNMP. Monitor de temperatura, umidade e entradas digitais. Alertas de temperatura para 30°C e 40°C. Gráficos para temperatura do local, da sonda e de umidade. Dúvidas: rodolfo@dcmtech.com.br Site fabricante: [dcmtech.com.br](https://dcmtech.com.br/) ## Author Rodolfo Luis Overbeck 
+
 ## Overview
 
 Template para o equipamento SE-10 2.0 2021 para consultas através de SNMP.
@@ -35,11 +39,11 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Entrada 1|<p>-</p>|`SNMP agent`|entrada1<p>Update: 30s</p>|
-|Entrada 2|<p>-</p>|`SNMP agent`|entrada2<p>Update: 30s</p>|
+|Temperatura|<p>-</p>|`SNMP agent`|temperatura<p>Update: 30</p>|
 |Temperatura Sonda|<p>-</p>|`SNMP agent`|sonda<p>Update: 30</p>|
 |Umidade|<p>-</p>|`SNMP agent`|umidade<p>Update: 30</p>|
-|Temperatura|<p>-</p>|`SNMP agent`|temperatura<p>Update: 30</p>|
+|Entrada 1|<p>-</p>|`SNMP agent`|entrada1<p>Update: 30s</p>|
+|Entrada 2|<p>-</p>|`SNMP agent`|entrada2<p>Update: 30s</p>|
 ## Triggers
 
 There are no triggers in this template.

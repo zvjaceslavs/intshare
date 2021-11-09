@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:04Z</date>
+  <date>2021-11-09T04:37:57Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>UNISIM_IPMI_SGI_Altix_H2106-G7</template>
       <name>3-IPMI SGI Altix H2106-G7</name>
+      <description>## Overview IPMI sensors for SGI Altix H2106-G7: +3.3V, +3.3VSB, +5V, +12V, CPU1 DIMM, CPU1 Temp, CPU1 Vcore, CPU2 DIMM, CPU2 Temp, CPU2 Vcore, CPU3 DIMM, CPU3 Temp, CPU3 Vcore, CPU4 DIMM, CPU4 Temp, CPU4 Vcore, Fan1, Fan2, Fan3, Fan4, Fan5, Fan6, Power, System Temp, VBAT 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho</description>
       <groups>
         <group>
           <name>Templates</name>

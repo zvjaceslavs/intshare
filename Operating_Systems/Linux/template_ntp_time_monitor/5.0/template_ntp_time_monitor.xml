@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:38Z</date>
+  <date>2021-11-09T04:28:56Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Time Drift OS Linux</template>
       <name>Time Drift OS Linux</name>
+      <description>## Overview Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4 Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf UserParameter=time.drift[*],cat /var/lib/ntp/drift UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?&lt;=offset ).*?(?= sec)' ## Author Jeffrey H. Simonson</description>
       <groups>
         <group>
           <name>Templates</name>
@@ -65,6 +66,7 @@
     <template>
       <template>Time Offset OS Linux</template>
       <name>Time Offset OS Linux</name>
+      <description>## Overview Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4 Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf UserParameter=time.drift[*],cat /var/lib/ntp/drift UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?&lt;=offset ).*?(?= sec)' ## Author Jeffrey H. Simonson ## Overview Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4 Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf UserParameter=time.drift[*],cat /var/lib/ntp/drift UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?&lt;=offset ).*?(?= sec)' ## Author Jeffrey H. Simonson</description>
       <groups>
         <group>
           <name>Templates</name>

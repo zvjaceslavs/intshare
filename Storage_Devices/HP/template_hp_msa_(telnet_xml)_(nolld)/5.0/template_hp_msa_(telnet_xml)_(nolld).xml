@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:47Z</date>
+  <date>2021-11-09T04:49:33Z</date>
   <groups>
     <group>
       <name>Шаблоны - рабочие</name>
@@ -11,6 +11,7 @@
     <template>
       <template>TELNET_HP_StorageWorks</template>
       <name>[Шаблон] TELNET - HP StorageWorks</name>
+      <description>## Overview **Version:** 4 *(04.04.2018)* * *+ 24 HDD (***Enclosure 1*) HW status (SMART, media errors, bad sectors) and triggers* **Supported models:** 2312fc, p2000, 2040 SAN (*2050 - works in progress*) **Language:** Russian only **Features:** * No external apps\scripts * No LLD * Telnet (you can use SSH instead, but telnet is really quicker) * Regex (to get raw response from device or for pre-cleaning data for XPath) * 2-step preprocessing (xPath &amp; regex) * Components health state\ operational status * Basic performance and status **Installation:** 1. Import this Template 2. Create two macro (at every device if all accounts are different or in template itself if accounts are equal): * {$SAN\_LOGIN} with CLI Login * {$SAN\_PASSWD} with CLI Password Now you have 1 new Template: * [Шаблон] TELNET - HP StorageWorks" And several new value mappings: * HP (StorageWorks) Blame State * HP (StorageWorks) Component Health * HP (StorageWorks) Controller ID * HP (StorageWorks) Controller Location * HP (StorageWorks) Controller Status * HP (StorageWorks) Enclosure Status * HP (StorageWorks) Failover State * HP (StorageWorks) HDD LED Status * HP (StorageWorks) Job Name * HP (StorageWorks) Port Status * HP (StorageWorks) PSU Location * HP (StorageWorks) Status * HP (StorageWorks) VDISK Status I tried to create all Keys of Items in most understood look. If you will have questions with understanding of Ites's names. All Applications of higher level are contain information about quantity of subcomponents. So: * App "Storage" contains the number of the connected Enclosures * App "Enclosure" contains the number of disks slots and installed physical disks * App "Controllers" contains the number of the vdisks * App "Virt(ual). disks" contains the number of the physical disks, used in vdisks and nuber of Volumes By default, all source XML Items for all basic subsystems are enabled ("XML" application). By default, only basic set of dependent Items is enabled. For getting data from 1 basic Storage (without expansions): * 1 disks enclosure * 2 controllers (A.B) * 4 FC ports (A1,B1,A2,B2) * 2 PSUs (left, right) * 1 physical disk (first in enclosure) * 1 virtual disk (first on controller A) * versions of main components ## Author Anth0nyME</description>
       <groups>
         <group>
           <name>Шаблоны - рабочие</name>

@@ -1,0 +1,46 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:33:31Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: dd0c49d976444f168535b9c1a2db981b
+      template: 'Template App IMAP Service'
+      name: 'Template App IMAP Service'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 823451f4ebb6437c88c2915ba6d6faad
+          name: 'IMAP service is running'
+          type: SIMPLE
+          key: 'net.tcp.service[imap]'
+          delay: '60'
+          history: 7d
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: 'IMAP service'
+          triggers:
+            -
+              uuid: 075e6217564d45fdb713f810a9eef87c
+              expression: 'max(/Template App IMAP Service/net.tcp.service[imap],#3)=0'
+              name: 'IMAP service is down on {HOST.NAME}'
+              priority: AVERAGE
+      valuemaps:
+        -
+          uuid: 17353d47bd0a4a03a8f3ab799207e157
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up

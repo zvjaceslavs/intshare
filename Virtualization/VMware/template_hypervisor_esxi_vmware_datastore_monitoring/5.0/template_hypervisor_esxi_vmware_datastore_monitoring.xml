@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:31Z</date>
+  <date>2021-11-09T04:41:03Z</date>
   <groups>
     <group>
       <name>Templates - Comunidade</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Virt VMware Hypervisor ESXi - Andre Bello</template>
       <name>Virt VMware Hypervisor ESXi - Andre Bello</name>
+      <description>## Overview Contact: [andreantunes.si@gmail.com](mailto:andreantunes.si@gmail.com) Skype: andreantunes.si Incluied: Datastore free, free %, Total Memory: Used memory, Used memory %, Total Memory, *How to obtain ESXi UUID* 0. You need to enable MOB vib, esxcli does not seems to provide the valid uuid for this. 1. enable MOB vib : Go to you're vsphere Advanced Settings, Config, Hostagent, plugins, solo, check "Config.HostAgent.plugins.solo.enableMob" 2. Browse to https://esxi.hostname/mob/?moid=ha-host&amp;doPath=hardware.systemInfo 3. disable MOB vib again (uncheck Config.HostAgent.plugins.solo.enableMob) Your HOSTNAME will be your UUID Else: **esxcfg-info -u** Used Macros: {$USERNAME} -> User connect ESxi {$PASSWORD} Password access to Esxi {$URL} - https://Your ip Esxi/sdk ## Author Andre Bello</description>
       <groups>
         <group>
           <name>Templates - Comunidade</name>

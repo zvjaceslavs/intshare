@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:59Z</date>
+  <date>2021-11-09T04:44:14Z</date>
   <groups>
     <group>
       <name>理光打印机</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Ricoh Printer</template>
       <name>RICOH Aficio MP C3300/3001</name>
+      <description>## Overview RICOH Aficio MP C3300 or 3001 print / copy / scan one machine input tray, toner status monitor zabbix3.2 template. ## Author ZhouJianChang</description>
       <groups>
         <group>
           <name>理光打印机</name>

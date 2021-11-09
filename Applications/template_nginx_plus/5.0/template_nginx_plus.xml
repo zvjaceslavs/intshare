@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:14Z</date>
+  <date>2021-11-09T05:20:06Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Nginx Plus</template>
       <name>App Nginx Plus</name>
+      <description>## Overview Zabbix NGINX Plus ================= LLD template for nginx plus. Please check your api version in template, is macro {$NGINXPLUS\_API\_VER} in defaults is used version 6 Use this command on nginx machine. Higest number is your API version. curl **&lt;http://127.0.0.1/api/>** **[1,2,3,4,5,6]** **Output (Higest is 6)** TODO: triggers &lt;p style="font-size: 16px; box-sizing: border-box; margin-t</description>
       <groups>
         <group>
           <name>Templates/Applications</name>

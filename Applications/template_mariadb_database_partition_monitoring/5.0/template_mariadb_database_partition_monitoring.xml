@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:07Z</date>
+  <date>2021-11-09T04:51:30Z</date>
   <groups>
     <group>
       <name>Zabbix servers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Zabbix DB Partitions</template>
       <name>Zabbix DB Partitions</name>
+      <description>## Overview This template create items to monitor 5 days worth of partitions have been created for your database. This template is intended to be used for the Zabbix Database partitions, however could be modified to check for any database partitions. Install Steps: * Import template into Zabbix 3.2 or > * Set the {$PASSWORD} Macro to the password for the account which will be preforming the check * Update EACH item to have the user that will be preforming the check, Default==Root * Update the ls path used in each item for the correct path to your DB * Apply to each of your DB hosts in Zabbix ![Software Information Systems](https://www.thinksis.com/images/header/logo.jpg) ## Author SIS</description>
       <groups>
         <group>
           <name>Zabbix servers</name>

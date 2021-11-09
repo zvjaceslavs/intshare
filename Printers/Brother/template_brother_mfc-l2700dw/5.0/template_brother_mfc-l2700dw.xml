@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:33Z</date>
+  <date>2021-11-09T05:01:37Z</date>
   <groups>
     <group>
       <name>Templates/Printers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Brother Printers</template>
       <name>Brother Printers</name>
+      <description>## Overview На базе шаблона на испанском сделал этот шаблон. Под указанный принтер - работает. Уровни тонера и Кита. Графики. Вопросы на 2135850@211.ru ## Author Sergey Sidenko</description>
       <groups>
         <group>
           <name>Templates/Printers</name>

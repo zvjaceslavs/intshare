@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:59Z</date>
+  <date>2021-11-09T04:44:10Z</date>
   <groups>
     <group>
       <name>Kyocera Printers</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Kyocera Printers</template>
       <name>Kyocera Printers</name>
+      <description>## Overview Zabbix template for Kyocera CS-6115ci - CS7051ci printers. ## Author Aniefiok Umoh</description>
       <groups>
         <group>
           <name>Kyocera Printers</name>

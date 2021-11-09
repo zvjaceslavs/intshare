@@ -2,7 +2,7 @@
 
 ## Description
 
-Simple ports and uptime checking for Grandstream HT813 gateway Be sure that you turned on SNMPv2 on device Made by http://itprofit32.ru
+## Description Simple ports and uptime checking for Grandstream HT813 gateway Be sure that you turned on SNMPv2 on device Made by http://itprofit32.ru ## Overview Port and uptime monitoring for Grandstream HT813 gateway. Be sure, that you turned on SNMPv2 on the gateway. ## Author Alexander Zverev 
 
 ## Overview
 
@@ -30,10 +30,10 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|FXS Hook|<p>-</p>|`SNMP agent`|fxs.hook<p>Update: 1m</p>|
-|Uptime|<p>-</p>|`SNMP agent`|gateway.uptime<p>Update: 1m</p>|
-|FXO Registry|<p>-</p>|`SNMP agent`|fxo.registry<p>Update: 1m</p>|
 |FXS Registry|<p>-</p>|`SNMP agent`|fxs.registry<p>Update: 1m</p>|
+|FXS Hook|<p>-</p>|`SNMP agent`|fxs.hook<p>Update: 1m</p>|
+|FXO Registry|<p>-</p>|`SNMP agent`|fxo.registry<p>Update: 1m</p>|
+|Uptime|<p>-</p>|`SNMP agent`|gateway.uptime<p>Update: 1m</p>|
 |FXO Hook|<p>-</p>|`SNMP agent`|fxo.hook<p>Update: 1m</p>|
 ## Triggers
 

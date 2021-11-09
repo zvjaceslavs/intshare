@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:12Z</date>
+  <date>2021-11-09T04:38:52Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Brocade</template>
       <name>SNMP Brocade</name>
+      <description>## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger</description>
       <groups>
         <group>
           <name>Templates</name>
@@ -419,6 +420,7 @@
     <template>
       <template>SNMP Brocade-Copper</template>
       <name>SNMP Brocade-Copper</name>
+      <description>## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger ## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger</description>
       <groups>
         <group>
           <name>Templates</name>
@@ -614,6 +616,7 @@
     <template>
       <template>SNMP Brocade-Fiber</template>
       <name>SNMP Brocade-Fiber</name>
+      <description>## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger ## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger ## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger</description>
       <groups>
         <group>
           <name>Templates</name>

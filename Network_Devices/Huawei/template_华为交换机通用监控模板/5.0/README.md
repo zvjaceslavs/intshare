@@ -1,5 +1,9 @@
 # 华为交换机监控模板
 
+## Description
+
+## Overview 华为交换机监控模板 已在S系列、CloudEngine系列设备完成验证 主要包括CPU利用率、内存利用率、端口状态、端口带宽利用率、端口报文速率、实体状态监控 将宏 {$CLOUD _SNMP _COMMUNITY} 替换为实际团体字即可 ## Author zhangzhefeng 
+
 ## Overview
 
 华为交换机监控模板
@@ -51,11 +55,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|系统信息|<p>-</p>|`SNMP agent`|SystemDescription<p>Update: 1h</p>|
-|ping时延|<p>-</p>|`Simple check`|icmppingsec[,10,,,,avg]<p>Update: 5m</p>|
 |运行时间|<p>-</p>|`SNMP agent`|SystemUpTime<p>Update: 1h</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping[,5,,,]<p>Update: 1m</p>|
+|ping时延|<p>-</p>|`Simple check`|icmppingsec[,10,,,,avg]<p>Update: 5m</p>|
 |ping丢包率|<p>-</p>|`Simple check`|icmppingloss[,10,,,]<p>Update: 5m</p>|
+|ICMP ping|<p>-</p>|`Simple check`|icmpping[,5,,,]<p>Update: 1m</p>|
+|系统信息|<p>-</p>|`SNMP agent`|SystemDescription<p>Update: 1h</p>|
 |trap消息|<p>-</p>|`SNMP trap`|snmptrap[""]<p>Update: 0</p>|
 |端口带宽 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 12h</p><p>LLD</p>|
 |入方向带宽利用率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`Calculated`|InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|

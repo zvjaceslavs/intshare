@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:31Z</date>
+  <date>2021-11-09T04:47:57Z</date>
   <groups>
     <group>
       <name>DC monitoring devices</name>
@@ -11,6 +11,7 @@
     <template>
       <template>schneider_pm8ecc</template>
       <name>PM8ECC</name>
+      <description>## Author petroska</description>
       <groups>
         <group>
           <name>DC monitoring devices</name>

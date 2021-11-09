@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:01Z</date>
+  <date>2021-11-09T04:44:28Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Mikrotik-QUEUE</template>
       <name>Mikrotik-QUEUE</name>
+      <description>## Overview zabbix template for graphing queue traffic on mikrotik devices [mehdi.sadighian@hotmail.com](mailto:mehdi.sadighian@hotmail.com) &lt;https://msadighian.com></description>
       <groups>
         <group>
           <name>Templates</name>

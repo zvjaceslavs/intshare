@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:32Z</date>
+  <date>2021-11-09T05:15:19Z</date>
   <groups>
     <group>
       <name>Templates/storage controllers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Intel RST with js</template>
       <name>Intel RST with js</name>
+      <description>## Overview This template is for discovering and monitoring Intel RST (Intel VROC) storage controllers. Works with zabbix 4.2 and higher. Template uses action with zabbix API. Instuctions is on github page &lt;https://github.com/mykolq/zabbix_intel_rst_template></description>
       <groups>
         <group>
           <name>Templates/storage controllers</name>

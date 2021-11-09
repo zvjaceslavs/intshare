@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:29Z</date>
+  <date>2021-11-09T05:01:07Z</date>
   <groups>
     <group>
       <name>Templates/Server hardware</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI Dell PowerEdge M610</template>
       <name>IPMI Dell PowerEdge M610</name>
+      <description>## Overview IPMI readout for Dell PowerEdge M610 blades. Reading Power usage and temperature.</description>
       <groups>
         <group>
           <name>Templates/Server hardware</name>

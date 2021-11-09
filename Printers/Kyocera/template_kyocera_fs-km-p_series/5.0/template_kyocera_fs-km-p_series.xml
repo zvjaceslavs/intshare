@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:51Z</date>
+  <date>2021-11-09T04:43:18Z</date>
   <groups>
     <group>
       <name>Descoberta</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IMPRESSORA - KYOCERA</template>
       <name>IMPRESSORA - KYOCERA</name>
+      <description>## Overview Monitora Estado da impressora(Mostrador do Visor), contador total, Nº de Série, Modelo, Uptime. ## Author Leonardo Nascimento da Silva</description>
       <groups>
         <group>
           <name>Descoberta</name>

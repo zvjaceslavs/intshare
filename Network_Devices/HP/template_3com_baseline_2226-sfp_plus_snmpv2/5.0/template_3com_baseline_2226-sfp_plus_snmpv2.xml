@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:50Z</date>
+  <date>2021-11-09T05:10:34Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>3COM Baseline 2226-SFP Plus SNMPv2</template>
       <name>3COM Baseline 2226-SFP Plus SNMPv2</name>
+      <description>## Overview Switch 26 ports Monitoring on Speed, Portstatus, Last Changed, In and Out Throughput and number of errors. Graphs for IN and OUT throughput per port Adapted from the layout https://www.zabbix.com/forum/attachment.php?attachmentid=4762&amp;d=1337691484</description>
       <groups>
         <group>
           <name>Templates</name>
@@ -3087,20 +3088,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifOutOctets.518</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifInOctects.518</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifOutOctets.518</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3111,20 +3112,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifOutOctets.646</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifInOctects.646</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifOutOctets.646</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3135,20 +3136,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifOutOctets.774</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifInOctects.774</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifOutOctets.774</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3279,20 +3280,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifOutOctets.1542</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifInOctects.1542</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifOutOctets.1542</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3351,20 +3352,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifOutOctets.1926</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifInOctects.1926</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifOutOctets.1926</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3399,20 +3400,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifInOctects.2182</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifOutOctets.2182</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifInOctects.2182</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3423,20 +3424,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifInOctects.2310</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifOutOctets.2310</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifInOctects.2310</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3543,20 +3544,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifOutOctets.2950</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifInOctects.2950</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifOutOctets.2950</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3567,20 +3568,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifInOctects.3078</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifOutOctets.3078</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifInOctects.3078</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3615,20 +3616,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifInOctects.3334</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifOutOctets.3334</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifInOctects.3334</key>
           </item>
         </graph_item>
       </graph_items>
@@ -3687,20 +3688,20 @@
       <graph_items>
         <graph_item>
           <drawtype>GRADIENT_LINE</drawtype>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
-            <key>ifOutOctets.3718</key>
-          </item>
-        </graph_item>
-        <graph_item>
-          <drawtype>GRADIENT_LINE</drawtype>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
             <key>ifInOctects.3718</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <drawtype>GRADIENT_LINE</drawtype>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM Baseline 2226-SFP Plus SNMPv2</host>
+            <key>ifOutOctets.3718</key>
           </item>
         </graph_item>
       </graph_items>

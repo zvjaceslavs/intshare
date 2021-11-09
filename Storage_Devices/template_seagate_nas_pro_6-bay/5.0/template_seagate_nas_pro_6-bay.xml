@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:33Z</date>
+  <date>2021-11-09T05:01:41Z</date>
   <groups>
     <group>
       <name>Storages</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Seagate Pro NAS DP6</template>
       <name>Seagate Pro NAS DP6</name>
+      <description>## Overview Template básico construído a partir do MIB fornecido nas configurações snmp do equipamento. Coleta as seguintes informações: * Quantidade de CPU´s; * Modelo dos discos; * Serial dos discos; * Tamanho dos discos; * Status dos discos; * RPM do sensor FAN; * Quantidade de memória: total, usada, livre e em cache. * Nome do volume RAID; * Porcentagem de uso do volume RAID; * Tamanho do RAID; * Tipo de RAID; * Bytes Enviados e recebidos; Gatilhos para: * Status dos discos; * Uso de CPU e memória * Fim do espaço de armazenamento nos discos; Gráficos para visualizar o consumo de recursos (CPU e Memória) Para utilizar, informe o valor para macro {$SNMP\_COMMUNITY} ## Author Fernando F. Costa</description>
       <groups>
         <group>
           <name>Storages</name>

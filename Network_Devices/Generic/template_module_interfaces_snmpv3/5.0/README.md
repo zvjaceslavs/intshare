@@ -2,7 +2,7 @@
 
 ## Description
 
-Template Module Interfaces SNMPv3 Used template Template Module Interfaces SNMPv2 Ville Leinonen https://www.hacknetwork.org Version 1.0
+## Description Template Module Interfaces SNMPv3 Used template Template Module Interfaces SNMPv2 Ville Leinonen https://www.hacknetwork.org Version 1.0 ## Overview UPDATED: There was a bug in version 1.0 Linked for Template Net HP and Aruba Enterprise Switch SNMPv3, but works also individually. SNMPv3 support added, new macros: {$SECURITY _NAME} = Username {$AUTH _PASSPHRASE} = Authentication password {$PRIV _PASSPHRASE} = Encryption password Template is just like V2 templates, but changed to support SNMPv3, please use SHA and AES128. 
 
 ## Overview
 

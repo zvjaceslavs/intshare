@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:44Z</date>
+  <date>2021-11-09T05:10:00Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>LLD OLT ZTE</template>
       <name>LLD OLT ZTE</name>
+      <description>## Overview Template OLT ZTE com LLD O QUE O TEMPLATE FAZ: - Sinal TX e RX OLT - Status up e down das onu. Feito com a ajuda do **Gabriel Augusto Besteiro.** ## Author Anderson Raber</description>
       <groups>
         <group>
           <name>Templates</name>

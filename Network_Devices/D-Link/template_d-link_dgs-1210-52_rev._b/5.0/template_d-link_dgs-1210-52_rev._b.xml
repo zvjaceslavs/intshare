@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:39Z</date>
+  <date>2021-11-09T04:35:33Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,6 +14,7 @@
     <template>
       <template>SNMP D-link DGS-1210-52 revB</template>
       <name>SNMP D-link DGS-1210-52 revB</name>
+      <description>## Overview Based on official D-link MIB. Generic device data, not all figures available though (can't find CPU / RAM usage, probably it was removed by vendor). LLD Network interfaces. In general will work for rev C1 devices also. But better use specific template. Not shure if it will work with PoE version of devices rev B.</description>
       <groups>
         <group>
           <name>Templates</name>

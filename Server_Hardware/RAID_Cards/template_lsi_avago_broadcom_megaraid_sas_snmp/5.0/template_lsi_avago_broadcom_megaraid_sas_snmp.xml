@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:29Z</date>
+  <date>2021-11-09T04:40:50Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP MegaRAID SAS</template>
       <name>SNMP MegaRAID SAS</name>
-      <description>Zabbix Template for Avago Megaraid SAS (formerly LSI) RAID cards</description>
+      <description>## Description Zabbix Template for Avago Megaraid SAS (formerly LSI) RAID cards ## Overview This is initial template for Monitoring LSI/Avago/Broadcom (or branded like Intel, IBM, Supermicro etc) MegaRAID based hardware RAID cards. According to vendor docs it should also support non-RAID adapters, enclosures and some other devices. It took me one night to complete major/required parts, so far template supports most of the options and all the critical components to keep you warned in case some RAID-related problems will occur. Supported so far: * Full LLD Support * Informational part for agent/driver/module * Complete Adapter-Related OID list with graphs and triggers * Part of Device-Related OID's with graphs * All triggers that are crucial * Comments for all OID's with value mappings from MegaRAID MIB Planned: * Value Mappings * Completing list of device OID's and related graphs * virtualDevice OID's and related graphs * enclosureInfo OID's and related graphs * Trap setting OID's * Traps for trapper * Check for updated version Not tested yet: * M$ Windows Support * Values and units are done as per MIB doc with 1-1 match, cannot guarantee that they are correct if vendor has provided wrong info (apparently, there is at least one minor issue) Installation and Requirements: * Ensure, that LSI-MegaRAID-SAS-MIB files downloaded from vendor site are installed and added to snmp.conf (after that you can restart both agent and server) * Ensure, that appropriate package (snmp sas or snmp sas\_ir) with MegaRAID snmp agent wrapper is installed and running, snmpd.conf for OID's are set as per doc for wrapper * Ensure, that Zabbix is allowed to gather information from snmpd * Ensure, that required device drivers are installed on the hosts * Import Template, assign to hosts * Wait for LLD to check all OID's and start gathering data * Have a good night's sleep Bugs? -> Please Report @GitHub or at giomac gmail com When will you finish this? -> Nah, all critical issues are included, will do, definitely, but not asap ## Author George Machitidze</description>
       <groups>
         <group>
           <name>Templates</name>

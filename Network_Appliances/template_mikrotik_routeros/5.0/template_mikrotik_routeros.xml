@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:11Z</date>
+  <date>2021-11-09T05:13:10Z</date>
   <groups>
     <group>
       <name>Templates/Mikrotik Network Devices</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Mikrotik RouterOS</template>
       <name>Mikrotik RouterOS</name>
-      <description>Ros Modelo dedicado (dispositivo RB) Este modelo é usado apenas para o monitoramento do sistema de roteamento RouterOS.。 By:[Suspeito]</description>
+      <description>## Description Ros Modelo dedicado (dispositivo RB) Este modelo é usado apenas para o monitoramento do sistema de roteamento RouterOS.。 By:[Suspeito] ## Overview MONITORAMENTO MIKROTIK Temperatura da CPU Temperatura do equipamento Tempo de Atividade Monitirando Comsumo Clientes PPoE Monitirando Quantidade de Clientes PPoE Monitora todos os comnumo das portas Monitirando CPUs Monitora Ping Contatos: whatsapp 81 982670619 E-Mail: rsg.sp.gov@gmail.com ## Author Renato</description>
       <groups>
         <group>
           <name>Templates/Mikrotik Network Devices</name>

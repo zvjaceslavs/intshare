@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:01Z</date>
+  <date>2021-11-09T04:37:36Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>UNISIM_IPMI_Dell_PowerEdge_T320</template>
       <name>3-IPMI Dell Power Edge T320</name>
+      <description>## Overview IPMI sensors for Dell PowerEdge T320: Current 1, Current 2, Inlet Temp, Power, Pwr Consumption, Sys Fan1 RPM, Temp, Voltage 1, Voltage 2 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho</description>
       <groups>
         <group>
           <name>Templates</name>

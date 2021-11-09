@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:46Z</date>
+  <date>2021-11-09T05:03:08Z</date>
   <groups>
     <group>
       <name>Templates/Mikrotik Network Devices</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Mikrotik RouterBOARD</template>
       <name>Mikrotik RouterBOARD</name>
-      <description>Ros 专用模板（RB设备） 该模板只用于RouterOS路由系统监控，其它设备请绕路。 By:【犯罪嫌疑人】</description>
+      <description>## Description Ros 专用模板（RB设备） 该模板只用于RouterOS路由系统监控，其它设备请绕路。 By:【犯罪嫌疑人】 ## Overview ①丶该模板仅用于RB设备... ②丶该模板适用于4.x及以上版本；4.x以下版本不要下载，下了也没什么卵用！ 人生的第一次这样就→ 做得不好尽管上来怼我，反正也帮不了你。</description>
       <groups>
         <group>
           <name>Templates/Mikrotik Network Devices</name>

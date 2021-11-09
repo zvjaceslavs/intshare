@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:55Z</date>
+  <date>2021-11-09T04:50:04Z</date>
   <groups>
     <group>
       <name>Test</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Storage</template>
       <name>Storage</name>
+      <description>## Overview Мониторинг свободного места на диске С и диске D используя только SNMP. Важно не подключать диск А, меняются OID</description>
       <groups>
         <group>
           <name>Test</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:16Z</date>
+  <date>2021-11-09T04:59:42Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Auto fuzzytime trigger for Zabbix proxy</template>
       <name>Auto fuzzytime trigger for Zabbix proxy</name>
+      <description>## Overview The solution is based on Zabbix API. And native HTTP agent will discover all proxies and create lastaccess item per each proxy + fuzzytime trigger. In order to run this solution, you have to have an active session-id in a global level. Please see: [https://share.zabbix.com/zabbix-tools-and-utilities/maintain-zabbix-api-session-id-in-a-global-level](zabbix-tools-and-utilities/maintain-zabbix-api-session-id-in-a-global-level) &lt;https://youtu.be/MjQJ0g0AaYI></description>
       <groups>
         <group>
           <name>Templates/Applications</name>

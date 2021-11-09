@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:03Z</date>
+  <date>2021-11-09T05:18:56Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Net Tintri SNMP</template>
       <name>Net Tintri SNMP</name>
-      <description>Template for Trintri devices.</description>
+      <description>## Description Template for Trintri devices. ## Overview Template 5.X for Tintri SNMP devices.</description>
       <templates>
         <template>
           <name>Template Module Generic SNMP</name>

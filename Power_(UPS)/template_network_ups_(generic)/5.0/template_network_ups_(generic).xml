@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:20Z</date>
+  <date>2021-11-09T05:00:09Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -122,6 +122,7 @@
     <template>
       <template>UPS - diogont</template>
       <name>UPS - diogont</name>
+      <description>## Overview Template made based on [Phillip Hernandez](owner/samwiseg0) template: https://share.zabbix.com/power-ups/apc/apc-ups All OID's were changed to match general MIB for UPS. New graphs were also added. 21 Items 9 Triggers 7 Graphs I also have a template made for three-phase UPSs, feel free to check: [https://share.zabbix.com/power-ups/ups-templates/network-ups-three-phase-generic](power-ups/ups-templates/network-ups-three-phase-generic) ## Author Diogo Teixeira</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

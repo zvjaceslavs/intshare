@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:52Z</date>
+  <date>2021-11-09T04:56:50Z</date>
   <groups>
     <group>
       <name>PON</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Eltex LTE-8X</template>
       <name>Eltex LTE-8X</name>
+      <description>## Overview Eltex LTE-8x Template with ONT discovery (Mac &amp; Laser Level), PON I/O traffic, CPU load, Temperature, ONT Count ## Author nvrskARTIst</description>
       <groups>
         <group>
           <name>PON</name>

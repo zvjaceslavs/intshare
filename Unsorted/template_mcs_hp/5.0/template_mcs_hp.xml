@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:51Z</date>
+  <date>2021-11-09T05:03:44Z</date>
   <groups>
     <group>
       <name>MCS</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Monitoring MCS</template>
       <name>Monitoring MCS</name>
+      <description>## Overview Hi Here is a template for HP MCS Mostly traps. Triggers included. Thanks</description>
       <groups>
         <group>
           <name>MCS</name>

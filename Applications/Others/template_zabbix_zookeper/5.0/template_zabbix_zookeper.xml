@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:34Z</date>
+  <date>2021-11-09T04:48:15Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>App Zookeeper</template>
       <name>App Zookeeper</name>
-      <description>Zookeper Monitoring Need this userparameter in zabbix_agentd.conf: UserParameter=echo2nc[*],echo $1 | nc $2 $3</description>
+      <description>## Description Zookeper Monitoring Need this userparameter in zabbix_agentd.conf: UserParameter=echo2nc[*],echo $1 | nc $2 $3 ## Overview System requirements ------------------- * [zabbix](http://www.zabbix.com/downloads/) >= 3.4 (preprocessing used by this template) * [zookeeper](https://zookeeper.apache.org/releases.html) >= 3.4 (mntr stats) * netcat Features -------- * ruok check , mntr stats , graphs, screen Zabbix Configuration -------------------- UserParameter=echo2nc[*],echo $1 | nc $2 $3 ## Author Patrick Fouquet</description>
       <groups>
         <group>
           <name>Templates</name>

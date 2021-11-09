@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:27Z</date>
+  <date>2021-11-09T04:34:08Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Sensors D2500CC</template>
       <name>Sensors D2500CC</name>
-      <description>fan2 is ignored as MB only has 1 fan pin</description>
+      <description>## Description fan2 is ignored as MB only has 1 fan pin ## Overview ``` D2500CC: Need zabbix-agent installed, using coretemp &amp; winbond 83627uhg driver Load coretemp and w83627ehf modules in /etc/modules Based on BIOS values ``` ## Author pfoo</description>
       <groups>
         <group>
           <name>Templates</name>

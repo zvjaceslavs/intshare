@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:00Z</date>
+  <date>2021-11-09T05:04:47Z</date>
   <groups>
     <group>
       <name>CISCO-ESA</name>
@@ -14,7 +14,7 @@
     <template>
       <template>ESA-CISCO</template>
       <name>ESA-CISCO</name>
-      <description>Cisco IronPort Email and Web Security</description>
+      <description>## Description Cisco IronPort Email and Web Security ## Overview -- ***************************************************************** -- ASYNCOS-MAIL-MIB -- Copyright (c) 2005-2011 by Cisco Systems, Inc. -- All rights reserved. -- Cisco IronPort Email and Web Security Customer Service -- ***************************************************************** Adicione as MIBs no servidor de monitoramento antes de executar o template nos appliances &lt;https://www.cisco.com/web/ironport/tools/email/ASYNCOS-MAIL-MIB.txt> &lt;https://www.cisco.com/web/ironport/tools/email/IRONPORT-SMI.txt> ## Author Lauro de Paula</description>
       <groups>
         <group>
           <name>CISCO-ESA</name>

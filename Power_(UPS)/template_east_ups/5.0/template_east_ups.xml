@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:12Z</date>
+  <date>2021-11-09T04:59:14Z</date>
   <groups>
     <group>
       <name>Nobreak</name>
@@ -11,6 +11,7 @@
     <template>
       <template>East Nobreak</template>
       <name>East Nobreak</name>
+      <description>## Overview Monitors power parameters like voltage and frequency, battery charge and status, battery temperature, etc. Has triggers for out of range parameters,. Please set macro for host. | Macro | | --- | {$SNMP\_COMMUNITY} ⇒ nobreak01 ## Author Wellington Martins</description>
       <groups>
         <group>
           <name>Nobreak</name>

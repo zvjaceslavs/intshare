@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:11Z</date>
+  <date>2021-11-09T05:06:06Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Huawei OceanStor Rest-API v2</template>
       <name>Huawei OceanStor Rest-API v2</name>
+      <description>## Overview Python script for monitoring huawei storages Tested on 5500 V5, 5600 V5, 2600 V3, 5500 V3, dorado 5000 V3, 18800 V3 and dorado 5000 V6</description>
       <groups>
         <group>
           <name>Templates</name>

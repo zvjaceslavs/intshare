@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:16Z</date>
+  <date>2021-11-09T05:13:41Z</date>
   <groups>
     <group>
       <name>NetworkDevice-Template</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Network-H3C-WLC</template>
       <name>Network-H3C-WLC</name>
+      <description>## Overview # 宏 {$APCOUNTS} AP总数 {$SNMP\_COMMUNITY}</description>
       <groups>
         <group>
           <name>NetworkDevice-Template</name>

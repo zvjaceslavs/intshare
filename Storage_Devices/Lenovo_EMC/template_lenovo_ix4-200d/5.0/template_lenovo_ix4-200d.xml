@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:24Z</date>
+  <date>2021-11-09T04:53:23Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Lenovo ix4-200d</template>
       <name>Lenovo ix4-200d</name>
+      <description>## Overview Template Lenovo ix4-200d [Descrição](http://10.255.255.6/zabbix/applications.php?form=update&amp;applicationid=4178&amp;hostid=10399) [Discos](http://10.255.255.6/zabbix/applications.php?form=update&amp;applicationid=4179&amp;hostid=10399) [Processador](http://10.255.255.6/zabbix/applications.php?form=update&amp;applicationid=4180&amp;hostid=10399) [RAID](http://10.255.255.6/zabbix/applications.php?form=update&amp;applicationid=4181&amp;hostid=10399) [Rede](http://10.255.255.6/zabbix/applications.php?form=update&amp;applicationid=4182&amp;hostid=10399)</description>
       <groups>
         <group>
           <name>Templates</name>

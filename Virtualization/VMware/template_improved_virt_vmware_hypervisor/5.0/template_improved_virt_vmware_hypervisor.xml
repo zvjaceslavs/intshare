@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:45Z</date>
+  <date>2021-11-09T04:42:41Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Virt VMware Hypervisor</template>
       <name>Virt VMware Hypervisor</name>
+      <description>## Overview An improved version of the default "Virt VMware Hypervisor template". Added the following items: **Cpu Total Frequency** **Cpu Usage Percentage** **Available memory (bytes)** **Used memory percentage** Also added various useful triggers (the original template has none). Tested on version 3.2, but will probably work on 3.0 as well. Any feedback appreciated. ## Author Aviram Alter</description>
       <groups>
         <group>
           <name>Templates</name>

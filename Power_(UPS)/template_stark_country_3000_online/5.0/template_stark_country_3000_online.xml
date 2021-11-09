@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:58Z</date>
+  <date>2021-11-09T04:57:35Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Stark-3000-snmp</template>
       <name>Stark-3000-snmp</name>
+      <description>## Overview UPS Stark country 3000 online. &lt;https://en.stark-power.de> Template based on "Template\_UPS\_Inform-flexipower" ## Author Sergey Prisada</description>
       <groups>
         <group>
           <name>Templates</name>

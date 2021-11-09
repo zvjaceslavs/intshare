@@ -2,7 +2,7 @@
 
 ## Description
 
-Install and info: https://github.com/hermanekt/Zabbix_wildfly_eap_jboss_monitoring https://share.zabbix.com/official-templates/wildfly-eap-jboss-discovery Version 1.2
+## Description Install and info: https://github.com/hermanekt/Zabbix_wildfly_eap_jboss_monitoring https://share.zabbix.com/official-templates/wildfly-eap-jboss-discovery Version 1.2 ## Overview This is auto Discovery template for monitoring Wildfly, EAP, Jboss servers ========================================================================== **Install instruction: https://github.com/hermanekt/Zabbix _wildfly _eap _jboss _monitoring/** Static item: ``` JMX Wildfly Memory JMX Wildfly Runtime JMX Wildfly Threading JMX Wildlfy Classes JMX Wildlfy Server ``` Discovery: ``` Datasource JDBC Datasource POOL Garbage Collector Memory Pool Server ``` ## Author Tomas Hermanek 
 
 ## Overview
 
@@ -57,39 +57,45 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Datasource JDBC|<p>-</p>|`JMX agent`|jmx.get[beans,"jboss.as:subsystem=datasources,data-source=*,statistics=jdbc"]<p>Update: 30m</p>|
 |Datasource POOL|<p>-</p>|`JMX agent`|jmx.get[beans,"jboss.as:subsystem=datasources,data-source=*,statistics=pool"]<p>Update: 30m</p>|
 |Server|<p>-</p>|`JMX agent`|jmx.get[attributes,"jboss.as:management-root=server,*"]<p>Update: 30m</p>|
 |Memory Pool|<p>-</p>|`JMX agent`|jmx.get[beans,"*:type=MemoryPool,name=*"]<p>Update: 30m</p>|
 |Garbage Collector|<p>-</p>|`JMX agent`|jmx.get[beans,"*:type=GarbageCollector,name=*"]<p>Update: 30m</p>|
-|Datasource JDBC|<p>-</p>|`JMX agent`|jmx.get[beans,"jboss.as:subsystem=datasources,data-source=*,statistics=jdbc"]<p>Update: 30m</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|jvm Version|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmVersion]<p>Update: 1h</p>|
-|Non-Heap Memory max|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.max]<p>Update: 1h</p>|
-|Total Loaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",TotalLoadedClassCount]<p>Update: 1m</p>|
-|Daemon Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",DaemonThreadCount]<p>Update: 1m</p>|
 |Total Started Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",TotalStartedThreadCount]<p>Update: 1m</p>|
-|Peak Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",PeakThreadCount]<p>Update: 1m</p>|
-|Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.committed]<p>Update: 1m</p>|
-|Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.used]<p>Update: 1m</p>|
-|jvm Vendor|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmVendor]<p>Update: 1h</p>|
-|Object Pending Finalization Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",ObjectPendingFinalizationCount]<p>Update: 1m</p>|
+|Total Loaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",TotalLoadedClassCount]<p>Update: 1m</p>|
 |Wildfly Web application interface|<p>-</p>|`Simple check`|net.tcp.service[http,,8080]<p>Update: 30s</p>|
-|Max File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]<p>Update: 1h</p>|
-|jvm Uptime|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",Uptime]<p>Update: 1m</p>|
-|jvm Name|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmName]<p>Update: 1h</p>|
-|Open File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]<p>Update: 1m</p>|
+|jvm Vendor|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmVendor]<p>Update: 1h</p>|
 |Heap Memory max|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.max]<p>Update: 1h</p>|
+|jvm Name|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmName]<p>Update: 1h</p>|
+|jvm Uptime|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",Uptime]<p>Update: 1m</p>|
+|Daemon Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",DaemonThreadCount]<p>Update: 1m</p>|
 |Process CPU Load|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",ProcessCpuLoad]<p>Update: 1m</p>|
-|Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",ThreadCount]<p>Update: 1m</p>|
 |Wildfly monitoring interface|<p>-</p>|`Simple check`|net.tcp.service[tcp,,4447]<p>Update: 30s</p>|
-|Non-Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.used]<p>Update: 1m</p>|
+|Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.committed]<p>Update: 1m</p>|
 |Java Version|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",SpecVersion]<p>Update: 1h</p>|
-|Unloaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",UnloadedClassCount]<p>Update: 1m</p>|
-|Non-Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed]<p>Update: 1m</p>|
 |Loaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",LoadedClassCount]<p>Update: 1m</p>|
+|Unloaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",UnloadedClassCount]<p>Update: 1m</p>|
+|Non-Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.used]<p>Update: 1m</p>|
+|Max File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]<p>Update: 1h</p>|
+|Peak Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",PeakThreadCount]<p>Update: 1m</p>|
+|Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",ThreadCount]<p>Update: 1m</p>|
+|Non-Heap Memory max|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.max]<p>Update: 1h</p>|
+|Non-Heap Memory committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed]<p>Update: 1m</p>|
+|jvm Version|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmVersion]<p>Update: 1h</p>|
+|Open File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]<p>Update: 1m</p>|
+|Object Pending Finalization Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",ObjectPendingFinalizationCount]<p>Update: 1m</p>|
+|Heap Memory used|<p>-</p>|`JMX agent`|jmx["java.lang:type=Memory",HeapMemoryUsage.used]<p>Update: 1m</p>|
+|{#JMXDATA_SOURCE} Cache Access Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheAccessCount]<p>Update: 30s</p><p>LLD</p>|
+|{#JMXDATA_SOURCE} Cache Add Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheAddCount]<p>Update: 30s</p><p>LLD</p>|
+|{#JMXDATA_SOURCE} Cache Current Size|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheCurrentSize]<p>Update: 30s</p><p>LLD</p>|
+|{#JMXDATA_SOURCE} Cache Delete Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheDeleteCount]<p>Update: 30s</p><p>LLD</p>|
+|{#JMXDATA_SOURCE} Cache Hit Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheHitCount]<p>Update: 30s</p><p>LLD</p>|
+|{#JMXDATA_SOURCE} Cache Miss Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheMissCount]<p>Update: 30s</p><p>LLD</p>|
 |{#JMXDATA_SOURCE} ActiveCount|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},ActiveCount]<p>Update: 30</p><p>LLD</p>|
 |{#JMXDATA_SOURCE} XAPrepareMaxTime|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},XAPrepareMaxTime]<p>Update: 30</p><p>LLD</p>|
 |{#JMXDATA_SOURCE} XACommitTotalTime|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},XACommitTotalTime]<p>Update: 30</p><p>LLD</p>|
@@ -170,12 +176,6 @@ There are no template links in this template.
 |{#JMXNAME} used|<p>-</p>|`JMX agent`|jmx[{#JMXOBJ},Usage.used]<p>Update: 30s</p><p>LLD</p>|
 |{#JMXNAME} Collections|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},CollectionCount]<p>Update: 60s</p><p>LLD</p>|
 |{#JMXNAME} Total time spent|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},CollectionTime]<p>Update: 60s</p><p>LLD</p>|
-|{#JMXDATA_SOURCE} Cache Access Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheAccessCount]<p>Update: 30s</p><p>LLD</p>|
-|{#JMXDATA_SOURCE} Cache Add Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheAddCount]<p>Update: 30s</p><p>LLD</p>|
-|{#JMXDATA_SOURCE} Cache Current Size|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheCurrentSize]<p>Update: 30s</p><p>LLD</p>|
-|{#JMXDATA_SOURCE} Cache Delete Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheDeleteCount]<p>Update: 30s</p><p>LLD</p>|
-|{#JMXDATA_SOURCE} Cache Hit Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheHitCount]<p>Update: 30s</p><p>LLD</p>|
-|{#JMXDATA_SOURCE} Cache Miss Count|<p>{#JMXDESC}</p>|`JMX agent`|jmx[{#JMXOBJ},PreparedStatementCacheMissCount]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -192,6 +192,7 @@ There are no template links in this template.
 |Datasource {#JMXDATA_SOURCE} monitoring statistic is not enabled!|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},statisticsEnabled].str(true)}=0</p><p>**Recovery expression**: </p>|information|
 |Datasource {#JMXDATA_SOURCE} connection is timeout on {HOST.NAME}|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},TimedOut].diff(300)}>0</p><p>**Recovery expression**: </p>|disaster|
 |Datasource {#JMXDATA_SOURCE} connection is waiting on {HOST.NAME}|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},WaitCount].avg(300)}>0</p><p>**Recovery expression**: </p>|high|
+|Datasource {#JMXDATA_SOURCE} cache hit is too low! (LLD)|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheAccessCount].last(0)}<({JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheHitCount].last(0)}*0.5)</p><p>**Recovery expression**: {JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheAccessCount].last(0)}>({JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheHitCount].last(0)}*0.6)</p>|warning|
 |Datasource {#JMXDATA_SOURCE} 90% connection is in use {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},InUseCount].last(0)}>({JMX Wildlfy:jmx[{#JMXOBJ},AvailableCount].last(0)}*0.9)</p><p>**Recovery expression**: {JMX Wildlfy:jmx[{#JMXOBJ},InUseCount].last(0)}<({JMX Wildlfy:jmx[{#JMXOBJ},AvailableCount].last(0)}*0.7)</p>|disaster|
 |Datasource {#JMXDATA_SOURCE} have no active connection on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},ActiveCount].last(300)}=0</p><p>**Recovery expression**: </p>|disaster|
 |Datasource {#JMXDATA_SOURCE} monitoring statistic is not enabled! (LLD)|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},statisticsEnabled].str(true)}=0</p><p>**Recovery expression**: </p>|information|
@@ -203,4 +204,3 @@ There are no template links in this template.
 |Server Group is changed! (LLD)|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},serverGroup].diff(0)}>0</p><p>**Recovery expression**: </p>|information|
 |Server controller need to be restart for configuration change. (LLD)|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},serverState].str(running)}=0</p><p>**Recovery expression**: </p>|high|
 |Concurrent {#JMXNAME} in fire fighting mode on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},CollectionCount].last(0)}<{JMX Wildlfy:jmx[{#JMXOBJ},CollectionCount].last(0)}</p><p>**Recovery expression**: </p>|average|
-|Datasource {#JMXDATA_SOURCE} cache hit is too low! (LLD)|<p>-</p>|<p>**Expression**: {JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheAccessCount].last(0)}<({JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheHitCount].last(0)}*0.5)</p><p>**Recovery expression**: {JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheAccessCount].last(0)}>({JMX Wildlfy:jmx[{#JMXOBJ},PreparedStatementCacheHitCount].last(0)}*0.6)</p>|warning|

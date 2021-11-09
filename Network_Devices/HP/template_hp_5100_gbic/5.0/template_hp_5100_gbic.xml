@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:19Z</date>
+  <date>2021-11-09T04:46:26Z</date>
   <groups>
     <group>
       <name>Switchs e Routers</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Sinais Opticos SW HP</template>
       <name>Sinais Opticos SW HP</name>
-      <description>Sinais ópticos (GBIC) para SW HP 5100</description>
+      <description>## Description Sinais ópticos (GBIC) para SW HP 5100 ## Overview Template for SW 5100 with GBIC. GBIC Information: - Optical signal level - Laser Temperature - Voltage and Current in the Laser - Wavelength - Manufacturer Required to MIB: HH3C-TRANSCEIVER-INFO-MIB ## Author Geraldo Jr</description>
       <groups>
         <group>
           <name>Switchs e Routers</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:39Z</date>
+  <date>2021-11-09T05:21:36Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -17,7 +17,7 @@
     <template>
       <template>TP-Link Managed switch with SNMP v3</template>
       <name>TP-Link Managed switch with SNMP v3</name>
-      <description>It is for TP-Link managed switches</description>
+      <description>## Description It is for TP-Link managed switches ## Overview Template can be used for TP-link managed switch SNMPv3 ## Author carissa</description>
       <groups>
         <group>
           <name>Templates</name>

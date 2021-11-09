@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:27Z</date>
+  <date>2021-11-09T05:14:46Z</date>
   <groups>
     <group>
       <name>Templates App</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Nutcracker</template>
       <name>App Nutcracker</name>
+      <description>## Overview Template for collecting [nutcracker (twemproxy)](https://github.com/twitter/twemproxy) metrics. By default template use system.run to collect metrics from &lt;http://localhost:22222> (can be altered via macro) via zabbix-agent, but it can be changed to userparameter or http agent if remote commands are forbidden. Some of the features: * Pool and server discovery. * Single request for LLD and metrics. * Minimum host dependencies - only curl needed if system.run used. No host dependencies with http agent. * No host scripts, utilizing Zabbix features: dependent items and JavaScript preprocessing. ## Author Oleg Morozov aka zigmund</description>
       <groups>
         <group>
           <name>Templates App</name>

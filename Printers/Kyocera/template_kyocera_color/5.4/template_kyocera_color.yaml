@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-26T04:45:58Z'
+  date: '2021-11-09T05:23:21Z'
   groups:
     -
       uuid: 60f1dce8720d41eab748470cd7d4746e
@@ -10,6 +10,27 @@ zabbix_export:
       uuid: 6348e5b0acb84d8f9c47b70ea933acc9
       template: 'Kyocera color'
       name: 'Kyocera color'
+      description: |
+        ## Overview
+        
+        ### Tested colored printer ECOSYS M6030cdn
+        
+        
+        ### -information about the remaining toner in the cartridges
+        
+        
+        ### -triggers on residual less than 5%
+        
+        
+        ### -chart template to track the toner levels of all cartridges
+        
+        
+        
+        ## Author
+        
+        Miromani4
+        
+        
       groups:
         -
           name: Printers

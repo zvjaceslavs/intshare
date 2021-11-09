@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:52Z</date>
+  <date>2021-11-09T04:36:51Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP QNAP NAS</template>
       <name>SNMP QNAP NAS</name>
+      <description>## Overview based on the template you find here: "Zabbix 2.2 QNAP NAS SNMP template" changes: - updated discovery oid's - removed "Use custom multiplier" from item prototype "HdCapacityEX[{#SNMPINDEX}]" NEED in Macros HOST {$SNMP\_COMMUNITY} {$SNMP\_PORT} ## Author AlteraSidus, Bas van Elburg</description>
       <groups>
         <group>
           <name>Templates</name>

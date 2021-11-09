@@ -2,7 +2,7 @@
 
 ## Description
 
-Hitachi_DiskArray_monitor_template Known Issues: device : G200，G400，G800
+## Description Hitachi_DiskArray_monitor_template Known Issues: device : G200，G400，G800 ## Overview Monitor Template of Hitachi DiskArray Suitable for G200, G400, G800 Repalce macro {$CLOUD _SNMP _COMMUNITY} with your snmp community ## Author zhangzhefeng 
 
 ## Overview
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:15Z</date>
+  <date>2021-11-09T05:13:37Z</date>
   <groups>
     <group>
       <name>Templates/Network devices</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Palo Alto SNMPv3 Auth Priv</template>
       <name>Palo Alto SNMPv3 Auth Priv</name>
+      <description>## Overview > Uses SNMPv3 ------------- > Predefined Auth and Priv method : SHA and AES ----------------------------------------------- > Variables under Macros, just one time update during host addition ------------------------------------------------------------------- ## Author hitesh-vinzoda</description>
       <groups>
         <group>
           <name>Templates/Network devices</name>

@@ -1,0 +1,88 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:42:12Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 6abe820d667142e1a6d6bfb9418c785e
+      template: 'APC PDU'
+      name: 'APC PDU'
+      description: |
+        ## Overview
+        
+        Tested in models AP8841. Temperatures in °C
+        
+        
+        With graphic and alerts.
+        
+        
+         
+        
+        
+        Need to use macro {$SNMP\_COMMUNITY}
+        
+        
+         
+        
+        
+         
+        
+        
+        GITHUB: https://github.com/magaiverpr/template-zabbix-apc-pdu
+        
+        
+        
+        ## Author
+        
+        Danielsberton
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 04e37633a4504427971ce14d00ee79ff
+          name: 'Temperatura sensor'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.318.1.1.26.10.2.2.1.8.1
+          key: rPDU2SensorTempHumidityStatusTempC
+          delay: '30'
+          value_type: FLOAT
+          units: C
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.1'
+          triggers:
+            -
+              uuid: a254dfc9a219404a8cbfc4f423c81075
+              expression: 'last(/APC PDU/rPDU2SensorTempHumidityStatusTempC)>30'
+              name: 'Temperatura alta'
+              priority: HIGH
+            -
+              uuid: a224fa4583534b60b94bb59bcc388c54
+              expression: 'last(/APC PDU/rPDU2SensorTempHumidityStatusTempC)<20'
+              name: 'Temperatura baixa'
+              priority: AVERAGE
+            -
+              uuid: e0025be5b494417fbc0ed448825916e7
+              expression: 'last(/APC PDU/rPDU2SensorTempHumidityStatusTempC)>40'
+              name: 'Temperatura crítica'
+              priority: DISASTER
+  graphs:
+    -
+      uuid: 6d0e844cef8d4d8d9b86e7c06fe5eed6
+      name: 'Temperatura sensor'
+      graph_items:
+        -
+          drawtype: GRADIENT_LINE
+          color: 0000CC
+          yaxisside: RIGHT
+          item:
+            host: 'APC PDU'
+            key: rPDU2SensorTempHumidityStatusTempC

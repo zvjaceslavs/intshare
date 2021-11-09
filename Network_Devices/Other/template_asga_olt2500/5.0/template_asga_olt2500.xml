@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:44Z</date>
+  <date>2021-11-09T04:42:33Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP AsGa OLT2500</template>
       <name>SNMP AsGa OLT2500</name>
+      <description>## Overview - Discovery ONUs - 15 Items - 3 Triggers by Onu - Disconvery PON Interfaces - 8 Items - Discovery SFP Interfaces - 12 Items - 1 Trigger by Interface - Discovery XFP Interfaces - 12 Items - 1 Trigger by Interface I will update in some days, I wait your Suggestions. Thanks!! ## Author Reginaldo F Lopes</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,2 +1,0 @@
-PowerSupply-[0-9]$|Power Supply [0-9]|Ethernet Module|Expansion Module 	RESULTADO is VERDADERO
-

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:24Z</date>
+  <date>2021-11-09T04:33:51Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Generic</template>
       <name>SNMP Generic</name>
+      <description>## Overview Official template from Zabbix distribution to monitor generic device information by SNMP ## Author Zabbix SIA</description>
       <groups>
         <group>
           <name>Templates</name>

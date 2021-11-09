@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:00Z</date>
+  <date>2021-11-09T04:50:38Z</date>
   <groups>
     <group>
       <name>DmOS</name>
@@ -14,6 +14,7 @@
     <template>
       <template>DATACOM DmOS - ONU Interfaces</template>
       <name>DATACOM DmOS - ONU Interfaces</name>
+      <description>## Overview SNMP Discovery - Ethernet UNI Interfaces SNMP - Ethernet UNI Statistics SNMP - ONU Power ## Author Guilherme Zamora Rodrigues</description>
       <groups>
         <group>
           <name>DmOS</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:20Z</date>
+  <date>2021-11-09T04:52:52Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Kaspersky</template>
       <name>App Kaspersky</name>
+      <description>## Overview É obrigatório ter o SNMP habilitado no server, bem como ter habilitado o SNMP na console de gerenciamento do Kaspersky (KSC) Método de coleta, via SNMPv2 Itens coletados: * Quantidade de Hosts com licenças expiradas * Quantidade de Hosts sem verificação * Quantidade de Hosts sem conexão * Quantidade de hosts com licença expirando * Quantidade de hosts localizados * Quantidade de hosts com Antivírus * Número de vírus no Unprocessed files * Quantidade de eventos críticos * Status da atualização da base * Último update. ## Author Carlos Eduardo</description>
       <groups>
         <group>
           <name>Templates</name>

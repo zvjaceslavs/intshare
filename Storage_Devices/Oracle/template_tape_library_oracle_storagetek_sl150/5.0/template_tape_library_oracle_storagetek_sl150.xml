@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:18Z</date>
+  <date>2021-11-09T05:14:00Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP Tape Library Oracle StorageTek SL150</template>
       <name>SNMP Tape Library Oracle StorageTek SL150</name>
-      <description>Based on MIB File: STREAMLINE-TAPE-LIBRARY-MIB Created by Samuel Martins https://github.com/slunart/ https://www.linkedin.com/in/slmartins/ 2020-04-19 Version 1.0</description>
+      <description>## Description Based on MIB File: STREAMLINE-TAPE-LIBRARY-MIB Created by Samuel Martins https://github.com/slunart/ https://www.linkedin.com/in/slmartins/ 2020-04-19 Version 1.0 ## Overview Hello, I created this template to monitor the Oracle StorageTek SL150 Modular Tape Library equipment ((www.oracle.com/br/storage/tape-storage/sl150-modular-tape-library/) via SNMP agent. I used as a base the MIB called "STREAMLINE-TAPE-LIBRARY-MIB" and validated it on an SL 150 device. This template is likely to work partially on other Oracle Tape Library as on the SL 500 version. This template is also available on GitHub: https://github.com/slunart/Zabbix-Templates/tree/master/Oracle If you find any inconsistencies in the template, please let me know that I will try to improve it. Best regards, Samuel Martins ## Author Samuel Martins</description>
       <groups>
         <group>
           <name>Templates</name>

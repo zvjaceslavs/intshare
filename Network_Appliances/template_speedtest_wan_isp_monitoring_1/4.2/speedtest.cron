@@ -1,1 +1,0 @@
-*/10 * * * * zabbix /etc/zabbix/script/speedtest.sh -a

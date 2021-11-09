@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:31Z</date>
+  <date>2021-11-09T04:54:09Z</date>
   <groups>
     <group>
       <name>Templates/Servers Hardware</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco-UCS</template>
       <name>Cisco-UCS</name>
+      <description>## Overview **Monitoring Cisco UCS Server for snmp v2 Working with B and C Blade server** **tested on Cisco chassis 5018 and B200M4 .** **it give you this info :** * **Servers Hardware component info.** * **Temperature monitoring .** * **FAN** ****monitoring .**** * ****PSU**** ******monitoring .****** * ******Memory****** ************monitoring .************ * ************CPU************ ******************monitoring .****************** * ******************Network****************** ******************you only need to add {$SNMP\_COMMUNITY} in macros****************** ## Author Bassam Darawshi</description>
       <groups>
         <group>
           <name>Templates/Servers Hardware</name>

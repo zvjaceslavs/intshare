@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:43Z</date>
+  <date>2021-11-09T04:42:25Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>3COM 4500 28 Ports</template>
       <name>3COM 4500 28 Ports</name>
+      <description>## Overview Template para monitorar o Switch 3COM, modelo 4500 de 28 portas. Gráficos por porta, Entrada e Saída, Erro de tráfego nas 28 portas. O template exibe a alteração e status da porta. O template foi criado por: Marcelo Carvalho eu fiz somente a edição. ## Author Marcelo Carvalo e edição Gerson Thiago</description>
       <groups>
         <group>
           <name>Templates</name>
@@ -2195,19 +2196,19 @@
       <name>Port 2 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifInOctects.4227634</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifOutOctets.4227634</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifInOctects.4227634</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2216,19 +2217,19 @@
       <name>Port 3 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifInOctects.4227642</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifOutOctets.4227642</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifInOctects.4227642</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2279,19 +2280,19 @@
       <name>Port 6 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifOutOctets.4227666</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifInOctects.4227666</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifOutOctets.4227666</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2300,19 +2301,19 @@
       <name>Port 7 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifInOctects.4227674</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifOutOctets.4227674</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifInOctects.4227674</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2321,19 +2322,19 @@
       <name>Port 8 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifOutOctets.4227682</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifInOctects.4227682</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifOutOctets.4227682</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2405,19 +2406,19 @@
       <name>Port 12 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifOutOctets.4227714</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifInOctects.4227714</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifOutOctets.4227714</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2447,19 +2448,19 @@
       <name>Port 14 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifInOctects.4227730</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifOutOctets.4227730</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifInOctects.4227730</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2468,19 +2469,19 @@
       <name>Port 15 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>FF0000</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifOutOctets.4227738</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>009900</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifInOctects.4227738</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>FF0000</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifOutOctets.4227738</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2489,19 +2490,19 @@
       <name>Port 16 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifInOctects.4227746</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifOutOctets.4227746</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifInOctects.4227746</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2552,19 +2553,19 @@
       <name>Port 19 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifInOctects.4227770</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifOutOctets.4227770</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifInOctects.4227770</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2594,19 +2595,19 @@
       <name>Port 21 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifInOctects.4227786</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifOutOctets.4227786</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifInOctects.4227786</key>
           </item>
         </graph_item>
       </graph_items>
@@ -2636,19 +2637,19 @@
       <name>Port 23 Traffic</name>
       <graph_items>
         <graph_item>
-          <color>009900</color>
-          <yaxisside>RIGHT</yaxisside>
-          <item>
-            <host>3COM 4500 28 Ports</host>
-            <key>ifInOctects.4227802</key>
-          </item>
-        </graph_item>
-        <graph_item>
           <color>FF0000</color>
           <yaxisside>RIGHT</yaxisside>
           <item>
             <host>3COM 4500 28 Ports</host>
             <key>ifOutOctets.4227802</key>
+          </item>
+        </graph_item>
+        <graph_item>
+          <color>009900</color>
+          <yaxisside>RIGHT</yaxisside>
+          <item>
+            <host>3COM 4500 28 Ports</host>
+            <key>ifInOctects.4227802</key>
           </item>
         </graph_item>
       </graph_items>

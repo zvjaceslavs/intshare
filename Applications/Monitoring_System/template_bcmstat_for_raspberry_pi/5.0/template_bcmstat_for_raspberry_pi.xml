@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:04Z</date>
+  <date>2021-11-09T05:12:20Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>App bcmstat</template>
       <name>App bcmstat</name>
-      <description>Monitoring bcmstat 0.5.4 or greater. https://github.com/MilhouseVH/bcmstat</description>
+      <description>## Description Monitoring bcmstat 0.5.4 or greater. https://github.com/MilhouseVH/bcmstat ## Overview The Git repo can be found [here](https://gitlab.com/i.am.stack/zabbix_bcmstat_raspberrypi). This template will monitor Raspberry Pi's (only tested RPI4) via SSH using the bcmstat utility which must be v0.5.4 or better. ## Author ~Stack~</description>
       <templates>
         <template>
           <name>Template App SSH Service</name>

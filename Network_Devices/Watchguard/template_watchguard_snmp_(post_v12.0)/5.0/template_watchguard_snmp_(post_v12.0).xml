@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:22Z</date>
+  <date>2021-11-09T05:07:24Z</date>
   <groups>
     <group>
       <name>Halley template</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Watchguard Firewall</template>
       <name>Watchguard Firewall</name>
+      <description>## Overview An updated Watchguard template that uses the updated SNMP OIDs after the v12.0 update. Template pulls: Active Connections Available Memory CPU Utilization Device Description Device Location Device Name Device Uptime Free Memory Total Bytes Received Total Bytes Sent Total Memory Bandwidth Utilization Access Rules Discovery Rules: Access Rules Network Interfaces ## Author klheuser</description>
       <groups>
         <group>
           <name>Halley template</name>

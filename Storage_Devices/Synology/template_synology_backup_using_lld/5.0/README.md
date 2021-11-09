@@ -2,7 +2,7 @@
 
 ## Description
 
-Is the template for the service NAS Backup. Will contain only items for discover and monitor de NAS backup instances
+## Description Is the template for the service NAS Backup. Will contain only items for discover and monitor de NAS backup instances ## Overview All processes are described here: https://github.com/tudorticau/Synology-Backup-LLD-Monitor First step: setup syslogserver Second: configure zabbix to monitor using LLD All is tested and already implemented on production: over 40 NAS Template have 1 item and 1 trigger, but is LLD - this mean you don't have to take care how your admins will add and name the backup processes: all is done automatically ## Author Tudor Ticau 
 
 ## Overview
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:21Z</date>
+  <date>2021-11-09T04:46:47Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App MQTT Service</template>
       <name>App MQTT Service</name>
+      <description>## Overview A very simple template+script for monitoring mosquitto. CONFIG /etc/zabbix/zabbix-agent.d/userparams\_mosquitto.conf ======================= CUT HERE ================================ # Mosquitto monitoring # # This content is licensed GNU GPL v2 # Author: Guido Rizzi ([guido.rizzi@studiorizzi.net](mailto:guido.rizzi@studiorizzi.net)) # UserParameter=mosquitto[*],/etc/zabbix/scripts/mosquitto \$SYS/broker/$1 2>/dev/null ======================= CUT HERE ================================ SCRIPT /etc/zabbix/scripts/mosquitto ======================= CUT HERE ================================ #!/bin/bash mosquitto\_sub -C 1 -u USERNAME -P PASSWORD -t "$1" ======================= CUT HERE ================================</description>
       <groups>
         <group>
           <name>Templates</name>

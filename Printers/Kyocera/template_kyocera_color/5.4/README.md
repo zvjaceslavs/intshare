@@ -1,5 +1,9 @@
 # Kyocera color
 
+## Description
+
+## Overview ### Tested colored printer ECOSYS M6030cdn ### -information about the remaining toner in the cartridges ### -triggers on residual less than 5% ### -chart template to track the toner levels of all cartridges ## Author Miromani4 
+
 ## Overview
 
 ### Tested colored printer ECOSYS M6030cdn

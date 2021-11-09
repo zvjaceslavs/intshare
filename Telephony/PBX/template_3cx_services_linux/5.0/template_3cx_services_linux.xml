@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:27Z</date>
+  <date>2021-11-09T05:14:43Z</date>
   <groups>
     <group>
       <name>3CX Services</name>
@@ -14,6 +14,7 @@
     <template>
       <template>3CX Services Linux</template>
       <name>3CX Services Linux</name>
+      <description>## Overview Template for monitoring 3cx services running on linux, this template contains trigger and items to monitor services related to the 3cx system, the postgresql and nginx database service. Note: As of version 18, the tunnel has been incorporated into the media server and this item/trigger must be disabled or excluded. ## Author Antony T. N. Peronio</description>
       <groups>
         <group>
           <name>3CX Services</name>

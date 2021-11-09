@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:17Z</date>
+  <date>2021-11-09T04:52:33Z</date>
   <groups>
     <group>
       <name>ZBX-INFINERA-TEMPLATES</name>
@@ -11,6 +11,7 @@
     <template>
       <template>ZBX-INFINERA-XTM-SERIES-MONITORING</template>
       <name>ZBX-INFINERA-XTM-SERIES-MONITORING</name>
+      <description>## Overview README: &lt;https://github.com/hacktivism-github/zbx-templates-repository/blob/master/zbx-infinera/README.md> ![Infinera XTM Series Template in Production](media/com_mtree/images/listings/m/481.png) ## Author Bruno Teixeira</description>
       <groups>
         <group>
           <name>ZBX-INFINERA-TEMPLATES</name>

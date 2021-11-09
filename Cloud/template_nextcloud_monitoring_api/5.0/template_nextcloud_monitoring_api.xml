@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:30Z</date>
+  <date>2021-11-09T04:54:02Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Nextcloud Monitoring API</template>
       <name>App Nextcloud Monitoring API</name>
+      <description>## Overview Nextcloud Monitoring API integration for Zabbix 3.4 Needs **curl** to be installed on the Nextcloud server. **You need to set the macros according to your environment.** Fully compatible with Nextcloud versions 14 - 17. Shows different operating values of your Nextcloud server: Version Webserver Database Type Database Version Database Size PHP Max. Execution Time PHP Memory Limit PHP Upload Max. Filesize PHP Version Storage Files Storage Freespace Storage Users Number of Storages Apps Installed Apps Needing Update</description>
       <groups>
         <group>
           <name>Templates</name>

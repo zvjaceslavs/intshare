@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:54Z</date>
+  <date>2021-11-09T05:11:10Z</date>
   <groups>
     <group>
       <name>Fortigate</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Fortigate FG_200B</template>
       <name>FG_200B</name>
+      <description>## Overview Template for Fortigate 200B Still - WIP! Use at your own risk Items: * Memory * CPU * SN * FW * Up time * Sessions Items Prototypes * Download * Upload * Status * Description Trigger Prototypes * Interface Up &amp; Down Any suggestion will be Welcomed :) ## Author JonatanRek</description>
       <groups>
         <group>
           <name>Fortigate</name>

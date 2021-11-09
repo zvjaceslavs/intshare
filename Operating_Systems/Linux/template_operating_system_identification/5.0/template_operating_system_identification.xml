@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:40Z</date>
+  <date>2021-11-09T05:21:41Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>OSI_v2</template>
       <name>Operating System Identification v2</name>
+      <description>## Overview The template does not require additional scripts and installation of any packages on a Linux system. Low-level discovery (LLD) extracts keys from the /etc/os-release file and generates items. The template requires version 5 (or higher) of Zabbix server. ## Author vasilisc</description>
       <groups>
         <group>
           <name>Templates</name>

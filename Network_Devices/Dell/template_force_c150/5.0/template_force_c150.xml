@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:00Z</date>
+  <date>2021-11-09T04:57:50Z</date>
   <groups>
     <group>
       <name>Мегалинк_ЦТ</name>
@@ -11,6 +11,7 @@
     <template>
       <template>force_c150</template>
       <name>Force C150</name>
+      <description>## Overview my template for Dell Force C150 chassis. мой шаблон для шасси Dell Force C150 ## Author nickolya666</description>
       <groups>
         <group>
           <name>Мегалинк_ЦТ</name>

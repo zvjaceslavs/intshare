@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:25Z</date>
+  <date>2021-11-09T05:07:46Z</date>
   <groups>
     <group>
       <name>Network</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Huawei Quidway S5600 series switches</template>
       <name>Huawei Quidway s5600 series switches</name>
+      <description>## Overview Template for Huawei Quidway s5600 switches. General information - Uptime, system name, number of interfaces. Interfaces - operational and administrative status of ports, errors TX and RX on every port, Bytes TX and RX on every port, triggers on CRC errors RX and TX, port status down, and restart of switch. Graphics - statistics TX/RX on every interface. MACROS to be defined for the hosts: {$SNMP\_COMMUNITY} Possilble, it will work on earlier versions of Zabbix, but i was testing it on 4.0 ## Author Fedor Katilov</description>
       <groups>
         <group>
           <name>Network</name>

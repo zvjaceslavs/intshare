@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:59Z</date>
+  <date>2021-11-09T05:11:44Z</date>
   <groups>
     <group>
       <name>Hosts Datacenter Telegram</name>
@@ -11,6 +11,7 @@
     <template>
       <template>DCM SW-11-DSP</template>
       <name>DCM SW-11-DSP</name>
+      <description>## Overview Template para o equipamento SW-11-DSP para consultas através de SNMP. Monitor de temperatura e umidade. Alertas de temperatura para 30°C e 40°C. Gráficos para temperatura do local e de umidade. Dúvidas: rodolfo@dcmtech.com.br Site fabricante: [dcmtech.com.br](https://dcmtech.com.br/) ## Author Rodolfo Luis Overbeck</description>
       <groups>
         <group>
           <name>Hosts Datacenter Telegram</name>

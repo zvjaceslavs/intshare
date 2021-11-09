@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:46Z</date>
+  <date>2021-11-09T05:22:25Z</date>
   <groups>
     <group>
       <name>UPS</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Emerson NXR UPS</template>
       <name>Emerson NXR UPS</name>
+      <description>## Overview * Suitable for Emerson NXR UPS series * zabbix 5.0 * reference https://exchange.nagios.org/directory/Plugins/Hardware/UPS/Liebert/Check-Liebert-NXR-2DUPS-(30kVA)/details The OID value of the search The status mapping value 0 is normal! ## Author LI haoling</description>
       <groups>
         <group>
           <name>UPS</name>

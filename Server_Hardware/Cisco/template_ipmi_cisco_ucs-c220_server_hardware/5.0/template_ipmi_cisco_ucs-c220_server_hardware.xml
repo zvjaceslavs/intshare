@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:28Z</date>
+  <date>2021-11-09T05:08:00Z</date>
   <groups>
     <group>
       <name>Templates Hardware</name>
@@ -11,7 +11,7 @@
     <template>
       <template>IPMI Cisco UCS-C220 Server hardware</template>
       <name>IPMI Cisco UCS-C220 Server hardware</name>
-      <description>ipmi sensors, please disable absend HDD and unsupported items</description>
+      <description>## Description ipmi sensors, please disable absend HDD and unsupported items ## Overview Template for monitoring IPMI sensors for Cisco UCS servers hardware tested on C220M3 please disable absend HDD and unsupported items after some time. sensors and triggers: * cpu temperature * DDR modules status * HDD status * LED fan status * overal leds status * Power modules status * other temperature sensors * storage status ## Author Dmitry Lavrukhin</description>
       <groups>
         <group>
           <name>Templates Hardware</name>

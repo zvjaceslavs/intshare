@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:02Z</date>
+  <date>2021-11-09T04:31:37Z</date>
   <groups>
     <group>
       <name>自宅ラックテンプレート</name>
@@ -11,6 +11,7 @@
     <template>
       <template>NTP-remote-Japanese</template>
       <name>NTPテンプレート（リモート）</name>
+      <description>## Overview NTP accuracy Template の日本語版です 英語版は[こちら](cat-app/ntp-accuracy-template)English version of the template is in the [link](cat-app/ntp-accuracy-template) . テンプレートを利用する場合zabbix\_agentd.confでリモートコマンドを有効にしてください。 EnableRemoteCommands=1 UnsafeUserParameters=1 ZabbixAgentがインストールされた環境に対しては NTPテンプレートが使用できます。 NTPアプライアンスなどZabbixAgentが使用できない環境のNTPサーバに対しては NTPテンプレート（リモート）が使用できます。 NTPテンプレート（リモート）を利用する場合はホストマクロにおいて {$NTP\_IP}に監視対象のIPアドレスを指定してください。 ntpqによって表示されるすべての項目が監視できます。 NTP精度情報をグラフ化することが可能です。</description>
       <groups>
         <group>
           <name>自宅ラックテンプレート</name>
@@ -175,6 +176,7 @@
     <template>
       <template>NTP_Monitoring-Japanese</template>
       <name>NTPテンプレート</name>
+      <description>## Overview NTP accuracy Template の日本語版です 英語版は[こちら](cat-app/ntp-accuracy-template)English version of the template is in the [link](cat-app/ntp-accuracy-template) . テンプレートを利用する場合zabbix\_agentd.confでリモートコマンドを有効にしてください。 EnableRemoteCommands=1 UnsafeUserParameters=1 ZabbixAgentがインストールされた環境に対しては NTPテンプレートが使用できます。 NTPアプライアンスなどZabbixAgentが使用できない環境のNTPサーバに対しては NTPテンプレート（リモート）が使用できます。 NTPテンプレート（リモート）を利用する場合はホストマクロにおいて {$NTP\_IP}に監視対象のIPアドレスを指定してください。 ntpqによって表示されるすべての項目が監視できます。 NTP精度情報をグラフ化することが可能です。 ## Overview NTP accuracy Template の日本語版です 英語版は[こちら](cat-app/ntp-accuracy-template)English version of the template is in the [link](cat-app/ntp-accuracy-template) . テンプレートを利用する場合zabbix\_agentd.confでリモートコマンドを有効にしてください。 EnableRemoteCommands=1 UnsafeUserParameters=1 ZabbixAgentがインストールされた環境に対しては NTPテンプレートが使用できます。 NTPアプライアンスなどZabbixAgentが使用できない環境のNTPサーバに対しては NTPテンプレート（リモート）が使用できます。 NTPテンプレート（リモート）を利用する場合はホストマクロにおいて {$NTP\_IP}に監視対象のIPアドレスを指定してください。 ntpqによって表示されるすべての項目が監視できます。 NTP精度情報をグラフ化することが可能です。</description>
       <groups>
         <group>
           <name>自宅ラックテンプレート</name>

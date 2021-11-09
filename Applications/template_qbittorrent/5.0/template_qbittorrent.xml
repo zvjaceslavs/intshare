@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:54Z</date>
+  <date>2021-11-09T05:11:06Z</date>
   <groups>
     <group>
       <name>Templates Midgard</name>
@@ -11,7 +11,7 @@
     <template>
       <template>qBittorrent</template>
       <name>qBittorrent</name>
-      <description>Template de monitoramento da API do qBittorrent</description>
+      <description>## Description Template de monitoramento da API do qBittorrent ## Overview Template for qBittorrent. Do you need change macro "{$URLQBITTORRENT}", set de URL on your qBittorrent server with port (if exist). In the qBittorent do you need change in options>web interface to allow IP the zabbix server or proxy. Itens: * Conection Status * DHT Nodes * Download Data * Download Limit * Download Speed * Upload Data * Upload Limit * Upload Speed * Version ## Author Antony Peronio</description>
       <groups>
         <group>
           <name>Templates Midgard</name>

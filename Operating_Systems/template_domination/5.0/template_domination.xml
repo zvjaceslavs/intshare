@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:35Z</date>
+  <date>2021-11-09T04:48:22Z</date>
   <groups>
     <group>
       <name>DOMINATION</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Domination</template>
       <name>Domination</name>
+      <description>## Overview Шаблон для видео наблюдения на базе Domination. ## Author Egor Elcov</description>
       <groups>
         <group>
           <name>DOMINATION</name>

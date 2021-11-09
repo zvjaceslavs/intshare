@@ -1,4 +1,0 @@
-1 : operational
-2 : suspended
-3 : mtuTooBigForDevice
-4 : mtuTooBigForTrunk 

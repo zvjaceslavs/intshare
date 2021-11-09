@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:07Z</date>
+  <date>2021-11-09T05:19:21Z</date>
   <groups>
     <group>
       <name> Templates</name>
@@ -17,7 +17,7 @@
     <template>
       <template>ILOM ORACLE SRV X8-2 SNMP Trap</template>
       <name>ILOM ORACLE SRV X8-2 SNMP Trap</name>
-      <description>Exadata Database Machine X8-2</description>
+      <description>## Description Exadata Database Machine X8-2 ## Overview Template for monitoring Oracle Exadata Infraestructure. ## Author Anael Silva | Bruno Luz</description>
       <groups>
         <group>
           <name> Templates</name>

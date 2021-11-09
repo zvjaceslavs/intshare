@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:41Z</date>
+  <date>2021-11-09T05:21:48Z</date>
   <groups>
     <group>
       <name>Fortiswitch</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP FortiSwitch Devices</template>
       <name>SNMP FortiSwitch Devices</name>
+      <description>## Overview This is a template created starting from Andrea Durante's Fortigate SNMP template, but with modified OIDs from the MIB of the FortiSwitch 124E-PoE device. Serial No., OS version,% CPU,% RAM, disk (total and used), interface data (link and speed). Graphs for % CPU, % RAM, disk use and network traffic. ## Author Sergio Román González</description>
       <groups>
         <group>
           <name>Fortiswitch</name>

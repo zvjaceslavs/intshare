@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:19Z</date>
+  <date>2021-11-09T05:25:17Z</date>
   <groups>
     <group>
       <name>Templates/Server hardware</name>
@@ -11,7 +11,7 @@
     <template>
       <template>H3C_RackServer_monitor</template>
       <name>H3C RackServer Monitor</name>
-      <description>H3C_RackServer_monitor_template Known Issues: device : UIS-Cell-3030-G3,UniServer-R4900</description>
+      <description>## Description H3C_RackServer_monitor_template Known Issues: device : UIS-Cell-3030-G3,UniServer-R4900 ## Overview Monitor Template of H3C RackServer . Suitable for UIS-Cell-3030-G3,UniServer-R4900. Include health status of CPU, disk, entity, fan, memory, PCIE, power. Repalce &lt;span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-posit ## Author zhangzhefeng</description>
       <groups>
         <group>
           <name>Templates/Server hardware</name>

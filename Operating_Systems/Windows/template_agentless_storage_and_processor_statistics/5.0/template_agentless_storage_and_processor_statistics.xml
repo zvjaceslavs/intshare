@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:45Z</date>
+  <date>2021-11-09T04:49:25Z</date>
   <groups>
     <group>
       <name>Templates/Operating Systems</name>
@@ -11,6 +11,7 @@
     <template>
       <template>OS Windows WMI</template>
       <name>OS Windows WMI</name>
+      <description>## Overview Template for receiving stats with zbxwmi script. This method allows to retrieve stats remotely by WMI without installing agent to OS. You can get script from: &lt;https://github.com/13hakta/zbxwmi> - with tips and installation manual. Requires python 3 script (check link above). ## Author Vitaly Chekryzhev</description>
       <groups>
         <group>
           <name>Templates/Operating Systems</name>

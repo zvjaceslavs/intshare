@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:53Z</date>
+  <date>2021-11-09T04:56:58Z</date>
   <groups>
     <group>
       <name>Network Appliance</name>
@@ -14,6 +14,7 @@
     <template>
       <template>SNMP HP v1920-24G</template>
       <name>SNMP HP v1920-24G</name>
+      <description>## Overview Modified (added additional ports) following template https://share.zabbix.com/network\_devices/cat-hp/hp-1920-16g</description>
       <groups>
         <group>
           <name>Network Appliance</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:36Z</date>
+  <date>2021-11-09T04:54:43Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Printer Xerox WorkCentre 7220</template>
       <name>Printer Xerox WorkCentre 7220</name>
+      <description>## Overview I upgraded older version Xerox template 7225. Its orchestrated with template Grafana. Zabbix apliance 3.4.12 [Dasboard Geafana Xerox 7220](https://grafana.com/api/dashboards/8369/revisions/1/download)</description>
       <groups>
         <group>
           <name>Printers</name>

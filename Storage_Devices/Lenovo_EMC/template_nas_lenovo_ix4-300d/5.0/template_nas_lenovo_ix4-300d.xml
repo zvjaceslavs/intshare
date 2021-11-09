@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:13Z</date>
+  <date>2021-11-09T04:45:50Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Storage Lenovo ix4-300d</template>
       <name>Storage Lenovo ix4-300d</name>
+      <description>## Overview SNMPv3 Template for Lenovo NAS ix4-300d: this template monitor RAID, FAN , Disk partitions, Connected users, Network interfaces and device temperature. - 11 items - 5 Triggers - 8 Discovery ## Author Hamdi Ben Abdallah</description>
       <groups>
         <group>
           <name>Templates</name>

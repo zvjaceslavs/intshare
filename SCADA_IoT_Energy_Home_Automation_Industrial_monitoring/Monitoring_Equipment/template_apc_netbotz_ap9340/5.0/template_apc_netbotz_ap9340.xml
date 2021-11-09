@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:31Z</date>
+  <date>2021-11-09T04:47:54Z</date>
   <groups>
     <group>
       <name>APC Environmental Manager</name>
@@ -11,7 +11,7 @@
     <template>
       <template>netbotzAP9340</template>
       <name>APC Netbotz AP9340</name>
-      <description>Retrieves temps and humidity from all the sensors.</description>
+      <description>## Description Retrieves temps and humidity from all the sensors. ## Overview I made a simple template for the APC Netbotz AP9340, i currently have 2 (RJ45) temperature sensors connected and retrieving the temp and humidity from both. ## Author petroska</description>
       <groups>
         <group>
           <name>APC Environmental Manager</name>

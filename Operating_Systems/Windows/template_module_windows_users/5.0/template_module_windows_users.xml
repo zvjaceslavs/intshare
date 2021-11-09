@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:12Z</date>
+  <date>2021-11-09T05:24:33Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Module Windows users by Zabbix agent</template>
       <name>Module Windows users by Zabbix agent</name>
-      <description>Get a total of logged-in users in the system.</description>
+      <description>## Description Get a total of logged-in users in the system. ## Overview **Attach** this module with your **Template OS Windows by Zabbix agent** or the **Template OS Windows by Zabbix agent active**, and start to get the number of users that are logged in your Windows Server. This module shows the 'active users' and the 'disconnected users' (consuming system resources). This module works great with my [Grafana Dashboard](https://grafana.com/grafana/dashboards/5363), please take a look. Item details: For a very long time, I tried to get this done in Windows (Linux already comes with this monitoring out of the box), the only option I know was with 'Remote Commands', which can have some security problems, or the company doesn't want to enable, so I figured out how to do this with WMI. Please enjoy. ## Author Paulo Paim</description>
       <groups>
         <group>
           <name>Templates/Modules</name>
@@ -45,7 +45,7 @@
     <template>
       <template>Module Windows users by Zabbix agent active</template>
       <name>Module Windows users by Zabbix agent active</name>
-      <description>Get a total of logged-in users in the system.</description>
+      <description>## Description Get a total of logged-in users in the system. ## Overview **Attach** this module with your **Template OS Windows by Zabbix agent** or the **Template OS Windows by Zabbix agent active**, and start to get the number of users that are logged in your Windows Server. This module shows the 'active users' and the 'disconnected users' (consuming system resources). This module works great with my [Grafana Dashboard](https://grafana.com/grafana/dashboards/5363), please take a look. Item details: For a very long time, I tried to get this done in Windows (Linux already comes with this monitoring out of the box), the only option I know was with 'Remote Commands', which can have some security problems, or the company doesn't want to enable, so I figured out how to do this with WMI. Please enjoy. ## Author Paulo Paim ## Description Get a total of logged-in users in the system. ## Overview **Attach** this module with your **Template OS Windows by Zabbix agent** or the **Template OS Windows by Zabbix agent active**, and start to get the number of users that are logged in your Windows Server. This module shows the 'active users' and the 'disconnected users' (consuming system resources). This module works great with my [Grafana Dashboard](https://grafana.com/grafana/dashboards/5363), please take a look. Item details: For a very long time, I tried to get this done in Windows (Linux already comes with this monitoring out of the box), the only option I know was with 'Remote Commands', which can have some security problems, or the company doesn't want to enable, so I figured out how to do this with WMI. Please enjoy. ## Author Paulo Paim</description>
       <groups>
         <group>
           <name>Templates/Modules</name>

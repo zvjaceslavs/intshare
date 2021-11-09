@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:15Z</date>
+  <date>2021-11-09T04:52:18Z</date>
   <groups>
     <group>
       <name>A-OVR_TPLGPR</name>
@@ -14,6 +14,7 @@
     <template>
       <template>VEEAM-Agents</template>
       <name>VEEAM-Agents</name>
+      <description>## Overview This template provide a way to monitor backup made by [Veeam Backup Agent for Microsoft Windows](https://www.veeam.com/windows-cloud-server-backup-agent.html). There is no additionnals scripts needed, all results are read from the Windows Event Log. It also monitor the service state of the application. This template is made with "zabbix active" item, meaning it can work behind remote firewall. ## Author Cédric MARCOUX</description>
       <groups>
         <group>
           <name>A-OVR_TPLGPR</name>

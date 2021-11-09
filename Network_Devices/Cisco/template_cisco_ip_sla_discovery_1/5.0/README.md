@@ -1,5 +1,9 @@
 # SNMP Cisco IP SLA
 
+## Description
+
+## Overview Template for Zabbix 3.0 version. Adapted from Pahedu Pahedu's Zabbix 3.2 template. 
+
 ## Overview
 
 Template for Zabbix 3.0 version. Adapted from Pahedu Pahedu's Zabbix 3.2 template.

@@ -1,5 +1,9 @@
 # Discovery Audemat
 
+## Description
+
+## Overview Template for Audemat FM Monitor Silver, snmp no MIBS needed ## Author I. Aliaga U. 
+
 ## Overview
 
 Template for Audemat FM Monitor Silver, snmp no MIBS needed

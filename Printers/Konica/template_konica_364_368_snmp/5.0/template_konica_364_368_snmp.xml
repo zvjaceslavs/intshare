@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:24Z</date>
+  <date>2021-11-09T04:47:05Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Printer_Konica</template>
       <name>Printer_Konica</name>
+      <description>## Overview Displays toner levels, special units, total pages and triggers on low toner and units level. ## Author Dorin Sergey</description>
       <groups>
         <group>
           <name>Printers</name>

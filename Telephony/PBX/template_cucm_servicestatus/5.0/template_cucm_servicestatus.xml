@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:06Z</date>
+  <date>2021-11-09T05:05:34Z</date>
   <groups>
     <group>
       <name>VOIP ALL</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco AXL Feature Service Status</template>
       <name>Cisco AXL Feature Service Status</name>
+      <description>## Overview CUCM Feature Service Status request from AXL Запрос информации о статусе сервисов CUCM через AXL. Необходим Application User с правами на чтение AXL API Application user name: {$ZABBIX\_APIUSER\_UC} Applicatuin user passwd: {$ZABBIX\_APIUSER\_UC} ## Author Andrey</description>
       <groups>
         <group>
           <name>VOIP ALL</name>

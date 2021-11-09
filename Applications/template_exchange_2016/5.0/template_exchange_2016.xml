@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:22Z</date>
+  <date>2021-11-09T05:00:20Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Microsoft Exchange Server 2016</template>
       <name>Microsoft Exchange Server 2016</name>
+      <description>## Overview exchange 2016 template Generated with: [https://xh-compiler.com](https://xh-compiler.com/) ## Author eXtremeHosting</description>
       <groups>
         <group>
           <name>Templates</name>

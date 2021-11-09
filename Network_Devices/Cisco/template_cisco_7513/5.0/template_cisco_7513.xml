@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:54Z</date>
+  <date>2021-11-09T04:30:36Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco General</template>
       <name>Cisco General</name>
+      <description>## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage</description>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>
@@ -154,6 +155,7 @@
     <template>
       <template>Cisco_7513</template>
       <name>Cisco_7513</name>
+      <description>## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage ## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage ## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage</description>
       <templates>
         <template>
           <name>Cisco General</name>
@@ -753,6 +755,7 @@
     <template>
       <template>Cisco_Traps</template>
       <name>Cisco_Traps</name>
+      <description>## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage ## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage</description>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>

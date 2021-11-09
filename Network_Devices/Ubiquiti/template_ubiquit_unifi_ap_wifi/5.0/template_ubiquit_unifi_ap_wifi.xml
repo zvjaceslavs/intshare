@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:56Z</date>
+  <date>2021-11-09T04:50:07Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Ubiquiti Unifi AP LR SNMPv1</template>
       <name>Ubiquiti Unifi AP LR SNMPv1</name>
+      <description>## Overview Template para Ubiquiti Unifi AP e Wifi ## Author leonardog50</description>
       <groups>
         <group>
           <name>Templates</name>

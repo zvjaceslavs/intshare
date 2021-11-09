@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:43Z</date>
+  <date>2021-11-09T05:09:49Z</date>
   <groups>
     <group>
       <name>Templates/Network devices</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Asustor NAS</template>
       <name>Asustor NAS</name>
-      <description>Asustor NAS AS1004T https://www.asustor.com/</description>
+      <description>## Description Asustor NAS AS1004T https://www.asustor.com/ ## Overview Asustor NAS AS1004T template for Zabbix CPU, fan, net, storage, volume discovery ## Author Sergey Demidov</description>
       <groups>
         <group>
           <name>Templates/Network devices</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:19Z</date>
+  <date>2021-11-09T05:25:13Z</date>
   <groups>
     <group>
       <name>Template/Rede de dados</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Peplink</template>
       <name>Peplink</name>
+      <description>## Overview *** LLD - SPEEDFUSION IN USE BY NAME** - Item prototype - Speedfusion status *** LLD - WAN IN USE BY NAME** - Item prototype - Status wan - Item prototype - Health check ## Author Brunno Freitas Santos</description>
       <groups>
         <group>
           <name>Template/Rede de dados</name>

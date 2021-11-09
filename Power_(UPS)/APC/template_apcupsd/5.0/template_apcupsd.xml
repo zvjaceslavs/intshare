@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:26Z</date>
+  <date>2021-11-09T04:40:30Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>APCUPSd</template>
       <name>APCUPSd</name>
-      <description>Шаблон APCUPSd</description>
+      <description>## Description Шаблон APCUPSd ## Overview Monitoring APC UPS (without SNMP) through APCUPSd. Russian language. Мониторинг ИБП APC (без SNMP) через APCUPSd. На русском языке. Переменные: * Имя * Текущий статус * Уровень заряда батареи * Внутренняя температура * Напряжение на входе * Уровень нагрузки * Уровень чувствительности * Количество переходов на питание от батареи с момента запуска apcupsd [Примеры настройки Zabbix agent](https://wiki.yola.ru/apcupsd#zabbix)</description>
       <groups>
         <group>
           <name>Templates</name>

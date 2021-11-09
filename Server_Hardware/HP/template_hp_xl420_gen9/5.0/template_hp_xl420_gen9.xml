@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:24Z</date>
+  <date>2021-11-09T04:53:19Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI HP ProLiant XL420 Gen9</template>
       <name>IPMI HP ProLiant XL420 Gen9</name>
+      <description>## Overview IPMI Template for the HP XL420 Gen 9</description>
       <groups>
         <group>
           <name>Templates</name>

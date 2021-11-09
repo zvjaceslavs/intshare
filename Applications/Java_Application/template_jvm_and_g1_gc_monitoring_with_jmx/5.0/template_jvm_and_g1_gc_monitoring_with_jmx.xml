@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:31Z</date>
+  <date>2021-11-09T04:40:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>JVM Generic</template>
       <name>JVM Generic</name>
+      <description>## Overview This is a modification of [official template for generic java applications, customized for G1 GC. (and includes better graphs) &lt;https://github.com/tahajahangir/zabbix-jvm-template> ## Author Taha Jahangir</description>
       <groups>
         <group>
           <name>Templates</name>

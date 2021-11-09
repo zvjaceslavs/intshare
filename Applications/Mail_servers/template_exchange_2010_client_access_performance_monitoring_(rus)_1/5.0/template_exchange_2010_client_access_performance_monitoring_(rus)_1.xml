@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:51Z</date>
+  <date>2021-11-09T04:56:46Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Exchange Mailbox Servers_RU</template>
       <name>Exchange Mailbox Servers_RU</name>
+      <description>## Overview 39 Items, 5 Triggers 13 Graphs and 6 Screens built from Exchange 2010 Client Access Server Performance Counters for advanced troubleshooting, trending and capacity planning. Изменены названия Performance Couters для поддержки русской версии сервера Exchange ## Author Stephen E. Fritz</description>
       <groups>
         <group>
           <name>Templates</name>

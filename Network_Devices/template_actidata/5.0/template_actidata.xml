@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:38Z</date>
+  <date>2021-11-09T05:09:13Z</date>
   <groups>
     <group>
       <name>Templates/Servers Hardware</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Actidata NV1 SNMPv1</template>
       <name>Actidata NV1 SNMPv1</name>
-      <description>Шаблон для Контроллера температуры и влажности Actidata NV1</description>
+      <description>## Description Шаблон для Контроллера температуры и влажности Actidata NV1 ## Overview Шаблон для Контроллера температуры и влажности Actidata NV1, SNMP v1. В шаблон включен график для 4 сенсоров, 8 триггеров и 8 макросов. Значения макросов подбирайте сами. ## Author Raveren</description>
       <groups>
         <group>
           <name>Templates/Servers Hardware</name>

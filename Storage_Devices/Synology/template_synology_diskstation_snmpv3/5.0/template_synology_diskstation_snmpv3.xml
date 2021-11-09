@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:17Z</date>
+  <date>2021-11-09T05:13:50Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Synology DiskStation</template>
       <name>Synology DiskStation SNMPv3</name>
-      <description>Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values and set macros in Zabbix</description>
+      <description>## Description Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values and set macros in Zabbix ## Overview Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values Zabbix > Template > Macros > set Username, Passwort and PrivacyPasswort 2020 April: fixed https://github.com/kko/unifi-zabbix-snmpv3/issues/4 ## Author Helmut Leonhardt</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

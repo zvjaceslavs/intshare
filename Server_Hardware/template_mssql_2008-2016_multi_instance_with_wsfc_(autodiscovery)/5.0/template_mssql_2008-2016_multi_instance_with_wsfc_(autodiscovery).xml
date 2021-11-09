@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:48Z</date>
+  <date>2021-11-09T05:03:19Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App MSSQL 2008-2016 WSFC</template>
       <name>App MSSQL 2008-2016 WSFC</name>
+      <description>## Overview ``` Requirements: ``` 1. Zabbix 3+ Install instrucitons: https://github.com/hermanekt/MSSQL-2008-2016-Multi-instance-with-WSFC</description>
       <groups>
         <group>
           <name>Templates</name>

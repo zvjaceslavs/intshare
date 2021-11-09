@@ -2,7 +2,7 @@
 
 ## Description
 
-MIBs: - SNMPv2-MIB
+## Description MIBs: - SNMPv2-MIB ## Overview Template Básico para monitoramento OLT Intelbras 4840E. 
 
 ## Overview
 
@@ -26,12 +26,12 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Localizacao (sysLocation)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysLocation.0<p>Update: 6h</p>|
-|ID do objeto (sysObjectID)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysObjectID.0<p>Update: 6h</p>|
 |Descricao do sistema (sysDescr)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysDescr.0<p>Update: 6h</p>|
+|Localizacao (sysLocation)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysLocation.0<p>Update: 6h</p>|
 |Traps SNMP nao tratados|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
-|Nome (hostname)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysName.0<p>Update: 2h</p>|
+|ID do objeto (sysObjectID)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysObjectID.0<p>Update: 6h</p>|
 |Disponibilidade do SNMP|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 2m</p>|
+|Nome (hostname)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysName.0<p>Update: 2h</p>|
 ## Triggers
 
 There are no triggers in this template.
@@ -40,7 +40,7 @@ There are no triggers in this template.
 
 ## Description
 
-Homologado na EL5610-04P (Intelbras 4840E) firmware V100R001B01D001P006SP5
+## Description MIBs: - SNMPv2-MIB ## Overview Template Básico para monitoramento OLT Intelbras 4840E. ## Description Homologado na EL5610-04P (Intelbras 4840E) firmware V100R001B01D001P006SP5 ## Overview Template Básico para monitoramento OLT Intelbras 4840E. 
 
 ## Overview
 
@@ -67,20 +67,20 @@ Template Básico para monitoramento OLT Intelbras 4840E.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Descoberta de ONUs|<p>-</p>|`SNMP agent`|EPON-ONU-CONFIG-MIB.eponOnuInfoTable<p>Update: 2h</p>|
 |Descoberta de interfaces PON|<p>-</p>|`SNMP agent`|EPON-PON-CONFIG-MIB.eponPonOpmTable<p>Update: 12h</p>|
+|Descoberta de ONUs|<p>-</p>|`SNMP agent`|EPON-ONU-CONFIG-MIB.eponOnuInfoTable<p>Update: 2h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Status de ONU (JSON)|<p>-</p>|`SNMP agent`|EPON-ONU-CONFIG-MIB.eponOnuOperationStatus<p>Update: 1m</p>|
 |Tempo de atividade (uptime)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysUpTime.0<p>Update: 2m</p>|
-|ONU {#CARD}/{#PON}/{#ONU} {{#ONUID}.regsub("(\w+).(\w+).(\w+).(\w+).(\w+).(\w+)","\1:\2:\3:\4:\5:\6")} ({#ONUNAME}): Potencia Rx|<p>-</p>|`SNMP agent`|EPON-ONU-CONFIG-MIB.eponOnuOpmRxPower.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
-|ONU {#CARD}/{#PON}/{#ONU} {{#ONUID}.regsub("(\w+).(\w+).(\w+).(\w+).(\w+).(\w+)","\1:\2:\3:\4:\5:\6")} ({#ONUNAME}): Status|<p>-</p>|`Dependent item`|EPON-ONU-CONFIG-MIB.eponOnuOperationStatus.[{#SNMPINDEX}]<p>Update: 0</p><p>LLD</p>|
+|Status de ONU (JSON)|<p>-</p>|`SNMP agent`|EPON-ONU-CONFIG-MIB.eponOnuOperationStatus<p>Update: 1m</p>|
 |Interface PON {{#SNMPINDEX}.regsub("(\d+)\.(\d+)","\1/\2")}: Temperatura|<p>-</p>|`SNMP agent`|EPON-PON-CONFIG-MIB.eponPonOpmTemperature[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Interface PON {{#SNMPINDEX}.regsub("(\d+)\.(\d+)","\1/\2")}: Corrente bias|<p>-</p>|`SNMP agent`|EPON-PON-CONFIG-MIB.eponPonOpmBias[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Interface PON {{#SNMPINDEX}.regsub("(\d+)\.(\d+)","\1/\2")}: Voltagem|<p>-</p>|`SNMP agent`|EPON-PON-CONFIG-MIB.eponPonOpmVcc[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Total de ONUs offline na PON {{#SNMPINDEX}.regsub("(\d+)\.(\d+)","\1/\2")}|<p>-</p>|`Dependent item`|EPON-ONU-CONFIG-MIB.eponOnuOperationStatus.[{#SNMPINDEX},onustatus != 1]<p>Update: 0</p><p>LLD</p>|
+|ONU {#CARD}/{#PON}/{#ONU} {{#ONUID}.regsub("(\w+).(\w+).(\w+).(\w+).(\w+).(\w+)","\1:\2:\3:\4:\5:\6")} ({#ONUNAME}): Potencia Rx|<p>-</p>|`SNMP agent`|EPON-ONU-CONFIG-MIB.eponOnuOpmRxPower.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|ONU {#CARD}/{#PON}/{#ONU} {{#ONUID}.regsub("(\w+).(\w+).(\w+).(\w+).(\w+).(\w+)","\1:\2:\3:\4:\5:\6")} ({#ONUNAME}): Status|<p>-</p>|`Dependent item`|EPON-ONU-CONFIG-MIB.eponOnuOperationStatus.[{#SNMPINDEX}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

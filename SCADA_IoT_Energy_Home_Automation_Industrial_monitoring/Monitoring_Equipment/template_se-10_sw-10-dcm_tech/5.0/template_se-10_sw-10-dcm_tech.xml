@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:19Z</date>
+  <date>2021-11-09T04:46:30Z</date>
   <groups>
     <group>
       <name>Hosts Datacenter Telegram</name>
@@ -11,6 +11,7 @@
     <template>
       <template>DCM SE-10</template>
       <name>DCM SE-10</name>
+      <description>## Overview Template para monitoramento de temperatura e umidade do equipamento SE-10 e SW-10, fabricado pela DCM Tech. Alertas de temperatura para 30°C e 40°C. Gráficos para temperatura do local, da sonda e de umidade. Testado no Zabbix 3.0, mas deverá funcionar em todas as versões. Dúvidas ou auxílio para alteração de parâmetros é só entrar em contato: danielsberton(arroba)gmail(ponto)com Site fabricante: https://dcmtech.com.br/ ## Author Daniel Berton, Daniel Pechmann</description>
       <groups>
         <group>
           <name>Hosts Datacenter Telegram</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:59Z</date>
+  <date>2021-11-09T04:37:26Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>UNISIM_IPMI_Dell_PowerEdge_1950</template>
       <name>3-IPMI Dell Power Edge 1950</name>
+      <description>## Overview IPMI sensors for Dell PowerEdge 1950: Ambient Temp, FAN MOD 1A RPM, FAN MOD 1B RPM, FAN MOD 1C RPM, FAN MOD 1D RPM, FAN MOD 2A RPM, FAN MOD 2B RPM, FAN MOD 2C RPM, FAN MOD 2D RPM, FAN MOD 3A RPM, FAN MOD 3B RPM, FAN MOD 3C RPM, FAN MOD 3D RPM, FAN MOD 4A RPM, FAN MOD 4B RPM, FAN MOD 4C RPM, FAN MOD 4D RPM, Power 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho</description>
       <groups>
         <group>
           <name>Templates</name>

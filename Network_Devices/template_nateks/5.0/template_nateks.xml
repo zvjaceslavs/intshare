@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:39Z</date>
+  <date>2021-11-09T05:02:22Z</date>
   <groups>
     <group>
       <name>Linux servers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Nateks FG-ACE-CON-VF</template>
       <name>Nateks FG-ACE-CON-VF</name>
+      <description>## Overview Nateks NETRADIO-MIB based template for monitoring radio channels. Latest data includes: - Channel number - Channel IP - Channel status - Device Location - Device Model ## Author Olga Yanovskaya</description>
       <groups>
         <group>
           <name>Linux servers</name>

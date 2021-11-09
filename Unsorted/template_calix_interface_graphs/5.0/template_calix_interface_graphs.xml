@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:14Z</date>
+  <date>2021-11-09T04:52:11Z</date>
   <groups>
     <group>
       <name>Calix</name>
@@ -11,6 +11,7 @@
     <template>
       <template>calix</template>
       <name>calix</name>
+      <description>## Overview Very Basic template to discovery and graph traffic in and out of Calix interfaces. Tested with E7-2 shelfs and Zabbix 3.4. It may take up to 10 minutes for the graphs to discover and display after added the device and applying the template. ## Author City of Windom-TF</description>
       <groups>
         <group>
           <name>Calix</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:39Z</date>
+  <date>2021-11-09T04:48:49Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Nginx by Alex Gluck</template>
       <name>App Nginx by Alex Gluck</name>
+      <description>## Overview System requirements ------------------- * Nginx, [http://nginx.org](http://nginx.org/)/, with configured `http\_stub\_status\_module` Features -------- Connection Statistics: * Active * Reading * Waiting * Writing Request Statistics: &lt;ul style="padding: 0px 0px 0px 12px; margin: 0px 0px 1.5em 12px; border: 0px; outline: 0px; vertic ## Author Alex Gluck</description>
       <groups>
         <group>
           <name>Templates</name>

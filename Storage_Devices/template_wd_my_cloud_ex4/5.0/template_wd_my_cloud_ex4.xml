@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:20Z</date>
+  <date>2021-11-09T04:52:56Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>WD My Cloud EX4</template>
       <name>WD My Cloud EX4</name>
+      <description>## Overview Zabbix SNMP Template for (Western Digital) WD My Cloud EX4 In WD My Cloud EX4 is simple (MIBs here http://downloads.wdc.com/nas/WDMYCLOUDEX4-MIB.txt). Because some OID return not-clear-byte values (150.3G, 2.3T) - in items used "regex-magic". Loosing some precision (i try to beat this problem), for flexiable data: Prerequisites: -------------- * Enable SNMP on WD My Cloud EX4 * Zabbix 3.4+ with preproccessing support for regex-magic on item Feautres: --------- Low Level Discovery: * physical disks * logical disks * UPS Notice: ------- In my env this NAS is "lazy" and have problems with BULK SNMP queries from Zabbix. Template uses vars set on host-level: * {$SNMP\_PORT} * {$SNMP\_COMMUNITY}</description>
       <groups>
         <group>
           <name>Templates</name>

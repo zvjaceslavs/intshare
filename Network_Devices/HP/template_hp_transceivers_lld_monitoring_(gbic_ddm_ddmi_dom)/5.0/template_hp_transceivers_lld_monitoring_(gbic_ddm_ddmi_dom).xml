@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:01Z</date>
+  <date>2021-11-09T04:50:42Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>GM DDMI</template>
       <name>GM DDMI</name>
-      <description>Monitor HP transceivers</description>
+      <description>## Description Monitor HP transceivers ## Overview Low Level Discovery (LLD) for HP transceivers (switches) monitoring (gbic DDM DDMI DOM). Attention: You will want to have a regular expression called @isFiberTransceiver to filter out cooper gbics (stacking, etc) oid .1.3.6.1.4.1.25506.2.70.1.1.1.1 Triggers are created with thresholds given by gbic. Temperature, voltage, bias, serial, hardware type, fiber diameter, status, dbm, db, transmit power, receive power. ## Author Rafael Gustavo Gassner</description>
       <groups>
         <group>
           <name>Templates</name>

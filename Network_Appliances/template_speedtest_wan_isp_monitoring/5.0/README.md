@@ -1,5 +1,9 @@
 # App Speedtest WAN
 
+## Description
+
+## Overview Monitoring the speedtest by different ISP server on different part of world It need the script here https://git.cdp.li/polcape/zabbix/tree/master/zabbix-speedtest 
+
 ## Overview
 
 Monitoring the speedtest by different ISP server on different part of world
@@ -26,9 +30,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Speedtest Best server - Upload|<p>-</p>|`Zabbix agent`|speedtest.upload<p>Update: 1200s</p>|
 |Speedtest Best server - Download|<p>-</p>|`Zabbix agent`|speedtest.download<p>Update: 1200s</p>|
 |Speedtest Best server - Ping|<p>-</p>|`Zabbix agent`|speedtest.ping<p>Update: 1200s</p>|
+|Speedtest Best server - Upload|<p>-</p>|`Zabbix agent`|speedtest.upload<p>Update: 1200s</p>|
 |Speedtest {#SERVERNAME} - Download|<p>-</p>|`Zabbix agent`|speedtest.download.server[{#SERVERID}]<p>Update: 1200s</p><p>LLD</p>|
 |Speedtest {#SERVERNAME} - Ping|<p>-</p>|`Zabbix agent`|speedtest.ping.server[{#SERVERID}]<p>Update: 1200s</p><p>LLD</p>|
 |Speedtest {#SERVERNAME} - Upload|<p>-</p>|`Zabbix agent`|speedtest.upload.server[{#SERVERID}]<p>Update: 1200s</p><p>LLD</p>|

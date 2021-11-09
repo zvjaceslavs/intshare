@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:38Z</date>
+  <date>2021-11-09T04:48:37Z</date>
   <groups>
     <group>
       <name>Templates/Virtualization</name>
@@ -11,6 +11,7 @@
     <template>
       <template>VM VMware UUID VM Standalone</template>
       <name>VM VMware UUID VM Standalone</name>
+      <description>## Overview Standalone template modified from Zabbix's "VM VMware Guest" for monitoring selected VMs instead of all VMs as per Zabbix's auto-discovery template. Modified from 3.4.7 and 3.0.15 **Requirements** * Read-only ESXi user credentials * ESXi server IP address * VM (Virtual Machine not host) UUID * VMware Tools installed in VM **To obtain** **VM UUID** (&lt;http://www-01.ibm.com/support/docview.wss?uid=swg21682150>) * Login to vSphere client * Go to Virtual Machines * Verify column headers include UUID. If not, right button click on column header and select UUID * Select desire VM, right button click and "Copy to Clipboard" * CTRL-V into text editor, select UUID, copy and paste. UUID value can also be obtained by viewing the VM's .vmx file via SSH shell. Value is defined as **uuid.bios** but must be formatted in the correct form. So if uuid.bios="42 10 c1 62 e3 1e 70 e6-4a 03 b4 6a bb e1 7b 4f", UUID is "4210c162-e31e-70e6-4a03-b46abbe17b4f" **To use** * Create new Host * Go to **Templates** * Search for, select "VMware UUID VM Standalone" and add * Go to **Macros**, **Inherited and Host Macros** * Click Change to modify the values for + {$USERNAME} : ESXi username + {$PASSWORD} : ESXi password + {$URL} : https://{ESXi-IP-Address}/sdk + {$UUID} : UUID in lower case * Click Add For those using Grafana, I have uploaded the dashboard to &lt;https://grafana.com/dashboards/4809> **Others** Edit **zabbix\_server.conf** and update value of **StartVMwareCollectors** to more than 0 and restart zabbix-server. ## Author Zabbix</description>
       <groups>
         <group>
           <name>Templates/Virtualization</name>

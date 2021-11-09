@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:59Z</date>
+  <date>2021-11-09T05:18:25Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Mikrotik</template>
       <name>Mikrotik</name>
+      <description>## Overview NESSE TEMPLATE MONITORAMOS CPU DISCO MEMORIA INTERFACE NOME DO EQUIPAMENTO UPTIME TEMPERATURA VOLTAGEM VERSÃO DO MIKOTIK ## Author Renato Severino</description>
       <groups>
         <group>
           <name>Templates</name>

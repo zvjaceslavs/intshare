@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:54Z</date>
+  <date>2021-11-09T04:43:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Janitza-UV</template>
       <name>Janitza-UV</name>
+      <description>## Overview Created with Zabbix 3.2 Just OIDs to Zabbix Template Maybe helpful to some.</description>
       <groups>
         <group>
           <name>Templates</name>

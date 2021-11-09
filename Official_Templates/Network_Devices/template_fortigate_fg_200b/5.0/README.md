@@ -1,5 +1,9 @@
 # FG_200B
 
+## Description
+
+## Overview Template for Fortigate 200B Still - WIP! Use at your own risk Items: * Memory * CPU * SN * FW * Up time * Sessions Items Prototypes * Download * Upload * Status * Description Trigger Prototypes * Interface Up & Down Any suggestion will be Welcomed :) ## Author JonatanRek 
+
 ## Overview
 
  Template for Fortigate 200B
@@ -83,13 +87,13 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Firmware Version|<p>-</p>|`SNMP agent`|SysmFirmwareVersion<p>Update: 3600</p>|
-|CPU|<p>-</p>|`SNMP agent`|sysCpu<p>Update: 1m</p>|
-|Memory Usage|<p>-</p>|`SNMP agent`|sysMemUsage<p>Update: 1m</p>|
-|Uptime|<p>-</p>|`SNMP agent`|fortinetUpTime<p>Update: 30</p>|
-|Serial Number|<p>-</p>|`SNMP agent`|SysmSerialNumber<p>Update: 3600</p>|
 |Connections|<p>-</p>|`SNMP agent`|fortinetCurrentConnections<p>Update: 60</p>|
+|Serial Number|<p>-</p>|`SNMP agent`|SysmSerialNumber<p>Update: 3600</p>|
+|CPU|<p>-</p>|`SNMP agent`|sysCpu<p>Update: 1m</p>|
+|Firmware Version|<p>-</p>|`SNMP agent`|SysmFirmwareVersion<p>Update: 3600</p>|
 |System Sessions|<p>-</p>|`SNMP agent`|sysSessions<p>Update: 30s</p>|
+|Uptime|<p>-</p>|`SNMP agent`|fortinetUpTime<p>Update: 30</p>|
+|Memory Usage|<p>-</p>|`SNMP agent`|sysMemUsage<p>Update: 1m</p>|
 |Status {#SNMPVALUE}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.8.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |Interface Description {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
 |Download {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:21Z</date>
+  <date>2021-11-09T04:46:40Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App ActiveMQ JMX</template>
       <name>App ActiveMQ JMX</name>
+      <description>## Overview You can configure like the image; ![](http://prntscr.com/hk7sbu) ## Author Armagan Yaman</description>
       <groups>
         <group>
           <name>Templates/Applications</name>

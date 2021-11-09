@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:34Z</date>
+  <date>2021-11-09T04:54:32Z</date>
   <groups>
     <group>
       <name>自宅ラックテンプレート</name>
@@ -11,6 +11,7 @@
     <template>
       <template>chrony_Monitoring-Japanese</template>
       <name>chronyテンプレート</name>
+      <description>## Overview chrony accuracy Template Englishの日本語版です 英語版は[こちら](cat-app/ntp/chrony-accuracy-template-english) English version of the template is in the [link](cat-app/ntp/chrony-accuracy-template-english) . テンプレートを利用する場合zabbix\_agentd.confでリモートコマンドを有効にしてください。 EnableRemoteCommands=1 UnsafeUserParameters=1 ZabbixAgentがインストールされた環境に対しては chrony テンプレートが使用できます。</description>
       <groups>
         <group>
           <name>自宅ラックテンプレート</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:11Z</date>
+  <date>2021-11-09T04:45:39Z</date>
   <groups>
     <group>
       <name>HSC Hosts</name>
@@ -11,6 +11,7 @@
     <template>
       <template>HSC Discovery DHCP scopes - HSC</template>
       <name>HSC Discovery DHCP scopes - HSC</name>
+      <description>## Overview Este template foi elaborado para o monitoramento de escopos dhcp de servidores Microsoft Windows em PT-BR. Nele existe um gatilho para o envio de alertas para escopos com menos de 15 ips livres. ## Author William Normandia</description>
       <groups>
         <group>
           <name>HSC Hosts</name>

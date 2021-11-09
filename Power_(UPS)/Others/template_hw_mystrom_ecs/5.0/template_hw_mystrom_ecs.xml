@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:36Z</date>
+  <date>2021-11-09T05:15:51Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>HW myStrom ECS</template>
       <name>HW myStrom ECS</name>
-      <description>Monitoring template for myStrom ECS (Energy Control Switch). Source: https://github.com/frei-style/zabbix-mystrom-ecs-template</description>
+      <description>## Description Monitoring template for myStrom ECS (Energy Control Switch). Source: https://github.com/frei-style/zabbix-mystrom-ecs-template ## Overview Monitoring template for [myStrom ECS](https://mystrom.ch/) (Energy Control Switch). ## Author Manuel Frei</description>
       <groups>
         <group>
           <name>Templates</name>

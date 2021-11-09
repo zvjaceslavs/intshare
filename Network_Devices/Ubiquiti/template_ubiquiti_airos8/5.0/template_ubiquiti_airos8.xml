@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:54Z</date>
+  <date>2021-11-09T04:43:36Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>AirOS8</template>
       <name>AirOS8</name>
+      <description>## Overview Version 1.0 This is a template which I use to monitor a point to point Ubiquiti link with two IS‑5AC devices; that's what I test with. I would think it should work with other AirOS8 devices as well. Perhaps not very well suited for "normal" access points as it creates a graph for every station connected. It discovers the remote station and greates a graph to show noise floor, signal level, RX/TX capacity and the latency. The only trigger in there is when the connection resets; none on disconnect. ## Author Olivier</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:48Z</date>
+  <date>2021-11-09T05:17:12Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Ruijie BBU</template>
       <name>Ruijie BBU</name>
+      <description>## Overview 锐捷小站设备资源监测模板</description>
       <groups>
         <group>
           <name>Templates</name>

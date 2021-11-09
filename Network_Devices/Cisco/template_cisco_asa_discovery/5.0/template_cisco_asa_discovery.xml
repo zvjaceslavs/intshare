@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:34Z</date>
+  <date>2021-11-09T04:28:35Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco ASA Discovery</template>
       <name>Cisco ASA Discovery</name>
+      <description>## Overview In it's early stage this template was based on the one from Vladislav Vodopyan, but i've made huge modifications, corrections and add many other components. **Features:** * Replaced all the community from public to the macro {$SNMP\_COMMUNITY}; * Replaced all OIDs with MIBs; * Added a lot of corrections into the structure; * Added many checks for VPNs, Failover, Interfaces; and so on; * Support for Zabbix 3.x **Changelog 28/08/2017:** * Fixed some counters; This template is tested on all ASA55xx and some 5525-X, i didn't tested on brand new FirePOWER product yet but it should be UNIVERSAL. Into the template there is a regular EXP to filter internal components that we don't need. The regular expression **@Firewalls network interfaces for discovery** * Expression: (Internal|Virtual|management|plane|Null) * Expression type: Result is FALSE * CaseSensitive: TRUE **NOTE:** For all the people that have problems with discovery rules: 1 - You must create the Regular Expression **BEFORE** import the template; 2 - The REG EXP is defined with @ into the template, but when you need create it into your Zabbix you need to remove the @. Example: Template REG-EXP: **@Firewalls network interfaces for discovery** Zabbix REG-EXP: **Firewalls network interfaces for discovery** ## Author Manuel Mannello</description>
       <groups>
         <group>
           <name>Templates</name>

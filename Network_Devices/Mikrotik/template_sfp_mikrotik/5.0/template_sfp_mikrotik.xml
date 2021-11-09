@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:03Z</date>
+  <date>2021-11-09T05:05:14Z</date>
   <groups>
     <group>
       <name>Autenticadores</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SFP Mikrotik</template>
       <name>SFP Mikrotik</name>
+      <description>## Overview Template para monitoramento de interfaces SFP de equipamentos Mikrotik Monitora: - Tx - RX - Temperatura Triggers: - Variação de sinal de tx/x - Alarme de temperatura Link GitHub: &lt;https://github.com/anderson-raber/sfp_mikrotik/blob/master/README.md> ## Author anderson raber</description>
       <groups>
         <group>
           <name>Autenticadores</name>

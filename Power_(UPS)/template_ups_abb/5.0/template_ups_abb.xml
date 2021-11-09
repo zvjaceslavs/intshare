@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:03Z</date>
+  <date>2021-11-09T05:23:42Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -125,6 +125,7 @@
     <template>
       <template>UPS - diogont</template>
       <name>UPS - diogont</name>
+      <description>## Overview Full clone of Template UPS - diogont (thanks Diogo Teixeira). Above you view the main changes for this template: For the metrics. We included the measurements 2 and 3: * UPS input current * UPS input frequency * UPS input power * UPS input voltage * UPS output current * UPS output frequency * UPS output load * UPS output power * UPS output voltage **Pay attention** For triggers in my case 38 has disabled. we added this SNMP Check connect what check if the UPS have snmp connectivity. If past ten minute without data ## Author Marcos Sousa</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

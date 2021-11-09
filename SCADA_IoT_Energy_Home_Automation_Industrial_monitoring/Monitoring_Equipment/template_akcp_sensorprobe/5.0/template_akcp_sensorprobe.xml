@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:21Z</date>
+  <date>2021-11-09T04:39:53Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>AKCP</template>
       <name>AKCP</name>
+      <description>## Overview This template is designed for all SensorProbe devices from the vendor AKCP. All connected sensors (humidity and temperature) are automaticly discovered in this template. This template is tested whith SensorProbe2 and SensorProbe4. ## Author Nico Wieczorek</description>
       <groups>
         <group>
           <name>Templates</name>

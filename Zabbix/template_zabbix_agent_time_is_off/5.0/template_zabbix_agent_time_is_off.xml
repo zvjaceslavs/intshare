@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:44Z</date>
+  <date>2021-11-09T05:16:49Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Time is off by Zabbix agent active</template>
       <name>Time is off by Zabbix agent active</name>
+      <description>## Overview Detects if Zabbix agent time has been shifted away. Solution is suitable in cases where Zabbix agent (active) checks are the only option. Explanation how/why it works: &lt;https://youtu.be/bSQ1xV1nmqU></description>
       <groups>
         <group>
           <name>Templates/Modules</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:39Z</date>
+  <date>2021-11-09T04:41:56Z</date>
   <groups>
     <group>
       <name>All Clients</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Emerson ITA</template>
       <name>Emerson ITA</name>
+      <description>## Overview Includes 47 items, 1 Trigger, 8 Graphs Please set {$SNMP\_COMMUNITY} macro for host. ## Author Augusto Ribeiro</description>
       <groups>
         <group>
           <name>All Clients</name>

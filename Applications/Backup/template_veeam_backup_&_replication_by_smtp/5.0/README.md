@@ -1,5 +1,9 @@
 # VEEAM SMTP trapper
 
+## Description
+
+## Overview This Veeam Backup & Replication use email and not Powershell snippet. It is as efficient (or more) as other method of integration with Zabbix and it requires a lot less ressources. It monitors even Backup Database backup (which others do not). Using a specific script it can be applied to Free Agents as well. It uses zbxsmtptrap (on an idea from here : <https://www.zabbix.com/forum/showthread.php?p=186838>) <https://github.com/sibiodev/zbxsmtptrap> NB: a bug was recently corrected about Veeam sending multiline subjects - not really nice... but it can happen if you have long hostnames and happen to be sudenly out of support (which adds some garbage at the begining of the title) Give it a try! PS: to use this script with Veeam Free Agents without a VBR server (if you use a VBR server with a Free Agent, then you do not need this script because VBR will report by email to you), you'll need this small script to send the email : <https://github.com/sibiodev/veeamrun> ## Author Raynald de Lahondès 
+
 ## Overview
 
 This Veeam Backup & Replication use email and not Powershell snippet. It is as efficient (or more) as other method of integration with Zabbix and it requires a lot less ressources. It monitors even Backup Database backup (which others do not).

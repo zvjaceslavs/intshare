@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:43Z</date>
+  <date>2021-11-09T04:29:24Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP D-Link DGS-3200</template>
       <name>SNMP D-Link DGS-3200</name>
+      <description>## Overview NEED in Macros HOST {$SNMP\_COMMUNITY} {$SNMP\_PORT} ## Author AlteraSidus</description>
       <groups>
         <group>
           <name>Templates</name>

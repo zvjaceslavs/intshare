@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:20Z</date>
+  <date>2021-11-09T05:25:21Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>brother Printers s</template>
       <name>brother Printers s</name>
+      <description>## Overview [Printed pages](http://192.168.0.12/zabbix/items.php?form=update&amp;hostid=10436&amp;itemid=37189)[Status color](http://192.168.0.12/zabbix/items.php?form=update&amp;hostid=10436&amp;itemid=37157)[Status written](http://192.168.0.12/zabbix/items.php?form=update&amp;hostid=10436&amp;itemid=37158)</description>
       <groups>
         <group>
           <name>Printers</name>

@@ -1,0 +1,379 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:16:00Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 87743c71c77f49ed8ff6d01f616c422d
+      template: Draytek_130
+      name: 'Draytek Vigor 130 (v1.0)'
+      description: |
+        ## Description
+        
+        Template for the Draytek Vigor 130 VDSL Modem.
+        
+        ## Overview
+        
+        Simple SNMP agent for the Draytek Vigor 130 ADSL/VDSL Modem.
+        
+        
+        Provides the following:
+        
+        
+        Items
+        
+        
+        * LAN Status
+        * LAN Traffic IN
+        * LAN Traffic OUT
+        * Uptime
+        * VDSL Rx Attenuation
+        * VDSL Rx Rate (Actual)
+        * VDSL Rx Rate (Attainable)
+        * VDSL Rx SNR Margin
+        * VDSL Tx (Actual)
+        * VSDL Upstream Noise
+        * WAN1 Status
+        * WAN1 Traffic IN
+        * WAN1 Traffic OUT
+        
+        
+        Graphs
+        
+        
+        * Actual Tx Rates
+        * LAN Traffic
+        * WAN1 Traffic
+        * WAN Attainable vs. Actual Rx Rates
+        * WAN Noise Levels
+        
+        
+        Triggers
+        
+        
+        * Device has just been restarted
+        * LAN is down
+        * WAN1 down
+        
+        
+        ## Author
+        
+        Sean Gordon
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: d0aeff868d1344c88f978a1a2b6cd519
+          name: 'VDSL Rx Rate (Actual)'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.10.94.1.1.4.1.2.4
+          key: adslAtucChanCurrTxRate.4
+          delay: '30'
+          history: 30d
+          units: Bps
+          description: 'Actual transmit rate on this channel.'
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: 829e5245ea7e4675bb1ae60512f2a7e5
+          name: 'VDSL Tx (Actual)'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.10.94.1.1.5.1.2.4
+          key: adslAturChanCurrTxRate.4
+          delay: '30'
+          history: 30d
+          units: Bps
+          description: 'Actual transmit rate on this channel.'
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: 7e9cd6711bc14cf3b8b0dda02b8558a5
+          name: 'VDSL Rx Attenuation'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.10.94.1.1.3.1.5.4
+          key: adslAturCurrAtn.4
+          delay: '30'
+          history: 30d
+          units: dB
+          description: 'Measured difference in the total power transmitted by the peer ATU and the total power received by this ATU.'
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: 69a1060ef7264926919ef76f76ac6d55
+          name: 'VDSL Rx Rate (Attainable)'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.10.94.1.1.3.1.8.4
+          key: adslAturCurrAttainableRate.4
+          delay: '30'
+          history: 30d
+          units: Bps
+          description: 'Indicates the maximum currently attainable data rate by the ATU.  This value will be equal or greater than the current line rate.'
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: b93fa0fc00d347cfbf1d6852df978010
+          name: 'VSDL Upstream Noise'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.10.94.1.1.3.1.7.4
+          key: adslAturCurrOutputPwr.4
+          delay: '30'
+          history: 30d
+          units: dBm
+          description: 'Measured total output power transmitted by this ATU. This is the measurement that was reported during the last activation sequence.'
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: 3f414c4d35d74b5680014cc8a85c5db1
+          name: 'VDSL Rx SNR Margin'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.10.94.1.1.3.1.4.4
+          key: adslAturCurrSnrMgn.4
+          delay: '30'
+          history: 30d
+          units: dB
+          description: 'Noise Margin as seen by this ATU with respect to its received signal in tenth dB.'
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: fb3d2e492e2b4170b4f96568adeaeab3
+          name: 'LAN Traffic IN'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.2.2.1.10.1
+          key: ifInOctects.1
+          delay: '30'
+          history: 30d
+          units: Bps
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: b787c2cf05084500bbda15389ba3fbe5
+          name: 'WAN1 Traffic IN'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.2.2.1.10.4
+          key: ifInOctects.4
+          delay: '30'
+          history: 30d
+          units: Bps
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: 83b57320f8be40d08586cbecc61dd28e
+          name: 'LAN Status'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.2.2.1.8.1
+          key: ifOperStatus.1
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: Network
+          triggers:
+            -
+              uuid: 6e6f1906807d40b380ddad1fb4bcc49a
+              expression: last(/Draytek_130/ifOperStatus.1)<>1
+              name: '{HOSTNAME} LAN is down'
+              priority: HIGH
+              description: 'LAN port is down on Vigor 130'
+        -
+          uuid: 31b17a9533834781879feaae0fb74196
+          name: 'WAN1 Status'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.2.2.1.8.4
+          key: ifOperStatus.4
+          delay: '30'
+          tags:
+            -
+              tag: Application
+              value: Network
+          triggers:
+            -
+              uuid: e1d9dd69eecf4689b2f42887db6c9e0b
+              expression: last(/Draytek_130/ifOperStatus.4)<>2
+              name: '{HOSTNAME} WAN1 down'
+              priority: HIGH
+              description: 'WAN1 is down.'
+        -
+          uuid: ec03f267df074310bafa32c2f024d640
+          name: 'LAN Traffic OUT'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.2.2.1.16.1
+          key: ifOutOctects.1
+          delay: '30'
+          history: 30d
+          units: Bps
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: a032a93183ea4656afa6aa0e31fed128
+          name: 'WAN1 Traffic OUT'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.2.2.1.16.4
+          key: ifOutOctects.4
+          delay: '30'
+          history: 30d
+          units: Bps
+          preprocessing:
+            -
+              type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            -
+              tag: Application
+              value: Network
+        -
+          uuid: 73483308227c4786ade92cb3a170b2e4
+          name: Uptime
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.3.0
+          key: sysUpTimeInstance
+          delay: '30'
+          value_type: FLOAT
+          units: uptime
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: General
+          triggers:
+            -
+              uuid: 48c71bd20f5c4a8695de845b8dcf01f7
+              expression: last(/Draytek_130/sysUpTimeInstance)<600
+              name: '{HOSTNAME} has just been restarted'
+              priority: INFO
+  graphs:
+    -
+      uuid: f86df33dd6ed44bfbd8bd83e9d157e83
+      name: 'Actual Tx Rates'
+      graph_items:
+        -
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: Draytek_130
+            key: adslAturChanCurrTxRate.4
+    -
+      uuid: 466fe6949e6043b6bf40d2d2504394a0
+      name: 'LAN Traffic'
+      percent_right: '95'
+      graph_items:
+        -
+          drawtype: FILLED_REGION
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: Draytek_130
+            key: ifOutOctects.1
+        -
+          sortorder: '1'
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Draytek_130
+            key: ifInOctects.1
+    -
+      uuid: e52566cfd6c74ba382c6521fade50093
+      name: 'WAN1 Traffic'
+      percent_right: '95'
+      graph_items:
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Draytek_130
+            key: ifInOctects.4
+        -
+          sortorder: '1'
+          drawtype: FILLED_REGION
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: Draytek_130
+            key: ifOutOctects.4
+    -
+      uuid: c4c58d59711a4748aa1e418cff264d04
+      name: 'WAN Attainable vs. Actual Rx Rates'
+      percent_left: '95'
+      graph_items:
+        -
+          color: '009900'
+          yaxisside: RIGHT
+          calc_fnc: ALL
+          item:
+            host: Draytek_130
+            key: adslAtucChanCurrTxRate.4
+        -
+          sortorder: '1'
+          color: 0000FF
+          yaxisside: RIGHT
+          calc_fnc: ALL
+          item:
+            host: Draytek_130
+            key: adslAturCurrAttainableRate.4
+    -
+      uuid: 7f19014227454a97972d28586ea28a20
+      name: 'WAN Noise Levels'
+      graph_items:
+        -
+          color: '990000'
+          yaxisside: RIGHT
+          item:
+            host: Draytek_130
+            key: adslAturCurrAtn.4
+        -
+          sortorder: '1'
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: Draytek_130
+            key: adslAturCurrSnrMgn.4
+        -
+          sortorder: '2'
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Draytek_130
+            key: adslAturCurrOutputPwr.4

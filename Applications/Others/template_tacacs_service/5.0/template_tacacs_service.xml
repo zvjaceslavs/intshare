@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:38Z</date>
+  <date>2021-11-09T04:35:25Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App TACACS Service</template>
       <name>App TACACS Service</name>
+      <description>## Overview Simple TCP Check of TACACS Service running in TCP Port 49. Includes: * Item * Trigger * Graph Created with Zabbix 3.0, but it can be ported to versions 2.2 and 2.4 ## Author Jose Rosa</description>
       <groups>
         <group>
           <name>Templates</name>

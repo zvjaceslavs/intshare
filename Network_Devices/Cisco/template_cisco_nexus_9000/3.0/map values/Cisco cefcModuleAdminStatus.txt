@@ -1,4 +1,0 @@
-1:enabled
-2:disabled
-3:reset
-4:outOfServiceAdmin

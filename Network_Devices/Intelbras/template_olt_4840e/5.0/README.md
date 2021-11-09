@@ -2,7 +2,7 @@
 
 ## Description
 
-MIBs: - SNMPv2-MIB
+## Description MIBs: - SNMPv2-MIB ## Overview Template Básico para monitoramento OLT Intelbras 4840E. 
 
 ## Overview
 
@@ -26,11 +26,11 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Disponibilidade do SNMP|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 2m</p>|
-|ID do objeto (sysObjectID)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysObjectID.0<p>Update: 6h</p>|
+|Nome (hostname)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysName.0<p>Update: 2h</p>|
 |Localizacao (sysLocation)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysLocation.0<p>Update: 6h</p>|
 |Traps SNMP nao tratados|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
-|Nome (hostname)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysName.0<p>Update: 2h</p>|
+|Disponibilidade do SNMP|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 2m</p>|
+|ID do objeto (sysObjectID)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysObjectID.0<p>Update: 6h</p>|
 |Descricao do sistema (sysDescr)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysDescr.0<p>Update: 6h</p>|
 ## Triggers
 
@@ -40,7 +40,7 @@ There are no triggers in this template.
 
 ## Description
 
-Homologado na EL5610-04P (Intelbras 4840E) firmware V100R001B01D001P006SP5
+## Description MIBs: - SNMPv2-MIB ## Overview Template Básico para monitoramento OLT Intelbras 4840E. ## Description Homologado na EL5610-04P (Intelbras 4840E) firmware V100R001B01D001P006SP5 ## Overview Template Básico para monitoramento OLT Intelbras 4840E. 
 
 ## Overview
 
@@ -73,8 +73,8 @@ Template Básico para monitoramento OLT Intelbras 4840E.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Status de ONU (JSON)|<p>-</p>|`SNMP agent`|EPON-ONU-CONFIG-MIB.eponOnuOperationStatus<p>Update: 1m</p>|
 |Tempo de atividade (uptime)|<p>-</p>|`SNMP agent`|SNMPv2-MIB.sysUpTime.0<p>Update: 2m</p>|
+|Status de ONU (JSON)|<p>-</p>|`SNMP agent`|EPON-ONU-CONFIG-MIB.eponOnuOperationStatus<p>Update: 1m</p>|
 |Interface PON {{#SNMPINDEX}.regsub("(\d+)\.(\d+)","\1/\2")}: Temperatura|<p>-</p>|`SNMP agent`|EPON-PON-CONFIG-MIB.eponPonOpmTemperature[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Interface PON {{#SNMPINDEX}.regsub("(\d+)\.(\d+)","\1/\2")}: Corrente bias|<p>-</p>|`SNMP agent`|EPON-PON-CONFIG-MIB.eponPonOpmBias[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Interface PON {{#SNMPINDEX}.regsub("(\d+)\.(\d+)","\1/\2")}: Voltagem|<p>-</p>|`SNMP agent`|EPON-PON-CONFIG-MIB.eponPonOpmVcc[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|

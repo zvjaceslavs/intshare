@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:48Z</date>
+  <date>2021-11-09T04:29:54Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -11,6 +11,7 @@
     <template>
       <template>A10_AX_Series</template>
       <name>A10_AX_Series</name>
+      <description>## Overview FAN Discovery Power Supply Discovery Power Supply Voltage Discovery</description>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>

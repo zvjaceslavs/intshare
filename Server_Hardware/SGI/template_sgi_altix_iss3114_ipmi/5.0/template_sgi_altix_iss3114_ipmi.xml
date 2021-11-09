@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:06Z</date>
+  <date>2021-11-09T04:38:13Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>UNISIM_IPMI_SGI_Altix_ISS3114</template>
       <name>3-IPMI SGI Altix ISS3114</name>
+      <description>## Overview IPMI sensors for SGI Altix ISS3114: Agg Therm Mgn 1, BB +1.05Vccp P1, BB +1.05Vccp P2, BB +1.1V STBY, BB +1.5 P1MEM AB, BB +1.5 P1MEM CD, BB +1.5 P2MEM AB, BB +1.5 P2MEM CD, BB +1.8V AUX, BB +3.3V, BB +3.3V AUX, BB +3.3V Vbat, BB +5.0V, BB +5.0V STBY, BB +12.0V, BB P1 VR Temp, BB P2 VR Temp, BB Vtt 1 Temp, BB Vtt 2 Temp, DIMM Thrm Mrgn 1, DIMM Thrm Mrgn 2, DIMM Thrm Mrgn 3, DIMM Thrm Mrgn 4, Exit Air Temp, Fan 1 Present, Fan 2 Present, Fan 3 Present, Fan 4 Present, Fan 5 Present, Fan Redundancy, Front Panel Temp, HDD 0 Status, HDD 1 Status, HDD 2 Status, HDD 3 Status, HDD 4 Status, HDD 5 Status, HDD 6 Status, HDD 7 Status, HDD 8 Status, HDD 9 Status, HDD 10 Status, HDD 11 Status, HDD 12 Status, HDD 13 Status, HDD 14 Status, HDD 15 Status, HDD 16 Status, HDD 17 Status, HDD 18 Status, HDD 19 Status, HDD 20 Status, HDD 21 Status, HDD 22 Status, HDD 23 Status, HSBP 1 Temp, HSBP 2 Temp, HSBP 3 Temp, LAN NIC Temp, P1 DTS Therm Mgn, P1 Therm Margin, P2 DTS Therm Mgn, P2 Therm Margin, Power Triggers 1, PS1 Curr Out %, PS1 Fan Fail, PS1 Input Power, PS1 Status, PS1 Temperature, PS2 Curr Out %, PS2 Fan Fail, PS2 Input Power, PS2 Status, PS2 Temperature, Pwr Unit Redund, SSB Temp, System Airflow, System Fan 1, System Fan 2, System Fan 3, System Fan 4, System Fan 5 ## Author Daniel Carvalho</description>
       <groups>
         <group>
           <name>Templates</name>

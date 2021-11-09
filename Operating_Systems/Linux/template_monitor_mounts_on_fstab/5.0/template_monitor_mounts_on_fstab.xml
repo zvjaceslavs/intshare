@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:06Z</date>
+  <date>2021-11-09T04:51:21Z</date>
   <groups>
     <group>
       <name>Templates PERTO</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Check Mount Point</template>
       <name>Check Mount Point</name>
-      <description>Monitora os pontos de montagem do Gluster</description>
+      <description>## Description Monitora os pontos de montagem do Gluster ## Overview First Step- You will need put the user parameter below in your zabbix\_agent.conf UserParameter=vfs.fs.mounted[*],findmnt -nr -o source -T $1 > /dev/null &amp;&amp; echo 0 || echo 1 this parameter will return if the mount point is OK Second Step - Import the template Third Step - Change the Item Key, You need put your mount point, like the exemple below. ex: vfs.fs.mounted[put your mounte point here] ## Author Rodrigo Américo</description>
       <groups>
         <group>
           <name>Templates PERTO</name>

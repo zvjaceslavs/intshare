@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:59Z</date>
+  <date>2021-11-09T04:37:22Z</date>
   <groups>
     <group>
       <name>Fujitsu Server</name>
@@ -14,6 +14,7 @@
     <template>
       <template>IPMI Fujitsu RX2530 M2</template>
       <name>IPMI Fujitsu RX2530 M2</name>
+      <description>## Overview &lt;https://github.com/mimugmail/zbx-template-rx2530> Template for monitoring mostly all IPMI values for Fujitsu RX2530 server. Probably compatible with more models. Please checkout the readme at github! ## Author mimugmail</description>
       <groups>
         <group>
           <name>Fujitsu Server</name>

@@ -1,5 +1,9 @@
 # Palo_Alto_Firewall
 
+## Description
+
+## Overview FAN Discovery Temperature Discovery Memory 
+
 ## Overview
 
 FAN Discovery
@@ -31,9 +35,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Software Version|<p>PAN-COMMON-MIB::panSysSwVersion Full software version. The first two components of the full version are the major and minor versions. The third component indicates the maintenance release number and the fourth, the build number.</p>|`SNMP agent`|panSysSwVersion<p>Update: 3600</p>|
 |Session Utilization|<p>PAN-COMMON-MIB::panSessionUtilization Session table utilization percentage.</p>|`SNMP agent`|panSessionUtilization<p>Update: 300</p>|
 |Hardware Version|<p>PAN-COMMON-MIB::panSysHwVersion Hardware version of the unit.</p>|`SNMP agent`|panSysHwVersion<p>Update: 3600</p>|
-|Software Version|<p>PAN-COMMON-MIB::panSysSwVersion Full software version. The first two components of the full version are the major and minor versions. The third component indicates the maintenance release number and the fourth, the build number.</p>|`SNMP agent`|panSysSwVersion<p>Update: 3600</p>|
 |Max Possible Sessions|<p>PAN-COMMON-MIB::panSessionMax Total number of sessions supported.</p>|`SNMP agent`|panSessionMax<p>Update: 3600</p>|
 |Chassis Type|<p>PAN-COMMON-MIB::panChassisType Chassis type for this Palo Alto device.</p>|`SNMP agent`|panChassisType<p>Update: 86400</p>|
 |Current speed of $2 $1|<p>ENTITY-SENSOR-MIB::entPhySensorValue The most recent measurement obtained by the agent for this sensor.</p>|`SNMP agent`|entPhySensorValue[{#SNMPVALUE},FAN]<p>Update: 60</p><p>LLD</p>|

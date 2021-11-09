@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:10Z</date>
+  <date>2021-11-09T04:38:37Z</date>
   <groups>
     <group>
       <name>Templates SNMP</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco UCS Standalone SNMP</template>
       <name>Cisco UCS Standalone SNMP</name>
+      <description>## Overview Features: * LLD for fans * LLD for disk drives * LLD for logical disks * LLD for PSU Tested on: * Cisco UCS C220 M3 * Cisco UCS C220 M4 ## Author Aleksey Kurnosov</description>
       <groups>
         <group>
           <name>Templates SNMP</name>

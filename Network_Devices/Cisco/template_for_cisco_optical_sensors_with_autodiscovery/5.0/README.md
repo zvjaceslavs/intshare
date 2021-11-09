@@ -1,5 +1,9 @@
 # Cisco_Sensors
 
+## Description
+
+## Overview This template gets informations from optical sensors in Cisco switches/routes. It will get optical transmit and receive power from each optical interface connected in. It uses mibs CISCO-ENTITY-SENSOR-MIB and CISCO-ENVMON-MIB. Do not forget to add this lines to snmp.conf! mibs +CISCO-ENTITY-SENSOR-MIB mibs +CISCO-ENVMON-MIB After discovery, template finds all connected GBICs and get informations about thresholds and signal levels. There are triggers included which will be PROBLEM if signal level is out of range or if signal level changes in time. Just apply template to your box and set macro {$SNMP _COMMUNITY} to fit your needs. ## Author Lukas Macura 
+
 ## Overview
 
 This template gets informations from optical sensors in Cisco switches/routes. It will get optical transmit and receive power from each optical interface connected in.

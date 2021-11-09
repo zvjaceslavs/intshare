@@ -1,5 +1,9 @@
 # Stornext Quota
 
+## Description
+
+## Overview Template for get Quotas from Stornext 5 WebAPI Just write macro values in host configuration. {$USERNAME _VALUE _STORNEXT} {$PASSWORD _VALUE _STORNEXT} {$FSNAME _VALUE _STORNEXT} Template have dependent items which use main item. Dependent items will create by discovery process. - Current Size in TB - Grace Period in weeks - Hard Limit in TB - Soft Limit in TB - Used Space in percents Warning and average triggers by 5% and 0% It use GET to https://IP/sws/v2/quota/snquota?username=USER&password=PASSWORD&fsname=NAME&action=listall&format=json ## Author Kirill Savin, Nikita Kuznetsov 
+
 ## Overview
 
 Template for get Quotas from Stornext 5 WebAPI 

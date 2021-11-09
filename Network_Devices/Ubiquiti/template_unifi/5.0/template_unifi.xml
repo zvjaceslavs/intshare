@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:11Z</date>
+  <date>2021-11-09T04:51:55Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Ubitiqui</template>
       <name>Ubitiqui</name>
+      <description>## Overview Retorna as informações abaixo: Modelo Frequência WiFi SSID Quantidade de usuários conectados Versão Firmware. É necessário habilitar o protocolo SNMP nas antenas. ## Author Carlos Eduardo</description>
       <groups>
         <group>
           <name>Templates</name>

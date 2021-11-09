@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:55Z</date>
+  <date>2021-11-09T05:18:01Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>HPE_Module Aruba 2930 VSF or Stacking</template>
       <name>HPE_Module Aruba 2930 VSF or Stacking</name>
+      <description>## Overview Module Template with LLD over SNMPv2 for VSF and stacking ## Author R.P.Wimmer</description>
       <groups>
         <group>
           <name>Templates</name>

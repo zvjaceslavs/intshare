@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:40Z</date>
+  <date>2021-11-09T05:02:29Z</date>
   <groups>
     <group>
       <name>Templates/Network devices</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP THECUS NAS</template>
       <name>SNMP THECUS NAS</name>
+      <description>## Overview Делал под Thecus N8900 Чтобы нормально получать данные через SNMP ставьте последние прошивки на устройства. В принципе моя модель - это linux NAS. Через linux SNMPv2 практически все выдается, но в самой морде есть mib-файл, на его основе и сделал данный шаблон. Вопросы на 2135850@211.ru ## Author S.V.Sidenko</description>
       <groups>
         <group>
           <name>Templates/Network devices</name>

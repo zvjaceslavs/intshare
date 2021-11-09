@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:41Z</date>
+  <date>2021-11-09T04:55:24Z</date>
   <groups>
     <group>
       <name>Templates/Virtualization</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Proxmox Services</template>
       <name>Proxmox Services</name>
+      <description>## Overview Simple template for monitoring common Proxmox 5.x services. ## Author Rafael Mundel</description>
       <groups>
         <group>
           <name>Templates/Virtualization</name>

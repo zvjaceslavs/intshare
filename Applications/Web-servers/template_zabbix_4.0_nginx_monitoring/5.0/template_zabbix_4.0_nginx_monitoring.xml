@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:13Z</date>
+  <date>2021-11-09T04:59:17Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Nginx</template>
       <name>Nginx</name>
-      <description>Nginx template created by Alireza Zabihi zabihi.a.r@gmail.com</description>
+      <description>## Description Nginx template created by Alireza Zabihi zabihi.a.r@gmail.com ## Overview Zabbix 4 Nginx monitoring by Alireza Zabihi based on Alex Gluck solution. Connection Statistics: * Active * Reading * Waiting * Writing * Requests pro connection * Request Statistics: * Accepted * Handled * Total Linux and Nginx performance monitoring: * File descriptors (Maximum and Current) * CPU Cores * Worker\_Connections * Worker\_Processes * Maximum supported connection depended on configuration * Nginx service status and ... &lt;ul style="box-sizing: border-box; margin-bottom: 16px; margin-top: 0px; padding-left: 2em; co&lt;/p> ## Author Alireza Zabihi</description>
       <groups>
         <group>
           <name>Templates</name>

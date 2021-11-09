@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:48Z</date>
+  <date>2021-11-09T05:22:39Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -943,6 +943,7 @@
     <template>
       <template>UNIVERGE IX</template>
       <name>UNIVERGE IX</name>
+      <description>## Overview You can get hardware temperature and fan and power status, as well as CPU and memory usage. PICO-SMI-MIB based &lt;https://jpn.nec.com/univerge/ix/Manual/index.html#mib> Product details --------------- &lt;https://jpn.nec.com/univerge/ix/index.html></description>
       <templates>
         <template>
           <name>Template Module EtherLike-MIB SNMP</name>

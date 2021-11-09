@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:43Z</date>
+  <date>2021-11-09T04:55:45Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI Supermicro X9SRI-F</template>
       <name>IPMI Supermicro X9SRI-F</name>
+      <description>## Overview Template for IPMI SuperMicro X9SRI Motherboard (items, triggers, graphs).</description>
       <groups>
         <group>
           <name>Templates</name>

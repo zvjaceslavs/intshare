@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:39Z</date>
+  <date>2021-11-09T04:35:35Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,7 +14,7 @@
     <template>
       <template>SNMP D-link DGS-3120-xx</template>
       <name>SNMP D-link DGS-3120-xx</name>
-      <description>D-link do something realy wierd with swTemperatureTable. So it's values not discovered but set manualy as items</description>
+      <description>## Description D-link do something realy wierd with swTemperatureTable. So it's values not discovered but set manualy as items ## Overview Based on MIB from vendor. Checked on local single and stacked DGS/DWS-3120-xx devices. Main system Items, Ttiggers and Graphs. LLD Network interfaces. LLD Memory, Temperature and Fan values (though D-link does something weird with fan and temperature OIDs, probably depends on firmware, so this prototypes was added semi-manualy).</description>
       <groups>
         <group>
           <name>Templates</name>

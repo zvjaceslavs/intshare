@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:09Z</date>
+  <date>2021-11-09T04:51:42Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Synology DiskStation</template>
       <name>Synology DiskStation</name>
+      <description>## Overview **TEMPLATE VERSION 1.0** ------------------------ Template is based on [Synology DiskStation MIB Guide](https://global.download.synology.com/download/Document/MIBGuide/Synology_DiskStation_MIB_Guide.pdf "Synology DiskStation MIB Guide") (published:2017/09/19). ### Features Includes following applications/sections: * Synology System * Synology Disk * Synology RAID * Synology SMART * Synology Services * Synology StorageIO * Synology SpaceIO * Synology iSCSI LUN * Useful OIDs Excluded are following applications: * Synology UPS ### Environment Created and tested with: * Synology DSM 6.1-15284 on following models: + DS214play + DS916+ * Zabbix version 3.4.9 (Appliance, ISO version) ### Note(s) No warranties. Comment(s), discussions below. ## Author NPollie</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

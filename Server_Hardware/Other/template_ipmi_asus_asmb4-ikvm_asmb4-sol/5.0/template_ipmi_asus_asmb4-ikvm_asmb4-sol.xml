@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:32Z</date>
+  <date>2021-11-09T04:34:45Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>IPMI ASUS ASMB4</template>
       <name>IPMI ASUS ASMB4</name>
-      <description>ASUS ASMB4-iKVM/ASMB4-SOL PLUS Hardware Monitor / System Sensor related Autor template: m.beloglazov@gmail.com Version Zabbix: 3.0</description>
+      <description>## Description ASUS ASMB4-iKVM/ASMB4-SOL PLUS Hardware Monitor / System Sensor related Autor template: m.beloglazov@gmail.com Version Zabbix: 3.0 ## Overview IPMI HW status [Fan, Temperature, Voltage], Triggers [Temperature]. (The ASUS ASMB4-iKVM/ASMB4-SOL PLUS is an Intelligent Platform Management Interface (IPMI) 2.0-compliant board that allows you to monitor, control, and manage a remote server from the local or central server in your local area network (LAN).) ## Author belmih</description>
       <groups>
         <group>
           <name>Templates</name>

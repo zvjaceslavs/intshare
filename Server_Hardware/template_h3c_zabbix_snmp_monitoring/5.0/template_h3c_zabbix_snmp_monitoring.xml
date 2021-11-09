@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:02Z</date>
+  <date>2021-11-09T05:12:02Z</date>
   <groups>
     <group>
       <name>Linux servers</name>
@@ -11,7 +11,7 @@
     <template>
       <template>H3C_basic_monitoring</template>
       <name>H3C_basic_monitoring</name>
-      <description>H3C server basic monitoring items</description>
+      <description>## Description H3C server basic monitoring items ## Overview H3C zabbix基于SNMP的监控模板，适用于HDM版本为B03 H3C ZABBIX monitoring template based on SNMP ,for HDM version B03 ## Author yelin</description>
       <groups>
         <group>
           <name>Linux servers</name>

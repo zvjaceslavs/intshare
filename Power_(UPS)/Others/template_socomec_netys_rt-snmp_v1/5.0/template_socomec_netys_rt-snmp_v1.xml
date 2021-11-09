@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:26Z</date>
+  <date>2021-11-09T05:07:51Z</date>
   <groups>
     <group>
       <name>UPS</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SOCOMEC UPS</template>
       <name>SOCOMEC UPS</name>
+      <description>## Overview This templase include some info and trigger such as: - Battery - Temperature - Output - Alarms You just edit the SNMP\_COMMUNITY value into the template ## Author diablofight89</description>
       <groups>
         <group>
           <name>UPS</name>

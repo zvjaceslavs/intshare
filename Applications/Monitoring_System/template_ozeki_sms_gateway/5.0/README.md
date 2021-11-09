@@ -1,5 +1,9 @@
 # 8 Ozeki
 
+## Description
+
+## Overview Ozeki SMS Gateway Template provide server information, connection status, users and queue sizes, trigger for disconnection and filling queues and display queue sizes in graph. Tested on zabbix 3.4 
+
 ## Overview
 
 Ozeki SMS Gateway
@@ -31,19 +35,19 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |InstallationDate|<p>-</p>|`SNMP agent`|ozeki.InstallationDate<p>Update: 30s</p>|
-|ServiceProviderConnections|<p>-</p>|`SNMP agent`|ozeki.ServiceProviderConnections<p>Update: 30s</p>|
+|Engine|<p>-</p>|`SNMP agent`|ozeki.Engine<p>Update: 30s</p>|
+|CompanyName|<p>-</p>|`SNMP agent`|ozeki.CompanyName<p>Update: 30s</p>|
+|ProductUptime|<p>-</p>|`SNMP agent`|ozeki.Uptime<p>Update: 30s</p>|
+|ProductEmail|<p>-</p>|`SNMP agent`|ozeki.ProductEmail<p>Update: 30s</p>|
 |OzekiSoftwareProduct|<p>-</p>|`SNMP agent`|ozeki.OzekiSoftwareProduct<p>Update: 30s</p>|
 |OSVersion|<p>-</p>|`SNMP agent`|ozeki.OSVersion<p>Update: 30s</p>|
 |ProductURL|<p>-</p>|`SNMP agent`|ozeki.ProductURL<p>Update: 30s</p>|
-|ProductName|<p>-</p>|`SNMP agent`|ozeki.ProductName<p>Update: 30s</p>|
-|ProductUptime|<p>-</p>|`SNMP agent`|ozeki.Uptime<p>Update: 30s</p>|
-|CompanyName|<p>-</p>|`SNMP agent`|ozeki.CompanyName<p>Update: 30s</p>|
-|LegalCopyright|<p>-</p>|`SNMP agent`|ozeki.LegalCopyright<p>Update: 30s</p>|
-|Users|<p>-</p>|`SNMP agent`|ozeki.Users<p>Update: 30s</p>|
 |OzekiNGSMSGateway|<p>-</p>|`SNMP agent`|ozeki.OzekiNGSMSGateway<p>Update: 30s</p>|
-|ProductEmail|<p>-</p>|`SNMP agent`|ozeki.ProductEmail<p>Update: 30s</p>|
-|Engine|<p>-</p>|`SNMP agent`|ozeki.Engine<p>Update: 30s</p>|
+|ServiceProviderConnections|<p>-</p>|`SNMP agent`|ozeki.ServiceProviderConnections<p>Update: 30s</p>|
 |Manifest|<p>-</p>|`SNMP agent`|ozeki.Manifest<p>Update: 30s</p>|
+|Users|<p>-</p>|`SNMP agent`|ozeki.Users<p>Update: 30s</p>|
+|LegalCopyright|<p>-</p>|`SNMP agent`|ozeki.LegalCopyright<p>Update: 30s</p>|
+|ProductName|<p>-</p>|`SNMP agent`|ozeki.ProductName<p>Update: 30s</p>|
 |Deleted $1|<p>-</p>|`SNMP agent`|ozeki.Deleted[{#OZEKIUSERNAME}]<p>Update: 30s</p><p>LLD</p>|
 |Inbox $1|<p>-</p>|`SNMP agent`|ozeki.Inbox[{#OZEKIUSERNAME}]<p>Update: 30s</p><p>LLD</p>|
 |NotSent $1|<p>-</p>|`SNMP agent`|ozeki.NotSent[{#OZEKIUSERNAME}]<p>Update: 30s</p><p>LLD</p>|

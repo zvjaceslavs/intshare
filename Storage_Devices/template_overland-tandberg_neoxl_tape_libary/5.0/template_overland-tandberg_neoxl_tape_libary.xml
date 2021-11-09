@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:57Z</date>
+  <date>2021-11-09T05:23:19Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Other - NeoXL</template>
       <name>Other - NeoXL</name>
+      <description>## Overview The template is based on the "BDT-MS-MIB" (Version 201702211500Z). The SNMP capabilities of the libaries are pretty limited. All possible values are being checked and triggers are being used. **Features** * Check of the Health Status of the Library * Scan for Modules/Expansions * Check of the "Drive Power Module" of each Expansion * Check of the "Power Supply Status" of each Expansion * Inventory Checks like Installed Firmware, Serial Number and so on. --- Template was tested with a NEOxl 80 and Firmware 2.80. ## Author Marcel Wiechmann</description>
       <templates>
         <template>
           <name>Template Module Generic SNMP</name>

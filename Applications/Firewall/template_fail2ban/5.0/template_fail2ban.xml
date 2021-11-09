@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:55Z</date>
+  <date>2021-11-09T04:57:16Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Fail2ban</template>
       <name>Fail2ban</name>
+      <description>## Overview Fail2Ban template for Zabbix ============================ **Features:** Automatic discovery of jails Monitor service status Monitor jails Jails graph **The installation instruction is in this repository.** [github.com/hermanekt/zabbix-fail2ban-discovery-](cat-app/firewall/fail2ban/visit) ## Author Tomas Hermanek</description>
       <groups>
         <group>
           <name>Templates</name>

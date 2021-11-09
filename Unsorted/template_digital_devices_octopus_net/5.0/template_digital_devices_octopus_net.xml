@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:55Z</date>
+  <date>2021-11-09T05:04:09Z</date>
   <groups>
     <group>
       <name>DD Bridge</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Octopus NET DD Bridge satelite mon</template>
       <name>Octopus NET DD Bridge satelite mon</name>
+      <description>## Overview Template for monitoring all 4 tuners on ddbridge Octopus Net. Monitoring status: SNR, lock Graph: SNR Alarms: SNR &lt; 10 db lock fail If you have web authentification, you need to modify data item "tuners mon" and add HTTP authentification. ## Author Aleksey Grabilenko</description>
       <groups>
         <group>
           <name>DD Bridge</name>

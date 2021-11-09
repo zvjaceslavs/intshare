@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:56Z</date>
+  <date>2021-11-09T04:43:52Z</date>
   <groups>
     <group>
       <name>Fortigate</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Fortinet Devices</template>
       <name>SNMP Fortinet Devices</name>
+      <description>## Overview This is a template created starting from the Leonardo Nascimento da Silva, but modified in English. Serial N., OS version, Connection num, CPU%, RAM%, Disk (Total and Used), Interface data (link and speed) Graph for everything. 01 Aug 2017 - Added UPTIME and a trigger for Reboot check ## Author Andrea Durante</description>
       <groups>
         <group>
           <name>Fortigate</name>

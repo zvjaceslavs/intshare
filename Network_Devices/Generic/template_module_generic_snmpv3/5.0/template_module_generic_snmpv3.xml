@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:26Z</date>
+  <date>2021-11-09T05:14:36Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Module Generic SNMPv3</template>
       <name>Module Generic SNMPv3</name>
-      <description>Template Module Generic SNMPv3 Template used Template Module Generic SNMPv2 Ville Leinonen https://www.hacknetwork.org Version 1.1</description>
+      <description>## Description Template Module Generic SNMPv3 Template used Template Module Generic SNMPv2 Ville Leinonen https://www.hacknetwork.org Version 1.1 ## Overview UPDATED: There was a bug in version 1.0 Linked for Template Net HP and Aruba Enterprise Switch SNMPv3, but works also individually. SNMPv3 support added, new macros: {$SECURITY\_NAME} = Username {$AUTH\_PASSPHRASE} = Authentication password {$PRIV\_PASSPHRASE} = Encryption password Template is just like V2 templates, but changed to support SNMPv3, please use SHA and AES128.</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

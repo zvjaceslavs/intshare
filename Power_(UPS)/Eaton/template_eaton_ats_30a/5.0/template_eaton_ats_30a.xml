@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:58Z</date>
+  <date>2021-11-09T05:18:18Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Eaton ATS 230V 30A</template>
       <name>Eaton ATS 230V 30A</name>
+      <description>## Overview Template for Eaton ATS 30A 64 Items 25 Triggers ## Author Peter Stanke</description>
       <groups>
         <group>
           <name>Templates</name>

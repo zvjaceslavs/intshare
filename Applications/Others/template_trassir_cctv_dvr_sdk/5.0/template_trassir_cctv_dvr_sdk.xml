@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:47Z</date>
+  <date>2021-11-09T04:56:14Z</date>
   <groups>
     <group>
       <name>CAM</name>
@@ -122,6 +122,7 @@
     <template>
       <template>Trassir-server</template>
       <name>Trassir-server</name>
+      <description>## Overview Template for Trassir CCTV DVR server. This template allows to check DVR server related metrics via SDK web connection. You need to provide global or inside host macros: * {$TRASSIR\_SDK\_PORT} - web server port on remote host, usually 8080, * {$TRASSIR\_SDK\_PASS} - password to SDK, * &lt;span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: nor ## Author vanomel</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

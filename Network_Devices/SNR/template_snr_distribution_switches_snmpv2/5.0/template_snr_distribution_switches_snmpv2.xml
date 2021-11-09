@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:07Z</date>
+  <date>2021-11-09T05:12:35Z</date>
   <groups>
     <group>
       <name>SNR</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNR Broadcast-Multicast-Unicast</template>
       <name>SNR Broadcast-Multicast-Unicast</name>
+      <description>## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM</description>
       <groups>
         <group>
           <name>SNR</name>
@@ -211,6 +212,7 @@
     <template>
       <template>SNR CPU Usage</template>
       <name>SNR CPU Usage</name>
+      <description>## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM</description>
       <groups>
         <group>
           <name>SNR</name>
@@ -241,6 +243,7 @@
     <template>
       <template>SNR DDM Statistic</template>
       <name>SNR DDM Statistic</name>
+      <description>## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM</description>
       <groups>
         <group>
           <name>SNR</name>
@@ -316,6 +319,7 @@
     <template>
       <template>SNR Error and Discared Packets</template>
       <name>SNR Error and Discared Packets</name>
+      <description>## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM</description>
       <groups>
         <group>
           <name>SNR</name>
@@ -483,6 +487,7 @@
     <template>
       <template>SNR Interfaces Statistic</template>
       <name>SNR Interfaces Statistic</name>
+      <description>## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM</description>
       <groups>
         <group>
           <name>SNR</name>
@@ -683,6 +688,7 @@
     <template>
       <template>SNR Memory Information</template>
       <name>SNR Memory Information</name>
+      <description>## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM</description>
       <groups>
         <group>
           <name>SNR</name>
@@ -726,6 +732,7 @@
     <template>
       <template>SNR POE Power</template>
       <name>SNR POE Power</name>
+      <description>## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM</description>
       <groups>
         <group>
           <name>SNR</name>
@@ -833,6 +840,7 @@
     <template>
       <template>SNR Switch Temperature</template>
       <name>SNR Switch Temperature</name>
+      <description>## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for distribution switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM</description>
       <groups>
         <group>
           <name>SNR</name>

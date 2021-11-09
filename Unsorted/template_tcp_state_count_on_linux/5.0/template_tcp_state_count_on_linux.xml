@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:08Z</date>
+  <date>2021-11-09T04:38:27Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>TCP-state-count bulkget</template>
       <name>TCP-state-count bulkget</name>
-      <description>The number of TCP sessions. Using "dependent item" net.tcp.count.master[&lt;source port>,&lt;dest port>] https://github.com/mutz0623/zabbix_TCP-state-count-module</description>
+      <description>## Description The number of TCP sessions. Using "dependent item" net.tcp.count.master[&lt;source port>,&lt;dest port>] https://github.com/mutz0623/zabbix_TCP-state-count-module ## Overview About * loadable module for aggregating TCP sessions. * 2017/9 Enabled for "depend item". so you can reduce server-agent NW connection frequency and load. Requirements * zabbix 3.0 * Linux ## Author mutsumi Iwata</description>
       <groups>
         <group>
           <name>Templates</name>

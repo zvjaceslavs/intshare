@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:52Z</date>
+  <date>2021-11-09T04:36:47Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>FreeBSD IP statistics</template>
       <name>FreeBSD IP statistics</name>
+      <description>## Overview Keep track of IPv4 and IPv6 statistics on FreeBSD. --- In /usr/local/etc/zabbix3/zabbix\_agentd.conf, add: ``` UserParameter=net.ip4[*],netstat -s -p ip | awk '/$1/{ print $$1}' UserParameter=net.ip6[*],netstat -s -p ip6 | awk '/$1/{ print $$1}' ``` --- Template might work on earlier Zabbix versions, only tested for 3.0.x ## Author RedShift</description>
       <groups>
         <group>
           <name>Templates</name>

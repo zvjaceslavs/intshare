@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:58Z</date>
+  <date>2021-11-09T05:04:33Z</date>
   <groups>
     <group>
       <name>Discovered hosts</name>
@@ -11,6 +11,7 @@
     <template>
       <template>ZTE-C320-GPON-nor</template>
       <name>ZTE-C320-GPON-nor</name>
+      <description>## Overview This is the template which is monitoring ZTE X320 with auto discovery Just upload it in zabbix templates no need to use macroses The template can calculate and print the real onu signal values in dbm ## Author Mushegh Davtyan Eduard Alaverdyan</description>
       <groups>
         <group>
           <name>Discovered hosts</name>

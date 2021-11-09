@@ -1,0 +1,91 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:32:54Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 29faeb6410e24c959b92967f466750e6
+      template: 'App Zabbix Agent'
+      name: 'App Zabbix Agent'
+      description: |
+        ## Overview
+        
+        Official Zabbix Agent Template from Zabbix distribution
+        
+        
+        
+        ## Author
+        
+        Zabbix SIA
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 1f436557772f4629a425ef311b306a70
+          name: 'Host name of zabbix_agentd running'
+          key: agent.hostname
+          delay: '3600'
+          history: 7d
+          trends: '0'
+          value_type: CHAR
+          tags:
+            -
+              tag: Application
+              value: 'Zabbix agent'
+          triggers:
+            -
+              uuid: ed938d0e260647ab99ee603f69afea90
+              expression: '(last(/App Zabbix Agent/agent.hostname,#1)<>last(/App Zabbix Agent/agent.hostname,#2))>0'
+              name: 'Host name of zabbix_agentd was changed on {HOST.NAME}'
+              priority: INFO
+        -
+          uuid: bf419e8cb21342e596cd3727af5b3ebf
+          name: 'Agent ping'
+          key: agent.ping
+          delay: '60'
+          history: 7d
+          description: 'The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.'
+          valuemap:
+            name: 'Zabbix agent ping status'
+          tags:
+            -
+              tag: Application
+              value: 'Zabbix agent'
+          triggers:
+            -
+              uuid: 43555408eeab4ee2bd0d2b059dcd488f
+              expression: 'nodata(/App Zabbix Agent/agent.ping,5m)=1'
+              name: 'Zabbix agent on {HOST.NAME} is unreachable for 5 minutes'
+              priority: AVERAGE
+        -
+          uuid: 848edd2ec1cf4a279f65db59e2b83039
+          name: 'Version of zabbix_agent(d) running'
+          key: agent.version
+          delay: '3600'
+          history: 7d
+          trends: '0'
+          value_type: CHAR
+          tags:
+            -
+              tag: Application
+              value: 'Zabbix agent'
+          triggers:
+            -
+              uuid: b4663ca19dc54caa8ced01bf0fc84c1d
+              expression: '(last(/App Zabbix Agent/agent.version,#1)<>last(/App Zabbix Agent/agent.version,#2))>0'
+              name: 'Version of zabbix_agent(d) was changed on {HOST.NAME}'
+              priority: INFO
+      valuemaps:
+        -
+          uuid: 2bbdd800972b4752b18d300712301e9d
+          name: 'Zabbix agent ping status'
+          mappings:
+            -
+              value: '1'
+              newvalue: Up

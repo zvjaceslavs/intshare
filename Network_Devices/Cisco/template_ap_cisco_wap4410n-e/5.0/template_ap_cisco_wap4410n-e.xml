@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:23Z</date>
+  <date>2021-11-09T05:25:39Z</date>
   <groups>
     <group>
       <name>AP Wifi</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Cisco WAP4410N</template>
       <name>Cisco WAP4410N</name>
+      <description>## Overview Template de Monitoramento de Access Point Cisco Small Business Model: WAP4410N-E, Firmware: Versão 2.0.7.8 Monitoramento: Disponibilidade; Uptime; Nome; Modelo; Localização; CPU; SSID,s; Trafego Wifi; Mac adress.</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

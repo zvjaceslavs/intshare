@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:40Z</date>
+  <date>2021-11-09T05:21:44Z</date>
   <groups>
     <group>
       <name>Templates SNMP</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPS2222</template>
       <name>IPS2222</name>
+      <description>## Overview Base Template IPS2222 Reading on: * Temp Sensor 1 * Temp Sensor 2 * Humidity Sensor 1 * Humidity Sensor 2 Triggers: * High Temp * High Humidity Requires MIB on SNMP config https://www.ip-sens.com/downloads/ips2222\_v1.3.mib</description>
       <groups>
         <group>
           <name>Templates SNMP</name>

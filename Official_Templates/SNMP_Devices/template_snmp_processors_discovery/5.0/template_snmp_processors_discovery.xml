@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:23Z</date>
+  <date>2021-11-09T04:33:41Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Processors</template>
       <name>SNMP Processors</name>
+      <description>## Overview Official template from Zabbix distribution to discover processors by SNMP ## Author Zabbix SIA</description>
       <groups>
         <group>
           <name>Templates</name>

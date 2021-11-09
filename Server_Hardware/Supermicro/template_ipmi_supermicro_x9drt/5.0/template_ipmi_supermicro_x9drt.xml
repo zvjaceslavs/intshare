@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:43Z</date>
+  <date>2021-11-09T04:49:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI Supermicro X9DRT</template>
       <name>IPMI Supermicro X9DRT</name>
+      <description>## Overview IPMI Supermicro X9DRT Measuring all available values by IPMI. All are triggered. Plus some graphs. ## Author Daniel Pogac</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:57Z</date>
+  <date>2021-11-09T05:23:15Z</date>
   <groups>
     <group>
       <name>Templates/Printer</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Printer Samsung CLP</template>
       <name>Printer Samsung CLP</name>
+      <description>## Overview Template for color printers Samsung CLP and other color Samsung models</description>
       <groups>
         <group>
           <name>Templates/Printer</name>

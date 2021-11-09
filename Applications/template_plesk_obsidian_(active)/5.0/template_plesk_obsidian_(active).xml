@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:53Z</date>
+  <date>2021-11-09T05:23:08Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,6 +11,7 @@
     <template>
       <template>CustomApp Plesk</template>
       <name>CustomApp Plesk</name>
+      <description>## Author samsteve169</description>
       <groups>
         <group>
           <name>Templates/Applications</name>

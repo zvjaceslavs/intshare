@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:43Z</date>
+  <date>2021-11-09T05:02:53Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Apache2</template>
       <name>App Apache2</name>
+      <description>## Overview Zabbix template for apache 2 web server without external script. This template have macros for setting URL status page. This template uses only one http item as a master item and other items depend it. Requirements: 1. Zabbix 4+ 2. Enabled mod\_status &lt;https://www.tecmint.com/monitor-apache-web-server-load-and-page-statistics/></description>
       <groups>
         <group>
           <name>Templates/Applications</name>

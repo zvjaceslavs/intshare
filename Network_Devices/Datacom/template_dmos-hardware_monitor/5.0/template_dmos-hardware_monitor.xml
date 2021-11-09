@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:57Z</date>
+  <date>2021-11-09T04:44:00Z</date>
   <groups>
     <group>
       <name>DmOS</name>
@@ -11,7 +11,7 @@
     <template>
       <template>DmOS - Hardware Monitor</template>
       <name>DmOS - Hardware Monitor</name>
-      <description>Monitor de objetos da MIB DMOS-HW-MONITOR-MIB para monitoramento do hardware dos devices.</description>
+      <description>## Description Monitor de objetos da MIB DMOS-HW-MONITOR-MIB para monitoramento do hardware dos devices. ## Overview Platforms DM4050 and DM4610. SNMP - Sensors Temperature SNMP - FAN Control, FAN Speed ## Author Guilherme Zamora Rodrigues</description>
       <groups>
         <group>
           <name>DmOS</name>

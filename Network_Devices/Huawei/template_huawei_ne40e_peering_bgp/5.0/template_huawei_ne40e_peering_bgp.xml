@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:07Z</date>
+  <date>2021-11-09T05:19:17Z</date>
   <groups>
     <group>
       <name>CORE</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Huawei NE40E - BGP</template>
       <name>Huawei NE40E - BGP</name>
-      <description>Template para monitoramento de sessão BGP</description>
+      <description>## Description Template para monitoramento de sessão BGP ## Overview Template to discovery all bgp peers and to create a trigger when the session bgp peer is down</description>
       <groups>
         <group>
           <name>CORE</name>

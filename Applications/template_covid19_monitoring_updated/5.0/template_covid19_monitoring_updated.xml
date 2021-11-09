@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:12Z</date>
+  <date>2021-11-09T05:19:49Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Covid19</template>
       <name>Coronavirus - Covid19 Monitoring</name>
-      <description>Getting cases from worldometers.info and plotting on Zabbix</description>
+      <description>## Description Getting cases from worldometers.info and plotting on Zabbix ## Overview **Gets statistics of COVID19 - CORONAVIRUS and presents to JSON and Zabbix** Updated template and code to work with current worldometers.info results (as they changed slightly) and the old code was not working properly. I forked the original repo from Rickk Barbosa and uploaded changes there, all the credits goes to him. If you have any suggestion please do send your feedback to improve! ## Author Christian Reizlein</description>
       <groups>
         <group>
           <name>Templates</name>

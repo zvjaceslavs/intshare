@@ -1,5 +1,9 @@
 # Cisco_LAG
 
+## Description
+
+## Overview This template discovers LACP interfaces and create items, triggers and graphs for monitoring their status ## Author vig0gne 
+
 ## Overview
 
 This template discovers LACP interfaces and create items, triggers and graphs for monitoring their status

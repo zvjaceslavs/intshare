@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:32Z</date>
+  <date>2021-11-09T04:54:18Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Tripplite WEBCARDLX</template>
       <name>SNMP Tripplite WEBCARDLX</name>
+      <description>## Overview This is Zabbix 3.0+ template for Tripplite UPS with option card WEBCARDLX. Includes 23 items, 1 applications, 15 triggers, 3 Graphs Monitors power parameters like voltage and frequency, battery charge and status, battery temperature, etc. Has triggers for out of range parameters, power loss, low battery. ## Author Dominique Beaulieu</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:26Z</date>
+  <date>2021-11-09T04:47:20Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>OKI Printer</template>
       <name>OKI Printer</name>
+      <description>## Overview I created this template for my office printer OKI ES8461 MFP. Not sure if it works with any other models. Let us know in comments. ## Author Slawek Glebocki</description>
       <groups>
         <group>
           <name>Printers</name>

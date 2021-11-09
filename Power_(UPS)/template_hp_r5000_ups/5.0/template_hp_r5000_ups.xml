@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:15Z</date>
+  <date>2021-11-09T04:59:35Z</date>
   <groups>
     <group>
       <name>UPS</name>
@@ -11,7 +11,7 @@
     <template>
       <template>HP R5000 SNMP</template>
       <name>HP R5000 SNMP</name>
-      <description>HP R5000 UPS SNMP Made bu Ennio</description>
+      <description>## Description HP R5000 UPS SNMP Made bu Ennio ## Overview ### Monitor power parametrs: frequency, power, voltage, current, temp. Full control for Input, Output (Segment), Battery, Bypass. I used CPQPOWER1.76.MIB and UPS-MIB.mib ## Author Ennio</description>
       <groups>
         <group>
           <name>UPS</name>

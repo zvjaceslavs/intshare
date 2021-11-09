@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:18Z</date>
+  <date>2021-11-09T04:46:23Z</date>
   <groups>
     <group>
       <name>Appliances</name>
@@ -14,6 +14,7 @@
     <template>
       <template>DELL POWERVAULT TL2000</template>
       <name>DELL POWERVAULT TL2000</name>
+      <description>## Overview Created and configured in Zabbix 3.2 By using SNMP, I believe it works in other versions. DELL MIBs required Link: https://www.dell.com/support/home/br/en/brbsdt1/drivers/driversdetails?driverId=M0KV7 ## Author Geraldo Jr</description>
       <groups>
         <group>
           <name>Appliances</name>

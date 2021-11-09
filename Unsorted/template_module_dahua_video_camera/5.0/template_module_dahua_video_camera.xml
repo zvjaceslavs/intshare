@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:43Z</date>
+  <date>2021-11-09T05:09:54Z</date>
   <groups>
     <group>
       <name>Video cameras</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Dahua Video Camera</template>
       <name>Dahua Video Camera</name>
-      <description>A simple template based on official Dahua MIB (DAHUA-SNMP-MIB 2014-01-07)</description>
+      <description>## Description A simple template based on official Dahua MIB (DAHUA-SNMP-MIB 2014-01-07) ## Overview A simple template based on official Dahua MIB (DAHUA-SNMP-MIB 2014-01-07) ## Author Bruno BASLI</description>
       <groups>
         <group>
           <name>Video cameras</name>

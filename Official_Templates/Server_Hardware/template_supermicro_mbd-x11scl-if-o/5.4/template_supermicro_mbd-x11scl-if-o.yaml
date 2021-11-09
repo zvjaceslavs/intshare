@@ -1,0 +1,545 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:23:48Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 3d23a0a5a92d461faf8d178036838299
+      template: 'IPMI Supermicro X11-SCL-IF-O'
+      name: 'IPMI Supermicro X11-SCL-IF-O'
+      description: |
+        ## Overview
+        
+        IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage]
+        
+        
+        
+        ## Author
+        
+        Andrei Ruslantsev
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 99ae1dfc0ef1464aa6aa41ab922d0865
+          name: 1.05V_PCH
+          type: IPMI
+          key: ipmi.supermicro.1.05VPCH
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: 1.05V_PCH
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: d9c5e333509d4f549efb7a57e7c1c4b8
+          name: 1.2V_BMC
+          type: IPMI
+          key: ipmi.supermicro.1.2VBMC
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: 1.2V_BMC
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '1'
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: b61be3ce551a4eb38c6f040933cb6ee4
+          name: 1.8V_PCH
+          type: IPMI
+          key: ipmi.supermicro.1.8VPCH
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: 1.8V_PCH
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: d030ff315e754e39b7e1348b31506954
+          name: 3.3VCC
+          type: IPMI
+          key: ipmi.supermicro.3.3VCC
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: 3.3VCC
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: 49b407446d2b48d6a7135eae40d6572d
+          name: 3.3VSB
+          type: IPMI
+          key: ipmi.supermicro.3.3VSB
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: 3.3VSB
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: 6adcfa17ba6d4eda941e32cb4053c6cb
+          name: 5VCC
+          type: IPMI
+          key: ipmi.supermicro.5VCC
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: 5VCC
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: 23130a1475b449188feb1340cebf4e63
+          name: 5VSB
+          type: IPMI
+          key: ipmi.supermicro.5VSB
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: 5VSB
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: f8160178e5d445c9a539254ae24fbe22
+          name: 12V
+          type: IPMI
+          key: ipmi.supermicro.12V
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: 12V
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: a7fd6243365c413eb2dd3b46ffd93372
+          name: 'CPU Temp'
+          type: IPMI
+          key: ipmi.supermicro.cpu.temp
+          delay: '45'
+          history: 7d
+          value_type: FLOAT
+          units: 'degrees C'
+          ipmi_sensor: 'CPU Temp'
+          tags:
+            -
+              tag: Application
+              value: Temperature
+          triggers:
+            -
+              uuid: f20ee9725584403d923d7001efb95d0d
+              expression: 'last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.cpu.temp)>70'
+              name: 'CPU temperature critical on {HOSTNAME}'
+              priority: HIGH
+        -
+          uuid: babe04543802428e9f72e4a73ed181d7
+          name: Fan1
+          type: IPMI
+          key: ipmi.supermicro.fan1
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: RPM
+          ipmi_sensor: FAN1
+          tags:
+            -
+              tag: Application
+              value: Fans
+          triggers:
+            -
+              uuid: 5f97abe8cf544c16b1c1908299d6feb8
+              expression: 'last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.fan1)>9000 or last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.fan1)<100'
+              name: 'Fan1 critical on {HOSTNAME}'
+              priority: WARNING
+        -
+          uuid: 58259d4d755c4169891ba4f2f9f5b5fa
+          name: Fan2
+          type: IPMI
+          key: ipmi.supermicro.fan2
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: RPM
+          ipmi_sensor: FAN2
+          tags:
+            -
+              tag: Application
+              value: Fans
+          triggers:
+            -
+              uuid: 9c11d335267a4f9083e0212f9199030e
+              expression: 'last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.fan2)>9000 or last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.fan2)<100'
+              name: 'Fan2 critical on {HOSTNAME}'
+              priority: WARNING
+        -
+          uuid: 33e4c446cac944d885d1f4064500cafa
+          name: Fan3
+          type: IPMI
+          key: ipmi.supermicro.fan3
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: RPM
+          ipmi_sensor: FAN3
+          tags:
+            -
+              tag: Application
+              value: Fans
+          triggers:
+            -
+              uuid: 4ad3f76659314f3492514ae6822e8f95
+              expression: 'last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.fan3)>9000 or last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.fan3)<100'
+              name: 'Fan3 critical on {HOSTNAME}'
+              priority: WARNING
+        -
+          uuid: 89f69138c1634e4ab1f806c3c7bb9365
+          name: 'Fan A'
+          type: IPMI
+          key: ipmi.supermicro.fana
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: RPM
+          ipmi_sensor: FANA
+          tags:
+            -
+              tag: Application
+              value: Fans
+          triggers:
+            -
+              uuid: 3e2bef5940734a4691455202b6174c8f
+              expression: 'last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.fana)>9000 or last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.fana)<100'
+              name: 'FanA critical on {HOSTNAME}'
+              priority: WARNING
+        -
+          uuid: 31e0c088c0e247b0944ac3b384398b01
+          name: 'M2NVMeSSD Temp'
+          type: IPMI
+          key: ipmi.supermicro.M2NVMeSSD.temp
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: 'degrees C'
+          ipmi_sensor: 'M2NVMeSSD Temp'
+          tags:
+            -
+              tag: Application
+              value: Temperature
+        -
+          uuid: ac7a80f0747341ba8c3542199b3ea484
+          name: 'DIMMA1 Temp'
+          type: IPMI
+          key: ipmi.supermicro.p1.dimma1.temp
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: 'degrees C'
+          ipmi_sensor: 'DIMMA1 Temp'
+          tags:
+            -
+              tag: Application
+              value: Temperature
+          triggers:
+            -
+              uuid: caa0f1ab23874cfca89778bc12eb1ea7
+              expression: 'last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.p1.dimma1.temp)>70'
+              name: 'DIMMA1 temperature critical on {HOSTNAME}'
+              priority: AVERAGE
+        -
+          uuid: 99e4e42cc31445fa9c5b7b7d06de30d9
+          name: 'DIMMB1 Temp'
+          type: IPMI
+          key: ipmi.supermicro.p1.dimmb1.temp
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: 'degrees C'
+          ipmi_sensor: 'DIMMB1 Temp'
+          tags:
+            -
+              tag: Application
+              value: Temperature
+          triggers:
+            -
+              uuid: 820a8bda23424f65975f2db1223c9814
+              expression: 'last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.p1.dimmb1.temp)>70'
+              name: 'DIMMB1 temperature critical on {HOSTNAME}'
+              priority: AVERAGE
+        -
+          uuid: 9dd8bdfe64554cafbae4e5b16843927c
+          name: 'PCH Temp'
+          type: IPMI
+          key: ipmi.supermicro.pch.temp
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: 'degrees C'
+          ipmi_sensor: 'PCH Temp'
+          tags:
+            -
+              tag: Application
+              value: Temperature
+        -
+          uuid: 7a0cf966732d404e93b72610070a3b72
+          name: 'Peripheral Temp'
+          type: IPMI
+          key: ipmi.supermicro.peripheral.temp
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: 'degrees C'
+          ipmi_sensor: 'Peripheral Temp'
+          tags:
+            -
+              tag: Application
+              value: Temperature
+        -
+          uuid: d9aa02b5a3ab43c2a71ed16e8ab6635f
+          name: 'System Temp'
+          type: IPMI
+          key: ipmi.supermicro.system.temp
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: 'degrees C'
+          ipmi_sensor: 'System Temp'
+          tags:
+            -
+              tag: Application
+              value: Temperature
+          triggers:
+            -
+              uuid: eeca2a6a19ce4984b5701c27955bd641
+              expression: 'last(/IPMI Supermicro X11-SCL-IF-O/ipmi.supermicro.system.temp)>60'
+              name: 'System temperature critical on  {HOSTNAME}'
+              priority: HIGH
+        -
+          uuid: 04cd834f8b4a4158899a2abe075c0dc5
+          name: VBAT
+          type: IPMI
+          key: ipmi.supermicro.VBAT
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: VBAT
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: 6d941afc7adc4cfb94f40eec8e1d1ba9
+          name: Vcpu
+          type: IPMI
+          key: ipmi.supermicro.Vcpu
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: Vcpu
+          tags:
+            -
+              tag: Application
+              value: Voltage
+        -
+          uuid: bdf4cc23352c40039e5a87f87293536c
+          name: 'VcpuVRM Temp'
+          type: IPMI
+          key: ipmi.supermicro.VcpuVRM.temp
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: 'degrees C'
+          ipmi_sensor: 'VcpuVRM Temp'
+          tags:
+            -
+              tag: Application
+              value: Temperature
+        -
+          uuid: 1425efd11d3b48dbbf44c92a64c4ba80
+          name: VDimm
+          type: IPMI
+          key: ipmi.supermicro.VDIMM
+          delay: '240'
+          history: 7d
+          value_type: FLOAT
+          units: Volts
+          ipmi_sensor: VDimm
+          tags:
+            -
+              tag: Application
+              value: Voltage
+  graphs:
+    -
+      uuid: b49d845b3f204536be74a0c8d8b36d05
+      name: 'FAN speed'
+      graph_items:
+        -
+          color: 1A7C11
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.fan1
+        -
+          sortorder: '1'
+          color: F63100
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.fan2
+        -
+          sortorder: '2'
+          color: 2774A4
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.fan3
+        -
+          sortorder: '3'
+          color: FC6EA3
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.fana
+    -
+      uuid: 47476a7076744df7b62465637169b193
+      name: Temperature
+      graph_items:
+        -
+          color: 1A7C11
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.peripheral.temp
+        -
+          sortorder: '1'
+          color: F63100
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.system.temp
+        -
+          sortorder: '2'
+          color: 2774A4
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.VcpuVRM.temp
+        -
+          sortorder: '3'
+          color: 6C59DC
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.cpu.temp
+        -
+          sortorder: '4'
+          color: AC8C14
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.M2NVMeSSD.temp
+        -
+          sortorder: '5'
+          color: 611F27
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.p1.dimma1.temp
+        -
+          sortorder: '6'
+          color: F230E0
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.p1.dimmb1.temp
+    -
+      uuid: 45068300fb954e5483d3edb172df5036
+      name: Voltage
+      graph_items:
+        -
+          color: 1A7C11
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.1.05VPCH
+        -
+          sortorder: '1'
+          color: F63100
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.1.2VBMC
+        -
+          sortorder: '2'
+          color: 2774A4
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.1.8VPCH
+        -
+          sortorder: '3'
+          color: A54F10
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.3.3VCC
+        -
+          sortorder: '4'
+          color: FC6EA3
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.3.3VSB
+        -
+          sortorder: '5'
+          color: 6C59DC
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.5VCC
+        -
+          sortorder: '6'
+          color: AC8C14
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.5VSB
+        -
+          sortorder: '7'
+          color: 611F27
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.12V
+        -
+          sortorder: '8'
+          color: F230E0
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.VBAT
+        -
+          sortorder: '9'
+          color: 5CCD18
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.Vcpu
+        -
+          sortorder: '10'
+          color: BB2A02
+          item:
+            host: 'IPMI Supermicro X11-SCL-IF-O'
+            key: ipmi.supermicro.VDIMM

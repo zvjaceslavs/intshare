@@ -1,0 +1,385 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:26:37Z'
+  groups:
+    -
+      uuid: e960332b3f6c46a1956486d4f3f99fce
+      name: 'Templates/Server hardware'
+  templates:
+    -
+      uuid: 06b13541e374472e9544927803343869
+      template: monitor_RackServer_HP_ProLiant
+      name: 惠普ProLiant系列机架服务器监控模板
+      description: |
+        ## Overview
+        
+        惠普ProLiant系列机架服务器监控模板
+        
+        
+        包括CPU、内存、电源、风扇、硬盘、Cache状态
+        
+        
+        将宏{$CLOUD\_SNMP\_COMMUNITY}替换为实际团体字即可
+        
+        
+        
+        ## Author
+        
+        zhangzhefeng
+        
+        
+      groups:
+        -
+          name: 'Templates/Server hardware'
+      items:
+        -
+          uuid: ded1077bd0de4cc7b360f00df24dda92
+          name: ping丢包率
+          type: SIMPLE
+          key: 'icmppingloss[,10,,,]'
+          delay: 5m
+          history: 7d
+          trends: 0d
+          value_type: FLOAT
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: 8ef4b7b98f9c4e97a14fdc06c5331fd0
+              expression: 'avg(/monitor_RackServer_HP_ProLiant/icmppingloss[,10,,,],10m)>{$ICMP_LOSS_WARN}'
+              name: 'ICMP ping 丢包'
+              priority: HIGH
+              description: 'Last value: {ITEM.LASTVALUE1}.'
+              type: MULTIPLE
+              manual_close: 'YES'
+              dependencies:
+                -
+                  name: 'ICMP ping不可达'
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/icmpping[,5,,,],#1)=0'
+        -
+          uuid: edce95d354b7447fa640988880bcdd03
+          name: ping时延
+          type: SIMPLE
+          key: 'icmppingsec[,10,,,,avg]'
+          delay: 5m
+          history: 7d
+          trends: 0d
+          value_type: FLOAT
+          units: s
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: 028e4899568740dcb8f7c92d66df1ef6
+              expression: 'min(/monitor_RackServer_HP_ProLiant/icmppingsec[,10,,,,avg],10m)>{$ICMP_RESPONSE_TIME_WARN}'
+              name: 'ICMP ping 时延高'
+              priority: HIGH
+              description: 'Last value: {ITEM.LASTVALUE1}.'
+              type: MULTIPLE
+              manual_close: 'YES'
+              dependencies:
+                -
+                  name: 'ICMP ping不可达'
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/icmpping[,5,,,],#1)=0'
+        -
+          uuid: b125de0899e244928faef6122cd02120
+          name: 'ICMP ping'
+          type: SIMPLE
+          key: 'icmpping[,5,,,]'
+          history: 7d
+          trends: 0d
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: 4a73625ccc114c59902ba357a92274fb
+              expression: 'last(/monitor_RackServer_HP_ProLiant/icmpping[,5,,,],#1)=0'
+              name: 'ICMP ping不可达'
+              priority: HIGH
+              description: |
+                Last value: {ITEM.LASTVALUE1}.
+                Last 2 attempts returned timeout.  Please check device connectivity.
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: 2b6051e7cf054e45ba71125a9521e3f9
+              expression: 'last(/monitor_RackServer_HP_ProLiant/icmpping[,5,,,],#1)=0'
+              name: 监控失效（ping不通）
+              priority: INFO
+              manual_close: 'YES'
+              tags:
+                -
+                  tag: 监控失效原因
+                  value: ping不通
+        -
+          uuid: 66f6cf85d1694a02acc958df52c88af9
+          name: 系统信息
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.1.0
+          key: SystemDescription
+          delay: 1h
+          history: 3d
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: 系统信息
+          triggers:
+            -
+              uuid: 63d5826485ee4be59bd0b1b71c6f6d9f
+              expression: 'nodata(/monitor_RackServer_HP_ProLiant/SystemDescription,12h)=1'
+              name: 监控失效（snmp不通）
+              priority: INFO
+              manual_close: 'YES'
+              tags:
+                -
+                  tag: 监控失效原因
+                  value: snmp不通
+        -
+          uuid: ee6c2a1eccf447e5afccb0ba3f82d9b0
+          name: 运行时间
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.3.0
+          key: SystemUpTime
+          delay: 1h
+          history: 3d
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: 系统信息
+      discovery_rules:
+        -
+          uuid: 43e76ef12b9446fc9b13ddab0ada411c
+          name: Cache发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.232.1.2.2.3.1.1]'
+          key: CacheDiscovery
+          delay: 1d
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 52771f39af9b4fce8b737f51d75e1f8e
+              name: 'Cache状态 [{#SNMPVALUE}]'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.232.1.2.2.3.1.5.{#SNMPINDEX}'
+              key: 'CacheStatus.[{#SNMPINDEX}]'
+              delay: 1h
+              history: 7d
+              trends: 0d
+              tags:
+                -
+                  tag: Application
+                  value: Cache情况
+              trigger_prototypes:
+                -
+                  uuid: 797f029999b34b06819375130c58159f
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/CacheStatus.[{#SNMPINDEX}],#1)=3'
+                  name: 'Cache degraded'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                -
+                  uuid: dd2b1b79c6fe4cd3845da16cb804f299
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/CacheStatus.[{#SNMPINDEX}],#1)=4'
+                  name: 'Cache failed'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+        -
+          uuid: d70cb018627747dfad802b4df8abe165
+          name: CPU发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.232.1.2.2.1.1.1]'
+          key: CPUDiscovery
+          delay: 1d
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 0b325699239948fd8d541a2a2df0f527
+              name: 'CPU状态 [{#SNMPVALUE}]'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.232.1.2.2.1.1.6.{#SNMPINDEX}'
+              key: 'CPUStatus.[{#SNMPINDEX}]'
+              delay: 1h
+              history: 7d
+              trends: 0d
+              tags:
+                -
+                  tag: Application
+                  value: CPU情况
+              trigger_prototypes:
+                -
+                  uuid: 21e1cb7df0114edcbfc0b8e53cacdda7
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/CPUStatus.[{#SNMPINDEX}],#1)=3'
+                  name: 'CPU degraded'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                -
+                  uuid: a344f6cb5875486297ee63c6ed280afc
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/CPUStatus.[{#SNMPINDEX}],#1)=4'
+                  name: 'CPU failed'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+        -
+          uuid: 76d009b39cff4503bebf5ac5ef334ec1
+          name: 硬盘发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.232.3.2.5.1.1.64]'
+          key: DisckDiscovery
+          delay: 1d
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 2289c433c00a4ee582d3ef56a7cd6ca1
+              name: '硬盘状态 [{#SNMPVALUE}]'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.232.3.2.5.1.1.6.{#SNMPINDEX}'
+              key: 'DiskStatus.[{#SNMPINDEX}]'
+              delay: 1h
+              history: 7d
+              trends: 0d
+              tags:
+                -
+                  tag: Application
+                  value: 硬盘情况
+              trigger_prototypes:
+                -
+                  uuid: bba5142958324e84a76903e5839cc078
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/DiskStatus.[{#SNMPINDEX}],#1)=3'
+                  name: 硬盘状态failed
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                -
+                  uuid: 59821791e2fe49f2ac23ba1b3a0f8e01
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/DiskStatus.[{#SNMPINDEX}],#1)=4'
+                  name: 硬盘状态predictiveFailure
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+        -
+          uuid: 27e0d5796f77467aabe86c96b875c13d
+          name: 风扇发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.232.6.2.6.7.1.2]'
+          key: FanDiscovery
+          delay: 1d
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 2f4bca8fa09547cfa900e29820f4f672
+              name: '风扇状态 {#SNMPVALUE}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.232.6.2.6.7.1.9.{#SNMPINDEX}'
+              key: 'FanStatus.[{#SNMPINDEX}]'
+              delay: 1h
+              history: 7d
+              trends: 0d
+              tags:
+                -
+                  tag: Application
+                  value: 风扇情况
+              trigger_prototypes:
+                -
+                  uuid: 6b46daa9c90b48d28d756edda1240fef
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/FanStatus.[{#SNMPINDEX}],#1)=3'
+                  name: 风扇状态degraded
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                -
+                  uuid: 274f1a788d9a478087513f74e3e23468
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/FanStatus.[{#SNMPINDEX}],#1)=4'
+                  name: 风扇状态failed
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+        -
+          uuid: 3caae44442bd448db14bca65843014a1
+          name: 内存发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.232.6.2.14.13.1.13]'
+          key: MemoryDiscovery
+          delay: 1d
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: bd16a29199b0494ba9d3e6c93861a86d
+              name: '内存状态 {#SNMPVALUE}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.232.6.2.14.13.1.19.{#SNMPINDEX}'
+              key: 'MemoryStatus.[{#SNMPINDEX}]'
+              delay: 1h
+              history: 7d
+              trends: 0d
+              tags:
+                -
+                  tag: Application
+                  value: 内存情况
+              trigger_prototypes:
+                -
+                  uuid: 601dcb9082cb4922869741fb28dd449b
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/MemoryStatus.[{#SNMPINDEX}],#1)=11'
+                  name: 内存degraded
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+        -
+          uuid: 3385845e4ecb4e17a07892addbe64623
+          name: 电源发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.232.6.2.9.3.1.11]'
+          key: PowerDiscovery
+          delay: 1d
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 7b2e8d35b6834dc9ba323fa847b0f85a
+              name: '电源状态 [{#SNMPVALUE}]'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.232.6.2.9.3.1.4.{#SNMPINDEX}'
+              key: 'PowerStatus.[{#SNMPINDEX}]'
+              delay: 1h
+              history: 7d
+              trends: 0d
+              tags:
+                -
+                  tag: Application
+                  value: 电源情况
+              trigger_prototypes:
+                -
+                  uuid: 24c96f8011544d588078cf976c70af0c
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/PowerStatus.[{#SNMPINDEX}],#1)=3'
+                  name: 电源degraded
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                -
+                  uuid: e04410d976e9446f814b02928247cff0
+                  expression: 'last(/monitor_RackServer_HP_ProLiant/PowerStatus.[{#SNMPINDEX}],#1)=4'
+                  name: 电源failed
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+      macros:
+        -
+          macro: '{$CLOUD_SNMP_COMMUNITY}'
+          value: public
+        -
+          macro: '{$ICMP_LOSS_WARN}'
+          value: '30'
+        -
+          macro: '{$ICMP_RESPONSE_TIME_WARN}'
+          value: '0.1'

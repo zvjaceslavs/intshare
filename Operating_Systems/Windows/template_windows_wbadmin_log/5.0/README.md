@@ -1,5 +1,9 @@
 # Event Windows Backup
 
+## Description
+
+## Overview check windows backup (wbadmin tool) event log tested on win 2012 r2 
+
 ## Overview
 
 check windows backup (wbadmin tool) event log
@@ -25,8 +29,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Windiws Backup Trouble|<p>-</p>|`Zabbix agent (active)`|eventlog[Microsoft-Windows-Backup,,"Error|Critical|Warning",,,,skip]<p>Update: 300</p>|
 |Windows Backup Successful|<p>-</p>|`Zabbix agent (active)`|eventlog[Microsoft-Windows-Backup,,"Information",,4,,skip]<p>Update: 300</p>|
+|Windiws Backup Trouble|<p>-</p>|`Zabbix agent (active)`|eventlog[Microsoft-Windows-Backup,,"Error|Critical|Warning",,,,skip]<p>Update: 300</p>|
 ## Triggers
 
 There are no triggers in this template.

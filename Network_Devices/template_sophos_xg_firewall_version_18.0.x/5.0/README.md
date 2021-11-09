@@ -2,7 +2,7 @@
 
 ## Description
 
-Template for SOPHOS XG (Version 18) series Firewall. (Tested on XG260 with Zabbix 5.0) Used MIB: SFOS-FIREWALL-MIB
+## Description Template for SOPHOS XG (Version 18) series Firewall. (Tested on XG260 with Zabbix 5.0) Used MIB: SFOS-FIREWALL-MIB ## Overview SNMPv2 template for XG series (Version 18) Sophos Firewall 64 static items and 37 triggers + discovered interface items and triggers It using (linked) default zabbix templates: Template Module Generic SNMP Template Module Interfaces SNMP Template Module HOST-RESOURCES-MIB CPU SNMP Necessary MIB: SOPHOS-XG-MIB18.txt - you have to upload it on monitoring endpoint server or proxy (for CentOS /usr/share/snmp/mib) https://docs.sophos.com/nsg/sophos-firewall/MIB/SOPHOS-XG-MIB.zip Mandatory default macros: {$SNMP _COMMUNITY} Optional macroses that can be overloaded per device: {$CPU.UTIL.CRIT} {$DISK _UTIL _MAX} {$MEMORY _UTIL _MAX} {$SWAP _UTIL _MAX} Tested on XG106 (FW 18.0.2 MR-2) with zabbix 5.0.x (Probably can be ported to 4.0 and lower) ## Author R.P.Wimmer 
 
 ## Overview
 
@@ -71,58 +71,58 @@ R.P.Wimmer
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Device name|<p>-</p>|`SNMP agent`|applianceName<p>Update: 1h</p>|
-|Service SSL-VPN status|<p>-</p>|`SNMP agent`|sslvpnService<p>Update: 5m</p>|
-|HA mode|<p>Textual Convention: HaStatusType Values: disabled(0), enabled(1)</p>|`SNMP agent`|haMode<p>Update: 5m</p>|
-|Disk capacity|<p>-</p>|`SNMP agent`|diskCapacity<p>Update: 1h</p>|
-|WebServer Protection license reg status|<p>WebServer Protection license status.</p>|`SNMP agent`|webServerProtectionLicRegStatus<p>Update: 1h</p>|
-|IMAP Hits|<p>-</p>|`SNMP agent`|imapHits<p>Update: 3m</p>|
-|Webcat version|<p>Version of Webcat</p>|`SNMP agent`|webcatVersion<p>Update: 1h</p>|
-|Base license reg status|<p>Base Firewall protection license status.</p>|`SNMP agent`|baseFWLicRegStatus<p>Update: 1h</p>|
-|Service HTTP status|<p>-</p>|`SNMP agent`|httpService<p>Update: 5m</p>|
-|Mail Protection license expire date|<p>EMail Protection Iicense Expiry Date.</p>|`SNMP agent`|mailProtectionLicExpiryDate<p>Update: 1h</p>|
-|Mail Protection license reg status|<p>EMail Protection license status.</p>|`SNMP agent`|mailProtectionLicRegStatus<p>Update: 1h</p>|
-|Device serial number|<p>-</p>|`SNMP agent`|applianceKey<p>Update: 1h</p>|
-|WebServer Protection license expire date|<p>WebServer Protection Iicense Expiry Date.</p>|`SNMP agent`|webServerProtectionLicExpiryDate<p>Update: 1h</p>|
-|Live user count|<p>-</p>|`SNMP agent`|liveUserCount<p>Update: 3m</p>|
-|Network Protection license expire date|<p>Network Protection Iicense Expiry Date.</p>|`SNMP agent`|netProtectionLicExpiryDate<p>Update: 1h</p>|
-|Web Protection license reg status|<p>Web Protection registration license status.</p>|`SNMP agent`|webProtectionLicRegStatus<p>Update: 1h</p>|
-|Memory capacity|<p>-</p>|`SNMP agent`|memoryCapacity<p>Update: 1h</p>|
-|Service IP-Sec VPN status|<p>-</p>|`SNMP agent`|ipSecVpnService<p>Update: 5m</p>|
-|Service IPS status|<p>-</p>|`SNMP agent`|ipsService<p>Update: 5m</p>|
-|Swap capacity|<p>-</p>|`SNMP agent`|swapCapacity<p>Update: 1h</p>|
-|Sandstrom license expire date|<p>Sandstrom Protection Iicense Expiry Date.</p>|`SNMP agent`|sandstromLicExpiryDate<p>Update: 1h</p>|
-|Service SMTP status|<p>-</p>|`SNMP agent`|smtpService<p>Update: 5m</p>|
-|Device type|<p>-</p>|`SNMP agent`|applianceType<p>Update: 1h</p>|
-|Memory utilization|<p>-</p>|`SNMP agent`|memoryPercentUsage<p>Update: 1m</p>|
-|Service AV status|<p>-</p>|`SNMP agent`|avService<p>Update: 5m</p>|
-|Service drouting status|<p>-</p>|`SNMP agent`|droutingService<p>Update: 5m</p>|
-|Service sshd status|<p>-</p>|`SNMP agent`|sshdService<p>Update: 5m</p>|
-|HA current status|<p>Textual Convention: HaStatus Values: notapplicable( 0 ), auxiliary( 1 ), standAlone( 2 ), primary( 3 ), faulty( 4 ), ready ( 5 )</p>|`SNMP agent`|currentHAStatus<p>Update: 5m</p>|
-|IDS version|<p>Version of Intrusion Detection and Prevention (IDP)</p>|`SNMP agent`|ipsVersion<p>Update: 1h</p>|
-|Service apache status|<p>-</p>|`SNMP agent`|apacheService<p>Update: 5m</p>|
-|Base license expire date|<p>Base Firewall protection license expiry date.</p>|`SNMP agent`|baseFWLicExpiryDate<p>Update: 1h</p>|
-|Network Protection reg license status|<p>Network Protection registration license status</p>|`SNMP agent`|netProtectionLicRegStatus<p>Update: 1h</p>|
-|Firmware version|<p>Version of Intrusion Detection and Prevention (IDP)</p>|`SNMP agent`|firewallVersion<p>Update: 1h</p>|
-|Service NTP status|<p>-</p>|`SNMP agent`|ntpService<p>Update: 5m</p>|
-|Web Protection license expire date|<p>Web Protection license expiry date.</p>|`SNMP agent`|webProtectionLicExpiryDate<p>Update: 1h</p>|
-|Service dns status|<p>-</p>|`SNMP agent`|dnsService<p>Update: 5m</p>|
-|Service IMAP4 status|<p>-</p>|`SNMP agent`|imap4Service<p>Update: 5m</p>|
-|Service HA status|<p>-</p>|`SNMP agent`|haService<p>Update: 5m</p>|
-|Service FTP status|<p>-</p>|`SNMP agent`|ftpService<p>Update: 5m</p>|
-|Service Dgd status|<p>-</p>|`SNMP agent`|dgdService<p>Update: 5m</p>|
-|Disk utilization|<p>-</p>|`SNMP agent`|diskPercentUsage<p>Update: 5m</p>|
 |SMTP Hits|<p>-</p>|`SNMP agent`|smtpHits<p>Update: 3m</p>|
-|Service tomcat status|<p>-</p>|`SNMP agent`|tomcatService<p>Update: 5m</p>|
-|Sandstrom license reg status|<p>Sandstrom Protection Iicense status.</p>|`SNMP agent`|sandstromLicRegStatus<p>Update: 1h</p>|
+|Mail Protection license expire date|<p>EMail Protection Iicense Expiry Date.</p>|`SNMP agent`|mailProtectionLicExpiryDate<p>Update: 1h</p>|
+|Service HA status|<p>-</p>|`SNMP agent`|haService<p>Update: 5m</p>|
+|Base license reg status|<p>Base Firewall protection license status.</p>|`SNMP agent`|baseFWLicRegStatus<p>Update: 1h</p>|
+|Service SSL-VPN status|<p>-</p>|`SNMP agent`|sslvpnService<p>Update: 5m</p>|
+|WebServer Protection license reg status|<p>WebServer Protection license status.</p>|`SNMP agent`|webServerProtectionLicRegStatus<p>Update: 1h</p>|
+|Service IP-Sec VPN status|<p>-</p>|`SNMP agent`|ipSecVpnService<p>Update: 5m</p>|
+|Device serial number|<p>-</p>|`SNMP agent`|applianceKey<p>Update: 1h</p>|
+|Service garner status|<p>-</p>|`SNMP agent`|garnerService<p>Update: 5m</p>|
+|Service NTP status|<p>-</p>|`SNMP agent`|ntpService<p>Update: 5m</p>|
 |Swap utilization|<p>-</p>|`SNMP agent`|swapPercentUsage<p>Update: 5m</p>|
+|Service AS status|<p>-</p>|`SNMP agent`|asService<p>Update: 5m</p>|
+|Device name|<p>-</p>|`SNMP agent`|applianceName<p>Update: 1h</p>|
+|Memory capacity|<p>-</p>|`SNMP agent`|memoryCapacity<p>Update: 1h</p>|
+|Service IPS status|<p>-</p>|`SNMP agent`|ipsService<p>Update: 5m</p>|
+|Service drouting status|<p>-</p>|`SNMP agent`|droutingService<p>Update: 5m</p>|
+|Service IMAP4 status|<p>-</p>|`SNMP agent`|imap4Service<p>Update: 5m</p>|
+|Memory utilization|<p>-</p>|`SNMP agent`|memoryPercentUsage<p>Update: 1m</p>|
 |Service database status|<p>-</p>|`SNMP agent`|databaseService<p>Update: 5m</p>|
-|POP3 Hits|<p>-</p>|`SNMP agent`|pop3Hits<p>Update: 3m</p>|
+|Web Protection license expire date|<p>Web Protection license expiry date.</p>|`SNMP agent`|webProtectionLicExpiryDate<p>Update: 1h</p>|
+|Service apache status|<p>-</p>|`SNMP agent`|apacheService<p>Update: 5m</p>|
+|Network Protection reg license status|<p>Network Protection registration license status</p>|`SNMP agent`|netProtectionLicRegStatus<p>Update: 1h</p>|
+|HA current status|<p>Textual Convention: HaStatus Values: notapplicable( 0 ), auxiliary( 1 ), standAlone( 2 ), primary( 3 ), faulty( 4 ), ready ( 5 )</p>|`SNMP agent`|currentHAStatus<p>Update: 5m</p>|
+|Web Protection license reg status|<p>Web Protection registration license status.</p>|`SNMP agent`|webProtectionLicRegStatus<p>Update: 1h</p>|
+|Service AV status|<p>-</p>|`SNMP agent`|avService<p>Update: 5m</p>|
 |HTTP Hits|<p>-</p>|`SNMP agent`|httpHits<p>Update: 3m</p>|
 |Service network status|<p>-</p>|`SNMP agent`|networkService<p>Update: 5m</p>|
-|Service AS status|<p>-</p>|`SNMP agent`|asService<p>Update: 5m</p>|
+|Service HTTP status|<p>-</p>|`SNMP agent`|httpService<p>Update: 5m</p>|
+|Webcat version|<p>Version of Webcat</p>|`SNMP agent`|webcatVersion<p>Update: 1h</p>|
+|Swap capacity|<p>-</p>|`SNMP agent`|swapCapacity<p>Update: 1h</p>|
+|Service dns status|<p>-</p>|`SNMP agent`|dnsService<p>Update: 5m</p>|
+|IDS version|<p>Version of Intrusion Detection and Prevention (IDP)</p>|`SNMP agent`|ipsVersion<p>Update: 1h</p>|
+|POP3 Hits|<p>-</p>|`SNMP agent`|pop3Hits<p>Update: 3m</p>|
+|Firmware version|<p>Version of Intrusion Detection and Prevention (IDP)</p>|`SNMP agent`|firewallVersion<p>Update: 1h</p>|
+|Service tomcat status|<p>-</p>|`SNMP agent`|tomcatService<p>Update: 5m</p>|
+|WebServer Protection license expire date|<p>WebServer Protection Iicense Expiry Date.</p>|`SNMP agent`|webServerProtectionLicExpiryDate<p>Update: 1h</p>|
+|Network Protection license expire date|<p>Network Protection Iicense Expiry Date.</p>|`SNMP agent`|netProtectionLicExpiryDate<p>Update: 1h</p>|
+|Disk capacity|<p>-</p>|`SNMP agent`|diskCapacity<p>Update: 1h</p>|
+|Device type|<p>-</p>|`SNMP agent`|applianceType<p>Update: 1h</p>|
+|Mail Protection license reg status|<p>EMail Protection license status.</p>|`SNMP agent`|mailProtectionLicRegStatus<p>Update: 1h</p>|
+|Disk utilization|<p>-</p>|`SNMP agent`|diskPercentUsage<p>Update: 5m</p>|
+|Sandstrom license expire date|<p>Sandstrom Protection Iicense Expiry Date.</p>|`SNMP agent`|sandstromLicExpiryDate<p>Update: 1h</p>|
+|Service FTP status|<p>-</p>|`SNMP agent`|ftpService<p>Update: 5m</p>|
+|HA mode|<p>Textual Convention: HaStatusType Values: disabled(0), enabled(1)</p>|`SNMP agent`|haMode<p>Update: 5m</p>|
+|Base license expire date|<p>Base Firewall protection license expiry date.</p>|`SNMP agent`|baseFWLicExpiryDate<p>Update: 1h</p>|
+|Service SMTP status|<p>-</p>|`SNMP agent`|smtpService<p>Update: 5m</p>|
 |Service POP3 status|<p>-</p>|`SNMP agent`|pop3Service<p>Update: 5m</p>|
-|Service garner status|<p>-</p>|`SNMP agent`|garnerService<p>Update: 5m</p>|
+|Service Dgd status|<p>-</p>|`SNMP agent`|dgdService<p>Update: 5m</p>|
+|Sandstrom license reg status|<p>Sandstrom Protection Iicense status.</p>|`SNMP agent`|sandstromLicRegStatus<p>Update: 1h</p>|
+|Live user count|<p>-</p>|`SNMP agent`|liveUserCount<p>Update: 3m</p>|
+|IMAP Hits|<p>-</p>|`SNMP agent`|imapHits<p>Update: 3m</p>|
+|Service sshd status|<p>-</p>|`SNMP agent`|sshdService<p>Update: 5m</p>|
 |Interface {#IFNAME}({#IFALIAS}): Inbound packets discarded|<p>MIB: IF-MIB The number of inbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol. One possible reason for discarding such a packet could be to free up buffer space. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Interface type|<p>MIB: IF-MIB The type of interface. Additional values for ifType are assigned by the Internet Assigned NumbersAuthority (IANA), through updating the syntax of the IANAifType textual convention.</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Speed|<p>MIB: IF-MIB An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|

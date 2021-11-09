@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:07Z</date>
+  <date>2021-11-09T04:31:44Z</date>
   <groups>
     <group>
       <name>templates_switchs</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Stormshield</template>
       <name>Stormshield</name>
-      <description>Template Netasq</description>
+      <description>## Description Template Netasq ## Overview Template for Stormshield router/firewall. Works with Zabbix 2.4.7 and a Stormshield SN500 FW 2.2.3. Contains : Ports IN/OUT traffic + graphes Informations such as model, S/N, FW version ## Author Nicolas C.</description>
       <groups>
         <group>
           <name>templates_switchs</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:54Z</date>
+  <date>2021-11-09T05:04:06Z</date>
   <groups>
     <group>
       <name>Devices/Network/Satellite/Modem/Newtec</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Newtec</template>
       <name>Newtec</name>
-      <description>Template for satellite modem</description>
+      <description>## Description Template for satellite modem ## Overview Zabbix-NewtexEL470-SatelitteModem ================================= Zabbix SNMP template for monitoring Newtec EL470 Satellite Modem for Zabbix 4.x Has been created in Zabbix 4.0, but exported from Zabbix 4.2 Needs to set up macroses: {$HISTORY} {$TRENDS} {$UPDATEINT} ## Author AlKosmos</description>
       <groups>
         <group>
           <name>Devices/Network/Satellite/Modem/Newtec</name>

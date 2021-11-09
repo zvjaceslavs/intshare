@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:52Z</date>
+  <date>2021-11-09T05:23:01Z</date>
   <groups>
     <group>
       <name>DEM (Datacenter Environment Monitoring)</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP - ServerCheck.com - SensorGateway</template>
       <name>SNMP - ServerCheck.com - SensorGateway</name>
+      <description>## Overview ServerCheck SensorGateway. **Applications:** * General; * Network; * Sensor; * Trigger; * Graphics. Tested in Zabbix 5.0 TLS ## Author Issayev Nursultan</description>
       <groups>
         <group>
           <name>DEM (Datacenter Environment Monitoring)</name>

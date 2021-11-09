@@ -1,5 +1,9 @@
 # Service HLS
 
+## Description
+
+## Overview This is beta version of HLS checker. This template can discovery different streams (playlist in playlists file) and show next parameters: There is presented ts file Total lenght of ts file Target duration of ts file Duration of ts file Spended time for download ts file Average speed for download ts file Not created: different paraneters of ts file from ffprobe. May be later. You need install python2, m3u8 library and ffmpeg if you want: apt install python python-m3u8 python-requests ffmpeg 1. Put script to /path _to _script/check _hls 2. Give him executable flag by: chmod ugo+x check _hls 3. Add userparameter into zabbix agent: echo "UserParameter=hls[*], /usr/bin/python /path _to _script/check _hls $1 $2" > /etc/zabbix/zabbix _agentd.d/hls.conf 4. Import template into zabbix server 5. Apply template to host 6. Add macros {$HLSURI} = "http://yourdmain.local/playlist.m3u8" If you have additions or comments you are welcome! ## Author Kirill Savin 
+
 ## Overview
 
 This is beta version of HLS checker.

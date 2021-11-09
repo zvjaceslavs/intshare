@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:49Z</date>
+  <date>2021-11-09T05:03:24Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Mikrotik-QUEUETREE</template>
       <name>Mikrotik-QUEUETREE</name>
+      <description>## Overview Mikrotik Queue Tree Discovery Template ## Author Clode</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:42Z</date>
+  <date>2021-11-09T05:09:41Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMPv2 Interfaces packets per second</template>
       <name>SNMPv2 Interfaces packets per second</name>
-      <description>Template adds items for measuring switchport unicast, broadcast and multicast packets per second.</description>
+      <description>## Description Template adds items for measuring switchport unicast, broadcast and multicast packets per second. ## Overview Template SNMPv2 Interfaces packets per second Discover interfaces and creates items for inbound and outbound unicast packets, multicast packets, and broadcast packets. Creates trigger to warining about high input broadcast. Can be adjusted WARNING\_BROADCAST\_PPS ## Author Kari Karvonen</description>
       <groups>
         <group>
           <name>Templates</name>

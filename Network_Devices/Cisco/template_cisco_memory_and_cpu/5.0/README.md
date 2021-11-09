@@ -1,5 +1,9 @@
 # tpl_part_network_cisco_all_performance
 
+## Description
+
+## Overview Template for all Cisco devices which support the CISCO-MEMORY-POOL-MIB and CISCO-PROCESS-MIB. Discovery all CPUs and memory pools with dynamic trigger thresholds (macro context) and flapping prevention (use of .max()/.min() functions). You need to create a user macro on the template or global level with name {$CRD _SNMPV2 _R} = "yourSNMPv2ReadCommunity". ## Author Valentin Weber 
+
 ## Overview
 
 Template for all Cisco devices which support the CISCO-MEMORY-POOL-MIB and CISCO-PROCESS-MIB. 

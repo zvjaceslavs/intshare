@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:18Z</date>
+  <date>2021-11-09T04:32:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>JMX Generic</template>
       <name>JMX Generic</name>
+      <description>## Overview Official JMX Template from Zabbix distribution. Could be useful for many Java Applications (JMX). ## Author Zabbix SIA</description>
       <groups>
         <group>
           <name>Templates</name>

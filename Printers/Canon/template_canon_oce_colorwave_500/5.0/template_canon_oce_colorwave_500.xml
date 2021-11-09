@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:32Z</date>
+  <date>2021-11-09T05:01:33Z</date>
   <groups>
     <group>
       <name>Templates/Printers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>OCE ColorWave 500</template>
       <name>OCE ColorWave 500</name>
+      <description>## Overview Делал под Canon OCE ColorWave 500 Считывает уровни по тонеру, счетчики. Графики в комплекте. Вопросы на 2135850@211.ru ## Author Sergey Sidenko</description>
       <groups>
         <group>
           <name>Templates/Printers</name>

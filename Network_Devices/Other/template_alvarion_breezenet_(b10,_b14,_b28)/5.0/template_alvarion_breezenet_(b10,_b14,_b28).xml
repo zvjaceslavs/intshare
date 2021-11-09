@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:52Z</date>
+  <date>2021-11-09T04:49:45Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Net BreezeNet SNMPv1</template>
       <name>Net BreezeNet SNMPv1</name>
+      <description>## Overview The unofficial template for Alvarion BreezeNET (testing B10, B14, B28) is a comprehensive and highly-proficient portfolio of wireless point-to-point bridging solutions for license-exempt frequency bands. It offers long range and high-capacity support for high bandwidth applications. The template is for us and is still used. All parameters are requirements for the operation of our network and may not suit you ## Author Asert</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

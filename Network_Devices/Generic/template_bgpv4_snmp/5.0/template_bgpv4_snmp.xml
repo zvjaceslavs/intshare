@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:21Z</date>
+  <date>2021-11-09T05:20:39Z</date>
   <groups>
     <group>
       <name>Templates_Created</name>
@@ -11,7 +11,7 @@
     <template>
       <template>BGPv4 SNMP</template>
       <name>BGPv4 SNMP</name>
-      <description>Template BGPv4 Sessions -Admin Status -Established Time -Operation Status -AS Name -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as_name Base: BGP4-MIB.mib https://www.iana.org/assignments/bgp-parameters/bgp-parameters.xhtml</description>
+      <description>## Description Template BGPv4 Sessions -Admin Status -Established Time -Operation Status -AS Name -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as_name Base: BGP4-MIB.mib https://www.iana.org/assignments/bgp-parameters/bgp-parameters.xhtml ## Overview Template BGPv4 Sessions -Admin Status -Established Time -Operation Status -AS Name -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as\_name Base: BGP4-MIB.mib &lt;https://www.iana.org/assignments/bgp-parameters/bgp-parameters.xhtml> External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates ## Author Flavio Camacho Junior</description>
       <groups>
         <group>
           <name>Templates_Created</name>

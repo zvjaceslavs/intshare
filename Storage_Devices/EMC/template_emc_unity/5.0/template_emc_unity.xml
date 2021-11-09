@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:10Z</date>
+  <date>2021-11-09T05:05:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>EMC Unity REST-API v3</template>
       <name>EMC Unity REST-API v3</name>
+      <description>## Overview Tested on Unity 600 Python-script to get metrics from EMC Unity Storage. Script uses REST-API interface. This script get next metrics: BBU, Disk, Disk Array Enclosure, Disk Processor Enclosure, FAN, I/O Module, LCC, Lun, Memory Module, Pool, PortEth, PortFibreChannel, PortSAS, PSU, SSC, SSD, Storage Processors, Uncommitted Port.</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:04Z</date>
+  <date>2021-11-09T05:12:15Z</date>
   <groups>
     <group>
       <name>Telos Allaince Aero</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Aero-1000 SNMP</template>
       <name>Aero-1000 SNMP</name>
-      <description>Template for monitoring Telos Allaince Aero devices over SNMP Capability in AERO.10/100/1000/2000/asi/soft Depends A1K-MIB.MIB.</description>
+      <description>## Description Template for monitoring Telos Allaince Aero devices over SNMP Capability in AERO.10/100/1000/2000/asi/soft Depends A1K-MIB.MIB. ## Overview Template for monitoring Telos Allaince Aero devices over SNMP Capability in AERO.10/100/1000/2000/asi/soft Depends A1K-MIB.MIB. Tested on Aero-100 Software Version - 3.16.05</description>
       <groups>
         <group>
           <name>Telos Allaince Aero</name>

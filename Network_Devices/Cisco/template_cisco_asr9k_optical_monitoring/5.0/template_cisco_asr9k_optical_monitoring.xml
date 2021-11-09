@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:29Z</date>
+  <date>2021-11-09T04:53:58Z</date>
   <groups>
     <group>
       <name>ZBX-CISCO-TEMPLATES</name>
@@ -11,6 +11,7 @@
     <template>
       <template>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</template>
       <name>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</name>
+      <description>## Overview README: &lt;https://github.com/hacktivism-github/zbx-templates-repository/blob/master/zbx-cisco/ASR9k/optical-monitoring/README.md> ![ASR9k Optical Monitoring](media/com_mtree/images/listings/m/515.png) ## Author Bruno Teixeira</description>
       <groups>
         <group>
           <name>ZBX-CISCO-TEMPLATES</name>

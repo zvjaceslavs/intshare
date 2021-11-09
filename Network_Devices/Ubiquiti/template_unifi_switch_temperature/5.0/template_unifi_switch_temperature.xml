@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:56Z</date>
+  <date>2021-11-09T05:04:22Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Unifi Switch 16 POE-150W Temperature</template>
       <name>Unifi Switch 16 POE-150W Temperature</name>
+      <description>## Overview Adds 2 temperature sensors and 4 PoE temperature sensors for rackmountable Unifi Switches. Tested with Unif Switch 16 POE-150W. Information at 70°C and Warning at 90°C just like Unifi specifies in console output. The temperatures are the ones you can see in the screenshot. ## Author frauhottelmann</description>
       <groups>
         <group>
           <name>Templates</name>

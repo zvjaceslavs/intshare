@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:33Z</date>
+  <date>2021-11-09T05:26:30Z</date>
   <groups>
     <group>
       <name>Templates/Server hardware</name>
@@ -11,6 +11,7 @@
     <template>
       <template>monitor_RackServer_Dell_PowerEdge</template>
       <name>戴尔PowerEdge系列机架服务器监控模板</name>
+      <description>## Overview 戴尔PowerEdge系列机架服务器监控模板 包括CPU、内存、电源、硬盘、风扇、整体状态 将宏{$CLOUD\_SNMP\_COMMUNITY}替换为实际团体字即可 ## Author zhangzhefeng</description>
       <groups>
         <group>
           <name>Templates/Server hardware</name>

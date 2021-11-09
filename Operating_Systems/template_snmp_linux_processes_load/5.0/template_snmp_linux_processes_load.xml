@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:48Z</date>
+  <date>2021-11-09T04:42:59Z</date>
   <groups>
     <group>
       <name>newtec</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Linux Processes Load</template>
       <name>SNMP Linux Processes Load</name>
+      <description>## Overview 1m 5m 15m Processes load ## Author Alcides(Shaolinrj)</description>
       <groups>
         <group>
           <name>newtec</name>

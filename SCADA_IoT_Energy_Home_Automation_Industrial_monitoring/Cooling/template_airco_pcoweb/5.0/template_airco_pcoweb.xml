@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:09Z</date>
+  <date>2021-11-09T05:05:55Z</date>
   <groups>
     <group>
       <name>Extra Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Airco pCOWeb</template>
       <name>Airco pCOWeb</name>
+      <description>## Overview Generic template for Airco compute. This compute is used on most air cooling system. Monitored items (when supported by hardware): - Common Alarm Active - Compressor is Active - Humidifier Maintenance Warning - Humidity Setpoint - Liquid Pressure - Number of network interfaces - Room Humidity - Room Temperature (incoming air flow) - Setpoint Cooling Temperature - Setpoint Heating Temperature - Supply Fan - Supply Temperature (outgoing air flow) - Unit is Active ## Author eric_at_2037</description>
       <groups>
         <group>
           <name>Extra Templates</name>

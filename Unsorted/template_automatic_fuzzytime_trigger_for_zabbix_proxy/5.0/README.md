@@ -1,5 +1,9 @@
 # Auto fuzzytime trigger for Zabbix proxy
 
+## Description
+
+## Overview The solution is based on Zabbix API. And native HTTP agent will discover all proxies and create lastaccess item per each proxy + fuzzytime trigger. In order to run this solution, you have to have an active session-id in a global level. Please see: [https://share.zabbix.com/zabbix-tools-and-utilities/maintain-zabbix-api-session-id-in-a-global-level](zabbix-tools-and-utilities/maintain-zabbix-api-session-id-in-a-global-level) <https://youtu.be/MjQJ0g0AaYI> 
+
 ## Overview
 
 The solution is based on Zabbix API.

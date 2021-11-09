@@ -2,7 +2,7 @@
 
 ## Description
 
-Simple template to check the Zabbix Agent Service on server This template uses "Simple Check" of Zabbix (ping and tcp control). by Federico Coppola
+## Description Simple template to check the Zabbix Agent Service on server This template uses "Simple Check" of Zabbix (ping and tcp control). by Federico Coppola ## Overview This is a simple template to check the availability of Zabbix Agent. It uses Zabbix Simple Check (ping and tcp). I have personally tested on Zabbix 3.4 You have just only import this template and associate it to an host. This template do not need the community. I have create it becouse I need another control about Zabbix Agent and I use it with other template to collect other information. Thanks Federico Coppola ## Author Federico Coppola 
 
 ## Overview
 

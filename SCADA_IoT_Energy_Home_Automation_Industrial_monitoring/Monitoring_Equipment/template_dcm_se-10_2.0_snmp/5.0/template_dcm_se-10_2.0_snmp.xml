@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:47Z</date>
+  <date>2021-11-09T05:22:32Z</date>
   <groups>
     <group>
       <name>Hosts Datacenter Telegram</name>
@@ -11,6 +11,7 @@
     <template>
       <template>DCM SE-10</template>
       <name>DCM SE-10</name>
+      <description>## Overview Template para o equipamento SE-10 2.0 2021 para consultas através de SNMP. Monitor de temperatura, umidade e entradas digitais. Alertas de temperatura para 30°C e 40°C. Gráficos para temperatura do local, da sonda e de umidade. Dúvidas: rodolfo@dcmtech.com.br Site fabricante: [dcmtech.com.br](https://dcmtech.com.br/) ## Author Rodolfo Luis Overbeck</description>
       <groups>
         <group>
           <name>Hosts Datacenter Telegram</name>

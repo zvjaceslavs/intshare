@@ -1,0 +1,46 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T04:33:28Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 736d92e82cfb48a592c8a976c45ef76f
+      template: 'Template App LDAP Service'
+      name: 'Template App LDAP Service'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: a0d19592dc5b4ab49240fc7d6101a459
+          name: 'LDAP service is running'
+          type: SIMPLE
+          key: 'net.tcp.service[ldap]'
+          delay: '60'
+          history: 7d
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: 'LDAP service'
+          triggers:
+            -
+              uuid: ea88df0a4c87424c891ac2197e5b6966
+              expression: 'max(/Template App LDAP Service/net.tcp.service[ldap],#3)=0'
+              name: 'LDAP service is down on {HOST.NAME}'
+              priority: AVERAGE
+      valuemaps:
+        -
+          uuid: ddbdab3aa88f4ad0b331a65504cceca5
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up

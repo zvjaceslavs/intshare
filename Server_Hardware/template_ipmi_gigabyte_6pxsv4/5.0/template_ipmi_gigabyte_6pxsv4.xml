@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:46Z</date>
+  <date>2021-11-09T04:56:10Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI Gigabyte 6PXSV4</template>
       <name>IPMI Gigabyte 6PXSV4</name>
+      <description>## Overview Template for IPMI Gigabyte 6PXSV4 Motherboard (items, triggers, graphs).</description>
       <groups>
         <group>
           <name>Templates</name>

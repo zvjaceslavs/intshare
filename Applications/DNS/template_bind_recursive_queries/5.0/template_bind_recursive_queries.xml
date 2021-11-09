@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:06Z</date>
+  <date>2021-11-09T04:51:18Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Bind queries</template>
       <name>Bind queries</name>
-      <description>/etc/zabbix/zabbix_agentd.d/userparameter_bind.conf: UserParameter=bind.tcpcl,/bin/cat /tmp/namedtcp.log UserParameter=bind.udpcl,/bin/cat /tmp/namedudp.log --------------- cron every 30 sec: /var/spool/cron/root: SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin 0-59 * * * * /etc/zabbix/custom/named.sh 0-59 * * * * ( sleep 30; /etc/zabbix/custom/named.sh ) /etc/zabbix/custom/named.sh: #!/bin/bash /usr/local/named/sbin/rndc status > /tmp/rndcstatus cat /tmp/rndcstatus | grep tcp | awk '{ print $3 }' | cut -d '/' -f 1 > /tmp/namedtcp.log cat /tmp/rndcstatus | grep recursive | awk '{ print $3 }' | cut -d '/' -f 1 > /tmp/namedudp.log ----------------------------- add key for rndc in config of named</description>
+      <description>## Description /etc/zabbix/zabbix_agentd.d/userparameter_bind.conf: UserParameter=bind.tcpcl,/bin/cat /tmp/namedtcp.log UserParameter=bind.udpcl,/bin/cat /tmp/namedudp.log --------------- cron every 30 sec: /var/spool/cron/root: SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin 0-59 * * * * /etc/zabbix/custom/named.sh 0-59 * * * * ( sleep 30; /etc/zabbix/custom/named.sh ) /etc/zabbix/custom/named.sh: #!/bin/bash /usr/local/named/sbin/rndc status > /tmp/rndcstatus cat /tmp/rndcstatus | grep tcp | awk '{ print $3 }' | cut -d '/' -f 1 > /tmp/namedtcp.log cat /tmp/rndcstatus | grep recursive | awk '{ print $3 }' | cut -d '/' -f 1 > /tmp/namedudp.log ----------------------------- add key for rndc in config of named ## Overview Shows recursive queries on your BIND server. Triggers on excesive usage. Best for caching servers. Instalation description: /etc/zabbix/zabbix\_agentd.d/userparameter\_bind.conf: UserParameter=bind.tcpcl,/bin/cat /tmp/namedtcp.log UserParameter=bind.udpcl,/bin/cat /tmp/namedudp.log --------------- cron every 30 sec: /var/spool/cron/root: SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin 0-59 * * * * /etc/zabbix/custom/named.sh 0-59 * * * * ( sleep 30; /etc/zabbix/custom/named.sh ) chmod +x /etc/zabbix/custom/named.sh: #!/bin/bash /usr/local/named/sbin/rndc status > /tmp/rndcstatus cat /tmp/rndcstatus | grep tcp | awk '{ print $3 }' | cut -d '/' -f 1 > /tmp/namedtcp.log cat /tmp/rndcstatus | grep recursive | awk '{ print $3 }' | cut -d '/' -f 1 > /tmp/namedudp.log ----------------------------- add key for rndc in config of named</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:27Z</date>
+  <date>2021-11-09T05:07:55Z</date>
   <groups>
     <group>
       <name>Switche</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco_SB_SG350XG-2F10</template>
       <name>Cisco_SB_SG350XG-2F10</name>
+      <description>## Overview Template for Cisco Small Business Switch SG350XG-2F10 - Device Details - Traffic on Ports (IN/OUT) - Errors on Ports (IN/OUT) - Status on Ports - Admin-Status on Ports - Status OOB - Ping Latency - Trigger Status Port with dependency to Admin-Status of Port - Trigger Errors on Ports - Trigger OOB Port - 9 Example-Graphs ## Author Thomas Oecknick</description>
       <groups>
         <group>
           <name>Switche</name>

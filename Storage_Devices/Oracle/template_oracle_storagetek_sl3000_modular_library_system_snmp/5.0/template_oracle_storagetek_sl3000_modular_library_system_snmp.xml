@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:27Z</date>
+  <date>2021-11-09T04:53:40Z</date>
   <groups>
     <group>
       <name>Templates Prod</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Oracle SL3000</template>
       <name>SNMP Oracle SL3000</name>
+      <description>## Overview This is simple SNMP template for monitoring Oracle StorageTek SL3000 Modular Library System Checks: CapAccessibility (open allow/prevent) CapState ControllerHaId[1] (0=active/1=standby) TapeCount Triggers: ControllerHA\_changestatus LLD: Checks: DriveCellContentLabel DriveFibreNodeName DriveState DriveType Drive RobotState State of the robot Triggers: DriveState RobotState ## Author Vsevolod Sidorov</description>
       <groups>
         <group>
           <name>Templates Prod</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:15Z</date>
+  <date>2021-11-09T04:52:14Z</date>
   <groups>
     <group>
       <name>17HostGroupOzeki</name>
@@ -11,6 +11,7 @@
     <template>
       <template>8 Ozeki</template>
       <name>8 Ozeki</name>
+      <description>## Overview Ozeki SMS Gateway Template provide server information, connection status, users and queue sizes, trigger for disconnection and filling queues and display queue sizes in graph. Tested on zabbix 3.4</description>
       <groups>
         <group>
           <name>17HostGroupOzeki</name>

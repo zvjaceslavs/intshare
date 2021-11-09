@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:35Z</date>
+  <date>2021-11-09T05:15:43Z</date>
   <groups>
     <group>
       <name>nevis</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Nevis</template>
       <name>Nevis</name>
+      <description>## Overview Template for monitoring Nevis Appliances (nevis mib only). Not all of the items are in there but the most for admin, proxy and auth have been added with also some triggers. The template is built with discovery Rules only. ## Author Stefan Müller</description>
       <groups>
         <group>
           <name>nevis</name>

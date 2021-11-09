@@ -1,5 +1,9 @@
 # TCP port monitoring
 
+## Description
+
+## Overview The following template is utilizing Zabbix agent to discover TCP ports in listening state. Underneath the hood it will use the command: ``` ss --tcp --listening --numeric ``` This means the remote commands must be enabled. Or you need to convert it as an UserParameter. See discovery section for details. After that, it will use JavaScript preprocessing step to transform the output suitable for discovery. By default, the item will check port every 5 minutes. If the port is not reachable for 5 consecutive checks (25 minutes) it is a called a "Disaster". Explaining video: <https://www.youtube.com/watch?v=BwQwWXoGzGM> Cheers! 
+
 ## Overview
 
 The following template is utilizing Zabbix agent to discover TCP ports in listening state. 

@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-10-26T04:45:49Z'
+  date: '2021-11-09T05:22:42Z'
   groups:
     -
       uuid: dc579cd7a1a34222933f24f52a68bcd8
@@ -10,6 +10,18 @@ zabbix_export:
       uuid: a70e9642064144bba79b93c7bf3e65df
       template: 'Iostat monitoring'
       name: 'Iostat monitoring'
+      description: |
+        ## Overview
+        
+        Please follow to github for install instructions https://github.com/tulnovdl/ZabbixIostatMonitoring
+        
+        
+        
+        ## Author
+        
+        Dmitry Tulnov
+        
+        
       groups:
         -
           name: 'Linux servers'

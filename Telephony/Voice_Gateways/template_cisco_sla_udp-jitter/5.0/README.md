@@ -1,5 +1,9 @@
 # VoIP IPSLA Discovery
 
+## Description
+
+## Overview command IPSLA on router: ip sla 1111 udp-jitter 1.1.1.1 49333 source-ip 2.2.2.2 codec g729a tag Region ip sla schedule 1111 life forever start-time now template will get all information like "sh ip sla statistics", don't forget use tag. ## Author Andrey 
+
 ## Overview
 
 command IPSLA on router:

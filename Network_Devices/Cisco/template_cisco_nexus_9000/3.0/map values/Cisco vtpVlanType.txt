@@ -1,6 +1,0 @@
-1:ethernet
-2:fddi
-3:tokenRing
-4:fddiNet
-5:trNet
-6:deprecated

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:25Z</date>
+  <date>2021-11-09T05:00:42Z</date>
   <groups>
     <group>
       <name>C24 - Citrix License Server</name>
@@ -11,6 +11,7 @@
     <template>
       <template>C24_CVAD-715_CTXLicServer_v1.00</template>
       <name>C24_CVAD-715_CTXLicServer_v1.00</name>
+      <description>## Overview Monitoring template for Citrix License server included in CVAD (Citrix Virtual Apps and Desktops) ver 7.15 ## Author citrix24</description>
       <groups>
         <group>
           <name>C24 - Citrix License Server</name>

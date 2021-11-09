@@ -1,5 +1,9 @@
 # UNIVERGE IX
 
+## Description
+
+## Overview You can get hardware temperature and fan and power status, as well as CPU and memory usage. PICO-SMI-MIB based <https://jpn.nec.com/univerge/ix/Manual/index.html#mib> Product details --------------- <https://jpn.nec.com/univerge/ix/index.html> 
+
 ## Overview
 
 You can get hardware temperature and fan and power status, as well as CPU and memory usage.
@@ -47,19 +51,19 @@ Product details
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|CPU Utilization for 1min|<p>-</p>|`SNMP agent`|pico.SchedRtUtl.1Min<p>Update: 1m</p>|
-|IPv4 UFS Cache Creates|<p>-</p>|`SNMP agent`|pico.IPv4UFSCache.Creates<p>Update: 1m</p>|
-|IPv6 UFS Cache Peaks|<p>-</p>|`SNMP agent`|pico.IPv6UFSCache.Peaks<p>Update: 1m</p>|
-|IPv4 UFS Cache Overflows|<p>-</p>|`SNMP agent`|pico.IPv4UFSCache.Overflows<p>Update: 1m</p>|
-|IPv6 UFS Cache Creates|<p>-</p>|`SNMP agent`|pico.IPv6UFSCache.Creates<p>Update: 1m</p>|
-|IPv4 UFS Cache Entries|<p>-</p>|`SNMP agent`|pico.IPv4UFSCache.Entries<p>Update: 1m</p>|
-|IPv6 UFS Cache Entries|<p>-</p>|`SNMP agent`|pico.IPv6UFSCache.Entries<p>Update: 1m</p>|
-|Total Heap Memory Size|<p>-</p>|`SNMP agent`|pico.Heap.Size<p>Update: 1m</p>|
-|IPv6 UFS Cache Overflows|<p>-</p>|`SNMP agent`|pico.IPv6UFSCache.Overflows<p>Update: 1m</p>|
 |Voltage|<p>-</p>|`SNMP agent`|pico.Voltage<p>Update: 5m</p>|
+|CPU Utilization for 1min|<p>-</p>|`SNMP agent`|pico.SchedRtUtl.1Min<p>Update: 1m</p>|
+|IPv6 UFS Cache Peaks|<p>-</p>|`SNMP agent`|pico.IPv6UFSCache.Peaks<p>Update: 1m</p>|
+|IPv4 UFS Cache Entries|<p>-</p>|`SNMP agent`|pico.IPv4UFSCache.Entries<p>Update: 1m</p>|
+|IPv6 UFS Cache Creates|<p>-</p>|`SNMP agent`|pico.IPv6UFSCache.Creates<p>Update: 1m</p>|
+|IPv4 UFS Cache Creates|<p>-</p>|`SNMP agent`|pico.IPv4UFSCache.Creates<p>Update: 1m</p>|
 |Temperature|<p>-</p>|`SNMP agent`|pico.Celsius<p>Update: 3m</p>|
 |Memory Utilization|<p>-</p>|`SNMP agent`|pico.Heap.Util<p>Update: 1m</p>|
+|Total Heap Memory Size|<p>-</p>|`SNMP agent`|pico.Heap.Size<p>Update: 1m</p>|
 |IPv4 UFS Cache Peaks|<p>-</p>|`SNMP agent`|pico.IPv4UFSCache.Peaks<p>Update: 1m</p>|
+|IPv6 UFS Cache Entries|<p>-</p>|`SNMP agent`|pico.IPv6UFSCache.Entries<p>Update: 1m</p>|
+|IPv4 UFS Cache Overflows|<p>-</p>|`SNMP agent`|pico.IPv4UFSCache.Overflows<p>Update: 1m</p>|
+|IPv6 UFS Cache Overflows|<p>-</p>|`SNMP agent`|pico.IPv6UFSCache.Overflows<p>Update: 1m</p>|
 |Interface {#IFNAME}({#IFALIAS}): Duplex status|<p>MIB: EtherLike-MIB The current mode of operation of the MAC entity. 'unknown' indicates that the current duplex mode could not be determined. Management control of the duplex mode is accomplished through the MAU MIB. When an interface does not support autonegotiation, or when autonegotiation is not enabled, the duplex mode is controlled using ifMauDefaultType. When autonegotiation is supported and enabled, duplex mode is controlled using ifMauAutoNegAdvertisedBits. In either case, the currently operating duplex mode is reflected both in this object and in ifMauType. Note that this object provides redundant information with ifMauType. Normally, redundant objects are discouraged. However, in this instance, it allows a management application to determine the duplex status of an interface without having to know every possible value of ifMauType. This was felt to be sufficiently valuable to justify the redundancy. Reference: [IEEE 802.3 Std.], 30.3.1.1.32,aDuplexStatus.</p>|`SNMP agent`|net.if.duplex[dot3StatsDuplexStatus.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Fan #{#FANINDEX} rpm|<p>-</p>|`SNMP agent`|pico.fan.rpm.[{#FANINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Fan #{#FANINDEX} Status|<p>-</p>|`SNMP agent`|pico.fan.status.[{#FANINDEX}]<p>Update: 5m</p><p>LLD</p>|

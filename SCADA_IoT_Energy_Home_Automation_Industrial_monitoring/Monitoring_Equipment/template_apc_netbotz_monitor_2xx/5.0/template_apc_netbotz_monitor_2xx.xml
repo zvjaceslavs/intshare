@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:24Z</date>
+  <date>2021-11-09T05:00:33Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>APC NetBotz Rack Monitor 200</template>
       <name>APC NetBotz Rack Monitor 200</name>
+      <description>## Overview * LLD of Sensors (Currently Temperature and Humidity &amp; Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity</description>
       <groups>
         <group>
           <name>Templates</name>
@@ -520,6 +521,7 @@
     <template>
       <template>APC NetBotz Rack Monitor 250</template>
       <name>APC NetBotz Rack Monitor 250</name>
+      <description>## Overview * LLD of Sensors (Currently Temperature and Humidity &amp; Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity ## Overview * LLD of Sensors (Currently Temperature and Humidity &amp; Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity</description>
       <templates>
         <template>
           <name>APC NetBotz Rack Monitor 200</name>

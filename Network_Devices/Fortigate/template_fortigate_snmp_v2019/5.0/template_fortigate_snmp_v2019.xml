@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:36Z</date>
+  <date>2021-11-09T05:02:00Z</date>
   <groups>
     <group>
       <name>Fortigate</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Fortinet Devices v2019</template>
       <name>SNMP Fortinet Devices v2019</name>
+      <description>## Overview Up to date of [Andrea Durante](network_devices/fortigate/fortigate-snmp-template)'s excellent template. Monitors: Serial N., OS version, Connection num, CPU%, RAM%, Disk (Total and Used), Interface data (link and speed). Graph for everything. ## Author Lorenzo Milesi, Andrea Durante</description>
       <groups>
         <group>
           <name>Fortigate</name>

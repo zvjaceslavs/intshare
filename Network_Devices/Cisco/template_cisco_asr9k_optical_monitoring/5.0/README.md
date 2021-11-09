@@ -1,5 +1,9 @@
 # ZBX-CISCO-ASR9001-OPTICAL-MONITORING
 
+## Description
+
+## Overview README: <https://github.com/hacktivism-github/zbx-templates-repository/blob/master/zbx-cisco/ASR9k/optical-monitoring/README.md> ![ASR9k Optical Monitoring](media/com_mtree/images/listings/m/515.png) ## Author Bruno Teixeira 
+
 ## Overview
 
 README: <https://github.com/hacktivism-github/zbx-templates-repository/blob/master/zbx-cisco/ASR9k/optical-monitoring/README.md>
@@ -30,11 +34,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|$1|<p>-</p>|`SNMP agent`|entSensorValue[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Thresholds::$1 | Warning High|<p>-</p>|`SNMP agent`|entSensorThresholdRxTxValueHighWarn[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Thresholds::$1 | Alarm High|<p>This variable indicates the value of the threshold. To correctly display or interpret this variable's value, you must also know entSensorType, entSensorScale, and entSensorPrecision. However, you can directly compare entSensorValue with the threshold values given in entSensorThresholdTable without any semantic knowledge.</p>|`SNMP agent`|entSensorThresholdRxTxValueHigh[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Thresholds::$1 | Warning Low|<p>-</p>|`SNMP agent`|entSensorThresholdRxTxValueLowWarn[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Thresholds::$1 | Alarm Low|<p>-</p>|`SNMP agent`|entSensorThresholdRxTxValueLow[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|$1|<p>-</p>|`SNMP agent`|entSensorValue[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

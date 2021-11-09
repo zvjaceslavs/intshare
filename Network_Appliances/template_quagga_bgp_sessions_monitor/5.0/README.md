@@ -2,7 +2,7 @@
 
 ## Description
 
-Template for auto-discovery bgp peers and monitor they.
+## Description Template for auto-discovery bgp peers and monitor they. ## Overview This is a template to monitor peerings BGP Quagga with Zabbix. ## Author Renan Rodrigues 
 
 ## Overview
 

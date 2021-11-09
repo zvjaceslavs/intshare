@@ -1,0 +1,118 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:16:51Z'
+  groups:
+    -
+      uuid: 57b7ae836ca64446ba2c296389c009b7
+      name: Templates/Modules
+  templates:
+    -
+      uuid: 483848d339e84a65b2728872ba043df8
+      template: 'Time is off by Zabbix agent active'
+      name: 'Time is off by Zabbix agent active'
+      description: |
+        ## Overview
+        
+        Detects if Zabbix agent time has been shifted away.
+        
+        
+        Solution is suitable in cases where Zabbix agent (active) checks are the only option.
+        
+        
+        Explanation how/why it works:
+        
+        
+        <https://youtu.be/bSQ1xV1nmqU>
+        
+        
+        
+        
+      groups:
+        -
+          name: Templates/Modules
+      items:
+        -
+          uuid: 7b024b0c93444c6cb478ec7dfe831b3d
+          name: 'Agent time offset'
+          type: DEPENDENT
+          key: agent.time.offset
+          delay: '0'
+          trends: '0'
+          units: s
+          preprocessing:
+            -
+              type: REGEX
+              parameters:
+                - '([0-9]+)'
+                - \1
+          master_item:
+            key: system.localtime
+          tags:
+            -
+              tag: Application
+              value: Time
+        -
+          uuid: 4f8425b0c456425c8fb86561d943f6b3
+          name: 'Agent time shifted in'
+          type: DEPENDENT
+          key: agent.time.shifted.in
+          delay: '0'
+          trends: '0'
+          valuemap:
+            name: 'Local time monitoring Zabbix agent'
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - 'return value.replace(/[0-9]+/gm,"").length;'
+          master_item:
+            key: system.localtime
+          tags:
+            -
+              tag: Application
+              value: Time
+        -
+          uuid: 81c568efa2b34310b55d510d28f10425
+          name: 'Agent time difference'
+          type: ZABBIX_ACTIVE
+          key: system.localtime
+          history: '0'
+          trends: '0'
+          value_type: CHAR
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - 'return Math.round((new Date()).getTime() / 1000 - value);'
+          tags:
+            -
+              tag: Application
+              value: Time
+      macros:
+        -
+          macro: '{$AGENT_TIME_DIFFERENCE}'
+          value: 2m
+      valuemaps:
+        -
+          uuid: 19efa37a145c43c58a7bc949ec843ab1
+          name: 'Local time monitoring Zabbix agent'
+          mappings:
+            -
+              value: '0'
+              newvalue: past
+            -
+              value: '1'
+              newvalue: future
+  triggers:
+    -
+      uuid: 682e153d8baf4421aec1a633305fb0ba
+      expression: 'min(/Time is off by Zabbix agent active/agent.time.offset,#3)>{$AGENT_TIME_DIFFERENCE} and last(/Time is off by Zabbix agent active/agent.time.shifted.in)=1'
+      name: 'Agent time in future {$AGENT_TIME_DIFFERENCE}'
+      priority: AVERAGE
+      manual_close: 'YES'
+    -
+      uuid: 60b5351d34034b858ead065458f8df01
+      expression: 'min(/Time is off by Zabbix agent active/agent.time.offset,#3)>{$AGENT_TIME_DIFFERENCE} and last(/Time is off by Zabbix agent active/agent.time.shifted.in)=0'
+      name: 'Agent time in past {$AGENT_TIME_DIFFERENCE}'
+      priority: AVERAGE
+      manual_close: 'YES'

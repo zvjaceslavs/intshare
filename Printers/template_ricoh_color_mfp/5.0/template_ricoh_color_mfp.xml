@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:12Z</date>
+  <date>2021-11-09T04:32:21Z</date>
   <groups>
     <group>
       <name>Printers</name>
@@ -11,6 +11,7 @@
     <template>
       <template>MFP Ricoh</template>
       <name>MFP Ricoh</name>
+      <description>## Overview Template is tested with Ricoh MP C2011SP. Displays toner levels for each colour and some print counters (Total, BW and Colour prints). Triggers on low toner level. ## Author Alexey Muraviev</description>
       <groups>
         <group>
           <name>Printers</name>

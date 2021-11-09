@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:53Z</date>
+  <date>2021-11-09T04:36:57Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP APC NetBotz Rack Monitor 200</template>
       <name>SNMP APC NetBotz Rack Monitor 200</name>
+      <description>## Overview LLD of Sensors (Only Temperature and humidity) Trigger Prototypes for recommended 45RH% - 55RH% humidity and 20°C - 24°C Temperature Graph Prototypes for Temperature and Humidity. Triggers names contain the last value that cause the trigger so you can see the temp/hum in the alert.</description>
       <groups>
         <group>
           <name>Templates</name>

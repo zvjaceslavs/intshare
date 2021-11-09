@@ -1,5 +1,9 @@
 # Windows Physical Disk IOPS
 
+## Description
+
+## Overview This template discover physical disk thrue a powershell code. As i hate myself to deploy third party scripts on my agents, the powershell code is embeded in this template macro, this mean that you don't have to deploy any additionnal scripts to get it work. It also use "zabbix active" items to get work behind firewall. Data are retrieved thrue perfmon values, the template has been made to be compatible with all OS language using numeric value of perfcounter. This template is better than others because this one calculate the IOPS per physical disk instead of logical drive, meaning a better estimation of true saturation of a disk. If trigger fire on physical disk too much, it's time to buy SSD :) Look at the attached screenshots to get a better idea of it. Enjoy PS: powershell macro has been base64 encoded to be more easy to deploy, if you do not trust the code you can easily revert it back to something readable or just look at the Zabbix Agent log to see the command executed Tested from Windows 7 till 2016 with success. ## Author Cédric MARCOUX 
+
 ## Overview
 
 This template discover physical disk thrue a powershell code.

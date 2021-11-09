@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:34Z</date>
+  <date>2021-11-09T05:15:35Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Ignite JMX</template>
       <name>App Ignite JMX</name>
+      <description>## Overview JMX metrics template for Apache Ignite and Gridgain computing platform. All metrics are discoverable. Template supports jmx with certificates and credentionals To apply them to your cluster you have to: * add the following jvm option to -DIGNITE\_MBEAN\_APPEND\_CLASS\_LOADER\_ID=false * set the following xml option Template tested with ignite 2.8.0 and GridGain 2.7.16</description>
       <groups>
         <group>
           <name>Templates/Applications</name>

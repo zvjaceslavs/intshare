@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:23Z</date>
+  <date>2021-11-09T05:20:42Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Status</template>
       <name>Status</name>
-      <description>Monitoria Status do Device -ICMP -SNMP test -Uptime By: Flavio Gomes Figueira Camacho Junior Dependency: Template Module ICMP Ping</description>
+      <description>## Description Monitoria Status do Device -ICMP -SNMP test -Uptime By: Flavio Gomes Figueira Camacho Junior Dependency: Template Module ICMP Ping ## Overview Monitoria Status do Device -ICMP -SNMP test -Uptime By: Flavio Gomes Figueira Camacho Junior Dependency: Template Module ICMP Ping External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates ## Author Flavio Camacho Junior</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

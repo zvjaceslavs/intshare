@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:07Z</date>
+  <date>2021-11-09T04:31:47Z</date>
   <groups>
     <group>
       <name>Elements réseau</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Netgear_WG103</template>
       <name>Netgear_WG103</name>
+      <description>## Overview Template for Netgear WG103 access point. Works with Zabbix 2.4.7 and a Netgear WG103 FW 2.2.5. Contains : Basic information such as : FWversion, S/N, APname, MACLAN, MACWLAN Interfaces traffic (LAN and WLAN) Wifi profiles names Current users number connected to the AP ## Author Nicolas C.</description>
       <groups>
         <group>
           <name>Elements réseau</name>

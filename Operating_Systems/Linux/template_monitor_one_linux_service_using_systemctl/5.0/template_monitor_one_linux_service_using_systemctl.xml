@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:56Z</date>
+  <date>2021-11-09T05:11:24Z</date>
   <groups>
     <group>
       <name>Templates/Linux</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Monitor one Linux Services</template>
       <name>Monitor one Linux Services</name>
+      <description>## Overview **This template will allow you to monitor one Linux Services using systemctl, and fire the alarm on zabbix Dashboard.** it's very simple template without using User Parameter or Scripts Just item and trigger , if you want to monitor more than one services then you should create another item. **Steps:** 1. Download the template 2. Import the template into zabbix 3. Assign the template to the host. **Template Group --> Template/Linux** **Tested on :** * Ubuntu 18 * CentOS 6 * Redhat 7 **Zabbix version 4.4.2** ## Author Osama Mustafa</description>
       <groups>
         <group>
           <name>Templates/Linux</name>

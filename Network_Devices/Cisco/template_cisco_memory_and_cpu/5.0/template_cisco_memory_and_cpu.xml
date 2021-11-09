@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:50Z</date>
+  <date>2021-11-09T04:36:33Z</date>
   <groups>
     <group>
       <name>ZZZ-TPL: Parts Network</name>
@@ -11,6 +11,7 @@
     <template>
       <template>tpl_part_network_cisco_all_performance</template>
       <name>tpl_part_network_cisco_all_performance</name>
+      <description>## Overview Template for all Cisco devices which support the CISCO-MEMORY-POOL-MIB and CISCO-PROCESS-MIB. Discovery all CPUs and memory pools with dynamic trigger thresholds (macro context) and flapping prevention (use of .max()/.min() functions). You need to create a user macro on the template or global level with name {$CRD\_SNMPV2\_R} = "yourSNMPv2ReadCommunity". ## Author Valentin Weber</description>
       <groups>
         <group>
           <name>ZZZ-TPL: Parts Network</name>

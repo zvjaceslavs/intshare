@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:25Z</date>
+  <date>2021-11-09T05:20:49Z</date>
   <groups>
     <group>
       <name>Halley template</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Halley Synology NAS Backup</template>
       <name>Halley Synology NAS Backup</name>
-      <description>Is the template for the service NAS Backup. Will contain only items for discover and monitor de NAS backup instances</description>
+      <description>## Description Is the template for the service NAS Backup. Will contain only items for discover and monitor de NAS backup instances ## Overview All processes are described here: https://github.com/tudorticau/Synology-Backup-LLD-Monitor First step: setup syslogserver Second: configure zabbix to monitor using LLD All is tested and already implemented on production: over 40 NAS Template have 1 item and 1 trigger, but is LLD - this mean you don't have to take care how your admins will add and name the backup processes: all is done automatically ## Author Tudor Ticau</description>
       <groups>
         <group>
           <name>Halley template</name>

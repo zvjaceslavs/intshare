@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:38Z</date>
+  <date>2021-11-09T04:54:55Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP-iDRAC-9</template>
       <name>SNMP-iDRAC-9</name>
-      <description>Lucas Afonso Kremer https://www.linkedin.com/in/lucasafonsokremer</description>
+      <description>## Description Lucas Afonso Kremer https://www.linkedin.com/in/lucasafonsokremer ## Overview **Template for Dell servers with iDRAC 9 controller.** ------------------------------------------------------ * #### Tested on PowerEdge R440 with version 3.21.21.21 * #### The value maps are available to download on 3.0 version, please import this template first * #### You must add one macro on the server or on the template with the name: {$SNMP\_COMMUNITY} with the community to be used * #### All the items was created with "SNMPv2 agent" * #### Make sure your iDRAC is reachable from the zabbix server/proxy, test with: snmpstatus -v 2c -c public 192.168.0.1 Based on @endersonmaia iDRAC 7 template ## Author Lucas Afonso Kremer</description>
       <groups>
         <group>
           <name>Templates</name>

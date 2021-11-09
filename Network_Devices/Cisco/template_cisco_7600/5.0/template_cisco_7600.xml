@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:55Z</date>
+  <date>2021-11-09T04:30:45Z</date>
   <groups>
     <group>
       <name>Templates SNMP Devices</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Cisco General</template>
       <name>Cisco General</name>
+      <description>## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies</description>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>
@@ -154,6 +155,7 @@
     <template>
       <template>Cisco_7600</template>
       <name>Cisco_7600</name>
+      <description>## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies ## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies ## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies</description>
       <templates>
         <template>
           <name>Cisco General</name>
@@ -941,6 +943,7 @@
     <template>
       <template>Cisco_Traps</template>
       <name>Cisco_Traps</name>
+      <description>## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies ## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies</description>
       <groups>
         <group>
           <name>Templates SNMP Devices</name>

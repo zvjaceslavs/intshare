@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:33Z</date>
+  <date>2021-11-09T04:48:07Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>App e2guardian - Active</template>
       <name>App e2guardian - Active</name>
-      <description>https://github.com/e2guardian/e2guardian/blob/master/notes/dstats_format USER.MACRO={$E2GUARDIAN_DSTATS} UserParameter=e2guardian[*],tail -1 $1 | cut -f $2</description>
+      <description>## Description https://github.com/e2guardian/e2guardian/blob/master/notes/dstats_format USER.MACRO={$E2GUARDIAN_DSTATS} UserParameter=e2guardian[*],tail -1 $1 | cut -f $2 ## Overview Introduction ============ This is my approach for a performance monitoring Template of [E2guardian](http://e2guardian.org/). This Template was created on and for Zabbix 3.4 and E2Guardian 4.1.x on Debian 9 Stretch. Installation ------------ Please check the GitHub Page for latest version and instructions. Changes ------- * February 2018: initial commit. * 03 April 2018: Switch to Zabbix agent (active) &amp; converted s ## Author Marco Hofmann</description>
       <groups>
         <group>
           <name>Templates</name>

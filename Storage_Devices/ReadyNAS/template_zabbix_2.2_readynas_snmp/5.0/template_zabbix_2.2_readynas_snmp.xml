@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:37:38Z</date>
+  <date>2021-11-09T04:29:01Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP ReadyNas</template>
       <name>SNMP ReadyNas</name>
+      <description>## Overview NEED in Macros HOST {$SNMP\_COMMUNITY} {$SNMP\_PORT} Modified for ReadyNas 2120 zabbix 2.2 Restart trigger added Small mistakes corrected ## Author Bonardi &amp; Jeffrey H. Simonson</description>
       <groups>
         <group>
           <name>Templates</name>

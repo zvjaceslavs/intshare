@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:33Z</date>
+  <date>2021-11-09T04:34:52Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>HP Procurve 2920</template>
       <name>HP Procurve 2920</name>
+      <description>## Overview Template for a HP 2920 Procurve switch. J9728A, J9726A. ## Author w4t1s</description>
       <groups>
         <group>
           <name>Templates</name>

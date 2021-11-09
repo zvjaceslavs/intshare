@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:33Z</date>
+  <date>2021-11-09T04:54:25Z</date>
   <groups>
     <group>
       <name>HomeRackUserGroupTemplates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>chrony_Monitoring</template>
       <name>chrony</name>
+      <description>## Overview chrony accuracy Infomation Template Japanese version template is in the . 日本語版テンプレートは Sammeln Sie alle Informationen, die in der chronyc Befehl angezeigt wird. When you use a template Please make the following settings zabbix\_agentd.conf. EnableRemoteCommands=1 UnsafeUserParameters=1 In ZabbixAgent is installed environment It will use the chrony template.</description>
       <groups>
         <group>
           <name>HomeRackUserGroupTemplates</name>

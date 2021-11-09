@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:26Z</date>
+  <date>2021-11-09T04:40:26Z</date>
   <groups>
     <group>
       <name>Очереди печати Kyocera</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Kyocera Printers</template>
       <name>Принтеры Kyocera</name>
-      <description>Для принтеров FS-1020DN, FS-1030DN, FS-4000DN, FS-1060DN</description>
+      <description>## Description Для принтеров FS-1020DN, FS-1030DN, FS-4000DN, FS-1060DN ## Overview Russian language. Tested on: * FS-1020DN * FS-1030DN * FS-4000DN * FS-1060DN * ECOSYS P3055dn На русском языке. Список переменных: * Имя * Модель * Серийный номер * Местоположение * Контактная информация * MAC адрес * Сетевой интерфейс * Общее количество отпечатанных страниц * Код ошибки * Строка состояния 1 * Строка состояния 2 * Тип картриджа * Количество тонера * Тонер: максимальное кол-во * Тонер: текущее кол-во * Время работы с момента последнего включения</description>
       <groups>
         <group>
           <name>Очереди печати Kyocera</name>

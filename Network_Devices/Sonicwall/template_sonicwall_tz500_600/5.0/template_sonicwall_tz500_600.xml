@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:57Z</date>
+  <date>2021-11-09T04:57:27Z</date>
   <groups>
     <group>
       <name>Firewall</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Sonicwall SNMP - TZ600</template>
       <name>Sonicwall SNMP - TZ600</name>
-      <description>Template customizado para o TZ600</description>
+      <description>## Description Template customizado para o TZ600 ## Overview Template Sonicwall TZ500 e TZ600 Performance Status de Portas e Tráfego Triggers de Status de portas, processamento e memória ## Author Ruy Mendonça</description>
       <groups>
         <group>
           <name>Firewall</name>

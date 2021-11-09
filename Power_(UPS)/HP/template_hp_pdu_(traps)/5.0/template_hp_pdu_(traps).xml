@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:50Z</date>
+  <date>2021-11-09T05:03:36Z</date>
   <groups>
     <group>
       <name>PDU</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Monitoring PDU</template>
       <name>Monitoring PDU</name>
+      <description>## Overview Hi, Here is a template for HP PDU's There are mostly traps items but also some polling items. SNMPv2. Triggers are also include. You need to put your SNMP community in macro. Thanks. ## Author Vincent MATIAS</description>
       <groups>
         <group>
           <name>PDU</name>

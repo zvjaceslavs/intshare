@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:57Z</date>
+  <date>2021-11-09T04:50:20Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>App Skype for business Mediation Role</template>
       <name>App Skype for business Mediation Role</name>
-      <description>This template assesses the status and overall health of services as well as the performance of the Mediation Microsoft Skype for Business Server 2015. Note: You need to set thresholds for these counters according to your environment. It is recommended to monitor these counters for some period of time to understand potential value ranges and then set the thresholds accordingly. This documentation is based on: https://technet.microsoft.com/en-us/library/gg398616.aspx.</description>
+      <description>## Description This template assesses the status and overall health of services as well as the performance of the Mediation Microsoft Skype for Business Server 2015. Note: You need to set thresholds for these counters according to your environment. It is recommended to monitor these counters for some period of time to understand potential value ranges and then set the thresholds accordingly. This documentation is based on: https://technet.microsoft.com/en-us/library/gg398616.aspx. ## Overview Lync 2013 Mediation role template</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,5 +1,9 @@
 # SNMP Interfaces Huawei
 
+## Description
+
+## Overview Templete para OLT's Huawei MA5600 e outras OLT's menores. Observações: Dentro do servidor zabbix será necessário editar o arquivo "/etc/snmp/snmp.conf" no meu caso o servidor é ubuntu server. Já dentro do arquivo escreva a linha "noRangeCheck yes" caso ela ainda não exista ou caso ela exista basta descomentar, esse passo é importante para que não retorne erro de "index out of range". Os equipamentos da Huawei nas interfaces GPON tem um problema com o MIB-ifAlias e MIB-ifDescr, sempre irão retornar o apelido e descrição das interfaces GPON com o mesmo nome. Assim o zabbix não consegue identifica-las separadamente. Porém o MIB-ifName trás o resultado correto das interfaces, segue os exemplos: IF-MIB::ifDescr.[4194304000](tel:(419)%20430-4000) = STRING: Huawei-MA5600-V800R015-GPON _UNI IF-MIB::ifDescr.[4194304256](tel:(419)%20430-4256) = STRING: Huawei-MA5600-V800R015-GPON _UNI IF-MIB::ifDescr.[4194304512](tel:(419)%20430-4512) = STRING: Huawei-MA5600-V800R015-GPON _UNI IF-MIB::ifName.[4194304000](tel:(419)%20430-4000) = STRING: GPON 0/0/0 IF-MIB::ifName.[4194304256](tel:(419)%20430-4256) = STRING: GPON 0/0/1 IF-MIB::ifName.[4194304512](tel:(419)%20430-4512) = STRING: GPON 0/0/2 Agradecimentos: Jorge Iwano, Rodrigo Gregório, Willian Nawate ## Author Hudson Teixeira 
+
 ## Overview
 
 Templete para OLT's Huawei MA5600 e outras OLT's menores.

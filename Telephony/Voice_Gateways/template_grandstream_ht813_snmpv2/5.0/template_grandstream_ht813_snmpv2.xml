@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:30Z</date>
+  <date>2021-11-09T05:26:18Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Grandstream HT813 SNMPv2</template>
       <name>Grandstream HT813 SNMPv2</name>
-      <description>Simple ports and uptime checking for Grandstream HT813 gateway Be sure that you turned on SNMPv2 on device Made by http://itprofit32.ru</description>
+      <description>## Description Simple ports and uptime checking for Grandstream HT813 gateway Be sure that you turned on SNMPv2 on device Made by http://itprofit32.ru ## Overview Port and uptime monitoring for Grandstream HT813 gateway. Be sure, that you turned on SNMPv2 on the gateway. ## Author Alexander Zverev</description>
       <groups>
         <group>
           <name>Templates</name>

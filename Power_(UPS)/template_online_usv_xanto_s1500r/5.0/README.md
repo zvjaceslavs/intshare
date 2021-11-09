@@ -1,5 +1,9 @@
 # Xanto S1500R
 
+## Description
+
+## Overview Template for Online USV - XANTO S1500R tested with xabbix 3.2 via SNMP Monitoring and triggers for - Current Battery load in % - Battery capacity - remaining runtime in min - temperature - Voltage Input / Output - MAC, USV Model, system runtime.... including triggers and graphs ## Author stschu 
+
 ## Overview
 
 Template for Online USV - XANTO S1500R
@@ -60,14 +64,14 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Temperature|<p>Temp</p>|`SNMP agent`|Temp<p>Update: 30</p>|
-|system uptime|<p>-</p>|`SNMP agent`|system.up<p>Update: 86400</p>|
-|Voltage Output|<p>-</p>|`SNMP agent`|VoltageOut<p>Update: 30</p>|
-|MAC|<p>-</p>|`SNMP agent`|deviceMAC<p>Update: 86400</p>|
-|Runtime|<p>remaining runtime in min</p>|`SNMP agent`|Time<p>Update: 30</p>|
-|Voltage Input|<p>-</p>|`SNMP agent`|VoltageIN<p>Update: 30</p>|
 |USV Model|<p>-</p>|`SNMP agent`|USVVersion<p>Update: 86400</p>|
-|Battery Capacity|<p>-</p>|`SNMP agent`|Battery<p>Update: 30</p>|
 |Load Current %|<p>current load in %</p>|`SNMP agent`|Load<p>Update: 30</p>|
+|MAC|<p>-</p>|`SNMP agent`|deviceMAC<p>Update: 86400</p>|
+|system uptime|<p>-</p>|`SNMP agent`|system.up<p>Update: 86400</p>|
+|Runtime|<p>remaining runtime in min</p>|`SNMP agent`|Time<p>Update: 30</p>|
+|Battery Capacity|<p>-</p>|`SNMP agent`|Battery<p>Update: 30</p>|
+|Voltage Input|<p>-</p>|`SNMP agent`|VoltageIN<p>Update: 30</p>|
+|Voltage Output|<p>-</p>|`SNMP agent`|VoltageOut<p>Update: 30</p>|
 ## Triggers
 
 There are no triggers in this template.

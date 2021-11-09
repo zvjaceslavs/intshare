@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:09Z</date>
+  <date>2021-11-09T04:31:59Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Kyocera FS-C8525MFP</template>
       <name>Kyocera FS-C8525MFP</name>
+      <description>## Author Eugene Varnavsky</description>
       <groups>
         <group>
           <name>Templates</name>

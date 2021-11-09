@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:20Z</date>
+  <date>2021-11-09T04:46:33Z</date>
   <groups>
     <group>
       <name>Dynavideo</name>
@@ -14,7 +14,7 @@
     <template>
       <template>smart-ups</template>
       <name>Nobreak-APC-SMART-UPS-3000BI-BR</name>
-      <description>## In English: Template for Zabbix 3.4 and above. Collects and displays information about voltage, current, power, status, temperature, and battery usage. UPS MIB: http://www.oidview.com/mibs/0/UPS-MIB.html Software SGM Auto-Shutdown V4.1: http://www.apc.com/shop/br/pt/products/Software-SGM-Auto-Shutdown-V4-1-para-Linux-s%C3%B3-Brasil-/P-SFSGM41L?isCurrentSite=true --------- ## Em Português: Template para Zabbix 3.4 ou superior. Coleta e exibe informações da tensão, corrente, potência, status, temperatura e uso da bateria. UPS MIB: http://www.oidview.com/mibs/0/UPS-MIB.html Software SGM Auto-Shutdown V4.1: http://www.apc.com/shop/br/pt/products/Software-SGM-Auto-Shutdown-V4-1-para-Linux-s%C3%B3-Brasil-/P-SFSGM41L?isCurrentSite=true --------- ## Developed by: * Victor Igor (victor.igor.redes@gmail.com), sysadmin; * Aécio Pires (http://aeciopires.com), sysadmin. Shared by **Dynavideo** (http://www.dynavideo.com.br)</description>
+      <description>## Description ## In English: Template for Zabbix 3.4 and above. Collects and displays information about voltage, current, power, status, temperature, and battery usage. UPS MIB: http://www.oidview.com/mibs/0/UPS-MIB.html Software SGM Auto-Shutdown V4.1: http://www.apc.com/shop/br/pt/products/Software-SGM-Auto-Shutdown-V4-1-para-Linux-s%C3%B3-Brasil-/P-SFSGM41L?isCurrentSite=true --------- ## Em Português: Template para Zabbix 3.4 ou superior. Coleta e exibe informações da tensão, corrente, potência, status, temperatura e uso da bateria. UPS MIB: http://www.oidview.com/mibs/0/UPS-MIB.html Software SGM Auto-Shutdown V4.1: http://www.apc.com/shop/br/pt/products/Software-SGM-Auto-Shutdown-V4-1-para-Linux-s%C3%B3-Brasil-/P-SFSGM41L?isCurrentSite=true --------- ## Developed by: * Victor Igor (victor.igor.redes@gmail.com), sysadmin; * Aécio Pires (http://aeciopires.com), sysadmin. Shared by **Dynavideo** (http://www.dynavideo.com.br) ## Overview **## In English:** Template for Zabbix 3.4 and above. Collects and displays information about voltage, current, power, status, temperature, and battery usage. UPS MIB: &lt;http://www.oidview.com/mibs/0/UPS-MIB.html> Software SGM Auto-Shutdown V4.1: &lt;http://www.apc.com/shop/br/pt/products/Software-SGM-Auto-Shutdown-V4-1-para-Linux-s%C3%B3-Brasil-/P-SFSGM41L?isCurrentSite=true> Dashboard Grafana: &lt;https://grafana.com/dashboards/3926> --------- **## Em Português:** Template para Zabbix 3.4 ou superior. Coleta e exibe informações da tensão, corrente, potência, status, temperatura e uso da bateria. UPS MIB: &lt;http://www.oidview.com/mibs/0/UPS-MIB.html> Software SGM Auto-Shutdown V4.1: &lt;http://www.apc.com/shop/br/pt/products/Software-SGM-Auto-Shutdown-V4-1-para-Linux-s%C3%B3-Brasil-/P-SFSGM41L?isCurrentSite=true> Dashboard Grafana: &lt;https://grafana.com/dashboards/3926> --------- **## Developed by:** * Victor Igor (victor.igor.redes@gmail.com), sysadmin; * Aécio Pires (&lt;http://aeciopires.com>), sysadmin. Shared by **Dynavideo** (&lt;http://www.dynavideo.com.br>) ## Author Aécio Pires e Victor Igor</description>
       <groups>
         <group>
           <name>Dynavideo</name>

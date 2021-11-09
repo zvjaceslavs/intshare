@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:48Z</date>
+  <date>2021-11-09T04:43:05Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>MIB XG-FIREWALL-MIB - sophos</template>
       <name>MIB XG-FIREWALL-MIB - sophos</name>
+      <description>## Overview Used mib2template to convert oficial Sophos XG MIB to Template. Tested on Zabbix 3.2 using a XG 105 Appliance. Need to set a Macro for {$SNMP\_COMMUNITY} with the community name on the Firewall. It does not contain Interface Discovery, but native SNMP Interface template does the job. ## Author Paulo S. D. Vasques</description>
       <groups>
         <group>
           <name>Templates</name>

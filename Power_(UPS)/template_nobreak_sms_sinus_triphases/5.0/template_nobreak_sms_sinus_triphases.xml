@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:54Z</date>
+  <date>2021-11-09T04:57:07Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Nobreak SMS Sinus Triphases</template>
       <name>Nobreak SMS Sinus Triphases</name>
-      <description>Para toda linha de nobreak sinus triphases</description>
+      <description>## Description Para toda linha de nobreak sinus triphases ## Overview A change made of template made by Peahgah All SMS nobles with Net Adapter II, input voltage information in (R, S, T), frequency, temperature, battery charge, power per phase. Triggers activate Work with Mono and Tri voltages (Tested with Sinus Double Black) With graphs and a screen Language PT-BR ## Author Ricardo Ito</description>
       <groups>
         <group>
           <name>Templates</name>

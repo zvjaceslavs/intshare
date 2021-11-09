@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:38Z</date>
+  <date>2021-11-09T05:21:29Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Mobotix Camera</template>
       <name>Mobotix Camera</name>
+      <description>## Overview This template will get you the following items from a Mobotix IP Security Camera: Model Name, Name, Serial Number, Uptime, Storage Type, Storage Used Space, Flash Wear, Remaining Time to save, Software Version, Software Version Timestamp It will trigger on the following: * Used space above 80% (High) * Flash Wear above 65% (Warning) * Flash Wear above 80% (High) * Storage Low Time Remaining (High) * Storage Failed (High)</description>
       <groups>
         <group>
           <name>Templates</name>

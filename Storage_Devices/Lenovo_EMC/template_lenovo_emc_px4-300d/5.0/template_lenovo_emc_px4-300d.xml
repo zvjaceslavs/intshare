@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:18Z</date>
+  <date>2021-11-09T05:06:55Z</date>
   <groups>
     <group>
       <name>Storages</name>

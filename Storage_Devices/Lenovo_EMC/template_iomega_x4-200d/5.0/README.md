@@ -1,5 +1,9 @@
 # IOMEGA ix4-200d
 
+## Description
+
+## Overview * Host Macro - {$USER} - Username - {$PASS} - Password * Features Discovery Network Discovery Disk Perfomance Discover Disk Info. ## Author Levi Pereira 
+
 ## Overview
 
 * Host Macro
@@ -44,22 +48,24 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Disks Info|<p>-</p>|`SNMP agent`|diskID<p>Update: 1m</p>|
 |Network Interface Discovery|<p>-</p>|`SNMP agent`|net.if.discovery<p>Update: 1m</p>|
 |I/O Perfomance|<p>-</p>|`SNMP agent`|diskName<p>Update: 1m</p>|
-|Disks Info|<p>-</p>|`SNMP agent`|diskID<p>Update: 1m</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Up time|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 1m</p>|
-|Hostname|<p>-</p>|`SNMP agent`|deviceName<p>Update: 30m</p>|
-|Temperature|<p>-</p>|`SNMP agent`|tempValue<p>Update: 1m</p>|
-|Voltage V1.1|<p>-</p>|`SNMP agent`|volt1.1<p>Update: 2m</p>|
-|Description|<p>-</p>|`SNMP agent`|deviceDescr<p>Update: 30m</p>|
-|RAID Status|<p>-</p>|`SNMP agent`|raidStatus<p>Update: 1m</p>|
-|Processor|<p>-</p>|`SNMP agent`|hrDeviceDescr.768<p>Update: 30m</p>|
 |Voltage V3.3|<p>-</p>|`SNMP agent`|volt3.3<p>Update: 2m</p>|
+|Processor|<p>-</p>|`SNMP agent`|hrDeviceDescr.768<p>Update: 30m</p>|
+|RAID Status|<p>-</p>|`SNMP agent`|raidStatus<p>Update: 1m</p>|
 |Internal Fan|<p>-</p>|`SNMP agent`|fanValue<p>Update: 2m</p>|
+|Voltage V1.1|<p>-</p>|`SNMP agent`|volt1.1<p>Update: 2m</p>|
+|Up time|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 1m</p>|
+|Temperature|<p>-</p>|`SNMP agent`|tempValue<p>Update: 1m</p>|
+|Hostname|<p>-</p>|`SNMP agent`|deviceName<p>Update: 30m</p>|
+|Description|<p>-</p>|`SNMP agent`|deviceDescr<p>Update: 30m</p>|
+|Capacity of disk - $1|<p>-</p>|`SNMP agent`|diskSize[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
+|Status of Disk - $1|<p>-</p>|`SNMP agent`|diskStatus[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
 |Interface {#IFNAME}: Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
 |Interface {#IFNAME}: Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 3m</p><p>LLD</p>|
 |Interface {#IFNAME}: Download|<p>-</p>|`SNMP agent`|net.if.in[ifInOctets.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
@@ -80,8 +86,6 @@ There are no template links in this template.
 |Write merges per second - $1|<p>-</p>|`SNMP agent`|ioMgws[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
 |Read io requests per second - $1|<p>-</p>|`SNMP agent`|ioReqrs[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
 |Write io requests per second - $1|<p>-</p>|`SNMP agent`|ioReqws[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
-|Capacity of disk - $1|<p>-</p>|`SNMP agent`|diskSize[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
-|Status of Disk - $1|<p>-</p>|`SNMP agent`|diskStatus[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

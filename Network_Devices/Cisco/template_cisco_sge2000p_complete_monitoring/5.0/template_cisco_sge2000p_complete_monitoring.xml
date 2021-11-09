@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:15Z</date>
+  <date>2021-11-09T04:46:03Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>XSM SNMP Devices</template>
       <name>XSM SNMP Devices</name>
+      <description>## Overview Grettings people, here is an XML template developed by me, to monitoring the all 24 Interfaces, 5 fan cooler, latency, temperature and more from the Cisco SGE2000P switch. The only thing to consider here is, you will need to change the SNMP community set in here, because i made it for the company that i'm working right now c yaa</description>
       <groups>
         <group>
           <name>Templates</name>

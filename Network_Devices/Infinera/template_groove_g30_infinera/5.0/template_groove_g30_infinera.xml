@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:36Z</date>
+  <date>2021-11-09T05:08:57Z</date>
   <groups>
     <group>
       <name>Groove-Tely</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Groove-G30 Infinera</template>
       <name>Groove-G30 Infinera</name>
+      <description>## Overview Tested from zabbix 4.0.14 Server Ubuntu 18.04 LTSIt uses SNMPv2Add Coriant-groove.mib for OID in textual-convention on **/usr/share/snmp/mibs** after add files restart service snmpd **Features:** * ochOsPreFecBer * OmsTX-RX Optical Power * Port Tx Rx Optical Power * Osnr-Table * Q-Factor-Table * Shelf-Temperature * Graph based in items discovery **Requirements:** * Coriant-groove.mib ## Author Guerlielton</description>
       <groups>
         <group>
           <name>Groove-Tely</name>

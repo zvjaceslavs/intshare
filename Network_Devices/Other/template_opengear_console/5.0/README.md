@@ -1,5 +1,9 @@
 # Opengear_Console
 
+## Description
+
+## Author David Angelovich 
+
 ## Author
 
 David Angelovich
@@ -22,9 +26,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Firmware Version|<p>-</p>|`SNMP agent`|opengear.firmwareversion<p>Update: 3600</p>|
 |System Uptime|<p>System Uptime in centiseconds (hundredths of a second: 0.01s)</p>|`SNMP agent`|opengear.systemuptime<p>Update: 60</p>|
 |Serial Number|<p>-</p>|`SNMP agent`|opengear.serialnumber<p>Update: 3600</p>|
+|Firmware Version|<p>-</p>|`SNMP agent`|opengear.firmwareversion<p>Update: 3600</p>|
 |Interface {#IFNAME} Inbound Discards|<p>-</p>|`SNMP agent`|opengear.snmp.netif.indiscards[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
 |Interface {#IFNAME} Inbound Errors|<p>-</p>|`SNMP agent`|opengear.snmp.netif.inerr[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|
 |Interface {#IFNAME} Inbound Traffic|<p>-</p>|`SNMP agent`|opengear.snmp.netif.in[{#IFNAME}]<p>Update: 60</p><p>LLD</p>|

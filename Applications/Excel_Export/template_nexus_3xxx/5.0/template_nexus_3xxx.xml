@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:06Z</date>
+  <date>2021-11-09T05:19:12Z</date>
   <groups>
     <group>
       <name>Infra Network</name>
@@ -11,7 +11,7 @@
     <template>
       <template>NEXUS 3xxx</template>
       <name>NEXUS 3xxx</name>
-      <description>A template to monitor nexus switch via SNMP</description>
+      <description>## Description A template to monitor nexus switch via SNMP ## Overview A Nexus 3xxx template to get SNMP system informations. This template will find interface, CPU, Fan, create graphs, check ip/tcp/udp/icmp information, create some triggers etc... All items, triggers and discovery rules have brief descriptions. If SNMP is not your friend, you can check this web page (https://cric.grenoble.cnrs.fr/Administrateurs/Outils/MIBS/?oid=1.3.6.1.2.1) to help you. ## Author Leo Cardao</description>
       <groups>
         <group>
           <name>Infra Network</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:14Z</date>
+  <date>2021-11-09T04:52:07Z</date>
   <groups>
     <group>
       <name>MikroTik</name>
@@ -11,6 +11,7 @@
     <template>
       <template>MikroTik RB3011UiAS</template>
       <name>MikroTik RB3011UiAS</name>
+      <description>## Overview MikroTik RB3011UiAS</description>
       <groups>
         <group>
           <name>MikroTik</name>

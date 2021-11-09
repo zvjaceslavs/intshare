@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:22Z</date>
+  <date>2021-11-09T05:07:27Z</date>
   <groups>
     <group>
       <name>DEMO</name>
@@ -11,6 +11,7 @@
     <template>
       <template>rpcm_1502</template>
       <name>rpcm_1502</name>
+      <description>## Overview rcpm - over voltage state 0 - NO OVERVOLTAGE TURN OFF DETECTED 1 - OVERVOLTAGE TURN OFF FIRED rpcm - admin state 0 - off 1 - on rpcm - breaker state 0 - NO SHORT CIRCUIT DETECTED 1 - SHORT CIRCUIT DETECTED rpcm - force fallback 0 - enabled 1 - disabled rpcm - frequency 0 - absent 1 - present rpcm - ground good 0 - Ground is Bad 1 - Ground is Good rpcm - indicator flashing 0 - disabled 1 - enabled rpcm - overcurent turn off state 0 - NO OVERCURRENT TURN OFF DETECTED 1 - OVERCURRENT TURN OFF FIRED rpcm - overcurrent alarm state 0 - NO ALARM 1 - OVERCURRENT ALARM FIRED</description>
       <groups>
         <group>
           <name>DEMO</name>

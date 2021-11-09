@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:59Z</date>
+  <date>2021-11-09T05:23:26Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP Fortinet - Antivirus and WebFilter</template>
       <name>SNMP Fortinet - Antivirus and WebFilter</name>
-      <description>Created by Samuel Martins (04-16-2021) https://github.com/slunart https://www.linkedin.com/in/slmartins ----------------------------------------------------------- Based on FORTINET-FORTIGATE-MIB OBJECTS { fgAvVirusDetected, fgAvVirusBlocked, fgAvHTTPVirusDetected, fgAvHTTPVirusBlocked, fgAvSMTPVirusDetected, fgAvSMTPVirusBlocked, fgAvPOP3VirusDetected, fgAvPOP3VirusBlocked, fgAvIMAPVirusDetected, fgAvIMAPVirusBlocked, fgAvFTPVirusDetected, fgAvFTPVirusBlocked, fgAvIMVirusDetected, fgAvIMVirusBlocked, fgAvNNTPVirusDetected, fgAvNNTPVirusBlocked, fgAvOversizedDetected, fgAvOversizedBlocked } FgWebfilterStatsEntry ::= SEQUENCE { fgWfHTTPBlocked Counter32, fgWfHTTPSBlocked Counter32, fgWfHTTPURLBlocked Counter32, fgWfHTTPSURLBlocked Counter32, fgWfActiveXBlocked Counter32, fgWfCookieBlocked Counter32, fgWfAppletBlocked Counter32 }</description>
+      <description>## Description Created by Samuel Martins (04-16-2021) https://github.com/slunart https://www.linkedin.com/in/slmartins ----------------------------------------------------------- Based on FORTINET-FORTIGATE-MIB OBJECTS { fgAvVirusDetected, fgAvVirusBlocked, fgAvHTTPVirusDetected, fgAvHTTPVirusBlocked, fgAvSMTPVirusDetected, fgAvSMTPVirusBlocked, fgAvPOP3VirusDetected, fgAvPOP3VirusBlocked, fgAvIMAPVirusDetected, fgAvIMAPVirusBlocked, fgAvFTPVirusDetected, fgAvFTPVirusBlocked, fgAvIMVirusDetected, fgAvIMVirusBlocked, fgAvNNTPVirusDetected, fgAvNNTPVirusBlocked, fgAvOversizedDetected, fgAvOversizedBlocked } FgWebfilterStatsEntry ::= SEQUENCE { fgWfHTTPBlocked Counter32, fgWfHTTPSBlocked Counter32, fgWfHTTPURLBlocked Counter32, fgWfHTTPSURLBlocked Counter32, fgWfActiveXBlocked Counter32, fgWfCookieBlocked Counter32, fgWfAppletBlocked Counter32 } ## Overview Updated: 2021-04-19 -> Support for monitoring the WebFilter feature. ----------------------------------------------------------------------------------------- Template for monitoring Antivirus and Web Filter features in FORTIGATE equipment based on FORTINET-FORTIGATE-MIB. **WEBFILTER:** * 7 Item prototypes * 0 Trigger prototypes **ANTIVIRUS**: * 18 Item prototypes * 0 Trigger prototypes Feel free to make suggestions! ## Author Samuel Martins</description>
       <groups>
         <group>
           <name>Templates</name>

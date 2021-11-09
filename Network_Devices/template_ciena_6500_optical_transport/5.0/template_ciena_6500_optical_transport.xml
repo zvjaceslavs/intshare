@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:53Z</date>
+  <date>2021-11-09T05:17:49Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Ciena 6500 2</template>
       <name>Ciena 6500 2</name>
+      <description>## Overview This template will discover and monitor various optical interfaces - mainly light levels and baselines and alert if light levels fall outside of VARIANCE macro. Also will report when OSC has no light and serve a clear indication that there is a fiber issue. No MIBs required. Used OIDs. No Dependencies - just enable SNMP with v2 community on the shelf and set SNMP\_COMMUNITY macro in template. ## Author Dustin Howard</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:47Z</date>
+  <date>2021-11-09T05:03:13Z</date>
   <groups>
     <group>
       <name>DES-3526</name>
@@ -11,6 +11,7 @@
     <template>
       <template>DES-3526</template>
       <name>DES-3526</name>
+      <description>## Overview Updated the template of Sergey. [Here is a link to its template and source accordingly.](network_devices/d-link/des-3526)</description>
       <groups>
         <group>
           <name>DES-3526</name>

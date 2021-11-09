@@ -2,7 +2,7 @@
 
 ## Description
 
-Template para o sensor de umidade e temperatura ProDigital Term-1Net
+## Description Template para o sensor de umidade e temperatura ProDigital Term-1Net ## Overview Sensor **ProDigital** Term -1Net Template criado para fornecer: - Gráfico de temperatura (°C) e umidade (%) - Triggers para alertas de temperatura em: 10°C ou menos 25°C ou mais 30°C ou mais Alerta de problema com a sonda do sensor. ## Author Guilherme Campos 
 
 ## Overview
 

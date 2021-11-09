@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:18Z</date>
+  <date>2021-11-09T04:59:56Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Repotec-RP-PG1626W-Stacked</template>
       <name>Repotec-RP-PG1626W-Stacked</name>
+      <description>## Overview Template for the Repotec RP-PG1625W in Stacked Mode(Two Switches) Monitors Port- and Switch status</description>
       <groups>
         <group>
           <name>Templates</name>

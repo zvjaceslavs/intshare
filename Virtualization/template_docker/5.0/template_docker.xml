@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:50Z</date>
+  <date>2021-11-09T04:56:37Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>..Docker.OSLinux.ShortTermContainers</template>
       <name>..Docker.OSLinux.ShortTermContainers</name>
+      <description>## Description Monitor Docker Container Details ## Overview Template with LLD to discover Docker Containers via Docker socket ([Template.Docker.ContainerDetails](http://127.0.0.1/zabbix/templates.php?form=update&amp;templateid=10264&amp;groupid=1)) and Template [Template..Docker.OSLinux.ShortTermContainers](http://127.0.0.1/zabbix/templates.php?form=update&amp;templateid=10265&amp;groupid=1) with macros to forget short living containers after {$DISCOVERY\_TTL}. ## Author Martin Schroeter ## Overview Template with LLD to discover Docker Containers via Docker socket ([Template.Docker.ContainerDetails](http://127.0.0.1/zabbix/templates.php?form=update&amp;templateid=10264&amp;groupid=1)) and Template [Template..Docker.OSLinux.ShortTermContainers](http://127.0.0.1/zabbix/templates.php?form=update&amp;templateid=10265&amp;groupid=1) with macros to forget short living containers after {$DISCOVERY\_TTL}. ## Author Martin Schroeter</description>
       <templates>
         <template>
           <name>.Docker.ContainerDetails</name>
@@ -47,7 +48,7 @@
     <template>
       <template>.Docker.ContainerDetails</template>
       <name>.Docker.ContainerDetails</name>
-      <description>Monitor Docker Container Details</description>
+      <description>## Description Monitor Docker Container Details ## Overview Template with LLD to discover Docker Containers via Docker socket ([Template.Docker.ContainerDetails](http://127.0.0.1/zabbix/templates.php?form=update&amp;templateid=10264&amp;groupid=1)) and Template [Template..Docker.OSLinux.ShortTermContainers](http://127.0.0.1/zabbix/templates.php?form=update&amp;templateid=10265&amp;groupid=1) with macros to forget short living containers after {$DISCOVERY\_TTL}. ## Author Martin Schroeter</description>
       <groups>
         <group>
           <name>Templates</name>

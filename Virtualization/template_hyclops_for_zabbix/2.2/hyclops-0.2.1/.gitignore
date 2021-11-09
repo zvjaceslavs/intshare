@@ -1,7 +1,0 @@
-*.py[co]
-*.sw[po]
-*.egg-info
-.coverage
-dist
-build
-MANIFEST

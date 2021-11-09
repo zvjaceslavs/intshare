@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:39Z</date>
+  <date>2021-11-09T04:48:45Z</date>
   <groups>
     <group>
       <name>Datasul</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Banco Progress Datasul</template>
       <name>Banco Progress Datasul</name>
-      <description>Monitoramento Banco Progress Datasul</description>
+      <description>## Description Monitoramento Banco Progress Datasul ## Overview Basic template with itens and triggers monitoring default Totvs Datasul ports using Zabbix Agent on the host (Windows or Linux). Tested on Zabbix 3.4.6 ##################### Template básico para montoramento do banco Progress para o Datasul da Totvs (Portas Padrões) utilizando o Agent do Zabbix (Windows ou Linux). Testado no Zabbix 3.4.6 Cheers! Luiz Fernando Gondin Santos ## Author Luiz Fernando Gondin Santos</description>
       <groups>
         <group>
           <name>Datasul</name>

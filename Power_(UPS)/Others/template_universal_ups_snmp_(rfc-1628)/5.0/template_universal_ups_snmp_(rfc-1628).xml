@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:02Z</date>
+  <date>2021-11-09T05:18:52Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -353,6 +353,7 @@
     <template>
       <template>UPS RFC 1628 SNMP</template>
       <name>UPS RFC 1628 SNMP</name>
+      <description>## Overview There is a UPS SNMP template for UPS with rfc-1628 support. Tested with: * APC SURTD3000XLI with APC Network Management Card 2 (AP9630) * APC SRT3000RMXLI with APC Network Management Card 2 (AP9630) * EATON (PowerWare) 9125-6000g with ConnectUPS Web/SNMP Card. ## Author Sergey Morozov</description>
       <templates>
         <template>
           <name>Template Module Generic SNMP</name>

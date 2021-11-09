@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:28Z</date>
+  <date>2021-11-09T05:14:54Z</date>
   <groups>
     <group>
       <name>Templates/UPS</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Huawei 10K UPS</template>
       <name>Huawei 10K UPS</name>
+      <description>## Overview This template for **Huawei UPS 2000** Protocol SNMP v2 Items 95 with low discovery **Triggers**: Battery charge &lt; {$BATTERY\_CHARGE}% on {HOST.NAME} Battery backup time &lt; {$BACKUP\_TIME} on {HOST.NAME} Battery is discharging on {HOST.NAME} **Macros****:** {$BACKUP\_TIME} - Remaining critical battery life in minutes {$BATTERY\_CHARGE} - The critical battery percentage Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administration/zabbix/templates/Template%20Huawei%2010K%20UPS.xml) repository MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/huawei/ups2000/snmp) repository ## Author P.V. Galonza</description>
       <groups>
         <group>
           <name>Templates/UPS</name>

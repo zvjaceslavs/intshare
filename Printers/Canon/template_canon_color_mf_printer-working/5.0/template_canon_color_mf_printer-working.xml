@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:19Z</date>
+  <date>2021-11-09T05:20:35Z</date>
   <groups>
     <group>
       <name>Printer group</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Canon Color MF printers</template>
       <name>Canon Color MF printers</name>
-      <description>Template for color Canon Multi Functional printer.</description>
+      <description>## Description Template for color Canon Multi Functional printer. ## Overview Modified version of created by aikucits Corrected the error when the importing template to new zabbix versions. It tested on Zabbix version 5.0.5 Regards..</description>
       <groups>
         <group>
           <name>Printer group</name>

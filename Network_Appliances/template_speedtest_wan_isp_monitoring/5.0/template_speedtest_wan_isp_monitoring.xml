@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:09Z</date>
+  <date>2021-11-09T04:45:22Z</date>
   <groups>
     <group>
       <name>Template importati</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Speedtest WAN</template>
       <name>App Speedtest WAN</name>
+      <description>## Overview Monitoring the speedtest by different ISP server on different part of world It need the script here https://git.cdp.li/polcape/zabbix/tree/master/zabbix-speedtest</description>
       <groups>
         <group>
           <name>Template importati</name>

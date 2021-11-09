@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:38Z</date>
+  <date>2021-11-09T04:55:01Z</date>
   <groups>
     <group>
       <name>My Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>AD DS Health and Performance</template>
       <name>AD DS Health and Performance</name>
+      <description>## Overview Performance counters * DRA Inbound Bytes Total/Sec * DRA Inbound Object Updates Remaining in Packet * DRA Outbound Bytes Total/Sec * DRA Pending Replication Synchronizations * Kerberos Authentications/Sec * LDAP Bind Time * LDAP Client Sessions * LDAP Searches/Sec * LDAP Successful Binds/Sec * LDAP Active Threads * LDAP Writes/Sec * NTLM Authentications Events * Active Directory Web Service (Error, Warning) * DFS Replication (Error, Warning) * Directory Service (Error, Warning) * DNS Server (Error, Warning) Service * Distributed File System Enables * DNS Server * DFS Replication *</description>
       <groups>
         <group>
           <name>My Templates</name>

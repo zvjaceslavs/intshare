@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:36Z</date>
+  <date>2021-11-09T04:41:39Z</date>
   <groups>
     <group>
       <name>Pyora</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Pyora active send</template>
       <name>Pyora active send</name>
+      <description>## Overview This is the fixed template for Zabbix PyOra to work on 3.0. I remove the unsupported tags and downgraded version. Note you will most likely have to update the triggers manually.</description>
       <groups>
         <group>
           <name>Pyora</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:29Z</date>
+  <date>2021-11-09T05:08:11Z</date>
   <groups>
     <group>
       <name>Templates Hardware</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP XSCF Sun M5000</template>
       <name>SNMP XSCF Sun M5000</name>
-      <description>please set {$SNMP_COMMUNITY} macros</description>
+      <description>## Description please set {$SNMP_COMMUNITY} macros ## Overview Simple template to monitor Sun M5000 server over SNMP by XSCF This template contains: Firmware state, Hardware state, Ambient Temperature, Serial Number, System State, System Type CPU discovery Fan Discovery Memory board discovery Memory Unit discovery &lt;p style="margin: 0px 0px 1.5em ## Author Dmitry Lavrukhin</description>
       <groups>
         <group>
           <name>Templates Hardware</name>

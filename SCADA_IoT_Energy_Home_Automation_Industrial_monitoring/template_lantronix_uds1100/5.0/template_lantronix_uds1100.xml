@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:43Z</date>
+  <date>2021-11-09T05:16:39Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>LANTRONIX-UDS1100</template>
       <name>LANTRONIX-UDS1100</name>
-      <description>Simple LANTRONIX-UDS1100 template by Federico Coppola</description>
+      <description>## Description Simple LANTRONIX-UDS1100 template by Federico Coppola ## Overview It is a very simple template to monitor Lantronix UDS1100 device. Using this template you can monitor: * Ethernet port status * Input/output bytes * Operational mode * Admin console and web console service This template create graphs about this checks. I have created and tested it using Zabbix 4.0.5 ## Author Federico Coppola</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:26Z</date>
+  <date>2021-11-09T05:00:49Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App IIS Service_RUS</template>
       <name>App IIS Service_RUS</name>
+      <description>## Overview 16 Items, 4 Triggers 5 Graphs and 2 Screens built for IIS 7.5, 8.0, 8.5 and 10 Services, Ports and Performance Counters. Developed through "Template Windows 2008 R2 IIS Server\_RUS" for RUSSIAN Location</description>
       <groups>
         <group>
           <name>Templates/Modules</name>

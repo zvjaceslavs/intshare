@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:52Z</date>
+  <date>2021-11-09T05:10:50Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Check if Zabbix session key is valid via API</template>
       <name>Check if Zabbix session key is valid via API</name>
-      <description>To use template create new user 'api' and set user type 'Zabbix Super Admin'. Setup global macros: {$Z_API_USER} {$Z_API_PASSWORD} {$Z_API_PHP} {$Z_API_SESSIONID} for example: {$Z_API_USER} = 'api' {$Z_API_PASSWORD} = 'jp5Jda5ABveGVEbSyJgZ' {$Z_API_PHP} = 'http://127.0.0.1/api_jsonrpc.php' Obtain new session id instantly curl -sk http://127.0.0.1/api_jsonrpc.php -X POST -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d '{"jsonrpc":"2.0","method":"user.login","params":{"user":"api","password":"jp5Jda5ABveGVEbSyJgZ"},"id":1}' | grep -E -o "([0-9a-f]{32,32})" Install session: {$Z_API_SESSIONID} = '2fdcdb96409fb134f82a2029342ce933'</description>
+      <description>## Description To use template create new user 'api' and set user type 'Zabbix Super Admin'. Setup global macros: {$Z_API_USER} {$Z_API_PASSWORD} {$Z_API_PHP} {$Z_API_SESSIONID} for example: {$Z_API_USER} = 'api' {$Z_API_PASSWORD} = 'jp5Jda5ABveGVEbSyJgZ' {$Z_API_PHP} = 'http://127.0.0.1/api_jsonrpc.php' Obtain new session id instantly curl -sk http://127.0.0.1/api_jsonrpc.php -X POST -H 'Content-Type: application/json' -H 'cache-control: no-cache' -d '{"jsonrpc":"2.0","method":"user.login","params":{"user":"api","password":"jp5Jda5ABveGVEbSyJgZ"},"id":1}' | grep -E -o "([0-9a-f]{32,32})" Install session: {$Z_API_SESSIONID} = '2fdcdb96409fb134f82a2029342ce933' ## Overview A lot of solutions out there are using Zabbix API to accomplish a specific task. In a lot of times, the session is not closed with API 'user.logout' procedure. In the long term, this will always result in slowness inside the frontend. I offer to not use a repeated authorization at all but use a static session-id (a Zabbix macro) instead for all the API calls/scripts. Here is the template to maintain the session id (macro). &lt;https://youtu.be/MjQJ0g0AaYI></description>
       <groups>
         <group>
           <name>Templates/Modules</name>

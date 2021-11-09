@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:13Z</date>
+  <date>2021-11-09T05:13:21Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP FortiAnalyzer</template>
       <name>SNMP FortiAnalyzer</name>
-      <description>Version 1.0 Created by Samuel Martins Repo: https://github.com/slunart/Zabbix-Templates Plesase, install the Fortianalyzer MIB on Zabbix Server FORTINET-FORTIMANAGER-FORTIANALYZER-MIB</description>
+      <description>## Description Version 1.0 Created by Samuel Martins Repo: https://github.com/slunart/Zabbix-Templates Plesase, install the Fortianalyzer MIB on Zabbix Server FORTINET-FORTIMANAGER-FORTIANALYZER-MIB ## Overview Hi, This is my first attempt to create a template for the FortiAnalyzer appliance. In the future, I will update with more items and triggers. I test on Zabbix 4.4, but I believe it must be compatible with other recent versions. I used the MIB to extract the OID. Search the Fortinet website for the MIB: FORTINET-FORTIMANAGER-FORTIANALYZER-MIB You can complement the monitoring with the SNMP templates already existing in Zabbix, such as: "SNMP Devices" and others, it will not generate incompatibility. My GITHUB repository: &lt;https://github.com/slunart/Zabbix-Templates/tree/master/Fortinet> If you have any problems, send a message, I don't know if I'll be able to solve it, but I'll try. FortiAnalyzer Website: &lt;https://www.fortinet.com/products/management/fortianalyzer.html> Best Regards! ## Author Samuel Martins</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:36Z</date>
+  <date>2021-11-09T05:26:58Z</date>
   <groups>
     <group>
       <name>Templates/Montioring</name>
@@ -11,6 +11,7 @@
     <template>
       <template>MikroTik</template>
       <name>MikroTik</name>
+      <description>## Overview **A newly built template designed to work on all MikroTik Routers!** **Items:** * CPU Frequency * Disk Space Total * Disk Space Used * Disk Space Utilisation * Firmware * ICMP Ping * ICMP Packet Loss * ICMP Latency * Identity * Memory Total * Memory Used * Memory Utilisation * Model * Temperature * Uptime * Voltage * SNMP Availability **Discover Rules:** * CPU * Interfaces All in one contained template. ## Author Shaun Allen</description>
       <groups>
         <group>
           <name>Templates/Montioring</name>

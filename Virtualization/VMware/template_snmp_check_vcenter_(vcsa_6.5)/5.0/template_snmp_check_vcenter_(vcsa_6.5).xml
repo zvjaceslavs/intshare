@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:36Z</date>
+  <date>2021-11-09T04:48:25Z</date>
   <groups>
     <group>
       <name>Template Virtual</name>
@@ -14,7 +14,7 @@
     <template>
       <template>vCenter_SNMP-VMWARE_VCSA_6.5</template>
       <name>vCenter_SNMP-VMWARE_VCSA_6.5</name>
-      <description>vCenter 6.5 Usage 5318154</description>
+      <description>## Description vCenter 6.5 Usage 5318154 ## Overview Reprocessing [https://share.zabbix.com/virtualization/vmware/snmp-check-vcenter](virtualization/vmware/snmp-check-vcenter) for Zabbix 3.0.4 and VCSA 6.5 (5318154) Thanks [Olivier LAHOUZE](owner/li_mVlS9YBOhr) ## Author Dorin Sergey</description>
       <groups>
         <group>
           <name>Template Virtual</name>

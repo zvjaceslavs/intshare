@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:50Z</date>
+  <date>2021-11-09T05:22:44Z</date>
   <groups>
     <group>
       <name>Network</name>
@@ -11,6 +11,7 @@
     <template>
       <template>CiscoSwitchInterfaceSNMPv3</template>
       <name>CiscoSwitchInterfaceSNMPv3</name>
+      <description>## Overview Cisco SNMP v3 Discovery for Interface Monitoring Template use this macros: {$SNMP\_SECNAME} security name ( snmpv3 Username ) {$SNMP\_AUTH} authentication password. {$SNMP\_PRIV} private password. iinclude this data : Admin status of interface Operational status of interface Description of interface incomming traffic Outgoing traffic ## Author Omid Hosseini</description>
       <groups>
         <group>
           <name>Network</name>

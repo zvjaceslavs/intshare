@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:51Z</date>
+  <date>2021-11-09T05:10:42Z</date>
   <groups>
     <group>
       <name>Templates/Servers Hardware</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Lenovo Flex chassis</template>
       <name>Lenovo Flex chassis</name>
+      <description>## Overview **Basic zabbix template for Lenovo Flex chassis.** ================================================== Базовый монтирониг: Blades, Fans, Information, Powers, Switches, System. Настройка: 1. Включить на CMM Flex SNMPv3. 2. Создать и настроить пользователя для мониторинга на CMM Flex. 3. В импортированном шаблоне прописать макросы: {$FLEX\_USER} и {$FLEX\_PASS}. ## Author Evgen-20</description>
       <groups>
         <group>
           <name>Templates/Servers Hardware</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:17Z</date>
+  <date>2021-11-09T05:25:03Z</date>
   <groups>
     <group>
       <name>Fabricante GCOM</name>
@@ -23,7 +23,7 @@
     <template>
       <template>Solustic-GCOM_EL5610_Intelbras_4840E</template>
       <name>Solustic - OLT GCOM EL5610 (Intelbras 4840E) v1.0.0</name>
-      <description>Homologado na EL5610-04P (Intelbras 4840E) firmware V100R001B01D001P006SP5</description>
+      <description>## Description MIBs: - SNMPv2-MIB ## Overview Template Básico para monitoramento OLT Intelbras 4840E. ## Description Homologado na EL5610-04P (Intelbras 4840E) firmware V100R001B01D001P006SP5 ## Overview Template Básico para monitoramento OLT Intelbras 4840E.</description>
       <templates>
         <template>
           <name>Solustic-Modulo_SNMP_Generico</name>
@@ -324,7 +324,7 @@
     <template>
       <template>Solustic-Modulo_SNMP_Generico</template>
       <name>Solustic-Modulo SNMP Generico v1.0.2</name>
-      <description>MIBs: - SNMPv2-MIB</description>
+      <description>## Description MIBs: - SNMPv2-MIB ## Overview Template Básico para monitoramento OLT Intelbras 4840E.</description>
       <groups>
         <group>
           <name>Templates Solustic</name>

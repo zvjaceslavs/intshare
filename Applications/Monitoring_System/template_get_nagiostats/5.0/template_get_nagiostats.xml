@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:17Z</date>
+  <date>2021-11-09T04:39:19Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Nagios stats</template>
       <name>App Nagios stats</name>
+      <description>## Overview get nagios's statistics with nagiostats （Nagios 3.x） install 1. add zabbix user into nagios group to execute nagiostats. 2. deploy the script and Userparameter. 3. import the template. enjoy --- UserParameter UserParameter=get.nagiostats,/etc/zabbix/scripts/get-nagiostats.sh --- Script &lt;https://github.com/sewata/getnagiostats/blob/master/get-nagiostats.sh> =20161126 Added Graphs and Screen in the template. ## Author sewata</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:28Z</date>
+  <date>2021-11-09T05:26:09Z</date>
   <groups>
     <group>
       <name>Templates/DiskArray</name>
@@ -11,6 +11,7 @@
     <template>
       <template>monitor_SANSwitch_Brocade</template>
       <name>博科光纤交换机监控模板</name>
+      <description>## Overview 博科光纤交换机通用监控模板 包括CPU利用率、内存利用率（部分型号不支持）、端口状态、电源风扇状态 将宏{$CLOUD\_SNMP\_COMMUNITY}替换为实际团体字即可 ## Author zhangzhefeng</description>
       <groups>
         <group>
           <name>Templates/DiskArray</name>

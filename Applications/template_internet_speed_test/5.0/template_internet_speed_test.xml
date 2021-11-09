@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:49Z</date>
+  <date>2021-11-09T05:17:17Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SpeedTest</template>
       <name>SpeedTest</name>
+      <description>## Overview Zabbix Speed Teste Tempalte. Descrição em breve ## Author Fabricio Guiamraes</description>
       <groups>
         <group>
           <name>Templates</name>

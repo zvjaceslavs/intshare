@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:44Z</date>
+  <date>2021-11-09T04:55:54Z</date>
   <groups>
     <group>
       <name>_Creditas</name>
@@ -11,6 +11,7 @@
     <template>
       <template>16 GammuSMS</template>
       <name>16 GammuSMS</name>
+      <description>## Overview Monitoring gammu daemon statistics. ODBC connected queries into gammu database. ## Author Pavel Mlčoch</description>
       <groups>
         <group>
           <name>_Creditas</name>

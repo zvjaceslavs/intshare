@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:22Z</date>
+  <date>2021-11-09T04:53:04Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>VNX_monitoring_and_reporting</template>
       <name>VNX_monitoring_and_reporting</name>
+      <description>## Overview Use this template to monitor EMC VNX Monitoring&amp;reporting aka VNX M&amp;R vApp/linux instance via passive checks. Installation instructions here: &lt;https://github.com/Vnet-as/VNX_Monitoring_and_reporting> Enjoy! ## Author Peter Vilhan</description>
       <groups>
         <group>
           <name>Templates</name>

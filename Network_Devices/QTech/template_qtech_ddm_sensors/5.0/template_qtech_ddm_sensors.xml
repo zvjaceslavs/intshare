@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:38Z</date>
+  <date>2021-11-09T05:02:16Z</date>
   <groups>
     <group>
       <name>Qtech</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Qtech_Sensors</template>
       <name>Qtech_Sensors</name>
+      <description>## Overview Template for Qtech. Discovering RX power, TX power, Bias, Voltage and Temp sensors of installed SFP (SFP modules must be with DDM support). PS: Without triggers. Must be later.</description>
       <groups>
         <group>
           <name>Qtech</name>

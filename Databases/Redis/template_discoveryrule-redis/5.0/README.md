@@ -1,5 +1,9 @@
 # REDIS
 
+## Description
+
+## Overview Discovery rule for auto find and monitor all redis on server monitor: port, status, ping, dbsize, ram ... ### Please Download Full and updated from GitHub ### ## Author faridarjmand 
+
 ## Overview
 
 Discovery rule for auto find and monitor all redis on server  

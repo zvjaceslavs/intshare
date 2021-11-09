@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:18Z</date>
+  <date>2021-11-09T05:20:32Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Power Supply S6700 SNMP</template>
       <name>Power Supply S6700 SNMP</name>
+      <description>## Overview Regra de Descoberta com Filtros para monitoramento de PSU na linha S6700.. Testado com S6720, S5720, S6730, S5732 ## Author carlosviatroski</description>
       <groups>
         <group>
           <name>Templates</name>

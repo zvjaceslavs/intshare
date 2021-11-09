@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:40:03Z</date>
+  <date>2021-11-09T04:44:37Z</date>
   <groups>
     <group>
       <name>Windows Event Log</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Event Windows Backup</template>
       <name>Event Windows Backup</name>
+      <description>## Overview check windows backup (wbadmin tool) event log tested on win 2012 r2</description>
       <groups>
         <group>
           <name>Windows Event Log</name>

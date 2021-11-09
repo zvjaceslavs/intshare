@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:23Z</date>
+  <date>2021-11-09T05:00:29Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Exchange 2016</template>
       <name>Exchange 2016</name>
+      <description>## Overview Converted the Exchange 2010 Performance Monitoring Templates. Removed unsupported items and replaced them with equivalents that could be found. Added some new items and graphs. ## Author matt snead</description>
       <groups>
         <group>
           <name>Templates</name>

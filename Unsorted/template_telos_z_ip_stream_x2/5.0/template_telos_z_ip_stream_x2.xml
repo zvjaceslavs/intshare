@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:12Z</date>
+  <date>2021-11-09T04:59:10Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,7 @@
     <template>
       <template>SNMP Telos ZIPStream-X2</template>
       <name>SNMP Telos ZIPStream-X2</name>
-      <description>Telos Z/IPStream-X2 SNMP Template. Created by Roman Ermakov r.ermakov@emg.fm v1.0 - 2019-01-29 - Initial release Usage notes: 1. Install and configure SNMP Service on your Windows server; 2. Install and activate ZIPStream software; 3. Run: C:\Program Files (x86)\ZIPStream X2\snmpmgr.exe register 4. Restart SNMP Service If you need the MIB, get TLSCORP-ZIPSTREAM-X2-MIB.txt from installation folder.</description>
+      <description>## Description Telos Z/IPStream-X2 SNMP Template. Created by Roman Ermakov r.ermakov@emg.fm v1.0 - 2019-01-29 - Initial release Usage notes: 1. Install and configure SNMP Service on your Windows server; 2. Install and activate ZIPStream software; 3. Run: C: Program Files (x86) ZIPStream X2 snmpmgr.exe register 4. Restart SNMP Service If you need the MIB, get TLSCORP-ZIPSTREAM-X2-MIB.txt from installation folder. ## Overview Template for **Telos Z/IP Stream X2** software with SNMP management. &lt;https://www.telosalliance.com/Telos/ZIPStream-X2> **Items features:** * Count of Audio sources * Count of Audio sources with errors * Count of Audio sources with silence * Count of Live Streams * Count of Live Streams with errors * Product name * Product version **Triggers features:** * Last two checks - streams have errors; audio sources have silence **Discovery features:** * Items: Livewire sources and destinations Enabled/Disabled, Address, Name, Gain etc. * Triggers: Gain changed, Source Address changed, Port disabled **Usage notes:** 1. Install and configure SNMP Service on your Windows server; 2. Install and activate ZIPStream software; 3. Run: *C:\Program Files (x86)\ZIPStream X2\snmpmgr.exe register* 4. Restart SNMP Service If you need the MIB get TLSCORP-ZIPSTREAM-X2-MIB.txt from installation folder. ## Author Roman Ermakov</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:45:08Z</date>
+  <date>2021-11-09T05:19:32Z</date>
   <groups>
     <group>
       <name>CPD</name>
@@ -14,6 +14,7 @@
     <template>
       <template>Volt Pop Protect SNMP</template>
       <name>Volt Pop Protect SNMP</name>
+      <description>## Overview</description>
       <groups>
         <group>
           <name>CPD</name>

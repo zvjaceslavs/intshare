@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:54Z</date>
+  <date>2021-11-09T05:17:55Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -14,6 +14,7 @@
     <template>
       <template>SNMP QNAP</template>
       <name>SNMP QNAP</name>
+      <description>## Overview This template allows you to quickly get up and running with monitoring of QNAP line of devices (NAS). It allows for auto-discovering of hard drives, LUNs, pools, volumes, system HW and automatically applies appropriate triggers for the discovered items. If you wish to see new items added please open an issue @ [albinbatman/zabbix-qnap-template @ GitHub](https://github.com/albinbatman/zabbix-qnap-template). All new updates will be released on github.</description>
       <templates>
         <template>
           <name>Template Net Network Generic Device SNMP</name>

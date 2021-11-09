@@ -1,5 +1,9 @@
 # Intel RST with js
 
+## Description
+
+## Overview This template is for discovering and monitoring Intel RST (Intel VROC) storage controllers. Works with zabbix 4.2 and higher. Template uses action with zabbix API. Instuctions is on github page <https://github.com/mykolq/zabbix_intel_rst_template> 
+
 ## Overview
 
 This template is for discovering and monitoring Intel RST (Intel VROC) storage controllers. Works with zabbix 4.2 and higher. Template uses action with zabbix API.
@@ -40,23 +44,23 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Logical disks discovery|<p>-</p>|`Dependent item`|ldlld<p>Update: 0</p>|
 |Physical disks discovery|<p>-</p>|`Dependent item`|pdlld<p>Update: 0</p>|
+|Logical disks discovery|<p>-</p>|`Dependent item`|ldlld<p>Update: 0</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Intel RST All Pds LLD info|<p>JSON for lld of physical disks and for SMART template</p>|`Dependent item`|irst.SMART.lld<p>Update: 0</p>|
 |Intel RST All Pds info|<p>-</p>|`Dependent item`|irst.pd<p>Update: 0</p>|
 |RST cli path|<p>Path to needed version of utility (depends on driver version)</p>|`Zabbix agent`|wmi.get[root\cimv2,select DriverVersion from Win32_PnPSignedDriver WHERE DriverProviderName like '%Intel%' and DeviceClass like 'SCSIADAPTER' and not DeviceName like '%Ethernet Virtual Storage%']<p>Update: {$INTERNAL_ITEMS_REQUEST_PERIOD}</p>|
-|Intel RST All Info|<p>Get all info from rst controller(cli path + 'I' key)</p>|`Zabbix agent`|irst.allinfo[{$IRST_CLI}]<p>Update: {$STOR_CTRL_REQUEST_PERIOD}</p>|
 |Intel RST All Lds info|<p>-</p>|`Dependent item`|irst.ld<p>Update: 0</p>|
-|Logical disk "{#LDNAME}" level|<p>-</p>|`Dependent item`|irst.raid.level.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
-|Logical disk "{#LDNAME}" disks count|<p>-</p>|`Dependent item`|irst.raid.pdcount.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
-|Logical disk "{#LDNAME}" state|<p>-</p>|`Dependent item`|irst.raid.state.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
+|Intel RST All Info|<p>Get all info from rst controller(cli path + 'I' key)</p>|`Zabbix agent`|irst.allinfo[{$IRST_CLI}]<p>Update: {$STOR_CTRL_REQUEST_PERIOD}</p>|
+|Intel RST All Pds LLD info|<p>JSON for lld of physical disks and for SMART template</p>|`Dependent item`|irst.SMART.lld<p>Update: 0</p>|
 |Physical disk "{#SLOT}" serial number|<p>-</p>|`Dependent item`|irst.pd.sn.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
 |Physical disk "{#SLOT}" state|<p>-</p>|`Dependent item`|irst.pd.state.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
 |Physical disk "{#SLOT}" usage|<p>-</p>|`Dependent item`|irst.pd.usage.["{#SLOT}"]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" level|<p>-</p>|`Dependent item`|irst.raid.level.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" disks count|<p>-</p>|`Dependent item`|irst.raid.pdcount.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" state|<p>-</p>|`Dependent item`|irst.raid.state.[{#LDNAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -70,12 +74,12 @@ There are no template links in this template.
 |Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE1}". Disk SN is "{ITEM.VALUE2}"|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Verify|Rebuilding)}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Normal)}=1</p>|warning|
 |Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE}". Disk SN is "{ITEM.VALUE2}"|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Missing|Failed|Smart event triggered)}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Normal)}=1</p>|high|
 |Intel RST: Physical disk "{#SLOT}" was replaced by  sn "{ITEM.VALUE}"|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.sn.["{#SLOT}"].diff()}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>2</p><p>**Recovery expression**: </p>|information|
+|Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE1}". Disk SN is "{ITEM.VALUE2}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(need to set it)}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: </p>|information|
+|Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE1}". Disk SN is "{ITEM.VALUE2}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Verify|Rebuilding)}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Normal)}=1</p>|warning|
+|Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE}". Disk SN is "{ITEM.VALUE2}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Missing|Failed|Smart event triggered)}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Normal)}=1</p>|high|
+|Intel RST: Physical disk "{#SLOT}" was replaced by  sn "{ITEM.VALUE}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.sn.["{#SLOT}"].diff()}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>2</p><p>**Recovery expression**: </p>|information|
 |Intel RST: Logical disk "{#LDNAME}" is "{ITEM.VALUE1}". LD level: {ITEM.VALUE2} Disks count: {ITEM.VALUE3} (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Degraded|Failed)}=1 and {Intel RST with js:irst.raid.level.[{#LDNAME}].last()}>0 and {Intel RST with js:irst.raid.pdcount.[{#LDNAME}].last()}>0</p><p>**Recovery expression**: {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Normal)}=1</p>|high|
 |Intel RST: Logical disk "{#LDNAME}" is "{ITEM.VALUE}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Initializing)}=1</p><p>**Recovery expression**: {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Normal)}=1</p>|information|
 |Intel RST: Logical disk "{#LDNAME}" is "{ITEM.VALUE}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Rebuilding|Verify and Fix,#1)}=1 and {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Degraded|Failed,#3)}=0</p><p>**Recovery expression**: {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Normal)}=1</p>|warning|
 |Intel RST: Logical disk "{#LDNAME}" state was changed from "Degraded" state to  "{ITEM.VALUE}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Rebuilding|Verify and Fix,#1)}=1 and {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Degraded,#2)}=1</p><p>**Recovery expression**: </p>|information|
 |Intel RST: Logical disk "{#LDNAME}" state was changed from "Failed" state to  "{ITEM.VALUE}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Rebuilding|Verify and Fix,#1)}=1 and {Intel RST with js:irst.raid.state.[{#LDNAME}].regexp(Failed,#2)}=1</p><p>**Recovery expression**: </p>|information|
-|Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE1}". Disk SN is "{ITEM.VALUE2}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(need to set it)}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: </p>|information|
-|Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE1}". Disk SN is "{ITEM.VALUE2}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Verify|Rebuilding)}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Normal)}=1</p>|warning|
-|Intel RST: Physical disk "{#SLOT}" is "{ITEM.VALUE}". Disk SN is "{ITEM.VALUE2}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Missing|Failed|Smart event triggered)}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>0</p><p>**Recovery expression**: {Intel RST with js:irst.pd.state.["{#SLOT}"].iregexp(Normal)}=1</p>|high|
-|Intel RST: Physical disk "{#SLOT}" was replaced by  sn "{ITEM.VALUE}" (LLD)|<p>-</p>|<p>**Expression**: {Intel RST with js:irst.pd.sn.["{#SLOT}"].diff()}=1 and {Intel RST with js:irst.pd.sn.["{#SLOT}"].strlen()}>2</p><p>**Recovery expression**: </p>|information|

@@ -2,7 +2,7 @@
 
 ## Description
 
-NetGear ReadyNAS 102
+## Description NetGear ReadyNAS 102 ## Overview 1. Discovery Disk a. Capacity b. Model c. Serial d. State e. Temperature 2. Discovery Volume a. Freespace b. RaidLevel c. Name d. Size e. Status 3. fanRPM 4. fanStatus 5. S/N 6. Firmware 7. Temperature CPU NEED in Macros HOST {$SNMP _COMMUNITY} {$SNMP _PORT} {$FAN _MINIMUM _RPM} Tested ReadyNas 102 Version 6.2.5 Zabbix 2.4.6 ## Author Bonardi 
 
 ## Overview
 
@@ -107,11 +107,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|S/N|<p>-</p>|`SNMP agent`|nasMgrSerialNUM.0<p>Update: 30</p>|
 |fanStatus|<p>-</p>|`SNMP agent`|fanStatus<p>Update: 30</p>|
+|Temperature|<p>-</p>|`SNMP agent`|temperatureValue.1<p>Update: 30</p>|
 |Firmware|<p>-</p>|`SNMP agent`|nasMgrSoftwareVersion.0<p>Update: 30</p>|
 |fanRPM|<p>-</p>|`SNMP agent`|fanRPM<p>Update: 30</p>|
-|Temperature|<p>-</p>|`SNMP agent`|temperatureValue.1<p>Update: 30</p>|
-|S/N|<p>-</p>|`SNMP agent`|nasMgrSerialNUM.0<p>Update: 30</p>|
 |[{#SNMPVALUE}]_DiskCapacity|<p>-</p>|`SNMP agent`|DiskCapacity[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |[{#SNMPVALUE}]_DiskModel|<p>-</p>|`SNMP agent`|DiskModel[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |[{#SNMPVALUE}]_DiskSerial|<p>-</p>|`SNMP agent`|DiskSerial[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|

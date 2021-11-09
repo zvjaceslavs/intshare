@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:41:04Z</date>
+  <date>2021-11-09T04:51:05Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>IPMI Dell PowerEdge R415</template>
       <name>IPMI Dell PowerEdge R415</name>
+      <description>## Overview Simple IPMI template fetching: * Read Chassis Temperature * Read System Voltage * Read Fan speeds * Read Power (Voltage/Watts) ## Author Mads Falch Larsen</description>
       <groups>
         <group>
           <name>Templates</name>

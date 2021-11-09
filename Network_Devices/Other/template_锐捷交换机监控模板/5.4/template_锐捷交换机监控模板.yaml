@@ -1,0 +1,669 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:26:07Z'
+  groups:
+    -
+      uuid: 36bff6c29af64692839d077febfc7079
+      name: 'Templates/Network devices'
+  templates:
+    -
+      uuid: e7edb8b004ff430bbfa12fb626f90e9f
+      template: monitor_Switch_Ruijie
+      name: 锐捷交换机监控模板
+      description: |
+        ## Overview
+        
+        锐捷（Ruijie）RGOS系列交换机通用监控模板
+        
+        
+        主要包括CPU利用率、内存利用率、端口状态、端口带宽利用率、端口报文速率、电源风扇状态
+        
+        
+        将宏 {$CLOUD\_SNMP\_COMMUNITY} 替换为实际团体字即可
+        
+        
+        
+        ## Author
+        
+        zhangzhefeng
+        
+        
+      groups:
+        -
+          name: 'Templates/Network devices'
+      items:
+        -
+          uuid: c577cf88ec1049d084644124263d9b20
+          name: 'CPU 5分钟利用率'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.4881.1.1.10.2.36.1.1.3.0
+          key: CPUUsageIn5Min
+          delay: 10m
+          history: 3d
+          trends: 0d
+          tags:
+            -
+              tag: Application
+              value: CPU情况
+          triggers:
+            -
+              uuid: e3d2aca9c1fa49bd98334964c79fb67b
+              expression: 'last(/monitor_Switch_Ruijie/CPUUsageIn5Min)>{$CPU_USAGE_THRESHOLD}'
+              name: CPU利用率高
+              priority: HIGH
+              type: MULTIPLE
+              manual_close: 'YES'
+        -
+          uuid: 896e097d0add4fe1a2b84313ee9a2de8
+          name: ping丢包率
+          type: SIMPLE
+          key: 'icmppingloss[,10,,,]'
+          delay: 5m
+          history: 7d
+          trends: 0d
+          value_type: FLOAT
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: ca00f291e97547088049f4e9f34cb4bf
+              expression: 'avg(/monitor_Switch_Ruijie/icmppingloss[,10,,,],10m)>{$ICMP_LOSS_WARN}'
+              name: 'ICMP ping 丢包'
+              priority: AVERAGE
+              description: 'Last value: {ITEM.LASTVALUE1}.'
+              type: MULTIPLE
+              manual_close: 'YES'
+              dependencies:
+                -
+                  name: 'ICMP ping不可达'
+                  expression: 'last(/monitor_Switch_Ruijie/icmpping[,5,,,],#1)=0 and last(/monitor_Switch_Ruijie/icmpping[,5,,,],#2)=1'
+        -
+          uuid: 5829abe3f5664225aa70b70ba3aded2f
+          name: ping时延
+          type: SIMPLE
+          key: 'icmppingsec[,10,,,,avg]'
+          delay: 5m
+          history: 7d
+          trends: 0d
+          value_type: FLOAT
+          units: s
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: 4b9e6c535b014aec953bd96bd4e1b3b6
+              expression: 'min(/monitor_Switch_Ruijie/icmppingsec[,10,,,,avg],10m)>{$ICMP_RESPONSE_TIME_WARN}'
+              name: 'ICMP ping 时延高'
+              priority: AVERAGE
+              description: 'Last value: {ITEM.LASTVALUE1}.'
+              type: MULTIPLE
+              manual_close: 'YES'
+              dependencies:
+                -
+                  name: 'ICMP ping不可达'
+                  expression: 'last(/monitor_Switch_Ruijie/icmpping[,5,,,],#1)=0 and last(/monitor_Switch_Ruijie/icmpping[,5,,,],#2)=1'
+        -
+          uuid: a99b5260a6c04fb08998f9c68e68ffb7
+          name: 'ICMP ping'
+          type: SIMPLE
+          key: 'icmpping[,5,,,]'
+          history: 7d
+          trends: 0d
+          tags:
+            -
+              tag: Application
+              value: ping检测
+          triggers:
+            -
+              uuid: 17842279cc5c430fb6b936c202d15ce8
+              expression: 'last(/monitor_Switch_Ruijie/icmpping[,5,,,],#1)=0 and last(/monitor_Switch_Ruijie/icmpping[,5,,,],#2)=1'
+              name: 'ICMP ping不可达'
+              priority: HIGH
+              type: MULTIPLE
+              manual_close: 'YES'
+            -
+              uuid: 6b9df881410f4e20b2f4444ad27c2b09
+              expression: 'last(/monitor_Switch_Ruijie/icmpping[,5,,,],#1)=0'
+              name: 监控失效（ping不通）
+              priority: INFO
+              manual_close: 'YES'
+              tags:
+                -
+                  tag: 监控失效原因
+                  value: ping不通
+        -
+          uuid: ffc8e140d516481b860b2d119d4a807b
+          name: 系统信息
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.1.0
+          key: SystemDescription
+          delay: 1h
+          history: 3d
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: 系统信息
+          triggers:
+            -
+              uuid: f3cac5fadab54dccacbab2f246dceb70
+              expression: 'nodata(/monitor_Switch_Ruijie/SystemDescription,12h)=1'
+              name: 监控失效（snmp不通）
+              priority: INFO
+              manual_close: 'YES'
+              tags:
+                -
+                  tag: 监控失效原因
+                  value: snmp不通
+        -
+          uuid: ae8ae603e96943c89ad9af0743ec4bda
+          name: 运行时间
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.3.0
+          key: SystemUpTime
+          delay: 1h
+          history: 3d
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: 系统信息
+      discovery_rules:
+        -
+          uuid: 38e2427f155a43b0b71c2c141d68f876
+          name: 风扇发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.4881.1.1.10.2.1.1.21.1.3]'
+          key: FanDiscovery
+          delay: 1h
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 7f5b4cf24f4b49c98d6043fe747c01da
+              name: '风扇运行状态 {#SNMPVALUE}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.4881.1.1.10.2.1.1.21.1.2.{#SNMPINDEX}'
+              key: 'FanOperationStatus.[{#SNMPINDEX}]'
+              delay: 30m
+              history: 3d
+              trends: 0d
+              tags:
+                -
+                  tag: Application
+                  value: 风扇情况
+              trigger_prototypes:
+                -
+                  uuid: 0de0501f4bfa4088928af3947682c5cf
+                  expression: 'last(/monitor_Switch_Ruijie/FanOperationStatus.[{#SNMPINDEX}],#1)<>4'
+                  name: 风扇运行异常
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+        -
+          uuid: adecad165ba64d9e9263572e8d867948
+          name: 端口发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFDESCR},IF-MIB::ifDescr,{#IFALIAS},IF-MIB::ifAlias]'
+          key: InterfaceDiscovery_status
+          delay: 12h
+          filter:
+            conditions:
+              -
+                macro: '{#IFDESCR}'
+                value: '.*Vlan.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+          lifetime: 0d
+          description: |
+            You may also consider using IF-MIB::ifType or IF-MIB::ifAlias for discovery depending on your filtering needs.
+            
+            {$CLOUD_SNMP_COMMUNITY} is a global macro.
+          item_prototypes:
+            -
+              uuid: c4fd727c5a3a48dbb271b354f0582016
+              name: '端口 {#IFDESCR}({#IFALIAS})状态'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifOperStatus.{#SNMPINDEX}'
+              key: 'InterfaceOperationStatus.[{#SNMPINDEX}]'
+              delay: 5m
+              history: 3d
+              trends: 0d
+              description: 'The current operational state of the interface.'
+              tags:
+                -
+                  tag: Application
+                  value: 端口状态
+              trigger_prototypes:
+                -
+                  uuid: 2f2d4acd99b442589be8c1ca8629bce5
+                  expression: 'last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#2)=1 and  last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#1)=2'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#2)=1 and  last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#1)=1'
+                  name: '端口:{#IFDESCR} down'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                  tags:
+                    -
+                      tag: 端口描述
+                      value: '{#IFALIAS}'
+        -
+          uuid: 3dff4a62b15a4abfb80a0dfb90e37eb4
+          name: 端口发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFDESCR},IF-MIB::ifDescr,{#IFSTATUS},IF-MIB::ifOperStatus,{#IFALIAS},IF-MIB::ifAlias]'
+          key: InterfaceDiscovery_traffic
+          delay: 12h
+          filter:
+            evaltype: AND
+            conditions:
+              -
+                macro: '{#IFSTATUS}'
+                value: '1'
+                formulaid: E
+              -
+                macro: '{#IFDESCR}'
+                value: '.*Vlan.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: B
+              -
+                macro: '{#IFDESCR}'
+                value: '.*Loop.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+              -
+                macro: '{#IFDESCR}'
+                value: '.*VLAN.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: C
+              -
+                macro: '{#IFDESCR}'
+                value: '.*NULL.*'
+                operator: NOT_MATCHES_REGEX
+                formulaid: D
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 6cf0fb9c35be49b1a3c7a87e11e4214c
+              name: '端口带宽 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.15.{#SNMPINDEX}'
+              key: 'InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 12h
+              history: 3d
+              trends: 0d
+              units: Mbps
+              tags:
+                -
+                  tag: Application
+                  value: 端口带宽
+            -
+              uuid: b879d0fb0525435481f250eb34c4eef4
+              name: '入方向带宽利用率 {#IFDESCR}({#IFALIAS})'
+              type: CALCULATED
+              key: 'InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              value_type: FLOAT
+              units: '%'
+              params: 'last(//InterfaceInTraffic.[{#SNMPINDEX},{#IFDESCR}])/last(//InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}])/10000'
+              tags:
+                -
+                  tag: Application
+                  value: 入方向带宽利用率
+              trigger_prototypes:
+                -
+                  uuid: 2abee067667645d6ba49379296a4550f
+                  expression: 'last(/monitor_Switch_Ruijie/InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}])>{$BANDWIDTH_USAGE_IN_THRESHOLD}'
+                  name: '{#IFDESCR} 入方向带宽利用率高'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                  tags:
+                    -
+                      tag: 端口描述
+                      value: '{#IFALIAS}'
+            -
+              uuid: 998445e3f3294871869a91d01a456a02
+              name: '入方向广播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.9.{#SNMPINDEX}'
+              key: 'InterfaceInBroadcastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向广播包流量
+            -
+              uuid: 110109770f89427bbcf9fad588e9d0bd
+              name: '入方向组播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.9.{#SNMPINDEX}'
+              key: 'InterfaceInMulticastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向组播报文速率
+            -
+              uuid: 0ba112375cce46a280dc58a1ff2a0198
+              name: '入方向错包 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.14.{#SNMPINDEX}'
+              key: 'InterfaceInPacketError.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 30m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向错包
+              trigger_prototypes:
+                -
+                  uuid: 7597a11326554b298ab5bff667ff58f8
+                  expression: 'last(/monitor_Switch_Ruijie/InterfaceInPacketError.[{#SNMPINDEX},{#IFDESCR}])>{$ERROR_PACKETS_IN_THRESHOLD}'
+                  name: '{#IFDESCR} 入方向错包率高'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                  tags:
+                    -
+                      tag: 端口描述
+                      value: '{#IFALIAS}'
+            -
+              uuid: a2dde32df4664069a999f9ffa63581fb
+              name: '入方向流量 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.6.{#SNMPINDEX}'
+              key: 'InterfaceInTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              units: bps
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向流量
+            -
+              uuid: a448be12afb5423f8f171fa463d223a8
+              name: '入方向单播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.7.{#SNMPINDEX}'
+              key: 'InterfaceInUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 入方向单播报文速率
+            -
+              uuid: 3279531670194c98bd1a27e32c655701
+              name: '出方向带宽利用率 {#IFDESCR}({#IFALIAS})'
+              type: CALCULATED
+              key: 'InterfaceOutBandwidthUsage[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              value_type: FLOAT
+              units: '%'
+              params: 'last(//InterfaceOutTraffic.[{#SNMPINDEX},{#IFDESCR}])/last(//InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}])/10000'
+              tags:
+                -
+                  tag: Application
+                  value: 出方向带宽利用率
+              trigger_prototypes:
+                -
+                  uuid: 5733855df7b444498d0595a2e040f49e
+                  expression: 'last(/monitor_Switch_Ruijie/InterfaceOutBandwidthUsage[{#SNMPINDEX},{#IFDESCR}])>{$BANDWIDTH_USAGE_OUT_THRESHOLD}'
+                  name: '{#IFDESCR} 出方向带宽利用率高'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                  tags:
+                    -
+                      tag: 端口描述
+                      value: '{#IFALIAS}'
+            -
+              uuid: 2cfad68c8ff54beca7ebd072ab0ef004
+              name: '出方向广播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.13.{#SNMPINDEX}'
+              key: 'InterfaceOutBroadcastPacketTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向广播报文速率
+            -
+              uuid: 2a184c9bf96245f598acacd37649c938
+              name: '出方向组播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.12.{#SNMPINDEX}'
+              key: 'InterfaceOutMulticastPackestTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 3d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向组播报文速率
+            -
+              uuid: 4004d7f404ab4e4cb17eed13c6679926
+              name: '出方向错包 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.20.{#SNMPINDEX}'
+              key: 'InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 30m
+              history: 7d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向错包
+              trigger_prototypes:
+                -
+                  uuid: f9a22c9a847f42a0a5bb890de7b0c183
+                  expression: 'last(/monitor_Switch_Ruijie/InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}])>{$ERROR_PACKETS_OUT_THRESHOLD}'
+                  name: '{#IFDESCR} 出方向错包率高'
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+                  tags:
+                    -
+                      tag: 端口描述
+                      value: '{#IFALIAS}'
+            -
+              uuid: 4878d58a252941aea9d52cf577019ce6
+              name: '出方向流量 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.10.{#SNMPINDEX}'
+              key: 'InterfaceOutTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              units: bps
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向流量
+            -
+              uuid: a460ea735f884928a2d5cf9037b28e47
+              name: '出方向单播报文速率 {#IFDESCR}({#IFALIAS})'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.11.{#SNMPINDEX}'
+              key: 'InterfaceOutUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]'
+              delay: 10m
+              history: 30d
+              trends: 0d
+              units: pps
+              preprocessing:
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: 出方向单播报文速率
+        -
+          uuid: 5c3204e7d4cd464cb50e9a0c949aa56f
+          name: 内存发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.4881.1.1.10.2.35.1.1.1.2]'
+          key: MemoryDiscovery
+          delay: 1h
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 9b9c7dea59e64c7bb7f3e1527c351772
+              name: '内存利用率 {#SNMPVALUE}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.4881.1.1.10.2.35.1.1.1.3.{#SNMPINDEX}'
+              key: 'MemoryUsage.[{#SNMPINDEX}]'
+              delay: 10m
+              history: 3d
+              trends: 0d
+              units: '%'
+              tags:
+                -
+                  tag: Application
+                  value: 内存情况
+              trigger_prototypes:
+                -
+                  uuid: a80b03fbad9e4db48d74805511721da2
+                  expression: 'last(/monitor_Switch_Ruijie/MemoryUsage.[{#SNMPINDEX}])>{$MEMORY_USAGE_THRESHOLD}'
+                  name: 内存利用率高
+                  priority: HIGH
+                  type: MULTIPLE
+        -
+          uuid: ffcc6149cbd74bf29e545dba5594583d
+          name: 电源发现
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SNMPVALUE},1.3.6.1.4.1.4881.1.1.10.2.1.1.18.1.3]'
+          key: PowerDiscovery
+          delay: 1h
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: caabad009c2c4cbaa8327c7e46f9f89d
+              name: '电源运行状态 {#SNMPVALUE}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.4881.1.1.10.2.1.1.18.1.2.{#SNMPINDEX}'
+              key: 'PowerSupplyStatus.[{#SNMPINDEX}]'
+              delay: 30m
+              history: 3d
+              trends: 0d
+              tags:
+                -
+                  tag: Application
+                  value: 电源情况
+              trigger_prototypes:
+                -
+                  uuid: c417064b2ec645e3b3bffc19f36bf4f9
+                  expression: 'last(/monitor_Switch_Ruijie/PowerSupplyStatus.[{#SNMPINDEX}],#1)<>4'
+                  name: 电源运行异常
+                  priority: HIGH
+                  type: MULTIPLE
+                  manual_close: 'YES'
+      macros:
+        -
+          macro: '{$BANDWIDTH_USAGE_IN_THRESHOLD}'
+          value: '90'
+        -
+          macro: '{$BANDWIDTH_USAGE_OUT_THRESHOLD}'
+          value: '90'
+        -
+          macro: '{$CLOUD_SNMP_COMMUNITY}'
+          value: public
+        -
+          macro: '{$CPU_USAGE_THRESHOLD}'
+          value: '90'
+        -
+          macro: '{$ERROR_PACKETS_IN_THRESHOLD}'
+          value: '10'
+        -
+          macro: '{$ERROR_PACKETS_OUT_THRESHOLD}'
+          value: '10'
+        -
+          macro: '{$ICMP_LOSS_WARN}'
+          value: '30'
+        -
+          macro: '{$ICMP_RESPONSE_TIME_WARN}'
+          value: '0.1'
+        -
+          macro: '{$MEMORY_USAGE_THRESHOLD}'
+          value: '90'

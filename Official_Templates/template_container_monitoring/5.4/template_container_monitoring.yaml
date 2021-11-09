@@ -1,0 +1,3000 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:08:51Z'
+  groups:
+    -
+      uuid: 6de1c78d371245e0a1acfe0c1f38562f
+      name: Templates/Prometheus
+  templates:
+    -
+      uuid: ec997c2078654b2990b75396118e5d36
+      template: 'Container Monitoring'
+      name: 'Container Monitoring'
+      description: |
+        ## Overview
+        
+        Template desenvolvido para monitorar containers.
+        
+        
+        - Esse template explora o recurso de integração nativa do Zabbix com o Prometheus.
+        
+        
+        - Com excessão do item master, todos os demais items, além das triggers e gráficos, serão criados por LLD.
+        
+        
+        - No campo URL do item master, foi declarado uma macro. Para setar o valor dessa macro, deve-se linkar o template no host, herdar a macro e setar o valor à nível de host.
+        
+        
+        - A URL declarada, será usada pelo o Zabbix para extrair as métricas expostas em determinada porta pelo o exporter cAdvisor.
+        
+        
+        - A URL deve seguir o seguinte formato: [http://ip\_ou\_dns:port/metrics](http://ip_ou_dnsport) ou [https://ip\_ou\_dns:port/metrics](https://ip_ou_dnsport)
+        
+        
+        - O IP/DNS, aponta para o servidor onde os containers estão rodando.
+        
+        
+        - A porta deve ser a mesma que o cAdvisor utiliza para expor as métricas. Por padrão é a 8080.
+        
+        
+        - O Template foi desenvolvido na versão 4.4.1 do Zabbix.
+        
+        
+        
+        ## Author
+        
+        Lucas de Araújo
+        
+        
+      groups:
+        -
+          name: Templates/Prometheus
+      items:
+        -
+          uuid: 4080ef6df27f42169306b4b0f28b594a
+          name: 'cAdvisor Exporter'
+          type: HTTP_AGENT
+          key: master
+          delay: 5m
+          trends: '0'
+          value_type: TEXT
+          timeout: 1m
+          url: '{$URL}'
+          tags:
+            -
+              tag: Application
+              value: master
+      discovery_rules:
+        -
+          uuid: 11c49e9ccd0047749b1c91b7e9b7b166
+          name: 'LLD - container_cpu_load_average_10s'
+          type: DEPENDENT
+          key: container_cpu_load_average_10s
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 86e964e9a50e4863b901ddb50ecdf816
+              name: '{#METRIC} on {#ID}'
+              type: DEPENDENT
+              key: 'cpu[{#METRIC},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 6bf56b0ec07b47e3ba3ddbd77df63e93
+                  expression: 'last(/Container Monitoring/cpu[{#METRIC},{#ID}])>0'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 88230cb782fc4ec2849af31b268800d0
+              name: 'container_cpu_load_average_10s no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'cpu[{#METRIC},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_cpu_load_average_10s{id=~".*"}'
+        -
+          uuid: d4df9f7f2c06402eae2a9de5582a7a2a
+          name: 'LLD - container_cpu_system_seconds_total'
+          type: DEPENDENT
+          key: container_cpu_system_seconds_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: d9d8893eefbb4d7eb32a16aaf1954e11
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_cpu_system_seconds_total[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: e91a63892477449589ed74a24069d5cd
+                  expression: 'last(/Container Monitoring/container_cpu_system_seconds_total[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 2a6ab07f192d4c1da97a58b64572af5c
+              name: 'container_cpu_system_seconds_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_cpu_system_seconds_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_cpu_system_seconds_total{id=~".*"}'
+        -
+          uuid: 9552dfddf21940eb8f2fa4d3bf351cdc
+          name: 'LLD - container_cpu_usage_seconds_total'
+          type: DEPENDENT
+          key: container_cpu_usage_seconds_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 8d55d805ce764ec781d19cb830663c7d
+              name: '{#METRIC} na cpu={#CPUI} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_cpu_usage_seconds_total[{#CPU},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{cpu="{#CPU}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: db0100bfd3494088a3e4eaaceafa4c2d
+                  expression: 'last(/Container Monitoring/container_cpu_usage_seconds_total[{#CPU},{#ID}])>50'
+                  name: '{#METRIC} na cpu={#CPUI} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 524983cc230c4d96934b83b74dfdfdde
+              name: 'container_cpu_usage_seconds_total na cpu={#CPUI} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_cpu_usage_seconds_total[{#CPU},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+            -
+              lld_macro: '{#CPU}'
+              path: '$.labels[''cpu'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_cpu_usage_seconds_total{cpu=~".*",id=~".*"}'
+        -
+          uuid: 96d7342b1be4430380c8f520331edb93
+          name: 'LLD - container_cpu_user_seconds_total'
+          type: DEPENDENT
+          key: container_cpu_user_seconds_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 08d0686d1c804071be44da4ffdad1c51
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_cpu_user_seconds_total[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 340231a063cb47f899a7f8a9cd3a37c6
+                  expression: 'last(/Container Monitoring/container_cpu_user_seconds_total[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: a3284c9329ba4a47aaf18fefd89a3e04
+              name: 'container_cpu_user_seconds_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_cpu_user_seconds_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_cpu_user_seconds_total{id=~".*"}'
+        -
+          uuid: b45ad466149c4c6ba273572935057bd9
+          name: 'LLD - container_fs_inodes_free'
+          type: DEPENDENT
+          key: container_fs_inodes_free
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: d28bda1c092d48daad8aff3ee0ee5082
+              name: '{#METRIC} no device={#DEVICE} | id={#ID} | image={#IMAGE} | name={#NAME}'
+              type: DEPENDENT
+              key: 'container_fs_inodes_free[{#DEVICE},{#ID},{#IMAGE},{#NAME}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}",image="{#IMAGE}",name="{#NAME}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#IMAGE}'
+              path: '$.labels[''image'']'
+            -
+              lld_macro: '{#NAME}'
+              path: '$.labels[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_inodes_free{device=~".*",id=~".*",image=~".*",name=~".*"}'
+        -
+          uuid: db1fa2bd0c674214a13cbe8031edcd39
+          name: 'LLD - container_fs_inodes_total'
+          type: DEPENDENT
+          key: container_fs_inodes_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 0c634f20cf7e4e56824e4f12531cf670
+              name: '{#METRIC} no device={#DEVICE} | id={#ID} | image={#IMAGE} | name={#NAME}'
+              type: DEPENDENT
+              key: 'container_fs_inodes_total[{#DEVICE},{#ID},{#IMAGE},{#NAME}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}",image="{#IMAGE}",name="{#NAME}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#IMAGE}'
+              path: '$.labels[''image'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+            -
+              lld_macro: '{#NAME}'
+              path: '$.labels[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_inodes_total{device=~".*",id=~".*",image=~".*",name=~".*"}'
+        -
+          uuid: dc9be4ab15fd4b73b4a8272f4417463a
+          name: 'LLD - container_fs_io_current'
+          type: DEPENDENT
+          key: container_fs_io_current
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: c4b68012852b41edb0e0a97415726c2f
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_io_current[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: a47080cf2afa44729efae6f9ed422d87
+                  expression: 'last(/Container Monitoring/container_fs_io_current[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 9e7a61be37944bf89d7d626d420f8782
+              name: 'container_fs_io_current no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_io_current[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_io_current{device=~".*",id=~".*"}'
+        -
+          uuid: 8e2c4a0170c64976926b8839e9393644
+          name: 'LLD - container_fs_io_time_seconds_total'
+          type: DEPENDENT
+          key: container_fs_io_time_seconds_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: e8b772fd16864be49df1b00571cb27aa
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_io_time_seconds_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 9560cafccd2d430996cf2a72c0e5296c
+                  expression: 'last(/Container Monitoring/container_fs_io_time_seconds_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 15586a89c4464ecc80ce779c9826d1fc
+              name: 'container_fs_io_time_seconds_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_io_time_seconds_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_io_time_seconds_total{device=~".*",id=~".*"}'
+        -
+          uuid: 449abbc8ea1541fcbeef9d855428bca4
+          name: 'LLD - container_fs_io_time_weighted_seconds_total'
+          type: DEPENDENT
+          key: container_fs_io_time_weighted_seconds_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: fc96fbf9120045a598405bbc9cab0608
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_io_time_weighted_seconds_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 2c6ba179c8a94703888db49e94115bea
+                  expression: 'last(/Container Monitoring/container_fs_io_time_weighted_seconds_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: d99b5a8e62da4b94afc569ef2ec00f14
+              name: 'container_fs_io_time_weighted_seconds_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_io_time_weighted_seconds_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_io_time_weighted_seconds_total{device=~".*",id=~".*"}'
+        -
+          uuid: 47e0a3e9cfe0425f87cbfbe9dfb82f85
+          name: 'LLD - container_fs_limit_bytes'
+          type: DEPENDENT
+          key: container_fs_limit_bytes
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 0745b9b8f01d4adeaa599d8bba523a94
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_limit_bytes[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'container_fs_limit_bytes{device=~".*",id=~".*"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 108eaaa45d954a319b4d08419e87cd40
+                  expression: 'last(/Container Monitoring/container_fs_limit_bytes[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 055dab2c2d8641f9946ba28818ff38f4
+              name: container_fs_limit_bytes
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_limit_bytes[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_limit_bytes{device=~".*",id=~".*"}'
+        -
+          uuid: 406778bdbbab43f5a660fddcc837117b
+          name: 'LLD - container_fs_reads_bytes_total'
+          type: DEPENDENT
+          key: container_fs_reads_bytes_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: e028b9206922447dbb8789ab9c12e8f2
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_reads_bytes_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: d705ba88382342aca1b93c56db0adc22
+                  expression: 'last(/Container Monitoring/container_fs_reads_bytes_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 6d37fe73e51b44d08a4566fd796d9812
+              name: 'container_fs_reads_bytes_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_reads_bytes_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_reads_bytes_total{device=~".*",id=~".*"}'
+        -
+          uuid: ee7bc338e17e4de094eb8d238d14ac2d
+          name: 'LLD - container_fs_reads_merged_total'
+          type: DEPENDENT
+          key: container_fs_reads_merged_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 0985a03a66a14b15928ae5391c1881db
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_reads_merged_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 563f82d25a794e74b36c9f0963df6504
+                  expression: 'last(/Container Monitoring/container_fs_reads_merged_total[{#DEVICE},{#ID}])>100'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: dd313e9ec7344d73a0bc1d1cf5208f07
+              name: 'container_fs_reads_merged_total no device={#DEVICE}  e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_reads_merged_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_reads_merged_total{device=~".*",id=~".*"}'
+        -
+          uuid: 82dad44b7b594b2c84381a6785bd6a30
+          name: 'LLD - container_fs_reads_total'
+          type: DEPENDENT
+          key: container_fs_reads_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: b3aa42f378d74c92a63ce9a29bf50dae
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_reads_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 92a250ba43704499b1e576b8215ec8d2
+                  expression: 'last(/Container Monitoring/container_fs_reads_total[{#DEVICE},{#ID}])>100'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: c00896f09f0e49ed82cee0a8f8046e9c
+              name: 'container_fs_reads_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_reads_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_reads_total{device=~".*",id=~".*"}'
+        -
+          uuid: e3e4f0e943c347bbb9492e9b0e90f01a
+          name: 'LLD - container_fs_read_seconds_total'
+          type: DEPENDENT
+          key: container_fs_read_seconds_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 10b7836cf66742dfb0d2f03f481b9335
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_read_seconds_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: a291d4de8a2f48c5a6ed3b5b24fb3dc1
+                  expression: 'last(/Container Monitoring/container_fs_read_seconds_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 0b14d0ea44a742d3855014b2777061c8
+              name: 'container_fs_read_seconds_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_read_seconds_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_read_seconds_total{device=~".*",id=~".*"}'
+        -
+          uuid: 2d75649a593540b187ede5cfd700467e
+          name: 'LLD - container_fs_sector_reads_total'
+          type: DEPENDENT
+          key: container_fs_sector_reads_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 70cba546f1124a1fb0c71a91e360604a
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_sector_reads_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: bd572b5d455e47a2be45b2821905c2c6
+                  expression: 'last(/Container Monitoring/container_fs_sector_reads_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 5e7c7c999fcc48aba64911aeb8e1f8ff
+              name: 'container_fs_sector_reads_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_sector_reads_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_sector_reads_total{device=~".*",id=~".*"}'
+        -
+          uuid: c23b5d95ada244539d6443449fabbd21
+          name: 'LLD - container_fs_sector_writes_total'
+          type: DEPENDENT
+          key: container_fs_sector_writes_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: f13d68a547984a5c8c9763857d80ce57
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_sector_writes_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 8ef6619741834243a904d8d162d70c91
+                  expression: 'last(/Container Monitoring/container_fs_sector_writes_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 1690bd809599460abd84e679a789ed69
+              name: 'container_fs_sector_writes_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_sector_writes_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_sector_writes_total{device=~".*",id=~".*"}'
+        -
+          uuid: 23e17b9172144432b930f74defb1ee94
+          name: 'LLD - container_fs_usage_bytes'
+          type: DEPENDENT
+          key: container_fs_usage_bytes
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: f732088acb3a4b3eb5c3d03853fb1023
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_usage_bytes[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 7bac178b979248a8a3aec2d54e28cdbd
+                  expression: 'last(/Container Monitoring/container_fs_usage_bytes[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: c854803515854853866fa5d788046480
+              name: 'container_fs_usage_bytes no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_usage_bytes[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_usage_bytes{device=~".*",id=~".*"}'
+        -
+          uuid: a96d1df9437a40b990104fc70a61e3d4
+          name: 'LLD - container_fs_writes_bytes_total'
+          type: DEPENDENT
+          key: container_fs_writes_bytes_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 72c689552c9e4df0a552169658003297
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_writes_bytes_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: f278560fdfa74865baad6f458a8a24b6
+                  expression: 'last(/Container Monitoring/container_fs_writes_bytes_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 28b3f7e164f04e739ef21c77dfebd46a
+              name: 'container_fs_writes_bytes_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_writes_bytes_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_writes_bytes_total{device=~".*",id=~".*"}'
+        -
+          uuid: 2c88689b239b4b9399f146efa03ba2b6
+          name: 'LLD - container_fs_writes_merged_total'
+          type: DEPENDENT
+          key: container_fs_writes_merged_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: b0233a2b4881426397fd83d8cb6bf866
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_writes_merged_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: b09a0398788c44889826bc87b9f2b9d2
+                  expression: 'last(/Container Monitoring/container_fs_writes_merged_total[{#DEVICE},{#ID}])>100'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 41377d904d6f4c31964b0124fcc4b891
+              name: 'container_fs_writes_merged_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_writes_merged_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_writes_merged_total{device=~".*",id=~".*"}'
+        -
+          uuid: 777938dc1c5c4cc187c0b664b0527ab4
+          name: 'LLD - container_fs_writes_total'
+          type: DEPENDENT
+          key: container_fs_writes_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: cbeeb89ba2484800be36857aa37b9155
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_writes_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 618dd1d12728431ab620b16e7258f537
+                  expression: 'last(/Container Monitoring/container_fs_writes_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 0c28173ca4e24a8aa63c4405cc5c4838
+              name: 'container_fs_writes_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_writes_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_writes_total{device=~".*",id=~".*"}'
+        -
+          uuid: 911445e5ff4a4066a603c03315eadabc
+          name: 'LLD - container_fs_write_seconds_total'
+          type: DEPENDENT
+          key: container_fs_write_seconds_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: ac2ab05ca7c14a12b56fcb8305104bb1
+              name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+              type: DEPENDENT
+              key: 'container_fs_write_seconds_total[{#DEVICE},{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{device="{#DEVICE}",id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 4a95ddba69174daeb372c6cc939ed101
+                  expression: 'last(/Container Monitoring/container_fs_write_seconds_total[{#DEVICE},{#ID}])>50'
+                  name: '{#METRIC} no device={#DEVICE} e id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 36cbfe3e736845bcbf4c30b7f7f5f07e
+              name: 'container_fs_write_seconds_total no device={#DEVICE} e id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_fs_write_seconds_total[{#DEVICE},{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#DEVICE}'
+              path: '$.labels[''device'']'
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_fs_write_seconds_total{device=~".*",id=~".*"}'
+        -
+          uuid: 2b408d57e54a4216aa6374f60d959cd6
+          name: 'LLD - container_last_seen'
+          type: DEPENDENT
+          key: container_last_seen
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 1665599311e844fe9ec3edc318869056
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_last_seen[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: e6f5768336b4457fbdeff7a772838d8c
+                  expression: 'last(/Container Monitoring/container_last_seen[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: c4b9492787e04be1a8092032b1e8bc77
+              name: 'container_last_seen no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_last_seen[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_last_seen{id=~".*"}'
+        -
+          uuid: 6096cb00399e4d8295a6d34c89971832
+          name: 'LLD - container_memory_cache'
+          type: DEPENDENT
+          key: container_memory_cache
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: f6f0659d375542f290e1e26eeecdc7e5
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_memory_cache[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: c3818b17c91e49518413e7882f18491f
+                  expression: 'last(/Container Monitoring/container_memory_cache[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 60f2d7c9532f40a6a9ff5b334ead8929
+              name: 'container_memory_cache no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_memory_cache[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_memory_cache{id=~".*"}'
+        -
+          uuid: 9481ce8ddb3c4d24a4bd968c069a1145
+          name: 'LLD - container_memory_failcnt'
+          type: DEPENDENT
+          key: container_memory_failcnt
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 71d31f49cb8c40d3acd6652a6ad6317f
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_memory_failcnt[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 5a8c8288b2d74fd39de50b32ed0026bd
+                  expression: 'last(/Container Monitoring/container_memory_failcnt[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 743e24f667ac4e7b81dd6bae4bd29816
+              name: 'container_memory_failcnt no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_memory_failcnt[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_memory_failcnt{id=~".*"}'
+        -
+          uuid: 15655d921268422babb38c212ba07278
+          name: 'LLD - container_memory_failures_total'
+          type: DEPENDENT
+          key: container_memory_failures_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: fdaa2a1e7b1441819c2773377421d4d1
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_memory_failures_total[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: b8ec16b5567a4a06891baa974a2d877d
+                  expression: 'last(/Container Monitoring/container_memory_failures_total[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 6282e484ddeb45419bd6b9a7a360b3c3
+              name: 'container_memory_failures_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_memory_failures_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_memory_failures_total{id=~".*"}'
+        -
+          uuid: 52a358a533fc45f88460c9d42fd02468
+          name: 'LLD - container_memory_rss'
+          type: DEPENDENT
+          key: container_memory_rss
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 8a6f181060af4f8981da544cd9c7a263
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_memory_rss[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 533385555aee49b2905e6c31ab858087
+                  expression: 'last(/Container Monitoring/container_memory_rss[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 3a3becc121814cb88cd76041b2ed950d
+              name: 'container_memory_rss no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_memory_rss[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_memory_rss{id=~".*"}'
+        -
+          uuid: 0817fe9eda00451aabe1a415ca07998c
+          name: 'LLD - container_memory_swap'
+          type: DEPENDENT
+          key: container_memory_swap
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 61c887b5bfd04904ac42da084d592061
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_memory_swap[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: dae1569305ca4711856b2703bfb08087
+                  expression: 'last(/Container Monitoring/container_memory_swap[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 5c8edc8f89154dabaf2edf2e18643f1a
+              name: 'container_memory_swap no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_memory_swap[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_memory_swap{id=~".*"}'
+        -
+          uuid: 740f8807be2a40d3bb8b77d76673943b
+          name: 'LLD - container_memory_usage_bytes'
+          type: DEPENDENT
+          key: container_memory_usage_bytes
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: f8ed731a948e44f391d167e4511dd233
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_memory_usage_bytes[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 334459ea5dc9412aa43f43ca68e7c382
+                  expression: 'last(/Container Monitoring/container_memory_usage_bytes[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: de48db5d61764e23a60df27e2e594501
+              name: 'container_memory_usage_bytes no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_memory_usage_bytes[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_memory_usage_bytes{id=~".*"}'
+        -
+          uuid: ac16a1133ebf473dbd76ac0cbc7205a1
+          name: 'LLD - container_memory_working_set_bytes'
+          type: DEPENDENT
+          key: container_memory_working_set_bytes
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 7f8e125048a8401189bc67639def1855
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_memory_working_set_bytes[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: e9a5dfaff337477ab8725b6a0366c003
+                  expression: 'last(/Container Monitoring/container_memory_working_set_bytes[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 44e83f667bea4c41be88a310549f6780
+              name: 'container_memory_working_set_bytes no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_memory_working_set_bytes[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_memory_working_set_bytes{id=~".*"}'
+        -
+          uuid: c3fc9271944b4890bc87a9701fbc1371
+          name: 'LLD - container_network_receive_bytes_total'
+          type: DEPENDENT
+          key: container_network_receive_bytes_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: e8472e0e0d784645bd5195e0ba73ddb8
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_receive_bytes_total[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 322b8e1aee3942ddaca545310341a53e
+                  expression: 'last(/Container Monitoring/container_network_receive_bytes_total[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: e3bf596cb99d4fb5a3ab66ce7996735b
+              name: 'container_network_receive_bytes_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_receive_bytes_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_receive_bytes_total{id=~".*"}'
+        -
+          uuid: eb3683ba331f4e229b0d2dc72b1d6e1a
+          name: 'LLD - container_network_receive_errors_total'
+          type: DEPENDENT
+          key: container_network_receive_errors_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: a2661839aacd468a8384f0b5ea437d46
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_receive_errors_total[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: daa6fba8e40e4a82860f75aebb4adc6a
+                  expression: 'last(/Container Monitoring/container_network_receive_errors_total[{#ID}])>10'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 344a1c49d68f438fa5a78775663485aa
+              name: 'container_network_receive_errors_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_receive_errors_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_receive_errors_total{id=~".*"}'
+        -
+          uuid: ca53cbebfeb44f029414800611560d99
+          name: 'LLD - container_network_receive_packets_dropped_total'
+          type: DEPENDENT
+          key: container_network_receive_packets_dropped_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: f9680a7e64ef41deb4877877e51888f1
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_receive_packets_dropped_total[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: beb7cc167c2c4e2da56cc0d20d4d0e4f
+                  expression: 'last(/Container Monitoring/container_network_receive_packets_dropped_total[{#ID}])>10'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 9654c916708e4a7a80403e03dc58f6ba
+              name: 'container_network_receive_packets_dropped_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_receive_packets_dropped_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_receive_packets_dropped_total{id=~".*"}'
+        -
+          uuid: b6adba9e7b884ee385b115708278da0e
+          name: 'LLD - container_network_receive_packets_total'
+          type: DEPENDENT
+          key: container_network_receive_packets_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: c2b275aabbe04cb98fbfa3949583e449
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_receive_packets_total[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: cb043d0154f74c25b785a90eda4e98bb
+                  expression: 'last(/Container Monitoring/container_network_receive_packets_total[{#ID}])>1000'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: eeaee084a64648fc9f8551ac6bc3d7d2
+              name: 'container_network_receive_packets_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_receive_packets_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_receive_packets_total{id=~".*"}'
+        -
+          uuid: f126896eca6642de8c76d8fcd6d86077
+          name: 'LLD - container_network_tcp_usage_total'
+          type: DEPENDENT
+          key: container_network_tcp_usage_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: a4e33a13be794e18a3391537915e8091
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_tcp_usage_total[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 890cc44736f3432fb1495e33e06dc082
+                  expression: 'last(/Container Monitoring/container_network_tcp_usage_total[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 430f1504bcb04933aada8c5c78601987
+              name: 'container_network_tcp_usage_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_tcp_usage_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_tcp_usage_total{id=~".*"}'
+        -
+          uuid: a748b0a353a64c1eb3f214490d878c04
+          name: 'LLD - container_network_transmit_bytes_total'
+          type: DEPENDENT
+          key: container_network_transmit_bytes_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 0d294f9364074a9db95b15adb87f1d46
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_transmit_bytes_total[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: e4028bbe7f344d75a16999c04ade9ffe
+                  expression: 'last(/Container Monitoring/container_network_transmit_bytes_total[{#ID}])>100'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 1ef8c75337c84db68a7fa8d77fdc2b28
+              name: 'container_network_transmit_bytes_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_transmit_bytes_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_transmit_bytes_total{id=~".*"}'
+        -
+          uuid: 8bb91655df574a50858b31645fbeef05
+          name: 'LLD - container_network_transmit_errors_total'
+          type: DEPENDENT
+          key: container_network_transmit_errors_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 2704e402db02472f85b89671d7b914e2
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_transmit_errors_total[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 9de2169a60ce42d2b8516fcb48f75d4b
+                  expression: 'last(/Container Monitoring/container_network_transmit_errors_total[{#ID}])>10'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: c6a81837b1dd404485bea1783b76167f
+              name: 'container_network_transmit_errors_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_transmit_errors_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_transmit_errors_total{id=~".*"}'
+        -
+          uuid: 2df90904e427482a89d6dd403eb74287
+          name: 'LLD - container_network_transmit_packets_dropped_total'
+          type: DEPENDENT
+          key: container_network_transmit_packets_dropped_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: e49ebd0bbbc549f4bfb5afe154b355f2
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_transmit_packets_dropped_total[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: a5de44c74268497fb9549b55662e0cb5
+                  expression: 'last(/Container Monitoring/container_network_transmit_packets_dropped_total[{#ID}])>10'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: a4573c163a0d4632afbbaa1136cdd59c
+              name: 'container_network_transmit_packets_dropped_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_transmit_packets_dropped_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_transmit_packets_dropped_total{id=~".*"}'
+        -
+          uuid: 2511fd39065b46788ff3d3bed78309a7
+          name: 'LLD - container_network_transmit_packets_total'
+          type: DEPENDENT
+          key: container_network_transmit_packets_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 1bdf62844781485290f3319f3b6d6f72
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_transmit_packets_total[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: d908bdf5208445b9ad711745d1c0237c
+                  expression: 'last(/Container Monitoring/container_network_transmit_packets_total[{#ID}])>100'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: f420d2813e254e7bad81622ad4795cd9
+              name: 'container_network_transmit_packets_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_transmit_packets_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_transmit_packets_total{id=~".*"}'
+        -
+          uuid: a39af3be5b424dd7825b73f43928bbed
+          name: 'LLD - container_network_udp_usage_total'
+          type: DEPENDENT
+          key: container_network_udp_usage_total
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 7fe43f549fb24efc8d2ec35fceda7547
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_network_udp_usage_total[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: d75207655f8d407381fb4da9b51b9adf
+                  expression: 'last(/Container Monitoring/container_network_udp_usage_total[{#ID}])>50'
+                  name: '{#METRIC} no id={#ID}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 8cb2aff935e647ad88b992a833b445e7
+              name: 'container_network_udp_usage_total no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_network_udp_usage_total[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_network_udp_usage_total{id=~".*"}'
+        -
+          uuid: f098225754c24a6290e1e451c6569b56
+          name: 'LLD - container_scrape_error'
+          type: DEPENDENT
+          key: container_scrape_error
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 8940e93b2d8c4cafad6dc27df7460c98
+              name: '{#METRIC}'
+              type: DEPENDENT
+              key: 'err[{#METRIC}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 9b723b0114504a4aacc12a6d4e179912
+                  expression: 'last(/Container Monitoring/err[{#METRIC}])>0'
+                  name: '{#METRIC}'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: AVERAGE
+          graph_prototypes:
+            -
+              uuid: 22ca4f7b5c404671ac2376457d84c79c
+              name: container_scrape_error
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'err[{#METRIC}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - container_scrape_error
+        -
+          uuid: 42b77c7673b94818bfc6f29d66d5ba18
+          name: 'LLD - container_spec_cpu_period'
+          type: DEPENDENT
+          key: container_spec_cpu_period
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 01a2d9a44ab747c6a5de4e13788bd61e
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_spec_cpu_period[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_TO_JSON
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+          graph_prototypes:
+            -
+              uuid: 3d4892843a824630a8b4436529cfe466
+              name: 'container_spec_cpu_period no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_spec_cpu_period[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_spec_cpu_period{id=~".*"}'
+        -
+          uuid: dcae21115f61421ca31a71bd3d2fb041
+          name: 'LLD - container_spec_cpu_shares'
+          type: DEPENDENT
+          key: container_spec_cpu_shares
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: bd655a461e6d422eadd1e933976462bc
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_spec_cpu_shares[{#ID}]'
+              delay: '0'
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+          graph_prototypes:
+            -
+              uuid: ce8371e42b224f30a2fa868189c79989
+              name: 'container_spec_cpu_shares no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_spec_cpu_shares[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_spec_cpu_shares{id=~".*"}'
+        -
+          uuid: 6fd0f62441014b5892ee4b873a6c5998
+          name: 'LLD - container_spec_memory_limit_bytes'
+          type: DEPENDENT
+          key: container_spec_memory_limit_bytes
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 142315ddcc6741eeba8e4308c8775284
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_spec_memory_limit_bytes[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+          graph_prototypes:
+            -
+              uuid: 7c26e6d76f5042b9b0dc9bcd59eb130a
+              name: 'container_spec_memory_limit_bytes no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_spec_memory_limit_bytes[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_spec_memory_limit_bytes{id=~".*"}'
+        -
+          uuid: f2758405ddde406e929c3eb5ee0d443c
+          name: 'LLD - container_spec_memory_swap_limit_bytes'
+          type: DEPENDENT
+          key: container_spec_memory_swap_limit_bytes
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: f1fac513782c4419adc12ba65538ea6b
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_spec_memory_swap_limit_bytes[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: B
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+          graph_prototypes:
+            -
+              uuid: c00410ada4944b8191fc2cc32758849f
+              name: 'container_spec_memory_swap_limit_bytes no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_spec_memory_swap_limit_bytes[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_spec_memory_swap_limit_bytes{id=~".*"}'
+        -
+          uuid: aef05beb4d3b4dd59ee226213addcfb0
+          name: 'LLD - container_start_time_seconds'
+          type: DEPENDENT
+          key: container_start_time_seconds
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 39a06678da6d4fe18d04d42db74f1a1b
+              name: '{#METRIC} no id={#ID}'
+              type: DEPENDENT
+              key: 'container_start_time_seconds[{#ID}]'
+              delay: '0'
+              value_type: FLOAT
+              units: uptime
+              description: '{#HELP}'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 4e152a6b937540ffa0520b88f3f5a5cc
+                  expression: 'change(/Container Monitoring/container_start_time_seconds[{#ID}])<0'
+                  name: '{#METRIC} no id={#ID} foi reiniciado'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: DISASTER
+          graph_prototypes:
+            -
+              uuid: 8738797a3b8a4698941eaab0cae54466
+              name: 'container_start_time_seconds no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_start_time_seconds[{#ID}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_start_time_seconds{id=~".*"}'
+        -
+          uuid: a3ba280c5526479a911da6a2f2101625
+          name: 'LLD - container_tasks_state'
+          type: DEPENDENT
+          key: container_tasks_state
+          delay: '0'
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: fabff7758c034961bb2157c533f7067f
+              name: '{#METRIC} no id={#ID} e state={#STATE}'
+              type: DEPENDENT
+              key: 'container_tasks_state[{#ID},{#STATE}]'
+              delay: '0'
+              description: 'Number of tasks in running state'
+              preprocessing:
+                -
+                  type: PROMETHEUS_PATTERN
+                  parameters:
+                    - '{#METRIC}{id="{#ID}",state="{#STATE}"}'
+                    - ''
+              master_item:
+                key: master
+              tags:
+                -
+                  tag: Application
+                  value: '{#METRIC}'
+              trigger_prototypes:
+                -
+                  uuid: 064693eca5c54b4b83a08c7f660d4894
+                  expression: 'last(/Container Monitoring/container_tasks_state[{#ID},{#STATE}])=0'
+                  name: '{#METRIC} no id={#ID} não está em execução'
+                  opdata: '{ITEM.LASTVALUE}'
+                  status: DISABLED
+                  priority: DISASTER
+          graph_prototypes:
+            -
+              uuid: 0b61706f34414be1a130dedcad52fe70
+              name: 'container_tasks_state no id={#ID}'
+              graph_items:
+                -
+                  color: 199C0D
+                  calc_fnc: ALL
+                  item:
+                    host: 'Container Monitoring'
+                    key: 'container_tasks_state[{#ID},{#STATE}]'
+          master_item:
+            key: master
+          lld_macro_paths:
+            -
+              lld_macro: '{#HELP}'
+              path: '$[''help'']'
+            -
+              lld_macro: '{#ID}'
+              path: '$.labels[''id'']'
+            -
+              lld_macro: '{#METRIC}'
+              path: '$[''name'']'
+            -
+              lld_macro: '{#STATE}'
+              path: '$.labels[''state'']'
+          preprocessing:
+            -
+              type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'container_tasks_state{id=~".*",state="running"}'
+      macros:
+        -
+          macro: '{$URL}'
+          description: 'A URL deve seguir o seguinte formato - http://ip_ou_dns:port/metrics'

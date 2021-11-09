@@ -2,7 +2,7 @@
 
 ## Description
 
-Шаблон для Контроллера температуры и влажности Actidata NV1
+## Description Шаблон для Контроллера температуры и влажности Actidata NV1 ## Overview Шаблон для Контроллера температуры и влажности Actidata NV1, SNMP v1. В шаблон включен график для 4 сенсоров, 8 триггеров и 8 макросов. Значения макросов подбирайте сами. ## Author Raveren 
 
 ## Overview
 
@@ -50,9 +50,9 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Internal temperature sensor|<p>-</p>|`SNMP agent`|nv1.sensor.its<p>Update: 300s</p>|
+|External humidity sensor|<p>-</p>|`SNMP agent`|nv1.sensor.ehs<p>Update: 300s</p>|
 |External temperature sensor 1|<p>-</p>|`SNMP agent`|nv1.sensor.ets1<p>Update: 300s</p>|
 |External temperature sensor 2|<p>-</p>|`SNMP agent`|nv1.sensor.ets2<p>Update: 300s</p>|
-|External humidity sensor|<p>-</p>|`SNMP agent`|nv1.sensor.ehs<p>Update: 300s</p>|
 ## Triggers
 
 There are no triggers in this template.

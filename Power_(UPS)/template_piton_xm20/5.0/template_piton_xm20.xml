@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:33Z</date>
+  <date>2021-11-09T05:15:27Z</date>
   <groups>
     <group>
       <name>Templates/Modules</name>
@@ -14,6 +14,7 @@
     <template>
       <template>PitON</template>
       <name>PitON</name>
+      <description>## Overview This template for PitON XM20 ============================ Protocol SNMP v2. Items 128 with low discovery. Sorry but without triggers. Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administration/zabbix/templates/PitON%20XM20.xml) repository MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/PitON/XM20/snmp) repository ## Author P.V. Galonza</description>
       <templates>
         <template>
           <name>Template Module ICMP Ping</name>

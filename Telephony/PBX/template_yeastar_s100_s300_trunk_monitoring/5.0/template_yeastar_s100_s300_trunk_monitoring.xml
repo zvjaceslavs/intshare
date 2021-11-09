@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:46:02Z</date>
+  <date>2021-11-09T05:23:38Z</date>
   <groups>
     <group>
       <name>VOIP</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Yeastar S300</template>
       <name>Yeastar S300</name>
+      <description>## Overview Template autodiscovers trunks via snmp v2c and system information. You only need to add {$SNMP\_COMMUNITY} in hosts macros ## Author Bogdan Vaschenko</description>
       <groups>
         <group>
           <name>VOIP</name>

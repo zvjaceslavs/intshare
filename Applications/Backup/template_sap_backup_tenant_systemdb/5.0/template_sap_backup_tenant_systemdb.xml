@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:04Z</date>
+  <date>2021-11-09T05:05:21Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SAP Backup</template>
       <name>SAP Backup</name>
+      <description>## Overview ================ SAP-Backup-TENANT-SYSTEMDB ================ O presente documento tem por objetivo apresentar todas as etapas técnicas para implantação do monitoramento do Backup SAP utilizando shell script e hdbsql, e a função do Userparameter do agente Zabbix. Projeto idealizado na comunidade Zabbix Brasil no Telegram pelos usuários Wilson Fernandes e Eduardo Freitas. A ideia do projeto foi monitorar os backups executados pelo SAP. * Data da execucão do backup * Status do backup do SYSTEMDB * Status do backup do TENANT ## Author wilsonwers</description>
       <groups>
         <group>
           <name>Templates</name>

@@ -1,0 +1,609 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-09T05:20:13Z'
+  groups:
+    -
+      uuid: c8205c7636e748d488c2774e6a4a944b
+      name: Internet
+    -
+      uuid: 32630ca913d04c4fae71bbe8ef28edea
+      name: Todos
+  templates:
+    -
+      uuid: 83e353f95194471b907c11c155f939ab
+      template: 'MitraStar - GPT-2741GNAC-N2'
+      name: 'MitraStar - GPT-2741GNAC-N2'
+      description: |
+        ## Description
+        
+        Template roteador de fibra MitraStar - GPT-2741GNAC-N2 utilizado pela Vivo no Brasil Desenvolvido por Maurício Venzi mvenzi at gmail.com
+        
+        ## Overview
+        
+        Template de monitoração do roteador da marca MitraStar modelo GPT-2741GNAC-N2 utilizado pela operadora VIVO FIBRA.
+        
+        
+         testado no Zabbix 5.0 e 5.2
+        
+        
+        Caso o uptime fique errado ajuste o preprocessamento multiplicando por 0.01
+        
+        
+        deixe seu feedback...
+        
+        
+        problemas mvenzi@gmail.com
+        
+        
+        
+        ## Author
+        
+        Maurício Venzi
+        
+        
+      groups:
+        -
+          name: Internet
+        -
+          name: Todos
+      items:
+        -
+          uuid: 9d3c9c294a9a47289337e2318fe4451c
+          name: 'ICMP ping'
+          type: SIMPLE
+          key: icmpping
+          history: 1w
+          valuemap:
+            name: 'Service state'
+          tags:
+            -
+              tag: Application
+              value: ICMP
+          triggers:
+            -
+              uuid: 09ab0d42fcb040d1bb59a0248cd9ff5e
+              expression: 'max(/MitraStar - GPT-2741GNAC-N2/icmpping,#3)=0'
+              name: 'Unavailable by ICMP ping'
+              priority: HIGH
+              description: 'Last three attempts returned timeout.  Please check device connectivity.'
+        -
+          uuid: cf04800a0a35408380d0e022f0440fd9
+          name: 'ICMP loss'
+          type: SIMPLE
+          key: icmppingloss
+          history: 1w
+          value_type: FLOAT
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: ICMP
+          triggers:
+            -
+              uuid: 50d2754384de49ada4d5b25cb8149500
+              expression: 'min(/MitraStar - GPT-2741GNAC-N2/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/MitraStar - GPT-2741GNAC-N2/icmppingloss,5m)<100'
+              name: 'High ICMP ping loss'
+              opdata: 'Loss: {ITEM.LASTVALUE1}'
+              priority: WARNING
+              dependencies:
+                -
+                  name: 'Unavailable by ICMP ping'
+                  expression: 'max(/MitraStar - GPT-2741GNAC-N2/icmpping,#3)=0'
+        -
+          uuid: f57e642959a547019629999667d7e49e
+          name: 'ICMP response time'
+          type: SIMPLE
+          key: icmppingsec
+          history: 1w
+          value_type: FLOAT
+          units: s
+          tags:
+            -
+              tag: Application
+              value: ICMP
+          triggers:
+            -
+              uuid: 9187f57a1abb45348a3798556b2a1e0a
+              expression: 'avg(/MitraStar - GPT-2741GNAC-N2/icmppingsec,5m)>{$ICMP_RESPONSE_TIME_WARN}'
+              name: 'High ICMP ping response time'
+              opdata: 'Value: {ITEM.LASTVALUE1}'
+              priority: WARNING
+              dependencies:
+                -
+                  name: 'High ICMP ping loss'
+                  expression: 'min(/MitraStar - GPT-2741GNAC-N2/icmppingloss,5m)>{$ICMP_LOSS_WARN} and min(/MitraStar - GPT-2741GNAC-N2/icmppingloss,5m)<100'
+                -
+                  name: 'Unavailable by ICMP ping'
+                  expression: 'max(/MitraStar - GPT-2741GNAC-N2/icmpping,#3)=0'
+        -
+          uuid: c045e455d8744f60a53ac377af42f6f3
+          name: 'Descrição da versão de software'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.2.1.1.1.0
+          key: sysDescr.0
+          delay: 10m
+          trends: '0'
+          value_type: TEXT
+          inventory_link: SOFTWARE_FULL
+          tags:
+            -
+              tag: Application
+              value: 'STATUS GERAL'
+        -
+          uuid: d77c948509b743aaad060fd8cf135cdf
+          name: 'System contact details'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.4.0
+          key: 'system.contact[sysContact.0]'
+          delay: 1h
+          history: 2w
+          trends: '0'
+          value_type: CHAR
+          description: |
+            MIB: SNMPv2-MIB
+            The textual identification of the contact person for this managed node, together with information on how to contact this person.  If no contact information is known, the value is the zero-length string.
+          inventory_link: CONTACT
+          tags:
+            -
+              tag: Application
+              value: 'STATUS GERAL'
+        -
+          uuid: 1346a3c718714298b21dd72437a554c3
+          name: 'System description'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.1.0
+          key: 'system.descr[sysDescr.0]'
+          delay: 1h
+          history: 2w
+          trends: '0'
+          value_type: CHAR
+          description: |
+            MIB: SNMPv2-MIB
+            A textual description of the entity. This value should
+            include the full name and version identification of the system's hardware type, software operating-system, and
+            networking software.
+          tags:
+            -
+              tag: Application
+              value: 'STATUS GERAL'
+        -
+          uuid: 6a588355c3314fe8beabdf9bee410999
+          name: 'System location'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.6.0
+          key: 'system.location[sysLocation.0]'
+          delay: 1h
+          history: 2w
+          trends: '0'
+          value_type: CHAR
+          description: |
+            MIB: SNMPv2-MIB
+            The physical location of this node (e.g., `telephone closet, 3rd floor').  If the location is unknown, the value is the zero-length string.
+          inventory_link: LOCATION
+          tags:
+            -
+              tag: Application
+              value: 'STATUS GERAL'
+        -
+          uuid: 606ef9e4c5a34846baf0ff8d3a517665
+          name: 'System name'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.5.0
+          key: system.name
+          delay: 1h
+          history: 2w
+          trends: '0'
+          value_type: CHAR
+          description: |
+            MIB: SNMPv2-MIB
+            An administratively-assigned name for this managed node.By convention, this is the node's fully-qualified domain name.  If the name is unknown, the value is the zero-length string.
+          inventory_link: NAME
+          tags:
+            -
+              tag: Application
+              value: 'STATUS GERAL'
+        -
+          uuid: 008fba4cd32c4f769ec70623edf2c155
+          name: Uptime
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.2.1.1.3.0
+          key: 'system.uptime[sysUpTime.0]'
+          delay: 10m
+          history: 2w
+          trends: '0'
+          units: uptime
+          description: |
+            MIB: SNMPv2-MIB
+            The time (in hundredths of a second) since the network management portion of the system was last re-initialized.
+          tags:
+            -
+              tag: Application
+              value: 'STATUS GERAL'
+          triggers:
+            -
+              uuid: 55514dd2e4874e00963d428e9f047671
+              expression: 'last(/MitraStar - GPT-2741GNAC-N2/system.uptime[sysUpTime.0])=10m'
+              name: '{HOST.NAME} Foi reiniciado (uptime < 10m)'
+              priority: INFO
+              manual_close: 'YES'
+              dependencies:
+                -
+                  name: 'Não há coleta via SNMP'
+                  expression: 'max(/MitraStar - GPT-2741GNAC-N2/zabbix[host,snmp,available],{$SNMP.TIMEOUT})=0'
+        -
+          uuid: 04a933fe2f3144da81af2a67f3ce29ad
+          name: 'SNMP agent availability'
+          type: INTERNAL
+          key: 'zabbix[host,snmp,available]'
+          history: 7d
+          valuemap:
+            name: zabbix.host.available
+          tags:
+            -
+              tag: Application
+              value: 'STATUS GERAL'
+          triggers:
+            -
+              uuid: 768a5069049f43fa9ee4141c01ad128d
+              expression: 'max(/MitraStar - GPT-2741GNAC-N2/zabbix[host,snmp,available],{$SNMP.TIMEOUT})=0'
+              name: 'Não há coleta via SNMP'
+              priority: HIGH
+              manual_close: 'YES'
+      discovery_rules:
+        -
+          uuid: 68edd11813364e4db6163df8c77c5a29
+          name: Interfaces
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFDESCR}, ifDescr, {#IFPHYSADDRESS}, ifPhysAddress]'
+          key: ifDescr
+          delay: 30m
+          filter:
+            conditions:
+              -
+                macro: '{#IFDESCR}'
+                value: '@vivo'
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+          lifetime: 0d
+          description: 'discovery[{#IFDESCR}, ifDescr, {#IFPHYSADDRESS}, ifPhysAddress]'
+          item_prototypes:
+            -
+              uuid: 623abdb1cfed4c3799153c90fe9ef479
+              name: 'Status administrativo - interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifAdminStatus.{#SNMPINDEX}'
+              key: 'ifAdminStatus[{#IFDESCR}]'
+              delay: 10m
+              description: 'Disponibiliza o nome e o status das interfaces'
+              valuemap:
+                name: 'SNMP interface status (ifOperStatus)'
+              tags:
+                -
+                  tag: Application
+                  value: STATUS
+            -
+              uuid: 3b3a3315186d4d01b8a8ab785bc475b3
+              name: 'Descartes de entrada da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifInDiscards.{#SNMPINDEX}'
+              key: 'ifInDiscards.[{#IFDESCR}]'
+              delay: 10m
+              description: 'Disponibiliza os descartes de  entrada das interfaces'
+              valuemap:
+                name: 'SNMP interface status (ifOperStatus)'
+              tags:
+                -
+                  tag: Application
+                  value: Descartes
+              trigger_prototypes:
+                -
+                  uuid: eef26a4a3be646f394710fa650b8857c
+                  expression: 'last(/MitraStar - GPT-2741GNAC-N2/ifInDiscards.[{#IFDESCR}])>10'
+                  name: 'Descartes de pacote de entrada - interface {#IFDESCR}'
+                  priority: WARNING
+                  manual_close: 'YES'
+            -
+              uuid: a62498c97d0c4c399e11af3a007d19b9
+              name: 'Erros de entrada da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifInErrors.{#SNMPINDEX}'
+              key: 'ifInErrors[{#IFDESCR}]'
+              delay: 10m
+              description: 'Disponibiliza os erros de entrada das interfaces'
+              valuemap:
+                name: 'SNMP interface status (ifOperStatus)'
+              tags:
+                -
+                  tag: Application
+                  value: Erros
+              trigger_prototypes:
+                -
+                  uuid: 750e8135dc19497f9f5706e31413428b
+                  expression: 'last(/MitraStar - GPT-2741GNAC-N2/ifInErrors[{#IFDESCR}])>50'
+                  name: 'Erros de entrada - interface {#IFDESCR}'
+                  priority: WARNING
+                  manual_close: 'YES'
+            -
+              uuid: cb2a0f32473747158004b5afa328890a
+              name: 'Tráfego de entrada da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifInOctets.{#SNMPINDEX}'
+              key: 'ifInOctets[{#IFDESCR}]'
+              delay: 10m
+              units: bps
+              description: 'Disponibiliza o tráfego de entrada das interfaces'
+              tags:
+                -
+                  tag: Application
+                  value: Tráfego
+            -
+              uuid: 0a907574401d44f1b0020789012bd8b4
+              name: 'Valor do MTU da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifMtu.{#SNMPINDEX}'
+              key: 'ifMtu[{#IFDESCR}]'
+              delay: 10m
+              description: 'Disponibiliza o nome e o MTU das interfaces'
+              tags:
+                -
+                  tag: Application
+                  value: STATUS
+            -
+              uuid: c9a37feee6a94efdb1b39c3298a16da9
+              name: 'Status operacional - interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifOperStatus.{#SNMPINDEX}'
+              key: 'ifOperStatus[{#IFDESCR}]'
+              delay: 10m
+              description: 'Disponibiliza o nome e o status das interfaces'
+              valuemap:
+                name: 'SNMP interface status (ifOperStatus)'
+              tags:
+                -
+                  tag: Application
+                  value: STATUS
+            -
+              uuid: 3d86cc71a54040c7b2c0913f4514ea5f
+              name: 'Descartes de saída da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifOutDiscards.{#SNMPINDEX}'
+              key: 'ifOutDiscards[{#IFDESCR}]'
+              delay: 10m
+              description: 'Disponibiliza os descartes de saída das interfaces'
+              valuemap:
+                name: 'SNMP interface status (ifOperStatus)'
+              tags:
+                -
+                  tag: Application
+                  value: Descartes
+              trigger_prototypes:
+                -
+                  uuid: a8262ddea03748f3af89e1816f092839
+                  expression: 'last(/MitraStar - GPT-2741GNAC-N2/ifOutDiscards[{#IFDESCR}])>10'
+                  name: 'Descartes de pacote de saída - interface {#IFDESCR}'
+                  priority: WARNING
+                  manual_close: 'YES'
+            -
+              uuid: e5201449ecda4dbaa818d821e7fddb07
+              name: 'Erros de saída da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifOutErrors.{#SNMPINDEX}'
+              key: 'ifOutErrors[{#IFDESCR}]'
+              delay: 10m
+              description: 'Disponibiliza os erros de saída das interfaces'
+              valuemap:
+                name: 'SNMP interface status (ifOperStatus)'
+              tags:
+                -
+                  tag: Application
+                  value: Erros
+              trigger_prototypes:
+                -
+                  uuid: dbe4bde2425b4ead8570c1e34d6f3616
+                  expression: 'last(/MitraStar - GPT-2741GNAC-N2/ifOutErrors[{#IFDESCR}])>50'
+                  name: 'Erros de saída - interface {#IFDESCR}'
+                  priority: WARNING
+                  manual_close: 'YES'
+            -
+              uuid: 498fe1c1ee144278a9f9629e2b0cc7f6
+              name: 'Tráfego de saída da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifOutOctets.{#SNMPINDEX}'
+              key: 'ifOutOctets[{#IFDESCR}]'
+              delay: 10m
+              units: bps
+              description: 'Disponibiliza o tráfego de entrada das interfaces'
+              tags:
+                -
+                  tag: Application
+                  value: Tráfego
+            -
+              uuid: 42366905ce7948c2aa47162ceb67327e
+              name: 'Endereço MAC da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifPhysAddress.{#SNMPINDEX}'
+              key: 'ifPhysAddress[{#IFDESCR}]'
+              delay: 10m
+              trends: '0'
+              value_type: TEXT
+              description: 'Disponibiliza o nome e o endereço MAC das interfaces'
+              tags:
+                -
+                  tag: Application
+                  value: MAC
+            -
+              uuid: c111a3511110400291f9618c62254d47
+              name: 'Velocidade da interface {#IFDESCR}'
+              type: SNMP_AGENT
+              snmp_oid: 'IF-MIB::ifSpeed.{#SNMPINDEX}'
+              key: 'ifSpeed[{#IFDESCR}]'
+              delay: 10m
+              units: bps
+              description: 'Disponibiliza o nome e a velocidade das interfaces'
+              tags:
+                -
+                  tag: Application
+                  value: SPEED
+          trigger_prototypes:
+            -
+              uuid: 589a09c419b842e88940fa1f482db7c3
+              expression: |
+                ({TRIGGER.VALUE}=0 and last(/MitraStar - GPT-2741GNAC-N2/ifAdminStatus[{#IFDESCR}])=1 and last(/MitraStar - GPT-2741GNAC-N2/ifOperStatus[{#IFDESCR}])<>1 and
+                last(/MitraStar - GPT-2741GNAC-N2/ifOperStatus[{#IFDESCR}],#2)=1) or ({TRIGGER.VALUE}=1 and last(/MitraStar - GPT-2741GNAC-N2/ifAdminStatus[{#IFDESCR}])=1 and
+                last(/MitraStar - GPT-2741GNAC-N2/ifOperStatus[{#IFDESCR}])<>1)
+              name: 'Indisponibilidade - interface {#IFDESCR}'
+              priority: AVERAGE
+              manual_close: 'YES'
+          graph_prototypes:
+            -
+              uuid: cc3f11dc7cee412b8e0d0eae3c9ab224
+              name: 'Tráfego de entrada'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 199C0D
+                  item:
+                    host: 'MitraStar - GPT-2741GNAC-N2'
+                    key: 'ifInOctets[{#IFDESCR}]'
+            -
+              uuid: 0aa1e2b3765c4dbb9a87edce3f5f028c
+              name: 'Tráfego de saída'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 199C0D
+                  item:
+                    host: 'MitraStar - GPT-2741GNAC-N2'
+                    key: 'ifOutOctets[{#IFDESCR}]'
+        -
+          uuid: 4cd0378df9e54ec598c9df1f2ecb9d24
+          name: 'Endereços IP da WAN'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IPADDRESS}, ipAdEntAddr]'
+          key: ipAdEntAddr
+          delay: 1h
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: f36b87adf2ee4f51af45baaf4b280511
+              name: 'Endereços IP da WAN'
+              type: SNMP_AGENT
+              snmp_oid: 'IP-MIB::ipAdEntAddr.{#IPADDRESS}'
+              key: 'ipAdEntAddr[{#SNMPINDEX}]'
+              delay: 10m
+              history: 7d
+              trends: '0'
+              value_type: LOG
+              description: |
+                ifPhysAddress
+                {#SNMPINDEX}
+              tags:
+                -
+                  tag: Application
+                  value: WAN
+        -
+          uuid: be2e8e6160d345cfa7a7c33ec0d3bc8d
+          name: 'Endereços IP da LAN'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IPADDRESS}, mib-2.3.1.1.3.16.1]'
+          key: mib-2.3.1.1.3.16.1
+          delay: 30m
+          lifetime: 0d
+          item_prototypes:
+            -
+              uuid: 6978b1f7bb0e4c34b3399ad08b7a7ea8
+              name: 'Endereços MAC do endereço IP - {#IPADDRESS}'
+              type: SNMP_AGENT
+              snmp_oid: 'IP-MIB::ipNetToMediaPhysAddress.16.{#IPADDRESS}'
+              key: 'ipNetToMediaPhysAddress.16[{#SNMPINDEX}]'
+              delay: 10m
+              history: 7d
+              trends: '0'
+              value_type: TEXT
+              tags:
+                -
+                  tag: Application
+                  value: LAN
+            -
+              uuid: 426f2b53b95e46a2b40dbca3553709a1
+              name: 'Endereços IP da LAN'
+              type: SNMP_AGENT
+              snmp_oid: iso.3.6.1.2.1.3.1.1.3.16.1
+              key: lan.ipaddr
+              delay: 10m
+              history: 7d
+              trends: 30d
+              value_type: FLOAT
+              description: iso.3.6.1.2.1.3.1.1.3.16.1
+              tags:
+                -
+                  tag: Application
+                  value: LAN
+            -
+              uuid: e82eccb81f5d422781fdef4881abdf8d
+              name: 'Endereços IP da LAN'
+              type: SNMP_AGENT
+              snmp_oid: 'SNMPv2-SMI::mib-2.3.1.1.3.16.1.{#IPADDRESS}'
+              key: 'mib-2.3.1.1.3.16.1[{#SNMPINDEX}]'
+              delay: 5m
+              history: 7d
+              trends: '0'
+              value_type: LOG
+              description: 'SNMPv2-SMI::mib-2.3.1.1.3.16.1.'
+              tags:
+                -
+                  tag: Application
+                  value: LAN
+      macros:
+        -
+          macro: '{$SNMP.TIMEOUT}'
+          value: 5m
+      valuemaps:
+        -
+          uuid: 48478c237492473b8bc6ac29e3d030b0
+          name: 'Service state'
+          mappings:
+            -
+              value: '0'
+              newvalue: Down
+            -
+              value: '1'
+              newvalue: Up
+        -
+          uuid: 62b17c06eef945ee96827ac0c3b206b4
+          name: 'SNMP interface status (ifOperStatus)'
+          mappings:
+            -
+              value: '1'
+              newvalue: up
+            -
+              value: '2'
+              newvalue: down
+            -
+              value: '3'
+              newvalue: testing
+            -
+              value: '4'
+              newvalue: unknown
+            -
+              value: '5'
+              newvalue: dormant
+            -
+              value: '6'
+              newvalue: notPresent
+            -
+              value: '7'
+              newvalue: lowerLayerDown
+        -
+          uuid: 05ea137851e64758be6d9bb1db1af398
+          name: zabbix.host.available
+          mappings:
+            -
+              value: '0'
+              newvalue: 'not available'
+            -
+              value: '1'
+              newvalue: available
+            -
+              value: '2'
+              newvalue: unknown

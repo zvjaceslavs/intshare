@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:29Z</date>
+  <date>2021-11-09T04:34:23Z</date>
   <groups>
     <group>
       <name>Router Mikroitk</name>
@@ -11,7 +11,7 @@
     <template>
       <template>Mikrotik RB750-RB1100</template>
       <name>Mikrotik RB750-RB1100</name>
-      <description>Autor: Danilo Barros de Medeiros Template: Mikrotik RB750/RB1100 Versão Zabbix: 3.0 Versão Template: 1.1</description>
+      <description>## Description Autor: Danilo Barros de Medeiros Template: Mikrotik RB750/RB1100 Versão Zabbix: 3.0 Versão Template: 1.1 ## Overview Template Mikrotik para RB 750 e RB1100. Zabbix 3.0 ## Author Danilo Barros</description>
       <groups>
         <group>
           <name>Router Mikroitk</name>

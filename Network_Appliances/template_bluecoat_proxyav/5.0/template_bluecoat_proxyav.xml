@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:38:36Z</date>
+  <date>2021-11-09T04:35:10Z</date>
   <groups>
     <group>
       <name>BlueCoat</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App BlueCoat AV</template>
       <name>App BlueCoat AV</name>
+      <description>## Overview Based on official SNMP MIBs. Used on AV510 and AV810. Additional info: &lt;https://bto.bluecoat.com/documentation/All-Documents/ProxyAV>.</description>
       <groups>
         <group>
           <name>BlueCoat</name>

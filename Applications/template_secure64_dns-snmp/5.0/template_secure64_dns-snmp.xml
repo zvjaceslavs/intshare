@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:44:39Z</date>
+  <date>2021-11-09T05:16:09Z</date>
   <groups>
     <group>
       <name>Templates/Applications</name>
@@ -11,7 +11,7 @@
     <template>
       <template>App Secure64 SNMP</template>
       <name>App Secure64 SNMP</name>
-      <description>By Ahrar Ahmad Khan</description>
+      <description>## Description By Ahrar Ahmad Khan ## Overview **Visit the github link for Readme file** ## Author Ahrar Khan</description>
       <groups>
         <group>
           <name>Templates/Applications</name>

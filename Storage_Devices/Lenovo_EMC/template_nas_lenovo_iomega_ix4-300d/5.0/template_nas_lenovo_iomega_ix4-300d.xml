@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:38Z</date>
+  <date>2021-11-09T04:41:53Z</date>
   <groups>
     <group>
       <name>NAS</name>
@@ -11,6 +11,7 @@
     <template>
       <template>Lenovo ix4-300d</template>
       <name>Lenovo ix4-300d</name>
+      <description>## Overview Template com mensagens em português. São 44 itens e 17 triggers contendo as informações descritas abaixo: Monitoramento: - Status de cada disco; - Status do RAID; - Alteração no tipo do RAID; - Alteração do nome do dispositivo; - Uptime; - Restart do equipamento; Dados disponíveis: - Tráfego de entrada e saída das interfaces de rede; - Nome do dispositivo; - Modelo do dispositivo; - Descrição do dispositivo; - Capacidade total de cada disco; - MAC Adress de cada interface de rede; - MTU das interfaces de rede; - Uptime; - Descrição do processador do dispositivo; - CPU load. Não foi possível monitorar espaço de disco disponível e total, pois, não achei as MIBs para isso. Se alguém encontrar me informe que eu atualizo. ## Author André Luis Soares</description>
       <groups>
         <group>
           <name>NAS</name>

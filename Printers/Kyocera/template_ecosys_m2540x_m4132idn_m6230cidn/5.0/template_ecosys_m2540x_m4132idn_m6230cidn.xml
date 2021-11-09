@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:43:37Z</date>
+  <date>2021-11-09T05:09:05Z</date>
   <groups>
     <group>
       <name>Pool Printer Talay HP</name>
@@ -14,7 +14,7 @@
     <template>
       <template>Kyocera Printers</template>
       <name>Принтеры Kyocera</name>
-      <description>ECOSYS M2540dn, ECOSYS M3540idn, ECOSYS M4132idn, ECOSYS M6230cidn</description>
+      <description>## Description ECOSYS M2540dn, ECOSYS M3540idn, ECOSYS M4132idn, ECOSYS M6230cidn ## Overview ECOSYS M2540dn, ECOSYS M3540idn, ECOSYS M4132idn, ECOSYS M6230cidn may by and other... Onli ru language. ## Author Dmitrii</description>
       <groups>
         <group>
           <name>Pool Printer Talay Kyocera</name>
@@ -292,6 +292,7 @@
     <template>
       <template>Printer HP</template>
       <name>Принтре HP</name>
+      <description>## Description ECOSYS M2540dn, ECOSYS M3540idn, ECOSYS M4132idn, ECOSYS M6230cidn ## Overview ECOSYS M2540dn, ECOSYS M3540idn, ECOSYS M4132idn, ECOSYS M6230cidn may by and other... Onli ru language. ## Author Dmitrii ## Overview ECOSYS M2540dn, ECOSYS M3540idn, ECOSYS M4132idn, ECOSYS M6230cidn may by and other... Onli ru language. ## Author Dmitrii</description>
       <groups>
         <group>
           <name>Pool Printer Talay HP</name>

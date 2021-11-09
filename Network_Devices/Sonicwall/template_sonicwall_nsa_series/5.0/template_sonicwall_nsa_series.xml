@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:39:33Z</date>
+  <date>2021-11-09T04:41:18Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>SNMP Sonicwall 4600</template>
       <name>SNMP Sonicwall 4600</name>
+      <description>## Overview This will work on NSA 3x00 and 4x00 series firewalls. Derive form the 3600/400 one that is in Portuguese. This one is in English.</description>
       <groups>
         <group>
           <name>Templates</name>

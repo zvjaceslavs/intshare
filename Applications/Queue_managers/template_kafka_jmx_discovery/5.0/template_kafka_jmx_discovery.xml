@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-10-26T04:42:29Z</date>
+  <date>2021-11-09T05:01:11Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,6 +11,7 @@
     <template>
       <template>App Kafka</template>
       <name>App Kafka</name>
+      <description>## Overview This template will use JMX discovery to get metrics about resource usage, topics stats and much more from a Kafka node.</description>
       <groups>
         <group>
           <name>Templates</name>
