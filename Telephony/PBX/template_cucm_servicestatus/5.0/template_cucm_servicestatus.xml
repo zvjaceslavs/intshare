@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-11-09T05:05:34Z</date>
+  <date>2021-11-09T08:34:32Z</date>
   <groups>
     <group>
       <name>VOIP ALL</name>

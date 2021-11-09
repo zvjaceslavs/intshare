@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template Cisco BGP Sessions -AdminStatus -Established Time -OperationStatus -AS Name -Maximum Prefix -Accepted Prefix -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as.name .oid_to_ipv6 Base: CISCO-BGP4-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-BGP4-MIB.php#cbgpPeer2RemoteAs External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates ## Overview Template Cisco BGP Sessions -AdminStatus -Established Time -OperationStatus -AS Name -Maximum Prefix -Accepted Prefix -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as.name .oid _to _ipv6 Base: CISCO-BGP4-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-BGP4-MIB.php#cbgpPeer2RemoteAs External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates 
+Template Cisco BGP Sessions -AdminStatus -Established Time -OperationStatus -AS Name -Maximum Prefix -Accepted Prefix -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as.name .oid_to_ipv6 Base: CISCO-BGP4-MIB.mib http://www.circitor.fr/Mibs/Html/C/CISCO-BGP4-MIB.php#cbgpPeer2RemoteAs External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates
 
 ## Overview
 

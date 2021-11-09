@@ -1,9 +1,5 @@
 # XSM SNMP Devices
 
-## Description
-
-## Overview Grettings people, here is an XML template developed by me, to monitoring the all 24 Interfaces, 5 fan cooler, latency, temperature and more from the Cisco SGE2000P switch. The only thing to consider here is, you will need to change the SNMP community set in here, because i made it for the company that i'm working right now c yaa 
-
 ## Overview
 
 Grettings people, here is an XML template developed by me, to monitoring the all 24 Interfaces, 5 fan cooler, latency, temperature and more from the Cisco SGE2000P switch.

@@ -1,9 +1,5 @@
 # SNMP Sonicwall 4600
 
-## Description
-
-## Overview This will work on NSA 3x00 and 4x00 series firewalls. Derive form the 3600/400 one that is in Portuguese. This one is in English. 
-
 ## Overview
 
 This will work on NSA 3x00 and 4x00 series firewalls. Derive form the 3600/400 one that is in Portuguese. This one is in English.

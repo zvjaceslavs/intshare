@@ -1,9 +1,5 @@
 # Clickhouse
 
-## Description
-
-## Overview Clickhouse Template + monitoring script which covered the following aspects of monitoring: * Memory Tracking * Select speed * Insert / Merge speed * How many parts in partitions * Replication * Zookeeper communications * Distributed tables server-server connection * DNS Cache Contains **33 items, 15 triggers, 10 graphs, and 1 host screen** Require **clickhouse-client** and **zbx _clickhouse _monitor.sh** installed on zabbix-agent host ![Clickhouse Zabbix Template](https://github.com/Altinity/clickhouse-zabbix-template/raw/master/img/dashboard.png) 
-
 ## Overview
 
 Clickhouse Template + monitoring script which covered the following aspects of monitoring:

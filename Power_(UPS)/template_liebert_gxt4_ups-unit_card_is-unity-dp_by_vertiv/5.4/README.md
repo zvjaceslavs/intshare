@@ -1,9 +1,5 @@
 # Liebert_GXT4_UPS
 
-## Description
-
-## Overview This template has 23 items 10 triggers and depends on Template Module ICMP Ping 3.4. If your zabbix hasn't got the Template Module ICMP Ping 3.4, please, download/import that first and then import the UPS template. Template Module ICMP Ping link [Template Module ICMP Ping 3.4](?link_id=451&cf_id=42 "Template Module ICMP Ping 3.4") ## Author Peter Franca 
-
 ## Overview
 
 This template has 23 items 10 triggers and depends on Template Module ICMP Ping 3.4.   

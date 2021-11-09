@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Autor: Danilo Barros de Medeiros Template: Mikrotik RB750/RB1100 Versão Zabbix: 3.0 Versão Template: 1.1 ## Overview Template Mikrotik para RB 750 e RB1100. Zabbix 3.0 ## Author Danilo Barros 
+Autor: Danilo Barros de Medeiros Template: Mikrotik RB750/RB1100 Versão Zabbix: 3.0 Versão Template: 1.1
 
 ## Overview
 

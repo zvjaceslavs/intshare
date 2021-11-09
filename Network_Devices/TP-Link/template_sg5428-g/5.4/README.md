@@ -1,9 +1,5 @@
 # TP-Link 5428
 
-## Description
-
-## Overview Template for a SG5428-G. Not verified on other devices. ## Author w4t1s 
-
 ## Overview
 
 Template for a SG5428-G. Not verified on other devices.

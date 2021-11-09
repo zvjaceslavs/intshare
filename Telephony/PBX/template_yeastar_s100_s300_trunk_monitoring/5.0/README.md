@@ -1,9 +1,5 @@
 # Yeastar S300
 
-## Description
-
-## Overview Template autodiscovers trunks via snmp v2c and system information. You only need to add {$SNMP _COMMUNITY} in hosts macros ## Author Bogdan Vaschenko 
-
 ## Overview
 
 Template autodiscovers trunks via snmp v2c and system information.

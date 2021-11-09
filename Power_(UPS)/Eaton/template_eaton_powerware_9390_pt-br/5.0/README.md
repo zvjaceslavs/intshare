@@ -1,9 +1,5 @@
 # Powerware9390-Pt-Br
 
-## Description
-
-## Overview Portuguese items description, graphs names and application, but SNMP keys in English. Input, output, load, battery, external probe, UPS state. ## Author Nilson Espurio 
-
 ## Overview
 
 Portuguese items description, graphs names and application, but SNMP keys in English. Input, output, load, battery, external probe, UPS state.

@@ -1,9 +1,5 @@
 # IPMI Dell PowerEdge R510
 
-## Description
-
-## Overview Template IPMI Dell PowerEdge R510 ## Author Chinge_Yang 
-
 ## Overview
 
 Template IPMI Dell PowerEdge R510

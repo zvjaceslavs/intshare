@@ -1,9 +1,5 @@
 # Halley Linux Disk_iostat
 
-## Description
-
-## Overview Template for monitoring Linux Disk with iostat with explanations and advices. Use LLD discovery: discover only [hsv]d[a-z] The idea is from <https://wiki.enchtex.info/howto/zabbix/zabbix_iostat_monitoring> I edited the script and add explanations and advises to the template Script write data in a cache file to not make a lot of requests To install: follow instructions from <https://cloud.mail.ru/public/6LpD/qkVgL4E8z> Any recommends are welcome ## Author Tudor Ticau 
-
 ## Overview
 
 Template for monitoring Linux Disk with iostat with explanations and advices.

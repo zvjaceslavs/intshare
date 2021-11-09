@@ -1,9 +1,5 @@
 # Ubiquiti LTU-rocket wireless
 
-## Description
-
-## Overview Zabbix version 5. SNMPv2 Items for AP: Wireless Role, Wireless channel bandwidth, Tx power EIRP, Tx modulation, The percentage of total memory usage, The percentage of total CPU usage, The main frequency to use, The MAC address of this device, The list of alternative frequencies, The firmware version running, The device name, The device model, Radio SSID, Radio connected, Packet per second for tx, Packet per second for rx, GPS status, GPS Satellites Visible, GPS Satellites Tracked, GPS Longitude, GPS Latitude, GPS Horizontal Dilution of Precision, GPS Fix Obtained, GPS Altitude (m), GPS Altitude (ft), Ethernet packet per second for tx, Ethernet packet per second for rx, Ethernet Data port plugged, Cable loss, Automatic Tx modulation selection, Antenna gain. Items for CPE discovery: Device Model, Device Name, Distance, Firmware, IdealRxPower0 (ap), IdealRxPower1 (ap), Last IP address, Latency, Registration Attempts, Rx Capacity, RxIdealPower0 (cpe), RxIdealPower1 (cpe), RxPower0 (ap), RxPower0 (cpe), RxPower1 (ap), RxPower1 (cpe), RxPowerLevel0 (ap), RxPowerLevel0 (cpe), RxPowerLevel1 (ap), RxPowerLevel1 (cpe), RxRate, Tx Capacity, TxPower EIRP (cpe), TxRate. Just data retrieval. Template has no triggers, graphs or screens. ## Author Kari Karvonen 
-
 ## Overview
 
 Zabbix version 5.  

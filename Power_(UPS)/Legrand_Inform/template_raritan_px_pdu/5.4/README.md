@@ -1,9 +1,5 @@
 # Raritan PDU
 
-## Description
-
-## Overview Works with Raritan PDU PX2 / PX3 and ATS PX3 products Discovery rules: - Inlets - Outlets - Overcurrent Protectors - Sensors With advanced power function (See <https://www.zabbix.com/forum/zabbix-help/385574> for more info) ## Author eric_at_2037 
-
 ## Overview
 
 Works with Raritan PDU PX2 / PX3 and ATS PX3 products

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Oleg Kostikov aka Semiadmin Module for ICMP ping test from the Zabbix Windows agent. Put the comma-separated target list in user macro {$PING_LIST} at the template or host level and run the "get ICMP ping list" item. List example: 8.8.8.8,www.ya.ru,10.10.10.10 ## Overview Zabbix template for the ICMP ping test from the Zabbix Windows agent without any external scripts or user parameters. Edit Put the comma-separated target list into user macro {$PING _LIST} at the template or host level and run the "get ICMP ping list" item. List example: 8.8.8.8,www.ya.ru,10.10.10.10 ## Author Oleg Kostikov 
+Oleg Kostikov aka Semiadmin Module for ICMP ping test from the Zabbix Windows agent. Put the comma-separated target list in user macro {$PING_LIST} at the template or host level and run the "get ICMP ping list" item. List example: 8.8.8.8,www.ya.ru,10.10.10.10
 
 ## Overview
 

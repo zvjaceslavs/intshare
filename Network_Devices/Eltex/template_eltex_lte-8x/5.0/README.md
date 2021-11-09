@@ -1,9 +1,5 @@
 # Eltex LTE-8X
 
-## Description
-
-## Overview Eltex LTE-8x Template with ONT discovery (Mac & Laser Level), PON I/O traffic, CPU load, Temperature, ONT Count ## Author nvrskARTIst 
-
 ## Overview
 
 Eltex LTE-8x Template with ONT discovery (Mac & Laser Level), PON I/O traffic, CPU load, Temperature, ONT Count
@@ -42,8 +38,8 @@ There are no template links in this template.
 |OLT3 PON0 inbound|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.35265.1.21.5.2.10.1.1.0<p>Update: 300</p>|
 |SystemName|<p>Имя свитча, лучше указывать уникальное имя. И желательно не сильно длинное значение.</p>|`SNMP agent`|1.3.6.1.2.1.1.5.0<p>Update: 3600;3600/1-7,08:00-22:00</p>|
 |OLT1 PON1 outbound|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.35265.1.21.3.3.10.2.1.0<p>Update: 300</p>|
-|OLT2 ONT count PON1|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.35265.1.21.4.3.20.0<p>Update: 60</p>|
 |Temp2|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.35265.1.21.30.4.0<p>Update: 60</p>|
+|OLT2 ONT count PON1|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.35265.1.21.4.3.20.0<p>Update: 60</p>|
 |OLT2 PON1 inbound|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.35265.1.21.4.3.10.1.1.0<p>Update: 300</p>|
 |OLT1 PON0 outbound|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.35265.1.21.3.2.10.2.1.0<p>Update: 300</p>|
 |OLT1 PON0 inbound|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.35265.1.21.3.2.10.1.1.0<p>Update: 300</p>|

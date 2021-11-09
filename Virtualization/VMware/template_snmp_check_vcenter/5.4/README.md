@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Check host vCenter with SNMP. /! Must be vCenter 6.0.2a or later /! ## Overview Template for supervision SNMP of vCenter. --- **/! ** vCenter **6.0.2a** or later (error with previous version: <https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2145388>) **/! ** --- **Note1**: Triggers for services check use timer of 70 sec because check SNMP is configured with 60sec. If you change timer SNMP, change timer trigger **Note 2**: SNMP check of CPU is not usable because it return alwaus 100% **Note 3:** I have not Zabbix <3.0 in my DC. If you could test this template on Zabbix < 3.0, tell me if all is OK. Thanks ## Author LAHOUZE Olivier 
+Check host vCenter with SNMP. /! Must be vCenter 6.0.2a or later /! 
 
 ## Overview
 

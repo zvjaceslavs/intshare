@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Asustor NAS AS1004T https://www.asustor.com/ ## Overview Asustor NAS AS1004T template for Zabbix CPU, fan, net, storage, volume discovery ## Author Sergey Demidov 
+Asustor NAS AS1004T https://www.asustor.com/
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # Iostat monitoring
 
-## Description
-
-## Overview Please follow to github for install instructions https://github.com/tulnovdl/ZabbixIostatMonitoring ## Author Dmitry Tulnov 
-
 ## Overview
 
 Please follow to github for install instructions https://github.com/tulnovdl/ZabbixIostatMonitoring

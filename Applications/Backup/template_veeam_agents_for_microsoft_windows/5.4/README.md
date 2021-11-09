@@ -1,9 +1,5 @@
 # VEEAM-Agents
 
-## Description
-
-## Overview This template provide a way to monitor backup made by [Veeam Backup Agent for Microsoft Windows](https://www.veeam.com/windows-cloud-server-backup-agent.html). There is no additionnals scripts needed, all results are read from the Windows Event Log. It also monitor the service state of the application. This template is made with "zabbix active" item, meaning it can work behind remote firewall. ## Author Cédric MARCOUX 
-
 ## Overview
 
 This template provide a way to monitor backup made by [Veeam Backup Agent for Microsoft Windows](https://www.veeam.com/windows-cloud-server-backup-agent.html).

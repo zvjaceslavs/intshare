@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template BGPv4 Sessions -Admin Status -Established Time -Operation Status -AS Name -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as_name Base: BGP4-MIB.mib https://www.iana.org/assignments/bgp-parameters/bgp-parameters.xhtml ## Overview Template BGPv4 Sessions -Admin Status -Established Time -Operation Status -AS Name -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as _name Base: BGP4-MIB.mib <https://www.iana.org/assignments/bgp-parameters/bgp-parameters.xhtml> External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates ## Author Flavio Camacho Junior 
+Template BGPv4 Sessions -Admin Status -Established Time -Operation Status -AS Name -BGP last Error By: Flavio Gomes Figueira Camacho Junior Require: ValueMaps .BGP4-MIB::bgpPeerAdminStatus .BGP4-MIB::bgpPeerState ExternalScript .as_name Base: BGP4-MIB.mib https://www.iana.org/assignments/bgp-parameters/bgp-parameters.xhtml
 
 ## Overview
 

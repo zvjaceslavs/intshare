@@ -1,9 +1,5 @@
 # 瞻博SRX防火墙监控模板
 
-## Description
-
-## Overview 瞻博（Juniper）SRX系列防火墙监控模板 已在SRX3600，SRX650完成验证 主要包括CPU利用率、内存利用率、端口状态、端口带宽利用率、端口报文速率、CP会话、flow会话、新建会话 将宏 {$CLOUD _SNMP _COMMUNITY} 替换为实际团体字即可 ## Author zhangzhefeng 
-
 ## Overview
 
 瞻博（Juniper）SRX系列防火墙监控模板

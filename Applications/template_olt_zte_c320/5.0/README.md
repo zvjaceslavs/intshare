@@ -1,9 +1,5 @@
 # OLT ZTE C320
 
-## Description
-
-## Overview Template OLT ZTE o que o template faz: - Temperatura sfp - uptime - Interface status - onu registradas por porta - status das placas ## Author Anderson Raber 
-
 ## Overview
 
 Template OLT ZTE

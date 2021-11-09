@@ -1,9 +1,5 @@
 # SNMP HP v1905 POE
 
-## Description
-
-## Overview NEED in Macros HOST {$SNMP _COMMUNITY} {$SNMP _PORT} ## Author AlteraSidus 
-
 ## Overview
 
 NEED in Macros HOST

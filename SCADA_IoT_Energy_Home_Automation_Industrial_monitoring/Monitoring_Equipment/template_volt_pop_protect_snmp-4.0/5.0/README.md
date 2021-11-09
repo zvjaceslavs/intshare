@@ -1,9 +1,5 @@
 # Volt Pop Protect SNMP
 
-## Description
-
-## Overview 
-
 ## Overview
 
  

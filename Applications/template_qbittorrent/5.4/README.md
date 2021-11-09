@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template de monitoramento da API do qBittorrent ## Overview Template for qBittorrent. Do you need change macro "{$URLQBITTORRENT}", set de URL on your qBittorrent server with port (if exist). In the qBittorent do you need change in options>web interface to allow IP the zabbix server or proxy. Itens: * Conection Status * DHT Nodes * Download Data * Download Limit * Download Speed * Upload Data * Upload Limit * Upload Speed * Version ## Author Antony Peronio 
+Template de monitoramento da API do qBittorrent
 
 ## Overview
 

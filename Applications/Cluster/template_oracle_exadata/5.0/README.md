@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Exadata Database Machine X8-2 ## Overview Template for monitoring Oracle Exadata Infraestructure. ## Author Anael Silva | Bruno Luz 
+Exadata Database Machine X8-2
 
 ## Overview
 

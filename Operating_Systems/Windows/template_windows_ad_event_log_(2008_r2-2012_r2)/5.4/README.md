@@ -1,9 +1,5 @@
 # Event User Log
 
-## Description
-
-## Overview Check windows event log: 1. Create user account 2. User account on 3. User account off 4. User account password reset 5. Delete user account 6. Unlocked user account + changed domain policy and cleaned security log ## Author Andrew Herasym 
-
 ## Overview
 
 Check windows event log:

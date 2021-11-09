@@ -1,9 +1,5 @@
 # APC_Monitor_RackPDU
 
-## Description
-
-## Overview Basic items only, 3 Phase only ## Author Eric Kennedy 
-
 ## Overview
 
 Basic items only, 3 Phase only

@@ -1,9 +1,5 @@
 # Parks Fiberlink 20048S - V1.1
 
-## Description
-
-## Overview Template para Olt Parks Modelo 20048S ## Author Parks 
-
 ## Overview
 
 Template para Olt Parks Modelo 20048S
@@ -41,8 +37,8 @@ There are no discovery rules in this template.
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[gpon1/2]<p>Update: 60</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[giga-ethernet0/6]<p>Update: 60</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[10giga-ethernet1/1]<p>Update: 60</p>|
-|Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/0]<p>Update: 60</p>|
 |Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[giga-ethernet0/5]<p>Update: 60</p>|
+|Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/0]<p>Update: 60</p>|
 |Device Description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 7200</p>|
 |Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/7]<p>Update: 60</p>|
 |Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/5]<p>Update: 60</p>|
@@ -53,9 +49,9 @@ There are no discovery rules in this template.
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[gpon2/1]<p>Update: 60</p>|
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[giga-ethernet0/3]<p>Update: 60</p>|
 |Outgoing traffic on interface $1|<p>The number of octets transmitted in MAC frames on this interface, including the MAC header and FCS.</p>|`SNMP agent`|ifOutOctets[giga-ethernet0/4]<p>Update: 60</p>|
+|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/4]<p>Update: 60</p>|
 |Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[gpon1/1]<p>Update: 60</p>|
 |Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[giga-ethernet0/7]<p>Update: 60</p>|
-|Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[gpon2/4]<p>Update: 60</p>|
 |Operational status of interface $1|<p>The current operational state of the interface.</p>|`SNMP agent`|ifOperStatus[giga-ethernet0/1]<p>Update: 60</p>|
 |Temperature SFP Gpon 2/3|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_7<p>Update: 1800</p>|
 |Temperature SFP Gpon 1/3|<p>-</p>|`SNMP agent`|pkSfpDiagTemperature_3<p>Update: 1800</p>|

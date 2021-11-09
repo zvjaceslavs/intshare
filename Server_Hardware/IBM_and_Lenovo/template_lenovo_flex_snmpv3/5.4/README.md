@@ -1,9 +1,5 @@
 # Lenovo Flex chassis
 
-## Description
-
-## Overview **Basic zabbix template for Lenovo Flex chassis.** ================================================== Базовый монтирониг: Blades, Fans, Information, Powers, Switches, System. Настройка: 1. Включить на CMM Flex SNMPv3. 2. Создать и настроить пользователя для мониторинга на CMM Flex. 3. В импортированном шаблоне прописать макросы: {$FLEX _USER} и {$FLEX _PASS}. ## Author Evgen-20 
-
 ## Overview
 
 **Basic zabbix template for Lenovo Flex chassis.**

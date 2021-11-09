@@ -2,7 +2,71 @@
 
 ## Description
 
-## Description This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default. ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli ## Description Official Linux template using node exporter. Known Issues: Description: node_exporter v0.16.0 renamed many metrics. CPU utilization for 'guest' and 'guest_nice' metrics are not supported in this template with node_exporter < 0.16. Disk IO metrics are not supported. Other metrics provided as 'best effort'. See https://github.com/prometheus/node_exporter/releases/tag/v0.16.0 for details. Version: below 0.16.0 Description: metric node_network_info with label 'device' cannot be found, so network discovery is not possible. Version: below 0.18 You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/387225-discussion-thread-for-official-zabbix-template-for-linux Template tooling version used: 0.34 ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli 
+This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default.
+
+## Overview
+
+ ### Description
+
+
+zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server.
+
+
+It is used for external Kubernetes monitoring by Zabbix via Prometheus API.
+
+
+### Installation
+
+
+1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster.
+2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server.
+3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed.
+4. Let LLD create discovered nodes as new "Zabbix hosts"
+5. Let LLD create discovered pods as new "Virtual Zabbix hosts
+
+
+### Templates
+
+
+The global export (zabbix-kube-prom.xml) contains following templates:
+
+
+
+
+| Templates | Description |
+| --- | --- |
+| Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. |
+| Template Kube Node by Prom API | Template applied to the created host (node). |
+| Template Kube Pod by Prom API | Template applied to the created host (pod). |
+
+
+### Licenses
+
+
+
+
+| Template | License |
+| --- | --- |
+| Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) |
+| Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) |
+
+
+
+
+---
+
+
+ 
+
+
+
+## Author
+
+Laurent Marchelli
+
+## Description
+
+Official Linux template using node exporter. Known Issues: Description: node_exporter v0.16.0 renamed many metrics. CPU utilization for 'guest' and 'guest_nice' metrics are not supported in this template with node_exporter < 0.16. Disk IO metrics are not supported. Other metrics provided as 'best effort'. See https://github.com/prometheus/node_exporter/releases/tag/v0.16.0 for details. Version: below 0.16.0 Description: metric node_network_info with label 'device' cannot be found, so network discovery is not possible. Version: below 0.18 You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/387225-discussion-thread-for-official-zabbix-template-for-linux Template tooling version used: 0.34
 
 ## Overview
 
@@ -199,7 +263,131 @@ There are no template links in this template.
 
 ## Description
 
-## Description This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default. ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli ## Description Official Linux template using node exporter. Known Issues: Description: node_exporter v0.16.0 renamed many metrics. CPU utilization for 'guest' and 'guest_nice' metrics are not supported in this template with node_exporter < 0.16. Disk IO metrics are not supported. Other metrics provided as 'best effort'. See https://github.com/prometheus/node_exporter/releases/tag/v0.16.0 for details. Version: below 0.16.0 Description: metric node_network_info with label 'device' cannot be found, so network discovery is not possible. Version: below 0.18 You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/387225-discussion-thread-for-official-zabbix-template-for-linux Template tooling version used: 0.34 ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli 
+This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default.
+
+## Overview
+
+ ### Description
+
+
+zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server.
+
+
+It is used for external Kubernetes monitoring by Zabbix via Prometheus API.
+
+
+### Installation
+
+
+1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster.
+2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server.
+3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed.
+4. Let LLD create discovered nodes as new "Zabbix hosts"
+5. Let LLD create discovered pods as new "Virtual Zabbix hosts
+
+
+### Templates
+
+
+The global export (zabbix-kube-prom.xml) contains following templates:
+
+
+
+
+| Templates | Description |
+| --- | --- |
+| Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. |
+| Template Kube Node by Prom API | Template applied to the created host (node). |
+| Template Kube Pod by Prom API | Template applied to the created host (pod). |
+
+
+### Licenses
+
+
+
+
+| Template | License |
+| --- | --- |
+| Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) |
+| Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) |
+
+
+
+
+---
+
+
+ 
+
+
+
+## Author
+
+Laurent Marchelli
+
+## Description
+
+Official Linux template using node exporter. Known Issues: Description: node_exporter v0.16.0 renamed many metrics. CPU utilization for 'guest' and 'guest_nice' metrics are not supported in this template with node_exporter < 0.16. Disk IO metrics are not supported. Other metrics provided as 'best effort'. See https://github.com/prometheus/node_exporter/releases/tag/v0.16.0 for details. Version: below 0.16.0 Description: metric node_network_info with label 'device' cannot be found, so network discovery is not possible. Version: below 0.18 You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/387225-discussion-thread-for-official-zabbix-template-for-linux Template tooling version used: 0.34
+
+## Overview
+
+ ### Description
+
+
+zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server.
+
+
+It is used for external Kubernetes monitoring by Zabbix via Prometheus API.
+
+
+### Installation
+
+
+1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster.
+2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server.
+3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed.
+4. Let LLD create discovered nodes as new "Zabbix hosts"
+5. Let LLD create discovered pods as new "Virtual Zabbix hosts
+
+
+### Templates
+
+
+The global export (zabbix-kube-prom.xml) contains following templates:
+
+
+
+
+| Templates | Description |
+| --- | --- |
+| Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. |
+| Template Kube Node by Prom API | Template applied to the created host (node). |
+| Template Kube Pod by Prom API | Template applied to the created host (pod). |
+
+
+### Licenses
+
+
+
+
+| Template | License |
+| --- | --- |
+| Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) |
+| Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) |
+
+
+
+
+---
+
+
+ 
+
+
+
+## Author
+
+Laurent Marchelli
 
 ## Overview
 
@@ -316,7 +504,7 @@ There are no triggers in this template.
 
 ## Description
 
-## Description This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default. ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli 
+This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default.
 
 ## Overview
 

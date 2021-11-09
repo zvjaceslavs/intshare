@@ -1,9 +1,5 @@
 # MFP Ricoh
 
-## Description
-
-## Overview Template is tested with Ricoh MP C2011SP. Displays toner levels for each colour and some print counters (Total, BW and Colour prints). Triggers on low toner level. ## Author Alexey Muraviev 
-
 ## Overview
 
 Template is tested with Ricoh MP C2011SP.

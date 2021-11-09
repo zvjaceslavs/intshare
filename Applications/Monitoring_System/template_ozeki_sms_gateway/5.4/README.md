@@ -1,9 +1,5 @@
 # 8 Ozeki
 
-## Description
-
-## Overview Ozeki SMS Gateway Template provide server information, connection status, users and queue sizes, trigger for disconnection and filling queues and display queue sizes in graph. Tested on zabbix 3.4 
-
 ## Overview
 
 Ozeki SMS Gateway

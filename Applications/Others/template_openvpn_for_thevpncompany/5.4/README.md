@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au The VPN Company provides the source code to create an end-to-end VPN Company. ## Overview [TheVPNCompany.com.au](https://thevpncompany.com.au) offers an open source end to end solution for VPN Companies. In order to manage the OpenVPN Infrastructure, those templates are published. Please visit [TheVPNCompany.com.au](https://thevpncompany.com.au) on how to install and configure the templates. Those templates allows the user to: - Discover how many users are connected to the OpenVPN backend - Monitor how much bandwidth those users have consumed in the current month - Monitor how much total bandwidth the OpenVPN server has consumed in the current month 
+Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au The VPN Company provides the source code to create an end-to-end VPN Company.
 
 ## Overview
 
@@ -66,7 +66,47 @@ There are no triggers in this template.
 
 ## Description
 
-## Description Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au The VPN Company provides the source code to create an end-to-end VPN Company. ## Overview [TheVPNCompany.com.au](https://thevpncompany.com.au) offers an open source end to end solution for VPN Companies. In order to manage the OpenVPN Infrastructure, those templates are published. Please visit [TheVPNCompany.com.au](https://thevpncompany.com.au) on how to install and configure the templates. Those templates allows the user to: - Discover how many users are connected to the OpenVPN backend - Monitor how much bandwidth those users have consumed in the current month - Monitor how much total bandwidth the OpenVPN server has consumed in the current month ## Description Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au The VPN Company provides the source code to create an end-to-end VPN Company. ## Overview [TheVPNCompany.com.au](https://thevpncompany.com.au) offers an open source end to end solution for VPN Companies. In order to manage the OpenVPN Infrastructure, those templates are published. Please visit [TheVPNCompany.com.au](https://thevpncompany.com.au) on how to install and configure the templates. Those templates allows the user to: - Discover how many users are connected to the OpenVPN backend - Monitor how much bandwidth those users have consumed in the current month - Monitor how much total bandwidth the OpenVPN server has consumed in the current month 
+Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au The VPN Company provides the source code to create an end-to-end VPN Company.
+
+## Overview
+
+[TheVPNCompany.com.au](https://thevpncompany.com.au) offers an open source end to end solution for VPN Companies. In order to manage the OpenVPN Infrastructure, those templates are published.
+
+
+Please visit [TheVPNCompany.com.au](https://thevpncompany.com.au) on how to install and configure the templates.
+
+
+Those templates allows the user to:
+
+
+ - Discover how many users are connected to the OpenVPN backend
+
+
+ - Monitor how much bandwidth those users have consumed in the current month
+
+
+ - Monitor how much total bandwidth the OpenVPN server has consumed in the current month
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+## Description
+
+Template to monitor VPN Services according to the Open Source configuration provided at https://thevpncompany.com.au The VPN Company provides the source code to create an end-to-end VPN Company.
 
 ## Overview
 

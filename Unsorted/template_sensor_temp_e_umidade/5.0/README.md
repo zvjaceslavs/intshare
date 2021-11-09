@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template customizado para o TZ600 ## Overview Template Sensor de Temperatura e Umidade Coleta a Temperatura e Umidade Triggers Temperatura acima de 40ºC Umidade Acima de 80% Umidade Acima de 90% Umidade Inferior a 35% ## Author Ruy Mendonça 
+Template customizado para o TZ600
 
 ## Overview
 

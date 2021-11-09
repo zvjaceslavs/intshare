@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description vCenter 6.5 Usage 5318154 ## Overview Reprocessing [https://share.zabbix.com/virtualization/vmware/snmp-check-vcenter](virtualization/vmware/snmp-check-vcenter) for Zabbix 3.0.4 and VCSA 6.5 (5318154) Thanks [Olivier LAHOUZE](owner/li_mVlS9YBOhr) ## Author Dorin Sergey 
+vCenter 6.5 Usage 5318154
 
 ## Overview
 
@@ -41,8 +41,8 @@ There are no template links in this template.
 |----|-----------|----|----|
 |Process vmware-sca Perf Memory|<p>VMware Service Control Agent Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_sca-Perf-Memory<p>Update: 180</p>|
 |Process vmware-cm Perf Memory|<p>VMware Component Manager Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_cm-Perf-Memory<p>Update: 180</p>|
-|Process vmware-cis-license Perf Memory|<p>VMware License Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_cis_license-Perf-Memory<p>Update: 180</p>|
 |Process vmware-sts-idmd Perf Memory|<p>VMware Identity Management Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_sts_idmd-Perf-Memory<p>Update: 180</p>|
+|Process vmware-cis-license Perf Memory|<p>VMware License Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_cis_license-Perf-Memory<p>Update: 180</p>|
 |Process vsphere-client Status|<p>vsphere-client</p>|`SNMP agent`|SNMP-Process-vsphere_client-Status<p>Update: 180</p>|
 |Process vmware-vapi-endpoint Perf Memory|<p>VMware vAPI Endpoint Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vapi_endpoint-Perf-Memory<p>Update: 180</p>|
 |Process vmdird Status|<p>VMware Directory Service</p>|`SNMP agent`|SNMP-Process-vmdird-Status<p>Update: 180</p>|
@@ -52,8 +52,8 @@ There are no template links in this template.
 |Process vsphere-client Perf Memory|<p>vsphere-client Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vsphere_client-Perf-Memory<p>Update: 180</p>|
 |Process vmware-cm Perf CPU|<p>VMware Component Manager</p>|`SNMP agent`|SNMP-Process-vmware_cm-Perf-CPU<p>Update: 180</p>|
 |Process vmware-vpostgres Perf Memory|<p>VMware Postgres Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_vpostgres-Perf-Memory<p>Update: 180</p>|
-|Process vmware-psc-client Status|<p>Platform Services Controller</p>|`SNMP agent`|SNMP-Process-vmware_psc_client-Status<p>Update: 180</p>|
 |Process vmware-syslog-health Perf Memory|<p>VMware Syslog Health Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_syslog_health-Perf-Memory<p>Update: 180</p>|
+|Process vmware-psc-client Status|<p>Platform Services Controller</p>|`SNMP agent`|SNMP-Process-vmware_psc_client-Status<p>Update: 180</p>|
 |Process vmware-tools-vgauth Perf Memory|<p>VMware Tools Guest Authentication Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_tools_vgauth-Perf-Memory<p>Update: 180</p>|
 |Nombre de Processus|<p>-</p>|`SNMP agent`|SNMP-Nombre-Processus<p>Update: 180</p>|
 |Process vmware-syslog Perf Memory|<p>VMware Common Logging Service Result in Kbytes</p>|`SNMP agent`|SNMP-Process-vmware_syslog-Perf-Memory<p>Update: 180</p>|

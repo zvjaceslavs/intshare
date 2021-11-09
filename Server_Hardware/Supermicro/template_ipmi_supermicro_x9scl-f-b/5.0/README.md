@@ -1,9 +1,5 @@
 # IPMI Supermicro X9DRL-7F-BO
 
-## Description
-
-## Overview IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage] Items 17, Triggers 17, Graphs 3 ## Author Vadzim Smazheuski 
-
 ## Overview
 
 IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage]

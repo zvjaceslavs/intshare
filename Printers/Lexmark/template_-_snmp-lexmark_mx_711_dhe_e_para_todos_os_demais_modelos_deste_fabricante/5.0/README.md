@@ -1,9 +1,5 @@
 # SNMP - Lexmark MONO
 
-## Description
-
-## Overview Template customizado para monitorar os itens: 01 Device model **Maintenance Kit level (Photo Condutor)** Maintenance Kit capacity Printer Status Page Counter Toner print level Toner print capacity 05 Device Serial Number **KIT Manutenção** **Kit Rolo** Os itens em negrito foram acrescentados e já estão com as triggers criada para disparar abaixo de 5% **Criado para monitorar o modelo Lexmark MX711dhe. Em tempo, informo que para monitorar outro modelo de impressora lexmark basta alterar nos itens o SNMP OID.** Para buscar OID inserir o comando no terminal # snmpwalk -v2c -c public + ip (o comando retornara todas OID . ) Template atualizado pois durante a substituição do fotocondutor, a impressora reporta "0" no status do toner para o Zabbix, o que gerava um falso positivo. Para corrigir esse erro, fizemos uma alteraçao na Trigger para desconsiderar o status "0" do toner, reportando toner esgotado quando estiver em 1%, e "Finalizando" entre 1 e 5%, podendo ser alterado conforme sua necessidade. ## Author Thiago Surette 
-
 ## Overview
 
 Template customizado para monitorar os itens:

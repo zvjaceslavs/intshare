@@ -1,9 +1,5 @@
 # Trassir-server
 
-## Description
-
-## Overview Template for Trassir CCTV DVR server. This template allows to check DVR server related metrics via SDK web connection. You need to provide global or inside host macros: * {$TRASSIR _SDK _PORT} - web server port on remote host, usually 8080, * {$TRASSIR _SDK _PASS} - password to SDK, * <span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: nor ## Author vanomel 
-
 ## Overview
 
 Template for Trassir CCTV DVR server.

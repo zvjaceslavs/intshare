@@ -1,9 +1,5 @@
 # IPMI HP ProLiant XL420 Gen9
 
-## Description
-
-## Overview IPMI Template for the HP XL420 Gen 9 
-
 ## Overview
 
 IPMI Template for the HP XL420 Gen 9 
@@ -33,8 +29,8 @@ There are no discovery rules in this template.
 |C1 P2I Bay 4|<p>-</p>|`IPMI agent`|C1P2IBay4<p>Update: 300</p>|
 |Fan 3 Presence|<p>-</p>|`IPMI agent`|Fan3Presence<p>Update: 300</p>|
 |C1 P2I Bay 5|<p>-</p>|`IPMI agent`|C1P2IBay5<p>Update: 300</p>|
-|Fan 5|<p>-</p>|`IPMI agent`|Fan5<p>Update: 300</p>|
 |Fan 1|<p>-</p>|`IPMI agent`|Fan1<p>Update: 300</p>|
+|Fan 5|<p>-</p>|`IPMI agent`|Fan5<p>Update: 300</p>|
 |03-CPU 2|<p>-</p>|`IPMI agent`|03-CPU2<p>Update: 300</p>|
 |Fan 2|<p>-</p>|`IPMI agent`|Fan2<p>Update: 300</p>|
 |PS 2 Presence|<p>-</p>|`IPMI agent`|PS2Presence<p>Update: 300</p>|

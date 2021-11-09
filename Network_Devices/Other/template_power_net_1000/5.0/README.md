@@ -1,9 +1,5 @@
 # VOLT - POWER NET 1000
 
-## Description
-
-## Overview Olá, Template para equipamentos Power Net 1000 da Volt. Segue abaixo lista de Itens a serem Monitorados. * Modo de Operação da Fonte * Status do Carregador de Baterias * Status do Cooler * Status do Ramal 1 * Status do Ramal 2 * Status do Ramal 3 * Status do Ramal 4 * Temperatura Interna * Voltagem da entrada AC * Voltagem das Tomadas * Voltagem do Banco de Baterias * Voltagem do Ramal 1 * Voltagem do Ramal 2 * Voltagem do Ramal 3 * Voltagem do Ramal 4 ## Author Aquinof 
-
 ## Overview
 
 Olá,

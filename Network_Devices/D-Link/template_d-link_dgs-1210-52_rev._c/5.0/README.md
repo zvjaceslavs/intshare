@@ -1,9 +1,5 @@
 # SNMP D-link DGS-1210-52 revC
 
-## Description
-
-## Overview Based on official D-link MIB. Generic device data, not all figures available though (can't find CPU / RAM usage, probably was removed by vendor). LLD Network interfaces. Do not use with PoE version - vendor changed many OIDs. 
-
 ## Overview
 
 Based on official D-link MIB. Generic device data, not all figures available though (can't find CPU / RAM usage, probably was removed by vendor).

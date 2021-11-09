@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Created by Joakim Kingström at Sports Interactive. ## Overview This template is for Powertek 1-phase PDU's. It consists of 25 Items, nine triggers, and four graphs. It also has four discovery rules, with one of them having nine trigger prototypes. The discovery rules are disabled by default since they only created noise for me, but might be useful for other people. ## Author Joakim Kingström 
+Created by Joakim Kingström at Sports Interactive.
 
 ## Overview
 
@@ -85,7 +85,6 @@ There are no template links in this template.
 |SPSv1-MIB::inletCfgVoltWarnPhase1[{#SNMPINDEX}]|<p>The Warning Threshold of pahse1 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.13.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |SPSv1-MIB::inletCfgVoltWarnPhase2[{#SNMPINDEX}]|<p>The Warning Threshold of pahse2 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.14.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |SPSv1-MIB::inletCfgVoltWarnPhase3[{#SNMPINDEX}]|<p>The Warning Threshold of pahse3 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.3.1.15.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|PDU Power Factor ?[{#SNMPINDEX}]|<p>The phase1 status of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.18.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Active Power[{#SNMPINDEX}]|<p>The total power of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.2.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |PDU Reset Date[{#SNMPINDEX}]|<p>The reset date of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.3.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Energy used[{#SNMPINDEX}]|<p>The total energy of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.4.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
@@ -94,6 +93,7 @@ There are no template links in this template.
 |PDU Inlet Voltage[{#SNMPINDEX}]|<p>The phase1 voltage of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.9.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Supposedly the Power Factor of the PDU[{#SNMPINDEX}]|<p>The phase1 power factor of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.12.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Voltage[{#SNMPINDEX}]|<p>The phase1 power of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.15.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|PDU Power Factor ?[{#SNMPINDEX}]|<p>The phase1 status of inlet.</p>|`SNMP agent`|.1.3.6.1.4.1.42610.1.4.4.1.6.1.2.1.18.[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

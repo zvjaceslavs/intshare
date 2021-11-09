@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Install and info: https://github.com/hermanekt/Zabbix_wildfly_eap_jboss_monitoring https://share.zabbix.com/official-templates/wildfly-eap-jboss-discovery Version 1.2 ## Overview This is auto Discovery template for monitoring Wildfly, EAP, Jboss servers ========================================================================== **Install instruction: https://github.com/hermanekt/Zabbix _wildfly _eap _jboss _monitoring/** Static item: ``` JMX Wildfly Memory JMX Wildfly Runtime JMX Wildfly Threading JMX Wildlfy Classes JMX Wildlfy Server ``` Discovery: ``` Datasource JDBC Datasource POOL Garbage Collector Memory Pool Server ``` ## Author Tomas Hermanek 
+Install and info: https://github.com/hermanekt/Zabbix_wildfly_eap_jboss_monitoring https://share.zabbix.com/official-templates/wildfly-eap-jboss-discovery Version 1.2
 
 ## Overview
 

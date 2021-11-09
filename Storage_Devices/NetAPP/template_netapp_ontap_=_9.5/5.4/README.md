@@ -1,9 +1,5 @@
 # Module Netapp OS
 
-## Description
-
-## Overview It's based on template "NETAPP ONTAB 9.5" from eric _at _2037, but with some improvements. I tested with Ontap 9.5 to Ontap 9.7. Discovery rules: Same like other template! Improvements: - SnapMirror with custom multiplier (original template gave wrong results) - Volumes now with iNodes discovery and triggers - some new macros for trigger Exported from Zabbix 5.0 
-
 ## Overview
 
 It's based on template "NETAPP ONTAB 9.5" from eric\_at\_2037, but with some improvements.

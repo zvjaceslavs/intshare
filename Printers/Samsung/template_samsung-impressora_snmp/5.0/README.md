@@ -1,9 +1,5 @@
 # SAMSUNG
 
-## Description
-
-## Overview Desenvolvido por Thomas Lage E-Mail: lage.thomas@gmail.com Telegram: @lagethomasm Template para impressoras SAMSUNG,montado com as principais configurações que são necessárias para o uso na empresa em que trabalho, testado e montado com base nos modelos: SL-M4025ND SL-M4075FR CARACTERISTICAS: Informação do setor (se cadastrado na impressora) Modelo Número de série Endereço IP Endereço MAC Nível do toner (números) Nível do toner (%) - Trigger notifica com 5% de toner Nível do fotocondutor (Números) - Trigger Notifica com 5% de fotocondutor Total de impressões Entre outros... Como sou novo com Zabbix, esse é meu primeiro template, resolvi compartilhar e contribuir com a comunidade. ## Author Thomas Henrique Lage 
-
 ## Overview
 
 Desenvolvido por Thomas Lage 

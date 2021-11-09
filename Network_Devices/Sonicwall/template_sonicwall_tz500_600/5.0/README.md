@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template customizado para o TZ600 ## Overview Template Sonicwall TZ500 e TZ600 Performance Status de Portas e Tráfego Triggers de Status de portas, processamento e memória ## Author Ruy Mendonça 
+Template customizado para o TZ600
 
 ## Overview
 

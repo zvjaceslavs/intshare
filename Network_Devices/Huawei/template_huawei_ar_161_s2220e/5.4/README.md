@@ -1,9 +1,5 @@
 # Basic HUAWEI SNMP with traps AR161 and S2220E
 
-## Description
-
-## Author rkarepanov@gmail.com 
-
 ## Author
 
 rkarepanov@gmail.com

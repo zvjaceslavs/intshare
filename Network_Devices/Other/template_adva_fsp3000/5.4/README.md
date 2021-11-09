@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Autodiscovery ADVA Dwdm (especially FSP3000 r7) ## Overview Template to autodiscover Adva fsp3000 R7 base system It actually has autodiscovery for network port client port edf amplifier If you have additional module pls be kind and add related autodiscovery Use snmptt for having traps syntax for the translated traps should be like that *EVENT alarmCfmOosDisabled .1.3.6.1.4.1.2544.1.11.6.1.2.0.13000 "Status Events" Normal* *FORMAT ZBXTRAP $aA Non-Specific Disablement of Management Access |$** *REGEX ((.+) |( d+).* |(.+)$)($1 severity:$2 object:$3)* Value Maps are the following | | [Adva Administrative state](http://nm01-lrd.pop01.ch.m2b.int/zabbix/adm.valuemapping.php?form=update&valuemapid=50) | 0 ⇒ Undefined1 ⇒ Unassigned2 ⇒ In Service3 ⇒ Automatic In Service4 ⇒ Management5 ⇒ Maintanance6 ⇒ Disabled7 ⇒ Path Protection State | | | | [Adva Operational State](http://nm01-lrd.pop01.ch.m2b.int/zabbix/adm.valuemapping.php?form=update&valuemapid=49) | 0 ⇒ Undefined1 ⇒ Normal2 ⇒ Abnormal3 ⇒ Out of Service4 ⇒ Unreachable | | | | [Adva Row State](http://nm01-lrd.pop01.ch.m2b.int/zabbix/adm.valuemapping.php?form=update&valuemapid=51) | 0 ⇒ undefined1 ⇒ active2 ⇒ notInService3 ⇒ notReady4 ⇒ createAndGo5 ⇒ createAndWait6 ⇒ destroy | | | | | | | | | | | | | | | ## Author Marco Agostani 
+Autodiscovery ADVA Dwdm (especially FSP3000 r7)
 
 ## Overview
 

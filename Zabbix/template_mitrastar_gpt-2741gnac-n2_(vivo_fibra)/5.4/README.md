@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template roteador de fibra MitraStar - GPT-2741GNAC-N2 utilizado pela Vivo no Brasil Desenvolvido por Maurício Venzi mvenzi at gmail.com ## Overview Template de monitoração do roteador da marca MitraStar modelo GPT-2741GNAC-N2 utilizado pela operadora VIVO FIBRA. testado no Zabbix 5.0 e 5.2 Caso o uptime fique errado ajuste o preprocessamento multiplicando por 0.01 deixe seu feedback... problemas mvenzi@gmail.com ## Author Maurício Venzi 
+Template roteador de fibra MitraStar - GPT-2741GNAC-N2 utilizado pela Vivo no Brasil Desenvolvido por Maurício Venzi mvenzi at gmail.com
 
 ## Overview
 

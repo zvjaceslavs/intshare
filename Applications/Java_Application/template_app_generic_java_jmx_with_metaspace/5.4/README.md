@@ -1,11 +1,5 @@
 # Template App Generic Java JMX
 
-## Overview
-
-Standard JMX monitoring with Metaspace added
-
-
-
 ## Macros used
 
 There are no macros links in this template.

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Monitoring template for myStrom ECS (Energy Control Switch). Source: https://github.com/frei-style/zabbix-mystrom-ecs-template ## Overview Monitoring template for [myStrom ECS](https://mystrom.ch/) (Energy Control Switch). ## Author Manuel Frei 
+Monitoring template for myStrom ECS (Energy Control Switch). Source: https://github.com/frei-style/zabbix-mystrom-ecs-template
 
 ## Overview
 

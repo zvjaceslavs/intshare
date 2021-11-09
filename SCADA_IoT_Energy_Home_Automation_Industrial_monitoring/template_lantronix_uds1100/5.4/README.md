@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Simple LANTRONIX-UDS1100 template by Federico Coppola ## Overview It is a very simple template to monitor Lantronix UDS1100 device. Using this template you can monitor: * Ethernet port status * Input/output bytes * Operational mode * Admin console and web console service This template create graphs about this checks. I have created and tested it using Zabbix 4.0.5 ## Author Federico Coppola 
+Simple LANTRONIX-UDS1100 template by Federico Coppola
 
 ## Overview
 

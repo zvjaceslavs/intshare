@@ -1,9 +1,5 @@
 # SNMP - ServerCheck.com - SensorGateway
 
-## Description
-
-## Overview Critical Facilities Monitoring with **[ServersCheck.com](https://serverscheck.com)** Template for the **[SensorGateway](https://serverscheck.com/sensors/)** product which includes: **Applications (3)**: * General - 5 items * Network - 4 items * Sensor - 4 items **General (5):** * productname - Name of product. e.g. SensorGateway etc. * productversion - Version of product. e.g. 1.0 etc * productdate - Build date of product. e.g. Apr 2010 etc * productusername - User give name of product. e.g. ABCD etc * productuserloc - Usage loaction of product. e.g. Data center etc **Network (4):** * productnetip - IP Address of product * productnetgateway - Gateway of product * productnetpridns - Primary DNS of product * productnetsecdns - Secondary DNS of product **Sensor (4):** * sensor1name - Type of Sensor * sensor1Value - Value of Sensor * sensor1LastErrMsg - Last error message of Sensor * sensor1LastErrTime - Last error time of Sensor **Triggers (0):** * Room for improvement! **Graphs (0):** * All SNMP values are TEXT so graphs are possibly not working ## Author Jean-Paul van Hamond 
-
 ## Overview
 
 Critical Facilities Monitoring with **[ServersCheck.com](https://serverscheck.com)** Template for the **[SensorGateway](https://serverscheck.com/sensors/)** product which includes:

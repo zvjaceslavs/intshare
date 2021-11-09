@@ -1,9 +1,5 @@
 # Zabbix DB Partitions
 
-## Description
-
-## Overview This template create items to monitor 5 days worth of partitions have been created for your database. This template is intended to be used for the Zabbix Database partitions, however could be modified to check for any database partitions. Install Steps: * Import template into Zabbix 3.2 or > * Set the {$PASSWORD} Macro to the password for the account which will be preforming the check * Update EACH item to have the user that will be preforming the check, Default==Root * Update the ls path used in each item for the correct path to your DB * Apply to each of your DB hosts in Zabbix ![Software Information Systems](https://www.thinksis.com/images/header/logo.jpg) ## Author SIS 
-
 ## Overview
 
 This template create items to monitor 5 days worth of partitions have been created for your database. This template is intended to be used for the Zabbix Database partitions, however could be modified to check for any database partitions. 

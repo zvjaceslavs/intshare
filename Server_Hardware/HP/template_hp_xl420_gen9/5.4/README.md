@@ -1,9 +1,5 @@
 # IPMI HP ProLiant XL420 Gen9
 
-## Description
-
-## Overview IPMI Template for the HP XL420 Gen 9 
-
 ## Overview
 
 IPMI Template for the HP XL420 Gen 9 

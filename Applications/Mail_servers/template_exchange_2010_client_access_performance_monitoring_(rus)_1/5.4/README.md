@@ -1,9 +1,5 @@
 # Exchange Mailbox Servers_RU
 
-## Description
-
-## Overview 39 Items, 5 Triggers 13 Graphs and 6 Screens built from Exchange 2010 Client Access Server Performance Counters for advanced troubleshooting, trending and capacity planning. Изменены названия Performance Couters для поддержки русской версии сервера Exchange ## Author Stephen E. Fritz 
-
 ## Overview
 
 39 Items, 5 Triggers 13 Graphs and 6 Screens built from Exchange 2010 Client Access Server Performance Counters for advanced troubleshooting, trending and capacity planning.

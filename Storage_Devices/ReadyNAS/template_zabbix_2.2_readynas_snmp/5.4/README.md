@@ -1,9 +1,5 @@
 # SNMP ReadyNas
 
-## Description
-
-## Overview NEED in Macros HOST {$SNMP _COMMUNITY} {$SNMP _PORT} Modified for ReadyNas 2120 zabbix 2.2 Restart trigger added Small mistakes corrected ## Author Bonardi & Jeffrey H. Simonson 
-
 ## Overview
 
 NEED in Macros HOST

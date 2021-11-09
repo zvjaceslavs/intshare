@@ -1,9 +1,5 @@
 # FG_200B
 
-## Description
-
-## Overview Template for Fortigate 200B Still - WIP! Use at your own risk Items: * Memory * CPU * SN * FW * Up time * Sessions Items Prototypes * Download * Upload * Status * Description Trigger Prototypes * Interface Up & Down Any suggestion will be Welcomed :) ## Author JonatanRek 
-
 ## Overview
 
  Template for Fortigate 200B

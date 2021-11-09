@@ -1,9 +1,5 @@
 # QCT Hardware Health
 
-## Description
-
-## Overview QCT Server fan speed and health control template. Value Mapping unknown(1), disable(2), ok(3), fail(4), prefailure-predicted(5), redundant-fan-failed(6), not-manageable(7), not-present(8), not-available(9) Reference: https://github.com/simonjj/SnmpMibs/blob/master/S31.mib ## Author Sami Onur Zaim 
-
 ## Overview
 
 QCT Server fan speed and health control template.

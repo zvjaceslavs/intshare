@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description template dvr ## Overview Monitorar Trafico de Rede Status do Canal Perca de Pacote Tempo Ligado Equipamento ## Author Favero 
+template dvr
 
 ## Overview
 

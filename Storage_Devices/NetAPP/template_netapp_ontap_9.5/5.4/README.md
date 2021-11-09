@@ -1,9 +1,5 @@
 # SNMP NetApp cDot
 
-## Description
-
-## Overview For Netapp Ontape 9.5 and later. Discovery rules: - Aggregates - Enclosures - LIFs - Nodes - SnapMirror (New) - Volumes Based on "NETAPP ONTAP 9.1" edited by "[zabbiJ](owner/zabbiJ)". ## Author eric_at_2037 
-
 ## Overview
 
 For Netapp Ontape 9.5 and later.
@@ -50,20 +46,20 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Autosupport Failed Sends|<p>-</p>|`SNMP agent`|autosupportFailedSends<p>Update: 5m</p>|
-|Autosupport Status|<p>-</p>|`SNMP agent`|autosupportStatus<p>Update: 5m</p>|
-|Autosupport Status Message|<p>-</p>|`SNMP agent`|autosupportStatusMessage<p>Update: 5m</p>|
-|Autosupport Successful Sends|<p>-</p>|`SNMP agent`|autosupportSuccessfulSends<p>Update: 5m</p>|
+|Product Version|<p>-</p>|`SNMP agent`|productVersio<p>Update: 30m</p>|
+|Number of Disks|<p>-</p>|`SNMP agent`|diskTotalCount<p>Update: 30m</p>|
 |CPU usage (%)|<p>-</p>|`SNMP agent`|cpuBusyTimePerCent<p>Update: 1m</p>|
+|Autosupport Failed Sends|<p>-</p>|`SNMP agent`|autosupportFailedSends<p>Update: 5m</p>|
+|Number of spare Disks|<p>-</p>|`SNMP agent`|diskSpareCount<p>Update: 30m</p>|
+|Autosupport Status Message|<p>-</p>|`SNMP agent`|autosupportStatusMessage<p>Update: 5m</p>|
+|Number of verifying parity Disks|<p>-</p>|`SNMP agent`|diskVerifyingParityCount<p>Update: 1m</p>|
+|Prefailed Disks Count|<p>-</p>|`SNMP agent`|diskPrefailedCount<p>Update: 1m</p>|
 |CPU Count|<p>-</p>|`SNMP agent`|cpuCount<p>Update: 30m</p>|
 |Failed Disks Count|<p>-</p>|`SNMP agent`|diskFailedCount<p>Update: 1m</p>|
+|Autosupport Successful Sends|<p>-</p>|`SNMP agent`|autosupportSuccessfulSends<p>Update: 5m</p>|
 |Disk Failed Message|<p>-</p>|`SNMP agent`|diskFailedMessage<p>Update: 1m</p>|
-|Prefailed Disks Count|<p>-</p>|`SNMP agent`|diskPrefailedCount<p>Update: 1m</p>|
 |Number of reconstructing parity Disks|<p>-</p>|`SNMP agent`|diskReconstructingParityCount<p>Update: 1m</p>|
-|Number of spare Disks|<p>-</p>|`SNMP agent`|diskSpareCount<p>Update: 30m</p>|
-|Number of Disks|<p>-</p>|`SNMP agent`|diskTotalCount<p>Update: 30m</p>|
-|Number of verifying parity Disks|<p>-</p>|`SNMP agent`|diskVerifyingParityCount<p>Update: 1m</p>|
-|Product Version|<p>-</p>|`SNMP agent`|productVersio<p>Update: 30m</p>|
+|Autosupport Status|<p>-</p>|`SNMP agent`|autosupportStatus<p>Update: 5m</p>|
 |Enclosure[{#ENCLNUM}] Failed Electronic|<p>-</p>|`SNMP agent`|enclElectronicsFailed[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Enclosure[{#ENCLNUM}] Over Temperature warn|<p>-</p>|`SNMP agent`|enclTempSensorsOverTempWarn[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Enclosure[{#ENCLNUM}] Under Voltage fail|<p>-</p>|`SNMP agent`|enclVoltSensorsUnderVoltFail[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|

@@ -1,9 +1,5 @@
 # Emby
 
-## Description
-
-## Overview For this template, you only need to change the {$ EMBY _URL} and {$ EMBY _TOKEN} macros To generate the token API, follow the instructions: <https://github.com/MediaBrowser/Emby/wiki> Note: if possible use the Emby URL in http, there may be problems using https 
-
 ## Overview
 
 For this template, you only need to change the {$ EMBY\_URL} and {$ EMBY\_TOKEN} macros

@@ -1,9 +1,5 @@
 # Vertiv EXS UPS
 
-## Description
-
-## Overview Template for Vertiv EXS 10 kV UPS. Check Input voltage (VAC), output volatge (VAC), output current (A), output power (W), batterie, temperature ## Author R.P.Wimmer 
-
 ## Overview
 
 Template for Vertiv EXS 10 kV UPS. Check Input voltage (VAC), output volatge (VAC), output current (A), output power (W), batterie, temperature

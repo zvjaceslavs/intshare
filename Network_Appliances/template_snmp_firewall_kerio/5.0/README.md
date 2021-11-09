@@ -1,9 +1,5 @@
 # SNMP_FIREWALL_KERIO_CONTROL_LLD_VERSAO-1.0
 
-## Description
-
-## Overview alimoradimllm99@gmail.com 
-
 ## Overview
 
 alimoradimllm99@gmail.com

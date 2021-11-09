@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Monitoramento Banco Progress Datasul ## Overview Basic template with itens and triggers monitoring default Totvs Datasul ports using Zabbix Agent on the host (Windows or Linux). Tested on Zabbix 3.4.6 ##################### Template básico para montoramento do banco Progress para o Datasul da Totvs (Portas Padrões) utilizando o Agent do Zabbix (Windows ou Linux). Testado no Zabbix 3.4.6 Cheers! Luiz Fernando Gondin Santos ## Author Luiz Fernando Gondin Santos 
+Monitoramento Banco Progress Datasul
 
 ## Overview
 

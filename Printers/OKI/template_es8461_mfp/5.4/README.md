@@ -1,9 +1,5 @@
 # OKI Printer
 
-## Description
-
-## Overview I created this template for my office printer OKI ES8461 MFP. Not sure if it works with any other models. Let us know in comments. ## Author Slawek Glebocki 
-
 ## Overview
 
 I created this template for my office printer OKI ES8461 MFP.

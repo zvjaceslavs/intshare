@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description The number of TCP sessions. Using "dependent item" net.tcp.count.master[<source port>,<dest port>] https://github.com/mutz0623/zabbix_TCP-state-count-module ## Overview About * loadable module for aggregating TCP sessions. * 2017/9 Enabled for "depend item". so you can reduce server-agent NW connection frequency and load. Requirements * zabbix 3.0 * Linux ## Author mutsumi Iwata 
+The number of TCP sessions. Using "dependent item" net.tcp.count.master[<source port>,<dest port>] https://github.com/mutz0623/zabbix_TCP-state-count-module
 
 ## Overview
 

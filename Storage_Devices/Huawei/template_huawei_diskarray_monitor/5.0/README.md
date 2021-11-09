@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Huawei_DiskArray_monitor_template Known Issues: device : OceanStor-2600, OceanStor-5300, OceanStor-5600, OceanStor-6800, OceanStor-Dorado6000 ## Overview Monitor Template of Huawei OceanStor DiskArray. Suitable for OceanStor-2600, OceanStor-5300, OceanStor-5600, OceanStor-6800, OceanStor-Dorado6000. Include health status of controller, disk, fan and power. Repalce macro {$CLOUD _SNMP _COMMUNITY} with your snmp community ## Author zhangzhefeng 
+Huawei_DiskArray_monitor_template Known Issues: device : OceanStor-2600, OceanStor-5300, OceanStor-5600, OceanStor-6800, OceanStor-Dorado6000
 
 ## Overview
 

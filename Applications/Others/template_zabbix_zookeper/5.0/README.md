@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Zookeper Monitoring Need this userparameter in zabbix_agentd.conf: UserParameter=echo2nc[*],echo $1 | nc $2 $3 ## Overview System requirements ------------------- * [zabbix](http://www.zabbix.com/downloads/) >= 3.4 (preprocessing used by this template) * [zookeeper](https://zookeeper.apache.org/releases.html) >= 3.4 (mntr stats) * netcat Features -------- * ruok check , mntr stats , graphs, screen Zabbix Configuration -------------------- UserParameter=echo2nc[*],echo $1 | nc $2 $3 ## Author Patrick Fouquet 
+Zookeper Monitoring Need this userparameter in zabbix_agentd.conf: UserParameter=echo2nc[*],echo $1 | nc $2 $3
 
 ## Overview
 

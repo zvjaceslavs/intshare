@@ -1,9 +1,5 @@
 # Nobreak Engetron
 
-## Description
-
-## Author Felippe Costa 
-
 ## Author
 
 Felippe Costa

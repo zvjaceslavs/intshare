@@ -1,9 +1,5 @@
 # Opengear_Console
 
-## Description
-
-## Author David Angelovich 
-
 ## Author
 
 David Angelovich

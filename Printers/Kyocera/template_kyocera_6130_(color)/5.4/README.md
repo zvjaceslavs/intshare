@@ -1,9 +1,5 @@
 # Color printers Kyocera
 
-## Description
-
-## Overview Шаблон для мониторинга цветного принтера Kyocera 6130 Переменные: Cartridge toner level % - cyan Current cartridge toner level - black Max cartridge toner level - cyan Current cartridge toner level - cyan Max cartridge toner level - magenta Current cartridge toner level - magenta Max cartridge toner level - yellow Current cartridge toner level - yellow Max cartridge toner level - black Cartridge toner level % - magenta Printer model Cartridge toner level % - yellow Pages printed - total Printer location Serial number 
-
 ## Overview
 
 Шаблон для мониторинга цветного принтера Kyocera 6130

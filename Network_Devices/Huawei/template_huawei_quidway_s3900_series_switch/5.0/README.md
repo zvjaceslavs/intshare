@@ -1,9 +1,5 @@
 # Huawei Quidway s3900 series switches
 
-## Description
-
-## Overview Template for Huawei Quidway s3900 switches. General information - Uptime, system name, number of interfaces. Interfaces - operational and administrative status of ports, errors TX and RX on every port, Bytes TX and RX on every port, triggers on CRC errors RX and TX, port status down, and restart of switch. Graphics - statistics TX/RX on every interface. MACROS to be defined for the hosts: {$SNMP _COMMUNITY} Possilble, it will work on earlier versions of Zabbix, but i was testing it on 4.0 ## Author Fedor Katilov 
-
 ## Overview
 
 Template for Huawei Quidway s3900 switches. General information - Uptime, system name, number of interfaces. Interfaces - operational and administrative status of ports, errors TX and RX on every port, Bytes TX and RX on every port, triggers on CRC errors RX and TX, port status down, and restart of switch. Graphics - statistics TX/RX on every interface.

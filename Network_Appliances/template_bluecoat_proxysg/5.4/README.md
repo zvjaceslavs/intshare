@@ -1,9 +1,5 @@
 # App BlueCoat SG
 
-## Description
-
-## Overview Based on official SNMP MIBs. SGOS 6.5.x+ Additional info: <https://bto.bluecoat.com/documentation/All-Documents/ProxySG> 
-
 ## Overview
 
 Based on official SNMP MIBs.  

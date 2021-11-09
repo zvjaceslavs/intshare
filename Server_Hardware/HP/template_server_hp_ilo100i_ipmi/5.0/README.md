@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template polling sensor data of a HP iLO100i ## Overview This templates monitors the HP iLO100i integrated lights-out system for available sensors. Tested only on Zabbix 4.2.x with a iLO100i, possibly working on other iLOs aswell. You need to configure the **IPMI-Tab** on any monitored host with a **Username** and **Password**. These can be set in the User Administration of the iLO-Card and only need "User" rights. **There are no triggers configured, alerts should be handled specifically for your own setup!** ## Author RegularAlicorn 
+Template polling sensor data of a HP iLO100i
 
 ## Overview
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description MIBs used: IF-MIB ## Overview This is a module based on the "TTemplate Module Interfaces Simple SNMPv2" module. For correct use, you need to define the macro "{$SNMP _SECNAME _CONTEXT}", this macro is also used in the rest of my templates using SNMPv3. I do not use authentication and encryption in my templates, which corresponds to security level = noAuthNoPriv ## Author Alexey Glotkin 
+MIBs used: IF-MIB
 
 ## Overview
 

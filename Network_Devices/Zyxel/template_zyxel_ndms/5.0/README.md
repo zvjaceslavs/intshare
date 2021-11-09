@@ -1,9 +1,5 @@
 # SNMP ZyXEL NDMS
 
-## Description
-
-## Overview A simple template for monitoring Zyxel with NDMS firmware for monitoring network activity. Tested for Keenetic Omni II. ## Author Ymnuk 
-
 ## Overview
 
 A simple template for monitoring Zyxel with NDMS firmware for monitoring network activity. Tested for Keenetic Omni II.  

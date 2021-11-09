@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template for SNMP-enabled RDS coder DEVA SmartGen 6 http://www.devabroadcast.com v1.0: 2017-10-30 Roman Ermakov, r.ermakov@emg.fm ## Overview Template for Deva SmartGen 6 RDS encoder. Uses SNMP data only. Monitored items: 1. Main RDS values: PI, PS, PTT, PTY, RT, TA, TP 2. RDS level 3. GPS satellites in view and in use 4. Internal temperature Triggers: 1. PI code changed 2. Device is overheat 3. Free disk space is less than 20% 4. PS ## Author Roman Ermakov 
+Template for SNMP-enabled RDS coder DEVA SmartGen 6 http://www.devabroadcast.com v1.0: 2017-10-30 Roman Ermakov, r.ermakov@emg.fm
 
 ## Overview
 

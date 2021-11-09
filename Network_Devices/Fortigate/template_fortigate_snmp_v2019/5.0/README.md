@@ -1,9 +1,5 @@
 # SNMP Fortinet Devices v2019
 
-## Description
-
-## Overview Up to date of [Andrea Durante](network_devices/fortigate/fortigate-snmp-template)'s excellent template. Monitors: Serial N., OS version, Connection num, CPU%, RAM%, Disk (Total and Used), Interface data (link and speed). Graph for everything. ## Author Lorenzo Milesi, Andrea Durante 
-
 ## Overview
 
 Up to date of [Andrea Durante](network_devices/fortigate/fortigate-snmp-template)'s excellent template.

@@ -1,9 +1,5 @@
 # Siemens HiPATH
 
-## Description
-
-## Overview This template permit to monitor basic OID of Siemens Hipath MIB and all ports of an HiPath system ## Author Matteo Lobbiani 
-
 ## Overview
 
 This template permit to monitor basic OID of Siemens Hipath MIB and all ports of an HiPath system

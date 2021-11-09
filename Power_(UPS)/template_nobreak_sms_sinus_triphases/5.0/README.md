@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Para toda linha de nobreak sinus triphases ## Overview A change made of template made by Peahgah All SMS nobles with Net Adapter II, input voltage information in (R, S, T), frequency, temperature, battery charge, power per phase. Triggers activate Work with Mono and Tri voltages (Tested with Sinus Double Black) With graphs and a screen Language PT-BR ## Author Ricardo Ito 
+Para toda linha de nobreak sinus triphases
 
 ## Overview
 

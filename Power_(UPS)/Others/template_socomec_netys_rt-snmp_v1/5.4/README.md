@@ -1,9 +1,5 @@
 # SOCOMEC UPS
 
-## Description
-
-## Overview This templase include some info and trigger such as: - Battery - Temperature - Output - Alarms You just edit the SNMP _COMMUNITY value into the template ## Author diablofight89 
-
 ## Overview
 
 This templase include some info and trigger such as:

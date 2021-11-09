@@ -1,9 +1,5 @@
 # IPMI Supermicro X8DTL-3F
 
-## Description
-
-## Overview IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage] Items 27, Triggers 27, Graphs 3 ## Author Vadzim Smazheuski 
-
 ## Overview
 
 IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage]

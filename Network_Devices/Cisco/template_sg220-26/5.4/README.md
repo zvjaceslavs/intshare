@@ -1,9 +1,5 @@
 # Cisco_SG220-26P.xml
 
-## Description
-
-## Overview Simple template for: Cisco SG220-26 Port Status, Port Traffic In, Port Traffic Out, and System Uptime. Hardware webpage: goo.gl/7zdRSN ## Author ArcticNerd 
-
 ## Overview
 
 Simple template for: Cisco SG220-26
@@ -41,11 +37,11 @@ There are no discovery rules in this template.
 |----|-----------|----|----|
 |Port GE21 Traffic OUT|<p>-</p>|`SNMP agent`|ifHCOutOctets.21<p>Update: 60</p>|
 |Port GE18 Traffic IN|<p>-</p>|`SNMP agent`|ifHCInOctets.18<p>Update: 60</p>|
-|Port GE23 Traffic IN|<p>-</p>|`SNMP agent`|ifHCInOctets.23<p>Update: 60</p>|
 |Port GE08 Traffic IN|<p>-</p>|`SNMP agent`|ifHCInOctets.8<p>Update: 60</p>|
 |Port GE10 Traffic IN|<p>-</p>|`SNMP agent`|ifHCInOctets.10<p>Update: 60</p>|
-|Port GE07 Traffic OUT|<p>-</p>|`SNMP agent`|ifHCOutOctets.7<p>Update: 60</p>|
+|Port GE23 Traffic IN|<p>-</p>|`SNMP agent`|ifHCInOctets.23<p>Update: 60</p>|
 |Port GE17 Traffic IN|<p>-</p>|`SNMP agent`|ifHCInOctets.17<p>Update: 60</p>|
+|Port GE07 Traffic OUT|<p>-</p>|`SNMP agent`|ifHCOutOctets.7<p>Update: 60</p>|
 |Port GE06 Status|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 60</p>|
 |Port GE20 Status|<p>-</p>|`SNMP agent`|ifOperStatus.20<p>Update: 60</p>|
 |Port GE26 Status|<p>-</p>|`SNMP agent`|ifOperStatus.26<p>Update: 60</p>|

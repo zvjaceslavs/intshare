@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description temp2 is ignored as it is fixed to 110.5°C ## Overview ``` DN2800MT: Need zabbix-agent installed, using coretemp & winbond 83627ehf driver Load coretemp and w83627ehf modules in /etc/modules Based on BIOS values ``` ## Author pfoo 
+temp2 is ignored as it is fixed to 110.5°C
 
 ## Overview
 

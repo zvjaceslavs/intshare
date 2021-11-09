@@ -1,9 +1,5 @@
 # Palo_Alto_PA200
 
-## Description
-
-## Overview Hi, I prepared a template for Palo Alto devices, I made it testing it with my Palo Alto PA-200, so I only can assure it works with PA-200 without any issue, but should work with other models as well. It is compatible with PAN-OS version 6.0.x, I was working with 6.0.12 Template gaves You 175 checks (on PA-200 which has 6 network interfaces). Template is based on SNMP checks. You don't need to use default interface template as I added interface checks in that template. There is also few graphs and some triggers configured. Feel free to comment and suggest what could be improved. All was done with zabbix 3.0.2 so I recommend to use it with version 3.0.x MACRO : There is only one {$SNMP _COMMUNITY} and must be configured on the host level, You need to define SNMP community string there. VALUE MAPS for ports please add manually, I can't attach it here. Name: Palo port status Value: 1 Mapped to: Up Value: 2 Mapped to: Down Enjoy! ## Author Jacek Tymoczko 
-
 ## Overview
 
 Hi,

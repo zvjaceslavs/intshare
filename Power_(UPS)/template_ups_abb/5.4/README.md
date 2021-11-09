@@ -1,9 +1,5 @@
 # UPS - diogont
 
-## Description
-
-## Overview Full clone of Template UPS - diogont (thanks Diogo Teixeira). Above you view the main changes for this template: For the metrics. We included the measurements 2 and 3: * UPS input current * UPS input frequency * UPS input power * UPS input voltage * UPS output current * UPS output frequency * UPS output load * UPS output power * UPS output voltage **Pay attention** For triggers in my case 38 has disabled. we added this SNMP Check connect what check if the UPS have snmp connectivity. If past ten minute without data ## Author Marcos Sousa 
-
 ## Overview
 
 Full clone of Template UPS - diogont (thanks Diogo Teixeira). Above you view the main changes for this template:

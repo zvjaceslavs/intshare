@@ -1,9 +1,5 @@
 # SNMP HP v1910-48G
 
-## Description
-
-## Overview This template expanded the original 24 ports template to 48 ports published by Павел Яковлев and made compatible with Zabbix 2.0.x+ It is necessary to set: * {$SNMP _COMMUNITY} - **public** is the default value for read-only and **private** for read-write. * {$SNMP _PORT} - The value **161** is the default for SNMP port. The template was tested in Zabbix: * 2.0.6 * 2.2.7 ## Author Rômulo Mendes Figueiredo 
-
 ## Overview
 
 This template expanded the original 24 ports template to 48 ports published by Павел Яковлев and made compatible with Zabbix 2.0.x+

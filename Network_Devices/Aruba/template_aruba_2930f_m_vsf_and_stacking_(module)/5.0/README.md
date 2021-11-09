@@ -1,9 +1,5 @@
 # HPE_Module Aruba 2930 VSF or Stacking
 
-## Description
-
-## Overview Module Template with LLD over SNMPv2 for VSF and stacking ## Author R.P.Wimmer 
-
 ## Overview
 
 Module Template with LLD over SNMPv2 for VSF and stacking

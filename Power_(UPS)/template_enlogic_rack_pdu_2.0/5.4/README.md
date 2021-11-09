@@ -1,9 +1,5 @@
 # Enlogic Metered PDU
 
-## Description
-
-## Overview For use with Enlogic Rack PDU 2.0. It’s made with a EN1403 (Input metered PDU, 400V 3phases 16A) Applications: • Information • Power Items: • Load State • PDU Input Phase 1 Status Active Power • PDU Input Phase 1 Status Apparent Power • PDU Input Phase 1 Status Current • PDU Input Phase 1 Status Current State • PDU Input Phase 1 Status Power Factor • PDU Input Phase 1 Status Voltage • PDU Input Phase 1 Status Voltage State • PDU Input Phase 2 Status Active Power • PDU Input Phase 2 Status Apparent Power • PDU Input Phase 2 Status Current • PDU Input Phase 2 Status Current State • PDU Input Phase 2 Status Power Factor • PDU Input Phase 2 Status Voltage • PDU Input Phase 2 Status Voltage State • PDU Input Phase 3 Status Active Power • PDU Input Phase 3 Status Apparent Power • PDU Input Phase 3 Status Current • PDU Input Phase 3 Status Current State • PDU Input Phase 3 Status Power Factor • PDU Input Phase 3 Status Voltage • PDU Input Phase 3 Status Voltage State • System Contact • System Destription • System Location • System Name • System Type • Unit Status Active Power • Unit Status Apparent Power • Unit Status Energy • Unit Status Peak Power • Unit Status Resettable Energy ## Author John Berthelsen 
-
 ## Overview
 
 For use with Enlogic Rack PDU 2.0. It’s made with a EN1403 (Input metered PDU, 400V 3phases 16A)

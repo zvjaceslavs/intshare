@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Monitor Docker Container Details ## Overview Template with LLD to discover Docker Containers via Docker socket ([Template.Docker.ContainerDetails](http://127.0.0.1/zabbix/templates.php?form=update&templateid=10264&groupid=1)) and Template [Template..Docker.OSLinux.ShortTermContainers](http://127.0.0.1/zabbix/templates.php?form=update&templateid=10265&groupid=1) with macros to forget short living containers after {$DISCOVERY _TTL}. ## Author Martin Schroeter 
+Monitor Docker Container Details
 
 ## Overview
 
@@ -51,7 +51,20 @@ There are no triggers in this template.
 
 ## Description
 
-## Description Monitor Docker Container Details ## Overview Template with LLD to discover Docker Containers via Docker socket ([Template.Docker.ContainerDetails](http://127.0.0.1/zabbix/templates.php?form=update&templateid=10264&groupid=1)) and Template [Template..Docker.OSLinux.ShortTermContainers](http://127.0.0.1/zabbix/templates.php?form=update&templateid=10265&groupid=1) with macros to forget short living containers after {$DISCOVERY _TTL}. ## Author Martin Schroeter ## Overview Template with LLD to discover Docker Containers via Docker socket ([Template.Docker.ContainerDetails](http://127.0.0.1/zabbix/templates.php?form=update&templateid=10264&groupid=1)) and Template [Template..Docker.OSLinux.ShortTermContainers](http://127.0.0.1/zabbix/templates.php?form=update&templateid=10265&groupid=1) with macros to forget short living containers after {$DISCOVERY _TTL}. ## Author Martin Schroeter 
+Monitor Docker Container Details
+
+## Overview
+
+Template with LLD to discover Docker Containers via Docker socket ([Template.Docker.ContainerDetails](http://127.0.0.1/zabbix/templates.php?form=update&templateid=10264&groupid=1)) and Template [Template..Docker.OSLinux.ShortTermContainers](http://127.0.0.1/zabbix/templates.php?form=update&templateid=10265&groupid=1) with macros to forget short living containers after {$DISCOVERY\_TTL}.
+
+
+ 
+
+
+
+## Author
+
+Martin Schroeter
 
 ## Overview
 

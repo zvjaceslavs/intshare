@@ -1,9 +1,5 @@
 # App Needrestart
 
-## Description
-
-## Overview Template for needrestart to check if the server needs a reboot / restart of services after package upgrade. [www.kaneo-gmbh.de](https://www.kaneo-gmbh.de) ### Install packages ``` apt install needrestart ``` ### Zabbix agent user parameter: ``` UserParameter=needrestart.kernel,sudo needrestart -b -r l -k | grep 'NEEDRESTART-KSTA:' | grep -Eo '[0-9]' UserParameter=needrestart.libs,sudo needrestart -b -r l -l | grep NEEDRESTART-SVC | wc -l ``` ### sudoers entry: ``` # allow zabbix to check for needrestart in batch listing mode zabbix ALL = NOPASSWD: /usr/sbin/needrestart -b -r l * ``` ## Author kaneo GmbH 
-
 ## Overview
 
 Template for needrestart to check if the server needs a reboot / restart of services after package upgrade.

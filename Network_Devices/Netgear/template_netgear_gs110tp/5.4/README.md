@@ -1,9 +1,5 @@
 # Netgear GS110TP
 
-## Description
-
-## Overview Template for Netgear GS110TP using SNMP. Probably needs to be improved (no triggers). Community used is "public" 
-
 ## Overview
 
 Template for Netgear GS110TP using SNMP.

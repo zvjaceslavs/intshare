@@ -1,9 +1,5 @@
 # Huawei Server iBMC
 
-## Description
-
-## Overview This template for **RH5885H V3** Protocol SNMP v2 Items 177 with low discovery **Triggers**: System health status critical System health status status major System health status status minor CPU status critical CPU status major CPU status minor Fan status critical Fan status major Fan status minor Hard disk status critical Hard disk status major Hard disk status minor Memory status critical Memory status major Memory status minor Power supply status critical Power supply status major Power supply status minor Temperature is too high Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administration/zabbix/templates/RH5885H%20V3.xml) repository MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/huawei/RH5885H%20V3/snmp) repository ## Author P.V. Galonza 
-
 ## Overview
 
 This template for **RH5885H V3**
@@ -150,8 +146,8 @@ There are no template links in this template.
 |Syslog severity|<p>The level of syslog send. Default level is ok. ok:send all level message. minor:send minor and above level message. major:send major and above level message. critical:send critical level message. none:send nothing.</p>|`SNMP agent`|huawei-server.syslogSeverity<p>Update: 5m</p>|
 |Actual power supply entire mode|<p>Actual power supply entire mode.</p>|`SNMP agent`|huawei-server.actualPowerSupplyEntireMode<p>Update: 5m</p>|
 |Power consumption|<p>Power consume from power statistic start time, unit is kWh.</p>|`SNMP agent`|huawei-server.powerConsumption<p>Update: 5m</p>|
-|System boot sequence|<p>Decide the system's first boot device. 1 - No override 2 - Force PXE 3 - Force boot from default Hard-drive 4 - Force boot from default CD/DVD 5 - Force boot from Floppy/primary removable media 6 - boot flags valid. The bit should be set to indicate that valid flag data is present. This bit may be automatically cleared based on the boot flag valid bit clearing parameter, above.(This option is read-only.) 7 - Force boot into BIOS SETUP The default value is 6 (unspecified)</p>|`SNMP agent`|huawei-server.systemBootsequence<p>Update: 1h</p>|
 |Host name|<p>The host name between 1 to 64 characters. Supported characters: 0-9 a-z A-Z - ('-' is not allowed to be the first/last character). Default value is huawei.</p>|`SNMP agent`|huawei-server.hostName<p>Update: 6h</p>|
+|System boot sequence|<p>Decide the system's first boot device. 1 - No override 2 - Force PXE 3 - Force boot from default Hard-drive 4 - Force boot from default CD/DVD 5 - Force boot from Floppy/primary removable media 6 - boot flags valid. The bit should be set to indicate that valid flag data is present. This bit may be automatically cleared based on the boot flag valid bit clearing parameter, above.(This option is read-only.) 7 - Force boot into BIOS SETUP The default value is 6 (unspecified)</p>|`SNMP agent`|huawei-server.systemBootsequence<p>Update: 1h</p>|
 |Local LVM state|<p>Local KVM display state. disable 1, enable 2. Default value is enable(2).</p>|`SNMP agent`|huawei-server.localKVMState<p>Update: 5m</p>|
 |Present system power|<p>Display the present system power.</p>|`SNMP agent`|huawei-server.presentSystemPower<p>Update: 5m</p>|
 |System memory usage|<p>Percent of memory usage. The value defined as: -1: invalid current memory usage. [0,100]: represents the current memory usage.</p>|`SNMP agent`|huawei-server.systemMemUsage<p>Update: 5m</p>|
@@ -200,13 +196,13 @@ There are no template links in this template.
 |{#CPUNAME} status|<p>Information about CPU health status.</p>|`SNMP agent`|huawei-server[cpuStatus.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#CPUNAME} thread count|<p>CPU ThreadCount.</p>|`SNMP agent`|huawei-server[cpuThreadCount.{#SNMPVALUE}]<p>Update: 6h</p><p>LLD</p>|
 |{#CPUNAME} type|<p>Information about CPU type.</p>|`SNMP agent`|huawei-server[cpuType.{#SNMPVALUE}]<p>Update: 6h</p><p>LLD</p>|
-|{#DEVICENAME} upper minor|<p>Information about temperature upper minor threshold,the unit is 1/10 Celsius degree,65535 represent NA.</p>|`SNMP agent`|huawei-server[temperatureUpperMinor.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
-|{#DEVICENAME} upper nonrecoverable|<p>Information about temperature upper nonrecoverable threshold,the unit is 1/10 Celsius degree,65535 represent NA.</p>|`SNMP agent`|huawei-server[temperatureUpperNonRecoverable.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#DEVICENAME} lower critical|<p>Information about temperature lower critical threshold,the unit is 1/10 Celsius degree,65535 represent NA.</p>|`SNMP agent`|huawei-server[temperatureLowerCritical.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#DEVICENAME} lower minor|<p>Information about temperature lower minor threshold,the unit is 1/10 Celsius degree,65535 represent NA.</p>|`SNMP agent`|huawei-server[temperatureLowerMinor.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#DEVICENAME} lower nonrecoverable|<p>Information about temperature lower nonrecoverable threshold,the unit is 1/10 Celsius degree,65535 represent NA.</p>|`SNMP agent`|huawei-server[temperatureLowerNonRecoverable.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#DEVICENAME} temperature|<p>Information about temperature reading,the unit is 1/10 Celsius degree. If power off, the CPU temperature cannot be readable and is set to 65535.</p>|`SNMP agent`|huawei-server[temperatureReading.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#DEVICENAME} upper critical|<p>Information about temperature upper critical threshold,the unit is 1/10 Celsius degree,65535 represent NA.</p>|`SNMP agent`|huawei-server[temperatureUpperCritical.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
+|{#DEVICENAME} upper minor|<p>Information about temperature upper minor threshold,the unit is 1/10 Celsius degree,65535 represent NA.</p>|`SNMP agent`|huawei-server[temperatureUpperMinor.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
+|{#DEVICENAME} upper nonrecoverable|<p>Information about temperature upper nonrecoverable threshold,the unit is 1/10 Celsius degree,65535 represent NA.</p>|`SNMP agent`|huawei-server[temperatureUpperNonRecoverable.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#DEVICENAME} {#SNMPVALUE} availability|<p>Information about memory availability.</p>|`SNMP agent`|huawei-server[memoryAvailability.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#DEVICENAME} {#SNMPVALUE} bit width|<p>Information about memory bit width.</p>|`SNMP agent`|huawei-server[memoryBitWidth.{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 |{#DEVICENAME} {#SNMPVALUE} clock rate|<p>Information about memory clock rate.</p>|`SNMP agent`|huawei-server[memoryClockRate.{#SNMPVALUE}]<p>Update: 6h</p><p>LLD</p>|

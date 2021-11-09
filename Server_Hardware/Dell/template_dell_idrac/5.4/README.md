@@ -1,9 +1,5 @@
 # Dell idrac
 
-## Description
-
-## Overview Based on <https://github.com/endersonmaia/zabbix-templates/tree/master/dell/idrac> and [https://share.zabbix.com/cat-server-hardware/dell/dell-idrac-chinese](cat-server-hardware/dell/dell-idrac-chinese). Chinese version translated back to english. 
-
 ## Overview
 
 Based on <https://github.com/endersonmaia/zabbix-templates/tree/master/dell/idrac> and [https://share.zabbix.com/cat-server-hardware/dell/dell-idrac-chinese](cat-server-hardware/dell/dell-idrac-chinese). Chinese version translated back to english. 
@@ -44,8 +40,8 @@ There are no template links in this template.
 |RAID Controller : Firmware Version|<p>-</p>|`SNMP agent`|RAIDControllerFirmware<p>Update: 86400</p>|
 |BIOS Date|<p>-</p>|`SNMP agent`|BiosDate<p>Update: 86400</p>|
 |Power Usage Minimum Idle Power|<p>-</p>|`SNMP agent`|PowerUsageMinIdle<p>Update: 120</p>|
-|RAID Controller : Status|<p>-</p>|`SNMP agent`|RAIDControllerStatus<p>Update: 60</p>|
 |BIOS Version|<p>-</p>|`SNMP agent`|BiosVersion<p>Update: 86400</p>|
+|RAID Controller : Status|<p>-</p>|`SNMP agent`|RAIDControllerStatus<p>Update: 60</p>|
 |iDRAC access url|<p>-</p>|`SNMP agent`|idrac_acessurl<p>Update: 86400</p>|
 |iDRAC Firmware Version|<p>-</p>|`SNMP agent`|idrac_firmwareversion<p>Update: 86400</p>|
 |Model|<p>-</p>|`SNMP agent`|idrac_SystemModel<p>Update: 86400</p>|

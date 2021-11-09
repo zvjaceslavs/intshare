@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description H3C server basic monitoring items ## Overview H3C zabbix基于SNMP的监控模板，适用于HDM版本为B03 H3C ZABBIX monitoring template based on SNMP ,for HDM version B03 ## Author yelin 
+H3C server basic monitoring items
 
 ## Overview
 

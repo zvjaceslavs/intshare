@@ -1,9 +1,5 @@
 # Huawei UPS
 
-## Description
-
-## Overview **Шаблон на русском для ИБП Huawei 6000KVA** **Элементы данных:** | Ток батарей | | Статус питания | | Статус батарей | | Статус ИБП | | Оставшаяся емкость аккумуляторов | | <td style="height: 15.0pt; border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; fo 
-
 ## Overview
 
 **Шаблон на русском для ИБП Huawei 6000KVA**

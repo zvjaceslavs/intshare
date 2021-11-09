@@ -1,9 +1,5 @@
 # 1 Check Active Client PPPoE
 
-## Description
-
-## Overview Nesse modelo, você irá verificar quantidade de clientes conectado no seu mikrotik, com uma trigger já criada para mais informações E-Mail: [rsg.sp.gov@gmail.com](mailto:rsg.sp.gov@gmail.com) WhatsApp: (81) 98267-0619 ## Author Renato Severino 
-
 ## Overview
 
 Nesse modelo, você irá verificar quantidade de clientes conectado no seu mikrotik, com uma trigger já criada 

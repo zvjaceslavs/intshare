@@ -1,11 +1,5 @@
 # Template App Generic Java JMX
 
-## Overview
-
-Standard JMX monitoring with Metaspace added
-
-
-
 ## Macros used
 
 There are no macros links in this template.
@@ -22,27 +16,6 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|cl Loaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",LoadedClassCount]<p>Update: 1m</p>|
-|mp PS Perm Gen max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max]<p>Update: 1h</p>|
-|mp Code Cache used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used]<p>Update: 1m</p>|
-|mp Metaspace committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Metaspace",Usage.committed]<p>Update: 1m</p>|
-|mp Metaspace max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Metaspace",Usage.max]<p>Update: 1m</p>|
-|mp Metaspace used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Metaspace",Usage.used]<p>Update: 1m</p>|
-|mp Perm Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.committed]<p>Update: 1m</p>|
-|mp Perm Gen max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max]<p>Update: 1h</p>|
-|mp Perm Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.used]<p>Update: 1m</p>|
-|mp PS Old Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.committed]<p>Update: 1m</p>|
-|mp PS Old Gen max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max]<p>Update: 1h</p>|
-|mp PS Old Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.used]<p>Update: 1m</p>|
-|mp PS Perm Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.committed]<p>Update: 1m</p>|
-|mp PS Perm Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.used]<p>Update: 1m</p>|
-|mp Code Cache committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.committed]<p>Update: 1m</p>|
-|mp Tenured Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.committed]<p>Update: 1m</p>|
-|mp Tenured Gen max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max]<p>Update: 1h</p>|
-|mp Tenured Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.used]<p>Update: 1m</p>|
-|os Max File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]<p>Update: 1h</p>|
-|os Open File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]<p>Update: 1m</p>|
-|os Process CPU Load|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",ProcessCpuLoad]<p>Update: 1m</p>|
 |jvm Uptime|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",Uptime]<p>Update: 1m</p>|
 |jvm Name|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmName]<p>Update: 1h</p>|
 |jvm Version|<p>-</p>|`JMX agent`|jmx["java.lang:type=Runtime",VmVersion]<p>Update: 1h</p>|
@@ -80,6 +53,27 @@ There are no discovery rules in this template.
 |mp CMS Old Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.used]<p>Update: 1m</p>|
 |mp CMS Perm Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.committed]<p>Update: 1m</p>|
 |th Total Started Thread Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=Threading",TotalStartedThreadCount]<p>Update: 1m</p>|
+|cl Loaded Class Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=ClassLoading",LoadedClassCount]<p>Update: 1m</p>|
+|mp PS Perm Gen max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max]<p>Update: 1h</p>|
+|mp Code Cache used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used]<p>Update: 1m</p>|
+|mp Metaspace committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Metaspace",Usage.committed]<p>Update: 1m</p>|
+|mp Metaspace max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Metaspace",Usage.max]<p>Update: 1m</p>|
+|mp Metaspace used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Metaspace",Usage.used]<p>Update: 1m</p>|
+|mp Perm Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.committed]<p>Update: 1m</p>|
+|mp Perm Gen max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max]<p>Update: 1h</p>|
+|mp Perm Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.used]<p>Update: 1m</p>|
+|mp PS Old Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.committed]<p>Update: 1m</p>|
+|mp PS Old Gen max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max]<p>Update: 1h</p>|
+|mp PS Old Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.used]<p>Update: 1m</p>|
+|mp PS Perm Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.committed]<p>Update: 1m</p>|
+|mp PS Perm Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.used]<p>Update: 1m</p>|
+|mp Code Cache committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.committed]<p>Update: 1m</p>|
+|mp Tenured Gen committed|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.committed]<p>Update: 1m</p>|
+|mp Tenured Gen max|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max]<p>Update: 1h</p>|
+|mp Tenured Gen used|<p>-</p>|`JMX agent`|jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.used]<p>Update: 1m</p>|
+|os Max File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]<p>Update: 1h</p>|
+|os Open File Descriptor Count|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]<p>Update: 1m</p>|
+|os Process CPU Load|<p>-</p>|`JMX agent`|jmx["java.lang:type=OperatingSystem",ProcessCpuLoad]<p>Update: 1m</p>|
 ## Triggers
 
 There are no triggers in this template.

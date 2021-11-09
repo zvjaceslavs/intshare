@@ -1,9 +1,5 @@
 # SNMP HP v1910-24G
 
-## Description
-
-## Overview It's based on the excelent work *"Zabbix 2.2 HP v1910-24G SNMP template" by AlteraSidus.* Works with HP 1920-24G and HP 1910-24G. The triggers enable activate when the delta number of errors is more than 3 in the last 10 checks. And the AlteraSidus triggers activate when the error counter is more than 100: AlteraSidus original version: [https://share.zabbix.com/network _devices/cat-hp/zabbix-2-2-hp-v1910-snmp-template](network_devices/cat-hp/zabbix-2-2-hp-v1910-snmp-template "AlteraSidus Original Version") You have to create two Macros in the host: {$SNMP _COMMUNITY} Self explained {$SNMP _PORT} Usually 161 Also records the bytes in and out of every interface with graphics. ## Author AlteraSidus 
-
 ## Overview
 
 It's based on the excelent work *"Zabbix 2.2 HP v1910-24G SNMP template" by AlteraSidus.* Works with HP 1920-24G and HP 1910-24G. The triggers enable activate when the delta number of errors is more than 3 in the last 10 checks. And the AlteraSidus triggers activate when the error counter is more than 100:
@@ -78,8 +74,8 @@ There are no discovery rules in this template.
 |InErrorsFa0/19|<p>-</p>|`SNMP agent`|ifInErrors.19<p>Update: 120</p>|
 |Bytes Rx port 2|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 120</p>|
 |Bytes Tx port 21|<p>-</p>|`SNMP agent`|ifOutOctets.21<p>Update: 120</p>|
-|Bytes Tx port 14|<p>-</p>|`SNMP agent`|ifOutOctets.14<p>Update: 120</p>|
 |OutErrorsFa0/15|<p>-</p>|`SNMP agent`|ifOutErrors.15<p>Update: 120</p>|
+|Bytes Tx port 14|<p>-</p>|`SNMP agent`|ifOutOctets.14<p>Update: 120</p>|
 |Bytes Rx port 9|<p>-</p>|`SNMP agent`|ifInOctets.9<p>Update: 120</p>|
 |Bytes Tx port 19|<p>-</p>|`SNMP agent`|ifOutOctets.19<p>Update: 120</p>|
 |InErrorsFa0/7|<p>-</p>|`SNMP agent`|ifInErrors.7<p>Update: 120</p>|
@@ -111,8 +107,8 @@ There are no discovery rules in this template.
 |InErrorsFa0/12|<p>-</p>|`SNMP agent`|ifInErrors.12<p>Update: 120</p>|
 |Status port 12|<p>-</p>|`SNMP agent`|ifOperStatus.12<p>Update: 120</p>|
 |OutErrorsFa0/28|<p>-</p>|`SNMP agent`|ifOutErrors.28<p>Update: 120</p>|
-|Bytes Rx port 23|<p>-</p>|`SNMP agent`|ifInOctets.23<p>Update: 120</p>|
 |OutErrorsFa0/10|<p>-</p>|`SNMP agent`|ifOutErrors.10<p>Update: 120</p>|
+|Bytes Rx port 23|<p>-</p>|`SNMP agent`|ifInOctets.23<p>Update: 120</p>|
 |InErrorsFa0/23|<p>-</p>|`SNMP agent`|ifInErrors.23<p>Update: 120</p>|
 |Status port 15|<p>-</p>|`SNMP agent`|ifOperStatus.15<p>Update: 120</p>|
 |OutErrorsFa0/26|<p>-</p>|`SNMP agent`|ifOutErrors.26<p>Update: 120</p>|
@@ -137,8 +133,8 @@ There are no discovery rules in this template.
 |Status port 14|<p>-</p>|`SNMP agent`|ifOperStatus.14<p>Update: 120</p>|
 |Status port 17|<p>-</p>|`SNMP agent`|ifOperStatus.17<p>Update: 120</p>|
 |InErrorsFa0/9|<p>-</p>|`SNMP agent`|ifInErrors.9<p>Update: 120</p>|
-|Status port 22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 120</p>|
 |OutErrorsFa0/19|<p>-</p>|`SNMP agent`|ifOutErrors.19<p>Update: 120</p>|
+|Status port 22|<p>-</p>|`SNMP agent`|ifOperStatus.22<p>Update: 120</p>|
 |Bytes Rx port 21|<p>-</p>|`SNMP agent`|ifInOctets.21<p>Update: 120</p>|
 |Status port 10|<p>-</p>|`SNMP agent`|ifOperStatus.10<p>Update: 120</p>|
 |InErrorsFa0/25|<p>-</p>|`SNMP agent`|ifInErrors.25<p>Update: 120</p>|

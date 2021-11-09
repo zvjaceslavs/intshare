@@ -1,9 +1,5 @@
 # RouterOS BGP
 
-## Description
-
-## Overview For more details using this template, take a look at the [repository](https://github.com/MrCirca/zabbix-routeros-bgp) ## Author MrCirca 
-
 ## Overview
 
 For more details using this template, take a look at the [repository](https://github.com/MrCirca/zabbix-routeros-bgp)

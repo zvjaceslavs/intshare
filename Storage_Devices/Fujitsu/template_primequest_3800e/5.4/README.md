@@ -1,9 +1,5 @@
 # Fujitsu Primequest 3800E
 
-## Description
-
-## Overview Value mapping Primequest 3800E - CPU 1 - unknown 2 - not-present 3 - ok 4 - disabled 5 - error 6 - failed 7 - missing-termination 8 - prefailed-warning Primequest 3800E - DIMM 1 - unknown 2 - not-present 3 - ok 4 - failed-disabled 5 - error 7 - warning 8 - hot-spare 9 - configuration-error Primequest 3800E - FAN 1 - unknown 2 - disabled 3 - ok 4 - failed 5 - prefailed-predicted 6 - redundant-fan-failed 7 - not-manageable 8 - not-present Primequest 3800E - FAN FAIL REACTION 1 - unknown 2 - continue 3 - shutdown-and-poweroff Primequest 3800E - OVERAL STATUS 1 - ok 2 - degraded 3 - error 4 - failed 5 - unknown Primequest 3800E - POWER SUPPLY 1 - unknown 2 - not-present 3 - ok 4 - failed 5 - ac-fail 6 - dc-fail 7 - critical-temperature 8 - not-manageable 9 - predictive-fail Primequest 3800E - TEMPERATURE 1 - unknown 2 - not-available 3 - ok 5 - failed 6 - temperature-warning 7 - temperature-critical Primequest 3800E - TEMPERATURE CRITICAL REACTION 1 - unknown 2 - continue 3 - shutdown-and-poweroff Primequest 3800E - VOLTAGE 1 - unknown 2 - not-available 3 - ok 4 - too-low 5 - too-high 6 - sensor-failed 7 - low-warning 8 - high-warning 
-
 ## Overview
 
 Value mapping

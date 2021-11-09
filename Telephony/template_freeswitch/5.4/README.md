@@ -1,9 +1,5 @@
 # Freeswitch
 
-## Description
-
-## Overview Monitors: service uptime, session rate, active calls, active sessions, peak sessions, peak calls and number of Freeswitch processes. Trigger on too many active calls [ie when you're running out of channels]. Requires the mod _snmp SNMP subagent to be enabled in Freeswitch+net-snmp. 
-
 ## Overview
 
 Monitors: service uptime, session rate, active calls, active sessions, peak sessions, peak calls and number of Freeswitch processes. Trigger on too many active calls [ie when you're running out of channels].

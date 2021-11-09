@@ -1,9 +1,5 @@
 # Cisco-UCS
 
-## Description
-
-## Overview **Monitoring Cisco UCS Server for snmp v2 Working with B and C Blade server** **tested on Cisco chassis 5018 and B200M4 .** **it give you this info :** * **Servers Hardware component info.** * **Temperature monitoring .** * **FAN** ****monitoring .**** * ****PSU**** ******monitoring .****** * ******Memory****** ************monitoring .************ * ************CPU************ ******************monitoring .****************** * ******************Network****************** ******************you only need to add {$SNMP _COMMUNITY} in macros****************** ## Author Bassam Darawshi 
-
 ## Overview
 
 **Monitoring Cisco UCS Server for snmp v2 Working with B and C Blade server**
@@ -96,13 +92,13 @@ There are no template links in this template.
 |{#SNMPINDEX}:Tx Multicast Packets|<p>-</p>|`SNMP agent`|cucsEtherTxStatsMulticastPackets[{#SNMPINDEX}]<p>Update: 5s</p><p>LLD</p>|
 |{#SNMPINDEX}:Tx Total Bytes|<p>-</p>|`SNMP agent`|cucsEtherTxStatsTotalBytes[{#SNMPINDEX}]<p>Update: 5s</p><p>LLD</p>|
 |{#SNMPINDEX}:Tx Unicast Packets|<p>-</p>|`SNMP agent`|cucsEtherTxStatsUnicastPackets[{#SNMPINDEX}]<p>Update: 5s</p><p>LLD</p>|
+|{#SNMPINDEX}: PSU Name|<p>-</p>|`SNMP agent`|cucsEquipmentPsuRn[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|{#SNMPINDEX}: PSU Serial|<p>-</p>|`SNMP agent`|cucsEquipmentPsuSerial[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
+|{#SNMPINDEX}: PSU Thermal|<p>-</p>|`SNMP agent`|cucsEquipmentPsuThermal[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
 |{#SNMPINDEX}: PSU Modle|<p>-</p>|`SNMP agent`|cucsEquipmentPsuModel[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
 |{#SNMPINDEX}: PSU Operability|<p>-</p>|`SNMP agent`|cucsEquipmentPsuOperability[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPINDEX}: PSU Operation state|<p>-</p>|`SNMP agent`|cucsEquipmentPsuOperState[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
 |{#SNMPINDEX}: PSU PartNumber|<p>-</p>|`SNMP agent`|cucsEquipmentPsuPartNumber[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
-|{#SNMPINDEX}: PSU Name|<p>-</p>|`SNMP agent`|cucsEquipmentPsuRn[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
-|{#SNMPINDEX}: PSU Serial|<p>-</p>|`SNMP agent`|cucsEquipmentPsuSerial[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
-|{#SNMPINDEX}: PSU Thermal|<p>-</p>|`SNMP agent`|cucsEquipmentPsuThermal[{#SNMPINDEX}]<p>Update: 60s</p><p>LLD</p>|
 |{#SNMPINDEX}: Admin State|<p>-</p>|`SNMP agent`|cucsComputeBladeAdminState[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
 |{#SNMPINDEX}: Available Memory|<p>-</p>|`SNMP agent`|cucsComputeBladeAvailableMemory[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
 |{#SNMPINDEX}: Last Power Cycle|<p>-</p>|`SNMP agent`|cucsComputeBladeFsmPrev[{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|

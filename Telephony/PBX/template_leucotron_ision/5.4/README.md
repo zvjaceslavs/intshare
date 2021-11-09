@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template do PABX da Leucotron, modelo ISION IP ## Overview This template permit to monitor basic OID of Leucotron ISION IP MIB. This template is entirely in Brazilian Portuguese. **Features** * Slots configuration * System information * Voltage * Temperature * Licenses * Extras * Billed / CDR ## Author Fernando Vançan 
+Template do PABX da Leucotron, modelo ISION IP
 
 ## Overview
 

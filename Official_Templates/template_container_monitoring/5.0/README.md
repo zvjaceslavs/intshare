@@ -1,9 +1,5 @@
 # Container Monitoring
 
-## Description
-
-## Overview Template desenvolvido para monitorar containers. - Esse template explora o recurso de integração nativa do Zabbix com o Prometheus. - Com excessão do item master, todos os demais items, além das triggers e gráficos, serão criados por LLD. - No campo URL do item master, foi declarado uma macro. Para setar o valor dessa macro, deve-se linkar o template no host, herdar a macro e setar o valor à nível de host. - A URL declarada, será usada pelo o Zabbix para extrair as métricas expostas em determinada porta pelo o exporter cAdvisor. - A URL deve seguir o seguinte formato: [http://ip _ou _dns:port/metrics](http://ip_ou_dnsport) ou [https://ip _ou _dns:port/metrics](https://ip_ou_dnsport) - O IP/DNS, aponta para o servidor onde os containers estão rodando. - A porta deve ser a mesma que o cAdvisor utiliza para expor as métricas. Por padrão é a 8080. - O Template foi desenvolvido na versão 4.4.1 do Zabbix. ## Author Lucas de Araújo 
-
 ## Overview
 
 Template desenvolvido para monitorar containers.

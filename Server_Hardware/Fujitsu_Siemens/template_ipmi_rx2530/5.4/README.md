@@ -1,9 +1,5 @@
 # IPMI Fujitsu RX2530 M2
 
-## Description
-
-## Overview <https://github.com/mimugmail/zbx-template-rx2530> Template for monitoring mostly all IPMI values for Fujitsu RX2530 server. Probably compatible with more models. Please checkout the readme at github! ## Author mimugmail 
-
 ## Overview
 
 <https://github.com/mimugmail/zbx-template-rx2530>

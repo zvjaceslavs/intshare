@@ -1,9 +1,5 @@
 # ESA-CISCO XML Status
 
-## Description
-
-## Overview Template allows to monitor your CISCO ESA ( IRONPORT ). number of active recipients, number of completed recipietns per minute, number of injected (recieved by esa) messages per minute, number of connections and so on. For now there is no triggers. Installation: 1. import the template, 2. create read _only _operator user in your ESA, 3. create and fill in value macros in zabbix ESA host: {$IRP _LOGIN} for login and {$IRP _PASS} for password (both created on step 2) 4. link imported template to ESA host Default update interval is 5 min. you can chage it in "Get _Ironport _xml _status" item. Tempalate contains 28 items. "HTTP agent" item (Get _Ironport _xml _status) reads xml status page from ESA (https://{HOST.IP}/xml/status) and 27 dependet items, using preproceccing and XML Path to get items from XML: * 5xx _hard _bounced _recips * active _recips * completed _recips * completed _recips _last _1 _min * conn _in * conn _out * deleted _recips * delivered _recips * delivered _recips _last _1 _min * dns _hard _bounced _recips * dropped _msgs * expired _hard _bounced _recips * filter _hard _bounced _recips * gen _bounce _recips * global _unsub _hits * hard _bounced _recips * hard _bounced _recips _last _1 _min * inj _msgs * inj _msgs _last _1 _min * inj _recips * inj _recips _last _1 _min * kbytes _in _policy _virus _outbreak _quarantine * msgs _in _policy _virus _outbreak _quarantine * other _hard _bounced _recips * rejected _recips * soft _bounced _evts * soft _bounced _evts _last _1 _min ## Author DK 
-
 ## Overview
 
 Template allows to monitor your CISCO ESA ( IRONPORT ). number of active recipients, number of completed recipietns per minute, number of injected (recieved by esa) messages per minute, number of connections and so on. For now there is no triggers.

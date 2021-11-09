@@ -1,9 +1,5 @@
 # RICOH Aficio MP C3300/3001
 
-## Description
-
-## Overview RICOH Aficio MP C3300 or 3001 print / copy / scan one machine input tray, toner status monitor zabbix3.2 template. ## Author ZhouJianChang 
-
 ## Overview
 
 RICOH Aficio MP C3300 or 3001 print / copy / scan one machine input tray, toner status monitor zabbix3.2 template.

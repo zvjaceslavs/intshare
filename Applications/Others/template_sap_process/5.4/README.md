@@ -1,9 +1,5 @@
 # SAP Availability Linux
 
-## Description
-
-## Overview ================ SAP-Process ================ O presente documento tem por objetivo apresentar todas as etapas técnicas para implantação do monitoramento dos Processos SAP utilizando shell script e saphostctrl, e a função do Userparameter do agente Zabbix. Projeto idealizado por Wilson Fernandes. A ideia do projeto foi monitorar os processos SAP abaixo: - Compile Server - Daemon - Xsengine - Nameserver - Preprocessor - Webdispatcher ## Author wilsonwers 
-
 ## Overview
 
 ================ SAP-Process ================  

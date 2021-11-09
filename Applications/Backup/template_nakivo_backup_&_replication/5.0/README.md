@@ -1,9 +1,5 @@
 # Nakivo
 
-## Description
-
-## Overview External Zabbix Script with discovery rule for nakivo backups ## Author Michael Weber 
-
 ## Overview
 
 External Zabbix Script with discovery rule for nakivo backups

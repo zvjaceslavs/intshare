@@ -1,9 +1,5 @@
 # Cisco_SG200-26P
 
-## Description
-
-## Overview CPU loading, Port status, Incoming speed,Outcoming speed,Uptime, Graphs for port utilization 
-
 ## Overview
 
 CPU loading, Port status, Incoming speed,Outcoming speed,Uptime, Graphs for port utilization
@@ -45,15 +41,15 @@ There are no discovery rules in this template.
 |Port GE22 Status|<p>-</p>|`SNMP agent`|ifOperStatus.70<p>Update: 60</p>|
 |Port GE16 Status|<p>-</p>|`SNMP agent`|ifOperStatus.64<p>Update: 60</p>|
 |Port GE24 Status|<p>-</p>|`SNMP agent`|ifOperStatus.72<p>Update: 60</p>|
-|Port GE06 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.54<p>Update: 60</p>|
 |Port GE07 Status|<p>-</p>|`SNMP agent`|ifOperStatus.55<p>Update: 60</p>|
+|Port GE06 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.54<p>Update: 60</p>|
 |Port GE09 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.57<p>Update: 60</p>|
 |Port GE01 Traffic OUT|<p>-</p>|`SNMP agent`|ifHCOutOctets.49<p>Update: 60</p>|
 |Port GE18 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.66<p>Update: 60</p>|
 |Port GE26 Status|<p>-</p>|`SNMP agent`|ifOperStatus.74<p>Update: 60</p>|
 |Port GE13 Status|<p>-</p>|`SNMP agent`|ifOperStatus.61<p>Update: 60</p>|
-|Port GE04 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.52<p>Update: 60</p>|
 |Port GE21 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.69<p>Update: 60</p>|
+|Port GE04 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.52<p>Update: 60</p>|
 |Port GE23 Status|<p>-</p>|`SNMP agent`|ifOperStatus.71<p>Update: 60</p>|
 |Port GE12 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.60<p>Update: 60</p>|
 |Port GE13 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.61<p>Update: 60</p>|
@@ -86,8 +82,8 @@ There are no discovery rules in this template.
 |Port GE20 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.68<p>Update: 60</p>|
 |Port GE03 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.51<p>Update: 60</p>|
 |Port GE02 Traffic OUT|<p>-</p>|`SNMP agent`|ifHCOutOctets.50<p>Update: 60</p>|
-|Port GE23 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.71<p>Update: 60</p>|
 |Port GE26 Traffic IN |<p>-</p>|`SNMP agent`|ifInOctects.74<p>Update: 60</p>|
+|Port GE23 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.71<p>Update: 60</p>|
 |Port GE02 Status|<p>-</p>|`SNMP agent`|ifOperStatus.50<p>Update: 60</p>|
 |Port GE09 Status|<p>-</p>|`SNMP agent`|ifOperStatus.57<p>Update: 60</p>|
 |Port GE17 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.65<p>Update: 60</p>|

@@ -1,9 +1,5 @@
 # 3-IPMI Dell Power Edge 2900
 
-## Description
-
-## Overview IPMI sensors for Dell PowerEdge 2900: Ambient Temp, FAN 1 RPM, FAN 2 RPM, FAN 3 RPM, FAN 4 RPM, FAN 5 RPM, FAN 6 RPM, Power 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho 
-
 ## Overview
 
 IPMI sensors for Dell PowerEdge 2900:

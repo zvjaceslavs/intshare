@@ -1,9 +1,5 @@
 # Emerson_Liebert
 
-## Description
-
-## Overview Athough I've seen some Emerson templates, none of them worked with my UPS GXT3-XXXXX. So I created this template with lld for the UPS outputs and some itens that I usually need (like % Load). It's basic but can help someone in need some day. Battery Charge Status, Battery Charge Remaining %, Battery Voltage, System Info (Contact, Uptime, Serial, Firmware and etc), Output Load and Input Voltage ps: There's a macro for SNMP community, so you might want to change it. Tested in Zabbix 3.4.3 Cheers! ################## Embora eu já tenha visto alguns templates de No-Breaks Emerson na internet, nenhum deles funcionou com meu equipamento (modelo GXT3-XXXX). Então eu criei este template com lld para descobrir as saidas e criar as % de carga de cada saída. É um template básico mas pode ajudar alguém algum dia. Carga de Bateria, Status da Bateris, Carga Restante (em %), Carga Restante (em min), Voltagem da Bateria, Informações do Equipamento (Nome, Tempo sem desligar, número de série, versão do firmware e etc), Carga de Saida e Tensão de Entrada. Obs: Há uma macro criada para a community do SNMP, então talvez você queira alterar. Sucesso! Luiz Fernando Gondin Santos ## Author Luiz Fernando Gondin 
-
 ## Overview
 
 Athough I've seen some Emerson templates, none of them worked with my UPS GXT3-XXXXX. So I created this template with lld for the UPS outputs and some itens that I usually need (like % Load).

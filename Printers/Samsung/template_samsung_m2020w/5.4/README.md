@@ -1,9 +1,5 @@
 # M2020W
 
-## Description
-
-## Overview Samsung M2020W Printer ## Author Piotr Górski 
-
 ## Overview
 
 Samsung M2020W Printer

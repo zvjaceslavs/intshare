@@ -1,9 +1,5 @@
 # Module Linux systemd by Zabbix agent 2
 
-## Description
-
-## Overview This is template for native monitoring systemd services via Zabbix Agent 2. Zabbix agent 2 is a new generation of Zabbix agent and may be used in place of Zabbix agent. Template is for Zabbix 4.4+ New version for zabbix 5.0.6 and 5.2.2 has ben uploaded + fixed regular expression in preprocessing. ## Author Tomas Hermanek 
-
 ## Overview
 
 This is template for native monitoring systemd services via Zabbix Agent 2. Zabbix agent 2 is a new generation of Zabbix agent and may be used in place of Zabbix agent. Template is for Zabbix 4.4+

@@ -1,9 +1,5 @@
 # APC NetBotz Rack Monitor 200
 
-## Description
-
-## Overview * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity 
-
 ## Overview
 
 * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity)
@@ -71,9 +67,12 @@ There are no template links in this template.
 |{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > Max Threshold (LLD)|<p>-</p>|<p>**Expression**: ({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}>={APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()})</p><p>**Recovery expression**: ({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"].last()}<=({APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"].last()}-{APC NetBotz Rack Monitor 200:apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"].last()}))</p>|disaster|
 # APC NetBotz Rack Monitor 250
 
-## Description
+## Overview
 
-## Overview * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity ## Overview * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity 
+* LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity)
+* Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds
+* Graph Prototypes for Temperature and Humidity
+
 
 ## Overview
 

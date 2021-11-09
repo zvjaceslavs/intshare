@@ -1,9 +1,5 @@
 # Ruijie BBU
 
-## Description
-
-## Overview 锐捷小站设备资源监测模板 
-
 ## Overview
 
 锐捷小站设备资源监测模板

@@ -1,9 +1,5 @@
 # Eltex MES SNMPv2
 
-## Description
-
-## Overview Added to the Eltex MES switches, serial number, MAC address, firmware version. 15.02.2018 Add SFP healt (C, Volt, mA, Out power [mW/dBm], Input power [mW/dBm]). 23.02.2018 Add Screens and Aliase to Screens 
-
 ## Overview
 
 Added to the Eltex MES switches, serial number, MAC address, firmware version.

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description The number of TCP sessions. Using "dependent item" net.tcp.count.master[<source port>,<dest port>] https://github.com/mutz0623/zabbix_TCP-state-count-module ## Overview About * loadable module for aggregating TCP sessions. * 2017/9 Enabled for "depend item". so you can reduce server-agent NW connection frequency and load. Requirements * zabbix 3.0 * Linux ## Author mutsumi Iwata 
+The number of TCP sessions. Using "dependent item" net.tcp.count.master[<source port>,<dest port>] https://github.com/mutz0623/zabbix_TCP-state-count-module
 
 ## Overview
 
@@ -170,8 +170,8 @@ There are no discovery rules in this template.
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[20772,,LAST_ACK]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,10051,CLOSE]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[445,,CountAll]<p>Update: 0</p>|
-|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,445,SYN_RECV]<p>Update: 0</p>|
 |TCP count remote port $2 master|<p>-</p>|`Zabbix agent`|net.tcp.count.bulk[,445]<p>Update: 30s</p>|
+|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,445,SYN_RECV]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[20772,,TIME_WAIT]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,SYN_RECV]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,80,CLOSING]<p>Update: 0</p>|
@@ -221,8 +221,8 @@ There are no discovery rules in this template.
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,CountAll]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,10051,SYN_RECV]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[445,,LAST_ACK]<p>Update: 0</p>|
-|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,443,SYN_RECV]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,22,CLOSING]<p>Update: 0</p>|
+|TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,443,SYN_RECV]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,445,CountAll]<p>Update: 0</p>|
 |TCP count local port $1 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[22,,FIN_WAIT1]<p>Update: 0</p>|
 |TCP count remote port $2 $3|<p>-</p>|`Dependent item`|net.tcp.count.depend[,20772,CLOSE_WAIT]<p>Update: 0</p>|

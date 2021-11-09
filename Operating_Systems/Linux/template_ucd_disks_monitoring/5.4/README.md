@@ -1,9 +1,5 @@
 # SNMP UCD Disk
 
-## Description
-
-## Overview SNMP Template to poll UCD Disks Polls the following Stats diskIONRead The number of bytes read from this device since boot. diskIONWritten The number of bytes written to this device since boot. diskIOReads The number of read accesses from this device since boot. diskIOWrites The number of write accesses to this device since boot. diskIOLA1 The 1 minute average load of disk (%) diskIOLA5 The 5 minute average load of disk (%) diskIOLA15 The 15 minute average load of disk (%) Reference : http://net-snmp.sourceforge.net/docs/mibs/ucdDiskIOMIB.html ## Author SirLagz 
-
 ## Overview
 
 SNMP Template to poll UCD Disks

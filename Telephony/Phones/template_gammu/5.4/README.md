@@ -1,9 +1,5 @@
 # 16 GammuSMS
 
-## Description
-
-## Overview Monitoring gammu daemon statistics. ODBC connected queries into gammu database. ## Author Pavel Mlčoch 
-
 ## Overview
 
 Monitoring gammu daemon statistics.

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Model for PBX OXE R9.1 or greater, discovery: "trunk" only works on OXE R12.2 Modelo para PBX OXE R9.1 ou superior, descoberta: tronco só funciona em OXE R12.2 ## Overview ``` Zabbix template for Alcatel OXE Compatibility: Releases R9.1 or greater, prototype items (discovery:"trunk") only works in R12.2 or greater. How to configure SNMP in OXE 1. SNMP AGENT mgr > SNMP > SNMP Global Configuration > Consult - V2C - Agent: Enable - Add Contact, Location e Community - Apply -Test: $ snmpwalk -v 2c -c [ _Community _] localhost SNMPv2-MIB::sysName.0 Return : 'SNMPv2-MIB::sysName.0 = STRING: [HOST _NAME] 2. SNMP TRAP mgr > SNMP > SNMP Supervisor > Create, - V2C - Agent: Enable - Add Name, IP of ZABBIX Server or Proxy, Community, TRAP(yes), Trap TYPE (Extended). 3. Incident maneger Applications > Incident manager - Alter CONFIG SNMP Applications > Incident manager > Descend(Go down) > Incident Filter - Create or ative/desative SNMP of incident! - SNMP Incident: Yes ``` ## Author Pedro Rodrigues 
+Model for PBX OXE R9.1 or greater, discovery: "trunk" only works on OXE R12.2 Modelo para PBX OXE R9.1 ou superior, descoberta: tronco só funciona em OXE R12.2
 
 ## Overview
 
@@ -115,7 +115,44 @@ There are no macros links in this template.
 
 ## Description
 
-## Description Model for PBX OXE R9.1 or greater, discovery: "trunk" only works on OXE R12.2 Modelo para PBX OXE R9.1 ou superior, descoberta: tronco só funciona em OXE R12.2 ## Overview ``` Zabbix template for Alcatel OXE Compatibility: Releases R9.1 or greater, prototype items (discovery:"trunk") only works in R12.2 or greater. How to configure SNMP in OXE 1. SNMP AGENT mgr > SNMP > SNMP Global Configuration > Consult - V2C - Agent: Enable - Add Contact, Location e Community - Apply -Test: $ snmpwalk -v 2c -c [ _Community _] localhost SNMPv2-MIB::sysName.0 Return : 'SNMPv2-MIB::sysName.0 = STRING: [HOST _NAME] 2. SNMP TRAP mgr > SNMP > SNMP Supervisor > Create, - V2C - Agent: Enable - Add Name, IP of ZABBIX Server or Proxy, Community, TRAP(yes), Trap TYPE (Extended). 3. Incident maneger Applications > Incident manager - Alter CONFIG SNMP Applications > Incident manager > Descend(Go down) > Incident Filter - Create or ative/desative SNMP of incident! - SNMP Incident: Yes ``` ## Author Pedro Rodrigues ## Overview ``` Zabbix template for Alcatel OXE Compatibility: Releases R9.1 or greater, prototype items (discovery:"trunk") only works in R12.2 or greater. How to configure SNMP in OXE 1. SNMP AGENT mgr > SNMP > SNMP Global Configuration > Consult - V2C - Agent: Enable - Add Contact, Location e Community - Apply -Test: $ snmpwalk -v 2c -c [ _Community _] localhost SNMPv2-MIB::sysName.0 Return : 'SNMPv2-MIB::sysName.0 = STRING: [HOST _NAME] 2. SNMP TRAP mgr > SNMP > SNMP Supervisor > Create, - V2C - Agent: Enable - Add Name, IP of ZABBIX Server or Proxy, Community, TRAP(yes), Trap TYPE (Extended). 3. Incident maneger Applications > Incident manager - Alter CONFIG SNMP Applications > Incident manager > Descend(Go down) > Incident Filter - Create or ative/desative SNMP of incident! - SNMP Incident: Yes ``` ## Author Pedro Rodrigues 
+Model for PBX OXE R9.1 or greater, discovery: "trunk" only works on OXE R12.2 Modelo para PBX OXE R9.1 ou superior, descoberta: tronco só funciona em OXE R12.2
+
+## Overview
+
+
+```
+Zabbix template for Alcatel OXE 
+Compatibility: Releases R9.1 or greater, prototype items (discovery:"trunk") only works in R12.2 or greater.
+
+How to configure SNMP in OXE
+
+1. SNMP AGENT
+mgr > SNMP > SNMP Global Configuration > Consult
+ - V2C
+ - Agent: Enable
+ - Add Contact, Location e Community
+ - Apply
+ -Test:
+ $ snmpwalk -v 2c -c [\_Community\_] localhost SNMPv2-MIB::sysName.0
+ Return : 'SNMPv2-MIB::sysName.0 = STRING: [HOST\_NAME]
+2. SNMP TRAP
+mgr > SNMP > SNMP Supervisor > Create,
+ - V2C
+ - Agent: Enable
+ - Add Name, IP of ZABBIX Server or Proxy, Community, TRAP(yes), Trap TYPE (Extended).
+3. Incident maneger
+Applications > Incident manager
+ - Alter CONFIG SNMP
+Applications > Incident manager > Descend(Go down) > Incident Filter
+ - Create or ative/desative SNMP of incident!
+ - SNMP Incident: Yes
+
+```
+
+
+## Author
+
+Pedro Rodrigues
 
 ## Overview
 

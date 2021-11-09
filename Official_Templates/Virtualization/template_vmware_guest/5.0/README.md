@@ -1,9 +1,5 @@
 # Virt VMware Guest
 
-## Description
-
-## Overview Official VMware Guest Template from Zabbix distribution ## Author Zabbix SIA 
-
 ## Overview
 
 Official VMware Guest Template from Zabbix distribution

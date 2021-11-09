@@ -1,9 +1,5 @@
 # Snmp_Impressora_LLD_VERSAO-0.1
 
-## Description
-
-## Overview ##### A ideia desse template e facilitar a vida em poder utilizar um template unico para as impressoras do ambiente ganhando tempo valioso ao invés de ter um template para cada host. Att: Magno Monte Cerqueira Skype: [magnopeem _rj@hotmail.com](mailto:magnopeem_rj@hotmail.com) Telegram: @Magnopeem Linkdln: <https://br.linkedin.com/in/magno-monte-cerqueira-976b1587> OBS: no Git Tem mais informações. 
-
 ## Overview
 
 ##### A ideia desse template e facilitar a vida em poder utilizar um template unico para as impressoras do ambiente ganhando tempo valioso ao invés de ter um template para cada host.

@@ -1,9 +1,5 @@
 # APC_NMC2
 
-## Description
-
-## Overview This is Zabbix 2.0+ template for current models of APC Network Management Cards with or without enviromental sensor. Supports: AP9630 AP9631 (same as above but with env sensor) Includes 19 items, 4 applications, 13 triggers Monitors power parameters like voltage and frequency, battery charge and status, battery temperature, etc. Has triggers for out of range parameters, power loss, low battery. Supports temperature and humidity monitoring if present. Please set {$SNMP _COMMUNITY} macro for host. ## Author Eugene Varnavsky 
-
 ## Overview
 
 This is Zabbix 2.0+ template for current models of APC Network Management Cards with or without enviromental sensor.  

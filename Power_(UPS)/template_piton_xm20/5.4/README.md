@@ -1,9 +1,5 @@
 # PitON
 
-## Description
-
-## Overview This template for PitON XM20 ============================ Protocol SNMP v2. Items 128 with low discovery. Sorry but without triggers. Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administration/zabbix/templates/PitON%20XM20.xml) repository MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/PitON/XM20/snmp) repository ## Author P.V. Galonza 
-
 ## Overview
 
 This template for PitON XM20

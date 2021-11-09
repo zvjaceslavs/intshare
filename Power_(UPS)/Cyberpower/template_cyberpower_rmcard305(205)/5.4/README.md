@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description SNMPv2 Template for Cyberpower's remote management card ver.305 (205) used in OR and PR-series UPSes. Tested on firmware version 1.3.0. Created by Taurus (https://github.com/RusTaurus) MIBs used: CPS-MIB (v2.9) https://www.cyberpowersystems.com/products/software/mib-files/ ## Overview This is Zabbix SNMPv2 Template for Cyberpower's remote management card ver.305(205) used in OR- and PR-series UPSes. Tested on Zabbix 4.0 and 4.4, PR3000ELCDRT2U, OR1500ELCDRM1U with RMCARD305 (firmware version 1.3.0). [Here](https://github.com/RusTaurus/cyberpower-rmcard305) you can find latest firmware and MIB versions of RMCARD305. --- Enhancements in v2 version of this template: * New application with UPS configuration settings * Add discovery of battery Age Recommendation parameter * Display RMCARD serial number --- MIBs used: CPS-MIB (v2.9) ## Author Sergey Romanov 
+SNMPv2 Template for Cyberpower's remote management card ver.305 (205) used in OR and PR-series UPSes. Tested on firmware version 1.3.0. Created by Taurus (https://github.com/RusTaurus) MIBs used: CPS-MIB (v2.9) https://www.cyberpowersystems.com/products/software/mib-files/
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # IPMI Intel RMM3
 
-## Description
-
-## Overview Intel® Remote Management Module 3 Sensors: * 1 | BB +1.05V PCH | Voltage * 2 | BB +1.1V P1 Vccp | Voltage * 3 | BB +1.5V P1 DDR3 | Voltage * 4 | BB +3.3V | Voltage * 5 | BB +3.3V STBY | Voltage * 6 | BB +5.0V | Voltage * 7 | Baseboard Temp1 | Temperature * 8 | Baseboard Temp2 | Temperature * 9 | Front Panel Temp | Temperature * 11 | Sys Fan Tach 1A | Fan * 12 | Sys Fan Tach 1B | Fan * 13 | Sys Fan Tach 2A | Fan * 14 | Sys Fan Tach 2B | Fan * 15 | Sys Fan Tach 3A | Fan * 16 | Sys Fan Tach 3B | Fan * 17 | PS Power In | Other Units Based Sensor 4 Triggers note: Authentication algorithm - md5 
-
 ## Overview
 
 Intel® Remote Management Module 3

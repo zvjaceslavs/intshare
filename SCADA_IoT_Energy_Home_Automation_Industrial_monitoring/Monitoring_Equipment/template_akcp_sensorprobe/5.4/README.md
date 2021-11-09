@@ -1,9 +1,5 @@
 # AKCP
 
-## Description
-
-## Overview This template is designed for all SensorProbe devices from the vendor AKCP. All connected sensors (humidity and temperature) are automaticly discovered in this template. This template is tested whith SensorProbe2 and SensorProbe4. ## Author Nico Wieczorek 
-
 ## Overview
 
 This template is designed for all SensorProbe devices from the vendor AKCP.

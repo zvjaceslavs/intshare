@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values and set macros in Zabbix ## Overview Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values Zabbix > Template > Macros > set Username, Passwort and PrivacyPasswort 2020 April: fixed https://github.com/kko/unifi-zabbix-snmpv3/issues/4 ## Author Helmut Leonhardt 
+Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values and set macros in Zabbix 
 
 ## Overview
 
@@ -81,6 +81,8 @@ Helmut Leonhardt
 |Storage Size on {#IFDESCR}|<p>The size of the storage represented by this entry, in units of hrStorageAllocationUnits.</p>|`SNMP agent`|host.hrStorage.hrStorageTable.hrStorageEntry.hrStorageSize[{#IFINDEX}]<p>Update: 3m</p><p>LLD</p>|
 |Storage Used on {#IFDESCR} (%)|<p>% of disk space used.</p>|`Calculated`|host.hrStorage.hrStorageTable.hrStorageEntry.hrStorageUsed[{#IFINDEX},pct]<p>Update: 5m</p><p>LLD</p>|
 |Storage Used on {#IFDESCR}|<p>The amount of the storage represented by this entry.</p>|`SNMP agent`|host.hrStorage.hrStorageTable.hrStorageEntry.hrStorageUsed[{#IFINDEX}]<p>Update: 3m</p><p>LLD</p>|
+|Disk Latency Read on LUN {#LUNNAME} ({#LUNUID})|<p>LUN read disk latency.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNDiskLatencyRead[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Disk Latency Write on LUN {#LUNNAME} ({#LUNUID})|<p>LUN write disk latency.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNDiskLatencyWrite[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |IOPS Read on LUN {#LUNNAME} ({#LUNUID})|<p>LUN read iops.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNIopsRead[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |IOPS Write on LUN {#LUNNAME} ({#LUNUID})|<p>LUN write iops.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNIopsWrite[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |IO Size Read on LUN {#LUNNAME} ({#LUNUID})|<p>LUN average io size when reading.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNIoSizeRead[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
@@ -90,8 +92,6 @@ Helmut Leonhardt
 |Throughput Read Low on LUN {#LUNNAME} ({#LUNUID})|<p>LUN read throughput over 32 bits part.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNThroughputReadLow[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Throughput Write High on LUN {#LUNNAME} ({#LUNUID})|<p>The higher 32 bit of write throughput.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNThroughputWriteHigh[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Throughput Write Low on LUN {#LUNNAME} ({#LUNUID})|<p>The lower 32 bit of write throughput.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNThroughputWriteLow[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Disk Latency Read on LUN {#LUNNAME} ({#LUNUID})|<p>LUN read disk latency.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNDiskLatencyRead[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Disk Latency Write on LUN {#LUNNAME} ({#LUNUID})|<p>LUN write disk latency.</p>|`SNMP agent`|synologyiSCSILUN.iSCSILUNTable.iSCSILUNEntry.iSCSILUNDiskLatencyWrite[{#LUNINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |{#SNMPVALUE} Model|<p>Synology disk model name: the disk model name will be showed here.</p>|`SNMP agent`|synoDisk.diskTable.diskEntry.diskModel.[{#SNMPINDEX}]<p>Update: 1d</p><p>LLD</p>|
 |{#SNMPVALUE} Status|<p>Synology disk status: each meanings of status represented describe below: [1] Normal: the hard disk functions normally. [2] Initialized: the hard disk has system partition but no data. [3] NotInitialized: the hard disk does not have system in system partition. [4] SystemPartitionFailed: the system partitions on the hard disks are damaged. [5] Crashed: the hard disk has damaged.</p>|`SNMP agent`|synoDisk.diskTable.diskEntry.diskStatus.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |{#SNMPVALUE} Temperature|<p>Synology disk temperature: the temperature of each disk uses Celsius degree.</p>|`SNMP agent`|synoDisk.diskTable.diskEntry.diskTemperature.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|

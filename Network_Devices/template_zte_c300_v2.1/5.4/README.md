@@ -1,9 +1,5 @@
 # ICMP Ping GPON
 
-## Description
-
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
-
 ## Overview
 
  LLD for Cards, Onus and Interfaces Traps PWR
@@ -39,9 +35,15 @@ There are no triggers in this template.
 
 # SNMP Device GPON PARKS
 
-## Description
+## Overview
 
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
+ LLD for Cards, Onus and Interfaces Traps PWR
+
+
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
 
 ## Overview
 
@@ -96,9 +98,25 @@ There are no macros links in this template.
 |ONU {#SNMPVALUE} LOW SIGNAL (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP Device GPON PARKS/onuDwRx[{#SNMPVALUE}])>28</p><p>**Recovery expression**: </p>|information|
 # SNMP Device GPON ZTE fw 2.1
 
-## Description
+## Overview
 
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
+ LLD for Cards, Onus and Interfaces Traps PWR
+
+
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
+
+## Overview
+
+ LLD for Cards, Onus and Interfaces Traps PWR
+
+
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
 
 ## Overview
 

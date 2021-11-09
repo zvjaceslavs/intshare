@@ -1,9 +1,5 @@
 # Mikrotik CRS125-24G-1S-2HnD-IN
 
-## Description
-
-## Overview This template has been customized for CRS125-24G-1S-2HnD-IN, but will probably work fine for other Mikrotik routers. It includes interfaces, processors, memory, disk, availability, temperature, voltage, DHCP leases and wireless clients. Updated in 2019-May-15 to reflect the OID changes implemented by Mikrotik. For some reason, they changed several OIDs and my monitoring stopped working. After some troubleshooting I found out the router was showing the data on different OIDs so I updated the template to reflect them. If you are experiencing broken graphics and Items showing as "Not supported" since a few weeks ago, please update the template to this one. Im not sure if you will need to clear the data.. I did it during the troubleshooting process because I thought my DB was somehow corrupted, but please try to update the template first.. if it does not work properly, then clean the historical data of your router in your Zabbix. ## Author Antonio Forster 
-
 ## Overview
 
 This template has been customized for CRS125-24G-1S-2HnD-IN, but will probably work fine for other Mikrotik routers. It includes interfaces, processors, memory, disk, availability, temperature, voltage, DHCP leases and wireless clients.

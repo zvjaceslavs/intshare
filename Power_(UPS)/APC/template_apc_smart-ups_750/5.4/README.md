@@ -1,9 +1,5 @@
 # APC Smart-UPS
 
-## Description
-
-## Overview This template covers basic monitoring with some triggers. I use it on a Windows Server 2016 with PowerChute Business Edition installed. Feel free to modify this template to meet your needs. Configure PowerChute Business Edition to use SNMP v1 with Community "public". --- The following applications, triggers and items are configured: ### Applications and Items Info * APC Firmware Revision * APC Modell * APC Serial Number Battery * APC Battery Capacity * APC Battery Replace Indicator * APC Battery Status * APC Battery Temperature * APC Battery Voltage * APC Time on Battery * APC Time on Battery remaining Input * APC Input Frequency * APC Input Phase * APC Input Voltage Output * APC Output Current (Amperes) * APC Output Frequency * APC Output Load * APC Output Phase * APC Output Status (basic) * APC Output Voltage Diagnostics * Test Last Diagnostics Date * Test Last Diagnostics Results ### Triggers * Information UPS Capacity lower than 90 Percent * Warning UPS Capacity lower than 70 Percent * Average UPS Capacity lower than 50 Percent * Average UPS Capacity lower than 30 Percent * High UPS Capacity lower than 20 Percent * Disaster UPS Capacity lower than 10 Percent * Average Test Failed * Disaster Remaining Time on Battery is lower than 5 Minutes * High No Power Source * Warning Load on this APC unit is to high * Average Input Fequency to low * Average Input Fequency to high * Information Frequency is not 50 Hz * Average Battery should be replaced ## Author Jonas Zürcher 
-
 ## Overview
 
 This template covers basic monitoring with some triggers.

@@ -1,9 +1,5 @@
 # Xanto S1500R
 
-## Description
-
-## Overview Template for Online USV - XANTO S1500R tested with xabbix 3.2 via SNMP Monitoring and triggers for - Current Battery load in % - Battery capacity - remaining runtime in min - temperature - Voltage Input / Output - MAC, USV Model, system runtime.... including triggers and graphs ## Author stschu 
-
 ## Overview
 
 Template for Online USV - XANTO S1500R

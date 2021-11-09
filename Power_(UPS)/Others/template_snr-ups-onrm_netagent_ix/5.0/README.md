@@ -1,9 +1,5 @@
 # NetAgent UPS
 
-## Description
-
-## Overview A simple template for monitoring the UPS company NAG series **SNR-UPS-ONRM** with network cards **SNMP DL801** (**NetAgent IX**) List of parameters: UPS battery capacity (%) UPS Battery Last Replace Date UPS battery status UPS battery temperature UPS Firmware Revision UPS input voltage UPS output frequency UPS output load (%) UPS output voltage UPS status UPS time on battery Uptime ## Author Ilya Ostanin 
-
 ## Overview
 
 A simple template for monitoring the UPS company NAG series **SNR-UPS-ONRM** with network cards **SNMP DL801** (**NetAgent IX**)

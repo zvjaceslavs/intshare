@@ -1,9 +1,5 @@
 # SNMP NetApp cDot
 
-## Description
-
-## Overview For Netapp Ontape 9.5 and later. Discovery rules: - Aggregates - Enclosures - LIFs - Nodes - SnapMirror (New) - Volumes Based on "NETAPP ONTAP 9.1" edited by "[zabbiJ](owner/zabbiJ)". ## Author eric_at_2037 
-
 ## Overview
 
 For Netapp Ontape 9.5 and later.

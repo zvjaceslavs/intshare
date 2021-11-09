@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description ViPNet IDS SNMPv2 template ## Overview Infotecs ViPNet IDS ## Author Antik89 
+ViPNet IDS SNMPv2 template
 
 ## Overview
 

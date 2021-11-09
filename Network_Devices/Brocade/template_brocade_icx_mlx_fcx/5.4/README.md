@@ -1,9 +1,5 @@
 # SNMP Brocade
 
-## Description
-
-## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger 
-
 ## Overview
 
 Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers.
@@ -72,11 +68,7 @@ There are no template links in this template.
 |Temperature is > {$WARNTEMP} on {#SNMPVALUE} Chassi: {#SNMPINDEX} (LLD)|<p>Temperature ist mire than {$WARNTEMP}</p>|<p>**Expression**: last(/SNMP Brocade/snAgentTempValue[{#SNMPINDEX}])>90</p><p>**Recovery expression**: </p>|average|
 |Operational status was changed on Power Supply {#PWRSUPID} (LLD)|<p>The power supply operation has been changed</p>|<p>**Expression**: (last(/SNMP Brocade/snChasPwrSupplyDescription[{#SNMPINDEX}],#1)<>last(/SNMP Brocade/snChasPwrSupplyDescription[{#SNMPINDEX}],#2))=1</p><p>**Recovery expression**: </p>|average|
 |Fan Number {#SNMPINDEX} Failure (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP Brocade/snChasFanOperStatus[{#SNMPINDEX}])<>2</p><p>**Recovery expression**: </p>|average|
-# SNMP Brocade-Copper
-
-## Description
-
-## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger ## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger 
+# SNMP Brocade-Fiber
 
 ## Overview
 
@@ -97,39 +89,24 @@ Discoveryrules for: temperatur, fan and power supply. every Port is an "Applicat
 
 Stefan Krüger
 
-## Macros used
+## Overview
 
-There are no macros links in this template.
+Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers.
 
-## Template links
 
-There are no template links in this template.
+Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1).
 
-## Discovery rules
 
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|PortDiscover|<p>-</p>|`SNMP agent`|snSwIfInfoConnectorTypeCopper<p>Update: 3600</p>|
-## Items collected
+It only discovered "UP"-ports. 
 
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
-|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
-|Incoming traffic on interface $1|<p>The total number of packets transmitted out of the interface.</p>|`SNMP agent`|snSwIfStatsInFrames[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
-|Outgoing traffic on interface $1|<p>The total number of packets received on the interface.</p>|`SNMP agent`|snSwIfStatsOutFrames[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
-|Status of interface $1|<p>The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.</p>|`SNMP agent`|snSwPortInfoLinkStatus[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
-## Triggers
 
-|Name|Description|Expression|Priority|
-|----|-----------|----------|--------|
-|Operational status was changed on {HOST.NAME} interface {#IFDESCRCOP}|<p>-</p>|<p>**Expression**: (last(/SNMP Brocade-Copper/snSwPortInfoLinkStatus[{#IFDESCRCOP}],#1)<>last(/SNMP Brocade-Copper/snSwPortInfoLinkStatus[{#IFDESCRCOP}],#2))=1</p><p>**Recovery expression**: </p>|average|
-|Operational status was changed on {HOST.NAME} interface {#IFDESCRCOP} (LLD)|<p>-</p>|<p>**Expression**: (last(/SNMP Brocade-Copper/snSwPortInfoLinkStatus[{#IFDESCRCOP}],#1)<>last(/SNMP Brocade-Copper/snSwPortInfoLinkStatus[{#IFDESCRCOP}],#2))=1</p><p>**Recovery expression**: </p>|average|
-# SNMP Brocade-Fiber
+Discoveryrules for: temperatur, fan and power supply. every Port is an "Application"
 
-## Description
 
-## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger ## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger ## Overview Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers. Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1). It only discovered "UP"-ports. Discoveryrules for: temperatur, fan and power supply. every Port is an "Application" ## Author Stefan Krüger 
+
+## Author
+
+Stefan Krüger
 
 ## Overview
 
@@ -178,3 +155,71 @@ There are no template links in this template.
 |----|-----------|----------|--------|
 |Operational status was changed on {HOST.NAME} interface {#IFDESCRFIB}|<p>-</p>|<p>**Expression**: (last(/SNMP Brocade-Fiber/snSwPortInfoLinkStatus[{#IFDESCRFIB}],#1)<>last(/SNMP Brocade-Fiber/snSwPortInfoLinkStatus[{#IFDESCRFIB}],#2))=1</p><p>**Recovery expression**: </p>|average|
 |Operational status was changed on {HOST.NAME} interface {#IFDESCRFIB} (LLD)|<p>-</p>|<p>**Expression**: (last(/SNMP Brocade-Fiber/snSwPortInfoLinkStatus[{#IFDESCRFIB}],#1)<>last(/SNMP Brocade-Fiber/snSwPortInfoLinkStatus[{#IFDESCRFIB}],#2))=1</p><p>**Recovery expression**: </p>|average|
+# SNMP Brocade-Copper
+
+## Overview
+
+Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers.
+
+
+Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1).
+
+
+It only discovered "UP"-ports. 
+
+
+Discoveryrules for: temperatur, fan and power supply. every Port is an "Application"
+
+
+
+## Author
+
+Stefan Krüger
+
+## Overview
+
+Due OID/MIB limitations on Brocade side the trigger for PowerSupply based on diff(!!) not on "not normal", because not presents powersupplys will be marked as failure, so you will get some false positives triggers.
+
+
+Was tested on Brocade FCX/MLX/ICX and old FastIrons(Firmware >07.2.02eT7f1).
+
+
+It only discovered "UP"-ports. 
+
+
+Discoveryrules for: temperatur, fan and power supply. every Port is an "Application"
+
+
+
+## Author
+
+Stefan Krüger
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|PortDiscover|<p>-</p>|`SNMP agent`|snSwIfInfoConnectorTypeCopper<p>Update: 3600</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.</p>|`SNMP agent`|ifOutErrors[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>The total number of packets transmitted out of the interface.</p>|`SNMP agent`|snSwIfStatsInFrames[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>The total number of packets received on the interface.</p>|`SNMP agent`|snSwIfStatsOutFrames[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+|Status of interface $1|<p>The current operational state of the interface. The testing(3) state indicates that no operational packets can be passed.</p>|`SNMP agent`|snSwPortInfoLinkStatus[{#IFDESCRCOP}]<p>Update: 60</p><p>LLD</p>|
+## Triggers
+
+|Name|Description|Expression|Priority|
+|----|-----------|----------|--------|
+|Operational status was changed on {HOST.NAME} interface {#IFDESCRCOP}|<p>-</p>|<p>**Expression**: (last(/SNMP Brocade-Copper/snSwPortInfoLinkStatus[{#IFDESCRCOP}],#1)<>last(/SNMP Brocade-Copper/snSwPortInfoLinkStatus[{#IFDESCRCOP}],#2))=1</p><p>**Recovery expression**: </p>|average|
+|Operational status was changed on {HOST.NAME} interface {#IFDESCRCOP} (LLD)|<p>-</p>|<p>**Expression**: (last(/SNMP Brocade-Copper/snSwPortInfoLinkStatus[{#IFDESCRCOP}],#1)<>last(/SNMP Brocade-Copper/snSwPortInfoLinkStatus[{#IFDESCRCOP}],#2))=1</p><p>**Recovery expression**: </p>|average|

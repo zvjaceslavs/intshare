@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ ## Overview The same as [this](operating-systems/windows/template-os-windows-server), but with numerical designations for perf _counter All thanks to the [author](https://vk.com/simplezabbix) Видео про шаблон:<https://youtu.be/FWqFyRu8hmQ> ## Author https://vk.com/simplezabbix 
+Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ
 
 ## Overview
 

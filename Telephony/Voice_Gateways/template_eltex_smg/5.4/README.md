@@ -1,9 +1,5 @@
 # Eltex SMG SNMPv2
 
-## Description
-
-## Author Oleg 
-
 ## Author
 
 Oleg

@@ -1,9 +1,5 @@
 # Supermicro SNMP Superdoctor 5 LLD
 
-## Description
-
-## Overview Monitor Supermicro servers by snmp vs SuperDoctor5 (SD5). Monitored items: 1. Fans (RPM) 2. Physical disks (by hba or LSI raid card (see SD5 documentation)). By default deactivated. * model * serial number (trigger exists) * smart status (trigger exists) 3. Power Supply (ok or not, trigger exists) 4. Temperatures (celsius, trigger exists) 5. Power Supply Input Voltages (for tests, trigger exists). By default deactivated. 6. Memory * model * serial number (trigger exists) * manufacturer * location * error count (trigger exists) * capacity 7. Mainboard * model * bios version (trigger exists) All items is searching by lld (excluding mainboard model and bios version). Filtering if set to not monitored in SD5. Macroses: 1. {$SNMP _COMMUNITY} 2. {$SUPERMICRO _DISCOVERY _TIME} - period of discovering (how often). 3. {$DISC _DISCOVERY _TIME} - period of discovering for disks (i suppose that you may change it more often) 4. {$PD _REQUEST _PERIOD} - period of requesting data from disks. Regular expressions: 1. Filtering RAID (Result is False, expression - RAID) 2. Filtering Microsoft Storage Space Device (Result is False, expression - Filtering Microsoft Storage Space Device) Value mappings: 1. Supermicro physical disk smart status (0 ⇒ OK 2 ⇒ Critical) 2. Supermicro power supply status (SNMP) (0 ⇒ OK 1 ⇒ Warning 2 ⇒ Critical) I don't use disks in production and power voltages, but i've tested this functions. For using this template you have to configure snmp and install super doctor 5. You can use template as is and make commens with your wishes or other. i will glad to see interesting ideas for upgrading this template. 
-
 ## Overview
 
 Monitor Supermicro servers by snmp vs SuperDoctor5 (SD5). 

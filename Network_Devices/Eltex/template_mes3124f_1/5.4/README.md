@@ -1,9 +1,5 @@
 # MES3124
 
-## Description
-
-## Overview Eltex MES3124f network switch ## Author gg.ledokol 
-
 ## Overview
 
 Eltex MES3124f network switch 
@@ -49,8 +45,8 @@ There are no discovery rules in this template.
 |Gigabitethernet 1/0/11 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets59<p>Update: 20</p>|
 |Gigabitethernet 1/0/21 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets69<p>Update: 20</p>|
 |Gigabitethernet 1/0/18 - in|<p>-</p>|`SNMP agent`|ifHCInOctets66<p>Update: 20</p>|
-|Gigabitethernet 1/0/2 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets50<p>Update: 20</p>|
 |Gigabitethernet 1/0/12 - in|<p>-</p>|`SNMP agent`|ifHCInOctets60<p>Update: 20</p>|
+|Gigabitethernet 1/0/2 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets50<p>Update: 20</p>|
 |Gigabitethernet 1/0/17 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets65<p>Update: 20</p>|
 |Gigabitethernet 1/0/19 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets67<p>Update: 20</p>|
 |Gigabitethernet 1/0/17 - in|<p>-</p>|`SNMP agent`|ifHCInOctets65<p>Update: 20</p>|
@@ -61,8 +57,8 @@ There are no discovery rules in this template.
 |Port-channel 3 - in|<p>-</p>|`SNMP agent`|ifInOctets1002<p>Update: 20</p>|
 |Gigabitethernet 1/0/23 - in|<p>-</p>|`SNMP agent`|ifHCInOctets71<p>Update: 20</p>|
 |Gigabitethernet 1/0/24 - in|<p>-</p>|`SNMP agent`|ifHCInOctets72<p>Update: 20</p>|
-|Gigabitethernet 1/0/3 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets51<p>Update: 20</p>|
 |Gigabitethernet 1/0/23 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets71<p>Update: 20</p>|
+|Gigabitethernet 1/0/3 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets51<p>Update: 20</p>|
 |Port-channel 3 - out|<p>-</p>|`SNMP agent`|ifOutOctets1002<p>Update: 20</p>|
 |Gigabitethernet 1/0/11 - in|<p>-</p>|`SNMP agent`|ifHCInOctets59<p>Update: 20</p>|
 |Gigabitethernet 1/0/7 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets55<p>Update: 20</p>|

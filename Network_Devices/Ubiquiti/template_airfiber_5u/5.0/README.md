@@ -1,9 +1,5 @@
 # AirFiber_5U
 
-## Description
-
-## Overview Template for AirFiber 5U. 
-
 ## Overview
 
 Template for AirFiber 5U.

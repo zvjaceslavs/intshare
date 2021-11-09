@@ -1,9 +1,5 @@
 # SNMP Reillo UPS
 
-## Description
-
-## Overview SNMP Template for REILLLO UPS, tested with Zabbix 3.4 (should work in older versions) Battery Status, Input/output load, Alarms. This template requires [Reillo MIB files](http://www.riello-ups.com/downloads/25-netman-204) (RFC1628A.MIB ) to be import into Zabbix server. ## Author Sing Kingdavong 
-
 ## Overview
 
  SNMP Template for REILLLO UPS, tested with Zabbix 3.4 (should work in older versions) Battery Status, Input/output load, Alarms. This template requires [Reillo MIB files](http://www.riello-ups.com/downloads/25-netman-204) (RFC1628A.MIB ) to be import into Zabbix server. 

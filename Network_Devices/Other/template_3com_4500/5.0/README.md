@@ -1,9 +1,5 @@
 # 3COM 4500 52 Ports
 
-## Description
-
-## Overview Template to monitor 3com switchs, Model 4500 with 52 ports. Graphs for Port Speed, Traffic IN, Traffic OUT, Traffic errors for ALL 52 ports Template shows too Port Last Changed and Port Status ## Author Marcello Carvalho 
-
 ## Overview
 
 Template to monitor 3com switchs, Model 4500 with 52 ports.

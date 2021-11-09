@@ -1,9 +1,5 @@
 # 1C Enterprise
 
-## Description
-
-## Overview **Zabbix 1C Enterprise** Monitor sessions number for each base in cluster and for each cluster. Items names include base name and cluster name. Using LLD for base discovery Suggestions are welcome. UPD Added items for monitoring UPD2 Added converted to exe Python scripts, so you don't need install Python interpreter, but you need be very fearless to use exe files from Internet :) 
-
 ## Overview
 
  **Zabbix 1C Enterprise**

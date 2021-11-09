@@ -1,8 +1,206 @@
+# Kube by Prom API
+
+## Description
+
+This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default.
+
+## Overview
+
+ ### Description
+
+
+zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server.
+
+
+It is used for external Kubernetes monitoring by Zabbix via Prometheus API.
+
+
+### Installation
+
+
+1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster.
+2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server.
+3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed.
+4. Let LLD create discovered nodes as new "Zabbix hosts"
+5. Let LLD create discovered pods as new "Virtual Zabbix hosts
+
+
+### Templates
+
+
+The global export (zabbix-kube-prom.xml) contains following templates:
+
+
+
+
+| Templates | Description |
+| --- | --- |
+| Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. |
+| Template Kube Node by Prom API | Template applied to the created host (node). |
+| Template Kube Pod by Prom API | Template applied to the created host (pod). |
+
+
+### Licenses
+
+
+
+
+| Template | License |
+| --- | --- |
+| Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) |
+| Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) |
+
+
+
+
+---
+
+
+ 
+
+
+
+## Author
+
+Laurent Marchelli
+
+## Macros used
+
+|Name|Description|Default|Type|
+|----|-----------|-------|----|
+|{$CPU.UTIL.CRIT}|<p>-</p>|`90`|Text macro|
+|{$IF.ERRORS.WARN}|<p>-</p>|`2`|Text macro|
+|{$IF.UTIL.MAX}|<p>-</p>|`90`|Text macro|
+|{$IFCONTROL}|<p>-</p>|`1`|Text macro|
+|{$KERNEL.MAXFILES.MIN}|<p>-</p>|`256`|Text macro|
+|{$LOAD_AVG_PER_CPU.MAX.WARN}|<p>Load per CPU considered sustainable. Tune if needed.</p>|`1.5`|Text macro|
+|{$MEMORY.AVAILABLE.MIN}|<p>-</p>|`20M`|Text macro|
+|{$MEMORY.UTIL.MAX}|<p>-</p>|`90`|Text macro|
+|{$NET.IF.IFALIAS.MATCHES}|<p>-</p>|`^.*$`|Text macro|
+|{$NET.IF.IFALIAS.NOT_MATCHES}|<p>-</p>|`CHANGE_IF_NEEDED`|Text macro|
+|{$NET.IF.IFNAME.MATCHES}|<p>-</p>|`^.*$`|Text macro|
+|{$NET.IF.IFNAME.NOT_MATCHES}|<p>Filter out loopbacks, nulls, docker veth links and docker0 bridge by default</p>|`(^Software Loopback Interface|^NULL[0-9.]*$|^[Ll]o[0-9.]*$|^[Ss]ystem$|^Nu[0-9.]*$|^veth[0-9a-z]+$|docker[0-9]+|br-[a-z0-9]{12})`|Text macro|
+|{$NET.IF.IFOPERSTATUS.MATCHES}|<p>-</p>|`^.*$`|Text macro|
+|{$NET.IF.IFOPERSTATUS.NOT_MATCHES}|<p>Ignore notPresent(7)</p>|`^7$`|Text macro|
+|{$NODE_EXPORTER_PORT}|<p>TCP Port node_exporter is listening on.</p>|`9100`|Text macro|
+|{$PROM.API.URL}|<p>Prometheus API URL. Can be overridden on the host or linked template level.</p>|`http://prometheus.k8scluster.nuci7.lan:8080/api/v1/`|Text macro|
+|{$PROM.NODE.IP.MATCHES}|<p>This macro is used in node discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
+|{$PROM.NODE.IP.NOT_MATCHES}|<p>This macro is used in node discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
+|{$PROM.NODE.NAME.MATCHES}|<p>This macro is used in node discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
+|{$PROM.NODE.NAME.NOT_MATCHES}|<p>This macro is used in node discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
+|{$PROM.POD.DEVICE.MATCHES}|<p>Device regex used in pod's metric discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
+|{$PROM.POD.DEVICE.NOT_MATCHES}|<p>Device interface regex used in pod's metric discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
+|{$PROM.POD.IFNAME.MATCHES}|<p>Network interface regex used in pod's metric discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
+|{$PROM.POD.IFNAME.NOT_MATCHES}|<p>Network interface regex used in pod's metric discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
+|{$PROM.POD.NAME.MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
+|{$PROM.POD.NAME.NOT_MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
+|{$PROM.POD.NAMESPACE.MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
+|{$PROM.POD.NAMESPACE.NOT_MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
+|{$PROM.POD.SERVICE.MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
+|{$PROM.POD.SERVICE.NOT_MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
+|{$SWAP.PFREE.MIN.WARN}|<p>-</p>|`50`|Text macro|
+|{$SYSTEM.FUZZYTIME.MAX}|<p>-</p>|`60`|Text macro|
+|{$VFS.DEV.DEVNAME.MATCHES}|<p>This macro is used in block devices discovery. Can be overridden on the host or linked template level</p>|`.+`|Text macro|
+|{$VFS.DEV.DEVNAME.NOT_MATCHES}|<p>This macro is used in block devices discovery. Can be overridden on the host or linked template level</p>|`^(loop[0-9]*|sd[a-z][0-9]+|nbd[0-9]+|sr[0-9]+|fd[0-9]+|dm-[0-9]+|ram[0-9]+|ploop[a-z0-9]+|md[0-9]*|hcp[0-9]*|zram[0-9]*)`|Text macro|
+|{$VFS.DEV.READ.AWAIT.WARN}|<p>Disk read average response time (in ms) before the trigger would fire</p>|`20`|Text macro|
+|{$VFS.DEV.WRITE.AWAIT.WARN}|<p>Disk write average response time (in ms) before the trigger would fire</p>|`20`|Text macro|
+|{$VFS.FS.FSDEVICE.MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^.+$`|Text macro|
+|{$VFS.FS.FSDEVICE.NOT_MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^\s$`|Text macro|
+|{$VFS.FS.FSNAME.MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`.+`|Text macro|
+|{$VFS.FS.FSNAME.NOT_MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^(/dev|/sys|/run|/proc|.+/shm$)`|Text macro|
+|{$VFS.FS.FSTYPE.MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^(btrfs|ext2|ext3|ext4|reiser|xfs|ffs|ufs|jfs|jfs2|vxfs|hfs|apfs|refs|ntfs|fat32|zfs)$`|Text macro|
+|{$VFS.FS.FSTYPE.NOT_MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^\s$`|Text macro|
+|{$VFS.FS.INODE.PFREE.MIN.CRIT}|<p>-</p>|`10`|Text macro|
+|{$VFS.FS.INODE.PFREE.MIN.WARN}|<p>-</p>|`20`|Text macro|
+|{$VFS.FS.PUSED.MAX.CRIT}|<p>-</p>|`90`|Text macro|
+|{$VFS.FS.PUSED.MAX.WARN}|<p>-</p>|`80`|Text macro|
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Kube node|<p>-</p>|`HTTP agent`|prom.node.discovery<p>Update: 1m</p>|
+|Kube pod|<p>-</p>|`HTTP agent`|prom.pod.discovery<p>Update: 1m</p>|
+## Items collected
+
+There are no items in this template.
+
+## Triggers
+
+There are no triggers in this template.
+
 # Kube Node by Prom API
 
 ## Description
 
-## Description This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default. ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli ## Description Official Linux template using node exporter. Known Issues: Description: node_exporter v0.16.0 renamed many metrics. CPU utilization for 'guest' and 'guest_nice' metrics are not supported in this template with node_exporter < 0.16. Disk IO metrics are not supported. Other metrics provided as 'best effort'. See https://github.com/prometheus/node_exporter/releases/tag/v0.16.0 for details. Version: below 0.16.0 Description: metric node_network_info with label 'device' cannot be found, so network discovery is not possible. Version: below 0.18 You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/387225-discussion-thread-for-official-zabbix-template-for-linux Template tooling version used: 0.34 ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli 
+This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default.
+
+## Overview
+
+ ### Description
+
+
+zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server.
+
+
+It is used for external Kubernetes monitoring by Zabbix via Prometheus API.
+
+
+### Installation
+
+
+1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster.
+2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server.
+3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed.
+4. Let LLD create discovered nodes as new "Zabbix hosts"
+5. Let LLD create discovered pods as new "Virtual Zabbix hosts
+
+
+### Templates
+
+
+The global export (zabbix-kube-prom.xml) contains following templates:
+
+
+
+
+| Templates | Description |
+| --- | --- |
+| Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. |
+| Template Kube Node by Prom API | Template applied to the created host (node). |
+| Template Kube Pod by Prom API | Template applied to the created host (pod). |
+
+
+### Licenses
+
+
+
+
+| Template | License |
+| --- | --- |
+| Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) |
+| Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) |
+
+
+
+
+---
+
+
+ 
+
+
+
+## Author
+
+Laurent Marchelli
+
+## Description
+
+Official Linux template using node exporter. Known Issues: Description: node_exporter v0.16.0 renamed many metrics. CPU utilization for 'guest' and 'guest_nice' metrics are not supported in this template with node_exporter < 0.16. Disk IO metrics are not supported. Other metrics provided as 'best effort'. See https://github.com/prometheus/node_exporter/releases/tag/v0.16.0 for details. Version: below 0.16.0 Description: metric node_network_info with label 'device' cannot be found, so network discovery is not possible. Version: below 0.18 You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/387225-discussion-thread-for-official-zabbix-template-for-linux Template tooling version used: 0.34
 
 ## Overview
 
@@ -199,7 +397,131 @@ There are no template links in this template.
 
 ## Description
 
-## Description This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default. ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli ## Description Official Linux template using node exporter. Known Issues: Description: node_exporter v0.16.0 renamed many metrics. CPU utilization for 'guest' and 'guest_nice' metrics are not supported in this template with node_exporter < 0.16. Disk IO metrics are not supported. Other metrics provided as 'best effort'. See https://github.com/prometheus/node_exporter/releases/tag/v0.16.0 for details. Version: below 0.16.0 Description: metric node_network_info with label 'device' cannot be found, so network discovery is not possible. Version: below 0.18 You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/387225-discussion-thread-for-official-zabbix-template-for-linux Template tooling version used: 0.34 ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli 
+This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default.
+
+## Overview
+
+ ### Description
+
+
+zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server.
+
+
+It is used for external Kubernetes monitoring by Zabbix via Prometheus API.
+
+
+### Installation
+
+
+1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster.
+2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server.
+3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed.
+4. Let LLD create discovered nodes as new "Zabbix hosts"
+5. Let LLD create discovered pods as new "Virtual Zabbix hosts
+
+
+### Templates
+
+
+The global export (zabbix-kube-prom.xml) contains following templates:
+
+
+
+
+| Templates | Description |
+| --- | --- |
+| Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. |
+| Template Kube Node by Prom API | Template applied to the created host (node). |
+| Template Kube Pod by Prom API | Template applied to the created host (pod). |
+
+
+### Licenses
+
+
+
+
+| Template | License |
+| --- | --- |
+| Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) |
+| Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) |
+
+
+
+
+---
+
+
+ 
+
+
+
+## Author
+
+Laurent Marchelli
+
+## Description
+
+Official Linux template using node exporter. Known Issues: Description: node_exporter v0.16.0 renamed many metrics. CPU utilization for 'guest' and 'guest_nice' metrics are not supported in this template with node_exporter < 0.16. Disk IO metrics are not supported. Other metrics provided as 'best effort'. See https://github.com/prometheus/node_exporter/releases/tag/v0.16.0 for details. Version: below 0.16.0 Description: metric node_network_info with label 'device' cannot be found, so network discovery is not possible. Version: below 0.18 You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/387225-discussion-thread-for-official-zabbix-template-for-linux Template tooling version used: 0.34
+
+## Overview
+
+ ### Description
+
+
+zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server.
+
+
+It is used for external Kubernetes monitoring by Zabbix via Prometheus API.
+
+
+### Installation
+
+
+1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster.
+2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server.
+3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed.
+4. Let LLD create discovered nodes as new "Zabbix hosts"
+5. Let LLD create discovered pods as new "Virtual Zabbix hosts
+
+
+### Templates
+
+
+The global export (zabbix-kube-prom.xml) contains following templates:
+
+
+
+
+| Templates | Description |
+| --- | --- |
+| Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. |
+| Template Kube Node by Prom API | Template applied to the created host (node). |
+| Template Kube Pod by Prom API | Template applied to the created host (pod). |
+
+
+### Licenses
+
+
+
+
+| Template | License |
+| --- | --- |
+| Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) |
+| Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) |
+
+
+
+
+---
+
+
+ 
+
+
+
+## Author
+
+Laurent Marchelli
 
 ## Overview
 
@@ -308,140 +630,6 @@ There are no template links in this template.
 |Network {#IFNAME}: {#METRIC}|<p>-</p>|`Dependent item`|prom.pod.metrics[network,{#METRIC},{#IFNAME}]<p>Update: 0</p><p>LLD</p>|
 |{#CONTAINER} - {#METRIC}|<p>-</p>|`Dependent item`|prom.pod.metrics[new,{#CONTAINER},{#METRIC}]<p>Update: 0</p><p>LLD</p>|
 |{#CONTAINER} - {#METRIC}|<p>-</p>|`Dependent item`|prom.pod.metrics[cpu,{#CONTAINER},{#METRIC}]<p>Update: 0</p><p>LLD</p>|
-## Triggers
-
-There are no triggers in this template.
-
-# Kube by Prom API
-
-## Description
-
-## Description This template works out of the box as soon as Prometheus (Prometheus-operator) is available inside your cluster; it does not require any Zabbix agent installation or configuration. It allows external monitoring of the Kubernetes cluster through ingress, without any NodePort declaration. It uses the Prometheus API to create a Zabbix host for each pod available inside the Kubernetes cluster. {$PROM.API.URL} must contains the Prometheus entry point into your Kubernetes cluster. Zabbix pod hosts are created with the "Template Kube Pod by Prom API" template by default. ## Overview ### Description zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server. It is used for external Kubernetes monitoring by Zabbix via Prometheus API. ### Installation 1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster. 2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server. 3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed. 4. Let LLD create discovered nodes as new "Zabbix hosts" 5. Let LLD create discovered pods as new "Virtual Zabbix hosts ### Templates The global export (zabbix-kube-prom.xml) contains following templates: | Templates | Description | | --- | --- | | Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. | | Template Kube Node by Prom API | Template applied to the created host (node). | | Template Kube Pod by Prom API | Template applied to the created host (pod). | ### Licenses | Template | License | | --- | --- | | Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) | | Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) | --- ## Author Laurent Marchelli 
-
-## Overview
-
- ### Description
-
-
-zabbix-kube-prom is a batch of Zabbix LLD templates for Zabbix server.
-
-
-It is used for external Kubernetes monitoring by Zabbix via Prometheus API.
-
-
-### Installation
-
-
-1. Install [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) into the Kubernetes cluster.
-2. Import global Zabbix Template (zabbix-kube-prom.xml) into your Zabbix server.
-3. Create or import a host identifying your Kubernetes cluster where Prometheus is deployed.
-4. Let LLD create discovered nodes as new "Zabbix hosts"
-5. Let LLD create discovered pods as new "Virtual Zabbix hosts
-
-
-### Templates
-
-
-The global export (zabbix-kube-prom.xml) contains following templates:
-
-
-
-
-| Templates | Description |
-| --- | --- |
-| Template Kube by Prom API | Creates a Zabbix host for each pod and node discovered. |
-| Template Kube Node by Prom API | Template applied to the created host (node). |
-| Template Kube Pod by Prom API | Template applied to the created host (pod). |
-
-
-### Licenses
-
-
-
-
-| Template | License |
-| --- | --- |
-| Template OS Linux by Prom | *GNU General Public License v2.0 or later*[Copyright (C) 2001-2021 Zabbix SIA](https://github.com/zabbix/zabbix/blob/master/README) |
-| Template Kube by Prom APITemplate Kube Node by Prom APITemplate Kube Pod by Prom API | *GNU General Public License v3.0*[Copyright (C) 2021 Diagnostica Stago](https://www.stago.com/) |
-
-
-
-
----
-
-
- 
-
-
-
-## Author
-
-Laurent Marchelli
-
-## Macros used
-
-|Name|Description|Default|Type|
-|----|-----------|-------|----|
-|{$PROM.POD.NAME.MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
-|{$PROM.POD.NAME.NOT_MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
-|{$PROM.POD.NAMESPACE.MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
-|{$PROM.POD.NAMESPACE.NOT_MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
-|{$PROM.POD.SERVICE.MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
-|{$PROM.POD.SERVICE.NOT_MATCHES}|<p>This macro is used in pod discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
-|{$SWAP.PFREE.MIN.WARN}|<p>-</p>|`50`|Text macro|
-|{$SYSTEM.FUZZYTIME.MAX}|<p>-</p>|`60`|Text macro|
-|{$VFS.DEV.DEVNAME.MATCHES}|<p>This macro is used in block devices discovery. Can be overridden on the host or linked template level</p>|`.+`|Text macro|
-|{$VFS.DEV.DEVNAME.NOT_MATCHES}|<p>This macro is used in block devices discovery. Can be overridden on the host or linked template level</p>|`^(loop[0-9]*|sd[a-z][0-9]+|nbd[0-9]+|sr[0-9]+|fd[0-9]+|dm-[0-9]+|ram[0-9]+|ploop[a-z0-9]+|md[0-9]*|hcp[0-9]*|zram[0-9]*)`|Text macro|
-|{$VFS.DEV.READ.AWAIT.WARN}|<p>Disk read average response time (in ms) before the trigger would fire</p>|`20`|Text macro|
-|{$VFS.DEV.WRITE.AWAIT.WARN}|<p>Disk write average response time (in ms) before the trigger would fire</p>|`20`|Text macro|
-|{$VFS.FS.FSDEVICE.MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^.+$`|Text macro|
-|{$VFS.FS.FSDEVICE.NOT_MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^\s$`|Text macro|
-|{$VFS.FS.FSNAME.MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`.+`|Text macro|
-|{$VFS.FS.FSNAME.NOT_MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^(/dev|/sys|/run|/proc|.+/shm$)`|Text macro|
-|{$VFS.FS.FSTYPE.MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^(btrfs|ext2|ext3|ext4|reiser|xfs|ffs|ufs|jfs|jfs2|vxfs|hfs|apfs|refs|ntfs|fat32|zfs)$`|Text macro|
-|{$VFS.FS.FSTYPE.NOT_MATCHES}|<p>This macro is used in filesystems discovery. Can be overridden on the host or linked template level</p>|`^\s$`|Text macro|
-|{$VFS.FS.INODE.PFREE.MIN.CRIT}|<p>-</p>|`10`|Text macro|
-|{$VFS.FS.INODE.PFREE.MIN.WARN}|<p>-</p>|`20`|Text macro|
-|{$VFS.FS.PUSED.MAX.CRIT}|<p>-</p>|`90`|Text macro|
-|{$VFS.FS.PUSED.MAX.WARN}|<p>-</p>|`80`|Text macro|
-|{$CPU.UTIL.CRIT}|<p>-</p>|`90`|Text macro|
-|{$IF.ERRORS.WARN}|<p>-</p>|`2`|Text macro|
-|{$IF.UTIL.MAX}|<p>-</p>|`90`|Text macro|
-|{$IFCONTROL}|<p>-</p>|`1`|Text macro|
-|{$KERNEL.MAXFILES.MIN}|<p>-</p>|`256`|Text macro|
-|{$LOAD_AVG_PER_CPU.MAX.WARN}|<p>Load per CPU considered sustainable. Tune if needed.</p>|`1.5`|Text macro|
-|{$MEMORY.AVAILABLE.MIN}|<p>-</p>|`20M`|Text macro|
-|{$MEMORY.UTIL.MAX}|<p>-</p>|`90`|Text macro|
-|{$NET.IF.IFALIAS.MATCHES}|<p>-</p>|`^.*$`|Text macro|
-|{$NET.IF.IFALIAS.NOT_MATCHES}|<p>-</p>|`CHANGE_IF_NEEDED`|Text macro|
-|{$NET.IF.IFNAME.MATCHES}|<p>-</p>|`^.*$`|Text macro|
-|{$NET.IF.IFNAME.NOT_MATCHES}|<p>Filter out loopbacks, nulls, docker veth links and docker0 bridge by default</p>|`(^Software Loopback Interface|^NULL[0-9.]*$|^[Ll]o[0-9.]*$|^[Ss]ystem$|^Nu[0-9.]*$|^veth[0-9a-z]+$|docker[0-9]+|br-[a-z0-9]{12})`|Text macro|
-|{$NET.IF.IFOPERSTATUS.MATCHES}|<p>-</p>|`^.*$`|Text macro|
-|{$NET.IF.IFOPERSTATUS.NOT_MATCHES}|<p>Ignore notPresent(7)</p>|`^7$`|Text macro|
-|{$NODE_EXPORTER_PORT}|<p>TCP Port node_exporter is listening on.</p>|`9100`|Text macro|
-|{$PROM.API.URL}|<p>Prometheus API URL. Can be overridden on the host or linked template level.</p>|`http://prometheus.k8scluster.nuci7.lan:8080/api/v1/`|Text macro|
-|{$PROM.NODE.IP.MATCHES}|<p>This macro is used in node discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
-|{$PROM.NODE.IP.NOT_MATCHES}|<p>This macro is used in node discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
-|{$PROM.NODE.NAME.MATCHES}|<p>This macro is used in node discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
-|{$PROM.NODE.NAME.NOT_MATCHES}|<p>This macro is used in node discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
-|{$PROM.POD.DEVICE.MATCHES}|<p>Device regex used in pod's metric discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
-|{$PROM.POD.DEVICE.NOT_MATCHES}|<p>Device interface regex used in pod's metric discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
-|{$PROM.POD.IFNAME.MATCHES}|<p>Network interface regex used in pod's metric discovery. Can be overridden on the host or linked template level.</p>|`^.*$`|Text macro|
-|{$PROM.POD.IFNAME.NOT_MATCHES}|<p>Network interface regex used in pod's metric discovery. Can be overridden on the host or linked template level.</p>|`CHANGE_IF_NEEDED`|Text macro|
-## Template links
-
-There are no template links in this template.
-
-## Discovery rules
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Kube node|<p>-</p>|`HTTP agent`|prom.node.discovery<p>Update: 1m</p>|
-|Kube pod|<p>-</p>|`HTTP agent`|prom.pod.discovery<p>Update: 1m</p>|
-## Items collected
-
-There are no items in this template.
-
 ## Triggers
 
 There are no triggers in this template.

@@ -1,9 +1,5 @@
 # Mikrotik-QUEUE
 
-## Description
-
-## Overview zabbix template for graphing queue traffic on mikrotik devices [mehdi.sadighian@hotmail.com](mailto:mehdi.sadighian@hotmail.com) <https://msadighian.com> 
-
 ## Overview
 
 zabbix template for graphing queue traffic on mikrotik devices

@@ -1,9 +1,5 @@
 # Cisco ASA 515
 
-## Description
-
-## Overview Cisco ASA 515 ## Author leonardog50 
-
 ## Overview
 
 Cisco ASA 515
@@ -39,8 +35,8 @@ There are no template links in this template.
 |----|-----------|----|----|
 |Chassis Serial Number|<p>-</p>|`SNMP agent`|deviceSerialNum<p>Update: 3600</p>|
 |CPU Loading 1 Minutes|<p>-</p>|`SNMP agent`|cMTSystemMetricCpuOneMinuteUtilization<p>Update: 10s</p>|
-|Administrative State Of Outsid Status - DMZ|<p>-</p>|`SNMP agent`|ifAdminStatus.4<p>Update: 10s</p>|
 |Interface LAN - Trafic In|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 10s</p>|
+|Administrative State Of Outsid Status - DMZ|<p>-</p>|`SNMP agent`|ifAdminStatus.4<p>Update: 10s</p>|
 |Hardware serial number|<p>MIB: ENTITY-MIB</p>|`SNMP agent`|system.hw.serialnumber<p>Update: 30s</p>|
 |Description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
 |CPU Utilization avg last 5 min|<p>-</p>|`SNMP agent`|cpmCPUTotal5minRev<p>Update: 300s</p>|

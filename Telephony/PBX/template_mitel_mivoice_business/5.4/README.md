@@ -1,9 +1,5 @@
 # Mitel MiVoice Business
 
-## Description
-
-## Overview Template for Mitel MiVoice Business, formerly known as Mitel Communications Director and Mitel 3300. Uses SNMP to fetch various Mitel OIDs, most importantly the Alarm State. Tested with a range of firmware releases from 10.x to 14.x. Fetches: * Alarm state * Number of categories in alarm state * User licenses purchased * User licenses used * Disk reads * Disk writes * 1min CPU average * Hardware platform * Software version Triggers: * Alarm state 
-
 ## Overview
 
 Template for Mitel MiVoice Business, formerly known as Mitel Communications Director and Mitel 3300.

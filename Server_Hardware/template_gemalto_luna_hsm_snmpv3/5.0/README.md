@@ -1,9 +1,5 @@
 # Gemalto SafeNet Luna SNMPv3
 
-## Description
-
-## Overview Template for monitoring Gemalto SafeNet Luna HSM using SNMPv3 polling. No SNMP Traps. Tested with Luna Mark II firmware 6.10.5 . SafeNet SNMP MIB is very limited and a bit clumsy, so I had to do with whatever I could have find there. ## Author Jan Gregor 
-
 ## Overview
 
 Template for monitoring Gemalto SafeNet Luna HSM using SNMPv3 polling. No SNMP Traps.

@@ -1,9 +1,5 @@
 # 3-IPMI SGI Altix H2106-G7
 
-## Description
-
-## Overview IPMI sensors for SGI Altix H2106-G7: +3.3V, +3.3VSB, +5V, +12V, CPU1 DIMM, CPU1 Temp, CPU1 Vcore, CPU2 DIMM, CPU2 Temp, CPU2 Vcore, CPU3 DIMM, CPU3 Temp, CPU3 Vcore, CPU4 DIMM, CPU4 Temp, CPU4 Vcore, Fan1, Fan2, Fan3, Fan4, Fan5, Fan6, Power, System Temp, VBAT 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho 
-
 ## Overview
 
 IPMI sensors for SGI Altix H2106-G7:

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description ipmi sensors, please disable absend HDD and unsupported items ## Overview Template for monitoring IPMI sensors for Cisco UCS servers hardware tested on C220M3 please disable absend HDD and unsupported items after some time. sensors and triggers: * cpu temperature * DDR modules status * HDD status * LED fan status * overal leds status * Power modules status * other temperature sensors * storage status ## Author Dmitry Lavrukhin 
+ipmi sensors, please disable absend HDD and unsupported items
 
 ## Overview
 

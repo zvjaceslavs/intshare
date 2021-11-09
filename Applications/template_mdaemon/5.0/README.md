@@ -1,9 +1,5 @@
 # App MDaemon
 
-## Description
-
-## Author Frederik Bjerggaard Nielsen 
-
 ## Author
 
 Frederik Bjerggaard Nielsen

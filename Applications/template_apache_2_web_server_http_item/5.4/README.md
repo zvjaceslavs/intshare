@@ -1,9 +1,5 @@
 # App Apache2
 
-## Description
-
-## Overview Zabbix template for apache 2 web server without external script. This template have macros for setting URL status page. This template uses only one http item as a master item and other items depend it. Requirements: 1. Zabbix 4+ 2. Enabled mod _status <https://www.tecmint.com/monitor-apache-web-server-load-and-page-statistics/> 
-
 ## Overview
 
 Zabbix template for apache 2 web server without external script. This template have macros for setting URL status page. This template uses only one http item as a master item and other items depend it.

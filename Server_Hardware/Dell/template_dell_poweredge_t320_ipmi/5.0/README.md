@@ -1,9 +1,5 @@
 # 3-IPMI Dell Power Edge T320
 
-## Description
-
-## Overview IPMI sensors for Dell PowerEdge T320: Current 1, Current 2, Inlet Temp, Power, Pwr Consumption, Sys Fan1 RPM, Temp, Voltage 1, Voltage 2 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho 
-
 ## Overview
 
 IPMI sensors for Dell PowerEdge T320:

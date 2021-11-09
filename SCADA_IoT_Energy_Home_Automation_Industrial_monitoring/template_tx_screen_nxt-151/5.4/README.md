@@ -1,9 +1,5 @@
 # Nxt151 General
 
-## Description
-
-## Overview Template of transmissor of Screen. Model: NXT-151. This template contains: * 7 applications * 70 items * 69 Triggers * 9 Grafs Our applications have itens of the component below: * Amplifier * External Amplifier * GbE * GPS * Input * Modulator * System ## Author Marcos Sousa and Guilherme Pereira 
-
 ## Overview
 
 Template of transmissor of Screen. Model: NXT-151. This template contains:

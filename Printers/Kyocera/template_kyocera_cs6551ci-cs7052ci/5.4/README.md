@@ -1,9 +1,5 @@
 # Kyocera Printers
 
-## Description
-
-## Overview Zabbix template for Kyocera CS-6115ci - CS7051ci printers. ## Author Aniefiok Umoh 
-
 ## Overview
 
 Zabbix template for Kyocera CS-6115ci - CS7051ci printers.

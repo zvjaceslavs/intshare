@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Created by Samuel Martins (https://www.linkedin.com/in/slmartins/) Last update: 2021-03-08 Based on Furukawa user's guide - NT-GPONREV00–Março2019 https://github.com/slunart Compatbile with: OLT G4S Firmware: 6.11 OLT G8S Firmware: 1.12 OLT G2500 Firmware: 6.12 OLT G1040 OLT LD3032 Firmware: 2.02 ## Overview Hello, Template for monitoring the OLT and ONU network devices from the manufacturer Furukawa. This template may be compatible with the following OLT models: Equipments: * OLT G4S * OLT G8S * OLT G2500 * OLT G1040 * OLT LD3032 Total of: * 13 item prototypes * 2 prototype triggers Based on Furukawa user guide - NT-GPONREV00 – March2019 Bye! ## Author Samuel Martins 
+Created by Samuel Martins (https://www.linkedin.com/in/slmartins/) Last update: 2021-03-08 Based on Furukawa user's guide - NT-GPONREV00–Março2019 https://github.com/slunart Compatbile with: OLT G4S Firmware: 6.11 OLT G8S Firmware: 1.12 OLT G2500 Firmware: 6.12 OLT G1040 OLT LD3032 Firmware: 2.02
 
 ## Overview
 

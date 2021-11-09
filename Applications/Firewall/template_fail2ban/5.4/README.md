@@ -1,9 +1,5 @@
 # Fail2ban
 
-## Description
-
-## Overview Fail2Ban template for Zabbix ============================ **Features:** Automatic discovery of jails Monitor service status Monitor jails Jails graph **The installation instruction is in this repository.** [github.com/hermanekt/zabbix-fail2ban-discovery-](cat-app/firewall/fail2ban/visit) ## Author Tomas Hermanek 
-
 ## Overview
 
 Fail2Ban template for Zabbix

@@ -1,9 +1,5 @@
 # Stark-3000-snmp
 
-## Description
-
-## Overview UPS Stark country 3000 online. <https://en.stark-power.de> Template based on "Template _UPS _Inform-flexipower" ## Author Sergey Prisada 
-
 ## Overview
 
 UPS Stark country 3000 online.

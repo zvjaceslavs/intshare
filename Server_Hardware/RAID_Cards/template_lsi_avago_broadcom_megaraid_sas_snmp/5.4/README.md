@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Zabbix Template for Avago Megaraid SAS (formerly LSI) RAID cards ## Overview This is initial template for Monitoring LSI/Avago/Broadcom (or branded like Intel, IBM, Supermicro etc) MegaRAID based hardware RAID cards. According to vendor docs it should also support non-RAID adapters, enclosures and some other devices. It took me one night to complete major/required parts, so far template supports most of the options and all the critical components to keep you warned in case some RAID-related problems will occur. Supported so far: * Full LLD Support * Informational part for agent/driver/module * Complete Adapter-Related OID list with graphs and triggers * Part of Device-Related OID's with graphs * All triggers that are crucial * Comments for all OID's with value mappings from MegaRAID MIB Planned: * Value Mappings * Completing list of device OID's and related graphs * virtualDevice OID's and related graphs * enclosureInfo OID's and related graphs * Trap setting OID's * Traps for trapper * Check for updated version Not tested yet: * M$ Windows Support * Values and units are done as per MIB doc with 1-1 match, cannot guarantee that they are correct if vendor has provided wrong info (apparently, there is at least one minor issue) Installation and Requirements: * Ensure, that LSI-MegaRAID-SAS-MIB files downloaded from vendor site are installed and added to snmp.conf (after that you can restart both agent and server) * Ensure, that appropriate package (snmp sas or snmp sas _ir) with MegaRAID snmp agent wrapper is installed and running, snmpd.conf for OID's are set as per doc for wrapper * Ensure, that Zabbix is allowed to gather information from snmpd * Ensure, that required device drivers are installed on the hosts * Import Template, assign to hosts * Wait for LLD to check all OID's and start gathering data * Have a good night's sleep Bugs? -> Please Report @GitHub or at giomac gmail com When will you finish this? -> Nah, all critical issues are included, will do, definitely, but not asap ## Author George Machitidze 
+Zabbix Template for Avago Megaraid SAS (formerly LSI) RAID cards
 
 ## Overview
 
@@ -148,6 +148,7 @@ There are no template links in this template.
 |MegaRAID SAS MIB Topology Types info for adapter $1|<p>This field gives the Topology Type</p>|`SNMP agent`|topologyType[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Raid On Chip Temperature on adapter $1|<p>temperature of RAID On Chip in Celsius</p>|`SNMP agent`|temperatureROC[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Controller Temperature on adapter $1|<p>temperature of controller in Celsius</p>|`SNMP agent`|temperatureCtrl[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Enable SAS Pi on adapter $1|<p>1 =Enable SAS PI for controller , 0 =Disable SAS PI for controller</p>|`SNMP agent`|enablePI[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB SATA Drive Support on adapter $1|<p>SATA physical drive support. Values:notSupported(0), supported(1)</p>|`SNMP agent`|supportsSATA[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB SAS Drive Support on adapter $1|<p>SAS physical drive support. Values:notSupported(0), supported(1)</p>|`SNMP agent`|supportsSAS[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB PD shield state support on adapter $1|<p>1=Support PD shield state, 0=Not Support PD shield state</p>|`SNMP agent`|supportShieldState[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
@@ -205,6 +206,7 @@ There are no template links in this template.
 |MegaRAID SAS MIB Maximum no of arrays supported for adapter $1|<p>Maximum no of arrays supported for this adapter.</p>|`SNMP agent`|maxArrays[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Maximum arms per Virtual Drive supported for adapter $1|<p>Maximum arms per Virtual Drive supported for this Adapter.</p>|`SNMP agent`|maxArms[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Firmware support for Maintenance Mode on adapter $1|<p>1=FW supports maintenance mode</p>|`SNMP agent`|maintenanceMode[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|MegaRAID SAS MIB Driver Version for adapter $1|<p>Driver version Format->(Driver Name:Version)</p>|`SNMP agent`|driverVersion[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Lock Key Not BackedUp Support on adapter $1|<p>lock Key Not Backedup support for this Adapter. Values:false(0),true(1)</p>|`SNMP agent`|lockKeyNotBackedup[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Lock Key Failed Support on adapter $1|<p>lock Key Failed support for this Adapter. Values:false(0),true(1)</p>|`SNMP agent`|lockKeyFailed[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Type of lock key binding for adapter $1|<p>Type of lock key binding. lock key is not bound(0),lock key bound to FW secret key(1), lock key bound to user(2), lock key bound to a TPM(3)</p>|`SNMP agent`|lockKeyBinding[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
@@ -224,8 +226,6 @@ There are no template links in this template.
 |MegaRAID SAS MIB Firmware Version for adapter $1|<p>Firmware version Format->(Firmware Package Version:Version:Date:Time)</p>|`SNMP agent`|firmwareVersion[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Expander Firmware Version for adapter $1|<p>Expander firmware version - Not Available if expander is not present on the controller</p>|`SNMP agent`|expanderFirmwareVersion[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Spin Down Unconfigured Drives on adapter $1|<p>Spin Down Unconfigured Drives(1), Do Not Spin Down Unconfigured Drives(0)</p>|`SNMP agent`|enableSpinDownUnconfigured[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Enable SAS Pi on adapter $1|<p>1 =Enable SAS PI for controller , 0 =Disable SAS PI for controller</p>|`SNMP agent`|enablePI[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|MegaRAID SAS MIB Driver Version for adapter $1|<p>Driver version Format->(Driver Name:Version)</p>|`SNMP agent`|driverVersion[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Domain ID of adapter $1|<p>This field gives the Domain ID</p>|`SNMP agent`|domainId[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Spin Down Hotspares on adapter $1|<p>Spin Down Hotspares(0), Do Not Spin Down Hotspares(1)</p>|`SNMP agent`|disableSpinDownHotSpare[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |MegaRAID SAS MIB Logical Drive Power Saving disable time after 12:00AM on adapter $1|<p>LD power savings shall be disabled at xx minutes from 12:00am.</p>|`SNMP agent`|disableLdPSTime[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|

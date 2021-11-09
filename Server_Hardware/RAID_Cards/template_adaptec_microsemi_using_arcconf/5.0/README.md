@@ -1,9 +1,5 @@
 # Adaptec PS
 
-## Description
-
-## Overview Description ----------- This template is for discovering and monitoring adaptec storage controllers by using outputs of arcconf cli tool. Useful only if you have one adaptec adapter in server (i don't have servers with more fore testing). Now it works only with zabbix 4.2 Main features ------------- * Discovery of controllers, logical discs, physical discs, batteries * Monitoring controllers, logical, physical discs, batteries * Comfortable changing of time intervals by macroses. 
-
 ## Overview
 
 Description

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Scopus IRD-2900 series SNMP status sensors. Reading QPSK received signal quality. v1.0 initial release by r.ermakov@emg.fm. v1.1 added multiplier for BER, changed some colours. ## Overview Template for DVB/S satellite receiver Scopus IRD-2900 series. I guess it should fit new Harmonic ProView as well. Uses SNMP data only. Monitored items: 1. Viterbi Bit Error Rate, 2. Carrier/Noise ratio, 3. signal Eb/N0 measurement, 4. Link Margin, 5. overall Signal Quality in %. Triggers: 1. Signal Quality is low, 2. Link Margin is low ## Author Roman Ermakov 
+Scopus IRD-2900 series SNMP status sensors. Reading QPSK received signal quality. v1.0 initial release by r.ermakov@emg.fm. v1.1 added multiplier for BER, changed some colours.
 
 ## Overview
 

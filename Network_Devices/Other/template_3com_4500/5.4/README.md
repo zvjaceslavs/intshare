@@ -1,9 +1,5 @@
 # 3COM 4500 52 Ports
 
-## Description
-
-## Overview Template to monitor 3com switchs, Model 4500 with 52 ports. Graphs for Port Speed, Traffic IN, Traffic OUT, Traffic errors for ALL 52 ports Template shows too Port Last Changed and Port Status ## Author Marcello Carvalho 
-
 ## Overview
 
 Template to monitor 3com switchs, Model 4500 with 52 ports.
@@ -39,8 +35,8 @@ There are no discovery rules in this template.
 |Port 44 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227970<p>Update: 30</p>|
 |Port 21 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227786<p>Update: 30</p>|
 |Port 26 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.4227826<p>Update: 30</p>|
-|Port 29 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227850<p>Update: 30</p>|
 |Port 10 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227698<p>Update: 30</p>|
+|Port 29 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227850<p>Update: 30</p>|
 |Port 42 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227954<p>Update: 30</p>|
 |Port 14 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.4227730<p>Update: 30</p>|
 |Port 16 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227746<p>Update: 30</p>|
@@ -162,8 +158,8 @@ There are no discovery rules in this template.
 |Port 46 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227986<p>Update: 30</p>|
 |Port 25 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227818<p>Update: 30</p>|
 |Port 34 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227890<p>Update: 30</p>|
-|Port 36 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227906<p>Update: 30</p>|
 |Port 33 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227882<p>Update: 30</p>|
+|Port 36 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227906<p>Update: 30</p>|
 |Port 32 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227874<p>Update: 30</p>|
 |Port 16 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227746<p>Update: 30</p>|
 |Port 29 Traffic OUT|<p>-</p>|`SNMP agent`|ifOutOctets.4227850<p>Update: 30</p>|
@@ -181,8 +177,8 @@ There are no discovery rules in this template.
 |Port 51 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.4228025<p>Update: 30</p>|
 |Port 9 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227690<p>Update: 30</p>|
 |Port 47 Traffic OUT|<p>-</p>|`SNMP agent`|ifOutOctets.4227994<p>Update: 30</p>|
-|Port 34 Traffic OUT|<p>-</p>|`SNMP agent`|ifOutOctets.4227890<p>Update: 30</p>|
 |Port 38 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227922<p>Update: 30</p>|
+|Port 34 Traffic OUT|<p>-</p>|`SNMP agent`|ifOutOctets.4227890<p>Update: 30</p>|
 |Port 19 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227770<p>Update: 30</p>|
 |Port 27 Traffic IN|<p>-</p>|`SNMP agent`|ifInOctects.4227834<p>Update: 30</p>|
 |Port 15 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227738<p>Update: 30</p>|
@@ -288,8 +284,8 @@ There are no discovery rules in this template.
 |Port 14 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227730<p>Update: 30</p>|
 |Port 13 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227722<p>Update: 30</p>|
 |Port 22 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227794<p>Update: 30</p>|
-|Port 38 Traffic OUT|<p>-</p>|`SNMP agent`|ifOutOctets.4227922<p>Update: 30</p>|
 |Port 7 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227674<p>Update: 30</p>|
+|Port 38 Traffic OUT|<p>-</p>|`SNMP agent`|ifOutOctets.4227922<p>Update: 30</p>|
 |Port 43 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227962<p>Update: 30</p>|
 |Port 6 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227666<p>Update: 30</p>|
 |Port 13 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227722<p>Update: 30</p>|
@@ -331,8 +327,8 @@ There are no discovery rules in this template.
 |Port 31 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227866<p>Update: 30</p>|
 |Port 16 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227746<p>Update: 30</p>|
 |Port 23 Traffic IN|<p>-</p>|`SNMP agent`|ifInOctects.4227802<p>Update: 30</p>|
-|Port 34 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227890<p>Update: 30</p>|
 |Port 40 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227938<p>Update: 30</p>|
+|Port 34 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227890<p>Update: 30</p>|
 |Port 41 Traffic OUT|<p>-</p>|`SNMP agent`|ifOutOctets.4227946<p>Update: 30</p>|
 |Port 44 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227970<p>Update: 30</p>|
 |Port 28 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227842<p>Update: 30</p>|
@@ -348,17 +344,17 @@ There are no discovery rules in this template.
 |Port 28 Traffic IN|<p>-</p>|`SNMP agent`|ifInOctects.4227842<p>Update: 30</p>|
 |Port 37 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.4227914<p>Update: 30</p>|
 |Port 7 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227674<p>Update: 30</p>|
-|Port 22 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227794<p>Update: 30</p>|
 |Port 51 Speed|<p>-</p>|`SNMP agent`|ifspeed.4228025<p>Update: 30</p>|
+|Port 22 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227794<p>Update: 30</p>|
 |Port 23 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.4227802<p>Update: 30</p>|
 |Port 34 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227890<p>Update: 30</p>|
 |Port 46 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227986<p>Update: 30</p>|
 |Port 4 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227650<p>Update: 30</p>|
 |Port 21 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227786<p>Update: 30</p>|
-|Port 38 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227922<p>Update: 30</p>|
 |Port 10 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227698<p>Update: 30</p>|
-|Port 35 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227898<p>Update: 30</p>|
+|Port 38 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227922<p>Update: 30</p>|
 |Port 39 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227930<p>Update: 30</p>|
+|Port 35 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227898<p>Update: 30</p>|
 |Port 38 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227922<p>Update: 30</p>|
 |Port 33 Traffic IN Errors|<p>-</p>|`SNMP agent`|ifInErrors.4227882<p>Update: 30</p>|
 |Port 34 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227890<p>Update: 30</p>|
@@ -386,8 +382,8 @@ There are no discovery rules in this template.
 |Port 12 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227714<p>Update: 30</p>|
 |Port 9 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227690<p>Update: 30</p>|
 |Port 4 Traffic IN|<p>-</p>|`SNMP agent`|ifInOctects.4227650<p>Update: 30</p>|
-|Port 45 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227978<p>Update: 30</p>|
 |Port 47 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227994<p>Update: 30</p>|
+|Port 45 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227978<p>Update: 30</p>|
 |Port 30 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227858<p>Update: 30</p>|
 |Port 39 Traffic OUT|<p>-</p>|`SNMP agent`|ifOutOctets.4227930<p>Update: 30</p>|
 |Port 31 Traffic IN|<p>-</p>|`SNMP agent`|ifInOctects.4227866<p>Update: 30</p>|

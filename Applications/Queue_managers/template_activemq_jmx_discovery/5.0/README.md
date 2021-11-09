@@ -1,9 +1,5 @@
 # JMX ActiveMQ
 
-## Description
-
-## Overview Download and import the Zabbix server. ## Author Armagan Yaman 
-
 ## Overview
 
 Download and import the Zabbix server.

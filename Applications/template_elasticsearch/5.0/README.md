@@ -1,9 +1,5 @@
 # App Elasticsearch Cluster new
 
-## Description
-
-## Overview **ElasticSearch Zabbix monitoring** =================================== #### Script-free Zabbix ES monitoring This template monitores all ES cluster using Zabbix 4.x HTTP Agent resource. This allows check ES being OnPremise or PAAS (AWS Elasticsearch, for example) without additional scripts. ### Requisites: * ES available for Zabbix server or a Zabbix proxy. That's all. * ES Endpoints can be adjusted on template macro. ### **Discovers:** * ES Indexes discovery ES Node discovery ### **Monitored Items:** * Shards * Cluster Rate * Cluster Latency * Cluster Health * JVM Stats * Disk Status * Snapshot status * ES Port * Memory * Documents (searchable, deleted) ## Author Rickk Barbosa (https://github.com/rickkbarbosa) 
-
 ## Overview
 
 **ElasticSearch Zabbix monitoring**

@@ -1,9 +1,5 @@
 # SNMP Ruckus Zonedirector
 
-## Description
-
-## Overview In order to get this template working, you need at least Firmware 9.10 . Inventory template **General:** -CPU Utilization -ZoneDirector MAC Adress -ZoneDirector Serial Number -ZoneDirector System Model -ZoneDirector System Name -ZoneDirector System Version **Acces Points:** -AP Status (via Discovery rules) + Triggers **Interfaces:** -Status of interface (eth0,...) + Triggers **Users:** -Authenticated Users on AP -Total Authenticated users -Total connected users ( Authenticated and not-authenticated) **If you are using Zabbix 2.4, you need to add value mappings!** **Administration => General => Value Mapping => Create ValueMap** **RuckusAPStatus** 0 ⇒ Disconnected 1 ⇒ Connected 2 ⇒ ApprovalPending 3 ⇒ UpgradingFirmware 4 ⇒ Provisioning **ruckusZDEthStatus** 1 ⇒ Up 2 ⇒ Down ## Author Pieter-Jan Lamont 
-
 ## Overview
 
 In order to get this template working, you need at least Firmware 9.10 .  

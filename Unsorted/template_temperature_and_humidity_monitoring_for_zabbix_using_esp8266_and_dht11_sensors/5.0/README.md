@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Temperature and humidity monitoring for Zabbix using ESP8266 and DHT11 sensors. ## Overview Using cheap hardware it is possible to monitor basic environment data near by. What is needed: * ESP8266 module (I'm using NodeMCU) * DHT11 sensors (probably up to 8) * Some jumper wires * Access to WiFi network reachable by zabbix server or proxy Installation process is described here: [https://github.com/michalsternadel/zbx-esp-env/blob/master/README.md](https://github.com/michalsternadel/zbx-esp-env/blob/master/README.md "Installation") ## Author Michał Sternadel 
+Temperature and humidity monitoring for Zabbix using ESP8266 and DHT11 sensors.
 
 ## Overview
 

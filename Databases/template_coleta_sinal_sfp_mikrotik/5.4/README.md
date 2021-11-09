@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Igor Dib ## Overview segue template para coletar sinal SFP no mikrotik, criar um expressão regular com nome **EXCLUSAO _ETHER-SINAL SFP** **Resultado VERDADEIRA ^sfp** **Resultado é FALSO ^NULLO$** para o discovery achar somente as SFP, assim não ira criar gráficos de ether. espero que ajudem o pessoal Abrass a todos Igor Dib. ## Author Igor Dib 
+Igor Dib
 
 ## Overview
 

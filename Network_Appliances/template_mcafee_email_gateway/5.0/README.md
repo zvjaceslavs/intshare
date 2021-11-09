@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Created by Samuel Martins 2019-04-24 Version 1.00 https://github.com/slunart/Zabbix-Templates https://www.linkedin.com/in/slmartins/ ## Overview Template SNMP McAfee Email Gateway I used the MCAFEE-SCM-MIB to create this template and I tested with the version 5.5, a very old version, but I think it will works well with the others versions. This appliance is now at end-of-life status, you can check this here: https://www.mcafee.com/enterprise/pt-br/support/email-security-end-of-life.html This template supply the security monitor for SMTP and POP3. It also available at https://github.com/slunart/Zabbix-Templates/tree/master/McAfeeEmailGateway ## Author Samuel Martins 
+Created by Samuel Martins 2019-04-24 Version 1.00 https://github.com/slunart/Zabbix-Templates https://www.linkedin.com/in/slmartins/
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # Ricoh color printer
 
-## Description
-
-## Overview It is the template for aIt is the template for an ink level monitored as "**gel jet color printer**" in Ricoh. A warning trigger is activated when the ink remaining falls below 5% A mild failed trigger will be activated when the remaining amount increases in the + direction and the ink remaining amount reaches 0% after the cartridge is changed. If you send an e-mail with this trigger in Zabbix action, you can change an consumable cartridges automatically. From Zabbix 2.2 onwards GXe series, they works but I guess from Zabbix 2.0 it will work as well. Also in the GX series I guess it will work unless SNMP is interrupted with a sleep mode. (it doesn't work actally) **Update information:** I can monitor the free space of the wasted ink box from the SG series whose value decreases from 100% (empty) to 0% (full). Attention Regarding to the waste ink box, we set the item but we do not register the trigger. ## Author Toshihiro_SKK 
-
 ## Overview
 
 It is the template for aIt is the template for an ink level monitored as "**gel jet color printer**" in Ricoh.

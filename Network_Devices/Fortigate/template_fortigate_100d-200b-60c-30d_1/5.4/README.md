@@ -1,51 +1,4 @@
-# FGT-MEMORIA
-
-## Description
-
-## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva ## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva ## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva ## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva 
-
-## Overview
-
-Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco).
-
-
- 
-
-
-Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2
-
-
-
-## Author
-
-Leonardo Nascimento da Silva
-
-## Macros used
-
-There are no macros links in this template.
-
-## Template links
-
-There are no template links in this template.
-
-## Discovery rules
-
-There are no discovery rules in this template.
-
-## Items collected
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Uso da memória do sistema (%)|<p>-</p>|`SNMP agent`|fgSysMemUsage<p>Update: 10</p>|
-## Triggers
-
-There are no triggers in this template.
-
 # FGT-CPU
-
-## Description
-
-## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva 
 
 ## Overview
 
@@ -87,9 +40,21 @@ There are no triggers in this template.
 
 # FGT-EQUIPAMENTO
 
-## Description
+## Overview
 
-## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva ## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva 
+Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco).
+
+
+ 
+
+
+Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2
+
+
+
+## Author
+
+Leonardo Nascimento da Silva
 
 ## Overview
 
@@ -143,9 +108,37 @@ There are no triggers in this template.
 
 # FGT-INTERFACES DISCOVERY
 
-## Description
+## Overview
 
-## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva ## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva ## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2 ## Author Leonardo Nascimento da Silva 
+Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco).
+
+
+ 
+
+
+Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2
+
+
+
+## Author
+
+Leonardo Nascimento da Silva
+
+## Overview
+
+Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco).
+
+
+ 
+
+
+Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2
+
+
+
+## Author
+
+Leonardo Nascimento da Silva
 
 ## Overview
 
@@ -183,6 +176,93 @@ There are no template links in this template.
 |Upload $1|<p>-</p>|`SNMP agent`|ifHCOutOctets[{#SNMPVALUE}]<p>Update: 10</p><p>LLD</p>|
 |Velocidade do Link $1|<p>-</p>|`SNMP agent`|ifHighSpeed[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
 |Download $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10</p><p>LLD</p>|
+## Triggers
+
+There are no triggers in this template.
+
+# FGT-MEMORIA
+
+## Overview
+
+Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco).
+
+
+ 
+
+
+Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2
+
+
+
+## Author
+
+Leonardo Nascimento da Silva
+
+## Overview
+
+Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco).
+
+
+ 
+
+
+Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2
+
+
+
+## Author
+
+Leonardo Nascimento da Silva
+
+## Overview
+
+Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco).
+
+
+ 
+
+
+Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2
+
+
+
+## Author
+
+Leonardo Nascimento da Silva
+
+## Overview
+
+Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",(CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco).
+
+
+ 
+
+
+Efetuado ajustes do tempo de coleta e algumas aplicações para melhor visualização - Atualizado para a versão 3.2
+
+
+
+## Author
+
+Leonardo Nascimento da Silva
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Uso da memória do sistema (%)|<p>-</p>|`SNMP agent`|fgSysMemUsage<p>Update: 10</p>|
 ## Triggers
 
 There are no triggers in this template.

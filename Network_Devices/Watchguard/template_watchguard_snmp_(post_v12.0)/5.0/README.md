@@ -1,9 +1,5 @@
 # Watchguard Firewall
 
-## Description
-
-## Overview An updated Watchguard template that uses the updated SNMP OIDs after the v12.0 update. Template pulls: Active Connections Available Memory CPU Utilization Device Description Device Location Device Name Device Uptime Free Memory Total Bytes Received Total Bytes Sent Total Memory Bandwidth Utilization Access Rules Discovery Rules: Access Rules Network Interfaces ## Author klheuser 
-
 ## Overview
 
 An updated Watchguard template that uses the updated SNMP OIDs after the v12.0 update.

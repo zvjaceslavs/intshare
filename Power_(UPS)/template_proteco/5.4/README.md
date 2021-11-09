@@ -1,9 +1,5 @@
 # Proteco
 
-## Description
-
-## Overview https://github.com/Mihguel-Araujo/Template-Zabbix/blob/main/Template%20Proteco.xml ## Author Mihguel da Silva Santos Tavares de Araujo 
-
 ## Overview
 
 https://github.com/Mihguel-Araujo/Template-Zabbix/blob/main/Template%20Proteco.xml

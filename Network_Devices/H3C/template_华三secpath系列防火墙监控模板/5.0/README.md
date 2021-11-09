@@ -1,9 +1,5 @@
 # 华三SecPath防火墙监控模板
 
-## Description
-
-## Overview 新华三SecPath系列防火墙监控模板 已在M9010、M9008完成验证 主要包括CPU利用率、内存利用率、端口状态、端口带宽利用率、端口报文速率、并发会话、新建会话、实体（电源、风扇、板卡）状态 将宏 {$CLOUD _SNMP _COMMUNITY} 替换为实际团体字即可 ## Author zhangzhefeng 
-
 ## Overview
 
 新华三SecPath系列防火墙监控模板

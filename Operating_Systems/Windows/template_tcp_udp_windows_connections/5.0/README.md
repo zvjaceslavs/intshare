@@ -1,9 +1,5 @@
 # TCP/UDP Stats Windows
 
-## Description
-
-## Overview Starting from the template that they published in: <https://systembash.com/track-tcp-and-udp-connections-with-zabbix/> I have modified the parameters for use in Windows. For it to work, add the following lines in UserParameter of zabbix _agent.conf UserParameter=sockstat.sockets, netstat -ano | find /V "hola" /C UserParameter=sockstat.tcp.inuse, netstat -ano | findstr ESTABLISHED UserParameter=sockstat.tcp.inuse.count, netstat -ano | find /C "ESTABLISHED" UserParameter=sockstat.tcp.orphan, netstat -ano | findstr CLOSE _WAIT UserParameter=sockstat.tcp.orphan.count, netstat -ano | find /C "CLOSE _WAIT" UserParameter=sockstat.tcp.timewait, netstat -ano | findstr TIME _WAIT UserParameter=sockstat.tcp.timewait.count, netstat -ano | find /C "TIME _WAIT" UserParameter=sockstat.tcp.allocated, netstat -ano | findstr LISTENING UserParameter=sockstat.tcp.allocated.count, netstat -ano | find /C "LISTENING" UserParameter=sockstat.udp.inuse, netstat -ano | findstr UDP UserParameter=sockstat.udp.inuse.count, netstat -ano | find /C "UDP" Restart Zabbix agent ## Author Sancho 
-
 ## Overview
 
 Starting from the template that they published in:

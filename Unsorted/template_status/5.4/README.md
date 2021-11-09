@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Monitoria Status do Device -ICMP -SNMP test -Uptime By: Flavio Gomes Figueira Camacho Junior Dependency: Template Module ICMP Ping ## Overview Monitoria Status do Device -ICMP -SNMP test -Uptime By: Flavio Gomes Figueira Camacho Junior Dependency: Template Module ICMP Ping External Scripts and Value Mapping on my Github: https://github.com/flaviojunior1995/Zabbix-Templates ## Author Flavio Camacho Junior 
+Monitoria Status do Device -ICMP -SNMP test -Uptime By: Flavio Gomes Figueira Camacho Junior Dependency: Template Module ICMP Ping
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # Zimbra
 
-## Description
-
-## Overview É necessário habilitar o Allow root e o comando externo. Coleta status dos serviços, fila e spam. Adicionar ao Userparameter UserParameter=zimbra.mailq,/opt/zimbra/common/sbin/mailq | grep -v "Mail queue is empty" | grep -c '^[0-9A-Z]' UserParameter=zimbra.service.status,su - zimbra -c"zmcontrol status" > /tmp/zimbrastatus.txt UserParameter=zimbra.amavis.status,awk '/amavis/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.antispam.status,awk '/antispam/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.antivirus.status,awk '/antivirus/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.cbpolicyd.status,awk '/cbpolicyd/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.mailbox.status,awk '/mailbox/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.mta.status,awk '/mta/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.zmconfigd.status,awk '/zmconfigd/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.webmail.status,awk '/service webapp/{print $3}' /tmp/zimbrastatus.txt UserParameter=zimbra.webadm.status,awk '/zimbraAdmin/{print $3}' /tmp/zimbrastatus.txt UserParameter=zimbra.proxy.status,awk '/proxy/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.mailq.active,/opt/zimbra/libexec/zmqstat | grep active | cut -d= -f2 UserParameter=zimbra.mailq.corrupt,/opt/zimbra/libexec/zmqstat | grep corrupt | cut -d= -f2 UserParameter=zimbra.mailq.hold,/opt/zimbra/libexec/zmqstat | grep hold | cut -d= -f2 UserParameter=zimbra.mailq.deferred,/opt/zimbra/libexec/zmqstat | grep deferred | cut -d= -f2 UserParameter=zimbra.mailq.incoming,/opt/zimbra/libexec/zmqstat | grep incoming | cut -d= -f2 ## Author Carlos Eduardo 
-
 ## Overview
 
 É necessário habilitar o Allow root e o comando externo.

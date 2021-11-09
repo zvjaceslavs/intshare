@@ -1,9 +1,5 @@
 # Printer Xerox WorkCentre 7855
 
-## Description
-
-## Overview Based on Dmitry Burtsev's "Xerox WorkCentre 7525" template, so cudos! Added waste container trigger and minor changes to fit the 7855 model. I also set the toner triggers lower (3% information, 0% warning) Cheers ## Author Steffen Winkelbauer 
-
 ## Overview
 
 Based on Dmitry Burtsev's "Xerox WorkCentre 7525" template, so cudos!

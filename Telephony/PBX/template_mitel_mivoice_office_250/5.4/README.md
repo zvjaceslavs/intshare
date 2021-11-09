@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description For Mitel MiVoice Office 250 phone system, fka Mitel 5000, fka Inter-Tel. Requires access from Zabbix server to the web interface of the phone system. ## Overview Uses HTTP agent to connect to "Administrative Web Service" on Mitel MiVoice Office 250 phone system [formerly known as Mitel 5000 and Inter-Tel Axxess]. Requires HTTP agent, Xpath pre-processing and Dependent Items features in Zabbix. The HTTPS port for the web interface is defined in the macro {$AWS.PORT}. Please override this if you're not using 443. Developed and tested on Zabbix 4.2, with phone systems on 6.0, 6.1 and 6.3 software. May work with older versions. Currently fetches: * Alarm state * Number of calls * Flash space * Call processing version * Release version * License state Trigger for: * Alarm state * Flash space 
+For Mitel MiVoice Office 250 phone system, fka Mitel 5000, fka Inter-Tel. Requires access from Zabbix server to the web interface of the phone system.
 
 ## Overview
 

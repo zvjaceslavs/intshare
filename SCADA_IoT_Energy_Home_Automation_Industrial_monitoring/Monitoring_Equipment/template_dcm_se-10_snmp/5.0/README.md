@@ -1,9 +1,5 @@
 # DCM SE-10
 
-## Description
-
-## Overview Template para o equipamento SE-10 para consultas através de SNMP. Monitor de temperatura, umidade e entradas digitais. Alertas de temperatura para 30°C e 40°C. Gráficos para temperatura do local, da sonda e de umidade. Dúvidas: rodolfo@dcmtech.com.br Site fabricante: [dcmtech.com.br](https://dcmtech.com.br) ## Author Rodolfo Luis Overbeck 
-
 ## Overview
 
 Template para o equipamento SE-10 para consultas através de SNMP.

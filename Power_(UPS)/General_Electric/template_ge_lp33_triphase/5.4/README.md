@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description UPS General Electric - Model LP 33 Trifásica - Cláudio Ferreira ## Overview Zabbix Template for UPS General Electric (GE) Model LP33 Triphase. Works with generic UPS's SNMP v2c enabled too. Contains most importante items (49), 9 triggers for alerting and 8 graphics. Because almost OIDs are generic, this template works with other UPS SNMP v2c enabled. ## Author Cláudio Ferreira 
+UPS General Electric - Model LP 33 Trifásica - Cláudio Ferreira
 
 ## Overview
 

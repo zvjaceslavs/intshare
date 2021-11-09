@@ -1,9 +1,5 @@
 # App Speedtest WAN
 
-## Description
-
-## Overview Monitoring the speedtest by different ISP server on different part of world It need the script here https://git.cdp.li/polcape/zabbix/tree/master/zabbix-speedtest 
-
 ## Overview
 
 Monitoring the speedtest by different ISP server on different part of world

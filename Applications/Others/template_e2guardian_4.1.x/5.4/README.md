@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description https://github.com/e2guardian/e2guardian/blob/master/notes/dstats_format USER.MACRO={$E2GUARDIAN_DSTATS} UserParameter=e2guardian[*],tail -1 $1 | cut -f $2 ## Overview Introduction ============ This is my approach for a performance monitoring Template of [E2guardian](http://e2guardian.org/). This Template was created on and for Zabbix 3.4 and E2Guardian 4.1.x on Debian 9 Stretch. Installation ------------ Please check the GitHub Page for latest version and instructions. Changes ------- * February 2018: initial commit. * 03 April 2018: Switch to Zabbix agent (active) & converted s ## Author Marco Hofmann 
+https://github.com/e2guardian/e2guardian/blob/master/notes/dstats_format USER.MACRO={$E2GUARDIAN_DSTATS} UserParameter=e2guardian[*],tail -1 $1 | cut -f $2
 
 ## Overview
 

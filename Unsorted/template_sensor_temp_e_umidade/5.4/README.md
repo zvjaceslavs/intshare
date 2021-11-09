@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template customizado para o TZ600 ## Overview Template Sensor de Temperatura e Umidade Coleta a Temperatura e Umidade Triggers Temperatura acima de 40ºC Umidade Acima de 80% Umidade Acima de 90% Umidade Inferior a 35% ## Author Ruy Mendonça 
+Template customizado para o TZ600
 
 ## Overview
 
@@ -61,8 +61,8 @@ There are no discovery rules in this template.
 |X4 Bytes In/sec|<p>-</p>|`SNMP agent`|ifInOctets.5<p>Update: 60</p>|
 |X1 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 60</p>|
 |Perda de Pacotes|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60</p>|
-|X6 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 60</p>|
 |Disponibilidade|<p>-</p>|`Simple check`|icmpping<p>Update: 60</p>|
+|X6 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 60</p>|
 |Status X2|<p>-</p>|`SNMP agent`|ifOperStatus.3<p>Update: 60</p>|
 |X8 Bytes Out/sec|<p>-</p>|`SNMP agent`|ifOutOctets.9<p>Update: 60</p>|
 |Status X5|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 60</p>|

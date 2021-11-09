@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Asterisk IP PBX template ## Overview ``` Zabbix template for Asterisk IP PBX Finds out the total number of concurrent channels on trunks. Each thunk's name should start with "tru _" Installation: - Put userparameter _asterisk.conf in /etc/zabbix/zabbix _agentd.d/ , restart zabbix agent - Put asterisk _trunks and asterisk _calls scripts in /etc/zabbix/externalscripts/ and add execute privileges - Set up cronjob for asterisk _trunks script like this: # crontab -l SHELL=/bin/bash # update Asterisk trunks info for zabbix 2 * * * * /etc/zabbix/externalscripts/asterisk _trunks - (Optional) If there're no enough permissions for /var/run/asterisk/asterisk.ctl then add following line in /etc/asterisk/asterisk.conf: astctlpermissions = 775 , and restart Asterisk. Add zabbix user to group asterisk. - Import Asterisk.xml template in Zabbix. Adjust values if necessary. ``` ## Author Oleg 
+Asterisk IP PBX template
 
 ## Overview
 

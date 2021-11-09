@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template Netasq ## Overview Template for Stormshield router/firewall. Works with Zabbix 2.4.7 and a Stormshield SN500 FW 2.2.3. Contains : Ports IN/OUT traffic + graphes Informations such as model, S/N, FW version ## Author Nicolas C. 
+Template Netasq
 
 ## Overview
 

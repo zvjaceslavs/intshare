@@ -1,9 +1,5 @@
 # Gluster Storage
 
-## Description
-
-## Overview This project was created to monitor Gluster Storage with Zabbix. In this repository there are two files. One python script that calls [gstatus](https://github.com/gluster/gstatus), discovering gluster volumes and print data we want, according to the arguments given. You have to install gstatus [gstatus](https://github.com/gluster/gstatus) You should save the script in any directory you want, in order to do it executable from zabbix user using sudo. You have to create a file in /etc/zabbix/zabbix _server.conf.d/ and add UserParameters: * You should save the script in any directory you want, do it executable from zabbix user using sudo. * You have to create a file in /etc/zabbix/zabbix _server.conf.d/ and add UserParameters: ... UserParameter=gluster _volume _info[*],sudo /path/gstatus _discovery.py $1 $2 UserParameter=gluster _storage _info[*],sudo /path/gstatus _discovery.py $1 UserParameter=gluster _volume _info,sudo /path/gstatus _discovery.py * The last one shoud be import zabbix _template.xml in zabbix You can check my [github repository](https://github.com/MrCirca/zabbix-glusterfs) ## Author MrCirca 
-
 ## Overview
 
  This project was created to monitor Gluster Storage with Zabbix. In this repository there are two files. One python script that calls [gstatus](https://github.com/gluster/gstatus), discovering gluster volumes and print data we want, according to the arguments given. You have to install gstatus [gstatus](https://github.com/gluster/gstatus)

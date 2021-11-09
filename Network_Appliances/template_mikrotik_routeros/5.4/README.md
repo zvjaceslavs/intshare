@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Ros Modelo dedicado (dispositivo RB) Este modelo é usado apenas para o monitoramento do sistema de roteamento RouterOS.。 By:[Suspeito] ## Overview MONITORAMENTO MIKROTIK Temperatura da CPU Temperatura do equipamento Tempo de Atividade Monitirando Comsumo Clientes PPoE Monitirando Quantidade de Clientes PPoE Monitora todos os comnumo das portas Monitirando CPUs Monitora Ping Contatos: whatsapp 81 982670619 E-Mail: rsg.sp.gov@gmail.com ## Author Renato 
+Ros Modelo dedicado (dispositivo RB) Este modelo é usado apenas para o monitoramento do sistema de roteamento RouterOS.。 By:[Suspeito]
 
 ## Overview
 

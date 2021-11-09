@@ -1,9 +1,5 @@
 # IPMI Supermicro A1SAM-2750F
 
-## Description
-
-## Overview ``` Supermicro A1SAM-2750F (IPMI) template : * Need to turn on zabbix server ipmi polling in zabbix configuration file (StartIPMIPollers=1) * Need zabbix host to be configured with IPMI information, with at least user privilege level; Authentication algorithm default * Under Debian / Ubuntu, OpenIPMI is currently compiled with ssl turned off (<https://support.zabbix.com/browse/ZBX-6139>). You will need to rebuild openipmi package in order to have ipmi working with zabbix. See <https://support.zabbix.com/browse/ZBX-6139?focusedCommentId=149255&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-149255> for build instruction. * Template interval is set to 300s, but you might need to set a least 1 item to a 60s update interval or you might see the "Network error while retrieving IPMI data" bug (see <https://support.zabbix.com/browse/ZBX-3243>) ``` ## Author pfoo 
-
 ## Overview
 
 

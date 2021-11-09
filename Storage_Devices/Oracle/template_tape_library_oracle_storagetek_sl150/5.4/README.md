@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Based on MIB File: STREAMLINE-TAPE-LIBRARY-MIB Created by Samuel Martins https://github.com/slunart/ https://www.linkedin.com/in/slmartins/ 2020-04-19 Version 1.0 ## Overview Hello, I created this template to monitor the Oracle StorageTek SL150 Modular Tape Library equipment ((www.oracle.com/br/storage/tape-storage/sl150-modular-tape-library/) via SNMP agent. I used as a base the MIB called "STREAMLINE-TAPE-LIBRARY-MIB" and validated it on an SL 150 device. This template is likely to work partially on other Oracle Tape Library as on the SL 500 version. This template is also available on GitHub: https://github.com/slunart/Zabbix-Templates/tree/master/Oracle If you find any inconsistencies in the template, please let me know that I will try to improve it. Best regards, Samuel Martins ## Author Samuel Martins 
+Based on MIB File: STREAMLINE-TAPE-LIBRARY-MIB Created by Samuel Martins https://github.com/slunart/ https://www.linkedin.com/in/slmartins/ 2020-04-19 Version 1.0
 
 ## Overview
 
@@ -78,8 +78,8 @@ There are no template links in this template.
 |[Drive] Discovery of Drive Fibre Node Name|<p>Drive's fibre node name (node WWN)</p>|`SNMP agent`|slDriveFibreNodeName<p>Update: 1h</p>|
 |[Robot] Discovery of Robot Put Retries|<p>The number of dismount retries performed by the robot</p>|`SNMP agent`|slRobotPutRetries<p>Update: 1h</p>|
 |[Cap] Discovery of Cap Accessibility|<p>The accessibility of a CAP (open allow/prevent)</p>|`SNMP agent`|slCapAccessibility<p>Update: 1m</p>|
-|[Robot] Discovery of Robot Fault LED|<p>The Robot's Fault LED status off=0, on=1</p>|`SNMP agent`|slRobotFaultLED<p>Update: 1h</p>|
 |[Cap] Discovery of Cap Status|<p>The operational status of the CAP presented as an enumeration</p>|`SNMP agent`|slCapStatusEnum<p>Update: 1h</p>|
+|[Robot] Discovery of Robot Fault LED|<p>The Robot's Fault LED status off=0, on=1</p>|`SNMP agent`|slRobotFaultLED<p>Update: 1h</p>|
 |[Cap] Discovery of Cap Access State|<p>The access state of the cap presented as an enumeration unknown(1), open(2), close(3)</p>|`SNMP agent`|slCapAccessStateEnum<p>Update: 1h</p>|
 |[Controller] Discovery of Controller Top Level Condition|<p>The Controller's top-level condition (normal, degraded, notoperative)</p>|`SNMP agent`|slControllerTopLevelCondition<p>Update: 1h</p>|
 |[PowerSupply] Discovery if the PowerSupply is Operational|<p>Indicates if the supply is OK(2), meaningless if not-installed</p>|`SNMP agent`|slPowerSupplyOperational<p>Update: 1h</p>|
@@ -198,8 +198,8 @@ There are no template links in this template.
 |Drive {#SNMPINDEX} Fibre Node Name|<p>Drive's fibre node name (node WWN)</p>|`SNMP agent`|slDriveFibreNodeName[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Number of Dismount Retries by Robot {#SNMPINDEX}|<p>The number of dismount retries performed by the robot</p>|`SNMP agent`|slRobotPutRetries[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Cap {#SNMPINDEX} Accessibility|<p>The accessibility of a CAP (open allow/prevent)</p>|`SNMP agent`|slCapAccessibility[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|Robot {#SNMPINDEX} Fault LED|<p>The Robot's Fault LED status off=0, on=1</p>|`SNMP agent`|slRobotFaultLED[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Cap {#SNMPINDEX} Status|<p>The operational status of the CAP presented as an enumeration</p>|`SNMP agent`|slCapStatusEnum[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|Robot {#SNMPINDEX} Fault LED|<p>The Robot's Fault LED status off=0, on=1</p>|`SNMP agent`|slRobotFaultLED[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Cap {#SNMPINDEX} Access State|<p>The access state of the cap presented as an enumeration</p>|`SNMP agent`|slCapAccessStateEnum[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Controller {#SNMPINDEX} Top Level Condition|<p>The Controller's top-level condition (normal, degraded, notoperative) normal(0), degraded(1), notoperative(2)</p>|`SNMP agent`|slControllerTopLevelCondition[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Power Supply {#SNMPINDEX} is Operational|<p>Indicates if the supply is OK(2), meaningless if not-installed</p>|`SNMP agent`|slPowerSupplyOperational[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|

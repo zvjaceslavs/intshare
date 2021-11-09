@@ -1,9 +1,5 @@
 # PitON
 
-## Description
-
-## Overview This template for PitON XM20 ============================ Protocol SNMP v2. Items 128 with low discovery. Sorry but without triggers. Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administration/zabbix/templates/PitON%20XM20.xml) repository MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/PitON/XM20/snmp) repository ## Author P.V. Galonza 
-
 ## Overview
 
 This template for PitON XM20
@@ -104,8 +100,8 @@ P.V. Galonza
 |Three phase fault status inverter output fail|<p>Output Fail</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseFaultStatusInverterOutputFail<p>Update: 5m</p>|
 |Plugged devices|<p>The number of devices that are plugged into the UPS.</p>|`SNMP agent`|XPPC-MIB.upsBaseConfigNumDevices<p>Update: 6h</p>|
 |SNMP Proxy agent firmware revision|<p>The firmware revision of the UPS SNMP Proxy agent.</p>|`SNMP agent`|XPPC-MIB.upsSmartIdentAgentFirmwareRevision<p>Update: 6h</p>|
-|Three phase output frequency|<p>Output Frequency</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseOutputFrequency<p>Update: 5m</p>|
 |Battery conserve control|<p>Setting this variable to turnUpsOffToConserveBattery(2) causes a UPS on battery to be put into 'sleep' mode immediately. The (10) means suspending time(10 minutes) before turn off UPS. UPS will turn back on when utility power is restored. Attempting to turn off a UPS that is not on battery will result in a badValue error. Setting this value to noTurnOffUps(1) has no effect. The value noTurnOffUps(1) will always be returned when the variable is read.</p>|`SNMP agent`|XPPC-MIB.upsBaseControlConserveBattery<p>Update: 5m</p>|
+|Three phase output frequency|<p>Output Frequency</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseOutputFrequency<p>Update: 5m</p>|
 |Input line fail cause|<p>The reason for the occurrence of the last transfer to UPS battery power. The variable is set to noTransfer(1) if there is no transfer yet. The variable is set to highLineVoltage(2) if the transfer to battery is caused by an over voltage greater than the high transfer voltage. The variable is set to brownout(3) if the duration of the outage is greater than five seconds and the line voltage is between 40 percent of the rated output voltage and the low transfer voltage. The variable is set to blackout(4) if the duration of the outage is greater than five seconds and the line voltage is between 40 percent of the rated output voltage and ground. The variable is set to smallMomentarySag(5) if the duration of the outage is less than five seconds and the line voltage is between 40 percent of the rated output voltage and the low transfer voltage. The variable is set to deepMomentarySag(6) if the duration of the outage is less than five seconds and the line voltage is between 40 percent of the rated output voltage and ground.</p>|`SNMP agent`|XPPC-MIB.upsSmartInputLineFailCause<p>Update: 5m</p>|
 |Three phase output load percentage S|<p>Load PercentageS</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseOutputLoadPercentageS<p>Update: 5m</p>|
 |Battery capacity|<p>The remaining battery capacity expressed in percent of full capacity.</p>|`SNMP agent`|XPPC-MIB.upsSmartBatteryCapacity<p>Update: 5m</p>|
@@ -124,8 +120,8 @@ P.V. Galonza
 |Three phase DC and rectifier status charge status|<p>Charge Status</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseDCandRectifierStatusChargeStatus<p>Update: 5m</p>|
 |Three phase output voltage T|<p>Output VoltageT</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseOutputVoltageT<p>Update: 5m</p>|
 |Three phase DC and rectifier status battery status|<p>Back Status</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseDCandRectifierStatusBatteryStatus<p>Update: 5m</p>|
-|Environment temperature|<p>The ambient environment temperature.</p>|`SNMP agent`|XPPC-MIB.upsEnvTemperature<p>Update: 5m</p>|
 |Battery full charge voltage|<p>The fully charged battery voltage of the battery system used in the UPS, expressed in tenths of a volt.</p>|`SNMP agent`|XPPC-MIB.upsSmartBatteryFullChargeVoltage<p>Update: 5m</p>|
+|Environment temperature|<p>The ambient environment temperature.</p>|`SNMP agent`|XPPC-MIB.upsEnvTemperature<p>Update: 5m</p>|
 |Three phase fault status over temperature|<p>Over Temperature</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseFaultStatusOverTemperature<p>Update: 5m</p>|
 |Phase battery capacity percentage|<p>Battery Capacity Percentage</p>|`SNMP agent`|XPPC-MIB.upsThreePhaseBatteryCapacityPercentage<p>Update: 5m</p>|
 |Rated output voltage|<p>The nominal output voltage from the UPS in 1/10 VAC. Possible values are 1000, 1200, 2080, 2200, 2250, 2300 and 2400. NOTE: Only units that are 2200, 2250, 2300 and 2400 can be changed. Allowable values are 2200, 2250, 2300 and 2400. For these adjustable units, if a value other than a supported value is provided in a set request, the UPS interprets it as the next lower acceptable value. If the provided value is lower than the lowest acceptable value, the lowest acceptable value is used.</p>|`SNMP agent`|XPPC-MIB.upsSmartConfigRatedOutputVoltage<p>Update: 5m</p>|

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Universal template for APC Agent for windows ## Overview universal template for windows APC Agent (APCPBEAgent) PC PowerChute Business Edition Agent from eventid logs **In Russian with comments in English** --- Alerts: about switching to battery with event closing when switching to a network on compensation for increasing voltage in the network with the closing of the event on compensation for undervoltage in the network with the closing of the event about disconnecting USB from the UPS with closing the event about unstable connection with the UPS with the closing of the event "Battery life threshold exceeded" "Battery low" --- Оповещения : о переключении на батарею с закрытием события при переключении на сеть о компенсации при повышении напряжения в сети с закрытием события о компенсации при понижении напряжения в сети с закрытием события об отключении USB от ИБП с закрытием события о нестабильном соединение c ИБП с закрытием события "Превышен порог времени работы от батареи" "Батарея разряжена" ## Author Whyborn 
+Universal template for APC Agent for windows
 
 ## Overview
 

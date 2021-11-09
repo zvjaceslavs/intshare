@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template that use dhcpd-pools ( package avail on EPEL or http://dhcpd-pools.sourceforge.net ) to monitor DHCPD Pools Status ## Overview ``` Zabbix 5 template to use dhcpd-pools V3.x+ for JSON support ( [http://dhcpd-pools.sourceforge.net](http://dhcpd-pools.sourceforge.net/) ) to monitor ISC DHCPD shared network status. It will create items ( Already Used IP, Defined IP, Free IP, Percent IP already use at least for 1 lease, Percent IP used, Status, Touched IP, Used IP ) for each Shared Network Create a trigger on " Percent IP used " based on a macro ( {$PERCENT _IP _USED} with default a 90% ) at severity " Average " and a second trigger on " Free IP " with a macro ( {$MIN _FREE _IP} default at 10 ) at severity " High " for each Shared Network. Also creates a graph for each Shared Network that is shown on a screen You will need to put EnableRemoteCommands=1 on zabbix _agentd.conf of the host that runs DHCPD ``` ## Author Mathieu Morier 
+Template that use dhcpd-pools ( package avail on EPEL or http://dhcpd-pools.sourceforge.net ) to monitor DHCPD Pools Status
 
 ## Overview
 

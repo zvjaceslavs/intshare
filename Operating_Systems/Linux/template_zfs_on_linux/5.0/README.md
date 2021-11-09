@@ -1,9 +1,5 @@
 # ZFS on Linux
 
-## Description
-
-## Overview Modified from <https://www.zabbix.com/forum/showthread.php?t=43347> , this template is used to monitor ZFS on Linux (ZoL) . The documentation has moved to github: [https://github.com/Cosium/zabbix _zfs-on-linux](https://github.com/AceSlash/zabbix_zfs-on-linux) The 4.0 template has been tested on Zabbix up to 5.2 . (Removed the old template and lost the download count which was at ~5K). ## Author AceSlash 
-
 ## Overview
 
 Modified from <https://www.zabbix.com/forum/showthread.php?t=43347> , this template is used to monitor ZFS on Linux (ZoL) .

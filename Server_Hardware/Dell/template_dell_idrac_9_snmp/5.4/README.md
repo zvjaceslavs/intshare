@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Lucas Afonso Kremer https://www.linkedin.com/in/lucasafonsokremer ## Overview **Template for Dell servers with iDRAC 9 controller.** ------------------------------------------------------ * #### Tested on PowerEdge R440 with version 3.21.21.21 * #### The value maps are available to download on 3.0 version, please import this template first * #### You must add one macro on the server or on the template with the name: {$SNMP _COMMUNITY} with the community to be used * #### All the items was created with "SNMPv2 agent" * #### Make sure your iDRAC is reachable from the zabbix server/proxy, test with: snmpstatus -v 2c -c public 192.168.0.1 Based on @endersonmaia iDRAC 7 template ## Author Lucas Afonso Kremer 
+Lucas Afonso Kremer https://www.linkedin.com/in/lucasafonsokremer
 
 ## Overview
 

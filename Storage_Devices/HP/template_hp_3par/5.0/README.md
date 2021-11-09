@@ -1,9 +1,5 @@
 # HPE 3PAR SMI-S for shareZabbix
 
-## Description
-
-## Overview Tested on HPE _3PAR 8450, HPE _3PAR 20840 _R2 Python-script to get metrics from HP 3Par Storage. Script uses SMI-S interface. This script get next metrics: Battery, CagePowerSupply, DiskDrive, DriveCage, DynamicStoragePool, EthernetPort, Fan, FCPort, IDEDrive, NodePowerSupply, NodeSystem, PCICard, PhysicalMemory, SASPort 
-
 ## Overview
 
 Tested on HPE\_3PAR 8450, HPE\_3PAR 20840\_R2

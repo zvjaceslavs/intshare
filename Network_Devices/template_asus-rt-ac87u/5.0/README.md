@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description ASUSルーター ## Overview SSHエージェントによりASUS-RT-AC87UのCPU使用率を取得するテンプレートです。 依存アイテムを利用する事により少ない負荷でCPU使用率を可視化します。 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/102020/e9df31db-0a99-79b5-3540-683dd017bc66.png) ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/102020/7088100c-ea7d-774c-0e59-f4d6a7713971.png) 
+ASUSルーター
 
 ## Overview
 

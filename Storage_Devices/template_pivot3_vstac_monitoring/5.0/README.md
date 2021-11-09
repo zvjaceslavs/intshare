@@ -1,9 +1,5 @@
 # SNMP Pivot3
 
-## Description
-
-## Overview Created this template to help monitor our physical drives, temperature, and system for Pivot3 vSTAC Watch. - Drive status - Temperature - Fans - Power supply - Nodes You'll need to enable SNMP via the vSTAC Manager Suite, for this to work. Created and used on Zabbix 3.4.10 but I'm positive this can be used in older version as well. ## Author ScriptByScript 
-
 ## Overview
 
 Created this template to help monitor our physical drives, temperature, and system for Pivot3 vSTAC Watch.

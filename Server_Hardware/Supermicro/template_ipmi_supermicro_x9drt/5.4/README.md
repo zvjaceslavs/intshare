@@ -1,9 +1,5 @@
 # IPMI Supermicro X9DRT
 
-## Description
-
-## Overview IPMI Supermicro X9DRT Measuring all available values by IPMI. All are triggered. Plus some graphs. ## Author Daniel Pogac 
-
 ## Overview
 
 IPMI Supermicro X9DRT

@@ -1,9 +1,5 @@
 # IPMI SuperMicro X10DRT-H
 
-## Description
-
-## Overview All IPMI items for SuperMicro X10DRT-H motherboard: - Voltage - Temperature - Fan speed - Power supply status Triggers for all categories except voltage Graphs for CPU & DIMM temperature Monitored items: 39 Triggers: 6 Graphs: 2 There's room for improvement: triggers for voltages could be added, but I'm not familiar with acceptable voltage ranges. Make sure to disable all items that do not exist or you will get errors. Only tested with Zabbix 3.0.x. ## Author Tiemen Ruiten 
-
 ## Overview
 
 All IPMI items for SuperMicro X10DRT-H motherboard:

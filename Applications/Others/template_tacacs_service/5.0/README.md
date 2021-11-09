@@ -1,9 +1,5 @@
 # App TACACS Service
 
-## Description
-
-## Overview Simple TCP Check of TACACS Service running in TCP Port 49. Includes: * Item * Trigger * Graph Created with Zabbix 3.0, but it can be ported to versions 2.2 and 2.4 ## Author Jose Rosa 
-
 ## Overview
 
 Simple TCP Check of TACACS Service running in TCP Port 49.

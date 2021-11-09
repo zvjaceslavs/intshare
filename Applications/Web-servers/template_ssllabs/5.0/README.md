@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description SSL certificate monitoring via SSLLabs open API ## Overview SSL certificates monitoring via SSLLabs open API. Please check also <https://github.com/objectiveit/zabbix-ssllabs> for script details. ## Author ObjectiveIT 
+SSL certificate monitoring via SSLLabs open API
 
 ## Overview
 

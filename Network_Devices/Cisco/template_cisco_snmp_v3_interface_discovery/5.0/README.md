@@ -1,9 +1,5 @@
 # CiscoSwitchInterfaceSNMPv3
 
-## Description
-
-## Overview Cisco SNMP v3 Discovery for Interface Monitoring Template use this macros: {$SNMP _SECNAME} security name ( snmpv3 Username ) {$SNMP _AUTH} authentication password. {$SNMP _PRIV} private password. iinclude this data : Admin status of interface Operational status of interface Description of interface incomming traffic Outgoing traffic ## Author Omid Hosseini 
-
 ## Overview
 
 Cisco SNMP v3 Discovery for Interface Monitoring

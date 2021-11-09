@@ -1,9 +1,5 @@
 # DES-3526
 
-## Description
-
-## Overview Updated the template of Sergey. [Here is a link to its template and source accordingly.](network_devices/d-link/des-3526) 
-
 ## Overview
 
 Updated the template of Sergey.
@@ -390,16 +386,16 @@ There are no discovery rules in this template.
 |ifOutUcastPkts.19|<p>-</p>|`SNMP agent`|ifOutUcastPkts.19<p>Update: 30s</p>|
 |Дуплекс статус порта 9|<p>-</p>|`SNMP agent`|dot3StatsDuplexStatus.9<p>Update: 30s</p>|
 |ifHCOutOctets.22|<p>-</p>|`SNMP agent`|ifHCOutOctets.22<p>Update: 30s</p>|
-|Текущая скорость на порту 13|<p>-</p>|`SNMP agent`|ifHighSpeed.13<p>Update: 30s</p>|
 |ifHCInOctets.13|<p>-</p>|`SNMP agent`|ifHCInOctets.13<p>Update: 30s</p>|
+|Текущая скорость на порту 13|<p>-</p>|`SNMP agent`|ifHighSpeed.13<p>Update: 30s</p>|
 |ifOutUcastPkts.15|<p>-</p>|`SNMP agent`|ifOutUcastPkts.15<p>Update: 30s</p>|
-|Текущая скорость на порту 11|<p>-</p>|`SNMP agent`|ifHighSpeed.11<p>Update: 30s</p>|
 |Скорость входящего трафика на порту 2|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 30s</p>|
+|Текущая скорость на порту 11|<p>-</p>|`SNMP agent`|ifHighSpeed.11<p>Update: 30s</p>|
 |Cостояние порта 6|<p>-</p>|`SNMP agent`|ifAdminStatus.6<p>Update: 6s</p>|
 |ifHCInOctets.14|<p>-</p>|`SNMP agent`|ifHCInOctets.14<p>Update: 30s</p>|
 |ifInBroadcastPkts.4|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.4<p>Update: 30s</p>|
-|Текущая скорость на порту 20|<p>-</p>|`SNMP agent`|ifHighSpeed.20<p>Update: 30s</p>|
 |Скорость входящего трафика на порту 4|<p>-</p>|`SNMP agent`|ifInOctets.4<p>Update: 30s</p>|
+|Текущая скорость на порту 20|<p>-</p>|`SNMP agent`|ifHighSpeed.20<p>Update: 30s</p>|
 |ifHCOutOctets.21|<p>-</p>|`SNMP agent`|ifHCOutOctets.21<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 14|<p>-</p>|`SNMP agent`|ifOutOctets.14<p>Update: 30s</p>|
 |Скорость исходящего трафика на порту 11|<p>-</p>|`SNMP agent`|ifOutOctets.11<p>Update: 30s</p>|
@@ -451,8 +447,8 @@ There are no discovery rules in this template.
 |ifInMulticastPkts.25|<p>-</p>|`SNMP agent`|ifInMulticastPkts.25<p>Update: 30s</p>|
 |Ошибки входящие порта 16|<p>-</p>|`SNMP agent`|ifInErrors.16<p>Update: 30s</p>|
 |ifInBroadcastPkts.14|<p>-</p>|`SNMP agent`|ifInBroadcastPkts.14<p>Update: 30s</p>|
-|Текущая скорость на порту 24|<p>-</p>|`SNMP agent`|ifHighSpeed.24<p>Update: 30s</p>|
 |ifInUcastPkts.17|<p>-</p>|`SNMP agent`|ifInUcastPkts.17<p>Update: 30s</p>|
+|Текущая скорость на порту 24|<p>-</p>|`SNMP agent`|ifHighSpeed.24<p>Update: 30s</p>|
 |ifInMulticastPkts.22|<p>-</p>|`SNMP agent`|ifInMulticastPkts.22<p>Update: 30s</p>|
 |ifOutUcastPkts.2|<p>-</p>|`SNMP agent`|ifOutUcastPkts.2<p>Update: 30s</p>|
 |PVID порта 5|<p>-</p>|`SNMP agent`|mib-2.17.7.1.4.5.1.1.5<p>Update: 30s</p>|

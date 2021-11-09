@@ -1,9 +1,5 @@
 # Kyocera FS-4200DN
 
-## Description
-
-## Overview Template for Kyocera FS-4200DN network printers, in french. Works with Zabbix 2.4.7. Contains : - Informations : % toner remain, S/N, Total printed pages, MAC address, location, toner capacity - Counters : printed pages, toner printed pages ## Author Nicolas C. 
-
 ## Overview
 
 Template for Kyocera FS-4200DN network printers, in french.

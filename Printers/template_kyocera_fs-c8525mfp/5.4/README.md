@@ -1,9 +1,5 @@
 # Kyocera FS-C8525MFP
 
-## Description
-
-## Author Eugene Varnavsky 
-
 ## Author
 
 Eugene Varnavsky

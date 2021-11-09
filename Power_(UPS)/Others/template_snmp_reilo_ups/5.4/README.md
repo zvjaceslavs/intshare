@@ -1,9 +1,5 @@
 # SNMP Reillo UPS
 
-## Description
-
-## Overview SNMP Template for REILLLO UPS, tested with Zabbix 3.4 (should work in older versions) Battery Status, Input/output load, Alarms. This template requires [Reillo MIB files](http://www.riello-ups.com/downloads/25-netman-204) (RFC1628A.MIB ) to be import into Zabbix server. ## Author Sing Kingdavong 
-
 ## Overview
 
  SNMP Template for REILLLO UPS, tested with Zabbix 3.4 (should work in older versions) Battery Status, Input/output load, Alarms. This template requires [Reillo MIB files](http://www.riello-ups.com/downloads/25-netman-204) (RFC1628A.MIB ) to be import into Zabbix server. 
@@ -58,10 +54,10 @@ There are no template links in this template.
 |Line {#SNMPVALUE} Input Frequency|<p>-</p>|`SNMP agent`|upsInputFrequency[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 |Line {#SNMPVALUE} True Power|<p>-</p>|`SNMP agent`|upsInputTruePower[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 |Line {#SNMPVALUE} Input Voltage|<p>-</p>|`SNMP agent`|upsInputVoltage[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
-|Line {#SNMPVALUE} Output Current|<p>-</p>|`SNMP agent`|upsOutputCurrent[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 |Line {#SNMPVALUE} Load|<p>-</p>|`SNMP agent`|upsOutputPercentLoad[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 |Line {#SNMPVALUE} Output Power|<p>-</p>|`SNMP agent`|upsOutputPower[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 |Line {#SNMPVALUE} Output Voltage|<p>-</p>|`SNMP agent`|upsOutputVoltage[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
+|Line {#SNMPVALUE} Output Current|<p>-</p>|`SNMP agent`|upsOutputCurrent[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

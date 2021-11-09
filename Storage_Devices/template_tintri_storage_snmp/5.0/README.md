@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template for Trintri devices. ## Overview Template 5.X for Tintri SNMP devices. 
+Template for Trintri devices.
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # CheckPoint FW-1 Interfaces
 
-## Description
-
-## Overview Use this template to monitor Checkpoint firewalls interfaces and packet filtering. **** The following value map must be created for the Checkpoint templates collection : "Checkpoint standard status" 0 ⇒ OK 1 ⇒ Warning 2 ⇒ Error The advsnmp.discovery external script (<https://github.com/simonkowallik/Zabbix-Addons/tree/master/advsnmp.discovery>) is also needed by most templates. Last, the SNMP items reference the CHECKPOINT-MIB (chkpnt.mib, see https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit _doGoviewsolutiondetails=&solutionid=sk90470#Check Point SNMP MIB files for all products) so it must be properly installed on your Zabbix server. 
-
 ## Overview
 
 Use this template to monitor Checkpoint firewalls interfaces and packet filtering.

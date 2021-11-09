@@ -1,9 +1,5 @@
 # OKTA AD Agent Healthcheck
 
-## Description
-
-## Overview Easy to use, just add the template in and link it ## Author Bilal Habib 
-
 ## Overview
 
 Easy to use, just add the template in and link it

@@ -1,9 +1,5 @@
 # Vizrt SNMP
 
-## Description
-
-## Overview Hello! This is simple SNMP tepmplate fo monitor Graphical Inserter Vizrt Viz Engine. Vizrt support SNMP beginning with version 3.11. This is my first publish. I am glad to any wishes and questions. Checks: Ready For Connect On Air Connected To Db Post Render Mode NLE Mode Current Frame Rate Retrace Counter Viz Engine Version System ID Computer Type TCP Port Genlock Status Video In 1 Status Video In 2 Status Video In 3 Status Video In 4 Status Video In 5 Status Video In 6 Status Video In 7 Status Video In 8 Status Clip 1 Status Clip 2 Status Clip 3 Status Clip 4 Status Clip 5 Status Clip 6 Status Clip 7 Status Clip 8 Status Texture Memory Free Texture Memory Total Texture Memory Used Renderer Scene Front Renderer Scene Middle Renderer Scene Back Post Scene Front Post Scene Middle Post Scene Back Retrace Counter Moving Triggers: Vizrt Clip Status is not ok Vizrt Engine not OnAIR!!! Vizrt Genlock Status is not ok Vizrt not Connected To DB (Graphic HUB) Vizrt not Ready for connect Vizrt Texture Memory used more 80% Vizrt Texture Memory used more 90% Vizrt Video In Status is not ok ## Author Kirill Savin 
-
 ## Overview
 
  Hello!

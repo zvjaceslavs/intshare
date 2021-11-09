@@ -1,9 +1,5 @@
 # ZTE-C320-GPON-nor
 
-## Description
-
-## Overview This is the template which is monitoring ZTE X320 with auto discovery Just upload it in zabbix templates no need to use macroses The template can calculate and print the real onu signal values in dbm ## Author Mushegh Davtyan Eduard Alaverdyan 
-
 ## Overview
 
 This is the template which is monitoring ZTE X320 with auto discovery

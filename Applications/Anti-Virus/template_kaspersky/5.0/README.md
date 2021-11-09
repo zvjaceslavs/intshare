@@ -1,9 +1,5 @@
 # App Kaspersky
 
-## Description
-
-## Overview É obrigatório ter o SNMP habilitado no server, bem como ter habilitado o SNMP na console de gerenciamento do Kaspersky (KSC) Método de coleta, via SNMPv2 Itens coletados: * Quantidade de Hosts com licenças expiradas * Quantidade de Hosts sem verificação * Quantidade de Hosts sem conexão * Quantidade de hosts com licença expirando * Quantidade de hosts localizados * Quantidade de hosts com Antivírus * Número de vírus no Unprocessed files * Quantidade de eventos críticos * Status da atualização da base * Último update. ## Author Carlos Eduardo 
-
 ## Overview
 
 É obrigatório ter o SNMP habilitado no server, bem como ter habilitado o SNMP na console de gerenciamento do Kaspersky (KSC)

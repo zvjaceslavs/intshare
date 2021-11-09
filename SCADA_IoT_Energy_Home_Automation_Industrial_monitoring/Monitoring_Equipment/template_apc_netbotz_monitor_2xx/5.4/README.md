@@ -1,9 +1,5 @@
 # APC NetBotz Rack Monitor 200
 
-## Description
-
-## Overview * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity 
-
 ## Overview
 
 * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity)
@@ -28,6 +24,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|{#SNMPVALUE} Humitity: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Humitity: Threshold - Hysteresis|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Temperature|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Alarm|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.alarm.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Temperature: Threshold - Long Term Increasing Rate Time|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.long.increasing.time.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Temperature: Threshold - Short Term Increasing Rate Value|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.threshold.short.increasing.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
@@ -46,9 +45,6 @@ There are no template links in this template.
 |{#SNMPVALUE} Humitity|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Humitity: Threshold - Min|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.min.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Humitity: Threshold - Max|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.max.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Humitity: Threshold - Low|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.low.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Humitity: Threshold - Hysteresis|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.humidity.threshold.hysteresis.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Temperature|<p>-</p>|`SNMP agent`|apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -71,9 +67,12 @@ There are no template links in this template.
 |{#SNMPVALUE} {ITEM.LASTVALUE} :: Temperature > Max Threshold (LLD)|<p>-</p>|<p>**Expression**: (last(/APC NetBotz Rack Monitor 200/apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"])>=last(/APC NetBotz Rack Monitor 200/apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"]))</p><p>**Recovery expression**: (last(/APC NetBotz Rack Monitor 200/apc.enviro.sensor.module.temperature.value.["{#SNMPINDEX}"])<=(last(/APC NetBotz Rack Monitor 200/apc.enviro.sensor.module.temperature.threshold.max.["{#SNMPINDEX}"])-last(/APC NetBotz Rack Monitor 200/apc.enviro.sensor.module.temperature.threshold.hysteresis.["{#SNMPINDEX}"])))</p>|disaster|
 # APC NetBotz Rack Monitor 250
 
-## Description
+## Overview
 
-## Overview * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity ## Overview * LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity) * Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds * Graph Prototypes for Temperature and Humidity 
+* LLD of Sensors (Currently Temperature and Humidity & Wireless Tempurature and Humidity)
+* Trigger Prototypes for recommended Humidity and Tempurature based on Netbotz configured thresholds
+* Graph Prototypes for Temperature and Humidity
+
 
 ## Overview
 

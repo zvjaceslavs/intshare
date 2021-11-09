@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Same as v2.0 with valuemap and application prototype added. ## Overview Adapted for Zabbix 3 version by [dav3860](owner/tatapoum). Valuemaps included. 
+Same as v2.0 with valuemap and application prototype added.
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # HW UPS Legrand CS121
 
-## Description
-
-## Overview Template for monitoring UPS Legrand CS 121 (all models) with explanations and advices. The mibs are there: <http://ups.legrand.com/software/> The content of template: **5 Applications**: General, Health, Input, Output, Battery **18 Items:** Input voltage, Battery Status ,Estimated minutes remaining if no power , Bypass Voltage Alarms present on {HOST.NAME}, Bypass Current, Bypass Power Input line bads, Output Power, Output load in percent Seconds on battery, Output Voltage Estimated charge remaining, Battery voltage Battery temperature, Device Version Device Name, Device Model 13 Triggers and 4 Graphs The template use SNMP agent v2. Assure that you set the community in template macros. Assure also that in Administration -> General -> Value mapping you have under APC Battery Status next values 1 ⇒ unknown 2 ⇒ batteryNormal 3 ⇒ batteryLow 4 ⇒ batteryDepleted [Send me](mailto:priechodsky.dusan@gmail.com) what template you need, or if this template helped you, [you can buy me one coffee](https://ko-fi.com/priechodskydusan) :) Upgraded template from Tudor Ticau ## Author Dusan Priechodsky 
-
 ## Overview
 
 

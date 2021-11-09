@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Retrieves temps and humidity from all the sensors. ## Overview I made a simple template for the APC Netbotz AP9340, i currently have 2 (RJ45) temperature sensors connected and retrieving the temp and humidity from both. ## Author petroska 
+Retrieves temps and humidity from all the sensors.
 
 ## Overview
 

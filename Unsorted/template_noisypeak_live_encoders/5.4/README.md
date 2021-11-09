@@ -1,9 +1,5 @@
 # Noisypeak Live encoders
 
-## Description
-
-## Overview Template for monitoring status NoisyPeak Live encoders over REST API. 
-
 ## Overview
 
 Template for monitoring status NoisyPeak Live encoders over REST API.

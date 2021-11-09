@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template for executing https://github.com/mjtrangoni/geoip2_zabbix This populates the location to the Host Inventory ## Overview Monitor your host locations with [GeoIP2](https://www.maxmind.com/en/home) ## Author Mario Trangoni 
+Template for executing https://github.com/mjtrangoni/geoip2_zabbix This populates the location to the Host Inventory
 
 ## Overview
 

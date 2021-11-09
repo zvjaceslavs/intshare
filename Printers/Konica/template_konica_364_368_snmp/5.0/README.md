@@ -1,9 +1,5 @@
 # Printer_Konica
 
-## Description
-
-## Overview Displays toner levels, special units, total pages and triggers on low toner and units level. ## Author Dorin Sergey 
-
 ## Overview
 
 Displays toner levels, special units, total pages and triggers on low toner and units level.
@@ -45,8 +41,8 @@ There are no discovery rules in this template.
 |Amount_of_cyan_toner_remaining|<p>-</p>|`SNMP agent`|Amount_of_cyan_toner_remaining<p>Update: 3600</p>|
 |Amount_of_magenta_developer_cartridge_remaining|<p>-</p>|`SNMP agent`|Amount_of_magenta_developer_cartridge_remaining<p>Update: 3600</p>|
 |Maximum_cyan_toner_level|<p>-</p>|`SNMP agent`|Maximum_cyan_toner_level<p>Update: 86400</p>|
-|Serial_number|<p>-</p>|`SNMP agent`|Serial_number<p>Update: 86400</p>|
 |Maximum_magenta_toner_level|<p>-</p>|`SNMP agent`|Maximum_magenta_toner_level<p>Update: 86400</p>|
+|Serial_number|<p>-</p>|`SNMP agent`|Serial_number<p>Update: 86400</p>|
 |Amount_of_ozone_filter_remaining|<p>-</p>|`SNMP agent`|Amount_of_ozone_filter_remaining<p>Update: 3600</p>|
 |Maximum_yellow_drum_level|<p>-</p>|`SNMP agent`|Maximum_yellow_drum_level<p>Update: 86400</p>|
 |Amount_of_magenta_drum_remaining|<p>-</p>|`SNMP agent`|Amount_of_magenta_drum_remaining<p>Update: 3600</p>|

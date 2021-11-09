@@ -1,9 +1,5 @@
 # Huawei Quidway s3900 series switches
 
-## Description
-
-## Overview Template for Huawei Quidway s3900 switches. General information - Uptime, system name, number of interfaces. Interfaces - operational and administrative status of ports, errors TX and RX on every port, Bytes TX and RX on every port, triggers on CRC errors RX and TX, port status down, and restart of switch. Graphics - statistics TX/RX on every interface. MACROS to be defined for the hosts: {$SNMP _COMMUNITY} Possilble, it will work on earlier versions of Zabbix, but i was testing it on 4.0 ## Author Fedor Katilov 
-
 ## Overview
 
 Template for Huawei Quidway s3900 switches. General information - Uptime, system name, number of interfaces. Interfaces - operational and administrative status of ports, errors TX and RX on every port, Bytes TX and RX on every port, triggers on CRC errors RX and TX, port status down, and restart of switch. Graphics - statistics TX/RX on every interface.
@@ -83,8 +79,8 @@ There are no template links in this template.
 |Admin Status port FE05|<p>-</p>|`SNMP agent`|ifAdminStatus.4227658<p>Update: 30s</p>|
 |Oper status port GE3|<p>-</p>|`SNMP agent`|ifOperStatus.4228057<p>Update: 30s</p>|
 |Oper status port FE02|<p>-</p>|`SNMP agent`|ifOperStatus.4227634<p>Update: 30s</p>|
-|Oper status port FE09|<p>-</p>|`SNMP agent`|ifOperStatus.4227690<p>Update: 30s</p>|
 |Bytes Rx FE11|<p>-</p>|`SNMP agent`|ifInOctets.4227706<p>Update: 30s</p>|
+|Oper status port FE09|<p>-</p>|`SNMP agent`|ifOperStatus.4227690<p>Update: 30s</p>|
 |Oper status port FE07|<p>-</p>|`SNMP agent`|ifOperStatus.4227674<p>Update: 30s</p>|
 |Oper status port FE03|<p>-</p>|`SNMP agent`|ifOperStatus.4227642<p>Update: 30s</p>|
 |Bytes Tx FE14|<p>-</p>|`SNMP agent`|ifOutOctets.4227730<p>Update: 30s</p>|

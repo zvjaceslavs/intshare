@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description by padamiak, 2019.05.28, zabbix v4.0, tested on sg300 and sg200 ## Overview Hi, Here is a result of my work on Cisco SG300 witch Zabbix 4.0. - based on SNMP and LLD, - it's working with vary numbers of interfaces, - interface is discovered only if it's operational up (less unnecessary data), - it also monitors CPU usage, status of temperature and fan's (if any), - tested witch SG300 and SG200 switches, - in case of SG200 you may consider updating firmware of your switch as older versions doesn't support SNMP Have fun ## Author deb 
+by padamiak, 2019.05.28, zabbix v4.0, tested on sg300 and sg200
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # Netgear_WG103
 
-## Description
-
-## Overview Template for Netgear WG103 access point. Works with Zabbix 2.4.7 and a Netgear WG103 FW 2.2.5. Contains : Basic information such as : FWversion, S/N, APname, MACLAN, MACWLAN Interfaces traffic (LAN and WLAN) Wifi profiles names Current users number connected to the AP ## Author Nicolas C. 
-
 ## Overview
 
 Template for Netgear WG103 access point.

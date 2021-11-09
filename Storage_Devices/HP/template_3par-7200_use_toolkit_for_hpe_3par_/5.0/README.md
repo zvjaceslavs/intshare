@@ -1,9 +1,5 @@
 # 3par
 
-## Description
-
-## Overview Beta TolkitPosh for 3par-7200 monitorig Please contact with questions in the mail or telegram Просьба обращаться с вопросами в почту или telegram For multiple unique problems with host windows and powershell 3par toolkit HPE. I'm going to redo everything under linux Until the end of 2018, I'm going to have time I apologize for not informative in use, I deliberately raised the threshold of entry so that no one would destroy the data in the storage system По многочисленным и уникальным проблемам с хостами windows и powershell 3par toolkit HPE. Я собираюсь переделать все под linux. До конца 2018 года собираюсь успеть Прошу прощения за не информативность в использовании, я намеренно повысил порог вхождения чтоб никто не уничтожил данные в СХД <https://github.com/Toh3mi/zabbix-3par> mail [x.tohemi@gmail.com](mailto:x.tohemi@gmail.com) telegram @toh3mi ## Author Toh3mi 
-
 ## Overview
 
 Beta TolkitPosh for 3par-7200 monitorig

@@ -1,9 +1,5 @@
 # SNMP AvidNEXIS-MIB
 
-## Description
-
-## Overview I created a template for basic AVID NEXIS editing platform metrics. This functions on SNMPv2 and tested with Zabbix v4.0 and NEXIS E2 20.7.5 Metrics include: * Active Client Count * Event Log Notify * File Count * Folder Count * Highest Disk Used Percentage * Maximum Client Count * Data transfer /sec * Storage read/writes * Messages /sec * Product Name * System Director State * Memory/RAM * NEXIS Version * Workspace count No built-in triggers, but they can easily be created once imported. ## Author Danielle 
-
 ## Overview
 
 I created a template for basic AVID NEXIS editing platform metrics.

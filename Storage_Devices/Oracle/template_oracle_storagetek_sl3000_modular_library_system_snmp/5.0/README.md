@@ -1,9 +1,5 @@
 # SNMP Oracle SL3000
 
-## Description
-
-## Overview This is simple SNMP template for monitoring Oracle StorageTek SL3000 Modular Library System Checks: CapAccessibility (open allow/prevent) CapState ControllerHaId[1] (0=active/1=standby) TapeCount Triggers: ControllerHA _changestatus LLD: Checks: DriveCellContentLabel DriveFibreNodeName DriveState DriveType Drive RobotState State of the robot Triggers: DriveState RobotState ## Author Vsevolod Sidorov 
-
 ## Overview
 
  This is simple SNMP template for monitoring Oracle StorageTek SL3000 Modular Library System

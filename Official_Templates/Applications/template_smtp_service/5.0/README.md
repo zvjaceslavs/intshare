@@ -1,15 +1,5 @@
 # Template App SMTP Service
 
-## Overview
-
-Official template from Zabbix distribution to check SMTP service availability
-
-
-
-## Author
-
-Zabbix SIA
-
 ## Macros used
 
 There are no macros links in this template.

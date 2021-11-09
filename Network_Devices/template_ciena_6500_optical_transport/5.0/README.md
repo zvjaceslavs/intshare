@@ -1,9 +1,5 @@
 # Ciena 6500 2
 
-## Description
-
-## Overview This template will discover and monitor various optical interfaces - mainly light levels and baselines and alert if light levels fall outside of VARIANCE macro. Also will report when OSC has no light and serve a clear indication that there is a fiber issue. No MIBs required. Used OIDs. No Dependencies - just enable SNMP with v2 community on the shelf and set SNMP _COMMUNITY macro in template. ## Author Dustin Howard 
-
 ## Overview
 
 This template will discover and monitor various optical interfaces - mainly light levels and baselines and alert if light levels fall outside of VARIANCE macro. Also will report when OSC has no light and serve a clear indication that there is a fiber issue.

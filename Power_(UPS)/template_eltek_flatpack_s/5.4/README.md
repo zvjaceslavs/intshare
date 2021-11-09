@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Eltek Flatpack S DC-power system. Template for 2 rectifiers, 1 battery set. No solar power. No wind. No generator. Version 0.3 - Kari Karvonen <kari.karvonen@kasenet.fi> Eltek mibs available ftp://ftp.eltek.com. Ask your dealer or support for username and pass. ## Overview Basic monitoring template for Eltek Flatpack / SmartPack S. 48VDC power system. 2 inverters. One batttery set. No solar power. No generator. Template is for Zabbix 4.4.0rc1 Items Power System Company Power System Site Power System Model Power System Serial Number Rectifiers Temperature Value Rectifier 1 Input Voltage Rectifier 2 Input Voltage Rectifier 1 Output Current Value Rectifier 2 Output Current Value Rectifier 1 Status Rectifier 2 Status Battery 1 Status Battery 1 Temperature Value Battery 1 Total Capacity Value Battery 1 Voltage Value Battery 1 Remaining Capacity Value Battery 1 Current Value Main Control Unit Temperature Value Mains Outage Total Mains Voltage Status L1 Mains Voltage Status L2 Mains Voltage Value L1 Mains Voltage Value L2 Triggers Lost mains power L1 Lost mains power L2 Battery high temperature Battery low temperature Battery 1 low remaining capacity ## Author Kari Karvonen 
+Eltek Flatpack S DC-power system. Template for 2 rectifiers, 1 battery set. No solar power. No wind. No generator. Version 0.3 - Kari Karvonen <kari.karvonen@kasenet.fi> Eltek mibs available ftp://ftp.eltek.com. Ask your dealer or support for username and pass.
 
 ## Overview
 

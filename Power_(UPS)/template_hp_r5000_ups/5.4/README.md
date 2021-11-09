@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description HP R5000 UPS SNMP Made bu Ennio ## Overview ### Monitor power parametrs: frequency, power, voltage, current, temp. Full control for Input, Output (Segment), Battery, Bypass. I used CPQPOWER1.76.MIB and UPS-MIB.mib ## Author Ennio 
+HP R5000 UPS SNMP Made bu Ennio
 
 ## Overview
 
@@ -56,8 +56,8 @@ There are no discovery rules in this template.
 |Bypass Voltage|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.232.165.3.5.3.1.2.1<p>Update: 30s</p>|
 |MAC|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.232.165.1.2.8.0<p>Update: 1d</p>|
 |Input Line Bads|<p>The number of times the Input was out of tolerance in voltage or frequency.</p>|`SNMP agent`|.1.3.6.1.4.1.232.165.3.3.2.0<p>Update: 30s</p>|
-|Segment #1|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.232.165.3.10.2.1.2.1<p>Update: 30s</p>|
 |Running On Battery|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.33.1.2.2.0<p>Update: 30s</p>|
+|Segment #1|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.232.165.3.10.2.1.2.1<p>Update: 30s</p>|
 |Alarm Present|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.33.1.6.1.0<p>Update: 30s</p>|
 |System Uptime|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.1.3.0<p>Update: 1m</p>|
 |Test Start Time|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.33.1.7.5.0<p>Update: 30s</p>|

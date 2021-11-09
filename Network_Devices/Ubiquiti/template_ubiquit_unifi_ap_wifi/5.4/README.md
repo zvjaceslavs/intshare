@@ -1,9 +1,5 @@
 # Ubiquiti Unifi AP LR SNMPv1
 
-## Description
-
-## Overview Template para Ubiquiti Unifi AP e Wifi ## Author leonardog50 
-
 ## Overview
 
 Template para Ubiquiti Unifi AP e Wifi
@@ -54,13 +50,13 @@ There are no template links in this template.
 |Device Contact Details|<p>-</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
 |TX retries on {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, ng_tx_retries]<p>Update: 60s</p>|
 |Incoming Traffic Unicast 02|<p>-</p>|`SNMP agent`|ifInUcast.2<p>Update: 600</p>|
-|Incoming Traffic Unicast 04|<p>-</p>|`SNMP agent`|ifInUcast.4<p>Update: 600</p>|
 |Radio CCQ|<p>-</p>|`SNMP agent`|ubntWlStatCcq<p>Update: 30s</p>|
+|Incoming Traffic Unicast 04|<p>-</p>|`SNMP agent`|ifInUcast.4<p>Update: 600</p>|
 |Operation Status 02|<p>-</p>|`SNMP agent`|ifOperStatus.2<p>Update: 60</p>|
 |Radio Tx Rate|<p>-</p>|`SNMP agent`|ubntWlStatTxRate<p>Update: 30s</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.3<p>Update: 600</p>|
-|Wireless outgoing drops on site|<p>-</p>|`Zabbix agent (active)`|unifi.site.state[ap,stat.tx_dropped, sum]<p>Update: 30s</p>|
 |{#ALIAS} '$2' state|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, adopted]<p>Update: 600s</p>|
+|Wireless outgoing drops on site|<p>-</p>|`Zabbix agent (active)`|unifi.site.state[ap,stat.tx_dropped, sum]<p>Update: 30s</p>|
 |Bandwidth 04|<p>-</p>|`SNMP agent`|ifSpeed.4<p>Update: 600</p>|
 |Incoming Traffic  01|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 300</p>|
 |Operation Status 06|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 60</p>|
@@ -113,8 +109,8 @@ There are no template links in this template.
 |Operation Status 03|<p>-</p>|`SNMP agent`|ifOperStatus.3<p>Update: 60</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.5<p>Update: 600</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.4<p>Update: 600</p>|
-|Incoming Traffic 03|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 300</p>|
 |AirMax Quality|<p>-</p>|`SNMP agent`|ubntAirMaxQuality<p>Update: 30s</p>|
+|Incoming Traffic 03|<p>-</p>|`SNMP agent`|ifInOctets.3<p>Update: 300</p>|
 |Number of $2 AP's on site|<p>-</p>|`Zabbix agent (active)`|unifi.site.state[ap, adopted, count]<p>Update: 600s</p>|
 |SNMP traps (fallback)|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
 |Incoming Traffic Unicast 01|<p>-</p>|`SNMP agent`|ifInUcast.1<p>Update: 600</p>|
@@ -129,8 +125,8 @@ There are no template links in this template.
 |HP V1910-48G Switch JE009A|<p>-</p>|`SNMP agent`|system.hw.version<p>Update: 3600s</p>|
 |Operating system|<p>-</p>|`SNMP agent`|system.sw.os<p>Update: 3600s</p>|
 |Firmware version|<p>MIB: ENTITY-MIB</p>|`SNMP agent`|system.hw.firmware<p>Update: 3600s</p>|
-|Incoming Traffic 06|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 300</p>|
 |AirMax Enabled|<p>-</p>|`SNMP agent`|ubntAirMaxEnabled<p>Update: 30s</p>|
+|Incoming Traffic 06|<p>-</p>|`SNMP agent`|ifInOctets.6<p>Update: 300</p>|
 |Radio TX Power|<p>-</p>|`SNMP agent`|ubntRadioTxPower<p>Update: 30s</p>|
 |Guests connected to {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, guest-num_sta]<p>Update: 60s</p>|
 |Incoming Traffic No-Unicast 03|<p>-</p>|`SNMP agent`|ifInNoUcast.3<p>Update: 600</p>|

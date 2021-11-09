@@ -1,9 +1,5 @@
 # Microsoft Exchange Server 2016
 
-## Description
-
-## Overview exchange 2016 template Generated with: [https://xh-compiler.com](https://xh-compiler.com/) ## Author eXtremeHosting 
-
 ## Overview
 
 exchange 2016 template

@@ -1,9 +1,5 @@
 # SNMP - Lexmark CS860dte COLOR
 
-## Description
-
-## Overview Lexmark Printer **SNMP** template for model **Lexmark CS860dte** (**Color**) note : every new lexmark model in 2018/2019 seem to have specific OIDs depending on the modules in the printer, therefore i made many templates for each model i've been working on. i plan to add other triggers late (such as detect paper jams etc.). At the moment all templates can monitor all basic things, and all modules (toners, photoconductors, waste boxes etc.) as well as ping the machine to ensure it's available (you might want to modify triggers to lower/higher values if required) if required, replace Zabbix version from 3.4 to 3.0 in the XML to make it work on 3.0 **note : template edited on April 6th 2019 to fix issues with triggers, now triggering everything at 15% levels.** ## Author Olivier GRIFFIN 
-
 ## Overview
 
 Lexmark Printer **SNMP** template for model **Lexmark CS860dte** (**Color**)

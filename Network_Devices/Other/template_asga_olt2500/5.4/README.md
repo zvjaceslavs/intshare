@@ -1,9 +1,5 @@
 # SNMP  AsGa OLT2500
 
-## Description
-
-## Overview - Discovery ONUs - 15 Items - 3 Triggers by Onu - Disconvery PON Interfaces - 8 Items - Discovery SFP Interfaces - 12 Items - 1 Trigger by Interface - Discovery XFP Interfaces - 12 Items - 1 Trigger by Interface I will update in some days, I wait your Suggestions. Thanks!! ## Author Reginaldo F Lopes 
-
 ## Overview
 
 - Discovery ONUs - 15 Items - 3 Triggers by Onu

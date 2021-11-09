@@ -1,9 +1,5 @@
 # Emerson NXR UPS
 
-## Description
-
-## Overview * Suitable for Emerson NXR UPS series * zabbix 5.0 * reference https://exchange.nagios.org/directory/Plugins/Hardware/UPS/Liebert/Check-Liebert-NXR-2DUPS-(30kVA)/details The OID value of the search The status mapping value 0 is normal! ## Author LI haoling 
-
 ## Overview
 
 * Suitable for Emerson NXR UPS series

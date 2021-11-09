@@ -1,9 +1,5 @@
 # Lenovo ix4-300d
 
-## Description
-
-## Overview Template com mensagens em português. São 44 itens e 17 triggers contendo as informações descritas abaixo: Monitoramento: - Status de cada disco; - Status do RAID; - Alteração no tipo do RAID; - Alteração do nome do dispositivo; - Uptime; - Restart do equipamento; Dados disponíveis: - Tráfego de entrada e saída das interfaces de rede; - Nome do dispositivo; - Modelo do dispositivo; - Descrição do dispositivo; - Capacidade total de cada disco; - MAC Adress de cada interface de rede; - MTU das interfaces de rede; - Uptime; - Descrição do processador do dispositivo; - CPU load. Não foi possível monitorar espaço de disco disponível e total, pois, não achei as MIBs para isso. Se alguém encontrar me informe que eu atualizo. ## Author André Luis Soares 
-
 ## Overview
 
 Template com mensagens em português.

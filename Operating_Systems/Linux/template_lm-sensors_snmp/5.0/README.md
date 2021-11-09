@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template for LM-SENSORS mib, works for any net-snmp based machine. ## Overview CPU Temperature FAN rpm PSU Voltage Others Temperatures requires "net-snmp" and "lm-sensors" Tested on FreeNAS and Debian should work on any Linux and FreeBSD system [Based on the Template of Tim Rightnour](cat-server-hardware/lm-sensors-snmp "Based on the Template of Tim Rightnour") 
+Template for LM-SENSORS mib, works for any net-snmp based machine.
 
 ## Overview
 

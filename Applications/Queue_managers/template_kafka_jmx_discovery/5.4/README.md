@@ -1,9 +1,5 @@
 # App Kafka
 
-## Description
-
-## Overview This template will use JMX discovery to get metrics about resource usage, topics stats and much more from a Kafka node. 
-
 ## Overview
 
 This template will use JMX discovery to get metrics about resource usage, topics stats and much more from a Kafka node.

@@ -1,9 +1,5 @@
 # NVidia Sensors
 
-## Description
-
-## Overview This template integrates NVidia SMI for a single graphics card with Zabbix. The template adds monitoring of: * GPU Utilisation * GPU Power Consumption * GPU Memory (Used, Free, Total) * GPU Temperature * GPU Fan Speed The following agent parameters can be used to add the metrics into Zabbix. UserParameter=gpu.temp,nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits -i 0 UserParameter=gpu.memtotal,nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits -i 0 UserParameter=gpu.used,nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits -i 0 UserParameter=gpu.free,nvidia-smi --query-gpu=memory.free --format=csv,noheader,nounits -i 0 UserParameter=gpu.fanspeed,nvidia-smi --query-gpu=fan.speed --format=csv,noheader,nounits -i 0 UserParameter=gpu.utilisation,nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits -i 0 UserParameter=gpu.power,nvidia-smi --query-gpu=power.draw --format=csv,noheader,nounits -i 0 ## Author Richard Kavanagh 
-
 ## Overview
 
 This template integrates NVidia SMI for a single graphics card with Zabbix.

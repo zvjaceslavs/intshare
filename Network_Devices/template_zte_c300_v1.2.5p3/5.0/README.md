@@ -1,8 +1,49 @@
+# ICMP Ping GPON
+
+## Overview
+
+LLD for Cards, Onus and Interfaces
+Traps
+PWR
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1s</p>|
+|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1s</p>|
+|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1s</p>|
+## Triggers
+
+There are no triggers in this template.
+
 # SNMP Device GPON PARKS
 
-## Description
+## Overview
 
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
+LLD for Cards, Onus and Interfaces
+Traps
+PWR
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
 
 ## Overview
 
@@ -57,9 +98,25 @@ There are no macros links in this template.
 |ONU {#SNMPVALUE} LOW SIGNAL (LLD)|<p>-</p>|<p>**Expression**: {SNMP Device GPON PARKS:onuDwRx[{#SNMPVALUE}].last()}>28</p><p>**Recovery expression**: </p>|information|
 # SNMP Device GPON ZTE fw 1.2.5p3
 
-## Description
+## Overview
 
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
+LLD for Cards, Onus and Interfaces
+Traps
+PWR
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
+
+## Overview
+
+LLD for Cards, Onus and Interfaces
+Traps
+PWR
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
 
 ## Overview
 
@@ -144,42 +201,3 @@ There are no macros links in this template.
 |CARD {#SNMPVALUE} standby status changed (LLD)|<p>-</p>|<p>**Expression**: {SNMP Device GPON ZTE fw 1.2.5p3:cardstandby[{#SNMPINDEX}].last()}<>1 and {SNMP Device GPON ZTE fw 1.2.5p3:cardstandby[{#SNMPINDEX}].last()}<>2</p><p>**Recovery expression**: </p>|high|
 |SIGNAL LOW rx 1310nm {#ONUDESC} (LLD)|<p>-</p>|<p>**Expression**: {SNMP Device GPON ZTE fw 1.2.5p3:rx1310[{#SNMPINDEX}].last()}<=-30 and {SNMP Device GPON ZTE fw 1.2.5p3:rx1310[{#SNMPINDEX}].last()}<>-80</p><p>**Recovery expression**: </p>|information|
 |SIGNAL LOW rx 1490nm {#ONUDESC} (LLD)|<p>-</p>|<p>**Expression**: {SNMP Device GPON ZTE fw 1.2.5p3:rx1490[{#SNMPINDEX}].last()}<=6 and {SNMP Device GPON ZTE fw 1.2.5p3:rx1490[{#SNMPINDEX}].last()}<>131.07</p><p>**Recovery expression**: </p>|information|
-# ICMP Ping GPON
-
-## Description
-
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
-
-## Overview
-
-LLD for Cards, Onus and Interfaces
-Traps
-PWR
-
-## Author
-
-Pedro Pilla de Azevedo e Souza
-
-## Macros used
-
-There are no macros links in this template.
-
-## Template links
-
-There are no template links in this template.
-
-## Discovery rules
-
-There are no discovery rules in this template.
-
-## Items collected
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1s</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1s</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1s</p>|
-## Triggers
-
-There are no triggers in this template.
-

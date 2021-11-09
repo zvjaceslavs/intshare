@@ -1,9 +1,5 @@
 # SNMP HP v1920-16G
 
-## Description
-
-## Overview Modified and updated(CPU and Memory monitor) version of https://share.zabbix.com/network _devices/cat-hp/zabbix-2-2-hp-v1910-snmp-template 
-
 ## Overview
 
 Modified and updated(CPU and Memory monitor) version of

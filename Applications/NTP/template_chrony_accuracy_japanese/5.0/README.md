@@ -1,9 +1,5 @@
 # chronyテンプレート
 
-## Description
-
-## Overview chrony accuracy Template Englishの日本語版です 英語版は[こちら](cat-app/ntp/chrony-accuracy-template-english) English version of the template is in the [link](cat-app/ntp/chrony-accuracy-template-english) . テンプレートを利用する場合zabbix _agentd.confでリモートコマンドを有効にしてください。 EnableRemoteCommands=1 UnsafeUserParameters=1 ZabbixAgentがインストールされた環境に対しては chrony テンプレートが使用できます。 
-
 ## Overview
 
 chrony accuracy Template Englishの日本語版です  

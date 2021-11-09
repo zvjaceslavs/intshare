@@ -1,9 +1,5 @@
 # Mikrotik
 
-## Description
-
-## Overview NESSE TEMPLATE MONITORAMOS CPU DISCO MEMORIA INTERFACE NOME DO EQUIPAMENTO UPTIME TEMPERATURA VOLTAGEM VERSÃO DO MIKOTIK ## Author Renato Severino 
-
 ## Overview
 
 NESSE TEMPLATE MONITORAMOS 
@@ -83,6 +79,7 @@ There are no template links in this template.
 |Serial Number|<p>-</p>|`SNMP agent`|mtxrSerialNumber<p>Update: 30s</p>|
 |Espaco Total em Disco|<p>-</p>|`SNMP agent`|mikrotik.total.disk.space<p>Update: 10m</p>|
 |Memoria em Uso|<p>-</p>|`SNMP agent`|mikrotik.used.memory<p>Update: 30s</p>|
+|Interface {#IFNAME}({#IFALIAS}): Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 240s;120s/2-6,07:00-21:00</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Discards In|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Erros In|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 300s</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Bytes In|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 120;30/2-6,07:00-21:00</p><p>LLD</p>|
@@ -90,7 +87,6 @@ There are no template links in this template.
 |Interface {#IFNAME}({#IFALIAS}): Erros Out|<p>-</p>|`SNMP agent`|net.if.out.errors[ifOutErrors.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Bytes Out|<p>-</p>|`SNMP agent`|net.if.out[ifHCOutOctets.{#SNMPINDEX}]<p>Update: 120;30/2-6,07:00-21:00</p><p>LLD</p>|
 |Interface {#IFNAME}({#IFALIAS}): Speed|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
-|Interface {#IFNAME}({#IFALIAS}): Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 240s;120s/2-6,07:00-21:00</p><p>LLD</p>|
 |Uso de CPU {#SNMPINDEX}|<p>-</p>|`SNMP agent`|cpucore[ifnum{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Disk-{#SNMPINDEX}: Space utilization|<p>Space utilization in % for Disk-{#SNMPINDEX}</p>|`Calculated`|vfs.fs.pused[hrStorageSize.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Disk-{#SNMPINDEX}: Total space|<p>MIB: HOST-RESOURCES-MIB The size of the storage represented by this entry, in units of hrStorageAllocationUnits. This object is writable to allow remote configuration of the size of the storage area in those cases where such an operation makes sense and is possible on the underlying system. For example, the amount of main memory allocated to a buffer pool might be modified or the amount of disk space allocated to virtual memory might be modified.</p>|`SNMP agent`|vfs.fs.total[hrStorageSize.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|

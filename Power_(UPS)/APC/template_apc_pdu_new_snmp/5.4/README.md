@@ -1,9 +1,5 @@
 # SNMP APC PDU
 
-## Description
-
-## Overview UPDATE: Uploaded V2 to fix one of the power ratings that was the wrong OID. It was collecting watts incorrectly. All fixed now! This APC Template contains outlet discovery and should work with any managed or switched APC PDU. Contains sane triggers, load status, graphs, etc. Triggers: APC Load State, Load Change, Power Alarm, etc. Items: Basic information (model, name, firmware, etc), Power load/peak/etc, Master States (Enable for older units), All APC value mappings, and much more. Graphs: Load and Current Outlet Status (Dynamic Discovery) Please enjoy and vote! 
-
 ## Overview
 
 UPDATE: Uploaded V2 to fix one of the power ratings that was the wrong OID. It was collecting watts incorrectly. All fixed now!
@@ -80,9 +76,32 @@ There are no template links in this template.
 |Outlet {#SNMPVALUE} State Change (LLD)|<p>-</p>|<p>**Expression**: (last(/SNMP APC PDU/rPDU2OutletSwitchedStatusState[{#SNMPINDEX}],#1)<>last(/SNMP APC PDU/rPDU2OutletSwitchedStatusState[{#SNMPINDEX}],#2))=1</p><p>**Recovery expression**: </p>|information|
 # SNMP Tripplite
 
-## Description
+## Overview
 
-## Overview UPDATE: Uploaded V2 to fix one of the power ratings that was the wrong OID. It was collecting watts incorrectly. All fixed now! This APC Template contains outlet discovery and should work with any managed or switched APC PDU. Contains sane triggers, load status, graphs, etc. Triggers: APC Load State, Load Change, Power Alarm, etc. Items: Basic information (model, name, firmware, etc), Power load/peak/etc, Master States (Enable for older units), All APC value mappings, and much more. Graphs: Load and Current Outlet Status (Dynamic Discovery) Please enjoy and vote! ## Overview UPDATE: Uploaded V2 to fix one of the power ratings that was the wrong OID. It was collecting watts incorrectly. All fixed now! This APC Template contains outlet discovery and should work with any managed or switched APC PDU. Contains sane triggers, load status, graphs, etc. Triggers: APC Load State, Load Change, Power Alarm, etc. Items: Basic information (model, name, firmware, etc), Power load/peak/etc, Master States (Enable for older units), All APC value mappings, and much more. Graphs: Load and Current Outlet Status (Dynamic Discovery) Please enjoy and vote! 
+UPDATE: Uploaded V2 to fix one of the power ratings that was the wrong OID. It was collecting watts incorrectly. All fixed now!
+
+
+This APC Template contains outlet discovery and should work with any managed or switched APC PDU.
+
+
+Contains sane triggers, load status, graphs, etc.
+
+
+Triggers: APC Load State, Load Change, Power Alarm, etc.
+
+
+Items: Basic information (model, name, firmware, etc), Power load/peak/etc, Master States (Enable for older units), All APC value mappings, and much more.
+
+
+Graphs: Load and Current
+
+
+Outlet Status (Dynamic Discovery)
+
+
+Please enjoy and vote!
+
+
 
 ## Overview
 

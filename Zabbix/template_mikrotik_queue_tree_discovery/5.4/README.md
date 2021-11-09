@@ -1,9 +1,5 @@
 # Mikrotik-QUEUETREE
 
-## Description
-
-## Overview Mikrotik Queue Tree Discovery Template ## Author Clode 
-
 ## Overview
 
 Mikrotik Queue Tree Discovery Template

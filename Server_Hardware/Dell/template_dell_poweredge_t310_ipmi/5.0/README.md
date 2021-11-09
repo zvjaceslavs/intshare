@@ -1,9 +1,5 @@
 # IPMI Dell Power Edge T310
 
-## Description
-
-## Overview Simple template for Dell T310 IPMI monitoring. Contains: * 4 sensors (Fan, Temp, Power state and consumption) * 8 triggers (Fan speed too slow, Temp too high, Power down, Power consumption too high) * 2 graphics (Fan speed + Temp, Power consumption) Is lightweight, keeps data for 7 days, except for temperature and power consumption (90d) ## Author Eric N 
-
 ## Overview
 
 Simple template for Dell T310 IPMI monitoring.

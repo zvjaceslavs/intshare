@@ -1,9 +1,5 @@
 # Volt Pop Protect SNMP
 
-## Description
-
-## Overview Template simples para monitoramento de: tensão de entrada, Tensão da Bateria e Temperatura. Acompanha triggers. 
-
 ## Overview
 
 Template simples para monitoramento de: tensão de entrada, Tensão da Bateria e Temperatura. Acompanha triggers.

@@ -1,9 +1,5 @@
 # APC InRow Cooling
 
-## Description
-
-## Overview This template is for use with APC InRow Cooling Units. There are 4 Applications, 25 Items, 6 Triggers, and 3 Graphs. * Applications: + Information + Return Side + Supply Side + Thresholds * Items: + Airflow + Condensate Pump Run hours + Cooling Demand Power + Cooling output Power + Cool Set Point + Dehumidify/Output + Dew Point + Discharge Pressure + Fan Speed + Humidifier Run Hours + Humidify Output + Operating Mode + Return Side: - Air Temo - Sire Temp Threshold - Humudty - Humidity High and Low Thresholds + Suction Pressure + Suction Temp + Supply Side: - Set Point - Air Temp - Air Temp Threshold - Humidity + System Name + System Up Time * Triggers + Return Humidity High and Low + Return Temp Critical and High + Supply Temp High The Triggers are formed using the thresholds set by the APC InRow cooling system setup. The values are pulled from the MIB and stored as Item. This was more efficient when developing the triggers for use with multiple Cooling Units. All the Intervals and History values can be changed per your desired use. Thank you for downloading and using this template. ## Author Chad Hoye 
-
 ## Overview
 
 This template is for use with APC InRow Cooling Units. There are 4 Applications, 25 Items, 6 Triggers, and 3 Graphs.

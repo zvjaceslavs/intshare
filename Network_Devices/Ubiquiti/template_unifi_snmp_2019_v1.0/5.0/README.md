@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description This template retrieve SNMP data from Unifi AP devices. MIBS requiriments: FROGFOOT-RESOURCES-MIB IANAifType-MIB IF-MIB SNMP-FRAMEWORK-MIB SNMPv2-CONF SNMPv2-MIB SNMPv2-SMI SNMPv2-TC UBNT-MIB UBNT-UniFi-MIB Author: Alex Moura ## Overview Explicação em Português no link do site. This template retrieve SNMP data from Unifi AP devices. Model, Firmware Version, Uptime, IP Address, MAC Address, LAN port Speed and real time traffic, WIFI SSIDs, Traffic/SSID, Users/SSID Traffic graphics, Users graphics. MIBS requirements: FROGFOOT-RESOURCES-MIB . IANAifType-MIB , IF-MIB , SNMP-FRAMEWORK-MIB , SNMPv2-CONF. SNMPv2-MIB, SNMPv2-SMI, SNMPv2-TC UBNT-MIB, UBNT-UniFi-MIB Tested on: (LOCAL and PROXY environments) Models tested: UAP, UAP LR. UAP AC LR (in progress) Requirements: AP firmware above 3.9.X AP SNMP feature enabled If you Like let a comment to help me make this template better. Se voce gostou deixe um comentário com sugestões para melhoria do template. ## Author Alex Moura 
+This template retrieve SNMP data from Unifi AP devices. MIBS requiriments: FROGFOOT-RESOURCES-MIB IANAifType-MIB IF-MIB SNMP-FRAMEWORK-MIB SNMPv2-CONF SNMPv2-MIB SNMPv2-SMI SNMPv2-TC UBNT-MIB UBNT-UniFi-MIB Author: Alex Moura
 
 ## Overview
 

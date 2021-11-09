@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description A template to monitor nexus switch via SNMP ## Overview A Nexus 3xxx template to get SNMP system informations. This template will find interface, CPU, Fan, create graphs, check ip/tcp/udp/icmp information, create some triggers etc... All items, triggers and discovery rules have brief descriptions. If SNMP is not your friend, you can check this web page (https://cric.grenoble.cnrs.fr/Administrateurs/Outils/MIBS/?oid=1.3.6.1.2.1) to help you. ## Author Leo Cardao 
+A template to monitor nexus switch via SNMP
 
 ## Overview
 

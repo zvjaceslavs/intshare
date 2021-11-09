@@ -1,9 +1,5 @@
 # SNMP Fortinet Devices
 
-## Description
-
-## Overview This is a template created starting from the Leonardo Nascimento da Silva, but modified in English. Serial N., OS version, Connection num, CPU%, RAM%, Disk (Total and Used), Interface data (link and speed) Graph for everything. 01 Aug 2017 - Added UPTIME and a trigger for Reboot check ## Author Andrea Durante 
-
 ## Overview
 
 This is a template created starting from the Leonardo Nascimento da Silva, but modified in English. 

@@ -1,9 +1,5 @@
 # DATACOM DmOS - ONU Interfaces
 
-## Description
-
-## Overview SNMP Discovery - Ethernet UNI Interfaces SNMP - Ethernet UNI Statistics SNMP - ONU Power ## Author Guilherme Zamora Rodrigues 
-
 ## Overview
 
  

@@ -1,9 +1,5 @@
 # UPS_Inform-flexipower
 
-## Description
-
-## Overview This template was tested on Zabbix 3.4 and work for Inform Flexipower 10KVA equiped with snmp card NetAgent II. ## Author Hamdi Ben Abdallah 
-
 ## Overview
 
 This template was tested on Zabbix 3.4 and work for Inform Flexipower 10KVA equiped with snmp card NetAgent II. 

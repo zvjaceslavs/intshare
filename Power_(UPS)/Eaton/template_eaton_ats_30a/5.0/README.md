@@ -1,9 +1,5 @@
 # Eaton ATS 230V 30A
 
-## Description
-
-## Overview Template for Eaton ATS 30A 64 Items 25 Triggers ## Author Peter Stanke 
-
 ## Overview
 
 Template for Eaton ATS 30A

@@ -1,9 +1,5 @@
 # IOMEGA ix4-200d
 
-## Description
-
-## Overview * Host Macro - {$USER} - Username - {$PASS} - Password * Features Discovery Network Discovery Disk Perfomance Discover Disk Info. ## Author Levi Pereira 
-
 ## Overview
 
 * Host Macro

@@ -1,9 +1,5 @@
 # SNMP Riello NetMan204 UPS
 
-## Description
-
-## Overview Riello NetMan204 SNMP Template This template is for the monitoring of Riello NetMan204 UPS hardware via SNMP. Monitors the following items: * Battery Current * Battery Status * Battery Temperature * Battery Voltage * Bypass Freq * Input Line Bads * Output Freq * Alarms Present * Estimated Charge Remaining * Estimated Charge Remaining <li style="line-height: 20px; margin: 0px; padding: 0px; border: 0 ## Author balmag 
-
 ## Overview
 
 Riello NetMan204 SNMP Template

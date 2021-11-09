@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template para Rádio Mimosa C5c. By Dzset Tecnologia. www.dzset.com.br ## Overview **Template para Rádio Mimosa C5c.** ## Author Luís Henrique Nascimento 
+Template para Rádio Mimosa C5c. By Dzset Tecnologia. www.dzset.com.br
 
 ## Overview
 

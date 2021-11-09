@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Monitoring bcmstat 0.5.4 or greater. https://github.com/MilhouseVH/bcmstat ## Overview The Git repo can be found [here](https://gitlab.com/i.am.stack/zabbix_bcmstat_raspberrypi). This template will monitor Raspberry Pi's (only tested RPI4) via SSH using the bcmstat utility which must be v0.5.4 or better. ## Author ~Stack~ 
+Monitoring bcmstat 0.5.4 or greater. https://github.com/MilhouseVH/bcmstat
 
 ## Overview
 

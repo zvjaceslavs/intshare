@@ -1,9 +1,5 @@
 # SNMP OLT FiberHome
 
-## Description
-
-## Overview Template para fiberhome ## Author Jhakson Redfield 
-
 ## Overview
 
 Template para fiberhome

@@ -1,9 +1,5 @@
 # SNMP - Lexmark CX860dtfe COLOR
 
-## Description
-
-## Overview Lexmark Printer **SNMP** template for model **Lexmark** **CX860dtfe** (**Color**) note : every new lexmark model in 2018/2019 seem to have specific OIDs depending on the modules in the printer, therefore i made many templates for each model i've been working on. i plan to add other triggers late (such as detect paper jams etc.). At the moment all templates can monitor all basic things, and all modules (toners, photoconductors, waste boxes etc.) as well as ping the machine to ensure it's available (you might want to modify triggers to lower/higher values if required) if required, replace Zabbix version from 3.4 to 3.0 in the XML to make it work on 3.0 **note : template edited on April 6th 2019 to fix issues with triggers, now triggering everything at 15% levels (with high capacity toners)** ## Author Olivier GRIFFIN 
-
 ## Overview
 
 Lexmark Printer **SNMP** template for model **Lexmark** **CX860dtfe** (**Color**)
@@ -53,8 +49,8 @@ There are no discovery rules in this template.
 |CYAN Developer level|<p>-</p>|`SNMP agent`|CyanDeveloperLevel<p>Update: 1800</p>|
 |Toner Level YELLOW|<p>-</p>|`SNMP agent`|prtYellowTonerLevel<p>Update: 60</p>|
 |Page Counter|<p>-</p>|`SNMP agent`|prtMarkerLifeCount<p>Update: 60</p>|
-|Toner capacity MAGENTA|<p>-</p>|`SNMP agent`|prtMagentaTonerMaxCapacity<p>Update: 3600</p>|
 |Toner Level BLACK|<p>-</p>|`SNMP agent`|prtBlackTonerLevel<p>Update: 60</p>|
+|Toner capacity MAGENTA|<p>-</p>|`SNMP agent`|prtMagentaTonerMaxCapacity<p>Update: 3600</p>|
 |MAGENTA Photoconductor level|<p>-</p>|`SNMP agent`|MagentaPhotoconductorLevel<p>Update: 1800</p>|
 |YELLOW Photoconductor level|<p>-</p>|`SNMP agent`|YellowPhotoconductorLevel<p>Update: 1800</p>|
 |02 Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|

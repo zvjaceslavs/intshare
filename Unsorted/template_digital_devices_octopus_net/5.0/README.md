@@ -1,9 +1,5 @@
 # Octopus NET DD Bridge satelite mon
 
-## Description
-
-## Overview Template for monitoring all 4 tuners on ddbridge Octopus Net. Monitoring status: SNR, lock Graph: SNR Alarms: SNR < 10 db lock fail If you have web authentification, you need to modify data item "tuners mon" and add HTTP authentification. ## Author Aleksey Grabilenko 
-
 ## Overview
 
 Template for monitoring all 4 tuners on ddbridge Octopus Net.

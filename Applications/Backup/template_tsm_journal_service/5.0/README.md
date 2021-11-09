@@ -1,9 +1,5 @@
 # App TSM Journal Service
 
-## Description
-
-## Overview Template for check if "TSM Journal Service" is running. IBM Spectrum Protect (Tivoli Storage Manager) Note that trigger service name is: "TSM Journal Service" You can also create (manual) action auto-start service in case service is down: Go to Configuration → Actions **Conditions:** * Maintenance status not in maintenance * Trigger value = PROBLEM * Trigger name like TSM Journal Service Stopped * * **Operations:** * **Operation type:** Remote command * **Commands:** NET START "TSM Journal Service" *- Haim Cohen 2017 -* ## Author Haim Cohen 
-
 ## Overview
 
 Template for check if "TSM Journal Service" is running.

@@ -1,9 +1,5 @@
 # Synology DiskStation
 
-## Description
-
-## Overview **TEMPLATE VERSION 1.0** ------------------------ Template is based on [Synology DiskStation MIB Guide](https://global.download.synology.com/download/Document/MIBGuide/Synology_DiskStation_MIB_Guide.pdf "Synology DiskStation MIB Guide") (published:2017/09/19). ### Features Includes following applications/sections: * Synology System * Synology Disk * Synology RAID * Synology SMART * Synology Services * Synology StorageIO * Synology SpaceIO * Synology iSCSI LUN * Useful OIDs Excluded are following applications: * Synology UPS ### Environment Created and tested with: * Synology DSM 6.1-15284 on following models: + DS214play + DS916+ * Zabbix version 3.4.9 (Appliance, ISO version) ### Note(s) No warranties. Comment(s), discussions below. ## Author NPollie 
-
 ## Overview
 
 **TEMPLATE VERSION 1.0**

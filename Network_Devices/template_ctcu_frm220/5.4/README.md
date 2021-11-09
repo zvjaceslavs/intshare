@@ -1,9 +1,5 @@
 # CTCU Frm220
 
-## Description
-
-## Overview This Template works with snmpv1/2 and uses {$SNMP _COMMUNITY} Macro. - General Monitoring of NMC its self. (FAN/PSU) - Autodiscovery for following Line Cards - 1000MS - 1000DS - 3R-10G-SS - 3R-10G This Template will possibly not work for other CTCU Versions. It should work with other Zabbix Versions, but it is not testet. I am not able to discover other Linecards, because we dont have them in use yet. ## Author Rene Schwarz 
-
 ## Overview
 
 This Template works with snmpv1/2 and uses {$SNMP\_COMMUNITY} Macro.

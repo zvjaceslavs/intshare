@@ -1,9 +1,5 @@
 # Linux NFS v3 Client
 
-## Description
-
-## Overview Templates for NFS V3 & V4 client statistics using vfs.file.regex ## Author Len Rugen 
-
 ## Overview
 
 Templates for NFS V3 & V4 client statistics using vfs.file.regex
@@ -51,9 +47,15 @@ There are no triggers in this template.
 
 # Linux NFS v4 Client
 
-## Description
+## Overview
 
-## Overview Templates for NFS V3 & V4 client statistics using vfs.file.regex ## Author Len Rugen ## Overview Templates for NFS V3 & V4 client statistics using vfs.file.regex ## Author Len Rugen 
+Templates for NFS V3 & V4 client statistics using vfs.file.regex
+
+
+
+## Author
+
+Len Rugen
 
 ## Overview
 

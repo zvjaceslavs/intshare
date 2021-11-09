@@ -1,9 +1,5 @@
 # s 3CX ODBC
 
-## Description
-
-## Overview This tempalte is used in 3CX linux servers, it is necessary to create a postgresql ODBC connector to perform the collections and to change the {$ DSN3CX} macro to the name of the created connector. To check the DB credentials, I checked the file "/var/lib/3cxpbx/Bin/3CXSystemService.exe.config" and edit pg _hba.conf to release remote connections. Note: only release the IP of the zabbix proxy or server for security reasons. Itens: - Discovery of trunks and extensions - Calls today, 7 days and this month Extensions: - User Extension Last Register - User Extension Status - User First Name - User Last Name - User Mail Trunks: - Gateway Host - Gateway Max Calls - Gateway Port - Number of associated routes 
-
 ## Overview
 
 This tempalte is used in 3CX linux servers, it is necessary to create a postgresql ODBC connector to perform the collections and to change the {$ DSN3CX} macro to the name of the created connector.

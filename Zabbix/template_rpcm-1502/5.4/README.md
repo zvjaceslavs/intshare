@@ -1,9 +1,5 @@
 # rpcm_1502
 
-## Description
-
-## Overview rcpm - over voltage state 0 - NO OVERVOLTAGE TURN OFF DETECTED 1 - OVERVOLTAGE TURN OFF FIRED rpcm - admin state 0 - off 1 - on rpcm - breaker state 0 - NO SHORT CIRCUIT DETECTED 1 - SHORT CIRCUIT DETECTED rpcm - force fallback 0 - enabled 1 - disabled rpcm - frequency 0 - absent 1 - present rpcm - ground good 0 - Ground is Bad 1 - Ground is Good rpcm - indicator flashing 0 - disabled 1 - enabled rpcm - overcurent turn off state 0 - NO OVERCURRENT TURN OFF DETECTED 1 - OVERCURRENT TURN OFF FIRED rpcm - overcurrent alarm state 0 - NO ALARM 1 - OVERCURRENT ALARM FIRED 
-
 ## Overview
 
 rcpm - over voltage state
@@ -164,18 +160,6 @@ There are no template links in this template.
 |{#SNMPVALUE} Accumulated KVar/h|<p>Input Accumulated KVar/h</p>|`SNMP agent`|inputAccumulatedKVarhString.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Accumulated KVar/h|<p>Input Accumulated KVar/h</p>|`SNMP agent`|inputAccumulatedKVarhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Minimum Allowed Voltage|<p>Input Minimum Allowed Voltage</p>|`SNMP agent`|inputVoltageAllowedMin.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Accumulated KVA/h|<p>Output Accumulated KVA/h</p>|`SNMP agent`|outputAccumulatedKVAhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overcurrent Alarm State|<p>Output Overcurrent Alarm State (1 =OVERCURRENT ALARM FIRED, 0 =NO ALARM)</p>|`SNMP agent`|outputOvercurrentAlarmFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Turn Off Priority On Input Overload|<p>Output Turn Off Priority On Input Overload (Outputs with higher priority values will turn off first)</p>|`SNMP agent`|outputTurnOffPriorityOnInputOverload.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overvoltage Recovery interval, Seconds|<p>Output Overvoltage Recovery interval, Seconds</p>|`SNMP agent`|outputRecoverAfterOvervoltageSeconds.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Indicator Flashing|<p>Output Indicator Flashing for Physical Recognition/Indication (1 =enabled, 0 =disabled)</p>|`SNMP agent`|outputRecognitionState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overvoltage Turn Off Fired State|<p>Output Overvoltage Turn Off Fired State (1 =OVERVOLTAGE TURN OFF FIRED, 0 =NO OVERVOLTAGE TURN OFF DETECTED)</p>|`SNMP agent`|outputOvervoltageTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overvoltage Turn Off Facts|<p>Output Overvoltage Turn Off Facts</p>|`SNMP agent`|outputOvervoltageTurnOffFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overcurrent Turn Off Limit Seconds|<p>Output Overcurrent Turn Off Limit Seconds</p>|`SNMP agent`|outputOvercurrentTurnOffLimitSeconds.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overcurrent Turn Off Limit Reached Facts|<p>Output Overcurrent Turn Off Limit Reached Facts</p>|`SNMP agent`|outputOvercurrentTurnOffLimitReachedFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overcurrent Turn Off Limit Milliamps|<p>Output Overcurrent Turn Off Limit Milliamps</p>|`SNMP agent`|outputOvercurrentTurnOffLimitMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overcurrent Turn Off State|<p>Output Overcurrent Turn Off State (1 =OVERCURRENT TURN OFF FIRED, 0 =NO OVERCURRENT TURN OFF DETECTED)</p>|`SNMP agent`|outputOvercurrentTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Overcurrent Turn Off Fired Facts|<p>Output Overcurrent Turn Off Fired Facts</p>|`SNMP agent`|outputOvercurrentTurnOffFiredFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Overcurrent Alarm Limit Seconds|<p>Output Overcurrent Alarm Limit Seconds</p>|`SNMP agent`|outputOvercurrentAlarmLimitSeconds.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Overcurrent Alarm Limit Reached Facts|<p>Output Overcurrent Alarm Limit Reached Facts</p>|`SNMP agent`|outputOvercurrentAlarmLimitReachedFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Overcurrent Alarm Limit Milliamps|<p>Output Overcurrent Alarm Limit Milliamps</p>|`SNMP agent`|outputOvercurrentAlarmLimitMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
@@ -196,6 +180,18 @@ There are no template links in this template.
 |{#SNMPVALUE} Accumulated KVar/h|<p>Output Accumulated KVar/h</p>|`SNMP agent`|outputAccumulatedKVarhString.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Accumulated KVar/h|<p>Output Accumulated KVar/h</p>|`SNMP agent`|outputAccumulatedKVarhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Turn On Delay After RPCM Device Startup|<p>Output Turn On Delay After RPCM Device Startup</p>|`SNMP agent`|outputTurnOnDelayOnStartup.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Accumulated KVA/h|<p>Output Accumulated KVA/h</p>|`SNMP agent`|outputAccumulatedKVAhFloat.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Alarm State|<p>Output Overcurrent Alarm State (1 =OVERCURRENT ALARM FIRED, 0 =NO ALARM)</p>|`SNMP agent`|outputOvercurrentAlarmFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Turn Off Priority On Input Overload|<p>Output Turn Off Priority On Input Overload (Outputs with higher priority values will turn off first)</p>|`SNMP agent`|outputTurnOffPriorityOnInputOverload.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overvoltage Recovery interval, Seconds|<p>Output Overvoltage Recovery interval, Seconds</p>|`SNMP agent`|outputRecoverAfterOvervoltageSeconds.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Indicator Flashing|<p>Output Indicator Flashing for Physical Recognition/Indication (1 =enabled, 0 =disabled)</p>|`SNMP agent`|outputRecognitionState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overvoltage Turn Off Fired State|<p>Output Overvoltage Turn Off Fired State (1 =OVERVOLTAGE TURN OFF FIRED, 0 =NO OVERVOLTAGE TURN OFF DETECTED)</p>|`SNMP agent`|outputOvervoltageTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overvoltage Turn Off Facts|<p>Output Overvoltage Turn Off Facts</p>|`SNMP agent`|outputOvervoltageTurnOffFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off Limit Seconds|<p>Output Overcurrent Turn Off Limit Seconds</p>|`SNMP agent`|outputOvercurrentTurnOffLimitSeconds.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off Limit Reached Facts|<p>Output Overcurrent Turn Off Limit Reached Facts</p>|`SNMP agent`|outputOvercurrentTurnOffLimitReachedFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off Limit Milliamps|<p>Output Overcurrent Turn Off Limit Milliamps</p>|`SNMP agent`|outputOvercurrentTurnOffLimitMilliamps.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off State|<p>Output Overcurrent Turn Off State (1 =OVERCURRENT TURN OFF FIRED, 0 =NO OVERCURRENT TURN OFF DETECTED)</p>|`SNMP agent`|outputOvercurrentTurnOffFiredState.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
+|{#SNMPVALUE} Overcurrent Turn Off Fired Facts|<p>Output Overcurrent Turn Off Fired Facts</p>|`SNMP agent`|outputOvercurrentTurnOffFiredFacts.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

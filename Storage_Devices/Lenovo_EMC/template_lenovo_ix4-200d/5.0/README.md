@@ -1,9 +1,5 @@
 # Lenovo ix4-200d
 
-## Description
-
-## Overview Template Lenovo ix4-200d [Descrição](http://10.255.255.6/zabbix/applications.php?form=update&applicationid=4178&hostid=10399) [Discos](http://10.255.255.6/zabbix/applications.php?form=update&applicationid=4179&hostid=10399) [Processador](http://10.255.255.6/zabbix/applications.php?form=update&applicationid=4180&hostid=10399) [RAID](http://10.255.255.6/zabbix/applications.php?form=update&applicationid=4181&hostid=10399) [Rede](http://10.255.255.6/zabbix/applications.php?form=update&applicationid=4182&hostid=10399) 
-
 ## Overview
 
 Template Lenovo ix4-200d

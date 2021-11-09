@@ -1,9 +1,5 @@
 # MES3124
 
-## Description
-
-## Overview Eltex MES3124f network switch ## Author gg.ledokol 
-
 ## Overview
 
 Eltex MES3124f network switch 

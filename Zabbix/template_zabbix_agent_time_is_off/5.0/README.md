@@ -1,9 +1,5 @@
 # Time is off by Zabbix agent active
 
-## Description
-
-## Overview Detects if Zabbix agent time has been shifted away. Solution is suitable in cases where Zabbix agent (active) checks are the only option. Explanation how/why it works: <https://youtu.be/bSQ1xV1nmqU> 
-
 ## Overview
 
 Detects if Zabbix agent time has been shifted away.

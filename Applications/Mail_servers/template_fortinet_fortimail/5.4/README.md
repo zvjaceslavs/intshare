@@ -1,9 +1,5 @@
 # Fortimail 60D
 
-## Description
-
-## Author Mikhail Norenberg 
-
 ## Author
 
 Mikhail Norenberg

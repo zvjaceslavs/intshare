@@ -1,9 +1,5 @@
 # Printer Xerox WorkCentre 7220
 
-## Description
-
-## Overview I upgraded older version Xerox template 7225. Its orchestrated with template Grafana. Zabbix apliance 3.4.12 [Dasboard Geafana Xerox 7220](https://grafana.com/api/dashboards/8369/revisions/1/download) 
-
 ## Overview
 
 I upgraded older version Xerox template 7225. Its orchestrated with template Grafana. Zabbix apliance 3.4.12

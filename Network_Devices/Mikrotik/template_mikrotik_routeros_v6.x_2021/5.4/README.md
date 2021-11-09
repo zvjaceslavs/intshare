@@ -1,9 +1,5 @@
 # MikroTik
 
-## Description
-
-## Overview **A newly built template designed to work on all MikroTik Routers!** **Items:** * CPU Frequency * Disk Space Total * Disk Space Used * Disk Space Utilisation * Firmware * ICMP Ping * ICMP Packet Loss * ICMP Latency * Identity * Memory Total * Memory Used * Memory Utilisation * Model * Temperature * Uptime * Voltage * SNMP Availability **Discover Rules:** * CPU * Interfaces All in one contained template. ## Author Shaun Allen 
-
 ## Overview
 
 **A newly built template designed to work on all MikroTik Routers!**

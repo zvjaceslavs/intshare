@@ -1,9 +1,5 @@
 # Mikrotik - OSPF LLD
 
-## Description
-
-## Overview The Zabbix Mikrotik OSPF template for 4.0, which uses LLD, JSON, SSH for connection to Mikrotik router wihout externel scripts. Discovers OSPF neighbors and monitors STATE and changes. Uses one ssh connection to the Mikrotik for getting data. This template needs changing macroses: {$MIKROTIK _SSH _PASS} {$MIKROTIK _SSH _PORT} {$MIKROTIK _SSH _USER} ## Author AlKosmos 
-
 ## Overview
 
 The Zabbix Mikrotik OSPF template for 4.0, which uses LLD, JSON, SSH for connection to Mikrotik router wihout externel scripts. Discovers OSPF neighbors and monitors STATE and changes. Uses one ssh connection to the Mikrotik for getting data. 

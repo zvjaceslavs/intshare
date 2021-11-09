@@ -1,9 +1,5 @@
 # MES3124
 
-## Description
-
-## Overview Eltex MES3124f network switch ## Author gg.ledokol 
-
 ## Overview
 
 Eltex MES3124f network switch 
@@ -99,8 +95,8 @@ There are no discovery rules in this template.
 |Tengigabitethernet 1/0/2 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets106<p>Update: 20</p>|
 |Gigabitethernet 1/0/22 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets70<p>Update: 20</p>|
 |Gigabitethernet 1/0/19 - in|<p>-</p>|`SNMP agent`|ifHCInOctets67<p>Update: 20</p>|
-|Gigabitethernet 1/0/3 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets51<p>Update: 20</p>|
 |Gigabitethernet 1/0/12 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets60<p>Update: 20</p>|
+|Gigabitethernet 1/0/3 - out|<p>-</p>|`SNMP agent`|ifHCOutOctets51<p>Update: 20</p>|
 ## Triggers
 
 There are no triggers in this template.

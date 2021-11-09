@@ -1,9 +1,5 @@
 # IPMI Supermicro X10SLL-F
 
-## Description
-
-## Author Jan Koppe 
-
 ## Author
 
 Jan Koppe

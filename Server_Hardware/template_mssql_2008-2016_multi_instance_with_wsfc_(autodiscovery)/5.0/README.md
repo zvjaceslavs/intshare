@@ -1,9 +1,5 @@
 # App MSSQL 2008-2016 WSFC
 
-## Description
-
-## Overview ``` Requirements: ``` 1. Zabbix 3+ Install instrucitons: https://github.com/hermanekt/MSSQL-2008-2016-Multi-instance-with-WSFC 
-
 ## Overview
 
 

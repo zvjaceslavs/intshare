@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ ## Overview Данный шаблон основан на счетчиках производительности Windows. Низкоуровневое обнаружение сетевых интерфейсов и дисков используется для создания ключей "perf _counter[счетчик,<период>]" Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ 
+Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ
 
 ## Overview
 

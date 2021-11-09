@@ -1,9 +1,5 @@
 # Server Inspur BMC SNMPv3
 
-## Description
-
-## Overview 通过SNMPv3监控浪潮BMC接口，兼容M4和M5系列，已经在NF5280M4、NF5280M5、SA5212M5等设备上测试。监控整体健康、型号、序列号等信息。同时可以自动发现内存、风扇、硬盘、温度数据。 Monitor the Inspur BMC interface through SNMPv3 It is compatible with M4 and M5 series. It has been tested on NF5280M4, NF5280M5, SA5212M5 and other devices. Monitor overall health, model, serial number and more. At the same time, you can automatically find the memory, fan, hard disk, and temperature data. ## Author Yihai Duan 
-
 ## Overview
 
 通过SNMPv3监控浪潮BMC接口，兼容M4和M5系列，已经在NF5280M4、NF5280M5、SA5212M5等设备上测试。监控整体健康、型号、序列号等信息。同时可以自动发现内存、风扇、硬盘、温度数据。

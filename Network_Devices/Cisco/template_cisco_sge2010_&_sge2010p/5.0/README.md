@@ -1,9 +1,5 @@
 # SGE2010_48P
 
-## Description
-
-## Overview Prezados, Este template e para switch cisco SGE2010 e SGE2010P , caso queira acrescentar mais informações fiquem a vontade , apos este , por gentileza inserir novamente no share do zabbix. # Este template Monitora: 1- Cooler (FAN), 2- Disponibilidade , 3- Latencia , 4- Pacotes de entrada , 5- Pacotes de Saida , 6- Temperatura , 7- Trafego de entrada , 8- Trafego de saida Att: Magno Monte Cerqueira Skype: [magnopeem _rj@hotmail.com](mailto:magnopeem_rj@hotmail.com) Linkdln: <https://br.linkedin.com/in/magno-monte-cerqueira-976b1587> Gmail: [magnopeem@gmail.com](mailto:magnopeem@gmail.com) OBS: Esta licença esta sobre regra do GNU. ## Author Magno Monte Cerqueira "magnopeem" 
-
 ## Overview
 
 Prezados,
@@ -144,8 +140,8 @@ There are no discovery rules in this template.
 |Estado operacional GigabitEthernet1/0/47|<p>-</p>|`SNMP agent`|ifOperStatus.47<p>Update: 60</p>|
 |Pacotes de entrada com erro GigabitEthernet1/0/08|<p>-</p>|`SNMP agent`|ifInErrors.8<p>Update: 60</p>|
 |Tráfego de entrada GigabitEthernet1/0/27|<p>-</p>|`SNMP agent`|ifInOctets.27<p>Update: 60</p>|
-|Tráfego de saída GigabitEthernet1/0/07|<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 60</p>|
 |Pacotes de saída com erro GigabitEthernet1/0/39|<p>-</p>|`SNMP agent`|ifOutErrors.39<p>Update: 60</p>|
+|Tráfego de saída GigabitEthernet1/0/07|<p>-</p>|`SNMP agent`|ifOutOctets.7<p>Update: 60</p>|
 |Velocidade Porta GigaEthernet 0/42 MTU|<p>-</p>|`SNMP agent`|ifMtu.42<p>Update: 60</p>|
 |Velocidade Porta GigaEthernet 0/21 MTU|<p>-</p>|`SNMP agent`|ifMtu.21<p>Update: 60</p>|
 |Tráfego de entrada GigabitEthernet1/1/2|<p>-</p>|`SNMP agent`|ifInOctets.50<p>Update: 60</p>|
@@ -400,8 +396,8 @@ There are no discovery rules in this template.
 |Pacotes de entrada com erro GigabitEthernet1/0/48|<p>-</p>|`SNMP agent`|ifInErrors.48<p>Update: 60</p>|
 |Velocidade GigaEthernet 0/34|<p>-</p>|`SNMP agent`|ifSpeed.34<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/36|<p>-</p>|`SNMP agent`|ifOperStatus.36<p>Update: 60</p>|
-|Pacotes de saída com erro GigabitEthernet1/0/35|<p>-</p>|`SNMP agent`|ifOutErrors.35<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/33|<p>-</p>|`SNMP agent`|ifOperStatus.33<p>Update: 60</p>|
+|Pacotes de saída com erro GigabitEthernet1/0/35|<p>-</p>|`SNMP agent`|ifOutErrors.35<p>Update: 60</p>|
 |Velocidade Porta GigaEthernet 0/2 MTU|<p>-</p>|`SNMP agent`|ifMtu.2<p>Update: 60</p>|
 |Estado operacional GigabitEthernet1/0/02|<p>-</p>|`SNMP agent`|ifOperStatus.2<p>Update: 60</p>|
 |Tráfego de saída GigabitEthernet1/0/43|<p>-</p>|`SNMP agent`|ifOutOctets.43<p>Update: 60</p>|

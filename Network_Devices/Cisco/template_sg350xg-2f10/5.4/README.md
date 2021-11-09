@@ -1,9 +1,5 @@
 # Cisco_SB_SG350XG-2F10
 
-## Description
-
-## Overview Template for Cisco Small Business Switch SG350XG-2F10 - Device Details - Traffic on Ports (IN/OUT) - Errors on Ports (IN/OUT) - Status on Ports - Admin-Status on Ports - Status OOB - Ping Latency - Trigger Status Port with dependency to Admin-Status of Port - Trigger Errors on Ports - Trigger OOB Port - 9 Example-Graphs ## Author Thomas Oecknick 
-
 ## Overview
 
 Template for Cisco Small Business Switch SG350XG-2F10
@@ -76,8 +72,8 @@ There are no discovery rules in this template.
 |MTU Size Interface te1/0/8|<p>-</p>|`SNMP agent`|ifMtu.8<p>Update: 60</p>|
 |Errors Inbound te2/0/7|<p>-</p>|`SNMP agent`|ifInErrors.59<p>Update: 60</p>|
 |Errors Inbound te1/0/4|<p>-</p>|`SNMP agent`|ifInErrors.4<p>Update: 60</p>|
-|Errors Inbound te2/0/3|<p>-</p>|`SNMP agent`|ifInErrors.55<p>Update: 60</p>|
 |Errors Outbound Port te1/0/11|<p>-</p>|`SNMP agent`|ifOutErrors.11<p>Update: 60</p>|
+|Errors Inbound te2/0/3|<p>-</p>|`SNMP agent`|ifInErrors.55<p>Update: 60</p>|
 |MTU Size Interface te2/0/5|<p>-</p>|`SNMP agent`|ifMtu.57<p>Update: 60</p>|
 |Admin Status Port te2/0/11|<p>-</p>|`SNMP agent`|ifAdminStatus.63<p>Update: 30s</p>|
 |Errors Inbound te1/0/3|<p>-</p>|`SNMP agent`|ifInErrors.3<p>Update: 60</p>|
@@ -109,15 +105,15 @@ There are no discovery rules in this template.
 |Traffic outgoing Interface te2/0/8|<p>-</p>|`SNMP agent`|ifOutOctets.60<p>Update: 30s</p>|
 |PortSpeed te2/0/5|<p>-</p>|`SNMP agent`|ifSpeed.57<p>Update: 60</p>|
 |PortSpeed te1/0/12|<p>-</p>|`SNMP agent`|ifSpeed.12<p>Update: 60</p>|
-|MTU Size Interface te2/0/6|<p>-</p>|`SNMP agent`|ifMtu.58<p>Update: 60</p>|
 |Errors Outbound Port te1/0/4|<p>-</p>|`SNMP agent`|ifOutErrors.4<p>Update: 60</p>|
+|MTU Size Interface te2/0/6|<p>-</p>|`SNMP agent`|ifMtu.58<p>Update: 60</p>|
 |Status Port te1/0/12|<p>-</p>|`SNMP agent`|ifOperStatus.12<p>Update: 30s</p>|
 |Fan 02|<p>-</p>|`SNMP agent`|rlEnvMonFanState.67109251<p>Update: 600</p>|
 |PortSpeed te2/0/12|<p>-</p>|`SNMP agent`|ifSpeed.64<p>Update: 60</p>|
 |Traffic outgoing Interface te1/0/3|<p>-</p>|`SNMP agent`|ifOutOctets.3<p>Update: 30s</p>|
 |Status Port te2/0/6|<p>-</p>|`SNMP agent`|ifOperStatus.58<p>Update: 30s</p>|
-|Status Port te1/0/6|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 30s</p>|
 |Traffic outgoing Interface te2/0/11|<p>-</p>|`SNMP agent`|ifOutOctets.63<p>Update: 30s</p>|
+|Status Port te1/0/6|<p>-</p>|`SNMP agent`|ifOperStatus.6<p>Update: 30s</p>|
 |Traffic incomming Interface te2/0/6|<p>-</p>|`SNMP agent`|ifInOctets.58<p>Update: 30s</p>|
 |Traffic outgoing Interface te2/0/9|<p>-</p>|`SNMP agent`|ifOutOctets.61<p>Update: 30s</p>|
 |PortSpeed te1/0/7|<p>-</p>|`SNMP agent`|ifSpeed.7<p>Update: 60</p>|
@@ -133,8 +129,8 @@ There are no discovery rules in this template.
 |MTU Size Interface te2/0/7|<p>-</p>|`SNMP agent`|ifMtu.59<p>Update: 60</p>|
 |Traffic incomming Interface te2/0/4|<p>-</p>|`SNMP agent`|ifInOctets.56<p>Update: 30s</p>|
 |Status Port te2/0/8|<p>-</p>|`SNMP agent`|ifOperStatus.60<p>Update: 30s</p>|
-|Admin Status Port te2/0/12|<p>-</p>|`SNMP agent`|ifAdminStatus.64<p>Update: 30s</p>|
 |Status Port te2/0/4|<p>-</p>|`SNMP agent`|ifOperStatus.56<p>Update: 30s</p>|
+|Admin Status Port te2/0/12|<p>-</p>|`SNMP agent`|ifAdminStatus.64<p>Update: 30s</p>|
 |Ping|<p>-</p>|`Simple check`|icmpping<p>Update: 30</p>|
 |Traffic incomming Interface te2/0/7|<p>-</p>|`SNMP agent`|ifInOctets.59<p>Update: 30s</p>|
 |OOB Status MGMT|<p>-</p>|`SNMP agent`|ifOperStatus.1050<p>Update: 30s</p>|
@@ -174,8 +170,8 @@ There are no discovery rules in this template.
 |Traffic outgoing Interface te1/0/5|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 30s</p>|
 |PortSpeed te1/0/3|<p>-</p>|`SNMP agent`|ifSpeed.3<p>Update: 60</p>|
 |Admin Status Port te1/0/10|<p>-</p>|`SNMP agent`|ifAdminStatus.10<p>Update: 30s</p>|
-|MTU Size Interface te1/0/5|<p>-</p>|`SNMP agent`|ifMtu.5<p>Update: 60</p>|
 |Admin Status Port te1/0/1|<p>-</p>|`SNMP agent`|ifAdminStatus.1<p>Update: 30s</p>|
+|MTU Size Interface te1/0/5|<p>-</p>|`SNMP agent`|ifMtu.5<p>Update: 60</p>|
 |Errors Outbound Port te2/0/1|<p>-</p>|`SNMP agent`|ifOutErrors.53<p>Update: 60</p>|
 |Errors Inbound te2/0/5|<p>-</p>|`SNMP agent`|ifInErrors.57<p>Update: 60</p>|
 |Traffic outgoing Interface te1/0/12|<p>-</p>|`SNMP agent`|ifOutOctets.12<p>Update: 30s</p>|
@@ -184,8 +180,8 @@ There are no discovery rules in this template.
 |MTU Size Interface te2/0/9|<p>-</p>|`SNMP agent`|ifMtu.61<p>Update: 60</p>|
 |Errors Outbound Port te2/0/8|<p>-</p>|`SNMP agent`|ifOutErrors.60<p>Update: 60</p>|
 |MTU Size Interface te2/0/10|<p>-</p>|`SNMP agent`|ifMtu.62<p>Update: 60</p>|
-|MTU Size Interface te1/0/12|<p>-</p>|`SNMP agent`|ifMtu.12<p>Update: 60</p>|
 |Traffic outgoing Interface te1/0/2|<p>-</p>|`SNMP agent`|ifOutOctets.2<p>Update: 30s</p>|
+|MTU Size Interface te1/0/12|<p>-</p>|`SNMP agent`|ifMtu.12<p>Update: 60</p>|
 |Traffic incomming Interface te2/0/2|<p>-</p>|`SNMP agent`|ifInOctets.54<p>Update: 30s</p>|
 |Errors Inbound te1/0/8|<p>-</p>|`SNMP agent`|ifInErrors.8<p>Update: 60</p>|
 |PortSpeed te1/0/11|<p>-</p>|`SNMP agent`|ifSpeed.11<p>Update: 60</p>|
@@ -231,8 +227,8 @@ There are no discovery rules in this template.
 |Errors Outbound Port te1/0/9|<p>-</p>|`SNMP agent`|ifOutErrors.9<p>Update: 60</p>|
 |Fan 01|<p>-</p>|`SNMP agent`|rlEnvMonFanState.67109250<p>Update: 600</p>|
 |System Uptime|<p>-</p>|`SNMP agent`|system.uptime<p>Update: 60</p>|
-|Device Firmware Version|<p>-</p>|`SNMP agent`|Firmware<p>Update: 600</p>|
 |Stystem Kontakt|<p>-</p>|`SNMP agent`|SysContact<p>Update: 60</p>|
+|Device Firmware Version|<p>-</p>|`SNMP agent`|Firmware<p>Update: 600</p>|
 |MTU Size Interface te1/0/7|<p>-</p>|`SNMP agent`|ifMtu.7<p>Update: 60</p>|
 |Traffic incomming Interface te2/0/1|<p>-</p>|`SNMP agent`|ifInOctets.53<p>Update: 30s</p>|
 |MTU Size Interface te2/0/12|<p>-</p>|`SNMP agent`|ifMtu.64<p>Update: 60</p>|
@@ -241,8 +237,8 @@ There are no discovery rules in this template.
 |Errors Inbound te2/0/9|<p>-</p>|`SNMP agent`|ifInErrors.61<p>Update: 60</p>|
 |Traffic incomming Interface te1/0/1|<p>-</p>|`SNMP agent`|ifInOctets.1<p>Update: 30s</p>|
 |Status Port te2/0/12|<p>-</p>|`SNMP agent`|ifOperStatus.64<p>Update: 30s</p>|
-|Errors Inbound te1/0/2|<p>-</p>|`SNMP agent`|ifInErrors.2<p>Update: 60</p>|
 |Status Port te1/0/5|<p>-</p>|`SNMP agent`|ifOperStatus.5<p>Update: 30s</p>|
+|Errors Inbound te1/0/2|<p>-</p>|`SNMP agent`|ifInErrors.2<p>Update: 60</p>|
 |Errors Inbound te2/0/12|<p>-</p>|`SNMP agent`|ifInErrors.64<p>Update: 60</p>|
 |PortSpeed te2/0/2|<p>-</p>|`SNMP agent`|ifSpeed.54<p>Update: 60</p>|
 |Errors Inbound te1/0/11|<p>-</p>|`SNMP agent`|ifInErrors.11<p>Update: 60</p>|

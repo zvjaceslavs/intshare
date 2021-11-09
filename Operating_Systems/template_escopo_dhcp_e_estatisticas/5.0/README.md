@@ -1,9 +1,5 @@
 # HSC Discovery DHCP scopes - HSC
 
-## Description
-
-## Overview Este template foi elaborado para o monitoramento de escopos dhcp de servidores Microsoft Windows em PT-BR. Nele existe um gatilho para o envio de alertas para escopos com menos de 15 ips livres. ## Author William Normandia 
-
 ## Overview
 
 Este template foi elaborado para o monitoramento de escopos dhcp de servidores Microsoft Windows em PT-BR.

@@ -1,9 +1,5 @@
 # DNS
 
-## Description
-
-## Overview **Requirements** Bind Server 9 and above Zabbix Server 4+ and above Zabbix Agent on monitored host **How it works** Include statistics in named.conf statistics-channels { inet 127.0.0.1 port 8053 allow { 127.0.0.1; }; }; Include - zabbix _agentd.d/bind.conf UserParameter=bind.net.udp,netstat -nua | grep :53 | wc -l UserParameter=bind.net.tcp,netstat -nta | grep :53 | wc -l UserParameter=bind.queries.in[*],curl http://127.0.0.1:8053/ 2>/dev/null | xml2 | grep -A1 "/statistics/server/counters/counter/@name=$1$" | tail -1 | cut -d= -f2 UserParameter=bind.queries.out[*],curl http://127.0.0.1:8053/ 2>/dev/null | xml2 | grep -A1 "/statistics/views/view/counters/counter/@name=$1$" | tail -1 | cut -d= -f2 UserParameter=bind.queries.query[*],curl http://127.0.0.1:8053/ 2>/dev/null | xml2 | grep -A1 "/statistics/server/counters/counter/@name=Qry$1$" | tail -1 | cut -d= -f2 ![](http://img.dzek.ru/images/dns.jpg) 
-
 ## Overview
 
 **Requirements**  

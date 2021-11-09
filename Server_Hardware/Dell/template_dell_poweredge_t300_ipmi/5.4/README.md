@@ -1,9 +1,5 @@
 # 3-IPMI Dell Power Edge T300
 
-## Description
-
-## Overview IPMI sensors for Dell PowerEdge T300: Ambient Temp, FAN 1 RPM, FAN 2 RPM, Planar Temp, Power 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho 
-
 ## Overview
 
 IPMI sensors for Dell PowerEdge T300:

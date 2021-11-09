@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description DNS応答時間測定 ## Overview DNSの応答性能を測定します。 テンプレートを利用する場合zabbix _agentd.confでリモートコマンドを有効にしてください。 EnableRemoteCommands=1 UnsafeUserParameters=1 マクロ {$DNS _SERVER}＝利用するDNSサーバを指定します。 {$DOMAIN _NAME}＝対象ドメイン名を指定します。 
+DNS応答時間測定
 
 ## Overview
 

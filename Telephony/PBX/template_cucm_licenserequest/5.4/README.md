@@ -1,9 +1,5 @@
 # Cisco AXL License data
 
-## Description
-
-## Overview Запрос кол-ва лицензий для Cisco UCM 11.5 через HTTP Agent. На CUCM необходим application user с правами на чтение AXL. В шаблоне использованы макросы: логин для Application user: {$ZABBIX _APIUSER _UC} пароль для Application user: {$ZABBIX _APIPASS _UC} ## Author Yaazard 
-
 ## Overview
 
 Запрос кол-ва лицензий для Cisco UCM 11.5 через HTTP Agent.

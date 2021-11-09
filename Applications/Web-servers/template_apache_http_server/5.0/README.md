@@ -1,9 +1,5 @@
 # Apache
 
-## Description
-
-## Overview This template is for Apache HTTP server monitoring. It contains one master item that connects to HTTP Agent every 10 seconds, requests server-status page, provided by mod-status Apache module and spreads collected information between 18 dependent items. No triggers. See screenshot for details. Refer to the blog post <https://blog.zabbix.com/apache-http-server-monitoring/6972> for even more details. ## Author Andris Zeila 
-
 ## Overview
 
 This template is for Apache HTTP server monitoring. It contains one master item that connects to HTTP Agent every 10 seconds, requests server-status page, provided by mod-status Apache module and spreads collected information between 18 dependent items. No triggers. See screenshot for details.

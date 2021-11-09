@@ -1,9 +1,5 @@
 # IPMI Dell PowerEdge R415
 
-## Description
-
-## Overview Simple IPMI template fetching: * Read Chassis Temperature * Read System Voltage * Read Fan speeds * Read Power (Voltage/Watts) ## Author Mads Falch Larsen 
-
 ## Overview
 
 Simple IPMI template fetching:

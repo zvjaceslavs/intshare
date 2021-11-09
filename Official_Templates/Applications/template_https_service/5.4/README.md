@@ -1,15 +1,5 @@
 # Template App HTTPS Service
 
-## Overview
-
-Official template from Zabbix distribution to check HTTPS service availability
-
-
-
-## Author
-
-Zabbix SIA
-
 ## Macros used
 
 There are no macros links in this template.

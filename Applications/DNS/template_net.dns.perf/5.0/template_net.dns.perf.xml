@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-11-09T04:53:30Z</date>
+  <date>2021-11-09T08:22:58Z</date>
   <groups>
     <group>
       <name>自宅ラックテンプレート</name>

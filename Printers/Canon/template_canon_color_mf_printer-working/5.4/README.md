@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template for color Canon Multi Functional printer. ## Overview Modified version of created by aikucits Corrected the error when the importing template to new zabbix versions. It tested on Zabbix version 5.0.5 Regards.. 
+Template for color Canon Multi Functional printer.
 
 ## Overview
 

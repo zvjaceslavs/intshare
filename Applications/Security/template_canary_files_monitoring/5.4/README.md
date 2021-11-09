@@ -1,9 +1,5 @@
 # Canary
 
-## Description
-
-## Overview Canary files can help you identify information breaches or ransomware attacks. The script monitors when a file, or set of files, are accessed and upon detection execute several commands to help identify the source of the event. This script should be run by cron every minute. The file files2monitor should contain the files to monitor, all in one line, space separated. Dependencies: inotify-tools, flock, zabbix _sender Script and Zabbix template to: Detect actions on canary files, read, write or open. Support for multiple files monitoring. Avoid multiple simultaneous execution of the script using flock. Sends information to zabbix only when incident happens, for monitoring resource optimization. Records information from inotify, top, netstat, lsof, who, ps and fuser upon event detection. Dependencies: inotify-tools, flock, zabbix _sender https://github.com/rggassner/gassnerZabbixScripts/tree/master/canary The shell script can be found in the github repository above. Suggestions are welcome! 
-
 ## Overview
 
 Canary files can help you identify information breaches or ransomware attacks.

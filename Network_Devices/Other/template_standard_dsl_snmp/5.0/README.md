@@ -1,9 +1,5 @@
 # SNMP ADSL Stats
 
-## Description
-
-## Overview Built on 3.2, this template supports the following SNMP OIDs for monitoring of DSL stats ADSL-LINE-MIB::adslAtucCurrSnrMgn ADSL-LINE-MIB::adslAtucCurrAtn ADSL-LINE-MIB::adslAtucCurrOutputPwr ADSL-LINE-MIB::adslAtucCurrAttainableRate ADSL-LINE-MIB::adslAturCurrSnrMgn ADSL-LINE-MIB::adslAturCurrAtn ADSL-LINE-MIB::adslAturCurrOutputPwr ADSL-LINE-MIB::adslAturCurrAttainableRate ADSL-LINE-MIB::adslAtucChanCurrTxRate ADSL-LINE-MIB::adslAturChanCurrTxRate Also monitors DSL errors and resyncs. Tested against a Cisco 887VA, should work for any other devices that has the standard ADSL OID of .1.3.6.1.2.1.10.94.1 ## Author SirLagz 
-
 ## Overview
 
 Built on 3.2, this template supports the following SNMP OIDs for monitoring of DSL stats

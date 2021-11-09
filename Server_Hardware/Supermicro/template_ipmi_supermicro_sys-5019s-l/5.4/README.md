@@ -1,9 +1,5 @@
 # IPMI Supermicro SYS-5019S-L
 
-## Description
-
-## Author winmasta 
-
 ## Author
 
 winmasta

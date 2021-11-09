@@ -1,9 +1,5 @@
 # Storage Lenovo ix4-300d
 
-## Description
-
-## Overview SNMPv3 Template for Lenovo NAS ix4-300d: this template monitor RAID, FAN , Disk partitions, Connected users, Network interfaces and device temperature. - 11 items - 5 Triggers - 8 Discovery ## Author Hamdi Ben Abdallah 
-
 ## Overview
 
 SNMPv3 Template for Lenovo NAS ix4-300d: this template monitor RAID, FAN , Disk partitions, Connected users, Network interfaces and device temperature. 

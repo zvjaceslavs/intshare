@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-11-09T05:11:58Z</date>
+  <date>2021-11-09T08:40:40Z</date>
   <groups>
     <group>
       <name>Clickhouse servers</name>

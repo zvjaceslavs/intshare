@@ -1,9 +1,5 @@
 # Konica C3110 SNMP
 
-## Description
-
-## Overview Template for Konica Minolta C3110 ## Author cruppy 
-
 ## Overview
 
 Template for Konica Minolta C3110

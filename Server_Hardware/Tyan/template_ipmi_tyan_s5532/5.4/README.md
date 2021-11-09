@@ -1,9 +1,5 @@
 # IPMI Tyan S5532
 
-## Description
-
-## Overview Template for IPMI on mainboard Tyan S5532. Probably needs to be improved (no triggers). 
-
 ## Overview
 
 Template for IPMI on mainboard Tyan S5532.

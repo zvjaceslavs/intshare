@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template for SOPHOS XG (Version 18) series Firewall. (Tested on XG260 with Zabbix 5.0) Used MIB: SFOS-FIREWALL-MIB ## Overview SNMPv2 template for XG series (Version 18) Sophos Firewall 64 static items and 37 triggers + discovered interface items and triggers It using (linked) default zabbix templates: Template Module Generic SNMP Template Module Interfaces SNMP Template Module HOST-RESOURCES-MIB CPU SNMP Necessary MIB: SOPHOS-XG-MIB18.txt - you have to upload it on monitoring endpoint server or proxy (for CentOS /usr/share/snmp/mib) https://docs.sophos.com/nsg/sophos-firewall/MIB/SOPHOS-XG-MIB.zip Mandatory default macros: {$SNMP _COMMUNITY} Optional macroses that can be overloaded per device: {$CPU.UTIL.CRIT} {$DISK _UTIL _MAX} {$MEMORY _UTIL _MAX} {$SWAP _UTIL _MAX} Tested on XG106 (FW 18.0.2 MR-2) with zabbix 5.0.x (Probably can be ported to 4.0 and lower) ## Author R.P.Wimmer 
+Template for SOPHOS XG (Version 18) series Firewall. (Tested on XG260 with Zabbix 5.0) Used MIB: SFOS-FIREWALL-MIB
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # 3-IPMI Dell Power Edge T620
 
-## Description
-
-## Overview IPMI sensors for Dell PowerEdge T620: Current 1, Current 2, Fan1 RPM, Fan2 RPM, Inlet Temp, Power, Pwr Consumption, Voltage 1, Voltage 2, Temp 27/09/2016: Some changes and fixes. Add Temp Sensor. ## Author Daniel Carvalho 
-
 ## Overview
 
 IPMI sensors for Dell PowerEdge T620:

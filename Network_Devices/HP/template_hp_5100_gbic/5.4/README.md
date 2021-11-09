@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Sinais ópticos (GBIC) para SW HP 5100 ## Overview Template for SW 5100 with GBIC. GBIC Information: - Optical signal level - Laser Temperature - Voltage and Current in the Laser - Wavelength - Manufacturer Required to MIB: HH3C-TRANSCEIVER-INFO-MIB ## Author Geraldo Jr 
+Sinais ópticos (GBIC) para SW HP 5100
 
 ## Overview
 

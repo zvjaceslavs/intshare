@@ -1,9 +1,5 @@
 # SNMP QNAP NAS
 
-## Description
-
-## Overview Based on template: "Zabbix 3.0 QNAP NAS SNMP template" Changes: - added sysUptime 0.01 multiplier - fixed typo "Received bps on" Before using, define Macros (Administration -> General -> Macros): * {$SNMP _COMMUNITY} : public * {$SNMP _PORT} : 161 ## Author Brut. 
-
 ## Overview
 
 Based on template: "Zabbix 3.0 QNAP NAS SNMP template"

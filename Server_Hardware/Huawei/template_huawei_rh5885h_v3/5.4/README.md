@@ -1,9 +1,5 @@
 # Huawei Server iBMC
 
-## Description
-
-## Overview This template for **RH5885H V3** Protocol SNMP v2 Items 177 with low discovery **Triggers**: System health status critical System health status status major System health status status minor CPU status critical CPU status major CPU status minor Fan status critical Fan status major Fan status minor Hard disk status critical Hard disk status major Hard disk status minor Memory status critical Memory status major Memory status minor Power supply status critical Power supply status major Power supply status minor Temperature is too high Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administration/zabbix/templates/RH5885H%20V3.xml) repository MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/huawei/RH5885H%20V3/snmp) repository ## Author P.V. Galonza 
-
 ## Overview
 
 This template for **RH5885H V3**

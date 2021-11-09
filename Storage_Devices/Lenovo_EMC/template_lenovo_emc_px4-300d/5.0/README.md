@@ -42,9 +42,6 @@ There are no macros links in this template.
 |USB device #{#SNMPVALUE} Type|<p>USB device type(such UPS(3), PTP(6), printer(7) and so on)</p>|`SNMP agent`|usbType.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |{#SNMPVALUE} Capacity|<p>Capacity of disk</p>|`SNMP agent`|diskSize.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |{#SNMPVALUE} Status|<p>Status of Disk. There are four status: NORMAL FOREIGN FAULTED MISSING</p>|`SNMP agent`|diskStatus.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Write merges per seconds|<p>-</p>|`SNMP agent`|ioMgws.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
-|{#SNMPVALUE} Read io request per seconds|<p>-</p>|`SNMP agent`|ioReqrs.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
-|{#SNMPVALUE} Write io request per seconds|<p>-</p>|`SNMP agent`|ioReqws.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |{#SNMPVALUE} Average queue lenght|<p>-</p>|`SNMP agent`|ioAvgQueue.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |{#SNMPVALUE} Average service time at disk|<p>-</p>|`SNMP agent`|ioAvgSvc.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |{#SNMPVALUE} Average disk utilization|<p>-</p>|`SNMP agent`|ioAvgUtil.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
@@ -53,6 +50,9 @@ There are no macros links in this template.
 |{#SNMPVALUE} Kilobytes read per seconds|<p>-</p>|`SNMP agent`|ioKbrs.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |{#SNMPVALUE} Kilobytes written per seconds|<p>-</p>|`SNMP agent`|ioKbws.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |{#SNMPVALUE} Read merges per seconds|<p>-</p>|`SNMP agent`|ioMgrs.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
+|{#SNMPVALUE} Write merges per seconds|<p>-</p>|`SNMP agent`|ioMgws.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
+|{#SNMPVALUE} Read io request per seconds|<p>-</p>|`SNMP agent`|ioReqrs.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
+|{#SNMPVALUE} Write io request per seconds|<p>-</p>|`SNMP agent`|ioReqws.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |Connected client #{#SNMPVALUE} For a given protocol|<p>Connected client count for a given protocol</p>|`SNMP agent`|conCount.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |Connected client #{#SNMPVALUE} Protocol used by this kind of clients|<p>Protocol used by this kind of clients</p>|`SNMP agent`|conProtocol.[{#SNMPINDEX}]<p>Update: 120s</p><p>LLD</p>|
 |{#SNMPVALUE} Value|<p>-</p>|`SNMP agent`|tempEntry.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|

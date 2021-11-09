@@ -1,9 +1,5 @@
 # Printer Xerox WorkCentre 3220
 
-## Description
-
-## Overview ``` Hello everyone, Working on several Xerox 7220. I found the template [Vladim Greb](owner/g_115418446613921870307) I adjusted to have the information of the four toners (cyan / yellow / magenta / black) With trigers same as on the original template ``` ## Author Alex Clerbois 
-
 ## Overview
 
 

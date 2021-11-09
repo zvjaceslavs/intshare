@@ -1,9 +1,5 @@
 # SNMP Processors
 
-## Description
-
-## Overview Official template from Zabbix distribution to discover processors by SNMP ## Author Zabbix SIA 
-
 ## Overview
 
 Official template from Zabbix distribution to discover processors by SNMP

@@ -1,9 +1,5 @@
 # EdgeMAX SNMPv2
 
-## Description
-
-## Overview This template allows you to quickly get up and running with monitoring of Ubiquiti's EdgeRouter line of devices. It allows for auto-discovering of network interfaces and automatically applies appropriate triggers for the discovered network interfaces. Please see @ [Github (albinbatman/zabbix-edgemax-template)](https://github.com/albinbatman/zabbix-edgemax-template) 
-
 ## Overview
 
 This template allows you to quickly get up and running with monitoring of Ubiquiti's EdgeRouter line of devices. It allows for auto-discovering of network interfaces and automatically applies appropriate triggers for the discovered network interfaces.

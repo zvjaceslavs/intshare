@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template for the Draytek Vigor 130 VDSL Modem. ## Overview Simple SNMP agent for the Draytek Vigor 130 ADSL/VDSL Modem. Provides the following: Items * LAN Status * LAN Traffic IN * LAN Traffic OUT * Uptime * VDSL Rx Attenuation * VDSL Rx Rate (Actual) * VDSL Rx Rate (Attainable) * VDSL Rx SNR Margin * VDSL Tx (Actual) * VSDL Upstream Noise * WAN1 Status * WAN1 Traffic IN * WAN1 Traffic OUT Graphs * Actual Tx Rates * LAN Traffic * WAN1 Traffic * WAN Attainable vs. Actual Rx Rates * WAN Noise Levels Triggers * Device has just been restarted * LAN is down * WAN1 down ## Author Sean Gordon 
+Template for the Draytek Vigor 130 VDSL Modem.
 
 ## Overview
 

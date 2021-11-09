@@ -1,9 +1,5 @@
 # SNMP - Lexmark COLOR
 
-## Description
-
-## Overview SNMP Template Lexmark Generic Laser Printer - Color ## Author Romulo Ribeiro Moreira 
-
 ## Overview
 
 SNMP Template

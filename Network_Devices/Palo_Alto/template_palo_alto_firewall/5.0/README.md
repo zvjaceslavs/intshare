@@ -1,9 +1,5 @@
 # Palo_Alto_Firewall
 
-## Description
-
-## Overview FAN Discovery Temperature Discovery Memory 
-
 ## Overview
 
 FAN Discovery

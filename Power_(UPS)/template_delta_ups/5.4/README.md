@@ -1,9 +1,5 @@
 # UPS Delta
 
-## Description
-
-## Overview Works Fine with UPS Delta (SNMP Module). All traductions are in Portuguese - Brazil. Good luck! ## Author Richard Augusto S. Sousa 
-
 ## Overview
 
 Works Fine with UPS Delta (SNMP Module).

@@ -1,9 +1,5 @@
 # IPMI Dell PowerEdge M610
 
-## Description
-
-## Overview IPMI readout for Dell PowerEdge M610 blades. Reading Power usage and temperature. 
-
 ## Overview
 
 IPMI readout for Dell PowerEdge M610 blades.

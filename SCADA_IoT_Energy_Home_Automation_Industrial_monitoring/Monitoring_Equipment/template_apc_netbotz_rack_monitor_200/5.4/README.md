@@ -1,9 +1,5 @@
 # SNMP APC NetBotz Rack Monitor 200
 
-## Description
-
-## Overview LLD of Sensors (Only Temperature and humidity) Trigger Prototypes for recommended 45RH% - 55RH% humidity and 20°C - 24°C Temperature Graph Prototypes for Temperature and Humidity. Triggers names contain the last value that cause the trigger so you can see the temp/hum in the alert. 
-
 ## Overview
 
  LLD of Sensors (Only Temperature and humidity) 

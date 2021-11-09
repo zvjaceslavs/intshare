@@ -1,9 +1,5 @@
 # Delta UPS SNMP v1
 
-## Description
-
-## Overview Simple **SNMPv1** template for Delta UPS with LLD for lines. Tested on Zabbix 3.0 but should works on older versions. Required extra configuration: Macro for {$SNMP _COMMUNITY} UPS-MIB ## Author sim 
-
 ## Overview
 
 Simple **SNMPv1** template for Delta UPS with LLD for lines.  

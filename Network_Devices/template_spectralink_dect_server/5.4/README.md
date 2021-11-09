@@ -1,9 +1,5 @@
 # Spectralink DECT server
 
-## Description
-
-## Overview Need to install [Spectralink MIBs](http://support.spectralink.com/resources/spectralink-ip-dect-mib-files "Spectralink MIBs") 11 items trigger *Base station is DOWN* 
-
 ## Overview
 
 Need to install [Spectralink MIBs](http://support.spectralink.com/resources/spectralink-ip-dect-mib-files "Spectralink MIBs")

@@ -1,9 +1,5 @@
 # IMPRESSORA - KYOCERA
 
-## Description
-
-## Overview Monitora Estado da impressora(Mostrador do Visor), contador total, Nº de Série, Modelo, Uptime. ## Author Leonardo Nascimento da Silva 
-
 ## Overview
 
 Monitora Estado da impressora(Mostrador do Visor), contador total, Nº de Série, Modelo, Uptime.

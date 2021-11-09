@@ -1,9 +1,5 @@
 # App MDaemon
 
-## Description
-
-## Overview Template for Mdaemon russian version. 
-
 ## Overview
 
 Template for Mdaemon russian version. 

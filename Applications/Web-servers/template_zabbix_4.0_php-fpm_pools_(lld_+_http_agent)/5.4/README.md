@@ -1,9 +1,5 @@
 # App PHP-FPM
 
-## Description
-
-## Overview (Check the latest version and updates to this doc at the repo: <https://github.com/vigrai/zabbix-template-php-fpm> ) # Zabbix 4.0 Template for PHP-FPM Pools This is a template for monitoring php-fpm and it's pools with [Zabbix](www.zabbix.com). What's special about this template, is that it *automatically* detects (using LLD) the running php-fpm pools and creates items for measuring metrics from each pool. It uses Http Agent type check in zabbix in order to parse the php status information into useful metrics. So, if you are running a server with multiple php-fpm pools, this may be a better alternative for monitoring php than other templates available. # Compatibility This template was tested using: | Software | Vesion | | ------ | ------ | | Zabbix Server | 4.0.3 | | Debian | Stretch (9.8) | | Php-fpm | 7.2 | It might also work with other combination of versions. # Metrics This are the metrics created for each php-fpm pool: ![N|Solid](https://github.com/vigrai/zabbix-template-php-fpm/blob/master/img/metrics.png) # Requirements - Php-status should be enabled in the php-fpm pools. - Php-status should be accessible and located in /php-status _POOLNAME for each pool (see step 4 of Setup). # Setup Even though this template is made with automation in mind, there's still some manual steps to be done in the client (where php-fpm and zabbix-agent are running) in order to get it working: 1. Clone this template into a temporary directory. ``` # git clone https://github.com/vigrai/zabbix-template-php-fpm.git /tmp/zabbix-template ``` 2. Put the file `php-fpm.discover _pools.pl` into the /etc/zabbix directory and make it executable. ``` # cp /tmp/zabbix-template/php-fpm.discover _pools.pl /etc/zabbix # chmod +x /etc/zabbix/php-fpm.discover _pools.pl # chown zabbix.zabbix /etc/zabbix/php-fpm.discover _pools.pl ``` 3. Copy the file userparameter _php-fpm.conf into /etc/zabbix/zabbix _agentd.d. ``` # cp /tmp/zabbix-template/userparameter _php-fpm.conf /etc/zabbix/zabbix _agentd.d ``` 4. Make sure that your php-fpm is correctly setup: [x] The pools should have php-status enabled. [x] Php-status should be available in the path /fpm-status _[NAME-OF-THE-POOL] Example configuration file for pool called *nms* (/etc/php/7.2/fpm/pool.d/nms.conf): ```[nms]``` ` ## Author Fabio Gallese 
-
 ## Overview
 
 (Check the latest version and updates to this doc at the repo: <https://github.com/vigrai/zabbix-template-php-fpm> )
@@ -222,6 +218,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|PHP-FPM ({#POOLNAME}): Start Since|<p>How long has this pool been running.</p>|`Dependent item`|php-fpm.start_since[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
+|PHP-FPM ({#POOLNAME}): Start Time|<p>The time when this pool was started.</p>|`Dependent item`|php-fpm.start_time[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
+|PHP-FPM ({#POOLNAME}): Total Processes|<p>The total number of server processes currently running; the sum of idle processes + active processes. If the process manager is static, this number will match pm.max_children.</p>|`Dependent item`|php-fpm.total_processes[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 |Memory Used by Pool {#POOLNAME}|<p>-</p>|`Zabbix agent`|proc.mem["php-fpm: pool {#POOLNAME}",,,,pmem]<p>Update: 120s</p><p>LLD</p>|
 |PHP-FPM Pool {#POOLNAME} status page|<p>-</p>|`HTTP agent`|php-fpm.status[{#POOLNAME}]<p>Update: 60s</p><p>LLD</p>|
 |Process for pool {#POOLNAME}|<p>-</p>|`Zabbix agent`|proc.num["php-fpm: pool {#POOLNAME}"]<p>Update: 60s</p><p>LLD</p>|
@@ -235,9 +234,6 @@ There are no template links in this template.
 |PHP-FPM ({#POOLNAME}): Pool Name|<p>The name of this pool.</p>|`Dependent item`|php-fpm.pool[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 |PHP-FPM ({#POOLNAME}): Process Manager|<p>The method used by the process manager to control the number of child processes (possible values: ondemand, dynamic or static) for this pool.</p>|`Dependent item`|php-fpm.process_manager[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 |PHP-FPM ({#POOLNAME}): Slow Requests|<p>The number of requests that exceeded your request_slowlog_timeout value.</p>|`Dependent item`|php-fpm.slow_requests[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
-|PHP-FPM ({#POOLNAME}): Start Since|<p>How long has this pool been running.</p>|`Dependent item`|php-fpm.start_since[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
-|PHP-FPM ({#POOLNAME}): Start Time|<p>The time when this pool was started.</p>|`Dependent item`|php-fpm.start_time[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
-|PHP-FPM ({#POOLNAME}): Total Processes|<p>The total number of server processes currently running; the sum of idle processes + active processes. If the process manager is static, this number will match pm.max_children.</p>|`Dependent item`|php-fpm.total_processes[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

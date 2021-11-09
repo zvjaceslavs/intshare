@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description NetGear ReadyNAS 102 ## Overview 1. Discovery Disk a. Capacity b. Model c. Serial d. State e. Temperature 2. Discovery Volume a. Freespace b. RaidLevel c. Name d. Size e. Status 3. fanRPM 4. fanStatus 5. S/N 6. Firmware 7. Temperature CPU NEED in Macros HOST {$SNMP _COMMUNITY} {$SNMP _PORT} {$FAN _MINIMUM _RPM} Tested ReadyNas 102 Version 6.2.5 Zabbix 2.4.6 ## Author Bonardi 
+NetGear ReadyNAS 102
 
 ## Overview
 
