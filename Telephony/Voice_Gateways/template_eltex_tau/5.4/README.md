@@ -1,9 +1,5 @@
 # Eltex TAU SNMPv2
 
-## Description
-
-## Overview First attempt to create a template for TAU-24. On other models it was not tested, but it should work. Первая попытка создать шаблон для TAU-24. На остальных моделях не тестировалось, но должно работать. ## Author Oleg 
-
 ## Overview
 
 First attempt to create a template for TAU-24. On other models it was not tested, but it should work.

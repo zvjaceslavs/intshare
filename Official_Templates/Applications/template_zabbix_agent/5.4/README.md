@@ -1,9 +1,5 @@
 # App Zabbix Agent
 
-## Description
-
-## Overview Official Zabbix Agent Template from Zabbix distribution ## Author Zabbix SIA 
-
 ## Overview
 
 Official Zabbix Agent Template from Zabbix distribution

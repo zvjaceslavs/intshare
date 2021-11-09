@@ -1,9 +1,5 @@
 # App EMQTT  Service
 
-## Description
-
-## Overview See <https://github.com/viniciusbo/zabbix-emqtt> for instructions. ## Author Vinícius Borriello 
-
 ## Overview
 
 See <https://github.com/viniciusbo/zabbix-emqtt> for instructions.

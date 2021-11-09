@@ -1,9 +1,5 @@
 # App ActiveMQ JMX
 
-## Description
-
-## Overview You can configure like the image; ![](http://prntscr.com/hk7sbu) ## Author Armagan Yaman 
-
 ## Overview
 
 You can configure like the image;

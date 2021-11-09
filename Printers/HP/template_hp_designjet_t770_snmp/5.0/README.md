@@ -1,9 +1,5 @@
 # HP_Designjet_T770
 
-## Description
-
-## Overview Displays informations (Ink usage, another information) graths and triggers on low toner levels, printheads. ## Author Dorin Sergey 
-
 ## Overview
 
 Displays informations (Ink usage, another information) graths and triggers on low toner levels, printheads.

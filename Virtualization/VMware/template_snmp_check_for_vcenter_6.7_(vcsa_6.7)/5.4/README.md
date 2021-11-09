@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description vCenter 6.7 U1 Build 10244745 ## Overview Template for SNMP check of VMware vCenter 6.7 **THIS TEMPLATE BOTH FOR ZABBIX 3.4 & 4.0** based on : https://share.zabbix.com/virtualization/vmware/snmp-check-vcenter-vcsa-6-5 09/nov/2018 **Template has been completely rebuilt!** Now it use autodiscovery and LLD. Setup procedure: **For Zabbix 3.4:** 1. Attach template 2. Create Regular Expression as shown below: Name: VMWARESVC Result is TRUE ^(.*?)((?= .)|(?=$)) Result is FALSE ^saslauth|bas|anacro|pytho 3. Put the linked script to Externalscripts directory on Zabbix Server with replace $vcsa and given name "vcsa _discovery" 4. Done. **For Zabbix 4.0:** 1. Attach template 2. Put the linked script to Externalscripts directory on Zabbix Server with replace $vcsa and given name "vcsa _discovery" 3. Done. Script link: https://yadi.sk/d/uYPmitqbaRwpew There is a few important things!! 1. In update 6.7U1 VMWare cut service names in OID: berfore: vpxd after: vpx So, in discovered item names there will be a little bit strange names. <https://support.zabbix.com/browse/ZBXNEXT-3753> - renaming discovered items still unavailable ## Author Aleksey Omelyanovich 
+vCenter 6.7 U1 Build 10244745
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # FreeBSD IP statistics
 
-## Description
-
-## Overview Keep track of IPv4 and IPv6 statistics on FreeBSD. --- In /usr/local/etc/zabbix3/zabbix _agentd.conf, add: ``` UserParameter=net.ip4[*],netstat -s -p ip | awk '/$1/{ print $$1}' UserParameter=net.ip6[*],netstat -s -p ip6 | awk '/$1/{ print $$1}' ``` --- Template might work on earlier Zabbix versions, only tested for 3.0.x ## Author RedShift 
-
 ## Overview
 
 Keep track of IPv4 and IPv6 statistics on FreeBSD.

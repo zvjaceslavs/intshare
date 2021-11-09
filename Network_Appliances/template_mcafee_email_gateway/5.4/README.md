@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Created by Samuel Martins 2019-04-24 Version 1.00 https://github.com/slunart/Zabbix-Templates https://www.linkedin.com/in/slmartins/ ## Overview Template SNMP McAfee Email Gateway I used the MCAFEE-SCM-MIB to create this template and I tested with the version 5.5, a very old version, but I think it will works well with the others versions. This appliance is now at end-of-life status, you can check this here: https://www.mcafee.com/enterprise/pt-br/support/email-security-end-of-life.html This template supply the security monitor for SMTP and POP3. It also available at https://github.com/slunart/Zabbix-Templates/tree/master/McAfeeEmailGateway ## Author Samuel Martins 
+Created by Samuel Martins 2019-04-24 Version 1.00 https://github.com/slunart/Zabbix-Templates https://www.linkedin.com/in/slmartins/
 
 ## Overview
 
@@ -86,8 +86,8 @@ There are no discovery rules in this template.
 |SMTP State|<p>The health of the SMTP protocol</p>|`SNMP agent`|smtp-state<p>Update: 1m</p>|
 |POP3 Total of Connections|<p>Total connections used</p>|`SNMP agent`|pop3-TotalConnections<p>Update: 1m</p>|
 |Number of POP3 E-mail Messages from Outside|<p>Number of e-mail messages from outside</p>|`SNMP agent`|pop3-from-outside-messages<p>Update: 1m</p>|
-|Number of POP3 PUPs from inside|<p>Number of potentially unwanted programs detected from inside</p>|`SNMP agent`|pop3-from-inside-pups-detected<p>Update: 1m</p>|
 |Total of SMTP Emails Rejected After SenderID Check|<p>Total number of emails rejected after SenderID check</p>|`SNMP agent`|smtp-spfpra-rejected<p>Update: 1m</p>|
+|Number of POP3 PUPs from inside|<p>Number of potentially unwanted programs detected from inside</p>|`SNMP agent`|pop3-from-inside-pups-detected<p>Update: 1m</p>|
 |Number of SMTP Directory Harvests Blocked|<p>Number of directory harvests blocked</p>|`SNMP agent`|smtp-directory-harvest-blocked<p>Update: 1m</p>|
 |Number of SMTP Virus Blocked|<p>Number of viruses blocked</p>|`SNMP agent`|smtp-virus-blocked<p>Update: 1m</p>|
 |POP3 State|<p>The health of the POP3 protocol</p>|`SNMP agent`|pop3-state<p>Update: 1m</p>|

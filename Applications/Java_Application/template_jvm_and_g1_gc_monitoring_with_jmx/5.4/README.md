@@ -1,9 +1,5 @@
 # JVM Generic
 
-## Description
-
-## Overview This is a modification of [official template for generic java applications, customized for G1 GC. (and includes better graphs) <https://github.com/tahajahangir/zabbix-jvm-template> ## Author Taha Jahangir 
-
 ## Overview
 
 This is a modification of [official template for generic java applications, customized for G1 GC. (and includes better graphs)

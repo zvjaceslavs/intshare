@@ -1,9 +1,5 @@
 # Graylog: Nodes
 
-## Description
-
-## Overview Template created to monitor GrayLog nodes through LLD (Low Level Discovery) We added a feature of Zabbix called LLD (Low Level Discovery) in the model, this automation seeks to facilitate the discovery of the nodes in GrayLog, so that you do not have to register the nodes manually just set the time of the discovery rule. Monitoring Itens: ----------------- * GrayLog: Filter execution Time (FIltered, Incomming, Outgoing, Process) * GrayLog: Internal Log Message (Error, Fatal, Trace, Warn) * GrayLog: Journal ( Journal Size) * GrayLog: Node Memory(LLD)/( Free Memory, Max Memory, Total Memory, Used Memory) * GrayLog: Node Status (Lifecycle, Processing, Status ) * GrayLog: Services Requirements ------------ * Zabbix 3.4; * Graylog 2.4; * Zabbix Agent install on Graylog; * Python 3.4 or > Python3; * Imports; + import requests; + import json; + import sys ## Author Beza 
-
 ## Overview
 
 Template created to monitor GrayLog nodes through LLD (Low Level Discovery)

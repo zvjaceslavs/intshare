@@ -1,9 +1,5 @@
 # SNR
 
-## Description
-
-## Overview Based on official MIB from vendor (they done some realy weird stuff this time). Checked on couple of local single and stacked devices. Basic system Items, Triggers and Graphs. ## Author Chirkov V. 
-
 ## Overview
 
 Based on official MIB from vendor (they done some realy weird stuff this time). Checked on couple of local single and stacked devices. Basic system Items, Triggers and Graphs.

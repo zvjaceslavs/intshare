@@ -1,9 +1,5 @@
 # SNMP Riello UPS
 
-## Description
-
-## Overview Basic Riello UPS Template no MIBs needed ## Author I. Aliaga U. 
-
 ## Overview
 
 Basic Riello UPS Template no MIBs needed

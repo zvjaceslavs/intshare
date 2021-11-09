@@ -1,9 +1,5 @@
 # Printer_Konica
 
-## Description
-
-## Overview Displays toner levels, special units, total pages and triggers on low toner and units level. ## Author Dorin Sergey 
-
 ## Overview
 
 Displays toner levels, special units, total pages and triggers on low toner and units level.

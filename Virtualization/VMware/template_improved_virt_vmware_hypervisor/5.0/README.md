@@ -1,9 +1,5 @@
 # Virt VMware Hypervisor
 
-## Description
-
-## Overview An improved version of the default "Virt VMware Hypervisor template". Added the following items: **Cpu Total Frequency** **Cpu Usage Percentage** **Available memory (bytes)** **Used memory percentage** Also added various useful triggers (the original template has none). Tested on version 3.2, but will probably work on 3.0 as well. Any feedback appreciated. ## Author Aviram Alter 
-
 ## Overview
 
 An improved version of the default "Virt VMware Hypervisor template".

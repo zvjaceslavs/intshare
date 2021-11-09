@@ -1,9 +1,5 @@
 # Microsoft Exchange Server 2019
 
-## Description
-
-## Overview Exchange 2019 template - Work in progress ,Updated on 10-April-2019 added perfmon monitoring, first batch Generated with: [https://xh-compiler.com](https://xh-compiler.com/) ## Author eXtremeHosting (https://xh-compiler.com/) 
-
 ## Overview
 
 Exchange 2019 template - Work in progress  

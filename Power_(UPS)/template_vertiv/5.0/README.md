@@ -1,9 +1,5 @@
 # Vertiv
 
-## Description
-
-## Overview https://github.com/Mihguel-Araujo/Template-Zabbix/blob/main/Template%20Vertiv ## Author Mihguel da Silva Santos Tavares de Araujo 
-
 ## Overview
 
 https://github.com/Mihguel-Araujo/Template-Zabbix/blob/main/Template%20Vertiv
@@ -58,13 +54,13 @@ There are no template links in this template.
 |Input Line B Current|<p>-</p>|`SNMP agent`|psInputLineBCurrent<p>Update: 1m</p>|
 |psSystemTotalACEnergy|<p>-</p>|`SNMP agent`|psSystemTotalACEnergy<p>Update: 1m</p>|
 |{#IFBATTERY} - Capacidade|<p>Tipo de Bateria Utilizada</p>|`SNMP agent`|ifBatteryRating[{#IFBATTERY}]<p>Update: 1m</p><p>LLD</p>|
+|{#IFDESCR} - Capacidade da Corrente|<p>-</p>|`SNMP agent`|ifCurrentCapacity[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
 |{#IFDESCR} - Falha no Retificador|<p>-</p>|`SNMP agent`|ifFailRectifyer[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
 |Hardware Version {#IFDESCR}|<p>-</p>|`SNMP agent`|ifHardwareVersion[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
 |Product Model {#IFDESCR}|<p>-</p>|`SNMP agent`|ifProducModel[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
 |Software Revision {#IFDESCR}|<p>-</p>|`SNMP agent`|ifSoftwareRevision[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
 |{#IFDESCR} - Temperature|<p>-</p>|`SNMP agent`|ifTemperatura[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
 |Serial {#IFDESCR}|<p>-</p>|`SNMP agent`|serial[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
-|{#IFDESCR} - Capacidade da Corrente|<p>-</p>|`SNMP agent`|ifCurrentCapacity[{#IFDESCR}]<p>Update: 1h</p><p>LLD</p>|
 |{#DESCR}|<p>-</p>|`SNMP agent`|if[{#DESCR}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 

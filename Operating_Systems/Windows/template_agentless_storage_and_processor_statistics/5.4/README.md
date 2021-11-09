@@ -1,9 +1,5 @@
 # OS Windows WMI
 
-## Description
-
-## Overview Template for receiving stats with zbxwmi script. This method allows to retrieve stats remotely by WMI without installing agent to OS. You can get script from: <https://github.com/13hakta/zbxwmi> - with tips and installation manual. Requires python 3 script (check link above). ## Author Vitaly Chekryzhev 
-
 ## Overview
 
 Template for receiving stats with zbxwmi script. This method allows to retrieve stats remotely by WMI without installing agent to OS.

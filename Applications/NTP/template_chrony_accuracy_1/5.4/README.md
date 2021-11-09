@@ -1,9 +1,5 @@
 # chrony
 
-## Description
-
-## Overview chrony accuracy Infomation Template Japanese version template is in the . 日本語版テンプレートは Sammeln Sie alle Informationen, die in der chronyc Befehl angezeigt wird. When you use a template Please make the following settings zabbix _agentd.conf. EnableRemoteCommands=1 UnsafeUserParameters=1 In ZabbixAgent is installed environment It will use the chrony template. 
-
 ## Overview
 
 chrony accuracy Infomation Template

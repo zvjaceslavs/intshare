@@ -1,9 +1,5 @@
 # VLAN L2 Huawei
 
-## Description
-
-## Overview Necessário configuração na vlan. vlan description statistic enable ## Author carlosviatroski 
-
 ## Overview
 
 Necessário configuração na vlan.

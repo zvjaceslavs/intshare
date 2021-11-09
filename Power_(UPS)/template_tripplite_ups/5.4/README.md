@@ -1,9 +1,5 @@
 # SNMP Tripplite
 
-## Description
-
-## Overview Updated! Fixed an incorrect OID and refined one of the graphs. This template was made from scratch for a SU20KRT8 (Using the newest Tripplite MIBs. Zabbix devs, come on and write MIB ingestion into the GUI already.). However, it should support any type of single phase UPS and likely 3 phase. I may add line discovery in later. But for now this template should cover everything most will need. Including triggers for temp, battery condition, bypass, voltage changes, etc. Enjoy and please rate! 
-
 ## Overview
 
 Updated! Fixed an incorrect OID and refined one of the graphs.

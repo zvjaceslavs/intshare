@@ -1,9 +1,5 @@
 # SNMP - Lexmark MONO
 
-## Description
-
-## Overview SNMP Template Lexmark Generic Laser Printer - Mono ## Author Romulo Ribeiro Moreira 
-
 ## Overview
 
 SNMP Template  

@@ -1,9 +1,5 @@
 # Printer_Panasonic_KX-MC6020RU
 
-## Description
-
-## Overview Displays total pages, another informations (count fax messages, copy pages, scan pages .....) and triggers on low toners and drums levels. Panasonic category. ## Author Dorin Sergey 
-
 ## Overview
 
 Displays total pages, another informations (count fax messages, copy pages, scan pages .....) and triggers on low toners and drums levels.  

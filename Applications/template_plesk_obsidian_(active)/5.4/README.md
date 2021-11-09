@@ -1,9 +1,5 @@
 # CustomApp Plesk
 
-## Description
-
-## Author samsteve169 
-
 ## Author
 
 samsteve169

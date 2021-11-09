@@ -1,9 +1,5 @@
 # Buffalo TeraStation TS4500R
 
-## Description
-
-## Overview Created for this Type of Tera Station: TS4500R * Items for all 4 Harddisk with Value Mapping + Disk Status (in Array or Standalone) + Disk SMART Status (with Trigger) * Array + Capacity + Status (Raidlevel) with Value Mapping * Failover + Partner + Role (with Trigger) with Value Mapping + Status * Services with Value Mapping + FTP + Mail Notification + NFS + SFTP + SMB (with Trigger) * System + Firmware Version + Firmware Update available with Value Mapping + Product Name + Serial Number Template was creating with using the TeraStation MIB File from Manufactor. Template contain NOT all possible Items. ## Author Bernhard Linz 
-
 ## Overview
 
 Created for this Type of Tera Station:

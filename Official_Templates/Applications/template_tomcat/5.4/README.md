@@ -1,9 +1,5 @@
 # JMX Tomcat
 
-## Description
-
-## Overview Official Tomcat Template from Zabbix distribution ## Author Zabbix SIA 
-
 ## Overview
 
 Official Tomcat Template from Zabbix distribution

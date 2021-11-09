@@ -1,9 +1,5 @@
 # 3COM 4500 28 Ports
 
-## Description
-
-## Overview Template para monitorar o Switch 3COM, modelo 4500 de 28 portas. Gráficos por porta, Entrada e Saída, Erro de tráfego nas 28 portas. O template exibe a alteração e status da porta. O template foi criado por: Marcelo Carvalho eu fiz somente a edição. ## Author Marcelo Carvalo e edição Gerson Thiago 
-
 ## Overview
 
 Template para monitorar o Switch 3COM, modelo 4500 de 28 portas.

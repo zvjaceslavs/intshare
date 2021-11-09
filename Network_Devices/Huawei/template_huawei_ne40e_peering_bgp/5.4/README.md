@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template para monitoramento de sessão BGP ## Overview Template to discovery all bgp peers and to create a trigger when the session bgp peer is down 
+Template para monitoramento de sessão BGP
 
 ## Overview
 

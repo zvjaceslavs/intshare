@@ -1,9 +1,5 @@
 # SNMP HP v1920-24G
 
-## Description
-
-## Overview Modified (added additional ports) following template https://share.zabbix.com/network _devices/cat-hp/hp-1920-16g 
-
 ## Overview
 
 Modified (added additional ports) following template https://share.zabbix.com/network\_devices/cat-hp/hp-1920-16g

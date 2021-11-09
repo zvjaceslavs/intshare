@@ -1,9 +1,5 @@
 # SNMP Cisco SG500x
 
-## Description
-
-## Overview PoE, port usage, uptime 
-
 ## Overview
 
 PoE, port usage, uptime
@@ -45,6 +41,8 @@ There are no template links in this template.
 |Stack device id, unit $1|<p>Asset tag of the product.</p>|`SNMP agent`|rlPhdUnitGenParamServiceTag[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Stack device serial, unit $1|<p>Asset tag of the product.</p>|`SNMP agent`|rlPhdUnitGenParamSerialNum[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Stack device uptime, unit $1|<p>Up time of the unit in 100th of second (sec/100).</p>|`SNMP agent`|rlPhdUnitEnvParamUpTime[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Admin status of interface $1|<p>INTEGER {up(1), down(2), testing(3)} The desired state of the interface. The testing(3) state indicates that no operational packets can be passed. When a managed system initializes, all interfaces start with ifAdminStatus in the down(2) state. As a result of either explicit management action or per configuration information retained by the managed system, ifAdminStatus is then changed to either the up(1) or testing(3) states (or remains in the down(2) state).</p>|`SNMP agent`|ifAdminStatus[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Speed of interface {#SNMPVALUE}|<p>An estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to `n+499,999'. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.</p>|`SNMP agent`|ifHighSpeed[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Outgoing unicast packets on interface $1|<p>The total number of packets that higher-level protocols requested be transmitted, and which were not addressed to a multicast or broadcast address at this sub-layer, including those that were discarded or not sent. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|ifOutUcastPkts[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Outgoing traffic on interface $1|<p>-</p>|`SNMP agent`|IfHCOutOctets[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
@@ -61,8 +59,6 @@ There are no template links in this template.
 |Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Description of interface $1|<p>A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software.</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Uptime of interface $1|<p>The value of sysUpTime at the time the interface entered its current operational state. If the current state was entered prior to the last re-initialization of the local network management subsystem, then this object contains a zero value.</p>|`SNMP agent`|ifLastChange[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|Admin status of interface $1|<p>INTEGER {up(1), down(2), testing(3)} The desired state of the interface. The testing(3) state indicates that no operational packets can be passed. When a managed system initializes, all interfaces start with ifAdminStatus in the down(2) state. As a result of either explicit management action or per configuration information retained by the managed system, ifAdminStatus is then changed to either the up(1) or testing(3) states (or remains in the down(2) state).</p>|`SNMP agent`|ifAdminStatus[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
-|Outbound errors on interface $1|<p>For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.</p>|`SNMP agent`|ifOutErrors[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Runtime stats and storage monitoring for macOS High Sierra Caching Service. ## Overview With the release of macOS 10.13 High Sierra, Apple have made a big change to their App and iCloud content caching services. This function used to be part of their add-on macOS Server package, but with 10.13 they've moved the feature into the regular macOS operating system. This means that any Macintosh computer running 10.13 High Sierra can serve as a content cache for a local network. The old macOS Server version had fancy logs and graphs that allowed you to monitor cahing performance and activity to keep an eye on the efficacy and health of the service. When they moved it all to regular macOS all that stuff disappeared. It's basically just an on/off checkbox. Instead, there's just a command-line tool that outputs the raw data from the service. You can see the stats by running `AssetCacheManagerUtil status` from a Terminal window. This template parses the JSON output of AssetCacheManagerUtil for monitoring in Zabbix. Requires Zabbix 3.4 and RemoteCommands=1 in the Zabbix Agent. 
+Runtime stats and storage monitoring for macOS High Sierra Caching Service.
 
 ## Overview
 

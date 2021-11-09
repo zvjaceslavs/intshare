@@ -1,9 +1,5 @@
 # MikroTik RB750GR3
 
-## Description
-
-## Overview MikroTik RB750GR3 
-
 ## Overview
 
 MikroTik RB750GR3

@@ -1,9 +1,5 @@
 # [Шаблон] TELNET - HP StorageWorks
 
-## Description
-
-## Overview **Version:** 4 *(04.04.2018)* * *+ 24 HDD (***Enclosure 1*) HW status (SMART, media errors, bad sectors) and triggers* **Supported models:** 2312fc, p2000, 2040 SAN (*2050 - works in progress*) **Language:** Russian only **Features:** * No external apps scripts * No LLD * Telnet (you can use SSH instead, but telnet is really quicker) * Regex (to get raw response from device or for pre-cleaning data for XPath) * 2-step preprocessing (xPath & regex) * Components health state operational status * Basic performance and status **Installation:** 1. Import this Template 2. Create two macro (at every device if all accounts are different or in template itself if accounts are equal): * {$SAN _LOGIN} with CLI Login * {$SAN _PASSWD} with CLI Password Now you have 1 new Template: * [Шаблон] TELNET - HP StorageWorks" And several new value mappings: * HP (StorageWorks) Blame State * HP (StorageWorks) Component Health * HP (StorageWorks) Controller ID * HP (StorageWorks) Controller Location * HP (StorageWorks) Controller Status * HP (StorageWorks) Enclosure Status * HP (StorageWorks) Failover State * HP (StorageWorks) HDD LED Status * HP (StorageWorks) Job Name * HP (StorageWorks) Port Status * HP (StorageWorks) PSU Location * HP (StorageWorks) Status * HP (StorageWorks) VDISK Status I tried to create all Keys of Items in most understood look. If you will have questions with understanding of Ites's names. All Applications of higher level are contain information about quantity of subcomponents. So: * App "Storage" contains the number of the connected Enclosures * App "Enclosure" contains the number of disks slots and installed physical disks * App "Controllers" contains the number of the vdisks * App "Virt(ual). disks" contains the number of the physical disks, used in vdisks and nuber of Volumes By default, all source XML Items for all basic subsystems are enabled ("XML" application). By default, only basic set of dependent Items is enabled. For getting data from 1 basic Storage (without expansions): * 1 disks enclosure * 2 controllers (A.B) * 4 FC ports (A1,B1,A2,B2) * 2 PSUs (left, right) * 1 physical disk (first in enclosure) * 1 virtual disk (first on controller A) * versions of main components ## Author Anth0nyME 
-
 ## Overview
 
 **Version:** 4 *(04.04.2018)*
@@ -252,8 +248,8 @@ There are no discovery rules in this template.
 |Внутреннее имя|<p>-</p>|`Dependent item`|hp.msa.system-information.system-name<p>Update: 0</p>|
 |Порт (A3) - тип подключения|<p>Порт 3 из 4</p>|`Dependent item`|hp.msa.ports.1.5.media<p>Update: 0</p>|
 |Физ. диск (1.13) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.13.vendor<p>Update: 0</p>|
-|Физ. диск (1.11)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-1_11,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Порт (A4) - статус|<p>Порт 4 из 4</p>|`Dependent item`|hp.msa.ports.1.7.status-numeric<p>Update: 0</p>|
+|Физ. диск (1.11)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-1_11,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Вирт. диск (1) - разделы|<p>-</p>|`Dependent item`|hp.msa.vdisks.1.num-array-partitions<p>Update: 0</p>|
 |Физ. диск (1.4) - контроллер|<p>-</p>|`Dependent item`|hp.msa.disks.1.4.owner-numeric<p>Update: 0</p>|
 |Физ. диск (1.20) - ошибки|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.20.number-of-media-errors-1<p>Update: 0</p>|
@@ -347,8 +343,8 @@ There are no discovery rules in this template.
 |Физ. диск (1.5) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.1.5.state<p>Update: 0</p>|
 |Порт (B3) - тип подключения|<p>Порт 3 из 4</p>|`Dependent item`|hp.msa.ports.0.13.media<p>Update: 0</p>|
 |Физ. диск (1.15) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.15.vendor<p>Update: 0</p>|
-|Физ. диск (2.9) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.2.9.state<p>Update: 0</p>|
 |Порт (A4) - тип подключения|<p>Порт 4 из 4</p>|`Dependent item`|hp.msa.ports.1.7.media<p>Update: 0</p>|
+|Физ. диск (2.9) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.2.9.state<p>Update: 0</p>|
 |Физ. диск (2.6) - ср. время отклика|<p>-</p>|`Dependent item`|hp.msa.disks.2.6.avg-rsp-time<p>Update: 0</p>|
 |Физ. диск (1.3) - расположение|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.location<p>Update: 0</p>|
 |Физ. диск (1.24) - SMART|<p>-</p>|`Dependent item`|hp.msa.disk-statistics.1.24.smart-count-1<p>Update: 0</p>|
@@ -538,8 +534,8 @@ There are no discovery rules in this template.
 |Вирт. диск (1) - свободно|<p>-</p>|`Dependent item`|hp.msa.vdisks.1.freespace-numeric<p>Update: 0</p>|
 |Физ. диск (1.3) - индикатор|<p>-</p>|`Dependent item`|hp.msa.disks.1.3.led-status-numeric<p>Update: 0</p>|
 |Полка (2) - отсеки|<p>-</p>|`Dependent item`|hp.msa.enclosures.2.slots<p>Update: 0</p>|
-|Физ. диск (1.5)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-1_5,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (2.10) - использование|<p>-</p>|`Dependent item`|hp.msa.disks.2.10.state<p>Update: 0</p>|
+|Физ. диск (1.5)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-1_5,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (1.7) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.1.7.vendor<p>Update: 0</p>|
 |Контроллер (B) - отказ партнёра|<p>-</p>|`Dependent item`|hp.msa.controllers.0.failed-over-numeric<p>Update: 0</p>|
 |Физ. диск (1.2) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.2.health-numeric<p>Update: 0</p>|
@@ -675,8 +671,8 @@ There are no discovery rules in this template.
 |Физ. диск (1.24) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.24.health-numeric<p>Update: 0</p>|
 |Физ. диск (1.23) - номер вирт. диска|<p>-</p>|`Dependent item`|hp.msa.disks.1.23.virtual-disk-serial<p>Update: 0</p>|
 |Физ. диск (1.12) - состояние|<p>-</p>|`Dependent item`|hp.msa.disks.1.12.health-numeric<p>Update: 0</p>|
-|Физ. диск (1.23)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-1_23,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |БП (2.1) - вентилятор|<p>-</p>|`Dependent item`|hp.msa.power-supplies.2.1.fan.health-numeric<p>Update: 0</p>|
+|Физ. диск (1.23)|<p>-</p>|`Telnet agent`|telnet.run[hp-msa-disks-1_23,{HOST.CONN},23,utf8]<p>Update: 1h</p>|
 |Физ. диск (2.1) - производитель|<p>-</p>|`Dependent item`|hp.msa.disks.2.1.vendor<p>Update: 0</p>|
 |Вирт. диск (2) - объём|<p>-</p>|`Dependent item`|hp.msa.vdisks.2.size-numeric<p>Update: 0</p>|
 |Физ. диск (1.23) - модель|<p>-</p>|`Dependent item`|hp.msa.disks.1.23.model<p>Update: 0</p>|

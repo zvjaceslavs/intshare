@@ -1,9 +1,5 @@
 # VM VMware UUID ESXi Standalone
 
-## Description
-
-## Overview Standalone template modified from Zabbix's "VM VMware Hypervisor" template that includes ESXI event log from Zabbix's "VM VMware" template. Modified from 3.4.7 and 3.0.15 Requirements 1. Read-only ESXi user credentials 2. ESXi server UUID# 3. ESXi server IP address Zabbix config required Edit **zabbix _server.conf,** update **StartVMwareCollectors** value to more than 0 and restart zabbix-server. For more details, refer to <https://www.zabbix.com/documentation/4.0/manual/vm_monitoring#configuration> To use 1. Create new Host* (preferably in host group VMware) 2. Go to **Templates** 3. Search for, select "VMware UUID ESXi Standalone" and add 4. Go to **Macros**, **Inherited and host Macros** 5. Click **Change** to modify the values for 1. {$USERNAME} : ESXi username 2. {$PASSWORD} : ESXi password 3. {$URL} : <https://{ESXi-IP-Address}/sdk> 4. {$UUID} : UUID in lower case# 6. Click **Add** **#**Obtaining UUID Login to your ESXi server, run**esxcfg-info -u |awk '{print tolower($0)}'** from SSH shell (Thanks to Travis Quinnelly) Else 1. Vsphere Advanced Settings, Config, Hostagent, plugins, solo, check "Config.HostAgent.plugins.solo.enableMob" 2. Browse to [https:///mob/?moid=ha-host&doPath=hardware.systemInfo](mob/?moid=ha-host&doPath=hardware.systemInfo) 3. Copy down value 4. Uncheck as in step 1 *Grafana dashboard For those using Grafana, I have uploaded dashboard to <https://grafana.com/dashboards/4812>. Note that your host must be in Zabbix host group **VMware**. Others If template does not work, try using the official Zabbix VMware monitoring (e.g. <https://www.zabbix.com/documentation/4.0/manual/vm_monitoring>) ## Author Zabbix 
-
 ## Overview
 
 Standalone template modified from Zabbix's "VM VMware Hypervisor" template that includes ESXI event log from Zabbix's "VM VMware" template. Modified from 3.4.7 and 3.0.15

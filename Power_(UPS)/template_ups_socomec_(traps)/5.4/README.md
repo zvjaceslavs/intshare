@@ -1,9 +1,5 @@
 # Monitoring UPS
 
-## Description
-
-## Overview Hi Here is a template for Socomec UPS. It is made mostly with traps. Triggers are included. Do not hesitate to ask me questions if you have some. Thanks. ## Author Vincent MATIAS 
-
 ## Overview
 
 Hi

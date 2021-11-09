@@ -1,9 +1,5 @@
 # IPMI SuperMicro X9DRD-7LN4F
 
-## Description
-
-## Overview Hello! It's my fist template. Warning! FAN3, FAN4, FAN6, FAN7, FAN8 disabled for me. 
-
 ## Overview
 
 Hello!

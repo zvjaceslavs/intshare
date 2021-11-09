@@ -1,9 +1,5 @@
 # LSI JSON discovery
 
-## Description
-
-## Overview Description ----------- This template is for discovering and monitoring LSI (Avago, Broadcom) storage controllers by using json outputs of storcli tool. Now it works only with zabbix 4.2 Main features ------------- * Discovery of controllers, logical discs, physical discs, batteries (bbu an cv) without scripts on servers side (it uses parsing of json and java scripts on zabbix side) * Monitoring controllers, logical, physical discs, batteries * Useful with OS, where storcli works * Comfortable changing of time intervals by macroses. Notes ----- * Please follow link for the newest version and instruction < 
-
 ## Overview
 
 Description

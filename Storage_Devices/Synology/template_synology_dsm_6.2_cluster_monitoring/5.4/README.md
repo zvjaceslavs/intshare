@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template to monitor Synology HA Solution ## Overview Template is based on [Synology MIB Guide](https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/All/enu/Synology_DiskStation_MIB_Guide.pdf) and monitor only an Synology HA Cluster Is based on snmp v2 data from section Synology SHA MIB Installation notes 1. Don't forget to set the right community name in template Macros section 2. Before add to host set/add in Zabbix-> Administration -> General -> Value mapping 1. Synology Cluster Status 0 ⇒ normal 1 ⇒ warning 2 ⇒ critical 3 ⇒ upgrading 4 ⇒ processing 2. Synology Heartbeat Status 0 ⇒ normal 1 ⇒ abnormal 2 ⇒ disconnected 3 ⇒ empty 3. Synology AutoFailover 1 ⇒ True 2 ⇒ False ### Features 1. Items are explained in details 2. Triggers are explained and contain tags to show the problem details depending on received value ### Environment Created and tested with: * Synology DSM 6.2-24922on following models: + RS820RP+ * Zabbix version 4.0.0 ### Note(s) You can write questions also to [tudorticau@mail.ru](mailto:tudorticau@mail.ru) Nice to read when will deploy Synology HA environment this [Synology HA White Paper](https://global.download.synology.com/download/Document/Software/WhitePaper/Package/HighAvailability/All/enu/Synology_SHA_White_Paper.pdf "Synology HA White Paper") ## Author Tudor Ticau 
+Template to monitor Synology HA Solution
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # Принтеры Киосера v2
 
-## Description
-
-## Overview В данном шаблоне собраны: 1. MAC устройства 2. Версия ПО 3. Код ошибки 4. Модель устройства 5. Поддержка сканирования 6. Расположение 7. Серийный номер 8. Статус устройства 9. Ресурс страниц у картриджа 10. Какая модель картриджа у устройства Счетчики: 1. Uptime 2. Всего отсканировано / копировано страниц 3. Отпечатано страниц А4 4. Всего отпечатано 5. Отсканировано страниц 6. Сколько бумаги помещается в лоток 7. Откопировано страниц Триггеры: <ol style="box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI ## Author Alexei Lipton 
-
 ## Overview
 
 В данном шаблоне собраны:

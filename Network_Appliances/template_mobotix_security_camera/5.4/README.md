@@ -1,9 +1,5 @@
 # Mobotix Camera
 
-## Description
-
-## Overview This template will get you the following items from a Mobotix IP Security Camera: Model Name, Name, Serial Number, Uptime, Storage Type, Storage Used Space, Flash Wear, Remaining Time to save, Software Version, Software Version Timestamp It will trigger on the following: * Used space above 80% (High) * Flash Wear above 65% (Warning) * Flash Wear above 80% (High) * Storage Low Time Remaining (High) * Storage Failed (High) 
-
 ## Overview
 
 This template will get you the following items from a Mobotix IP Security Camera:

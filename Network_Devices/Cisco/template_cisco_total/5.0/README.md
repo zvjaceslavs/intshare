@@ -1,9 +1,5 @@
 # Cisco Total
 
-## Description
-
-## Overview This template is a smattering of a few templates combined with some custom discovery rules. It has been tested to work with a bunch of Cisco switches and routers. It uses the standard SNMP root for all discovery (using OID's), so it works with most switch/router devices. If you have any issues with it let me know. I exported this from a live system, so the read the dependencies below. **What it does:** * BGP Discovery + Admin Status + Peer State * CPU Discovery + Usage on core * Interface Discovery + Traffic in/out + Errors in/out + Drops in/out * Memory Pool Discovery + Mem free in pool * OSPF Discovery + Neighbor State * Temperature Discovery + temperature of monitor The template creates quite a few graph prototypes and adds them to a screen as well. **Dependencies:** The template had value maps, interface filters and groups associated with it when I cloned it, but I removed them so there shouldn't be any issues with it. If you find an issue importing let me know. I was successful importing default template to a new system. **Other Instructions:** Be sure to set the $SNMP _COMMUNITY and $CRD _SNMPV2 _R values. They should both be your SNMP community string. 
-
 ## Overview
 
 This template is a smattering of a few templates combined with some custom discovery rules.

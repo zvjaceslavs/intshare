@@ -1,9 +1,5 @@
 # Clickhouse
 
-## Description
-
-## Overview Template to monitor main Clickhouse parameters *without using additional scripts* It uses HTTP interface to read metrics from *system* database using Zabbix Agent's HTTP client Gathered metrics: * MaxPartCountForPartition * ReplicasMaxQueueSize * Uptime * InsertedBytes * InsertedRows * Query * InsertQuery * SelectQuery * Merge * Inactive parts count * HTTPConnection * TCPConnection * InterserverConnection * LeaderReplica * ReadonlyReplica * Used memory (this is roughly calculated from metrics and is not accurate) * Ping (`/ping` HTTP endpoint) <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: #24292e; font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', ## Author Igor Novgorodov 
-
 ## Overview
 
 Template to monitor main Clickhouse parameters *without using additional scripts*

@@ -1,9 +1,5 @@
 # B593
 
-## Description
-
-## Overview Template for Huawei B593u-12 LTE Router. Does not apply on B593s-12 or B593s-22 (should be ok with B593u-91). A custom firmware is needed to get Zabbix agent, please follow the link. 
-
 ## Overview
 
 Template for Huawei B593u-12 LTE Router.

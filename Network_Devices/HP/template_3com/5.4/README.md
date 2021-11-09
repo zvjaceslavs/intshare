@@ -1,9 +1,5 @@
 # 3COM 4500 28 Ports
 
-## Description
-
-## Overview Template para monitorar o Switch 3COM, modelo 4500 de 28 portas. Gráficos por porta, Entrada e Saída, Erro de tráfego nas 28 portas. O template exibe a alteração e status da porta. O template foi criado por: Marcelo Carvalho eu fiz somente a edição. ## Author Marcelo Carvalo e edição Gerson Thiago 
-
 ## Overview
 
 Template para monitorar o Switch 3COM, modelo 4500 de 28 portas.
@@ -49,8 +45,8 @@ There are no discovery rules in this template.
 |Port 6 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227666<p>Update: 30</p>|
 |Port 19 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227770<p>Update: 30</p>|
 |Port 28 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.4227842<p>Update: 30</p>|
-|Port 9 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227690<p>Update: 30</p>|
 |Port 14 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227730<p>Update: 30</p>|
+|Port 9 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227690<p>Update: 30</p>|
 |Port 22 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227794<p>Update: 30</p>|
 |Port 9 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227690<p>Update: 30</p>|
 |Port 27 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227834<p>Update: 30</p>|
@@ -91,8 +87,8 @@ There are no discovery rules in this template.
 |Port 1 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.4227626<p>Update: 30</p>|
 |Port 12 Traffic OUT |<p>-</p>|`SNMP agent`|ifOutOctets.4227714<p>Update: 30</p>|
 |Port 24 Traffic IN|<p>-</p>|`SNMP agent`|ifInOctects.4227810<p>Update: 30</p>|
-|Port 24 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227810<p>Update: 30</p>|
 |Port 5 Speed|<p>-</p>|`SNMP agent`|ifspeed.4227658<p>Update: 30</p>|
+|Port 24 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227810<p>Update: 30</p>|
 |Port 21 Last Changed|<p>-</p>|`SNMP agent`|ifLastChange.4227786<p>Update: 30</p>|
 |Port 9 Traffic OUT Errors|<p>-</p>|`SNMP agent`|ifOutErrors.4227690<p>Update: 30</p>|
 |Port 13 Status|<p>-</p>|`SNMP agent`|ifOperStatus.4227722<p>Update: 30</p>|

@@ -1,9 +1,5 @@
 # App MQTT  Service
 
-## Description
-
-## Overview A very simple template+script for monitoring mosquitto. CONFIG /etc/zabbix/zabbix-agent.d/userparams _mosquitto.conf ======================= CUT HERE ================================ # Mosquitto monitoring # # This content is licensed GNU GPL v2 # Author: Guido Rizzi ([guido.rizzi@studiorizzi.net](mailto:guido.rizzi@studiorizzi.net)) # UserParameter=mosquitto[*],/etc/zabbix/scripts/mosquitto $SYS/broker/$1 2>/dev/null ======================= CUT HERE ================================ SCRIPT /etc/zabbix/scripts/mosquitto ======================= CUT HERE ================================ #!/bin/bash mosquitto _sub -C 1 -u USERNAME -P PASSWORD -t "$1" ======================= CUT HERE ================================ 
-
 ## Overview
 
 A very simple template+script for monitoring mosquitto.

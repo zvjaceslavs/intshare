@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Version 1.1.3, Release date 29.4.2020 Made by: Ville Leinonen/www.hacknetwork.org Template is tested in Zabbix 4.4 and ASA version 9.14(1) Changelog: SNMPv3 support added TODO (maybe): Interface statistic and more triggers. ## Overview Version 1.1 Template is tested against Zabbix version 4.4.6 and ASA version 9.14(1). Failover role can be primary or secondary, it based in your ASA configuration. Failover status can be Active unit or Standby unit. This indicates which of your Firewall is active right now. Template also populates inventory fields automaticly. This is snmpv2 template, but v3 is coming soon. Version 1.1.3 SNMPv3 support added, new macros: {$SECURITY _NAME} = Username {$AUTH _PASSPHRASE} = Authentication password {$PRIV _PASSPHRASE} = Encryption password Use authentication algorithm SHA and encryption algorithm AES (128). Added OID: ASA System name (ciscoASAsysName) OLD VERSIONS, USE GITHUB <https://github.com/hrleinonen/zabbix> More information (soon) <https://www.hacknetwork.org/?page_id=304> ## Author Ville Leinonen 
+Version 1.1.3, Release date 29.4.2020 Made by: Ville Leinonen/www.hacknetwork.org Template is tested in Zabbix 4.4 and ASA version 9.14(1) Changelog: SNMPv3 support added TODO (maybe): Interface statistic and more triggers.
 
 ## Overview
 

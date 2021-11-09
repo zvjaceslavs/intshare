@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description vCenter 6.5 Usage 5318154 ## Overview Reprocessing [https://share.zabbix.com/virtualization/vmware/snmp-check-vcenter](virtualization/vmware/snmp-check-vcenter) for Zabbix 3.0.4 and VCSA 6.5 (5318154) Thanks [Olivier LAHOUZE](owner/li_mVlS9YBOhr) ## Author Dorin Sergey 
+vCenter 6.5 Usage 5318154
 
 ## Overview
 
@@ -119,9 +119,9 @@ There are no template links in this template.
 |Interface [{#SNMPVALUE}] Type|<p>-</p>|`SNMP agent`|SNMP-Interface-Type.[{#SNMPVALUE}]<p>Update: 1800</p><p>LLD</p>|
 |CPU {#SNMPINDEX} Charge|<p>-</p>|`SNMP agent`|SNMP-Charge-CPU-.[{#SNMPINDEX}]<p>Update: 180</p><p>LLD</p>|
 |CPU {#SNMPINDEX} Name|<p>-</p>|`SNMP agent`|SNMP-Name-CPU-.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
+|File System {#SNMPVALUE} - Espace Utilise|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Used.[{#SNMPVALUE}]<p>Update: 180</p><p>LLD</p>|
 |File System {#SNMPVALUE} - Used Percentage|<p>-</p>|`Calculated`|File-System-Space-Used-Percentage.[{#SNMPVALUE}]<p>Update: 180</p><p>LLD</p>|
 |File System {#SNMPVALUE} - Espace Alloue|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Allocated.[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
-|File System {#SNMPVALUE} - Espace Utilise|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Used.[{#SNMPVALUE}]<p>Update: 180</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

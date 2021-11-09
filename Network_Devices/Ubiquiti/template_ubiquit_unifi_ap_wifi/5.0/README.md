@@ -1,9 +1,5 @@
 # Ubiquiti Unifi AP LR SNMPv1
 
-## Description
-
-## Overview Template para Ubiquiti Unifi AP e Wifi ## Author leonardog50 
-
 ## Overview
 
 Template para Ubiquiti Unifi AP e Wifi
@@ -112,8 +108,8 @@ There are no template links in this template.
 |SNMP traps (fallback)|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
 |{#ALIAS} '$2' state|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, adopted]<p>Update: 600s</p>|
 |Outgoing Traffic 05|<p>-</p>|`SNMP agent`|ifOutOctets.5<p>Update: 300</p>|
-|Model of {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, model]<p>Update: 3600s</p>|
 |Incoming Traffic 02|<p>-</p>|`SNMP agent`|ifInOctets.2<p>Update: 300</p>|
+|Model of {#ALIAS}|<p>-</p>|`Zabbix agent (active)`|unifi.ap.state[{#ID}, model]<p>Update: 3600s</p>|
 |Description Interface $1|<p>-</p>|`SNMP agent`|ifDescr.6<p>Update: 600</p>|
 |Wireless outgoing traffic on site|<p>-</p>|`Zabbix agent (active)`|unifi.site.state[ap, tx_bytes, sum]<p>Update: 30s</p>|
 |Device Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|

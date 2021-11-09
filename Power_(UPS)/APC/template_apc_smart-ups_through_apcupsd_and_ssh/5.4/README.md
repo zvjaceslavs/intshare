@@ -1,9 +1,5 @@
 # APC Smart-UPS through apcupsd and ssh
 
-## Description
-
-## Overview This template is for situation when you have apcupsd, but cannot install zabbix agent. Tested with Centos 6.x. You have to install apcupsd and configure it, configure ssh access for user by certificate. Provides: Items: model, serial number, number of switching (xfers), name (set in apcupsd config), status (ONLINE and etc), charge level, timeleft. Triggers: minimal timeleft is equal or less then {$APC _SMARTUPS _MINIMAL _TIMELEFT}, status is not ONLINE. Requires macroses: {$UPS _GET _MAININFO _PERIOD} - period of getting model and etc. {$UPS _GET _STATUS _PERIOD} – period of getting status, timeleft, status. {$APC _SMARTUPS _MINIMAL _TIMELEFT} –minimal timeleft for trigger. {$SSH _CONNECT _USERNAME} – user for connecting by ssh. If you have any ideas to make this template better, comment, please. 
-
 ## Overview
 
 This template is for situation when you have apcupsd, but cannot install zabbix agent. Tested with Centos 6.x.

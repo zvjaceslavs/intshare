@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template Interfaces version: 0.14 MIBs used: IF-MIB ## Overview Hello, I created this template that contains the verification of all interfaces of fortinet equipment Including CPU% Memory% Vpn discovery HA monitoring Equipment Uptime Number of Connections Traffic Internet Inbound and Outbound Serial Number (Included in host screens) Firmware version (Included in host screens) In addition to trigger triggers for all items Update: Template updated to configuration version, search and discovery items changed ## Author Cleyton Ferreira da Silva 
+Template Interfaces version: 0.14 MIBs used: IF-MIB
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # Printer Samsung M Series
 
-## Description
-
-## Overview This File gets basic components of Samsung M Series Printer. - Serial Number - Black Unit - Toner Level - Page Counter I used to do Printer Accounting and monitor Tonner Level for runners into company replace empty Tonners. 
-
 ## Overview
 
 This File gets basic components of Samsung M Series Printer.

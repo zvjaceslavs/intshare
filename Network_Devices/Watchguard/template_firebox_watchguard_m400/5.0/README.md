@@ -1,9 +1,5 @@
 # Halley Firewall Watchguard M400
 
-## Description
-
-## Overview Template for monitoring Firebox Watchuard M400 Firewall with explanations and advices. The mibs are there: <https://www.watchguard.com/help/docs/wsm/xtm_11/en-us/content/en-us/basicadmin/snmp_about_mibs_c.html> The content of template: 6 Applications: CPU, Disk Partitions, General, Interfaces, Memory, Traffic rules 10 SNMPv2 and calculated items Cached memory, Swap used space, Free physical memory in%, Total physical memory, ping check, Device localtion, uptime, description, name 4 LLD rules for: a) Access rules - taken from template M300 on share.zabbix.com (thanks) to discover traffic on access rules with graph b) Disk partitions - with filter in post processing to discover (/var, /boot, /, and /tmp) - total and used space c) Network interfaces - discover incoming/outgoing traffic, operational state and inbound/outbound errors on interface (need to enable) + trigger and graph. To not discover no need interface like virtual or loopback create in Administration->General-> Regular expressions a rule to not allow per example virtual interfaces: (?!)Virtual -result FALSE d) Processors - discover and monitor with trigger the load on processors ## Author Ticau Tudor 
-
 ## Overview
 
 Template for monitoring Firebox Watchuard M400 Firewall with explanations and advices. The mibs are there: <https://www.watchguard.com/help/docs/wsm/xtm_11/en-us/content/en-us/basicadmin/snmp_about_mibs_c.html>

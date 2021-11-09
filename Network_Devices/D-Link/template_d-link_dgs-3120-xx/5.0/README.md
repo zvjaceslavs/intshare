@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description D-link do something realy wierd with swTemperatureTable. So it's values not discovered but set manualy as items ## Overview Based on MIB from vendor. Checked on local single and stacked DGS/DWS-3120-xx devices. Main system Items, Ttiggers and Graphs. LLD Network interfaces. LLD Memory, Temperature and Fan values (though D-link does something weird with fan and temperature OIDs, probably depends on firmware, so this prototypes was added semi-manualy). 
+D-link do something realy wierd with swTemperatureTable. So it's values not discovered but set manualy as items
 
 ## Overview
 

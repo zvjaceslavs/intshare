@@ -1,9 +1,5 @@
 # PowerCom
 
-## Description
-
-## Overview Tested on Powercom 10K model and CY504 card ## Author Roman Puzanov 
-
 ## Overview
 
 Tested on Powercom 10K model and CY504 card

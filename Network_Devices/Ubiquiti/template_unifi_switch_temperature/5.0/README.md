@@ -1,9 +1,5 @@
 # Unifi Switch 16 POE-150W Temperature
 
-## Description
-
-## Overview Adds 2 temperature sensors and 4 PoE temperature sensors for rackmountable Unifi Switches. Tested with Unif Switch 16 POE-150W. Information at 70°C and Warning at 90°C just like Unifi specifies in console output. The temperatures are the ones you can see in the screenshot. ## Author frauhottelmann 
-
 ## Overview
 
 Adds 2 temperature sensors and 4 PoE temperature sensors for rackmountable Unifi Switches.

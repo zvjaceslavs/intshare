@@ -1,9 +1,5 @@
 # App MSSQL 2008-2016 WSFC
 
-## Description
-
-## Overview ``` Requirements: ``` 1. Zabbix 3+ Install instrucitons: https://github.com/hermanekt/MSSQL-2008-2016-Multi-instance-with-WSFC 
-
 ## Overview
 
 
@@ -44,34 +40,6 @@ There are no template links in this template.
 |SQL Agent Default Instance: Service State - SQL Agent (MSSQLSERVER)|<p>-</p>|`Zabbix agent`|service_state[SQLServerAgent]<p>Update: 60s</p>|
 |SQL Server Default Service State - MSSQLSERVER|<p>-</p>|`Zabbix agent`|service_state[MSSQLSERVER]<p>Update: 30s</p>|
 |Host name of SQL Node|<p>-</p>|`Zabbix agent`|agent.hostname<p>Update: 60s</p>|
-|SQL Server, Instance {#INST}: Bytes Received from Replica/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Bytes Received from Replica/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Database Flow Control Delay|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Database Flow Control Delay"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Bytes Sent to Replica/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Bytes Sent to Replica/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Bytes Sent to Transport/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Bytes Sent to Transport/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Flow Control/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Flow Control/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Flow Control Time (ms/sec)|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Flow Control Time (ms/sec)"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Receives from Replica/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Receives from Replica/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Resent Messages/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Resent Messages/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Sends to Replica/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Sends to Replica/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Sends to Transport/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Sends to Transport/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Buffer Manager\Page life expectancy|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Buffer Manager\Page life expectancy"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Buffer Manager\Page reads/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Buffer Manager\Page reads/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Buffer Manager\Page writes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Buffer Manager\Page writes/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Database Flow Controls/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Database Flow Controls/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Mirrored Write Transactions/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Mirrored Write Transactions/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: File Bytes Received/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\File Bytes Received/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Group Commits/Sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Group Commits/Sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Group Commit Time|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Group Commit Time"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log Bytes Compressed/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Bytes Compressed/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log Bytes Decompressed/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Bytes Decompressed/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log Bytes Received/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Bytes Received/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log Compression Cache hits/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Compression Cache hits/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log Compression Cache misses/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Compression Cache misses/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log Compressions/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Compressions/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log Decompressions/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Decompressions/sec"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log remaining for undo|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log remaining for undo"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}: Log Send Queue|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Send Queue"]<p>Update: 1m</p><p>LLD</p>|
-|SQL Server, Instance {#INST}:Page IO latch waits/Waits started per second|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Wait Statistics(Waits started per second)\Page IO latch waits"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Access Methods\Page Splits/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Access Methods\Page Splits/sec"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}:SQL Statistics\Batch Requests/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:SQL Statistics\Batch Requests/sec"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Redone Bytes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Redone Bytes/sec"]<p>Update: 1m</p><p>LLD</p>|
@@ -101,6 +69,34 @@ There are no template links in this template.
 |SQL Server, Instance {#INST}:Network IO waits/Waits started per second|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Wait Statistics(Waits started per second)\Network IO waits"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Redo Bytes Remaining|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Redo Bytes Remaining"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Recovery Queue|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Recovery Queue"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Bytes Received from Replica/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Bytes Received from Replica/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Database Flow Control Delay|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Database Flow Control Delay"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Bytes Sent to Replica/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Bytes Sent to Replica/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Bytes Sent to Transport/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Bytes Sent to Transport/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Flow Control/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Flow Control/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Flow Control Time (ms/sec)|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Flow Control Time (ms/sec)"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Receives from Replica/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Receives from Replica/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Resent Messages/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Resent Messages/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Sends to Replica/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Sends to Replica/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Sends to Transport/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Availability Replica(_Total)\Sends to Transport/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Buffer Manager\Page life expectancy|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Buffer Manager\Page life expectancy"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Buffer Manager\Page reads/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Buffer Manager\Page reads/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Buffer Manager\Page writes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Buffer Manager\Page writes/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Database Flow Controls/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Database Flow Controls/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Mirrored Write Transactions/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Mirrored Write Transactions/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: File Bytes Received/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\File Bytes Received/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Group Commits/Sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Group Commits/Sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Group Commit Time|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Group Commit Time"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log Bytes Compressed/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Bytes Compressed/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log Bytes Decompressed/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Bytes Decompressed/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log Bytes Received/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Bytes Received/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log Compression Cache hits/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Compression Cache hits/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log Compression Cache misses/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Compression Cache misses/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log Compressions/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Compressions/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log Decompressions/sec|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Decompressions/sec"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log remaining for undo|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log remaining for undo"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}: Log Send Queue|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Database Replica(_Total)\Log Send Queue"]<p>Update: 1m</p><p>LLD</p>|
+|SQL Server, Instance {#INST}:Page IO latch waits/Waits started per second|<p>-</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Wait Statistics(Waits started per second)\Page IO latch waits"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Error Log File (LOGCount)|<p>-</p>|`Zabbix agent (active)`|log.count[{#ERRORLOG},Error|Failed,"UTF-16"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}: Error Log File (LOG)|<p>-</p>|`Zabbix agent (active)`|log[{#ERRORLOG},Error|Failed,"UTF-16"]<p>Update: 1m</p><p>LLD</p>|
 |SQL Server, Instance {#INST}, DB {#DBNAME}: Active Transactions|<p>Number of active transactions for the database.</p>|`Zabbix agent`|perf_counter["\{#PERFCOUNTERNAME}:Databases({#DBNAME})\Active Transactions"]<p>Update: 1m</p><p>LLD</p>|

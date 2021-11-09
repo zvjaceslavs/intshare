@@ -1,9 +1,5 @@
 # Force C150
 
-## Description
-
-## Overview my template for Dell Force C150 chassis. мой шаблон для шасси Dell Force C150 ## Author nickolya666 
-
 ## Overview
 
 my template for Dell Force C150 chassis.

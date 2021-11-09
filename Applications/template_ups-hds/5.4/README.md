@@ -1,9 +1,5 @@
 # UPS HDS
 
-## Description
-
-## Overview Coleta via SNMPv2 Retorna as informações: Nome do Dispositivo Local do Dispositivo Uptime Status da Bateria Status da saída de energia Voltagem da Bateria Temperatura em °C Frequência da energia de entrada Voltagem de entrada Capacidade da bateria Carga da Bateria Cria o mapeamento de valor: 1° UPS Battery Satus 1 ⇒ unknown 2 ⇒ batteryNormal 3 ⇒ batteryLow 2° Status saída bateria UPS 1 ⇒ unknown 2 ⇒ onLine 3 ⇒ onBattery 4 ⇒ onBoost 5 ⇒ sleeping 6 ⇒ onBypass <span style="color: #1f2c33; fon ## Author Carlos Eduardo 
-
 ## Overview
 
 Coleta via SNMPv2

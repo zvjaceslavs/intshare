@@ -1,9 +1,5 @@
 # SNMP Generic
 
-## Description
-
-## Overview Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices ## Author Zabbix SIA 
-
 ## Overview
 
 Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices
@@ -41,9 +37,15 @@ There are no triggers in this template.
 
 # SNMP Interfaces
 
-## Description
+## Overview
 
-## Overview Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices ## Author Zabbix SIA ## Overview Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices ## Author Zabbix SIA 
+Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices
+
+
+
+## Author
+
+Zabbix SIA
 
 ## Overview
 
@@ -89,9 +91,25 @@ There are no template links in this template.
 |Operational status was changed on {HOST.NAME} interface {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: {SNMP Interfaces:ifOperStatus[{#SNMPVALUE}].diff(0)}=1</p><p>**Recovery expression**: </p>|information|
 # SNMP Device
 
-## Description
+## Overview
 
-## Overview Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices ## Author Zabbix SIA ## Overview Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices ## Author Zabbix SIA ## Overview Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices ## Author Zabbix SIA 
+Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices
+
+
+
+## Author
+
+Zabbix SIA
+
+## Overview
+
+Official template from Zabbix distribution. It includes SNMP Generic and SNMP Interfaces templates. Could be used for most of SNMP devices
+
+
+
+## Author
+
+Zabbix SIA
 
 ## Overview
 

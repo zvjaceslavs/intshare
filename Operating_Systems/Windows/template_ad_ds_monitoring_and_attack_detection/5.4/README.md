@@ -1,9 +1,5 @@
 # AD DS Monitoring and Attack Detection
 
-## Description
-
-## Overview **Template based on MS document "Best Practices for Securing Active Directory"** Items & Triggers A monitored security event pattern has occurred. A replay attack was detected. May be a harmless false positive due to misconfiguration error. System audit policy was changed. SID History was added to an account. An attempt to add SID History to an account failed. An attempt was made to set the Directory Services Restore Mode. Role separation enabled: Special groups have been assigned to a new logon. A security setting was updated on the OCSP Responder Service Possible denial-of-service (DoS) attack The audit log was cleared Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded. SIDs were filtered. Backup of data protection master key was attempted. Recovery of data protection master key was attempted. A new trust was created to a domain. Kerberos policy was changed. Encrypted data recovery policy was changed. The audit policy (SACL) on an object was changed. Trusted domain information was modified. An attempt was made to reset an account’s password. 
-
 ## Overview
 
 **Template based on MS document "Best Practices for Securing Active Directory"**  

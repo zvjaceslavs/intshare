@@ -1,9 +1,5 @@
 # Network-H3C-WLC
 
-## Description
-
-## Overview # 宏 {$APCOUNTS} AP总数 {$SNMP _COMMUNITY} 
-
 ## Overview
 
 # 宏

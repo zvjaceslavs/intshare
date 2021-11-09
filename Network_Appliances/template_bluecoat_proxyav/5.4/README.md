@@ -1,9 +1,5 @@
 # App BlueCoat AV
 
-## Description
-
-## Overview Based on official SNMP MIBs. Used on AV510 and AV810. Additional info: <https://bto.bluecoat.com/documentation/All-Documents/ProxyAV>. 
-
 ## Overview
 
 Based on official SNMP MIBs.  

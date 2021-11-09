@@ -1,9 +1,5 @@
 # IPMI Supermicro X10SRL-F
 
-## Description
-
-## Overview IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage] ## Author Dorin Sergey 
-
 ## Overview
 
 IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage]

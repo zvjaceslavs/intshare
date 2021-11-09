@@ -1,9 +1,5 @@
 # Nxt151 General
 
-## Description
-
-## Overview Template of transmissor of Screen. Model: NXT-151. This template contains: * 7 applications * 70 items * 69 Triggers * 9 Grafs Our applications have itens of the component below: * Amplifier * External Amplifier * GbE * GPS * Input * Modulator * System ## Author Marcos Sousa and Guilherme Pereira 
-
 ## Overview
 
 Template of transmissor of Screen. Model: NXT-151. This template contains:
@@ -94,8 +90,8 @@ There are no discovery rules in this template.
 |Alarm Linear Feedback|<p>alarm linear feedback of amplifier component</p>|`SNMP agent`|amplifier.alarm.feedback<p>Update: 5s</p>|
 |Alarm Fan|<p>alarm of FAN of external amplifier component.</p>|`SNMP agent`|extamplifier.alarm.fan<p>Update: 5s</p>|
 |Antenna|<p>data of antenna of GPS</p>|`SNMP agent`|gps.status.antenna<p>Update: 5s</p>|
-|Power (Watt)|<p>data of power of external amplifier component.</p>|`SNMP agent`|extamplifier.status.power<p>Update: 5s</p>|
 |Alarm Voltage 1 (50 V)|<p>alarm of voltage 1 of system</p>|`SNMP agent`|system.alarm.voltage1<p>Update: 5s</p>|
+|Power (Watt)|<p>data of power of external amplifier component.</p>|`SNMP agent`|extamplifier.status.power<p>Update: 5s</p>|
 |Reflected Power (Watt)|<p>data of power reflected of external amplifier component.</p>|`SNMP agent`|extamplifier.status.power.reflected<p>Update: 5s</p>|
 |Alarm 1 PPS|<p>alarm of 1 PPS of modulator</p>|`SNMP agent`|modulator.alarm.1pps<p>Update: 5s</p>|
 |Alarm Hitless|<p>data of hitless of input</p>|`SNMP agent`|input.alarm.hitless<p>Update: 5s</p>|

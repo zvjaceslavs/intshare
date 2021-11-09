@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description This template assesses the status and overall health of services as well as the performance of the Mediation Microsoft Skype for Business Server 2015. Note: You need to set thresholds for these counters according to your environment. It is recommended to monitor these counters for some period of time to understand potential value ranges and then set the thresholds accordingly. This documentation is based on: https://technet.microsoft.com/en-us/library/gg398616.aspx. ## Overview Lync 2013 Mediation role template 
+This template assesses the status and overall health of services as well as the performance of the Mediation Microsoft Skype for Business Server 2015. Note: You need to set thresholds for these counters according to your environment. It is recommended to monitor these counters for some period of time to understand potential value ranges and then set the thresholds accordingly. This documentation is based on: https://technet.microsoft.com/en-us/library/gg398616.aspx.
 
 ## Overview
 

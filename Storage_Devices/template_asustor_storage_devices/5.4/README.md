@@ -1,9 +1,5 @@
 # MIB Asustor
 
-## Description
-
-## Overview SNMP Template for Asustor Storages. On the device, download the MIB on the device page, enable SNMP support. Import template on Zabbix and set host and {$SNMP _COMMUNITY} Macro. Tested on Zabbix 4.0.17 and with Asustor AS6104T. ## Author Jonatan Gobbato 
-
 ## Overview
 
 SNMP Template for Asustor Storages.

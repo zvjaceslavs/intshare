@@ -1,9 +1,5 @@
 # IPMI SuperMicro
 
-## Description
-
-## Author AlteraSidus 
-
 ## Author
 
 AlteraSidus

@@ -1,9 +1,5 @@
 # App Chrony Service
 
-## Description
-
-## Overview This template will parse the various types of data from the acquisition result of chronyc tracking command. This allows you to detect the change of the time of displacement and Stratum by chrony. 
-
 ## Overview
 
 This template will parse the various types of data from the acquisition result of chronyc tracking command.  

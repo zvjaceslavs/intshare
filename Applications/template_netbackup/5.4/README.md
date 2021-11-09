@@ -1,9 +1,5 @@
 # Netbackup
 
-## Description
-
-## Overview Pessoal, favor acrescentar em suas configurações o UserParamenter abaixo: UserParameter=backup,/usr/openv/netbackup/bin/admincmd/bpdbjobs -summary | awk '{print $7}' | grep -n ^ | grep ^2 Personal, please add in your settings the above UserParameter: UserParameter=backup,/usr/openv/netbackup/bin/admincmd/bpdbjobs -summary | awk '{print $7}' | grep -n ^ | grep ^2 Obs: Template para Master em Linux. Note: Template for Master in Linux. ## Author Felipe Aquino 
-
 ## Overview
 
 Pessoal, favor acrescentar em suas configurações o UserParamenter abaixo:

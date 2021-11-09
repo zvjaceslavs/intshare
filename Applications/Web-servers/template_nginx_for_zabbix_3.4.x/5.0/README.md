@@ -1,9 +1,5 @@
 # App Nginx by Alex Gluck
 
-## Description
-
-## Overview System requirements ------------------- * Nginx, [http://nginx.org](http://nginx.org/)/, with configured `http _stub _status _module` Features -------- Connection Statistics: * Active * Reading * Waiting * Writing Request Statistics: <ul style="padding: 0px 0px 0px 12px; margin: 0px 0px 1.5em 12px; border: 0px; outline: 0px; vertic ## Author Alex Gluck 
-
 ## Overview
 
 System requirements

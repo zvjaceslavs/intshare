@@ -1,9 +1,5 @@
 # IPMI_HP320eG8
 
-## Description
-
-## Overview PMI HW status [Health, Drives, Fan, Power, Temperature, Temperature Memory], Triggers [Health, Drives, Temperature, Power, Fans] ## Author Romanitch 
-
 ## Overview
 
 PMI HW status [Health, Drives, Fan, Power, Temperature, Temperature Memory], Triggers [Health, Drives, Temperature, Power, Fans]

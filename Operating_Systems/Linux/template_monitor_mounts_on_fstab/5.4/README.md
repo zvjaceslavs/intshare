@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Monitora os pontos de montagem do Gluster ## Overview First Step- You will need put the user parameter below in your zabbix _agent.conf UserParameter=vfs.fs.mounted[*],findmnt -nr -o source -T $1 > /dev/null && echo 0 || echo 1 this parameter will return if the mount point is OK Second Step - Import the template Third Step - Change the Item Key, You need put your mount point, like the exemple below. ex: vfs.fs.mounted[put your mounte point here] ## Author Rodrigo Américo 
+Monitora os pontos de montagem do Gluster
 
 ## Overview
 

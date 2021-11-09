@@ -1,9 +1,5 @@
 # Ubiquiti AirMax AP Clientes by Dzset
 
-## Description
-
-## Overview Template monitora as estações conectadas no AP Ubiquiti (testado somente na linha M5) Métricas: * Capacidade Airmax * CCQ * Distancia AP * MAC * Prioridade Airmax * Qualidade Airmax * RX Rate * Sinal * Uptime * Tx Rate ## Author Luís Henrique Nascimento 
-
 ## Overview
 
 Template monitora as estações conectadas no AP Ubiquiti (testado somente na linha M5)

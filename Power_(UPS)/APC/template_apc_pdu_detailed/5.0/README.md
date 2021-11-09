@@ -1,9 +1,5 @@
 # APC PDU
 
-## Description
-
-## Overview I have created a very detailed template for a Rack Mounted APC PDU. I spent a considerable amount of time digging through the MIB to obtain all the correct OID numbers pertaining to each Item for the PDU to use with SNMP. The template includes: * 7 Applications: + Enviornment + Information + Outlets + Peaks + Phases + Power + Thresholds * 39 Items for monitoring that range from: + 7 Items for each phase totaling 21 items - Load - Overload Thresholds - Current - Power - Voltage + Firmware Rev + Total Power + Peak Power + Load State + Rack Temp/Humidity (if the sensors are present) * 13 Triggers + Individual triggers for each phase - Voltage High and Low + Load State Changes + Power Trigger + Near overload and Overload Triggers * 3 Default Graphs + Current Usage + Phase Power Status + Temp/Humid (If sensors are present) I hope you enjoy using this template as much as I have. You can tweak the Interval and History settings within each item per your needs. I have also included HOSTNAME calls in each Trigger to Identify the host that is causing the Trigger. ## Author Chad Hoye 
-
 ## Overview
 
 I have created a very detailed template for a Rack Mounted APC PDU. I spent a considerable amount of time digging through the MIB to obtain all the correct OID numbers pertaining to each Item for the PDU to use with SNMP. The template includes:

@@ -1,9 +1,5 @@
 # Cisco WAP4410N
 
-## Description
-
-## Overview Template de Monitoramento de Access Point Cisco Small Business Model: WAP4410N-E, Firmware: Versão 2.0.7.8 Monitoramento: Disponibilidade; Uptime; Nome; Modelo; Localização; CPU; SSID,s; Trafego Wifi; Mac adress. 
-
 ## Overview
 
 Template de Monitoramento de Access Point Cisco Small Business

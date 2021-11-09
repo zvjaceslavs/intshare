@@ -1,9 +1,5 @@
 # Repotec-RP-PG1626W-Stacked
 
-## Description
-
-## Overview Template for the Repotec RP-PG1625W in Stacked Mode(Two Switches) Monitors Port- and Switch status 
-
 ## Overview
 
 Template for the Repotec RP-PG1625W in Stacked Mode(Two Switches)

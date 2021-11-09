@@ -1,9 +1,5 @@
 # Cisco General
 
-## Description
-
-## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies 
-
 ## Overview
 
 Amperage sensors
@@ -83,9 +79,47 @@ There are no template links in this template.
 |BGP Peer "{#SNMPINDEX}"->"{#SNMPVALUE}" State changed (LLD)|<p>-</p>|<p>**Expression**: {Cisco General:snmptrap["(bgpBackwardTransition|cbgpFsmStateChange).*bgpPeerState .{#SNMPINDEX}[[:space:]][a-zA-Z]+[[:space:]]"].nodata(10m)}=0</p><p>**Recovery expression**: </p>|average|
 # Cisco_Traps
 
-## Description
+## Overview
 
-## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies ## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies 
+Amperage sensors
+
+
+Fan Tray sensors
+
+
+Temperature Sensors
+
+
+Module sensors
+
+
+Load sensors
+
+
+BGP Peers (inherited from Template Cisco General)
+
+
+CPU
+
+
+FAN
+
+
+Flash Devices
+
+
+Memory Pool
+
+
+OSPF Interfaces (inherited from Template Cisco General)
+
+
+OSPF Neighbours (inherited from Template Cisco General)
+
+
+Power Supplies
+
+
 
 ## Overview
 
@@ -164,9 +198,89 @@ There are no triggers in this template.
 
 # Cisco_7600
 
-## Description
+## Overview
 
-## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies ## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies ## Overview Amperage sensors Fan Tray sensors Temperature Sensors Module sensors Load sensors BGP Peers (inherited from Template Cisco General) CPU FAN Flash Devices Memory Pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies 
+Amperage sensors
+
+
+Fan Tray sensors
+
+
+Temperature Sensors
+
+
+Module sensors
+
+
+Load sensors
+
+
+BGP Peers (inherited from Template Cisco General)
+
+
+CPU
+
+
+FAN
+
+
+Flash Devices
+
+
+Memory Pool
+
+
+OSPF Interfaces (inherited from Template Cisco General)
+
+
+OSPF Neighbours (inherited from Template Cisco General)
+
+
+Power Supplies
+
+
+
+## Overview
+
+Amperage sensors
+
+
+Fan Tray sensors
+
+
+Temperature Sensors
+
+
+Module sensors
+
+
+Load sensors
+
+
+BGP Peers (inherited from Template Cisco General)
+
+
+CPU
+
+
+FAN
+
+
+Flash Devices
+
+
+Memory Pool
+
+
+OSPF Interfaces (inherited from Template Cisco General)
+
+
+OSPF Neighbours (inherited from Template Cisco General)
+
+
+Power Supplies
+
+
 
 ## Overview
 

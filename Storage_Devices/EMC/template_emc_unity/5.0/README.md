@@ -1,9 +1,5 @@
 # EMC Unity REST-API v3
 
-## Description
-
-## Overview Tested on Unity 600 Python-script to get metrics from EMC Unity Storage. Script uses REST-API interface. This script get next metrics: BBU, Disk, Disk Array Enclosure, Disk Processor Enclosure, FAN, I/O Module, LCC, Lun, Memory Module, Pool, PortEth, PortFibreChannel, PortSAS, PSU, SSC, SSD, Storage Processors, Uncommitted Port. 
-
 ## Overview
 
 Tested on Unity 600

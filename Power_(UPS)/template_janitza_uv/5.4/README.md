@@ -1,9 +1,5 @@
 # Janitza-UV
 
-## Description
-
-## Overview Created with Zabbix 3.2 Just OIDs to Zabbix Template Maybe helpful to some. 
-
 ## Overview
 
 Created with Zabbix 3.2

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description please set {$SNMP_COMMUNITY} macros ## Overview Simple template to monitor Sun M5000 server over SNMP by XSCF This template contains: Firmware state, Hardware state, Ambient Temperature, Serial Number, System State, System Type CPU discovery Fan Discovery Memory board discovery Memory Unit discovery <p style="margin: 0px 0px 1.5em ## Author Dmitry Lavrukhin 
+please set {$SNMP_COMMUNITY} macros
 
 ## Overview
 

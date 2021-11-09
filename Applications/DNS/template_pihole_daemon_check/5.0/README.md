@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description pihole-FTL [zabbix active agent] check status pihole-FTL service if not "start" send alarm triger ## Overview check status pihole-FTL service if not "start" send alarm triger ## Author whyborn 
+pihole-FTL [zabbix active agent] check status pihole-FTL service if not "start" send alarm triger
 
 ## Overview
 

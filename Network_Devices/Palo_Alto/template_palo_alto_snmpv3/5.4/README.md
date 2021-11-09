@@ -1,9 +1,5 @@
 # Palo Alto SNMPv3 Auth Priv
 
-## Description
-
-## Overview > Uses SNMPv3 ------------- > Predefined Auth and Priv method : SHA and AES ----------------------------------------------- > Variables under Macros, just one time update during host addition ------------------------------------------------------------------- ## Author hitesh-vinzoda 
-
 ## Overview
 
 > Uses SNMPv3

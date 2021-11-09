@@ -1,9 +1,5 @@
 # SNMP Linux Processes Load
 
-## Description
-
-## Overview 1m 5m 15m Processes load ## Author Alcides(Shaolinrj) 
-
 ## Overview
 
 1m 5m 15m Processes load

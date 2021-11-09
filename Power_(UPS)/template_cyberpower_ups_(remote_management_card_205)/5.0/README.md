@@ -1,9 +1,5 @@
 # UPS CyberPower PR1000RT2U
 
-## Description
-
-## Overview I didn't see any templates for Cyberpower UPS systems so I made a quick and simple one. Hope this can help someone else! ## Author Adam Loghides 
-
 ## Overview
 
 I didn't see any templates for Cyberpower UPS systems so I made a quick and simple one.

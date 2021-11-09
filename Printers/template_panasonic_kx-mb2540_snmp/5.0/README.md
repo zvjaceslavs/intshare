@@ -1,9 +1,5 @@
 # Printer_Panasonic_KX-MB2540
 
-## Description
-
-## Overview Displays total pages, another informations (count fax messages, copy pages, scan pages) and triggers on low toner and drum levels. Panasonic category. ## Author Dorin Sergey 
-
 ## Overview
 
 Displays total pages, another informations (count fax messages, copy pages, scan pages) and triggers on low toner and drum levels.  

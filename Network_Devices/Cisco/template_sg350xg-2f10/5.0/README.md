@@ -1,9 +1,5 @@
 # Cisco_SB_SG350XG-2F10
 
-## Description
-
-## Overview Template for Cisco Small Business Switch SG350XG-2F10 - Device Details - Traffic on Ports (IN/OUT) - Errors on Ports (IN/OUT) - Status on Ports - Admin-Status on Ports - Status OOB - Ping Latency - Trigger Status Port with dependency to Admin-Status of Port - Trigger Errors on Ports - Trigger OOB Port - 9 Example-Graphs ## Author Thomas Oecknick 
-
 ## Overview
 
 Template for Cisco Small Business Switch SG350XG-2F10

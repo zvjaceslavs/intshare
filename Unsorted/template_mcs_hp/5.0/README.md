@@ -1,9 +1,5 @@
 # Monitoring MCS
 
-## Description
-
-## Overview Hi Here is a template for HP MCS Mostly traps. Triggers included. Thanks 
-
 ## Overview
 
 Hi

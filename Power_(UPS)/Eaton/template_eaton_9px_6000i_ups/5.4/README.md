@@ -1,9 +1,5 @@
 # EATON Mistral
 
-## Description
-
-## Overview Import and enjoy tested with EATON 9PX 6000i model Should work with other models too. Triggers for temperature and humidity are also added. Created in zabbix v3.2.x ## Author Nijaz Sehic 
-
 ## Overview
 
 

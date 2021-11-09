@@ -1,9 +1,5 @@
 # UNIVERGE IX
 
-## Description
-
-## Overview You can get hardware temperature and fan and power status, as well as CPU and memory usage. PICO-SMI-MIB based <https://jpn.nec.com/univerge/ix/Manual/index.html#mib> Product details --------------- <https://jpn.nec.com/univerge/ix/index.html> 
-
 ## Overview
 
 You can get hardware temperature and fan and power status, as well as CPU and memory usage.

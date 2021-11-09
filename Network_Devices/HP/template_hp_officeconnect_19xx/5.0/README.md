@@ -1,9 +1,5 @@
 # SNMP OfficeConnect 19XX
 
-## Description
-
-## Overview SNMPV2 Works on Office Connect Switches 1910 1920 1950 Low Level Discovery for: * CPU * Fan Status * Interfaces (Ports) - includes Rx/Tx/Errors/Status * Mac Address * Memory Stats * PSU * Tempature Sensors * Entity - includes Serial Number, Model Name, Firmware, Hardware revision, OS ## Author Union College 
-
 ## Overview
 
 SNMPV2

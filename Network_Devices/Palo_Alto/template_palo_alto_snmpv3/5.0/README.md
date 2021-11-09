@@ -1,9 +1,5 @@
 # Palo Alto SNMPv3 Auth Priv
 
-## Description
-
-## Overview > Uses SNMPv3 ------------- > Predefined Auth and Priv method : SHA and AES ----------------------------------------------- > Variables under Macros, just one time update during host addition ------------------------------------------------------------------- ## Author hitesh-vinzoda 
-
 ## Overview
 
 > Uses SNMPv3
@@ -62,8 +58,8 @@ There are no template links in this template.
 |Operational status of $1|<p>-</p>|`SNMP agent`|entPhySensorOperStatus[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|
 |Speed of $1|<p>-</p>|`SNMP agent`|entPhySensorValue[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |Temperature of $1|<p>-</p>|`SNMP agent`|entPhySensorTemp[{#SENSORNAME}]<p>Update: 30s</p><p>LLD</p>|
-|{#SNMPVALUE} Size|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |{#SNMPVALUE} Used|<p>-</p>|`SNMP agent`|hrStorageUsed[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
+|{#SNMPVALUE} Size|<p>-</p>|`SNMP agent`|hrStorageSize[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Total broadcast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |Total multicast packets incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |Total traffic incoming on interface $1|<p>-</p>|`SNMP agent`|ifHCInOctets[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|

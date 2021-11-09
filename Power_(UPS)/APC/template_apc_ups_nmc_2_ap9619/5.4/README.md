@@ -1,9 +1,5 @@
 # APC NMC 2 AP9619
 
-## Description
-
-## Overview This template was originaly created for the AP9619 card, but in version 2 now support more UPS's. Tested on: APC Symmetra PX40 3Phase UPS APC Smart-UPS VT 20kVA 3Phase UPS Smart-UPS RT 7500 RM XL and more... It gathers input and output values from all three phases. I tried to make it as universal as i could so it can be used with single phase ups's as well. I have disable some of the items on the template for the reason that my ups didn't support them, feel free to try them if they are supported by your UPS. Changelog V2: Added more items for single phase ups's and triggers. thanks, petroska ## Author petroska 
-
 ## Overview
 
 This template was originaly created for the AP9619 card, but in version 2 now support more UPS's.  

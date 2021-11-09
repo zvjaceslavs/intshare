@@ -1,9 +1,5 @@
 # IBM-Storwize-3700 CLI v2
 
-## Description
-
-## Overview Tested on Storwize 3700. This script get next metrics: Disk, Enclosure, Battery, Enclosure Canister, PSU, Mdisk, Pool, PortFibreChannel, PortSas, Volume 
-
 ## Overview
 
 Tested on Storwize 3700.

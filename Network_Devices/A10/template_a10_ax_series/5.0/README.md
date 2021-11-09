@@ -1,9 +1,5 @@
 # A10_AX_Series
 
-## Description
-
-## Overview FAN Discovery Power Supply Discovery Power Supply Voltage Discovery 
-
 ## Overview
 
 FAN Discovery

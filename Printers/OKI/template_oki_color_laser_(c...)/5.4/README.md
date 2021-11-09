@@ -1,9 +1,5 @@
 # OKI
 
-## Description
-
-## Overview A template to check supplies on OKIDATA printers (you'll need the OKIDATA MIB). It provides items and triggers for toner, drum, fuser and belt levels as well as a simple paper count. I've been using it with an OKI C5950 and an OKI C610 printer. You'll need to add a 'zabbix' snmp read community on your printer (from the Admin webpage choose Network->SNMP->Settings->Step2) or change the community to 'public' within the template. Triggers will be activated at 11% for toner and 10% for drums, belt and fuser unit, which should be ample time to restack on supplies unless you're really printing loads of pages. EDIT: 2017-06-01 Updated this for adjusted trigger levels on toner and drums as the chosen ones were too low. ## Author Korbinian Grote 
-
 ## Overview
 
 A template to check supplies on OKIDATA printers (you'll need the OKIDATA MIB).

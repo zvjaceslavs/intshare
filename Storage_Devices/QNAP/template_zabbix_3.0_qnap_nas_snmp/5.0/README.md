@@ -1,9 +1,5 @@
 # SNMP QNAP NAS
 
-## Description
-
-## Overview based on the template you find here: "Zabbix 2.2 QNAP NAS SNMP template" changes: - updated discovery oid's - removed "Use custom multiplier" from item prototype "HdCapacityEX[{#SNMPINDEX}]" NEED in Macros HOST {$SNMP _COMMUNITY} {$SNMP _PORT} ## Author AlteraSidus, Bas van Elburg 
-
 ## Overview
 
 based on the template you find here: "Zabbix 2.2 QNAP NAS SNMP template"  

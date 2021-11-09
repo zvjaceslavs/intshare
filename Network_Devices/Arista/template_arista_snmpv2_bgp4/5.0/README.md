@@ -1,9 +1,5 @@
 # SNMP Arista BGP4
 
-## Description
-
-## Overview Minimalistic template with SNMPv2 discovery Alerting on BGP session Admin UP and Oper not Estab. Collects AdminStatus, OperStatus, Recieved/Accepted/Announced Prefixes. SNMPv2 Community via {$SNMP _COMMUNITY} Macro 
-
 ## Overview
 
 Minimalistic template with SNMPv2 discovery

@@ -1,9 +1,5 @@
 # 惠普ProLiant系列机架服务器监控模板
 
-## Description
-
-## Overview 惠普ProLiant系列机架服务器监控模板 包括CPU、内存、电源、风扇、硬盘、Cache状态 将宏{$CLOUD _SNMP _COMMUNITY}替换为实际团体字即可 ## Author zhangzhefeng 
-
 ## Overview
 
 惠普ProLiant系列机架服务器监控模板

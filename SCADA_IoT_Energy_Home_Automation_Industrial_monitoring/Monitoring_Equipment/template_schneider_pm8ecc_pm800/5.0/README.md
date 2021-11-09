@@ -1,9 +1,5 @@
 # PM8ECC
 
-## Description
-
-## Author petroska 
-
 ## Author
 
 petroska

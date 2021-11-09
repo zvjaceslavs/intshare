@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template Module Generic version: 0.15 MIBs used: SNMPv2-MIB ## Overview Based on the template: [Template Module ICMP Ping](https://z.serahost.net/templates.php?form=update&templateid=10186) And [Alexander Lesovoy](owner/spacert) Fujitsu RX2540 SNMP V2 Thanks! ## Author Serpentarius Software 
+Template Module Generic version: 0.15 MIBs used: SNMPv2-MIB
 
 ## Overview
 

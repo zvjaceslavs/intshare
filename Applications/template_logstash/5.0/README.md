@@ -1,9 +1,5 @@
 # App Logstash
 
-## Description
-
-## Overview This method uses python protobix library, and check metrics from logstash JSON file. More informations and download script on: https://github.com/fredprod/logstash-zabbix ## Author fredprod 
-
 ## Overview
 
 This method uses python protobix library, and check metrics from logstash JSON file.

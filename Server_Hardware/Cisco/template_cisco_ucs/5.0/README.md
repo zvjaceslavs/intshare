@@ -1,9 +1,5 @@
 # Cisco-UCS
 
-## Description
-
-## Overview **Monitoring Cisco UCS Server for snmp v2 Working with B and C Blade server** **tested on Cisco chassis 5018 and B200M4 .** **it give you this info :** * **Servers Hardware component info.** * **Temperature monitoring .** * **FAN** ****monitoring .**** * ****PSU**** ******monitoring .****** * ******Memory****** ************monitoring .************ * ************CPU************ ******************monitoring .****************** * ******************Network****************** ******************you only need to add {$SNMP _COMMUNITY} in macros****************** ## Author Bassam Darawshi 
-
 ## Overview
 
 **Monitoring Cisco UCS Server for snmp v2 Working with B and C Blade server**

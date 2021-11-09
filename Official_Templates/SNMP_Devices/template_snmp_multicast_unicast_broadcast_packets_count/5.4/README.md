@@ -1,9 +1,5 @@
 # SNMP Packets
 
-## Description
-
-## Overview Count of Multicast | Unicast | Broadcast packets ## Author Фенечкин 
-
 ## Overview
 
 Count of Multicast | Unicast | Broadcast packets

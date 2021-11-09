@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Getting cases from worldometers.info and plotting on Zabbix ## Overview **Gets statistics of COVID19 - CORONAVIRUS and presents to JSON and Zabbix** Updated template and code to work with current worldometers.info results (as they changed slightly) and the old code was not working properly. I forked the original repo from Rickk Barbosa and uploaded changes there, all the credits goes to him. If you have any suggestion please do send your feedback to improve! ## Author Christian Reizlein 
+Getting cases from worldometers.info and plotting on Zabbix
 
 ## Overview
 

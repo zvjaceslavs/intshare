@@ -1,9 +1,5 @@
 # Cisco_SG200-26P
 
-## Description
-
-## Overview CPU loading, Port status, Incoming speed,Outcoming speed,Uptime, Graphs for port utilization 
-
 ## Overview
 
 CPU loading, Port status, Incoming speed,Outcoming speed,Uptime, Graphs for port utilization

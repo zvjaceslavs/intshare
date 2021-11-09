@@ -1,9 +1,5 @@
 # SGE2010_48P
 
-## Description
-
-## Overview Prezados, Este template e para switch cisco SGE2010 e SGE2010P , caso queira acrescentar mais informações fiquem a vontade , apos este , por gentileza inserir novamente no share do zabbix. # Este template Monitora: 1- Cooler (FAN), 2- Disponibilidade , 3- Latencia , 4- Pacotes de entrada , 5- Pacotes de Saida , 6- Temperatura , 7- Trafego de entrada , 8- Trafego de saida Att: Magno Monte Cerqueira Skype: [magnopeem _rj@hotmail.com](mailto:magnopeem_rj@hotmail.com) Linkdln: <https://br.linkedin.com/in/magno-monte-cerqueira-976b1587> Gmail: [magnopeem@gmail.com](mailto:magnopeem@gmail.com) OBS: Esta licença esta sobre regra do GNU. ## Author Magno Monte Cerqueira "magnopeem" 
-
 ## Overview
 
 Prezados,

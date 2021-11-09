@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description For Netgear Ready NAS http://www.downloads.netgear.com/files/ReadyNAS/READYNAS-MIB.txt Template is used for monitoring of the disks state, disks temperature, a status of volumes and general state device. Calculated value can be unavailable the some time ## Overview Template is based on MIB <http://www.downloads.netgear.com/files/ReadyNAS/READYNAS-MIB.txt>. LLD of disks. It monitors: * Disks temperature in Celsius. There is a trigger * Disks state. There is trigger * Volume state. There is trigger * Volume size, free space. There is trigger * And other. For tuning of a template macros are used Perhaps works at versions 2.*. 
+For Netgear Ready NAS http://www.downloads.netgear.com/files/ReadyNAS/READYNAS-MIB.txt Template is used for monitoring of the disks state, disks temperature, a status of volumes and general state device. Calculated value can be unavailable the some time
 
 ## Overview
 

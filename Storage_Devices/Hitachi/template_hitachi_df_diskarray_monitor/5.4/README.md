@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Hitachi_DF_DiskArray_monitor_template Known Issues: device : AMS 2100，AMS 2300，HUS130，HUS150 ## Overview Monitor Template of Hitachi DF DiskArray Suitable for AMS 2100, AMS 2300, HUS130, HUS150 Repalce macro {$CLOUD _SNMP _COMMUNITY} with your snmp community ## Author zhangzhefeng 
+Hitachi_DF_DiskArray_monitor_template Known Issues: device : AMS 2100，AMS 2300，HUS130，HUS150
 
 ## Overview
 

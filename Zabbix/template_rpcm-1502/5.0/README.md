@@ -1,9 +1,5 @@
 # rpcm_1502
 
-## Description
-
-## Overview rcpm - over voltage state 0 - NO OVERVOLTAGE TURN OFF DETECTED 1 - OVERVOLTAGE TURN OFF FIRED rpcm - admin state 0 - off 1 - on rpcm - breaker state 0 - NO SHORT CIRCUIT DETECTED 1 - SHORT CIRCUIT DETECTED rpcm - force fallback 0 - enabled 1 - disabled rpcm - frequency 0 - absent 1 - present rpcm - ground good 0 - Ground is Bad 1 - Ground is Good rpcm - indicator flashing 0 - disabled 1 - enabled rpcm - overcurent turn off state 0 - NO OVERCURRENT TURN OFF DETECTED 1 - OVERCURRENT TURN OFF FIRED rpcm - overcurrent alarm state 0 - NO ALARM 1 - OVERCURRENT ALARM FIRED 
-
 ## Overview
 
 rcpm - over voltage state

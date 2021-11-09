@@ -1,9 +1,5 @@
 # Printer Xerox WorkCentre 7525
 
-## Description
-
-## Overview Template for Xerox WorkCentre 7525, uses SNMP v.1 
-
 ## Overview
 
 Template for Xerox WorkCentre 7525, uses SNMP v.1

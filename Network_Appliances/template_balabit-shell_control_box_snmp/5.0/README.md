@@ -1,9 +1,5 @@
 # BALABIT-SNMPv2-Shell_Control_Box
 
-## Description
-
-## Overview Template for supervise, with SNMP v2, the product: **BALABIT Shell Control Box** <https://www.balabit.com/fr/network-security/scb> --- You must add values on MACRO for each supervising protocol 1. Get the exact string for each protocol (**snmpwalk | grep scb _**) ***=> See first image*** 2. Add values on MACRO for each protocol ***=> See second image*** 
-
 ## Overview
 
 Template for supervise, with SNMP v2, the product: **BALABIT Shell Control Box**

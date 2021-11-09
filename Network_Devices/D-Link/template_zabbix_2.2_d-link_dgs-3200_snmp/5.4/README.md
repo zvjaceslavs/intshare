@@ -1,9 +1,5 @@
 # SNMP D-Link DGS-3200
 
-## Description
-
-## Overview NEED in Macros HOST {$SNMP _COMMUNITY} {$SNMP _PORT} ## Author AlteraSidus 
-
 ## Overview
 
 NEED in Macros HOST

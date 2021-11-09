@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description ipmi sensors, please disable absend HDD and unsupported items ## Overview Template for monitoring IPMI sensors for Cisco UCS servers hardware tested on C220M3 please disable absend HDD and unsupported items after some time. sensors and triggers: * cpu temperature * DDR modules status * HDD status * LED fan status * overal leds status * Power modules status * other temperature sensors * storage status ## Author Dmitry Lavrukhin 
+ipmi sensors, please disable absend HDD and unsupported items
 
 ## Overview
 
@@ -56,16 +56,16 @@ There are no discovery rules in this template.
 |DDR3_P2_E1_ECC|<p>-</p>|`IPMI agent`|DDR3_P2_E1_ECC<p>Update: 3600</p>|
 |LED_FAN1_FAULT|<p>-</p>|`IPMI agent`|LED_FAN1_FAULT<p>Update: 3600</p>|
 |LED_FAN4_FAULT|<p>-</p>|`IPMI agent`|LED_FAN4_FAULT<p>Update: 3600</p>|
-|HDD8_STATUS|<p>-</p>|`IPMI agent`|HDD8_STATUS<p>Update: 3600</p>|
 |FP_TEMP_SENSOR|<p>-</p>|`IPMI agent`|FP_TEMP_SENSOR<p>Update: 3600</p>|
+|HDD8_STATUS|<p>-</p>|`IPMI agent`|HDD8_STATUS<p>Update: 3600</p>|
 |DDR3_P2_G2_ECC|<p>-</p>|`IPMI agent`|DDR3_P2_G2_ECC<p>Update: 3600</p>|
 |DDR3_P1_D2_ECC|<p>-</p>|`IPMI agent`|DDR3_P1_D2_ECC<p>Update: 3600</p>|
 |CPU1 temperature|<p>-</p>|`IPMI agent`|P1_TEMP_SENS<p>Update: 3600</p>|
 |DDR3_P2_H1_ECC|<p>-</p>|`IPMI agent`|DDR3_P2_H1_ECC<p>Update: 3600</p>|
 |DDR3_P1_B1_ECC|<p>-</p>|`IPMI agent`|DDR3_P1_B1_ECC<p>Update: 3600</p>|
 |OVERALL_DIMM_STATUS|<p>-</p>|`IPMI agent`|OVERALL_DIMM_STATUS<p>Update: 3600</p>|
-|DDR3_P1_C2_ECC|<p>-</p>|`IPMI agent`|DDR3_P1_C2_ECC<p>Update: 3600</p>|
 |STOR_STATUS|<p>-</p>|`IPMI agent`|STOR_STATUS<p>Update: 3600</p>|
+|DDR3_P1_C2_ECC|<p>-</p>|`IPMI agent`|DDR3_P1_C2_ECC<p>Update: 3600</p>|
 |PSU2_AC_OK|<p>-</p>|`IPMI agent`|PSU2_AC_OK<p>Update: 3600</p>|
 |LED_FAN5_FAULT|<p>-</p>|`IPMI agent`|LED_FAN5_FAULT<p>Update: 3600</p>|
 |CPU2 temperature|<p>-</p>|`IPMI agent`|P2_TEMP_SENS<p>Update: 3600</p>|

@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T04:41:50Z'
+  date: '2021-11-09T08:11:45Z'
   groups:
     -
       uuid: 85dcfb92cf3f48e7bb9089342e98559c

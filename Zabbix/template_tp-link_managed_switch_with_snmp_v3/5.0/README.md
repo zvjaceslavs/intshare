@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description It is for TP-Link managed switches ## Overview Template can be used for TP-link managed switch SNMPv3 ## Author carissa 
+It is for TP-Link managed switches
 
 ## Overview
 

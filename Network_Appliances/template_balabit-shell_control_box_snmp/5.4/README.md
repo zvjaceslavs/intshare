@@ -1,9 +1,5 @@
 # BALABIT-SNMPv2-Shell_Control_Box
 
-## Description
-
-## Overview Template for supervise, with SNMP v2, the product: **BALABIT Shell Control Box** <https://www.balabit.com/fr/network-security/scb> --- You must add values on MACRO for each supervising protocol 1. Get the exact string for each protocol (**snmpwalk | grep scb _**) ***=> See first image*** 2. Add values on MACRO for each protocol ***=> See second image*** 
-
 ## Overview
 
 Template for supervise, with SNMP v2, the product: **BALABIT Shell Control Box**
@@ -102,12 +98,12 @@ There are no template links in this template.
 |File System {#SNMPVALUE} - Used Percentage|<p>-</p>|`Calculated`|File-System-Space-Used-Percentage-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |File System {#SNMPVALUE} - Espace Alloue|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Allocated-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |File System {#SNMPVALUE} - Espace Utilise|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Used-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
+|CPU {#SNMPINDEX} - Charge|<p>-</p>|`SNMP agent`|SNMP-Charge-CPU-[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |CPU {#SNMPINDEX} - Etat|<p>-</p>|`SNMP agent`|SNMP-Etat-CPU-[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |CPU {#SNMPINDEX} - Name|<p>-</p>|`SNMP agent`|SNMP-Name-CPU-[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
-|CPU {#SNMPINDEX} - Charge|<p>-</p>|`SNMP agent`|SNMP-Charge-CPU-[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|Interface [{#SNMPVALUE}] - IN Octets|<p>-</p>|`SNMP agent`|SNMP-Interface-IN-Octets-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Interface [{#SNMPVALUE}] - MAC|<p>-</p>|`SNMP agent`|SNMP-Interface-MAC-[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Interface [{#SNMPVALUE}] - MTU|<p>-</p>|`SNMP agent`|SNMP-Interface-MTU-[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
-|Interface [{#SNMPVALUE}] - IN Octets|<p>-</p>|`SNMP agent`|SNMP-Interface-IN-Octets-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Interface [{#SNMPVALUE}] - Operational Status|<p>-</p>|`SNMP agent`|SNMP-Interface-Op-Status-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Interface [{#SNMPVALUE}] - OUT Errors|<p>-</p>|`SNMP agent`|SNMP-Interface-OUT-Errors-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Interface [{#SNMPVALUE}] - OUT Octets|<p>-</p>|`SNMP agent`|SNMP-Interface-OUT-Octets-[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|

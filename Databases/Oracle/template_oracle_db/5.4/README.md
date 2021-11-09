@@ -1,9 +1,5 @@
 # Oracle DB
 
-## Description
-
-## Overview Zabbix template for oracle ========================== Steps in order to make it work: ------------------------------- 1. Install ODBC drivers for your OS (Oracle) 2. Create some user in your Oracle database for Zabbix 3. Maintain your odbc.ini and add new DSN 4. Fill corresponding connect DSN in {#DSN} and {#BACKUP _DSN} macro at your zabbix host. 5. Grant **select any dictionary** to created user at step #2. 6. If some specific permission is required for some specific item, it will be available at item description. Future plans: ------------- * Add more performance metric items and triggers * Add support for Oracle RAC * Add compatibility for Oracle DataGuard instances Github repo: <https://github.com/HellScre4m/zabbix-monitoring-templates> Some hints: ----------- **Min Zabbix version** is prone to **change** at higher versions. Always check template description before getting new version. Current supporting Oracle is **11gr2** Feel free to fork/edit/pull request. Version / Zabbix version: ------------------------- 1.0 / 4.2+ ## Author SuNova 
-
 ## Overview
 
 Zabbix template for oracle

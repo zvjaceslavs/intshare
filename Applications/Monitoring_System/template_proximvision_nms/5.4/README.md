@@ -1,9 +1,5 @@
 # ProximVision NMS
 
-## Description
-
-## Overview Monitor critical services for ProximWireless Proximvision NMS ## Author Dmitry Lavrukhin 
-
 ## Overview
 
 Monitor critical services for ProximWireless Proximvision NMS

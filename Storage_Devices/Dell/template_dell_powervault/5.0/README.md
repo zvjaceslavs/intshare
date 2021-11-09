@@ -1,9 +1,5 @@
 # DELL POWERVAULT TL2000
 
-## Description
-
-## Overview Created and configured in Zabbix 3.2 By using SNMP, I believe it works in other versions. DELL MIBs required Link: https://www.dell.com/support/home/br/en/brbsdt1/drivers/driversdetails?driverId=M0KV7 ## Author Geraldo Jr 
-
 ## Overview
 
 Created and configured in Zabbix 3.2

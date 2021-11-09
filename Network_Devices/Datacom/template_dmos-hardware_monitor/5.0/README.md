@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Monitor de objetos da MIB DMOS-HW-MONITOR-MIB para monitoramento do hardware dos devices. ## Overview Platforms DM4050 and DM4610. SNMP - Sensors Temperature SNMP - FAN Control, FAN Speed ## Author Guilherme Zamora Rodrigues 
+Monitor de objetos da MIB DMOS-HW-MONITOR-MIB para monitoramento do hardware dos devices.
 
 ## Overview
 

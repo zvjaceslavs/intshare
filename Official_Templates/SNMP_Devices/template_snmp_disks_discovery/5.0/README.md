@@ -1,9 +1,5 @@
 # SNMP Disks
 
-## Description
-
-## Overview Official template from Zabbix distribution to discover disk devices by SNMP ## Author Zabbix SIA 
-
 ## Overview
 
 Official template from Zabbix distribution to discover disk devices by SNMP

@@ -1,9 +1,5 @@
 # Windows ICMP Macro Discovery Active
 
-## Description
-
-## Overview Sometimes we are faced with an infrastructure distributed over the Internet. In case there is no VPN, using zabbix active agents is a great way to configure monitoring of servers and workstations. But what if we just want to check the availability of the IP camera and other devices behind the NAT? Of course we should use an agent! This template uses a macros with "!"-separated pairs for hosts and IP-addresses for LLD and makes a very simple ICMP checks for each host. ## Author Maxim M. Demichev 
-
 ## Overview
 
 Sometimes we are faced with an infrastructure distributed over the Internet. In case there is no VPN, using zabbix active agents is a great way to configure monitoring of servers and workstations. But what if we just want to check the availability of the IP camera and other devices behind the NAT? Of course we should use an agent!

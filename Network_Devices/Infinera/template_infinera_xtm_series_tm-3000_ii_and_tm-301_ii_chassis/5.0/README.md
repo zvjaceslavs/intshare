@@ -1,9 +1,5 @@
 # ZBX-INFINERA-XTM-SERIES-MONITORING
 
-## Description
-
-## Overview README: <https://github.com/hacktivism-github/zbx-templates-repository/blob/master/zbx-infinera/README.md> ![Infinera XTM Series Template in Production](media/com_mtree/images/listings/m/481.png) ## Author Bruno Teixeira 
-
 ## Overview
 
 README: <https://github.com/hacktivism-github/zbx-templates-repository/blob/master/zbx-infinera/README.md>
@@ -47,11 +43,11 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |XTM Series | Unsaved Changes Alarm|<p>-</p>|`SNMP agent`|backupGeneralUnsavedChangesAlarm<p>Update: 300</p>|
+|XTM Series | equipmentPowerType $1|<p>-</p>|`SNMP agent`|equipmentPowerType[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
 |XTM Series | equipmentPowerDCPowerFailedSeverity $1|<p>-</p>|`SNMP agent`|equipmentPowerDCPowerFailedSeverity[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |XTM Series | equipmentPowerDCPowerFailed $1|<p>-</p>|`SNMP agent`|equipmentPowerDCPowerFailed[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |XTM Series | equipmentPowerName $1|<p>-</p>|`SNMP agent`|equipmentPowerName[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
 |XTM Series | equipmentPowerOperStatus $1|<p>-</p>|`SNMP agent`|equipmentPowerOperStatus[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|XTM Series | equipmentPowerType $1|<p>-</p>|`SNMP agent`|equipmentPowerType[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
 |XTM Series | equipmentFanName $1|<p>-</p>|`SNMP agent`|equipmentFanName[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
 |XTM Series | equipmentFanOperStatus $1|<p>-</p>|`SNMP agent`|equipmentFanOperStatus[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |XTM Series | equipmentFanUnitFailed $1|<p>-</p>|`SNMP agent`|equipmentFanUnitFailed[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|

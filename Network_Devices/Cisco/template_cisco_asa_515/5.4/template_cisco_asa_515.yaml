@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T04:49:52Z'
+  date: '2021-11-09T08:19:28Z'
   groups:
     -
       uuid: 6e4deb8bb85c43e59f59d4f00241b7bb
@@ -272,6 +272,19 @@ zabbix_export:
               priority: HIGH
               description: '{HOST.NAME} has had a CPU Utilization above 85 % for 3 samples taken in the last 1 minute 30 seconds.'
         -
+          uuid: 6187757389d04992b80b808b93d34e15
+          name: 'Overall CPU busy percentage in the last 5 minute period'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.9.9.109.1.1.1.1.5
+          key: cpmCPUTotal5min
+          delay: 300s
+          history: 7d
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: General
+        -
           uuid: 83fda8d1c4fb40b6ae274bfa7e485d25
           name: 'CPU Loading Total 5 Minutes'
           type: SNMP_AGENT
@@ -286,19 +299,6 @@ zabbix_export:
               name: '{HOST.NAME}  CPU Over 85 %'
               priority: HIGH
               description: '{HOST.NAME} has had a CPU Utilization above 85 % for 3 samples taken in the last 1 minute 30 seconds.'
-        -
-          uuid: 6187757389d04992b80b808b93d34e15
-          name: 'Overall CPU busy percentage in the last 5 minute period'
-          type: SNMP_AGENT
-          snmp_oid: .1.3.6.1.4.1.9.9.109.1.1.1.1.5
-          key: cpmCPUTotal5min
-          delay: 300s
-          history: 7d
-          units: '%'
-          tags:
-            -
-              tag: Application
-              value: General
         -
           uuid: 42fbdf8aac8a47f3a88ea2ba51a88520
           name: 'CPU Utilization avg last 5 min'

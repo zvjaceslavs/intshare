@@ -1,9 +1,5 @@
 # Array AG1100 SNMP 监控模板
 
-## Description
-
-## Overview SNMP Template for monitoring Array Networks "AG Secure Access Gateway". ## Author zhangrongjie 
-
 ## Overview
 
 SNMP Template for monitoring Array Networks "AG Secure Access Gateway".

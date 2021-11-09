@@ -1,9 +1,5 @@
 # 3CX Services Linux
 
-## Description
-
-## Overview Template for monitoring 3cx services running on linux, this template contains trigger and items to monitor services related to the 3cx system, the postgresql and nginx database service. Note: As of version 18, the tunnel has been incorporated into the media server and this item/trigger must be disabled or excluded. ## Author Antony T. N. Peronio 
-
 ## Overview
 
 Template for monitoring 3cx services running on linux, this template contains trigger and items to monitor services related to the 3cx system, the postgresql and nginx database service.

@@ -1,9 +1,5 @@
 # CTCU Frm220
 
-## Description
-
-## Overview This Template works with snmpv1/2 and uses {$SNMP _COMMUNITY} Macro. - General Monitoring of NMC its self. (FAN/PSU) - Autodiscovery for following Line Cards - 1000MS - 1000DS - 3R-10G-SS - 3R-10G This Template will possibly not work for other CTCU Versions. It should work with other Zabbix Versions, but it is not testet. I am not able to discover other Linecards, because we dont have them in use yet. ## Author Rene Schwarz 
-
 ## Overview
 
 This Template works with snmpv1/2 and uses {$SNMP\_COMMUNITY} Macro.
@@ -81,11 +77,11 @@ There are no template links in this template.
 |3R-10G-SS Slot{#SNMPINDEX} Link2 Tx PWR|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.210.20.1.50.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |3R-10G-SS Slot{#SNMPINDEX} Link2 Rx PWR|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.210.20.1.51.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |3R-10G-SS Slot{#SNMPINDEX} SFP2 Temperatur|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.210.20.1.52.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|1000MS Slot{#SNMPINDEX} Link1(LWL) status|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.310.20.1.11.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |1000MS Slot{#SNMPINDEX} Link2(CU) status|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.310.20.1.23.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |1000MS Slot{#SNMPINDEX} Tx PWR|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.310.20.1.134.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |1000MS Slot{#SNMPINDEX} Rx PWR|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.310.20.1.135.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |1000MS Slot{#SNMPINDEX} SFP Temperatur|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.310.20.1.136.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|1000MS Slot{#SNMPINDEX} Link1(LWL) status|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.310.20.1.11.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |3R-10G Slot{#SNMPINDEX} Link1 status|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.680.20.1.7.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |3R-10G Slot{#SNMPINDEX} Link2 status|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.680.20.1.8.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |3R-10G Slot{#SNMPINDEX} Link3 status|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.4756.20.680.20.1.9.0.[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|

@@ -1,9 +1,5 @@
 # Storage NBU 5240 SNMP Trap
 
-## Description
-
-## Overview Storage NBU 5240 SNMP Trap Template in Chinese. 1. State of the fan(风扇控制器状态). 2. Power Supply AC Status(电源制器状态) . 3. The Fibre Channel links state(光纤连接状态). 4. State of the System temperature(控制器温度状态). ... ## Author ZhangQi 
-
 ## Overview
 
 Storage NBU 5240 SNMP Trap Template in Chinese.

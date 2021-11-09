@@ -1,9 +1,5 @@
 # Zimbra
 
-## Description
-
-## Overview É necessário habilitar o Allow root e o comando externo. Coleta status dos serviços, fila e spam. Adicionar ao Userparameter UserParameter=zimbra.mailq,/opt/zimbra/common/sbin/mailq | grep -v "Mail queue is empty" | grep -c '^[0-9A-Z]' UserParameter=zimbra.service.status,su - zimbra -c"zmcontrol status" > /tmp/zimbrastatus.txt UserParameter=zimbra.amavis.status,awk '/amavis/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.antispam.status,awk '/antispam/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.antivirus.status,awk '/antivirus/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.cbpolicyd.status,awk '/cbpolicyd/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.mailbox.status,awk '/mailbox/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.mta.status,awk '/mta/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.zmconfigd.status,awk '/zmconfigd/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.webmail.status,awk '/service webapp/{print $3}' /tmp/zimbrastatus.txt UserParameter=zimbra.webadm.status,awk '/zimbraAdmin/{print $3}' /tmp/zimbrastatus.txt UserParameter=zimbra.proxy.status,awk '/proxy/{print $2}' /tmp/zimbrastatus.txt UserParameter=zimbra.mailq.active,/opt/zimbra/libexec/zmqstat | grep active | cut -d= -f2 UserParameter=zimbra.mailq.corrupt,/opt/zimbra/libexec/zmqstat | grep corrupt | cut -d= -f2 UserParameter=zimbra.mailq.hold,/opt/zimbra/libexec/zmqstat | grep hold | cut -d= -f2 UserParameter=zimbra.mailq.deferred,/opt/zimbra/libexec/zmqstat | grep deferred | cut -d= -f2 UserParameter=zimbra.mailq.incoming,/opt/zimbra/libexec/zmqstat | grep incoming | cut -d= -f2 ## Author Carlos Eduardo 
-
 ## Overview
 
 É necessário habilitar o Allow root e o comando externo.
@@ -113,8 +109,8 @@ There are no discovery rules in this template.
 |Status AntiSpam Zimbra|<p>-</p>|`Zabbix agent`|zimbra.antispam.status<p>Update: 3m</p>|
 |Fila de e-mails não entregues|<p>Quando as mensagens não podem ser entregues, são colocadas nessa fila para que seja feita uma nova tentativa de reenvio. A quantidade de tentativas de reenvio vai depender da configuração do servidor</p>|`Zabbix agent`|zimbra.mailq.deferred<p>Update: 1m</p>|
 |Status Admin Console Zimbra|<p>-</p>|`Zabbix agent`|zimbra.webadm.status<p>Update: 3m</p>|
-|Status Serviço Webmail Zimbra|<p>-</p>|`Zabbix agent`|zimbra.webmail.status<p>Update: 3m</p>|
 |Bloqueio Lista b.barracudacentral.org|<p>Retorna quantidade de e-mails diários bloqueados pela lista b.barracudacentral.org.</p>|`Zabbix agent`|system.run[awk '/blocked using b.barracudacentral.org/{print $5}' /tmp/report.txt]<p>Update: 0;h23m50</p>|
+|Status Serviço Webmail Zimbra|<p>-</p>|`Zabbix agent`|zimbra.webmail.status<p>Update: 3m</p>|
 |E-mails rejeitados pelo comando Helo - Host não qualificado|<p>Retorna quantidade de e-mails diários bloqueados por erro por comando Helo, pelo motivo de need fully-qualified hostname.</p>|`Zabbix agent`|system.run[awk '/Helo command rejected: need fully-qualified hostname/{print $8}' /tmp/report.txt]<p>Update: 0;h23m50</p>|
 ## Triggers
 

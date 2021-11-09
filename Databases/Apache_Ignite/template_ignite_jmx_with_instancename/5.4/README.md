@@ -1,9 +1,5 @@
 # App Ignite JMX
 
-## Description
-
-## Overview JMX metrics template for Apache Ignite and Gridgain computing platform. All metrics are discoverable. Template supports jmx with certificates and credentionals To apply them to your cluster you have to: * add the following jvm option to -DIGNITE _MBEAN _APPEND _CLASS _LOADER _ID=false * set the following xml option Template tested with ignite 2.8.0 and GridGain 2.7.16 
-
 ## Overview
 
  JMX metrics template for Apache Ignite and Gridgain computing platform.

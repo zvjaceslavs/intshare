@@ -1,9 +1,5 @@
 # HP A5120
 
-## Description
-
-## Overview Template for HP A5120 switch with SNMP v3 authPriv. Included items: * CPU usage * Memory usage * Temperature * Fan status * PSU sensor * Device name, location, description, contact details * Discovery rule for CRC errors no links to other templates, does not include standard interface items (use generic SNMP interface template) I use SNMP V3 with authPriv security level, SHA authentication protocol, AES privacy protocol. It is required to fill these variables with correct values using host macros. * Security name: {$SNMP _V3 _USER} * Authentication passphrase: {$SNMP _V3 _AUTHPASSPHRASE} * Privacy passphrase: {$SNMP _V3 _PRIVPASSPHRASE} Created on Zabbix 3.0, should work with newer/older versions. ## Author Jakub Samek 
-
 ## Overview
 
 Template for HP A5120 switch with SNMP v3 authPriv.

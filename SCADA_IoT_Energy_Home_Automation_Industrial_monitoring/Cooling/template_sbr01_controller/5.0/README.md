@@ -1,9 +1,5 @@
 # SBR01
 
-## Description
-
-## Overview This template for **SBR01 air conditioner controller** Template for 3 conditioners, the rest you can add. Because MIB structure not good for low discovery. Protocol SNMP v2 Items 95 with low discovery Graphs 1 **Triggers:** All the air conditioning's stopped Error on conditioner No data on {HOST.NAME} Temperature is above warning threshold in {HOST.NAME} room Template on my [GitHub](https://github.com/pgalonza/Notes/blob/master/administration/zabbix/templates/SBR01.xml) repository MIBs on my [GitHub](https://github.com/pgalonza/Notes/tree/master/administration/sbr01) repository ## Author P.V. Galonza 
-
 ## Overview
 
 This template for **SBR01 air conditioner controller**

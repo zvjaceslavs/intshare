@@ -1,9 +1,5 @@
 # TeraStation SNMPV2
 
-## Description
-
-## Overview Templates to monitor Buffalo TeraStations over SNMP v2c on mini _snmpd. --- 1. Install ipkg mkdir -p /share/tmp; cd /share/tmp wget http://ipkg.nslu2-linux.org/feeds/optware/mssii/cross/stable/mssii-bootstrap _1.2-7 _arm.xsh sh mssii-bootstrap _1.2-7 _arm.xsh 2. Install mini _snmpd ipkg update ipkg install mini _snmpd 3. Create Init Script vi /opt/etc/init.d/S99mini _snmpd #!/bin/sh /opt/sbin/mini _snmpd -i eth0 -D "TeraStation" & 4. Change permission chmod 755 /opt/etc/init.d/S99mini _snmpd 5. Reboot reboot 6.check Execute ps | grep snmpd ## Author Akira345 
-
 ## Overview
 
 Templates to monitor Buffalo TeraStations over SNMP v2c on mini\_snmpd.  

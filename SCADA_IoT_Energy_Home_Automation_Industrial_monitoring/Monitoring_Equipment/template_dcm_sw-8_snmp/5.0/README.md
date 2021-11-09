@@ -1,9 +1,5 @@
 # DCM SW-8
 
-## Description
-
-## Overview Template para o equipamento SW-8 para consultas através de SNMP. Monitor de temperatura. Alertas de temperatura para 30°C e 40°C. Gráfico para temperatura. Dúvidas: rodolfo@dcmtech.com.br Site fabricante: [dcmtech.com.br](https://dcmtech.com.br/) ## Author Rodolfo Luis Overbeck 
-
 ## Overview
 
 Template para o equipamento SW-8 para consultas através de SNMP.

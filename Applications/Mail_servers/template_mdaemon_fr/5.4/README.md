@@ -1,9 +1,5 @@
 # App MDaemon
 
-## Description
-
-## Overview Hi, New here, I updated the english version to french since mdaemon perf indicator are localized. 
-
 ## Overview
 
 Hi, 

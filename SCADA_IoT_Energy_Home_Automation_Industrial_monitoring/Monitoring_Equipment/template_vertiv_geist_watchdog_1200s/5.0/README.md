@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Check the watchdogs for the temperature in each closet. ## Overview SNMP discovery-based template for Vertiv Geist ITWatchdogs Watchdog 1200-series environmental monitoring appliances. Currently supports the onboard climate and IO sensors, and external airflow, temperature, and water sensors. Provides item and graph prototypes. Where possible, this template will automatically detect and apply the sensor names to each item. Noticeably missing are the IO sensor names, because while you can name them in the Watchdog's interface, these names are not exposed via SNMP. Device firmware 3.15.0 is recommended. Older firmware versions, such as 3.9.0, do not expose the external sensor data via SNMP Due to a limitation in Zabbix, you cannot create a graph of one sensor item across multiple hosts. Please vote for issue <https://support.zabbix.com/browse/ZBXNEXT-1120> to have that feature added. ## Author Webster Massingham 
+Check the watchdogs for the temperature in each closet.
 
 ## Overview
 

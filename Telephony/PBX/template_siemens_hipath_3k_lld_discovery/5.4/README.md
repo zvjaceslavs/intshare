@@ -1,9 +1,5 @@
 # aa Siemens Hipath
 
-## Description
-
-## Author Cesar Buffulin 
-
 ## Author
 
 Cesar Buffulin

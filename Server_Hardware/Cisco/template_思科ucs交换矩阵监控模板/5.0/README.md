@@ -1,9 +1,5 @@
 # 思科UCS交换矩阵监控模板
 
-## Description
-
-## Overview 思科UCS交换矩阵监控模板 包括CPU、Raid卡、内存、刀片、电源、硬盘、风扇、端口状态 将宏{$CLOUD _SNMP _COMMUNITY}替换为实际团体字即可 某些情况下监控是浮动地址无效，需要监控实际地址 ## Author zhangzhefeng 
-
 ## Overview
 
 思科UCS交换矩阵监控模板 

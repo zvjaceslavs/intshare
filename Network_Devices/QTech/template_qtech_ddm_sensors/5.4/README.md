@@ -1,9 +1,5 @@
 # Qtech_Sensors
 
-## Description
-
-## Overview Template for Qtech. Discovering RX power, TX power, Bias, Voltage and Temp sensors of installed SFP (SFP modules must be with DDM support). PS: Without triggers. Must be later. 
-
 ## Overview
 
 Template for Qtech. Discovering RX power, TX power, Bias, Voltage and Temp sensors of installed SFP (SFP modules must be with DDM support).

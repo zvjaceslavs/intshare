@@ -1,9 +1,5 @@
 # IBM SW 7k
 
-## Description
-
-## Overview MDisk, Volumes, IPOS, Mb s Open github, read instruction. If you have any question, contact me with telegram **@jegeren** Eng/Rus IMPORTANT this is very very alpha release, watch out for github, send your suggestions and modifications ## Author homesicker 
-
 ## Overview
 
 MDisk, Volumes, IPOS, Mb\s

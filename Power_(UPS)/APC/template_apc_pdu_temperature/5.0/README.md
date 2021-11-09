@@ -1,9 +1,5 @@
 # APC PDU
 
-## Description
-
-## Overview Tested in models AP8841. Temperatures in °C With graphic and alerts. Need to use macro {$SNMP _COMMUNITY} GITHUB: https://github.com/magaiverpr/template-zabbix-apc-pdu ## Author Danielsberton 
-
 ## Overview
 
 Tested in models AP8841. Temperatures in °C

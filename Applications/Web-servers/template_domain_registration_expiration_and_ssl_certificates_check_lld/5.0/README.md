@@ -1,9 +1,5 @@
 # SSL check LLD
 
-## Description
-
-## Overview Main idea is monitoring several URL with SSL in one Zabbix host. Data for LLD provide JSON file. This is originally based on [https://share.zabbix.com/cat-app/web-servers/ssl-certificates-check](cat-app/web-servers/ssl-certificates-check) with modifications to the script and template. Added domain registration expiration check 
-
 ## Overview
 
 Main idea is monitoring several URL with SSL in one Zabbix host. Data for LLD provide JSON file.

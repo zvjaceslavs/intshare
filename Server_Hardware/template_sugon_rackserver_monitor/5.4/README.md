@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Hitachi_DiskArray_monitor_template Known Issues: In some version, the item "nicHealthAllStatus" may be disable device : H620-G30, I620-G30, I840-G30 ## Overview 中科曙光服务器snmpv2监控模板，覆盖CPU、内存、硬盘、BMC、网卡、PCIE卡、电源、风扇和系统。 其中网卡监控在部分版本上可能无法使用。 G30型号适用。 将宏{$CLOUD _SNMP _COMMUNITY}中默认团体字"public"替换为实际团体字。 Sugon RackServer Monitor Template, covering CPU, menory, disk, BMC, nic, pcie, power, fan and system. Known Issues: In some version, the item "nicHealthAllStatus" may be disable. device : H620-G30, I620-G30, I840-G30 Repalce macro {$CLOUD _SNMP _COMMUNITY} with your snmp community ## Author zhangzhefeng 
+Hitachi_DiskArray_monitor_template Known Issues: In some version, the item "nicHealthAllStatus" may be disable device : H620-G30, I620-G30, I840-G30
 
 ## Overview
 

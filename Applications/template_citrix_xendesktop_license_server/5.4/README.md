@@ -1,9 +1,5 @@
 # C24_CVAD-715_CTXLicServer_v1.00
 
-## Description
-
-## Overview Monitoring template for Citrix License server included in CVAD (Citrix Virtual Apps and Desktops) ver 7.15 ## Author citrix24 
-
 ## Overview
 
 Monitoring template for Citrix License server included in CVAD (Citrix Virtual Apps and Desktops) ver 7.15

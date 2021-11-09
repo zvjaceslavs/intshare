@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Autor: m.beloglazov@gmail.com Template: Template D-link DES-1210-28 SNMP Version Zabbix: 3.0 ## Overview Uses SNMP LLD to discover interfaces. Items (In/Out interface traffic and other statistics, uptime, sysDescr, sysName), Screen and Graph. Trigger up/down interface. ## Author belmih 
+Autor: m.beloglazov@gmail.com Template: Template D-link DES-1210-28 SNMP Version Zabbix: 3.0
 
 ## Overview
 

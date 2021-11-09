@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description HP R5000 UPS SNMP Made bu Ennio ## Overview ### Monitor power parametrs: frequency, power, voltage, current, temp. Full control for Input, Output (Segment), Battery, Bypass. I used CPQPOWER1.76.MIB and UPS-MIB.mib ## Author Ennio 
+HP R5000 UPS SNMP Made bu Ennio
 
 ## Overview
 

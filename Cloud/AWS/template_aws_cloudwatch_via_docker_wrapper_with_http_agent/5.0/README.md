@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Monitorizacion de AWS via CloudWatch utilizando un Wrapper desarrollado en NodeJS. ## Overview Repository for access to Cloudwatch via API REST using AWS-SDK + NodeJS Wrapper. The templatre only use HTTP Agent to recolect all metrics from AWS Cloudwatch. [Git Repo](https://github.com/mobarrio/cloudwatch_wrapper "Git Repo") ## Author Mariano J. Obarrio Miles 
+Monitorizacion de AWS via CloudWatch utilizando un Wrapper desarrollado en NodeJS.
 
 ## Overview
 

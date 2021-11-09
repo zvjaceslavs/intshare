@@ -1,9 +1,5 @@
 # SNMP Time Diff
 
-## Description
-
-## Overview My first template submitted here. I created this template to monitoring time difference between zabbix and host through SNMP. ## Author Abner Rizzi 
-
 ## Overview
 
 My first template submitted here.

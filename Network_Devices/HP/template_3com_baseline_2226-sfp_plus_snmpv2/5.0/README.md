@@ -1,9 +1,5 @@
 # 3COM Baseline 2226-SFP Plus SNMPv2
 
-## Description
-
-## Overview Switch 26 ports Monitoring on Speed, Portstatus, Last Changed, In and Out Throughput and number of errors. Graphs for IN and OUT throughput per port Adapted from the layout https://www.zabbix.com/forum/attachment.php?attachmentid=4762&d=1337691484 
-
 ## Overview
 
 Switch 26 ports
@@ -198,8 +194,8 @@ There are no discovery rules in this template.
 |Port 06 Status|<p>Port 06 Status</p>|`SNMP agent`|ifOperStatus.1158<p>Update: 120</p>|
 |Port 08 Traffic OUT|<p>Port 08 Traffic OUT</p>|`SNMP agent`|ifOutOctets.1414<p>Update: 120</p>|
 |Port 26 Traffic OUT Errors|<p>Port 26 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.3718<p>Update: 120</p>|
-|Port 15 Traffic OUT Errors|<p>Port 15 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.2310<p>Update: 120</p>|
 |Port 19 Status|<p>Port 19 Status</p>|`SNMP agent`|ifOperStatus.2822<p>Update: 120</p>|
+|Port 15 Traffic OUT Errors|<p>Port 15 Traffic OUT Errors</p>|`SNMP agent`|ifOutErrors.2310<p>Update: 120</p>|
 |Port 08 Status|<p>Port 08 Status</p>|`SNMP agent`|ifOperStatus.1414<p>Update: 120</p>|
 |Port 19 Speed|<p>Port 19 Speed</p>|`SNMP agent`|ifspeed.2822<p>Update: 120</p>|
 |Port 14 Traffic OUT|<p>Port 14 Traffic OUT</p>|`SNMP agent`|ifOutOctets.2182<p>Update: 120</p>|

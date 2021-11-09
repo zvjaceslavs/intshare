@@ -1,9 +1,5 @@
 # NGINX_http_agent
 
-## Description
-
-## Overview **Nginx template based on http agent** **Nginx configuration example:** > > server { > > > listen 0.0.0.0:8080; > > > server _name status.localhost; > > > keepalive _timeout 0; > > > allow 127.0.0.1; > > > allow 192.168.11.254; > > > deny all; > > > location /server-status { > > > stub _status on; > > > } > > > access _log off; > > > } > > > **P.S. item "Number of nginx running" using zabbix agent (active), you can change it,** **use macros to specify the ip address and port of nginx** 
-
 ## Overview
 
 **Nginx template based on http agent**

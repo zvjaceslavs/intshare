@@ -1,9 +1,5 @@
 # Seagate Pro NAS DP6
 
-## Description
-
-## Overview Template básico construído a partir do MIB fornecido nas configurações snmp do equipamento. Coleta as seguintes informações: * Quantidade de CPU´s; * Modelo dos discos; * Serial dos discos; * Tamanho dos discos; * Status dos discos; * RPM do sensor FAN; * Quantidade de memória: total, usada, livre e em cache. * Nome do volume RAID; * Porcentagem de uso do volume RAID; * Tamanho do RAID; * Tipo de RAID; * Bytes Enviados e recebidos; Gatilhos para: * Status dos discos; * Uso de CPU e memória * Fim do espaço de armazenamento nos discos; Gráficos para visualizar o consumo de recursos (CPU e Memória) Para utilizar, informe o valor para macro {$SNMP _COMMUNITY} ## Author Fernando F. Costa 
-
 ## Overview
 
 Template básico construído a partir do MIB fornecido nas configurações snmp do equipamento.

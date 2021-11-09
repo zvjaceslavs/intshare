@@ -1,15 +1,5 @@
 # Template App HTTP Service
 
-## Overview
-
-Official template from Zabbix distribution to check HTTP service availability
-
-
-
-## Author
-
-Zabbix SIA
-
 ## Macros used
 
 There are no macros links in this template.

@@ -1,9 +1,5 @@
 # Cisco UCS Standalone SNMP
 
-## Description
-
-## Overview Based on [https://share.zabbix.com/cat-server-hardware/cisco/cisco-ucs-standalone-hw-monitoring](cat-server-hardware/cisco/cisco-ucs-standalone-hw-monitoring) Contains: MB operation state rack serial number Discoveries: Arrays CPUs Disks Fans Memory PSU Raid batterys Raid controllers ## Author Dmitry Lavrukhin 
-
 ## Overview
 
 Based on [https://share.zabbix.com/cat-server-hardware/cisco/cisco-ucs-standalone-hw-monitoring](cat-server-hardware/cisco/cisco-ucs-standalone-hw-monitoring)

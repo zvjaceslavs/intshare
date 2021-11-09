@@ -1,9 +1,5 @@
 # SNMP HP v1910-24G
 
-## Description
-
-## Overview It's based on the excelent work *"Zabbix 2.2 HP v1910-24G SNMP template" by AlteraSidus.* Works with HP 1920-24G and HP 1910-24G. The triggers enable activate when the delta number of errors is more than 3 in the last 10 checks. And the AlteraSidus triggers activate when the error counter is more than 100: AlteraSidus original version: [https://share.zabbix.com/network _devices/cat-hp/zabbix-2-2-hp-v1910-snmp-template](network_devices/cat-hp/zabbix-2-2-hp-v1910-snmp-template "AlteraSidus Original Version") You have to create two Macros in the host: {$SNMP _COMMUNITY} Self explained {$SNMP _PORT} Usually 161 Also records the bytes in and out of every interface with graphics. ## Author AlteraSidus 
-
 ## Overview
 
 It's based on the excelent work *"Zabbix 2.2 HP v1910-24G SNMP template" by AlteraSidus.* Works with HP 1920-24G and HP 1910-24G. The triggers enable activate when the delta number of errors is more than 3 in the last 10 checks. And the AlteraSidus triggers activate when the error counter is more than 100:

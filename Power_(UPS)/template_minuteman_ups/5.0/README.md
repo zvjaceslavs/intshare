@@ -1,9 +1,5 @@
 # SNMP Minuteman UPS
 
-## Description
-
-## Overview Basic SNMP v1 monitoring template for the Minuteman UPS 
-
 ## Overview
 
 Basic SNMP v1 monitoring template for the Minuteman UPS 

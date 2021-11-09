@@ -1,9 +1,5 @@
 # App MySQL
 
-## Description
-
-## Overview Official MySQL Template from Zabbix distribution ## Author Zabbix SIA 
-
 ## Overview
 
 Official MySQL Template from Zabbix distribution

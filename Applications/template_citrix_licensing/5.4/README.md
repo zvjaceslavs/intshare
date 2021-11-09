@@ -1,9 +1,5 @@
 # App Citrix License Sever
 
-## Description
-
-## Overview This Template doesn't require any scripts on the target machine. It is able to enumerate and discover the installed licenses. Following properties will be monitored (to be extended): * List of installed licenses * License expiration ## Author WorkSimple GmbH 
-
 ## Overview
 
 This Template doesn't require any scripts on the target machine.

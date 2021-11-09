@@ -1,9 +1,5 @@
 # Sharp Printers
 
-## Description
-
-## Overview This is a template for Sharp Printers MX-C301w and MX-2640. **Items** **Waste Toner Usage** **Cyan Toner Usage** **Black Photoconductive Drum Usage** **Yellow Photoconductive Drum Usage** **Cyan Photoconductive Drum Usage** **Magenta Photoconductive Drum Usage** **Magenta Toner Usage** **Yellow Toner Usage** **Magenta Developer Usage** **Black Developer Usage** **Cyan Developer Usage** **Yellow Developer Usage** **Black Toner Usage** **Fusing Unit Usage** **Paper Tray Levels** **LLD** **Paper Trays** ## Author James Lodge 
-
 ## Overview
 
 This is a template for Sharp Printers MX-C301w and MX-2640. 

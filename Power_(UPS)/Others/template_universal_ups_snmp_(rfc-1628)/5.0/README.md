@@ -1,9 +1,5 @@
 # UPS RFC 1628 SNMP
 
-## Description
-
-## Overview There is a UPS SNMP template for UPS with rfc-1628 support. Tested with: * APC SURTD3000XLI with APC Network Management Card 2 (AP9630) * APC SRT3000RMXLI with APC Network Management Card 2 (AP9630) * EATON (PowerWare) 9125-6000g with ConnectUPS Web/SNMP Card. ## Author Sergey Morozov 
-
 ## Overview
 
 There is a UPS SNMP template for UPS with rfc-1628 support. Tested with:

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Zabbix monitoring template about ILO ProLiant DL380p Gen8. This template controls CPU, RAM banks, temperature and disks status. By Federico Coppola ## Overview It is a simple template to monitoring *HP ILO ProLiant DL380p Gen8.*It controls the status about fans, disks, RAM banks, CPUs and temperature sensors. It is tested with the Zabbix version 4 alpha and works properly. *Federico* ## Author Federico Coppola 
+Zabbix monitoring template about ILO ProLiant DL380p Gen8. This template controls CPU, RAM banks, temperature and disks status. By Federico Coppola 
 
 ## Overview
 

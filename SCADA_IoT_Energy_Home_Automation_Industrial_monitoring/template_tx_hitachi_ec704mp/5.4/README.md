@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template of transmissor Hitachi model EC704MP. ## Overview Template of transmissor Hitachi model **EC704MP.** This template contains: * 8 applications * 61 itens * 4 triggers Our applications have itens of the component below: * Driver Measurements * General * Power Amplifiers * Power Setup * Power Supply * SFN * Template module ICMP Ping:status * System ## Author Marcos Sousa 
+Template of transmissor Hitachi model EC704MP.
 
 ## Overview
 

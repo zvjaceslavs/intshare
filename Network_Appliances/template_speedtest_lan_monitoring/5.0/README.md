@@ -1,9 +1,5 @@
 # App Speedtest LAN
 
-## Description
-
-## Overview Monitoring the LAN speedtest by iperf on different server It need the script here https://git.cdp.li/polcape/zabbix/tree/master/zabbix-speedtest-lan 
-
 ## Overview
 
 Monitoring the LAN speedtest by iperf on different server

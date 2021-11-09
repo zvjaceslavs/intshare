@@ -1,9 +1,5 @@
 # Vertiv
 
-## Description
-
-## Overview https://github.com/Mihguel-Araujo/Template-Zabbix/blob/main/Template%20Vertiv ## Author Mihguel da Silva Santos Tavares de Araujo 
-
 ## Overview
 
 https://github.com/Mihguel-Araujo/Template-Zabbix/blob/main/Template%20Vertiv

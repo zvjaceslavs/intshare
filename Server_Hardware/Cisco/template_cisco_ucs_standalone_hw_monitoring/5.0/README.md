@@ -1,9 +1,5 @@
 # Cisco UCS Standalone SNMP
 
-## Description
-
-## Overview Features: * LLD for fans * LLD for disk drives * LLD for logical disks * LLD for PSU Tested on: * Cisco UCS C220 M3 * Cisco UCS C220 M4 ## Author Aleksey Kurnosov 
-
 ## Overview
 
 Features:

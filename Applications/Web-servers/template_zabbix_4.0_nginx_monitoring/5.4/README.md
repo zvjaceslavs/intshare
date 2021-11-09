@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Nginx template created by Alireza Zabihi zabihi.a.r@gmail.com ## Overview Zabbix 4 Nginx monitoring by Alireza Zabihi based on Alex Gluck solution. Connection Statistics: * Active * Reading * Waiting * Writing * Requests pro connection * Request Statistics: * Accepted * Handled * Total Linux and Nginx performance monitoring: * File descriptors (Maximum and Current) * CPU Cores * Worker _Connections * Worker _Processes * Maximum supported connection depended on configuration * Nginx service status and ... <ul style="box-sizing: border-box; margin-bottom: 16px; margin-top: 0px; padding-left: 2em; co</p> ## Author Alireza Zabihi 
+Nginx template created by Alireza Zabihi zabihi.a.r@gmail.com
 
 ## Overview
 

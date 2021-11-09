@@ -1,9 +1,5 @@
 # 锐捷交换机监控模板
 
-## Description
-
-## Overview 锐捷（Ruijie）RGOS系列交换机通用监控模板 主要包括CPU利用率、内存利用率、端口状态、端口带宽利用率、端口报文速率、电源风扇状态 将宏 {$CLOUD _SNMP _COMMUNITY} 替换为实际团体字即可 ## Author zhangzhefeng 
-
 ## Overview
 
 锐捷（Ruijie）RGOS系列交换机通用监控模板

@@ -1,9 +1,5 @@
 # BROCADE FIBER CHANNEL SWITCH
 
-## Description
-
-## Overview Unnoficial template created and used by me. This template allows you to monitor your Brocade 300's fans, power supply, status of temperature, temperature on sensors and the system's uptime. This template does NOT monitor any interfaces. If you want to do so, and don't know how, please feel free to contact me by email, and I will be glad to help you. marcelo1302a@gmail.com ## Author Marcelo F. Salvatori 
-
 ## Overview
 
 Unnoficial template created and used by me.

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Collects statistic values from Knot Resolver ## Overview Knot Resolver statistics Requirements ------------ * None Installation ------------ * Import the template * If needed, modify *{$KRESD _STATS _URL}* macro on the Host (under Inherited and host macros) to the URL of your Knot Resolver statistics service, usually *https://localhost:8453/stats* or *http://localhost:8053/stats* Tested on Zabbix 4.0.11 Based on template from https://github.com/heximcz/kresd-stats-zabbix ## Author Václav Nováček 
+Collects statistic values from Knot Resolver
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # SNMP Eaton ATS
 
-## Description
-
-## Overview Template for Switching Power Distribution Unit with environmental sensor. Includes triggers for: * Self Test Status * Power source changed * power source shortcircuit * Power souirce status source 1 and 2 * Humidity high * Temperature high As this unit is often applied in small business environment, the environmental sensor is excellent to check whether the AC is funtioning normally. You might need to adjust for Fahrenheit. ## Author Maurice Flier 
-
 ## Overview
 
 Template for Switching Power Distribution Unit with environmental sensor.

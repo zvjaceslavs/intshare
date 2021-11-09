@@ -1,9 +1,5 @@
 # Exchange Mailbox Servers_RU
 
-## Description
-
-## Overview ## Author Stephen E. Fritz 
-
 ## Overview
 
  

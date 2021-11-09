@@ -1,9 +1,5 @@
 # SNMP QNAP NAS
 
-## Description
-
-## Overview Based on the templates from Bas van Elburg and AlteraSidus. I had some issues with those templates on Zabbix 3.4 on importing so I corrected a few things. Mostly i removed a duplicate filling of the hardware field and removed the depandancy for the {$SNMP _PORT} macro, it just depends on the host setting for SNMP address and port now. The {$SNMP _COMMUNITY} is still mandatory. There was something wrong with the uptime measurement for me with the old template (reported a much too high uptime) and I havent been able to correct that yet. I increased the HDD temperature warning to 45 becuase my disks are always 42 degrees. 
-
 ## Overview
 
 Based on the templates from Bas van Elburg and AlteraSidus.

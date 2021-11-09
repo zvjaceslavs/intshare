@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template for XMS API ## Overview The Zabbix Template includes discovery rules, item prototypes, trigger prototypes and graphs, Zabbix will periodically gather resource metrics from HTTP/HTTPS REST API, convert metrics into JSON object, automatically create resource metrics by discovery rules, and send triggers based on the trigger rules. ## Author XSKY 
+Template for XMS API
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # DM DmOS
 
-## Description
-
-## Overview SNMP - General Informations SNMP Discovery - Interfaces SNMP Discovery - CPU Cores SNMP Discovery - CPU Load SNMP Discovery - Fan SNMP SNMP Discovery - Temperature Sensor ### Template DmOS-BGP4-MIB, please download from [Datacom github](https://github.com/datacom-teracom/dmos-zabbix-template) * Auto-discovering * Supports IPv4 and IPv6 BGP sessions * Supports IPv4 Unicast, IPv6 Unicast and MPLS VPN objects * Supports SNMPv1 and SNMPv2c * Supports BGP4-MIB standard MIB and DmOS-BGP4-MIB proprietary MIB 
-
 ## Overview
 
 SNMP - General Informations  

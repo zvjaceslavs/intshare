@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Шаблон APCUPSd ## Overview Monitoring APC UPS (without SNMP) through APCUPSd. Russian language. Мониторинг ИБП APC (без SNMP) через APCUPSd. На русском языке. Переменные: * Имя * Текущий статус * Уровень заряда батареи * Внутренняя температура * Напряжение на входе * Уровень нагрузки * Уровень чувствительности * Количество переходов на питание от батареи с момента запуска apcupsd [Примеры настройки Zabbix agent](https://wiki.yola.ru/apcupsd#zabbix) 
+Шаблон APCUPSd
 
 ## Overview
 

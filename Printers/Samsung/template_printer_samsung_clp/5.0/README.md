@@ -1,9 +1,5 @@
 # Printer Samsung CLP
 
-## Description
-
-## Overview Template for color printers Samsung CLP and other color Samsung models 
-
 ## Overview
 
 Template for color printers Samsung CLP and other color Samsung models

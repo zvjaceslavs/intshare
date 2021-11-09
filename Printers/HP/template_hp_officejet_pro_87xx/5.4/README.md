@@ -1,9 +1,5 @@
 # Printer HP OfficeJet Pro 8xxx
 
-## Description
-
-## Overview Tested with Zabbix 4.03 on HP OfficeJet Pro 8710 
-
 ## Overview
 
 Tested with Zabbix 4.03 on HP OfficeJet Pro 8710

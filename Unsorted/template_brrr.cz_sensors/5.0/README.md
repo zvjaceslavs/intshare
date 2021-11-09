@@ -1,9 +1,5 @@
 # Humidity and temperature sensor brrr.cz
 
-## Description
-
-## Overview This template allows to monitor sensors from brrr.cz Temperature and himidity is supported now. ## Author Lukas Macura 
-
 ## Overview
 
 This template allows to monitor sensors from brrr.cz
@@ -45,9 +41,21 @@ There are no triggers in this template.
 
 # Temperature sensor brrr.cz
 
-## Description
+## Overview
 
-## Overview This template allows to monitor sensors from brrr.cz Temperature and himidity is supported now. ## Author Lukas Macura ## Overview This template allows to monitor sensors from brrr.cz Temperature and himidity is supported now. ## Author Lukas Macura 
+This template allows to monitor sensors from brrr.cz
+
+
+Temperature and himidity is supported now.
+
+
+ 
+
+
+
+## Author
+
+Lukas Macura
 
 ## Overview
 

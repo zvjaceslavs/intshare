@@ -1,9 +1,5 @@
 # UPS - diogont
 
-## Description
-
-## Overview Template made based on [Phillip Hernandez](owner/samwiseg0) template: https://share.zabbix.com/power-ups/apc/apc-ups All OID's were changed to match general MIB for UPS. New graphs were also added. 21 Items 9 Triggers 7 Graphs I also have a template made for three-phase UPSs, feel free to check: [https://share.zabbix.com/power-ups/ups-templates/network-ups-three-phase-generic](power-ups/ups-templates/network-ups-three-phase-generic) ## Author Diogo Teixeira 
-
 ## Overview
 
 Template made based on [Phillip Hernandez](owner/samwiseg0) template: https://share.zabbix.com/power-ups/apc/apc-ups

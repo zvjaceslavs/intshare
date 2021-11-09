@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description byS ## Overview Sorry, but in Russian ## Author Sof 
+byS
 
 ## Overview
 

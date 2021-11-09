@@ -1,9 +1,5 @@
 # Nateks FG-ACE-CON-VF
 
-## Description
-
-## Overview Nateks NETRADIO-MIB based template for monitoring radio channels. Latest data includes: - Channel number - Channel IP - Channel status - Device Location - Device Model ## Author Olga Yanovskaya 
-
 ## Overview
 
 Nateks NETRADIO-MIB based template for monitoring radio channels.

@@ -1,9 +1,5 @@
 # App IIS LLD Sites Monitoring
 
-## Description
-
-## Overview Template uses wmi and powershell methods. Agent 4.4.5 is required for operation. ## Author Serhii Zaitsev 
-
 ## Overview
 
 Template uses wmi and powershell methods.

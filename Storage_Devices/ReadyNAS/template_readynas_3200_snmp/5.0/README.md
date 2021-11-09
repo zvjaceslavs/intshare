@@ -1,9 +1,5 @@
 # SNMP ReadyNas 3200
 
-## Description
-
-## Overview Monitor NETGEAR ReadyNAS 3200 storage devices via SNMP. It monitors these items: 1. Disk info 2. Disk State 3. Disk Temperature 4. Fan RPM 5. Volume Free Space 6. Volume Size 7. VolumeStatus Disks and volumes are searching by lld.Appropriate triggers for each item are also provided. I have created and tested this template vs Zabbix 3.2.4. <p style="margin: 0px 0px 1.5em; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background ## Author Nikolay Kulikov 
-
 ## Overview
 
 Monitor NETGEAR ReadyNAS 3200 storage devices via SNMP. It monitors these items:

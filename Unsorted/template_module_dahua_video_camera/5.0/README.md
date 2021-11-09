@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description A simple template based on official Dahua MIB (DAHUA-SNMP-MIB 2014-01-07) ## Overview A simple template based on official Dahua MIB (DAHUA-SNMP-MIB 2014-01-07) ## Author Bruno BASLI 
+A simple template based on official Dahua MIB (DAHUA-SNMP-MIB 2014-01-07)
 
 ## Overview
 

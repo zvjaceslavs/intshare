@@ -1,9 +1,5 @@
 # App Nextcloud Monitoring API
 
-## Description
-
-## Overview Nextcloud Monitoring API integration for Zabbix 3.4 Needs **curl** to be installed on the Nextcloud server. **You need to set the macros according to your environment.** Fully compatible with Nextcloud versions 14 - 17. Shows different operating values of your Nextcloud server: Version Webserver Database Type Database Version Database Size PHP Max. Execution Time PHP Memory Limit PHP Upload Max. Filesize PHP Version Storage Files Storage Freespace Storage Users Number of Storages Apps Installed Apps Needing Update 
-
 ## Overview
 
 Nextcloud Monitoring API integration for Zabbix 3.4

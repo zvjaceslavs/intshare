@@ -1,9 +1,5 @@
 # IPMI Supermicro X9DBL
 
-## Description
-
-## Overview IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage] Items 30, Triggers 90, Graphs 3 ## Author Maxim Portnyagin 
-
 ## Overview
 
 IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan, Temperature, Voltage]

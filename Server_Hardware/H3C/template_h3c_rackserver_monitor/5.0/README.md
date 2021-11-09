@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description H3C_RackServer_monitor_template Known Issues: device : UIS-Cell-3030-G3,UniServer-R4900 ## Overview Monitor Template of H3C RackServer . Suitable for UIS-Cell-3030-G3,UniServer-R4900. Include health status of CPU, disk, entity, fan, memory, PCIE, power. Repalce <span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-posit ## Author zhangzhefeng 
+H3C_RackServer_monitor_template Known Issues: device : UIS-Cell-3030-G3,UniServer-R4900
 
 ## Overview
 

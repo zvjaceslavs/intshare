@@ -1,9 +1,5 @@
 # IPMI Gigabyte 6PXSV4
 
-## Description
-
-## Overview Template for IPMI Gigabyte 6PXSV4 Motherboard (items, triggers, graphs). 
-
 ## Overview
 
 Template for IPMI Gigabyte 6PXSV4 Motherboard (items, triggers, graphs).

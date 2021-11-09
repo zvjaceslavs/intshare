@@ -1,9 +1,5 @@
 # Nevis
 
-## Description
-
-## Overview Template for monitoring Nevis Appliances (nevis mib only). Not all of the items are in there but the most for admin, proxy and auth have been added with also some triggers. The template is built with discovery Rules only. ## Author Stefan Müller 
-
 ## Overview
 
 Template for monitoring Nevis Appliances (nevis mib only).

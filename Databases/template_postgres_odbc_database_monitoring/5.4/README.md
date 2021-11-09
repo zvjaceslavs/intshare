@@ -1,9 +1,5 @@
 # Postgres ODBC
 
-## Description
-
-## Overview I have been looking for templates to use with the new ODBC database monitoring item type with out success. I have created a rudimentary one for postgres. To use it follow these instructions for setting up ODBC on the server side. https://www.zabbix.com/documentation/4.0/manual/config/items/itemtypes/odbc _checks We run multiple instances on each server so I create a host for each database and use the {HOST.NAME} macro in the item key. If you want to use a different macro like {$DATABASE.NAME} then do a find and replace before you import this. As well all items have the name zabbix set as the user and the password set as " my _password". Again you may want to do a find and replace before importing. Then import this template and add it to the host you are using and then go through and double check the items. I know this functionality was in Zabbix 3 so this may work there but I created this in 4 so that is all I know it works with. I hope some one finds this useful. ## Author J Villain 
-
 ## Overview
 
 I have been looking for templates to use with the new ODBC database monitoring item type with out success. 

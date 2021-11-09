@@ -1,9 +1,5 @@
 # Event Windows Backup
 
-## Description
-
-## Overview check windows backup (wbadmin tool) event log tested on win 2012 r2 
-
 ## Overview
 
 check windows backup (wbadmin tool) event log

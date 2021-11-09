@@ -1,9 +1,5 @@
 # Airco pCOWeb
 
-## Description
-
-## Overview Generic template for Airco compute. This compute is used on most air cooling system. Monitored items (when supported by hardware): - Common Alarm Active - Compressor is Active - Humidifier Maintenance Warning - Humidity Setpoint - Liquid Pressure - Number of network interfaces - Room Humidity - Room Temperature (incoming air flow) - Setpoint Cooling Temperature - Setpoint Heating Temperature - Supply Fan - Supply Temperature (outgoing air flow) - Unit is Active ## Author eric_at_2037 
-
 ## Overview
 
 Generic template for Airco compute. This compute is used on most air cooling system.

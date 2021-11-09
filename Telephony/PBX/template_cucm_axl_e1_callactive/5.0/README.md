@@ -1,9 +1,5 @@
 # Cisco AXL MGCP monitoring
 
-## Description
-
-## Overview Information from PerfMon API for MGCP E1 ports. needs application user with permission access to PerfMon macro for username: {$ZABBIX _APIUSER _UC} macro for password: {$ZABBIX _APIPASS _UC} ## Author Andrey 
-
 ## Overview
 
 Information from PerfMon API for MGCP E1 ports.

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description MIBs: - SNMPv2-MIB ## Overview Template Básico para monitoramento OLT Intelbras 4840E. 
+MIBs: - SNMPv2-MIB
 
 ## Overview
 
@@ -40,7 +40,17 @@ There are no triggers in this template.
 
 ## Description
 
-## Description MIBs: - SNMPv2-MIB ## Overview Template Básico para monitoramento OLT Intelbras 4840E. ## Description Homologado na EL5610-04P (Intelbras 4840E) firmware V100R001B01D001P006SP5 ## Overview Template Básico para monitoramento OLT Intelbras 4840E. 
+MIBs: - SNMPv2-MIB
+
+## Overview
+
+Template Básico para monitoramento OLT Intelbras 4840E.
+
+
+
+## Description
+
+Homologado na EL5610-04P (Intelbras 4840E) firmware V100R001B01D001P006SP5
 
 ## Overview
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description BY EAS *************** CONTACT erik@tndbrasil.com.br Facebook: https://www.facebook.com/easerik Instagram: https://www.instagram.com/easerik Linkedin: https://www.linkedin.com/in/easerik/ ## Overview **Fortigate HA Sync** ********************* ***Itens*** *Ha Group Name* *Ha System Mode* *Ha Stats Sync Status* *Ha Auto Sync* **************************** **Triggers** HA - {HOST.NAME} - UnSynchronized HA Auto Sync- {HOST.NAME} - Disable **************************** **Teste** Fortigate 100E / Fortigate 60E / Fortigate 30E ************************************* **Firmware** 6.2/ 6.1 
+BY EAS *************** CONTACT erik@tndbrasil.com.br Facebook: https://www.facebook.com/easerik Instagram: https://www.instagram.com/easerik Linkedin: https://www.linkedin.com/in/easerik/
 
 ## Overview
 

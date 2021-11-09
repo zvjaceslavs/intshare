@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Test template ## Overview This if template for Wi-Tek switch 8GE and 2SFP ports If you want to use this template for switch with another count of interfaces please change formula items(Total Traffic). ## Author Bori$ 
+Test template
 
 ## Overview
 

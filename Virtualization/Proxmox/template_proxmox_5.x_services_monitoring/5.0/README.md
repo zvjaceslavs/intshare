@@ -1,9 +1,5 @@
 # Proxmox Services
 
-## Description
-
-## Overview Simple template for monitoring common Proxmox 5.x services. ## Author Rafael Mundel 
-
 ## Overview
 
 Simple template for monitoring common Proxmox 5.x services.

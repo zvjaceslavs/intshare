@@ -1,9 +1,5 @@
 # TP-Link TD-W8950N
 
-## Description
-
-## Overview Teaplate network device TP-Link TD-W8950N 
-
 ## Overview
 
 Teaplate network device TP-Link TD-W8950N

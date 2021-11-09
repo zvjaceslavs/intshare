@@ -1,9 +1,5 @@
 # SG500X_48P
 
-## Description
-
-## Overview Prezados, Este template e para switch cisco SG500 , caso queira acrescentar mais informações fiquem a vontade , apos este , por gentileza inserir novamente no share do zabbix. # Este template Monitora: 1- Cooler (FAN), 2- Disponibilidade , 3- Latencia , 4- Pacotes de entrada , 5- Pacotes de Saida , 6- Temperatura , 7- Trafego de entrada , 8- Trafego de saida Att: Magno Monte Cerqueira <p style="margin: 0px 0px 1.5em; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-size: 12px; line-height: 1.5em; color: #1f2c33; font-family: arial, sans-serif; background-image: initial; background-attachment: initial; background-size: initial; background- ## Author Magno Monte Cerqueira "magnopeem" 
-
 ## Overview
 
 Prezados,

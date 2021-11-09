@@ -1,9 +1,5 @@
 # SNMP FortiSwitch Devices
 
-## Description
-
-## Overview This is a template created starting from Andrea Durante's Fortigate SNMP template, but with modified OIDs from the MIB of the FortiSwitch 124E-PoE device. Serial No., OS version,% CPU,% RAM, disk (total and used), interface data (link and speed). Graphs for % CPU, % RAM, disk use and network traffic. ## Author Sergio Román González 
-
 ## Overview
 
 This is a template created starting from Andrea Durante's Fortigate SNMP template, but with modified OIDs from the MIB of the FortiSwitch 124E-PoE device.

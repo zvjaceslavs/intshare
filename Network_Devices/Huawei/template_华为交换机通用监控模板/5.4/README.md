@@ -1,9 +1,5 @@
 # 华为交换机监控模板
 
-## Description
-
-## Overview 华为交换机监控模板 已在S系列、CloudEngine系列设备完成验证 主要包括CPU利用率、内存利用率、端口状态、端口带宽利用率、端口报文速率、实体状态监控 将宏 {$CLOUD _SNMP _COMMUNITY} 替换为实际团体字即可 ## Author zhangzhefeng 
-
 ## Overview
 
 华为交换机监控模板

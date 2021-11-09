@@ -1,8 +1,87 @@
+# SNMP Device GPON PARKS
+
+## Overview
+
+LLD for Cards, Onus and Interfaces
+Traps
+PWR
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
+
+## Overview
+
+LLD for Cards, Onus and Interfaces
+Traps
+PWR
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+|Name|
+|----|
+|ICMP Ping GPON|
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|ONUs|<p>-</p>|`SNMP agent`|onuAlias<p>Update: 1d</p>|
+|Network interfaces|<p>-</p>|`SNMP agent`|ifDescr<p>Update: 1d</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 10m</p>|
+|Memory Used|<p>-</p>|`SNMP agent`|memory-used<p>Update: 10m</p>|
+|Memory Total|<p>-</p>|`SNMP agent`|memory-total<p>Update: 1h</p>|
+|CPU Load|<p>-</p>|`SNMP agent`|cpu-la<p>Update: 10m</p>|
+|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 1d</p>|
+|Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 10m</p>|
+|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 1d</p>|
+|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 1d</p>|
+|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 1d</p>|
+|Memory|<p>-</p>|`Calculated`|memory<p>Update: 10m</p>|
+|ONU $1 DOWNSTREAM SIGNAL|<p>-</p>|`SNMP agent`|onuDwRx[{#SNMPVALUE}]<p>Update: 600s</p><p>LLD</p>|
+|Incoming traffic on interface $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Operational status of interface $1|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+|Outgoing traffic on interface $1|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
+## Triggers
+
+|Name|Description|Expression|Priority|
+|----|-----------|----------|--------|
+|Interface {#SNMPVALUE} operational status changed|<p>-</p>|<p>**Expression**: (last(/SNMP Device GPON PARKS/ifOperStatus[{#SNMPVALUE}],#1)<>last(/SNMP Device GPON PARKS/ifOperStatus[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|average|
+|ONU {#SNMPVALUE} LOW SIGNAL|<p>-</p>|<p>**Expression**: last(/SNMP Device GPON PARKS/onuDwRx[{#SNMPVALUE}])>28</p><p>**Recovery expression**: </p>|information|
+|ONU {#SNMPVALUE} LOW SIGNAL (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP Device GPON PARKS/onuDwRx[{#SNMPVALUE}])>28</p><p>**Recovery expression**: </p>|information|
+|Interface {#SNMPVALUE} operational status changed (LLD)|<p>-</p>|<p>**Expression**: (last(/SNMP Device GPON PARKS/ifOperStatus[{#SNMPVALUE}],#1)<>last(/SNMP Device GPON PARKS/ifOperStatus[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|average|
 # SNMP Device GPON ZTE fw 1.2.5p3
 
-## Description
+## Overview
 
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
+LLD for Cards, Onus and Interfaces
+Traps
+PWR
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
+
+## Overview
+
+LLD for Cards, Onus and Interfaces
+Traps
+PWR
+
+## Author
+
+Pedro Pilla de Azevedo e Souza
 
 ## Overview
 
@@ -89,10 +168,6 @@ There are no macros links in this template.
 |SIGNAL LOW rx 1490nm {#ONUDESC} (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP Device GPON ZTE fw 1.2.5p3/rx1490[{#SNMPINDEX}])<=6 and last(/SNMP Device GPON ZTE fw 1.2.5p3/rx1490[{#SNMPINDEX}])<>131.07</p><p>**Recovery expression**: </p>|information|
 # ICMP Ping GPON
 
-## Description
-
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
-
 ## Overview
 
 LLD for Cards, Onus and Interfaces
@@ -126,60 +201,3 @@ There are no discovery rules in this template.
 
 There are no triggers in this template.
 
-# SNMP Device GPON PARKS
-
-## Description
-
-## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza ## Overview LLD for Cards, Onus and Interfaces Traps PWR ## Author Pedro Pilla de Azevedo e Souza 
-
-## Overview
-
-LLD for Cards, Onus and Interfaces
-Traps
-PWR
-
-## Author
-
-Pedro Pilla de Azevedo e Souza
-
-## Macros used
-
-There are no macros links in this template.
-
-## Template links
-
-|Name|
-|----|
-|ICMP Ping GPON|
-## Discovery rules
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|ONUs|<p>-</p>|`SNMP agent`|onuAlias<p>Update: 1d</p>|
-|Network interfaces|<p>-</p>|`SNMP agent`|ifDescr<p>Update: 1d</p>|
-## Items collected
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 10m</p>|
-|Memory Used|<p>-</p>|`SNMP agent`|memory-used<p>Update: 10m</p>|
-|Memory Total|<p>-</p>|`SNMP agent`|memory-total<p>Update: 1h</p>|
-|CPU Load|<p>-</p>|`SNMP agent`|cpu-la<p>Update: 10m</p>|
-|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 1d</p>|
-|Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 10m</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 1d</p>|
-|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 1d</p>|
-|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 1d</p>|
-|Memory|<p>-</p>|`Calculated`|memory<p>Update: 10m</p>|
-|ONU $1 DOWNSTREAM SIGNAL|<p>-</p>|`SNMP agent`|onuDwRx[{#SNMPVALUE}]<p>Update: 600s</p><p>LLD</p>|
-|Incoming traffic on interface $1|<p>-</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
-|Operational status of interface $1|<p>-</p>|`SNMP agent`|ifOperStatus[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
-|Outgoing traffic on interface $1|<p>-</p>|`SNMP agent`|ifOutOctets[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
-## Triggers
-
-|Name|Description|Expression|Priority|
-|----|-----------|----------|--------|
-|Interface {#SNMPVALUE} operational status changed|<p>-</p>|<p>**Expression**: (last(/SNMP Device GPON PARKS/ifOperStatus[{#SNMPVALUE}],#1)<>last(/SNMP Device GPON PARKS/ifOperStatus[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|average|
-|ONU {#SNMPVALUE} LOW SIGNAL|<p>-</p>|<p>**Expression**: last(/SNMP Device GPON PARKS/onuDwRx[{#SNMPVALUE}])>28</p><p>**Recovery expression**: </p>|information|
-|ONU {#SNMPVALUE} LOW SIGNAL (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP Device GPON PARKS/onuDwRx[{#SNMPVALUE}])>28</p><p>**Recovery expression**: </p>|information|
-|Interface {#SNMPVALUE} operational status changed (LLD)|<p>-</p>|<p>**Expression**: (last(/SNMP Device GPON PARKS/ifOperStatus[{#SNMPVALUE}],#1)<>last(/SNMP Device GPON PARKS/ifOperStatus[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|average|

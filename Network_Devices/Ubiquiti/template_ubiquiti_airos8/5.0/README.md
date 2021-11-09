@@ -1,9 +1,5 @@
 # AirOS8
 
-## Description
-
-## Overview Version 1.0 This is a template which I use to monitor a point to point Ubiquiti link with two IS‑5AC devices; that's what I test with. I would think it should work with other AirOS8 devices as well. Perhaps not very well suited for "normal" access points as it creates a graph for every station connected. It discovers the remote station and greates a graph to show noise floor, signal level, RX/TX capacity and the latency. The only trigger in there is when the connection resets; none on disconnect. ## Author Olivier 
-
 ## Overview
 
 Version 1.0

@@ -1,9 +1,5 @@
 # IPMI HP DL380p Gen9 without Drives
 
-## Description
-
-## Overview Simple template to monitor ipmi hp DL380p G9 server by ipmi protocol by iLO interface. useful with [my hp ipmi Drives discovery template](cat-server-hardware/hp/ipmi-hp-servers-hdd-discovery) Please first corretly configure ipmi interface on node in zabbix web interface. This pack contains template: IPMI HP DL380p Gen9 without Drives.xml - contains all sensors except hard drives I prefer use template with noHDD option and my ipmi HDD discovery template. ## Author Dmitry Lavrukhin 
-
 ## Overview
 
 Simple template to monitor ipmi hp DL380p G9 server by ipmi protocol by iLO interface.

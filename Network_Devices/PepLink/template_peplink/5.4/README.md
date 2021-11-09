@@ -1,9 +1,5 @@
 # Peplink
 
-## Description
-
-## Overview *** LLD - SPEEDFUSION IN USE BY NAME** - Item prototype - Speedfusion status *** LLD - WAN IN USE BY NAME** - Item prototype - Status wan - Item prototype - Health check ## Author Brunno Freitas Santos 
-
 ## Overview
 
 *** LLD - SPEEDFUSION IN USE BY NAME**

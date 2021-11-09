@@ -1,9 +1,5 @@
 # SNMP Tripplite WEBCARDLX
 
-## Description
-
-## Overview This is Zabbix 3.0+ template for Tripplite UPS with option card WEBCARDLX. Includes 23 items, 1 applications, 15 triggers, 3 Graphs Monitors power parameters like voltage and frequency, battery charge and status, battery temperature, etc. Has triggers for out of range parameters, power loss, low battery. ## Author Dominique Beaulieu 
-
 ## Overview
 
 This is Zabbix 3.0+ template for Tripplite UPS with option card WEBCARDLX.

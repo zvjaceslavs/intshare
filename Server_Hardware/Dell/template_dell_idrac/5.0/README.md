@@ -1,9 +1,5 @@
 # Dell idrac
 
-## Description
-
-## Overview Based on <https://github.com/endersonmaia/zabbix-templates/tree/master/dell/idrac> and [https://share.zabbix.com/cat-server-hardware/dell/dell-idrac-chinese](cat-server-hardware/dell/dell-idrac-chinese). Chinese version translated back to english. 
-
 ## Overview
 
 Based on <https://github.com/endersonmaia/zabbix-templates/tree/master/dell/idrac> and [https://share.zabbix.com/cat-server-hardware/dell/dell-idrac-chinese](cat-server-hardware/dell/dell-idrac-chinese). Chinese version translated back to english. 

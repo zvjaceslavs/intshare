@@ -1,9 +1,5 @@
 # 3-IPMI SGI Altix C2108-G9
 
-## Description
-
-## Overview IPMI sensors for SGI Altix C2108-G9 : +1.1 V, +1.8 V, +3.3 V, +3.3VSB, +5 V, +12 V, CPU1 DIMM, CPU1 DIMM VTT, CPU1 Temp, CPU1 Vcore, CPU2 DIMM, CPU2 DIMM VTT, CPU2 Temp, CPU2 Vcore, FAN 1, FAN 2, FAN 3, HT Voltage, Power, System Temp, VBAT 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho 
-
 ## Overview
 
 IPMI sensors for SGI Altix C2108-G9 :

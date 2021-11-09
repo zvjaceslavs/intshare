@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description frontend stats bind *:8880 http-request use-service prometheus-exporter if { path /metrics } stats enable stats uri /stats stats refresh 10s ## Overview Permit getting stats via prometheus exporter (since haproxy 2.0) First, configure your haproxy to expose frontend stats page like this : frontend stats bind *:8880 http-request use-service prometheus-exporter if { path /metrics } stats enable stats uri /stats stats refresh 10s Then, check the item haproxy.prometheus.allmetrics URL. Discovery for frontends, backends, servers. * Check if <50% of backend are down (not up, like DRAIN, NOLB, etc )on a frontend. * Check if connections are >90/95% of the limit on frontend * Check status of frontend and backend. 
+frontend stats bind *:8880 http-request use-service prometheus-exporter if { path /metrics } stats enable stats uri /stats stats refresh 10s
 
 ## Overview
 

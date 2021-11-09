@@ -1,9 +1,5 @@
 # App Nginx by Alex Gluck
 
-## Description
-
-## Overview System requirements ------------------- [Nginx](http://nginx.org/ "Nginx"), with configured `http _stub _status _module` Features -------- ##### HTTP/HTTPS support ##### Connection Statistics: * Active * Reading * Waiting * Writing ##### Request Statistics: * Accepted * Handled * Total ##### Graph and screen: * 'Requests Statistics' graph * 'Connection Status' graph * Screen combining both graph ##### Macros for customization: * {$NGINX _HOST} * {$NGINX _STATS _URI} * {$NGINX _PORT} * {$NGINX _REQ _NUM} * {$NGINX _CON _NUM} Installation ------------ ### Nginx Configuration Add the following example to your default vhost configuration file: ``` location /nginx _status { stub _status on; access _log off; allow 127.0.0.1; allow ::1; deny all; } ``` ``` ``` ### Zabbix Configuration 1. Import XML template file (`zbx _template _nginx.xml`) into Zabbix via Web GUI (Configuration -> Templates -> Import). 2. Assign the imported template to a host and enjoy! ## Author Alex Gluck 
-
 ## Overview
 
 System requirements

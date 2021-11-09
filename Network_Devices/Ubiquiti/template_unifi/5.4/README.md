@@ -1,9 +1,5 @@
 # Ubitiqui
 
-## Description
-
-## Overview Retorna as informações abaixo: Modelo Frequência WiFi SSID Quantidade de usuários conectados Versão Firmware. É necessário habilitar o protocolo SNMP nas antenas. ## Author Carlos Eduardo 
-
 ## Overview
 
 Retorna as informações abaixo:

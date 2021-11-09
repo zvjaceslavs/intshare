@@ -1,9 +1,5 @@
 # App Nagios stats
 
-## Description
-
-## Overview get nagios's statistics with nagiostats （Nagios 3.x） install 1. add zabbix user into nagios group to execute nagiostats. 2. deploy the script and Userparameter. 3. import the template. enjoy --- UserParameter UserParameter=get.nagiostats,/etc/zabbix/scripts/get-nagiostats.sh --- Script <https://github.com/sewata/getnagiostats/blob/master/get-nagiostats.sh> =20161126 Added Graphs and Screen in the template. ## Author sewata 
-
 ## Overview
 
 get nagios's statistics with nagiostats

@@ -1,9 +1,5 @@
 # Printer HP LaserJet 5500
 
-## Description
-
-## Overview Zabbix template wher added some parametrs like this: 1. Printer door open 2. Printer Jam present 3. Cartridge supply percent 4. Cartridge supply remaining print page 5. Shows Printer web page 6. Shows printer model 7.Shows printer supply model and name. 8. Printer status I hope this template will helpfull for You. ## Author aikucits 
-
 ## Overview
 
 Zabbix template wher added some parametrs like this:

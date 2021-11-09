@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description This template retrieve SNMP data from Unifi AP devices. MIBS requiriments: FROGFOOT-RESOURCES-MIB IANAifType-MIB IF-MIB SNMP-FRAMEWORK-MIB SNMPv2-CONF SNMPv2-MIB SNMPv2-SMI SNMPv2-TC UBNT-MIB UBNT-UniFi-MIB Author: Helmut Leonhardt based on Alex Moura ## Overview unifi zabbix snmpv3 based on Alex Mouras work https://share.zabbix.com/network _devices/ubiquiti/unifi-snmp-2019-v1-1 Ubiquity Controller > Settings > Services > SNMP v3 > enable, set username and passwort Zabbix > Macro > {$SNMP _USERNAME} <= username set in controller {$SNMP _AUTHPASS} & {$SNMP _PRIVPASS} <= password set in controller 2020 April fixed zabbix version fixed virtual interface items ## Author Helmut Leonhardt 
+This template retrieve SNMP data from Unifi AP devices. MIBS requiriments: FROGFOOT-RESOURCES-MIB IANAifType-MIB IF-MIB SNMP-FRAMEWORK-MIB SNMPv2-CONF SNMPv2-MIB SNMPv2-SMI SNMPv2-TC UBNT-MIB UBNT-UniFi-MIB Author: Helmut Leonhardt based on Alex Moura
 
 ## Overview
 

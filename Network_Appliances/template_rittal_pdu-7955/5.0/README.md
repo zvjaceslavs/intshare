@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description IT Infrastructure Monitoring. ## Overview Template for Rittal PDU 7955 1-phase (4.4) and 3-pases (5.0) with sensors (temperature, humidity, input, etc.) ## Author RPW 
+IT Infrastructure Monitoring.
 
 ## Overview
 

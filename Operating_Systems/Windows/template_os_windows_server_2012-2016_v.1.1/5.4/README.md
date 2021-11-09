@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ ## Overview The same as [this](operating-systems/windows/template-os-windows-server), but with numerical designations for perf _counter All thanks to the [author](https://vk.com/simplezabbix) Видео про шаблон:<https://youtu.be/FWqFyRu8hmQ> ## Author https://vk.com/simplezabbix 
+Шаблон подходит для ОС Windows Server 2012, 2016. Посетите. Группа ВК:https://vk.com/simplezabbix Видео про шаблон:https://youtu.be/FWqFyRu8hmQ
 
 ## Overview
 
@@ -53,12 +53,12 @@ There are no template links in this template.
 |Processor Context Switches|<p>в многозадачных ОС и средах - процесс прекращения выполнения процессором одной задачи (процесса, потока, нити) с сохранением всей необходимой информации и состояния, необходимых для последующего продолжения с прерванного места, и восстановления и загрузки состояния задачи, к выполнению которой переходит процессор.</p>|`Zabbix agent`|perf_counter["\2\146",60]<p>Update: 1m</p>|
 |Memory Commit Limit|<p>показывает максимальный объем памяти, который может быть выделен системой. Обычно это фиксированная величина, которая определяется операционной системой</p>|`Zabbix agent`|perf_counter["\4\30",300]<p>Update: 5m</p>|
 |Проверка статуса Firewall|<p>Для работы нужно добавить в файл конфигурации zabbix агента #CheckFirewall UserParameter=CheckFirewall, PowerShell.exe "(Get-NetFirewallProfile -Profile Domain,Public,Private).enabled"</p>|`Zabbix agent`|CheckFirewall<p>Update: 4h</p>|
-|Interface:{#IFNAME}, Sent Bytes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\510({#IFNAME})\506",60]<p>Update: 1m</p><p>LLD</p>|
-|Interface:{#IFNAME}, Current Bandwidth|<p>-</p>|`Zabbix agent`|perf_counter["\510({#IFNAME})\520",]<p>Update: 24h</p><p>LLD</p>|
-|Interface:{#IFNAME}, Output Queue Length|<p>Счетчик фиксирует длину очереди исходящих пакетов адаптера. Приемлемыми считаются значения 1 и 2. Но если этот показатель часто достигает уровня 3, 4 или более высоких отметок, это значит, что сетевой адаптер ввода/вывода не справляется с запросами сервера на передачу данных в сеть.</p>|`Zabbix agent`|perf_counter["\510({#IFNAME})\544",300]<p>Update: 5m</p><p>LLD</p>|
 |Interface:{#IFNAME}, Received Bytes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\510({#IFNAME})\898",60]<p>Update: 1m</p><p>LLD</p>|
 |Interface:{#IFNAME}, Utilization Received|<p>-</p>|`Calculated`|UtilizationReceived.[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
 |Interface:{#IFNAME}, Utilization Sent|<p>-</p>|`Calculated`|UtilizationSent.[{#IFNAME}]<p>Update: 1m</p><p>LLD</p>|
+|Interface:{#IFNAME}, Sent Bytes/sec|<p>-</p>|`Zabbix agent`|perf_counter["\510({#IFNAME})\506",60]<p>Update: 1m</p><p>LLD</p>|
+|Interface:{#IFNAME}, Current Bandwidth|<p>-</p>|`Zabbix agent`|perf_counter["\510({#IFNAME})\520",]<p>Update: 24h</p><p>LLD</p>|
+|Interface:{#IFNAME}, Output Queue Length|<p>Счетчик фиксирует длину очереди исходящих пакетов адаптера. Приемлемыми считаются значения 1 и 2. Но если этот показатель часто достигает уровня 3, 4 или более высоких отметок, это значит, что сетевой адаптер ввода/вывода не справляется с запросами сервера на передачу данных в сеть.</p>|`Zabbix agent`|perf_counter["\510({#IFNAME})\544",300]<p>Update: 5m</p><p>LLD</p>|
 |Состояние службы {#SERVICE.DISPLAYNAME}|<p>Описание: {#SERVICE.DESCRIPTION}</p>|`Zabbix agent`|service.info[{#SERVICE.NAME}]<p>Update: 3m</p><p>LLD</p>|
 |LogicalDisk {#FSNAME} Disk Time %|<p>Тип файловой системы:{#FSTYPE} Тип диска:{#FSDRIVETYPE} Счетчик отображает, какую часть времени диск расходует на обслуживание запросов на чтение и запись. Если его значения стабильно сохраняются на уровне вблизи отметки 100%, система работает с диском весьма интенсивно. Если же идет постоянный активный обмен данными и при этом создаются большие очереди, возможно, что дисковая подсистема не справляется с нагрузкой. В типичных условиях эксплуатации значение этого счетчика не должно превышать 50.</p>|`Zabbix agent`|perf_counter["\236({#FSNAME})\200",300]<p>Update: 5m</p><p>LLD</p>|
 |LogicalDisk {#FSNAME} Free Space|<p>Тип файловой системы:{#FSTYPE} Тип диска:{#FSDRIVETYPE}</p>|`Zabbix agent`|perf_counter["\236({#FSNAME})\408",300]<p>Update: 5m</p><p>LLD</p>|

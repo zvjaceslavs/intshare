@@ -1,9 +1,5 @@
 # Parks Fiberlink 20048S - V1.1
 
-## Description
-
-## Overview Template para Olt Parks Modelo 20048S ## Author Parks 
-
 ## Overview
 
 Template para Olt Parks Modelo 20048S

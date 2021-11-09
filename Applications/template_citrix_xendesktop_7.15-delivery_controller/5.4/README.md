@@ -1,9 +1,5 @@
 # C24_CVAD-715_Broker_v1.00
 
-## Description
-
-## Overview Monitoring template for Delivery Controller included in CVAD (Citrix Virtual Apps and Desktops) ver 7.15. Installation details 1. Prior to template import - create host group called C24 - XD 7.15 Broker 2. After import - update template macro section with correct host names. For more information about template configuration setings and template hiistory please visit [citrix24 blog](https://blog.citrix24.com/xendesktop-7-x-monitoring-template-delivery-controller/) ## Author citrix24 
-
 ## Overview
 
 Monitoring template for Delivery Controller included in CVAD (Citrix Virtual Apps and Desktops) ver 7.15.

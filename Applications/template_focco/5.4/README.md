@@ -1,9 +1,5 @@
 # Focco
 
-## Description
-
-## Overview Template de gerenciamento para Oracle Linux e sistema Focco ERP 
-
 ## Overview
 
 Template de gerenciamento para Oracle Linux e sistema Focco ERP

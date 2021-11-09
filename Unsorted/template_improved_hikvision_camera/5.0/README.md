@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Based of SNMP v2 Generic ## Overview Utilizes ICMP, SNMP and a Web Check against the RTSP connection to verify the camera is working. HikVision provide minimal data over SNMP so there is not much pulled from there however I have pulled the following information into inventory System Firmware Version > OS System MAC Address > MAC Address A System Model > Model System Manufacturer > Vendor You will need to ensure that your SNMP Macro is set correctly for the cameras (or override it at the Template or Host level) and set the RTSP _USER and RTSP _PASS macro's in the template to allow the RTSP check to work ## Author Justin Simmonds 
+Based of SNMP v2 Generic
 
 ## Overview
 

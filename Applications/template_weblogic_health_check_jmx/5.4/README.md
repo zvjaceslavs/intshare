@@ -1,9 +1,5 @@
 # WeblogicHealth
 
-## Description
-
-## Overview ##### Weblogic monitoring using JMX ##### <https://sath.com/weblogic-monitoring-zabbix-jmx/> ## Author Argha Chatterjee 
-
 ## Overview
 
 ##### Weblogic monitoring using JMX

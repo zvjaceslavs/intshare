@@ -1,9 +1,5 @@
 # Konica C3100P SNMP
 
-## Description
-
-## Overview Template manually created for Konica Minolta C3100P Contains items for: * Fuser Unit * Imaging Unit (Black) * Imaging Unit (Cyan) * Imaging Unit (Magenta) * Imaging Unit (Yellow) * Model * Serial * Toner (Black) * Toner (Cyan) * Toner (Magenta) * Toner (Yellow) * Transfer Belt * Transfer Unit * Waste Toner Bottle Triggers for: * Black 1% * Black < 5% * Cyan 1% * Cyan < 5% * Fuser Unit < 5% * Imaging Unit Black 1% * Imaging Unit Black < 5% * Imaging Unit Cyan 1% * Imaging Unit Cyan < 5% * Imaging Unit Magenta 1% * Imaging Unit Magenta < 5% * Imaging Unit Yellow 1% * Imaging Unit Yellow < 5% * Magenta 1% * Magenta < 5% * Transfer Belt < 5% * Transfer Unit < 5% * Waste Toner Near Full * Yellow 1% * Yellow < 5% ## Author Chr1sB89 
-
 ## Overview
 
 Template manually created for Konica Minolta C3100P

@@ -1,9 +1,5 @@
 # Cisco AXL Feature Service Status
 
-## Description
-
-## Overview CUCM Feature Service Status request from AXL Запрос информации о статусе сервисов CUCM через AXL. Необходим Application User с правами на чтение AXL API Application user name: {$ZABBIX _APIUSER _UC} Applicatuin user passwd: {$ZABBIX _APIUSER _UC} ## Author Andrey 
-
 ## Overview
 
 CUCM Feature Service Status request from AXL

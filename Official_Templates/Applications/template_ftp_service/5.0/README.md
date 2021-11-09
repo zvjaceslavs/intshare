@@ -1,15 +1,5 @@
 # Template App FTP Service
 
-## Overview
-
-Official template from Zabbix distribution to check FTP service availability
-
-
-
-## Author
-
-Zabbix SIA
-
 ## Macros used
 
 There are no macros links in this template.

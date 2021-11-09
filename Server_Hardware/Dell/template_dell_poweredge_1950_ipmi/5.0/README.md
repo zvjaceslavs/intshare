@@ -1,9 +1,5 @@
 # 3-IPMI Dell Power Edge 1950
 
-## Description
-
-## Overview IPMI sensors for Dell PowerEdge 1950: Ambient Temp, FAN MOD 1A RPM, FAN MOD 1B RPM, FAN MOD 1C RPM, FAN MOD 1D RPM, FAN MOD 2A RPM, FAN MOD 2B RPM, FAN MOD 2C RPM, FAN MOD 2D RPM, FAN MOD 3A RPM, FAN MOD 3B RPM, FAN MOD 3C RPM, FAN MOD 3D RPM, FAN MOD 4A RPM, FAN MOD 4B RPM, FAN MOD 4C RPM, FAN MOD 4D RPM, Power 27/09/2016: Some changes and fixes. ## Author Daniel Carvalho 
-
 ## Overview
 
 IPMI sensors for Dell PowerEdge 1950:

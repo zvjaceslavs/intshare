@@ -1,9 +1,5 @@
 # Palo Alto SNMPv2 64-bit counters
 
-## Description
-
-## Overview Hi everyone, I created this template because i updated two Palo Alto from 8.1.4 to 9.0.3 and some counter went from 32 to 64bits I just modified the template below from Pavol Rehak so check it out (for details details and trap configuration) : [https://share.zabbix.com/network _devices/palo-alto/paloalto-snmpv3-zabbix4-0](network_devices/palo-alto/paloalto-snmpv3-zabbix4-0) I changed all snmpv3 to snmpv2 and added graphs for discovered interface traffic (in & out) I had some error on storage discovery too that i fixed ### NAME : Template Palo Alto SNMPv2 64-bit counters ### TESTED : zabbix 4.2 and PAN OS 9.0.3-h3 but should work on zabbix 3.4 and PAN OS 8.1 ## Author Remi Chanoine 
-
 ## Overview
 
 Hi everyone,

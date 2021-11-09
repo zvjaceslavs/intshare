@@ -1,9 +1,5 @@
 # Cisco_1900
 
-## Description
-
-## Overview Prezados, Este template e para roteador cisco 1900 , caso queira acrescentar mais informações fiquem a vontade , apos este , por gentileza inserir novamente no share do zabbix. # Este template Monitora: 1- Disponibilidade , 2- Latencia , 3- Pacotes de entrada , 4- Pacotes de Saida , 5- Trafego de entrada , 6- Trafego de saida 7- Velocidade da Porta 8- Velocidade em MTU Att: <p style="margin: 0px 0px 1.5em; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-size: 12px; line-height: 1.5em; color: #1f2c33; font-family: arial, sans-serif; background-image: initial; background-attachment: initial; background-size: initial; background-origin: i ## Author Magno Monte Cerqueira "magnopeem" 
-
 ## Overview
 
 Prezados,

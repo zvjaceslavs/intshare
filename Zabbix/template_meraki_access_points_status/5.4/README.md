@@ -1,9 +1,5 @@
 # Meraki Access Points
 
-## Description
-
-## Overview As I did not find any template to monitor my Meraki APs on the Meraki CLoud, here you are a template proposal I made. I have tested on my zabbix server and it works. the idea is to find all Meraki APs in the Cloud (SNMPv2-SMI::enterprises.29671.1.1.4.1.2) And each Meraki AP status (SNMPv2-SMI::enterprises.29671.1.1.4.1.3) (0-Down, 1-UP) With a Discovery List I add each AP as a Item Prototype and create a High trigger proto for each status. To make it work you must enable SNMP read on your MERAKI cloud: <https://documentation.meraki.com/zGeneral_Administration/Monitoring_and_Reporting/SNMP_Overview_and_Configuration> The Template Needs as well a MACRO: {$SNMP _MERAKI _COMMUNITY} for the SNMP Comunity ## Author amendez 
-
 ## Overview
 
 As I did not find any template to monitor my Meraki APs on the Meraki CLoud, here you are a template proposal I made.

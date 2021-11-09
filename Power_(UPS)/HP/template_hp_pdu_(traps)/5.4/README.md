@@ -1,9 +1,5 @@
 # Monitoring PDU
 
-## Description
-
-## Overview Hi, Here is a template for HP PDU's There are mostly traps items but also some polling items. SNMPv2. Triggers are also include. You need to put your SNMP community in macro. Thanks. ## Author Vincent MATIAS 
-
 ## Overview
 
 Hi,

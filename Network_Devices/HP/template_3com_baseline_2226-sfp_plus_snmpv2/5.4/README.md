@@ -1,9 +1,5 @@
 # 3COM Baseline 2226-SFP Plus SNMPv2
 
-## Description
-
-## Overview Switch 26 ports Monitoring on Speed, Portstatus, Last Changed, In and Out Throughput and number of errors. Graphs for IN and OUT throughput per port Adapted from the layout https://www.zabbix.com/forum/attachment.php?attachmentid=4762&d=1337691484 
-
 ## Overview
 
 Switch 26 ports

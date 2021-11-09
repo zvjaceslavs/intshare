@@ -1,9 +1,5 @@
 # Asigra Backup SNMP Traps
 
-## Description
-
-## Overview This template will store Asigra Client Backup Jobs (failed and successful) in Items. It also includes triggers when a Backup Job fails. The triggers will NOT auto recover. So user needs to either acknowledge or close the trigger manually. Prerequisites: - SNMP Traps configured and working on Zabbix Server or Proxy. - Asigra Client needs to be configured to sent SNMP Traps to Zabbix Server or Proxy. - Host sending the traps needs to be configured with SNMP interface in Zabbix Server Frontend GUI. Tested on Version 4.4.5 
-
 ## Overview
 
 This template will store Asigra Client Backup Jobs (failed and successful) in Items. It also includes triggers when a Backup Job fails.

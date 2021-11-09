@@ -1,9 +1,5 @@
 # ZBX-CISCO-ASR9001-OPTICAL-MONITORING
 
-## Description
-
-## Overview README: <https://github.com/hacktivism-github/zbx-templates-repository/blob/master/zbx-cisco/ASR9k/optical-monitoring/README.md> ![ASR9k Optical Monitoring](media/com_mtree/images/listings/m/515.png) ## Author Bruno Teixeira 
-
 ## Overview
 
 README: <https://github.com/hacktivism-github/zbx-templates-repository/blob/master/zbx-cisco/ASR9k/optical-monitoring/README.md>

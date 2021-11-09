@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description https://share.zabbix.com/network_devices/snmp-router-ospf-v2-1 ## Overview Generic monitoring of OSPF-MIB compatible devices, including software routers. Inspired by [SNMP Router OSPF - V2 + fix](network_devices/generic/snmp-router-ospf-v2-fix "SNMP Router OSPF - V2 + fix") and [Cisco OSPF Neighbors](network_devices/cisco/cisco-ospf-neighbors "Cisco OSPF Neighbors") templates. Changes: * Neighbor down detect by non-null DR and null BDR * LSA and interface event rate monitoring * Application prototypes ## Author Ilia Slepnev 
+https://share.zabbix.com/network_devices/snmp-router-ospf-v2-1
 
 ## Overview
 

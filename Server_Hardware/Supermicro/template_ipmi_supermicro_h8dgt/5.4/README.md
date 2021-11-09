@@ -1,9 +1,5 @@
 # IPMI Supermicro H8DGT
 
-## Description
-
-## Overview IPMI HW status [Fan, Temperature, Voltage, PS], Triggers [Fan, Temperature, Voltage, PS] ## Author Daniel Pogac 
-
 ## Overview
 
 IPMI HW status [Fan, Temperature, Voltage, PS], Triggers [Fan, Temperature, Voltage, PS] 

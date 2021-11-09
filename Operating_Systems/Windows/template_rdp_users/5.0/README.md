@@ -1,9 +1,5 @@
 # RDPUsers
 
-## Description
-
-## Overview RDP Logged on Users I use this template to check Users, that are logged on RDP sessions on Windows servers. It's not full audit, it's only for current view of logged-on users. Template is really simple.It has only one Item and user parameter configured on monitored server. User parameter in zabbix _agentd.conf: UserParameter=RDPUsers,"c: zabbix RDPUsers.cmd" Script RDPUsers.cmd: @echo off for /F "usebackq tokens=1,2,3,4,5*" %%i in (`qwinsta ^| find "Active"`) do ( if "%%l" == "Active" ( echo %%j ) ) I was asked to enhance script for monitoring disconnected terminal users too. So this is my second version of script. Script adds "D:" before name for disconnecter users and "A: "for Active users. Script was tested only for English version of Windows server: New script RDPUsers.cmd: @echo off for /F "usebackq tokens=1,2,3,4,5*" %%i in (`query user 2^>nul`) do ( if "%%l" == "Active" ( echo A: %%i ) if "%%k" == "Disc" ( echo D: %%i ) ) 
-
 ## Overview
 
 RDP Logged on Users

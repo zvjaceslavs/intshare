@@ -1,9 +1,5 @@
 # OCE ColorWave 500
 
-## Description
-
-## Overview Делал под Canon OCE ColorWave 500 Считывает уровни по тонеру, счетчики. Графики в комплекте. Вопросы на 2135850@211.ru ## Author Sergey Sidenko 
-
 ## Overview
 
 Делал под Canon OCE ColorWave 500

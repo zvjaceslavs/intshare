@@ -1,9 +1,5 @@
 # Brother Printers
 
-## Description
-
-## Overview Termplate para monitoramento de impressoras Brother. Testado nos modelos 8912DW e HL5452. ## Author Fernando Lozer 
-
 ## Overview
 
 Termplate para monitoramento de impressoras Brother.

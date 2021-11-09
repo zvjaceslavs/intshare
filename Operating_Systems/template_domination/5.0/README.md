@@ -1,9 +1,5 @@
 # Domination
 
-## Description
-
-## Overview Шаблон для видео наблюдения на базе Domination. ## Author Egor Elcov 
-
 ## Overview
 
 Шаблон для видео наблюдения на базе Domination.

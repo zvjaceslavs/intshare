@@ -1,9 +1,5 @@
 # SNMP Generic
 
-## Description
-
-## Overview Official template from Zabbix distribution to monitor generic device information by SNMP ## Author Zabbix SIA 
-
 ## Overview
 
 Official template from Zabbix distribution to monitor generic device information by SNMP

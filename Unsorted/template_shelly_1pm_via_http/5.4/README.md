@@ -1,9 +1,5 @@
 # Shelly 1PM
 
-## Description
-
-## Overview Monitoring of almost all values the Shelly 1PM reports, except external sensors since I don't own one of those. It has a fixed update time of 60s for all values, which might not be enough for some usecases - feel free to adjust it. ## Author Leonard Winck 
-
 ## Overview
 
 Monitoring of almost all values the Shelly 1PM reports, except external sensors since I don't own one of those.

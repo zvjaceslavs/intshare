@@ -1,9 +1,5 @@
 # Engetron UPS
 
-## Description
-
-## Overview Este template tem como Objetivo monitorar Nobreaks da Engetron. Os Oid's analisados, estão em conformidade com a tabela SNMP UPS-MIB. ## Author Henrique Soares 
-
 ## Overview
 
  Este template tem como Objetivo monitorar Nobreaks da Engetron. Os Oid's analisados, estão em conformidade com a tabela SNMP UPS-MIB.

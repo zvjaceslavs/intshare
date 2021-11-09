@@ -1,9 +1,5 @@
 # OCI_Dbaas
 
-## Description
-
-## Overview This is a template to monitor OCI Dbaas with Zabbix. If you want to monitor Dbaas, OCI Monitoring function is not enough (or there is not Dbaas metrics?) So, It is Necessary to use other monitoring tools. This Zabbix template has been verified to run on zabbix3 or 4series. ■ Source <https://github.com/y-araki-git/zabbix-oci-dbaas> ■ The link is described below for the setting procedure. ・Setup <https://qiita.com/y-araki-qiita/items/f25e02182c7f279c0199> ・How to add monitoring <https://qiita.com/y-araki-qiita/items/0ec80adbb022458cab20> ■ Structure of download file zabbix-oci-dbaas ├deploy _zabbix-oci-dbaas.sh (Dbaas monitoring setup script executed on zabbix agent) ├README.md ├template _oci _dbaas.xml (Template to import in zabbix console) └zabbix-oci-dbaas (Stores files placed under / etc / zabbix / scripts / agentd / zabbix-oci-dbaas /)  ├zabbix _agentd.conf (Setting of UserParameter)  ├zabbix-oci-dbaas.conf.org (User description for OracleDB monitoring)  ├zabbix-oci-dbaas.oraenv.org (Environment variable settings)  ├zabbix-oci-dbaas.sh (Monitor acquisition script)  └sql(Store sql to get monitored items)   ├xxx.sql   … ## Author yu araki 
-
 ## Overview
 
 This is a template to monitor OCI Dbaas with Zabbix.

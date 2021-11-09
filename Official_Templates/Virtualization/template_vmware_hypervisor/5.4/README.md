@@ -1,9 +1,5 @@
 # Virt VMware Hypervisor
 
-## Description
-
-## Overview Official VMware Hypervisor Template from Zabbix distribution ## Author Zabbix SIA 
-
 ## Overview
 
 Official VMware Hypervisor Template from Zabbix distribution

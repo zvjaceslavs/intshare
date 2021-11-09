@@ -1,9 +1,5 @@
 # aa SNMP Mikrotik RB2011UiAS
 
-## Description
-
-## Overview Template adaptado para RB-2011UIAS-RM Alterar Macro {$SNMP _COMMUNITY} para sua necessidade. ## Author Cesar Buffulin 
-
 ## Overview
 
 Template adaptado para RB-2011UIAS-RM

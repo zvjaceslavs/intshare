@@ -1,9 +1,5 @@
 # App TSM Client Scheduler
 
-## Description
-
-## Overview *** Template App TSM Client Scheduler *** ----------------------------------------- A basic template for monitoring IBM TSM Client Scheduler. IBM Spectrum Protect (Tivoli Storage Manager) - Haim Cohen 2017 ## Author Haim Cohen 
-
 ## Overview
 
 *** Template App TSM Client Scheduler ***

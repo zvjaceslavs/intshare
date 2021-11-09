@@ -1,9 +1,5 @@
 # Junos Space
 
-## Description
-
-## Overview monitor critical services for Junos Space monitoring system ## Author Dmitry Lavrukhin 
-
 ## Overview
 
 monitor critical services for Junos Space monitoring system

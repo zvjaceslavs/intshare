@@ -1,9 +1,5 @@
 # OLT
 
-## Description
-
-## Overview Informações das portas GPON Total de clientes ativos e configurados. Alertas para portas. ## Author jluiz 
-
 ## Overview
 
  Informações das portas GPON

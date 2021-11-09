@@ -1,9 +1,5 @@
 # AD DS Health and Performance
 
-## Description
-
-## Overview Performance counters * DRA Inbound Bytes Total/Sec * DRA Inbound Object Updates Remaining in Packet * DRA Outbound Bytes Total/Sec * DRA Pending Replication Synchronizations * Kerberos Authentications/Sec * LDAP Bind Time * LDAP Client Sessions * LDAP Searches/Sec * LDAP Successful Binds/Sec * LDAP Active Threads * LDAP Writes/Sec * NTLM Authentications Events * Active Directory Web Service (Error, Warning) * DFS Replication (Error, Warning) * Directory Service (Error, Warning) * DNS Server (Error, Warning) Service * Distributed File System Enables * DNS Server * DFS Replication * 
-
 ## Overview
 
 Performance counters

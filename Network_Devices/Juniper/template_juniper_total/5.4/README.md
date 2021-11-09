@@ -1,9 +1,5 @@
 # Juniper Total
 
-## Description
-
-## Overview This template is a smattering of a few templates combined with some custom discovery rules. It has been tested to work with most Juniper switches and firewalls. It uses the standard SNMP root for all discovery, so it works with most switch/router devices. If you have any issues with it let me know. I exported this from a live system, so the read the dependencies below. **What it does:** * BGP Discovery + Peer State * IPSEC Discovery + Peer State * Interface Discovery + Traffic in/out + Errors in/out + Drops in/out * OSPF Discovery + Neighbor State * IKE Discovery + Peer State **Non Discovery items:** * Temperature * CPU * Memory * Make/Model * ICMP The template creates quite a few graph prototypes and adds them to a screen as well. **Dependencies:** The template had value maps, interface filters and groups associated with it when I cloned it, but I removed them so there shouldn't be any issues with it. If you find an issue importing let me know. I was successful importing default template to a new system. **Other Instructions:** Be sure to fill in the $SNMP _COMMUNITY macro with your SNMP community string. Also IKE discovery does not seem to work on JunOS pre 12.3. Everything else seems to work fine. **Updates:** 1) Updated as I left my community string in the macros section :( 2) The Parent OID for interface discovery is for the 32Bit counters. This will not work for 64Bit devices. I'll update this week 
-
 ## Overview
 
 This template is a smattering of a few templates combined with some custom discovery rules.

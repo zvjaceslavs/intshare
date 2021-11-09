@@ -1,9 +1,5 @@
 # East Nobreak
 
-## Description
-
-## Overview Monitors power parameters like voltage and frequency, battery charge and status, battery temperature, etc. Has triggers for out of range parameters,. Please set macro for host. | Macro | | --- | {$SNMP _COMMUNITY} ⇒ nobreak01 ## Author Wellington Martins 
-
 ## Overview
 
 Monitors power parameters like voltage and frequency, battery charge and status, battery temperature, etc. Has triggers for out of range parameters,.

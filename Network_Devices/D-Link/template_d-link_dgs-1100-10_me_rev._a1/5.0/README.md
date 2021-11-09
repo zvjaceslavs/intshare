@@ -1,9 +1,5 @@
 # SNMP D-link DGS-1100-10/ME revA1
 
-## Description
-
-## Overview Based on official D-link MIB. Generic device data. Auto-discovery for Network Interfaces. Fills possible host inventory fields. 
-
 ## Overview
 
 Based on official D-link MIB. Generic device data.

@@ -1,9 +1,5 @@
 # Kyocera TASKalfa 3051ci
 
-## Description
-
-## Overview Template for Kyocera TASKalfa 3051ci network printer, in french. Works with Zabbix 2.4.7 Contains : - Copier : amount of printed pages in B/W and in color - Printer : amount of printed pages in B/W and in color - Informations : location, MAC Address, Name, S/N ## Author Nicolas C. 
-
 ## Overview
 
 Template for Kyocera TASKalfa 3051ci network printer, in french.

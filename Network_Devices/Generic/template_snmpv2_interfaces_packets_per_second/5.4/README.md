@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template adds items for measuring switchport unicast, broadcast and multicast packets per second. ## Overview Template SNMPv2 Interfaces packets per second Discover interfaces and creates items for inbound and outbound unicast packets, multicast packets, and broadcast packets. Creates trigger to warining about high input broadcast. Can be adjusted WARNING _BROADCAST _PPS ## Author Kari Karvonen 
+Template adds items for measuring switchport unicast, broadcast and multicast packets per second.
 
 ## Overview
 

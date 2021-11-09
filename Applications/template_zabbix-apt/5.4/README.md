@@ -1,9 +1,5 @@
 # APT Debian
 
-## Description
-
-## Overview This template allow to monitor packets to update in debian based OS. ## Author mer 
-
 ## Overview
 
 This template allow to monitor packets to update in debian based OS.

@@ -1,9 +1,5 @@
 # Canon C5540
 
-## Description
-
-## Overview Делал под Canon iR-ADV C5540 Считывает уровни по тонеру, счетчики. Графики в комплекте. Вопросы на 2135850@211.ru ## Author Sergey Sidenko 
-
 ## Overview
 
 Делал под Canon iR-ADV C5540

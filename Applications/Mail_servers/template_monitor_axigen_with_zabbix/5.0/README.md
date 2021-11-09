@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Axigen template ## Overview Zabbix-Axigen ============= Monitor Axigen With Zabbix Usage ===== Go to your Axigen Web-Admin -> Status & Monitoring -> Reporting Service -Ensure your SNMP listner is enable * Scroll down to SNMP Parameters and enable snmp also Set SNMP community. * Use the Snmp community in template "" or you can also set your own Macro. * On the Axigen Web Admin Go to Services > Services Mangement > Scroll down and reload Reporting Service. <a id="user-content-provides-visibliity-on-the-following" class="anchor" style="box-sizing: border-box; background-color: initial; color: #0366d6; float: left; padding-right: 4px; =================================================================================================================================================================================== ## Author Ahrar Khan 
+Axigen template
 
 ## Overview
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Kamailio (kamcli) template Version: 1.0.0 Author: Neimar L. Avila - neimar.avila@gmail.com ## Overview Kamailio Stats via kamcli UserParameter=kamailio.rpc[*],/usr/local/bin/kamcli --config=/etc/zabbix/kamcli.ini $1 $2 Example: Key: kamailio.rpc[stats,usrloc:registered _users] Pre-Processing (JSONPath): $.['result'].['usrloc.registered _users'] ## Author Neimar L. Avila 
+Kamailio (kamcli) template Version: 1.0.0 Author: Neimar L. Avila - neimar.avila@gmail.com
 
 ## Overview
 

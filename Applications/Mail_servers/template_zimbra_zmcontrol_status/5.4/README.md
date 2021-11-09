@@ -1,9 +1,5 @@
 # Zimbra
 
-## Description
-
-## Overview With this template you can monitor the status of some parameters of your Zimbra server, in particular some of the "zmcontrol status" output. 1) prepare the Zimbra server, by adding the following line to the ROOT CRONTAB. This will put the output of the "zmcontrol status" on a file in /tmp. It will run every 3 min: */3 * * * * sudo -u zimbra /opt/zimbra/bin/zmcontrol status > /tmp/zmcontrol _status 2) add the following UserParameter to the zabbix _agentd.conf file, or the conf.d folder: UserParameter=zimbra.amavis.status,awk '/amavis/{print $2}' /tmp/zmcontrol _status UserParameter=zimbra.antispam.status,awk '/antispam/{print $2}' /tmp/zmcontrol _status UserParameter=zimbra.antivirus.status,awk '/antivirus/{print $2}' /tmp/zmcontrol _status UserParameter=zimbra.mailbox.status,awk '/mailbox/{print $2}' /tmp/zmcontrol _status UserParameter=zimbra.mta.status,awk '/mta/{print $2}' /tmp/zmcontrol _status UserParameter=zimbra.zmconfigd.status,awk '/zmconfigd/{print $2}' /tmp/zmcontrol _status UserParameter=zimbra.webmail.status,awk '/service webapp/{print $3}' /tmp/zmcontrol _status UserParameter=zimbra.webadm.status,awk '/zimbraAdmin/{print $3}' /tmp/zmcontrol _status UserParameter=zimbra.proxy.status,awk '/proxy/{print $2}' /tmp/zmcontrol _status ## Author LeleKimi 
-
 ## Overview
 
 With this template you can monitor the status of some parameters of your Zimbra server, in particular some of the "zmcontrol status" output.

@@ -1,9 +1,5 @@
 # Huawei Storage OceanStor
 
-## Description
-
-## Overview Translate and improvements of template Zabbix OceanStore 
-
 ## Overview
 
 Translate and improvements of template Zabbix OceanStore

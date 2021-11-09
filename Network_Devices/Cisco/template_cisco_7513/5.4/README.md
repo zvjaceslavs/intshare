@@ -1,9 +1,5 @@
 # Cisco General
 
-## Description
-
-## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage 
-
 ## Overview
 
 BGP Peers (SNMP traps)
@@ -74,9 +70,38 @@ There are no template links in this template.
 |OSPF Neighbor {#SNMPVALUE} has been changed (LLD)|<p>-</p>|<p>**Expression**: nodata(/Cisco General/snmptrap["(ospfNbrStateChange).*ospfNbrIpAddr[[:space:]]{#SNMPVALUE}[[:space:]].*[[:space:]][a-zA-Z]+[[:space:]]$"],10m)=0</p><p>**Recovery expression**: </p>|average|
 # Cisco_Traps
 
-## Description
+## Overview
 
-## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage ## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage 
+BGP Peers (SNMP traps)
+
+
+CPU
+
+
+FAN
+
+
+Flash devices
+
+
+Memory pool
+
+
+OSPF Interfaces (inherited from Template Cisco General)
+
+
+OSPF Neighbours (inherited from Template Cisco General)
+
+
+Power Supplies
+
+
+Temperature
+
+
+Voltage
+
+
 
 ## Overview
 
@@ -146,9 +171,71 @@ There are no triggers in this template.
 
 # Cisco_7513
 
-## Description
+## Overview
 
-## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage ## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage ## Overview BGP Peers (SNMP traps) CPU FAN Flash devices Memory pool OSPF Interfaces (inherited from Template Cisco General) OSPF Neighbours (inherited from Template Cisco General) Power Supplies Temperature Voltage 
+BGP Peers (SNMP traps)
+
+
+CPU
+
+
+FAN
+
+
+Flash devices
+
+
+Memory pool
+
+
+OSPF Interfaces (inherited from Template Cisco General)
+
+
+OSPF Neighbours (inherited from Template Cisco General)
+
+
+Power Supplies
+
+
+Temperature
+
+
+Voltage
+
+
+
+## Overview
+
+BGP Peers (SNMP traps)
+
+
+CPU
+
+
+FAN
+
+
+Flash devices
+
+
+Memory pool
+
+
+OSPF Interfaces (inherited from Template Cisco General)
+
+
+OSPF Neighbours (inherited from Template Cisco General)
+
+
+Power Supplies
+
+
+Temperature
+
+
+Voltage
+
+
 
 ## Overview
 

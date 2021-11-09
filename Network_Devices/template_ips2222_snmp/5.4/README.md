@@ -1,9 +1,5 @@
 # IPS2222
 
-## Description
-
-## Overview Base Template IPS2222 Reading on: * Temp Sensor 1 * Temp Sensor 2 * Humidity Sensor 1 * Humidity Sensor 2 Triggers: * High Temp * High Humidity Requires MIB on SNMP config https://www.ip-sens.com/downloads/ips2222 _v1.3.mib 
-
 ## Overview
 
 Base Template IPS2222

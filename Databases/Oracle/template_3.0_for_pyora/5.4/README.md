@@ -1,9 +1,5 @@
 # Pyora active send
 
-## Description
-
-## Overview This is the fixed template for Zabbix PyOra to work on 3.0. I remove the unsupported tags and downgraded version. Note you will most likely have to update the triggers manually. 
-
 ## Overview
 
 This is the fixed template for Zabbix PyOra to work on 3.0. I remove the unsupported tags and downgraded version. Note you will most likely have to update the triggers manually.

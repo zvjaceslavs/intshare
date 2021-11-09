@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Version 1.0. Para utilização com o software SMS Power View, testado com o aplicativo versão Versão: V3.00.02.00. Meu Nobreak é Entrada/Saída 220V, portanto para 110V seriam necessários ajustes. Se tiver alguém utilizando eu posso utilizar parâmetros como Macro. Este template funciona realizando o parse do código da página http://localhost:8080/sms/s2/atualizaBlock.action que possui comentários com os dados do Nobreak. ## Overview Version 1.0. Para utilização com o software SMS Power View, testado com o aplicativo versão Versão: V3.00.02.00. Meu Nobreak é Entrada/Saída 220V, portanto para 110V seriam necessários ajustes. Se tiver alguém utilizando eu posso utilizar parâmetros como Macro. Este template funciona realizando o parse do código da página http://localhost:8080/sms/s2/atualizaBlock.action que possui comentários com os dados do Nobreak. ## Author Marlon J dos Anjos 
+Version 1.0. Para utilização com o software SMS Power View, testado com o aplicativo versão Versão: V3.00.02.00. Meu Nobreak é Entrada/Saída 220V, portanto para 110V seriam necessários ajustes. Se tiver alguém utilizando eu posso utilizar parâmetros como Macro. Este template funciona realizando o parse do código da página http://localhost:8080/sms/s2/atualizaBlock.action que possui comentários com os dados do Nobreak.
 
 ## Overview
 

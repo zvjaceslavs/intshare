@@ -1,9 +1,5 @@
 # IPMI Supermicro X10SRM-TF
 
-## Description
-
-## Overview IPMI HW status [Fan, Temperature, Voltage], Triggers [Fan, Temperature, Voltage], Graphs [Fan Speed, Temperature, Voltage] Items 30, Triggers 12, Graphs 3 ## Author dataCore 
-
 ## Overview
 
 

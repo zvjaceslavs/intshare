@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values and set macros in Zabbix ## Overview Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values Zabbix > Template > Macros > set Username, Passwort and PrivacyPasswort 2020 April: fixed https://github.com/kko/unifi-zabbix-snmpv3/issues/4 ## Author Helmut Leonhardt 
+Based on https://share.zabbix.com/storage-devices/synology/synology-diskstation SHA authpass and AES privpass are hardcoded DiskStationManager > Terminal SNMP > SNMP > Enable SNMPv3 set all values and set macros in Zabbix 
 
 ## Overview
 
@@ -58,8 +58,8 @@ Helmut Leonhardt
 |Load Avg 1 min|<p>1 minute load.</p>|`SNMP agent`|synoSystem.laLoadInt.1<p>Update: 1m</p>|
 |CPU User|<p>The percentage of CPU time spent processing user-level code.</p>|`SNMP agent`|synoSystem.ssCpuUser<p>Update: 1m</p>|
 |Total Shared Memory|<p>The total amount of real or virtual memory currently allocated for use as shared memory.</p>|`SNMP agent`|ucdavis.memory.memShared<p>Update: 3m</p>|
-|Total Swap Space|<p>The total amount of swap space configured for this host.</p>|`SNMP agent`|ucdavis.memory.memTotalSwap<p>Update: 3m</p>|
 |Total Physical Available|<p>The amount of real/physical memory currently unused or available.</p>|`SNMP agent`|ucdavis.memory.memAvailReal<p>Update: 3m</p>|
+|Total Swap Space|<p>The total amount of swap space configured for this host.</p>|`SNMP agent`|ucdavis.memory.memTotalSwap<p>Update: 3m</p>|
 |Total Physical Memory|<p>The total amount of real/physical memory installed on this host.</p>|`SNMP agent`|ucdavis.memory.memTotalReal<p>Update: 3m</p>|
 |CPU Idle|<p>The percentage of processor time spent idle, calculated over the last minute.</p>|`SNMP agent`|synoSystem.ssCpuIdle<p>Update: 1m</p>|
 |System Status|<p>System partition status.</p>|`SNMP agent`|synoSystem.systemStatus<p>Update: 1m</p>|

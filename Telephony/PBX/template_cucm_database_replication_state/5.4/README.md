@@ -1,9 +1,5 @@
 # Cisco AXL DataBase Replication status
 
-## Description
-
-## Overview CUCM replication status request from AXL Необходим Application User с правами на чтение AXL API Application user name: {$ZABBIX _APIUSER _UC} Applicatuin user passwd: {$ZABBIX _APIUSER _UC} 
-
 ## Overview
 
 CUCM replication status request from AXL

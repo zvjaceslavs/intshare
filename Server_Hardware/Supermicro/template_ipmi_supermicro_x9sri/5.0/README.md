@@ -1,9 +1,5 @@
 # IPMI Supermicro X9SRI-F
 
-## Description
-
-## Overview Template for IPMI SuperMicro X9SRI Motherboard (items, triggers, graphs). 
-
 ## Overview
 
 Template for IPMI SuperMicro X9SRI Motherboard (items, triggers, graphs).

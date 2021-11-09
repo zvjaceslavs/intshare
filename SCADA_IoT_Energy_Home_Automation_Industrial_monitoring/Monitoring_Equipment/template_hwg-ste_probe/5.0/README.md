@@ -1,9 +1,5 @@
 # HWg-STE
 
-## Description
-
-## Overview Monitoring humidity and temperature ## Author Daniel Douat 
-
 ## Overview
 
 Monitoring humidity and temperature

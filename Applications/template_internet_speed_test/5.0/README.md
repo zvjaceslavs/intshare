@@ -1,9 +1,5 @@
 # SpeedTest
 
-## Description
-
-## Overview Zabbix Speed Teste Tempalte. Descrição em breve ## Author Fabricio Guiamraes 
-
 ## Overview
 
 Zabbix Speed Teste Tempalte.

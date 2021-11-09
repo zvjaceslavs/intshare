@@ -1,9 +1,5 @@
 # LDAP
 
-## Description
-
-## Overview Monitoring OpenLDAP Cluster with Zabbix 3.4. It's a script that checks LDAP Provider - Consumer status, and sync status between them. You should: 1. Put **ldap _check _status.sh** in LDAP **Consumer** and make it executable for zabbix user. 2. Put **openldap _cluster _status.conf** in /etc/zabbix/zabbix _agentd.conf.d directory in **LDAP Consumer**. 3. Import **zabbix _openldap _template.xml**. 4. Import **zabbix _openldap _value _mapping.xml**. 5. Modify the item parameter and replace with LDAP Provider FQDN or IP. **[https://github.com/MrCirca/OpenLDAP-Cluster-Zabbix](https://github.com/MrCirca/OpenLDAP-Cluster-Zabbix "Download Project")** 
-
 ## Overview
 
 Monitoring OpenLDAP Cluster with Zabbix 3.4. It's a script that checks LDAP Provider - Consumer status, and sync status between them.

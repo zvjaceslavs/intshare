@@ -1,9 +1,5 @@
 # Other - NeoXL
 
-## Description
-
-## Overview The template is based on the "BDT-MS-MIB" (Version 201702211500Z). The SNMP capabilities of the libaries are pretty limited. All possible values are being checked and triggers are being used. **Features** * Check of the Health Status of the Library * Scan for Modules/Expansions * Check of the "Drive Power Module" of each Expansion * Check of the "Power Supply Status" of each Expansion * Inventory Checks like Installed Firmware, Serial Number and so on. --- Template was tested with a NEOxl 80 and Firmware 2.80. ## Author Marcel Wiechmann 
-
 ## Overview
 
 The template is based on the "BDT-MS-MIB" (Version 201702211500Z). The SNMP capabilities of the libaries are pretty limited. All possible values are being checked and triggers are being used.

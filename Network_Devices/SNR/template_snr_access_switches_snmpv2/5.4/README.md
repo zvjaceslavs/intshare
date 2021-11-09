@@ -1,90 +1,26 @@
-# SNR Broadcast-Multicast-Unicast
-
-## Description
-
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
-
-## Overview
-
-Official Zabbix templates for SNR switches.
-Recommended for access switches.
- 
-If you have any questions, please contact support@nag.ru.
-
-## Author
-
-SNR-TEAM
-
-## Macros used
-
-There are no macros links in this template.
-
-## Template links
-
-There are no template links in this template.
-
-## Discovery rules
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Broadcast/Multicast/Unicast  - Statistic on interfaces|<p>-</p>|`SNMP agent`|ifInterbmu<p>Update: 30</p>|
-## Items collected
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Inbound broadcast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|Inbound multicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|Inbound unicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInUcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|Outbound broadcast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutBroadcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|Outbound multicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutMulticastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|Outbound unicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutUcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-## Triggers
-
-There are no triggers in this template.
-
-# SNR CPU Usage
-
-## Description
-
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
-
-## Overview
-
-Official Zabbix templates for SNR switches.
-Recommended for access switches.
- 
-If you have any questions, please contact support@nag.ru.
-
-## Author
-
-SNR-TEAM
-
-## Macros used
-
-There are no macros links in this template.
-
-## Template links
-
-There are no template links in this template.
-
-## Discovery rules
-
-There are no discovery rules in this template.
-
-## Items collected
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|CPU - Usage|<p>-</p>|`SNMP agent`|sys.cpuusage<p>Update: 30</p>|
-## Triggers
-
-There are no triggers in this template.
-
 # SNR Error and Discared Packets
 
-## Description
+## Overview
 
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
 
 ## Overview
 
@@ -125,11 +61,80 @@ There are no template links in this template.
 |----|-----------|----------|--------|
 |Interface {#IFNAME}({#IFALIAS}): High error rate|<p>-</p>|<p>**Expression**: avg(/SNR Error and Discared Packets/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)>2 or avg(/SNR Error and Discared Packets/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)>2</p><p>**Recovery expression**: avg(/SNR Error and Discared Packets/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)<2*0.8 and avg(/SNR Error and Discared Packets/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)<2*0.8</p>|warning|
 |Interface {#IFNAME}({#IFALIAS}): High error rate (LLD)|<p>-</p>|<p>**Expression**: avg(/SNR Error and Discared Packets/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)>2 or avg(/SNR Error and Discared Packets/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)>2</p><p>**Recovery expression**: avg(/SNR Error and Discared Packets/net.if.in.errors[ifInErrors.{#SNMPINDEX}],5m)<2*0.8 and avg(/SNR Error and Discared Packets/net.if.out.errors[ifOutErrors.{#SNMPINDEX}],5m)<2*0.8</p>|warning|
+# SNR Broadcast-Multicast-Unicast
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Broadcast/Multicast/Unicast  - Statistic on interfaces|<p>-</p>|`SNMP agent`|ifInterbmu<p>Update: 30</p>|
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Inbound broadcast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInBroadcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Inbound multicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInMulticastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Inbound unicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCInUcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Outbound broadcast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutBroadcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Outbound multicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutMulticastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Outbound unicast packets on interface {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ifHCOutUcastPkts.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+## Triggers
+
+There are no triggers in this template.
+
 # SNR Interfaces Statistic
 
-## Description
+## Overview
 
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
 
 ## Overview
 
@@ -176,11 +181,7 @@ There are no template links in this template.
 |Interface {#IFNAME}({#IFALIAS}): Ethernet has changed to lower speed than it was before (LLD)|<p>-</p>|<p>**Expression**: change(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}])<0 and last(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0 and ( last(/SNR Interfaces Statistic/net.if.type[ifType.{#SNMPINDEX}])=6 or last(/SNR Interfaces Statistic/net.if.type[ifType.{#SNMPINDEX}])=7 or last(/SNR Interfaces Statistic/net.if.type[ifType.{#SNMPINDEX}])=11 or last(/SNR Interfaces Statistic/net.if.type[ifType.{#SNMPINDEX}])=62 or last(/SNR Interfaces Statistic/net.if.type[ifType.{#SNMPINDEX}])=69 or last(/SNR Interfaces Statistic/net.if.type[ifType.{#SNMPINDEX}])=117 ) and (last(/SNR Interfaces Statistic/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2)</p><p>**Recovery expression**: (change(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0 and last(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}],#2)>0) or (last(/SNR Interfaces Statistic/net.if.status[ifOperStatus.{#SNMPINDEX}])=2)</p>|information|
 |Interface {#IFNAME}({#IFALIAS}): High bandwidth usage >{$IF_UTIL_MAX:"{#IFNAME}"}% (LLD)|<p>-</p>|<p>**Expression**: (avg(/SNR Interfaces Statistic/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)>(90/100)*last(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) or avg(/SNR Interfaces Statistic/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)>(90/100)*last(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}])) and last(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}])>0</p><p>**Recovery expression**: avg(/SNR Interfaces Statistic/net.if.in[ifHCInOctets.{#SNMPINDEX}],15m)<((90-3)/100)*last(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}]) and avg(/SNR Interfaces Statistic/net.if.out[ifHCOutOctets.{#SNMPINDEX}],15m)<((90-3)/100)*last(/SNR Interfaces Statistic/net.if.speed[ifHighSpeed.{#SNMPINDEX}])</p>|warning|
 |Interface {#IFNAME}({#IFALIAS}): Link down (LLD)|<p>-</p>|<p>**Expression**: 1=1 and (last(/SNR Interfaces Statistic/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/SNR Interfaces Statistic/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/SNR Interfaces Statistic/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)</p><p>**Recovery expression**: last(/SNR Interfaces Statistic/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2</p>|average|
-# SNR Memory Information
-
-## Description
-
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
+# SNR POE Power
 
 ## Overview
 
@@ -193,33 +194,49 @@ If you have any questions, please contact support@nag.ru.
 
 SNR-TEAM
 
-## Macros used
+## Overview
 
-There are no macros links in this template.
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
 
-## Template links
+## Author
 
-There are no template links in this template.
+SNR-TEAM
 
-## Discovery rules
+## Overview
 
-There are no discovery rules in this template.
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
 
-## Items collected
+## Author
 
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Memory - Busy|<p>-</p>|`SNMP agent`|sys.memorybusy<p>Update: 30</p>|
-|Memory - Size|<p>-</p>|`SNMP agent`|sys.memoryusage<p>Update: 30</p>|
-## Triggers
+SNR-TEAM
 
-There are no triggers in this template.
+## Overview
 
-# SNR POE Power
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
 
-## Description
+## Author
 
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
 
 ## Overview
 
@@ -252,6 +269,130 @@ There are no template links in this template.
 |POE - General Power|<p>-</p>|`SNMP agent`|poepower.general<p>Update: 30</p>|
 |POE - Power Current on Port:{#SNMPINDEX}|<p>-</p>|`SNMP agent`|poepower.current[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |POE - Max Power on Port:{#SNMPINDEX}|<p>-</p>|`SNMP agent`|poepowermax.onport[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+## Triggers
+
+There are no triggers in this template.
+
+# SNR CPU Usage
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|CPU - Usage|<p>-</p>|`SNMP agent`|sys.cpuusage<p>Update: 30</p>|
+## Triggers
+
+There are no triggers in this template.
+
+# SNR Memory Information
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Memory - Busy|<p>-</p>|`SNMP agent`|sys.memorybusy<p>Update: 30</p>|
+|Memory - Size|<p>-</p>|`SNMP agent`|sys.memoryusage<p>Update: 30</p>|
 ## Triggers
 
 There are no triggers in this template.

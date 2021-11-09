@@ -1,9 +1,5 @@
 # SNMP APC PDU AP79XX
 
-## Description
-
-## Overview The template is a reworked a version of APC PDU New SNMP Template to suit the needs of our AP7953. Contains sane triggers, load status, graphs, etc. The template monitors both load banks, status of the alarms, and changes in the port status (on/off) ## Author kos 
-
 ## Overview
 
 The template is a reworked a version of APC PDU New SNMP Template to suit the needs of our AP7953.

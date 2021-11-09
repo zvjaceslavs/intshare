@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Template para módulos UPS (Nobreaks), em conformidade com a RFC 1628 de Maio de 1994. Link: https://tools.ietf.org/html/rfc1628 ## Overview Este é o módulo MIB UPS-MIB baseado em Padrões/RFCs. ## Author Henrique Soares 
+Template para módulos UPS (Nobreaks), em conformidade com a RFC 1628 de Maio de 1994. Link: https://tools.ietf.org/html/rfc1628
 
 ## Overview
 

@@ -1,8 +1,48 @@
 # Shelly Motion
 
-## Description
+## Overview
 
-## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy 
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
 
 ## Overview
 
@@ -80,9 +120,115 @@ There are no triggers in this template.
 
 # Shelly Plug and Plug-S - MQTT
 
-## Description
+## Overview
 
-## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy 
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
 
 ## Overview
 
@@ -166,10 +312,6 @@ There are no triggers in this template.
 
 # Shelly 3EM
 
-## Description
-
-## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy 
-
 ## Overview
 
 List of supported Shelly devices:
@@ -276,11 +418,172 @@ There are no discovery rules in this template.
 
 There are no triggers in this template.
 
+# Shelly Motion - MQTT
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Macros used
+
+|Name|Description|Default|Type|
+|----|-----------|-------|----|
+|{$MQTT_BROKER_HOST}|<p>MQTT broker host</p>|`tcp://localhost:1883`|Text macro|
+|{$MQTT_BROKER_PASS}|<p>MQTT broker password, if configured</p>|`****`|Secret macro|
+|{$MQTT_BROKER_USER}|<p>MQTT broker user, if configured</p>|``|Text macro|
+|{$MQTT_DEVICE_ID}|<p>Shelly device MQTT ID</p>|``|Text macro|
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Lux illumination|<p>-</p>|`Dependent item`|lux.illumination<p>Update: 0</p>|
+|Device time|<p>-</p>|`Dependent item`|unixtime<p>Update: 0</p>|
+|Uptime|<p>-</p>|`Dependent item`|uptime<p>Update: 0</p>|
+|Skipped actions|<p>-</p>|`Dependent item`|actions_stats.skipped<p>Update: 0</p>|
+|Status data|<p>Collect data from Shelly device status topic.</p>|`Zabbix agent (active)`|mqtt.get[{$MQTT_BROKER_HOST},shellies/{$MQTT_DEVICE_ID}/info,{$MQTT_BROKER_USER},{$MQTT_BROKER_PASS}]<p>Update: 0</p>|
+|Cloud enabled|<p>-</p>|`Dependent item`|cloud.enabled<p>Update: 0</p>|
+|RAM free|<p>-</p>|`Dependent item`|ram_free<p>Update: 0</p>|
+|File system free size|<p>-</p>|`Dependent item`|fs_free<p>Update: 0</p>|
+|Motion detection|<p>-</p>|`Dependent item`|sensor.motion<p>Update: 0</p>|
+|System configuration changes|<p>-</p>|`Dependent item`|cfg_changed_cnt<p>Update: 0</p>|
+|Cloud connected|<p>-</p>|`Dependent item`|cloud.connected<p>Update: 0</p>|
+|Lux sensor self-check|<p>-</p>|`Dependent item`|lux.is_valid<p>Update: 0</p>|
+|Firmware new version|<p>-</p>|`Dependent item`|update.new_version<p>Update: 0</p>|
+|Motion sensor self-check|<p>-</p>|`Dependent item`|sensor.is_valid<p>Update: 0</p>|
+|Battery voltage|<p>-</p>|`Dependent item`|bat.voltage<p>Update: 0</p>|
+|Lux value|<p>-</p>|`Dependent item`|lux.value<p>Update: 0</p>|
+|Update available|<p>-</p>|`Dependent item`|update.has_update<p>Update: 0</p>|
+|MQTT connected|<p>-</p>|`Dependent item`|mqtt.connected<p>Update: 0</p>|
+|Motion sensor active|<p>-</p>|`Dependent item`|sensor.active<p>Update: 0</p>|
+|Battery percentage|<p>-</p>|`Dependent item`|bat.value<p>Update: 0</p>|
+|Firmware old version|<p>-</p>|`Dependent item`|update.old_version<p>Update: 0</p>|
+|File system total size|<p>-</p>|`Dependent item`|fs_size<p>Update: 0</p>|
+|Tamper detection|<p>-</p>|`Dependent item`|sensor.vibration<p>Update: 0</p>|
+|Charger connected|<p>-</p>|`Dependent item`|charger<p>Update: 0</p>|
+|WiFi IP|<p>-</p>|`Dependent item`|wifi_sta.ip<p>Update: 0</p>|
+|WiFi SSID|<p>-</p>|`Dependent item`|wifi_sta.ssid<p>Update: 0</p>|
+|RAM total|<p>-</p>|`Dependent item`|ram_total<p>Update: 0</p>|
+|WiFi RSSI|<p>-</p>|`Dependent item`|wifi_sta.rssi<p>Update: 0</p>|
+|WiFi connected|<p>-</p>|`Dependent item`|wifi_sta.connected<p>Update: 0</p>|
+## Triggers
+
+There are no triggers in this template.
+
 # Shelly 3EM - MQTT
 
-## Description
+## Overview
 
-## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy 
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
 
 ## Overview
 
@@ -389,11 +692,7 @@ There are no discovery rules in this template.
 
 There are no triggers in this template.
 
-# Shelly Motion - MQTT
-
-## Description
-
-## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy 
+# Shelly Plug and Plug-S
 
 ## Overview
 
@@ -417,64 +716,71 @@ For more information and configuration information see [README.md](https://githu
 
 Martin Suchy
 
-## Macros used
+## Overview
 
-|Name|Description|Default|Type|
-|----|-----------|-------|----|
-|{$MQTT_BROKER_HOST}|<p>MQTT broker host</p>|`tcp://localhost:1883`|Text macro|
-|{$MQTT_BROKER_PASS}|<p>MQTT broker password, if configured</p>|`****`|Secret macro|
-|{$MQTT_BROKER_USER}|<p>MQTT broker user, if configured</p>|``|Text macro|
-|{$MQTT_DEVICE_ID}|<p>Shelly device MQTT ID</p>|``|Text macro|
-## Template links
+List of supported Shelly devices:
 
-There are no template links in this template.
 
-## Discovery rules
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
 
-There are no discovery rules in this template.
 
-## Items collected
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
 
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|Lux illumination|<p>-</p>|`Dependent item`|lux.illumination<p>Update: 0</p>|
-|Device time|<p>-</p>|`Dependent item`|unixtime<p>Update: 0</p>|
-|Uptime|<p>-</p>|`Dependent item`|uptime<p>Update: 0</p>|
-|Skipped actions|<p>-</p>|`Dependent item`|actions_stats.skipped<p>Update: 0</p>|
-|Status data|<p>Collect data from Shelly device status topic.</p>|`Zabbix agent (active)`|mqtt.get[{$MQTT_BROKER_HOST},shellies/{$MQTT_DEVICE_ID}/info,{$MQTT_BROKER_USER},{$MQTT_BROKER_PASS}]<p>Update: 0</p>|
-|Cloud enabled|<p>-</p>|`Dependent item`|cloud.enabled<p>Update: 0</p>|
-|RAM free|<p>-</p>|`Dependent item`|ram_free<p>Update: 0</p>|
-|File system free size|<p>-</p>|`Dependent item`|fs_free<p>Update: 0</p>|
-|Motion detection|<p>-</p>|`Dependent item`|sensor.motion<p>Update: 0</p>|
-|System configuration changes|<p>-</p>|`Dependent item`|cfg_changed_cnt<p>Update: 0</p>|
-|Cloud connected|<p>-</p>|`Dependent item`|cloud.connected<p>Update: 0</p>|
-|Lux sensor self-check|<p>-</p>|`Dependent item`|lux.is_valid<p>Update: 0</p>|
-|Firmware new version|<p>-</p>|`Dependent item`|update.new_version<p>Update: 0</p>|
-|Motion sensor self-check|<p>-</p>|`Dependent item`|sensor.is_valid<p>Update: 0</p>|
-|Battery voltage|<p>-</p>|`Dependent item`|bat.voltage<p>Update: 0</p>|
-|Lux value|<p>-</p>|`Dependent item`|lux.value<p>Update: 0</p>|
-|Update available|<p>-</p>|`Dependent item`|update.has_update<p>Update: 0</p>|
-|MQTT connected|<p>-</p>|`Dependent item`|mqtt.connected<p>Update: 0</p>|
-|Motion sensor active|<p>-</p>|`Dependent item`|sensor.active<p>Update: 0</p>|
-|Battery percentage|<p>-</p>|`Dependent item`|bat.value<p>Update: 0</p>|
-|Firmware old version|<p>-</p>|`Dependent item`|update.old_version<p>Update: 0</p>|
-|File system total size|<p>-</p>|`Dependent item`|fs_size<p>Update: 0</p>|
-|Tamper detection|<p>-</p>|`Dependent item`|sensor.vibration<p>Update: 0</p>|
-|Charger connected|<p>-</p>|`Dependent item`|charger<p>Update: 0</p>|
-|WiFi IP|<p>-</p>|`Dependent item`|wifi_sta.ip<p>Update: 0</p>|
-|WiFi SSID|<p>-</p>|`Dependent item`|wifi_sta.ssid<p>Update: 0</p>|
-|RAM total|<p>-</p>|`Dependent item`|ram_total<p>Update: 0</p>|
-|WiFi RSSI|<p>-</p>|`Dependent item`|wifi_sta.rssi<p>Update: 0</p>|
-|WiFi connected|<p>-</p>|`Dependent item`|wifi_sta.connected<p>Update: 0</p>|
-## Triggers
 
-There are no triggers in this template.
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
 
-# Shelly Plug and Plug-S
 
-## Description
 
-## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy ## Overview List of supported Shelly devices: * Shelly 3EM * Shelly Plug and Plug-S * Shelly Motion * more to come (I hope)... Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well. For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub. ## Author Martin Suchy 
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
+
+## Overview
+
+List of supported Shelly devices:
+
+
+* Shelly 3EM
+* Shelly Plug and Plug-S
+* Shelly Motion
+* more to come (I hope)...
+
+
+Each device has two templates to choose from, one is using HTTP calls to collect device information from API status page and other is collecting device information from MQTT broker "shellies/*/info" topic. Templates were tested and created on Zabbix version 5.4 but some other versions will most likely work as well.
+
+
+For more information and configuration information see [README.md](https://github.com/UniverseDevel/zabbix-templates/tree/main/shelly) at GitHub repo. All templates can be downloaded here as a single file or separate templates are available on GitHub.
+
+
+
+## Author
+
+Martin Suchy
 
 ## Overview
 

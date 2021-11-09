@@ -1,9 +1,5 @@
 # Mikrotik - BGP LLD
 
-## Description
-
-## Overview MikroTik BGP LLD usando SSH Ajustes os intervalos de atualizações de acordo com sua necessidade. Declare macros do template de acordo com configuração do seu RouterOS. {$MIKROTIK _SSH _PASS} {$MIKROTIK _SSH _PORT} {$MIKROTIK _SSH _USER} Altere o timeout do zabbix-server "zabbix _server.conf" Timeout=30 OBS: O template não vai monitora peers desabilitados. O template monitora os seguintes itens {#PEERNAME} ({#REMOTEAS}) - Prefix {#PEERNAME} ({#REMOTEAS}) - Status E gera alarme caso o status do peer vier diferente de "established" Qualquer duvida, segue email para contato. Email: [jorge.iwano@gmail.com](mailto:jorge.iwano@gmail.com) ## Author Jorge Iwano 
-
 ## Overview
 
 MikroTik BGP LLD usando SSH

@@ -1,9 +1,5 @@
 # F5 LTM负载均衡器监控模板
 
-## Description
-
-## Overview F5 LTM系列负载均衡器监控模板 主要包括CPU利用率、内存利用率、端口状态、端口带宽利用率、报文数、电源状态、风扇状态监控 将宏{$CLOUD _SNMP _COMMUNITY}替换为实际团体字即可 ## Author zhangzhefeng 
-
 ## Overview
 
 F5 LTM系列负载均衡器监控模板

@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Trading using MercadoBitcoin API. Build using MBTC api documentation (https://www.mercadobitcoin.com.br/api-doc/) ## Overview **Template - MBTC Trading** =========================== Seeks Bitcoin, Ethereum and Litecoin trading using [MercadoBitcoin API](https://www.mercadobitcoin.com.br/api-doc/). * [BTC] - Current * [BTC] - High * [BTC] - Low * [ETH] - Current * [ETH] - High * [ETH] - Low * [LTC] - Current * [LTC] - High * [LTC] - Low ## Author Rickk Barbosa 
+Trading using MercadoBitcoin API. Build using MBTC api documentation (https://www.mercadobitcoin.com.br/api-doc/)
 
 ## Overview
 

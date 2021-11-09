@@ -1,9 +1,5 @@
 # Room Alert 12er
 
-## Description
-
-## Overview Created this template for Avtech Room Alert 12ER , i am monitoring one Internal Sensor , one External sensor (Digital Active Power) and 1 switch sensor (mini UPS). This themplate is unfinished and requires more time to add the restant sensors.When i have more sensors i will update the template. If u have any questions contact me via email at : tsantos.dssi@gmail.com ## Author Tiago Santos 
-
 ## Overview
 
 Created this template for Avtech Room Alert 12ER , i am monitoring one Internal Sensor , one External sensor (Digital Active Power) and 1 switch sensor (mini UPS). This themplate is unfinished and requires more time to add the restant sensors.When i have more sensors i will update the template.

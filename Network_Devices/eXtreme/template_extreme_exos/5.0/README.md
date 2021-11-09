@@ -1,9 +1,5 @@
 # SNMP Extreme EXOS
 
-## Description
-
-## Overview HARDWARE FIRMWARE STACKING 
-
 ## Overview
 
 HARDWARE

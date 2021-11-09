@@ -1,9 +1,5 @@
 # Device BigIP F5
 
-## Description
-
-## Overview Necessário, criar os Mapeamentos de valores da imagem. ## Author Theo Castelo 
-
 ## Overview
 
 Necessário, criar os Mapeamentos de valores da imagem.

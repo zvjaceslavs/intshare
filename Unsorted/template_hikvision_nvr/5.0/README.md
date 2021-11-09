@@ -1,9 +1,5 @@
 # Hikvision
 
-## Description
-
-## Overview ### Brief information: Template for Hikvision company NVR's (Network Video Recorder) using SNMPv2. Tested on Zabbix v4.4 and Hikvision NVR 9664-i8 ### Information covered by a template: * Low Level Discovery + LLD of installed HDD's statuses + LLD of installed HDD's capacity + LLD of installed HDD's free space * Triggers + HDD count change + HDD state change * Items + Count of installed HDD's + Device uptime + Number of NIC + Device description * Mappings + HDD disk state mappings ## Author Omar Bayramov, David Sitnikov 
-
 ## Overview
 
 ### Brief information:

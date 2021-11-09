@@ -1,9 +1,5 @@
 # Proteco
 
-## Description
-
-## Author Mihguel da Silva Santos Tavares de Araujo 
-
 ## Author
 
 Mihguel da Silva Santos Tavares de Araujo

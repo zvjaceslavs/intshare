@@ -1,9 +1,5 @@
 # Dell idrac
 
-## Description
-
-## Overview 这是[https://share.zabbix.com/network _devices/cat-dell-sonicwall/dell-idrac](network_devices/cat-dell-sonicwall/dell-idrac)的中文化版本，同时进行了修正以支持zabbix3.0，感谢原作者 
-
 ## Overview
 
 这是[https://share.zabbix.com/network\_devices/cat-dell-sonicwall/dell-idrac](network_devices/cat-dell-sonicwall/dell-idrac)的中文化版本，同时进行了修正以支持zabbix3.0，感谢原作者

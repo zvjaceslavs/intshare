@@ -1,9 +1,5 @@
 # templete rsg
 
-## Description
-
-## Overview Nesse templete você vai coleta PING TEMPO DE RESPOSTA LATÊNCIA CCQ ESTAÇÃO SINAL PORTA LAN UPTIME TRAFEGO E-MAIL: [rsg.sp.gov@gmail.com](mailto:rsg.sp.gov@gmail.com) WHATSSAPP: (81) 982670619 ## Author Renato Severino 
-
 ## Overview
 
  Nesse templete você vai coleta 

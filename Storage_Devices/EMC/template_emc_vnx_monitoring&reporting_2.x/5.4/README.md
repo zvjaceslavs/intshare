@@ -1,9 +1,5 @@
 # VNX_monitoring_and_reporting
 
-## Description
-
-## Overview Use this template to monitor EMC VNX Monitoring&reporting aka VNX M&R vApp/linux instance via passive checks. Installation instructions here: <https://github.com/Vnet-as/VNX_Monitoring_and_reporting> Enjoy! ## Author Peter Vilhan 
-
 ## Overview
 
 Use this template to monitor EMC VNX Monitoring&reporting aka VNX M&R vApp/linux instance via passive checks.

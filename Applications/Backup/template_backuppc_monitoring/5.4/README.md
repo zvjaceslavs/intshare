@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description The template to monitor BackupPC metrics API by Zabbix agent without need for extra scripts on server. Template Version v0.0.1 - Evren Yurtesen Tested on Zabbix5 and BackupPC 4.4.1 (needs updated metrics) ## Overview Please see the GitHub repository for newest version and reporting issues. <https://github.com/yurtesen/zabbix_backuppc> This template requires no external scripts. It is tested with latest BackupPC which has updated metrics. It may function partially in older BackupPC versions. https://github.com/backuppc/backuppc/pull/391 ## Author Evren Yurtesen 
+The template to monitor BackupPC metrics API by Zabbix agent without need for extra scripts on server. Template Version v0.0.1 - Evren Yurtesen Tested on Zabbix5 and BackupPC 4.4.1 (needs updated metrics)
 
 ## Overview
 

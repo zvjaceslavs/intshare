@@ -1,9 +1,5 @@
 # MikroTik RB3011UiAS
 
-## Description
-
-## Overview MikroTik RB3011UiAS 
-
 ## Overview
 
 MikroTik RB3011UiAS

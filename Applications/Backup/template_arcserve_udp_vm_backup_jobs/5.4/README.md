@@ -1,9 +1,5 @@
 # Arcserve UDP VM Backup Check
 
-## Description
-
-## Overview **Zabbix-Template Arcserve UDP VM Backups** This template checks out-of-the-box only VM Backups from Arcserve UDP. This script only counts the number of successful or unsuccessful backup jobs and throws a trigger if necessary. Installation steps für Arcserve UDP VM Backup checks: 1. Copy the script file "Arcserve _UDP _VMCount.ps1" to your Zabbix Agent Script folder on the Arcserve UDP Host. 2. Modify script parameter if necessary (protocol, port, JobID) 3. Test the script manually on the Arcserve UDP Host: `. Arcserve_UDP_VMCount.ps1 JobSuccessCount` 4. For debugging of errors you can enable "$Debug=$True" in the script.. 5. Check the script for correct results of the VM backup jobs. 6. Add the UserParameter to the zabbix _agentd.conf: UserParameter=custom.arcserveudpvm[*],powershell.exe -NoProfile -ExecutionPolicy Bypass -file "C: Program Files Zabbix Agent Scripts Arcserve _UDP _VMCount.ps1" $1 $2 $3 $4 $5 7. Import des Zabbix Template "Template _Arcserve UDP VM Backup Check.xml" to the Zabbix Server. 8. Assign the template to the Zabbix host for ARcserve UDP. 9. Modify the macro "{$ARCSERVE _DOMAIN}", "{$ARCSERVE _USER}" and "{$ARCSERVE _PASS} with the read only user login for Arcserve UDP. 10. Check the latest value of application "ArcserveUDP Jobs". ## Author R.P.Wimmer 
-
 ## Overview
 
 **Zabbix-Template Arcserve UDP VM Backups**

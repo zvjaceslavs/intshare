@@ -1,9 +1,5 @@
 # SNMP - ServerCheck.com - SensorGateway
 
-## Description
-
-## Overview ServerCheck SensorGateway. **Applications:** * General; * Network; * Sensor; * Trigger; * Graphics. Tested in Zabbix 5.0 TLS ## Author Issayev Nursultan 
-
 ## Overview
 
 ServerCheck SensorGateway.

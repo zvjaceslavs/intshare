@@ -1,9 +1,5 @@
 # Windows Defender WMI
 
-## Description
-
-## Overview Template utilizes **MSFT _MpComputerStatus** class in Windows WMI to collect information about Windows Defender, such as: * Antivirus Enabled/Disabled * RealTimeProtection Enabled/Disabled * BehaviorMonitor Enabled/Disabled * OnAccessProtection Enabled/Disabled * IoavProtection Enabled/Disabled * Antispyware Enabled/Disabled * RealTimeProtection Enabled/Disabled * NIS Enabled/Disabled * Age of last Full/Quick scans * Last Date of scans * Computer State * Age of Signatures All WMI information is gathered from official Microsoft documentation. Keep in mind, that his might not work with Older Windows versions. I checked the Min. Zabbix version 3.4, because some items have Regular expression pre-processing. However that could be removed, and template adapted to older Zabbix versions. ## Author Zabbix CookBook 
-
 ## Overview
 
 Template utilizes **MSFT\_MpComputerStatus** class in Windows WMI to collect information about Windows Defender, such as:

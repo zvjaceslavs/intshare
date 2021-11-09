@@ -1,9 +1,5 @@
 # Cisco_SG220-26P.xml
 
-## Description
-
-## Overview Simple template for: Cisco SG220-26 Port Status, Port Traffic In, Port Traffic Out, and System Uptime. Hardware webpage: goo.gl/7zdRSN ## Author ArcticNerd 
-
 ## Overview
 
 Simple template for: Cisco SG220-26

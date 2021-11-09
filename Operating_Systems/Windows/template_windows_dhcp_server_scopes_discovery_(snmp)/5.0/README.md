@@ -1,9 +1,5 @@
 # Discovery DHCP scopes
 
-## Description
-
-## Overview Hello, Using this template you'll be able to collect information about free IPs in your DHCP server scopes. Please make sure you activated SNMP monitoring in your server and that you changed the community name in the template. Remember to add your Zabbix server IP as a permitted host in your SNMP configuration. ## Author Zilmar de Souza Junior 
-
 ## Overview
 
 Hello,

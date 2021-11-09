@@ -1,46 +1,4 @@
-# SNR CPU Usage
-
-## Description
-
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
-
-## Overview
-
-Official Zabbix templates for SNR switches.
-Recommended for access switches.
- 
-If you have any questions, please contact support@nag.ru.
-
-## Author
-
-SNR-TEAM
-
-## Macros used
-
-There are no macros links in this template.
-
-## Template links
-
-There are no template links in this template.
-
-## Discovery rules
-
-There are no discovery rules in this template.
-
-## Items collected
-
-|Name|Description|Type|Key and additional info|
-|----|-----------|----|----|
-|CPU - Usage|<p>-</p>|`SNMP agent`|sys.cpuusage<p>Update: 30</p>|
-## Triggers
-
-There are no triggers in this template.
-
 # SNR Broadcast-Multicast-Unicast
-
-## Description
-
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
 
 ## Overview
 
@@ -80,11 +38,74 @@ There are no template links in this template.
 
 There are no triggers in this template.
 
+# SNR CPU Usage
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Macros used
+
+There are no macros links in this template.
+
+## Template links
+
+There are no template links in this template.
+
+## Discovery rules
+
+There are no discovery rules in this template.
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|CPU - Usage|<p>-</p>|`SNMP agent`|sys.cpuusage<p>Update: 30</p>|
+## Triggers
+
+There are no triggers in this template.
+
 # SNR Error and Discared Packets
 
-## Description
+## Overview
 
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
 
 ## Overview
 
@@ -127,9 +148,38 @@ There are no template links in this template.
 |Interface {#IFNAME}({#IFALIAS}): High error rate (LLD)|<p>-</p>|<p>**Expression**: {SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}>2 or {SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}>2</p><p>**Recovery expression**: {SNR Error and Discared Packets:net.if.in.errors[ifInErrors.{#SNMPINDEX}].avg(5m)}<2*0.8 and {SNR Error and Discared Packets:net.if.out.errors[ifOutErrors.{#SNMPINDEX}].avg(5m)}<2*0.8</p>|warning|
 # SNR Interfaces Statistic
 
-## Description
+## Overview
 
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
 
 ## Overview
 
@@ -178,9 +228,49 @@ There are no template links in this template.
 |Interface {#IFNAME}({#IFALIAS}): Link down (LLD)|<p>-</p>|<p>**Expression**: 1=1 and ({SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}=2 and {SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].diff()}=1)</p><p>**Recovery expression**: {SNR Interfaces Statistic:net.if.status[ifOperStatus.{#SNMPINDEX}].last()}<>2</p>|average|
 # SNR Memory Information
 
-## Description
+## Overview
 
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
 
 ## Overview
 
@@ -217,9 +307,60 @@ There are no triggers in this template.
 
 # SNR POE Power
 
-## Description
+## Overview
 
-## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM ## Overview Official Zabbix templates for SNR switches. Recommended for access switches. If you have any questions, please contact support@nag.ru. ## Author SNR-TEAM 
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
+
+## Overview
+
+Official Zabbix templates for SNR switches.
+Recommended for access switches.
+ 
+If you have any questions, please contact support@nag.ru.
+
+## Author
+
+SNR-TEAM
 
 ## Overview
 

@@ -1,9 +1,5 @@
 # SNMP ReadyNAS
 
-## Description
-
-## Overview Monitor NETGEAR ReadyNAS storage devices via SNMP. This template was developed for the ReadyNAS 316. It monitors these items: 1. diskState 2. diskTemperature 3. fanRPM 4. fanStatus 5. volumeFreeSpace 6. volumeSize 7. volumeStatus Appropriate triggers for each item are also provided. ## Author Jeffrey H. Simonson 
-
 ## Overview
 
 Monitor NETGEAR ReadyNAS storage devices via SNMP. This template was developed for the ReadyNAS 316. It monitors these items:

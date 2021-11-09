@@ -1,9 +1,5 @@
 # Eocortex
 
-## Description
-
-## Overview This template will monitor the following items of a Eocortex (or Macroscop) server: - Service State (Windows Service) - Eocortex version (through the API) - Last recording (by monitoring D: EocortexArchive ArchiveLogicDrive.xml, if you have more drives or different drive letters this needs modifying) - Total number of camera's (through the API) - Number of offline camera's (through the API) - CPU usage (i raised the default trigger because it's common for a Eocortex server doing video analytics to have high CPU usage) It needs two macro's to be configured on the host: {$EOCORTEX _PASSWORD} Eocortex password in MD5 hash {$EOCORTEX _USER} = Eocortex Username The user doesnt need any specific permissions in Eocortex. It's all configured with active checks, so make sure your agent works with the active checks or change it to passive checks. The agent will connect to localhost; if you have multiple Eocortex servers, just add all servers. I'm using Zabbix 4.4.4 but there is nothing very specific so it will probably also work on older versions. ## Author ARAS Security B.V. 
-
 ## Overview
 
 This template will monitor the following items of a Eocortex (or Macroscop) server:

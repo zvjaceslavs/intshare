@@ -2,7 +2,7 @@
 
 ## Description
 
-## Description Self-contained Zabbix template to get information about PowerDNS dnsdist. Source: https://github.com/frei-style/zabbix-powerdns-dnsdist-template/ ## Overview Self-contained Zabbix template to get information about PowerDNS dnsdist. For installation instructions see: [https://github.com/frei-style/zabbix-powerdns-dnsdist-template](cat-app/dns/app-powerdns-dnsdist/visit) ## Author Manuel Frei 
+Self-contained Zabbix template to get information about PowerDNS dnsdist. Source: https://github.com/frei-style/zabbix-powerdns-dnsdist-template/
 
 ## Overview
 
@@ -43,8 +43,8 @@ There are no discovery rules in this template.
 |noncompliant-responses|<p>Number of answers from a backend dropped as non-compliant.</p>|`Dependent item`|pdns.dnsdist.statistics[noncompliant-responses]<p>Update: 0</p>|
 |real-memory-usage|<p>Current memory usage.</p>|`Dependent item`|pdns.dnsdist.statistics[real-memory-usage]<p>Update: 0</p>|
 |cpu-steal|<p>Stolen time, which is the time spent by the whole system in other operating systems when running in a virtualized environment, in units of USER_HZ. New in version 1.5.0.</p>|`Dependent item`|pdns.dnsdist.statistics[cpu-steal]<p>Update: 0</p>|
-|latency-bucket|<p>Number of queries contributing to response time histogram per latency bucket.</p>|`Dependent item`|pdns.dnsdist.statistics[latency-bucket]<p>Update: 0</p>|
 |noncompliant-queries|<p>Number of queries dropped as non-compliant.</p>|`Dependent item`|pdns.dnsdist.statistics[noncompliant-queries]<p>Update: 0</p>|
+|latency-bucket|<p>Number of queries contributing to response time histogram per latency bucket.</p>|`Dependent item`|pdns.dnsdist.statistics[latency-bucket]<p>Update: 0</p>|
 |latency-sum|<p>Total response time of all queries combined in milliseconds since the start of dnsdist. Can be used to calculate the average response time over all queries.</p>|`Dependent item`|pdns.dnsdist.statistics[latency-sum]<p>Update: 0</p>|
 |latency10-50|<p>Number of queries answered in 10-50 ms.</p>|`Dependent item`|pdns.dnsdist.statistics[latency10-50]<p>Update: 0</p>|
 |latency50-100|<p>Number of queries answered in 50-100 ms.</p>|`Dependent item`|pdns.dnsdist.statistics[latency50-100]<p>Update: 0</p>|

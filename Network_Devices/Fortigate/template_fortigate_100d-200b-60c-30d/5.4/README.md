@@ -1,9 +1,5 @@
 # FGT-INTERFACES DISCOVERY
 
-## Description
-
-## Overview Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D", (CPU(%), Interfaces (bit/s), Memoria(%), Nº. Serial, Uptime, Modelo, Uso em Disco). Template pensado para ser usado em conjunto com o Grafana. ## Author Leonardo Nascimento da Silva 
-
 ## Overview
 
 Monitoramento de Appliance Fortigate homologado nos modelos "100D - 200B - 60C - 30D",  
