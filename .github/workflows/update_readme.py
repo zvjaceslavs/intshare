@@ -75,7 +75,7 @@ def parse_template(directory):
 
 def main():
     print(os.getcwd())
-    parse_dir(os.chdir('../../'))
+    parse_dir(os.getcwd())
 
     out_global_readme = '# Zabbix public templates\n\n'
     out_global_readme += '## A place for community driven integrations\n\n'
