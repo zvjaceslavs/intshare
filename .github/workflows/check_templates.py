@@ -20,10 +20,10 @@ z50 = ZabbixAPI('http://docker.oscar.lan:8050',
 z54 = ZabbixAPI('http://docker.oscar.lan:8054',
                 user='Admin', password='zabbix')
 
-with open('import50.json', encoding='utf-8') as json_import_50:
+with open('.github/workflows/import50.json', encoding='utf-8') as json_import_50:
     import_raw_50 = json.load(json_import_50)
 
-with open('import54.json', encoding='utf-8') as json_import_54:
+with open('.github/workflows/import54.json', encoding='utf-8') as json_import_54:
     import_raw_54 = json.load(json_import_54)
 
 default_tamplate_50_maxid = 0
@@ -415,7 +415,7 @@ def check_p1(directory):
             'message': 'Directory name error',
             'detail': 'Critical error in "{}". Automatic correction is not possible. Stop checking.'.format(directory)
         }, indent=4))
-        os.exit(1)
+        exit(1)
 
 
 def check_p2_2(directory, version):
@@ -432,7 +432,7 @@ def check_p2_2(directory, version):
                         'message': 'Error structure directory',
                         'detail': 'Multiple template files. The template file must be only one. Template directory: "{}"'.format(t_directory)
                     }, indent=4))
-                    os.exit(2)
+                    exit(2)
                 else:
                     contain_template_file = True
                     template_format = dir.split('.')[-1]
@@ -449,7 +449,7 @@ def check_p2_2(directory, version):
                                     'message': 'Import error',
                                     'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                                 }, indent=4))
-                                os.exit(6)
+                                exit(6)
                             else:
                                 if not float(in_template['zabbix_export']['version']) == float(version):
                                     print(json.dumps({
@@ -457,14 +457,14 @@ def check_p2_2(directory, version):
                                         'message': 'Non-compliance version',
                                         'detail': 'The version in the template does not match the directory. Template directory: "{}"'.format(t_directory)
                                     }, indent=4))
-                                    os.exit(2)
+                                    exit(2)
                         except Exception as err:
                             print(json.dumps({
                                 'code': 6,
                                 'message': 'Import error',
                                 'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                             }, indent=4))
-                            os.exit(6)
+                            exit(6)
                         if 'templates' in in_template['zabbix_export']:
                             if isinstance(in_template['zabbix_export']['templates']['template'], list):
                                 for template in in_template['zabbix_export']['templates']['template']:
@@ -482,7 +482,7 @@ def check_p2_2(directory, version):
                                     'message': 'Import error',
                                     'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                                 }, indent=4))
-                                os.exit(6)
+                                exit(6)
                             else:
                                 if not float(in_template['zabbix_export']['version']) == float(version):
                                     print(json.dumps({
@@ -490,14 +490,14 @@ def check_p2_2(directory, version):
                                         'message': 'Non-compliance version',
                                         'detail': 'The version in the template does not match the directory. Template directory: "{}"'.format(t_directory)
                                     }, indent=4))
-                                    os.exit(2)
+                                    exit(2)
                         except Exception as err:
                             print(json.dumps({
                                 'code': 6,
                                 'message': 'Import error',
                                 'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                             }, indent=4))
-                            os.exit(6)
+                            exit(6)
                         if 'templates' in in_template['zabbix_export']:
                             for template in in_template['zabbix_export']['templates']:
                                 template_names.append(
@@ -511,7 +511,7 @@ def check_p2_2(directory, version):
                                     'message': 'Import error',
                                     'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                                 }, indent=4))
-                                os.exit(6)
+                                exit(6)
                             else:
                                 if not float(in_template['zabbix_export']['version']) == float(version):
                                     print(json.dumps({
@@ -519,14 +519,14 @@ def check_p2_2(directory, version):
                                         'message': 'Non-compliance version',
                                         'detail': 'The version in the template does not match the directory. Template directory: "{}"'.format(t_directory)
                                     }, indent=4))
-                                    os.exit(2)
+                                    exit(2)
                         except Exception as err:
                             print(json.dumps({
                                 'code': 6,
                                 'message': 'Import error',
                                 'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                             }, indent=4))
-                            os.exit(6)
+                            exit(6)
                         if 'templates' in in_template['zabbix_export']:
                             for template in in_template['zabbix_export']['templates']:
                                 template_names.append(
@@ -534,14 +534,18 @@ def check_p2_2(directory, version):
                     if len(template_names) > 0:
                         list_servers[version]['import_rule']['source'] = r_file
                         list_servers[version]['import_rule']['format'] = template_format
-                        import_result = list_servers[version]['server'].do_request('configuration.import', list_servers[version]['import_rule'])
+                        import_result = False
+                        try:
+                            import_result = list_servers[version]['server'].do_request('configuration.import', list_servers[version]['import_rule'])
+                        except Exception as err:
+                            print(json.dumps(err.json, indent=4,))
                         if not import_result:
                             print(json.dumps({
                                 'code': 6,
                                 'message': 'Import error',
                                 'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                             }, indent=4))
-                            os.exit(6)
+                            exit(6)
                         for template_name in template_names:
                             if not template_name == clear_template_name(template_name):
                                 tmp_template_names = rename_template(template_names,list_servers[version]['server'],list_servers[version]['max_id'])
@@ -568,7 +572,7 @@ def check_p2_2(directory, version):
                         'message': 'Error structure directory',
                         'detail': 'It is prohibited to use compressed files (zip, tar.gz, etc.). Template directory: "{}"'.format(t_directory)
                     }, indent=4))
-                    os.exit(2)
+                    exit(2)                    
             if dir == 'README.md':
                 contain_readme_file = True
             check_p3(t_directory, dir)
@@ -579,10 +583,11 @@ def check_p2_2(directory, version):
                 readme_md.write(readme_obj['readme'])
 
 def check_p3(directory, file):
-    if re.match(r'template_[a-z_\-0-9\.]{4,}\.(xml|json|yaml)', file) == None:
-        new_file_name = clear_file_name(file)
-        os.rename(os.path.join(directory, file),
-                  os.path.join(directory, new_file_name))
+    if not file == 'README.md':
+        if re.match(r'template_[a-z_\-0-9\.]{4,}\.(xml|json|yaml)', file) == None:
+            new_file_name = clear_file_name(file)
+            os.rename(os.path.join(directory, file),
+                    os.path.join(directory, new_file_name))
 
 
 def check_p2_1(directory):
@@ -594,7 +599,7 @@ def check_p2_1(directory):
                 'message': 'Error structure directory',
                 'detail': 'In the template directory "{}", there can be only directories with versions (for example, 5.0, 5.4, etc.) '.format(directory)
             }, indent=4))
-            os.exit(2)
+            exit(2)
 
         if not dir in list_version:
             print(json.dumps({
@@ -602,7 +607,7 @@ def check_p2_1(directory):
                 'message': 'Error structure directory',
                 'detail': 'In the template directory "{}", there can be only directories with versions (for example, 5.0, 5.4, etc.) '.format(directory)
             }, indent=4))
-            os.exit(2)
+            exit(2)
         else:
             contain_version = True
 
@@ -614,7 +619,7 @@ def check_p2_1(directory):
             'message': 'Error structure directory',
             'detail': 'Lack of nested version directory. Template directory: "{}"'.format(directory)
         }, indent=4))
-        os.exit(2)
+        exit(2)
 
 def check_p7(directory):
     list_dir = os.listdir(directory)
@@ -648,7 +653,7 @@ def check_p7(directory):
                         'message': 'Import error',
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
-                    os.exit(6)
+                    exit(6)
                 if 'templates' in in_template['zabbix_export']:
                     if isinstance(in_template['zabbix_export']['templates']['template'], list):
                         for template in in_template['zabbix_export']['templates']['template']:
@@ -666,7 +671,7 @@ def check_p7(directory):
                         'message': 'Import error',
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
-                    os.exit(6)
+                    exit(6)
                 if 'templates' in in_template['zabbix_export']:
                     for template in in_template['zabbix_export']['templates']:
                         template_names.append(
@@ -680,7 +685,7 @@ def check_p7(directory):
                         'message': 'Import error',
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
-                    os.exit(6)
+                    exit(6)
                 if 'templates' in in_template['zabbix_export']:
                     for template in in_template['zabbix_export']['templates']:
                         template_names.append(
@@ -688,14 +693,18 @@ def check_p7(directory):
             if len(template_names) > 0:
                 list_servers[list_version[indx]]['import_rule']['source'] = r_file
                 list_servers[list_version[indx]]['import_rule']['format'] = template_format
-                import_result = list_servers[list_version[indx]]['server'].do_request('configuration.import', list_servers[list_version[indx]]['import_rule'])
+                import_result = False
+                try:
+                    import_result = list_servers[list_version[indx]]['server'].do_request('configuration.import', list_servers[list_version[indx]]['import_rule'])
+                except Exception as err:
+                    print (json.dumps(err.json))
                 if not import_result:
                     print(json.dumps({
                         'code': 6,
                         'message': 'Import error',
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
-                    os.exit(6)
+                    exit(6)
                 exportIds = get_template_list(template_names, list_servers[list_version[indx]]['server'])
                 out_template_file = list_servers[list_version[indx]]['server'].configuration.export(
                     options = {
