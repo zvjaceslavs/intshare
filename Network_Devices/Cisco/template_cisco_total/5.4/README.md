@@ -76,18 +76,16 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Cisco CPU Discovery|<p>{#CPUID} --> The physical entity can be a CPU chip, a group of CPUs, a CPU card etc. The exact type of this entity is described by its entPhysicalVendorType value.</p>|`SNMP agent`|cpmCPUTotalTable<p>Update: 3600</p>|
-|Cisco BGP Peer Enumeration|<p>-</p>|`SNMP agent`|discovery.bgpDescr<p>Update: 3600</p>|
 |Cisco Interface Discovery|<p>-</p>|`SNMP agent`|discovery.ifDescr<p>Update: 3600</p>|
 |Cisco memory pool discovery|<p>{#MEMNAME} --> A textual name assigned to the memory pool. This object is suitable for output to a human operator, and may also be used to distinguish among the various pool types, especially among dynamic pools.</p>|`SNMP agent`|ciscoMemoryPoolTable<p>Update: 3600</p>|
-|Cisco Temperature Discovery|<p>-</p>|`SNMP agent`|discovery.TempDesc<p>Update: 3600</p>|
 |Cisco OSPF Discovery|<p>-</p>|`SNMP agent`|cisco.ospf.diuscovery<p>Update: 3600</p>|
+|Cisco BGP Peer Enumeration|<p>-</p>|`SNMP agent`|discovery.bgpDescr<p>Update: 3600</p>|
+|Cisco Temperature Discovery|<p>-</p>|`SNMP agent`|discovery.TempDesc<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |CPU - usage on core '{#CPUID}'|<p>The overall CPU busy percentage in the last 5 minute period.</p>|`SNMP agent`|cpmCPUTotal5minRev[{#SNMPINDEX}]<p>Update: 300</p><p>LLD</p>|
-|BGP Peer State {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.2.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
-|BGP Admin Status {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.3.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound traffic|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.10.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound discarded packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.13.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound error packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.14.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
@@ -95,8 +93,10 @@ There are no template links in this template.
 |{#SNMPVALUE} - Outbound discarded packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.19.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |{#SNMPVALUE} - Outbound error packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.20.[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |Memory - free in pool '{#MEMNAME}'|<p>Indicates the number of bytes from the memory pool that are currently unused on the managed device.</p>|`SNMP agent`|ciscoMemoryPoolFree[{#SNMPINDEX}]<p>Update: 600</p><p>LLD</p>|
-|{#SNMPINDEX} temperature|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.9.9.13.1.3.1.3.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |ospfNbrState {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.14.10.1.6.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|BGP Peer State {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.2.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|BGP Admin Status {#SNMPINDEX}|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.15.3.1.3.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|{#SNMPINDEX} temperature|<p>-</p>|`SNMP agent`|1.3.6.1.4.1.9.9.13.1.3.1.3.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

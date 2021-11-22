@@ -59,12 +59,12 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Inode usage|<p>-</p>|`Dependent item`|backuppc.inode.usage<p>Update: 0</p>|
-|Determine last backup data|<p>-</p>|`Dependent item`|backuppc.metrics.last<p>Update: 0</p>|
-|Version|<p>-</p>|`Dependent item`|backuppc.server.version<p>Update: 0</p>|
-|BackupPC get metrics|<p>Fetches BackupPC server metrics</p>|`Zabbix agent`|web.page.get[{$BACKUPPC.SCHEME}://{$BACKUPPC.USERNAME}:{$BACKUPPC.PASSWORD}@{$BACKUPPC.HOST}:{$BACKUPPC.PORT}/{$BACKUPPC.PATH}?action=metrics]<p>Update: 5m</p>|
 |Start time|<p>-</p>|`Dependent item`|backuppc.server.start_time<p>Update: 0</p>|
 |Disk usage|<p>-</p>|`Dependent item`|backuppc.disk.usage<p>Update: 0</p>|
+|Determine last backup data|<p>-</p>|`Dependent item`|backuppc.metrics.last<p>Update: 0</p>|
+|Version|<p>-</p>|`Dependent item`|backuppc.server.version<p>Update: 0</p>|
+|Inode usage|<p>-</p>|`Dependent item`|backuppc.inode.usage<p>Update: 0</p>|
+|BackupPC get metrics|<p>Fetches BackupPC server metrics</p>|`Zabbix agent`|web.page.get[{$BACKUPPC.SCHEME}://{$BACKUPPC.USERNAME}:{$BACKUPPC.PASSWORD}@{$BACKUPPC.HOST}:{$BACKUPPC.PORT}/{$BACKUPPC.PATH}?action=metrics]<p>Update: 5m</p>|
 |[{#HOST}] Disabled|<p>-</p>|`Dependent item`|backuppc.disabled.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
 |[{#HOST}] Incr duration|<p>-</p>|`Dependent item`|backuppc.incr_duration.[{#HOST}]<p>Update: 0</p><p>LLD</p>|
 |[{#HOST}] Reason|<p>-</p>|`Dependent item`|backuppc.reason.[{#HOST}]<p>Update: 0</p><p>LLD</p>|

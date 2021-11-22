@@ -26,9 +26,9 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|load15m|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.2021.10.1.6.3<p>Update: 30</p>|
 |load5m|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.2021.10.1.6.2<p>Update: 30</p>|
 |load1m|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.2021.10.1.6.1<p>Update: 30</p>|
-|load15m|<p>-</p>|`SNMP agent`|.1.3.6.1.4.1.2021.10.1.6.3<p>Update: 30</p>|
 ## Triggers
 
 There are no triggers in this template.

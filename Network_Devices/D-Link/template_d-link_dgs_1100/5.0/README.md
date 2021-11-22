@@ -28,9 +28,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Desctiption|<p>-</p>|`SNMP agent`|SYSDescr<p>Update: 24h</p>|
 |Location|<p>-</p>|`SNMP agent`|SYSLocation<p>Update: 24h</p>|
 |Uptime|<p>-</p>|`SNMP agent`|SYSUptime<p>Update: 1m</p>|
-|Desctiption|<p>-</p>|`SNMP agent`|SYSDescr<p>Update: 24h</p>|
 |Interface {#IFDESCR} Inbound packets discarded|<p>-</p>|`SNMP agent`|net.if.in.discards[ifInDiscards.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Interface {#IFDESCR}: Inbound packets with errors|<p>-</p>|`SNMP agent`|net.if.in.errors[ifInErrors.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Bits received: {#IFDESCR}|<p>-</p>|`SNMP agent`|net.if.in[ifHCInOctets.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|

@@ -36,18 +36,18 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Fan Discovery|<p>-</p>|`SNMP agent`|FanDiscovery<p>Update: 12h</p>|
-|Disk Discovery|<p>-</p>|`SNMP agent`|DiskDiscovery<p>Update: 12h</p>|
-|Controller Discovery|<p>-</p>|`SNMP agent`|ControllerDiscovery<p>Update: 12h</p>|
 |Power Discovery|<p>-</p>|`SNMP agent`|PowerDiscovery<p>Update: 12h</p>|
+|Controller Discovery|<p>-</p>|`SNMP agent`|ControllerDiscovery<p>Update: 12h</p>|
+|Disk Discovery|<p>-</p>|`SNMP agent`|DiskDiscovery<p>Update: 12h</p>|
+|Fan Discovery|<p>-</p>|`SNMP agent`|FanDiscovery<p>Update: 12h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|FanHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|FanHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
-|DiskHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DiskHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
-|ControllerHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ControllerHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 |PowerHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|PowerHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|ControllerHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|ControllerHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|DiskHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|DiskHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
+|FanHealthStatus {#SNMPVALUE}|<p>-</p>|`SNMP agent`|FanHealthStatus.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -56,7 +56,7 @@ There are no template links in this template.
 |Disk Abnormal|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/DiskHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
 |Fan Abnormal|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/FanHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
 |Power Abnormal|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/PowerHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
-|Fan Abnormal (LLD)|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/FanHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
-|Disk Abnormal (LLD)|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/DiskHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
-|Controller Abnormal (LLD)|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/ControllerHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
 |Power Abnormal (LLD)|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/PowerHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
+|Controller Abnormal (LLD)|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/ControllerHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
+|Disk Abnormal (LLD)|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/DiskHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|
+|Fan Abnormal (LLD)|<p>-</p>|<p>**Expression**: last(/Huawei_DiskArray_monitor/FanHealthStatus.[{#SNMPINDEX}])<>1</p><p>**Recovery expression**: </p>|high|

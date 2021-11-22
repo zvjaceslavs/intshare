@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:05:21Z'
+  date: '2021-11-22T02:47:30Z'
   groups:
     -
       uuid: e48c7bd0d64f4a68a4e2e6c0b825ed9f
@@ -10,17 +10,6 @@ zabbix_export:
       uuid: 6672d8b40d1b496ebe71fc3470c08ce9
       template: 'App BlueCoat AV'
       name: 'App BlueCoat AV'
-      description: |
-        ## Overview
-        
-        Based on official SNMP MIBs.  
-        Used on AV510 and AV810.  
-        Additional info: <https://bto.bluecoat.com/documentation/All-Documents/ProxyAV>.  
-        
-        
-        
-        
-        
       groups:
         -
           name: BlueCoat

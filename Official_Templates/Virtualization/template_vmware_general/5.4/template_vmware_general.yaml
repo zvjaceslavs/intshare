@@ -1,0 +1,168 @@
+zabbix_export:
+  version: '5.4'
+  date: '2021-11-21T21:18:33Z'
+  groups:
+    -
+      uuid: 1b837a3c078647049a0c00c61b4d57b5
+      name: Hypervisors
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+    -
+      uuid: 137f19e6e2dc4219b33553b812627bc2
+      name: 'Virtual machines'
+  templates:
+    -
+      uuid: 5402b40d71a74fdc8429b8523274edfc
+      template: 'Virt VMware'
+      name: 'Virt VMware'
+      description: |
+        ## Overview
+        
+        Official VMware General Template from Zabbix distribution. It is used to discover all entities (Hypervisors, Guests and Clusters)
+        
+        
+        
+        ## Author
+        
+        Zabbix SIA
+        
+        
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 3618d086a39b4bcb9cd5e1ba7bfdcfb1
+          name: 'Event log'
+          type: SIMPLE
+          key: 'vmware.eventlog[{$URL}]'
+          delay: '60'
+          trends: '0'
+          value_type: LOG
+          username: '{$USERNAME}'
+          password: '{$PASSWORD}'
+          tags:
+            -
+              tag: Application
+              value: Log
+        -
+          uuid: 369b412ff1ba438085496ebbf4d6d9b4
+          name: 'Full name'
+          type: SIMPLE
+          key: 'vmware.fullname[{$URL}]'
+          delay: '3600'
+          trends: '0'
+          value_type: CHAR
+          username: '{$USERNAME}'
+          password: '{$PASSWORD}'
+          tags:
+            -
+              tag: Application
+              value: General
+        -
+          uuid: 9e6778412e9545fe9c20439fe75c8ad0
+          name: Version
+          type: SIMPLE
+          key: 'vmware.version[{$URL}]'
+          delay: '3600'
+          trends: '0'
+          value_type: CHAR
+          username: '{$USERNAME}'
+          password: '{$PASSWORD}'
+          tags:
+            -
+              tag: Application
+              value: General
+      discovery_rules:
+        -
+          uuid: b431fa19cf0d4a09b4aa560f04dff737
+          name: 'Discover VMware clusters'
+          type: SIMPLE
+          key: 'vmware.cluster.discovery[{$URL}]'
+          delay: '3600'
+          username: '{$USERNAME}'
+          password: '{$PASSWORD}'
+          description: 'Discovery of clusters'
+          item_prototypes:
+            -
+              uuid: eff02cfafc0e41c7a722c45fd60f3b90
+              name: 'Status of "$2" cluster'
+              type: SIMPLE
+              key: 'vmware.cluster.status[{$URL},{#CLUSTER.NAME}]'
+              delay: '60'
+              username: '{$USERNAME}'
+              password: '{$PASSWORD}'
+              valuemap:
+                name: 'VMware status'
+              tags:
+                -
+                  tag: Application
+                  value: Clusters
+        -
+          uuid: e95820e2991b4d0dbfef68dcf95b7f70
+          name: 'Discover VMware hypervisors'
+          type: SIMPLE
+          key: 'vmware.hv.discovery[{$URL}]'
+          delay: '3600'
+          username: '{$USERNAME}'
+          password: '{$PASSWORD}'
+          description: 'Discovery of hypervisors.'
+          host_prototypes:
+            -
+              uuid: 23d6c1dacb3240beb0aed230f0ba1b64
+              host: '{#HV.UUID}'
+              name: '{#HV.NAME}'
+              group_links:
+                -
+                  group:
+                    name: Hypervisors
+              group_prototypes:
+                -
+                  name: '{#CLUSTER.NAME}'
+              templates:
+                -
+                  name: 'Template Virt VMware Hypervisor'
+        -
+          uuid: 9391b4d1b96c46a3ad2c4ef2c5c1c144
+          name: 'Discover VMware VMs'
+          type: SIMPLE
+          key: 'vmware.vm.discovery[{$URL}]'
+          delay: '3600'
+          username: '{$USERNAME}'
+          password: '{$PASSWORD}'
+          description: 'Discovery of guest virtual machines.'
+          host_prototypes:
+            -
+              uuid: 0e3f6843b7794552ba0ffea1bc75c030
+              host: '{#VM.UUID}'
+              name: '{#VM.NAME}'
+              group_links:
+                -
+                  group:
+                    name: 'Virtual machines'
+              group_prototypes:
+                -
+                  name: '{#CLUSTER.NAME} (vm)'
+                -
+                  name: '{#HV.NAME}'
+              templates:
+                -
+                  name: 'Template Virt VMware Guest'
+      valuemaps:
+        -
+          uuid: 70bee0bcc69b42eb93849f9ab8b253c6
+          name: 'VMware status'
+          mappings:
+            -
+              value: '0'
+              newvalue: gray
+            -
+              value: '1'
+              newvalue: green
+            -
+              value: '2'
+              newvalue: yellow
+            -
+              value: '3'
+              newvalue: red

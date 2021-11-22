@@ -84,22 +84,22 @@ Ceillian
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Minimum Input Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsOutputCurrentMin<p>Update: {$UPDATEINT}</p>|
-|PDU  Software Version|<p>The UPS firmware/software version(s). This variable may or may not have the same value as upsIdentAgentSoftwareVersion in some implementations.</p>|`SNMP agent`|tlpDeviceIdentFirmwareVersion<p>Update: 86400</p>|
-|Input - Source Availability|<p>Reports power input sources for PDU.</p>|`SNMP agent`|tlpAtsInputSourceAvailability<p>Update: 30s</p>|
-|Low Transfer Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsConfigLowVoltageTransfer<p>Update: {$UPDATEINT}</p>|
-|Maximum Input Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsInputPhaseVoltageMax<p>Update: {$UPDATEINT}</p>|
-|Agent Software Version|<p>The UPS agent software version. This variable may or may not have the same value as upsIdentUPSSoftwareVersion in some implementations.</p>|`SNMP agent`|tlpAgentVersion<p>Update: 86400</p>|
 |Input - Frequency|<p>-</p>|`SNMP agent`|tlpAtsInputPhaseFrequency<p>Update: {$UPDATEINT}</p>|
-|Manufacturer Identification|<p>The name of the UPS manufacturer.</p>|`SNMP agent`|tlpDeviceManufacturer<p>Update: 86400</p>|
 |Model Identification|<p>The UPS Model designation.</p>|`SNMP agent`|tlpDeviceModel<p>Update: 86400</p>|
-|Maximum Output Current|<p>-</p>|`SNMP agent`|tlpAtsOutputCurrentMax<p>Update: {$UPDATEINT}</p>|
-|Device Location|<p>The device location string.</p>|`SNMP agent`|tlpDeviceLocation<p>Update: 86400</p>|
-|Input - Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsInputPhaseVoltage<p>Update: {$UPDATEINT}</p>|
 |PDU Serial Number|<p>Serial number for the UPS.</p>|`SNMP agent`|tlpDeviceIdentSerialNum<p>Update: 86400</p>|
+|PDU  Software Version|<p>The UPS firmware/software version(s). This variable may or may not have the same value as upsIdentAgentSoftwareVersion in some implementations.</p>|`SNMP agent`|tlpDeviceIdentFirmwareVersion<p>Update: 86400</p>|
 |Output Current|<p>-</p>|`SNMP agent`|tlpAtsOutputCurrent<p>Update: {$UPDATEINT}</p>|
+|Input - Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsInputPhaseVoltage<p>Update: {$UPDATEINT}</p>|
+|Minimum Input Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsOutputCurrentMin<p>Update: {$UPDATEINT}</p>|
+|Agent Software Version|<p>The UPS agent software version. This variable may or may not have the same value as upsIdentUPSSoftwareVersion in some implementations.</p>|`SNMP agent`|tlpAgentVersion<p>Update: 86400</p>|
 |Device Name|<p>A string identifying the UPS. This object should be set by the administrator.</p>|`SNMP agent`|tlpDeviceName<p>Update: 86400</p>|
+|Maximum Input Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsInputPhaseVoltageMax<p>Update: {$UPDATEINT}</p>|
+|Manufacturer Identification|<p>The name of the UPS manufacturer.</p>|`SNMP agent`|tlpDeviceManufacturer<p>Update: 86400</p>|
+|Input - Source Availability|<p>Reports power input sources for PDU.</p>|`SNMP agent`|tlpAtsInputSourceAvailability<p>Update: 30s</p>|
+|Maximum Output Current|<p>-</p>|`SNMP agent`|tlpAtsOutputCurrentMax<p>Update: {$UPDATEINT}</p>|
 |SNMP traps (fallback)|<p>-</p>|`SNMP trap`|snmptrap.fallback<p>Update: 0</p>|
+|Low Transfer Voltage|<p>The number of input voltages. Phase to phase or phase to neutral. This variable indicates the number of rows in the input table.</p>|`SNMP agent`|tlpAtsConfigLowVoltageTransfer<p>Update: {$UPDATEINT}</p>|
+|Device Location|<p>The device location string.</p>|`SNMP agent`|tlpDeviceLocation<p>Update: 86400</p>|
 |Outlet - Ramp data type of outlet $1|<p>The type of data associated with ramp action.</p>|`SNMP agent`|tlAtsOutletRampDataType[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
 |Outlet - Ndx group of outlet $1|<p>tlPDUOutletGroupIndex of corresponding outlet group, or 0 if ungrouped.</p>|`SNMP agent`|tlpAtsOutletGroup[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
 |Outlet - Name of outlet $1|<p>A string identifying the devices attached to the output(s) of the device.</p>|`SNMP agent`|tlpAtsOutletName[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|

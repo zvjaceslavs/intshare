@@ -29,10 +29,10 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|CTXLic_Citrix_GTLicensingProv|<p>-</p>|`Zabbix agent`|service.info[Citrix_GTLicensingProv]<p>Update: 1m</p>|
-|CTXLic_Citrix Licensing|<p>-</p>|`Zabbix agent`|service.info[Citrix Licensing]<p>Update: 1m</p>|
 |CTXLic_Citrix_GTLicensingProv_Startup|<p>-</p>|`Zabbix agent`|service.info[Citrix_GTLicensingProv,startup]<p>Update: 1m</p>|
 |CTXLic_CitrixWebServicesforLicensing|<p>-</p>|`Zabbix agent`|service.info[CitrixWebServicesforLicensing]<p>Update: 1m</p>|
+|CTXLic_Citrix Licensing|<p>-</p>|`Zabbix agent`|service.info[Citrix Licensing]<p>Update: 1m</p>|
+|CTXLic_Citrix_GTLicensingProv|<p>-</p>|`Zabbix agent`|service.info[Citrix_GTLicensingProv]<p>Update: 1m</p>|
 ## Triggers
 
 There are no triggers in this template.

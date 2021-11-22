@@ -37,15 +37,15 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|CPU(usr)|<p>-</p>|`Dependent item`|cpu.usr<p>Update: 0</p>|
-|CPU(io)|<p>-</p>|`Dependent item`|cpu.io<p>Update: 0</p>|
+|CPU(idle)|<p>-</p>|`Dependent item`|cpu.idle<p>Update: 0</p>|
+|CPU(nic)|<p>-</p>|`Dependent item`|cpu.nic<p>Update: 0</p>|
 |CPU(sirq)|<p>-</p>|`Dependent item`|cpu.sirq<p>Update: 0</p>|
+|CPU(irq)|<p>-</p>|`Dependent item`|cpu.irq<p>Update: 0</p>|
 |top|<p>-</p>|`SSH agent`|ssh.run[top]<p>Update: 10s</p>|
 |google ping|<p>-</p>|`SSH agent`|ssh.run[ping_to_google]<p>Update: 10s</p>|
+|CPU(io)|<p>-</p>|`Dependent item`|cpu.io<p>Update: 0</p>|
 |CPU(sys)|<p>-</p>|`Dependent item`|cpu.sys<p>Update: 0</p>|
-|CPU(nic)|<p>-</p>|`Dependent item`|cpu.nic<p>Update: 0</p>|
-|CPU(irq)|<p>-</p>|`Dependent item`|cpu.irq<p>Update: 0</p>|
-|CPU(idle)|<p>-</p>|`Dependent item`|cpu.idle<p>Update: 0</p>|
+|CPU(usr)|<p>-</p>|`Dependent item`|cpu.usr<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

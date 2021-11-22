@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:05:07Z'
+  date: '2021-11-21T21:20:32Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -10,18 +10,6 @@ zabbix_export:
       uuid: 98cb223c744b4e37acdbe13e1de9471c
       template: 'TP-Link 5428'
       name: 'TP-Link 5428'
-      description: |
-        ## Overview
-        
-        Template for a SG5428-G. Not verified on other devices.
-        
-        
-        
-        ## Author
-        
-        w4t1s
-        
-        
       groups:
         -
           name: Templates

@@ -35,17 +35,17 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Total Traffic From Ports IN|<p>-</p>|`Calculated`|if.InTotal.Traffic<p>Update: 30s</p>|
-|System Identity|<p>-</p>|`SNMP agent`|sys.Name<p>Update: 1d</p>|
-|SNMP Contact|<p>-</p>|`SNMP agent`|sys.Contact<p>Update: 360m</p>|
-|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60s</p>|
-|System SNMP Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 1d</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60s</p>|
-|System Uptime|<p>-</p>|`SNMP agent`|system.uptimet<p>Update: 60s</p>|
-|Total Traffic From Ports OUT|<p>-</p>|`Calculated`|if.OutTotal.Traffic<p>Update: 30s</p>|
-|Hardware Model|<p>-</p>|`SNMP agent`|sysDescr.0<p>Update: 30s</p>|
 |Total Traffic From Ports Out/In|<p>-</p>|`Calculated`|if.Total..Traffic<p>Update: 30s</p>|
+|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 60s</p>|
+|Total Traffic From Ports OUT|<p>-</p>|`Calculated`|if.OutTotal.Traffic<p>Update: 30s</p>|
+|System SNMP Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 1d</p>|
+|SNMP Contact|<p>-</p>|`SNMP agent`|sys.Contact<p>Update: 360m</p>|
+|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60s</p>|
+|Hardware Model|<p>-</p>|`SNMP agent`|sysDescr.0<p>Update: 30s</p>|
+|System Identity|<p>-</p>|`SNMP agent`|sys.Name<p>Update: 1d</p>|
+|Total Traffic From Ports IN|<p>-</p>|`Calculated`|if.InTotal.Traffic<p>Update: 30s</p>|
 |ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 60s</p>|
+|System Uptime|<p>-</p>|`SNMP agent`|system.uptimet<p>Update: 60s</p>|
 |Interface Name:{#IFNAME} Alias:{#IFALIAS} Speed|<p>-</p>|`SNMP agent`|ifHighSpeed.["({#SNMPINDEX})"]<p>Update: 30s</p><p>LLD</p>|
 |Interface Name:{#IFNAME} Alias:{#IFALIAS}  MTU|<p>-</p>|`SNMP agent`|ifMtu.["({#SNMPINDEX})"]<p>Update: 30s</p><p>LLD</p>|
 |Interface Name:{#IFNAME} Alias:{#IFALIAS} Type|<p>-</p>|`SNMP agent`|ifType.["({#SNMPINDEX})"]<p>Update: 30s</p><p>LLD</p>|

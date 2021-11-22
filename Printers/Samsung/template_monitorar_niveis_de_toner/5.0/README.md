@@ -121,10 +121,10 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Nivel Toner Preto|<p>-</p>|`External check`|NivelToner.php["{HOST.NAME}","Black"]<p>Update: 14400</p>|
-|Nivel Toner Azul|<p>-</p>|`External check`|NivelToner.php["{HOST.NAME}","Cyan"]<p>Update: 14400</p>|
-|Nivel Toner Amarelo|<p>-</p>|`External check`|NivelToner.php["{HOST.NAME}","Yellow"]<p>Update: 14400</p>|
 |Nivel Toner Rosa|<p>-</p>|`External check`|NivelToner.php["{HOST.NAME}","Magenta"]<p>Update: 14400</p>|
+|Nivel Toner Azul|<p>-</p>|`External check`|NivelToner.php["{HOST.NAME}","Cyan"]<p>Update: 14400</p>|
+|Nivel Toner Preto|<p>-</p>|`External check`|NivelToner.php["{HOST.NAME}","Black"]<p>Update: 14400</p>|
+|Nivel Toner Amarelo|<p>-</p>|`External check`|NivelToner.php["{HOST.NAME}","Yellow"]<p>Update: 14400</p>|
 ## Triggers
 
 There are no triggers in this template.

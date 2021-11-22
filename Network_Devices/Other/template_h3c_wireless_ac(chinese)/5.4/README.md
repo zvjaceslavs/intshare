@@ -49,41 +49,41 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|AP Discovery|<p>-</p>|`SNMP agent`|AP<p>Update: 1200</p>|
 |DHCP Server Discovery|<p>-</p>|`SNMP agent`|dhcpserver<p>Update: 1200</p>|
+|AP Discovery|<p>-</p>|`SNMP agent`|AP<p>Update: 1200</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|每秒DHCP请求数|<p>-</p>|`SNMP agent`|dhcp.requests<p>Update: 60</p>|
-|每秒mac认证用户异常掉线数|<p>-</p>|`SNMP agent`|user.mac_lostcon<p>Update: 60</p>|
+|当前mac认证用户总数|<p>-</p>|`SNMP agent`|user.mac<p>Update: 60</p>|
 |每秒免认证用户异常掉线数|<p>-</p>|`SNMP agent`|user.free_lostcon<p>Update: 60</p>|
-|当前免认证用户总数|<p>-</p>|`SNMP agent`|user.free<p>Update: 60</p>|
-|每秒关联证用户异常掉线数|<p>-</p>|`SNMP agent`|user.asso_lostcon<p>Update: 60</p>|
-|当前用户总数|<p>-</p>|`Calculated`|user.count<p>Update: 60</p>|
-|下行流量|<p>-</p>|`SNMP agent`|Bps_out<p>Update: 60</p>|
 |在线AP数量|<p>-</p>|`SNMP agent`|ap.count<p>Update: 120</p>|
 |当前portal认证用户总数|<p>-</p>|`SNMP agent`|user.portal<p>Update: 60</p>|
 |CPU 使用率|<p>-</p>|`SNMP agent`|cpu.usage<p>Update: 60</p>|
-|每秒认证失败|<p>-</p>|`Calculated`|user.lostcon<p>Update: 60</p>|
-|内存使用率|<p>-</p>|`SNMP agent`|cpu.mem_usage<p>Update: 60</p>|
-|当前关联认证用户总数|<p>-</p>|`SNMP agent`|user.asso<p>Update: 60</p>|
-|每秒portal认证用户异常掉线数|<p>-</p>|`SNMP agent`|user.portal_lostcon<p>Update: 60</p>|
-|当前mac认证用户总数|<p>-</p>|`SNMP agent`|user.mac<p>Update: 60</p>|
-|上行流量|<p>-</p>|`SNMP agent`|Bps_in<p>Update: 60</p>|
 |序列号|<p>-</p>|`SNMP agent`|sn<p>Update: 7200</p>|
+|每秒DHCP请求数|<p>-</p>|`SNMP agent`|dhcp.requests<p>Update: 60</p>|
+|当前关联认证用户总数|<p>-</p>|`SNMP agent`|user.asso<p>Update: 60</p>|
+|每秒认证失败|<p>-</p>|`Calculated`|user.lostcon<p>Update: 60</p>|
+|上行流量|<p>-</p>|`SNMP agent`|Bps_in<p>Update: 60</p>|
+|当前用户总数|<p>-</p>|`Calculated`|user.count<p>Update: 60</p>|
+|每秒mac认证用户异常掉线数|<p>-</p>|`SNMP agent`|user.mac_lostcon<p>Update: 60</p>|
+|当前免认证用户总数|<p>-</p>|`SNMP agent`|user.free<p>Update: 60</p>|
+|每秒portal认证用户异常掉线数|<p>-</p>|`SNMP agent`|user.portal_lostcon<p>Update: 60</p>|
+|下行流量|<p>-</p>|`SNMP agent`|Bps_out<p>Update: 60</p>|
+|每秒关联证用户异常掉线数|<p>-</p>|`SNMP agent`|user.asso_lostcon<p>Update: 60</p>|
+|内存使用率|<p>-</p>|`SNMP agent`|cpu.mem_usage<p>Update: 60</p>|
+|DHCP 地址池 $1 利用率|<p>-</p>|`SNMP agent`|dhcp.pool[{#DHCPPOOL}]<p>Update: 120</p><p>LLD</p>|
 |AP $1 关联认证在线用户数|<p>-</p>|`SNMP agent`|ap.asso[{#APNAME}]<p>Update: 120</p><p>LLD</p>|
 |AP $1 免认证在线用户数|<p>-</p>|`SNMP agent`|ap.free[{#APNAME}]<p>Update: 120</p><p>LLD</p>|
 |AP $1 地址|<p>-</p>|`SNMP agent`|ap.ip[{#APNAME}]<p>Update: 7200</p><p>LLD</p>|
 |AP $1 mac认证在线用户数|<p>-</p>|`SNMP agent`|ap.mac[{#APNAME}]<p>Update: 30</p><p>LLD</p>|
 |AP $1 在线时间|<p>-</p>|`SNMP agent`|ap.onlinetime[{#APNAME}]<p>Update: 120</p><p>LLD</p>|
 |AP $1 portal认证在线用户数|<p>-</p>|`SNMP agent`|ap.portal[{#APNAME}]<p>Update: 120</p><p>LLD</p>|
-|DHCP 地址池 $1 利用率|<p>-</p>|`SNMP agent`|dhcp.pool[{#DHCPPOOL}]<p>Update: 120</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
 |AP {#APNAME} 一天不在线|<p>-</p>|<p>**Expression**: max(/Device H3C AC/ap.onlinetime[{#APNAME}],1d)=0</p><p>**Recovery expression**: </p>|average|
 |AC 地址池 {#DHCPPOOL} 快满|<p>地址池 {#DHCPPOOL} 使用率超过{$DHCP_POOL_H}%</p>|<p>**Expression**: last(/Device H3C AC/dhcp.pool[{#DHCPPOOL}])>95</p><p>**Recovery expression**: </p>|high|
-|AP {#APNAME} 一天不在线 (LLD)|<p>-</p>|<p>**Expression**: max(/Device H3C AC/ap.onlinetime[{#APNAME}],1d)=0</p><p>**Recovery expression**: </p>|average|
 |AC 地址池 {#DHCPPOOL} 快满 (LLD)|<p>地址池 {#DHCPPOOL} 使用率超过{$DHCP_POOL_H}%</p>|<p>**Expression**: last(/Device H3C AC/dhcp.pool[{#DHCPPOOL}])>95</p><p>**Recovery expression**: </p>|high|
+|AP {#APNAME} 一天不在线 (LLD)|<p>-</p>|<p>**Expression**: max(/Device H3C AC/ap.onlinetime[{#APNAME}],1d)=0</p><p>**Recovery expression**: </p>|average|

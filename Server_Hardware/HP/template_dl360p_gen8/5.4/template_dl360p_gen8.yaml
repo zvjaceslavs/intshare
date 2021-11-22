@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:04:43Z'
+  date: '2021-11-21T21:20:12Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -10,36 +10,6 @@ zabbix_export:
       uuid: af275b289eeb449e853147de6f159a49
       template: 'IPMI HP DL360p Gen8'
       name: 'IPMI HP DL360p Gen8'
-      description: |
-        ## Overview
-        
-        Adapted from the official DL380p Gen8 template by Aleksej Pustovalov. 
-        
-        
-         
-        
-        
-        Items: All 66 IPMI keys for HP DL360p Gen8 servers. 
-        
-        
-        Triggers: Memory, Fan, Disk errors and CPU temperature, plus Sys. Health LED
-        
-        
-        Graph: CPU temperature
-        
-        
-         
-        
-        
-        Instructions for use: Set IPMI authentication algorithm to RMCP+ and I believe you need a user with Administrator privileges. Make sure to disable all items that do not exist or you will get errors. Tested only with Zabbix 3.0.x.
-        
-        
-        
-        ## Author
-        
-        Tiemen Ruiten
-        
-        
       groups:
         -
           name: Templates

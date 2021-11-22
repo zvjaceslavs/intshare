@@ -60,17 +60,17 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Available Memory|<p>-</p>|`SNMP agent`|memAvailReal<p>Update: 1m</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 30</p>|
-|Total Memory|<p>-</p>|`SNMP agent`|memTotalReal<p>Update: 1h</p>|
-|Active Connections|<p>-</p>|`SNMP agent`|wgSystemCurrActiveConns<p>Update: 1m</p>|
-|CPU Utilization|<p>-</p>|`SNMP agent`|wgSystemCpuUtil1<p>Update: 1m</p>|
 |Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 30</p>|
-|Free Memory|<p>-</p>|`SNMP agent`|memTotalFree<p>Update: 1m</p>|
-|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 30</p>|
-|Total Bytes Sent|<p>-</p>|`SNMP agent`|wgSystemTotalSendBytes<p>Update: 1m</p>|
 |Total Bytes Received|<p>-</p>|`SNMP agent`|wgSystemTotalRecvBytes<p>Update: 1m</p>|
+|Free Memory|<p>-</p>|`SNMP agent`|memTotalFree<p>Update: 1m</p>|
+|Active Connections|<p>-</p>|`SNMP agent`|wgSystemCurrActiveConns<p>Update: 1m</p>|
 |Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 30</p>|
+|Available Memory|<p>-</p>|`SNMP agent`|memAvailReal<p>Update: 1m</p>|
+|CPU Utilization|<p>-</p>|`SNMP agent`|wgSystemCpuUtil1<p>Update: 1m</p>|
+|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 30</p>|
+|Total Memory|<p>-</p>|`SNMP agent`|memTotalReal<p>Update: 1h</p>|
+|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 30</p>|
+|Total Bytes Sent|<p>-</p>|`SNMP agent`|wgSystemTotalSendBytes<p>Update: 1m</p>|
 |Traffic on {#SNMPVALUE}|<p>-</p>|`SNMP agent`|Traffic[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 1m</p><p>LLD</p>|
 |Incoming traffic on interface $1|<p>The number of octets in valid MAC frames received on this interface in 1 second, including the MAC header and FCS.</p>|`SNMP agent`|ifInOctets[{#SNMPVALUE}]<p>Update: 30s</p><p>LLD</p>|

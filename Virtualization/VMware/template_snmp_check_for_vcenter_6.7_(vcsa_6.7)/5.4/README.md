@@ -109,29 +109,29 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|File System|<p>-</p>|`SNMP agent`|snmp.filesystem.discovery<p>Update: 180</p>|
 |CPU|<p>-</p>|`SNMP agent`|snmp.CPU.discovery<p>Update: 3600</p>|
 |VCSA Services|<p>-</p>|`External check`|vcsa_discovery<p>Update: 1h</p>|
+|File System|<p>-</p>|`SNMP agent`|snmp.filesystem.discovery<p>Update: 180</p>|
 |Network|<p>-</p>|`SNMP agent`|snmp.network.discovery<p>Update: 180</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Memory Allocation Error|<p>-</p>|`SNMP agent`|SNMP-Memory-Allocation-Error<p>Update: 180</p>|
-|Ping vCenter|<p>-</p>|`Simple check`|icmpping[,2]<p>Update: 120</p>|
-|Snmp Availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 180</p>|
-|Vcenter Name|<p>-</p>|`SNMP agent`|SNMP-NamePlateforme<p>Update: 3600</p>|
-|Number of Processes|<p>-</p>|`SNMP agent`|SNMP-Number-Processes<p>Update: 180</p>|
 |File System Allocation Failure|<p>Storage allocation file system</p>|`SNMP agent`|SNMP-File-System-allocation-error<p>Update: 180</p>|
-|File System {#SNMPVALUE} - Used Percentage|<p>-</p>|`Calculated`|File-System-Space-Used-Percentage.[{#SNMPVALUE}]<p>Update: 180</p><p>LLD</p>|
-|File System {#SNMPVALUE} - Space Allocated|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Allocated.[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
-|File System {#SNMPVALUE} - Space Used|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Used.[{#SNMPVALUE}]<p>Update: 180</p><p>LLD</p>|
+|Number of Processes|<p>-</p>|`SNMP agent`|SNMP-Number-Processes<p>Update: 180</p>|
+|Memory Allocation Error|<p>-</p>|`SNMP agent`|SNMP-Memory-Allocation-Error<p>Update: 180</p>|
+|Vcenter Name|<p>-</p>|`SNMP agent`|SNMP-NamePlateforme<p>Update: 3600</p>|
+|Snmp Availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 180</p>|
+|Ping vCenter|<p>-</p>|`Simple check`|icmpping[,2]<p>Update: 120</p>|
 |CPU {#SNMPINDEX} Utilization|<p>-</p>|`SNMP agent`|SNMP-Charge-CPU-.[{#SNMPINDEX}]<p>Update: 180</p><p>LLD</p>|
 |CPU {#SNMPINDEX} Name|<p>-</p>|`SNMP agent`|SNMP-Name-CPU-.[{#SNMPINDEX}]<p>Update: 3600</p><p>LLD</p>|
 |Process [{#VMWARESVC}] CPU Usage|<p>-</p>|`Calculated`|Process-Usage-[{#VMWARESVC}]<p>Update: 30s</p><p>LLD</p>|
 |Process [{#VMWARESVC}] Memory Usage|<p>-</p>|`SNMP agent`|SNMP-Process-Memory-[{#VMWARESVC}]<p>Update: 1m</p><p>LLD</p>|
 |Process [{#VMWARESVC}] CPU centi-seconds|<p>-</p>|`SNMP agent`|SNMP-Process-Perf-CPU-[{#VMWARESVC}]<p>Update: 30s</p><p>LLD</p>|
 |Process [{#VMWARESVC}] Status|<p>-</p>|`SNMP agent`|SNMP-Process-Status-[{#VMWARESVC}]<p>Update: 1m</p><p>LLD</p>|
+|File System {#SNMPVALUE} - Used Percentage|<p>-</p>|`Calculated`|File-System-Space-Used-Percentage.[{#SNMPVALUE}]<p>Update: 180</p><p>LLD</p>|
+|File System {#SNMPVALUE} - Space Allocated|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Allocated.[{#SNMPVALUE}]<p>Update: 600</p><p>LLD</p>|
+|File System {#SNMPVALUE} - Space Used|<p>-</p>|`SNMP agent`|SNMP-File-System-Space-Used.[{#SNMPVALUE}]<p>Update: 180</p><p>LLD</p>|
 |Interface [{#SNMPVALUE}] Admin Status|<p>-</p>|`SNMP agent`|SNMP-Interface-Admin-Status.[{#SNMPVALUE}]<p>Update: 120</p><p>LLD</p>|
 |Interface [{#SNMPVALUE}] Description|<p>-</p>|`SNMP agent`|SNMP-Interface-Description.[{#SNMPVALUE}]<p>Update: 1800</p><p>LLD</p>|
 |Interface [{#SNMPVALUE}] IN Error|<p>-</p>|`SNMP agent`|SNMP-Interface-IN-Error.[{#SNMPVALUE}]<p>Update: 180</p><p>LLD</p>|
@@ -153,12 +153,12 @@ There are no template links in this template.
 |Interface [{#SNMPVALUE}]  on {HOST.HOST1} - IN Error|<p>-</p>|<p>**Expression**: (last(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Interface-IN-Error.[{#SNMPVALUE}],#1)<>last(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Interface-IN-Error.[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|warning|
 |Service [{#VMWARESVC}] high CPU usage on {HOST.HOST1}|<p>-</p>|<p>**Expression**: avg(/vCenter_SNMP-VMWARE_VCSA_6.7/Process-Usage-[{#VMWARESVC}],5m)>90</p><p>**Recovery expression**: </p>|average|
 |Service [{#VMWARESVC}] not running on {HOST.HOST1}|<p>-</p>|<p>**Expression**: nodata(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Process-Status-[{#VMWARESVC}],5m)=1</p><p>**Recovery expression**: </p>|high|
-|Free Space File System  {#SNMPVALUE}  -< 1%- on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: last(/vCenter_SNMP-VMWARE_VCSA_6.7/File-System-Space-Used-Percentage.[{#SNMPVALUE}])>=99</p><p>**Recovery expression**: </p>|high|
-|Free Space File System  {#SNMPVALUE}  -< 5%- on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: last(/vCenter_SNMP-VMWARE_VCSA_6.7/File-System-Space-Used-Percentage.[{#SNMPVALUE}])>=95</p><p>**Recovery expression**: </p>|average|
-|Free Space File System  {#SNMPVALUE}  -< 10%- on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: last(/vCenter_SNMP-VMWARE_VCSA_6.7/File-System-Space-Used-Percentage.[{#SNMPVALUE}])>=90</p><p>**Recovery expression**: </p>|warning|
 |High CPU {#SNMPINDEX} Utilization on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: avg(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Charge-CPU-.[{#SNMPINDEX}],5m)>90</p><p>**Recovery expression**: </p>|average|
 |Service [{#VMWARESVC}] high CPU usage on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: avg(/vCenter_SNMP-VMWARE_VCSA_6.7/Process-Usage-[{#VMWARESVC}],5m)>90</p><p>**Recovery expression**: </p>|average|
 |Service [{#VMWARESVC}] not running on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: nodata(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Process-Status-[{#VMWARESVC}],5m)=1</p><p>**Recovery expression**: </p>|high|
+|Free Space File System  {#SNMPVALUE}  -< 1%- on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: last(/vCenter_SNMP-VMWARE_VCSA_6.7/File-System-Space-Used-Percentage.[{#SNMPVALUE}])>=99</p><p>**Recovery expression**: </p>|high|
+|Free Space File System  {#SNMPVALUE}  -< 5%- on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: last(/vCenter_SNMP-VMWARE_VCSA_6.7/File-System-Space-Used-Percentage.[{#SNMPVALUE}])>=95</p><p>**Recovery expression**: </p>|average|
+|Free Space File System  {#SNMPVALUE}  -< 10%- on {HOST.HOST1} (LLD)|<p>-</p>|<p>**Expression**: last(/vCenter_SNMP-VMWARE_VCSA_6.7/File-System-Space-Used-Percentage.[{#SNMPVALUE}])>=90</p><p>**Recovery expression**: </p>|warning|
 |Interface [{#SNMPVALUE}] on {HOST.HOST1} - DOWN (LLD)|<p>-</p>|<p>**Expression**: last(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Interface-Admin-Status.[{#SNMPVALUE}])=0</p><p>**Recovery expression**: </p>|average|
 |Interface [{#SNMPVALUE}]  on {HOST.HOST1} - DOWN (LLD)|<p>-</p>|<p>**Expression**: last(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Interface-Operation-Status.[{#SNMPVALUE}])=0</p><p>**Recovery expression**: </p>|average|
 |Interface [{#SNMPVALUE}]  on {HOST.HOST1} - IN Error (LLD)|<p>-</p>|<p>**Expression**: (last(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Interface-IN-Error.[{#SNMPVALUE}],#1)<>last(/vCenter_SNMP-VMWARE_VCSA_6.7/SNMP-Interface-IN-Error.[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|warning|

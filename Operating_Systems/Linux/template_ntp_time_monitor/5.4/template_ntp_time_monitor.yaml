@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T07:59:23Z'
+  date: '2021-11-21T21:15:05Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -11,32 +11,8 @@ zabbix_export:
   templates:
     -
       uuid: 19d59e3b38d445e982fdb1d699874c57
-      template: 'Time Drift OS Linux'
-      name: 'Time Drift OS Linux'
-      description: |
-        ## Overview
-        
-        Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
-        
-        
-        Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
-          
-        UserParameter=time.drift[*],cat /var/lib/ntp/drift  
-        UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
-        
-        
-         
-        
-        
-         
-        
-        
-        
-        ## Author
-        
-        Jeffrey H. Simonson
-        
-        
+      template: 'Template Time Drift OS Linux'
+      name: 'Template Time Drift OS Linux'
       groups:
         -
           name: Templates
@@ -64,9 +40,9 @@ zabbix_export:
             -
               uuid: 325b7173eea04adf9ba209661f33d6a2
               expression: |
-                last(/Time Drift OS Linux/time.drift)>{$MAXTIMEDRIFT}
+                last(/Template Time Drift OS Linux/time.drift)>{$MAXTIMEDRIFT}
                 or
-                last(/Time Drift OS Linux/time.drift)<-{$MAXTIMEDRIFT}
+                last(/Template Time Drift OS Linux/time.drift)<-{$MAXTIMEDRIFT}
               name: 'Time: Drift  over  {$MAXTIMEDRIFT} sec/day on {HOST.NAME}'
               priority: WARNING
       macros:
@@ -75,54 +51,8 @@ zabbix_export:
           value: '20'
     -
       uuid: 62d4921d869e4794b61a45555247d745
-      template: 'Time Offset OS Linux'
-      name: 'Time Offset OS Linux'
-      description: |
-        ## Overview
-        
-        Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
-        
-        
-        Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
-          
-        UserParameter=time.drift[*],cat /var/lib/ntp/drift  
-        UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
-        
-        
-         
-        
-        
-         
-        
-        
-        
-        ## Author
-        
-        Jeffrey H. Simonson
-        
-        ## Overview
-        
-        Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
-        
-        
-        Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
-          
-        UserParameter=time.drift[*],cat /var/lib/ntp/drift  
-        UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
-        
-        
-         
-        
-        
-         
-        
-        
-        
-        ## Author
-        
-        Jeffrey H. Simonson
-        
-        
+      template: 'Template Time Offset OS Linux'
+      name: 'Template Time Offset OS Linux'
       groups:
         -
           name: Templates
@@ -147,9 +77,9 @@ zabbix_export:
             -
               uuid: 5b4f2670d3a0433e94ee9a0432944feb
               expression: |
-                last(/Time Offset OS Linux/time.offset)>{$MAXTIMEOFFSET}
+                last(/Template Time Offset OS Linux/time.offset)>{$MAXTIMEOFFSET}
                 or
-                last(/Time Offset OS Linux/time.offset)<-{$MAXTIMEOFFSET}
+                last(/Template Time Offset OS Linux/time.offset)<-{$MAXTIMEOFFSET}
               name: 'Time: Offset over {$MAXTIMEOFFSET} second on {HOST.NAME}'
               priority: WARNING
       macros:

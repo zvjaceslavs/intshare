@@ -52,37 +52,37 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Service Status Microsoft Exchange Transport|<p>-</p>|`Zabbix agent`|service_state[MSExchangeTransport]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Search|<p>-</p>|`Zabbix agent`|service_state[MSExchangeFastSearch]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Search Host Controller|<p>-</p>|`Zabbix agent`|service_state[HostControllerService]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange Transport Submission|<p>-</p>|`Zabbix agent`|service_state[MSExchangeSubmission]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange POP3|<p>-</p>|`Zabbix agent`|service_state[MSExchangePop3]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange Information Store|<p>-</p>|`Zabbix agent`|service_state[MSExchangeIS]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange Transport Delivery|<p>-</p>|`Zabbix agent`|service_state[MSExchangeDelivery]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Compliance Service|<p>-</p>|`Zabbix agent`|service_state[MSExchangeCompliance]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Mailbox Assistants|<p>-</p>|`Zabbix agent`|service_state[MSExchangeMailboxAssistants]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Unified Messaging|<p>-</p>|`Zabbix agent`|service_state[MSExchangeUM]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Search|<p>-</p>|`Zabbix agent`|service_state[MSExchangeFastSearch]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Mailbox Replication|<p>-</p>|`Zabbix agent`|service_state[MSExchangeMailboxReplication]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Health Manager Recovery|<p>-</p>|`Zabbix agent`|service_state[MSExchangeHMRecovery]<p>Update: 1m</p>|
-|Service Status Microsoft Exchange Compliance Audit|<p>-</p>|`Zabbix agent`|service_state[MSComplianceAudit]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange Throttling|<p>-</p>|`Zabbix agent`|service_state[MSExchangeThrottling]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Unified Messaging Call Router|<p>-</p>|`Zabbix agent`|service_state[MSExchangeUMCR]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange EdgeSync|<p>-</p>|`Zabbix agent`|service_state[MSExchangeEdgeSync]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Mailbox Replication|<p>-</p>|`Zabbix agent`|service_state[MSExchangeMailboxReplication]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Unified Messaging|<p>-</p>|`Zabbix agent`|service_state[MSExchangeUM]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Service Host|<p>-</p>|`Zabbix agent`|service_state[MSExchangeServiceHost]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Transport Log Search|<p>-</p>|`Zabbix agent`|service_state[MSExchangeTransportLogSearch]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Transport|<p>-</p>|`Zabbix agent`|service_state[MSExchangeTransport]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Diagnostics|<p>-</p>|`Zabbix agent`|service_state[MSExchangeDiagnostics]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Server Extension for Windows Server Backup|<p>-</p>|`Zabbix agent`|service_state[wsbexchange]<p>Update: 1m</p>|
 |Service Status Microsoft Exchange IMAP4|<p>-</p>|`Zabbix agent`|service_state[MSExchangeImap4]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange IMAP4 Backend|<p>-</p>|`Zabbix agent`|service_state[MSExchangeIMAP4BE]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Service Host|<p>-</p>|`Zabbix agent`|service_state[MSExchangeServiceHost]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Diagnostics|<p>-</p>|`Zabbix agent`|service_state[MSExchangeDiagnostics]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange DAG Management|<p>-</p>|`Zabbix agent`|service_state[MSExchangeDagMgmt]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Anti-spam update|<p>-</p>|`Zabbix agent`|service_state[MSExchangeAntispamUpdate]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange POP3|<p>-</p>|`Zabbix agent`|service_state[MSExchangePop3]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Frontend Transport|<p>-</p>|`Zabbix agent`|service_state[MSExchangeFrontEndTransport]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Active Directory Topology|<p>-</p>|`Zabbix agent`|service_state[MSExchangeADTopology]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange Health Manager|<p>-</p>|`Zabbix agent`|service_state[MSExchangeHM]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange DAG Management|<p>-</p>|`Zabbix agent`|service_state[MSExchangeDagMgmt]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Compliance Service|<p>-</p>|`Zabbix agent`|service_state[MSExchangeCompliance]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Anti-spam update|<p>-</p>|`Zabbix agent`|service_state[MSExchangeAntispamUpdate]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Health Manager Recovery|<p>-</p>|`Zabbix agent`|service_state[MSExchangeHMRecovery]<p>Update: 1m</p>|
 |Service Status Microsoft Exchange POP3 Backend|<p>-</p>|`Zabbix agent`|service_state[MSExchangePOP3BE]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange EdgeSync|<p>-</p>|`Zabbix agent`|service_state[MSExchangeEdgeSync]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Notifications Broker|<p>-</p>|`Zabbix agent`|service_state[MSExchangeNotificationsBroker]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Replication|<p>-</p>|`Zabbix agent`|service_state[MSExchangeRepl]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Search Host Controller|<p>-</p>|`Zabbix agent`|service_state[HostControllerService]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Unified Messaging Call Router|<p>-</p>|`Zabbix agent`|service_state[MSExchangeUMCR]<p>Update: 5m</p>|
 |Service Status Microsoft Exchange RPC Client Access|<p>-</p>|`Zabbix agent`|service_state[MSExchangeRPC]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Transport Log Search|<p>-</p>|`Zabbix agent`|service_state[MSExchangeTransportLogSearch]<p>Update: 5m</p>|
-|Service Status Microsoft Exchange Server Extension for Windows Server Backup|<p>-</p>|`Zabbix agent`|service_state[wsbexchange]<p>Update: 1m</p>|
+|Service Status Microsoft Exchange Mailbox Assistants|<p>-</p>|`Zabbix agent`|service_state[MSExchangeMailboxAssistants]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Replication|<p>-</p>|`Zabbix agent`|service_state[MSExchangeRepl]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Frontend Transport|<p>-</p>|`Zabbix agent`|service_state[MSExchangeFrontEndTransport]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Notifications Broker|<p>-</p>|`Zabbix agent`|service_state[MSExchangeNotificationsBroker]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Active Directory Topology|<p>-</p>|`Zabbix agent`|service_state[MSExchangeADTopology]<p>Update: 5m</p>|
+|Service Status Microsoft Exchange Compliance Audit|<p>-</p>|`Zabbix agent`|service_state[MSComplianceAudit]<p>Update: 5m</p>|
 |State of service "{#SERVICE.NAME}" ({#SERVICE.DISPLAYNAME})|<p>-</p>|`Zabbix agent`|service_state[{#SERVICE.NAME},state]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 

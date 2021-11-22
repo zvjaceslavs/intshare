@@ -38,24 +38,24 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|FAN MOD 2B RPM|<p>-</p>|`IPMI agent`|ipmi.fan.2b.rpm<p>Update: 300</p>|
 |FAN MOD 1A RPM|<p>-</p>|`IPMI agent`|ipmi.fan.1a.rpm<p>Update: 300</p>|
+|FAN MOD 4D RPM|<p>-</p>|`IPMI agent`|ipmi.fan.4d.rpm<p>Update: 300</p>|
+|FAN MOD 4A RPM|<p>-</p>|`IPMI agent`|ipmi.fan.4a.rpm<p>Update: 300</p>|
+|FAN MOD 2B RPM|<p>-</p>|`IPMI agent`|ipmi.fan.2b.rpm<p>Update: 300</p>|
 |FAN MOD 3B RPM|<p>-</p>|`IPMI agent`|ipmi.fan.3b.rpm<p>Update: 300</p>|
-|FAN MOD 4B RPM|<p>-</p>|`IPMI agent`|ipmi.fan.4b.rpm<p>Update: 300</p>|
-|FAN MOD 2D RPM|<p>-</p>|`IPMI agent`|ipmi.fan.2d.rpm<p>Update: 300</p>|
-|Ambient Temp|<p>-</p>|`IPMI agent`|ipmi.ambient.temp<p>Update: 300</p>|
-|FAN MOD 3D RPM|<p>-</p>|`IPMI agent`|ipmi.fan.3d.rpm<p>Update: 300</p>|
-|FAN MOD 1C RPM|<p>-</p>|`IPMI agent`|ipmi.fan.1c.rpm<p>Update: 300</p>|
-|FAN MOD 2A RPM|<p>-</p>|`IPMI agent`|ipmi.fan.2a.rpm<p>Update: 300</p>|
-|Power|<p>-</p>|`IPMI agent`|power<p>Update: 300</p>|
 |FAN MOD 1D RPM|<p>-</p>|`IPMI agent`|ipmi.fan.1d.rpm<p>Update: 300</p>|
+|FAN MOD 2D RPM|<p>-</p>|`IPMI agent`|ipmi.fan.2d.rpm<p>Update: 300</p>|
+|FAN MOD 3D RPM|<p>-</p>|`IPMI agent`|ipmi.fan.3d.rpm<p>Update: 300</p>|
+|Power|<p>-</p>|`IPMI agent`|power<p>Update: 300</p>|
+|FAN MOD 2A RPM|<p>-</p>|`IPMI agent`|ipmi.fan.2a.rpm<p>Update: 300</p>|
+|FAN MOD 1B RPM|<p>-</p>|`IPMI agent`|ipmi.fan.1b.rpm<p>Update: 300</p>|
 |FAN MOD 2C RPM|<p>-</p>|`IPMI agent`|ipmi.fan.2c.rpm<p>Update: 300</p>|
 |FAN MOD 4C RPM|<p>-</p>|`IPMI agent`|ipmi.fan.4c.rpm<p>Update: 300</p>|
-|FAN MOD 4A RPM|<p>-</p>|`IPMI agent`|ipmi.fan.4a.rpm<p>Update: 300</p>|
-|FAN MOD 3C RPM|<p>-</p>|`IPMI agent`|ipmi.fan.3c.rpm<p>Update: 300</p>|
 |FAN MOD 3A RPM|<p>-</p>|`IPMI agent`|ipmi.fan.3a.rpm<p>Update: 300</p>|
-|FAN MOD 1B RPM|<p>-</p>|`IPMI agent`|ipmi.fan.1b.rpm<p>Update: 300</p>|
-|FAN MOD 4D RPM|<p>-</p>|`IPMI agent`|ipmi.fan.4d.rpm<p>Update: 300</p>|
+|FAN MOD 3C RPM|<p>-</p>|`IPMI agent`|ipmi.fan.3c.rpm<p>Update: 300</p>|
+|Ambient Temp|<p>-</p>|`IPMI agent`|ipmi.ambient.temp<p>Update: 300</p>|
+|FAN MOD 4B RPM|<p>-</p>|`IPMI agent`|ipmi.fan.4b.rpm<p>Update: 300</p>|
+|FAN MOD 1C RPM|<p>-</p>|`IPMI agent`|ipmi.fan.1c.rpm<p>Update: 300</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -33,9 +33,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Fabricante|<p>-</p>|`SNMP agent`|upsIdentManufacturer<p>Update: 1m</p>|
-|Modelo|<p>-</p>|`SNMP agent`|upsIdentModel<p>Update: 1m</p>|
 |Versão do software do UPS|<p>-</p>|`SNMP agent`|upsIdentUPSSoftwareVersion<p>Update: 1m</p>|
+|Modelo|<p>-</p>|`SNMP agent`|upsIdentModel<p>Update: 1m</p>|
+|Fabricante|<p>-</p>|`SNMP agent`|upsIdentManufacturer<p>Update: 1m</p>|
 |Nome|<p>-</p>|`SNMP agent`|upsIdentName<p>Update: 1m</p>|
 |Corrente da Bateria (A) $1|<p>-</p>|`SNMP agent`|upsbatterycurrent.[{#INDICE}]<p>Update: 30m</p><p>LLD</p>|
 |Estado da Bateria $1|<p>A indicação da capacidade restante na(s) baterias do sistema do UPS. Um valor de "bateria normal" indica que o tempo de execução restante é maior que "upsConfigLowBattTime". Um valor de "bateria baixa" indica que o tempo de execução restante da bateria seja menor que ou igual a "upsConfigLowBattTime". Um valor de "bateria esgotada" indica que o UPS não será capaz para sustentar a carga atual quando e a energia for perdida (incluindo a possibilidade de que a energia da rede elétrica esteja ausente e o UPS será incapaz de sustentar a saída).</p>|`SNMP agent`|upsBatteryStatus.[{#INDICE}]<p>Update: 30m</p><p>LLD</p>|

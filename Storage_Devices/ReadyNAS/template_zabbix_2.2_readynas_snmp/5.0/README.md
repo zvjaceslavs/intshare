@@ -1,32 +1,4 @@
-# SNMP ReadyNas
-
-## Overview
-
-NEED in Macros HOST
-
-
-{$SNMP\_COMMUNITY}
-
-
-{$SNMP\_PORT}
-
-
- 
-
-
-Modified for ReadyNas 2120 zabbix 2.2
-
-
-Restart trigger added
-
-
-Small mistakes corrected
-
-
-
-## Author
-
-Bonardi & Jeffrey H. Simonson
+# Template SNMP ReadyNas
 
 ## Macros used
 
@@ -46,11 +18,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|fanRPM|<p>-</p>|`SNMP agent`|fanRPM<p>Update: 30</p>|
 |System uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 30</p>|
-|Firmware|<p>-</p>|`SNMP agent`|nasMgrSoftwareVersion.0<p>Update: 30</p>|
 |Temperature|<p>-</p>|`SNMP agent`|temperatureValue.1<p>Update: 30</p>|
+|Firmware|<p>-</p>|`SNMP agent`|nasMgrSoftwareVersion.0<p>Update: 30</p>|
 |fanStatus|<p>-</p>|`SNMP agent`|fanStatus<p>Update: 30</p>|
+|fanRPM|<p>-</p>|`SNMP agent`|fanRPM<p>Update: 30</p>|
 |S/N|<p>-</p>|`SNMP agent`|nasMgrSerialNUM.0<p>Update: 30</p>|
 |[{#SNMPVALUE}]_VolumeFreeSpace|<p>-</p>|`SNMP agent`|volumeFreeSpace[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |[{#SNMPVALUE}]_VolumeName|<p>-</p>|`SNMP agent`|volumeName[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
@@ -66,11 +38,11 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Disk [{#SNMPVALUE}] on {HOST.NAME} is Offline|<p>-</p>|<p>**Expression**: {SNMP ReadyNas:DiskState[{#SNMPVALUE}].regexp("(Offline)")}=1</p><p>**Recovery expression**: </p>|disaster|
-|Temperature Disk [{#SNMPVALUE}] is High on {HOST.NAME}|<p>-</p>|<p>**Expression**: {SNMP ReadyNas:DiskTemperature[{#SNMPVALUE}].last(0)}>45</p><p>**Recovery expression**: </p>|high|
-|Raid [{#SNMPVALUE}] on {HOST.NAME} - Problem|<p>-</p>|<p>**Expression**: {SNMP ReadyNas:volumeStatus[{#SNMPVALUE}].regexp("(UNPROTECTED|DEGRADED|DEAD|INACTIVE|UNKNOW)")}=1</p><p>**Recovery expression**: </p>|disaster|
-|Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME}|<p>-</p>|<p>**Expression**: ({SNMP ReadyNas:volumeFreeSpace[{#SNMPVALUE}].last()} / {SNMP ReadyNas:volumeSize[{#SNMPVALUE}].last()} * 100) < 10</p><p>**Recovery expression**: </p>|high|
-|Raid [{#SNMPVALUE}] on {HOST.NAME} - Problem (LLD)|<p>-</p>|<p>**Expression**: {SNMP ReadyNas:volumeStatus[{#SNMPVALUE}].regexp("(UNPROTECTED|DEGRADED|DEAD|INACTIVE|UNKNOW)")}=1</p><p>**Recovery expression**: </p>|disaster|
-|Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: ({SNMP ReadyNas:volumeFreeSpace[{#SNMPVALUE}].last()} / {SNMP ReadyNas:volumeSize[{#SNMPVALUE}].last()} * 100) < 10</p><p>**Recovery expression**: </p>|high|
-|Disk [{#SNMPVALUE}] on {HOST.NAME} is Offline (LLD)|<p>-</p>|<p>**Expression**: {SNMP ReadyNas:DiskState[{#SNMPVALUE}].regexp("(Offline)")}=1</p><p>**Recovery expression**: </p>|disaster|
-|Temperature Disk [{#SNMPVALUE}] is High on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {SNMP ReadyNas:DiskTemperature[{#SNMPVALUE}].last(0)}>45</p><p>**Recovery expression**: </p>|high|
+|Disk [{#SNMPVALUE}] on {HOST.NAME} is Offline|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas:DiskState[{#SNMPVALUE}].regexp("(Offline)")}=1</p><p>**Recovery expression**: </p>|disaster|
+|Raid [{#SNMPVALUE}] on {HOST.NAME} - Problem|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas:volumeStatus[{#SNMPVALUE}].regexp("(UNPROTECTED|DEGRADED|DEAD|INACTIVE|UNKNOW)")}=1</p><p>**Recovery expression**: </p>|disaster|
+|Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME}|<p>-</p>|<p>**Expression**: ({Template SNMP ReadyNas:volumeFreeSpace[{#SNMPVALUE}].last()} / {Template SNMP ReadyNas:volumeSize[{#SNMPVALUE}].last()} * 100) < 10</p><p>**Recovery expression**: </p>|high|
+|Temperature Disk [{#SNMPVALUE}] is High on {HOST.NAME}|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas:DiskTemperature[{#SNMPVALUE}].last(0)}>45</p><p>**Recovery expression**: </p>|high|
+|Raid [{#SNMPVALUE}] on {HOST.NAME} - Problem (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas:volumeStatus[{#SNMPVALUE}].regexp("(UNPROTECTED|DEGRADED|DEAD|INACTIVE|UNKNOW)")}=1</p><p>**Recovery expression**: </p>|disaster|
+|Volume {#SNMPVALUE} - FreeSpace is less than 10% on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: ({Template SNMP ReadyNas:volumeFreeSpace[{#SNMPVALUE}].last()} / {Template SNMP ReadyNas:volumeSize[{#SNMPVALUE}].last()} * 100) < 10</p><p>**Recovery expression**: </p>|high|
+|Disk [{#SNMPVALUE}] on {HOST.NAME} is Offline (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas:DiskState[{#SNMPVALUE}].regexp("(Offline)")}=1</p><p>**Recovery expression**: </p>|disaster|
+|Temperature Disk [{#SNMPVALUE}] is High on {HOST.NAME} (LLD)|<p>-</p>|<p>**Expression**: {Template SNMP ReadyNas:DiskTemperature[{#SNMPVALUE}].last(0)}>45</p><p>**Recovery expression**: </p>|high|

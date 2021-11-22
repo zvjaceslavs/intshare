@@ -76,24 +76,24 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|System Serial Number|<p>-</p>|`SNMP agent`|lgpAgentIdenSerialNumber<p>Update: 1m</p>|
-|Battery Time Remaining|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 1m</p>|
-|Ups Auto Restart|<p>-</p>|`SNMP agent`|upsAutoRestart<p>Update: 30s</p>|
-|Battery Voltage|<p>-</p>|`SNMP agent`|upsBatteryVoltage<p>Update: 30s</p>|
-|System Firmware Version|<p>-</p>|`SNMP agent`|lgpAgentIdenFirmwareVersion<p>Update: 1m</p>|
-|Battery Status|<p>-</p>|`SNMP agent`|upsBatteryStatus<p>Update: 30s</p>|
-|System Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 1m</p>|
-|System Contact|<p>-</p>|`SNMP agent`|sysContact<p>Update: 1m</p>|
 |Output Source|<p>-</p>|`SNMP agent`|upsOutputSource<p>Update: 30s</p>|
+|System Firmware Version|<p>-</p>|`SNMP agent`|lgpAgentIdenFirmwareVersion<p>Update: 1m</p>|
 |System Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 1m</p>|
-|System Model|<p>-</p>|`SNMP agent`|upsIdenModel<p>Update: 1m</p>|
 |System Description|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 1m</p>|
+|Battery Status|<p>-</p>|`SNMP agent`|upsBatteryStatus<p>Update: 30s</p>|
 |System Network Card Model|<p>-</p>|`SNMP agent`|lgpAgentIdenModel<p>Update: 1m</p>|
+|Battery Voltage|<p>-</p>|`SNMP agent`|upsBatteryVoltage<p>Update: 30s</p>|
+|Ups Input Voltage|<p>-</p>|`SNMP agent`|upsConfigInputVoltage<p>Update: 30s</p>|
+|System Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 1m</p>|
+|Battery Time Remaining|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 1m</p>|
 |Ups Output Voltage|<p>-</p>|`SNMP agent`|upsConfigOutputVoltage<p>Update: 30s</p>|
 |Battery Charge Remaining|<p>-</p>|`SNMP agent`|upsEstimatedChargeRemaining<p>Update: 1m</p>|
 |System Manufacturer|<p>-</p>|`SNMP agent`|lgpAgentIdenManufacturer<p>Update: 1m</p>|
-|Ups Input Voltage|<p>-</p>|`SNMP agent`|upsConfigInputVoltage<p>Update: 30s</p>|
-|System Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 1m</p>|
+|System Serial Number|<p>-</p>|`SNMP agent`|lgpAgentIdenSerialNumber<p>Update: 1m</p>|
+|System Contact|<p>-</p>|`SNMP agent`|sysContact<p>Update: 1m</p>|
+|Ups Auto Restart|<p>-</p>|`SNMP agent`|upsAutoRestart<p>Update: 30s</p>|
+|System Model|<p>-</p>|`SNMP agent`|upsIdenModel<p>Update: 1m</p>|
+|System Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 1m</p>|
 |Output Load at Line {#SNMPINDEX}|<p>Discovered Output Load Percentual</p>|`SNMP agent`|ups.Output.Percentload.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 ## Triggers
 

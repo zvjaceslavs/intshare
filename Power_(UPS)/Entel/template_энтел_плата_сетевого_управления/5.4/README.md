@@ -62,18 +62,18 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Нагрузка в процентах|<p>-</p>|`SNMP agent`|upsOutputPercentLoad<p>Update: 30</p>|
+|Напряжение входа|<p>-</p>|`SNMP agent`|upsInputVoltage<p>Update: 30</p>|
 |Напряжение выхода|<p>-</p>|`SNMP agent`|upsOutputVoltage<p>Update: 30</p>|
-|Частота выхода|<p>-</p>|`SNMP agent`|upsOutputFrequency<p>Update: 10</p>|
 |Заряд АКБ|<p>-</p>|`SNMP agent`|upsEstimatedChargeRemaining<p>Update: 30</p>|
-|Режим работы|<p>-</p>|`SNMP agent`|upsOutputSource<p>Update: 10</p>|
-|Статус АКБ|<p>-</p>|`SNMP agent`|upsBatteryStatus<p>Update: 30</p>|
-|Расчетное время автономии|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 30</p>|
+|Температура АКБ|<p>-</p>|`SNMP agent`|upsBatteryTemperature<p>Update: 30</p>|
+|Частота выхода|<p>-</p>|`SNMP agent`|upsOutputFrequency<p>Update: 10</p>|
 |Частота входа|<p>-</p>|`SNMP agent`|upsInputFrequency<p>Update: 30</p>|
 |Напряжение АКБ|<p>-</p>|`SNMP agent`|upsBatteryVoltage<p>Update: 30</p>|
-|Температура АКБ|<p>-</p>|`SNMP agent`|upsBatteryTemperature<p>Update: 30</p>|
 |Время работы от АКБ|<p>-</p>|`SNMP agent`|upsSecondsOnBattery<p>Update: 30</p>|
-|Напряжение входа|<p>-</p>|`SNMP agent`|upsInputVoltage<p>Update: 30</p>|
-|Нагрузка в процентах|<p>-</p>|`SNMP agent`|upsOutputPercentLoad<p>Update: 30</p>|
+|Расчетное время автономии|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 30</p>|
+|Статус АКБ|<p>-</p>|`SNMP agent`|upsBatteryStatus<p>Update: 30</p>|
+|Режим работы|<p>-</p>|`SNMP agent`|upsOutputSource<p>Update: 10</p>|
 ## Triggers
 
 There are no triggers in this template.

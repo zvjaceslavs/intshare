@@ -57,16 +57,16 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|qBittorrent transferInfo|<p>-</p>|`HTTP agent`|transferInfo<p>Update: 1m</p>|
+|Conection Status|<p>-</p>|`Dependent item`|qbittorrent.connection_status<p>Update: 0</p>|
+|Upload Data|<p>-</p>|`Dependent item`|qbittorrent.upldata<p>Update: 0</p>|
+|Upload Limit|<p>-</p>|`Dependent item`|qbittorrent.upllimit<p>Update: 0</p>|
+|Version|<p>-</p>|`HTTP agent`|qbittorrent.version<p>Update: 24h</p>|
 |Download Limit|<p>-</p>|`Dependent item`|qbittorrent.dwllimit<p>Update: 0</p>|
+|Upload Speed|<p>-</p>|`Dependent item`|qbittorrent.upload<p>Update: 0</p>|
+|qBittorrent transferInfo|<p>-</p>|`HTTP agent`|transferInfo<p>Update: 1m</p>|
 |Download Speed|<p>-</p>|`Dependent item`|qbittorrent.download<p>Update: 0</p>|
 |Download Data|<p>-</p>|`Dependent item`|qbittorrent.dwldata<p>Update: 0</p>|
 |DHT Nodes|<p>-</p>|`Dependent item`|qbittorrent.dht_nodes<p>Update: 0</p>|
-|Upload Limit|<p>-</p>|`Dependent item`|qbittorrent.upllimit<p>Update: 0</p>|
-|Upload Data|<p>-</p>|`Dependent item`|qbittorrent.upldata<p>Update: 0</p>|
-|Upload Speed|<p>-</p>|`Dependent item`|qbittorrent.upload<p>Update: 0</p>|
-|Version|<p>-</p>|`HTTP agent`|qbittorrent.version<p>Update: 24h</p>|
-|Conection Status|<p>-</p>|`Dependent item`|qbittorrent.connection_status<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

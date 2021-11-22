@@ -34,32 +34,37 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Inlets|<p>-</p>|`SNMP agent`|pduInlet<p>Update: 3600</p>|
 |Outlets|<p>-</p>|`SNMP agent`|pduOutlet<p>Update: 3600</p>|
+|Inlets|<p>-</p>|`SNMP agent`|pduInlet<p>Update: 3600</p>|
 |Sensors|<p>-</p>|`SNMP agent`|externalSensor<p>Update: 3600</p>|
 |Overcurrent Protectors|<p>-</p>|`SNMP agent`|overCurrentProtector<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Device Model Name|<p>-</p>|`SNMP agent`|pduBasicIdentModel<p>Update: 3600</p>|
-|Device Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
-|Device Frequency|<p>-</p>|`SNMP agent`|pduRatedFrequency<p>Update: 3600</p>|
-|Outlet number|<p>-</p>|`SNMP agent`|outletCount<p>Update: 3600</p>|
-|Outlet Controller number|<p>-</p>|`SNMP agent`|outletControllerCount<p>Update: 3600</p>|
-|Device Current|<p>-</p>|`SNMP agent`|pduRatedCurrent<p>Update: 3600</p>|
 |Device Manufacter Name|<p>-</p>|`SNMP agent`|Manufacturer.PDU<p>Update: 3600</p>|
 |Device Serial Number|<p>-</p>|`SNMP agent`|pduSerialNumber<p>Update: 3600</p>|
+|Inlet number|<p>-</p>|`SNMP agent`|inletCount<p>Update: 3600</p>|
+|Device reachability using ICMP|<p>-</p>|`Simple check`|icmpping<p>Update: 3600</p>|
+|Device Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
+|Software version (full)|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
+|Device Power Capability|<p>-</p>|`SNMP agent`|pduRatedVA<p>Update: 3600</p>|
 |Device Voltage|<p>-</p>|`SNMP agent`|pduRatedVoltage<p>Update: 3600</p>|
 |Overcurrent Protector number|<p>-</p>|`SNMP agent`|overCurrentProtectorCount<p>Update: 3600</p>|
-|Inlet number|<p>-</p>|`SNMP agent`|inletCount<p>Update: 3600</p>|
-|Software version (full)|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
-|Contact|<p>-</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
-|Device reachability using ICMP|<p>-</p>|`Simple check`|icmpping<p>Update: 3600</p>|
-|Device Power Capability|<p>-</p>|`SNMP agent`|pduRatedVA<p>Update: 3600</p>|
+|Device Current|<p>-</p>|`SNMP agent`|pduRatedCurrent<p>Update: 3600</p>|
 |Inlet Controller number|<p>-</p>|`SNMP agent`|inletControllerCount<p>Update: 3600</p>|
-|Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
+|Outlet number|<p>-</p>|`SNMP agent`|outletCount<p>Update: 3600</p>|
 |Device Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
+|Device Model Name|<p>-</p>|`SNMP agent`|pduBasicIdentModel<p>Update: 3600</p>|
+|Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
+|Outlet Controller number|<p>-</p>|`SNMP agent`|outletControllerCount<p>Update: 3600</p>|
+|Device Frequency|<p>-</p>|`SNMP agent`|pduRatedFrequency<p>Update: 3600</p>|
+|Contact|<p>-</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
+|OnOff Status of Outlet $1|<p>-</p>|`SNMP agent`|OnOffStatus[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Current Capability of Outlet $1|<p>-</p>|`SNMP agent`|OutletCurrent[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
+|Name of Outlet $1|<p>-</p>|`SNMP agent`|OutletName[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Type of Outlet $1|<p>-</p>|`SNMP agent`|outletReceptacleDescriptor[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
+|Voltage Capability of Outlet $1|<p>-</p>|`SNMP agent`|OutletVolts[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Name of Inlet $1|<p>-</p>|`SNMP agent`|InletName[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |State of powerFactor on Inlet $1|<p>-</p>|`SNMP agent`|measurementsInletSensorStatermspowerFactor[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |powerFactor of Inlet $1|<p>-</p>|`SNMP agent`|measurementsInletSensorValuermspowerFactor[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
@@ -80,11 +85,6 @@ There are no template links in this template.
 |Volatage Capability of Inlet $1|<p>-</p>|`SNMP agent`|inletRatedVoltage[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Current Capability of Inlet $1|<p>-</p>|`SNMP agent`|inletRatedCurrent[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Voltage of Inlet $1|<p>-</p>|`SNMP agent`|measurementsInletSensorValuermsVoltage[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
-|OnOff Status of Outlet $1|<p>-</p>|`SNMP agent`|OnOffStatus[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|Current Capability of Outlet $1|<p>-</p>|`SNMP agent`|OutletCurrent[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
-|Name of Outlet $1|<p>-</p>|`SNMP agent`|OutletName[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
-|Type of Outlet $1|<p>-</p>|`SNMP agent`|outletReceptacleDescriptor[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
-|Voltage Capability of Outlet $1|<p>-</p>|`SNMP agent`|OutletVolts[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Sensor DecimalDigits of External Sensor $1|<p>-</p>|`SNMP agent`|externalSensorDecimalDigits[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Serial Number of External Sensor $1|<p>-</p>|`SNMP agent`|externalSensorSerialNumber[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Type of External Sensor $1|<p>-</p>|`SNMP agent`|externalSensorType[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|

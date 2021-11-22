@@ -76,19 +76,21 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Power Supply Input voltages|<p>-</p>|`SNMP agent`|supermicro_inpvoltageid<p>Update: {$SUPERMICRO_DISCOVERY_TIME}</p>|
-|Physical disk|<p>-</p>|`SNMP agent`|supermicro_diskmodel<p>Update: {$DISC_DISCOVERY_TIME}</p>|
-|Memory|<p>-</p>|`SNMP agent`|supermicro_memory_id<p>Update: {$SUPERMICRO_DISCOVERY_TIME}</p>|
 |FANs|<p>-</p>|`SNMP agent`|supermicro_fanmonitemid<p>Update: {$SUPERMICRO_DISCOVERY_TIME}</p>|
 |Power Supply|<p>-</p>|`SNMP agent`|supermicro_psmonitemid<p>Update: {$SUPERMICRO_DISCOVERY_TIME}</p>|
 |Temperatures|<p>-</p>|`SNMP agent`|supermicro_tempmonitemid<p>Update: {$SUPERMICRO_DISCOVERY_TIME}</p>|
+|Physical disk|<p>-</p>|`SNMP agent`|supermicro_diskmodel<p>Update: {$DISC_DISCOVERY_TIME}</p>|
+|Memory|<p>-</p>|`SNMP agent`|supermicro_memory_id<p>Update: {$SUPERMICRO_DISCOVERY_TIME}</p>|
+|Power Supply Input voltages|<p>-</p>|`SNMP agent`|supermicro_inpvoltageid<p>Update: {$SUPERMICRO_DISCOVERY_TIME}</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Supermicro mainboard bios version|<p>-</p>|`SNMP agent`|supermicro_mb_biosversion<p>Update: 1d</p>|
 |Supermicro mainboard model|<p>-</p>|`SNMP agent`|supermicro_mb_model<p>Update: 1d</p>|
-|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_acinp[{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
+|Supermicro $1 RPMs|<p>-</p>|`SNMP agent`|supermicro_fanrpms[{#MONITEMNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_psstatus[{#MONITEMNAME}]<p>Update: 15m</p><p>LLD</p>|
+|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_temp[{#MONITEMNAME}]<p>Update: 5m</p><p>LLD</p>|
 |Supermicro disk {#SNMPINDEX} model|<p>-</p>|`SNMP agent`|supermicro_disc_model[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p><p>LLD</p>|
 |Supermicro disk {#SNMPINDEX} smart status|<p>-</p>|`SNMP agent`|supermicro_disk_smart[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p><p>LLD</p>|
 |Supermicro disk {#SNMPINDEX} serial number|<p>-</p>|`SNMP agent`|supermicro_disk_sn[{#SNMPINDEX}]<p>Update: {$PD_REQUEST_PERIOD}</p><p>LLD</p>|
@@ -98,9 +100,7 @@ There are no template links in this template.
 |Supermicro memory $1 manufacturer|<p>-</p>|`SNMP agent`|supermicro_memory_manufacturer[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
 |Supermicro memory $1 model|<p>-</p>|`SNMP agent`|supermicro_memory_model[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
 |Supermicro memory $1 sn|<p>-</p>|`SNMP agent`|supermicro_memory_sn[{#SNMPVALUE}]<p>Update: 1d</p><p>LLD</p>|
-|Supermicro $1 RPMs|<p>-</p>|`SNMP agent`|supermicro_fanrpms[{#MONITEMNAME}]<p>Update: 5m</p><p>LLD</p>|
-|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_psstatus[{#MONITEMNAME}]<p>Update: 15m</p><p>LLD</p>|
-|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_temp[{#MONITEMNAME}]<p>Update: 5m</p><p>LLD</p>|
+|Supermicro $1|<p>-</p>|`SNMP agent`|supermicro_acinp[{#SNMPVALUE}]<p>Update: 5m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -113,11 +113,11 @@ There are no template links in this template.
 |{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS}|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_psstatus[{#MONITEMNAME}].last()}=1</p><p>**Recovery expression**: </p>|warning|
 |{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS}|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_psstatus[{#MONITEMNAME}].last()}=2</p><p>**Recovery expression**: </p>|high|
 |{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS}|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_temp[{#MONITEMNAME}].last()}>70</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_acinp[{#SNMPVALUE}].last()}<220</p><p>**Recovery expression**: </p>|average|
+|{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_psstatus[{#MONITEMNAME}].last()}=1</p><p>**Recovery expression**: </p>|warning|
+|{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_psstatus[{#MONITEMNAME}].last()}=2</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_temp[{#MONITEMNAME}].last()}>70</p><p>**Recovery expression**: </p>|high|
 |Supermicro physical disc was changed to {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_disk_sn[{#SNMPINDEX}].diff()}=1</p><p>**Recovery expression**: </p>|warning|
 |Supermicro physical disk status is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_disk_smart[{#SNMPINDEX}].last()}=2</p><p>**Recovery expression**: </p>|high|
 |Memory bank on {HOST.DNS}  has {ITEM.LASTVALUE} errors (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_memory_errcount[{#SNMPVALUE}].last()}>0</p><p>**Recovery expression**: </p>|warning|
 |Memory bank on {HOST.DNS}  was changed (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_memory_sn[{#SNMPVALUE}].diff()}=1</p><p>**Recovery expression**: </p>|information|
-|{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_psstatus[{#MONITEMNAME}].last()}=1</p><p>**Recovery expression**: </p>|warning|
-|{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_psstatus[{#MONITEMNAME}].last()}=2</p><p>**Recovery expression**: </p>|high|
-|{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_temp[{#MONITEMNAME}].last()}>70</p><p>**Recovery expression**: </p>|high|
+|{#SNMPVALUE} is {ITEM.LASTVALUE} on {HOST.DNS} (LLD)|<p>-</p>|<p>**Expression**: {Supermicro SNMP Superdoctor 5 LLD:supermicro_acinp[{#SNMPVALUE}].last()}<220</p><p>**Recovery expression**: </p>|average|

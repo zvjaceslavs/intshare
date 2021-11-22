@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:00:18Z'
+  date: '2021-11-22T02:52:25Z'
   groups:
     -
       uuid: f1537448b0da4ebb870d18790c1cec56
@@ -10,20 +10,6 @@ zabbix_export:
       uuid: 6c3d9f97ba324360a5234fc8889d5b1e
       template: A10_AX_Series
       name: A10_AX_Series
-      description: |
-        ## Overview
-        
-        FAN Discovery
-        
-        
-        Power Supply Discovery
-        
-        
-        Power Supply Voltage Discovery
-        
-        
-        
-        
       groups:
         -
           name: 'Templates SNMP Devices'

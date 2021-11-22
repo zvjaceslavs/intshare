@@ -45,24 +45,24 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Device Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 60</p>|
-|UPS input current|<p>-</p>|`SNMP agent`|upsAdvInputCurrent<p>Update: 60</p>|
-|UPS output power|<p>-</p>|`SNMP agent`|upsAdvOutputPower<p>Update: 60</p>|
-|Software version (full)|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 60</p>|
-|UPS input voltage|<p>-</p>|`SNMP agent`|upsAdvInputVoltage<p>Update: 60</p>|
-|UPS battery status|<p>-</p>|`SNMP agent`|upsBasicBatteryStatus<p>Update: 60</p>|
-|Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
-|UPS run time remaining|<p>-</p>|`SNMP agent`|upsAdvRunTimeRemaining<p>Update: 60</p>|
-|UPS battery temperature|<p>-</p>|`SNMP agent`|upsAdvBatteryTemperature<p>Update: 60</p>|
-|UPS output voltage|<p>-</p>|`SNMP agent`|upsAdvOutputVoltage<p>Update: 60</p>|
-|UPS time on battery|<p>-</p>|`SNMP agent`|upsBasicBatteryTimeOnBattery<p>Update: 60</p>|
-|UPS output load (%)|<p>-</p>|`SNMP agent`|upsAdvOutputLoad<p>Update: 60</p>|
-|UPS input power|<p>-</p>|`SNMP agent`|upsAdvInputPower<p>Update: 60</p>|
-|Device Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 60</p>|
-|UPS battery capacity (%)|<p>-</p>|`SNMP agent`|upsAdvBatteryCapacity<p>Update: 60</p>|
-|UPS output current|<p>-</p>|`SNMP agent`|upsAdvOutputCurrent<p>Update: 60</p>|
-|UPS output frequency|<p>-</p>|`SNMP agent`|upsAdvOutputFrequency<p>Update: 60</p>|
 |Contact|<p>-</p>|`SNMP agent`|sysContact<p>Update: 60</p>|
+|UPS battery capacity (%)|<p>-</p>|`SNMP agent`|upsAdvBatteryCapacity<p>Update: 60</p>|
+|UPS output voltage|<p>-</p>|`SNMP agent`|upsAdvOutputVoltage<p>Update: 60</p>|
+|UPS input current|<p>-</p>|`SNMP agent`|upsAdvInputCurrent<p>Update: 60</p>|
+|UPS run time remaining|<p>-</p>|`SNMP agent`|upsAdvRunTimeRemaining<p>Update: 60</p>|
+|UPS output current|<p>-</p>|`SNMP agent`|upsAdvOutputCurrent<p>Update: 60</p>|
+|Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
+|Device Name|<p>-</p>|`SNMP agent`|sysName<p>Update: 60</p>|
+|UPS output load (%)|<p>-</p>|`SNMP agent`|upsAdvOutputLoad<p>Update: 60</p>|
+|UPS battery status|<p>-</p>|`SNMP agent`|upsBasicBatteryStatus<p>Update: 60</p>|
+|UPS output power|<p>-</p>|`SNMP agent`|upsAdvOutputPower<p>Update: 60</p>|
+|UPS input power|<p>-</p>|`SNMP agent`|upsAdvInputPower<p>Update: 60</p>|
+|Software version (full)|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 60</p>|
+|UPS output frequency|<p>-</p>|`SNMP agent`|upsAdvOutputFrequency<p>Update: 60</p>|
+|UPS input voltage|<p>-</p>|`SNMP agent`|upsAdvInputVoltage<p>Update: 60</p>|
+|Device Location|<p>-</p>|`SNMP agent`|sysLocation<p>Update: 60</p>|
+|UPS time on battery|<p>-</p>|`SNMP agent`|upsBasicBatteryTimeOnBattery<p>Update: 60</p>|
+|UPS battery temperature|<p>-</p>|`SNMP agent`|upsAdvBatteryTemperature<p>Update: 60</p>|
 ## Triggers
 
 There are no triggers in this template.

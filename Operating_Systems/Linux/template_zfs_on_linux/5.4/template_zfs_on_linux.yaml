@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T07:59:58Z'
+  date: '2021-11-21T21:15:34Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -10,27 +10,6 @@ zabbix_export:
       uuid: 47d3c2ff933947368d4bee4b1184d69b
       template: 'ZFS on Linux'
       name: 'ZFS on Linux'
-      description: |
-        ## Overview
-        
-        Modified from <https://www.zabbix.com/forum/showthread.php?t=43347> , this template is used to monitor ZFS on Linux (ZoL) .
-        
-        
-        The documentation has moved to github: [https://github.com/Cosium/zabbix\_zfs-on-linux](https://github.com/AceSlash/zabbix_zfs-on-linux)
-        
-        
-        The 4.0 template has been tested on Zabbix up to 5.2 .
-        
-        
-        (Removed the old template and lost the download count which was at ~5K).
-        
-        
-        
-        ## Author
-        
-        AceSlash
-        
-        
       groups:
         -
           name: Templates

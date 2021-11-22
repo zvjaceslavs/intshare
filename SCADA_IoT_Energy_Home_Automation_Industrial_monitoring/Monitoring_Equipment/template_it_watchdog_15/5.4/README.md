@@ -45,9 +45,9 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|UnitHumidity|<p>-</p>|`SNMP agent`|Humid.WatchDog<p>Update: 60</p>|
 |UnitTemp|<p>-</p>|`SNMP agent`|Temp.WatchDog<p>Update: 60</p>|
 |UnitDewPoint|<p>-</p>|`SNMP agent`|DewP.WatchDog<p>Update: 60</p>|
-|UnitHumidity|<p>-</p>|`SNMP agent`|Humid.WatchDog<p>Update: 60</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -1,43 +1,5 @@
 # NTPテンプレート（リモート）
 
-## Overview
-
-NTP accuracy Template の日本語版です  
-英語版は[こちら](cat-app/ntp-accuracy-template)English version of the template is in the [link](cat-app/ntp-accuracy-template) .
-
-
- 
-
-
-テンプレートを利用する場合zabbix\_agentd.confでリモートコマンドを有効にしてください。
-
-
-EnableRemoteCommands=1  
-UnsafeUserParameters=1
-
-
-ZabbixAgentがインストールされた環境に対しては  
-NTPテンプレートが使用できます。
-
-
-NTPアプライアンスなどZabbixAgentが使用できない環境のNTPサーバに対しては  
-NTPテンプレート（リモート）が使用できます。
-
-
-NTPテンプレート（リモート）を利用する場合はホストマクロにおいて  
-{$NTP\_IP}に監視対象のIPアドレスを指定してください。
-
-
-ntpqによって表示されるすべての項目が監視できます。
-
-
-NTP精度情報をグラフ化することが可能です。
-
-
- 
-
-
-
 ## Macros used
 
 |Name|Description|Default|Type|
@@ -68,82 +30,6 @@ There are no discovery rules in this template.
 There are no triggers in this template.
 
 # NTPテンプレート
-
-## Overview
-
-NTP accuracy Template の日本語版です  
-英語版は[こちら](cat-app/ntp-accuracy-template)English version of the template is in the [link](cat-app/ntp-accuracy-template) .
-
-
- 
-
-
-テンプレートを利用する場合zabbix\_agentd.confでリモートコマンドを有効にしてください。
-
-
-EnableRemoteCommands=1  
-UnsafeUserParameters=1
-
-
-ZabbixAgentがインストールされた環境に対しては  
-NTPテンプレートが使用できます。
-
-
-NTPアプライアンスなどZabbixAgentが使用できない環境のNTPサーバに対しては  
-NTPテンプレート（リモート）が使用できます。
-
-
-NTPテンプレート（リモート）を利用する場合はホストマクロにおいて  
-{$NTP\_IP}に監視対象のIPアドレスを指定してください。
-
-
-ntpqによって表示されるすべての項目が監視できます。
-
-
-NTP精度情報をグラフ化することが可能です。
-
-
- 
-
-
-
-## Overview
-
-NTP accuracy Template の日本語版です  
-英語版は[こちら](cat-app/ntp-accuracy-template)English version of the template is in the [link](cat-app/ntp-accuracy-template) .
-
-
- 
-
-
-テンプレートを利用する場合zabbix\_agentd.confでリモートコマンドを有効にしてください。
-
-
-EnableRemoteCommands=1  
-UnsafeUserParameters=1
-
-
-ZabbixAgentがインストールされた環境に対しては  
-NTPテンプレートが使用できます。
-
-
-NTPアプライアンスなどZabbixAgentが使用できない環境のNTPサーバに対しては  
-NTPテンプレート（リモート）が使用できます。
-
-
-NTPテンプレート（リモート）を利用する場合はホストマクロにおいて  
-{$NTP\_IP}に監視対象のIPアドレスを指定してください。
-
-
-ntpqによって表示されるすべての項目が監視できます。
-
-
-NTP精度情報をグラフ化することが可能です。
-
-
- 
-
-
 
 ## Macros used
 

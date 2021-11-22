@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-11-09T07:59:07Z</date>
+  <date>2021-11-22T02:06:21Z</date>
   <groups>
     <group>
       <name>Templates</name>
@@ -11,7 +11,6 @@
     <template>
       <template>App MS SQL Instance Discovery</template>
       <name>App MS SQL Instance Discovery</name>
-      <description>## Author Stephen E. Fritz</description>
       <groups>
         <group>
           <name>Templates</name>

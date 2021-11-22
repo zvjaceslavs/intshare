@@ -1,14 +1,4 @@
-# SNMP Disks
-
-## Overview
-
-Official template from Zabbix distribution to discover disk devices by SNMP
-
-
-
-## Author
-
-Zabbix SIA
+# Template SNMP Disks
 
 ## Macros used
 
@@ -37,5 +27,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Free disk space is less than 20% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: last(/SNMP Disks/hrStorageUsed[{#SNMPVALUE}]) / last(/SNMP Disks/hrStorageSize[{#SNMPVALUE}]) > 0.8</p><p>**Recovery expression**: </p>|warning|
-|Free disk space is less than 20% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP Disks/hrStorageUsed[{#SNMPVALUE}]) / last(/SNMP Disks/hrStorageSize[{#SNMPVALUE}]) > 0.8</p><p>**Recovery expression**: </p>|warning|
+|Free disk space is less than 20% on volume {#SNMPVALUE}|<p>-</p>|<p>**Expression**: last(/Template SNMP Disks/hrStorageUsed[{#SNMPVALUE}]) / last(/Template SNMP Disks/hrStorageSize[{#SNMPVALUE}]) > 0.8</p><p>**Recovery expression**: </p>|warning|
+|Free disk space is less than 20% on volume {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: last(/Template SNMP Disks/hrStorageUsed[{#SNMPVALUE}]) / last(/Template SNMP Disks/hrStorageSize[{#SNMPVALUE}]) > 0.8</p><p>**Recovery expression**: </p>|warning|

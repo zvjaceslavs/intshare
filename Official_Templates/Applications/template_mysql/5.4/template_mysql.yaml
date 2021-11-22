@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:03:38Z'
+  date: '2021-11-21T21:19:04Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,20 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 62a004b959464b97941afa471dcca73a
-      template: 'App MySQL'
-      name: 'App MySQL'
-      description: |
-        ## Overview
-        
-        Official MySQL Template from Zabbix distribution
-        
-        
-        
-        ## Author
-        
-        Zabbix SIA
-        
-        
+      template: 'Template App MySQL'
+      name: 'Template App MySQL'
       groups:
         -
           name: Templates
@@ -46,7 +34,7 @@ zabbix_export:
           triggers:
             -
               uuid: 7eb7d70b990f438b81343353d4355f73
-              expression: 'last(/App MySQL/mysql.ping)=0'
+              expression: 'last(/Template App MySQL/mysql.ping)=0'
               name: 'MySQL is down'
               priority: WARNING
         -
@@ -293,7 +281,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'MySQL operations'
-                        host: 'App MySQL'
+                        host: 'Template App MySQL'
                 -
                   type: GRAPH_CLASSIC
                   x: '12'
@@ -309,7 +297,7 @@ zabbix_export:
                       name: graphid
                       value:
                         name: 'MySQL bandwidth'
-                        host: 'App MySQL'
+                        host: 'Template App MySQL'
       valuemaps:
         -
           uuid: a759a7b8ca2b4e42a0656df0b79dd64b
@@ -330,14 +318,14 @@ zabbix_export:
           drawtype: GRADIENT_LINE
           color: 00AA00
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Bytes_received]'
         -
           sortorder: '1'
           drawtype: GRADIENT_LINE
           color: 3333FF
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Bytes_sent]'
     -
       uuid: 7353b0c1f3554f3e8d3404efac2e3719
@@ -346,41 +334,41 @@ zabbix_export:
         -
           color: C8C800
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Com_begin]'
         -
           sortorder: '1'
           color: '006400'
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Com_commit]'
         -
           sortorder: '2'
           color: C80000
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Com_delete]'
         -
           sortorder: '3'
           color: 0000EE
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Com_insert]'
         -
           sortorder: '4'
           color: '640000'
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Com_rollback]'
         -
           sortorder: '5'
           color: 00C800
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Com_select]'
         -
           sortorder: '6'
           color: C800C8
           item:
-            host: 'App MySQL'
+            host: 'Template App MySQL'
             key: 'mysql.status[Com_update]'

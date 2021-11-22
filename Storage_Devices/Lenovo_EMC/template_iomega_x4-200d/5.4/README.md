@@ -44,24 +44,22 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Disks Info|<p>-</p>|`SNMP agent`|diskID<p>Update: 1m</p>|
 |I/O Perfomance|<p>-</p>|`SNMP agent`|diskName<p>Update: 1m</p>|
 |Network Interface Discovery|<p>-</p>|`SNMP agent`|net.if.discovery<p>Update: 1m</p>|
+|Disks Info|<p>-</p>|`SNMP agent`|diskID<p>Update: 1m</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Up time|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 1m</p>|
 |RAID Status|<p>-</p>|`SNMP agent`|raidStatus<p>Update: 1m</p>|
-|Voltage V3.3|<p>-</p>|`SNMP agent`|volt3.3<p>Update: 2m</p>|
-|Temperature|<p>-</p>|`SNMP agent`|tempValue<p>Update: 1m</p>|
-|Voltage V1.1|<p>-</p>|`SNMP agent`|volt1.1<p>Update: 2m</p>|
 |Description|<p>-</p>|`SNMP agent`|deviceDescr<p>Update: 30m</p>|
-|Processor|<p>-</p>|`SNMP agent`|hrDeviceDescr.768<p>Update: 30m</p>|
 |Internal Fan|<p>-</p>|`SNMP agent`|fanValue<p>Update: 2m</p>|
 |Hostname|<p>-</p>|`SNMP agent`|deviceName<p>Update: 30m</p>|
-|Up time|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 1m</p>|
-|Capacity of disk - $1|<p>-</p>|`SNMP agent`|diskSize[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
-|Status of Disk - $1|<p>-</p>|`SNMP agent`|diskStatus[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
+|Voltage V1.1|<p>-</p>|`SNMP agent`|volt1.1<p>Update: 2m</p>|
+|Processor|<p>-</p>|`SNMP agent`|hrDeviceDescr.768<p>Update: 30m</p>|
+|Temperature|<p>-</p>|`SNMP agent`|tempValue<p>Update: 1m</p>|
+|Voltage V3.3|<p>-</p>|`SNMP agent`|volt3.3<p>Update: 2m</p>|
 |Average queue length - $1|<p>-</p>|`SNMP agent`|ioAvgQueue[{#DISKNAME}]<p>Update: 2m</p><p>LLD</p>|
 |Average service time at disk - $1|<p>-</p>|`SNMP agent`|ioAvgSvc[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
 |Average waiting time (queue + service) - $1|<p>-</p>|`SNMP agent`|ioAvgWait[{#DISKNAME}]<p>Update: 1m</p><p>LLD</p>|
@@ -82,6 +80,8 @@ There are no template links in this template.
 |Interface {#IFNAME}: Speed|<p>-</p>|`SNMP agent`|net.if.speed[ifHighSpeed.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Interface {#IFNAME}: Operational status|<p>-</p>|`SNMP agent`|net.if.status[ifOperStatus.{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Interface {#IFNAME}: Interface type|<p>-</p>|`SNMP agent`|net.if.type[ifType.{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|Capacity of disk - $1|<p>-</p>|`SNMP agent`|diskSize[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
+|Status of Disk - $1|<p>-</p>|`SNMP agent`|diskStatus[{#DISKID}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

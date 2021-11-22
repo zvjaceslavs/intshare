@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:04:01Z'
+  date: '2021-11-21T21:19:33Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,20 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 256cfe6e2398433b8ae14af58eab2df3
-      template: 'SNMP Disks'
-      name: 'SNMP Disks'
-      description: |
-        ## Overview
-        
-        Official template from Zabbix distribution to discover disk devices by SNMP
-        
-        
-        
-        ## Author
-        
-        Zabbix SIA
-        
-        
+      template: 'Template SNMP Disks'
+      name: 'Template SNMP Disks'
       groups:
         -
           name: Templates
@@ -132,7 +120,7 @@ zabbix_export:
           trigger_prototypes:
             -
               uuid: c5bccfdbdb7d4552878429f843a04da3
-              expression: 'last(/SNMP Disks/hrStorageUsed[{#SNMPVALUE}]) / last(/SNMP Disks/hrStorageSize[{#SNMPVALUE}]) > 0.8'
+              expression: 'last(/Template SNMP Disks/hrStorageUsed[{#SNMPVALUE}]) / last(/Template SNMP Disks/hrStorageSize[{#SNMPVALUE}]) > 0.8'
               name: 'Free disk space is less than 20% on volume {#SNMPVALUE}'
               priority: WARNING
           graph_prototypes:
@@ -150,11 +138,11 @@ zabbix_export:
                   color: 00C800
                   type: GRAPH_SUM
                   item:
-                    host: 'SNMP Disks'
+                    host: 'Template SNMP Disks'
                     key: 'hrStorageSizeInBytes[{#SNMPVALUE}]'
                 -
                   sortorder: '1'
                   color: C80000
                   item:
-                    host: 'SNMP Disks'
+                    host: 'Template SNMP Disks'
                     key: 'hrStorageUsedInBytes[{#SNMPVALUE}]'

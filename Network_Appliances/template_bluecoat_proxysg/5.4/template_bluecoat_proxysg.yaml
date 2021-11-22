@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:05:18Z'
+  date: '2021-11-22T02:47:32Z'
   groups:
     -
       uuid: e48c7bd0d64f4a68a4e2e6c0b825ed9f
@@ -10,16 +10,6 @@ zabbix_export:
       uuid: 5dd917c019594fb592cf349c8163bdc2
       template: 'App BlueCoat SG'
       name: 'App BlueCoat SG'
-      description: |
-        ## Overview
-        
-        Based on official SNMP MIBs.  
-        SGOS 6.5.x+  
-        Additional info: <https://bto.bluecoat.com/documentation/All-Documents/ProxySG>
-        
-        
-        
-        
       groups:
         -
           name: BlueCoat

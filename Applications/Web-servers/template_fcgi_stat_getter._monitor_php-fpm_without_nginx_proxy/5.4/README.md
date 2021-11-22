@@ -112,13 +112,13 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Php-fpm - max children reached|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","stat","-k","max children reached"]<p>Update: 60</p>|
 |Php-fpm - connections per sec|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","stat","-k","accepted conn"]<p>Update: 60</p>|
+|Php-fpm - max children reached|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","stat","-k","max children reached"]<p>Update: 60</p>|
 |Php-fpm|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","ping"]<p>Update: 60</p>|
-|Php-fpm - idle processes count|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","stat","-k","idle processes"]<p>Update: 60</p>|
-|Php-fpm - latency|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","latency"]<p>Update: 60</p>|
-|Php-fpm - active processes count|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","stat","-k","active processes"]<p>Update: 60</p>|
 |Php-fpm - length of listen queue|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","stat","-k","listen queue len"]<p>Update: 60</p>|
+|Php-fpm - latency|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","latency"]<p>Update: 60</p>|
+|Php-fpm - idle processes count|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","stat","-k","idle processes"]<p>Update: 60</p>|
+|Php-fpm - active processes count|<p>-</p>|`External check`|fcgi_stat_getter["-h","{HOST.CONN}","-p","3000","-c","stat","-k","active processes"]<p>Update: 60</p>|
 ## Triggers
 
 There are no triggers in this template.

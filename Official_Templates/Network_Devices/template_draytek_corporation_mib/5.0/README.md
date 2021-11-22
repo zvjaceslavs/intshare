@@ -39,200 +39,137 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |nsCacheEntry Discovery|<p>A conceptual row within the cache table.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsCacheEntry<p>Update: 3600</p>|
-|nsExtendConfigEntry Discovery|<p>A conceptual row within the extension table.</p>|`SNMP agent`|NET-SNMP-EXTEND-MIB.nsExtendConfigEntry<p>Update: 3600</p>|
-|lmVoltSensorsEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|LM-SENSORS-MIB.lmVoltSensorsEntry<p>Update: 3600</p>|
-|dlmodEntry Discovery|<p>The parameters of dynamically loaded MIB module.</p>|`SNMP agent`|UCD-DLMOD-MIB.dlmodEntry<p>Update: 3600</p>|
-|mrEntry Discovery|<p>An entry containing a registered mib oid.</p>|`SNMP agent`|UCD-SNMP-MIB.mrEntry<p>Update: 3600</p>|
-|logMatchEntry Discovery|<p>Entry of file</p>|`SNMP agent`|UCD-SNMP-MIB.logMatchEntry<p>Update: 3600</p>|
-|nsVacmAccessEntry Discovery|<p>Net-SNMP extensions to vacmAccessTable.</p>|`SNMP agent`|NET-SNMP-VACM-MIB.nsVacmAccessEntry<p>Update: 3600</p>|
-|fileEntry Discovery|<p>Entry of file</p>|`SNMP agent`|UCD-SNMP-MIB.fileEntry<p>Update: 3600</p>|
-|lmMiscSensorsEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|LM-SENSORS-MIB.lmMiscSensorsEntry<p>Update: 3600</p>|
 |nsDebugTokenEntry Discovery|<p>A conceptual row within the debug token table.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsDebugTokenEntry<p>Update: 3600</p>|
-|laEntry Discovery|<p>An entry containing a load average and its values.</p>|`SNMP agent`|UCD-SNMP-MIB.laEntry<p>Update: 3600</p>|
-|nsTransactionEntry Discovery|<p>A row describing a given transaction.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsTransactionEntry<p>Update: 3600</p>|
-|lmTempSensorsEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|LM-SENSORS-MIB.lmTempSensorsEntry<p>Update: 3600</p>|
-|prEntry Discovery|<p>An entry containing a process and its statistics.</p>|`SNMP agent`|UCD-SNMP-MIB.prEntry<p>Update: 3600</p>|
-|netSnmpIETFWGEntry Discovery|<p>A row describing a given working group</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpIETFWGEntry<p>Update: 3600</p>|
-|diskIOEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|UCD-DISKIO-MIB.diskIOEntry<p>Update: 3600</p>|
-|dskEntry Discovery|<p>An entry containing a disk and its statistics.</p>|`SNMP agent`|UCD-SNMP-MIB.dskEntry<p>Update: 3600</p>|
-|nsExtendOutput1Entry Discovery|<p>A conceptual row within the extension table.</p>|`SNMP agent`|NET-SNMP-EXTEND-MIB.nsExtendOutput1Entry<p>Update: 3600</p>|
-|netSnmpHostsEntry Discovery|<p>A host name mapped to an ip address</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpHostsEntry<p>Update: 3600</p>|
-|extEntry Discovery|<p>An entry containing an extensible script/program and its output.</p>|`SNMP agent`|UCD-SNMP-MIB.extEntry<p>Update: 3600</p>|
-|netSnmpPassEntry Discovery|<p>Conceptual row in the example table.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassEntry<p>Update: 3600</p>|
 |nsExtendOutput2Entry Discovery|<p>A conceptual row within the line-based output table.</p>|`SNMP agent`|NET-SNMP-EXTEND-MIB.nsExtendOutput2Entry<p>Update: 3600</p>|
 |nsLoggingEntry Discovery|<p>A conceptual row within the logging table.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsLoggingEntry<p>Update: 3600</p>|
+|dskEntry Discovery|<p>An entry containing a disk and its statistics.</p>|`SNMP agent`|UCD-SNMP-MIB.dskEntry<p>Update: 3600</p>|
+|netSnmpIETFWGEntry Discovery|<p>A row describing a given working group</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpIETFWGEntry<p>Update: 3600</p>|
+|mrEntry Discovery|<p>An entry containing a registered mib oid.</p>|`SNMP agent`|UCD-SNMP-MIB.mrEntry<p>Update: 3600</p>|
+|lmMiscSensorsEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|LM-SENSORS-MIB.lmMiscSensorsEntry<p>Update: 3600</p>|
+|nsExtendConfigEntry Discovery|<p>A conceptual row within the extension table.</p>|`SNMP agent`|NET-SNMP-EXTEND-MIB.nsExtendConfigEntry<p>Update: 3600</p>|
+|laEntry Discovery|<p>An entry containing a load average and its values.</p>|`SNMP agent`|UCD-SNMP-MIB.laEntry<p>Update: 3600</p>|
+|netSnmpPassEntry Discovery|<p>Conceptual row in the example table.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassEntry<p>Update: 3600</p>|
 |lmFanSensorsEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|LM-SENSORS-MIB.lmFanSensorsEntry<p>Update: 3600</p>|
+|nsVacmAccessEntry Discovery|<p>Net-SNMP extensions to vacmAccessTable.</p>|`SNMP agent`|NET-SNMP-VACM-MIB.nsVacmAccessEntry<p>Update: 3600</p>|
 |nsModuleEntry Discovery|<p>An entry containing a registered mib oid.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsModuleEntry<p>Update: 3600</p>|
+|extEntry Discovery|<p>An entry containing an extensible script/program and its output.</p>|`SNMP agent`|UCD-SNMP-MIB.extEntry<p>Update: 3600</p>|
+|prEntry Discovery|<p>An entry containing a process and its statistics.</p>|`SNMP agent`|UCD-SNMP-MIB.prEntry<p>Update: 3600</p>|
+|lmVoltSensorsEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|LM-SENSORS-MIB.lmVoltSensorsEntry<p>Update: 3600</p>|
+|nsExtendOutput1Entry Discovery|<p>A conceptual row within the extension table.</p>|`SNMP agent`|NET-SNMP-EXTEND-MIB.nsExtendOutput1Entry<p>Update: 3600</p>|
+|netSnmpHostsEntry Discovery|<p>A host name mapped to an ip address</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpHostsEntry<p>Update: 3600</p>|
+|fileEntry Discovery|<p>Entry of file</p>|`SNMP agent`|UCD-SNMP-MIB.fileEntry<p>Update: 3600</p>|
+|diskIOEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|UCD-DISKIO-MIB.diskIOEntry<p>Update: 3600</p>|
+|logMatchEntry Discovery|<p>Entry of file</p>|`SNMP agent`|UCD-SNMP-MIB.logMatchEntry<p>Update: 3600</p>|
+|nsTransactionEntry Discovery|<p>A row describing a given transaction.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsTransactionEntry<p>Update: 3600</p>|
+|dlmodEntry Discovery|<p>The parameters of dynamically loaded MIB module.</p>|`SNMP agent`|UCD-DLMOD-MIB.dlmodEntry<p>Update: 3600</p>|
+|lmTempSensorsEntry Discovery|<p>An entry containing a device and its statistics.</p>|`SNMP agent`|LM-SENSORS-MIB.lmTempSensorsEntry<p>Update: 3600</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|memSharedX|<p>The total amount of real or virtual memory currently allocated for use as shared memory. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memSharedX<p>Update: 60</p>|
-|ucdDemoResetKeys|<p>A set of value 1 to this object resets the demonstration user's auth and priv keys to the keys based on the P->Ku->Kul transformation of the value of the ucdDemoPasspharse object. Values other than 1 are ignored.</p>|`SNMP agent`|UCD-DEMO-MIB.ucdDemoResetKeys<p>Update: 60</p>|
-|netSnmpPassCounter|<p>Example counter object. Note that this object will always return the value '42'.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassCounter<p>Update: 60</p>|
-|ssIndex|<p>Bogus Index. This should always return the integer 1.</p>|`SNMP agent`|UCD-SNMP-MIB.ssIndex<p>Update: 60</p>|
-|memBuffer|<p>The total amount of real or virtual memory currently allocated for use as memory buffers. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memBuffer<p>Update: 60</p>|
-|memShared|<p>The total amount of real or virtual memory currently allocated for use as shared memory. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memShared<p>Update: 60</p>|
-|ssRawContexts|<p>Number of context switches</p>|`SNMP agent`|UCD-SNMP-MIB.ssRawContexts<p>Update: 60</p>|
-|ssCpuNumCpus|<p>The number of processors, as counted by the agent. This object's value may be useful in the management of certain operating systems where notions such as load average do not take into account the number of processors in the system. For other objects in the systemStats group whose descriptions refer to 'N processors', this object's value is N.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuNumCpus<p>Update: 60</p>|
-|netSnmpPassTimeTicks|<p>Example timetick object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassTimeTicks<p>Update: 60</p>|
-|ssErrorName|<p>Bogus Name. This should always return the string 'systemStats'.</p>|`SNMP agent`|UCD-SNMP-MIB.ssErrorName<p>Update: 60</p>|
-|ssRawSwapOut|<p>Number of blocks swapped out</p>|`SNMP agent`|UCD-SNMP-MIB.ssRawSwapOut<p>Update: 60</p>|
-|nsCacheEnabled|<p>Whether data caching is active overall.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsCacheEnabled<p>Update: 60</p>|
-|memBufferX|<p>The total amount of real or virtual memory currently allocated for use as memory buffers. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memBufferX<p>Update: 60</p>|
-|memMinimumSwapX|<p>The minimum amount of swap space expected to be kept free or available during normal operation of this host. If this value (as reported by 'memAvailSwap(4)') falls below the specified level, then 'memSwapError(100)' will be set to 1 and an error message made available via 'memSwapErrorMsg(101)'.</p>|`SNMP agent`|UCD-SNMP-MIB.memMinimumSwapX<p>Update: 60</p>|
-|ssCpuIdle|<p>The percentage of processor time spent idle, calculated over the last minute. This object has been deprecated in favour of 'ssCpuRawIdle(53)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuIdle<p>Update: 60</p>|
-|nsExtendNumEntries|<p>The number of rows in the nsExtendConfigTable</p>|`SNMP agent`|NET-SNMP-EXTEND-MIB.nsExtendNumEntries<p>Update: 60</p>|
-|memTotalReal|<p>The total amount of real/physical memory installed on this host.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalReal<p>Update: 60</p>|
-|SNMP Trap: NET-SNMP-EXAMPLES-MIB::netSnmpExampleHeartbeatNotification|<p>An example notification, used to illustrate the definition and generation of trap and inform PDUs (including the use of both standard and additional varbinds in the notification payload). This notification will typically be sent every 30 seconds, using the code found in the example module agent/mibgroup/examples/notification.c Varbinds: 0. netSnmpExampleHeartbeatRate (INTEGER32) A simple integer object, to act as a payload for the netSnmpExampleHeartbeatNotification. The value has no real meaning, but is nominally the interval (in seconds) between successive heartbeat notifications. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.8072\.2\.3\.0\.1\s"]<p>Update: 0</p>|
-|memUsedSwapTXT|<p>The amount of swap space or virtual memory currently being used by text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of swap space or virtual memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memUsedSwapTXT<p>Update: 60</p>|
-|memAvailRealTXT|<p>The amount of real/physical memory currently being used by text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of physical memory. Note that (despite the name), this value reports the amount used, rather than the amount free or available for use. For clarity, this object is being deprecated in favour of 'memUsedRealTXT(17).</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailRealTXT<p>Update: 60</p>|
-|memMinimumSwap|<p>The minimum amount of swap space expected to be kept free or available during normal operation of this host. If this value (as reported by 'memAvailSwap(4)') falls below the specified level, then 'memSwapError(100)' will be set to 1 and an error message made available via 'memSwapErrorMsg(101)'.</p>|`SNMP agent`|UCD-SNMP-MIB.memMinimumSwap<p>Update: 60</p>|
-|memTotalFreeX|<p>The total amount of memory free or available for use on this host. This value typically covers both real memory and swap space or virtual memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalFreeX<p>Update: 60</p>|
-|SNMP Trap: NET-SNMP-AGENT-MIB::nsNotifyStart|<p>An indication that the agent has started running.</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.8072\.4\.0\.1\s"]<p>Update: 0</p>|
-|memCachedX|<p>The total amount of real or virtual memory currently allocated for use as cached memory. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memCachedX<p>Update: 60</p>|
-|nsDebugDumpPdu|<p>Whether the agent is configured to display raw packet dumps. This is unrelated to the nsDebugEnabled setting.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsDebugDumpPdu<p>Update: 60</p>|
-|versionDoDebugging|<p>Set to 1 to turn debugging statements on in the agent or 0 to turn it off.</p>|`SNMP agent`|UCD-SNMP-MIB.versionDoDebugging<p>Update: 60</p>|
-|memAvailSwap|<p>The amount of swap space currently unused or available.</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailSwap<p>Update: 60</p>|
-|ssSysContext|<p>The average rate of context switches, calculated over the last minute. This object has been deprecated in favour of 'ssRawContext(60)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssSysContext<p>Update: 60</p>|
-|nsDebugOutputAll|<p>Whether the agent is configured to display all debugging output rather than filtering on individual debug tokens. Nothing will be generated unless nsDebugEnabled is also true(1)</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsDebugOutputAll<p>Update: 60</p>|
-|memAvailRealX|<p>The amount of real/physical memory currently unused or available.</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailRealX<p>Update: 60</p>|
-|ssCpuRawGuest|<p>The number of 'ticks' (typically 1/100s) spent by the CPU to run a virtual CPU (guest). This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawGuest<p>Update: 60</p>|
-|snmperrNames|<p>snmp</p>|`SNMP agent`|UCD-SNMP-MIB.snmperrNames<p>Update: 60</p>|
-|ssIOSent|<p>The average amount of data written to disk or other block device, calculated over the last minute. This object has been deprecated in favour of 'ssIORawSent(57)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssIOSent<p>Update: 60</p>|
-|SNMP Trap: UCD-SNMP-MIB::ucdStart|<p>This trap could in principle be sent when the agent start</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.2021\.251\.1\s"]<p>Update: 0</p>|
-|memTotalFree|<p>The total amount of memory free or available for use on this host. This value typically covers both real memory and swap space or virtual memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalFree<p>Update: 60</p>|
-|memSwapError|<p>Indicates whether the amount of available swap space (as reported by 'memAvailSwap(4)'), is less than the desired minimum (specified by 'memMinimumSwap(12)').</p>|`SNMP agent`|UCD-SNMP-MIB.memSwapError<p>Update: 60</p>|
-|memCached|<p>The total amount of real or virtual memory currently allocated for use as cached memory. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memCached<p>Update: 60</p>|
-|versionCDate|<p>Date string from ctime()</p>|`SNMP agent`|UCD-SNMP-MIB.versionCDate<p>Update: 60</p>|
-|ssCpuRawKernel|<p>The number of 'ticks' (typically 1/100s) spent processing kernel-level code. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. This time may also be included within the 'ssCpuRawSystem(52)' counter. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawKernel<p>Update: 60</p>|
-|netSnmpPassInteger64|<p>Example Opaque Integer64 object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassInteger64<p>Update: 60</p>|
-|SNMP Trap: NET-SNMP-AGENT-MIB::nsNotifyShutdown|<p>An indication that the agent is in the process of being shut down.</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.8072\.4\.0\.2\s"]<p>Update: 0</p>|
-|SNMP Trap: NET-SNMP-AGENT-MIB::nsNotifyRestart|<p>An indication that the agent has been restarted. This does not imply anything about whether the configuration has changed or not (unlike the standard coldStart or warmStart traps)</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.8072\.4\.0\.3\s"]<p>Update: 0</p>|
-|ucdDemoPassphrase|<p>The demo passphrase that ucdDemoResetKeys changes each users localized key to based on the P->Ku->Kul transformation.</p>|`SNMP agent`|UCD-DEMO-MIB.ucdDemoPassphrase<p>Update: 60</p>|
-|memAvailSwapTXT|<p>The amount of swap space or virtual memory currently being used by text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of swap space or virtual memory. Note that (despite the name), this value reports the amount used, rather than the amount free or available for use. For clarity, this object is being deprecated in favour of 'memUsedSwapTXT(16).</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailSwapTXT<p>Update: 60</p>|
-|ssCpuRawIdle|<p>The number of 'ticks' (typically 1/100s) spent idle. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawIdle<p>Update: 60</p>|
-|ssCpuRawSteal|<p>The number of 'ticks' (typically 1/100s) spent by the hypervisor code to run other VMs even though the CPU in the current VM had something runnable. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawSteal<p>Update: 60</p>|
-|memTotalSwap|<p>The total amount of swap space configured for this host.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalSwap<p>Update: 60</p>|
-|ssSysInterrupts|<p>The average rate of interrupts processed (including the clock) calculated over the last minute. This object has been deprecated in favour of 'ssRawInterrupts(59)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssSysInterrupts<p>Update: 60</p>|
-|memUsedRealTXT|<p>The amount of real/physical memory currently being used by text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of physical memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memUsedRealTXT<p>Update: 60</p>|
-|ssCpuRawWait|<p>The number of 'ticks' (typically 1/100s) spent waiting for IO. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. This time may also be included within the 'ssCpuRawSystem(52)' counter. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawWait<p>Update: 60</p>|
 |versionSavePersistentData|<p>Set to 1 to force the agent to save it's persistent data immediately.</p>|`SNMP agent`|UCD-SNMP-MIB.versionSavePersistentData<p>Update: 60</p>|
-|versionIdent|<p>Id string from RCS keyword</p>|`SNMP agent`|UCD-SNMP-MIB.versionIdent<p>Update: 60</p>|
-|netSnmpPassGauge|<p>Example Gauge object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassGauge<p>Update: 60</p>|
-|ucdDemoPublicString|<p>A publicly settable string that can be set for testing snmpsets. This value has no real usage other than testing purposes.</p>|`SNMP agent`|UCD-DEMO-MIB.ucdDemoPublicString<p>Update: 60</p>|
-|nsCacheDefaultTimeout|<p>Default cache timeout value (unless overridden for a particular cache entry).</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsCacheDefaultTimeout<p>Update: 60</p>|
-|versionClearCache|<p>Set to 1 to clear the exec cache, if enabled</p>|`SNMP agent`|UCD-SNMP-MIB.versionClearCache<p>Update: 60</p>|
-|memTotalRealTXT|<p>The total amount of real/physical memory allocated for text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of physical memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalRealTXT<p>Update: 60</p>|
-|versionRestartAgent|<p>Set to 1 to restart the agent.</p>|`SNMP agent`|UCD-SNMP-MIB.versionRestartAgent<p>Update: 60</p>|
-|ssCpuRawGuestNice|<p>The number of 'ticks' (typically 1/100s) spent by the CPU to run a niced virtual CPU (guest). This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawGuestNice<p>Update: 60</p>|
-|ssRawSwapIn|<p>Number of blocks swapped in</p>|`SNMP agent`|UCD-SNMP-MIB.ssRawSwapIn<p>Update: 60</p>|
-|dlmodNextIndex|<p>The index number of next appropiate unassigned entry in the dlmodTable.</p>|`SNMP agent`|UCD-DLMOD-MIB.dlmodNextIndex<p>Update: 60</p>|
-|ssSwapOut|<p>The average amount of memory swapped out to disk, calculated over the last minute.</p>|`SNMP agent`|UCD-SNMP-MIB.ssSwapOut<p>Update: 60</p>|
-|versionDate|<p>Date string from RCS keyword</p>|`SNMP agent`|UCD-SNMP-MIB.versionDate<p>Update: 60</p>|
-|ssIOReceive|<p>The average amount of data read from disk or other block device, calculated over the last minute. This object has been deprecated in favour of 'ssIORawReceived(58)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssIOReceive<p>Update: 60</p>|
-|ssCpuRawSystem|<p>The number of 'ticks' (typically 1/100s) spent processing system-level code. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors). This object may sometimes be implemented as the combination of the 'ssCpuRawWait(54)' and 'ssCpuRawKernel(55)' counters, so care must be taken when summing the overall raw counters.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawSystem<p>Update: 60</p>|
-|memAvailSwapX|<p>The amount of swap space currently unused or available.</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailSwapX<p>Update: 60</p>|
-|netSnmpExampleSleeper|<p>This is a simple object which is a basic integer. It's value indicates the number of seconds that the agent will take in responding to requests of this object. This is implemented in a way which will allow the agent to keep responding to other requests while access to this object is blocked. It is writable, and changing it's value will change the amount of time the agent will effectively wait for before returning a response when this object is manipulated. Note that SET requests through this object will take longer, since the delay is applied to each internal transaction phase, which could result in delays of up to 4 times the value of this object. This example object is implemented in the agent/mibgroup/examples/delayed_instance.c file.</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpExampleSleeper<p>Update: 60</p>|
+|memCached|<p>The total amount of real or virtual memory currently allocated for use as cached memory. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memCached<p>Update: 60</p>|
+|SNMP Trap: UCD-SNMP-MIB::ucdShutdown|<p>This trap is sent when the agent terminates</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.2021\.251\.2\s"]<p>Update: 0</p>|
+|ssRawSwapOut|<p>Number of blocks swapped out</p>|`SNMP agent`|UCD-SNMP-MIB.ssRawSwapOut<p>Update: 60</p>|
+|ssIndex|<p>Bogus Index. This should always return the integer 1.</p>|`SNMP agent`|UCD-SNMP-MIB.ssIndex<p>Update: 60</p>|
+|memAvailSwap|<p>The amount of swap space currently unused or available.</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailSwap<p>Update: 60</p>|
+|memSharedX|<p>The total amount of real or virtual memory currently allocated for use as shared memory. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memSharedX<p>Update: 60</p>|
+|memShared|<p>The total amount of real or virtual memory currently allocated for use as shared memory. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memShared<p>Update: 60</p>|
+|ucdDemoPassphrase|<p>The demo passphrase that ucdDemoResetKeys changes each users localized key to based on the P->Ku->Kul transformation.</p>|`SNMP agent`|UCD-DEMO-MIB.ucdDemoPassphrase<p>Update: 60</p>|
 |snmperrErrMessage|<p>An error message describing the problem (if one exists).</p>|`SNMP agent`|UCD-SNMP-MIB.snmperrErrMessage<p>Update: 60</p>|
-|netSnmpPassCounter64|<p>Example Counter64 object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassCounter64<p>Update: 60</p>|
-|ssCpuRawSoftIRQ|<p>The number of 'ticks' (typically 1/100s) spent processing software interrupts. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawSoftIRQ<p>Update: 60</p>|
+|ssRawSwapIn|<p>Number of blocks swapped in</p>|`SNMP agent`|UCD-SNMP-MIB.ssRawSwapIn<p>Update: 60</p>|
+|memBufferX|<p>The total amount of real or virtual memory currently allocated for use as memory buffers. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memBufferX<p>Update: 60</p>|
+|ssCpuIdle|<p>The percentage of processor time spent idle, calculated over the last minute. This object has been deprecated in favour of 'ssCpuRawIdle(53)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuIdle<p>Update: 60</p>|
+|ssIORawSent|<p>Number of blocks sent to a block device</p>|`SNMP agent`|UCD-SNMP-MIB.ssIORawSent<p>Update: 60</p>|
+|memTotalSwap|<p>The total amount of swap space configured for this host.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalSwap<p>Update: 60</p>|
+|nsCacheDefaultTimeout|<p>Default cache timeout value (unless overridden for a particular cache entry).</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsCacheDefaultTimeout<p>Update: 60</p>|
+|dlmodNextIndex|<p>The index number of next appropiate unassigned entry in the dlmodTable.</p>|`SNMP agent`|UCD-DLMOD-MIB.dlmodNextIndex<p>Update: 60</p>|
+|memUsedSwapTXT|<p>The amount of swap space or virtual memory currently being used by text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of swap space or virtual memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memUsedSwapTXT<p>Update: 60</p>|
+|netSnmpExampleSleeper|<p>This is a simple object which is a basic integer. It's value indicates the number of seconds that the agent will take in responding to requests of this object. This is implemented in a way which will allow the agent to keep responding to other requests while access to this object is blocked. It is writable, and changing it's value will change the amount of time the agent will effectively wait for before returning a response when this object is manipulated. Note that SET requests through this object will take longer, since the delay is applied to each internal transaction phase, which could result in delays of up to 4 times the value of this object. This example object is implemented in the agent/mibgroup/examples/delayed_instance.c file.</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpExampleSleeper<p>Update: 60</p>|
+|netSnmpPassIpAddress|<p>Example IP Address object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassIpAddress<p>Update: 60</p>|
 |memIndex|<p>Bogus Index. This should always return the integer 0.</p>|`SNMP agent`|UCD-SNMP-MIB.memIndex<p>Update: 60</p>|
+|ssRawInterrupts|<p>Number of interrupts processed</p>|`SNMP agent`|UCD-SNMP-MIB.ssRawInterrupts<p>Update: 60</p>|
+|ssCpuRawGuest|<p>The number of 'ticks' (typically 1/100s) spent by the CPU to run a virtual CPU (guest). This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawGuest<p>Update: 60</p>|
+|netSnmpExampleInteger|<p>This is a simple object which merely houses a writable integer. It's only purposes is to hold the value of a single integer. Writing to it will simply change the value for subsequent GET/GETNEXT/GETBULK retrievals. This example object is implemented in the agent/mibgroup/examples/scalar_int.c file.</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpExampleInteger<p>Update: 60</p>|
+|memErrorName|<p>Bogus Name. This should always return the string 'swap'.</p>|`SNMP agent`|UCD-SNMP-MIB.memErrorName<p>Update: 60</p>|
+|memCachedX|<p>The total amount of real or virtual memory currently allocated for use as cached memory. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memCachedX<p>Update: 60</p>|
+|ucdDemoUserList|<p>The list of users affected by the ucdDemoResetKeys object.</p>|`SNMP agent`|UCD-DEMO-MIB.ucdDemoUserList<p>Update: 60</p>|
+|SNMP Trap: NET-SNMP-EXAMPLES-MIB::netSnmpExampleHeartbeatNotification|<p>An example notification, used to illustrate the definition and generation of trap and inform PDUs (including the use of both standard and additional varbinds in the notification payload). This notification will typically be sent every 30 seconds, using the code found in the example module agent/mibgroup/examples/notification.c Varbinds: 0. netSnmpExampleHeartbeatRate (INTEGER32) A simple integer object, to act as a payload for the netSnmpExampleHeartbeatNotification. The value has no real meaning, but is nominally the interval (in seconds) between successive heartbeat notifications. </p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.8072\.2\.3\.0\.1\s"]<p>Update: 0</p>|
+|memBuffer|<p>The total amount of real or virtual memory currently allocated for use as memory buffers. This object will not be implemented on hosts where the underlying operating system does not explicitly identify memory as specifically reserved for this purpose.</p>|`SNMP agent`|UCD-SNMP-MIB.memBuffer<p>Update: 60</p>|
+|memTotalFreeX|<p>The total amount of memory free or available for use on this host. This value typically covers both real memory and swap space or virtual memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalFreeX<p>Update: 60</p>|
+|SNMP Trap: NET-SNMP-AGENT-MIB::nsNotifyShutdown|<p>An indication that the agent is in the process of being shut down.</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.8072\.4\.0\.2\s"]<p>Update: 0</p>|
+|versionIndex|<p>Index to mib (always 0)</p>|`SNMP agent`|UCD-SNMP-MIB.versionIndex<p>Update: 60</p>|
+|netSnmpExampleString|<p>This is a simple object which merely houses a writable string. It's only purposes is to hold the value of a single string. Writing to it will simply change the value for subsequent GET/GETNEXT/GETBULK retrievals. This example object is implemented in the agent/mibgroup/examples/watched.c file.</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpExampleString<p>Update: 60</p>|
+|ssCpuRawGuestNice|<p>The number of 'ticks' (typically 1/100s) spent by the CPU to run a niced virtual CPU (guest). This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawGuestNice<p>Update: 60</p>|
+|ssCpuRawSteal|<p>The number of 'ticks' (typically 1/100s) spent by the hypervisor code to run other VMs even though the CPU in the current VM had something runnable. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawSteal<p>Update: 60</p>|
+|nsDebugEnabled|<p>Whether the agent is configured to generate debugging output</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsDebugEnabled<p>Update: 60</p>|
+|netSnmpPassCounter64|<p>Example Counter64 object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassCounter64<p>Update: 60</p>|
+|ssCpuRawNice|<p>The number of 'ticks' (typically 1/100s) spent processing reduced-priority code. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawNice<p>Update: 60</p>|
+|ssSwapIn|<p>The average amount of memory swapped in from disk, calculated over the last minute.</p>|`SNMP agent`|UCD-SNMP-MIB.ssSwapIn<p>Update: 60</p>|
+|memAvailRealX|<p>The amount of real/physical memory currently unused or available.</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailRealX<p>Update: 60</p>|
+|versionCDate|<p>Date string from ctime()</p>|`SNMP agent`|UCD-SNMP-MIB.versionCDate<p>Update: 60</p>|
+|snmperrErrorFlag|<p>A Error flag to indicate trouble with the agent. It goes to 1 if there is an error, 0 if no error.</p>|`SNMP agent`|UCD-SNMP-MIB.snmperrErrorFlag<p>Update: 60</p>|
 |memTotalSwapX|<p>The total amount of swap space configured for this host.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalSwapX<p>Update: 60</p>|
 |snmperrIndex|<p>Bogus Index for snmperrs (always 0).</p>|`SNMP agent`|UCD-SNMP-MIB.snmperrIndex<p>Update: 60</p>|
-|ssCpuRawInterrupt|<p>The number of 'ticks' (typically 1/100s) spent processing hardware interrupts. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawInterrupt<p>Update: 60</p>|
-|versionTag|<p>CVS tag keyword</p>|`SNMP agent`|UCD-SNMP-MIB.versionTag<p>Update: 60</p>|
-|memAvailReal|<p>The amount of real/physical memory currently unused or available.</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailReal<p>Update: 60</p>|
-|memErrorName|<p>Bogus Name. This should always return the string 'swap'.</p>|`SNMP agent`|UCD-SNMP-MIB.memErrorName<p>Update: 60</p>|
-|netSnmpPassString|<p>Example string scalar object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassString<p>Update: 60</p>|
-|ssIORawSent|<p>Number of blocks sent to a block device</p>|`SNMP agent`|UCD-SNMP-MIB.ssIORawSent<p>Update: 60</p>|
-|memTotalSwapTXT|<p>The total amount of swap space or virtual memory allocated for text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of swap space or virtual memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalSwapTXT<p>Update: 60</p>|
-|ssRawInterrupts|<p>Number of interrupts processed</p>|`SNMP agent`|UCD-SNMP-MIB.ssRawInterrupts<p>Update: 60</p>|
+|ssIOReceive|<p>The average amount of data read from disk or other block device, calculated over the last minute. This object has been deprecated in favour of 'ssIORawReceived(58)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssIOReceive<p>Update: 60</p>|
+|ssCpuRawSoftIRQ|<p>The number of 'ticks' (typically 1/100s) spent processing software interrupts. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawSoftIRQ<p>Update: 60</p>|
+|memTotalFree|<p>The total amount of memory free or available for use on this host. This value typically covers both real memory and swap space or virtual memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalFree<p>Update: 60</p>|
 |ssIORawReceived|<p>Number of blocks received from a block device</p>|`SNMP agent`|UCD-SNMP-MIB.ssIORawReceived<p>Update: 60</p>|
-|netSnmpPassIpAddress|<p>Example IP Address object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassIpAddress<p>Update: 60</p>|
-|nsDebugEnabled|<p>Whether the agent is configured to generate debugging output</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsDebugEnabled<p>Update: 60</p>|
-|ssCpuSystem|<p>The percentage of CPU time spent processing system-level code, calculated over the last minute. This object has been deprecated in favour of 'ssCpuRawSystem(52)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuSystem<p>Update: 60</p>|
 |versionConfigureOptions|<p>Options passed to the configure script when this agent was built.</p>|`SNMP agent`|UCD-SNMP-MIB.versionConfigureOptions<p>Update: 60</p>|
-|ssCpuUser|<p>The percentage of CPU time spent processing user-level code, calculated over the last minute. This object has been deprecated in favour of 'ssCpuRawUser(50)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuUser<p>Update: 60</p>|
-|ucdDemoUserList|<p>The list of users affected by the ucdDemoResetKeys object.</p>|`SNMP agent`|UCD-DEMO-MIB.ucdDemoUserList<p>Update: 60</p>|
-|versionIndex|<p>Index to mib (always 0)</p>|`SNMP agent`|UCD-SNMP-MIB.versionIndex<p>Update: 60</p>|
-|ssSwapIn|<p>The average amount of memory swapped in from disk, calculated over the last minute.</p>|`SNMP agent`|UCD-SNMP-MIB.ssSwapIn<p>Update: 60</p>|
 |versionUpdateConfig|<p>Set to 1 to read-read the config file(s).</p>|`SNMP agent`|UCD-SNMP-MIB.versionUpdateConfig<p>Update: 60</p>|
-|memSwapErrorMsg|<p>Describes whether the amount of available swap space (as reported by 'memAvailSwap(4)'), is less than the desired minimum (specified by 'memMinimumSwap(12)').</p>|`SNMP agent`|UCD-SNMP-MIB.memSwapErrorMsg<p>Update: 60</p>|
-|ssCpuRawUser|<p>The number of 'ticks' (typically 1/100s) spent processing user-level code. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawUser<p>Update: 60</p>|
-|netSnmpExampleString|<p>This is a simple object which merely houses a writable string. It's only purposes is to hold the value of a single string. Writing to it will simply change the value for subsequent GET/GETNEXT/GETBULK retrievals. This example object is implemented in the agent/mibgroup/examples/watched.c file.</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpExampleString<p>Update: 60</p>|
-|ssCpuRawNice|<p>The number of 'ticks' (typically 1/100s) spent processing reduced-priority code. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawNice<p>Update: 60</p>|
+|ssRawContexts|<p>Number of context switches</p>|`SNMP agent`|UCD-SNMP-MIB.ssRawContexts<p>Update: 60</p>|
+|ssCpuRawInterrupt|<p>The number of 'ticks' (typically 1/100s) spent processing hardware interrupts. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawInterrupt<p>Update: 60</p>|
+|netSnmpPassGauge|<p>Example Gauge object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassGauge<p>Update: 60</p>|
+|SNMP Trap: UCD-SNMP-MIB::ucdStart|<p>This trap could in principle be sent when the agent start</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.2021\.251\.1\s"]<p>Update: 0</p>|
+|ssSysInterrupts|<p>The average rate of interrupts processed (including the clock) calculated over the last minute. This object has been deprecated in favour of 'ssRawInterrupts(59)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssSysInterrupts<p>Update: 60</p>|
+|ucdDemoPublicString|<p>A publicly settable string that can be set for testing snmpsets. This value has no real usage other than testing purposes.</p>|`SNMP agent`|UCD-DEMO-MIB.ucdDemoPublicString<p>Update: 60</p>|
+|memTotalSwapTXT|<p>The total amount of swap space or virtual memory allocated for text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of swap space or virtual memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalSwapTXT<p>Update: 60</p>|
+|versionClearCache|<p>Set to 1 to clear the exec cache, if enabled</p>|`SNMP agent`|UCD-SNMP-MIB.versionClearCache<p>Update: 60</p>|
+|ssErrorName|<p>Bogus Name. This should always return the string 'systemStats'.</p>|`SNMP agent`|UCD-SNMP-MIB.ssErrorName<p>Update: 60</p>|
+|ssCpuRawSystem|<p>The number of 'ticks' (typically 1/100s) spent processing system-level code. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors). This object may sometimes be implemented as the combination of the 'ssCpuRawWait(54)' and 'ssCpuRawKernel(55)' counters, so care must be taken when summing the overall raw counters.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawSystem<p>Update: 60</p>|
+|memAvailSwapX|<p>The amount of swap space currently unused or available.</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailSwapX<p>Update: 60</p>|
+|ssIOSent|<p>The average amount of data written to disk or other block device, calculated over the last minute. This object has been deprecated in favour of 'ssIORawSent(57)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssIOSent<p>Update: 60</p>|
+|nsDebugDumpPdu|<p>Whether the agent is configured to display raw packet dumps. This is unrelated to the nsDebugEnabled setting.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsDebugDumpPdu<p>Update: 60</p>|
+|nsDebugOutputAll|<p>Whether the agent is configured to display all debugging output rather than filtering on individual debug tokens. Nothing will be generated unless nsDebugEnabled is also true(1)</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsDebugOutputAll<p>Update: 60</p>|
+|netSnmpPassInteger64|<p>Example Opaque Integer64 object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassInteger64<p>Update: 60</p>|
+|ssCpuRawWait|<p>The number of 'ticks' (typically 1/100s) spent waiting for IO. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. This time may also be included within the 'ssCpuRawSystem(52)' counter. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawWait<p>Update: 60</p>|
+|snmperrNames|<p>snmp</p>|`SNMP agent`|UCD-SNMP-MIB.snmperrNames<p>Update: 60</p>|
+|ssSwapOut|<p>The average amount of memory swapped out to disk, calculated over the last minute.</p>|`SNMP agent`|UCD-SNMP-MIB.ssSwapOut<p>Update: 60</p>|
+|ssSysContext|<p>The average rate of context switches, calculated over the last minute. This object has been deprecated in favour of 'ssRawContext(60)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssSysContext<p>Update: 60</p>|
+|ssCpuUser|<p>The percentage of CPU time spent processing user-level code, calculated over the last minute. This object has been deprecated in favour of 'ssCpuRawUser(50)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuUser<p>Update: 60</p>|
 |memTotalRealX|<p>The total amount of real/physical memory installed on this host.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalRealX<p>Update: 60</p>|
-|SNMP Trap: UCD-SNMP-MIB::ucdShutdown|<p>This trap is sent when the agent terminates</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.2021\.251\.2\s"]<p>Update: 0</p>|
-|netSnmpExampleInteger|<p>This is a simple object which merely houses a writable integer. It's only purposes is to hold the value of a single integer. Writing to it will simply change the value for subsequent GET/GETNEXT/GETBULK retrievals. This example object is implemented in the agent/mibgroup/examples/scalar_int.c file.</p>|`SNMP agent`|NET-SNMP-EXAMPLES-MIB.netSnmpExampleInteger<p>Update: 60</p>|
-|snmperrErrorFlag|<p>A Error flag to indicate trouble with the agent. It goes to 1 if there is an error, 0 if no error.</p>|`SNMP agent`|UCD-SNMP-MIB.snmperrErrorFlag<p>Update: 60</p>|
+|versionDate|<p>Date string from RCS keyword</p>|`SNMP agent`|UCD-SNMP-MIB.versionDate<p>Update: 60</p>|
+|memSwapError|<p>Indicates whether the amount of available swap space (as reported by 'memAvailSwap(4)'), is less than the desired minimum (specified by 'memMinimumSwap(12)').</p>|`SNMP agent`|UCD-SNMP-MIB.memSwapError<p>Update: 60</p>|
+|ssCpuNumCpus|<p>The number of processors, as counted by the agent. This object's value may be useful in the management of certain operating systems where notions such as load average do not take into account the number of processors in the system. For other objects in the systemStats group whose descriptions refer to 'N processors', this object's value is N.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuNumCpus<p>Update: 60</p>|
+|versionIdent|<p>Id string from RCS keyword</p>|`SNMP agent`|UCD-SNMP-MIB.versionIdent<p>Update: 60</p>|
+|ucdDemoResetKeys|<p>A set of value 1 to this object resets the demonstration user's auth and priv keys to the keys based on the P->Ku->Kul transformation of the value of the ucdDemoPasspharse object. Values other than 1 are ignored.</p>|`SNMP agent`|UCD-DEMO-MIB.ucdDemoResetKeys<p>Update: 60</p>|
+|ssCpuRawKernel|<p>The number of 'ticks' (typically 1/100s) spent processing kernel-level code. This object will not be implemented on hosts where the underlying operating system does not measure this particular CPU metric. This time may also be included within the 'ssCpuRawSystem(52)' counter. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawKernel<p>Update: 60</p>|
+|memUsedRealTXT|<p>The amount of real/physical memory currently being used by text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of physical memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memUsedRealTXT<p>Update: 60</p>|
 |logMatchMaxEntries|<p>The maximum number of logmatch entries this snmpd daemon can support.</p>|`SNMP agent`|UCD-SNMP-MIB.logMatchMaxEntries<p>Update: 60</p>|
+|ssCpuRawUser|<p>The number of 'ticks' (typically 1/100s) spent processing user-level code. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawUser<p>Update: 60</p>|
+|ssCpuRawIdle|<p>The number of 'ticks' (typically 1/100s) spent idle. On a multi-processor system, the 'ssCpuRaw*' counters are cumulative over all CPUs, so their sum will typically be N*100 (for N processors).</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuRawIdle<p>Update: 60</p>|
+|nsExtendNumEntries|<p>The number of rows in the nsExtendConfigTable</p>|`SNMP agent`|NET-SNMP-EXTEND-MIB.nsExtendNumEntries<p>Update: 60</p>|
+|memAvailSwapTXT|<p>The amount of swap space or virtual memory currently being used by text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of swap space or virtual memory. Note that (despite the name), this value reports the amount used, rather than the amount free or available for use. For clarity, this object is being deprecated in favour of 'memUsedSwapTXT(16).</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailSwapTXT<p>Update: 60</p>|
+|memMinimumSwapX|<p>The minimum amount of swap space expected to be kept free or available during normal operation of this host. If this value (as reported by 'memAvailSwap(4)') falls below the specified level, then 'memSwapError(100)' will be set to 1 and an error message made available via 'memSwapErrorMsg(101)'.</p>|`SNMP agent`|UCD-SNMP-MIB.memMinimumSwapX<p>Update: 60</p>|
+|netSnmpPassString|<p>Example string scalar object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassString<p>Update: 60</p>|
+|versionDoDebugging|<p>Set to 1 to turn debugging statements on in the agent or 0 to turn it off.</p>|`SNMP agent`|UCD-SNMP-MIB.versionDoDebugging<p>Update: 60</p>|
+|netSnmpPassTimeTicks|<p>Example timetick object.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassTimeTicks<p>Update: 60</p>|
+|memTotalRealTXT|<p>The total amount of real/physical memory allocated for text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of physical memory.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalRealTXT<p>Update: 60</p>|
+|versionTag|<p>CVS tag keyword</p>|`SNMP agent`|UCD-SNMP-MIB.versionTag<p>Update: 60</p>|
+|versionRestartAgent|<p>Set to 1 to restart the agent.</p>|`SNMP agent`|UCD-SNMP-MIB.versionRestartAgent<p>Update: 60</p>|
+|nsCacheEnabled|<p>Whether data caching is active overall.</p>|`SNMP agent`|NET-SNMP-AGENT-MIB.nsCacheEnabled<p>Update: 60</p>|
+|ssCpuSystem|<p>The percentage of CPU time spent processing system-level code, calculated over the last minute. This object has been deprecated in favour of 'ssCpuRawSystem(52)', which can be used to calculate the same metric, but over any desired time period.</p>|`SNMP agent`|UCD-SNMP-MIB.ssCpuSystem<p>Update: 60</p>|
+|memTotalReal|<p>The total amount of real/physical memory installed on this host.</p>|`SNMP agent`|UCD-SNMP-MIB.memTotalReal<p>Update: 60</p>|
+|memSwapErrorMsg|<p>Describes whether the amount of available swap space (as reported by 'memAvailSwap(4)'), is less than the desired minimum (specified by 'memMinimumSwap(12)').</p>|`SNMP agent`|UCD-SNMP-MIB.memSwapErrorMsg<p>Update: 60</p>|
+|SNMP Trap: NET-SNMP-AGENT-MIB::nsNotifyStart|<p>An indication that the agent has started running.</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.8072\.4\.0\.1\s"]<p>Update: 0</p>|
+|netSnmpPassCounter|<p>Example counter object. Note that this object will always return the value '42'.</p>|`SNMP agent`|NET-SNMP-PASS-MIB.netSnmpPassCounter<p>Update: 60</p>|
+|memMinimumSwap|<p>The minimum amount of swap space expected to be kept free or available during normal operation of this host. If this value (as reported by 'memAvailSwap(4)') falls below the specified level, then 'memSwapError(100)' will be set to 1 and an error message made available via 'memSwapErrorMsg(101)'.</p>|`SNMP agent`|UCD-SNMP-MIB.memMinimumSwap<p>Update: 60</p>|
+|SNMP Trap: NET-SNMP-AGENT-MIB::nsNotifyRestart|<p>An indication that the agent has been restarted. This does not imply anything about whether the configuration has changed or not (unlike the standard coldStart or warmStart traps)</p>|`SNMP trap`|snmptrap["\s\.1\.3\.6\.1\.4\.1\.8072\.4\.0\.3\s"]<p>Update: 0</p>|
+|memAvailReal|<p>The amount of real/physical memory currently unused or available.</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailReal<p>Update: 60</p>|
+|memAvailRealTXT|<p>The amount of real/physical memory currently being used by text pages on this host. This object will not be implemented on hosts where the underlying operating system does not distinguish text pages from other uses of physical memory. Note that (despite the name), this value reports the amount used, rather than the amount free or available for use. For clarity, this object is being deprecated in favour of 'memUsedRealTXT(17).</p>|`SNMP agent`|UCD-SNMP-MIB.memAvailRealTXT<p>Update: 60</p>|
 |nsCacheStatus for {#SNMPINDEX}|<p>The current status of this particular cache entry. Acceptable values for Set requests are 'enabled(1)', 'disabled(2)' or 'empty(3)' (to clear all cached data). Requests to read the value of such an object will return 'disabled(2)' through to 'expired(5)'.</p>|`SNMP agent`|nsCacheStatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |nsCacheTimeout for {#SNMPINDEX}|<p>The length of time (?in seconds) for which the data in this particular cache entry will remain valid.</p>|`SNMP agent`|nsCacheTimeout[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmVoltSensorsValue for {#SNMPINDEX}|<p>The voltage in mV.</p>|`SNMP agent`|lmVoltSensorsValue[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmVoltSensorsDevice for {#SNMPINDEX}|<p>The name of the device we are reading.</p>|`SNMP agent`|lmVoltSensorsDevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmVoltSensorsIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|lmVoltSensorsIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|dlmodStatus for {#SNMPINDEX}|<p>The current status of the loaded module.</p>|`SNMP agent`|dlmodStatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|dlmodError for {#SNMPINDEX}|<p>The last error from dlmod_load_module.</p>|`SNMP agent`|dlmodError[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|dlmodPath for {#SNMPINDEX}|<p>The path of the module executable file.</p>|`SNMP agent`|dlmodPath[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|dlmodName for {#SNMPINDEX}|<p>The module name.</p>|`SNMP agent`|dlmodName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|mrModuleName for {#SNMPINDEX}|<p>The module name that registered this OID.</p>|`SNMP agent`|mrModuleName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|mrIndex for {#SNMPINDEX}|<p>The registry slot of a mibmodule.</p>|`SNMP agent`|mrIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchRegExCompilation for {#SNMPINDEX}|<p>message of regex precompilation</p>|`SNMP agent`|logMatchRegExCompilation[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchErrorFlag for {#SNMPINDEX}|<p>errorflag: is this line configured correctly?</p>|`SNMP agent`|logMatchErrorFlag[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchCycle for {#SNMPINDEX}|<p>time between updates (if not queried) in seconds</p>|`SNMP agent`|logMatchCycle[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchCount for {#SNMPINDEX}|<p>Description.</p>|`SNMP agent`|logMatchCount[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchCounter for {#SNMPINDEX}|<p>Regex match counter. This counter will be reset with each read</p>|`SNMP agent`|logMatchCounter[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchCurrentCount for {#SNMPINDEX}|<p>Description.</p>|`SNMP agent`|logMatchCurrentCount[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchCurrentCounter for {#SNMPINDEX}|<p>Regex match counter. This counter will be reset with each logfile rotation.</p>|`SNMP agent`|logMatchCurrentCounter[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchGlobalCount for {#SNMPINDEX}|<p>Description.</p>|`SNMP agent`|logMatchGlobalCount[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchGlobalCounter for {#SNMPINDEX}|<p>global count of matches</p>|`SNMP agent`|logMatchGlobalCounter[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchRegEx for {#SNMPINDEX}|<p>regular expression</p>|`SNMP agent`|logMatchRegEx[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchFilename for {#SNMPINDEX}|<p>filename to be logmatched</p>|`SNMP agent`|logMatchFilename[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchName for {#SNMPINDEX}|<p>logmatch instance name</p>|`SNMP agent`|logMatchName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|logMatchIndex for {#SNMPINDEX}|<p>Index of logmatch</p>|`SNMP agent`|logMatchIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|fileErrorMsg for {#SNMPINDEX}|<p>Filesize error message</p>|`SNMP agent`|fileErrorMsg[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|fileErrorFlag for {#SNMPINDEX}|<p>Limit exceeded flag</p>|`SNMP agent`|fileErrorFlag[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|fileMax for {#SNMPINDEX}|<p>Limit of filesize (kB)</p>|`SNMP agent`|fileMax[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|fileSize for {#SNMPINDEX}|<p>Size of file (kB)</p>|`SNMP agent`|fileSize[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|fileName for {#SNMPINDEX}|<p>Filename</p>|`SNMP agent`|fileName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|fileIndex for {#SNMPINDEX}|<p>Index of file</p>|`SNMP agent`|fileIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmMiscSensorsValue for {#SNMPINDEX}|<p>The value of this sensor.</p>|`SNMP agent`|lmMiscSensorsValue[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmMiscSensorsDevice for {#SNMPINDEX}|<p>The name of the device we are reading.</p>|`SNMP agent`|lmMiscSensorsDevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmMiscSensorsIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|lmMiscSensorsIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|laErrMessage for {#SNMPINDEX}|<p>An error message describing the load-average and its surpased watch-point value.</p>|`SNMP agent`|laErrMessage[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|laErrorFlag for {#SNMPINDEX}|<p>A Error flag to indicate the load-average has crossed its threshold value defined in the snmpd.conf file. It is set to 1 if the threshold is crossed, 0 otherwise.</p>|`SNMP agent`|laErrorFlag[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|laLoadFloat for {#SNMPINDEX}|<p>The 1,5 and 15 minute load averages as an opaquely wrapped floating point number.</p>|`SNMP agent`|laLoadFloat[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|laLoadInt for {#SNMPINDEX}|<p>The 1,5 and 15 minute load averages as an integer. This is computed by taking the floating point loadaverage value and multiplying by 100, then converting the value to an integer.</p>|`SNMP agent`|laLoadInt[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|laConfig for {#SNMPINDEX}|<p>The watch point for load-averages to signal an error. If the load averages rises above this value, the laErrorFlag below is set.</p>|`SNMP agent`|laConfig[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|laLoad for {#SNMPINDEX}|<p>The 1,5 and 15 minute load averages (one per row).</p>|`SNMP agent`|laLoad[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|laNames for {#SNMPINDEX}|<p>The list of loadave names we're watching.</p>|`SNMP agent`|laNames[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|laIndex for {#SNMPINDEX}|<p>reference index/row number for each observed loadave.</p>|`SNMP agent`|laIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsTransactionMode for {#SNMPINDEX}|<p>The mode number for the current operation being performed.</p>|`SNMP agent`|nsTransactionMode[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmTempSensorsValue for {#SNMPINDEX}|<p>The temperature of this sensor in mC.</p>|`SNMP agent`|lmTempSensorsValue[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmTempSensorsDevice for {#SNMPINDEX}|<p>The name of the temperature sensor we are reading.</p>|`SNMP agent`|lmTempSensorsDevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmTempSensorsIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|lmTempSensorsIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prErrFixCmd for {#SNMPINDEX}|<p>The command that gets run when the prErrFix column is set to 1.</p>|`SNMP agent`|prErrFixCmd[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prErrFix for {#SNMPINDEX}|<p>Setting this to one will try to fix the problem if the agent has been configured with a script to call to attempt to fix problems automatically using remote snmp operations.</p>|`SNMP agent`|prErrFix[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prErrMessage for {#SNMPINDEX}|<p>An error message describing the problem (if one exists).</p>|`SNMP agent`|prErrMessage[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prErrorFlag for {#SNMPINDEX}|<p>A Error flag to indicate trouble with a process. It goes to 1 if there is an error, 0 if no error.</p>|`SNMP agent`|prErrorFlag[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prCount for {#SNMPINDEX}|<p>The number of current processes running with the name in question.</p>|`SNMP agent`|prCount[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prMax for {#SNMPINDEX}|<p>The maximum number of processes that should be running. An error flag is generated if the number of running processes is > the maximum.</p>|`SNMP agent`|prMax[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prMin for {#SNMPINDEX}|<p>The minimum number of processes that should be running. An error flag is generated if the number of running processes is < the minimum.</p>|`SNMP agent`|prMin[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prNames for {#SNMPINDEX}|<p>The process name we're counting/checking on.</p>|`SNMP agent`|prNames[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|prIndex for {#SNMPINDEX}|<p>Reference Index for each observed process.</p>|`SNMP agent`|prIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIOBusyTime for {#SNMPINDEX}|<p>The number of usecs the drive has been busy since boot.</p>|`SNMP agent`|diskIOBusyTime[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIONWrittenX for {#SNMPINDEX}|<p>The number of bytes written to this device since boot.</p>|`SNMP agent`|diskIONWrittenX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIONReadX for {#SNMPINDEX}|<p>The number of bytes read from this device since boot.</p>|`SNMP agent`|diskIONReadX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIOLA15 for {#SNMPINDEX}|<p>The 15 minute average load of disk (%)</p>|`SNMP agent`|diskIOLA15[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIOLA5 for {#SNMPINDEX}|<p>The 5 minute average load of disk (%)</p>|`SNMP agent`|diskIOLA5[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIOLA1 for {#SNMPINDEX}|<p>The 1 minute average load of disk (%)</p>|`SNMP agent`|diskIOLA1[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIOWrites for {#SNMPINDEX}|<p>The number of write accesses to this device since boot.</p>|`SNMP agent`|diskIOWrites[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIOReads for {#SNMPINDEX}|<p>The number of read accesses from this device since boot.</p>|`SNMP agent`|diskIOReads[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIONWritten for {#SNMPINDEX}|<p>The number of bytes written to this device since boot.</p>|`SNMP agent`|diskIONWritten[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIONRead for {#SNMPINDEX}|<p>The number of bytes read from this device since boot.</p>|`SNMP agent`|diskIONRead[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIODevice for {#SNMPINDEX}|<p>The name of the device we are counting/checking.</p>|`SNMP agent`|diskIODevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|diskIOIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|diskIOIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsExtendOutLine for {#SNMPINDEX}|<p>A single line of output from the extension command.</p>|`SNMP agent`|nsExtendOutLine[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |dskErrorMsg for {#SNMPINDEX}|<p>A text description providing a warning and the space left on the disk.</p>|`SNMP agent`|dskErrorMsg[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |dskUsed for {#SNMPINDEX}|<p>Used space on the disk. For large heavily-used disks (>2Tb), this value will latch at INT32_MAX (2147483647).</p>|`SNMP agent`|dskUsed[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |dskPath for {#SNMPINDEX}|<p>Path where the disk is mounted.</p>|`SNMP agent`|dskPath[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
@@ -251,10 +188,27 @@ There are no template links in this template.
 |dskUsedLow for {#SNMPINDEX}|<p>Used space on the disk (kBytes). Together with dskUsedHigh composes 64-bit number.</p>|`SNMP agent`|dskUsedLow[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |dskUsedHigh for {#SNMPINDEX}|<p>Used space on the disk (kBytes). Together with dskUsedLow composes 64-bit number.</p>|`SNMP agent`|dskUsedHigh[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |dskIndex for {#SNMPINDEX}|<p>Integer reference number (row number) for the disk mib.</p>|`SNMP agent`|dskIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsExtendResult for {#SNMPINDEX}|<p>The return value of the command.</p>|`SNMP agent`|nsExtendResult[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsExtendOutNumLines for {#SNMPINDEX}|<p>The number of lines of output (and hence the number of rows in nsExtendOutputTable relating to this particular entry).</p>|`SNMP agent`|nsExtendOutNumLines[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsExtendOutputFull for {#SNMPINDEX}|<p>The full output from the command, as a single string</p>|`SNMP agent`|nsExtendOutputFull[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsExtendOutput1Line for {#SNMPINDEX}|<p>The first line of output from the command</p>|`SNMP agent`|nsExtendOutput1Line[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|mrModuleName for {#SNMPINDEX}|<p>The module name that registered this OID.</p>|`SNMP agent`|mrModuleName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|mrIndex for {#SNMPINDEX}|<p>The registry slot of a mibmodule.</p>|`SNMP agent`|mrIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmMiscSensorsValue for {#SNMPINDEX}|<p>The value of this sensor.</p>|`SNMP agent`|lmMiscSensorsValue[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmMiscSensorsDevice for {#SNMPINDEX}|<p>The name of the device we are reading.</p>|`SNMP agent`|lmMiscSensorsDevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmMiscSensorsIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|lmMiscSensorsIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|laErrMessage for {#SNMPINDEX}|<p>An error message describing the load-average and its surpased watch-point value.</p>|`SNMP agent`|laErrMessage[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|laErrorFlag for {#SNMPINDEX}|<p>A Error flag to indicate the load-average has crossed its threshold value defined in the snmpd.conf file. It is set to 1 if the threshold is crossed, 0 otherwise.</p>|`SNMP agent`|laErrorFlag[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|laLoadFloat for {#SNMPINDEX}|<p>The 1,5 and 15 minute load averages as an opaquely wrapped floating point number.</p>|`SNMP agent`|laLoadFloat[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|laLoadInt for {#SNMPINDEX}|<p>The 1,5 and 15 minute load averages as an integer. This is computed by taking the floating point loadaverage value and multiplying by 100, then converting the value to an integer.</p>|`SNMP agent`|laLoadInt[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|laConfig for {#SNMPINDEX}|<p>The watch point for load-averages to signal an error. If the load averages rises above this value, the laErrorFlag below is set.</p>|`SNMP agent`|laConfig[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|laLoad for {#SNMPINDEX}|<p>The 1,5 and 15 minute load averages (one per row).</p>|`SNMP agent`|laLoad[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|laNames for {#SNMPINDEX}|<p>The list of loadave names we're watching.</p>|`SNMP agent`|laNames[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|laIndex for {#SNMPINDEX}|<p>reference index/row number for each observed loadave.</p>|`SNMP agent`|laIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|netSnmpPassOID for {#SNMPINDEX}|<p>Example OID (table) object.</p>|`SNMP agent`|netSnmpPassOID[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|netSnmpPassInteger for {#SNMPINDEX}|<p>Example Integer (table) object.</p>|`SNMP agent`|netSnmpPassInteger[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmFanSensorsValue for {#SNMPINDEX}|<p>The rotation speed of the fan in RPM.</p>|`SNMP agent`|lmFanSensorsValue[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmFanSensorsDevice for {#SNMPINDEX}|<p>The name of the fan sensor we are reading.</p>|`SNMP agent`|lmFanSensorsDevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmFanSensorsIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|lmFanSensorsIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsModuleTimeout for {#SNMPINDEX}|<p>The registered timeout. This is only meaningful for handlers that expect to return results at a later date (subagents, etc)</p>|`SNMP agent`|nsModuleTimeout[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsModuleModes for {#SNMPINDEX}|<p>The modes that the particular lower level handler can cope with directly.</p>|`SNMP agent`|nsModuleModes[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsModuleName for {#SNMPINDEX}|<p>The module name that registered this OID.</p>|`SNMP agent`|nsModuleName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |extErrFixCmd for {#SNMPINDEX}|<p>The command that gets run when the extErrFix column is set to 1.</p>|`SNMP agent`|extErrFixCmd[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |extErrFix for {#SNMPINDEX}|<p>Setting this to one will try to fix the problem if the agent has been configured with a script to call to attempt to fix problems automatically using remote snmp operations.</p>|`SNMP agent`|extErrFix[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |extOutput for {#SNMPINDEX}|<p>The first line of output of the executed command.</p>|`SNMP agent`|extOutput[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
@@ -262,15 +216,61 @@ There are no template links in this template.
 |extCommand for {#SNMPINDEX}|<p>The command line to be executed.</p>|`SNMP agent`|extCommand[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |extNames for {#SNMPINDEX}|<p>A Short, one name description of the extensible command.</p>|`SNMP agent`|extNames[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |extIndex for {#SNMPINDEX}|<p>Reference Index for extensible scripts. Simply an integer row number.</p>|`SNMP agent`|extIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|netSnmpPassOID for {#SNMPINDEX}|<p>Example OID (table) object.</p>|`SNMP agent`|netSnmpPassOID[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|netSnmpPassInteger for {#SNMPINDEX}|<p>Example Integer (table) object.</p>|`SNMP agent`|netSnmpPassInteger[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsExtendOutLine for {#SNMPINDEX}|<p>A single line of output from the extension command.</p>|`SNMP agent`|nsExtendOutLine[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmFanSensorsValue for {#SNMPINDEX}|<p>The rotation speed of the fan in RPM.</p>|`SNMP agent`|lmFanSensorsValue[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmFanSensorsDevice for {#SNMPINDEX}|<p>The name of the fan sensor we are reading.</p>|`SNMP agent`|lmFanSensorsDevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|lmFanSensorsIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|lmFanSensorsIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsModuleTimeout for {#SNMPINDEX}|<p>The registered timeout. This is only meaningful for handlers that expect to return results at a later date (subagents, etc)</p>|`SNMP agent`|nsModuleTimeout[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsModuleModes for {#SNMPINDEX}|<p>The modes that the particular lower level handler can cope with directly.</p>|`SNMP agent`|nsModuleModes[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
-|nsModuleName for {#SNMPINDEX}|<p>The module name that registered this OID.</p>|`SNMP agent`|nsModuleName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prErrFixCmd for {#SNMPINDEX}|<p>The command that gets run when the prErrFix column is set to 1.</p>|`SNMP agent`|prErrFixCmd[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prErrFix for {#SNMPINDEX}|<p>Setting this to one will try to fix the problem if the agent has been configured with a script to call to attempt to fix problems automatically using remote snmp operations.</p>|`SNMP agent`|prErrFix[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prErrMessage for {#SNMPINDEX}|<p>An error message describing the problem (if one exists).</p>|`SNMP agent`|prErrMessage[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prErrorFlag for {#SNMPINDEX}|<p>A Error flag to indicate trouble with a process. It goes to 1 if there is an error, 0 if no error.</p>|`SNMP agent`|prErrorFlag[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prCount for {#SNMPINDEX}|<p>The number of current processes running with the name in question.</p>|`SNMP agent`|prCount[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prMax for {#SNMPINDEX}|<p>The maximum number of processes that should be running. An error flag is generated if the number of running processes is > the maximum.</p>|`SNMP agent`|prMax[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prMin for {#SNMPINDEX}|<p>The minimum number of processes that should be running. An error flag is generated if the number of running processes is < the minimum.</p>|`SNMP agent`|prMin[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prNames for {#SNMPINDEX}|<p>The process name we're counting/checking on.</p>|`SNMP agent`|prNames[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|prIndex for {#SNMPINDEX}|<p>Reference Index for each observed process.</p>|`SNMP agent`|prIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmVoltSensorsValue for {#SNMPINDEX}|<p>The voltage in mV.</p>|`SNMP agent`|lmVoltSensorsValue[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmVoltSensorsDevice for {#SNMPINDEX}|<p>The name of the device we are reading.</p>|`SNMP agent`|lmVoltSensorsDevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmVoltSensorsIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|lmVoltSensorsIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsExtendResult for {#SNMPINDEX}|<p>The return value of the command.</p>|`SNMP agent`|nsExtendResult[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsExtendOutNumLines for {#SNMPINDEX}|<p>The number of lines of output (and hence the number of rows in nsExtendOutputTable relating to this particular entry).</p>|`SNMP agent`|nsExtendOutNumLines[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsExtendOutputFull for {#SNMPINDEX}|<p>The full output from the command, as a single string</p>|`SNMP agent`|nsExtendOutputFull[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsExtendOutput1Line for {#SNMPINDEX}|<p>The first line of output from the command</p>|`SNMP agent`|nsExtendOutput1Line[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|fileErrorMsg for {#SNMPINDEX}|<p>Filesize error message</p>|`SNMP agent`|fileErrorMsg[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|fileErrorFlag for {#SNMPINDEX}|<p>Limit exceeded flag</p>|`SNMP agent`|fileErrorFlag[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|fileMax for {#SNMPINDEX}|<p>Limit of filesize (kB)</p>|`SNMP agent`|fileMax[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|fileSize for {#SNMPINDEX}|<p>Size of file (kB)</p>|`SNMP agent`|fileSize[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|fileName for {#SNMPINDEX}|<p>Filename</p>|`SNMP agent`|fileName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|fileIndex for {#SNMPINDEX}|<p>Index of file</p>|`SNMP agent`|fileIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIOBusyTime for {#SNMPINDEX}|<p>The number of usecs the drive has been busy since boot.</p>|`SNMP agent`|diskIOBusyTime[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIONWrittenX for {#SNMPINDEX}|<p>The number of bytes written to this device since boot.</p>|`SNMP agent`|diskIONWrittenX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIONReadX for {#SNMPINDEX}|<p>The number of bytes read from this device since boot.</p>|`SNMP agent`|diskIONReadX[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIOLA15 for {#SNMPINDEX}|<p>The 15 minute average load of disk (%)</p>|`SNMP agent`|diskIOLA15[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIOLA5 for {#SNMPINDEX}|<p>The 5 minute average load of disk (%)</p>|`SNMP agent`|diskIOLA5[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIOLA1 for {#SNMPINDEX}|<p>The 1 minute average load of disk (%)</p>|`SNMP agent`|diskIOLA1[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIOWrites for {#SNMPINDEX}|<p>The number of write accesses to this device since boot.</p>|`SNMP agent`|diskIOWrites[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIOReads for {#SNMPINDEX}|<p>The number of read accesses from this device since boot.</p>|`SNMP agent`|diskIOReads[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIONWritten for {#SNMPINDEX}|<p>The number of bytes written to this device since boot.</p>|`SNMP agent`|diskIONWritten[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIONRead for {#SNMPINDEX}|<p>The number of bytes read from this device since boot.</p>|`SNMP agent`|diskIONRead[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIODevice for {#SNMPINDEX}|<p>The name of the device we are counting/checking.</p>|`SNMP agent`|diskIODevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|diskIOIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|diskIOIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchRegExCompilation for {#SNMPINDEX}|<p>message of regex precompilation</p>|`SNMP agent`|logMatchRegExCompilation[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchErrorFlag for {#SNMPINDEX}|<p>errorflag: is this line configured correctly?</p>|`SNMP agent`|logMatchErrorFlag[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchCycle for {#SNMPINDEX}|<p>time between updates (if not queried) in seconds</p>|`SNMP agent`|logMatchCycle[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchCount for {#SNMPINDEX}|<p>Description.</p>|`SNMP agent`|logMatchCount[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchCounter for {#SNMPINDEX}|<p>Regex match counter. This counter will be reset with each read</p>|`SNMP agent`|logMatchCounter[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchCurrentCount for {#SNMPINDEX}|<p>Description.</p>|`SNMP agent`|logMatchCurrentCount[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchCurrentCounter for {#SNMPINDEX}|<p>Regex match counter. This counter will be reset with each logfile rotation.</p>|`SNMP agent`|logMatchCurrentCounter[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchGlobalCount for {#SNMPINDEX}|<p>Description.</p>|`SNMP agent`|logMatchGlobalCount[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchGlobalCounter for {#SNMPINDEX}|<p>global count of matches</p>|`SNMP agent`|logMatchGlobalCounter[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchRegEx for {#SNMPINDEX}|<p>regular expression</p>|`SNMP agent`|logMatchRegEx[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchFilename for {#SNMPINDEX}|<p>filename to be logmatched</p>|`SNMP agent`|logMatchFilename[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchName for {#SNMPINDEX}|<p>logmatch instance name</p>|`SNMP agent`|logMatchName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|logMatchIndex for {#SNMPINDEX}|<p>Index of logmatch</p>|`SNMP agent`|logMatchIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|nsTransactionMode for {#SNMPINDEX}|<p>The mode number for the current operation being performed.</p>|`SNMP agent`|nsTransactionMode[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|dlmodStatus for {#SNMPINDEX}|<p>The current status of the loaded module.</p>|`SNMP agent`|dlmodStatus[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|dlmodError for {#SNMPINDEX}|<p>The last error from dlmod_load_module.</p>|`SNMP agent`|dlmodError[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|dlmodPath for {#SNMPINDEX}|<p>The path of the module executable file.</p>|`SNMP agent`|dlmodPath[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|dlmodName for {#SNMPINDEX}|<p>The module name.</p>|`SNMP agent`|dlmodName[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmTempSensorsValue for {#SNMPINDEX}|<p>The temperature of this sensor in mC.</p>|`SNMP agent`|lmTempSensorsValue[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmTempSensorsDevice for {#SNMPINDEX}|<p>The name of the temperature sensor we are reading.</p>|`SNMP agent`|lmTempSensorsDevice[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
+|lmTempSensorsIndex for {#SNMPINDEX}|<p>Reference index for each observed device.</p>|`SNMP agent`|lmTempSensorsIndex[{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

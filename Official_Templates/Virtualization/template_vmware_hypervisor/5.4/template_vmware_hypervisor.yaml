@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:03:01Z'
+  date: '2021-11-21T21:18:27Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,20 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: f290b4dafdc440589835d3585dbe41a2
-      template: 'Virt VMware Hypervisor'
-      name: 'Virt VMware Hypervisor'
-      description: |
-        ## Overview
-        
-        Official VMware Hypervisor Template from Zabbix distribution
-        
-        
-        
-        ## Author
-        
-        Zabbix SIA
-        
-        
+      template: 'Template Virt VMware Hypervisor'
+      name: 'Template Virt VMware Hypervisor'
       groups:
         -
           name: Templates

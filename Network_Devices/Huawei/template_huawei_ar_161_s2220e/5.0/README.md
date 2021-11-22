@@ -23,14 +23,14 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|MIB-trap-BGP|<p>-</p>|`SNMP trap`|snmptrap["(CISCO.*MIB)((.|[[:space:]])*)(BGP)"]<p>Update: 0</p>|
 |CONFIG-MAN-MIB-trap|<p>-</p>|`SNMP trap`|snmptrap["CISCO-CONFIG-MAN-MIB"]<p>Update: 0</p>|
 |uptime|<p>-</p>|`SNMP agent`|uptime<p>Update: 30</p>|
-|Memory usage|<p>-</p>|`SNMP agent`|MemoryPoolUsed<p>Update: 300</p>|
 |MIB-trap-LOGIN|<p>-</p>|`SNMP trap`|snmptrap["(CISCO.*MIB)((.|[[:space:]])*)(LOGIN)"]<p>Update: 0</p>|
-|Temperature|<p>-</p>|`SNMP agent`|tempofhuawei<p>Update: 300</p>|
-|MIB-trap-SLA|<p>-</p>|`SNMP trap`|snmptrap["(CISCO.*MIB)((.|[[:space:]])*)(SLA)"]<p>Update: 0</p>|
 |CPU Usage|<p>-</p>|`SNMP agent`|cpmCPUTotal5min<p>Update: 300</p>|
+|MIB-trap-BGP|<p>-</p>|`SNMP trap`|snmptrap["(CISCO.*MIB)((.|[[:space:]])*)(BGP)"]<p>Update: 0</p>|
+|MIB-trap-SLA|<p>-</p>|`SNMP trap`|snmptrap["(CISCO.*MIB)((.|[[:space:]])*)(SLA)"]<p>Update: 0</p>|
+|Memory usage|<p>-</p>|`SNMP agent`|MemoryPoolUsed<p>Update: 300</p>|
+|Temperature|<p>-</p>|`SNMP agent`|tempofhuawei<p>Update: 300</p>|
 |State of "$1"|<p>-</p>|`SNMP agent`|ciscoEnvMonFanState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Cisco P/N: "$1"|<p>-</p>|`SNMP agent`|ceAssetOrderablePartNumber[{#SNMPVALUE}]<p>Update: 86400</p><p>LLD</p>|
 |State of "$1"|<p>-</p>|`SNMP agent`|ciscoEnvMonSupplyState[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|

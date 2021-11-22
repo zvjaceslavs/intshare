@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:03:11Z'
+  date: '2021-11-21T21:18:39Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,20 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 0c3a0c3b58224ce794361f356d249553
-      template: 'JMX Tomcat'
-      name: 'JMX Tomcat'
-      description: |
-        ## Overview
-        
-        Official Tomcat Template from Zabbix distribution
-        
-        
-        
-        ## Author
-        
-        Zabbix SIA
-        
-        
+      template: 'Template JMX Tomcat'
+      name: 'Template JMX Tomcat'
       groups:
         -
           name: Templates
@@ -389,7 +377,7 @@ zabbix_export:
           triggers:
             -
               uuid: d0d33091b56b4639b430ef400259a730
-              expression: 'find(/JMX Tomcat/jmx["Catalina:type=ProtocolHandler,port=8080",compression],,"like","off") = 1'
+              expression: 'find(/Template JMX Tomcat/jmx["Catalina:type=ProtocolHandler,port=8080",compression],,"like","off") = 1'
               name: 'gzip compression is off for connector http-8080 on {HOST.NAME}'
               priority: INFO
         -
@@ -409,7 +397,7 @@ zabbix_export:
           triggers:
             -
               uuid: ef6f7b180c2f40a2abd0b7b6d51ace14
-              expression: 'find(/JMX Tomcat/jmx["Catalina:type=ProtocolHandler,port=8443",compression],,"like","off") = 1'
+              expression: 'find(/Template JMX Tomcat/jmx["Catalina:type=ProtocolHandler,port=8443",compression],,"like","off") = 1'
               name: 'gzip compression is off for connector http-8443 on {HOST.NAME}'
               priority: INFO
         -
@@ -537,17 +525,17 @@ zabbix_export:
   triggers:
     -
       uuid: 213299218f954c82957cab4626932314
-      expression: 'last(/JMX Tomcat/jmx["Catalina:type=ThreadPool,name=http-8080",currentThreadsBusy]) > (last(/JMX Tomcat/jmx["Catalina:type=ThreadPool,name=http-8080",maxThreads]) * 0.7)'
+      expression: 'last(/Template JMX Tomcat/jmx["Catalina:type=ThreadPool,name=http-8080",currentThreadsBusy]) > (last(/Template JMX Tomcat/jmx["Catalina:type=ThreadPool,name=http-8080",maxThreads]) * 0.7)'
       name: '70% http-8080 worker threads busy on {HOST.NAME}'
       priority: WARNING
     -
       uuid: 9e159285af064342a2b663796149f90e
-      expression: 'last(/JMX Tomcat/jmx["Catalina:type=ThreadPool,name=http-8443",currentThreadsBusy]) > (last(/JMX Tomcat/jmx["Catalina:type=ThreadPool,name=http-8443",maxThreads]) * 0.7)'
+      expression: 'last(/Template JMX Tomcat/jmx["Catalina:type=ThreadPool,name=http-8443",currentThreadsBusy]) > (last(/Template JMX Tomcat/jmx["Catalina:type=ThreadPool,name=http-8443",maxThreads]) * 0.7)'
       name: '70% http-8443 worker threads busy on {HOST.NAME}'
       priority: WARNING
     -
       uuid: 9a5918d92a344953a3ef92fdad448167
-      expression: 'last(/JMX Tomcat/jmx["Catalina:type=ThreadPool,name=jk-8009",currentThreadsBusy]) > (last(/JMX Tomcat/jmx["Catalina:type=ThreadPool,name=jk-8009",maxThreads])  *0.7)'
+      expression: 'last(/Template JMX Tomcat/jmx["Catalina:type=ThreadPool,name=jk-8009",currentThreadsBusy]) > (last(/Template JMX Tomcat/jmx["Catalina:type=ThreadPool,name=jk-8009",maxThreads])  *0.7)'
       name: '70% jk-8009 worker threads busy on {HOST.NAME}'
       priority: WARNING
   graphs:
@@ -558,19 +546,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=http-8080",maxThreads]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=http-8080",currentThreadsBusy]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=http-8080",currentThreadCount]'
     -
       uuid: 44c125662a4a4322ac71cc4a67de708c
@@ -579,19 +567,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=http-8443",maxThreads]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=http-8443",currentThreadsBusy]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=http-8443",currentThreadCount]'
     -
       uuid: 3bafdbc0ea9e45bca0d6b395ad2b994a
@@ -600,19 +588,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=jk-8009",maxThreads]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=jk-8009",currentThreadsBusy]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=ThreadPool,name=jk-8009",currentThreadCount]'
     -
       uuid: 1b24e792b5c14efbaaaf4384d1897cb1
@@ -621,17 +609,17 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=Manager,path=/,host=localhost",rejectedSessions]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=Manager,path=/,host=localhost",activeSessions]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Tomcat'
+            host: 'Template JMX Tomcat'
             key: 'jmx["Catalina:type=Manager,path=/,host=localhost",maxActiveSessions]'

@@ -22,8 +22,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Status color|<p>-</p>|`SNMP agent`|printers.status.color<p>Update: 25s</p>|
 |Status written|<p>-</p>|`SNMP agent`|printers.status.written<p>Update: 25s</p>|
+|Status color|<p>-</p>|`SNMP agent`|printers.status.color<p>Update: 25s</p>|
 |Printed pages|<p>-</p>|`SNMP agent`|number.of.printed.pages<p>Update: 1h</p>|
 ## Triggers
 

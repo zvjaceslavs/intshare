@@ -36,19 +36,19 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Ток батарей|<p>-</p>|`SNMP agent`|hwUpsBatteryCurrent<p>Update: 30s</p>|
-|Оставшаяся емкость аккумуляторов|<p>-</p>|`SNMP agent`|hwUpsBatteryCapacityLeft<p>Update: 30s</p>|
-|Версия ПО|<p>-</p>|`SNMP agent`|hwUpsDeviceSoftVersion<p>Update: 60m</p>|
-|Статус ИБП|<p>-</p>|`SNMP agent`|hwUpsCtrlRowStatus<p>Update: 10s</p>|
 |Входящее напряжение|<p>-</p>|`SNMP agent`|hwUpsInputRowStatus<p>Update: 5s</p>|
-|Выходящая активная мощность|<p>-</p>|`SNMP agent`|hwUpsOutputActivePowerA<p>Update: 10s</p>|
-|Статус питания|<p>-</p>|`SNMP agent`|hwUpsDevicePowerSupplyMethod<p>Update: 5s</p>|
 |Статус батарей|<p>-</p>|`SNMP agent`|hwUpsBatteryRowStatus<p>Update: 30s</p>|
-|Напряжение батарей|<p>-</p>|`SNMP agent`|hwUpsBatteryVoltage<p>Update: 10s</p>|
-|Выходящий ток|<p>-</p>|`SNMP agent`|hwUpsOutputCurrentA<p>Update: 10s</p>|
-|Модель|<p>-</p>|`SNMP agent`|hwUpsCtrlModelType<p>Update: 2800s</p>|
+|Статус ИБП|<p>-</p>|`SNMP agent`|hwUpsCtrlRowStatus<p>Update: 10s</p>|
 |Выходящая нагрузка %|<p>-</p>|`SNMP agent`|hwUpsOutputLoadA<p>Update: 10s</p>|
+|Выходящий ток|<p>-</p>|`SNMP agent`|hwUpsOutputCurrentA<p>Update: 10s</p>|
+|Ток батарей|<p>-</p>|`SNMP agent`|hwUpsBatteryCurrent<p>Update: 30s</p>|
 |Выходящее напряжение|<p>-</p>|`SNMP agent`|hwUpsOutputVoltageA<p>Update: 10s</p>|
+|Модель|<p>-</p>|`SNMP agent`|hwUpsCtrlModelType<p>Update: 2800s</p>|
+|Оставшаяся емкость аккумуляторов|<p>-</p>|`SNMP agent`|hwUpsBatteryCapacityLeft<p>Update: 30s</p>|
+|Напряжение батарей|<p>-</p>|`SNMP agent`|hwUpsBatteryVoltage<p>Update: 10s</p>|
+|Версия ПО|<p>-</p>|`SNMP agent`|hwUpsDeviceSoftVersion<p>Update: 60m</p>|
+|Статус питания|<p>-</p>|`SNMP agent`|hwUpsDevicePowerSupplyMethod<p>Update: 5s</p>|
+|Выходящая активная мощность|<p>-</p>|`SNMP agent`|hwUpsOutputActivePowerA<p>Update: 10s</p>|
 ## Triggers
 
 There are no triggers in this template.

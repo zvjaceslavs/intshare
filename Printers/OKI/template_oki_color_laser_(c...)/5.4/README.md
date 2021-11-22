@@ -41,29 +41,29 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Magenta Drum max|<p>-</p>|`SNMP agent`|usageDrumMaxLevel.3<p>Update: 300</p>|
-|Yellow Drum max|<p>-</p>|`SNMP agent`|usageDrumMaxLevel.4<p>Update: 300</p>|
-|Yellow Drum level %|<p>-</p>|`Calculated`|yellowDrumLevelPercCalc<p>Update: 300</p>|
-|Magenta Drum count|<p>-</p>|`SNMP agent`|usageDrumCurrentLevel.3<p>Update: 300</p>|
-|Cyan Drum level %|<p>-</p>|`Calculated`|cyanDrumLevelPercCalc<p>Update: 300</p>|
-|Yellow Drum count|<p>-</p>|`SNMP agent`|usageDrumCurrentLevel.4<p>Update: 300</p>|
-|Cyan Drum max|<p>-</p>|`SNMP agent`|usageDrumMaxLevel.2<p>Update: 300</p>|
-|Belt level %|<p>-</p>|`Calculated`|BeltLevelPercCalc<p>Update: 300</p>|
-|Belt max level|<p>-</p>|`SNMP agent`|usageBeltMaxLevel.1<p>Update: 300</p>|
-|Total pages printed|<p>-</p>|`SNMP agent`|usagePrinterUnitCounter.1<p>Update: 300</p>|
-|Magenta Drum level %|<p>-</p>|`Calculated`|magentaDrumLevelPercCalc<p>Update: 300</p>|
-|Black Drum level %|<p>-</p>|`Calculated`|blackDrumLevelPercCalc<p>Update: 300</p>|
-|Cyan Drum count|<p>-</p>|`SNMP agent`|usageDrumCurrentLevel.2<p>Update: 300</p>|
 |Fuser level %|<p>-</p>|`Calculated`|FuserLevelPercCalc<p>Update: 300</p>|
-|Fuser count|<p>-</p>|`SNMP agent`|usageFuserCurrentLevel.1<p>Update: 300</p>|
-|Black Drum count|<p>-</p>|`SNMP agent`|usageDrumCurrentLevel.1<p>Update: 300</p>|
-|Black Drum max|<p>-</p>|`SNMP agent`|usageDrumMaxLevel.1<p>Update: 300</p>|
 |Cyan Toner Level %|<p>-</p>|`SNMP agent`|usageTonerCurrentLevel.2<p>Update: 300</p>|
-|Belt count|<p>-</p>|`SNMP agent`|usageBeltCurrentLevel.1<p>Update: 300</p>|
-|Fuser max level|<p>-</p>|`SNMP agent`|usageFuserMaxLevel.1<p>Update: 300</p>|
+|Black Drum max|<p>-</p>|`SNMP agent`|usageDrumMaxLevel.1<p>Update: 300</p>|
+|Belt level %|<p>-</p>|`Calculated`|BeltLevelPercCalc<p>Update: 300</p>|
+|Cyan Drum max|<p>-</p>|`SNMP agent`|usageDrumMaxLevel.2<p>Update: 300</p>|
+|Yellow Drum level %|<p>-</p>|`Calculated`|yellowDrumLevelPercCalc<p>Update: 300</p>|
+|Magenta Drum level %|<p>-</p>|`Calculated`|magentaDrumLevelPercCalc<p>Update: 300</p>|
 |Yellow Toner Level %|<p>-</p>|`SNMP agent`|usageTonerCurrentLevel.4<p>Update: 300</p>|
-|Magenta Toner Level %|<p>-</p>|`SNMP agent`|usageTonerCurrentLevel.3<p>Update: 300</p>|
+|Fuser max level|<p>-</p>|`SNMP agent`|usageFuserMaxLevel.1<p>Update: 300</p>|
 |Black Toner Level %|<p>-</p>|`SNMP agent`|usageTonerCurrentLevel.1<p>Update: 300</p>|
+|Belt count|<p>-</p>|`SNMP agent`|usageBeltCurrentLevel.1<p>Update: 300</p>|
+|Magenta Drum count|<p>-</p>|`SNMP agent`|usageDrumCurrentLevel.3<p>Update: 300</p>|
+|Total pages printed|<p>-</p>|`SNMP agent`|usagePrinterUnitCounter.1<p>Update: 300</p>|
+|Yellow Drum max|<p>-</p>|`SNMP agent`|usageDrumMaxLevel.4<p>Update: 300</p>|
+|Magenta Drum max|<p>-</p>|`SNMP agent`|usageDrumMaxLevel.3<p>Update: 300</p>|
+|Fuser count|<p>-</p>|`SNMP agent`|usageFuserCurrentLevel.1<p>Update: 300</p>|
+|Cyan Drum count|<p>-</p>|`SNMP agent`|usageDrumCurrentLevel.2<p>Update: 300</p>|
+|Black Drum count|<p>-</p>|`SNMP agent`|usageDrumCurrentLevel.1<p>Update: 300</p>|
+|Belt max level|<p>-</p>|`SNMP agent`|usageBeltMaxLevel.1<p>Update: 300</p>|
+|Black Drum level %|<p>-</p>|`Calculated`|blackDrumLevelPercCalc<p>Update: 300</p>|
+|Magenta Toner Level %|<p>-</p>|`SNMP agent`|usageTonerCurrentLevel.3<p>Update: 300</p>|
+|Yellow Drum count|<p>-</p>|`SNMP agent`|usageDrumCurrentLevel.4<p>Update: 300</p>|
+|Cyan Drum level %|<p>-</p>|`Calculated`|cyanDrumLevelPercCalc<p>Update: 300</p>|
 ## Triggers
 
 There are no triggers in this template.

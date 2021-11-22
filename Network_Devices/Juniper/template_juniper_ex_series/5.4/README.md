@@ -57,26 +57,26 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|JunOS Hardware|<p>-</p>|`SNMP agent`|jnxRedundancyL1Index<p>Update: 300</p>|
 |JunOS Interfaces|<p>-</p>|`SNMP agent`|discovery.ifDescr<p>Update: 300</p>|
+|JunOS Hardware|<p>-</p>|`SNMP agent`|jnxRedundancyL1Index<p>Update: 300</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Yellow alarm|<p>-</p>|`SNMP agent`|YellowAlarm<p>Update: 60</p>|
 |Red alarm|<p>-</p>|`SNMP agent`|RedAlarm<p>Update: 30</p>|
 |Ping check|<p>-</p>|`Simple check`|icmpping<p>Update: 30</p>|
-|Yellow alarm|<p>-</p>|`SNMP agent`|YellowAlarm<p>Update: 60</p>|
 |Uptime|<p>-</p>|`SNMP agent`|Uptime<p>Update: 60</p>|
-|Switch {#SNMPVALUE} - 5 min load avarage|<p>-</p>|`SNMP agent`|jnxOperating5MinLoadAvg.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|Switch {#SNMPVALUE} - Memory usage|<p>-</p>|`SNMP agent`|jnxOperatingBuffer.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|Switch {#SNMPVALUE} - CPU usage|<p>-</p>|`SNMP agent`|jnxOperatingCPU.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
-|Switch {#SNMPVALUE} - Routing engine temperature|<p>-</p>|`SNMP agent`|jnxOperatingTemp.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound discarded packets|<p>-</p>|`SNMP agent`|.1.3.6.1.2.1.2.2.1.13.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound traffic|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.10.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |{#SNMPVALUE} - Inbound errors|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.14.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |{#SNMPVALUE} - Outbound traffic|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.16.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |{#SNMPVALUE} - Outbound discarded packets|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.19.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
 |{#SNMPVALUE} - Outbound errors|<p>-</p>|`SNMP agent`|1.3.6.1.2.1.2.2.1.20.[{#SNMPINDEX}]<p>Update: 30</p><p>LLD</p>|
+|Switch {#SNMPVALUE} - 5 min load avarage|<p>-</p>|`SNMP agent`|jnxOperating5MinLoadAvg.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Switch {#SNMPVALUE} - Memory usage|<p>-</p>|`SNMP agent`|jnxOperatingBuffer.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Switch {#SNMPVALUE} - CPU usage|<p>-</p>|`SNMP agent`|jnxOperatingCPU.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
+|Switch {#SNMPVALUE} - Routing engine temperature|<p>-</p>|`SNMP agent`|jnxOperatingTemp.[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

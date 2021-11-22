@@ -1,134 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export>
-  <version>5.0</version>
-  <date>2021-11-09T08:40:10Z</date>
-  <groups>
-    <group>
-      <name>Templates/Applications</name>
-    </group>
-  </groups>
-  <templates>
-    <template>
-      <template>App IIS LLD Sites Monitoring</template>
-      <name>App IIS LLD Sites Monitoring</name>
-      <description>## Overview Template uses wmi and powershell methods. Agent 4.4.5 is required for operation. ## Author Serhii Zaitsev</description>
-      <groups>
-        <group>
-          <name>Templates/Applications</name>
-        </group>
-      </groups>
-      <applications>
-        <application>
-          <name>IIS Sites</name>
-        </application>
-      </applications>
-      <discovery_rules>
-        <discovery_rule>
-          <name>Discovery Sites</name>
-          <key>wmi.getall[ROOT\WebAdministration,SELECT * FROM WorkerProcess]</key>
-          <delay>3m</delay>
-          <lifetime>0</lifetime>
-          <item_prototypes>
-            <item_prototype>
-              <name>{#SITENAME} State</name>
-              <key>system.run[C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Nologo "Import-Module WebAdministration;(Get-ItemProperty IIS:\AppPools\{#SITENAME}).state"]</key>
-              <delay>10m</delay>
-              <trends>0</trends>
-              <value_type>TEXT</value_type>
-              <applications>
-                <application>
-                  <name>IIS Sites</name>
-                </application>
-              </applications>
-            </item_prototype>
-            <item_prototype>
-              <name>{#SITENAME} Limit Action</name>
-              <key>system.run[C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Nologo "Import-Module WebAdministration;(Get-ItemProperty IIS:\AppPools\{#SITENAME} -Name cpu).action"]</key>
-              <delay>10m</delay>
-              <trends>0</trends>
-              <value_type>TEXT</value_type>
-              <applications>
-                <application>
-                  <name>IIS Sites</name>
-                </application>
-              </applications>
-            </item_prototype>
-            <item_prototype>
-              <name>{#SITENAME} CPU Limit</name>
-              <key>system.run[C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Nologo "Import-Module WebAdministration;(Get-ItemProperty IIS:\AppPools\{#SITENAME} -Name cpu).limit"]</key>
-              <delay>10m</delay>
-              <units>%</units>
-              <applications>
-                <application>
-                  <name>IIS Sites</name>
-                </application>
-              </applications>
-              <preprocessing>
-                <step>
-                  <type>TRIM</type>
-                  <params>000</params>
-                </step>
-              </preprocessing>
-            </item_prototype>
-            <item_prototype>
-              <name>{#SITENAME} CPU Usage %</name>
-              <key>wmi.get[ROOT\CIMV2,"SELECT PercentProcessorTime FROM win32_perfformatteddata_perfproc_process WHERE IDProcess = {#PROCESSID}"]</key>
-              <value_type>FLOAT</value_type>
-              <units>%</units>
-              <applications>
-                <application>
-                  <name>IIS Sites</name>
-                </application>
-              </applications>
-              <trigger_prototypes>
-                <trigger_prototype>
-                  <expression>{min(5m)}>={$SITE_CPU_ALERT}</expression>
-                  <name>{#SITENAME} High CPU Usage</name>
-                  <opdata>{ITEM.VALUE}</opdata>
-                  <priority>HIGH</priority>
-                  <manual_close>YES</manual_close>
-                </trigger_prototype>
-              </trigger_prototypes>
-            </item_prototype>
-            <item_prototype>
-              <name>{#SITENAME} Memory Usage</name>
-              <key>wmi.get[ROOT\CIMV2,SELECT WorkingSet FROM win32_perfformatteddata_perfproc_process WHERE IDProcess = {#PROCESSID}]</key>
-              <units>B</units>
-              <applications>
-                <application>
-                  <name>IIS Sites</name>
-                </application>
-              </applications>
-            </item_prototype>
-            <item_prototype>
-              <name>{#SITENAME} ProcessId</name>
-              <key>wmi.get[ROOT\WebAdministration,SELECT ProcessId FROM WorkerProcess WHERE ProcessId = {#PROCESSID}]</key>
-              <delay>10m</delay>
-              <applications>
-                <application>
-                  <name>IIS Sites</name>
-                </application>
-              </applications>
-            </item_prototype>
-          </item_prototypes>
-          <lld_macro_paths>
-            <lld_macro_path>
-              <lld_macro>{#PROCESSID}</lld_macro>
-              <path>$.ProcessId</path>
-            </lld_macro_path>
-            <lld_macro_path>
-              <lld_macro>{#SITENAME}</lld_macro>
-              <path>$.AppPoolName</path>
-            </lld_macro_path>
-          </lld_macro_paths>
-        </discovery_rule>
-      </discovery_rules>
-      <macros>
-        <macro>
-          <macro>{$SITE_CPU_ALERT}</macro>
-          <value>40</value>
-        </macro>
-      </macros>
-    </template>
-  </templates>
-</zabbix_export>
+<zabbix_export><version>5.0</version><date>2021-11-21T21:55:44Z</date><groups><group><name>Templates/Applications</name></group></groups><templates><template><template>App IIS LLD Sites Monitoring</template><name>App IIS LLD Sites Monitoring</name><description>## Overview
+
+Template uses wmi and powershell methods.
+
+
+Agent 4.4.5 is required for operation.
+
+
+ 
+
+
+ 
+
+
+
+## Author
+
+Serhii Zaitsev
+
+</description><groups><group><name>Templates/Applications</name></group></groups><applications><application><name>IIS Sites</name></application></applications><discovery_rules><discovery_rule><name>Discovery Sites</name><key>wmi.getall[ROOT\WebAdministration,SELECT * FROM WorkerProcess]</key><delay>3m</delay><lifetime>0</lifetime><item_prototypes><item_prototype><name>{#SITENAME} State</name><key>system.run[C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Nologo &quot;Import-Module WebAdministration;(Get-ItemProperty IIS:\AppPools\{#SITENAME}).state&quot;]</key><delay>10m</delay><trends>0</trends><value_type>TEXT</value_type><applications><application><name>IIS Sites</name></application></applications></item_prototype><item_prototype><name>{#SITENAME} Limit Action</name><key>system.run[C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Nologo &quot;Import-Module WebAdministration;(Get-ItemProperty IIS:\AppPools\{#SITENAME} -Name cpu).action&quot;]</key><delay>10m</delay><trends>0</trends><value_type>TEXT</value_type><applications><application><name>IIS Sites</name></application></applications></item_prototype><item_prototype><name>{#SITENAME} CPU Limit</name><key>system.run[C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Nologo &quot;Import-Module WebAdministration;(Get-ItemProperty IIS:\AppPools\{#SITENAME} -Name cpu).limit&quot;]</key><delay>10m</delay><units>%</units><applications><application><name>IIS Sites</name></application></applications><preprocessing><step><type>TRIM</type><params>000</params></step></preprocessing></item_prototype><item_prototype><name>{#SITENAME} CPU Usage %</name><key>wmi.get[ROOT\CIMV2,&quot;SELECT PercentProcessorTime FROM win32_perfformatteddata_perfproc_process WHERE IDProcess = {#PROCESSID}&quot;]</key><value_type>FLOAT</value_type><units>%</units><applications><application><name>IIS Sites</name></application></applications><trigger_prototypes><trigger_prototype><expression>{min(5m)}&gt;={$SITE_CPU_ALERT}</expression><name>{#SITENAME} High CPU Usage</name><opdata>{ITEM.VALUE}</opdata><priority>HIGH</priority><manual_close>YES</manual_close></trigger_prototype></trigger_prototypes></item_prototype><item_prototype><name>{#SITENAME} Memory Usage</name><key>wmi.get[ROOT\CIMV2,SELECT WorkingSet FROM win32_perfformatteddata_perfproc_process WHERE IDProcess = {#PROCESSID}]</key><units>B</units><applications><application><name>IIS Sites</name></application></applications></item_prototype><item_prototype><name>{#SITENAME} ProcessId</name><key>wmi.get[ROOT\WebAdministration,SELECT ProcessId FROM WorkerProcess WHERE ProcessId = {#PROCESSID}]</key><delay>10m</delay><applications><application><name>IIS Sites</name></application></applications></item_prototype></item_prototypes><lld_macro_paths><lld_macro_path><lld_macro>{#PROCESSID}</lld_macro><path>$.ProcessId</path></lld_macro_path><lld_macro_path><lld_macro>{#SITENAME}</lld_macro><path>$.AppPoolName</path></lld_macro_path></lld_macro_paths></discovery_rule></discovery_rules><macros><macro><macro>{$SITE_CPU_ALERT}</macro><value>40</value></macro></macros></template></templates></zabbix_export>

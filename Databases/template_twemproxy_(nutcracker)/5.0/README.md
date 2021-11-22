@@ -41,9 +41,9 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Nutcracker current connections|<p>Number of all active connections (client + server)</p>|`Dependent item`|nutcracker[stats,curr_connections]<p>Update: 0</p>|
-|Number of nutcracker processes|<p>-</p>|`Zabbix agent (active)`|proc.num[nutcracker]<p>Update: 1m</p>|
 |Nutcracker connections per second|<p>Number of new connections per second</p>|`Dependent item`|nutcracker[stats,total_connections]<p>Update: 0</p>|
 |Nutcracker stats|<p>Nutcracker JSON stats</p>|`Zabbix agent (active)`|system.run[curl -s {$NUTCRACKER_URL}]<p>Update: 1m</p>|
+|Number of nutcracker processes|<p>-</p>|`Zabbix agent (active)`|proc.num[nutcracker]<p>Update: 1m</p>|
 |Nutcracker server {#POOL}/{#SERVER} incoming queue requests|<p>Current number of requests in incoming queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},in_queue]<p>Update: 0</p><p>LLD</p>|
 |Nutcracker server {#POOL}/{#SERVER} incoming queue bytes|<p>Current number of bytes in incoming queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},in_queue_bytes]<p>Update: 0</p><p>LLD</p>|
 |Nutcracker server {#POOL}/{#SERVER} outgoing queue requests|<p>Current number of requests in outgoing queue</p>|`Dependent item`|nutcracker[stats,servers,{#POOL},{#SERVER},out_queue]<p>Update: 0</p><p>LLD</p>|

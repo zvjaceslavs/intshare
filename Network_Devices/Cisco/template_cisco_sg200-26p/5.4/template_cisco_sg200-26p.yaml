@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:24:47Z'
+  date: '2021-11-21T21:40:19Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -1725,29 +1725,23 @@ zabbix_export:
       percent_right: '95'
       graph_items:
         -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.53
-        -
           drawtype: FILLED_REGION
           color: '009900'
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.53
-    -
-      uuid: ce65cea13a874cce9420a5d7aafbdb14
-      name: 'Port GE06 Traffic'
-      percent_right: '95'
-      graph_items:
         -
           color: 0000FF
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
-            key: ifInOctects.54
+            key: ifInOctects.53
+    -
+      uuid: ce65cea13a874cce9420a5d7aafbdb14
+      name: 'Port GE06 Traffic'
+      percent_right: '95'
+      graph_items:
         -
           drawtype: FILLED_REGION
           color: '009900'
@@ -1755,17 +1749,17 @@ zabbix_export:
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.54
-    -
-      uuid: f2d2d8e2d6844ec69847339b5287c293
-      name: 'Port GE07 Traffic'
-      percent_right: '95'
-      graph_items:
         -
           color: 0000FF
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
-            key: ifInOctects.55
+            key: ifInOctects.54
+    -
+      uuid: f2d2d8e2d6844ec69847339b5287c293
+      name: 'Port GE07 Traffic'
+      percent_right: '95'
+      graph_items:
         -
           drawtype: FILLED_REGION
           color: '009900'
@@ -1773,6 +1767,12 @@ zabbix_export:
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.55
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.55
     -
       uuid: 8dd02ebc259b4fd0baa0c91b7cd735dc
       name: 'Port GE08 Traffic'
@@ -1797,23 +1797,29 @@ zabbix_export:
       percent_right: '95'
       graph_items:
         -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.57
-        -
           drawtype: FILLED_REGION
           color: '009900'
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.57
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.57
     -
       uuid: 572874b7782c42b39823976119e5141b
       name: 'Port GE10 Traffic'
       percent_right: '95'
       graph_items:
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.58
         -
           drawtype: FILLED_REGION
           color: '009900'
@@ -1821,12 +1827,6 @@ zabbix_export:
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.58
-        -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.58
     -
       uuid: 2e32a87825a24b808bd798a8a32d5ee8
       name: 'Port GE11 Traffic'
@@ -1851,18 +1851,18 @@ zabbix_export:
       percent_right: '95'
       graph_items:
         -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.60
+        -
           drawtype: FILLED_REGION
           color: '009900'
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.60
-        -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.60
     -
       uuid: 08c9348a9c9c476db849516e257b0b6a
       name: 'Port GE13 Traffic'
@@ -1905,18 +1905,18 @@ zabbix_export:
       percent_right: '95'
       graph_items:
         -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.63
-        -
           drawtype: FILLED_REGION
           color: '009900'
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.63
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.63
     -
       uuid: 5dfedd742ae0472e8f1d16d0eda4fad5
       name: 'Port GE16 Traffic'
@@ -1941,23 +1941,29 @@ zabbix_export:
       percent_right: '95'
       graph_items:
         -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.65
-        -
           drawtype: FILLED_REGION
           color: '009900'
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.65
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.65
     -
       uuid: 5db20e27017a433e912061be02536b66
       name: 'Port GE18 Traffic'
       percent_right: '95'
       graph_items:
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.66
         -
           drawtype: FILLED_REGION
           color: '009900'
@@ -1965,12 +1971,6 @@ zabbix_export:
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.66
-        -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.66
     -
       uuid: 905d00958ec845e6b3417dda692a8e7f
       name: 'Port GE19 Traffic'
@@ -2031,18 +2031,18 @@ zabbix_export:
       percent_right: '95'
       graph_items:
         -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.70
-        -
           drawtype: FILLED_REGION
           color: '009900'
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.70
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.70
     -
       uuid: 8f0de7a6d09b4fcf958526f4c02f345f
       name: 'Port GE23 Traffic'
@@ -2067,18 +2067,18 @@ zabbix_export:
       percent_right: '95'
       graph_items:
         -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.72
-        -
           drawtype: FILLED_REGION
           color: '009900'
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.72
+        -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.72
     -
       uuid: 69d4bf895cea4a98a4b66b0e49923224
       name: 'Port GE25 Traffic'
@@ -2104,15 +2104,15 @@ zabbix_export:
       percent_right: '95'
       graph_items:
         -
+          color: 0000FF
+          yaxisside: RIGHT
+          item:
+            host: Cisco_SG200-26P
+            key: ifInOctects.74
+        -
           drawtype: FILLED_REGION
           color: '009900'
           yaxisside: RIGHT
           item:
             host: Cisco_SG200-26P
             key: ifOutOctets.74
-        -
-          color: 0000FF
-          yaxisside: RIGHT
-          item:
-            host: Cisco_SG200-26P
-            key: ifInOctects.74

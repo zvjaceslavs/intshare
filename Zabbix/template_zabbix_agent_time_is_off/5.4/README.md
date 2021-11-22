@@ -32,9 +32,9 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Agent time offset|<p>-</p>|`Dependent item`|agent.time.offset<p>Update: 0</p>|
-|Agent time difference|<p>-</p>|`Zabbix agent (active)`|system.localtime<p>Update: 1m</p>|
 |Agent time shifted in|<p>-</p>|`Dependent item`|agent.time.shifted.in<p>Update: 0</p>|
+|Agent time difference|<p>-</p>|`Zabbix agent (active)`|system.localtime<p>Update: 1m</p>|
+|Agent time offset|<p>-</p>|`Dependent item`|agent.time.offset<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

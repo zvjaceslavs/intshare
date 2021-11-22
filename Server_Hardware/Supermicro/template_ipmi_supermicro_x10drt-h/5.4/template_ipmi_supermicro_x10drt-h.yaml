@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:04:40Z'
+  date: '2021-11-21T21:20:09Z'
   groups:
     -
       uuid: efdeb97d48f0471b8d025b0b576b716e
@@ -13,60 +13,6 @@ zabbix_export:
       uuid: 29080b43126a48ea9567d1b1a66ad67a
       template: 'IPMI SuperMicro X10DRT-H'
       name: 'IPMI SuperMicro X10DRT-H'
-      description: |
-        ## Overview
-        
-        All IPMI items for SuperMicro X10DRT-H motherboard:
-        
-        
-         
-        
-        
-        - Voltage
-        
-        
-        - Temperature
-        
-        
-        - Fan speed
-        
-        
-        - Power supply status
-        
-        
-         
-        
-        
-         Triggers for all categories except voltage
-        
-        
-        Graphs for CPU & DIMM temperature
-        
-        
-         
-        
-        
-        Monitored items: 39
-        
-        
-        Triggers: 6
-        
-        
-        Graphs: 2
-        
-        
-         
-        
-        
-        There's room for improvement: triggers for voltages could be added, but I'm not familiar with acceptable voltage ranges. Make sure to disable all items that do not exist or you will get errors. Only tested with Zabbix 3.0.x.
-        
-        
-        
-        ## Author
-        
-        Tiemen Ruiten
-        
-        
       groups:
         -
           name: SuperMicro

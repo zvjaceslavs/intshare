@@ -37,11 +37,11 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |#atsNumInputs|<p>-</p>|`SNMP agent`|atsNumInputs.0<p>Update: 30s</p>|
-|atsOutputVoltage|<p>-</p>|`SNMP agent`|atsOutputVoltage.1.1.1<p>Update: 30s</p>|
-|System upTIme {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 60s</p>|
-|atsInputVoltage.1|<p>-</p>|`SNMP agent`|atsInputVoltage.1.1.1<p>Update: 30s</p>|
-|atsInputVoltage.2|<p>-</p>|`SNMP agent`|atsInputVoltage.2.1.1<p>Update: 30s</p>|
 |atsOutputCurrent|<p>-</p>|`SNMP agent`|atsOutputCurrent.1.1.1<p>Update: 30s</p>|
+|atsOutputVoltage|<p>-</p>|`SNMP agent`|atsOutputVoltage.1.1.1<p>Update: 30s</p>|
+|atsInputVoltage.1|<p>-</p>|`SNMP agent`|atsInputVoltage.1.1.1<p>Update: 30s</p>|
+|System upTIme {#SNMPVALUE}|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 60s</p>|
+|atsInputVoltage.2|<p>-</p>|`SNMP agent`|atsInputVoltage.2.1.1<p>Update: 30s</p>|
 |atsOutputVoltage|<p>{#SNMPVALUE}</p>|`SNMP agent`|atsOutputVoltage.["{#SNMPINDEX}"]<p>Update: 5</p><p>LLD</p>|
 ## Triggers
 

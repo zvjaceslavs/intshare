@@ -15,9 +15,9 @@ yaml.encoding = 'utf-8'
 
 formatter = xmlformatter.Formatter(
     indent="2", indent_char=" ", encoding_output="utf-8", encoding_input="utf-8", preserve=["literal"])
-z50 = ZabbixAPI('http://docker.oscar.lan:8050',
+z50 = ZabbixAPI('http://localhost:8050',
                 user='Admin', password='zabbix')
-z54 = ZabbixAPI('http://docker.oscar.lan:8054',
+z54 = ZabbixAPI('http://localhost:8054',
                 user='Admin', password='zabbix')
 
 with open('.github/workflows/import50.json', encoding='utf-8') as json_import_50:
@@ -70,6 +70,25 @@ list_servers = {
 
 def sorter_by_depends(e):
     return e['links']
+
+def delete_templates(template_names, template_default, zabbix):
+    del_ids = []
+    template_imported = zabbix.template.get(
+        output = [
+            'templateid',
+            'host',
+            'name'
+        ],
+        filter = {
+            'host': template_names
+        }
+    )
+    for tmpl in template_imported:
+        if int(tmpl['templateid']) > template_default:
+            del_ids.append(tmpl['templateid'])
+    
+    if len(del_ids) > 0:
+        zabbix.do_request('template.delete', del_ids)
 
 def get_template_list(template_names, zabb):
     isUnResolveParent = False
@@ -445,7 +464,7 @@ def check_p2_2(directory, version):
                                 r_file, encoding='utf-8')
                             if not 'zabbix_export' in in_template:
                                 print(json.dumps({
-                                    'code': 6,
+                                    'code': 6.11,
                                     'message': 'Import error',
                                     'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                                 }, indent=4))
@@ -460,7 +479,7 @@ def check_p2_2(directory, version):
                                     exit(2)
                         except Exception as err:
                             print(json.dumps({
-                                'code': 6,
+                                'code': 6.1,
                                 'message': 'Import error',
                                 'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                             }, indent=4))
@@ -478,7 +497,7 @@ def check_p2_2(directory, version):
                             in_template = json.dumps(r_file)
                             if not 'zabbix_export' in in_template:
                                 print(json.dumps({
-                                    'code': 6,
+                                    'code': 6.2,
                                     'message': 'Import error',
                                     'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                                 }, indent=4))
@@ -493,7 +512,7 @@ def check_p2_2(directory, version):
                                     exit(2)
                         except Exception as err:
                             print(json.dumps({
-                                'code': 6,
+                                'code': 6.3,
                                 'message': 'Import error',
                                 'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                             }, indent=4))
@@ -507,7 +526,7 @@ def check_p2_2(directory, version):
                             in_template = yaml.load(r_file)
                             if not 'zabbix_export' in in_template:
                                 print(json.dumps({
-                                    'code': 6,
+                                    'code': 6.4,
                                     'message': 'Import error',
                                     'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                                 }, indent=4))
@@ -522,7 +541,7 @@ def check_p2_2(directory, version):
                                     exit(2)
                         except Exception as err:
                             print(json.dumps({
-                                'code': 6,
+                                'code': 6.5,
                                 'message': 'Import error',
                                 'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                             }, indent=4))
@@ -538,17 +557,17 @@ def check_p2_2(directory, version):
                         try:
                             import_result = list_servers[version]['server'].do_request('configuration.import', list_servers[version]['import_rule'])
                         except Exception as err:
-                            print(json.dumps(err.json, indent=4,))
+                            print(err.data)
                         if not import_result:
                             print(json.dumps({
-                                'code': 6,
+                                'code': 6.6,
                                 'message': 'Import error',
                                 'detail': 'Error importing in the stock server. Template directory: "{}"'.format(t_directory)
                             }, indent=4))
                             exit(6)
                         for template_name in template_names:
                             if not template_name == clear_template_name(template_name):
-                                tmp_template_names = rename_template(template_names,list_servers[version]['server'],list_servers[version]['max_id'])
+                                tmp_template_names = rename_template(template_names,list_servers[version]['max_id'],list_servers[version]['server'])
                                 exportIds = get_template_list(tmp_template_names, list_servers[version]['server'])
                                 out_template_file = list_servers[version]['server'].configuration.export(
                                     options = {
@@ -556,14 +575,15 @@ def check_p2_2(directory, version):
                                     },
                                     format = template_format
                                 )
+                                delete_templates(tmp_template_names,list_servers[version]['max_id'],list_servers[version]['server'])
                                 if template_format == 'xml':
                                     with open(os.path.join(t_directory, dir), 'bw') as out_file:
                                         out_file.write(formatter.format_string(out_template_file))
                                 if template_format == 'json':
-                                    with open(os.path.join(t_directory, dir), 'w') as out_file:
+                                    with open(os.path.join(t_directory, dir), 'w', encoding='utf-8') as out_file:
                                         out_file.write(out_template_file)
                                 if template_format == 'yaml':
-                                    with open(os.path.join(t_directory, dir), 'w') as out_file:
+                                    with open(os.path.join(t_directory, dir), 'w', encoding='utf-8') as out_file:
                                         out_file.write(out_template_file)
             else:
                 if not dir == 'README.md':
@@ -649,7 +669,7 @@ def check_p7(directory):
                         r_file, encoding='utf-8')                    
                 except Exception as err:
                     print(json.dumps({
-                        'code': 6,
+                        'code': 6.7,
                         'message': 'Import error',
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
@@ -667,7 +687,7 @@ def check_p7(directory):
                     in_template = json.dumps(r_file)                    
                 except Exception as err:
                     print(json.dumps({
-                        'code': 6,
+                        'code': 6.8,
                         'message': 'Import error',
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
@@ -681,7 +701,7 @@ def check_p7(directory):
                     in_template = yaml.load(r_file)                    
                 except Exception as err:
                     print(json.dumps({
-                        'code': 6,
+                        'code': 6.9,
                         'message': 'Import error',
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
@@ -697,10 +717,10 @@ def check_p7(directory):
                 try:
                     import_result = list_servers[list_version[indx]]['server'].do_request('configuration.import', list_servers[list_version[indx]]['import_rule'])
                 except Exception as err:
-                    print (json.dumps(err.json))
+                    print (json.dumps(err.data))
                 if not import_result:
                     print(json.dumps({
-                        'code': 6,
+                        'code': 6.10,
                         'message': 'Import error',
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
@@ -712,18 +732,20 @@ def check_p7(directory):
                     },
                     format = export_default[list_version[indx]]
                 )
+                delete_templates(template_names,list_servers[list_version[indx]]['max_id'],list_servers[list_version[indx]]['server'])
                 if export_default[list_version[indx]] == 'xml':
                     with open(os.path.join(cur_directory, '{}.xml'.format('.'.join(dir.split('.')[:-1]))), 'bw') as out_file:
                         out_file.write(formatter.format_string(out_template_file))
                 if export_default[list_version[indx]] == 'json':
-                    with open(os.path.join(cur_directory, '{}.json'.format('.'.join(dir.split('.')[:-1]))), 'w') as out_file:
+                    with open(os.path.join(cur_directory, '{}.json'.format('.'.join(dir.split('.')[:-1]))), 'w', encoding='utf-8') as out_file:
                         out_file.write(out_template_file)
                 if export_default[list_version[indx]] == 'yaml':
-                    with open(os.path.join(cur_directory, '{}.json'.format('.'.join(dir.split('.')[:-1]))), 'w') as out_file:
+                    with open(os.path.join(cur_directory, '{}.yaml'.format('.'.join(dir.split('.')[:-1]))), 'w', encoding='utf-8') as out_file:
                         out_file.write(out_template_file)
                                  
     
 def parse_template(directory):
+    print(directory)
     check_p1(directory)
     check_p2_1(directory)
     check_p7(directory)   
