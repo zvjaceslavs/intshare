@@ -119,6 +119,6 @@ def main():
                 
     with open('README.md', 'w', encoding='utf-8') as README_global:
         README_global.write(out_global_readme)
-     print(os.getcwd())
+    print(os.getcwd())
   
 main()
