@@ -585,6 +585,7 @@ def check_p2_2(directory, version):
                                 if template_format == 'yaml':
                                     with open(os.path.join(t_directory, dir), 'w', encoding='utf-8') as out_file:
                                         out_file.write(out_template_file)
+                                break
             else:
                 if not dir == 'README.md':
                     print(json.dumps({
