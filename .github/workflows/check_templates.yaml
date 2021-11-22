@@ -80,4 +80,4 @@ jobs:
           ./.github/workflows/check.py
       - name: Check templates
         run: |
-          /.github/workflows/check_templates.py
+          ./.github/workflows/check_templates.py
