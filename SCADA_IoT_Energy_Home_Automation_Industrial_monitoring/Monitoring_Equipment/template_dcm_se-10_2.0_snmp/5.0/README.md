@@ -36,10 +36,10 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Temperatura|<p>-</p>|`SNMP agent`|temperatura<p>Update: 30</p>|
-|Temperatura Sonda|<p>-</p>|`SNMP agent`|sonda<p>Update: 30</p>|
 |Umidade|<p>-</p>|`SNMP agent`|umidade<p>Update: 30</p>|
-|Entrada 1|<p>-</p>|`SNMP agent`|entrada1<p>Update: 30s</p>|
 |Entrada 2|<p>-</p>|`SNMP agent`|entrada2<p>Update: 30s</p>|
+|Temperatura Sonda|<p>-</p>|`SNMP agent`|sonda<p>Update: 30</p>|
+|Entrada 1|<p>-</p>|`SNMP agent`|entrada1<p>Update: 30s</p>|
 ## Triggers
 
 There are no triggers in this template.

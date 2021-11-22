@@ -44,14 +44,14 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Sys1FAN_RPM|<p>-</p>|`SNMP agent`|sys1_fan_RPM<p>Update: 30</p>|
-|CPU temp|<p>CPU temp</p>|`SNMP agent`|cputemp<p>Update: 30</p>|
-|System uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 30</p>|
-|CPUFAN_RPM|<p>-</p>|`SNMP agent`|cpu_fan_RPM<p>Update: 30</p>|
-|Sys2FAN_RPM|<p>-</p>|`SNMP agent`|sys2_fan_RPM<p>Update: 30</p>|
-|Firmware version|<p>-</p>|`SNMP agent`|nasMgrSoftwareVersion<p>Update: 30</p>|
 |Sys temp|<p>CPU temp</p>|`SNMP agent`|systemp<p>Update: 30</p>|
+|Sys2FAN_RPM|<p>-</p>|`SNMP agent`|sys2_fan_RPM<p>Update: 30</p>|
+|CPUFAN_RPM|<p>-</p>|`SNMP agent`|cpu_fan_RPM<p>Update: 30</p>|
+|Firmware version|<p>-</p>|`SNMP agent`|nasMgrSoftwareVersion<p>Update: 30</p>|
+|System uptime|<p>-</p>|`SNMP agent`|sysUptime<p>Update: 30</p>|
 |Sys3FAN_RPM|<p>-</p>|`SNMP agent`|sys3_fan_RPM<p>Update: 30</p>|
+|CPU temp|<p>CPU temp</p>|`SNMP agent`|cputemp<p>Update: 30</p>|
+|Sys1FAN_RPM|<p>-</p>|`SNMP agent`|sys1_fan_RPM<p>Update: 30</p>|
 |[{#SNMPVALUE}]_DiskInfo|<p>-</p>|`SNMP agent`|DiskInfo[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |[{#SNMPVALUE}]_DiskState|<p>-</p>|`SNMP agent`|DiskState[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|
 |[{#SNMPVALUE}]_DiskTemperature|<p>-</p>|`SNMP agent`|DiskTemperature[{#SNMPVALUE}]<p>Update: 30</p><p>LLD</p>|

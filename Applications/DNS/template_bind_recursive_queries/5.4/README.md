@@ -57,8 +57,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Recursive UDP|<p>-</p>|`Zabbix agent`|bind.udpcl<p>Update: 30s</p>|
 |Recursive TCP|<p>-</p>|`Zabbix agent`|bind.tcpcl<p>Update: 30s</p>|
+|Recursive UDP|<p>-</p>|`Zabbix agent`|bind.udpcl<p>Update: 30s</p>|
 ## Triggers
 
 There are no triggers in this template.

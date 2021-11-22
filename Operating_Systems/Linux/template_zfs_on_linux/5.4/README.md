@@ -1,24 +1,5 @@
 # ZFS on Linux
 
-## Overview
-
-Modified from <https://www.zabbix.com/forum/showthread.php?t=43347> , this template is used to monitor ZFS on Linux (ZoL) .
-
-
-The documentation has moved to github: [https://github.com/Cosium/zabbix\_zfs-on-linux](https://github.com/AceSlash/zabbix_zfs-on-linux)
-
-
-The 4.0 template has been tested on Zabbix up to 5.2 .
-
-
-(Removed the old template and lost the download count which was at ~5K).
-
-
-
-## Author
-
-AceSlash
-
 ## Macros used
 
 |Name|Description|Default|Type|
@@ -45,29 +26,29 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ZFS parameter $1|<p>-</p>|`Zabbix agent (active)`|zfs.get.param[zfs_arc_meta_limit_percent]<p>Update: 1h</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[mru_size]<p>Update: 1m</p>|
-|ZFS ARC minimum size|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[c_min]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[bonus_size]<p>Update: 1m</p>|
-|ZFS ARC max size|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[c_max]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[hdr_size]<p>Update: 1m</p>|
-|ZFS ARC total read|<p>-</p>|`Calculated`|zfs.arcstats_total_read<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[arc_dnode_limit]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[mru_hits]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[hits]<p>Update: 1m</p>|
 |ZFS on Linux version|<p>-</p>|`Zabbix agent (active)`|vfs.file.contents[/sys/module/zfs/version]<p>Update: 1h</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[dnode_size]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[dbuf_size]<p>Update: 1m</p>|
 |ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[metadata_size]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[arc_meta_limit]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[mfu_size]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[misses]<p>Update: 1m</p>|
 |ZFS parameter $1|<p>-</p>|`Zabbix agent (active)`|zfs.get.param[zfs_arc_dnode_limit_percent]<p>Update: 1h</p>|
 |ZFS ARC current size|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[size]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[mfu_hits]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>arc_meta_used = hdr_size + metadata_size + dbuf_size + dnode_size + bonus_size</p>|`Zabbix agent (active)`|zfs.arcstats[arc_meta_used]<p>Update: 1m</p>|
-|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[data_size]<p>Update: 1m</p>|
+|ZFS ARC total read|<p>-</p>|`Calculated`|zfs.arcstats_total_read<p>Update: 1m</p>|
 |ZFS ARC Cache Hit Ratio|<p>-</p>|`Calculated`|zfs.arcstats_hit_ratio<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[mru_size]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[mru_hits]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[misses]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[mfu_size]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[dbuf_size]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[data_size]<p>Update: 1m</p>|
+|ZFS ARC minimum size|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[c_min]<p>Update: 1m</p>|
+|ZFS ARC max size|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[c_max]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[bonus_size]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>arc_meta_used = hdr_size + metadata_size + dbuf_size + dnode_size + bonus_size</p>|`Zabbix agent (active)`|zfs.arcstats[arc_meta_used]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[arc_meta_limit]<p>Update: 1m</p>|
+|ZFS parameter $1|<p>-</p>|`Zabbix agent (active)`|zfs.get.param[zfs_arc_meta_limit_percent]<p>Update: 1h</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[mfu_hits]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[hits]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[arc_dnode_limit]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[hdr_size]<p>Update: 1m</p>|
+|ZFS ARC stat "$1"|<p>-</p>|`Zabbix agent (active)`|zfs.arcstats[dnode_size]<p>Update: 1m</p>|
 |Zfs dataset $1 compressratio|<p>-</p>|`Zabbix agent (active)`|zfs.get.compressratio[{#FILESETNAME}]<p>Update: 30m</p><p>LLD</p>|
 |Zfs dataset $1 $2|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},available]<p>Update: 5m</p><p>LLD</p>|
 |Zfs dataset $1 $2|<p>-</p>|`Zabbix agent (active)`|zfs.get.fsinfo[{#FILESETNAME},referenced]<p>Update: 5m</p><p>LLD</p>|

@@ -30,15 +30,15 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Docker swarm services raw|<p>-</p>|`HTTP agent`|docker.swarm.services.raw<p>Update: 5m</p>|
-|Docker swarm managers nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.manager<p>Update: 0</p>|
 |Docker swarm updated at|<p>-</p>|`Dependent item`|docker.swarm.updated_at<p>Update: 0</p>|
-|Docker swarm nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.total<p>Update: 0</p>|
-|Docker swarm raw info|<p>-</p>|`HTTP agent`|docker.swarm.info.raw<p>Update: 1m</p>|
-|Docker swarm ready nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.ready<p>Update: 0</p>|
-|Docker swarm nodes raw|<p>-</p>|`HTTP agent`|docker.swarm.nodes.raw<p>Update: 1m</p>|
 |Docker swarm leader node|<p>-</p>|`Dependent item`|docker.swarm.nodes.leader<p>Update: 0</p>|
+|Docker swarm services raw|<p>-</p>|`HTTP agent`|docker.swarm.services.raw<p>Update: 5m</p>|
+|Docker swarm nodes raw|<p>-</p>|`HTTP agent`|docker.swarm.nodes.raw<p>Update: 1m</p>|
+|Docker swarm managers nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.manager<p>Update: 0</p>|
+|Docker swarm raw info|<p>-</p>|`HTTP agent`|docker.swarm.info.raw<p>Update: 1m</p>|
+|Docker swarm nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.total<p>Update: 0</p>|
 |Docker swarm tasks raw info|<p>-</p>|`HTTP agent`|docker.swarm.tasks.raw.info<p>Update: 1m</p>|
+|Docker swarm ready nodes|<p>-</p>|`Dependent item`|docker.swarm.nodes.ready<p>Update: 0</p>|
 |Docker swarm uptime {#SERVICE}|<p>-</p>|`Dependent item`|docker.swarm.service.uptime[{#SERVICE}]<p>Update: 0</p><p>LLD</p>|
 |Docker swarm number running tasks for {#SERVICE}|<p>-</p>|`Dependent item`|docker.swarm.tasks.running[{#SERVICE}]<p>Update: 0</p><p>LLD</p>|
 |Raw data node {#NAME} at {#ADDR}|<p>-</p>|`HTTP agent`|docker.nodes[{#ID}]<p>Update: 5m</p><p>LLD</p>|

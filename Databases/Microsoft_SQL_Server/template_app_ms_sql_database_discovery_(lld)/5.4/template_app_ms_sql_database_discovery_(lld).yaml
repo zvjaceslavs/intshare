@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T07:59:05Z'
+  date: '2021-11-22T02:06:21Z'
   groups:
     -
       uuid: 1525c35a49b84643b78e505d135a1967
@@ -10,12 +10,6 @@ zabbix_export:
       uuid: edafc53cf7264457b55b321036b439ff
       template: 'App MS SQL DB Discovery'
       name: 'App MS SQL DB Discovery'
-      description: |
-        ## Author
-        
-        Stephen E. Fritz
-        
-        
       groups:
         -
           name: 'Windows Servers'

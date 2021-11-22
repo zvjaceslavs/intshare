@@ -47,18 +47,18 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|MAC Address|<p>-</p>|`SNMP agent`|deviceMACAddress<p>Update: 1d</p>|
-|Temp Lower Sensor2|<p>-</p>|`SNMP agent`|temp2Lower<p>Update: 1d</p>|
 |Temp Sensor2|<p>-</p>|`SNMP agent`|temperature2<p>Update: 30</p>|
-|Temp Lower Sensor1|<p>-</p>|`SNMP agent`|temp1Lower<p>Update: 1d</p>|
-|Temp Upper Sensor1|<p>-</p>|`SNMP agent`|temp1Upper<p>Update: 1d</p>|
-|Name Sensor 2|<p>-</p>|`SNMP agent`|sens2Name<p>Update: 1d</p>|
 |Temp Upper Sensor2|<p>-</p>|`SNMP agent`|temp2Upper<p>Update: 1d</p>|
-|Humidity Sensor2|<p>-</p>|`SNMP agent`|humidity2<p>Update: 30</p>|
-|Name Agent|<p>-</p>|`SNMP agent`|name<p>Update: 1d</p>|
-|Humidity Sensor1|<p>-</p>|`SNMP agent`|humidity1<p>Update: 30</p>|
 |Version|<p>-</p>|`SNMP agent`|version<p>Update: 1d</p>|
 |Temp Sensor1|<p>-</p>|`SNMP agent`|temperature1<p>Update: 30</p>|
+|Humidity Sensor2|<p>-</p>|`SNMP agent`|humidity2<p>Update: 30</p>|
+|MAC Address|<p>-</p>|`SNMP agent`|deviceMACAddress<p>Update: 1d</p>|
+|Temp Lower Sensor1|<p>-</p>|`SNMP agent`|temp1Lower<p>Update: 1d</p>|
+|Temp Lower Sensor2|<p>-</p>|`SNMP agent`|temp2Lower<p>Update: 1d</p>|
+|Name Sensor 2|<p>-</p>|`SNMP agent`|sens2Name<p>Update: 1d</p>|
+|Humidity Sensor1|<p>-</p>|`SNMP agent`|humidity1<p>Update: 30</p>|
+|Temp Upper Sensor1|<p>-</p>|`SNMP agent`|temp1Upper<p>Update: 1d</p>|
+|Name Agent|<p>-</p>|`SNMP agent`|name<p>Update: 1d</p>|
 |Name Sensor 1|<p>-</p>|`SNMP agent`|sens1Name<p>Update: 1d</p>|
 ## Triggers
 

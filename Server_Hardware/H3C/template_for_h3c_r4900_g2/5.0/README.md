@@ -28,15 +28,15 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|hh3cFanHealthStatus|<p>-</p>|`SNMP agent`|hh3cFanHealthStatus<p>Update: 1m</p>|
-|hh3cCPUHealthStatus|<p>-</p>|`SNMP agent`|hh3cCPUHealthStatus<p>Update: 1m</p>|
-|hh3cSrvHdmVersion|<p>-</p>|`SNMP agent`|hh3cSrvHdmVersion<p>Update: 1m</p>|
-|hh3cManufactory|<p>-</p>|`SNMP agent`|hh3cManufactory<p>Update: 1m</p>|
+|hh3cSrvName|<p>-</p>|`SNMP agent`|hh3cSrvName<p>Update: 1m</p>|
+|hh3cPCIeCardStatus|<p>PCIE</p>|`SNMP agent`|hh3cPCIeCardStatus<p>Update: 1m</p>|
 |h3cSrvBiosVersion|<p>-</p>|`SNMP agent`|h3cSrvBiosVersion<p>Update: 1m</p>|
 |hh3cPwrHealthStatus|<p>-</p>|`SNMP agent`|hh3cPwrHealthStatus<p>Update: 1m</p>|
+|hh3cManufactory|<p>-</p>|`SNMP agent`|hh3cManufactory<p>Update: 1m</p>|
+|hh3cSrvHdmVersion|<p>-</p>|`SNMP agent`|hh3cSrvHdmVersion<p>Update: 1m</p>|
 |hh3cSensorServerityLevel_Inlet Temp|<p>-</p>|`SNMP agent`|hh3cSensorServerityLevel_Inlet_Temp<p>Update: 1m</p>|
-|hh3cPCIeCardStatus|<p>PCIE</p>|`SNMP agent`|hh3cPCIeCardStatus<p>Update: 1m</p>|
-|hh3cSrvName|<p>-</p>|`SNMP agent`|hh3cSrvName<p>Update: 1m</p>|
+|hh3cCPUHealthStatus|<p>-</p>|`SNMP agent`|hh3cCPUHealthStatus<p>Update: 1m</p>|
+|hh3cFanHealthStatus|<p>-</p>|`SNMP agent`|hh3cFanHealthStatus<p>Update: 1m</p>|
 ## Triggers
 
 There are no triggers in this template.

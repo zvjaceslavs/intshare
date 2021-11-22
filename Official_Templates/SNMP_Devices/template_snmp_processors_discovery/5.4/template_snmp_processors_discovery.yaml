@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:03:55Z'
+  date: '2021-11-21T21:19:28Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,20 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: a97317fb902643d1a83e2eca5ed4b3e9
-      template: 'SNMP Processors'
-      name: 'SNMP Processors'
-      description: |
-        ## Overview
-        
-        Official template from Zabbix distribution to discover processors by SNMP
-        
-        
-        
-        ## Author
-        
-        Zabbix SIA
-        
-        
+      template: 'Template SNMP Processors'
+      name: 'Template SNMP Processors'
       groups:
         -
           name: Templates

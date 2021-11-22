@@ -23,10 +23,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Hardware Version|<p>-</p>|`SNMP agent`|sysHardwareVersion<p>Update: 240s</p>|
-|Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 90s</p>|
 |Processor Load Level|<p>The actual CPU load level (per cent).</p>|`SNMP agent`|h150eLoadLevel<p>Update: 30s</p>|
+|Hardware Version|<p>-</p>|`SNMP agent`|sysHardwareVersion<p>Update: 240s</p>|
 |System State|<p>-</p>|`SNMP agent`|sysState<p>Update: 60s</p>|
+|Uptime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 90s</p>|
 |Software Version|<p>Contains the version string of the system software.</p>|`SNMP agent`|sysSoftwareVersion<p>Update: 240s</p>|
 |Slot Card Serial Number {#CARDTYPE}|<p>-</p>|`SNMP agent`|cardCodeNumber[{#CARDTYPE}]<p>Update: 60s</p><p>LLD</p>|
 |Slot Card Number {#CARDTYPE}|<p>-</p>|`SNMP agent`|cardSlotNum[{#CARDTYPE}]<p>Update: 60s</p><p>LLD</p>|

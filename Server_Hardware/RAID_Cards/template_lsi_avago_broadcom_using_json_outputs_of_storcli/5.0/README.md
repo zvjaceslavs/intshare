@@ -43,27 +43,18 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Logical disks discovery|<p>-</p>|`Zabbix agent`|lsi.ldlld<p>Update: {$LD_DISCOVERY_PERIOD}</p>|
-|Physical disks discovery|<p>-</p>|`Zabbix agent`|lsi.pdlld<p>Update: {$PD_DISCOVERY_PERIOD}</p>|
 |Controllers discovery|<p>-</p>|`Zabbix agent`|lsi.ctllld<p>Update: {$ADAP_DISCOVERY_PERIOD}</p>|
+|Physical disks discovery|<p>-</p>|`Zabbix agent`|lsi.pdlld<p>Update: {$PD_DISCOVERY_PERIOD}</p>|
+|Logical disks discovery|<p>-</p>|`Zabbix agent`|lsi.ldlld<p>Update: {$LD_DISCOVERY_PERIOD}</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|All bbus info|<p>-</p>|`Zabbix agent`|lsi.bbusinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
-|All cvs info|<p>-</p>|`Zabbix agent`|lsi.cvsinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
 |All Ctls info|<p>-</p>|`Zabbix agent`|lsi.ctlsinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
 |All Lds info|<p>-</p>|`Zabbix agent`|lsi.ldsinfo<p>Update: {$LD_REQUEST_PERIOD}</p>|
 |All Pds info|<p>-</p>|`Zabbix agent`|lsi.pdsinfo<p>Update: {$PD_REQUEST_PERIOD}</p>|
-|Logical disk "{#LDNAME}" (id {#LDID}) level|<p>-</p>|`Dependent item`|lsi.ld.level.["{#LDID}"]<p>Update: 0</p><p>LLD</p>|
-|Logical disk "{#LDNAME}" (id {#LDID})  state|<p>-</p>|`Dependent item`|lsi.ld.state.["{#LDID}"]<p>Update: 0</p><p>LLD</p>|
-|Physical disk "{#PDID}" media error count|<p>-</p>|`Dependent item`|lsi.pd.merrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
-|Physical disk "{#PDID}" model|<p>-</p>|`Dependent item`|lsi.pd.model.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
-|Physical disk "{#PDID}" other error count|<p>-</p>|`Dependent item`|lsi.pd.otherrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
-|Physical disk "{#PDID}" predictive failure count|<p>-</p>|`Dependent item`|lsi.pd.predicterrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
-|Physical disk "{#PDID}" SMART flag|<p>-</p>|`Dependent item`|lsi.pd.smartflag.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
-|Physical disk "{#PDID}" serial number|<p>-</p>|`Dependent item`|lsi.pd.sn.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
-|Physical disk "{#PDID}" state|<p>-</p>|`Dependent item`|lsi.pd.state.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|All bbus info|<p>-</p>|`Zabbix agent`|lsi.bbusinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
+|All cvs info|<p>-</p>|`Zabbix agent`|lsi.cvsinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
 |Controller "{#CTLID}" cache vault data|<p>-</p>|`Dependent item`|lsi.ctl.cvdata.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
 |Controller "{#CTLID}" cache bbu data|<p>-</p>|`Dependent item`|lsi.ctl.bbu.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
 |Controller "{#CTLID}" model|<p>-</p>|`Dependent item`|lsi.ctl.model.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
@@ -78,6 +69,15 @@ There are no template links in this template.
 |Controller "{#CTLID}" cache vault serial number|<p>-</p>|`Dependent item`|lsi.ctl.cvsn.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
 |Controller "{#CTLID}" cache vault state|<p>-</p>|`Dependent item`|lsi.ctl.cvstate.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
 |Controller "{#CTLID}" cache vault type|<p>-</p>|`Dependent item`|lsi.ctl.cvtype.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" media error count|<p>-</p>|`Dependent item`|lsi.pd.merrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" model|<p>-</p>|`Dependent item`|lsi.pd.model.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" other error count|<p>-</p>|`Dependent item`|lsi.pd.otherrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" predictive failure count|<p>-</p>|`Dependent item`|lsi.pd.predicterrcount.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" SMART flag|<p>-</p>|`Dependent item`|lsi.pd.smartflag.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" serial number|<p>-</p>|`Dependent item`|lsi.pd.sn.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Physical disk "{#PDID}" state|<p>-</p>|`Dependent item`|lsi.pd.state.["{#PDID}"]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" (id {#LDID}) level|<p>-</p>|`Dependent item`|lsi.ld.level.["{#LDID}"]<p>Update: 0</p><p>LLD</p>|
+|Logical disk "{#LDNAME}" (id {#LDID})  state|<p>-</p>|`Dependent item`|lsi.ld.state.["{#LDID}"]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -98,13 +98,6 @@ There are no template links in this template.
 |LSI physical disk "{#PDID}" predictive failure count is "{ITEM.LASTVALUE}". Growing up|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}>0 and {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].diff()}=1</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}=0</p>|warning|
 |LSI physical disk "{#PDID}" was replaced by sn  "{ITEM.LASTVALUE1}".  Previous sn: "{ITEM.LASTVALUE2}"|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.sn.["{#PDID}"].diff()}=1 and {LSI JSON discovery:lsi.pd.sn.["{#PDID}"].strlen(#2)}>0</p><p>**Recovery expression**: </p>|information|
 |LSI physical disk: SMART flag was raised up on "{#PDID}"|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.smartflag.["{#PDID}"].str(Yes)}=1</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.smartflag.["{#PDID}"].str(No)}=1</p>|average|
-|LSI logical disk "{#LDNAME}" ("{#LDID}") state is "{ITEM.LASTVALUE}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.ld.state.["{#LDID}"].str(Optimal)}=0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.ld.state.["{#LDID}"].str(Optimal)}=1</p>|high|
-|LSI physical disk "{#PDID}" is "{ITEM.LASTVALUE}" (LLD)|<p>-</p>|<p>**Expression**: ({LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Unconfigured-Bad)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Unconfigured-Good)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Missing)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Offline)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Foreign)}=1) and {LSI JSON discovery:lsi.pd.state.["{#PDID}"].diff()}=1 and {LSI JSON discovery:lsi.pd.state.["{#PDID}"].strlen()}>0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Unconfigured-Good)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Online)}=1</p>|high|
-|LSI physical disk "{#PDID}" media error count is "{ITEM.LASTVALUE}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.merrcount.["{#PDID}"].last()}>0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.merrcount.["{#PDID}"].last()}=0</p>|average|
-|LSI physical disk "{#PDID}" predictive failure count is "{ITEM.LASTVALUE}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}>0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}=0</p>|warning|
-|LSI physical disk "{#PDID}" predictive failure count is "{ITEM.LASTVALUE}". Growing up (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}>0 and {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].diff()}=1</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}=0</p>|warning|
-|LSI physical disk "{#PDID}" was replaced by sn  "{ITEM.LASTVALUE1}".  Previous sn: "{ITEM.LASTVALUE2}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.sn.["{#PDID}"].diff()}=1 and {LSI JSON discovery:lsi.pd.sn.["{#PDID}"].strlen(#2)}>0</p><p>**Recovery expression**: </p>|information|
-|LSI physical disk: SMART flag was raised up on "{#PDID}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.smartflag.["{#PDID}"].str(Yes)}=1</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.smartflag.["{#PDID}"].str(No)}=1</p>|average|
 |LSI controller {#CTLID} battery charge level is low (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.ctl.bbulowcharge.["{#CTLID}"].str(No)}=0 and {LSI JSON discovery:lsi.ctl.bbulowcharge.["{#CTLID}"].strlen()}>0</p><p>**Recovery expression**: </p>|average|
 |LSI controller {#CTLID} bbu battery is need to be replaced (LLD)|<p>-</p>|<p>**Expression**: ({LSI JSON discovery:lsi.ctl.bbureplace.["{#CTLID}"].str(No)}=0 and {LSI JSON discovery:lsi.ctl.bbureplace.["{#CTLID}"].strlen()}>0)</p><p>**Recovery expression**: </p>|average|
 |LSI controller {#CTLID} bbu battery state is {ITEM.LASTVALUE} (LLD)|<p>-</p>|<p>**Expression**: ({LSI JSON discovery:lsi.ctl.bbustate.["{#CTLID}"].str(Optimal)}=0 and {LSI JSON discovery:lsi.ctl.bbustate.["{#CTLID}"].strlen()}>0)</p><p>**Recovery expression**: </p>|average|
@@ -114,3 +107,10 @@ There are no template links in this template.
 |LSI controller {#CTLID} cachevault battery was replaced (LLD)|<p>-</p>|<p>**Expression**: ({LSI JSON discovery:lsi.ctl.cvsn.["{#CTLID}"].diff()}=1 and {LSI JSON discovery:lsi.ctl.cvsn.["{#CTLID}"].strlen()}>0)</p><p>**Recovery expression**: </p>|information|
 |LSI controller {#CTLID} status is {ITEM.LASTVALUE} (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.ctl.state.["{#CTLID}"].str(Opt)}=0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.ctl.state.["{#CTLID}"].str(Opt)}=1</p>|high|
 |LSI controller {#CTLID} was replaced (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.ctl.sn.["{#CTLID}"].diff()}=1 and {LSI JSON discovery:lsi.ctl.sn.["{#CTLID}"].strlen()}>0</p><p>**Recovery expression**: </p>|information|
+|LSI physical disk "{#PDID}" is "{ITEM.LASTVALUE}" (LLD)|<p>-</p>|<p>**Expression**: ({LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Unconfigured-Bad)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Unconfigured-Good)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Missing)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Offline)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Foreign)}=1) and {LSI JSON discovery:lsi.pd.state.["{#PDID}"].diff()}=1 and {LSI JSON discovery:lsi.pd.state.["{#PDID}"].strlen()}>0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Unconfigured-Good)}=1 or {LSI JSON discovery:lsi.pd.state.["{#PDID}"].str(Online)}=1</p>|high|
+|LSI physical disk "{#PDID}" media error count is "{ITEM.LASTVALUE}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.merrcount.["{#PDID}"].last()}>0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.merrcount.["{#PDID}"].last()}=0</p>|average|
+|LSI physical disk "{#PDID}" predictive failure count is "{ITEM.LASTVALUE}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}>0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}=0</p>|warning|
+|LSI physical disk "{#PDID}" predictive failure count is "{ITEM.LASTVALUE}". Growing up (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}>0 and {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].diff()}=1</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.predicterrcount.["{#PDID}"].last()}=0</p>|warning|
+|LSI physical disk "{#PDID}" was replaced by sn  "{ITEM.LASTVALUE1}".  Previous sn: "{ITEM.LASTVALUE2}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.sn.["{#PDID}"].diff()}=1 and {LSI JSON discovery:lsi.pd.sn.["{#PDID}"].strlen(#2)}>0</p><p>**Recovery expression**: </p>|information|
+|LSI physical disk: SMART flag was raised up on "{#PDID}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.pd.smartflag.["{#PDID}"].str(Yes)}=1</p><p>**Recovery expression**: {LSI JSON discovery:lsi.pd.smartflag.["{#PDID}"].str(No)}=1</p>|average|
+|LSI logical disk "{#LDNAME}" ("{#LDID}") state is "{ITEM.LASTVALUE}" (LLD)|<p>-</p>|<p>**Expression**: {LSI JSON discovery:lsi.ld.state.["{#LDID}"].str(Optimal)}=0</p><p>**Recovery expression**: {LSI JSON discovery:lsi.ld.state.["{#LDID}"].str(Optimal)}=1</p>|high|

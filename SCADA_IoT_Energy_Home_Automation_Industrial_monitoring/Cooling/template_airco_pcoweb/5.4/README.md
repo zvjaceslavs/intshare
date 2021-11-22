@@ -45,24 +45,24 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Compressor is Active|<p>-</p>|`SNMP agent`|airco.compressoractive<p>Update: 60</p>|
 |Humidifier Maintenance Warning|<p>-</p>|`SNMP agent`|airco.hummaint<p>Update: 60</p>|
+|Compressor is Active|<p>-</p>|`SNMP agent`|airco.compressoractive<p>Update: 60</p>|
+|Setpoint Cooling Temperature|<p>-</p>|`SNMP agent`|airco.setpointcooling<p>Update: 300</p>|
+|Room Temperature (incoming air flow)|<p>-</p>|`SNMP agent`|airco.roomtemp<p>Update: 60</p>|
+|Common Alarm Active|<p>-</p>|`SNMP agent`|airco.CommonAlarm<p>Update: 60</p>|
+|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
+|Supply Fan|<p>-</p>|`SNMP agent`|airco.supplyfan<p>Update: 60</p>|
+|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
+|Liquid Pressure|<p>-</p>|`SNMP agent`|airco.pressure<p>Update: 300</p>|
+|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
+|Humidity Setpoint|<p>-</p>|`SNMP agent`|airco.humsetpoint<p>Update: 300</p>|
+|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
+|Number of network interfaces|<p>The number of network interfaces (regardless of their current state) present on this system.</p>|`SNMP agent`|ifNumber<p>Update: 3600</p>|
+|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
+|Room Humidity|<p>-</p>|`SNMP agent`|airco.humidity<p>Update: 300</p>|
 |Setpoint Heating Temperature|<p>-</p>|`SNMP agent`|airco.setpointheating<p>Update: 300</p>|
 |Supply Temperature (outgoing air flow)|<p>-</p>|`SNMP agent`|airco.supplytemp<p>Update: 60</p>|
-|Supply Fan|<p>-</p>|`SNMP agent`|airco.supplyfan<p>Update: 60</p>|
-|Room Temperature (incoming air flow)|<p>-</p>|`SNMP agent`|airco.roomtemp<p>Update: 60</p>|
-|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
 |CPU Usage|<p>-</p>|`SNMP agent`|airco.cpu<p>Update: 60</p>|
-|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 60</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
-|Liquid Pressure|<p>-</p>|`SNMP agent`|airco.pressure<p>Update: 300</p>|
-|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
-|Humidity Setpoint|<p>-</p>|`SNMP agent`|airco.humsetpoint<p>Update: 300</p>|
-|Number of network interfaces|<p>The number of network interfaces (regardless of their current state) present on this system.</p>|`SNMP agent`|ifNumber<p>Update: 3600</p>|
-|Setpoint Cooling Temperature|<p>-</p>|`SNMP agent`|airco.setpointcooling<p>Update: 300</p>|
-|Common Alarm Active|<p>-</p>|`SNMP agent`|airco.CommonAlarm<p>Update: 60</p>|
-|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
-|Room Humidity|<p>-</p>|`SNMP agent`|airco.humidity<p>Update: 300</p>|
 |Unit is Active|<p>-</p>|`SNMP agent`|airco.unitactive<p>Update: 60</p>|
 |Alias of interface $1|<p>-</p>|`SNMP agent`|ifAlias[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Description of interface $1|<p>A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software.</p>|`SNMP agent`|ifDescr[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|

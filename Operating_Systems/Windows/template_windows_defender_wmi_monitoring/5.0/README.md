@@ -49,22 +49,22 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|AntiVirus Signature Age|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntivirusSignatureAge from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
-|Current computer state|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select ComputerState  from MSFT_MpComputerStatus"]<p>Update: 10m</p>|
-|AntiVirus Signature Last updated|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntivirusSignatureLastUpdated from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
-|Anti Spyware Protection Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntispywareEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
-|Anti Virus Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntivirusEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
-|AntiSpyware Signature age in days|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntispywareSignatureAge from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
 |Behavior Monitor Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select BehaviorMonitorEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
-|Full Scan Age|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select FullScanAge from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
-|AntiSpyware Signature Last updated|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntispywareSignatureLastUpdated from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
-|NIIS Signature age in days|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select NISSignatureAge from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
-|Ioav Protection Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select IoavProtectionEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
 |NIS Protection Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select NISEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
 |Real Time Protection Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select RealTimeProtectionEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
-|Quick Scan Age|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select QuickScanAge  from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
-|OnAccess Protection Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select OnAccessProtectionEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
+|Anti Virus Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntivirusEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
+|NIIS Signature age in days|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select NISSignatureAge from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
+|Ioav Protection Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select IoavProtectionEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
+|AntiVirus Signature Last updated|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntivirusSignatureLastUpdated from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
+|Full Scan Age|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select FullScanAge from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
 |NIS Signature Last updated|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select NISSignatureLastUpdated from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
+|Anti Spyware Protection Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntispywareEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
+|Quick Scan Age|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select QuickScanAge  from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
+|AntiVirus Signature Age|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntivirusSignatureAge from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
+|AntiSpyware Signature Last updated|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntispywareSignatureLastUpdated from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
+|Current computer state|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select ComputerState  from MSFT_MpComputerStatus"]<p>Update: 10m</p>|
+|OnAccess Protection Enabled|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select OnAccessProtectionEnabled from MSFT_MpComputerStatus"]<p>Update: 1h</p>|
+|AntiSpyware Signature age in days|<p>-</p>|`Zabbix agent`|wmi.get["root\microsoft\windows\defender","select AntispywareSignatureAge from MSFT_MpComputerStatus"]<p>Update: 3h</p>|
 ## Triggers
 
 There are no triggers in this template.

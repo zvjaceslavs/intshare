@@ -28,17 +28,17 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Исходящий трафик|<p>-</p>|`SNMP agent`|Dn_TX_SPEED<p>Update: 30s</p>|
 |Кол-во подключенных пользователей|<p>Количество соединений (клиентов, пользователей), подключенных к видеосерверу.</p>|`SNMP agent`|DnREALCLIENTS<p>Update: 30s</p>|
-|Количество неисправных HDD|<p>-</p>|`SNMP agent`|DnDiskFailedNum<p>Update: 10m</p>|
+|IP-адрес видеосервера|<p>-</p>|`SNMP agent`|DnIP<p>Update: 10m</p>|
 |Нагрузка процессора .|<p>Нагрузка (%) процессора видеосервера.</p>|`SNMP agent`|DnCPU_LOAD<p>Update: 1m</p>|
 |Порт Видеосервера|<p>-</p>|`SNMP agent`|DnPort<p>Update: 24h</p>|
-|Серийный номер видеосервера|<p>-</p>|`SNMP agent`|DnSerial<p>Update: 24h</p>|
-|Число потерянных кадров|<p>Число потерянных кадров от камер, которое не успевают записывать HDD видеосервера.</p>|`SNMP agent`|DnStorageDroppedFrames<p>Update: 30s</p>|
 |Количество архивных подключений|<p>Количество архивных подключений к серверу.</p>|`SNMP agent`|DnPLAYERCONNECTIONS<p>Update: 30s</p>|
-|IP-адрес видеосервера|<p>-</p>|`SNMP agent`|DnIP<p>Update: 10m</p>|
 |Скорость записи на HDD|<p>Скорость записи (Кбайт/сек) на HDD. При включенной функции "зеркалирования" архива значение удваивается.</p>|`SNMP agent`|DnRECORD_SPEED<p>Update: 30s</p>|
+|Количество неисправных HDD|<p>-</p>|`SNMP agent`|DnDiskFailedNum<p>Update: 10m</p>|
+|Исходящий трафик|<p>-</p>|`SNMP agent`|Dn_TX_SPEED<p>Update: 30s</p>|
+|Серийный номер видеосервера|<p>-</p>|`SNMP agent`|DnSerial<p>Update: 24h</p>|
 |Входящий трафик|<p>-</p>|`SNMP agent`|Dn_RX_SPEED<p>Update: 30s</p>|
+|Число потерянных кадров|<p>Число потерянных кадров от камер, которое не успевают записывать HDD видеосервера.</p>|`SNMP agent`|DnStorageDroppedFrames<p>Update: 30s</p>|
 |Свободное место HDD $1|<p>-</p>|`SNMP agent`|DnDiskFreeSpace[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Жесткий диск $1|<p>-</p>|`SNMP agent`|DnDiskIndex[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |Модель и SN HDD $1|<p>-</p>|`SNMP agent`|DnDiskSerial[{#SNMPINDEX}]<p>Update: 24h</p><p>LLD</p>|

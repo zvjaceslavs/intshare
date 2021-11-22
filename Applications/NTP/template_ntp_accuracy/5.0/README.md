@@ -1,40 +1,5 @@
 # NTP[Remote]
 
-## Overview
-
-NTP accuracy Infomation Template
-
-
-Japanese version template is in the [link](cat-app/ntp-accuracy-template-japanese) .  
-日本語版テンプレートは[こちら](cat-app/ntp-accuracy-template-japanese)
-
-
-Sammeln Sie alle Informationen, die in der ntpq Befehl angezeigt wird.
-
-
- When you use a template  
- Please make the following settings zabbix\_agentd.conf.
-
-
-EnableRemoteCommands=1
-
-
-UnsafeUserParameters=1
-
-
- 
- 
-
-In ZabbixAgent is installed environment  
-It will use the NTP template.  
-  
- ZabbxAgent can not be installed system  
- For example, in as NTP appliance  
- Please use the NTP [Remoto] template.  
- In the NTP [Remoto] template and the IP address of the destination NTP appliance  
-You set the macro as {$ NTP\_IP}.
-
-
 ## Macros used
 
 |Name|Description|Default|Type|
@@ -65,76 +30,6 @@ There are no discovery rules in this template.
 There are no triggers in this template.
 
 # NTP
-
-## Overview
-
-NTP accuracy Infomation Template
-
-
-Japanese version template is in the [link](cat-app/ntp-accuracy-template-japanese) .  
-日本語版テンプレートは[こちら](cat-app/ntp-accuracy-template-japanese)
-
-
-Sammeln Sie alle Informationen, die in der ntpq Befehl angezeigt wird.
-
-
- When you use a template  
- Please make the following settings zabbix\_agentd.conf.
-
-
-EnableRemoteCommands=1
-
-
-UnsafeUserParameters=1
-
-
- 
- 
-
-In ZabbixAgent is installed environment  
-It will use the NTP template.  
-  
- ZabbxAgent can not be installed system  
- For example, in as NTP appliance  
- Please use the NTP [Remoto] template.  
- In the NTP [Remoto] template and the IP address of the destination NTP appliance  
-You set the macro as {$ NTP\_IP}.
-
-
-## Overview
-
-NTP accuracy Infomation Template
-
-
-Japanese version template is in the [link](cat-app/ntp-accuracy-template-japanese) .  
-日本語版テンプレートは[こちら](cat-app/ntp-accuracy-template-japanese)
-
-
-Sammeln Sie alle Informationen, die in der ntpq Befehl angezeigt wird.
-
-
- When you use a template  
- Please make the following settings zabbix\_agentd.conf.
-
-
-EnableRemoteCommands=1
-
-
-UnsafeUserParameters=1
-
-
- 
- 
-
-In ZabbixAgent is installed environment  
-It will use the NTP template.  
-  
- ZabbxAgent can not be installed system  
- For example, in as NTP appliance  
- Please use the NTP [Remoto] template.  
- In the NTP [Remoto] template and the IP address of the destination NTP appliance  
-You set the macro as {$ NTP\_IP}.
-
 
 ## Macros used
 

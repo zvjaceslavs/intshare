@@ -48,19 +48,19 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|NTP同期サーバ|<p>-</p>|`Dependent item`|Reference<p>Update: 0</p>|
-|chronyc tracking|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc tracking]<p>Update: 10m</p>|
-|chronyReach|<p>過去8回の問合せ成功回数を8ビットで表現します。</p>|`Zabbix agent (active)`|system.run[chronyc sources|grep \* |awk '{print$5}']<p>Update: 10m</p>|
 |NTPポーリング間隔|<p>NTPサーバとの同期間隔を示します。</p>|`Dependent item`|Updateinterval<p>Update: 0</p>|
-|chronyバージョン|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc -v]<p>Update: 1h</p>|
-|同期状態|<p>同期状態 Normal 正常 Insert second 挿入 Delete second 削除 Not synchronized 同期していない</p>|`Dependent item`|LeapStatus<p>Update: 0</p>|
-|NTPオフセット(長期平均)|<p>NTPサーバとの時刻ズレ</p>|`Dependent item`|RMSoffset<p>Update: 0</p>|
+|NTP時刻差(ms)|<p>NTP時刻とsystem時刻との差を示します。</p>|`Dependent item`|Systemtime_ms<p>Update: 0</p>|
+|NTP同期サーバ|<p>-</p>|`Dependent item`|Reference<p>Update: 0</p>|
 |NTP時刻差(方向)|<p>NTP時刻とsystem時刻との差の方向を示します。</p>|`Dependent item`|Systemtime<p>Update: 0</p>|
+|ネットワーク合計遅延|<p>stratum-1 までのネットワーク合計遅延です。</p>|`Dependent item`|Rootdelay<p>Update: 0</p>|
+|NTP階層|<p>監視対象サーバーのstratum階層</p>|`Dependent item`|Stratum<p>Update: 0</p>|
+|chronyc tracking|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc tracking]<p>Update: 10m</p>|
 |chronyc sources|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc sources]<p>Update: 10m</p>|
 |NTPオフセット|<p>NTPサーバとの時刻ズレ</p>|`Dependent item`|Lastoffset<p>Update: 0</p>|
-|NTP時刻差(ms)|<p>NTP時刻とsystem時刻との差を示します。</p>|`Dependent item`|Systemtime_ms<p>Update: 0</p>|
-|NTP階層|<p>監視対象サーバーのstratum階層</p>|`Dependent item`|Stratum<p>Update: 0</p>|
-|ネットワーク合計遅延|<p>stratum-1 までのネットワーク合計遅延です。</p>|`Dependent item`|Rootdelay<p>Update: 0</p>|
+|同期状態|<p>同期状態 Normal 正常 Insert second 挿入 Delete second 削除 Not synchronized 同期していない</p>|`Dependent item`|LeapStatus<p>Update: 0</p>|
+|chronyバージョン|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc -v]<p>Update: 1h</p>|
+|NTPオフセット(長期平均)|<p>NTPサーバとの時刻ズレ</p>|`Dependent item`|RMSoffset<p>Update: 0</p>|
+|chronyReach|<p>過去8回の問合せ成功回数を8ビットで表現します。</p>|`Zabbix agent (active)`|system.run[chronyc sources|grep \* |awk '{print$5}']<p>Update: 10m</p>|
 ## Triggers
 
 There are no triggers in this template.

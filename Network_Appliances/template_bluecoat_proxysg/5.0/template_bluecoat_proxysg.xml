@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-11-09T08:05:16Z</date>
+  <date>2021-11-22T02:47:30Z</date>
   <groups>
     <group>
       <name>BlueCoat</name>
@@ -11,7 +11,6 @@
     <template>
       <template>App BlueCoat SG</template>
       <name>App BlueCoat SG</name>
-      <description>## Overview Based on official SNMP MIBs. SGOS 6.5.x+ Additional info: &lt;https://bto.bluecoat.com/documentation/All-Documents/ProxySG></description>
       <groups>
         <group>
           <name>BlueCoat</name>

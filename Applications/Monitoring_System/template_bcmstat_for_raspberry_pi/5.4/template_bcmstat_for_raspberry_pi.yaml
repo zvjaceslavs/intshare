@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:41:03Z'
+  date: '2021-11-22T02:51:04Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -10,25 +10,6 @@ zabbix_export:
       uuid: 6fb102566b2c476981a3b1e3eea14cb7
       template: 'App bcmstat'
       name: 'App bcmstat'
-      description: |
-        ## Description
-        
-        Monitoring bcmstat 0.5.4 or greater. https://github.com/MilhouseVH/bcmstat
-        
-        ## Overview
-        
-        The Git repo can be found [here](https://gitlab.com/i.am.stack/zabbix_bcmstat_raspberrypi).
-        
-        
-        This template will monitor Raspberry Pi's (only tested RPI4) via SSH using the bcmstat utility which must be v0.5.4 or better. 
-        
-        
-        
-        ## Author
-        
-        ~Stack~
-        
-        
       templates:
         -
           name: 'Template App SSH Service'

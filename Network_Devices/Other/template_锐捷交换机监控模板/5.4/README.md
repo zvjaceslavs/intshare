@@ -37,23 +37,21 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|端口发现|<p>You may also consider using IF-MIB::ifType or IF-MIB::ifAlias for discovery depending on your filtering needs. {$CLOUD_SNMP_COMMUNITY} is a global macro.</p>|`SNMP agent`|InterfaceDiscovery_status<p>Update: 12h</p>|
-|电源发现|<p>-</p>|`SNMP agent`|PowerDiscovery<p>Update: 1h</p>|
 |端口发现|<p>-</p>|`SNMP agent`|InterfaceDiscovery_traffic<p>Update: 12h</p>|
+|端口发现|<p>You may also consider using IF-MIB::ifType or IF-MIB::ifAlias for discovery depending on your filtering needs. {$CLOUD_SNMP_COMMUNITY} is a global macro.</p>|`SNMP agent`|InterfaceDiscovery_status<p>Update: 12h</p>|
 |内存发现|<p>-</p>|`SNMP agent`|MemoryDiscovery<p>Update: 1h</p>|
 |风扇发现|<p>-</p>|`SNMP agent`|FanDiscovery<p>Update: 1h</p>|
+|电源发现|<p>-</p>|`SNMP agent`|PowerDiscovery<p>Update: 1h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping[,5,,,]<p>Update: 1m</p>|
-|系统信息|<p>-</p>|`SNMP agent`|SystemDescription<p>Update: 1h</p>|
-|ping时延|<p>-</p>|`Simple check`|icmppingsec[,10,,,,avg]<p>Update: 5m</p>|
-|CPU 5分钟利用率|<p>-</p>|`SNMP agent`|CPUUsageIn5Min<p>Update: 10m</p>|
-|运行时间|<p>-</p>|`SNMP agent`|SystemUpTime<p>Update: 1h</p>|
 |ping丢包率|<p>-</p>|`Simple check`|icmppingloss[,10,,,]<p>Update: 5m</p>|
-|端口 {#IFDESCR}({#IFALIAS})状态|<p>The current operational state of the interface.</p>|`SNMP agent`|InterfaceOperationStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
-|电源运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|PowerSupplyStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|CPU 5分钟利用率|<p>-</p>|`SNMP agent`|CPUUsageIn5Min<p>Update: 10m</p>|
+|ICMP ping|<p>-</p>|`Simple check`|icmpping[,5,,,]<p>Update: 1m</p>|
+|运行时间|<p>-</p>|`SNMP agent`|SystemUpTime<p>Update: 1h</p>|
+|ping时延|<p>-</p>|`Simple check`|icmppingsec[,10,,,,avg]<p>Update: 5m</p>|
+|系统信息|<p>-</p>|`SNMP agent`|SystemDescription<p>Update: 1h</p>|
 |端口带宽 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceBandwidth.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 12h</p><p>LLD</p>|
 |入方向带宽利用率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`Calculated`|InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
 |入方向广播报文速率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceInBroadcastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
@@ -67,8 +65,10 @@ There are no template links in this template.
 |出方向错包 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 30m</p><p>LLD</p>|
 |出方向流量 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceOutTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
 |出方向单播报文速率 {#IFDESCR}({#IFALIAS})|<p>-</p>|`SNMP agent`|InterfaceOutUnicastPacketsTraffic.[{#SNMPINDEX},{#IFDESCR}]<p>Update: 10m</p><p>LLD</p>|
+|端口 {#IFDESCR}({#IFALIAS})状态|<p>The current operational state of the interface.</p>|`SNMP agent`|InterfaceOperationStatus.[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |内存利用率 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|MemoryUsage.[{#SNMPINDEX}]<p>Update: 10m</p><p>LLD</p>|
 |风扇运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|FanOperationStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
+|电源运行状态 {#SNMPVALUE}|<p>-</p>|`SNMP agent`|PowerSupplyStatus.[{#SNMPINDEX}]<p>Update: 30m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -81,11 +81,11 @@ There are no template links in this template.
 |{#IFDESCR} 出方向错包率高|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}])>10</p><p>**Recovery expression**: </p>|high|
 |内存利用率高|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/MemoryUsage.[{#SNMPINDEX}])>90</p><p>**Recovery expression**: </p>|high|
 |电源运行异常|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/PowerSupplyStatus.[{#SNMPINDEX}],#1)<>4</p><p>**Recovery expression**: </p>|high|
-|端口:{#IFDESCR} down (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#2)=1 and last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#1)=2</p><p>**Recovery expression**: last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#2)=1 and last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#1)=1</p>|high|
-|电源运行异常 (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/PowerSupplyStatus.[{#SNMPINDEX}],#1)<>4</p><p>**Recovery expression**: </p>|high|
 |{#IFDESCR} 入方向带宽利用率高 (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/InterfaceInBandwidthUsage.[{#SNMPINDEX},{#IFDESCR}])>90</p><p>**Recovery expression**: </p>|high|
 |{#IFDESCR} 入方向错包率高 (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/InterfaceInPacketError.[{#SNMPINDEX},{#IFDESCR}])>10</p><p>**Recovery expression**: </p>|high|
 |{#IFDESCR} 出方向带宽利用率高 (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/InterfaceOutBandwidthUsage[{#SNMPINDEX},{#IFDESCR}])>90</p><p>**Recovery expression**: </p>|high|
 |{#IFDESCR} 出方向错包率高 (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/InterfaceOutPacketError.[{#SNMPINDEX},{#IFDESCR}])>10</p><p>**Recovery expression**: </p>|high|
+|端口:{#IFDESCR} down (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#2)=1 and last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#1)=2</p><p>**Recovery expression**: last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#2)=1 and last(/monitor_Switch_Ruijie/InterfaceOperationStatus.[{#SNMPINDEX}],#1)=1</p>|high|
 |内存利用率高 (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/MemoryUsage.[{#SNMPINDEX}])>90</p><p>**Recovery expression**: </p>|high|
 |风扇运行异常 (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/FanOperationStatus.[{#SNMPINDEX}],#1)<>4</p><p>**Recovery expression**: </p>|high|
+|电源运行异常 (LLD)|<p>-</p>|<p>**Expression**: last(/monitor_Switch_Ruijie/PowerSupplyStatus.[{#SNMPINDEX}],#1)<>4</p><p>**Recovery expression**: </p>|high|

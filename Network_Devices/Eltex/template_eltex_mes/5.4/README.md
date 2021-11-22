@@ -30,23 +30,23 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Temperature|<p>-</p>|`SNMP agent`|rlEnvFanDataTemp<p>Update: 5m</p>|
 |ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 2m</p>|
-|Serial number|<p>Serial number</p>|`SNMP agent`|rlPhdUnitGenParamSerialNum<p>Update: 1h</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 1h</p>|
-|Memory Utilization Free|<p>-</p>|`SNMP agent`|eltexProcessMemoryFreePercent<p>Update: 5m</p>|
-|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 1h</p>|
-|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 1h</p>|
 |Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 5m</p>|
+|Memory Utilization Free|<p>-</p>|`SNMP agent`|eltexProcessMemoryFreePercent<p>Update: 5m</p>|
+|Temperature|<p>-</p>|`SNMP agent`|rlEnvFanDataTemp<p>Update: 5m</p>|
 |Device MAC|<p>MAC adress Device</p>|`SNMP agent`|rlPhdStackMacAddr<p>Update: 1h</p>|
+|CPU Utilization 1sec|<p>-</p>|`SNMP agent`|rlCpuUtilDuringLastSecond<p>Update: 3m</p>|
+|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</p>|`SNMP agent`|sysDescr<p>Update: 1h</p>|
+|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 1h</p>|
+|Device contact details|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|sysContact<p>Update: 1h</p>|
+|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1m</p>|
+|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 1h</p>|
+|Device firmware|<p>Version firmware</p>|`SNMP agent`|rndBrgVersion<p>Update: 1h</p>|
+|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 2m</p>|
+|CPU Utilization 1min|<p>-</p>|`SNMP agent`|rlCpuUtilDuringLastMinute<p>Update: 3m</p>|
+|Serial number|<p>Serial number</p>|`SNMP agent`|rlPhdUnitGenParamSerialNum<p>Update: 1h</p>|
 |Number of network interfaces|<p>The number of network interfaces (regardless of their current state) present on this system.</p>|`SNMP agent`|ifNumber<p>Update: 1h</p>|
 |CPU Utilization 5min|<p>-</p>|`SNMP agent`|rlCpuUtilDuringLast5Minutes<p>Update: 5m</p>|
-|CPU Utilization 1min|<p>-</p>|`SNMP agent`|rlCpuUtilDuringLastMinute<p>Update: 3m</p>|
-|Device firmware|<p>Version firmware</p>|`SNMP agent`|rndBrgVersion<p>Update: 1h</p>|
-|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 1h</p>|
-|CPU Utilization 1sec|<p>-</p>|`SNMP agent`|rlCpuUtilDuringLastSecond<p>Update: 3m</p>|
-|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1m</p>|
-|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 2m</p>|
 |Admin status of interface $1|<p>The desired state of the interface.</p>|`SNMP agent`|ifAdminStatus[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
 |Inbound errors on interface $1|<p>For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.</p>|`SNMP agent`|ifInErrors[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|
 |Volt SFP of interface $1|<p>Volt on SFP interface.</p>|`SNMP agent`|rlPhyTestGetResult.v[{#SNMPVALUE}]<p>Update: 10m</p><p>LLD</p>|

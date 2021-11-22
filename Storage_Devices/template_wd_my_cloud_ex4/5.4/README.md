@@ -57,20 +57,25 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|UPSs|<p>-</p>|`SNMP agent`|upsDiscovery<p>Update: 1h</p>|
 |Logical Disks|<p>-</p>|`SNMP agent`|ldDiscovery<p>Update: 1m</p>|
 |Physical Disks|<p>-</p>|`SNMP agent`|pdDiscovery<p>Update: 1h</p>|
-|UPSs|<p>-</p>|`SNMP agent`|upsDiscovery<p>Update: 1h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Agent Version|<p>-</p>|`SNMP agent`|agentVer<p>Update: 1h</p>|
+|FTP status|<p>-</p>|`SNMP agent`|ftpServer<p>Update: 1h</p>|
+|Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 1m</p>|
 |Fan status|<p>-</p>|`SNMP agent`|fanStatus<p>Update: 1m</p>|
-|Hostname|<p>-</p>|`SNMP agent`|hostName<p>Update: 1h</p>|
 |Net type|<p>-</p>|`SNMP agent`|netType<p>Update: 1h</p>|
 |Software version|<p>-</p>|`SNMP agent`|softwareVersion<p>Update: 1h</p>|
-|Agent Version|<p>-</p>|`SNMP agent`|agentVer<p>Update: 1h</p>|
-|Temperature|<p>-</p>|`SNMP agent`|temperature<p>Update: 1m</p>|
-|FTP status|<p>-</p>|`SNMP agent`|ftpServer<p>Update: 1h</p>|
+|Hostname|<p>-</p>|`SNMP agent`|hostName<p>Update: 1h</p>|
+|UPS No{#SNMPINDEX} Battery Charge|<p>-</p>|`SNMP agent`|upsBattery[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
+|UPS No{#SNMPINDEX} Manufacturer|<p>-</p>|`SNMP agent`|upsManufacturer[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|UPS No{#SNMPINDEX} Mode|<p>-</p>|`SNMP agent`|upsMode[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|UPS No{#SNMPINDEX} Product|<p>-</p>|`SNMP agent`|upsProduct[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
+|UPS No{#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|upsStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Logical disk {#VOLUMENAME} free space|<p>-</p>|`SNMP agent`|ld.freespace[{#VOLUMENAME}]<p>Update: 1m</p><p>LLD</p>|
 |Logical disk {#VOLUMENAME} FS type|<p>-</p>|`SNMP agent`|ld.fstype[{#VOLUMENAME}]<p>Update: 1h</p><p>LLD</p>|
 |Logical disk {#VOLUMENAME} free percent|<p>-</p>|`Calculated`|ld.pfree[{#VOLUMENAME}]<p>Update: 1m</p><p>LLD</p>|
@@ -81,11 +86,6 @@ There are no template links in this template.
 |Disk SN in slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|pd.SN[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
 |Disk temperature in slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|pd.temperature[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 |Disk vendor in slot {#SNMPINDEX}|<p>-</p>|`SNMP agent`|pd.Vendor[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|UPS No{#SNMPINDEX} Battery Charge|<p>-</p>|`SNMP agent`|upsBattery[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
-|UPS No{#SNMPINDEX} Manufacturer|<p>-</p>|`SNMP agent`|upsManufacturer[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|UPS No{#SNMPINDEX} Mode|<p>-</p>|`SNMP agent`|upsMode[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|UPS No{#SNMPINDEX} Product|<p>-</p>|`SNMP agent`|upsProduct[{#SNMPINDEX}]<p>Update: 1h</p><p>LLD</p>|
-|UPS No{#SNMPINDEX} Status|<p>-</p>|`SNMP agent`|upsStatus[{#SNMPINDEX}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|
@@ -95,8 +95,8 @@ There are no template links in this template.
 |Battery Charge Critical|<p>-</p>|<p>**Expression**: last(/WD My Cloud EX4/upsBattery[{#SNMPINDEX}])<25</p><p>**Recovery expression**: </p>|high|
 |Battery Charge Low|<p>-</p>|<p>**Expression**: last(/WD My Cloud EX4/upsBattery[{#SNMPINDEX}])<50</p><p>**Recovery expression**: </p>|average|
 |Battery Status|<p>-</p>|<p>**Expression**: find(/WD My Cloud EX4/upsStatus[{#SNMPINDEX}],#3,"regexp","On Line")=0</p><p>**Recovery expression**: </p>|warning|
-|Logical Disk {#VOLUMENAME} free space less 25% (LLD)|<p>-</p>|<p>**Expression**: last(/WD My Cloud EX4/ld.pfree[{#VOLUMENAME}])<25</p><p>**Recovery expression**: </p>|warning|
-|Physical disk {#SNMPINDEX} temperature (LLD)|<p>-</p>|<p>**Expression**: avg(/WD My Cloud EX4/pd.temperature[{#SNMPINDEX}],#5)>55</p><p>**Recovery expression**: </p>|warning|
 |Battery Charge Critical (LLD)|<p>-</p>|<p>**Expression**: last(/WD My Cloud EX4/upsBattery[{#SNMPINDEX}])<25</p><p>**Recovery expression**: </p>|high|
 |Battery Charge Low (LLD)|<p>-</p>|<p>**Expression**: last(/WD My Cloud EX4/upsBattery[{#SNMPINDEX}])<50</p><p>**Recovery expression**: </p>|average|
 |Battery Status (LLD)|<p>-</p>|<p>**Expression**: find(/WD My Cloud EX4/upsStatus[{#SNMPINDEX}],#3,"regexp","On Line")=0</p><p>**Recovery expression**: </p>|warning|
+|Logical Disk {#VOLUMENAME} free space less 25% (LLD)|<p>-</p>|<p>**Expression**: last(/WD My Cloud EX4/ld.pfree[{#VOLUMENAME}])<25</p><p>**Recovery expression**: </p>|warning|
+|Physical disk {#SNMPINDEX} temperature (LLD)|<p>-</p>|<p>**Expression**: avg(/WD My Cloud EX4/pd.temperature[{#SNMPINDEX}],#5)>55</p><p>**Recovery expression**: </p>|warning|

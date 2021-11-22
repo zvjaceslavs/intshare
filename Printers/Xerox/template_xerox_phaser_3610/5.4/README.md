@@ -16,14 +16,14 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Current cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.now<p>Update: 10m</p>|
+|Printer model|<p>-</p>|`SNMP agent`|model<p>Update: 1h</p>|
 |Serial number|<p>-</p>|`SNMP agent`|serial.number<p>Update: 1h</p>|
 |Pages printed - total|<p>-</p>|`SNMP agent`|pages.printed.total<p>Update: 30s</p>|
+|Printer location|<p>-</p>|`SNMP agent`|printer.location<p>Update: 1h</p>|
 |Cartridge toner level % - black|<p>-</p>|`Calculated`|black.cartridge.toner<p>Update: 10m</p>|
 |Max cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.max<p>Update: 10m</p>|
-|Printer model|<p>-</p>|`SNMP agent`|model<p>Update: 1h</p>|
 |Type of cartridge - black|<p>-</p>|`SNMP agent`|black.cartridge.type<p>Update: 1h</p>|
-|Printer location|<p>-</p>|`SNMP agent`|printer.location<p>Update: 1h</p>|
-|Current cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.now<p>Update: 10m</p>|
 ## Triggers
 
 There are no triggers in this template.

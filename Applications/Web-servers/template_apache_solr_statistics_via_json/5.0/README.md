@@ -75,29 +75,29 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Solr: JVM Threads Deadlock Count|<p>-</p>|`Dependent item`|solr.jvm.threads.deadlock.count<p>Update: 0</p>|
-|Solr: JVM OS Process CPU Load|<p>-</p>|`Dependent item`|solr.jvm.os.processCpuLoad<p>Update: 0</p>|
-|Solr: JVM memory non-heap used|<p>-</p>|`Dependent item`|solr.jvm.memory.non-heap.used<p>Update: 0</p>|
-|Solr: JVM Threads Blocked Count|<p>-</p>|`Dependent item`|solr.jvm.threads.blocked.count<p>Update: 0</p>|
 |Solr: JVM Threads Waiting Count|<p>-</p>|`Dependent item`|solr.jvm.threads.waiting.count<p>Update: 0</p>|
-|Solr: JVM memory heap usage|<p>-</p>|`Dependent item`|solr.jvm.memory.heap.usage<p>Update: 0</p>|
-|Solr: JVM memory non-heap commited|<p>-</p>|`Dependent item`|solr.jvm.memory.non-heap.committed<p>Update: 0</p>|
-|Solr: JVM memory heap commited|<p>-</p>|`Dependent item`|solr.jvm.memory.heap.committed<p>Update: 0</p>|
-|Solr: JVM memory total used|<p>-</p>|`Dependent item`|solr.jvm.memory.total.used<p>Update: 0</p>|
-|Solr: JVM OS max file descriptors|<p>-</p>|`Dependent item`|solr.jvm.os.maxFileDescriptorCount<p>Update: 0</p>|
 |Solr: JVM OS open file descriptors|<p>-</p>|`Dependent item`|solr.jvm.os.openFileDescriptorCount<p>Update: 0</p>|
+|Solr: JVM memory heap max|<p>-</p>|`Dependent item`|solr.jvm.memory.heap.max<p>Update: 0</p>|
+|Solr: JVM memory total used|<p>-</p>|`Dependent item`|solr.jvm.memory.total.used<p>Update: 0</p>|
+|Solr: JVM OS Process CPU Load|<p>-</p>|`Dependent item`|solr.jvm.os.processCpuLoad<p>Update: 0</p>|
+|Solr: JVM memory heap used|<p>-</p>|`Dependent item`|solr.jvm.memory.heap.used<p>Update: 0</p>|
+|Solr: JVM memory non-heap usage|<p>-</p>|`Dependent item`|solr.jvm.memory.non-heap.usage<p>Update: 0</p>|
+|Solr: JVM memory non-heap max|<p>-</p>|`Dependent item`|solr.jvm.memory.non-heap.max<p>Update: 0</p>|
 |Solr: JVM memory total max|<p>-</p>|`Dependent item`|solr.jvm.memory.total.max<p>Update: 0</p>|
 |Solr: Java process number|<p>-</p>|`Zabbix agent`|proc.num[java,,,start.jar]<p>Update: 180</p>|
-|Solr: JVM memory heap max|<p>-</p>|`Dependent item`|solr.jvm.memory.heap.max<p>Update: 0</p>|
-|Solr: JVM memory total commited|<p>-</p>|`Dependent item`|solr.jvm.memory.total.committed<p>Update: 0</p>|
-|Solr: JVM Threads Runnable Count|<p>-</p>|`Dependent item`|solr.jvm.threads.runnable.count<p>Update: 0</p>|
+|Solr: JVM Threads Blocked Count|<p>-</p>|`Dependent item`|solr.jvm.threads.blocked.count<p>Update: 0</p>|
+|Solr: JVM Threads Deadlock Count|<p>-</p>|`Dependent item`|solr.jvm.threads.deadlock.count<p>Update: 0</p>|
+|Solr: JVM OS max file descriptors|<p>-</p>|`Dependent item`|solr.jvm.os.maxFileDescriptorCount<p>Update: 0</p>|
 |Solr: JVM Threads Count|<p>-</p>|`Dependent item`|solr.jvm.threads.count<p>Update: 0</p>|
-|Solr: JVM memory heap used|<p>-</p>|`Dependent item`|solr.jvm.memory.heap.used<p>Update: 0</p>|
-|Solr: JVM Threads Daemon Count|<p>-</p>|`Dependent item`|solr.jvm.threads.daemon.count<p>Update: 0</p>|
-|Solr: JVM memory non-heap max|<p>-</p>|`Dependent item`|solr.jvm.memory.non-heap.max<p>Update: 0</p>|
+|Solr: JVM memory non-heap used|<p>-</p>|`Dependent item`|solr.jvm.memory.non-heap.used<p>Update: 0</p>|
+|Solr: JVM memory heap commited|<p>-</p>|`Dependent item`|solr.jvm.memory.heap.committed<p>Update: 0</p>|
+|Solr: JVM memory total commited|<p>-</p>|`Dependent item`|solr.jvm.memory.total.committed<p>Update: 0</p>|
 |Solr: JVM Threads Terminated Count|<p>-</p>|`Dependent item`|solr.jvm.threads.terminated.count<p>Update: 0</p>|
+|Solr: JVM Threads Daemon Count|<p>-</p>|`Dependent item`|solr.jvm.threads.daemon.count<p>Update: 0</p>|
 |Solr: JVM metrics get status|<p>-</p>|`HTTP agent`|solr.jvm.getStatus<p>Update: 5m</p>|
-|Solr: JVM memory non-heap usage|<p>-</p>|`Dependent item`|solr.jvm.memory.non-heap.usage<p>Update: 0</p>|
+|Solr: JVM memory heap usage|<p>-</p>|`Dependent item`|solr.jvm.memory.heap.usage<p>Update: 0</p>|
+|Solr: JVM memory non-heap commited|<p>-</p>|`Dependent item`|solr.jvm.memory.non-heap.committed<p>Update: 0</p>|
+|Solr: JVM Threads Runnable Count|<p>-</p>|`Dependent item`|solr.jvm.threads.runnable.count<p>Update: 0</p>|
 |Solr: Core "{#CORENAME}" metrics get status|<p>-</p>|`HTTP agent`|solr.core.getStatus[{#CORENAME}]<p>Update: 5m</p><p>LLD</p>|
 |Solr: Core {#CORENAME} document cache - evictions|<p>-</p>|`Dependent item`|solr.core.documentCache.evictions[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|
 |Solr: Core {#CORENAME} searcher - numDocs|<p>Document count</p>|`Dependent item`|solr.core.searcher.numDocs[{#CORENAME}]<p>Update: 0</p><p>LLD</p>|

@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:03:15Z'
+  date: '2021-11-21T21:18:42Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,20 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 1bfc936bef1442e6aec30bf957cc2eb0
-      template: 'JMX Generic'
-      name: 'JMX Generic'
-      description: |
-        ## Overview
-        
-        Official JMX Template from Zabbix distribution. Could be useful for many Java Applications (JMX).
-        
-        
-        
-        ## Author
-        
-        Zabbix SIA
-        
-        
+      template: 'Template JMX Generic'
+      name: 'Template JMX Generic'
       groups:
         -
           name: Templates
@@ -79,7 +67,7 @@ zabbix_export:
           triggers:
             -
               uuid: f6cc82bac38a4fea91ab2a96d4b063fd
-              expression: 'find(/JMX Generic/jmx["java.lang:type=Compilation",Name],,"like","Client")=1'
+              expression: 'find(/Template JMX Generic/jmx["java.lang:type=Compilation",Name],,"like","Client")=1'
               name: '{HOST.NAME} uses suboptimal JIT compiler'
               priority: INFO
         -
@@ -732,7 +720,7 @@ zabbix_export:
           triggers:
             -
               uuid: 36d69f31347e4b119237cabe65ec74a7
-              expression: 'last(/JMX Generic/jmx["java.lang:type=OperatingSystem",ProcessCpuLoad])>70'
+              expression: 'last(/Template JMX Generic/jmx["java.lang:type=OperatingSystem",ProcessCpuLoad])>70'
               name: '70% os Process CPU Load on {HOST.NAME}'
               priority: AVERAGE
         -
@@ -756,7 +744,7 @@ zabbix_export:
           triggers:
             -
               uuid: 87f287c1456c4bb8977d81b622e5e5b3
-              expression: 'nodata(/JMX Generic/jmx["java.lang:type=Runtime",Uptime],5m)=1'
+              expression: 'nodata(/Template JMX Generic/jmx["java.lang:type=Runtime",Uptime],5m)=1'
               name: '{HOST.NAME} is not reachable'
               priority: AVERAGE
         -
@@ -776,7 +764,7 @@ zabbix_export:
           triggers:
             -
               uuid: b3f10e4af98e4c43bbe6c42b818107d8
-              expression: 'find(/JMX Generic/jmx["java.lang:type=Runtime",VmName],,"like","Server")<>1'
+              expression: 'find(/Template JMX Generic/jmx["java.lang:type=Runtime",VmName],,"like","Server")<>1'
               name: '{HOST.NAME} runs suboptimal VM type'
               priority: INFO
         -
@@ -844,112 +832,112 @@ zabbix_export:
   triggers:
     -
       uuid: f3f124a128e148f0b6c68556f0878d20
-      expression: 'last(/JMX Generic/jmx["java.lang:type=Memory",HeapMemoryUsage.used])>(last(/JMX Generic/jmx["java.lang:type=Memory",HeapMemoryUsage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=Memory",HeapMemoryUsage.used])>(last(/Template JMX Generic/jmx["java.lang:type=Memory",HeapMemoryUsage.max])*0.7)'
       name: '70% mem Heap Memory used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 35c76581b51c480ba9873f7dfe64f401
-      expression: 'last(/JMX Generic/jmx["java.lang:type=Memory",NonHeapMemoryUsage.used])>(last(/JMX Generic/jmx["java.lang:type=Memory",NonHeapMemoryUsage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=Memory",NonHeapMemoryUsage.used])>(last(/Template JMX Generic/jmx["java.lang:type=Memory",NonHeapMemoryUsage.max])*0.7)'
       name: '70% mem Non-Heap Memory used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 2b977d5255d140289cbbc533b2718568
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.used])>(last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.used])>(last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max])*0.7)'
       name: '70% mp CMS Old Gen used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 552448ba88e048b3ac2721cf74fd4699
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.used])>(last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.used])>(last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max])*0.7)'
       name: '70% mp CMS Perm Gen used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 7ddb749bf2ad4138a96d311ad5758cc2
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used])>(last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used])>(last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max])*0.7)'
       name: '70% mp Code Cache used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 7f13085c343c478bbdd56a7a63af5a30
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.used])>(last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.used])>(last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max])*0.7)'
       name: '70% mp Perm Gen used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: f73322faf027495bbd046d9fc84b9818
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.used])>(last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.used])>(last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max])*0.7)'
       name: '70% mp PS Old Gen used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 3d491862948b4a80a0e5674d8eae97a9
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.used])>(last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.used])>(last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max])*0.7)'
       name: '70% mp PS Perm Gen used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: f927e9af4def4eb0b084994df1bd2e20
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.used])>(last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.used])>(last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max])*0.7)'
       name: '70% mp Tenured Gen used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 1a02878ab8394010a8f8358629ccff62
-      expression: 'last(/JMX Generic/jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount])>(last(/JMX Generic/jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount])*0.7)'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount])>(last(/Template JMX Generic/jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount])*0.7)'
       name: '70% os Opened File Descriptor Count used on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: ce126d4ef6964dfa985d304420156fce
-      expression: 'last(/JMX Generic/jmx["java.lang:type=GarbageCollector,name=ParNew",CollectionCount])<last(/JMX Generic/jmx["java.lang:type=GarbageCollector,name=ConcurrentMarkSweep",CollectionCount])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=GarbageCollector,name=ParNew",CollectionCount])<last(/Template JMX Generic/jmx["java.lang:type=GarbageCollector,name=ConcurrentMarkSweep",CollectionCount])'
       name: 'gc Concurrent Mark Sweep in fire fighting mode on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 4d1e4f237dc341fb81304239115f2ae9
-      expression: 'last(/JMX Generic/jmx["java.lang:type=GarbageCollector,name=Copy",CollectionCount])<last(/JMX Generic/jmx["java.lang:type=GarbageCollector,name=MarkSweepCompact",CollectionCount])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=GarbageCollector,name=Copy",CollectionCount])<last(/Template JMX Generic/jmx["java.lang:type=GarbageCollector,name=MarkSweepCompact",CollectionCount])'
       name: 'gc Mark Sweep Compact in fire fighting mode on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: b0b1a0b8c2c54ae8988b609eac1ae315
-      expression: 'last(/JMX Generic/jmx["java.lang:type=GarbageCollector,name=PS Scavenge",CollectionCount])<last(/JMX Generic/jmx["java.lang:type=GarbageCollector,name=PS MarkSweep",CollectionCount])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=GarbageCollector,name=PS Scavenge",CollectionCount])<last(/Template JMX Generic/jmx["java.lang:type=GarbageCollector,name=PS MarkSweep",CollectionCount])'
       name: 'gc PS Mark Sweep in fire fighting mode on {HOST.NAME}'
       priority: AVERAGE
     -
       uuid: 25e9c4f9ddf847df8bfd29920b382bca
-      expression: 'last(/JMX Generic/jmx["java.lang:type=Memory",HeapMemoryUsage.committed])=last(/JMX Generic/jmx["java.lang:type=Memory",HeapMemoryUsage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=Memory",HeapMemoryUsage.committed])=last(/Template JMX Generic/jmx["java.lang:type=Memory",HeapMemoryUsage.max])'
       name: 'mem Heap Memory fully committed on {HOST.NAME}'
       priority: WARNING
     -
       uuid: 0cc441fa729d4814b85f03fa28dbb122
-      expression: 'last(/JMX Generic/jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed])=last(/JMX Generic/jmx["java.lang:type=Memory",NonHeapMemoryUsage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=Memory",NonHeapMemoryUsage.committed])=last(/Template JMX Generic/jmx["java.lang:type=Memory",NonHeapMemoryUsage.max])'
       name: 'mem Non-Heap Memory fully committed on {HOST.NAME}'
       priority: WARNING
     -
       uuid: 83e856af910849a2a18d37561c5f4ae8
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.committed])=last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.committed])=last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max])'
       name: 'mp CMS Old Gen fully committed on {HOST.NAME}'
       priority: WARNING
     -
       uuid: 603ee09ac19747ebb73788b21490f442
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.committed])=last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.committed])=last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max])'
       name: 'mp CMS Perm Gen fully committed on {HOST.NAME}'
       priority: WARNING
     -
       uuid: f92766c2855d4c1fa9625021432217c2
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.committed])=last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.committed])=last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max])'
       name: 'mp Code Cache fully committed on {HOST.NAME}'
       priority: WARNING
     -
       uuid: 1b69c08e33a840b397b624b260a34bc9
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.committed])=last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.committed])=last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max])'
       name: 'mp Perm Gen fully committed on {HOST.NAME}'
       priority: WARNING
     -
       uuid: c6c55f089fae42d8aa0db637602ddb74
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.committed])=last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.committed])=last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max])'
       name: 'mp PS Old Gen fully committed on {HOST.NAME}'
       priority: WARNING
     -
       uuid: 617e2f24ceb14b4a8d2081b462cd42c0
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.committed])=last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.committed])=last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max])'
       name: 'mp PS Perm Gen fully committed on {HOST.NAME}'
       priority: WARNING
     -
       uuid: ad06024a001045bf9b70548b94be8284
-      expression: 'last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.committed])=last(/JMX Generic/jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max])'
+      expression: 'last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.committed])=last(/Template JMX Generic/jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max])'
       name: 'mp Tenured Gen fully committed on {HOST.NAME}'
       priority: WARNING
   graphs:
@@ -960,19 +948,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=ClassLoading",TotalLoadedClassCount]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=ClassLoading",UnloadedClassCount]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=ClassLoading",LoadedClassCount]'
     -
       uuid: 1a3a66ceeef34b4292671d7e1a42e133
@@ -981,13 +969,13 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=OperatingSystem",MaxFileDescriptorCount]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=OperatingSystem",OpenFileDescriptorCount]'
     -
       uuid: f0e0e9df95d342dd889fe83091a63e22
@@ -996,37 +984,37 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=GarbageCollector,name=PS Scavenge",CollectionCount]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=GarbageCollector,name=ConcurrentMarkSweep",CollectionCount]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=GarbageCollector,name=Copy",CollectionCount]'
         -
           sortorder: '3'
           color: C8C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=GarbageCollector,name=MarkSweepCompact",CollectionCount]'
         -
           sortorder: '4'
           color: 00C8C9
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=GarbageCollector,name=PS MarkSweep",CollectionCount]'
         -
           sortorder: '5'
           color: C800C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=GarbageCollector,name=ParNew",CollectionCount]'
     -
       uuid: 9e34156afeb64313a19c0e692295b695
@@ -1035,19 +1023,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.committed]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.max]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=CMS Old Gen",Usage.used]'
     -
       uuid: e41f8051f2cc4a6badc818b2d0c6247c
@@ -1056,19 +1044,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.committed]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.max]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=CMS Perm Gen",Usage.used]'
     -
       uuid: 92ce499d771842a2aa593c5e30e11d74
@@ -1077,19 +1065,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.committed]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.max]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Code Cache",Usage.used]'
     -
       uuid: b2a4dcdf750e49f49f970f0a7925a4b9
@@ -1098,19 +1086,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.committed]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.max]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Perm Gen",Usage.used]'
     -
       uuid: d803df0eba794d899396bd90c6a71bc3
@@ -1119,19 +1107,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.committed]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.max]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=PS Old Gen",Usage.used]'
     -
       uuid: a2a4330320f24573a7c65c0cfc074d12
@@ -1140,19 +1128,19 @@ zabbix_export:
         -
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.committed]'
         -
           sortorder: '1'
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.max]'
         -
           sortorder: '2'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=PS Perm Gen",Usage.used]'
     -
       uuid: 8000fadea3064cf2b4491754a564ae5c
@@ -1161,19 +1149,19 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.committed]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.max]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=MemoryPool,name=Tenured Gen",Usage.used]'
     -
       uuid: 700d78d0070f4a8aa0e3adbd50e0bb42
@@ -1182,17 +1170,17 @@ zabbix_export:
         -
           color: C80000
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=Threading",PeakThreadCount]'
         -
           sortorder: '1'
           color: 00C800
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=Threading",DaemonThreadCount]'
         -
           sortorder: '2'
           color: 0000C8
           item:
-            host: 'JMX Generic'
+            host: 'Template JMX Generic'
             key: 'jmx["java.lang:type=Threading",ThreadCount]'

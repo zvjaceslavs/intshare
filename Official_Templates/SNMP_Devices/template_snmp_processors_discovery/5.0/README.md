@@ -1,14 +1,4 @@
-# SNMP Processors
-
-## Overview
-
-Official template from Zabbix distribution to discover processors by SNMP
-
-
-
-## Author
-
-Zabbix SIA
+# Template SNMP Processors
 
 ## Macros used
 

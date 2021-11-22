@@ -53,30 +53,30 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|one|<p>-</p>|`Database monitor`|db.odbc.select[one,{HOST.NAME}]<p>Update: 60s</p>|
-|maxwritten_clean|<p>-</p>|`Database monitor`|db.odbc.select[maxwritten_clean,{HOST.NAME}]<p>Update: 60s</p>|
-|checkpoints_timed|<p>-</p>|`Database monitor`|db.odbc.select[checkpoints_timed,{HOST.NAME}]<p>Update: 60s</p>|
-|sharerowexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[sharerowexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
-|xactcommit|<p>-</p>|`Database monitor`|db.odbc.select[xactcommit,{HOST.NAME}]<p>Update: 60s</p>|
-|tupinserted|<p>-</p>|`Database monitor`|db.odbc.select[tupinserted,{HOST.NAME}]<p>Update: 60s</p>|
-|tupdeleted|<p>-</p>|`Database monitor`|db.odbc.select[tupdeleted,{HOST.NAME}]<p>Update: 60s</p>|
-|buffers_backend|<p>-</p>|`Database monitor`|db.odbc.select[buffers_backend,{HOST.NAME}]<p>Update: 60s</p>|
+|xactrollback|<p>-</p>|`Database monitor`|db.odbc.select[xactrollback,{HOST.NAME}]<p>Update: 60s</p>|
 |pmbcexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[pmbcexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
+|sharerowexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[sharerowexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
+|shareupdateexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[shareupdateexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
 |checkpoints_req|<p>-</p>|`Database monitor`|db.odbc.select[checkpoints_req,{HOST.NAME}]<p>Update: 60s</p>|
+|xactcommit|<p>-</p>|`Database monitor`|db.odbc.select[xactcommit,{HOST.NAME}]<p>Update: 60s</p>|
+|tupdeleted|<p>-</p>|`Database monitor`|db.odbc.select[tupdeleted,{HOST.NAME}]<p>Update: 60s</p>|
+|buffers_clean|<p>-</p>|`Database monitor`|db.odbc.select[buffers_clean,{HOST.NAME}]<p>Update: 60s</p>|
+|rowexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[rowexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
+|accessexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[accessexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
+|tupinserted|<p>-</p>|`Database monitor`|db.odbc.select[tupinserted,{HOST.NAME}]<p>Update: 60s</p>|
+|tupupdated|<p>-</p>|`Database monitor`|db.odbc.select[tupupdated,{HOST.NAME}]<p>Update: 60s</p>|
+|maxwritten_clean|<p>-</p>|`Database monitor`|db.odbc.select[maxwritten_clean,{HOST.NAME}]<p>Update: 60s</p>|
+|exclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[exclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
+|one|<p>-</p>|`Database monitor`|db.odbc.select[one,{HOST.NAME}]<p>Update: 60s</p>|
+|activeconn|<p>-</p>|`Database monitor`|db.odbc.select[activeconn,{HOST.NAME}]<p>Update: 60s</p>|
+|buffers_backend|<p>-</p>|`Database monitor`|db.odbc.select[buffers_backend,{HOST.NAME}]<p>Update: 60s</p>|
 |accesssharelock|<p>-</p>|`Database monitor`|db.odbc.select[accesssharelock,{HOST.NAME}]<p>Update: 60s</p>|
+|checkpoints_timed|<p>-</p>|`Database monitor`|db.odbc.select[checkpoints_timed,{HOST.NAME}]<p>Update: 60s</p>|
 |buffers_alloc|<p>-</p>|`Database monitor`|db.odbc.select[buffers_alloc,{HOST.NAME}]<p>Update: 60s</p>|
 |buffers_checkpoint|<p>-</p>|`Database monitor`|db.odbc.select[buffers_checkpoint,{HOST.NAME}]<p>Update: 60s</p>|
-|accessexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[accessexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
-|tupfetched|<p>-</p>|`Database monitor`|db.odbc.select[tupfetched,{HOST.NAME}]<p>Update: 60s</p>|
-|rowexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[rowexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
-|shareupdateexclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[shareupdateexclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
 |rowsharelock|<p>-</p>|`Database monitor`|db.odbc.select[rowsharelock,{HOST.NAME}]<p>Update: 60s</p>|
+|tupfetched|<p>-</p>|`Database monitor`|db.odbc.select[tupfetched,{HOST.NAME}]<p>Update: 60s</p>|
 |tupreturned|<p>-</p>|`Database monitor`|db.odbc.select[tupreturned,{HOST.NAME}]<p>Update: 60s</p>|
-|tupupdated|<p>-</p>|`Database monitor`|db.odbc.select[tupupdated,{HOST.NAME}]<p>Update: 60s</p>|
-|exclusivelock|<p>-</p>|`Database monitor`|db.odbc.select[exclusivelock,{HOST.NAME}]<p>Update: 60s</p>|
-|buffers_clean|<p>-</p>|`Database monitor`|db.odbc.select[buffers_clean,{HOST.NAME}]<p>Update: 60s</p>|
-|xactrollback|<p>-</p>|`Database monitor`|db.odbc.select[xactrollback,{HOST.NAME}]<p>Update: 60s</p>|
-|activeconn|<p>-</p>|`Database monitor`|db.odbc.select[activeconn,{HOST.NAME}]<p>Update: 60s</p>|
 ## Triggers
 
 There are no triggers in this template.

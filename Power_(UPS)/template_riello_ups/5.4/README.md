@@ -31,23 +31,23 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Agent availability|<p>The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 30s</p>|
-|Bypass frequency|<p>-</p>|`SNMP agent`|rupsBypassFrequency.0<p>Update: 60s</p>|
-|Model name|<p>-</p>|`SNMP agent`|rupsIdentModel.0<p>Update: 1d</p>|
-|Seconds on Battery|<p>-</p>|`SNMP agent`|rupsSecondsOnBattery.0<p>Update: 60s</p>|
 |Battery Status|<p>-</p>|`SNMP agent`|rupsBatteryStatus.0<p>Update: 60s</p>|
 |Estimated Charge Remaining|<p>-</p>|`SNMP agent`|rupsEstimatedChargeRemaining.0<p>Update: 60s</p>|
+|Software version|<p>-</p>|`SNMP agent`|rupsIdentUPSSoftwareVersion.0<p>Update: 1d</p>|
+|Seconds on Battery|<p>-</p>|`SNMP agent`|rupsSecondsOnBattery.0<p>Update: 60s</p>|
 |Battery Voltage|<p>-</p>|`SNMP agent`|rupsBatteryVoltage.0<p>Update: 60s</p>|
-|Battery Temperature|<p>-</p>|`SNMP agent`|rupsBatteryTemperature.0<p>Update: 60s</p>|
+|Input Line Bads|<p>-</p>|`SNMP agent`|rupsInputLineBads.0<p>Update: 60s</p>|
+|Model name|<p>-</p>|`SNMP agent`|rupsIdentModel.0<p>Update: 1d</p>|
+|Bypass frequency|<p>-</p>|`SNMP agent`|rupsBypassFrequency.0<p>Update: 60s</p>|
 |Estimated Minutes Remaining|<p>-</p>|`SNMP agent`|rupsEstimatedMinutesRemaining.0<p>Update: 60s</p>|
-|Output source|<p>-</p>|`SNMP agent`|rupsOutputSource.0<p>Update: 60s</p>|
+|Alarms Present|<p>-</p>|`SNMP agent`|upsAlarmsPresent.0<p>Update: 60s</p>|
 |Ups Agent Version|<p>-</p>|`SNMP agent`|rupsIdentAgentSoftwareVersion.0<p>Update: 1d</p>|
 |Output frequency|<p>-</p>|`SNMP agent`|rupsOutputFrequency.0<p>Update: 60s</p>|
+|Battery Temperature|<p>-</p>|`SNMP agent`|rupsBatteryTemperature.0<p>Update: 60s</p>|
+|Output source|<p>-</p>|`SNMP agent`|rupsOutputSource.0<p>Update: 60s</p>|
 |System Temperature|<p>-</p>|`SNMP agent`|rupsSystemTemperature.0<p>Update: 30s</p>|
-|Input Line Bads|<p>-</p>|`SNMP agent`|rupsInputLineBads.0<p>Update: 60s</p>|
-|Software version|<p>-</p>|`SNMP agent`|rupsIdentUPSSoftwareVersion.0<p>Update: 1d</p>|
 |Battery Current|<p>-</p>|`SNMP agent`|rupsBatteryCurrent.0<p>Update: 60s</p>|
-|Alarms Present|<p>-</p>|`SNMP agent`|upsAlarmsPresent.0<p>Update: 60s</p>|
+|Agent availability|<p>The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 30s</p>|
 |Line {#SNMPINDEX} Input Current|<p>-</p>|`SNMP agent`|rupsInputCurrent.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |Line {#SNMPINDEX} Input Frequency|<p>-</p>|`SNMP agent`|rupsInputFrequency.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|
 |Line {#SNMPINDEX} Input  True Power|<p>-</p>|`SNMP agent`|rupsInputTruePower.[{#SNMPINDEX}]<p>Update: 30s</p><p>LLD</p>|

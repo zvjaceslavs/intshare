@@ -90,25 +90,25 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |upsBatteryTemperature|<p>-</p>|`SNMP agent`|upsBatteryTemperature<p>Update: 10s</p>|
-|Real Data at BatteryCurrent|<p>-</p>|`Calculated`|RealDataBatteryCurrent<p>Update: 10s</p>|
-|upsBatteryVoltage|<p>-</p>|`SNMP agent`|upsBatteryVoltage<p>Update: 10s</p>|
-|upsOutputCurrent|<p>-</p>|`SNMP agent`|upsOutputCurrent<p>Update: 10s</p>|
-|Real Data at BatteryVoltage|<p>-</p>|`Calculated`|RealDataBatteryVoltage<p>Update: 10s</p>|
-|upsOutputFrequency|<p>-</p>|`SNMP agent`|upsOutputFrequency<p>Update: 10s</p>|
-|upsOutputPower|<p>-</p>|`SNMP agent`|upsOutputPower<p>Update: 10s</p>|
-|upsInputFrequency|<p>-</p>|`SNMP agent`|upsInputFrequency<p>Update: 10s</p>|
-|upsOutputPercentLoad|<p>-</p>|`SNMP agent`|upsOutputPercentLoad<p>Update: 10s</p>|
-|upsConfigInputVoltage|<p>-</p>|`SNMP agent`|upsConfigInputVoltage<p>Update: 30s</p>|
-|upsInputCurrent|<p>-</p>|`SNMP agent`|upsInputCurrent<p>Update: 10s</p>|
-|Real Data at InputFrequency|<p>-</p>|`Calculated`|RealDataInputFrequency<p>Update: 10s</p>|
-|Real Data at OutputFrequency|<p>-</p>|`Calculated`|RealDataOutputFrequency<p>Update: 10s</p>|
 |Real Data at InputCurrent|<p>-</p>|`Calculated`|RealDataInputCurrent<p>Update: 10s</p>|
+|Real Data at OutputFrequency|<p>-</p>|`Calculated`|RealDataOutputFrequency<p>Update: 10s</p>|
 |upsInputLineBads|<p>-</p>|`SNMP agent`|upsInputLineBads<p>Update: 30s</p>|
+|upsBatteryVoltage|<p>-</p>|`SNMP agent`|upsBatteryVoltage<p>Update: 10s</p>|
+|upsConfigInputVoltage|<p>-</p>|`SNMP agent`|upsConfigInputVoltage<p>Update: 30s</p>|
+|upsOutputFrequency|<p>-</p>|`SNMP agent`|upsOutputFrequency<p>Update: 10s</p>|
 |upsEstimatedMinutesRemaining|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 10s</p>|
-|upsOutputVoltage|<p>-</p>|`SNMP agent`|upsOutputVoltage<p>Update: 10s</p>|
-|Battery Status|<p>-</p>|`SNMP agent`|upsBatteryStatus<p>Update: 60s</p>|
-|upsInputVoltage|<p>-</p>|`SNMP agent`|upsInputVoltage<p>Update: 10s</p>|
 |upsBatteryCurrent|<p>-</p>|`SNMP agent`|upsBatteryCurrent<p>Update: 10s</p>|
+|Real Data at BatteryVoltage|<p>-</p>|`Calculated`|RealDataBatteryVoltage<p>Update: 10s</p>|
+|Battery Status|<p>-</p>|`SNMP agent`|upsBatteryStatus<p>Update: 60s</p>|
+|upsOutputCurrent|<p>-</p>|`SNMP agent`|upsOutputCurrent<p>Update: 10s</p>|
+|upsInputCurrent|<p>-</p>|`SNMP agent`|upsInputCurrent<p>Update: 10s</p>|
+|Real Data at BatteryCurrent|<p>-</p>|`Calculated`|RealDataBatteryCurrent<p>Update: 10s</p>|
+|upsOutputPower|<p>-</p>|`SNMP agent`|upsOutputPower<p>Update: 10s</p>|
+|upsInputVoltage|<p>-</p>|`SNMP agent`|upsInputVoltage<p>Update: 10s</p>|
+|upsInputFrequency|<p>-</p>|`SNMP agent`|upsInputFrequency<p>Update: 10s</p>|
+|Real Data at InputFrequency|<p>-</p>|`Calculated`|RealDataInputFrequency<p>Update: 10s</p>|
+|upsOutputPercentLoad|<p>-</p>|`SNMP agent`|upsOutputPercentLoad<p>Update: 10s</p>|
+|upsOutputVoltage|<p>-</p>|`SNMP agent`|upsOutputVoltage<p>Update: 10s</p>|
 ## Triggers
 
 There are no triggers in this template.

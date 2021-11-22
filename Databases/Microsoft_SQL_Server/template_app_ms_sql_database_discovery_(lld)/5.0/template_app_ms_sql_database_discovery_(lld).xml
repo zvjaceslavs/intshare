@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
   <version>5.0</version>
-  <date>2021-11-09T07:59:03Z</date>
+  <date>2021-11-22T02:06:20Z</date>
   <groups>
     <group>
       <name>Windows Servers</name>
@@ -11,7 +11,6 @@
     <template>
       <template>App MS SQL DB Discovery</template>
       <name>App MS SQL DB Discovery</name>
-      <description>## Author Stephen E. Fritz</description>
       <groups>
         <group>
           <name>Windows Servers</name>

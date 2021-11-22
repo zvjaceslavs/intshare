@@ -43,38 +43,38 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|PowerInputIndex2|<p>-</p>|`SNMP agent`|PowerInputIndex2<p>Update: 900</p>|
-|EnvHumLowerLimit|<p>-</p>|`SNMP agent`|EnvHumLowerLimit<p>Update: 3600</p>|
-|PowerInputIndex1|<p>-</p>|`SNMP agent`|PowerInputIndex1<p>Update: 900</p>|
-|DeviceStatusOverTemperature|<p>-</p>|`SNMP agent`|DeviceStatusOverTemperature<p>Update: 30</p>|
-|PowerStatusInputVoltage2|<p>-</p>|`SNMP agent`|PowerStatusInputVoltage2<p>Update: 30</p>|
-|PowerStatusInputGood1|<p>-</p>|`SNMP agent`|PowerStatusInputGood1<p>Update: 30</p>|
-|PowerOutputVoltage|<p>-</p>|`SNMP agent`|PowerOutputVoltage<p>Update: 15</p>|
-|DeviceStatusInternalFailure|<p>-</p>|`SNMP agent`|DeviceStatusInternalFailure<p>Update: 30</p>|
-|DeviceStatusOperationMode|<p>-</p>|`SNMP agent`|DeviceStatusOperationMode<p>Update: 5</p>|
-|PowerStatusInputUsed2|<p>-</p>|`SNMP agent`|PowerStatusInputUsed2<p>Update: 30</p>|
-|PowerStatusInputVoltage1|<p>-</p>|`SNMP agent`|PowerStatusInputVoltage1<p>Update: 30</p>|
-|PowerInputVoltage2|<p>-</p>|`SNMP agent`|PowerInputVoltage2<p>Update: 15</p>|
-|PowerStatusInputFrequency2|<p>-</p>|`SNMP agent`|PowerStatusInputFrequency2<p>Update: 30</p>|
-|EnvTemp|<p>-</p>|`SNMP agent`|EnvTemp<p>Update: 15</p>|
-|DeviceStatusOverload|<p>-</p>|`SNMP agent`|DeviceStatusOverload<p>Update: 30</p>|
-|PowerStatusInputInternalFailure2|<p>-</p>|`SNMP agent`|PowerStatusInputInternalFailure2<p>Update: 30</p>|
-|PowerStatusInputFrequency1|<p>-</p>|`SNMP agent`|PowerStatusInputFrequency1<p>Update: 30</p>|
-|EnvTempUpperLimit|<p>-</p>|`SNMP agent`|EnvTempUpperLimit<p>Update: 3600</p>|
 |PowerInputFrequency2|<p>-</p>|`SNMP agent`|PowerInputFrequency2<p>Update: 900</p>|
-|EnvHumUpperLimit|<p>-</p>|`SNMP agent`|EnvHumUpperLimit<p>Update: 3600</p>|
-|DeviceStatusTransferTest|<p>-</p>|`SNMP agent`|DeviceStatusTransferTest<p>Update: 30</p>|
-|PowerStatusInputDephasing|<p>-</p>|`SNMP agent`|PowerStatusInputDephasing<p>Update: 30</p>|
-|EnvTempLowerLimit|<p>-</p>|`SNMP agent`|EnvTempLowerLimit<p>Update: 3600</p>|
-|EnvHum|<p>-</p>|`SNMP agent`|EnvHum<p>Update: 15</p>|
+|PowerStatusInputVoltage2|<p>-</p>|`SNMP agent`|PowerStatusInputVoltage2<p>Update: 30</p>|
+|DeviceStatusOperationMode|<p>-</p>|`SNMP agent`|DeviceStatusOperationMode<p>Update: 5</p>|
+|DeviceStatusInternalFailure|<p>-</p>|`SNMP agent`|DeviceStatusInternalFailure<p>Update: 30</p>|
+|DeviceStatusOverload|<p>-</p>|`SNMP agent`|DeviceStatusOverload<p>Update: 30</p>|
+|PowerStatusInputInternalFailure1|<p>-</p>|`SNMP agent`|PowerStatusInputInternalFailure1<p>Update: 30</p>|
+|EnvHumLowerLimit|<p>-</p>|`SNMP agent`|EnvHumLowerLimit<p>Update: 3600</p>|
 |PowerInputFrequency1|<p>-</p>|`SNMP agent`|PowerInputFrequency1<p>Update: 900</p>|
-|PowerStatusInputUsed1|<p>-</p>|`SNMP agent`|PowerStatusInputUsed1<p>Update: 30</p>|
-|PowerInputVoltage1|<p>-</p>|`SNMP agent`|PowerInputVoltage1<p>Update: 15</p>|
-|DeviceStatusOutput|<p>-</p>|`SNMP agent`|DeviceStatusOutput<p>Update: 30</p>|
+|EnvTemp|<p>-</p>|`SNMP agent`|EnvTemp<p>Update: 15</p>|
 |DeviceStatusShortCircuit|<p>-</p>|`SNMP agent`|DeviceStatusShortCircuit<p>Update: 30</p>|
 |PowerStatusInputGood2|<p>-</p>|`SNMP agent`|PowerStatusInputGood2<p>Update: 30</p>|
-|PowerStatusInputInternalFailure1|<p>-</p>|`SNMP agent`|PowerStatusInputInternalFailure1<p>Update: 30</p>|
+|PowerOutputVoltage|<p>-</p>|`SNMP agent`|PowerOutputVoltage<p>Update: 15</p>|
+|DeviceStatusOverTemperature|<p>-</p>|`SNMP agent`|DeviceStatusOverTemperature<p>Update: 30</p>|
+|PowerStatusInputDephasing|<p>-</p>|`SNMP agent`|PowerStatusInputDephasing<p>Update: 30</p>|
+|PowerStatusInputFrequency1|<p>-</p>|`SNMP agent`|PowerStatusInputFrequency1<p>Update: 30</p>|
+|PowerStatusInputUsed2|<p>-</p>|`SNMP agent`|PowerStatusInputUsed2<p>Update: 30</p>|
+|PowerInputVoltage2|<p>-</p>|`SNMP agent`|PowerInputVoltage2<p>Update: 15</p>|
+|PowerStatusInputVoltage1|<p>-</p>|`SNMP agent`|PowerStatusInputVoltage1<p>Update: 30</p>|
+|EnvHumUpperLimit|<p>-</p>|`SNMP agent`|EnvHumUpperLimit<p>Update: 3600</p>|
+|PowerInputVoltage1|<p>-</p>|`SNMP agent`|PowerInputVoltage1<p>Update: 15</p>|
+|EnvTempLowerLimit|<p>-</p>|`SNMP agent`|EnvTempLowerLimit<p>Update: 3600</p>|
+|PowerStatusInputGood1|<p>-</p>|`SNMP agent`|PowerStatusInputGood1<p>Update: 30</p>|
+|PowerInputIndex1|<p>-</p>|`SNMP agent`|PowerInputIndex1<p>Update: 900</p>|
+|PowerInputIndex2|<p>-</p>|`SNMP agent`|PowerInputIndex2<p>Update: 900</p>|
+|DeviceStatusOutput|<p>-</p>|`SNMP agent`|DeviceStatusOutput<p>Update: 30</p>|
+|PowerStatusInputFrequency2|<p>-</p>|`SNMP agent`|PowerStatusInputFrequency2<p>Update: 30</p>|
+|EnvTempUpperLimit|<p>-</p>|`SNMP agent`|EnvTempUpperLimit<p>Update: 3600</p>|
+|EnvHum|<p>-</p>|`SNMP agent`|EnvHum<p>Update: 15</p>|
+|PowerStatusInputUsed1|<p>-</p>|`SNMP agent`|PowerStatusInputUsed1<p>Update: 30</p>|
+|PowerStatusInputInternalFailure2|<p>-</p>|`SNMP agent`|PowerStatusInputInternalFailure2<p>Update: 30</p>|
 |PowerOutputCurrent|<p>-</p>|`SNMP agent`|PowerOutputCurrent<p>Update: 15</p>|
+|DeviceStatusTransferTest|<p>-</p>|`SNMP agent`|DeviceStatusTransferTest<p>Update: 30</p>|
 ## Triggers
 
 There are no triggers in this template.

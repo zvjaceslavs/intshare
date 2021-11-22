@@ -60,28 +60,28 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |CPU Usage|<p>-</p>|`SNMP agent`|cpuLoad.0<p>Update: 30s</p>|
-|Uptime|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 5m</p>|
+|CPU AVG Load 5 Min|<p>-</p>|`SNMP agent`|IaLoad.2<p>Update: 1m</p>|
 |MAC Address|<p>-</p>|`SNMP agent`|unifiIfMac.1<p>Update: 30m</p>|
-|Channel 2G (N/G)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiVapChannel.1<p>Update: 1m</p>|
-|Contact|<p>Informa o modelo do aparelho</p>|`SNMP agent`|sysContact.0<p>Update: 60m</p>|
-|System Time|<p>-</p>|`SNMP agent`|hrSystemDate.0<p>Update: 30s</p>|
 |CPU AVG Load 15 Min|<p>-</p>|`SNMP agent`|IaLoad.3<p>Update: 1m</p>|
+|LAN Traffic Outgoing|<p>-</p>|`SNMP agent`|unifiIfTxBytes.1<p>Update: 1m</p>|
+|System Description|<p>Informa o modelo do aparelho</p>|`SNMP agent`|sysDescr.0<p>Update: 30m</p>|
+|LAN Traffic Incoming Errors|<p>-</p>|`SNMP agent`|unifiIfRxError.1<p>Update: 1m</p>|
+|Channel utilization 2G (BGN)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiRadioCuTotal.1<p>Update: 30s</p>|
+|Interface Speed (Mbit/s)|<p>-</p>|`SNMP agent`|unifiIfSpeed.1<p>Update: 60m</p>|
+|Firmware version|<p>-</p>|`SNMP agent`|unifiApSystemVersion.0<p>Update: 60m</p>|
+|Contact|<p>Informa o modelo do aparelho</p>|`SNMP agent`|sysContact.0<p>Update: 60m</p>|
+|Channel utilization 5G (AC)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiRadioCuTotal.2<p>Update: 30s</p>|
+|Uptime|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 5m</p>|
+|AP Hostname|<p>-</p>|`SNMP agent`|unifiSysName.0<p>Update: 60m</p>|
+|Location|<p>Informa o modelo do aparelho</p>|`SNMP agent`|sysLocation.0<p>Update: 60m</p>|
+|Channel 2G (N/G)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiVapChannel.1<p>Update: 1m</p>|
+|IP Address|<p>-</p>|`SNMP agent`|unifiApSystemIp.0<p>Update: 10m</p>|
 |LAN Traffic Outgoing Errors|<p>-</p>|`SNMP agent`|unifiIfTxError.1<p>Update: 1m</p>|
 |LAN Traffic Incoming|<p>-</p>|`SNMP agent`|unifiIfRxBytes.1<p>Update: 1m</p>|
 |Channel 5G (N/AC)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiVapChannel.5<p>Update: 1m</p>|
-|CPU AVG Load 1 Min|<p>-</p>|`SNMP agent`|IaLoad.1<p>Update: 1m</p>|
-|Channel utilization 5G (AC)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiRadioCuTotal.2<p>Update: 30s</p>|
-|Channel utilization 2G (BGN)|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiRadioCuTotal.1<p>Update: 30s</p>|
-|Interface Speed (Mbit/s)|<p>-</p>|`SNMP agent`|unifiIfSpeed.1<p>Update: 60m</p>|
-|IP Address|<p>-</p>|`SNMP agent`|unifiApSystemIp.0<p>Update: 10m</p>|
-|System Description|<p>Informa o modelo do aparelho</p>|`SNMP agent`|sysDescr.0<p>Update: 30m</p>|
 |Model|<p>Informa o modelo do aparelho</p>|`SNMP agent`|unifiApSystemModel.0<p>Update: 60m</p>|
-|Firmware version|<p>-</p>|`SNMP agent`|unifiApSystemVersion.0<p>Update: 60m</p>|
-|CPU AVG Load 5 Min|<p>-</p>|`SNMP agent`|IaLoad.2<p>Update: 1m</p>|
-|AP Hostname|<p>-</p>|`SNMP agent`|unifiSysName.0<p>Update: 60m</p>|
-|Location|<p>Informa o modelo do aparelho</p>|`SNMP agent`|sysLocation.0<p>Update: 60m</p>|
-|LAN Traffic Outgoing|<p>-</p>|`SNMP agent`|unifiIfTxBytes.1<p>Update: 1m</p>|
-|LAN Traffic Incoming Errors|<p>-</p>|`SNMP agent`|unifiIfRxError.1<p>Update: 1m</p>|
+|CPU AVG Load 1 Min|<p>-</p>|`SNMP agent`|IaLoad.1<p>Update: 1m</p>|
+|System Time|<p>-</p>|`SNMP agent`|hrSystemDate.0<p>Update: 30s</p>|
 |WIFI Channel $2 on $1|<p>-</p>|`SNMP agent`|unifiVapChannel[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 1m</p><p>LLD</p>|
 |Users $2 on $1|<p>-</p>|`SNMP agent`|unifiVapNumStations[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 30s</p><p>LLD</p>|
 |Traffic Incoming $2 on $1|<p>-</p>|`SNMP agent`|unifiVapRxBytes[{#UNIFIVAPESSID},{#UNIVAPRADIO}]<p>Update: 30s</p><p>LLD</p>|

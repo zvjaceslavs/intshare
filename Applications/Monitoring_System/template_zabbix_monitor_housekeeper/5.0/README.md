@@ -75,15 +75,15 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Records deleted in Alarms|<p>-</p>|`Dependent item`|dep.housekeeper.alarms<p>Update: 0</p>|
 |Syslog Housekeeping|<p>-</p>|`Zabbix agent (active)`|log[{$PATHLOG},"{$REGEXLOG}",,,skip,,]<p>Update: 1s</p>|
-|Records deleted in Items-Triggers|<p>-</p>|`Dependent item`|dep.housekeeper.itemstriggers<p>Update: 0</p>|
-|Records deleted in Hist/Trends|<p>-</p>|`Dependent item`|dep.housekeeper.histtrends<p>Update: 0</p>|
-|Records deleted in Events|<p>-</p>|`Dependent item`|dep.housekeeper.events<p>Update: 0</p>|
 |Records deleted in Audit|<p>-</p>|`Dependent item`|dep.housekeeper.audit<p>Update: 0</p>|
+|Records deleted in Sessions|<p>-</p>|`Dependent item`|dep.housekeeper.sessions<p>Update: 0</p>|
+|Records deleted in Events|<p>-</p>|`Dependent item`|dep.housekeeper.events<p>Update: 0</p>|
+|Records deleted in Hist/Trends|<p>-</p>|`Dependent item`|dep.housekeeper.histtrends<p>Update: 0</p>|
+|Records deleted in Items-Triggers|<p>-</p>|`Dependent item`|dep.housekeeper.itemstriggers<p>Update: 0</p>|
 |Duration of the last executed Housekeeper|<p>-</p>|`Dependent item`|dep.housekeeper.duration<p>Update: 0</p>|
 |Records deleted in Problems|<p>-</p>|`Dependent item`|dep.housekeeper.problems<p>Update: 0</p>|
-|Records deleted in Sessions|<p>-</p>|`Dependent item`|dep.housekeeper.sessions<p>Update: 0</p>|
-|Records deleted in Alarms|<p>-</p>|`Dependent item`|dep.housekeeper.alarms<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

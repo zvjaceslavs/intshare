@@ -80,17 +80,17 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Device Manufacturer|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|deviceManufacturer<p>Update: 3600</p>|
-|Toner print capacity|<p>-</p>|`SNMP agent`|prtMarkerSuppliesMaxCapacity<p>Update: 3600</p>|
-|Maintenance Kit level|<p>-</p>|`SNMP agent`|MaintenanceKitCurrentLevel<p>Update: 60s</p>|
-|Kit Rolo|<p>-</p>|`SNMP agent`|Kitrolo<p>Update: 30s</p>|
-|Page Counter|<p>-</p>|`SNMP agent`|prtMarkerLifeCount<p>Update: 60</p>|
-|Maintenance Kit capacity|<p>-</p>|`SNMP agent`|MaintenanceKitMaxCapacity<p>Update: 3600</p>|
-|05 Device Serial Number|<p>-</p>|`SNMP agent`|serialNumber<p>Update: 3600</p>|
-|KIT Manutencao|<p>-</p>|`SNMP agent`|Kitmanutencao<p>Update: 30s</p>|
-|01 Device model|<p>-</p>|`SNMP agent`|deviceModel<p>Update: 30</p>|
 |Toner print level|<p>-</p>|`SNMP agent`|prtMarkerSuppliesLevel<p>Update: 80s</p>|
+|Maintenance Kit level|<p>-</p>|`SNMP agent`|MaintenanceKitCurrentLevel<p>Update: 60s</p>|
 |Printer Status|<p>-</p>|`SNMP agent`|prtConsoleDescription<p>Update: 60</p>|
+|Kit Rolo|<p>-</p>|`SNMP agent`|Kitrolo<p>Update: 30s</p>|
+|05 Device Serial Number|<p>-</p>|`SNMP agent`|serialNumber<p>Update: 3600</p>|
+|Maintenance Kit capacity|<p>-</p>|`SNMP agent`|MaintenanceKitMaxCapacity<p>Update: 3600</p>|
+|Toner print capacity|<p>-</p>|`SNMP agent`|prtMarkerSuppliesMaxCapacity<p>Update: 3600</p>|
+|01 Device model|<p>-</p>|`SNMP agent`|deviceModel<p>Update: 30</p>|
+|Page Counter|<p>-</p>|`SNMP agent`|prtMarkerLifeCount<p>Update: 60</p>|
+|KIT Manutencao|<p>-</p>|`SNMP agent`|Kitmanutencao<p>Update: 30s</p>|
+|Device Manufacturer|<p>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</p>|`SNMP agent`|deviceManufacturer<p>Update: 3600</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -31,22 +31,22 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Battery Temperature|<p>-</p>|`SNMP agent`|upsBatteryTemperature<p>Update: 60s</p>|
-|Output source|<p>-</p>|`SNMP agent`|upsOutputSource<p>Update: 60s</p>|
-|Software version|<p>-</p>|`SNMP agent`|upsIdentUPSSoftwareVersion<p>Update: 86400</p>|
-|Battery Current|<p>-</p>|`SNMP agent`|upsBatteryCurrent<p>Update: 60s</p>|
-|Agent availability|<p>The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 30s</p>|
-|Ups Agent Version|<p>-</p>|`SNMP agent`|upsIdentAgentSoftwareVersion<p>Update: 86400</p>|
-|Battery Status|<p>-</p>|`SNMP agent`|upsBatteryStatus<p>Update: 60s</p>|
-|Output frequency|<p>-</p>|`SNMP agent`|upsOutputFrequency<p>Update: 60s</p>|
-|Input Line Bads|<p>-</p>|`SNMP agent`|upsInputLineBads<p>Update: 60s</p>|
-|Model name|<p>-</p>|`SNMP agent`|upsIdentModel<p>Update: 86400</p>|
-|Estimated Minutes Remaining|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 60s</p>|
-|Alarms Present|<p>-</p>|`SNMP agent`|upsAlarmsPresent<p>Update: 60s</p>|
 |Estimated Charge Remaining|<p>-</p>|`SNMP agent`|upsEstimatedChargeRemaining<p>Update: 60s</p>|
+|Software version|<p>-</p>|`SNMP agent`|upsIdentUPSSoftwareVersion<p>Update: 86400</p>|
+|Output frequency|<p>-</p>|`SNMP agent`|upsOutputFrequency<p>Update: 60s</p>|
+|Model name|<p>-</p>|`SNMP agent`|upsIdentModel<p>Update: 86400</p>|
 |Seconds on Battery|<p>-</p>|`SNMP agent`|upsSecondsOnBattery<p>Update: 60s</p>|
-|Battery Voltage|<p>-</p>|`SNMP agent`|upsBatteryVoltage<p>Update: 60s</p>|
+|Estimated Minutes Remaining|<p>-</p>|`SNMP agent`|upsEstimatedMinutesRemaining<p>Update: 60s</p>|
+|Output source|<p>-</p>|`SNMP agent`|upsOutputSource<p>Update: 60s</p>|
 |Bypass frequency|<p>-</p>|`SNMP agent`|upsBypassFrequency<p>Update: 60s</p>|
+|Battery Status|<p>-</p>|`SNMP agent`|upsBatteryStatus<p>Update: 60s</p>|
+|Ups Agent Version|<p>-</p>|`SNMP agent`|upsIdentAgentSoftwareVersion<p>Update: 86400</p>|
+|Input Line Bads|<p>-</p>|`SNMP agent`|upsInputLineBads<p>Update: 60s</p>|
+|Battery Current|<p>-</p>|`SNMP agent`|upsBatteryCurrent<p>Update: 60s</p>|
+|Battery Temperature|<p>-</p>|`SNMP agent`|upsBatteryTemperature<p>Update: 60s</p>|
+|Alarms Present|<p>-</p>|`SNMP agent`|upsAlarmsPresent<p>Update: 60s</p>|
+|Agent availability|<p>The agent always returns 1 for this item. It could be used in combination with nodata() for availability check.</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 30s</p>|
+|Battery Voltage|<p>-</p>|`SNMP agent`|upsBatteryVoltage<p>Update: 60s</p>|
 |Line {#SNMPVALUE} Output Current|<p>-</p>|`SNMP agent`|upsOutputCurrent[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 |Line {#SNMPVALUE} Load|<p>-</p>|`SNMP agent`|upsOutputPercentLoad[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|
 |Line {#SNMPVALUE} Output Power|<p>-</p>|`SNMP agent`|upsOutputPower[{#SNMPVALUE}]<p>Update: 60s</p><p>LLD</p>|

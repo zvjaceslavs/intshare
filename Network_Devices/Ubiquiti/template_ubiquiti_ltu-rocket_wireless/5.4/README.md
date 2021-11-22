@@ -36,37 +36,37 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|The list of alternative frequencies|<p>Multiple frequencies should be separated with commas. For example: '5250,5670,5800'.</p>|`SNMP agent`|afLTUAltFreqList.0<p>Update: 60m</p>|
-|GPS Satellites Visible|<p>-</p>|`SNMP agent`|afLTUgpsSatsVisible.0<p>Update: 5m</p>|
-|Wireless channel bandwidth|<p>bw10M(10),bw20M(20),bw30M(30),bw40M(40),bw50M(50),bw60M(60),bw80M(80),bw100M(100)</p>|`SNMP agent`|afLTUBandwidth.0<p>Update: 60m</p>|
-|Ethernet Data port plugged|<p>-</p>|`SNMP agent`|afLTUethConnected.0<p>Update: 5m</p>|
-|Ethernet packet per second for tx|<p>-</p>|`SNMP agent`|afLTUethTxPps.0<p>Update: 1m</p>|
-|GPS Horizontal Dilution of Precision|<p>-</p>|`SNMP agent`|afLTUgpsHDOP.0<p>Update: 5m</p>|
-|Packet per second for tx|<p>-</p>|`SNMP agent`|afLTUTxPps.0<p>Update: 1m</p>|
-|GPS Longitude|<p>-</p>|`SNMP agent`|afLTUgpsLon.0<p>Update: 5m</p>|
-|Tx modulation|<p>-</p>|`SNMP agent`|afLTUTxRate.0<p>Update: 60m</p>|
-|GPS Fix Obtained|<p>-</p>|`SNMP agent`|afLTUgpsDimensions.0<p>Update: 5m</p>|
-|Packet per second for rx|<p>-</p>|`SNMP agent`|afLTURxPps.0<p>Update: 1m</p>|
-|Cable loss|<p>-</p>|`SNMP agent`|afLTUCableLoss.0<p>Update: 60m</p>|
-|Wireless Role|<p>-</p>|`SNMP agent`|afLTURole.0<p>Update: 60m</p>|
-|The firmware version running|<p>-</p>|`SNMP agent`|afLTUFirmwareVersion.0<p>Update: 1h</p>|
-|The percentage of total CPU usage|<p>-</p>|`SNMP agent`|afLTUCpuUsage.0<p>Update: 5m</p>|
-|Ethernet packet per second for rx|<p>-</p>|`SNMP agent`|afLTUethRxPps.0<p>Update: 1m</p>|
-|GPS Latitude|<p>-</p>|`SNMP agent`|afLTUgpsLat.0<p>Update: 5m</p>|
 |The MAC address of this device|<p>-</p>|`SNMP agent`|afLTUMac.0<p>Update: 24h</p>|
-|The main frequency to use|<p>-</p>|`SNMP agent`|afLTUFrequency.0<p>Update: 60m</p>|
-|GPS Altitude (m)|<p>-</p>|`SNMP agent`|afLTUgpsAltMeter.0<p>Update: 5m</p>|
-|GPS status|<p>-</p>|`SNMP agent`|afLTUgpsStatus.0<p>Update: 5m</p>|
-|GPS Satellites Tracked|<p>-</p>|`SNMP agent`|afLTUgpsSatsTracked.0<p>Update: 5m</p>|
-|The percentage of total memory usage|<p>-</p>|`SNMP agent`|afLTUMemoryUsage.0<p>Update: 5m</p>|
-|The device name|<p>-</p>|`SNMP agent`|afLTUDevName.0<p>Update: 24h</p>|
-|Radio SSID|<p>-</p>|`SNMP agent`|afLTUSsid.0<p>Update: 60m</p>|
-|Tx power EIRP|<p>-</p>|`SNMP agent`|afLTUTxEIRP.0<p>Update: 60m</p>|
-|Automatic Tx modulation selection|<p>-</p>|`SNMP agent`|afLTUTxRateAuto.0<p>Update: 60m</p>|
-|GPS Altitude (ft)|<p>-</p>|`SNMP agent`|afLTUgpsAltFeet.0<p>Update: 5m</p>|
-|The device model|<p>-</p>|`SNMP agent`|afLTUDevModel.0<p>Update: 24h</p>|
-|Antenna gain|<p>-</p>|`SNMP agent`|afLTUAntennaGain.0<p>Update: 60m</p>|
 |Radio connected|<p>-</p>|`SNMP agent`|afLTUConnected.0<p>Update: 5m</p>|
+|The device model|<p>-</p>|`SNMP agent`|afLTUDevModel.0<p>Update: 24h</p>|
+|Ethernet packet per second for tx|<p>-</p>|`SNMP agent`|afLTUethTxPps.0<p>Update: 1m</p>|
+|Radio SSID|<p>-</p>|`SNMP agent`|afLTUSsid.0<p>Update: 60m</p>|
+|The main frequency to use|<p>-</p>|`SNMP agent`|afLTUFrequency.0<p>Update: 60m</p>|
+|The percentage of total CPU usage|<p>-</p>|`SNMP agent`|afLTUCpuUsage.0<p>Update: 5m</p>|
+|Cable loss|<p>-</p>|`SNMP agent`|afLTUCableLoss.0<p>Update: 60m</p>|
+|GPS Altitude (ft)|<p>-</p>|`SNMP agent`|afLTUgpsAltFeet.0<p>Update: 5m</p>|
+|The percentage of total memory usage|<p>-</p>|`SNMP agent`|afLTUMemoryUsage.0<p>Update: 5m</p>|
+|Wireless channel bandwidth|<p>bw10M(10),bw20M(20),bw30M(30),bw40M(40),bw50M(50),bw60M(60),bw80M(80),bw100M(100)</p>|`SNMP agent`|afLTUBandwidth.0<p>Update: 60m</p>|
+|GPS Fix Obtained|<p>-</p>|`SNMP agent`|afLTUgpsDimensions.0<p>Update: 5m</p>|
+|The list of alternative frequencies|<p>Multiple frequencies should be separated with commas. For example: '5250,5670,5800'.</p>|`SNMP agent`|afLTUAltFreqList.0<p>Update: 60m</p>|
+|Automatic Tx modulation selection|<p>-</p>|`SNMP agent`|afLTUTxRateAuto.0<p>Update: 60m</p>|
+|Antenna gain|<p>-</p>|`SNMP agent`|afLTUAntennaGain.0<p>Update: 60m</p>|
+|GPS Altitude (m)|<p>-</p>|`SNMP agent`|afLTUgpsAltMeter.0<p>Update: 5m</p>|
+|Tx power EIRP|<p>-</p>|`SNMP agent`|afLTUTxEIRP.0<p>Update: 60m</p>|
+|Packet per second for tx|<p>-</p>|`SNMP agent`|afLTUTxPps.0<p>Update: 1m</p>|
+|The firmware version running|<p>-</p>|`SNMP agent`|afLTUFirmwareVersion.0<p>Update: 1h</p>|
+|Ethernet Data port plugged|<p>-</p>|`SNMP agent`|afLTUethConnected.0<p>Update: 5m</p>|
+|GPS Satellites Tracked|<p>-</p>|`SNMP agent`|afLTUgpsSatsTracked.0<p>Update: 5m</p>|
+|Packet per second for rx|<p>-</p>|`SNMP agent`|afLTURxPps.0<p>Update: 1m</p>|
+|Tx modulation|<p>-</p>|`SNMP agent`|afLTUTxRate.0<p>Update: 60m</p>|
+|GPS Longitude|<p>-</p>|`SNMP agent`|afLTUgpsLon.0<p>Update: 5m</p>|
+|GPS Satellites Visible|<p>-</p>|`SNMP agent`|afLTUgpsSatsVisible.0<p>Update: 5m</p>|
+|GPS status|<p>-</p>|`SNMP agent`|afLTUgpsStatus.0<p>Update: 5m</p>|
+|Wireless Role|<p>-</p>|`SNMP agent`|afLTURole.0<p>Update: 60m</p>|
+|Ethernet packet per second for rx|<p>-</p>|`SNMP agent`|afLTUethRxPps.0<p>Update: 1m</p>|
+|The device name|<p>-</p>|`SNMP agent`|afLTUDevName.0<p>Update: 24h</p>|
+|GPS Horizontal Dilution of Precision|<p>-</p>|`SNMP agent`|afLTUgpsHDOP.0<p>Update: 5m</p>|
+|GPS Latitude|<p>-</p>|`SNMP agent`|afLTUgpsLat.0<p>Update: 5m</p>|
 |CPE {#REMOTEMAC} Distance|<p>-</p>|`SNMP agent`|Distance[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |CPE {#REMOTEMAC} RxPowerLevel0 (cpe)|<p>-</p>|`SNMP agent`|RemoteRxPowerLevel0[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |CPE {#REMOTEMAC} Tx Capacity|<p>-</p>|`SNMP agent`|TxCapacity[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|

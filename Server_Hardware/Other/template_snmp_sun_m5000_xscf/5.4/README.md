@@ -47,23 +47,23 @@ There are no template links in this template.
 |----|-----------|----|----|
 |Memory Board discovery|<p>-</p>|`SNMP agent`|scfComponentTable.memb<p>Update: 86400</p>|
 |CPU discovery|<p>-</p>|`SNMP agent`|scfComponentTable.cpu<p>Update: 86400</p>|
-|Fan discovery|<p>-</p>|`SNMP agent`|scfComponentTable.fan<p>Update: 86400</p>|
 |Memory unit discovery|<p>-</p>|`SNMP agent`|scfComponentTable.mem<p>Update: 86400</p>|
+|Fan discovery|<p>-</p>|`SNMP agent`|scfComponentTable.fan<p>Update: 86400</p>|
 |PSU discovery|<p>-</p>|`SNMP agent`|scfComponentTable.psu<p>Update: 86400</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|scfSystemState|<p>Overall system state normal(1), degraded(2), faulted(3), change(254), unknown(255)</p>|`SNMP agent`|scfSystemState<p>Update: 3600</p>|
-|scfSystemAmbientTemperatureValue|<p>-</p>|`SNMP agent`|scfSystemAmbientTemperatureValue<p>Update: 600</p>|
-|scfSystemSerialNumber|<p>-</p>|`SNMP agent`|scfSystemSerialNumber<p>Update: 86400</p>|
-|scfFirmwareState|<p>SCF software state normal(1), degraded(2), faulted(3), change(254), unknown(255)</p>|`SNMP agent`|scfFirmwareState<p>Update: 3600</p>|
-|scfHardwareState|<p>Overall system hardware state normal(1), degraded(2), faulted(3), change(254), unknown(255)</p>|`SNMP agent`|scfHardwareState<p>Update: 3600</p>|
 |scfSystemType|<p>-</p>|`SNMP agent`|scfSystemType<p>Update: 86400</p>|
+|scfSystemSerialNumber|<p>-</p>|`SNMP agent`|scfSystemSerialNumber<p>Update: 86400</p>|
+|scfSystemState|<p>Overall system state normal(1), degraded(2), faulted(3), change(254), unknown(255)</p>|`SNMP agent`|scfSystemState<p>Update: 3600</p>|
+|scfHardwareState|<p>Overall system hardware state normal(1), degraded(2), faulted(3), change(254), unknown(255)</p>|`SNMP agent`|scfHardwareState<p>Update: 3600</p>|
+|scfFirmwareState|<p>SCF software state normal(1), degraded(2), faulted(3), change(254), unknown(255)</p>|`SNMP agent`|scfFirmwareState<p>Update: 3600</p>|
+|scfSystemAmbientTemperatureValue|<p>-</p>|`SNMP agent`|scfSystemAmbientTemperatureValue<p>Update: 600</p>|
 |Memory Board #{#ID} status|<p>-</p>|`SNMP agent`|memb.status[{#ID}]<p>Update: 60</p><p>LLD</p>|
 |CPU {#BOARDID}-{#MODULEID} status|<p>-</p>|`SNMP agent`|cpu.status[{#BOARDID}-{#MODULEID}]<p>Update: 60</p><p>LLD</p>|
-|Fan #{#BOARDID} status|<p>-</p>|`SNMP agent`|fan.status[{#BOARDID}]<p>Update: 60</p><p>LLD</p>|
 |Memory unit {#BOARDID} status|<p>-</p>|`SNMP agent`|mem.statsu[{#BOARDID}]<p>Update: 60</p><p>LLD</p>|
+|Fan #{#BOARDID} status|<p>-</p>|`SNMP agent`|fan.status[{#BOARDID}]<p>Update: 60</p><p>LLD</p>|
 |Power Supply #{#BOARDID} status|<p>-</p>|`SNMP agent`|psu.status[{#BOARDID}]<p>Update: 60</p><p>LLD</p>|
 ## Triggers
 
@@ -76,6 +76,6 @@ There are no template links in this template.
 |Power Supply #{#BOARDID} Faulted|<p>-</p>|<p>**Expression**: last(/SNMP XSCF Sun M5000/psu.status[{#BOARDID}])<>1</p><p>**Recovery expression**: </p>|high|
 |Memory Board #{#ID} Faulted (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP XSCF Sun M5000/memb.status[{#ID}])<>1</p><p>**Recovery expression**: </p>|high|
 |CPU {#BOARDID}-{#MODULEID} Faulted (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP XSCF Sun M5000/cpu.status[{#BOARDID}-{#MODULEID}])<>1</p><p>**Recovery expression**: </p>|high|
-|Fan #{$BOARDID} Failed (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP XSCF Sun M5000/fan.status[{#BOARDID}])<>1</p><p>**Recovery expression**: </p>|high|
 |Memory unit {#BOARDID} Faulted (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP XSCF Sun M5000/mem.statsu[{#BOARDID}])<>1</p><p>**Recovery expression**: </p>|high|
+|Fan #{$BOARDID} Failed (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP XSCF Sun M5000/fan.status[{#BOARDID}])<>1</p><p>**Recovery expression**: </p>|high|
 |Power Supply #{#BOARDID} Faulted (LLD)|<p>-</p>|<p>**Expression**: last(/SNMP XSCF Sun M5000/psu.status[{#BOARDID}])<>1</p><p>**Recovery expression**: </p>|high|

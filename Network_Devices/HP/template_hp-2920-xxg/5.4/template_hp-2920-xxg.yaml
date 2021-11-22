@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:05:04Z'
+  date: '2021-11-21T21:20:29Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -10,18 +10,6 @@ zabbix_export:
       uuid: 77d2b28b537449b4a0878614bad8ee12
       template: 'HP Procurve 2920'
       name: 'HP Procurve 2920'
-      description: |
-        ## Overview
-        
-        Template for a HP 2920 Procurve switch. J9728A, J9726A.
-        
-        
-        
-        ## Author
-        
-        w4t1s
-        
-        
       groups:
         -
           name: Templates

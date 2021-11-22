@@ -43,12 +43,12 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Asigra Backup Completed with Warnings - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.11"]<p>Update: 0</p>|
 |Asigra Backup Completed with Errors - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.2"]<p>Update: 0</p>|
-|Asigra Backup Found Bulk Insert Failure - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.4"]<p>Update: 0</p>|
 |Asigra Backup Completed - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.1"]<p>Update: 0</p>|
-|Asigra Backup Failed - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.3"]<p>Update: 0</p>|
 |Asigra Backup Client is running on low database Space - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.6"]<p>Update: 0</p>|
+|Asigra Backup Found Bulk Insert Failure - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.4"]<p>Update: 0</p>|
+|Asigra Backup Completed with Warnings - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.11"]<p>Update: 0</p>|
+|Asigra Backup Failed - SNMP Traps|<p>-</p>|`SNMP trap`|snmptrap["SNMPv2-SMI::enterprises.15538.1.1.0.3"]<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

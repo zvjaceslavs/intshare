@@ -50,11 +50,11 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|All Pds info|<p>-</p>|`Zabbix agent`|lsi.pdsinfo<p>Update: {$PD_REQUEST_PERIOD}</p>|
+|All bbus info|<p>-</p>|`Zabbix agent`|lsi.bbusinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
 |All Lds info|<p>-</p>|`Zabbix agent`|lsi.ldsinfo<p>Update: {$LD_REQUEST_PERIOD}</p>|
 |All cvs info|<p>-</p>|`Zabbix agent`|lsi.cvsinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
-|All bbus info|<p>-</p>|`Zabbix agent`|lsi.bbusinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
 |All Ctls info|<p>-</p>|`Zabbix agent`|lsi.ctlsinfo<p>Update: {$ADAP_REQUEST_PERIOD}</p>|
+|All Pds info|<p>-</p>|`Zabbix agent`|lsi.pdsinfo<p>Update: {$PD_REQUEST_PERIOD}</p>|
 |Controller "{#CTLID}" cache vault data|<p>-</p>|`Dependent item`|lsi.ctl.cvdata.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
 |Controller "{#CTLID}" cache bbu data|<p>-</p>|`Dependent item`|lsi.ctl.bbu.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|
 |Controller "{#CTLID}" model|<p>-</p>|`Dependent item`|lsi.ctl.model.["{#CTLID}"]<p>Update: 0</p><p>LLD</p>|

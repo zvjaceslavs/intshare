@@ -45,16 +45,16 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Backup Exec Services|<p>Discovery Backup Exec Services.</p>|`Zabbix agent (active)`|service.discovery<p>Update: 3h</p>|
 |Backup Exec Jobs Discovery (INCREMENTAL)|<p>Discover Incremental Backup Exec jobs by SQL query.</p>|`Database monitor`|db.odbc.discovery[be.jobs.incr,{HOST.HOST}]<p>Update: 1h</p>|
+|Backup Exec Services|<p>Discovery Backup Exec Services.</p>|`Zabbix agent (active)`|service.discovery<p>Update: 3h</p>|
 |Backup Exec Jobs Discovery (FULL)|<p>Discover Full Backup Exec jobs by SQL query.</p>|`Database monitor`|db.odbc.discovery[be.jobs.full,{HOST.HOST}]<p>Update: 1h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Service {#SERVICE.NAME} status|<p>{#SERVICE.NAME} status Display name: {#SERVICE.DISPLAYNAME} Description: {#SERVICE.DESCRIPTION}</p>|`Zabbix agent (active)`|service.info[{#SERVICE.NAME}]<p>Update: 1m</p><p>LLD</p>|
 |{#JOB.NAME}: Final Job Status|<p>{#JOB.NAME} final job status</p>|`Database monitor`|db.odbc.select[be.job.incr.{#JOB.NAME}.finaljobstatus,{HOST.HOST}]<p>Update: 15m</p><p>LLD</p>|
 |{#JOB.NAME}: Total Data Size, bytes|<p>{#JOB.NAME} total bytes</p>|`Database monitor`|db.odbc.select[be.job.incr.{#JOB.NAME}.totalbytes,{HOST.HOST}]<p>Update: 15m</p><p>LLD</p>|
+|Service {#SERVICE.NAME} status|<p>{#SERVICE.NAME} status Display name: {#SERVICE.DISPLAYNAME} Description: {#SERVICE.DESCRIPTION}</p>|`Zabbix agent (active)`|service.info[{#SERVICE.NAME}]<p>Update: 1m</p><p>LLD</p>|
 |{#JOB.NAME}: Final Job Status|<p>{#JOB.NAME} final job status</p>|`Database monitor`|db.odbc.select[be.job.full.{#JOB.NAME}.finaljobstatus,{HOST.HOST}]<p>Update: 15m</p><p>LLD</p>|
 |{#JOB.NAME}: Total Data Size, bytes|<p>{#JOB.NAME} total bytes</p>|`Database monitor`|db.odbc.select[be.job.full.{#JOB.NAME}.totalbytes,{HOST.HOST}]<p>Update: 15m</p><p>LLD</p>|
 ## Triggers
@@ -64,6 +64,6 @@ There are no template links in this template.
 |Backup job {#JOB.NAME}: {ITEM.VALUE}|<p>Backup job {#JOB.NAME} finished with error: {ITEM.LASTVALUE}.</p>|<p>**Expression**: count(/Backup Exec Server/db.odbc.select[be.job.full.{#JOB.NAME}.finaljobstatus,Backup Exec Server],#2,"ne","19")<>0</p><p>**Recovery expression**: </p>|average|
 |Backup job {#JOB.NAME}: {ITEM.VALUE}|<p>Backup job {#JOB.NAME} finished with error: {ITEM.LASTVALUE}.</p>|<p>**Expression**: count(/Backup Exec Server/db.odbc.select[be.job.incr.{#JOB.NAME}.finaljobstatus,Backup Exec Server],#2,"ne","19")<>0</p><p>**Recovery expression**: </p>|warning|
 |Service {#SERVICE.NAME} in {ITEM.VALUE} state|<p>Service {#SERVICE.NAME} ({#SERVICE.DISPLAYNAME}) not in 'Running' state</p>|<p>**Expression**: count(/Backup Exec Server/service.info[{#SERVICE.NAME}],#5,"ne","0")>3</p><p>**Recovery expression**: </p>|warning|
-|Service {#SERVICE.NAME} in {ITEM.VALUE} state (LLD)|<p>Service {#SERVICE.NAME} ({#SERVICE.DISPLAYNAME}) not in 'Running' state</p>|<p>**Expression**: count(/Backup Exec Server/service.info[{#SERVICE.NAME}],#5,"ne","0")>3</p><p>**Recovery expression**: </p>|warning|
 |Backup job {#JOB.NAME}: {ITEM.VALUE} (LLD)|<p>Backup job {#JOB.NAME} finished with error: {ITEM.LASTVALUE}.</p>|<p>**Expression**: count(/Backup Exec Server/db.odbc.select[be.job.incr.{#JOB.NAME}.finaljobstatus,Backup Exec Server],#2,"ne","19")<>0</p><p>**Recovery expression**: </p>|warning|
+|Service {#SERVICE.NAME} in {ITEM.VALUE} state (LLD)|<p>Service {#SERVICE.NAME} ({#SERVICE.DISPLAYNAME}) not in 'Running' state</p>|<p>**Expression**: count(/Backup Exec Server/service.info[{#SERVICE.NAME}],#5,"ne","0")>3</p><p>**Recovery expression**: </p>|warning|
 |Backup job {#JOB.NAME}: {ITEM.VALUE} (LLD)|<p>Backup job {#JOB.NAME} finished with error: {ITEM.LASTVALUE}.</p>|<p>**Expression**: count(/Backup Exec Server/db.odbc.select[be.job.full.{#JOB.NAME}.finaljobstatus,Backup Exec Server],#2,"ne","19")<>0</p><p>**Recovery expression**: </p>|average|

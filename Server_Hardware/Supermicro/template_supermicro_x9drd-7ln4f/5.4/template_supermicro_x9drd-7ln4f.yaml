@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:05:00Z'
+  date: '2021-11-21T21:20:26Z'
   groups:
     -
       uuid: 1b837a3c078647049a0c00c61b4d57b5
@@ -10,20 +10,6 @@ zabbix_export:
       uuid: 99a68eb7ee5747d488d0362f202b602c
       template: 'IPMI SuperMicro X9DRD-7LN4F'
       name: 'IPMI SuperMicro X9DRD-7LN4F'
-      description: |
-        ## Overview
-        
-        Hello!
-        
-        
-        It's my fist template.
-        
-        
-        Warning! FAN3, FAN4, FAN6, FAN7, FAN8 disabled for me.
-        
-        
-        
-        
       groups:
         -
           name: Hypervisors

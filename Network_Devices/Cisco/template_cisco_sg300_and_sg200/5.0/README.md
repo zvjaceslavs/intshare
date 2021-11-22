@@ -66,11 +66,11 @@ There are no macros links in this template.
 |----|-----------|----|----|
 |Device name|<p>-</p>|`SNMP agent`|system.name<p>Update: 1h</p>|
 |Device description|<p>-</p>|`SNMP agent`|system.descr<p>Update: 1h</p>|
-|temperature status|<p>rlPhdUnitEnvParamMonitorTemperatureStatus 1.3.6.1.4.1.9.6.1.101.53.15.1.13 Display environment monitoring chassis temperature status ok(1), overTemperatureThreshold(2), overCriticalTemperatureThreshold(3)</p>|`SNMP agent`|system.temp.status<p>Update: 180</p>|
 |Device contact details|<p>-</p>|`SNMP agent`|system.contact<p>Update: 1h</p>|
-|snmp uptime|<p>-</p>|`SNMP agent`|system.uptime<p>Update: 120</p>|
+|temperature status|<p>rlPhdUnitEnvParamMonitorTemperatureStatus 1.3.6.1.4.1.9.6.1.101.53.15.1.13 Display environment monitoring chassis temperature status ok(1), overTemperatureThreshold(2), overCriticalTemperatureThreshold(3)</p>|`SNMP agent`|system.temp.status<p>Update: 180</p>|
 |Device location|<p>-</p>|`SNMP agent`|system.location<p>Update: 1h</p>|
 |CPU utilization|<p>CPU utilization for 5 seconds 1.3.6.1.4.1.9.6.1.101.1.7.0 CPU utilization for 1 minutes 1.3.6.1.4.1.9.6.1.101.1.8.0 CPU utilization for 5 minutes 1.3.6.1.4.1.9.6.1.101.1.9.0</p>|`SNMP agent`|system.cpu.util<p>Update: 60</p>|
+|snmp uptime|<p>-</p>|`SNMP agent`|system.uptime<p>Update: 120</p>|
 |vlan {#IFNAME} {#IFXENTRY}: RX bps|<p>-</p>|`SNMP agent`|net.vlan[ifInBits.{#SNMPINDEX}]<p>Update: 60</p><p>LLD</p>|
 |vlan {#IFNAME} {#IFXENTRY}: RX broadcast|<p>-</p>|`SNMP agent`|net.vlan[ifInBroadcastPkts.{#SNMPINDEX}]<p>Update: 180</p><p>LLD</p>|
 |vlan {#IFNAME} {#IFXENTRY}: RX errors|<p>-</p>|`SNMP agent`|net.vlan[ifInErrors.{#SNMPINDEX}]<p>Update: 180</p><p>LLD</p>|

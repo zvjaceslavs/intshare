@@ -76,31 +76,31 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Humidify Output|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.18<p>Update: 10s</p>|
-|Return Humidity Low Threshold|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.7<p>Update: 1d</p>|
-|Fan Speed|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogDescription.1.5<p>Update: 10s</p>|
-|Cooling Demand Power|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.12<p>Update: 30s</p>|
-|Suction Temp|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.21<p>Update: 10s</p>|
-|Airflow|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.3<p>Update: 10s</p>|
-|System Name|<p>-</p>|`SNMP agent`|sysName.0<p>Update: 1d</p>|
-|Suction Pressure|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.22<p>Update: 10s</p>|
-|Return  Air Temp Threshold|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.5<p>Update: 1d</p>|
-|Operating Mode|<p>-</p>|`SNMP agent`|coolingUnitStatusDiscreteIntegerAsString.1.2<p>Update: 1h</p>|
-|Cooling Output Power|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.13<p>Update: 30s</p>|
-|Dehumidify Output|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.16<p>Update: 10s</p>|
-|System Up Time|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 1h</p>|
-|Discharge Pressure|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.24<p>Update: 10s</p>|
-|Cool Set Point|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.9<p>Update: 1d</p>|
-|Condensate Pump Run Hrs|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.39<p>Update: 1h</p>|
-|Supply Air Temp|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.6<p>Update: 10s</p>|
-|Return Humidity|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.11<p>Update: 10s</p>|
-|Supply Air Temp Threshold|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.3<p>Update: 1d</p>|
-|Supply Humidity|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.10<p>Update: 10s</p>|
 |Supply Air Set Point|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.12<p>Update: 10s</p>|
-|Return Humidity High Threshold|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.8<p>Update: 1d</p>|
+|Return Humidity Low Threshold|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.7<p>Update: 1d</p>|
+|Humidify Output|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.18<p>Update: 10s</p>|
+|Condensate Pump Run Hrs|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.39<p>Update: 1h</p>|
+|Cooling Demand Power|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.12<p>Update: 30s</p>|
+|Dehumidify Output|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.16<p>Update: 10s</p>|
+|Return  Air Temp Threshold|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.5<p>Update: 1d</p>|
+|Cooling Output Power|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.13<p>Update: 30s</p>|
+|System Name|<p>-</p>|`SNMP agent`|sysName.0<p>Update: 1d</p>|
 |Dew Point|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.49<p>Update: 10s</p>|
-|Return Air Temp|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.8<p>Update: 10s</p>|
 |Humidifier Run Hrs|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.38<p>Update: 1h</p>|
+|Return Humidity|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.11<p>Update: 10s</p>|
+|Return Humidity High Threshold|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.8<p>Update: 1d</p>|
+|Airflow|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.3<p>Update: 10s</p>|
+|Fan Speed|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogDescription.1.5<p>Update: 10s</p>|
+|Supply Air Temp Threshold|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.3<p>Update: 1d</p>|
+|System Up Time|<p>-</p>|`SNMP agent`|sysUpTime.0<p>Update: 1h</p>|
+|Supply Humidity|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.10<p>Update: 10s</p>|
+|Discharge Pressure|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.24<p>Update: 10s</p>|
+|Suction Temp|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.21<p>Update: 10s</p>|
+|Supply Air Temp|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.6<p>Update: 10s</p>|
+|Cool Set Point|<p>-</p>|`SNMP agent`|coolingUnitConfigurationAnalogValue.1.9<p>Update: 1d</p>|
+|Return Air Temp|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.8<p>Update: 10s</p>|
+|Suction Pressure|<p>-</p>|`SNMP agent`|coolingUnitStatusAnalogValue.1.22<p>Update: 10s</p>|
+|Operating Mode|<p>-</p>|`SNMP agent`|coolingUnitStatusDiscreteIntegerAsString.1.2<p>Update: 1h</p>|
 ## Triggers
 
 There are no triggers in this template.

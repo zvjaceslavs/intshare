@@ -16,20 +16,20 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Max cartridge Drum level - black|<p>-</p>|`SNMP agent`|drum.black.max<p>Update: 15m</p>|
-|Printer location|<p>-</p>|`SNMP agent`|printer.location<p>Update: 6h</p>|
+|Pages printed - total|<p>-</p>|`SNMP agent`|pages.printed.total<p>Update: 30s</p>|
+|Serial number|<p>-</p>|`SNMP agent`|serial.number<p>Update: 6h</p>|
+|Cartridge drum level % - black|<p>-</p>|`Calculated`|black.cartridge.drum<p>Update: 15m</p>|
 |Current cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.now<p>Update: 15m</p>|
 |Printer model|<p>-</p>|`SNMP agent`|model<p>Update: 6h</p>|
-|Serial number|<p>-</p>|`SNMP agent`|serial.number<p>Update: 6h</p>|
-|Pages printed - color|<p>-</p>|`SNMP agent`|pages.printed.color<p>Update: 15m</p>|
-|Type of cartridge - black|<p>-</p>|`SNMP agent`|black.cartridge.type<p>Update: 6h</p>|
+|Max cartridge Drum level - black|<p>-</p>|`SNMP agent`|drum.black.max<p>Update: 15m</p>|
+|Pages printed - black|<p>-</p>|`SNMP agent`|pages.printed.black<p>Update: 15m</p>|
 |Cartridge toner level % - black|<p>-</p>|`Calculated`|black.cartridge.toner<p>Update: 15m</p>|
+|Type of cartridge - black|<p>-</p>|`SNMP agent`|black.cartridge.type<p>Update: 6h</p>|
 |Type of drum - black|<p>-</p>|`SNMP agent`|black.drum.type<p>Update: 6h</p>|
 |Current cartridge Drum level - black|<p>-</p>|`SNMP agent`|drum.black.now<p>Update: 15m</p>|
+|Printer location|<p>-</p>|`SNMP agent`|printer.location<p>Update: 6h</p>|
 |Max cartridge Toner level - black|<p>-</p>|`SNMP agent`|ink.black.max<p>Update: 15m</p>|
-|Cartridge drum level % - black|<p>-</p>|`Calculated`|black.cartridge.drum<p>Update: 15m</p>|
-|Pages printed - black|<p>-</p>|`SNMP agent`|pages.printed.black<p>Update: 15m</p>|
-|Pages printed - total|<p>-</p>|`SNMP agent`|pages.printed.total<p>Update: 30s</p>|
+|Pages printed - color|<p>-</p>|`SNMP agent`|pages.printed.color<p>Update: 15m</p>|
 ## Triggers
 
 There are no triggers in this template.

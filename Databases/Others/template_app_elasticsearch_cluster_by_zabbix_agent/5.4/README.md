@@ -59,31 +59,31 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|ES: Task max waiting in queue|<p>The time expressed in seconds since the earliest initiated task is waiting for being performed.</p>|`Dependent item`|es.cluster.task_max_waiting_in_queue<p>Update: 0</p>|
-|ES: Service response time|<p>Checks performance of the TCP service.</p>|`Zabbix agent`|net.tcp.service.perf["{$ELASTICSEARCH.SCHEME}","{$ELASTICSEARCH.HOST}","{$ELASTICSEARCH.PORT}"]<p>Update: 1m</p>|
-|ES: Cluster uptime|<p>Uptime duration in seconds since JVM has last started.</p>|`Dependent item`|es.nodes.jvm.max_uptime[{#ES.NODE}]<p>Update: 0</p>|
 |ES: Number of non-deleted documents|<p>The total number of non-deleted documents across all primary shards assigned to the selected nodes. This number is based on the documents in Lucene segments and may include the documents from nested fields.</p>|`Dependent item`|es.indices.docs.count<p>Update: 0</p>|
-|ES: Inactive shards percentage|<p>The ratio of inactive shards in the cluster expressed as a percentage.</p>|`Dependent item`|es.cluster.inactive_shards_percent_as_number<p>Update: 0</p>|
-|ES: Number of nodes|<p>The number of nodes within the cluster.</p>|`Dependent item`|es.cluster.number_of_nodes<p>Update: 0</p>|
-|ES: Get cluster health|<p>Returns the health status of a cluster.</p>|`Zabbix agent`|web.page.get[{$ELASTICSEARCH.HOST},_cluster/health?timeout=5s,{$ELASTICSEARCH.PORT}]<p>Update: 1m</p>|
 |ES: Get index settings|<p>Returns index settings.</p>|`Zabbix agent`|web.page.get[{$ELASTICSEARCH.HOST},_settings,{$ELASTICSEARCH.PORT}]<p>Update: 1m</p>|
-|ES: Total size of all file stores|<p>The total size in bytes of all file stores across all selected nodes.</p>|`Dependent item`|es.nodes.fs.total_in_bytes<p>Update: 0</p>|
-|ES: Service status|<p>Checks if the service is running and accepting TCP connections.</p>|`Zabbix agent`|net.tcp.service["{$ELASTICSEARCH.SCHEME}","{$ELASTICSEARCH.HOST}","{$ELASTICSEARCH.PORT}"]<p>Update: 1m</p>|
-|ES: Nodes with the data role|<p>The number of selected nodes with the data role.</p>|`Dependent item`|es.nodes.count.data<p>Update: 0</p>|
-|ES: Number of initializing shards|<p>The number of shards that are under initialization.</p>|`Dependent item`|es.cluster.initializing_shards<p>Update: 0</p>|
-|ES: Number of pending tasks|<p>The number of cluster-level changes that have not yet been executed.</p>|`Dependent item`|es.cluster.number_of_pending_tasks<p>Update: 0</p>|
-|ES: Number of relocating shards|<p>The number of shards that are under relocation.</p>|`Dependent item`|es.cluster.relocating_shards<p>Update: 0</p>|
-|ES: Delayed unassigned shards|<p>The number of shards whose allocation has been delayed by the timeout settings.</p>|`Dependent item`|es.cluster.delayed_unassigned_shards<p>Update: 0</p>|
-|ES: Nodes with the ingest role|<p>The number of selected nodes with the ingest role.</p>|`Dependent item`|es.nodes.count.ingest<p>Update: 0</p>|
-|ES: Cluster name|<p>Name of the cluster this node belongs to.</p>|`Dependent item`|es.cluster_name[{#ES.NODE}]<p>Update: 0</p>|
-|ES: Cluster health status|<p>Health status of the cluster, based on the state of its primary and replica shards. Statuses are: green All shards are assigned. yellow All primary shards are assigned, but one or more replica shards are unassigned. If a node in the cluster fails, some data could be unavailable until that node is repaired. red One or more primary shards are unassigned, so some data is unavailable. This can occur briefly during cluster startup as primary shards are assigned.</p>|`Dependent item`|es.cluster.status<p>Update: 0</p>|
-|ES: Number of data nodes|<p>The number of nodes that are dedicated to data nodes.</p>|`Dependent item`|es.cluster.number_of_data_nodes<p>Update: 0</p>|
 |ES: Nodes with the master role|<p>The number of selected nodes with the master role.</p>|`Dependent item`|es.nodes.count.master<p>Update: 0</p>|
+|ES: Number of data nodes|<p>The number of nodes that are dedicated to data nodes.</p>|`Dependent item`|es.cluster.number_of_data_nodes<p>Update: 0</p>|
+|ES: Get cluster health|<p>Returns the health status of a cluster.</p>|`Zabbix agent`|web.page.get[{$ELASTICSEARCH.HOST},_cluster/health?timeout=5s,{$ELASTICSEARCH.PORT}]<p>Update: 1m</p>|
 |ES: Get cluster stats|<p>Returns cluster statistics.</p>|`Zabbix agent`|web.page.get[{$ELASTICSEARCH.HOST},_cluster/stats,{$ELASTICSEARCH.PORT}]<p>Update: 1m</p>|
-|ES: Indices with shards assigned to nodes|<p>The total number of indices with shards assigned to the selected nodes.</p>|`Dependent item`|es.indices.count<p>Update: 0</p>|
-|ES: Number of unassigned shards|<p>The number of shards that are not allocated.</p>|`Dependent item`|es.cluster.unassigned_shards<p>Update: 0</p>|
-|ES: Get nodes stats|<p>Returns cluster nodes statistics.</p>|`Zabbix agent`|web.page.get[{$ELASTICSEARCH.HOST},_nodes/stats,{$ELASTICSEARCH.PORT}]<p>Update: 1m</p>|
+|ES: Service status|<p>Checks if the service is running and accepting TCP connections.</p>|`Zabbix agent`|net.tcp.service["{$ELASTICSEARCH.SCHEME}","{$ELASTICSEARCH.HOST}","{$ELASTICSEARCH.PORT}"]<p>Update: 1m</p>|
+|ES: Task max waiting in queue|<p>The time expressed in seconds since the earliest initiated task is waiting for being performed.</p>|`Dependent item`|es.cluster.task_max_waiting_in_queue<p>Update: 0</p>|
+|ES: Cluster health status|<p>Health status of the cluster, based on the state of its primary and replica shards. Statuses are: green All shards are assigned. yellow All primary shards are assigned, but one or more replica shards are unassigned. If a node in the cluster fails, some data could be unavailable until that node is repaired. red One or more primary shards are unassigned, so some data is unavailable. This can occur briefly during cluster startup as primary shards are assigned.</p>|`Dependent item`|es.cluster.status<p>Update: 0</p>|
 |ES: Total available size to JVM in all file stores|<p>The total number of bytes available to JVM in the file stores across all selected nodes. Depending on OS or process-level restrictions, this number may be less than nodes.fs.free_in_byes. This is the actual amount of free disk space the selected Elasticsearch nodes can use.</p>|`Dependent item`|es.nodes.fs.available_in_bytes<p>Update: 0</p>|
+|ES: Number of unassigned shards|<p>The number of shards that are not allocated.</p>|`Dependent item`|es.cluster.unassigned_shards<p>Update: 0</p>|
+|ES: Cluster uptime|<p>Uptime duration in seconds since JVM has last started.</p>|`Dependent item`|es.nodes.jvm.max_uptime[{#ES.NODE}]<p>Update: 0</p>|
+|ES: Total size of all file stores|<p>The total size in bytes of all file stores across all selected nodes.</p>|`Dependent item`|es.nodes.fs.total_in_bytes<p>Update: 0</p>|
+|ES: Service response time|<p>Checks performance of the TCP service.</p>|`Zabbix agent`|net.tcp.service.perf["{$ELASTICSEARCH.SCHEME}","{$ELASTICSEARCH.HOST}","{$ELASTICSEARCH.PORT}"]<p>Update: 1m</p>|
+|ES: Number of pending tasks|<p>The number of cluster-level changes that have not yet been executed.</p>|`Dependent item`|es.cluster.number_of_pending_tasks<p>Update: 0</p>|
+|ES: Number of nodes|<p>The number of nodes within the cluster.</p>|`Dependent item`|es.cluster.number_of_nodes<p>Update: 0</p>|
+|ES: Delayed unassigned shards|<p>The number of shards whose allocation has been delayed by the timeout settings.</p>|`Dependent item`|es.cluster.delayed_unassigned_shards<p>Update: 0</p>|
+|ES: Number of relocating shards|<p>The number of shards that are under relocation.</p>|`Dependent item`|es.cluster.relocating_shards<p>Update: 0</p>|
+|ES: Nodes with the ingest role|<p>The number of selected nodes with the ingest role.</p>|`Dependent item`|es.nodes.count.ingest<p>Update: 0</p>|
+|ES: Number of initializing shards|<p>The number of shards that are under initialization.</p>|`Dependent item`|es.cluster.initializing_shards<p>Update: 0</p>|
+|ES: Inactive shards percentage|<p>The ratio of inactive shards in the cluster expressed as a percentage.</p>|`Dependent item`|es.cluster.inactive_shards_percent_as_number<p>Update: 0</p>|
+|ES: Indices with shards assigned to nodes|<p>The total number of indices with shards assigned to the selected nodes.</p>|`Dependent item`|es.indices.count<p>Update: 0</p>|
+|ES: Cluster name|<p>Name of the cluster this node belongs to.</p>|`Dependent item`|es.cluster_name[{#ES.NODE}]<p>Update: 0</p>|
+|ES: Get nodes stats|<p>Returns cluster nodes statistics.</p>|`Zabbix agent`|web.page.get[{$ELASTICSEARCH.HOST},_nodes/stats,{$ELASTICSEARCH.PORT}]<p>Update: 1m</p>|
+|ES: Nodes with the data role|<p>The number of selected nodes with the data role.</p>|`Dependent item`|es.nodes.count.data<p>Update: 0</p>|
 |ES {#ES.NODE}: Flush latency|<p>The average flush latency calculated from the available flush.total and flush.total_time_in_millis metrics.</p>|`Calculated`|es.node.indices.flush.latency[{#ES.NODE}]<p>Update: 1m</p><p>LLD</p>|
 |ES {#ES.NODE}: Fetch latency|<p>The average fetch latency calculated by sampling the total number of fetches and the total elapsed time at regular intervals.</p>|`Calculated`|es.node.indices.search.fetch_latency[{#ES.NODE}]<p>Update: 1m</p><p>LLD</p>|
 |ES {#ES.NODE}: Indexing latency|<p>The average indexing latency calculated from the available index_total and index_time_in_millis metrics.</p>|`Calculated`|es.node.indices.indexing.index_latency[{#ES.NODE}]<p>Update: 1m</p><p>LLD</p>|

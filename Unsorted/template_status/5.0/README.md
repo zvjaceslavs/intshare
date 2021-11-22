@@ -64,8 +64,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Device Uptime|<p>-</p>|`SNMP agent`|system.uptime[sysUpTime]<p>Update: 1m</p>|
 |SNMP Availability|<p>-</p>|`Zabbix internal`|zabbix[host,snmp,available]<p>Update: 30m</p>|
+|Device Uptime|<p>-</p>|`SNMP agent`|system.uptime[sysUpTime]<p>Update: 1m</p>|
 ## Triggers
 
 There are no triggers in this template.

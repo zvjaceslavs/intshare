@@ -74,13 +74,13 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Log|<p>-</p>|`HTTP agent`|Log<p>Update: 1m</p>|
+|Frequency|<p>-</p>|`Dependent item`|UPS.Frequency<p>Update: 0</p>|
 |Load|<p>-</p>|`Dependent item`|UPS.Load<p>Update: 0</p>|
+|Log|<p>-</p>|`HTTP agent`|Log<p>Update: 1m</p>|
 |Output|<p>-</p>|`Dependent item`|UPS.Output<p>Update: 0</p>|
 |Battery Level|<p>-</p>|`Dependent item`|UPS.Battery<p>Update: 0</p>|
-|Temperature|<p>-</p>|`Dependent item`|UPS.Temperature<p>Update: 0</p>|
-|Frequency|<p>-</p>|`Dependent item`|UPS.Frequency<p>Update: 0</p>|
 |Input|<p>-</p>|`Dependent item`|UPS.Input<p>Update: 0</p>|
+|Temperature|<p>-</p>|`Dependent item`|UPS.Temperature<p>Update: 0</p>|
 ## Triggers
 
 There are no triggers in this template.

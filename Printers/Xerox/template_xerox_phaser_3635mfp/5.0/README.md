@@ -16,14 +16,14 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Type of cartridge - black|<p>-</p>|`SNMP agent`|black.cartridge.type<p>Update: 3600</p>|
 |Pages printed - total|<p>-</p>|`SNMP agent`|pages.printed.total<p>Update: 3600</p>|
-|Printer location|<p>-</p>|`SNMP agent`|printer.location<p>Update: 3600</p>|
-|Printer model|<p>-</p>|`SNMP agent`|model<p>Update: 3600</p>|
-|Max cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.max<p>Update: 600</p>|
-|Serial number|<p>-</p>|`SNMP agent`|serial.number<p>Update: 3600</p>|
 |Current cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.now<p>Update: 600</p>|
+|Printer model|<p>-</p>|`SNMP agent`|model<p>Update: 3600</p>|
+|Serial number|<p>-</p>|`SNMP agent`|serial.number<p>Update: 3600</p>|
 |Cartridge toner level % - black|<p>-</p>|`Calculated`|black.cartridge.toner<p>Update: 600</p>|
+|Printer location|<p>-</p>|`SNMP agent`|printer.location<p>Update: 3600</p>|
+|Max cartridge toner level - black|<p>-</p>|`SNMP agent`|ink.black.max<p>Update: 600</p>|
+|Type of cartridge - black|<p>-</p>|`SNMP agent`|black.cartridge.type<p>Update: 3600</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -44,8 +44,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|TCP-CONTROL|<p>Item about check tcp service on port 10050 (Zabbix Agent)</p>|`Simple check`|net.tcp.service[tcp,,10050]<p>Update: 1m</p>|
 |PING-CONTROL|<p>Simple check about ping</p>|`Simple check`|icmpping<p>Update: 1m</p>|
+|TCP-CONTROL|<p>Item about check tcp service on port 10050 (Zabbix Agent)</p>|`Simple check`|net.tcp.service[tcp,,10050]<p>Update: 1m</p>|
 ## Triggers
 
 There are no triggers in this template.

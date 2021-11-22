@@ -25,17 +25,17 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Device firmware version|<p>Version number of the Firmware.</p>|`SNMP agent`|entPhysicalFirmwareRev<p>Update: 3600</p>|
-|Device contact details|<p>-</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
-|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
-|Device CPU utilization|<p>Percentage of the device CPU utilization during the last 5 minutes. The value 101 is a dummy value, indicating that the CPU utilization was not measured (since measurement is disabled or was disabled during last 5 minutes).</p>|`SNMP agent`|rlCpuUtilDuringLast5Minutes<p>Update: 60</p>|
-|Device full description|<p>Full text IOS description</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
-|Device type|<p>-</p>|`SNMP agent`|entPhysicalDescr<p>Update: 3600</p>|
-|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
-|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software. It is mandatory that this only contain printable ASCII characters.</p>|`SNMP agent`|entPhysicalModelName<p>Update: 3600</p>|
-|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
-|Device hardware version|<p>Version number of the Hardware.</p>|`SNMP agent`|entPhysicalHardwareRev<p>Update: 3600</p>|
-|Device serial number|<p>-</p>|`SNMP agent`|entPhysicalSerialNum<p>Update: 3600</p>|
 |Device manufacter mame|<p>-</p>|`External check`|echo.something["Cisco Systems"]<p>Update: 3600</p>|
+|Device CPU utilization|<p>Percentage of the device CPU utilization during the last 5 minutes. The value 101 is a dummy value, indicating that the CPU utilization was not measured (since measurement is disabled or was disabled during last 5 minutes).</p>|`SNMP agent`|rlCpuUtilDuringLast5Minutes<p>Update: 60</p>|
+|Device contact details|<p>-</p>|`SNMP agent`|sysContact<p>Update: 3600</p>|
+|Device hardware version|<p>Version number of the Hardware.</p>|`SNMP agent`|entPhysicalHardwareRev<p>Update: 3600</p>|
+|Device name|<p>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysName<p>Update: 3600</p>|
+|Device uptime|<p>The time since the network management portion of the system was last re-initialized.</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
+|Device full description|<p>Full text IOS description</p>|`SNMP agent`|sysDescr<p>Update: 3600</p>|
+|Device description|<p>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software. It is mandatory that this only contain printable ASCII characters.</p>|`SNMP agent`|entPhysicalModelName<p>Update: 3600</p>|
+|Device location|<p>The physical location of this node (e.g., `telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</p>|`SNMP agent`|sysLocation<p>Update: 3600</p>|
+|Device serial number|<p>-</p>|`SNMP agent`|entPhysicalSerialNum<p>Update: 3600</p>|
+|Device type|<p>-</p>|`SNMP agent`|entPhysicalDescr<p>Update: 3600</p>|
 |Environment fan status, unit $1|<p>The mandatory state of the FAN 1 being instrumented</p>|`SNMP agent`|rlPhdUnitEnvParamFan1Status[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Environment temp. status, unit $1|<p>Display environment monitoring chassis temperature status</p>|`SNMP agent`|rlPhdUnitEnvParamMonitorTemperatureStatus[{#SNMPVALUE}]<p>Update: 300</p><p>LLD</p>|
 |Stack device id, unit $1|<p>Asset tag of the product.</p>|`SNMP agent`|rlPhdUnitGenParamServiceTag[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|

@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:03:08Z'
+  date: '2021-11-21T21:18:36Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,20 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 29faeb6410e24c959b92967f466750e6
-      template: 'App Zabbix Agent'
-      name: 'App Zabbix Agent'
-      description: |
-        ## Overview
-        
-        Official Zabbix Agent Template from Zabbix distribution
-        
-        
-        
-        ## Author
-        
-        Zabbix SIA
-        
-        
+      template: 'Template App Zabbix Agent'
+      name: 'Template App Zabbix Agent'
       groups:
         -
           name: Templates
@@ -41,7 +29,7 @@ zabbix_export:
           triggers:
             -
               uuid: ed938d0e260647ab99ee603f69afea90
-              expression: '(last(/App Zabbix Agent/agent.hostname,#1)<>last(/App Zabbix Agent/agent.hostname,#2))>0'
+              expression: '(last(/Template App Zabbix Agent/agent.hostname,#1)<>last(/Template App Zabbix Agent/agent.hostname,#2))>0'
               name: 'Host name of zabbix_agentd was changed on {HOST.NAME}'
               priority: INFO
         -
@@ -60,7 +48,7 @@ zabbix_export:
           triggers:
             -
               uuid: 43555408eeab4ee2bd0d2b059dcd488f
-              expression: 'nodata(/App Zabbix Agent/agent.ping,5m)=1'
+              expression: 'nodata(/Template App Zabbix Agent/agent.ping,5m)=1'
               name: 'Zabbix agent on {HOST.NAME} is unreachable for 5 minutes'
               priority: AVERAGE
         -
@@ -78,7 +66,7 @@ zabbix_export:
           triggers:
             -
               uuid: b4663ca19dc54caa8ced01bf0fc84c1d
-              expression: '(last(/App Zabbix Agent/agent.version,#1)<>last(/App Zabbix Agent/agent.version,#2))>0'
+              expression: '(last(/Template App Zabbix Agent/agent.version,#1)<>last(/Template App Zabbix Agent/agent.version,#2))>0'
               name: 'Version of zabbix_agent(d) was changed on {HOST.NAME}'
               priority: INFO
       valuemaps:

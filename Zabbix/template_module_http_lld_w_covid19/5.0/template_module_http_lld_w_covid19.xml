@@ -1,365 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zabbix_export>
-  <version>5.0</version>
-  <date>2021-11-09T08:41:27Z</date>
-  <groups>
-    <group>
-      <name>CORONAVIRUS</name>
-    </group>
-  </groups>
-  <templates>
-    <template>
-      <template>Module_HTTP_LLD_W_Corona_44</template>
-      <name>Module_HTTP_LLD_W_Corona_44</name>
-      <description>## Overview Dashboard Grafana: &lt;https://grafana.com/grafana/dashboards/11987> * EN-US **Homologated:** ***Zabbix 4.2.8, 4.4.4 and 4.4.7*** ***Grafana 6.6.2, 6.7.1*** Required plugins: 1) grafana-worldmap-panel - https://grafana.com/grafana/plugins/grafana-worldmap-panel 2) alexanderzobnin-zabbix-app - https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app Import Template\_Module\_HTTP\_LLD\_W\_Corona into Zabbix Create a host with the name "CORONA-COVID19", you can use the local interface (127.0.0.1: 10050) and the Hostgroup use the name "CORONAVIRUS" and link the template to the host. Wait for data collection, or use the function "Check now" in the item and in the LLD to speed up the collection Imports the Dashboard in Grafana When importing the Template into Garfana, select your Data Source. Note: If the list does not appear in countries, check if the applications and items were generated in Zabbix. Macros: * {$HISTORYSP}: History storage period * {$INTERVALHTTP}: Update interval * {$INTERVALLLDHTTP}: Update interval HTTP Item LLD * {$LOSTPERIOD}: * {$TRENDSP}: Trend storage period * {$UPINTERVALLLD}: Update interval Item LLD * PT-BR **Homologado:** ***Zabbix 4.2.8, 4.4.4 e 4.4.7*** ***Grafana 6.6.2, 6.7.1*** Plugins necessarios: 1) grafana-worldmap-panel - https://grafana.com/grafana/plugins/grafana-worldmap-panel 2) alexanderzobnin-zabbix-app - https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app Importe o Template\_Module\_HTTP\_LLD\_W\_Corona para o Zabbix Crie um host com nome "CORONA-COVID19", pode usar interface local (127.0.0.1: 10050) e o Hostgroup use o nome "CORONAVIRUS" e vincule o template ao host. Aguarde coleta de dados, ou utilize a função "Check now" no item e no LLD para agilizar a coleta. Importe a Dashboard no Grafana Ao importar o Template para o Garfana, selecione seu Data Source. Obs: Caso em paises não apareça a lista, verifique se as aplicações e itens foram gerados no Zabbix. ## Author Bernardo Lankheet</description>
-      <groups>
-        <group>
-          <name>CORONAVIRUS</name>
-        </group>
-      </groups>
-      <applications>
-        <application>
-          <name>Total Cases</name>
-        </application>
-      </applications>
-      <items>
-        <item>
-          <name>HTTP Consult Total</name>
-          <type>HTTP_AGENT</type>
-          <key>http.consult</key>
-          <delay>{$INTERVALHTTP}</delay>
-          <history>{$HISTORYSP}</history>
-          <trends>0</trends>
-          <value_type>TEXT</value_type>
-          <description>Download Data Raw Total Cases</description>
-          <applications>
-            <application>
-              <name>Total Cases</name>
-            </application>
-          </applications>
-          <timeout>10s</timeout>
-          <url>https://corona.lmao.ninja/v2/all</url>
-        </item>
-        <item>
-          <name>Total All Cases</name>
-          <type>DEPENDENT</type>
-          <key>total.all.cases</key>
-          <delay>0</delay>
-          <history>{$HISTORYSP}</history>
-          <trends>{$TRENDSP}</trends>
-          <applications>
-            <application>
-              <name>Total Cases</name>
-            </application>
-          </applications>
-          <preprocessing>
-            <step>
-              <type>JSONPATH</type>
-              <params>$.cases</params>
-            </step>
-          </preprocessing>
-          <master_item>
-            <key>http.consult</key>
-          </master_item>
-        </item>
-        <item>
-          <name>Total All Deaths</name>
-          <type>DEPENDENT</type>
-          <key>total.all.deaths</key>
-          <delay>0</delay>
-          <history>{$HISTORYSP}</history>
-          <trends>{$TRENDSP}</trends>
-          <applications>
-            <application>
-              <name>Total Cases</name>
-            </application>
-          </applications>
-          <preprocessing>
-            <step>
-              <type>JSONPATH</type>
-              <params>$.deaths</params>
-            </step>
-          </preprocessing>
-          <master_item>
-            <key>http.consult</key>
-          </master_item>
-        </item>
-        <item>
-          <name>Total All Recovered</name>
-          <type>DEPENDENT</type>
-          <key>total.all.recovered</key>
-          <delay>0</delay>
-          <history>{$HISTORYSP}</history>
-          <trends>{$TRENDSP}</trends>
-          <applications>
-            <application>
-              <name>Total Cases</name>
-            </application>
-          </applications>
-          <preprocessing>
-            <step>
-              <type>JSONPATH</type>
-              <params>$.recovered</params>
-            </step>
-          </preprocessing>
-          <master_item>
-            <key>http.consult</key>
-          </master_item>
-        </item>
-        <item>
-          <name>Total All updated</name>
-          <type>DEPENDENT</type>
-          <key>total.all.updated</key>
-          <delay>0</delay>
-          <history>{$HISTORYSP}</history>
-          <trends>{$TRENDSP}</trends>
-          <units>unixtime</units>
-          <applications>
-            <application>
-              <name>Total Cases</name>
-            </application>
-          </applications>
-          <preprocessing>
-            <step>
-              <type>JSONPATH</type>
-              <params>$.updated</params>
-            </step>
-          </preprocessing>
-          <master_item>
-            <key>http.consult</key>
-          </master_item>
-        </item>
-      </items>
-      <discovery_rules>
-        <discovery_rule>
-          <name>Discovery Countries</name>
-          <type>HTTP_AGENT</type>
-          <key>discovery.countries</key>
-          <delay>{$INTERVALLLDHTTP}</delay>
-          <lifetime>{$LOSTPERIOD}</lifetime>
-          <description>Discovery Data Raw All</description>
-          <item_prototypes>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - ActiveCases</name>
-              <type>HTTP_AGENT</type>
-              <key>active.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.active</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - Cases</name>
-              <type>HTTP_AGENT</type>
-              <key>cases.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.cases</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - CasesPerOneMillion</name>
-              <type>HTTP_AGENT</type>
-              <key>casesPerOneMillion.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.casesPerOneMillion</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - Critical</name>
-              <type>HTTP_AGENT</type>
-              <key>critical.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.critical</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - Deaths</name>
-              <type>HTTP_AGENT</type>
-              <key>deaths.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.deaths</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - DeathsPerOneMillion</name>
-              <type>HTTP_AGENT</type>
-              <key>deathsPerOneMillion.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.deathsPerOneMillion</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - Recovered</name>
-              <type>HTTP_AGENT</type>
-              <key>recovered.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.recovered</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - TodayCases</name>
-              <type>HTTP_AGENT</type>
-              <key>today.cases.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.todayCases</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-            <item_prototype>
-              <name>"{#COUNTRY} - {#ISO3}" - TodayDeaths</name>
-              <type>HTTP_AGENT</type>
-              <key>today.deaths.country[{#COUNTRY}]</key>
-              <delay>{$UPINTERVALLLD}</delay>
-              <history>{$HISTORYSP}</history>
-              <trends>{$TRENDSP}</trends>
-              <application_prototypes>
-                <application_prototype>
-                  <name>Cases "{#COUNTRY}"</name>
-                </application_prototype>
-              </application_prototypes>
-              <preprocessing>
-                <step>
-                  <type>JSONPATH</type>
-                  <params>$.todayDeaths</params>
-                </step>
-              </preprocessing>
-              <url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url>
-            </item_prototype>
-          </item_prototypes>
-          <timeout>7s</timeout>
-          <url>https://corona.lmao.ninja/v2/countries</url>
-          <lld_macro_paths>
-            <lld_macro_path>
-              <lld_macro>{#COUNTRY}</lld_macro>
-              <path>$.country</path>
-            </lld_macro_path>
-            <lld_macro_path>
-              <lld_macro>{#ISO3}</lld_macro>
-              <path>$.countryInfo.iso3</path>
-            </lld_macro_path>
-          </lld_macro_paths>
-        </discovery_rule>
-      </discovery_rules>
-      <macros>
-        <macro>
-          <macro>{$HISTORYSP}</macro>
-          <value>90d</value>
-        </macro>
-        <macro>
-          <macro>{$INTERVALHTTP}</macro>
-          <value>2h</value>
-        </macro>
-        <macro>
-          <macro>{$INTERVALLLDHTTP}</macro>
-          <value>5h</value>
-        </macro>
-        <macro>
-          <macro>{$LOSTPERIOD}</macro>
-          <value>2d</value>
-        </macro>
-        <macro>
-          <macro>{$TRENDSP}</macro>
-          <value>365d</value>
-        </macro>
-        <macro>
-          <macro>{$UPINTERVALLLD}</macro>
-          <value>5h</value>
-        </macro>
-      </macros>
-    </template>
-  </templates>
-</zabbix_export>
+<zabbix_export><version>5.0</version><date>2021-11-21T21:57:01Z</date><groups><group><name>CORONAVIRUS</name></group></groups><templates><template><template>Module_HTTP_LLD_W_Corona_44</template><name>Module_HTTP_LLD_W_Corona_44</name><description>## Overview
+
+Dashboard Grafana: &lt;https://grafana.com/grafana/dashboards/11987&gt;
+
+
+* EN-US
+
+
+**Homologated:**
+
+
+***Zabbix 4.2.8, 4.4.4 and 4.4.7***
+
+
+***Grafana 6.6.2, 6.7.1***
+
+
+Required plugins:
+
+
+1) grafana-worldmap-panel - https://grafana.com/grafana/plugins/grafana-worldmap-panel
+
+
+2) alexanderzobnin-zabbix-app - https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app
+
+
+Import Template\_Module\_HTTP\_LLD\_W\_Corona into Zabbix
+
+
+Create a host with the name &quot;CORONA-COVID19&quot;, you can use the local interface (127.0.0.1: 10050) and the Hostgroup use the name &quot;CORONAVIRUS&quot; and link the template to the host.
+
+
+Wait for data collection, or use the function &quot;Check now&quot; in the item and in the LLD to speed up the collection
+
+
+Imports the Dashboard in Grafana
+
+
+When importing the Template into Garfana, select your Data Source.
+
+
+Note: If the list does not appear in countries, check if the applications and items were generated in Zabbix.
+
+
+Macros:
+
+
+* {$HISTORYSP}: History storage period
+* {$INTERVALHTTP}: Update interval
+* {$INTERVALLLDHTTP}: Update interval HTTP Item LLD
+* {$LOSTPERIOD}:
+* {$TRENDSP}: Trend storage period
+* {$UPINTERVALLLD}: Update interval Item LLD
+
+
+ 
+
+
+* PT-BR
+
+
+**Homologado:** 
+
+
+***Zabbix 4.2.8, 4.4.4 e 4.4.7***
+
+
+ ***Grafana 6.6.2, 6.7.1***
+
+
+Plugins necessarios: 
+
+
+1) grafana-worldmap-panel - https://grafana.com/grafana/plugins/grafana-worldmap-panel
+
+
+2) alexanderzobnin-zabbix-app - https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app
+
+
+ Importe o Template\_Module\_HTTP\_LLD\_W\_Corona para o Zabbix 
+
+
+Crie um host com nome &quot;CORONA-COVID19&quot;, pode usar interface local (127.0.0.1: 10050) e o Hostgroup use o nome &quot;CORONAVIRUS&quot; e vincule o template ao host. 
+
+
+Aguarde coleta de dados, ou utilize a função &quot;Check now&quot; no item e no LLD para agilizar a coleta.
+
+
+Importe a Dashboard no Grafana
+
+
+Ao importar o Template para o Garfana, selecione seu Data Source.
+
+
+ Obs: Caso em paises não apareça a lista, verifique se as aplicações e itens foram gerados no Zabbix.
+
+
+
+## Author
+
+Bernardo Lankheet
+
+</description><groups><group><name>CORONAVIRUS</name></group></groups><applications><application><name>Total Cases</name></application></applications><items><item><name>HTTP Consult Total</name><type>HTTP_AGENT</type><key>http.consult</key><delay>{$INTERVALHTTP}</delay><history>{$HISTORYSP}</history><trends>0</trends><value_type>TEXT</value_type><description>Download Data Raw Total Cases</description><applications><application><name>Total Cases</name></application></applications><timeout>10s</timeout><url>https://corona.lmao.ninja/v2/all</url></item><item><name>Total All Cases</name><type>DEPENDENT</type><key>total.all.cases</key><delay>0</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><applications><application><name>Total Cases</name></application></applications><preprocessing><step><type>JSONPATH</type><params>$.cases</params></step></preprocessing><master_item><key>http.consult</key></master_item></item><item><name>Total All Deaths</name><type>DEPENDENT</type><key>total.all.deaths</key><delay>0</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><applications><application><name>Total Cases</name></application></applications><preprocessing><step><type>JSONPATH</type><params>$.deaths</params></step></preprocessing><master_item><key>http.consult</key></master_item></item><item><name>Total All Recovered</name><type>DEPENDENT</type><key>total.all.recovered</key><delay>0</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><applications><application><name>Total Cases</name></application></applications><preprocessing><step><type>JSONPATH</type><params>$.recovered</params></step></preprocessing><master_item><key>http.consult</key></master_item></item><item><name>Total All updated</name><type>DEPENDENT</type><key>total.all.updated</key><delay>0</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><units>unixtime</units><applications><application><name>Total Cases</name></application></applications><preprocessing><step><type>JSONPATH</type><params>$.updated</params></step></preprocessing><master_item><key>http.consult</key></master_item></item></items><discovery_rules><discovery_rule><name>Discovery Countries</name><type>HTTP_AGENT</type><key>discovery.countries</key><delay>{$INTERVALLLDHTTP}</delay><lifetime>{$LOSTPERIOD}</lifetime><description>Discovery Data Raw All</description><item_prototypes><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - ActiveCases</name><type>HTTP_AGENT</type><key>active.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.active</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - Cases</name><type>HTTP_AGENT</type><key>cases.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.cases</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - CasesPerOneMillion</name><type>HTTP_AGENT</type><key>casesPerOneMillion.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.casesPerOneMillion</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - Critical</name><type>HTTP_AGENT</type><key>critical.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.critical</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - Deaths</name><type>HTTP_AGENT</type><key>deaths.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.deaths</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - DeathsPerOneMillion</name><type>HTTP_AGENT</type><key>deathsPerOneMillion.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.deathsPerOneMillion</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - Recovered</name><type>HTTP_AGENT</type><key>recovered.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.recovered</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - TodayCases</name><type>HTTP_AGENT</type><key>today.cases.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.todayCases</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype><item_prototype><name>&quot;{#COUNTRY} - {#ISO3}&quot; - TodayDeaths</name><type>HTTP_AGENT</type><key>today.deaths.country[{#COUNTRY}]</key><delay>{$UPINTERVALLLD}</delay><history>{$HISTORYSP}</history><trends>{$TRENDSP}</trends><application_prototypes><application_prototype><name>Cases &quot;{#COUNTRY}&quot;</name></application_prototype></application_prototypes><preprocessing><step><type>JSONPATH</type><params>$.todayDeaths</params></step></preprocessing><url>https://corona.lmao.ninja/v2/countries/{#COUNTRY}</url></item_prototype></item_prototypes><timeout>7s</timeout><url>https://corona.lmao.ninja/v2/countries</url><lld_macro_paths><lld_macro_path><lld_macro>{#COUNTRY}</lld_macro><path>$.country</path></lld_macro_path><lld_macro_path><lld_macro>{#ISO3}</lld_macro><path>$.countryInfo.iso3</path></lld_macro_path></lld_macro_paths></discovery_rule></discovery_rules><macros><macro><macro>{$HISTORYSP}</macro><value>90d</value></macro><macro><macro>{$INTERVALHTTP}</macro><value>2h</value></macro><macro><macro>{$INTERVALLLDHTTP}</macro><value>5h</value></macro><macro><macro>{$LOSTPERIOD}</macro><value>2d</value></macro><macro><macro>{$TRENDSP}</macro><value>365d</value></macro><macro><macro>{$UPINTERVALLLD}</macro><value>5h</value></macro></macros></template></templates></zabbix_export>

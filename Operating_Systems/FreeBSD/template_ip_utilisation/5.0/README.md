@@ -54,8 +54,8 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|U IPv6 total packets received|<p>-</p>|`Zabbix agent (active)`|net.ip6[total packets received]<p>Update: 30</p>|
 |U IPv4 total packets received|<p>-</p>|`Zabbix agent (active)`|net.ip4[total packets received]<p>Update: 30</p>|
+|U IPv6 total packets received|<p>-</p>|`Zabbix agent (active)`|net.ip6[total packets received]<p>Update: 30</p>|
 |U IPv6 Packets sent|<p>-</p>|`Zabbix agent (active)`|net.ip6[packets sent from this host]<p>Update: 30</p>|
 |U IPv4 Packet sent|<p>-</p>|`Zabbix agent (active)`|net.ip4[packets sent from this host]<p>Update: 30</p>|
 ## Triggers

@@ -26,13 +26,13 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Freeswitch peak sessions|<p>-</p>|`SNMP agent`|enterprises.27880.1.2.10.0<p>Update: 30m</p>|
 |Freeswitch session rate|<p>-</p>|`SNMP agent`|enterprises.27880.1.2.2.0<p>Update: 5m</p>|
+|Freeswitch peak sessions|<p>-</p>|`SNMP agent`|enterprises.27880.1.2.10.0<p>Update: 30m</p>|
 |Freeswitch service uptime|<p>-</p>|`SNMP agent`|enterprises.27880.1.2.1.0<p>Update: 5m</p>|
 |Freeswitch active sessions|<p>-</p>|`SNMP agent`|enterprises.27880.1.2.3.0<p>Update: 1m</p>|
+|Number of freeswitch processes|<p>-</p>|`Zabbix agent`|proc.num[,,,freeswitch]<p>Update: 2m</p>|
 |Freeswitch active calls|<p>-</p>|`SNMP agent`|enterprises.27880.1.2.5.0<p>Update: 1m</p>|
 |Freeswitch peak sessions per second|<p>-</p>|`SNMP agent`|enterprises.27880.1.2.8.0<p>Update: 30m</p>|
-|Number of freeswitch processes|<p>-</p>|`Zabbix agent`|proc.num[,,,freeswitch]<p>Update: 2m</p>|
 ## Triggers
 
 There are no triggers in this template.

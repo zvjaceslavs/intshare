@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:39:22Z'
+  date: '2021-11-21T21:54:57Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -3098,18 +3098,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifInOctects.1286
-        -
-          drawtype: GRADIENT_LINE
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifOutOctets.1286
+        -
+          drawtype: GRADIENT_LINE
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifInOctects.1286
     -
       uuid: ff9eef3c7dbe42e1876577eac704dcb9
       name: 'Port 08 Traffic'
@@ -3174,18 +3174,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifInOctects.1798
-        -
-          drawtype: GRADIENT_LINE
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifOutOctets.1798
+        -
+          drawtype: GRADIENT_LINE
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifInOctects.1798
     -
       uuid: 5b4d971d42ec4d8d9736b0e5d7c3acd6
       name: 'Port 12 Traffic'
@@ -3212,18 +3212,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifOutOctets.2054
-        -
-          drawtype: GRADIENT_LINE
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifInOctects.2054
+        -
+          drawtype: GRADIENT_LINE
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifOutOctets.2054
     -
       uuid: 54f7365168134921983487ca55721d06
       name: 'Port 14 Traffic'
@@ -3231,18 +3231,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifOutOctets.2182
-        -
-          drawtype: GRADIENT_LINE
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifInOctects.2182
+        -
+          drawtype: GRADIENT_LINE
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifOutOctets.2182
     -
       uuid: 5e3dca0d6327484abe66045343f1270c
       name: 'Port 15 Traffic'
@@ -3250,18 +3250,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifInOctects.2310
-        -
-          drawtype: GRADIENT_LINE
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifOutOctets.2310
+        -
+          drawtype: GRADIENT_LINE
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifInOctects.2310
     -
       uuid: 33263809ea8742f49c597e3332211114
       name: 'Port 16 Traffic'
@@ -3307,18 +3307,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifInOctects.2694
-        -
-          drawtype: GRADIENT_LINE
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifOutOctets.2694
+        -
+          drawtype: GRADIENT_LINE
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifInOctects.2694
     -
       uuid: 9704054155a247718575e2e2ec558006
       name: 'Port 19 Traffic'
@@ -3345,18 +3345,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifOutOctets.2950
-        -
-          drawtype: GRADIENT_LINE
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifInOctects.2950
+        -
+          drawtype: GRADIENT_LINE
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifOutOctets.2950
     -
       uuid: 95c57b4ef71940bf816fb0c583218c3c
       name: 'Port 21 Traffic'
@@ -3364,18 +3364,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifOutOctets.3078
-        -
-          drawtype: GRADIENT_LINE
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifInOctects.3078
+        -
+          drawtype: GRADIENT_LINE
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifOutOctets.3078
     -
       uuid: cb652cab5c264cf4a48dab4133b0bc3f
       name: 'Port 22 Traffic'
@@ -3421,18 +3421,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifOutOctets.3462
-        -
-          drawtype: GRADIENT_LINE
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifInOctects.3462
+        -
+          drawtype: GRADIENT_LINE
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifOutOctets.3462
     -
       uuid: 2ec0fbe77b484ac48a4d8fd6830f6ace
       name: 'Port 25 Traffic'
@@ -3440,18 +3440,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifOutOctets.3590
-        -
-          drawtype: GRADIENT_LINE
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifInOctects.3590
+        -
+          drawtype: GRADIENT_LINE
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifOutOctets.3590
     -
       uuid: 225c854d3d4b4dedbd51edafcfbbb444
       name: 'Port 26 Traffic'
@@ -3459,18 +3459,18 @@ zabbix_export:
       graph_items:
         -
           drawtype: GRADIENT_LINE
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM Baseline 2226-SFP Plus SNMPv2'
-            key: ifOutOctets.3718
-        -
-          drawtype: GRADIENT_LINE
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM Baseline 2226-SFP Plus SNMPv2'
             key: ifInOctects.3718
+        -
+          drawtype: GRADIENT_LINE
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM Baseline 2226-SFP Plus SNMPv2'
+            key: ifOutOctets.3718
     -
       uuid: 05a238319ab04ca3a6d131230bc28518
       name: 'Port SFP 25 Traffic'

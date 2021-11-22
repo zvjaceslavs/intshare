@@ -47,14 +47,14 @@ There are no macros links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Device World Wide ID|<p>-</p>|`SNMP agent`|bdtDeviceDatWWI<p>Update: 1h</p>|
-|Current Device Activity|<p>-</p>|`SNMP agent`|bdtDeviceStatAct<p>Update: 5m</p>|
-|Current Device Health Status|<p>-</p>|`SNMP agent`|bdtDeviceStatHealth<p>Update: 5m</p>|
 |Device Robotic FW Revision|<p>-</p>|`SNMP agent`|bdtDeviceDatRoboticSWRev<p>Update: 1h</p>|
-|Device SW Build Date|<p>-</p>|`SNMP agent`|bdtDeviceDatSWBuildDate<p>Update: 1h</p>|
-|Device Serial Number|<p>-</p>|`SNMP agent`|bdtDeviceDatSerialNum<p>Update: 1h</p>|
 |Device Robotic HW Revision|<p>-</p>|`SNMP agent`|bdtDeviceDatRoboticHWRev<p>Update: 1h</p>|
+|Current Device Activity|<p>-</p>|`SNMP agent`|bdtDeviceStatAct<p>Update: 5m</p>|
+|Device World Wide ID|<p>-</p>|`SNMP agent`|bdtDeviceDatWWI<p>Update: 1h</p>|
 |Device SW Revision|<p>-</p>|`SNMP agent`|bdtDeviceDatSWRevision<p>Update: 1h</p>|
+|Device Serial Number|<p>-</p>|`SNMP agent`|bdtDeviceDatSerialNum<p>Update: 1h</p>|
+|Current Device Health Status|<p>-</p>|`SNMP agent`|bdtDeviceStatHealth<p>Update: 5m</p>|
+|Device SW Build Date|<p>-</p>|`SNMP agent`|bdtDeviceDatSWBuildDate<p>Update: 1h</p>|
 |Current Module {#SNMPINDEX} Drive Power Module 1 Status|<p>-</p>|`SNMP agent`|bdtDeviceStatModEntryDPwr1[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Current Module {#SNMPINDEX} Drive Power Module 2 Status|<p>-</p>|`SNMP agent`|bdtDeviceStatModEntryDPwr2[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|
 |Current Module {#SNMPINDEX} Health Stat|<p>-</p>|`SNMP agent`|bdtDeviceStatModEntryHealth[{#SNMPINDEX}]<p>Update: 5m</p><p>LLD</p>|

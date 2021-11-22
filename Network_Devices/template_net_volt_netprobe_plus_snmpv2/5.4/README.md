@@ -59,16 +59,16 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Status PoE|<p>-</p>|`SNMP agent`|statuspoe<p>Update: 60s</p>|
-|Status de controle da Saída da Fonte|<p>-</p>|`SNMP agent`|statusswitch<p>Update: 60s</p>|
-|Data de Criação|<p>-</p>|`SNMP agent`|date<p>Update: 60s</p>|
-|Voltagem de Entrada PoE|<p>-</p>|`SNMP agent`|voltagem<p>Update: 60s</p>|
-|Tempo de Uptime|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 60s</p>|
-|Temperatura|<p>-</p>|`SNMP agent`|temperatura<p>Update: 60s</p>|
 |Modelo|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 60s</p>|
-|Fabricante|<p>-</p>|`SNMP agent`|sysContact<p>Update: 60s</p>|
+|Data de Criação|<p>-</p>|`SNMP agent`|date<p>Update: 60s</p>|
+|Tempo de Uptime|<p>-</p>|`SNMP agent`|sysUpTimeInstance<p>Update: 60s</p>|
 |Versão|<p>-</p>|`SNMP agent`|version<p>Update: 60s</p>|
+|Fabricante|<p>-</p>|`SNMP agent`|sysContact<p>Update: 60s</p>|
+|Voltagem de Entrada PoE|<p>-</p>|`SNMP agent`|voltagem<p>Update: 60s</p>|
+|Temperatura|<p>-</p>|`SNMP agent`|temperatura<p>Update: 60s</p>|
 |Corrente de Saída PoE (Amperes)|<p>-</p>|`SNMP agent`|corrente<p>Update: 60s</p>|
+|Status de controle da Saída da Fonte|<p>-</p>|`SNMP agent`|statusswitch<p>Update: 60s</p>|
+|Status PoE|<p>-</p>|`SNMP agent`|statuspoe<p>Update: 60s</p>|
 ## Triggers
 
 There are no triggers in this template.

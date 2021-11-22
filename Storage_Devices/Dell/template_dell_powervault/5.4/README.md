@@ -48,9 +48,9 @@ There are no template links in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Display Name|<p>-</p>|`SNMP agent`|shadowIdDisplayName<p>Update: 86400</p>|
+|Status Global do Dispositivo|<p>-</p>|`SNMP agent`|shadowStatusGlobalStatus<p>Update: 60</p>|
 |Description|<p>-</p>|`SNMP agent`|shadowIdDescription<p>Update: 86400</p>|
 |Uptime|<p>-</p>|`SNMP agent`|shadowStatusTimeStamp.0<p>Update: 300</p>|
-|Status Global do Dispositivo|<p>-</p>|`SNMP agent`|shadowStatusGlobalStatus<p>Update: 60</p>|
 |Library - Qtde de Drivers|<p>Number of drives contained in this library.</p>|`SNMP agent`|libraryDrvCnt[{#SNMPVALUE}]<p>Update: 3600</p><p>LLD</p>|
 |Library - Error Description|<p>-</p>|`SNMP agent`|libraryFaultDescr[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|
 |Library - Código do Erro|<p>The library Fault error code.</p>|`SNMP agent`|libraryFaultFSC[{#SNMPVALUE}]<p>Update: 60</p><p>LLD</p>|

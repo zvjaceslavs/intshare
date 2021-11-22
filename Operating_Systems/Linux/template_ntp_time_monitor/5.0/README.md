@@ -1,26 +1,4 @@
-# Time Drift OS Linux
-
-## Overview
-
-Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
-
-
-Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
-  
-UserParameter=time.drift[*],cat /var/lib/ntp/drift  
-UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
-
-
- 
-
-
- 
-
-
-
-## Author
-
-Jeffrey H. Simonson
+# Template Time Drift OS Linux
 
 ## Macros used
 
@@ -44,51 +22,7 @@ There are no discovery rules in this template.
 
 There are no triggers in this template.
 
-# Time Offset OS Linux
-
-## Overview
-
-Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
-
-
-Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
-  
-UserParameter=time.drift[*],cat /var/lib/ntp/drift  
-UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
-
-
- 
-
-
- 
-
-
-
-## Author
-
-Jeffrey H. Simonson
-
-## Overview
-
-Monitor NTP drift and local offset from an NTP server. Two templates are included for time.offset and time.drift, along with appropriate triggers. Developed for CentOS 6.4
-
-
-Add these lines to the Zabbix configuration file at /etc/zabbix/zabbix\_agent.conf  
-  
-UserParameter=time.drift[*],cat /var/lib/ntp/drift  
-UserParameter=time.offset[*],ntpdate -p 1 -q pool.ntp.org | grep -oP '(?<=offset ).*?(?= sec)'
-
-
- 
-
-
- 
-
-
-
-## Author
-
-Jeffrey H. Simonson
+# Template Time Offset OS Linux
 
 ## Macros used
 

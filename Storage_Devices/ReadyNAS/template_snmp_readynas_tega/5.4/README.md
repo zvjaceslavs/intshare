@@ -54,10 +54,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|nasMgrSoftwareVersion|<p>Software version</p>|`SNMP agent`|nasMgrSoftwareVersion<p>Update: 3600</p>|
-|sysUpTime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
 |sysName|<p>-</p>|`SNMP agent`|sysName<p>Update: 7200</p>|
+|nasMgrSoftwareVersion|<p>Software version</p>|`SNMP agent`|nasMgrSoftwareVersion<p>Update: 3600</p>|
 |sysDescr|<p>-</p>|`SNMP agent`|sysDescr<p>Update: 7200</p>|
+|sysUpTime|<p>-</p>|`SNMP agent`|sysUpTime<p>Update: 300</p>|
 |Disk $1 model|<p>-</p>|`SNMP agent`|diskmodel[{#DISKNUMBER}]<p>Update: 3600</p><p>LLD</p>|
 |Disk $1 status digital|<p>The disk status in digital format. "1" the disk is status "ok"</p>|`Calculated`|diskstatusn[{#DISKNUMBER}]<p>Update: 3600</p><p>LLD</p>|
 |Disk $1 status|<p>-</p>|`SNMP agent`|diskstatus[{#DISKNUMBER}]<p>Update: 3600</p><p>LLD</p>|

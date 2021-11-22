@@ -26,17 +26,21 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|Informações de entrada de fase|<p>-</p>|`SNMP agent`|ups.line.in.discovery<p>Update: 2h</p>|
 |Informações da bateria|<p>-</p>|`SNMP agent`|ups.system.discovery<p>Update: 2h</p>|
 |Informações de saída de fase|<p>-</p>|`SNMP agent`|ups.line.out.discovery<p>Update: 2h</p>|
-|Informações de entrada de fase|<p>-</p>|`SNMP agent`|ups.line.in.discovery<p>Update: 2h</p>|
 ## Items collected
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Nome|<p>-</p>|`SNMP agent`|upsIdentName<p>Update: 1m</p>|
-|Versão do software do UPS|<p>-</p>|`SNMP agent`|upsIdentUPSSoftwareVersion<p>Update: 1m</p>|
-|Modelo|<p>-</p>|`SNMP agent`|upsIdentModel<p>Update: 1m</p>|
 |Fabricante|<p>-</p>|`SNMP agent`|upsIdentManufacturer<p>Update: 1m</p>|
+|Nome|<p>-</p>|`SNMP agent`|upsIdentName<p>Update: 1m</p>|
+|Modelo|<p>-</p>|`SNMP agent`|upsIdentModel<p>Update: 1m</p>|
+|Versão do software do UPS|<p>-</p>|`SNMP agent`|upsIdentUPSSoftwareVersion<p>Update: 1m</p>|
+|Corrente de entrada (A) - Fase $1|<p>-</p>|`SNMP agent`|upsInputCurrent.[{#EINDICE}]<p>Update: 1m</p><p>LLD</p>|
+|Frequência de entrada (Hz) - Fase $1|<p>-</p>|`SNMP agent`|upsInputFrequency.[{#EINDICE}]<p>Update: 1h</p><p>LLD</p>|
+|Potencia Real de entrada (W) - Fase $1|<p>-</p>|`SNMP agent`|upsInputTruePower.[{#EINDICE}]<p>Update: 1m</p><p>LLD</p>|
+|Tensão de entrada (V) - Fase $1|<p>-</p>|`SNMP agent`|upsInputVoltage.[{#EINDICE}]<p>Update: 1m</p><p>LLD</p>|
 |Corrente da Bateria (A) $1|<p>-</p>|`SNMP agent`|upsbatterycurrent.[{#INDICE}]<p>Update: 30m</p><p>LLD</p>|
 |Estado da Bateria $1|<p>A indicação da capacidade restante na(s) baterias do sistema do UPS. Um valor de "bateria normal" indica que o tempo de execução restante é maior que "upsConfigLowBattTime". Um valor de "bateria baixa" indica que o tempo de execução restante da bateria seja menor que ou igual a "upsConfigLowBattTime". Um valor de "bateria esgotada" indica que o UPS não será capaz para sustentar a carga atual quando e a energia for perdida (incluindo a possibilidade de que a energia da rede elétrica esteja ausente e o UPS será incapaz de sustentar a saída).</p>|`SNMP agent`|upsBatteryStatus.[{#INDICE}]<p>Update: 30m</p><p>LLD</p>|
 |Temperatura da Bateria (ºC) $1|<p>A temperatura ambiente em ou perto do invólucro da bateria do UPS.</p>|`SNMP agent`|upsBatteryTemperature.[{#INDICE}]<p>Update: 30m</p><p>LLD</p>|
@@ -48,10 +52,6 @@ There are no template links in this template.
 |Percentual de carga - Fase $1|<p>-</p>|`SNMP agent`|upsOutputPercentLoad.[{#SINDICE}]<p>Update: 30m</p><p>LLD</p>|
 |Potência de saída (W) - Fase $1|<p>-</p>|`SNMP agent`|upsOutputPower.[{#SINDICE}]<p>Update: 1m</p><p>LLD</p>|
 |Tensão de saída (V) - Fase $1|<p>-</p>|`SNMP agent`|upsOutputVoltage.[{#SINDICE}]<p>Update: 1m</p><p>LLD</p>|
-|Corrente de entrada (A) - Fase $1|<p>-</p>|`SNMP agent`|upsInputCurrent.[{#EINDICE}]<p>Update: 1m</p><p>LLD</p>|
-|Frequência de entrada (Hz) - Fase $1|<p>-</p>|`SNMP agent`|upsInputFrequency.[{#EINDICE}]<p>Update: 1h</p><p>LLD</p>|
-|Potencia Real de entrada (W) - Fase $1|<p>-</p>|`SNMP agent`|upsInputTruePower.[{#EINDICE}]<p>Update: 1m</p><p>LLD</p>|
-|Tensão de entrada (V) - Fase $1|<p>-</p>|`SNMP agent`|upsInputVoltage.[{#EINDICE}]<p>Update: 1m</p><p>LLD</p>|
 ## Triggers
 
 |Name|Description|Expression|Priority|

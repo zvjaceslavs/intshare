@@ -44,10 +44,10 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|VeeamAgent_Service|<p>-</p>|`Zabbix agent (active)`|service.info[VeeamEndpointBackupSvc]<p>Update: 5m</p>|
-|VeeamAgent_EventLog_Synchronisation|<p>-</p>|`Zabbix agent (active)`|eventlog[Veeam Agent,,,Veeam Agent,195,,skip]<p>Update: 5m</p>|
-|VeeamAgent_EventLog_JobRetry|<p>-</p>|`Zabbix agent (active)`|eventlog[Veeam Agent,,,Veeam Agent,191,,skip]<p>Update: 5m</p>|
 |VeeamAgent_EventLog_JobResult|<p>-</p>|`Zabbix agent (active)`|eventlog[Veeam Agent,,,Veeam Agent,190,,skip]<p>Update: 5m</p>|
+|VeeamAgent_EventLog_Synchronisation|<p>-</p>|`Zabbix agent (active)`|eventlog[Veeam Agent,,,Veeam Agent,195,,skip]<p>Update: 5m</p>|
+|VeeamAgent_Service|<p>-</p>|`Zabbix agent (active)`|service.info[VeeamEndpointBackupSvc]<p>Update: 5m</p>|
+|VeeamAgent_EventLog_JobRetry|<p>-</p>|`Zabbix agent (active)`|eventlog[Veeam Agent,,,Veeam Agent,191,,skip]<p>Update: 5m</p>|
 ## Triggers
 
 There are no triggers in this template.

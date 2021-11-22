@@ -218,9 +218,6 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|PHP-FPM ({#POOLNAME}): Start Since|<p>How long has this pool been running.</p>|`Dependent item`|php-fpm.start_since[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
-|PHP-FPM ({#POOLNAME}): Start Time|<p>The time when this pool was started.</p>|`Dependent item`|php-fpm.start_time[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
-|PHP-FPM ({#POOLNAME}): Total Processes|<p>The total number of server processes currently running; the sum of idle processes + active processes. If the process manager is static, this number will match pm.max_children.</p>|`Dependent item`|php-fpm.total_processes[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 |Memory Used by Pool {#POOLNAME}|<p>-</p>|`Zabbix agent`|proc.mem["php-fpm: pool {#POOLNAME}",,,,pmem]<p>Update: 120s</p><p>LLD</p>|
 |PHP-FPM Pool {#POOLNAME} status page|<p>-</p>|`HTTP agent`|php-fpm.status[{#POOLNAME}]<p>Update: 60s</p><p>LLD</p>|
 |Process for pool {#POOLNAME}|<p>-</p>|`Zabbix agent`|proc.num["php-fpm: pool {#POOLNAME}"]<p>Update: 60s</p><p>LLD</p>|
@@ -234,6 +231,9 @@ There are no template links in this template.
 |PHP-FPM ({#POOLNAME}): Pool Name|<p>The name of this pool.</p>|`Dependent item`|php-fpm.pool[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 |PHP-FPM ({#POOLNAME}): Process Manager|<p>The method used by the process manager to control the number of child processes (possible values: ondemand, dynamic or static) for this pool.</p>|`Dependent item`|php-fpm.process_manager[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 |PHP-FPM ({#POOLNAME}): Slow Requests|<p>The number of requests that exceeded your request_slowlog_timeout value.</p>|`Dependent item`|php-fpm.slow_requests[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
+|PHP-FPM ({#POOLNAME}): Start Since|<p>How long has this pool been running.</p>|`Dependent item`|php-fpm.start_since[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
+|PHP-FPM ({#POOLNAME}): Start Time|<p>The time when this pool was started.</p>|`Dependent item`|php-fpm.start_time[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
+|PHP-FPM ({#POOLNAME}): Total Processes|<p>The total number of server processes currently running; the sum of idle processes + active processes. If the process manager is static, this number will match pm.max_children.</p>|`Dependent item`|php-fpm.total_processes[{#POOLNAME}]<p>Update: 0</p><p>LLD</p>|
 ## Triggers
 
 There are no triggers in this template.

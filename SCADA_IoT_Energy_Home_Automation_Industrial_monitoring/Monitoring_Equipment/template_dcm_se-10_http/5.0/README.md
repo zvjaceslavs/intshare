@@ -36,9 +36,9 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |HTTP Get|<p>-</p>|`HTTP agent`|http_get<p>Update: 30s</p>|
+|Entrada 1|<p>-</p>|`Dependent item`|entrada1<p>Update: 0</p>|
 |Temperatura Sonda|<p>-</p>|`Dependent item`|temp_sonda<p>Update: 0</p>|
 |Umidade|<p>-</p>|`Dependent item`|umidade<p>Update: 0</p>|
-|Entrada 1|<p>-</p>|`Dependent item`|entrada1<p>Update: 0</p>|
 |Entrada 2|<p>-</p>|`Dependent item`|entrada2<p>Update: 0</p>|
 |Temperatura|<p>-</p>|`Dependent item`|temperatura<p>Update: 0</p>|
 ## Triggers

@@ -101,13 +101,13 @@ There are no discovery rules in this template.
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
 |Повышение напряжения в электросети|<p>AVR Trim Active</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,2007,,skip]<p>Update: 5m</p>|
-|Падение напряжения в электросети|<p>AVR Boost Active</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,0,,skip]<p>Update: 5m</p>|
 |Потеряна связь с ИБП|<p>Lost Communication With UPS</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,3000,,skip]<p>Update: 5m</p>|
-|Батарея разряжена (ЖОПА!)|<p>Батарея разряжена Low Battery Condition</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,2003,,skip]<p>Update: 30s</p>|
-|Связь с ИБП не установлена|<p>Communication Not Established</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,3005,,skip]<p>Update: 5m</p>|
-|Требуется замена батареи|<p>Battery Needs Replacing</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,3016,,skip]<p>Update: 5m</p>|
-|Превышен порог времени работы от батареи|<p>Time On Battery Threshold Exceeded</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,2060,,skip]<p>Update: 1m</p>|
 |ИБП на батарее|<p>UPS On Battery</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,2000,,skip]<p>Update: 30s</p>|
+|Превышен порог времени работы от батареи|<p>Time On Battery Threshold Exceeded</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,2060,,skip]<p>Update: 1m</p>|
+|Связь с ИБП не установлена|<p>Communication Not Established</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,3005,,skip]<p>Update: 5m</p>|
+|Падение напряжения в электросети|<p>AVR Boost Active</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,0,,skip]<p>Update: 5m</p>|
+|Требуется замена батареи|<p>Battery Needs Replacing</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,3016,,skip]<p>Update: 5m</p>|
+|Батарея разряжена (ЖОПА!)|<p>Батарея разряжена Low Battery Condition</p>|`Zabbix agent (active)`|eventlog[Application,,,APCPBEAgent,2003,,skip]<p>Update: 30s</p>|
 ## Triggers
 
 There are no triggers in this template.

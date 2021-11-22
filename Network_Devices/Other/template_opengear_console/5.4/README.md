@@ -22,9 +22,9 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|System Uptime|<p>System Uptime in centiseconds (hundredths of a second: 0.01s)</p>|`SNMP agent`|opengear.systemuptime<p>Update: 60</p>|
 |Firmware Version|<p>-</p>|`SNMP agent`|opengear.firmwareversion<p>Update: 3600</p>|
 |Serial Number|<p>-</p>|`SNMP agent`|opengear.serialnumber<p>Update: 3600</p>|
-|System Uptime|<p>System Uptime in centiseconds (hundredths of a second: 0.01s)</p>|`SNMP agent`|opengear.systemuptime<p>Update: 60</p>|
 |Port {#SNMPINDEX} ({#PORTNAME}) Traffic Inbound|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.rxbytes[{#PORTNAME}]<p>Update: 300</p><p>LLD</p>|
 |Port {#SNMPINDEX} ({#PORTNAME}) Speed|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.speed[{#PORTNAME}]<p>Update: 3600</p><p>LLD</p>|
 |Port {#SNMPINDEX} ({#PORTNAME}) Traffic Outbound|<p>-</p>|`SNMP agent`|opengear.snmp.serialport.txbytes[{#PORTNAME}]<p>Update: 300</p><p>LLD</p>|

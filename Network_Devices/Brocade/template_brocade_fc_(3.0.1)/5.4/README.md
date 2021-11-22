@@ -1,21 +1,5 @@
 # KHP-BROCADE-FC-PORT
 
-## Overview
-
-templates was tested for Zabbix 3.0.1
-
-
-you also need Fibre Channel Switch MIB = SW.mib ([v7.4.1b\_all\_mibs.tar.gz](http://www.techhelp24.net/download/brocade/FOS/MIB/v7.4.1b_all_mibs.tar.gz))
-
-
-This template is distributed under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. ### Copyright Copyright (c) Jean-Jacques Martrès ### Authors Jean-Jacques Martrès (jjmartres |at| gmail |dot| com)
-
-
-
-## Author
-
-Jean-Jacques Martrès (original)
-
 ## Macros used
 
 There are no macros links in this template.

@@ -125,10 +125,10 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
+|HTTP Consult Total|<p>Download Data Raw Total Cases</p>|`HTTP agent`|http.consult<p>Update: {$INTERVALHTTP}</p>|
 |Total All Recovered|<p>-</p>|`Dependent item`|total.all.recovered<p>Update: 0</p>|
 |Total All Deaths|<p>-</p>|`Dependent item`|total.all.deaths<p>Update: 0</p>|
 |Total All updated|<p>-</p>|`Dependent item`|total.all.updated<p>Update: 0</p>|
-|HTTP Consult Total|<p>Download Data Raw Total Cases</p>|`HTTP agent`|http.consult<p>Update: {$INTERVALHTTP}</p>|
 |Total All Cases|<p>-</p>|`Dependent item`|total.all.cases<p>Update: 0</p>|
 |"{#COUNTRY} - {#ISO3}" - ActiveCases|<p>-</p>|`HTTP agent`|active.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|
 |"{#COUNTRY} - {#ISO3}" - Cases|<p>-</p>|`HTTP agent`|cases.country[{#COUNTRY}]<p>Update: {$UPINTERVALLLD}</p><p>LLD</p>|

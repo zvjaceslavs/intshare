@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:08:47Z'
+  date: '2021-11-21T21:24:04Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -4157,17 +4157,17 @@ zabbix_export:
       name: 'Port 1 Traffic'
       graph_items:
         -
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifOutOctets.4227626
-        -
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifInOctects.4227626
+        -
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifOutOctets.4227626
     -
       uuid: 22401277abb5478c89db18a53a67c89d
       name: 'Port 2 Traffic'
@@ -4189,33 +4189,33 @@ zabbix_export:
       name: 'Port 3 Traffic'
       graph_items:
         -
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifOutOctets.4227642
-        -
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifInOctects.4227642
+        -
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifOutOctets.4227642
     -
       uuid: ab05dbb1f7054931999e14b814a7ddfc
       name: 'Port 4 Traffic'
       graph_items:
-        -
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifInOctects.4227650
         -
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifOutOctets.4227650
+        -
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifInOctects.4227650
     -
       uuid: 535fdc05a69b47718778637f533eb974
       name: 'Port 5 Traffic'
@@ -4253,49 +4253,49 @@ zabbix_export:
       name: 'Port 7 Traffic'
       graph_items:
         -
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifOutOctets.4227674
-        -
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifInOctects.4227674
-    -
-      uuid: 123fda3420b948a6a4a48b2177024153
-      name: 'Port 8 Traffic'
-      graph_items:
         -
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
-            key: ifOutOctets.4227682
+            key: ifOutOctets.4227674
+    -
+      uuid: 123fda3420b948a6a4a48b2177024153
+      name: 'Port 8 Traffic'
+      graph_items:
         -
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifInOctects.4227682
+        -
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifOutOctets.4227682
     -
       uuid: 2936eb3c364142fcbd7d5232adcdf156
       name: 'Port 9 Traffic'
       graph_items:
-        -
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifInOctects.4227690
         -
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifOutOctets.4227690
+        -
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifInOctects.4227690
     -
       uuid: 93e9bd6dffdd428e85aa47895cad0f20
       name: 'Port 10 Traffic'
@@ -4365,49 +4365,49 @@ zabbix_export:
       name: 'Port 14 Traffic'
       graph_items:
         -
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifInOctects.4227730
-        -
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifOutOctets.4227730
+        -
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifInOctects.4227730
     -
       uuid: eccad2c9eea34c12865a807237609b19
       name: 'Port 15 Traffic'
       graph_items:
-        -
-          color: FF0000
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifOutOctets.4227738
         -
           color: '009900'
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifInOctects.4227738
+        -
+          color: FF0000
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifOutOctets.4227738
     -
       uuid: a563d11dd0984b0aaabf3f0a51745c15
       name: 'Port 16 Traffic'
       graph_items:
-        -
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifInOctects.4227746
         -
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifOutOctets.4227746
+        -
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifInOctects.4227746
     -
       uuid: ec6d4303954c42a9bbfee16654720e17
       name: 'Port 17 Traffic'
@@ -4477,17 +4477,17 @@ zabbix_export:
       name: 'Port 21 Traffic'
       graph_items:
         -
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifInOctects.4227786
-        -
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifOutOctets.4227786
+        -
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifInOctects.4227786
     -
       uuid: 3241c12e1a5e49289ffbcb260ae252db
       name: 'Port 22 Traffic'
@@ -4509,17 +4509,17 @@ zabbix_export:
       name: 'Port 23 Traffic'
       graph_items:
         -
-          color: '009900'
-          yaxisside: RIGHT
-          item:
-            host: '3COM 4500 52 Ports'
-            key: ifInOctects.4227802
-        -
           color: FF0000
           yaxisside: RIGHT
           item:
             host: '3COM 4500 52 Ports'
             key: ifOutOctets.4227802
+        -
+          color: '009900'
+          yaxisside: RIGHT
+          item:
+            host: '3COM 4500 52 Ports'
+            key: ifInOctects.4227802
     -
       uuid: 2465759847794698962d8ccc36c803da
       name: 'Port 24 Traffic'

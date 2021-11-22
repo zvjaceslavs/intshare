@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2021-11-09T08:00:03Z'
+  date: '2021-11-21T21:15:38Z'
   groups:
     -
       uuid: 7df96b18c230490a9a0a9e2307226338
@@ -8,193 +8,8 @@ zabbix_export:
   templates:
     -
       uuid: 4832cc748adb4aedb5dd404baa59ddba
-      template: HP_SNMP_Autodiscovery
-      name: HP_SNMP_Autodiscovery
-      description: |
-        ## Overview
-        
-        For all HP servers with HP SNMP agents. Uses Zabbix Low-Level Discovery to spin up monitoring for serviceable items such as physical and logical drives, Drive Array Controllers, Drive Array Accelerators, Power Supplies, and firmware. Can also monitor individual memory modules but this is disabled by default because it is usually sufficient to monitor just the "Resilient Memory Condition" item. Similarly, things such as thermal problems are monitored using the top-level cpqHeThermalCondition item instead of monitoring individual temperature sensors.
-        
-        
-        Newer HP servers (G8 and up) include HP SNMP Agents embedded in hardware at the iLO address; these can be monitored (with some reduced functionality) where the OS does not support HP SNMP agent installation (i.e. VMware).
-        
-        
-        Tested with HP BL and DL series G7, G8, and G9 servers, using Zabbix 2.4.x
-        
-        
-        No MIB files are required (only numeric OIDs are used).
-        
-        
-        Update 2016-05-24: Added Zabbix Version 3.0 template (includes Zabbix value maps), thanks to "mrbbs" for converting. Also added Zabbix 2.0 version.
-        
-        
-        Update 2017-02-27: Added Zabbix Version 3.2 template (Includes Zabbix value maps). Added value map item 4 (Flash-Backed Write Cache) under cpqDaAccelBackupPowerSource (used by G9 servers).
-        
-        
-        This template uses Zabbix value mapping to provide meaningful data from SNMP queries. This means that the value maps must be entered before importing the template if you are using Zabbix 2.x. Although this is a bit tedious, it's worth the effort. Copy the value maps below and paste them into Zabbix:
-        
-        
-        Zabbix Value Mapping for Template\_HP\_SNMP\_Autodiscovery
-        
-        
-        cpqCondition
-        
-        
-        1 other
-        
-        
-        2 OK
-        
-        
-        3 degraded
-        
-        
-        4 failed
-        
-        
-         
-        
-        
-        cpqDaAccelBackupPowerSource
-        
-        
-        1 other
-        
-        
-        2 battery
-        
-        
-        3 capacitor
-        
-        
-        4 Flash-Backed Write Cache
-        
-        
-         
-        
-        
-        cpqDaAccelBatteryStatus
-        
-        
-        1 other
-        
-        
-        2 ok
-        
-        
-        3 recharging
-        
-        
-        4 failed
-        
-        
-        5 degraded
-        
-        
-        6 notPresent
-        
-        
-        7 capacitorFailed
-        
-        
-         
-        
-        
-        cpqDaAccelStatus
-        
-        
-        1 other
-        
-        
-        2 invalid
-        
-        
-        3 enabled
-        
-        
-        4 tmpDisabled
-        
-        
-        5 permDisabled
-        
-        
-        6 cacheModFlashMemNotAttached
-        
-        
-        7 cacheModDegradedFailsafeSpeed
-        
-        
-        8 cacheModCriticalFailure
-        
-        
-        9 cacheReadCacheNotMapped
-        
-        
-         
-        
-        
-        cpqDaCntlrDriveWriteCacheState
-        
-        
-        1 other
-        
-        
-        2 disabled
-        
-        
-        3 enabled
-        
-        
-         
-        
-        
-        cpqDaLogDrvFaultTol
-        
-        
-        1 other
-        
-        
-        2 none
-        
-        
-        3 mirroring
-        
-        
-        4 dataGuard
-        
-        
-        5 distribDataGuard
-        
-        
-        7 advancedDataGuard
-        
-        
-        8 raid50
-        
-        
-        9 raid60
-        
-        
-         
-        
-        
-        cpqRedundant
-        
-        
-        1 other
-        
-        
-        2 notRedundant
-        
-        
-        3 redundant
-        
-        
-         
-        
-        
-        
-        
+      template: Template_HP_SNMP_Autodiscovery
+      name: Template_HP_SNMP_Autodiscovery
       groups:
         -
           name: Templates
@@ -230,7 +45,7 @@ zabbix_export:
           triggers:
             -
               uuid: 286bebb2c68d43e1b0cea0cdc6fa51bf
-              expression: last(/HP_SNMP_Autodiscovery/cpqHeAsrCondition)>2
+              expression: last(/Template_HP_SNMP_Autodiscovery/cpqHeAsrCondition)>2
               name: '{HOST.NAME}: Server was restarted by ASR (HP Automatic Server Recovery)'
               priority: HIGH
               description: |
@@ -341,7 +156,7 @@ zabbix_export:
           triggers:
             -
               uuid: 15d879c558964de6abc2d30523fe69c4
-              expression: 'nodata(/HP_SNMP_Autodiscovery/cpqHeMibCondition,3600s)=1'
+              expression: 'nodata(/Template_HP_SNMP_Autodiscovery/cpqHeMibCondition,3600s)=1'
               name: '{HOST.NAME}: HP SNMP Agents are not responding'
               priority: WARNING
               description: |
@@ -396,7 +211,7 @@ zabbix_export:
           triggers:
             -
               uuid: 658082bbeb1e474a86463ee23b083f9a
-              expression: last(/HP_SNMP_Autodiscovery/cpqHeResilientMemCondition)=3
+              expression: last(/Template_HP_SNMP_Autodiscovery/cpqHeResilientMemCondition)=3
               name: '{HOST.NAME}: HP Resilient Memory condition is degraded'
               priority: AVERAGE
               description: |
@@ -406,7 +221,7 @@ zabbix_export:
                 https://{HOST.CONN}:2381
             -
               uuid: ea0232f73eb74c069630d1dc239acbe7
-              expression: last(/HP_SNMP_Autodiscovery/cpqHeResilientMemCondition)=1
+              expression: last(/Template_HP_SNMP_Autodiscovery/cpqHeResilientMemCondition)=1
               name: '{HOST.NAME}: HP Resilient Memory condition is unknown'
               priority: WARNING
               description: |
@@ -454,7 +269,7 @@ zabbix_export:
           triggers:
             -
               uuid: 718535cefd534c05889c505227557a6c
-              expression: last(/HP_SNMP_Autodiscovery/cpqHeThermalCondition)>2
+              expression: last(/Template_HP_SNMP_Autodiscovery/cpqHeThermalCondition)>2
               name: '{HOST.NAME}: HP Thermal Condition is Degraded'
               priority: HIGH
               description: |
@@ -684,7 +499,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 624a1ccdf1824ae08d6e09f0d1fe9bbd
-                  expression: 'max(/HP_SNMP_Autodiscovery/cpqDaAccelBattery[{#SNMPINDEX}],86400s)=4'
+                  expression: 'max(/Template_HP_SNMP_Autodiscovery/cpqDaAccelBattery[{#SNMPINDEX}],86400s)=4'
                   name: '{HOST.NAME}: Drive Array Accelerator {#SNMPINDEX} battery has failed'
                   priority: WARNING
                   description: |
@@ -787,7 +602,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 35d82cb74f6a48d3a435fe888619bde3
-                  expression: 'last(/HP_SNMP_Autodiscovery/cpqDaAccelStatus[{#SNMPINDEX}])=2'
+                  expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqDaAccelStatus[{#SNMPINDEX}])=2'
                   name: '{HOST.NAME}: Drive Array Accelerator {#SNMPINDEX} is missing or not configured'
                   priority: WARNING
                   description: |
@@ -935,7 +750,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: b5da9932256d474a803419270f0d703a
-                  expression: 'last(/HP_SNMP_Autodiscovery/cpqDaCntlrBoardCondition[{#SNMPINDEX}])>2'
+                  expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqDaCntlrBoardCondition[{#SNMPINDEX}])>2'
                   name: '{HOST.NAME}: HP Drive Array Controller Board {#SNMPINDEX} is degraded or failed'
                   priority: AVERAGE
                   description: |
@@ -1156,7 +971,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 80f5cecdb56d4872a6db3d0dc1050b7a
-                  expression: 'last(/HP_SNMP_Autodiscovery/cpqDaLogDrvCondition[{#SNMPINDEX}])=4'
+                  expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqDaLogDrvCondition[{#SNMPINDEX}])=4'
                   name: '{HOST.NAME}: Logical Drive {#SNMPINDEX} [{#SNMPVALUE}] has failed'
                   priority: HIGH
                   description: |
@@ -1166,7 +981,7 @@ zabbix_export:
                     https://{HOST.CONN}:2381
                 -
                   uuid: 83f915eeb4f04d279af91fdfb85b324b
-                  expression: 'last(/HP_SNMP_Autodiscovery/cpqDaLogDrvCondition[{#SNMPINDEX}])=3'
+                  expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqDaLogDrvCondition[{#SNMPINDEX}])=3'
                   name: '{HOST.NAME}: Logical Drive {#SNMPINDEX} [{#SNMPVALUE}] is degraded'
                   priority: WARNING
                   description: |
@@ -1456,7 +1271,7 @@ zabbix_export:
           trigger_prototypes:
             -
               uuid: b1c4a40ad8b345e5b0f8a94ba7bc5afb
-              expression: 'last(/HP_SNMP_Autodiscovery/cpqHeResMem2ModuleCondition[{#SNMPINDEX}])>2 and last(/HP_SNMP_Autodiscovery/cpqHeResMem2ModuleNum[{#SNMPINDEX}])<>99 and last(/HP_SNMP_Autodiscovery/cpqHeResMem2CpuNum[{#SNMPINDEX}])<>99'
+              expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqHeResMem2ModuleCondition[{#SNMPINDEX}])>2 and last(/Template_HP_SNMP_Autodiscovery/cpqHeResMem2ModuleNum[{#SNMPINDEX}])<>99 and last(/Template_HP_SNMP_Autodiscovery/cpqHeResMem2CpuNum[{#SNMPINDEX}])<>99'
               name: '{HOST.NAME}: Memory Module {#SNMPINDEX} is degraded'
               priority: AVERAGE
               description: |
@@ -1523,7 +1338,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 0f5111a02f034bf4b1f9d5c9a8a8f371
-                  expression: 'last(/HP_SNMP_Autodiscovery/cpqDaPhyDrvCondition[{#SNMPINDEX}])=4'
+                  expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqDaPhyDrvCondition[{#SNMPINDEX}])=4'
                   name: '{HOST.NAME}: Drive {#SNMPINDEX} has failed [{#SNMPVALUE}]'
                   priority: AVERAGE
                   description: |
@@ -1533,7 +1348,7 @@ zabbix_export:
                     https://{HOST.CONN}:2381
                 -
                   uuid: 55e83dedf2cf414e8961c7ce34f7217a
-                  expression: 'last(/HP_SNMP_Autodiscovery/cpqDaPhyDrvCondition[{#SNMPINDEX}])=3'
+                  expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqDaPhyDrvCondition[{#SNMPINDEX}])=3'
                   name: '{HOST.NAME}: Drive {#SNMPINDEX} is degraded [{#SNMPVALUE}]'
                   priority: WARNING
                   description: |
@@ -1849,7 +1664,7 @@ zabbix_export:
               trigger_prototypes:
                 -
                   uuid: 33e4a367043c4ddcbcc04333e0f7569d
-                  expression: 'last(/HP_SNMP_Autodiscovery/cpqHeFltTolPowerSupplyCondition[{#SNMPINDEX}])=4'
+                  expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqHeFltTolPowerSupplyCondition[{#SNMPINDEX}])=4'
                   name: '{HOST.NAME}: Power Supply {#SNMPINDEX} has failed'
                   priority: AVERAGE
                   description: |
@@ -1859,7 +1674,7 @@ zabbix_export:
                     https://{HOST.CONN}:2381
                 -
                   uuid: fa59d3b7cc44411f80389c583cfb6a45
-                  expression: 'last(/HP_SNMP_Autodiscovery/cpqHeFltTolPowerSupplyCondition[{#SNMPINDEX}])=3'
+                  expression: 'last(/Template_HP_SNMP_Autodiscovery/cpqHeFltTolPowerSupplyCondition[{#SNMPINDEX}])=3'
                   name: '{HOST.NAME}: Power Supply {#SNMPINDEX} is degraded'
                   priority: WARNING
                   description: |

@@ -49,19 +49,19 @@ There are no discovery rules in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|NTP offset|<p>Time deviation between the NTP server</p>|`Dependent item`|Lastoffset<p>Update: 0</p>|
-|NTP offset (long term average)|<p>Time deviation between the NTP server (long term average)</p>|`Dependent item`|RMSoffset<p>Update: 0</p>|
-|NTP polling|<p>Displays the synchronization interval with the NTP server.</p>|`Dependent item`|Updateinterval<p>Update: 0</p>|
-|NTP time difference (direction)|<p>Displays the direction of the difference between NTP time and system time.</p>|`Dependent item`|Systemtime<p>Update: 0</p>|
-|Network total delay|<p>Network total delay up to stratum-1.</p>|`Dependent item`|Rootdelay<p>Update: 0</p>|
-|NTP synchronized server|<p>-</p>|`Dependent item`|Reference<p>Update: 0</p>|
-|NTP stratum|<p>The stratum of the this server</p>|`Dependent item`|Stratum<p>Update: 0</p>|
-|Leap status|<p>Leap status Normal Insert second Delete second Not synchronized</p>|`Dependent item`|LeapStatus<p>Update: 0</p>|
-|chrony Version|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc -v]<p>Update: 1h</p>|
-|chronyReach|<p>過去8回の問合せ成功回数を8ビットで表現します。</p>|`Zabbix agent (active)`|system.run[chronyc sources|grep \* |awk '{print$5}']<p>Update: 10m</p>|
-|NTP time difference (ms)|<p>Displays the difference between NTP time and system time.</p>|`Dependent item`|Systemtime_ms<p>Update: 0</p>|
 |chronyc sources|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc sources]<p>Update: 10m</p>|
+|NTP offset|<p>Time deviation between the NTP server</p>|`Dependent item`|Lastoffset<p>Update: 0</p>|
+|NTP polling|<p>Displays the synchronization interval with the NTP server.</p>|`Dependent item`|Updateinterval<p>Update: 0</p>|
+|NTP time difference (ms)|<p>Displays the difference between NTP time and system time.</p>|`Dependent item`|Systemtime_ms<p>Update: 0</p>|
+|chronyReach|<p>過去8回の問合せ成功回数を8ビットで表現します。</p>|`Zabbix agent (active)`|system.run[chronyc sources|grep \* |awk '{print$5}']<p>Update: 10m</p>|
+|NTP offset (long term average)|<p>Time deviation between the NTP server (long term average)</p>|`Dependent item`|RMSoffset<p>Update: 0</p>|
+|Leap status|<p>Leap status Normal Insert second Delete second Not synchronized</p>|`Dependent item`|LeapStatus<p>Update: 0</p>|
+|NTP synchronized server|<p>-</p>|`Dependent item`|Reference<p>Update: 0</p>|
+|Network total delay|<p>Network total delay up to stratum-1.</p>|`Dependent item`|Rootdelay<p>Update: 0</p>|
+|NTP time difference (direction)|<p>Displays the direction of the difference between NTP time and system time.</p>|`Dependent item`|Systemtime<p>Update: 0</p>|
+|NTP stratum|<p>The stratum of the this server</p>|`Dependent item`|Stratum<p>Update: 0</p>|
 |chronyc tracking|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc tracking]<p>Update: 10m</p>|
+|chrony Version|<p>-</p>|`Zabbix agent (active)`|system.run[chronyc -v]<p>Update: 1h</p>|
 ## Triggers
 
 There are no triggers in this template.

@@ -1,14 +1,4 @@
-# SNMP Interfaces
-
-## Overview
-
-Official template from Zabbix distribution to discover network interfaces by SNMP
-
-
-
-## Author
-
-Zabbix SIA
+# Template SNMP Interfaces
 
 ## Macros used
 
@@ -40,5 +30,5 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Operational status was changed on {HOST.NAME} interface {#SNMPVALUE}|<p>-</p>|<p>**Expression**: (last(/SNMP Interfaces/ifOperStatus[{#SNMPVALUE}],#1)<>last(/SNMP Interfaces/ifOperStatus[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|information|
-|Operational status was changed on {HOST.NAME} interface {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: (last(/SNMP Interfaces/ifOperStatus[{#SNMPVALUE}],#1)<>last(/SNMP Interfaces/ifOperStatus[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|information|
+|Operational status was changed on {HOST.NAME} interface {#SNMPVALUE}|<p>-</p>|<p>**Expression**: (last(/Template SNMP Interfaces/ifOperStatus[{#SNMPVALUE}],#1)<>last(/Template SNMP Interfaces/ifOperStatus[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|information|
+|Operational status was changed on {HOST.NAME} interface {#SNMPVALUE} (LLD)|<p>-</p>|<p>**Expression**: (last(/Template SNMP Interfaces/ifOperStatus[{#SNMPVALUE}],#1)<>last(/Template SNMP Interfaces/ifOperStatus[{#SNMPVALUE}],#2))=1</p><p>**Recovery expression**: </p>|information|
