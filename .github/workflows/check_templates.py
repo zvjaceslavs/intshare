@@ -15,9 +15,9 @@ yaml.encoding = 'utf-8'
 
 formatter = xmlformatter.Formatter(
     indent="2", indent_char=" ", encoding_output="utf-8", encoding_input="utf-8", preserve=["literal"])
-z50 = ZabbixAPI('http://localhost:8050',
+z50 = ZabbixAPI('http://localhost:8050/api_jsonrpc.php',
                 user='Admin', password='zabbix')
-z54 = ZabbixAPI('http://localhost:8054',
+z54 = ZabbixAPI('http://localhost:8054/api_jsonrpc.php',
                 user='Admin', password='zabbix')
 
 with open('.github/workflows/import50.json', encoding='utf-8') as json_import_50:
