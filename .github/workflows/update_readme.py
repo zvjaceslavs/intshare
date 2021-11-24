@@ -37,43 +37,47 @@ def parse_dir(directory):
 def parse_template(directory):
     print(directory)
     next_dir_50 = os.path.join(directory, '5.0')
-    if os.path.isdir(next_dir_50):
-        for file in os.listdir(next_dir_50):
-            if os.path.isfile(os.path.join(next_dir_50, file)):
-                if file.split('.')[-1] == 'xml':
-                    template_names = []
-                    with open(os.path.join(next_dir_50, file), 'r', encoding='utf-8') as xml_file:
-                        r_file = xml_file.read()
-                        try:
-                            in_template = xmltodict.parse(
-                                r_file, encoding='utf-8')
-                            if 'templates' in in_template['zabbix_export']:
-                                if isinstance(in_template['zabbix_export']['templates']['template'], list):
-                                    for template in in_template['zabbix_export']['templates']['template']:
-                                        if 'templates' in template:
-                                            template_names.append({
-                                                'name': template['template'],
-                                                'links': len(template['templates'])
-                                            })
-                                        else:
-                                            template_names.append({
-                                                'name': template['template'],
-                                                'links': 0
-                                            })
-                                else:
-                                    template_names.append({
-                                        'name': in_template['zabbix_export']['templates']['template']['template'],
-                                        'links': 0
-                                    })
-                        except Exception as err:
-                            print('Error:', err)
-                    template_names.sort(
-                        key=lambda e:  e['links'], reverse=True)
-                    normpath = os.path.relpath(directory)
-                    normpath = os.path.normpath(normpath)
-                    path = normpath.split(os.sep)
-                    path.append(template_names)
-                    global_readme_obj.append(path)
+    if not os.path.isdir(next_dir_50):
+        return
+    for file in os.listdir(next_dir_50):
+        if not os.path.isfile(os.path.join(next_dir_50, file)):
+            continue
+        if not file.split('.')[-1] == 'xml':
+            continue
+        template_names = []
+        with open(os.path.join(next_dir_50, file), 'r', encoding='utf-8') as xml_file:
+            r_file = xml_file.read()
+            try:
+                in_template = xmltodict.parse(
+                    r_file, encoding='utf-8')
+                if not 'templates' in in_template['zabbix_export']:
+                    return
+                if isinstance(in_template['zabbix_export']['templates']['template'], list):
+                    for template in in_template['zabbix_export']['templates']['template']:
+                        if 'templates' in template:
+                            template_names.append({
+                                'name': template['template'],
+                                'links': len(template['templates'])
+                            })
+                        else:
+                            template_names.append({
+                                'name': template['template'],
+                                'links': 0
+                            })
+                else:
+                    template_names.append({
+                        'name': in_template['zabbix_export']['templates']['template']['template'],
+                        'links': 0
+                    })
+            except Exception as err:
+                print('Error:', err)
+        template_names.sort(
+            key=lambda e:  e['links'], reverse=True)
+        normpath = os.path.relpath(directory)
+        normpath = os.path.normpath(normpath)
+        path = normpath.split(os.sep)
+        path.append(template_names)
+        global_readme_obj.append(path)
 
 
 def main():
