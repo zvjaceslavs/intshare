@@ -33,8 +33,7 @@ servers_data = {
 
 for zabbix_server in servers_data:
     with open(servers_data[zabbix_server]['import_rule_file'], encoding='utf-8') as json_import:
-        servers_data[zabbix_server]['import_rule'] = json.load(
-            servers_data[zabbix_server]['import_rule_file'])
+        servers_data[zabbix_server]['import_rule'] = json.load(json_import)
         json_import.close()
     templates = servers_data[zabbix_server]['server'].template.get(output=[''])
     for template in templates:
