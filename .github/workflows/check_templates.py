@@ -5,7 +5,6 @@ import os
 import re
 import xmltodict
 from pyzabbix import ZabbixAPI
-import xmlformatter
 from ruamel.yaml import YAML
 import shutil
 
@@ -13,133 +12,107 @@ yaml = YAML()
 yaml.allow_unicode = True
 yaml.encoding = 'utf-8'
 
-formatter = xmlformatter.Formatter(
-    indent="2", indent_char=" ", encoding_output="utf-8", encoding_input="utf-8", preserve=["literal"])
-z50 = ZabbixAPI('http://localhost:8050/api_jsonrpc.php',
-                user='Admin', password='zabbix')
-z54 = ZabbixAPI('http://localhost:8054/api_jsonrpc.php',
-                user='Admin', password='zabbix')
-
-with open('.github/workflows/import50.json', encoding='utf-8') as json_import_50:
-    import_raw_50 = json.load(json_import_50)
-
-with open('.github/workflows/import54.json', encoding='utf-8') as json_import_54:
-    import_raw_54 = json.load(json_import_54)
-
-default_tamplate_50_maxid = 0
-default_tamplate_54_maxid = 0
-
-tmp_t = z50.template.get(
-    output=['']
-)
-for tmp in tmp_t:
-    if int(tmp['templateid']) > default_tamplate_50_maxid:
-        default_tamplate_50_maxid = int(tmp['templateid'])
-
-tmp_t = z54.template.get(
-    output=['']
-)
-for tmp in tmp_t:
-    if int(tmp['templateid']) > default_tamplate_54_maxid:
-        default_tamplate_54_maxid = int(tmp['templateid'])
-
-list_version = ['5.0', '5.4']
-
-export_default = {
-    '5.0': 'xml',
-    '5.4': 'yaml'
-}
-
-list_file_types = {
-    '5.0': ['xml'],
-    '5.4': ['xml', 'json', 'yaml']
-}
-
-list_servers = {
+servers_data = {
     '5.0': {
-        'server': z50,
-        'import_rule': import_raw_50,
-        'max_id': default_tamplate_50_maxid
+        'server': ZabbixAPI('http://localhost:8050/api_jsonrpc.php', user='Admin', password='zabbix'),
+        'import_rule': {},
+        'import_rule_file': '.github/workflows/import50.json',
+        'max_id': 0,
+        'export_default': 'xml',
+        'file_types': ['xml']
     },
     '5.4': {
-        'server': z54,
-        'import_rule': import_raw_54,
-        'max_id': default_tamplate_54_maxid
+        'server': ZabbixAPI('http://localhost:8054/api_jsonrpc.php', user='Admin', password='zabbix'),
+        'import_rule': {},
+        'import_rule_file': '.github/workflows/import54.json',
+        'max_id': 0,
+        'export_default': 'yaml',
+        'file_types': ['xml', 'json', 'yaml']
     }
 }
 
-def sorter_by_depends(e):
-    return e['links']
+for zabbix_server in servers_data:
+    with open(servers_data[zabbix_server]['import_rule_file'], encoding='utf-8') as json_import:
+        servers_data[zabbix_server]['import_rule'] = json.load(
+            servers_data[zabbix_server]['import_rule_file'])
+        json_import.close()
+    templates = servers_data[zabbix_server]['server'].template.get(output=[''])
+    for template in templates:
+        if int(template['templateid']) > servers_data[zabbix_server]['max_id']:
+            servers_data[zabbix_server]['max_id'] = int(template['templateid'])
 
-def delete_templates(template_names, template_default, zabbix):
+
+def delete_templates(template_names, template_default, zabbix_server):
     del_ids = []
-    template_imported = zabbix.template.get(
-        output = [
+    template_imported = zabbix_server.template.get(
+        output=[
             'templateid',
             'host',
             'name'
         ],
-        filter = {
+        filter={
             'host': template_names
         }
     )
     for tmpl in template_imported:
         if int(tmpl['templateid']) > template_default:
             del_ids.append(tmpl['templateid'])
-    
-    if len(del_ids) > 0:
-        zabbix.do_request('template.delete', del_ids)
 
-def get_template_list(template_names, zabb):
-    isUnResolveParent = False
+    if len(del_ids) > 0:
+        zabbix_server.do_request('template.delete', del_ids)
+
+
+def get_template_list(template_names, zabbix_server):
+    isParentUnresolved = False
     outIds = []
-    template_imported = zabb.template.get(
-        output = [
+    template_imported = zabbix_server.template.get(
+        output=[
             'templateid',
             'host'
         ],
-        filter = {
+        filter={
             'host': template_names
         },
-        selectParentTemplates = [
+        selectParentTemplates=[
             'templateid',
             'host'
         ]
     )
     for templ in template_imported:
         if not templ['templateid'] in outIds:
-            isUnResolveParent = True
+            isParentUnresolved = True
             outIds.append(templ['templateid'])
         if 'parentTemplates' in templ:
             for p_templ in templ['parentTemplates']:
                 if not p_templ['templateid'] in outIds:
-                    isUnResolveParent = True
+                    isParentUnresolved = True
                     outIds.append(p_templ['templateid'])
 
-    while isUnResolveParent:
-        isUnResolveParent = False
-        template_imported = zabb.template.get(
-            output = [
+    while isParentUnresolved:
+        isParentUnresolved = False
+        template_imported = zabbix_server.template.get(
+            output=[
                 'templateid',
                 'host'
             ],
-            templateids = outIds,            
-            selectParentTemplates = [
+            templateids=outIds,
+            selectParentTemplates=[
                 'templateid',
                 'host'
             ]
         )
         for templ in template_imported:
             if not templ['templateid'] in outIds:
-                isUnResolveParent = True
+                isParentUnresolved = True
                 outIds.append(templ['templateid'])
             if 'parentTemplates' in templ:
                 for p_templ in templ['parentTemplates']:
                     if not p_templ['templateid'] in outIds:
-                        isUnResolveParent = True
+                        isParentUnresolved = True
                         outIds.append(p_templ['templateid'])
-    
+
     return outIds
+
 
 def clear_template_name(name):
     out = re.sub(r'[\s\-_]{0,}[Tt]emplate[\s\-_]{0,}', ' ', name)
@@ -147,10 +120,10 @@ def clear_template_name(name):
     return out.strip()
 
 
-def rename_template(template_names, template_default, zabbix):
+def rename_template(template_names, template_default, zabbix_server):
     out_names = []
     desc = ''
-    template_imported = zabbix.template.get(
+    template_imported = zabbix_server.template.get(
         output=[
             'templateid',
             'host',
@@ -166,11 +139,9 @@ def rename_template(template_names, template_default, zabbix):
             continue
         else:
             new_host = clear_template_name(tmpl['host'])
-            new_name = clear_template_name(tmpl['name'])            
-
-            rename_result = zabbix.template.update(
+            rename_result = zabbix_server.template.update(
                 templateid=tmpl['templateid'],
-                name=new_name,
+                name=clear_template_name(tmpl['name']),
                 host=new_host,
                 description=desc
             )
@@ -180,14 +151,14 @@ def rename_template(template_names, template_default, zabbix):
     return out_names
 
 
-def get_readme(template_names, zabbix):
+def get_readme(template_names, zabbix_server):
     out = ''
     out_obj = {
         'readme': '',
         'meta': []
     }
 
-    template_imported = zabbix.template.get(
+    template_imported = zabbix_server.template.get(
         output='extend',
         filter={
             'host': template_names
@@ -239,7 +210,7 @@ def get_readme(template_names, zabbix):
 
         out += '# {}\n\n'.format(tmpl['name'])
 
-        if not tmpl['description'] == '':   
+        if not tmpl['description'] == '':
             out += tmpl['description']
 
         out += '## Macros used\n\n'.format(tmpl['name'])
@@ -259,9 +230,9 @@ def get_readme(template_names, zabbix):
         else:
             out += 'There are no macros links in this template.\n\n'
 
-        linked_template = zabbix.template.get(
+        linked_template = zabbix_server.template.get(
             output=['name', 'host'],
-            templateids=get_template_list([tmpl['host']], zabbix)
+            templateids=get_template_list([tmpl['host']], zabbix_server)
         )
 
         out += '## Template links\n\n'
@@ -274,7 +245,7 @@ def get_readme(template_names, zabbix):
         else:
             out += 'There are no template links in this template.\n\n'
 
-        discovery = zabbix.discoveryrule.get(
+        discovery = zabbix_server.discoveryrule.get(
             templateids=[tmpl['templateid']],
             selectFilter='extend',
             selectGraphs='extend',
@@ -309,7 +280,7 @@ def get_readme(template_names, zabbix):
                             'description': d_itm['description'],
                         }
                     )
-                tmp_triggers = zabbix.triggerprototype.get(
+                tmp_triggers = zabbix_server.triggerprototype.get(
                     output='extend',
                     discoveryids=rule['itemid'],
                     expandExpression=True
@@ -329,7 +300,7 @@ def get_readme(template_names, zabbix):
 
         out += '## Items collected\n\n'
 
-        items_template = zabbix.item.get(
+        items_template = zabbix_server.item.get(
             output='extend',
             templateids=tmpl['templateid'],
             inherited=False
@@ -362,7 +333,7 @@ def get_readme(template_names, zabbix):
 
         out += '## Triggers\n\n'
 
-        tmp_triggers2 = zabbix.triggerprototype.get(
+        tmp_triggers2 = zabbix_server.triggerprototype.get(
             output='extend',
             templateids=[tmpl['templateid']],
             expandExpression=True
@@ -393,17 +364,13 @@ def get_readme(template_names, zabbix):
             out += 'There are no triggers in this template.\n\n'
 
     out_obj['readme'] = out
-    out_obj['meta'].sort(key=sorter_by_depends, reverse=True)
+    out_obj['meta'].sort(key=lambda e: e['links'], reverse=True)
     return out_obj
 
 
 def clear_file_name(_new_folder):
     _new_folder = re.sub(r'[\t\\/:"*?<>| ]+', "_", _new_folder)
-    _new_folder = _new_folder.replace('template-', '')
-    _new_folder = _new_folder.replace('-template', '')
-    _new_folder = _new_folder.replace('template_', '')
-    _new_folder = _new_folder.replace('_template', '')
-    _new_folder = _new_folder.replace('template', '')
+    _new_folder = re.sub(r'[_-]?template[_-]?', "", _new_folder)
     _new_folder = _new_folder.replace('_-_', '-')
     _new_folder = _new_folder.strip()
     _new_folder = 'template_{}'.format(_new_folder)
@@ -414,7 +381,7 @@ def parse_dir(directory):
     for dir in os.listdir(directory):
         if dir in ['.git', '.github']:
             continue
-        if dir in list_version:
+        if dir in servers_data.keys():
             parse_template(directory)
         next_dir = os.path.join(directory, dir)
         if os.path.isdir(next_dir):
@@ -444,7 +411,7 @@ def check_p2_2(directory, version):
     t_directory = os.path.join(directory, version)
     for dir in os.listdir(t_directory):
         if os.path.isfile(os.path.join(t_directory, dir)):
-            if dir.split('.')[-1] in list_file_types[version]:
+            if dir.split('.')[-1] in servers_data[version]['file_types']:
                 if contain_template_file:
                     print(json.dumps({
                         'code': 2,
@@ -458,7 +425,7 @@ def check_p2_2(directory, version):
                     with open(os.path.join(t_directory, dir), 'r', encoding='utf-8') as template_file:
                         r_file = template_file.read()
                         template_file.close()
-                    if template_format == 'xml':                        
+                    if template_format == 'xml':
                         try:
                             in_template = xmltodict.parse(
                                 r_file, encoding='utf-8')
@@ -549,13 +516,14 @@ def check_p2_2(directory, version):
                         if 'templates' in in_template['zabbix_export']:
                             for template in in_template['zabbix_export']['templates']:
                                 template_names.append(
-                                    template['template'].strip())    
+                                    template['template'].strip())
                     if len(template_names) > 0:
-                        list_servers[version]['import_rule']['source'] = r_file
-                        list_servers[version]['import_rule']['format'] = template_format
+                        servers_data[version]['import_rule']['source'] = r_file
+                        servers_data[version]['import_rule']['format'] = template_format
                         import_result = False
                         try:
-                            import_result = list_servers[version]['server'].do_request('configuration.import', list_servers[version]['import_rule'])
+                            import_result = servers_data[version]['server'].do_request(
+                                'configuration.import', servers_data[version]['import_rule'])
                         except Exception as err:
                             print(err.data)
                         if not import_result:
@@ -567,24 +535,20 @@ def check_p2_2(directory, version):
                             exit(6)
                         for template_name in template_names:
                             if not template_name == clear_template_name(template_name):
-                                tmp_template_names = rename_template(template_names,list_servers[version]['max_id'],list_servers[version]['server'])
-                                exportIds = get_template_list(tmp_template_names, list_servers[version]['server'])
-                                out_template_file = list_servers[version]['server'].configuration.export(
-                                    options = {
+                                tmp_template_names = rename_template(
+                                    template_names, servers_data[version]['max_id'], servers_data[version]['server'])
+                                exportIds = get_template_list(
+                                    tmp_template_names, servers_data[version]['server'])
+                                out_template_file = servers_data[version]['server'].configuration.export(
+                                    options={
                                         'templates': exportIds
                                     },
-                                    format = template_format
+                                    format=template_format
                                 )
-                                delete_templates(tmp_template_names,list_servers[version]['max_id'],list_servers[version]['server'])
-                                if template_format == 'xml':
-                                    with open(os.path.join(t_directory, dir), 'bw') as out_file:
-                                        out_file.write(formatter.format_string(out_template_file))
-                                if template_format == 'json':
-                                    with open(os.path.join(t_directory, dir), 'w', encoding='utf-8') as out_file:
-                                        out_file.write(out_template_file)
-                                if template_format == 'yaml':
-                                    with open(os.path.join(t_directory, dir), 'w', encoding='utf-8') as out_file:
-                                        out_file.write(out_template_file)
+                                delete_templates(
+                                    tmp_template_names, servers_data[version]['max_id'], servers_data[version]['server'])
+                                with open(os.path.join(t_directory, dir), 'w', encoding='utf-8') as out_file:
+                                    out_file.write(out_template_file)
                                 break
             else:
                 if not dir == 'README.md':
@@ -593,22 +557,24 @@ def check_p2_2(directory, version):
                         'message': 'Error structure directory',
                         'detail': 'It is prohibited to use compressed files (zip, tar.gz, etc.). Template directory: "{}"'.format(t_directory)
                     }, indent=4))
-                    exit(2)                    
+                    exit(2)
             if dir == 'README.md':
                 contain_readme_file = True
             check_p3(t_directory, dir)
     if not contain_readme_file:
         if len(template_names) > 0:
-            with open(os.path.join(t_directory,'README.md'), 'w', encoding='utf-8') as readme_md:
-                readme_obj = get_readme(template_names, list_servers[version]['server'])
+            with open(os.path.join(t_directory, 'README.md'), 'w', encoding='utf-8') as readme_md:
+                readme_obj = get_readme(
+                    template_names, servers_data[version]['server'])
                 readme_md.write(readme_obj['readme'])
+
 
 def check_p3(directory, file):
     if not file == 'README.md':
         if re.match(r'template_[a-z_\-0-9\.]{4,}\.(xml|json|yaml)', file) == None:
             new_file_name = clear_file_name(file)
             os.rename(os.path.join(directory, file),
-                    os.path.join(directory, new_file_name))
+                      os.path.join(directory, new_file_name))
 
 
 def check_p2_1(directory):
@@ -622,7 +588,7 @@ def check_p2_1(directory):
             }, indent=4))
             exit(2)
 
-        if not dir in list_version:
+        if not dir in servers_data.keys():
             print(json.dumps({
                 'code': 2,
                 'message': 'Error structure directory',
@@ -642,20 +608,24 @@ def check_p2_1(directory):
         }, indent=4))
         exit(2)
 
+
 def check_p7(directory):
+    list_version = servers_data.keys()
     list_dir = os.listdir(directory)
     ver_index_max = 0
-    for indx in range(0,len(list_version)):
-        if list_version[indx] in list_dir:
-            ver_index_max = indx
-    
-    for indx in range(ver_index_max + 1, len(list_version)):
-        os.mkdir(os.path.join(directory,list_version[indx]))
-        prev_directory = os.path.join(directory,list_version[indx - 1])
-        cur_directory = os.path.join(directory,list_version[indx])
+    for index in range(0, len(list_version)):
+        if list_version[index] in list_dir:
+            ver_index_max = index
+
+    for index in range(ver_index_max + 1, len(list_version)):
+        os.mkdir(os.path.join(directory, list_version[index]))
+        prev_directory = os.path.join(directory, list_version[index - 1])
+        cur_directory = os.path.join(directory, list_version[index])
         if 'files' in os.listdir(prev_directory):
-            shutil.copytree(os.path.join(prev_directory,'files'),os.path.join(directory,list_version[indx]))
-        shutil.copyfile(os.path.join(prev_directory, 'README.md'),os.path.join(cur_directory, 'README.md'))
+            shutil.copytree(os.path.join(prev_directory, 'files'),
+                            os.path.join(directory, list_version[index]))
+        shutil.copyfile(os.path.join(prev_directory, 'README.md'),
+                        os.path.join(cur_directory, 'README.md'))
         for dir in os.listdir(prev_directory):
             if dir == 'README.md' or dir == 'files':
                 continue
@@ -664,10 +634,10 @@ def check_p7(directory):
             with open(os.path.join(prev_directory, dir), 'r', encoding='utf-8') as template_file:
                 r_file = template_file.read()
                 template_file.close()
-            if template_format == 'xml':                        
+            if template_format == 'xml':
                 try:
                     in_template = xmltodict.parse(
-                        r_file, encoding='utf-8')                    
+                        r_file, encoding='utf-8')
                 except Exception as err:
                     print(json.dumps({
                         'code': 6.7,
@@ -685,7 +655,7 @@ def check_p7(directory):
                             in_template['zabbix_export']['templates']['template']['template'].strip())
             if template_format == 'json':
                 try:
-                    in_template = json.dumps(r_file)                    
+                    in_template = json.dumps(r_file)
                 except Exception as err:
                     print(json.dumps({
                         'code': 6.8,
@@ -699,7 +669,7 @@ def check_p7(directory):
                             template['template'].strip())
             if template_format == 'yaml':
                 try:
-                    in_template = yaml.load(r_file)                    
+                    in_template = yaml.load(r_file)
                 except Exception as err:
                     print(json.dumps({
                         'code': 6.9,
@@ -710,15 +680,18 @@ def check_p7(directory):
                 if 'templates' in in_template['zabbix_export']:
                     for template in in_template['zabbix_export']['templates']:
                         template_names.append(
-                            template['template'].strip())    
+                            template['template'].strip())
             if len(template_names) > 0:
-                list_servers[list_version[indx]]['import_rule']['source'] = r_file
-                list_servers[list_version[indx]]['import_rule']['format'] = template_format
+                servers_data[list_version[index]
+                             ]['import_rule']['source'] = r_file
+                servers_data[list_version[index]
+                             ]['import_rule']['format'] = template_format
                 import_result = False
                 try:
-                    import_result = list_servers[list_version[indx]]['server'].do_request('configuration.import', list_servers[list_version[indx]]['import_rule'])
+                    import_result = servers_data[list_version[index]]['server'].do_request(
+                        'configuration.import', servers_data[list_version[index]]['import_rule'])
                 except Exception as err:
-                    print (json.dumps(err.data))
+                    print(json.dumps(err.data))
                 if not import_result:
                     print(json.dumps({
                         'code': 6.10,
@@ -726,33 +699,30 @@ def check_p7(directory):
                         'detail': 'Error importing in the stock server. Template directory: "{}"'.format(prev_directory)
                     }, indent=4))
                     exit(6)
-                exportIds = get_template_list(template_names, list_servers[list_version[indx]]['server'])
-                out_template_file = list_servers[list_version[indx]]['server'].configuration.export(
-                    options = {
+                exportIds = get_template_list(
+                    template_names, servers_data[list_version[index]]['server'])
+                out_template_file = servers_data[list_version[index]]['server'].configuration.export(
+                    options={
                         'templates': exportIds
                     },
-                    format = export_default[list_version[indx]]
+                    format=servers_data[list_version[index]]['export_default']
                 )
-                delete_templates(template_names,list_servers[list_version[indx]]['max_id'],list_servers[list_version[indx]]['server'])
-                if export_default[list_version[indx]] == 'xml':
-                    with open(os.path.join(cur_directory, '{}.xml'.format('.'.join(dir.split('.')[:-1]))), 'bw') as out_file:
-                        out_file.write(formatter.format_string(out_template_file))
-                if export_default[list_version[indx]] == 'json':
-                    with open(os.path.join(cur_directory, '{}.json'.format('.'.join(dir.split('.')[:-1]))), 'w', encoding='utf-8') as out_file:
-                        out_file.write(out_template_file)
-                if export_default[list_version[indx]] == 'yaml':
-                    with open(os.path.join(cur_directory, '{}.yaml'.format('.'.join(dir.split('.')[:-1]))), 'w', encoding='utf-8') as out_file:
-                        out_file.write(out_template_file)
-                                 
-    
+                delete_templates(
+                    template_names, servers_data[list_version[index]]['max_id'], servers_data[list_version[index]]['server'])
+                with open(os.path.join(cur_directory, '{}.{}'.format('.'.join(dir.split('.')[:-1]), servers_data[list_version[index]]['export_default'])), 'w', encoding='utf-8') as out_file:
+                    out_file.write(out_template_file)
+
+
 def parse_template(directory):
     print(directory)
     check_p1(directory)
     check_p2_1(directory)
-    check_p7(directory)   
+    check_p7(directory)
+
 
 def main():
     print(os.getcwd())
     parse_dir(os.getcwd())
-    
+
+
 main()
