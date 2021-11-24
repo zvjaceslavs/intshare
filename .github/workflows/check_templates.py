@@ -138,7 +138,7 @@ def rename_template(template_names, template_default, zabbix_server):
             continue
         else:
             new_host = clear_template_name(tmpl['host'])
-            rename_result = zabbix_server.template.update(
+            zabbix_server.template.update(
                 templateid=tmpl['templateid'],
                 name=clear_template_name(tmpl['name']),
                 host=new_host,
@@ -609,7 +609,7 @@ def check_p2_1(directory):
 
 
 def check_p7(directory):
-    list_version = servers_data.keys()
+    list_version = list(servers_data.keys())
     list_dir = os.listdir(directory)
     ver_index_max = 0
     for index in range(0, len(list_version)):
