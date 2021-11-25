@@ -7,14 +7,29 @@ import xmltodict
 global_readme_obj = []
 
 
-def get_from_list(_list=[], index=0):
-    if index < len(_list):
-        return _list[index]
+def get_from_list(list_tmpl=[], index=0):
+    """Getting a list of the index list 
+
+    Args:
+        list_tmpl (list, optional): . Defaults to [].
+        index (int, optional): . Defaults to 0.
+
+    """
+    if index < len(list_tmpl):
+        return list_tmpl[index]
     else:
         return None
 
 
 def print_ident(col):
+    """Adding indents in accordance with the level 
+
+    Args:
+        col (int): level 
+
+    Returns:
+        str: 
+    """
     ident = '    '
     out = ''
     for i in range(0, col):
@@ -23,6 +38,11 @@ def print_ident(col):
 
 
 def parse_dir(directory):
+    """Iterative view of the catalog tree 
+
+    Args:
+        directory (path): Path to the catalog 
+    """
     for dir in os.listdir(directory):
         if dir in ['.git', '.github']:
             continue
@@ -35,6 +55,11 @@ def parse_dir(directory):
 
 
 def parse_template(directory):
+    """Processing directory template 
+
+    Args:
+        directory (path): Path to the catalog 
+    """
     print(directory)
     next_dir_50 = os.path.join(directory, '5.0')
     if not os.path.isdir(next_dir_50):
@@ -81,6 +106,8 @@ def parse_template(directory):
 
 
 def main():
+    """The main function. Generation readme.md file. 
+    """
     parse_dir(os.getcwd())
 
     with open('.github/workflows/template_readme.md', encoding='utf-8') as template_readme:

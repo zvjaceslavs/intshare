@@ -42,6 +42,13 @@ for zabbix_server in servers_data:
 
 
 def delete_templates(template_names, template_default, zabbix_server):
+    """Deleting templates by name. Built-in templates are ignored.
+
+    Args:
+        template_names (list): List of templates for removal.
+        template_default (int): Maximum ID value for built-in templates 
+        zabbix_server (object): ZabbixApi Object 
+    """
     del_ids = []
     template_imported = zabbix_server.template.get(
         output=[
@@ -62,6 +69,15 @@ def delete_templates(template_names, template_default, zabbix_server):
 
 
 def get_template_list(template_names, zabbix_server):
+    """Addition of the list of templates by their dependencies
+
+    Args:
+        template_names (list): List of templates
+        zabbix_server (object): ZabbixApi Object
+
+    Returns:
+        list: List of templates 
+    """
     isParentUnresolved = False
     outIds = []
     template_imported = zabbix_server.template.get(
@@ -114,12 +130,29 @@ def get_template_list(template_names, zabbix_server):
 
 
 def clear_template_name(name):
+    """
+    Args:
+        name (string): 
+
+    Returns:
+        string:
+    """
     out = re.sub(r'[\s\-_]{0,}[Tt]emplate[\s\-_]{0,}', ' ', name)
     out = out.replace('( )', '')
     return out.strip()
 
 
 def rename_template(template_names, template_default, zabbix_server):
+    """Rename templates. Built-in templates are ignored.
+
+    Args:
+        template_names (list): List of templates for renaming.
+        template_default (int): Maximum ID value for built-in templates 
+        zabbix_server (object): ZabbixApi Object
+
+    Returns:
+        list: List of updated names.
+    """
     out_names = []
     desc = ''
     template_imported = zabbix_server.template.get(
@@ -151,6 +184,15 @@ def rename_template(template_names, template_default, zabbix_server):
 
 
 def get_readme(template_names, zabbix_server):
+    """Generation readme file. 
+
+    Args:
+        template_names (list): List of templates
+        zabbix_server (object): ZabbixApi Object
+
+    Returns:
+        string: 
+    """
     out = ''
     out_obj = {
         'readme': '',
@@ -367,16 +409,28 @@ def get_readme(template_names, zabbix_server):
     return out_obj
 
 
-def clear_file_name(_new_folder):
-    _new_folder = re.sub(r'[\t\\/:"*?<>| ]+', "_", _new_folder)
-    _new_folder = re.sub(r'[_-]?template[_-]?', "", _new_folder)
-    _new_folder = _new_folder.replace('_-_', '-')
-    _new_folder = _new_folder.strip()
-    _new_folder = 'template_{}'.format(_new_folder)
-    return _new_folder
+def clear_file_name(name):
+    """
+    Args:
+        name (string): 
+
+    Returns:
+        string:
+    """
+    name = re.sub(r'[\t\\/:"*?<>| ]+', "_", name)
+    name = re.sub(r'[_-]?template[_-]?', "", name)
+    name = name.replace('_-_', '-')
+    name = name.strip()
+    name = 'template_{}'.format(name)
+    return name
 
 
 def parse_dir(directory):
+    """Iterative view of the catalog tree 
+
+    Args:
+        directory (path): Path to the catalog 
+    """
     for dir in os.listdir(directory):
         if dir in ['.git', '.github']:
             continue
@@ -391,6 +445,11 @@ def parse_dir(directory):
 
 
 def check_p1(directory):
+    """Checking the structure of the catalog.         
+
+    Args:
+        directory (path): Path to the catalog 
+    """
     normpath = os.path.relpath(directory)
     normpath = os.path.normpath(normpath)
     template_directory = normpath.split(os.sep)[-1]
@@ -404,6 +463,12 @@ def check_p1(directory):
 
 
 def check_p2_2(directory, version):
+    """Checking the structure of the catalog.         
+
+    Args:
+        directory (path): Path to the catalog
+        version (string): Nested template version catalog 
+    """
     contain_template_file = False
     contain_readme_file = False
     template_names = []
@@ -569,14 +634,26 @@ def check_p2_2(directory, version):
 
 
 def check_p3(directory, file):
-    if not file == 'README.md':
-        if re.match(r'template_[a-z_\-0-9\.]{4,}\.(xml|json|yaml)', file) == None:
-            new_file_name = clear_file_name(file)
-            os.rename(os.path.join(directory, file),
-                      os.path.join(directory, new_file_name))
+    """Checking the structure of the catalog. Check file name         
+
+    Args:
+        directory (path): Path to the catalog
+        file (string): File name 
+    """
+    if file == 'README.md':
+        return
+    if re.match(r'template_[a-z_\-0-9\.]{4,}\.(xml|json|yaml)', file) == None:
+        new_file_name = clear_file_name(file)
+        os.rename(os.path.join(directory, file),
+                    os.path.join(directory, new_file_name))
 
 
 def check_p2_1(directory):
+    """Checking the structure of the catalog.         
+
+    Args:
+        directory (path): Path to the catalog 
+    """
     contain_version = False
     for dir in os.listdir(directory):
         if os.path.isfile(os.path.join(directory, dir)):
@@ -609,6 +686,11 @@ def check_p2_1(directory):
 
 
 def check_p7(directory):
+    """Checking the structure of the catalog.         
+
+    Args:
+        directory (path): Path to the catalog 
+    """
     list_version = list(servers_data.keys())
     list_dir = os.listdir(directory)
     ver_index_max = 0
@@ -713,6 +795,11 @@ def check_p7(directory):
 
 
 def parse_template(directory):
+    """Processing directory template 
+
+    Args:
+        directory (path): Path to the catalog 
+    """
     print(directory)
     check_p1(directory)
     check_p2_1(directory)
@@ -720,6 +807,8 @@ def parse_template(directory):
 
 
 def main():
+    """The main function.
+    """
     print(os.getcwd())
     parse_dir(os.getcwd())
 
